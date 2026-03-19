@@ -69,8 +69,6 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |     * 彼女は[韓国]出身です。        She is [from Korea].                   |
 |                                                                         |
 |                                                                         |
-|  [Tutor: Read each pattern aloud. Student repeats after you.]           |
-|                                                                         |
 |                                                                  PAGE 1 |
 +-------------------------------------------------------------------------+
 ```
@@ -87,8 +85,6 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |  │  Two people meet at a language exchange meetup.            │          |
 |  │  二人が言語交換の集まりで出会います。                            │          |
 |  └────────────────────────────────────────────────────────────┘          |
-|                                                                         |
-|  [Tutor: Read together first, then swap roles.]                         |
 |                                                                         |
 |                                                                         |
 |  YUKI:   こんにちは！私は *です* ゆき。私は学生 *です* 。                    |
@@ -128,9 +124,6 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |                                                                         |
 |  CONVERSATION: SPEED & MEMORY CHECK                                     |
 |  -----------------------------------                                    |
-|                                                                         |
-|  [Tutor: Student translates blanks from English. Go faster!]            |
-|  [It's OK to use the translator!]                                       |
 |                                                                         |
 |                                                                         |
 |  YUKI:   ___________________________________________________           |
@@ -247,8 +240,6 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |  SHORT DIALOGUES                                                        |
 |  ────────────────                                                       |
 |                                                                         |
-|  [Tutor reads their line. Student speaks the blank line.]               |
-|                                                                         |
 |                                                                         |
 |  DIALOGUE 1:                                                            |
 |  Tutor:   お仕事は何ですか？                                               |
@@ -339,9 +330,6 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |                                                                         |
 |  FREE DISCUSSION                                                        |
 |  ────────────────                                                       |
-|                                                                         |
-|  [Tutor: Ask the question first. After the student answers,             |
-|  the student asks YOU the same question. Answer naturally!]             |
 |                                                                         |
 |                                                                         |
 |  1. Introduce yourself! Tell me your name and your job                  |
@@ -439,14 +427,6 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |  MISSION COMPLETE!                                                      |
 |  ────────────────                                                       |
 |                                                                         |
-|  ┌─── TUTOR SCRIPT ────────────────────────────────────────┐            |
-|  │  "今日はとても上手でした！すごい！"                          │            |
-|  │  "You did amazing today!"                                │            |
-|  │                                                          │            |
-|  │  → Check off each mission while saying it aloud.         │            |
-|  └──────────────────────────────────────────────────────────┘            |
-|                                                                         |
-|                                                                         |
 |  TODAY'S MISSIONS:                                                      |
 |  ┌─────────────────────────────────────────────────────────┐            |
 |  │                                                          │            |
@@ -473,10 +453,6 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |  * 私は学生です。          * 彼女は医者です。                               |
 |  * 彼は優しいです。        * 彼らは韓国出身です。                            |
 |                                                                         |
-|  ┌─── TUTOR SCRIPT ────────────────────────────────────────┐            |
-|  │  After student reads: "完璧！次のレッスンで会いましょう！"   │            |
-|  │  "Perfect! See you in the next lesson!"                  │            |
-|  └──────────────────────────────────────────────────────────┘            |
 |                                                                  PAGE 9 |
 +-------------------------------------------------------------------------+
 ```
