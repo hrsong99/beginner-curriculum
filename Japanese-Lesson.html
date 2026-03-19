@@ -31,7 +31,7 @@
   .dialogue .speaker { font-weight: bold; display: inline-block; min-width: 80px; }
   .check-item { margin: 16px 0; padding-left: 10px; }
   .check { display: inline-block; border: 2px solid #111; width: 22px; height: 22px; text-align: center; line-height: 20px; margin-right: 10px; vertical-align: middle; font-size: 14px; }
-  .nav { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; border-top: 1px solid #ddd; padding: 16px; display: flex; justify-content: center; gap: 16px; align-items: center; }
+  .nav { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; border-top: 1px solid #ddd; padding: 16px; display: flex; justify-content: center; gap: 16px; align-items: center; z-index: 200; }
   .nav button { font-family: monospace; font-size: 14px; padding: 8px 24px; border: 1px solid #111; background: #fff; cursor: pointer; }
   .nav button:hover { background: #f0f0f0; }
   .nav button:disabled { color: #ccc; border-color: #ccc; cursor: default; background: #fff; }
@@ -555,17 +555,45 @@
 
 </div>
 
+<!-- Drawing/Typing overlay canvas -->
+<canvas id="drawCanvas"></canvas>
+<!-- Text annotations container -->
+<div id="textLayer"></div>
+
 <nav class="nav">
   <button id="prev" onclick="go(-1)" disabled>&larr; Back</button>
   <span id="indicator">1 / 10</span>
   <button id="next" onclick="go(1)">Next &rarr;</button>
+  <span style="border-left:1px solid #ddd; height:20px; margin:0 4px"></span>
+  <button id="btnDraw" onclick="setMode('draw')" style="padding:8px 14px">&#9998; Draw</button>
+  <button id="btnType" onclick="setMode('type')" style="padding:8px 14px">T Type</button>
+  <button id="btnErase" onclick="setMode('erase')" style="padding:8px 14px">&#9003; Erase</button>
+  <button id="btnClear" onclick="clearPage()" style="padding:8px 14px; color:#c33">&#10005; Clear</button>
 </nav>
+
+<style>
+  #drawCanvas { position: absolute; top: 0; left: 0; z-index: 100; pointer-events: none; }
+  #drawCanvas.active { pointer-events: auto; cursor: crosshair; }
+  #drawCanvas.erase { cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><circle cx="10" cy="10" r="9" fill="none" stroke="%23999" stroke-width="1.5"/></svg>') 10 10, auto; }
+  #textLayer { position: absolute; top: 0; left: 0; width: 100%; min-height: 100vh; pointer-events: none; z-index: 101; }
+  #textLayer.active { pointer-events: auto; cursor: text; }
+  #textLayer .anno-wrap { position: absolute; display: flex; align-items: flex-start; pointer-events: auto; }
+  #textLayer .anno-controls { display: flex; flex-direction: column; gap: 2px; padding: 2px 3px 0 0; }
+  #textLayer .anno-handle { cursor: grab; color: #ccc; font-size: 11px; user-select: none; line-height: 1; }
+  #textLayer .anno-handle:hover { color: #999; }
+  #textLayer .anno-handle:active { cursor: grabbing; }
+  #textLayer .anno-delete { cursor: pointer; color: #ddd; font-size: 11px; user-select: none; line-height: 1; border: none; background: none; padding: 0; }
+  #textLayer .anno-delete:hover { color: #c33; }
+  #textLayer .annotation { background: rgba(255,255,255,0.85); border: 1px dashed #e0b0b0; font-family: monospace; font-size: 16px; color: #c33; outline: none; min-width: 60px; max-width: 300px; padding: 4px 6px; resize: none; overflow: hidden; field-sizing: content; }
+  .nav button.active-mode { background: #111 !important; color: #fff !important; }
+</style>
 
 <script>
 const pages = ['p1','p2','p3','p4','p5','p6','p7','p8','p8b','p9'];
 let cur = 0;
 
 function go(dir) {
+  saveAnnotations();
   document.getElementById(pages[cur]).classList.remove('active');
   cur += dir;
   document.getElementById(pages[cur]).classList.add('active');
@@ -573,7 +601,241 @@ function go(dir) {
   document.getElementById('next').disabled = cur === pages.length - 1;
   document.getElementById('indicator').textContent = (cur + 1) + ' / ' + pages.length;
   window.scrollTo(0, 0);
+  loadAnnotations();
+  resizeCanvas();
 }
+
+// --- Annotation system ---
+const canvas = document.getElementById('drawCanvas');
+const ctx = canvas.getContext('2d');
+const textLayer = document.getElementById('textLayer');
+let mode = null; // 'draw', 'type', 'erase', or null
+let drawing = false;
+let lastX = 0, lastY = 0;
+
+// Drawing state per page: stored as canvas image data URLs
+const STORAGE_KEY = 'jp-lesson-annotations';
+
+function getStore() {
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; }
+  catch(e) { return {}; }
+}
+
+function saveAnnotations() {
+  const store = getStore();
+  const pageId = pages[cur];
+  // Save canvas drawing
+  store[pageId] = store[pageId] || {};
+  store[pageId].canvas = canvas.toDataURL();
+  // Save text annotations
+  const texts = [];
+  textLayer.querySelectorAll('.anno-wrap').forEach(wrap => {
+    const input = wrap.querySelector('.annotation');
+    if (input && input.value.trim()) {
+      texts.push({ x: parseInt(wrap.style.left), y: parseInt(wrap.style.top), text: input.value });
+    }
+  });
+  store[pageId].texts = texts;
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(store));
+}
+
+function loadAnnotations() {
+  const store = getStore();
+  const pageId = pages[cur];
+  const data = store[pageId];
+  // Clear canvas
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  // Clear text annotations
+  textLayer.innerHTML = '';
+  if (!data) return;
+  // Restore canvas
+  if (data.canvas) {
+    const img = new Image();
+    img.onload = () => ctx.drawImage(img, 0, 0);
+    img.src = data.canvas;
+  }
+  // Restore text annotations
+  if (data.texts) {
+    data.texts.forEach(t => createTextAt(t.x, t.y, t.text));
+  }
+}
+
+function resizeCanvas() {
+  const h = Math.max(document.documentElement.scrollHeight, window.innerHeight);
+  const w = document.documentElement.scrollWidth;
+  // Save current drawing
+  const tmp = canvas.toDataURL();
+  canvas.width = w;
+  canvas.height = h;
+  ctx.lineJoin = 'round';
+  ctx.lineCap = 'round';
+  // Restore drawing after resize
+  const img = new Image();
+  img.onload = () => ctx.drawImage(img, 0, 0);
+  img.src = tmp;
+  // Match text layer size
+  textLayer.style.height = h + 'px';
+}
+
+function setMode(m) {
+  if (mode === m) { mode = null; } else { mode = m; }
+  canvas.classList.remove('active', 'erase');
+  textLayer.classList.remove('active');
+  document.querySelectorAll('.nav button').forEach(b => b.classList.remove('active-mode'));
+  if (mode === 'draw') {
+    canvas.classList.add('active');
+    document.getElementById('btnDraw').classList.add('active-mode');
+  } else if (mode === 'erase') {
+    canvas.classList.add('active', 'erase');
+    document.getElementById('btnErase').classList.add('active-mode');
+  } else if (mode === 'type') {
+    textLayer.classList.add('active');
+    document.getElementById('btnType').classList.add('active-mode');
+  }
+}
+
+function clearPage() {
+  if (!confirm('Clear all annotations on this page?')) return;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  textLayer.innerHTML = '';
+  saveAnnotations();
+}
+
+function createTextAt(x, y, text) {
+  const wrap = document.createElement('div');
+  wrap.className = 'anno-wrap';
+  wrap.style.left = x + 'px';
+  wrap.style.top = y + 'px';
+
+  const controls = document.createElement('div');
+  controls.className = 'anno-controls';
+
+  const handle = document.createElement('span');
+  handle.className = 'anno-handle';
+  handle.textContent = '⠿';
+
+  const del = document.createElement('button');
+  del.className = 'anno-delete';
+  del.textContent = '✕';
+  del.addEventListener('click', () => { wrap.remove(); saveAnnotations(); });
+
+  controls.appendChild(handle);
+  controls.appendChild(del);
+
+  const ta = document.createElement('textarea');
+  ta.className = 'annotation';
+  ta.rows = 1;
+  ta.value = text || '';
+  ta.addEventListener('focus', () => { activeAnnotation = ta; });
+  ta.addEventListener('blur', () => {
+    activeAnnotation = null;
+    if (!ta.value.trim()) { wrap.remove(); }
+    saveAnnotations();
+    setMode(null);
+  });
+  ta.addEventListener('input', () => { ta.style.height = 'auto'; ta.style.height = ta.scrollHeight + 'px'; });
+
+  // Drag logic
+  let dragging = false, dragX, dragY;
+  handle.addEventListener('mousedown', e => {
+    dragging = true;
+    dragX = e.clientX - parseInt(wrap.style.left);
+    dragY = e.clientY - parseInt(wrap.style.top);
+    e.preventDefault();
+  });
+  document.addEventListener('mousemove', e => {
+    if (!dragging) return;
+    wrap.style.left = (e.clientX - dragX) + 'px';
+    wrap.style.top = (e.clientY - dragY + window.scrollY) + 'px';
+  });
+  document.addEventListener('mouseup', () => { if (dragging) { dragging = false; saveAnnotations(); }});
+
+  wrap.appendChild(controls);
+  wrap.appendChild(ta);
+  textLayer.appendChild(wrap);
+  if (!text) ta.focus();
+  // Auto-size on load
+  if (text) { requestAnimationFrame(() => { ta.style.height = 'auto'; ta.style.height = ta.scrollHeight + 'px'; }); }
+  return wrap;
+}
+
+// Drawing events
+canvas.addEventListener('mousedown', e => {
+  if (mode === 'draw' || mode === 'erase') {
+    drawing = true;
+    lastX = e.pageX;
+    lastY = e.pageY;
+    if (mode === 'erase') {
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.lineWidth = 20;
+    } else {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.strokeStyle = '#c33';
+      ctx.lineWidth = 2.5;
+    }
+  }
+});
+
+canvas.addEventListener('mousemove', e => {
+  if (!drawing) return;
+  ctx.beginPath();
+  ctx.moveTo(lastX, lastY);
+  ctx.lineTo(e.pageX, e.pageY);
+  ctx.stroke();
+  lastX = e.pageX;
+  lastY = e.pageY;
+});
+
+canvas.addEventListener('mouseup', () => { drawing = false; saveAnnotations(); });
+canvas.addEventListener('mouseleave', () => { drawing = false; });
+
+// Touch support
+canvas.addEventListener('touchstart', e => {
+  if (mode === 'draw' || mode === 'erase') {
+    e.preventDefault();
+    drawing = true;
+    const t = e.touches[0];
+    lastX = t.pageX;
+    lastY = t.pageY;
+    if (mode === 'erase') {
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.lineWidth = 20;
+    } else {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.strokeStyle = '#c33';
+      ctx.lineWidth = 2.5;
+    }
+  }
+}, { passive: false });
+
+canvas.addEventListener('touchmove', e => {
+  if (!drawing) return;
+  e.preventDefault();
+  const t = e.touches[0];
+  ctx.beginPath();
+  ctx.moveTo(lastX, lastY);
+  ctx.lineTo(t.pageX, t.pageY);
+  ctx.stroke();
+  lastX = t.pageX;
+  lastY = t.pageY;
+}, { passive: false });
+
+canvas.addEventListener('touchend', () => { drawing = false; saveAnnotations(); });
+
+// Text layer click — only create if no annotation is currently focused
+let activeAnnotation = null;
+textLayer.addEventListener('mousedown', e => {
+  if (mode === 'type' && e.target === textLayer && !activeAnnotation) {
+    // Small delay so the mousedown doesn't steal focus from the new textarea
+    const x = e.pageX - 4, y = e.pageY - 12;
+    setTimeout(() => createTextAt(x, y, ''), 10);
+  }
+});
+
+// Init
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
+loadAnnotations();
 </script>
 </body>
 </html>
