@@ -45,8 +45,43 @@
 </head>
 <body>
 
+<!-- PAGE 0: COVER -->
+<div class="page active" id="p0">
+  <div style="text-align:center; margin: 40px 0 20px">
+    <p style="font-size: 32px; font-weight: bold; line-height: 1.5; font-family: sans-serif;">
+      <ruby>はじめまして<rt>hajimemashite</rt></ruby>！<br>
+      <ruby>わたし<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby>〜<ruby>です<rt>desu</rt></ruby>。
+    </p>
+    <p class="en" style="font-size: 14px; margin-top: 12px;">Nice to meet you! I am ~.</p>
+  </div>
+
+  <div class="box" style="background: #fdf6e3; border-color: #e0c97f; margin: 32px 0; text-align: center;">
+    <p style="font-weight: bold;">If you have questions, feel free to ask your sensei during the lesson!</p>
+    <p class="en" style="font-size: 13px; color: #666; margin-top: 4px;">Note: Level 4+ classes are conducted 100% in Japanese.</p>
+  </div>
+
+  <div class="section" style="margin-top: 40px;">
+    <p style="margin-bottom: 20px;">
+      <strong>①</strong>&nbsp; <ruby>〜さん<rt>~san</rt></ruby>、<ruby>わたし<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>にほんご<rt>nihongo</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>せんせい<rt>sensei</rt></ruby><ruby>です<rt>desu</rt></ruby>。<ruby>〜と<rt>~to</rt></ruby><ruby>もうします<rt>mōshimasu</rt></ruby>。<br>
+      <span style="margin-left: 24px;"><ruby>これから<rt>korekara</rt></ruby><ruby>よろしく<rt>yoroshiku</rt></ruby><ruby>おねがいします<rt>onegai shimasu</rt></ruby>。</span><br>
+      <span class="en" style="margin-left: 24px;">"~, I'm your Japanese teacher. My name is ~.<br>
+      <span style="margin-left: 24px;">Nice to meet you, let's have a great time!"</span></span>
+    </p>
+
+    <p style="margin-bottom: 20px;">
+      <strong>②</strong>&nbsp; <ruby>それでは<rt>soredewa</rt></ruby>、<ruby>きょう<rt>kyō</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>じゅぎょう<rt>jugyō</rt></ruby><ruby>はじめます<rt>hajimemasu</rt></ruby>！<br>
+      <span class="en" style="margin-left: 24px;">"Alright, let's start today's lesson!"</span>
+    </p>
+
+    <p>
+      <strong>③</strong>&nbsp; <ruby>これ<rt>kore</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>よんで<rt>yonde</rt></ruby><ruby>ください<rt>kudasai</rt></ruby>。<br>
+      <span class="en" style="margin-left: 24px;">"Please read this."</span>
+    </p>
+  </div>
+</div>
+
 <!-- PAGE 1 -->
-<div class="page active" id="p1">
+<div class="page" id="p1">
   <h1>LESSON 1: <ruby>はじめまして<rt>hajimemashite</rt></ruby>！</h1>
   <h2></h2>
 
@@ -562,7 +597,7 @@
 
 <nav class="nav">
   <button id="prev" onclick="go(-1)" disabled>&larr; Back</button>
-  <span id="indicator">1 / 10</span>
+  <span id="indicator">1 / 11</span>
   <button id="next" onclick="go(1)">Next &rarr;</button>
   <span style="border-left:1px solid #ddd; height:20px; margin:0 4px"></span>
   <button id="btnDraw" onclick="setMode('draw')" style="padding:8px 14px">&#9998; Draw</button>
@@ -589,7 +624,7 @@
 </style>
 
 <script>
-const pages = ['p1','p2','p3','p4','p5','p6','p7','p8','p8b','p9'];
+const pages = ['p0','p1','p2','p3','p4','p5','p6','p7','p8','p8b','p9'];
 let cur = 0;
 
 function go(dir) {
