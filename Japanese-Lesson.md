@@ -87,7 +87,7 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |  └────────────────────────────────────────────────────────────┘          |
 |                                                                         |
 |                                                                         |
-|  YUKI:   こんにちは！私は *です* ゆき。私は学生 *です* 。                    |
+|  YUKI:   こんにちは！私はゆき *です* 。私は学生 *です* 。                    |
 |          Hello! I am Yuki. I am a student.                              |
 |                                                                         |
 |  ALEX:   こんにちは！私はアレックス *です* 。私は先生 *です* 。               |
