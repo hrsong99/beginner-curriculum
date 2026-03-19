@@ -9,20 +9,21 @@
   body { font-family: monospace; background: #fff; color: #111; }
   .page { display: none; max-width: 720px; margin: 0 auto; padding: 60px 40px 100px; }
   .page.active { display: block; }
-  h1 { font-size: 20px; margin-bottom: 8px; letter-spacing: 0.5px; }
-  h2 { font-size: 16px; font-weight: normal; margin-bottom: 32px; border-bottom: 1px solid #111; padding-bottom: 12px; }
-  h3 { font-size: 15px; margin: 32px 0 12px; }
-  p, li { font-size: 14px; line-height: 2; }
+  h1 { font-size: 22px; margin-bottom: 8px; letter-spacing: 0.5px; }
+  h2 { font-size: 18px; font-weight: normal; margin-bottom: 32px; border-bottom: 1px solid #111; padding-bottom: 12px; }
+  h3 { font-size: 17px; margin: 32px 0 12px; }
+  p, li { font-size: 16px; line-height: 1.8; }
   .en { color: #bbb; font-size: 12px; }
   .section { margin: 32px 0; }
-  .pattern { margin: 12px 0 12px 20px; line-height: 2.8; }
+  .pattern { margin: 12px 0 12px 20px; line-height: 2.2; }
   .blank { display: inline-block; border-bottom: 1px solid #111; min-width: 280px; height: 1.6em; vertical-align: bottom; }
   .blank-full { display: block; border-bottom: 1px solid #111; margin: 8px 0 8px 20px; max-width: 420px; height: 1.6em; }
   .box { border: 1px solid #111; padding: 20px 24px; margin: 20px 0; }
-  .box-label { font-size: 12px; font-weight: bold; margin-bottom: 10px; letter-spacing: 0.5px; }
-  .help-box { border: 1px solid #999; padding: 14px 18px; margin: 12px 0 12px 20px; max-width: 380px; line-height: 2.8; }
+  .box-label { font-size: 14px; font-weight: bold; margin-bottom: 10px; letter-spacing: 0.5px; }
+  .help-box { border: 1px solid #999; padding: 14px 18px; margin: 12px 0 12px 20px; max-width: 380px; line-height: 2.2; }
   .dialogue { margin: 12px 0 12px 20px; }
-  .dialogue p { margin-bottom: 12px; }
+  .dialogue p { margin-bottom: 16px; line-height: 1.6; }
+  .dialogue .en { display: block; margin-top: -2px; margin-bottom: 4px; }
   .dialogue .speaker { font-weight: bold; display: inline-block; min-width: 80px; }
   .check-item { margin: 16px 0; padding-left: 10px; }
   .check { display: inline-block; border: 2px solid #111; width: 22px; height: 22px; text-align: center; line-height: 20px; margin-right: 10px; vertical-align: middle; font-size: 14px; }
@@ -34,8 +35,8 @@
   .separator { border: none; border-top: 1px dashed #ccc; margin: 28px 0; }
   ol { padding-left: 20px; }
   ol li { margin: 4px 0; }
-  ruby { ruby-position: over; }
-  rt { font-size: 0.55em; color: #aaa; font-weight: normal; font-style: normal; }
+  ruby { ruby-position: over; position: relative; }
+  rt { font-size: 0.65em; color: #888; font-weight: normal !important; font-style: normal !important; font-family: sans-serif; letter-spacing: 0.3px; transform: translateY(-3px); }
 </style>
 </head>
 <body>
@@ -162,12 +163,12 @@
     <div class="pattern">
       &bull; I am a chef.<br>
       <span class="blank-full"></span>
-      <span style="color:#999; font-size:12px">(<ruby>料理人<rt>ryōrinin</rt></ruby>)</span>
+      <span style="color:#999; font-size:14px">(<ruby>料理人<rt>ryōrinin</rt></ruby>)</span>
     </div>
     <div class="pattern" style="margin-top:12px">
       &bull; They are police officers.<br>
       <span class="blank-full"></span>
-      <span style="color:#999; font-size:12px">(<ruby>警察官<rt>keisatsukan</rt></ruby>)</span>
+      <span style="color:#999; font-size:14px">(<ruby>警察官<rt>keisatsukan</rt></ruby>)</span>
     </div>
   </div>
 
@@ -208,12 +209,12 @@
     <div class="pattern">
       &bull; We are from Korea.<br>
       <span class="blank-full"></span>
-      <span style="color:#999; font-size:12px">(<ruby>韓国<rt>Kankoku</rt></ruby>)</span>
+      <span style="color:#999; font-size:14px">(<ruby>韓国<rt>Kankoku</rt></ruby>)</span>
     </div>
     <div class="pattern" style="margin-top:12px">
       &bull; She is very kind.<br>
       <span class="blank-full"></span>
-      <span style="color:#999; font-size:12px">(<ruby>とても<rt>totemo</rt></ruby> / <ruby>優しい<rt>yasashii</rt></ruby>)</span>
+      <span style="color:#999; font-size:14px">(<ruby>とても<rt>totemo</rt></ruby> / <ruby>優しい<rt>yasashii</rt></ruby>)</span>
     </div>
   </div>
 
