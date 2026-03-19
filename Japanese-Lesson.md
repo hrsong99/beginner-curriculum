@@ -65,7 +65,7 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |  2. Description (描写)                                                   |
 |                                                                         |
 |     * 私は[嬉しい]です。            I am [happy].                          |
-|     * 彼らは[疲れて]います。        They are [tired].                      |
+|     * 彼らは[眠い]です。            They are [sleepy].                     |
 |     * 彼女は[韓国]出身です。        She is [from Korea].                   |
 |                                                                         |
 |                                                                         |
@@ -203,13 +203,13 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |  1. Read Together:                                                      |
 |     * 私は嬉しいです。                I am happy.                          |
 |     * 彼は日本出身です。              He is from Japan.                    |
-|     * 彼らはとても疲れています。      They are very tired.                 |
+|     * 彼らはとても眠いです。          They are very sleepy.                |
 |                                                                         |
 |                                                                         |
 |  2. Fill in the Blanks:                                                 |
 |     * 彼女は東京出身 _______ 。      She is from Tokyo.                   |
 |     * 私はとても元気 _______ 。      I am very energetic.                 |
-|     * あなた _______ 疲れていますか？ Are you tired?                       |
+|     * あなた（　　）眠いですか？       Are you sleepy?                      |
 |                                                                         |
 |                                                                         |
 |  3. Translate (Translate to Japanese):                                  |
