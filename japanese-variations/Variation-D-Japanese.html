@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 1: はじめまして</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #fff;
+      color: #1a1a1a;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    /* Ruby */
+    ruby { ruby-align: center; }
+    rt {
+      font-size: 0.6em;
+      color: #2563eb;
+      letter-spacing: 0.3px;
+    }
+
+    /* Japanese text sizes */
+    .jp { font-size: 22px; line-height: 2.4; }
+    .jp-md { font-size: 18px; line-height: 2.4; }
+
+    /* English gloss */
+    .gloss {
+      font-size: 13px;
+      color: #888;
+      font-style: italic;
+    }
+
+    /* Page divider */
+    .page {
+      margin-bottom: 56px;
+    }
+
+    .page-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #2563eb;
+      margin-bottom: 4px;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    h2 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #f0f0f0;
+    }
+    h3 {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #888;
+      margin: 20px 0 10px;
+    }
+
+    /* Tutor note */
+    .note {
+      background: #fffbeb;
+      border-left: 3px solid #f59e0b;
+      padding: 10px 14px;
+      margin: 16px 0;
+      font-size: 13px;
+      color: #555;
+    }
+    .note strong { color: #92400e; }
+
+    /* Pattern block */
+    .pattern {
+      background: #f8f8f8;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 12px;
+    }
+
+    /* Vocab table */
+    table { width: 100%; border-collapse: collapse; margin: 8px 0 20px; }
+    th {
+      text-align: left;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #999;
+      padding: 6px 8px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+    td { padding: 8px; border-bottom: 1px solid #f0f0f0; }
+    tr:last-child td { border-bottom: none; }
+
+    /* Conversation */
+    .line { margin-bottom: 16px; }
+    .speaker {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 2px;
+    }
+
+    /* Blank */
+    .blank {
+      border: 1.5px dashed #ccc;
+      border-radius: 6px;
+      padding: 12px 16px;
+      background: #fafafa;
+      margin: 4px 0;
+    }
+    .blank .hint { font-size: 13px; color: #888; font-style: italic; }
+    .chips { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+    .chip {
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      padding: 2px 8px;
+      background: #e8f0fe;
+      color: #2563eb;
+      border-radius: 4px;
+    }
+
+    /* Fill blank inline */
+    .gap {
+      display: inline-block;
+      min-width: 60px;
+      border-bottom: 2px solid #2563eb;
+      margin: 0 3px;
+      vertical-align: bottom;
+    }
+
+    /* Drill item */
+    .drill { margin-bottom: 14px; }
+    .drill .en { font-size: 13px; color: #888; margin-top: 2px; }
+
+    /* Rules */
+    .rule { display: flex; gap: 8px; margin-bottom: 6px; font-size: 14px; }
+    .rule .icon { flex-shrink: 0; }
+
+    /* Mission */
+    .mission { display: flex; gap: 10px; margin-bottom: 10px; }
+    .check {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      background: #16a34a;
+      color: white;
+      border-radius: 4px;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 3px;
+    }
+
+    hr { border: none; border-top: 1px solid #f0f0f0; margin: 24px 0; }
+
+    /* Lesson header */
+    .header {
+      margin-bottom: 48px;
+      padding-bottom: 24px;
+      border-bottom: 2px solid #f0f0f0;
+    }
+    .level-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      background: #eff6ff;
+      color: #2563eb;
+      padding: 3px 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+    .goal-box {
+      margin-top: 16px;
+      padding: 12px 16px;
+      background: #f8f8f8;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    /* Flow strip */
+    .flow {
+      display: flex;
+      gap: 0;
+      margin-bottom: 48px;
+      background: #f8f8f8;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .flow-item {
+      flex: 1;
+      padding: 8px 4px;
+      text-align: center;
+      font-size: 11px;
+      border-right: 1px solid #e5e5e5;
+    }
+    .flow-item:last-child { border-right: none; }
+    .flow-item .n { font-weight: 700; color: #2563eb; display: block; }
+    .flow-item .t { color: #999; display: block; font-size: 10px; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <span class="level-tag">A1 — Lesson 1</span>
+    <h1>
+      <ruby>はじめまして<rt>ha·ji·me·ma·shi·te</rt></ruby>！
+    </h1>
+    <div style="font-size:18px;color:#666;">Nice to Meet You!</div>
+    <div class="goal-box">
+      <strong>Goal:</strong> Introduce yourself and describe others using
+      <em>desu</em> and <em>ja arimasen</em>.
+    </div>
+  </div>
+
+  <!-- FLOW -->
+  <div class="flow">
+    <div class="flow-item"><span class="n">1</span>Patterns<span class="t">2m</span></div>
+    <div class="flow-item"><span class="n">2</span>Vocab<span class="t">2m</span></div>
+    <div class="flow-item"><span class="n">3</span>Convo<span class="t">3m</span></div>
+    <div class="flow-item"><span class="n">4</span>Memory<span class="t">3m</span></div>
+    <div class="flow-item"><span class="n">5</span>Drill A<span class="t">3m</span></div>
+    <div class="flow-item"><span class="n">6</span>Drill B<span class="t">3m</span></div>
+    <div class="flow-item"><span class="n">7</span>Dialog<span class="t">3m</span></div>
+    <div class="flow-item"><span class="n">8</span>Roleplay<span class="t">4m</span></div>
+    <div class="flow-item"><span class="n">9</span>Wrap-up<span class="t">2m</span></div>
+  </div>
+
+
+  <!-- PAGE 1: PATTERNS -->
+  <div class="page">
+    <div class="page-title">Page 1</div>
+    <h2>Today's Patterns</h2>
+
+    <div class="note"><strong>Tutor:</strong> Read each pattern aloud. Student repeats after you.</div>
+
+    <div class="pattern">
+      <div style="font-size:12px;font-weight:700;color:#888;margin-bottom:8px;">PATTERN 1 — Saying what something IS</div>
+      <div class="jp">
+        <ruby>私<rt>wa·ta·shi</rt></ruby>
+        <ruby>は<rt>wa</rt></ruby>
+        [<ruby>学生<rt>ga·ku·se·i</rt></ruby>]
+        <ruby>です<rt>de·su</rt></ruby>。
+      </div>
+      <div class="gloss">Watashi wa [gakusei] desu. — I am a [student].</div>
+    </div>
+
+    <div class="pattern">
+      <div style="font-size:12px;font-weight:700;color:#888;margin-bottom:8px;">PATTERN 2 — Saying what something IS NOT</div>
+      <div class="jp">
+        <ruby>私<rt>wa·ta·shi</rt></ruby>
+        <ruby>は<rt>wa</rt></ruby>
+        [<ruby>先生<rt>se·n·se·i</rt></ruby>]
+        <ruby>じゃありません<rt>ja·a·ri·ma·se·n</rt></ruby>。
+      </div>
+      <div class="gloss">Watashi wa [sensei] ja arimasen. — I am not a [teacher].</div>
+    </div>
+  </div>
+
+
+  <!-- PAGE 2: VOCAB -->
+  <div class="page">
+    <div class="page-title">Page 2</div>
+    <h2>Vocabulary</h2>
+
+    <div class="note"><strong>Tutor:</strong> Read each word aloud. Student repeats.</div>
+
+    <h3>Nouns</h3>
+    <table>
+      <tr><th>Japanese</th><th>Romaji</th><th>English</th></tr>
+      <tr>
+        <td style="font-size:18px;line-height:2.2;"><ruby>学生<rt>ga·ku·se·i</rt></ruby></td>
+        <td>gakusei</td><td>student</td>
+      </tr>
+      <tr>
+        <td style="font-size:18px;line-height:2.2;"><ruby>先生<rt>se·n·se·i</rt></ruby></td>
+        <td>sensei</td><td>teacher</td>
+      </tr>
+      <tr>
+        <td style="font-size:18px;line-height:2.2;"><ruby>医者<rt>i·sha</rt></ruby></td>
+        <td>isha</td><td>doctor</td>
+      </tr>
+      <tr>
+        <td style="font-size:18px;line-height:2.2;"><ruby>会社員<rt>ka·i·sha·i·n</rt></ruby></td>
+        <td>kaishain</td><td>office worker</td>
+      </tr>
+      <tr>
+        <td style="font-size:18px;line-height:2.2;"><ruby>友達<rt>to·mo·da·chi</rt></ruby></td>
+        <td>tomodachi</td><td>friend</td>
+      </tr>
+    </table>
+
+    <h3>Adjectives</h3>
+    <table>
+      <tr><th>Japanese</th><th>Romaji</th><th>English</th></tr>
+      <tr>
+        <td style="font-size:18px;line-height:2.2;"><ruby>親切<rt>shi·n·se·tsu</rt></ruby><ruby>な<rt>na</rt></ruby></td>
+        <td>shinsetsu na</td><td>kind</td>
+      </tr>
+      <tr>
+        <td style="font-size:18px;line-height:2.2;"><ruby>元気<rt>ge·n·ki</rt></ruby><ruby>な<rt>na</rt></ruby></td>
+        <td>genki na</td><td>energetic / well</td>
+      </tr>
+    </table>
+
+    <hr>
+    <h3>Quick check — say these in Japanese</h3>
+    <div class="drill">
+      <div>1. "I am a student."</div>
+      <div style="border-bottom:1.5px dashed #ccc;height:28px;margin:6px 0;"></div>
+    </div>
+    <div class="drill">
+      <div>2. "She is a doctor."</div>
+      <div style="border-bottom:1.5px dashed #ccc;height:28px;margin:6px 0;"></div>
+    </div>
+    <div class="drill">
+      <div>3. "I am not a teacher."</div>
+      <div style="border-bottom:1.5px dashed #ccc;height:28px;margin:6px 0;"></div>
+    </div>
+  </div>
+
+
+  <!-- PAGE 3: GUIDED CONVERSATION -->
+  <div class="page">
+    <div class="page-title">Page 3</div>
+    <h2>Guided Conversation</h2>
+
+    <p style="font-size:13px;color:#888;margin-bottom:12px;">Context: Tom meets Yuki at a language exchange event.</p>
+    <div class="note"><strong>Tutor:</strong> Read together. Then swap roles and read again.</div>
+
+    <div class="line">
+      <div class="speaker">Tom</div>
+      <div class="jp-md">
+        <ruby>はじめまして<rt>ha·ji·me·ma·shi·te</rt></ruby>！
+        <ruby>私<rt>wa·ta·shi</rt></ruby><ruby>は<rt>wa</rt></ruby>
+        トム<ruby>です<rt>de·su</rt></ruby>。
+        <ruby>私<rt>wa·ta·shi</rt></ruby><ruby>は<rt>wa</rt></ruby>
+        <ruby>学生<rt>ga·ku·se·i</rt></ruby><ruby>です<rt>de·su</rt></ruby>。
+      </div>
+      <div class="gloss">Nice to meet you! I am Tom. I am a student.</div>
+    </div>
+
+    <div class="line">
+      <div class="speaker">Yuki</div>
+      <div class="jp-md">
+        <ruby>はじめまして<rt>ha·ji·me·ma·shi·te</rt></ruby>！
+        <ruby>私<rt>wa·ta·shi</rt></ruby><ruby>は<rt>wa</rt></ruby>
+        ユキ<ruby>です<rt>de·su</rt></ruby>。
+        <ruby>私<rt>wa·ta·shi</rt></ruby><ruby>は<rt>wa</rt></ruby>
+        <ruby>先生<rt>se·n·se·i</rt></ruby><ruby>です<rt>de·su</rt></ruby>。
+      </div>
+      <div class="gloss">Nice to meet you! I am Yuki. I am a teacher.</div>
+    </div>
+
+    <div class="line">
+      <div class="speaker">Tom</div>
+      <div class="jp-md">
+        <ruby>よろしく<rt>yo·ro·shi·ku</rt></ruby>
+        <ruby>お願いします<rt>o·ne·ga·i·shi·ma·su</rt></ruby>！
+        <ruby>あの<rt>a·no</rt></ruby><ruby>人<rt>hi·to</rt></ruby><ruby>は<rt>wa</rt></ruby>
+        <ruby>誰<rt>da·re</rt></ruby><ruby>です<rt>de·su</rt></ruby><ruby>か<rt>ka</rt></ruby>？
+      </div>
+      <div class="gloss">Pleased to meet you! Who is that person?</div>
+    </div>
+
+    <div class="line">
+      <div class="speaker">Yuki</div>
+      <div class="jp-md">
+        <ruby>あの<rt>a·no</rt></ruby><ruby>人<rt>hi·to</rt></ruby><ruby>は<rt>wa</rt></ruby>
+        <ruby>田中<rt>Ta·na·ka</rt></ruby>さん<ruby>です<rt>de·su</rt></ruby>。
+        <ruby>田中<rt>Ta·na·ka</rt></ruby>さん<ruby>は<rt>wa</rt></ruby>
+        <ruby>医者<rt>i·sha</rt></ruby><ruby>です<rt>de·su</rt></ruby>。
+        <ruby>田中<rt>Ta·na·ka</rt></ruby>さん<ruby>は<rt>wa</rt></ruby>
+        <ruby>とても<rt>to·te·mo</rt></ruby>
+        <ruby>親切<rt>shi·n·se·tsu</rt></ruby><ruby>です<rt>de·su</rt></ruby>。
+      </div>
+      <div class="gloss">That is Mr. Tanaka. Mr. Tanaka is a doctor. Mr. Tanaka is very kind.</div>
+    </div>
+  </div>
+
+
+  <!-- PAGE 4: MEMORY CHECK -->
+  <div class="page">
+    <div class="page-title">Page 4</div>
+    <h2>Memory Check</h2>
+
+    <div class="note"><strong>Tutor:</strong> Student fills in blanks from the hints. Try to go faster this time!</div>
+
+    <div class="line">
+      <div class="speaker">Tom</div>
+      <div class="blank">
+        <div class="hint">"Nice to meet you! I am Tom. I am a student."</div>
+        <div class="chips">
+          <span class="chip">hajimemashite</span>
+          <span class="chip">watashi wa</span>
+          <span class="chip">Tomu</span>
+          <span class="chip">gakusei</span>
+          <span class="chip">desu</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="line">
+      <div class="speaker">Yuki</div>
+      <div class="jp-md">
+        <ruby>はじめまして<rt>ha·ji·me·ma·shi·te</rt></ruby>！
+        <ruby>私<rt>wa·ta·shi</rt></ruby><ruby>は<rt>wa</rt></ruby>
+        ユキ<ruby>です<rt>de·su</rt></ruby>。
+        <ruby>私<rt>wa·ta·shi</rt></ruby><ruby>は<rt>wa</rt></ruby>
+        <ruby>先生<rt>se·n·se·i</rt></ruby><ruby>です<rt>de·su</rt></ruby>。
+      </div>
+      <div class="gloss">Nice to meet you! I am Yuki. I am a teacher.</div>
+    </div>
+
+    <div class="line">
+      <div class="speaker">Tom</div>
+      <div class="blank">
+        <div class="hint">"Pleased to meet you! Who is that person?"</div>
+        <div class="chips">
+          <span class="chip">yoroshiku onegaishimasu</span>
+          <span class="chip">ano hito wa</span>
+          <span class="chip">dare desu ka</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="line">
+      <div class="speaker">Yuki</div>
+      <div class="jp-md">
+        <ruby>あの<rt>a·no</rt></ruby><ruby>人<rt>hi·to</rt></ruby><ruby>は<rt>wa</rt></ruby>
+        <ruby>田中<rt>Ta·na·ka</rt></ruby>さん<ruby>です<rt>de·su</rt></ruby>。
+        <ruby>田中<rt>Ta·na·ka</rt></ruby>さん<ruby>は<rt>wa</rt></ruby>
+        <ruby>医者<rt>i·sha</rt></ruby><ruby>です<rt>de·su</rt></ruby>。
+      </div>
+      <div class="gloss">That is Mr. Tanaka. Mr. Tanaka is a doctor.</div>
+    </div>
+  </div>
+
+
+  <!-- PAGE 5: DRILL A -->
+  <div class="page">
+    <div class="page-title">Page 5</div>
+    <h2>Pattern Drill A — ___は___です</h2>
+    <p class="gloss" style="margin-bottom:16px;">___ wa ___ desu &nbsp;·&nbsp; "___ is ___"</p>
+
+    <h3>1. Read together</h3>
+    <div class="drill">
+      <div class="jp-md"><ruby>私<rt>wa·ta·shi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>学生<rt>ga·ku·se·i</rt></ruby><ruby>です<rt>de·su</rt></ruby>。</div>
+      <div class="en gloss">I am a student.</div>
+    </div>
+    <div class="drill">
+      <div class="jp-md"><ruby>彼女<rt>ka·no·jo</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>医者<rt>i·sha</rt></ruby><ruby>です<rt>de·su</rt></ruby>。</div>
+      <div class="en gloss">She is a doctor.</div>
+    </div>
+    <div class="drill">
+      <div class="jp-md"><ruby>田中<rt>Ta·na·ka</rt></ruby>さん<ruby>は<rt>wa</rt></ruby><ruby>先生<rt>se·n·se·i</rt></ruby><ruby>です<rt>de·su</rt></ruby>。</div>
+      <div class="en gloss">Mr. Tanaka is a teacher.</div>
+    </div>
+
+    <h3>2. Fill in the blanks</h3>
+    <div class="drill">
+      <div class="jp-md">
+        <ruby>私<rt>wa·ta·shi</rt></ruby><ruby>は<rt>wa</rt></ruby>
+        <ruby>会社員<rt>ka·i·sha·i·n</rt></ruby>
+        <span class="gap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>。
+      </div>
+      <div class="gloss">I am an office worker.</div>
+    </div>
+    <div class="drill">
+      <div class="jp-md">
+        <ruby>彼<rt>ka·re</rt></ruby>
+        <span class="gap">&nbsp;&nbsp;&nbsp;</span>
+        <ruby>友達<rt>to·mo·da·chi</rt></ruby><ruby>です<rt>de·su</rt></ruby>。
+      </div>
+      <div class="gloss">He is a friend.</div>
+    </div>
+
+    <h3>3. Translate into Japanese</h3>
+    <div class="drill">
+      <div style="margin-bottom:4px;">"I am a student."</div>
+      <div style="border-bottom:1.5px dashed #ccc;height:28px;margin-bottom:4px;"></div>
+      <div class="chips"><span class="chip">watashi</span><span class="chip">gakusei</span><span class="chip">desu</span></div>
+    </div>
+    <div class="drill">
+      <div style="margin-bottom:4px;">"She is a teacher."</div>
+      <div style="border-bottom:1.5px dashed #ccc;height:28px;margin-bottom:4px;"></div>
+      <div class="chips"><span class="chip">kanojo</span><span class="chip">sensei</span><span class="chip">desu</span></div>
+    </div>
+  </div>
+
+
+  <!-- PAGE 6: DRILL B -->
+  <div class="page">
+    <div class="page-title">Page 6</div>
+    <h2>Pattern Drill B — ___は___じゃありません</h2>
+    <p class="gloss" style="margin-bottom:16px;">___ wa ___ ja arimasen &nbsp;·&nbsp; "___ is not ___"</p>
+
+    <h3>1. Read together</h3>
+    <div class="drill">
+      <div class="jp-md"><ruby>私<rt>wa·ta·shi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>先生<rt>se·n·se·i</rt></ruby><ruby>じゃありません<rt>ja·a·ri·ma·se·n</rt></ruby>。</div>
+      <div class="gloss">I am not a teacher.</div>
+    </div>
+    <div class="drill">
+      <div class="jp-md"><ruby>彼<rt>ka·re</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>医者<rt>i·sha</rt></ruby><ruby>じゃありません<rt>ja·a·ri·ma·se·n</rt></ruby>。</div>
+      <div class="gloss">He is not a doctor.</div>
+    </div>
+    <div class="drill">
+      <div class="jp-md"><ruby>彼女<rt>ka·no·jo</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>会社員<rt>ka·i·sha·i·n</rt></ruby><ruby>じゃありません<rt>ja·a·ri·ma·se·n</rt></ruby>。</div>
+      <div class="gloss">She is not an office worker.</div>
+    </div>
+
+    <h3>2. Fill in the blanks</h3>
+    <div class="drill">
+      <div class="jp-md">
+        <ruby>私<rt>wa·ta·shi</rt></ruby><ruby>は<rt>wa</rt></ruby>
+        <ruby>学生<rt>ga·ku·se·i</rt></ruby>
+        <span class="gap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>。
+      </div>
+      <div class="gloss">I am not a student.</div>
+    </div>
+    <div class="drill">
+      <div class="jp-md">
+        <ruby>田中<rt>Ta·na·ka</rt></ruby>さん
+        <span class="gap">&nbsp;&nbsp;&nbsp;</span>
+        <ruby>先生<rt>se·n·se·i</rt></ruby><ruby>じゃありません<rt>ja·a·ri·ma·se·n</rt></ruby>。
+      </div>
+      <div class="gloss">Mr. Tanaka is not a teacher.</div>
+    </div>
+
+    <h3>3. Translate into Japanese</h3>
+    <div class="drill">
+      <div style="margin-bottom:4px;">"I am not a doctor."</div>
+      <div style="border-bottom:1.5px dashed #ccc;height:28px;margin-bottom:4px;"></div>
+      <div class="chips"><span class="chip">watashi</span><span class="chip">isha</span><span class="chip">ja arimasen</span></div>
+    </div>
+    <div class="drill">
+      <div style="margin-bottom:4px;">"He is not an office worker."</div>
+      <div style="border-bottom:1.5px dashed #ccc;height:28px;margin-bottom:4px;"></div>
+      <div class="chips"><span class="chip">kare</span><span class="chip">kaishain</span><span class="chip">ja arimasen</span></div>
+    </div>
+  </div>
+
+
+  <!-- PAGE 7: SHORT DIALOGUES -->
+  <div class="page">
+    <div class="page-title">Page 7</div>
+    <h2>Short Dialogues</h2>
+    <div class="note"><strong>Tutor:</strong> Read your line. Student speaks the blank using the hint.</div>
+
+    <h3>1 — "What is your job?"</h3>
+    <div class="line">
+      <div class="speaker">Tutor</div>
+      <div class="jp-md">
+        <ruby>お仕事<rt>o·shi·go·to</rt></ruby><ruby>は<rt>wa</rt></ruby>
+        <ruby>何<rt>na·n</rt></ruby><ruby>です<rt>de·su</rt></ruby><ruby>か<rt>ka</rt></ruby>？
+      </div>
+      <div class="gloss">What is your job?</div>
+    </div>
+    <div class="line">
+      <div class="speaker">Student</div>
+      <div class="blank">
+        <div class="hint">"I am a student."</div>
+        <div class="chips"><span class="chip">watashi wa</span><span class="chip">gakusei</span><span class="chip">desu</span></div>
+      </div>
+    </div>
+
+    <h3>2 — "Is Mr. Tanaka a teacher?"</h3>
+    <div class="line">
+      <div class="speaker">Student</div>
+      <div class="blank">
+        <div class="hint">"Is Mr. Tanaka a teacher?"</div>
+        <div class="chips"><span class="chip">Tanaka-san wa</span><span class="chip">sensei</span><span class="chip">desu ka</span></div>
+      </div>
+    </div>
+    <div class="line">
+      <div class="speaker">Tutor</div>
+      <div class="jp-md">
+        <ruby>いいえ<rt>i·i·e</rt></ruby>、
+        <ruby>田中<rt>Ta·na·ka</rt></ruby>さん<ruby>は<rt>wa</rt></ruby>
+        <ruby>医者<rt>i·sha</rt></ruby><ruby>です<rt>de·su</rt></ruby>。
+      </div>
+      <div class="gloss">No, Mr. Tanaka is a doctor.</div>
+    </div>
+
+    <h3>3 — "Are you a teacher?"</h3>
+    <div class="line">
+      <div class="speaker">Tutor</div>
+      <div class="jp-md">
+        <ruby>先生<rt>se·n·se·i</rt></ruby><ruby>です<rt>de·su</rt></ruby><ruby>か<rt>ka</rt></ruby>？
+      </div>
+      <div class="gloss">Are you a teacher?</div>
+    </div>
+    <div class="line">
+      <div class="speaker">Student</div>
+      <div class="blank">
+        <div class="hint">"No, I am not a teacher. I am a student."</div>
+        <div class="chips">
+          <span class="chip">iie</span>
+          <span class="chip">sensei ja arimasen</span>
+          <span class="chip">gakusei desu</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- PAGE 8: ROLEPLAY -->
+  <div class="page">
+    <div class="page-title">Page 8</div>
+    <h2>Roleplay — First Day at Japanese Class</h2>
+
+    <p style="margin-bottom:16px;font-size:14px;">You just arrived at a Japanese class abroad. Meet another student (the tutor) and introduce yourself!</p>
+
+    <div style="background:#f8f8f8;border-radius:8px;padding:16px 20px;margin-bottom:16px;">
+      <div style="font-weight:700;margin-bottom:10px;">Rules</div>
+      <div class="rule"><span class="icon" style="color:#16a34a;">✓</span> Say your name and role using <em>desu</em></div>
+      <div class="rule"><span class="icon" style="color:#16a34a;">✓</span> Ask at least 1 question using <em>desu ka?</em></div>
+      <div class="rule"><span class="icon" style="color:#16a34a;">✓</span> Say 1 thing that is NOT true using <em>ja arimasen</em></div>
+      <div class="rule"><span class="icon" style="color:#dc2626;">✗</span> No answering with just <em>hai</em> or <em>iie</em> — full sentences only</div>
+    </div>
+
+    <h3>Phrase bank</h3>
+    <div class="drill">
+      <div class="jp-md"><ruby>私<rt>wa·ta·shi</rt></ruby><ruby>は<rt>wa</rt></ruby>___<ruby>です<rt>de·su</rt></ruby>。</div>
+      <div class="gloss">Watashi wa ___ desu. — "I am ___."</div>
+    </div>
+    <div class="drill">
+      <div class="jp-md">___<ruby>は<rt>wa</rt></ruby>___<ruby>です<rt>de·su</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+      <div class="gloss">___ wa ___ desu ka? — "Is ___ a ___?"</div>
+    </div>
+    <div class="drill">
+      <div class="jp-md"><ruby>私<rt>wa·ta·shi</rt></ruby><ruby>は<rt>wa</rt></ruby>___<ruby>じゃありません<rt>ja·a·ri·ma·se·n</rt></ruby>。</div>
+      <div class="gloss">Watashi wa ___ ja arimasen. — "I am not ___."</div>
+    </div>
+    <div class="drill">
+      <div class="jp-md"><ruby>よろしく<rt>yo·ro·shi·ku</rt></ruby><ruby>お願いします<rt>o·ne·ga·i·shi·ma·su</rt></ruby>！</div>
+      <div class="gloss">Pleased to meet you!</div>
+    </div>
+
+    <div class="note"><strong>Tutor:</strong> Start with "<ruby>はじめまして<rt>ha·ji·me·ma·shi·te</rt></ruby>！<ruby>私<rt>wa·ta·shi</rt></ruby><ruby>は<rt>wa</rt></ruby>___<ruby>です<rt>de·su</rt></ruby>。" — Point to the phrase bank if the student is stuck.</div>
+  </div>
+
+
+  <!-- PAGE 9: WRAP-UP -->
+  <div class="page">
+    <div class="page-title">Page 9</div>
+    <h2>Mission Complete!</h2>
+
+    <div class="note"><strong>Tutor:</strong> "Great job today! You did amazing!" — Check off each mission while reading it aloud.</div>
+
+    <div style="margin:20px 0;">
+      <div class="mission">
+        <div class="check">✓</div>
+        <div>
+          <strong>Pattern 1 — ___<ruby>は<rt>wa</rt></ruby>___<ruby>です<rt>de·su</rt></ruby>。</strong><br>
+          <span class="gloss">I can say what something IS in Japanese.</span>
+        </div>
+      </div>
+      <div class="mission">
+        <div class="check">✓</div>
+        <div>
+          <strong>Pattern 2 — ___<ruby>は<rt>wa</rt></ruby>___<ruby>じゃありません<rt>ja·a·ri·ma·se·n</rt></ruby>。</strong><br>
+          <span class="gloss">I can say what something IS NOT.</span>
+        </div>
+      </div>
+      <div class="mission">
+        <div class="check">✓</div>
+        <div>
+          <strong>Goal — I introduced myself at Japanese class!</strong>
+        </div>
+      </div>
+    </div>
+
+    <h3>Read one more time</h3>
+    <div class="drill">
+      <div class="jp-md"><ruby>私<rt>wa·ta·shi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>学生<rt>ga·ku·se·i</rt></ruby><ruby>です<rt>de·su</rt></ruby>。</div>
+      <div class="gloss">I am a student.</div>
+    </div>
+    <div class="drill">
+      <div class="jp-md"><ruby>彼女<rt>ka·no·jo</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>医者<rt>i·sha</rt></ruby><ruby>です<rt>de·su</rt></ruby>。</div>
+      <div class="gloss">She is a doctor.</div>
+    </div>
+    <div class="drill">
+      <div class="jp-md"><ruby>私<rt>wa·ta·shi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>先生<rt>se·n·se·i</rt></ruby><ruby>じゃありません<rt>ja·a·ri·ma·se·n</rt></ruby>。</div>
+      <div class="gloss">I am not a teacher.</div>
+    </div>
+    <div class="drill">
+      <div class="jp-md"><ruby>田中<rt>Ta·na·ka</rt></ruby>さん<ruby>は<rt>wa</rt></ruby><ruby>とても<rt>to·te·mo</rt></ruby><ruby>親切<rt>shi·n·se·tsu</rt></ruby><ruby>です<rt>de·su</rt></ruby>。</div>
+      <div class="gloss">Mr. Tanaka is very kind.</div>
+    </div>
+
+    <div class="note" style="margin-top:24px;">
+      <strong>Tutor:</strong> "Perfect! See you in the next lesson!" —
+      <ruby>完璧<rt>ka·n·pe·ki</rt></ruby><ruby>です<rt>de·su</rt></ruby>！
+      <ruby>また<rt>ma·ta</rt></ruby>
+      <ruby>次<rt>tsu·gi</rt></ruby><ruby>の<rt>no</rt></ruby>
+      <ruby>授業<rt>ju·gyou</rt></ruby><ruby>で<rt>de</rt></ruby>
+      <ruby>会<rt>a</rt></ruby>いましょう！
+    </div>
+  </div>
+
+</body>
+</html>

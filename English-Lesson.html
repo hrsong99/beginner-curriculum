@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 1: Nice to Meet You!</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: monospace; background: #fff; color: #111; }
+  .page { display: none; max-width: 720px; margin: 0 auto; padding: 60px 40px 100px; }
+  .page.active { display: block; }
+  h1 { font-size: 20px; margin-bottom: 8px; letter-spacing: 0.5px; }
+  h2 { font-size: 16px; font-weight: normal; margin-bottom: 32px; border-bottom: 1px solid #111; padding-bottom: 12px; }
+  h3 { font-size: 15px; margin: 32px 0 12px; }
+  p, li { font-size: 14px; line-height: 2; }
+  .ko { color: #666; }
+  .section { margin: 32px 0; }
+  .pattern { margin: 12px 0 12px 20px; line-height: 2.2; }
+  .caps { font-weight: bold; }
+  .blank { display: inline-block; border-bottom: 1px solid #111; min-width: 280px; height: 1.6em; vertical-align: bottom; }
+  .blank-full { display: block; border-bottom: 1px solid #111; margin: 8px 0 8px 20px; max-width: 420px; height: 1.6em; }
+  .box { border: 1px solid #111; padding: 20px 24px; margin: 20px 0; }
+  .box-label { font-size: 12px; font-weight: bold; margin-bottom: 10px; letter-spacing: 0.5px; }
+  .help-box { border: 1px solid #999; padding: 14px 18px; margin: 12px 0 12px 20px; max-width: 380px; line-height: 2; }
+  .dialogue { margin: 12px 0 12px 20px; }
+  .dialogue p { margin-bottom: 12px; }
+  .dialogue .speaker { font-weight: bold; display: inline-block; min-width: 80px; }
+  .check-item { margin: 16px 0; padding-left: 10px; }
+  .check { display: inline-block; border: 2px solid #111; width: 22px; height: 22px; text-align: center; line-height: 20px; margin-right: 10px; vertical-align: middle; font-size: 14px; }
+  .nav { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; border-top: 1px solid #ddd; padding: 16px; display: flex; justify-content: center; gap: 16px; align-items: center; }
+  .nav button { font-family: monospace; font-size: 14px; padding: 8px 24px; border: 1px solid #111; background: #fff; cursor: pointer; }
+  .nav button:hover { background: #f0f0f0; }
+  .nav button:disabled { color: #ccc; border-color: #ccc; cursor: default; background: #fff; }
+  .nav span { font-size: 13px; color: #666; min-width: 80px; text-align: center; }
+  .tutor-box { border: 1px dashed #999; padding: 16px 20px; margin: 20px 0; }
+  .tutor-label { font-size: 11px; color: #666; margin-bottom: 8px; letter-spacing: 0.5px; }
+  .separator { border: none; border-top: 1px dashed #ccc; margin: 28px 0; }
+  ol { padding-left: 20px; }
+  ol li { margin: 4px 0; }
+</style>
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active" id="p1">
+  <h1>LESSON 1: NICE TO MEET YOU!</h1>
+  <h2></h2>
+
+  <div class="box">
+    <div class="box-label">OUTCOME / <span class="ko">목표</span></div>
+    You can introduce yourself and describe people<br>
+    <span class="ko">자기소개하고 사람을 설명할 수 있어요.</span>
+  </div>
+
+  <div class="section">
+    <h3>TODAY'S PATTERNS</h3>
+
+    <p><strong>1. Identity</strong> <span class="ko">(신원/정체)</span></p>
+    <div class="pattern">
+      I am a [student]. <span class="ko">저는 [학생]입니다.</span><br>
+      You are a [teacher]. <span class="ko">당신은 [선생님]입니다.</span><br>
+      He/She is a [doctor]. <span class="ko">그/그녀는 [의사]입니다.</span>
+    </div>
+
+    <p style="margin-top:16px"><strong>2. Description</strong> <span class="ko">(묘사)</span></p>
+    <div class="pattern">
+      I am [happy]. <span class="ko">저는 [행복]합니다.</span><br>
+      They are [tired]. <span class="ko">그들은 [피곤]합니다.</span><br>
+      She is [from Korea]. <span class="ko">그녀는 [한국] 출신입니다.</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="p2">
+  <h1>CONVERSATION: GUIDED READING</h1>
+  <h2></h2>
+
+  <div class="box">
+    <div class="box-label">CONTEXT / <span class="ko">상황</span></div>
+    Two people meet at a language exchange meetup.<br>
+    <span class="ko">두 사람이 언어교환 모임에서 만납니다.</span>
+  </div>
+
+  <div class="dialogue" style="margin-top:16px">
+    <p><span class="speaker">MIN-JI:</span> Hello! I <em>am</em> Min-ji. I <em>am</em> a student.<br>
+    <span class="ko" style="margin-left:80px">안녕! 나는 민지야. 나는 학생이야.</span></p>
+
+    <p><span class="speaker">ALEX:</span> Hi! I <em>am</em> Alex. I <em>am</em> a teacher.<br>
+    <span class="ko" style="margin-left:80px">안녕! 나는 알렉스야. 나는 선생님이야.</span><br>
+    <span style="margin-left:80px">Nice to meet you!</span><br>
+    <span class="ko" style="margin-left:80px">만나서 반가워요!</span></p>
+
+    <p><span class="speaker">MIN-JI:</span> Nice to meet you too! <em>Is</em> that your friend?<br>
+    <span class="ko" style="margin-left:80px">저도 반가워요! 저 사람은 당신 친구예요?</span></p>
+
+    <p><span class="speaker">ALEX:</span> Yes! She <em>is</em> Sarah. She <em>is</em> from London.<br>
+    <span class="ko" style="margin-left:80px">네! 그녀는 사라예요. 그녀는 런던 출신이에요.</span><br>
+    <span style="margin-left:80px">She <em>is</em> very kind.</span><br>
+    <span class="ko" style="margin-left:80px">그녀는 매우 친절해요.</span></p>
+
+    <p><span class="speaker">MIN-JI:</span> Great! <em>Are</em> those your classmates?<br>
+    <span class="ko" style="margin-left:80px">좋아요! 저 사람들은 당신 반 친구들이에요?</span></p>
+
+    <p><span class="speaker">ALEX:</span> Yes! They <em>are</em> my classmates.<br>
+    <span class="ko" style="margin-left:80px">네! 그들은 제 반 친구들이에요.</span><br>
+    <span style="margin-left:80px">They <em>are</em> really fun!</span><br>
+    <span class="ko" style="margin-left:80px">그들은 정말 재미있어요!</span></p>
+  </div>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="p3">
+  <h1>CONVERSATION: SPEED &amp; MEMORY CHECK</h1>
+  <h2></h2>
+
+  <div class="dialogue" style="margin-top:16px">
+    <p><span class="speaker">MIN-JI:</span> <span class="blank"></span><br>
+    <span class="ko" style="margin-left:70px">(안녕! 저는 민지예요. 저는 학생이에요.)</span></p>
+
+    <p><span class="speaker">ALEX:</span> Hi! I am Alex. I am a teacher. Nice to meet you!</p>
+
+    <p><span class="speaker">MIN-JI:</span> <span class="blank"></span><br>
+    <span class="ko" style="margin-left:70px">(저도 반가워요! 저 사람은 당신 친구예요?)</span></p>
+
+    <p><span class="speaker">ALEX:</span> Yes! She is Sarah. She is from London. She is very kind.</p>
+
+    <p><span class="speaker">MIN-JI:</span> <span class="blank"></span><br>
+    <span class="ko" style="margin-left:70px">(좋아요! 저 사람들은 당신 반 친구들이에요?)</span></p>
+
+    <p><span class="speaker">ALEX:</span> Yes! They are my classmates. They are really fun!</p>
+  </div>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page" id="p4">
+  <h1>PATTERN DRILL: IDENTITY <span class="ko">(신원)</span></h1>
+  <h2></h2>
+
+  <p>PATTERN: Subject + am/is/are + a [noun]</p>
+
+  <div class="section">
+    <p><strong>1. Read Together</strong> <span class="ko">(같이 읽기)</span></p>
+    <div class="pattern">
+      I am a student. <span class="ko">저는 학생입니다.</span><br>
+      She is a doctor. <span class="ko">그녀는 의사입니다.</span><br>
+      They are office workers. <span class="ko">그들은 회사원입니다.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <p><strong>2. Fill in the Blanks</strong> <span class="ko">(빈칸 채우기)</span></p>
+    <div class="pattern">
+      He <span class="blank" style="min-width:80px"></span> a teacher. <span class="ko">그는 선생님입니다.</span><br>
+      We <span class="blank" style="min-width:80px"></span> students. <span class="ko">우리는 학생입니다.</span><br>
+      <span class="blank" style="min-width:80px"></span> she a nurse? <span class="ko">그녀는 간호사인가요?</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <p><strong>3. Translate</strong> <span class="ko">(영어로 번역해 보세요)</span></p>
+    <div class="pattern">
+      <span class="ko">저는 요리사입니다.</span><br>
+      <span class="blank-full"></span>
+      <span style="color:#666; font-size:12px">(chef)</span>
+    </div>
+    <div class="pattern" style="margin-top:12px">
+      <span class="ko">그들은 경찰관입니다.</span><br>
+      <span class="blank-full"></span>
+      <span style="color:#666; font-size:12px">(police officers)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <p><strong>4. Make Your Own</strong> <span class="ko">(자유 문장 만들기)</span></p>
+    <p style="margin-left:16px">Use the pattern to make your own sentence!</p>
+    <span class="blank-full"></span>
+  </div>
+</div>
+
+<!-- PAGE 5 -->
+<div class="page" id="p5">
+  <h1>PATTERN DRILL: DESCRIPTION <span class="ko">(묘사)</span></h1>
+  <h2></h2>
+
+  <p>PATTERN: Subject + am/is/are + [adjective] / from [place]</p>
+
+  <div class="section">
+    <p><strong>1. Read Together</strong> <span class="ko">(같이 읽기)</span></p>
+    <div class="pattern">
+      I am happy. <span class="ko">저는 행복합니다.</span><br>
+      He is from Japan. <span class="ko">그는 일본 출신입니다.</span><br>
+      They are very tired. <span class="ko">그들은 매우 피곤합니다.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <p><strong>2. Fill in the Blanks</strong> <span class="ko">(빈칸 채우기)</span></p>
+    <div class="pattern">
+      She <span class="blank" style="min-width:80px"></span> from Seoul. <span class="ko">그녀는 서울 출신입니다.</span><br>
+      I <span class="blank" style="min-width:80px"></span> very excited. <span class="ko">저는 매우 신나요.</span><br>
+      <span class="blank" style="min-width:80px"></span> you tired? <span class="ko">당신은 피곤한가요?</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <p><strong>3. Translate</strong> <span class="ko">(영어로 번역해 보세요)</span></p>
+    <div class="pattern">
+      <span class="ko">우리는 한국에서 왔어요.</span><br>
+      <span class="blank-full"></span>
+      <span style="color:#666; font-size:12px">(Korea)</span>
+    </div>
+    <div class="pattern" style="margin-top:12px">
+      <span class="ko">그녀는 매우 친절합니다.</span><br>
+      <span class="blank-full"></span>
+      <span style="color:#666; font-size:12px">(very / kind)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <p><strong>4. Make Your Own</strong> <span class="ko">(자유 문장 만들기)</span></p>
+    <p style="margin-left:16px">Use the pattern to make your own sentence!</p>
+    <span class="blank-full"></span>
+  </div>
+</div>
+
+<!-- PAGE 6 -->
+<div class="page" id="p6">
+  <h1>SHORT DIALOGUES <span class="ko">짧은 대화</span></h1>
+  <h2></h2>
+
+  <div class="section">
+    <p><strong>DIALOGUE 1:</strong></p>
+    <div class="dialogue">
+      <p><span class="speaker">Tutor:</span> What is your job?<br>
+      <span class="ko" style="margin-left:80px">당신의 직업은 무엇인가요?</span></p>
+      <p><span class="speaker">Student:</span> <span class="blank"></span><br>
+      <span class="ko" style="margin-left:80px">(저는 학생입니다. | student)</span></p>
+    </div>
+  </div>
+
+  <div class="section">
+    <p><strong>DIALOGUE 2:</strong></p>
+    <div class="dialogue">
+      <p><span class="speaker">Student:</span> <span class="blank"></span><br>
+      <span class="ko" style="margin-left:80px">(그녀는 의사인가요? | Is / she / doctor)</span></p>
+      <p><span class="speaker">Tutor:</span> No, she is a nurse.<br>
+      <span class="ko" style="margin-left:80px">아니요, 그녀는 간호사입니다.</span></p>
+    </div>
+  </div>
+
+  <div class="section">
+    <p><strong>DIALOGUE 3:</strong></p>
+    <div class="dialogue">
+      <p><span class="speaker">Tutor:</span> How are you feeling today?<br>
+      <span class="ko" style="margin-left:80px">오늘 기분이 어떠세요?</span></p>
+      <p><span class="speaker">Student:</span> <span class="blank"></span><br>
+      <span class="ko" style="margin-left:80px">(저는 오늘 매우 행복해요! | very / happy)</span></p>
+    </div>
+  </div>
+
+  <div class="section">
+    <p><strong>DIALOGUE 4:</strong></p>
+    <div class="dialogue">
+      <p><span class="speaker">Student:</span> <span class="blank"></span><br>
+      <span class="ko" style="margin-left:80px">(그는 어디 출신인가요? | Where / he / from)</span></p>
+      <p><span class="speaker">Tutor:</span> He is from Canada.<br>
+      <span class="ko" style="margin-left:80px">그는 캐나다 출신입니다.</span></p>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 7 -->
+<div class="page" id="p7">
+  <h1>REAL-LIFE PRACTICE: ROLEPLAY <span class="ko">실전 연습</span></h1>
+  <h2>"The Welcome Party"</h2>
+
+  <p>SCENARIO:<br>
+  You are at a welcome party for new international students. Meet the tutor (another student) and make a new friend!<br>
+  <span class="ko">상황: 외국인 학생 환영 파티에 왔습니다. 튜터(다른 학생)를 만나세요!</span></p>
+
+  <div class="box" style="margin-top:20px">
+    <div class="box-label">FOR TUTOR</div>
+    <p>GOAL: Help the student have a real conversation.</p>
+    <p style="margin-top:8px">RULES:</p>
+    <div class="pattern">
+      &#10003; Start with: "Hi! Are you new here?"<br>
+      &#10003; Use simple sentences. Stay in character.<br>
+      &#10007; Don't correct grammar mid-conversation.
+    </div>
+    <p style="margin-top:8px">PHRASES:</p>
+    <div class="pattern">
+      "Are you from ___?"<br>
+      "Are you a ___?"
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="box-label"><span class="ko">학생용 (FOR STUDENT)</span></div>
+    <p><span class="ko">목표: 새 친구를 사귀세요!</span></p>
+    <p style="margin-top:8px"><span class="ko">규칙:</span></p>
+    <div class="pattern">
+      <span class="ko">&#10003; 자기소개를 하세요 (이름 + 직업)<br>
+      &#10003; "I am..." 문장을 2번 이상 사용하세요<br>
+      &#10007; "Yes" / "No"만 말하지 마세요!</span>
+    </div>
+    <p style="margin-top:8px"><span class="ko">이 표현을 사용하세요:</span></p>
+    <div class="pattern">
+      "I am [<span class="ko">이름</span>]. I am a [<span class="ko">직업</span>]."<br>
+      "I am from [<span class="ko">나라</span>]."
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 8 -->
+<div class="page" id="p8">
+  <h1>FREE DISCUSSION <span class="ko">자유 대화</span></h1>
+  <h2></h2>
+
+  <div class="section">
+    <p><strong>1.</strong> Introduce yourself to me! <span class="ko">(자기소개를 해 보세요!)</span><br>
+    Tell me your name and your job (or what you want to be).</p>
+    <div class="help-box">
+      <span class="ko">도움말</span><br>
+      "I am ___."<br>
+      "I am a ___."
+    </div>
+    <p class="ko" style="margin-top:6px">→ 이제 튜터에게 물어보세요: "What is your name? Are you a ___?"</p>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <p><strong>2.</strong> Describe someone in your family. <span class="ko">(가족 중 한 명을 설명해 보세요.)</span><br>
+    Tell me about one family member.</p>
+    <div class="help-box">
+      <span class="ko">도움말</span><br>
+      "He/She is ___."<br>
+      "He/She is a ___."<br>
+      "He/She is from ___."
+    </div>
+    <p class="ko" style="margin-top:6px">→ 이제 튜터에게 물어보세요: "Tell me about your family!"</p>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <p><strong>3.</strong> How are you feeling right now? <span class="ko">(지금 기분이 어떠세요?)</span><br>
+    Use an adjective to describe yourself.</p>
+    <div class="help-box">
+      <span class="ko">도움말</span><br>
+      "I am [adjective]."
+    </div>
+    <p class="ko" style="margin-top:6px">→ 이제 튜터에게 물어보세요: "How are you feeling today?"</p>
+  </div>
+</div>
+
+<!-- PAGE 8B -->
+<div class="page" id="p8b">
+  <h1>FREE DISCUSSION <span class="ko">자유 대화</span> (Script Version)</h1>
+  <h2></h2>
+
+  <div class="section">
+    <p><strong>ROUND 1: INTRODUCTIONS</strong> <span class="ko">(자기소개)</span></p>
+    <div class="dialogue">
+      <p><span class="speaker">Tutor:</span> "Tell me about yourself! What is your name? What do you do?"</p>
+      <p><span class="speaker">Student:</span> <span class="blank"></span><br>
+      <span style="margin-left:70px; color:#666">(I am ___. I am a ___.)</span></p>
+      <p><span class="speaker">Student:</span> "What is YOUR name? Are you a ___?"</p>
+      <p><span class="speaker">Tutor:</span> <em>(answers naturally)</em></p>
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <p><strong>ROUND 2: FAMILY</strong> <span class="ko">(가족 소개)</span></p>
+    <div class="dialogue">
+      <p><span class="speaker">Tutor:</span> "Tell me about someone in your family!"</p>
+      <p><span class="speaker">Student:</span> <span class="blank"></span><br>
+      <span style="margin-left:70px; color:#666">(He/She is ___. He/She is a ___.)</span></p>
+      <p><span class="speaker">Student:</span> "Tell me about YOUR family!"</p>
+      <p><span class="speaker">Tutor:</span> <em>(answers naturally)</em></p>
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <p><strong>ROUND 3: FEELINGS</strong> <span class="ko">(기분)</span></p>
+    <div class="dialogue">
+      <p><span class="speaker">Tutor:</span> "How are you feeling right now?"</p>
+      <p><span class="speaker">Student:</span> <span class="blank"></span><br>
+      <span style="margin-left:70px; color:#666">(I am ___.)</span></p>
+      <p><span class="speaker">Student:</span> "How are YOU feeling today?"</p>
+      <p><span class="speaker">Tutor:</span> <em>(answers naturally)</em></p>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 9 -->
+<div class="page" id="p9">
+  <h1>MISSION COMPLETE! <span class="ko">미션 완료!</span></h1>
+  <h2></h2>
+
+  <div class="box">
+    <p style="margin-bottom:12px"><strong>TODAY'S MISSIONS:</strong></p>
+
+    <div class="check-item">
+      <span class="check">&#10004;</span>
+      <strong>PATTERN 1:</strong> I am ___.<br>
+      <span style="margin-left:36px">"I can introduce myself!"</span>
+    </div>
+
+    <div class="check-item">
+      <span class="check">&#10004;</span>
+      <strong>PATTERN 2:</strong> He/She is ___.<br>
+      <span style="margin-left:36px">"I can describe other people!"</span>
+    </div>
+
+    <div class="check-item">
+      <span class="check">&#10004;</span>
+      <strong>GOAL:</strong> I made a new friend at the party!<br>
+      <span style="margin-left:36px">"I can use English in a real conversation!"</span>
+    </div>
+  </div>
+
+  <div class="section" style="margin-top:20px">
+    <p><strong>KEY EXPRESSIONS</strong> — <span class="ko">한 번 더 읽어봐요! (Read one more time!)</span></p>
+    <div class="pattern">
+      I am a student. &nbsp;&nbsp; She is a doctor.<br>
+      He is kind. &nbsp;&nbsp; They are from Korea.
+    </div>
+  </div>
+
+</div>
+
+<nav class="nav">
+  <button id="prev" onclick="go(-1)" disabled>&larr; Back</button>
+  <span id="indicator">1 / 10</span>
+  <button id="next" onclick="go(1)">Next &rarr;</button>
+</nav>
+
+<script>
+const pages = ['p1','p2','p3','p4','p5','p6','p7','p8','p8b','p9'];
+let cur = 0;
+
+function go(dir) {
+  document.getElementById(pages[cur]).classList.remove('active');
+  cur += dir;
+  document.getElementById(pages[cur]).classList.add('active');
+  document.getElementById('prev').disabled = cur === 0;
+  document.getElementById('next').disabled = cur === pages.length - 1;
+  document.getElementById('indicator').textContent = (cur + 1) + ' / ' + pages.length;
+  window.scrollTo(0, 0);
+}
+</script>
+</body>
+</html>
