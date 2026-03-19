@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prestudy: はじめまして！</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: monospace; background: #fff; color: #111; }
+  .page { display: none; max-width: 720px; margin: 0 auto; padding: 60px 40px 100px; position: relative; }
+  .page.active { display: block; }
+  h1 { font-size: 22px; margin-bottom: 8px; letter-spacing: 0.5px; }
+  h2 { font-size: 18px; font-weight: normal; margin-bottom: 32px; border-bottom: 1px solid #111; padding-bottom: 12px; }
+  h3 { font-size: 17px; margin: 32px 0 12px; }
+  p, li { font-size: 16px; line-height: 1.8; }
+  .en { color: #bbb; font-size: 12px; }
+  .section { margin: 32px 0; }
+  .pattern { margin: 12px 0 12px 20px; line-height: 2.2; }
+  .box { border: 1px solid #111; padding: 20px 24px; margin: 20px 0; }
+  .box-label { font-size: 14px; font-weight: bold; margin-bottom: 10px; letter-spacing: 0.5px; }
+  .help-box { border: 1px solid #999; padding: 14px 18px; margin: 12px 0 12px 20px; max-width: 480px; line-height: 2.2; }
+  .explain-box { border: 1px solid #ccc; background: #fafafa; padding: 16px 20px; margin: 16px 0; line-height: 1.8; }
+  .explain-box p { margin-bottom: 8px; }
+  .explain-box .label { font-size: 12px; font-weight: bold; letter-spacing: 1px; color: #999; text-transform: uppercase; margin-bottom: 8px; }
+  .dialogue { margin: 12px 0 12px 20px; }
+  .dialogue p { margin-bottom: 16px; line-height: 1.6; }
+  .dialogue .en { display: block; margin-top: -2px; margin-bottom: 4px; }
+  .dialogue .speaker { font-weight: bold; display: inline-block; min-width: 80px; }
+  .vocab-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+  .vocab-table th { text-align: left; font-size: 12px; font-weight: bold; letter-spacing: 1px; color: #999; text-transform: uppercase; padding: 8px 12px; border-bottom: 2px solid #111; }
+  .vocab-table td { padding: 10px 12px; border-bottom: 1px solid #eee; font-size: 16px; line-height: 1.6; }
+  .vocab-table tr:last-child td { border-bottom: 1px solid #111; }
+  .check-item { margin: 16px 0; padding-left: 10px; }
+  .check { display: inline-block; border: 2px solid #111; width: 22px; height: 22px; text-align: center; line-height: 20px; margin-right: 10px; vertical-align: middle; font-size: 14px; }
+  .nav { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; border-top: 1px solid #ddd; padding: 16px; display: flex; justify-content: center; gap: 16px; align-items: center; }
+  .nav button { font-family: monospace; font-size: 14px; padding: 8px 24px; border: 1px solid #111; background: #fff; cursor: pointer; }
+  .nav button:hover { background: #f0f0f0; }
+  .nav button:disabled { color: #ccc; border-color: #ccc; cursor: default; background: #fff; }
+  .nav span { font-size: 13px; color: #666; min-width: 80px; text-align: center; }
+  .separator { border: none; border-top: 1px dashed #ccc; margin: 28px 0; }
+  ol { padding-left: 20px; }
+  ol li { margin: 8px 0; }
+  ruby { ruby-position: over; }
+  rt { font-size: 0.7em; color: #7a8a9e; font-weight: normal !important; font-style: normal !important; font-family: 'Helvetica Neue', Arial, sans-serif; letter-spacing: 0.5px; padding: 0 1px; }
+
+  /* Interactive activity styles */
+  .match-item { display: flex; align-items: center; gap: 12px; margin: 10px 0 10px 20px; flex-wrap: wrap; }
+  .match-jp { font-size: 16px; min-width: 300px; }
+  .match-choices { display: flex; gap: 8px; flex-wrap: wrap; }
+  .match-btn { font-family: monospace; font-size: 13px; padding: 6px 14px; border: 1px solid #999; background: #fff; cursor: pointer; transition: all 0.15s; }
+  .match-btn:hover { background: #f0f0f0; border-color: #111; }
+  .match-btn.correct { background: #e8f5e9; border-color: #4caf50; color: #2e7d32; cursor: default; }
+  .match-btn.wrong { background: #ffebee; border-color: #ef5350; color: #c62828; }
+
+  .fill-item { margin: 16px 0 16px 20px; }
+  .check-btn { font-family: monospace; font-size: 13px; padding: 4px 12px; border: 1px solid #999; background: #fff; cursor: pointer; }
+  .check-btn:hover { background: #f0f0f0; border-color: #111; }
+  .fill-feedback { font-size: 13px; margin-left: 4px; }
+  .fill-feedback.correct { color: #2e7d32; }
+  .fill-feedback.wrong { color: #c62828; }
+
+  .translate-prompt { margin-bottom: 6px; }
+
+  .reorder-item { margin: 20px 0 20px 20px; }
+  .reorder-answer { min-height: 42px; border: 1px dashed #ccc; padding: 6px 10px; margin: 8px 0; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; background: #fafafa; }
+  .reorder-answer .word-btn { background: #e8f5e9; border-color: #4caf50; }
+  .reorder-bank { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+  .word-btn { font-family: monospace; font-size: 15px; padding: 6px 14px; border: 1px solid #999; background: #fff; cursor: pointer; transition: all 0.15s; }
+  .word-btn:hover { background: #f0f0f0; border-color: #111; }
+  .word-btn.used { opacity: 0.3; pointer-events: none; }
+  .reorder-controls { display: flex; align-items: center; gap: 8px; margin-top: 8px; }
+  .reorder-item.correct .reorder-answer { border-color: #4caf50; border-style: solid; background: #e8f5e9; }
+  .reorder-item.wrong .reorder-answer { border-color: #ef5350; border-style: solid; background: #ffebee; }
+</style>
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active" id="p1">
+  <h1>PRESTUDY: <ruby>はじめまして<rt>hajimemashite</rt></ruby>！</h1>
+  <h2>Introductions &amp; Occupations</h2>
+
+  <div class="box">
+    <div class="box-label">WHAT YOU WILL LEARN</div>
+    In this lesson, you will learn how to:<br>
+    <div class="pattern">
+      &bull; Introduce yourself (name and occupation)<br>
+      &bull; Describe other people<br>
+      &bull; Say where someone is from<br>
+      &bull; Use the word <ruby>です<rt>desu</rt></ruby> ("am / is / are")
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>WHAT IS <ruby>です<rt>desu</rt></ruby>?</h3>
+
+    <div class="explain-box">
+      <div class="label">English Explanation</div>
+      <p><strong><ruby>です<rt>desu</rt></ruby></strong> is one of the most important words in Japanese. It works like <strong>"am," "is,"</strong> or <strong>"are"</strong> in English.</p>
+      <p>Unlike English, <ruby>です<rt>desu</rt></ruby> always comes at the <strong>end</strong> of the sentence.</p>
+      <p>It does not change form &mdash; whether you say "I am," "she is," or "they are," the word is always <ruby>です<rt>desu</rt></ruby>.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>HOW JAPANESE SENTENCES WORK</h3>
+
+    <div class="explain-box">
+      <div class="label">Word Order</div>
+      <p>English: <strong>I</strong> am a <strong>student</strong>.</p>
+      <p>Japanese: <strong><ruby>わたし<rt>watashi</rt></ruby></strong> <ruby>は<rt>wa</rt></ruby> <strong><ruby>がくせい<rt>gakusei</rt></ruby></strong> <ruby>です<rt>desu</rt></ruby>。</p>
+      <p style="margin-top:12px">The particle <ruby>は<rt>wa</rt></ruby> marks the topic &mdash; it tells the listener <em>who</em> or <em>what</em> you are talking about. Think of it as "As for ___."</p>
+      <p style="margin-top:8px; color:#666; font-size:14px">Note: <ruby>は<rt>wa</rt></ruby> is written with the character "ha" but pronounced "wa" when used as a particle.</p>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="p2">
+  <h1>PATTERN 1: IDENTITY</h1>
+  <h2>"I am a ___."</h2>
+
+  <p><strong>Pattern:</strong> [Person] <ruby>は<rt>wa</rt></ruby> [noun] <ruby>です<rt>desu</rt></ruby>。</p>
+
+  <div class="explain-box">
+    <div class="label">How to use</div>
+    <p>Use this pattern to say who someone is &mdash; their name, job, or role.</p>
+    <p>Replace [Person] with the subject and [noun] with their identity.</p>
+  </div>
+
+  <div class="section">
+    <h3>EXAMPLES</h3>
+    <div class="pattern">
+      &bull; <ruby>わたし<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby> <ruby>がくせい<rt>gakusei</rt></ruby><ruby>です<rt>desu</rt></ruby>。<br>
+      <span class="en" style="margin-left:16px">I am a student.</span><br><br>
+
+      &bull; <ruby>あなた<rt>anata</rt></ruby><ruby>は<rt>wa</rt></ruby> <ruby>せんせい<rt>sensei</rt></ruby><ruby>です<rt>desu</rt></ruby>。<br>
+      <span class="en" style="margin-left:16px">You are a teacher.</span><br><br>
+
+      &bull; <ruby>かれ<rt>kare</rt></ruby>/<ruby>かのじょ<rt>kanojo</rt></ruby><ruby>は<rt>wa</rt></ruby> <ruby>いしゃ<rt>isha</rt></ruby><ruby>です<rt>desu</rt></ruby>。<br>
+      <span class="en" style="margin-left:16px">He/She is a doctor.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>KEY VOCABULARY</h3>
+    <table class="vocab-table">
+      <tr><th>Japanese</th><th>Reading</th><th>English</th></tr>
+      <tr><td><ruby>わたし<rt>watashi</rt></ruby></td><td>watashi</td><td>I / me</td></tr>
+      <tr><td><ruby>あなた<rt>anata</rt></ruby></td><td>anata</td><td>you</td></tr>
+      <tr><td><ruby>かれ<rt>kare</rt></ruby></td><td>kare</td><td>he / him</td></tr>
+      <tr><td><ruby>かのじょ<rt>kanojo</rt></ruby></td><td>kanojo</td><td>she / her</td></tr>
+      <tr><td><ruby>かれら<rt>karera</rt></ruby></td><td>karera</td><td>they / them</td></tr>
+      <tr><td><ruby>わたしたち<rt>watashi-tachi</rt></ruby></td><td>watashi-tachi</td><td>we / us</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="p3">
+  <h1>PATTERN 1: IDENTITY (continued)</h1>
+  <h2>Occupation Words</h2>
+
+  <div class="section">
+    <h3>OCCUPATIONS</h3>
+    <table class="vocab-table">
+      <tr><th>Japanese</th><th>Reading</th><th>English</th></tr>
+      <tr><td><ruby>がくせい<rt>gakusei</rt></ruby></td><td>gakusei</td><td>student</td></tr>
+      <tr><td><ruby>せんせい<rt>sensei</rt></ruby></td><td>sensei</td><td>teacher</td></tr>
+      <tr><td><ruby>いしゃ<rt>isha</rt></ruby></td><td>isha</td><td>doctor</td></tr>
+      <tr><td><ruby>かんごし<rt>kangoshi</rt></ruby></td><td>kangoshi</td><td>nurse</td></tr>
+      <tr><td><ruby>かいしゃいん<rt>kaishain</rt></ruby></td><td>kaishain</td><td>office worker</td></tr>
+      <tr><td><ruby>りょうりにん<rt>ryōrinin</rt></ruby></td><td>ryōrinin</td><td>chef</td></tr>
+      <tr><td><ruby>けいさつかん<rt>keisatsukan</rt></ruby></td><td>keisatsukan</td><td>police officer</td></tr>
+    </table>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <h3>QUICK PRACTICE: Match the sentence</h3>
+    <p style="margin-bottom:12px">Click the correct English meaning for each sentence.</p>
+
+    <div class="match-item">
+      <span class="match-jp">1. <ruby>わたし<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>せんせい<rt>sensei</rt></ruby><ruby>です<rt>desu</rt></ruby>。</span>
+      <div class="match-choices">
+        <button class="match-btn" onclick="checkMatch(this,'wrong')">She is a doctor.</button>
+        <button class="match-btn" onclick="checkMatch(this,'correct')">I am a teacher.</button>
+        <button class="match-btn" onclick="checkMatch(this,'wrong')">They are students.</button>
+      </div>
+    </div>
+
+    <div class="match-item">
+      <span class="match-jp">2. <ruby>かのじょ<rt>kanojo</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>いしゃ<rt>isha</rt></ruby><ruby>です<rt>desu</rt></ruby>。</span>
+      <div class="match-choices">
+        <button class="match-btn" onclick="checkMatch(this,'correct')">She is a doctor.</button>
+        <button class="match-btn" onclick="checkMatch(this,'wrong')">I am a teacher.</button>
+        <button class="match-btn" onclick="checkMatch(this,'wrong')">They are students.</button>
+      </div>
+    </div>
+
+    <div class="match-item">
+      <span class="match-jp">3. <ruby>かれら<rt>karera</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>がくせい<rt>gakusei</rt></ruby><ruby>です<rt>desu</rt></ruby>。</span>
+      <div class="match-choices">
+        <button class="match-btn" onclick="checkMatch(this,'wrong')">She is a doctor.</button>
+        <button class="match-btn" onclick="checkMatch(this,'wrong')">I am a teacher.</button>
+        <button class="match-btn" onclick="checkMatch(this,'correct')">They are students.</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page" id="p4">
+  <h1>PATTERN 2: DESCRIPTION</h1>
+  <h2>"I am ___." / "She is from ___."</h2>
+
+  <p><strong>Pattern A:</strong> [Person] <ruby>は<rt>wa</rt></ruby> [adjective] <ruby>です<rt>desu</rt></ruby>。</p>
+  <p><strong>Pattern B:</strong> [Person] <ruby>は<rt>wa</rt></ruby> [place] <ruby>しゅっしん<rt>shusshin</rt></ruby><ruby>です<rt>desu</rt></ruby>。</p>
+
+  <div class="explain-box">
+    <div class="label">How to use</div>
+    <p><strong>Pattern A:</strong> Use this to describe how someone feels or what they are like. Replace [adjective] with a describing word.</p>
+    <p><strong>Pattern B:</strong> Use this to say where someone is from. <ruby>しゅっしん<rt>shusshin</rt></ruby> means "from (hometown/origin)."</p>
+  </div>
+
+  <div class="section">
+    <h3>EXAMPLES</h3>
+    <div class="pattern">
+      &bull; <ruby>わたし<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby> <ruby>うれしい<rt>ureshii</rt></ruby><ruby>です<rt>desu</rt></ruby>。<br>
+      <span class="en" style="margin-left:16px">I am happy.</span><br><br>
+
+      &bull; <ruby>かれら<rt>karera</rt></ruby><ruby>は<rt>wa</rt></ruby> <ruby>とても<rt>totemo</rt></ruby><ruby>ねむい<rt>nemui</rt></ruby><ruby>です<rt>desu</rt></ruby>。<br>
+      <span class="en" style="margin-left:16px">They are very sleepy.</span><br><br>
+
+      &bull; <ruby>かのじょ<rt>kanojo</rt></ruby><ruby>は<rt>wa</rt></ruby> <ruby>かんこく<rt>Kankoku</rt></ruby><ruby>しゅっしん<rt>shusshin</rt></ruby><ruby>です<rt>desu</rt></ruby>。<br>
+      <span class="en" style="margin-left:16px">She is from Korea.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>KEY VOCABULARY</h3>
+    <table class="vocab-table">
+      <tr><th>Japanese</th><th>Reading</th><th>English</th></tr>
+      <tr><td><ruby>うれしい<rt>ureshii</rt></ruby></td><td>ureshii</td><td>happy</td></tr>
+      <tr><td><ruby>ねむい<rt>nemui</rt></ruby></td><td>nemui</td><td>sleepy</td></tr>
+      <tr><td><ruby>げんき<rt>genki</rt></ruby></td><td>genki</td><td>energetic / well</td></tr>
+      <tr><td><ruby>やさしい<rt>yasashii</rt></ruby></td><td>yasashii</td><td>kind</td></tr>
+      <tr><td><ruby>おもしろい<rt>omoshiroi</rt></ruby></td><td>omoshiroi</td><td>fun / interesting</td></tr>
+      <tr><td><ruby>とても<rt>totemo</rt></ruby></td><td>totemo</td><td>very</td></tr>
+      <tr><td><ruby>しゅっしん<rt>shusshin</rt></ruby></td><td>shusshin</td><td>from (origin)</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- PAGE 5 -->
+<div class="page" id="p5">
+  <h1>PATTERN 2: PRACTICE</h1>
+  <h2></h2>
+
+  <div class="section">
+    <p><strong>Activity 1: Choose the missing word</strong></p>
+    <p style="margin-bottom:12px">Click the correct word to complete each sentence.</p>
+
+    <div class="fill-item">
+      <p>1. <ruby>わたし<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby> _______ <ruby>です<rt>desu</rt></ruby>。 <span class="en">&mdash; I am happy.</span></p>
+      <div class="match-choices" style="margin-left:20px">
+        <button class="match-btn" onclick="checkMatch(this,'wrong')"><ruby>ねむい<rt>nemui</rt></ruby></button>
+        <button class="match-btn" onclick="checkMatch(this,'correct')"><ruby>うれしい<rt>ureshii</rt></ruby></button>
+        <button class="match-btn" onclick="checkMatch(this,'wrong')"><ruby>やさしい<rt>yasashii</rt></ruby></button>
+      </div>
+    </div>
+
+    <div class="fill-item">
+      <p>2. <ruby>かれ<rt>kare</rt></ruby><ruby>は<rt>wa</rt></ruby> <ruby>にほん<rt>Nihon</rt></ruby> _______ <ruby>です<rt>desu</rt></ruby>。 <span class="en">&mdash; He is from Japan.</span></p>
+      <div class="match-choices" style="margin-left:20px">
+        <button class="match-btn" onclick="checkMatch(this,'wrong')"><ruby>とても<rt>totemo</rt></ruby></button>
+        <button class="match-btn" onclick="checkMatch(this,'wrong')"><ruby>おもしろい<rt>omoshiroi</rt></ruby></button>
+        <button class="match-btn" onclick="checkMatch(this,'correct')"><ruby>しゅっしん<rt>shusshin</rt></ruby></button>
+      </div>
+    </div>
+
+    <div class="fill-item">
+      <p>3. <ruby>かのじょ<rt>kanojo</rt></ruby><ruby>は<rt>wa</rt></ruby> _______ <ruby>やさしい<rt>yasashii</rt></ruby><ruby>です<rt>desu</rt></ruby>。 <span class="en">&mdash; She is very kind.</span></p>
+      <div class="match-choices" style="margin-left:20px">
+        <button class="match-btn" onclick="checkMatch(this,'correct')"><ruby>とても<rt>totemo</rt></ruby></button>
+        <button class="match-btn" onclick="checkMatch(this,'wrong')"><ruby>しゅっしん<rt>shusshin</rt></ruby></button>
+        <button class="match-btn" onclick="checkMatch(this,'wrong')"><ruby>うれしい<rt>ureshii</rt></ruby></button>
+      </div>
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <p><strong>Activity 2: Build the sentence</strong></p>
+    <p style="margin-bottom:12px">Click the words in the correct order to build each sentence.</p>
+
+    <div class="reorder-item" id="ro1">
+      <p class="translate-prompt">1. I am a student.</p>
+      <div class="reorder-answer" id="ro1-answer"></div>
+      <div class="reorder-bank" id="ro1-bank">
+        <button class="word-btn" onclick="pickWord(this,'ro1')"><ruby>です<rt>desu</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro1')"><ruby>わたし<rt>watashi</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro1')"><ruby>がくせい<rt>gakusei</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro1')"><ruby>は<rt>wa</rt></ruby></button>
+      </div>
+      <div class="reorder-controls">
+        <button class="check-btn" onclick="checkOrder('ro1','わたし|は|がくせい|です')">Check</button>
+        <button class="check-btn" onclick="resetOrder('ro1')">Reset</button>
+        <span class="fill-feedback" id="ro1-fb"></span>
+      </div>
+    </div>
+
+    <div class="reorder-item" id="ro2">
+      <p class="translate-prompt">2. She is from Korea.</p>
+      <div class="reorder-answer" id="ro2-answer"></div>
+      <div class="reorder-bank" id="ro2-bank">
+        <button class="word-btn" onclick="pickWord(this,'ro2')"><ruby>しゅっしん<rt>shusshin</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro2')"><ruby>は<rt>wa</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro2')"><ruby>です<rt>desu</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro2')"><ruby>かんこく<rt>Kankoku</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro2')"><ruby>かのじょ<rt>kanojo</rt></ruby></button>
+      </div>
+      <div class="reorder-controls">
+        <button class="check-btn" onclick="checkOrder('ro2','かのじょ|は|かんこく|しゅっしん|です')">Check</button>
+        <button class="check-btn" onclick="resetOrder('ro2')">Reset</button>
+        <span class="fill-feedback" id="ro2-fb"></span>
+      </div>
+    </div>
+
+    <div class="reorder-item" id="ro3">
+      <p class="translate-prompt">3. They are very sleepy.</p>
+      <div class="reorder-answer" id="ro3-answer"></div>
+      <div class="reorder-bank" id="ro3-bank">
+        <button class="word-btn" onclick="pickWord(this,'ro3')"><ruby>は<rt>wa</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro3')"><ruby>ねむい<rt>nemui</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro3')"><ruby>かれら<rt>karera</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro3')"><ruby>です<rt>desu</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro3')"><ruby>とても<rt>totemo</rt></ruby></button>
+      </div>
+      <div class="reorder-controls">
+        <button class="check-btn" onclick="checkOrder('ro3','かれら|は|とても|ねむい|です')">Check</button>
+        <button class="check-btn" onclick="resetOrder('ro3')">Reset</button>
+        <span class="fill-feedback" id="ro3-fb"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 6 -->
+<div class="page" id="p6">
+  <h1>USEFUL PHRASES</h1>
+  <h2>Greetings &amp; Conversation</h2>
+
+  <div class="explain-box">
+    <div class="label">Before the Conversation</div>
+    <p>In the lesson, you will read and practice a conversation between two people meeting at a language exchange. Here are some useful phrases you will see.</p>
+  </div>
+
+  <div class="section">
+    <table class="vocab-table">
+      <tr><th>Japanese</th><th>Reading</th><th>English</th></tr>
+      <tr><td><ruby>こんにちは<rt>konnichiwa</rt></ruby></td><td>konnichiwa</td><td>Hello</td></tr>
+      <tr><td><ruby>はじめまして<rt>hajimemashite</rt></ruby></td><td>hajimemashite</td><td>Nice to meet you (first time)</td></tr>
+      <tr><td><ruby>よろしくおねがいします<rt>yoroshiku onegai shimasu</rt></ruby></td><td>yoroshiku onegai shimasu</td><td>Nice to meet you / Please be kind to me</td></tr>
+      <tr><td><ruby>こちらこそ<rt>kochira koso</rt></ruby></td><td>kochira koso</td><td>Likewise / Same here</td></tr>
+      <tr><td><ruby>はい<rt>hai</rt></ruby></td><td>hai</td><td>Yes</td></tr>
+      <tr><td><ruby>いいえ<rt>iie</rt></ruby></td><td>iie</td><td>No</td></tr>
+      <tr><td><ruby>おともだち<rt>otomodachi</rt></ruby></td><td>otomodachi</td><td>friend</td></tr>
+      <tr><td>～<ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</td><td>~desu ka?</td><td>Is it ~? (question)</td></tr>
+    </table>
+  </div>
+
+  <div class="explain-box">
+    <div class="label">Making Questions</div>
+    <p>To turn any <ruby>です<rt>desu</rt></ruby> sentence into a question, just add <ruby>か<rt>ka</rt></ruby> at the end.</p>
+    <p style="margin-top:8px"><ruby>かのじょ<rt>kanojo</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>せんせい<rt>sensei</rt></ruby><ruby>です<rt>desu</rt></ruby>。 → She is a teacher.</p>
+    <p><ruby>かのじょ<rt>kanojo</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>せんせい<rt>sensei</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？ → Is she a teacher?</p>
+  </div>
+</div>
+
+<!-- PAGE 7 -->
+<div class="page" id="p7">
+  <h1>CONVERSATION PREVIEW</h1>
+  <h2></h2>
+
+  <div class="box">
+    <div class="box-label">CONTEXT / <ruby>じょうきょう<rt>jōkyō</rt></ruby></div>
+    Two people meet at a language exchange meetup.<br>
+    <ruby>ふたり<rt>futari</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>げんごこうかん<rt>gengo kōkan</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>あつまり<rt>atsumari</rt></ruby><ruby>で<rt>de</rt></ruby><ruby>であいます<rt>deaimasu</rt></ruby>。
+  </div>
+
+  <div class="explain-box">
+    <div class="label">How to read this</div>
+    <p>Read through the conversation slowly. The words in <em>italics</em> are <ruby>です<rt>desu</rt></ruby> &mdash; the pattern you are learning. English translations are below each line.</p>
+  </div>
+
+  <div class="dialogue" style="margin-top:16px">
+    <p><span class="speaker">YUKI:</span> <ruby>こんにちは<rt>konnichiwa</rt></ruby>！<ruby>わたし<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>ゆき<rt>Yuki</rt></ruby><em><ruby>です<rt>desu</rt></ruby></em>。<ruby>わたし<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>がくせい<rt>gakusei</rt></ruby><em><ruby>です<rt>desu</rt></ruby></em>。<br>
+    <span class="en" style="margin-left:80px">Hello! I am Yuki. I am a student.</span></p>
+
+    <p><span class="speaker">ALEX:</span> <ruby>こんにちは<rt>konnichiwa</rt></ruby>！<ruby>わたし<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>アレックス<rt>Arekkusu</rt></ruby><em><ruby>です<rt>desu</rt></ruby></em>。<ruby>わたし<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>せんせい<rt>sensei</rt></ruby><em><ruby>です<rt>desu</rt></ruby></em>。<br>
+    <span class="en" style="margin-left:80px">Hello! I am Alex. I am a teacher.</span><br>
+    <span style="margin-left:80px"><ruby>よろしくおねがいします<rt>yoroshiku onegai shimasu</rt></ruby>！</span><br>
+    <span class="en" style="margin-left:80px">Nice to meet you!</span></p>
+
+    <p><span class="speaker">YUKI:</span> <ruby>こちらこそ<rt>kochira koso</rt></ruby>！<ruby>あの<rt>ano</rt></ruby><ruby>ひと<rt>hito</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>おともだち<rt>otomodachi</rt></ruby><em><ruby>です<rt>desu</rt></ruby></em><ruby>か<rt>ka</rt></ruby>？<br>
+    <span class="en" style="margin-left:80px">Likewise! Is that person your friend?</span></p>
+
+    <p><span class="speaker">ALEX:</span> <ruby>はい<rt>hai</rt></ruby>！<ruby>かのじょ<rt>kanojo</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>サラ<rt>Sara</rt></ruby><em><ruby>です<rt>desu</rt></ruby></em>。<ruby>かのじょ<rt>kanojo</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>ロンドン<rt>Rondon</rt></ruby><ruby>しゅっしん<rt>shusshin</rt></ruby><em><ruby>です<rt>desu</rt></ruby></em>。<br>
+    <span class="en" style="margin-left:80px">Yes! She is Sarah. She is from London.</span><br>
+    <span style="margin-left:80px"><ruby>かのじょ<rt>kanojo</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>とても<rt>totemo</rt></ruby><ruby>やさしい<rt>yasashii</rt></ruby><em><ruby>です<rt>desu</rt></ruby></em>。</span><br>
+    <span class="en" style="margin-left:80px">She is very kind.</span></p>
+
+    <p><span class="speaker">YUKI:</span> <ruby>いい<rt>ii</rt></ruby><em><ruby>です<rt>desu</rt></ruby></em><ruby>ね<rt>ne</rt></ruby>！<ruby>あの<rt>ano</rt></ruby><ruby>ひとたち<rt>hito-tachi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>クラスメート<rt>kurasumeeto</rt></ruby><em><ruby>です<rt>desu</rt></ruby></em><ruby>か<rt>ka</rt></ruby>？<br>
+    <span class="en" style="margin-left:80px">That's nice! Are those people your classmates?</span></p>
+
+    <p><span class="speaker">ALEX:</span> <ruby>はい<rt>hai</rt></ruby>！<ruby>かれら<rt>karera</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>わたし<rt>watashi</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>クラスメート<rt>kurasumeeto</rt></ruby><em><ruby>です<rt>desu</rt></ruby></em>。<br>
+    <span class="en" style="margin-left:80px">Yes! They are my classmates.</span><br>
+    <span style="margin-left:80px"><ruby>かれら<rt>karera</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>とても<rt>totemo</rt></ruby><ruby>おもしろい<rt>omoshiroi</rt></ruby><em><ruby>です<rt>desu</rt></ruby></em>！</span><br>
+    <span class="en" style="margin-left:80px">They are really fun!</span></p>
+  </div>
+</div>
+
+<!-- PAGE 8 -->
+<div class="page" id="p8">
+  <h1>PRESTUDY COMPLETE!</h1>
+  <h2></h2>
+
+  <div class="box">
+    <p style="margin-bottom:12px"><strong>Prestudy Checklist:</strong></p>
+
+    <div class="check-item">
+      <span class="check">&#10004;</span>
+      <strong><ruby>です<rt>desu</rt></ruby></strong> = "am / is / are" &mdash; always at the end
+    </div>
+
+    <div class="check-item">
+      <span class="check">&#10004;</span>
+      <strong>Pattern 1:</strong> [Person]<ruby>は<rt>wa</rt></ruby> [noun]<ruby>です<rt>desu</rt></ruby>。 &mdash; Identity
+    </div>
+
+    <div class="check-item">
+      <span class="check">&#10004;</span>
+      <strong>Pattern 2:</strong> [Person]<ruby>は<rt>wa</rt></ruby> [adjective]<ruby>です<rt>desu</rt></ruby>。 &mdash; Description
+    </div>
+
+    <div class="check-item">
+      <span class="check">&#10004;</span>
+      <strong>Questions:</strong> Add <ruby>か<rt>ka</rt></ruby> to the end &mdash; <ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？
+    </div>
+
+    <div class="check-item">
+      <span class="check">&#10004;</span>
+      <strong>Origin:</strong> [place]<ruby>しゅっしん<rt>shusshin</rt></ruby><ruby>です<rt>desu</rt></ruby> &mdash; "from [place]"
+    </div>
+  </div>
+
+  <div class="section" style="margin-top:20px">
+    <p><strong>KEY EXPRESSIONS</strong> &mdash; <ruby>もういちど<rt>mō ichido</rt></ruby><ruby>よんで<rt>yonde</rt></ruby><ruby>みましょう<rt>mimashō</rt></ruby>！</p>
+    <div class="pattern">
+      <ruby>わたし<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>がくせい<rt>gakusei</rt></ruby><ruby>です<rt>desu</rt></ruby>。 &nbsp;&nbsp; <ruby>かのじょ<rt>kanojo</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>いしゃ<rt>isha</rt></ruby><ruby>です<rt>desu</rt></ruby>。<br>
+      <ruby>かれ<rt>kare</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>やさしい<rt>yasashii</rt></ruby><ruby>です<rt>desu</rt></ruby>。 &nbsp;&nbsp; <ruby>かれら<rt>karera</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>かんこく<rt>Kankoku</rt></ruby><ruby>しゅっしん<rt>shusshin</rt></ruby><ruby>です<rt>desu</rt></ruby>。
+    </div>
+  </div>
+
+  <div class="explain-box" style="margin-top:24px">
+    <div class="label">You are ready!</div>
+    <p>You now know the key patterns and vocabulary for Lesson 1. In class, you will practice these patterns with your tutor through conversations, drills, and a roleplay activity.</p>
+  </div>
+</div>
+
+<nav class="nav">
+  <button id="prev" onclick="go(-1)" disabled>&larr; Back</button>
+  <span id="indicator">1 / 8</span>
+  <button id="next" onclick="go(1)">Next &rarr;</button>
+</nav>
+
+<script>
+const pages = ['p1','p2','p3','p4','p5','p6','p7','p8'];
+let cur = 0;
+
+function go(dir) {
+  document.getElementById(pages[cur]).classList.remove('active');
+  cur += dir;
+  document.getElementById(pages[cur]).classList.add('active');
+  document.getElementById('prev').disabled = cur === 0;
+  document.getElementById('next').disabled = cur === pages.length - 1;
+  document.getElementById('indicator').textContent = (cur + 1) + ' / ' + pages.length;
+  window.scrollTo(0, 0);
+}
+
+/* Matching activity */
+function checkMatch(btn, result) {
+  var siblings = btn.parentElement.querySelectorAll('.match-btn');
+  if (result === 'correct') {
+    siblings.forEach(function(b) { b.disabled = true; b.classList.remove('wrong'); });
+    btn.classList.add('correct');
+  } else {
+    btn.classList.add('wrong');
+    setTimeout(function() { btn.classList.remove('wrong'); }, 600);
+  }
+}
+
+/* Word reorder activity */
+function getBaseText(el) {
+  var clone = el.cloneNode(true);
+  var rts = clone.querySelectorAll('rt');
+  rts.forEach(function(rt) { rt.remove(); });
+  return clone.textContent.trim();
+}
+
+function pickWord(btn, id) {
+  var item = document.getElementById(id);
+  if (item.classList.contains('correct')) return;
+  item.classList.remove('wrong');
+  var fb = document.getElementById(id + '-fb');
+  fb.textContent = '';
+  fb.className = 'fill-feedback';
+  btn.classList.add('used');
+  var clone = document.createElement('button');
+  clone.className = 'word-btn';
+  clone.innerHTML = btn.innerHTML;
+  clone.onclick = function() { unpickWord(clone, btn, id); };
+  document.getElementById(id + '-answer').appendChild(clone);
+}
+
+function unpickWord(clone, original, id) {
+  var item = document.getElementById(id);
+  if (item.classList.contains('correct')) return;
+  item.classList.remove('wrong');
+  var fb = document.getElementById(id + '-fb');
+  fb.textContent = '';
+  fb.className = 'fill-feedback';
+  clone.remove();
+  original.classList.remove('used');
+}
+
+function checkOrder(id, correctStr) {
+  var item = document.getElementById(id);
+  if (item.classList.contains('correct')) return;
+  var answer = document.getElementById(id + '-answer');
+  var words = Array.from(answer.querySelectorAll('.word-btn')).map(function(b) { return getBaseText(b); });
+  var fb = document.getElementById(id + '-fb');
+  if (words.length === 0) return;
+  if (words.join('|') === correctStr) {
+    item.classList.remove('wrong');
+    item.classList.add('correct');
+    fb.textContent = 'Correct!';
+    fb.className = 'fill-feedback correct';
+    answer.querySelectorAll('.word-btn').forEach(function(b) { b.style.cursor = 'default'; });
+  } else {
+    item.classList.remove('correct');
+    item.classList.add('wrong');
+    fb.textContent = 'Not quite — try again!';
+    fb.className = 'fill-feedback wrong';
+  }
+}
+
+function resetOrder(id) {
+  var item = document.getElementById(id);
+  if (item.classList.contains('correct')) return;
+  item.classList.remove('wrong');
+  document.getElementById(id + '-answer').innerHTML = '';
+  document.getElementById(id + '-bank').querySelectorAll('.word-btn').forEach(function(b) { b.classList.remove('used'); });
+  var fb = document.getElementById(id + '-fb');
+  fb.textContent = '';
+  fb.className = 'fill-feedback';
+}
+</script>
+</body>
+</html>
