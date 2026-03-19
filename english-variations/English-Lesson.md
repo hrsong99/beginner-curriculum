@@ -46,10 +46,9 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |  LESSON 1: NICE TO MEET YOU!                                            |
 |  ----------------------------                                           |
 |                                                                         |
-|  ┌─── OUTCOME / 목표 ──────────────────────────────────────────┐         |
-|  │  You can introduce yourself and describe people             │         |
-|  │  자기소개하고 사람을 설명할 수 있어요.                               │         |
-|  └─────────────────────────────────────────────────────────────┘         |
+|  Outcome:                                                               |
+|  You can introduce yourself and describe people                         |
+|  자기소개하고 사람을 설명할 수 있어요.                                           |
 |                                                                         |
 |                                                                         |
 |  TODAY'S PATTERNS                                                       |
@@ -69,6 +68,8 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |     * She is [from Korea].       그녀는 [한국] 출신입니다.                    |
 |                                                                         |
 |                                                                         |
+|  [Tutor: Read each pattern aloud. Student repeats after you.]           |
+|                                                                         |
 |                                                                  PAGE 1 |
 +-------------------------------------------------------------------------+
 ```
@@ -81,37 +82,28 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |  CONVERSATION: GUIDED READING                                           |
 |  ----------------------------                                           |
 |                                                                         |
-|  ┌─── CONTEXT / 상황 ────────────────────────────────────────┐           |
-|  │  Two people meet at a language exchange meetup.          │           |
-|  │  두 사람이 언어교환 모임에서 만납니다.                            │           |
-|  └──────────────────────────────────────────────────────────┘           |
+|  Context: Two people meet at a language exchange meetup.                |
+|  상황: 두 사람이 언어교환 모임에서 만납니다.                                   |
+|                                                                         |
+|  [Tutor: Read together first, then swap roles.]                         |
 |                                                                         |
 |                                                                         |
-|  MIN-JI:  Hello! I *am* Min-ji. I *am* a student.                       |
-|           안녕! 나는 민지야. 나는 학생이야.                                    |
+|  MIN-JI:  Hello! I AM Min-ji. I AM a student.                          |
 |                                                                         |
-|  ALEX:    Hi! I *am* Alex. I *am* a teacher.                            |
-|           안녕! 나는 알렉스야. 나는 선생님이야.                                 |
+|  ALEX:    Hi! I AM Alex. I AM a teacher.                               |
 |           Nice to meet you!                                             |
-|           만나서 반가워요!                                                  |
 |                                                                         |
-|  MIN-JI:  Nice to meet you too! *Is* that your friend?                  |
-|           저도 반가워요! 저 사람은 당신 친구예요?                                |
+|  MIN-JI:  Nice to meet you too! IS that your friend?                    |
 |                                                                         |
-|  ALEX:    Yes! She *is* Sarah. She *is* from London.                    |
-|           네! 그녀는 사라예요. 그녀는 런던 출신이에요.                            |
-|           She *is* very kind.                                           |
-|           그녀는 매우 친절해요.                                              |
+|  ALEX:    Yes! She IS Sarah. SHE IS from London.                       |
+|           SHE IS very kind.                                             |
 |                                                                         |
-|  MIN-JI:  Great! *Are* those your classmates?                           |
-|           좋아요! 저 사람들은 당신 반 친구들이에요?                              |
+|  MIN-JI:  Great! ARE those your classmates?                             |
 |                                                                         |
-|  ALEX:    Yes! They *are* my classmates.                                |
-|           네! 그들은 제 반 친구들이에요.                                      |
-|           They *are* really fun!                                       |
-|           그들은 정말 재미있어요!                                            |
+|  ALEX:    Yes! THEY ARE my classmates. THEY ARE really fun!            |
 |                                                                         |
 |                                                                         |
+|  [Patterns highlighted in CAPS]                                         |
 |                                                                         |
 |                                                                  PAGE 2 |
 +-------------------------------------------------------------------------+
@@ -124,6 +116,9 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |                                                                         |
 |  CONVERSATION: SPEED & MEMORY CHECK                                     |
 |  -----------------------------------                                    |
+|                                                                         |
+|  [Tutor: Student translates blanks from Korean. Go faster!]             |
+|  [번역기를 사용해도 괜찮아요! It's OK to use the translator!]                |
 |                                                                         |
 |                                                                         |
 |  MIN-JI:  ___________________________________________________          |
@@ -142,6 +137,7 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |           (좋아요! 저 사람들은 당신 반 친구들이에요?)                           |
 |                                                                         |
 |  ALEX:    Yes! They are my classmates. They are really fun!             |
+|                                                                         |
 |                                                                  PAGE 3 |
 +-------------------------------------------------------------------------+
 ```
@@ -158,15 +154,15 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |                                                                         |
 |                                                                         |
 |  1. Read Together (같이 읽기):                                            |
-|     * I am a student.                저는 학생입니다.                      |
-|     * She is a doctor.               그녀는 의사입니다.                    |
-|     * They are office workers.       그들은 회사원입니다.                   |
+|     * I am a student.                                                   |
+|     * She is a doctor.                                                  |
+|     * They are office workers.                                          |
 |                                                                         |
 |                                                                         |
 |  2. Fill in the Blanks (빈칸 채우기):                                      |
-|     * He _______ a teacher.          그는 선생님입니다.                    |
-|     * We _______ students.           우리는 학생입니다.                    |
-|     * _______ she a nurse?           그녀는 간호사인가요?                  |
+|     * He _______ a teacher.                                             |
+|     * We _______ students.                                              |
+|     * _______ she a nurse?                                              |
 |                                                                         |
 |                                                                         |
 |  3. Translate (영어로 번역해 보세요):                                        |
@@ -201,15 +197,15 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |                                                                         |
 |                                                                         |
 |  1. Read Together (같이 읽기):                                            |
-|     * I am happy.                    저는 행복합니다.                      |
-|     * He is from Japan.              그는 일본 출신입니다.                  |
-|     * They are very tired.           그들은 매우 피곤합니다.                |
+|     * I am happy.                                                       |
+|     * He is from Japan.                                                 |
+|     * They are very tired.                                              |
 |                                                                         |
 |                                                                         |
 |  2. Fill in the Blanks (빈칸 채우기):                                      |
-|     * She _______ from Seoul.        그녀는 서울 출신입니다.               |
-|     * I _______ very excited.        저는 매우 신나요.                     |
-|     * _______ you tired?             당신은 피곤한가요?                    |
+|     * She _______ from Seoul.                                           |
+|     * I _______ very excited.                                           |
+|     * _______ you tired?                                                |
 |                                                                         |
 |                                                                         |
 |  3. Translate (영어로 번역해 보세요):                                        |
@@ -240,10 +236,11 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |  SHORT DIALOGUES 짧은 대화                                               |
 |  ────────────────────────                                               |
 |                                                                         |
+|  [Tutor reads their line. Student speaks the blank line.]               |
+|                                                                         |
 |                                                                         |
 |  DIALOGUE 1:                                                            |
 |  Tutor:   What is your job?                                             |
-|           당신의 직업은 무엇인가요?                                          |
 |  Student: _____________________________________________                 |
 |           (저는 학생입니다. | student)                                      |
 |                                                                         |
@@ -252,12 +249,10 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |  Student: _____________________________________________                 |
 |           (그녀는 의사인가요? | Is / she / doctor)                          |
 |  Tutor:   No, she is a nurse.                                           |
-|           아니요, 그녀는 간호사입니다.                                        |
 |                                                                         |
 |                                                                         |
 |  DIALOGUE 3:                                                            |
 |  Tutor:   How are you feeling today?                                    |
-|           오늘 기분이 어떠세요?                                               |
 |  Student: _____________________________________________                 |
 |           (저는 오늘 매우 행복해요! | very / happy)                          |
 |                                                                         |
@@ -266,7 +261,6 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |  Student: _____________________________________________                 |
 |           (그는 어디 출신인가요? | Where / he / from)                        |
 |  Tutor:   He is from Canada.                                            |
-|           그는 캐나다 출신입니다.                                             |
 |                                                                         |
 |                                                                  PAGE 6 |
 +-------------------------------------------------------------------------+
@@ -303,7 +297,7 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |  └─────────────────────────────────────────────────────────┘            |
 |                                                                         |
 |                                                                         |
-|  ┌─── FOR STUDENT / 학생용 ────────────────────────────────┐            |
+|  ┌─── 학생용 (FOR STUDENT) ────────────────────────────────┐            |
 |  │                                                         │            |
 |  │  목표: 새 친구를 사귀세요!                                  │            |
 |  │                                                         │            |
@@ -329,6 +323,9 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |                                                                         |
 |  FREE DISCUSSION 자유 대화                                                |
 |  ────────────────────────                                               |
+|                                                                         |
+|  [Tutor: Ask the question first. After the student answers,             |
+|  the student asks YOU the same question. Answer naturally!]             |
 |                                                                         |
 |                                                                         |
 |  1. Introduce yourself to me! (자기소개를 해 보세요!)                        |
@@ -380,45 +377,39 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |                                                                         |
 |  Tutor:    "Tell me about yourself!                                     |
 |             What is your name? What do you do?"                         |
-|             자기소개를 해 보세요! 이름이 뭐예요? 무슨 일을 하세요?              |
 |                                                                         |
 |  Student:  _____________________________________________                |
 |            (I am ___. I am a ___.)                                      |
 |                                                                         |
 |  Student:  "What is YOUR name? Are you a ___?"                         |
-|             이름이 뭐예요? ___이에요?                                       |
 |                                                                         |
-|  Tutor:    (answers naturally)                            |
+|  Tutor:    (answers naturally)                                          |
 |                                                                         |
 |  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─    |
 |                                                                         |
 |  ROUND 2: FAMILY (가족 소개)                                              |
 |                                                                         |
 |  Tutor:    "Tell me about someone in your family!"                     |
-|             가족 중 한 명을 소개해 주세요!                                    |
 |                                                                         |
 |  Student:  _____________________________________________                |
 |            (He/She is ___. He/She is a ___.)                            |
 |                                                                         |
 |  Student:  "Tell me about YOUR family!"                                |
-|             당신의 가족을 소개해 주세요!                                      |
 |                                                                         |
-|  Tutor:    (answers naturally)                            |
+|  Tutor:    (answers naturally)                                          |
 |                                                                         |
 |  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─    |
 |                                                                         |
 |  ROUND 3: FEELINGS (기분)                                                |
 |                                                                         |
 |  Tutor:    "How are you feeling right now?"                            |
-|             지금 기분이 어떠세요?                                            |
 |                                                                         |
 |  Student:  _____________________________________________                |
 |            (I am ___.)                                                  |
 |                                                                         |
 |  Student:  "How are YOU feeling today?"                                |
-|             오늘 기분이 어떠세요?                                            |
 |                                                                         |
-|  Tutor:    (answers naturally)                            |
+|  Tutor:    (answers naturally)                                          |
 |                                                                         |
 |                                                                 PAGE 8B |
 +-------------------------------------------------------------------------+
@@ -431,6 +422,14 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |                                                                         |
 |  MISSION COMPLETE! 미션 완료!                                             |
 |  ────────────────────────────                                           |
+|                                                                         |
+|  ┌─── TUTOR SCRIPT ────────────────────────────────────────┐            |
+|  │  "오늘 정말 잘했어요! 대단해요!"                               │            |
+|  │  "You did amazing today!"                                │            |
+|  │                                                          │            |
+|  │  → Check off each mission while saying it aloud.         │            |
+|  └──────────────────────────────────────────────────────────┘            |
+|                                                                         |
 |                                                                         |
 |  TODAY'S MISSIONS:                                                      |
 |  ┌─────────────────────────────────────────────────────────┐            |
@@ -458,6 +457,10 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |  * I am a student.        * She is a doctor.                            |
 |  * He is kind.            * They are from Korea.                        |
 |                                                                         |
+|  ┌─── TUTOR SCRIPT ────────────────────────────────────────┐            |
+|  │  After student reads: "완벽해요! 다음 수업에서 만나요!"        │            |
+|  │  "Perfect! See you in the next lesson!"                  │            |
+|  └──────────────────────────────────────────────────────────┘            |
 |                                                                  PAGE 9 |
 +-------------------------------------------------------------------------+
 ```
