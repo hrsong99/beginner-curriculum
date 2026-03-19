@@ -121,20 +121,23 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |  -----------------------------------                                    |
 |                                                                         |
 |                                                                         |
-|  YUKI:   ___________________________________________________           |
+|  YUKI:   アレックスさん、______は何ですか？                                     |
 |          (Alex, what is this?)                                          |
 |                                                                         |
-|  ALEX:   ああ、それは私の本です。                                         |
+|  ALEX:   ああ、それは私の本です。                                              |
+|          Oh, that is my book.                                           |
 |                                                                         |
-|  YUKI:   ___________________________________________________           |
+|  YUKI:   いい本ですね！______も本ですか？                                      |
 |          (Nice book! Is this also a book?)                              |
 |                                                                         |
-|  ALEX:   いいえ、それはノートです。先生のノートです。                       |
+|  ALEX:   いいえ、それはノートです。先生のノートです。                                |
+|          No, that is a notebook. It's the teacher's notebook.           |
 |                                                                         |
-|  YUKI:   ___________________________________________________           |
+|  YUKI:   あ、そうですか。______は何ですか？                                     |
 |          (Oh, I see. What is that over there?)                          |
 |                                                                         |
-|  ALEX:   あれはサラさんのかばんです。とても大きいですね！                   |
+|  ALEX:   あれはサラさんのかばんです。とても大きいですね！                             |
+|          That over there is Sara's bag. It's very big!                  |
 |                                                                  PAGE 3 |
 +-------------------------------------------------------------------------+
 ```
@@ -166,11 +169,11 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |                                                                         |
 |     * This is a phone.                                                  |
 |       _____________________________________________________             |
-|       (電話 / でんわ)                                                    |
+|       (this = これ / phone = でんわ)                                     |
 |                                                                         |
 |     * That over there is a school.                                      |
 |       _____________________________________________________             |
-|       (学校 / がっこう)                                                   |
+|       (that over there = あれ / school = がっこう)                        |
 |                                                                         |
 |                                                                         |
 |  4. Make Your Own:                                                      |
@@ -209,11 +212,11 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |                                                                         |
 |     * This is Alex's phone.                                             |
 |       _____________________________________________________             |
-|       (アレックス / 電話)                                                 |
+|       (this = これ / Alex = アレックス / phone = でんわ)                  |
 |                                                                         |
 |     * That is my friend's notebook.                                     |
 |       _____________________________________________________             |
-|       (友達 / ともだち / ノート)                                          |
+|       (that = それ / friend = ともだち / notebook = ノート)               |
 |                                                                         |
 |                                                                         |
 |  4. Make Your Own:                                                      |
@@ -238,12 +241,12 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |  Tutor:   これは何ですか？                                                |
 |           What is this?                                                 |
 |  Student: _____________________________________________                 |
-|           (This is a book. | 本)                                        |
+|           (This is a book. | this = これ / book = ほん)                  |
 |                                                                         |
 |                                                                         |
 |  DIALOGUE 2:                                                            |
 |  Student: _____________________________________________                 |
-|           (What is that? | それ / 何)                                    |
+|           (What is that? | that = それ / what = なん)                    |
 |  Tutor:   それはペンです。先生のペンです。                                  |
 |           That is a pen. It's the teacher's pen.                        |
 |                                                                         |
@@ -252,12 +255,14 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |  Tutor:   あれは誰のかばんですか？                                        |
 |           Whose bag is that over there?                                 |
 |  Student: _____________________________________________                 |
-|           (That is Yuki's bag. | ゆきさん / かばん)                       |
+|           (That is Yuki's bag.                                          |
+|            | that = あれ / Yuki = ゆきさん / bag = かばん)                   |
 |                                                                         |
 |                                                                         |
 |  DIALOGUE 4:                                                            |
 |  Student: _____________________________________________                 |
-|           (Is this your notebook? | あなた / ノート)                      |
+|           (Is this your notebook?                                       |
+|            | this = これ / your = あなた / notebook = ノート)              |
 |  Tutor:   はい、それは私のノートです。                                     |
 |           Yes, that is my notebook.                                     |
 |                                                                         |
@@ -281,22 +286,6 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |  アイテムについて聞いて、自分の物を見つけましょう！                       |
 |                                                                         |
 |                                                                         |
-|  ┌─── チューター用 ───────────────────────────────────────┐            |
-|  │                                                         │            |
-|  │  目標: 学生が自然な会話をできるようにサポートする。        │            |
-|  │                                                         │            |
-|  │  ルール:                                                 │            |
-|  │  ✓ "いらっしゃいませ！何をお探しですか？" から始める      │            |
-|  │  ✓ 簡単な文を使う。役になりきる。                         │            |
-|  │  ✗ 会話中に文法を直さない。                               │            |
-|  │                                                         │            |
-|  │  フレーズ:                                               │            |
-|  │  * "これですか？"                                        │            |
-|  │  * "それは___さんのですか？"                              │            |
-|  │                                                         │            |
-|  └─────────────────────────────────────────────────────────┘            |
-|                                                                         |
-|                                                                         |
 |  ┌─── FOR STUDENT ────────────────────────────────────────┐            |
 |  │                                                         │            |
 |  │  GOAL: Find your things!                                │            |
@@ -304,7 +293,6 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |  │  RULES:                                                 │            |
 |  │  ✓ Describe items using これ/それ/あれ                    │            |
 |  │  ✓ Use の to say whose things they are                   │            |
-|  │  ✗ Don't just say "はい" / "いいえ"!                     │            |
 |  │                                                         │            |
 |  │  USE THESE PHRASES:                                     │            |
 |  │  * "あれは私のかばんです。"                               │            |
@@ -325,60 +313,20 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |  ────────────────                                                       |
 |                                                                         |
 |                                                                         |
-|  1. 机の上の物を教えてください。                                          |
-|     Tell me about things on the desk.                                   |
-|                                                                         |
-|     ┌─── HINTS ──────────────────────────────────┐                      |
-|     │  * "これは___です。"                          │                      |
-|     │  * "それは___です。"                          │                      |
-|     └──────────────────────────────────────────────┘                      |
-|                                                                         |
-|     → Now ask the tutor: "それは何ですか？"                               |
-|                                                                         |
-|                                                                         |
-|  2. 持ち物について教えてください。                                        |
-|     Tell me about your belongings.                                      |
-|                                                                         |
-|     ┌─── HINTS ──────────────────────────────────┐                      |
-|     │  * "これは私の___です。"                      │                      |
-|     │  * "それは___の___です。"                     │                      |
-|     └──────────────────────────────────────────────┘                      |
-|                                                                         |
-|     → Now ask the tutor: "それは誰の___ですか？"                          |
-|                                                                         |
-|                                                                         |
-|  3. 教室の中を見てください。遠くにある物は何ですか？                       |
-|     Look around the classroom. What are the things far away?            |
-|                                                                         |
-|     ┌─── HINTS ──────────────────────────────────┐                      |
-|     │  * "あれは___です。"                          │                      |
-|     │  * "あれは___の___です。"                     │                      |
-|     └──────────────────────────────────────────────┘                      |
-|                                                                         |
-|     → Now ask the tutor: "あれは何ですか？"                               |
-|                                                                         |
-|                                                                  PAGE 8 |
-+-------------------------------------------------------------------------+
-```
-
-### PAGE 8B — Free Discussion (Script Version)
-
-```
-+-------------------------------------------------------------------------+
-|                                                                         |
-|  FREE DISCUSSION (Script Version)                                       |
-|  ──────────────────────────────────                                     |
-|                                                                         |
-|                                                                         |
 |  ROUND 1: THINGS ON THE DESK                                            |
 |                                                                         |
-|  Tutor:    "机の上の物を教えてください！                                   |
-|             これは何ですか？"                                              |
+|  Tutor:    "机の上の物を教えてください！これは何ですか？"                   |
+|            "Tell me about things on the desk! What is this?"            |
 |                                                                         |
 |  Student:  _____________________________________________                |
-|            (これは___です。それは___です。)                                 |
+|                                                                         |
+|     ┌─── WORDS ─────────────────────────────────────────┐               |
+|     │  本(book) ペン(pen) ノート(notebook) 時計(clock)    │               |
+|     │  かばん(bag) 電話(phone) かぎ(key) 水(water)       │               |
+|     └────────────────────────────────────────────────────┘               |
 |                                                                         |
 |  Student:  "それは何ですか？"                                              |
+|            "What is that?"                                              |
 |                                                                         |
 |  Tutor:    (answers naturally)                                          |
 |                                                                         |
@@ -387,11 +335,18 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |  ROUND 2: WHOSE IS IT?                                                   |
 |                                                                         |
 |  Tutor:    "これは誰の物ですか？"                                         |
+|            "Whose thing is this?"                                       |
 |                                                                         |
 |  Student:  _____________________________________________                |
-|            (これは___の___です。)                                          |
 |                                                                         |
-|  Student:  "それは誰の___ですか？"                                        |
+|     ┌─── WORDS ─────────────────────────────────────────┐               |
+|     │  People: 私(I/my) 先生(teacher) ゆきさん(Yuki)     │               |
+|     │  サラさん(Sara) アレックスさん(Alex) 友達(friend)    │               |
+|     │  Things: 本 ペン ノート かばん 電話 かぎ             │               |
+|     └────────────────────────────────────────────────────┘               |
+|                                                                         |
+|  Student:  "それは誰のですか？"                                           |
+|            "Whose is that?"                                             |
 |                                                                         |
 |  Tutor:    (answers naturally)                                          |
 |                                                                         |
@@ -399,16 +354,22 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |                                                                         |
 |  ROUND 3: FAR AWAY                                                      |
 |                                                                         |
-|  Tutor:    "あれは何ですか？"                                              |
+|  Tutor:    "あれは何ですか？あれは誰のですか？"                            |
+|            "What is that over there? Whose is it?"                      |
 |                                                                         |
 |  Student:  _____________________________________________                |
-|            (あれは___です。あれは___の___です。)                            |
+|                                                                         |
+|     ┌─── WORDS ─────────────────────────────────────────┐               |
+|     │  まど(window) ドア(door) いす(chair) つくえ(desk)   │               |
+|     │  かべ(wall) え(picture) とけい(clock)               │               |
+|     └────────────────────────────────────────────────────┘               |
 |                                                                         |
 |  Student:  "あれは何ですか？"                                              |
+|            "What is that over there?"                                   |
 |                                                                         |
 |  Tutor:    (answers naturally)                                          |
 |                                                                         |
-|                                                                 PAGE 8B |
+|                                                                  PAGE 8 |
 +-------------------------------------------------------------------------+
 ```
 
@@ -432,11 +393,6 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |  │  ┏━━━┓                                                   │            |
 |  │  ┃ ✔ ┃  PATTERN 2: これは___の___です。                    │            |
 |  │  ┗━━━┛  "誰の物か言える！"                                │            |
-|  │                                                          │            |
-|  │                                                          │            |
-|  │  ┏━━━┓                                                   │            |
-|  │  ┃ ✔ ┃  目標: 落とし物を見つけた！                         │            |
-|  │  ┗━━━┛  "日本語で物について話せる！"                       │            |
 |  │                                                          │            |
 |  │                                                          │            |
 |  └─────────────────────────────────────────────────────────┘            |
