@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 1: はじめまして！</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: monospace; background: #fff; color: #111; }
+  .page { display: none; max-width: 720px; margin: 0 auto; padding: 60px 40px 100px; }
+  .page.active { display: block; }
+  h1 { font-size: 20px; margin-bottom: 8px; letter-spacing: 0.5px; }
+  h2 { font-size: 16px; font-weight: normal; margin-bottom: 32px; border-bottom: 1px solid #111; padding-bottom: 12px; }
+  h3 { font-size: 15px; margin: 32px 0 12px; }
+  p, li { font-size: 14px; line-height: 2; }
+  .en { color: #bbb; font-size: 12px; }
+  .section { margin: 32px 0; }
+  .pattern { margin: 12px 0 12px 20px; line-height: 2.8; }
+  .blank { display: inline-block; border-bottom: 1px solid #111; min-width: 280px; height: 1.6em; vertical-align: bottom; }
+  .blank-full { display: block; border-bottom: 1px solid #111; margin: 8px 0 8px 20px; max-width: 420px; height: 1.6em; }
+  .box { border: 1px solid #111; padding: 20px 24px; margin: 20px 0; }
+  .box-label { font-size: 12px; font-weight: bold; margin-bottom: 10px; letter-spacing: 0.5px; }
+  .help-box { border: 1px solid #999; padding: 14px 18px; margin: 12px 0 12px 20px; max-width: 380px; line-height: 2.8; }
+  .dialogue { margin: 12px 0 12px 20px; }
+  .dialogue p { margin-bottom: 12px; }
+  .dialogue .speaker { font-weight: bold; display: inline-block; min-width: 80px; }
+  .check-item { margin: 16px 0; padding-left: 10px; }
+  .check { display: inline-block; border: 2px solid #111; width: 22px; height: 22px; text-align: center; line-height: 20px; margin-right: 10px; vertical-align: middle; font-size: 14px; }
+  .nav { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; border-top: 1px solid #ddd; padding: 16px; display: flex; justify-content: center; gap: 16px; align-items: center; }
+  .nav button { font-family: monospace; font-size: 14px; padding: 8px 24px; border: 1px solid #111; background: #fff; cursor: pointer; }
+  .nav button:hover { background: #f0f0f0; }
+  .nav button:disabled { color: #ccc; border-color: #ccc; cursor: default; background: #fff; }
+  .nav span { font-size: 13px; color: #666; min-width: 80px; text-align: center; }
+  .separator { border: none; border-top: 1px dashed #ccc; margin: 28px 0; }
+  ol { padding-left: 20px; }
+  ol li { margin: 4px 0; }
+  ruby { ruby-position: over; }
+  rt { font-size: 0.55em; color: #aaa; font-weight: normal; font-style: normal; }
+</style>
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active" id="p1">
+  <h1>LESSON 1: <ruby>はじめまして<rt>hajimemashite</rt></ruby>！</h1>
+  <h2></h2>
+
+  <div class="box">
+    <div class="box-label">OUTCOME / <ruby>目標<rt>mokuhyō</rt></ruby></div>
+    You can introduce yourself and describe people<br>
+    <ruby>自己紹介<rt>jiko shōkai</rt></ruby><ruby>をして<rt>wo shite</rt></ruby>、<ruby>人<rt>hito</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>説明<rt>setsumei</rt></ruby><ruby>できる<rt>dekiru</rt></ruby><ruby>ように<rt>yō ni</rt></ruby><ruby>なります<rt>narimasu</rt></ruby>。
+  </div>
+
+  <div class="section">
+    <h3>TODAY'S PATTERNS</h3>
+
+    <p><strong>1. Identity</strong> (<ruby>身分<rt>mibun</rt></ruby>)</p>
+    <div class="pattern">
+      <ruby>私<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby>[<ruby>学生<rt>gakusei</rt></ruby>]<ruby>です<rt>desu</rt></ruby>。 <span class="en">I am a [student].</span><br>
+      <ruby>あなた<rt>anata</rt></ruby><ruby>は<rt>wa</rt></ruby>[<ruby>先生<rt>sensei</rt></ruby>]<ruby>です<rt>desu</rt></ruby>。 <span class="en">You are a [teacher].</span><br>
+      <ruby>彼<rt>kare</rt></ruby>/<ruby>彼女<rt>kanojo</rt></ruby><ruby>は<rt>wa</rt></ruby>[<ruby>医者<rt>isha</rt></ruby>]<ruby>です<rt>desu</rt></ruby>。 <span class="en">He/She is a [doctor].</span>
+    </div>
+
+    <p style="margin-top:16px"><strong>2. Description</strong> (<ruby>描写<rt>byōsha</rt></ruby>)</p>
+    <div class="pattern">
+      <ruby>私<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby>[<ruby>嬉しい<rt>ureshii</rt></ruby>]<ruby>です<rt>desu</rt></ruby>。 <span class="en">I am [happy].</span><br>
+      <ruby>彼ら<rt>karera</rt></ruby><ruby>は<rt>wa</rt></ruby>[<ruby>疲れて<rt>tsukarete</rt></ruby>]<ruby>います<rt>imasu</rt></ruby>。 <span class="en">They are [tired].</span><br>
+      <ruby>彼女<rt>kanojo</rt></ruby><ruby>は<rt>wa</rt></ruby>[<ruby>韓国<rt>Kankoku</rt></ruby>]<ruby>出身<rt>shusshin</rt></ruby><ruby>です<rt>desu</rt></ruby>。 <span class="en">She is [from Korea].</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="p2">
+  <h1>CONVERSATION: GUIDED READING</h1>
+  <h2></h2>
+
+  <div class="box">
+    <div class="box-label">CONTEXT / <ruby>状況<rt>jōkyō</rt></ruby></div>
+    Two people meet at a language exchange meetup.<br>
+    <ruby>二人<rt>futari</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>言語交換<rt>gengo kōkan</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>集まり<rt>atsumari</rt></ruby><ruby>で<rt>de</rt></ruby><ruby>出会います<rt>deaimasu</rt></ruby>。
+  </div>
+
+  <div class="dialogue" style="margin-top:16px">
+    <p><span class="speaker">YUKI:</span> <ruby>こんにちは<rt>konnichiwa</rt></ruby>！<ruby>私<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby><em><ruby>です<rt>desu</rt></ruby></em> <ruby>ゆき<rt>Yuki</rt></ruby>。<ruby>私<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>学生<rt>gakusei</rt></ruby> <em><ruby>です<rt>desu</rt></ruby></em>。<br>
+    <span class="en" style="margin-left:80px">Hello! I am Yuki. I am a student.</span></p>
+
+    <p><span class="speaker">ALEX:</span> <ruby>こんにちは<rt>konnichiwa</rt></ruby>！<ruby>私<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>アレックス<rt>Arekkusu</rt></ruby> <em><ruby>です<rt>desu</rt></ruby></em>。<ruby>私<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>先生<rt>sensei</rt></ruby> <em><ruby>です<rt>desu</rt></ruby></em>。<br>
+    <span class="en" style="margin-left:80px">Hello! I am Alex. I am a teacher.</span><br>
+    <span style="margin-left:80px"><ruby>よろしくお願いします<rt>yoroshiku onegai shimasu</rt></ruby>！</span><br>
+    <span class="en" style="margin-left:80px">Nice to meet you!</span></p>
+
+    <p><span class="speaker">YUKI:</span> <ruby>こちらこそ<rt>kochira koso</rt></ruby>！<ruby>あの<rt>ano</rt></ruby><ruby>人<rt>hito</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>お友達<rt>otomodachi</rt></ruby> <em><ruby>です<rt>desu</rt></ruby></em> <ruby>か<rt>ka</rt></ruby>？<br>
+    <span class="en" style="margin-left:80px">Likewise! Is that person your friend?</span></p>
+
+    <p><span class="speaker">ALEX:</span> <ruby>はい<rt>hai</rt></ruby>！<ruby>彼女<rt>kanojo</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>サラ<rt>Sara</rt></ruby> <em><ruby>です<rt>desu</rt></ruby></em>。<ruby>彼女<rt>kanojo</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>ロンドン<rt>Rondon</rt></ruby><ruby>出身<rt>shusshin</rt></ruby> <em><ruby>です<rt>desu</rt></ruby></em>。<br>
+    <span class="en" style="margin-left:80px">Yes! She is Sarah. She is from London.</span><br>
+    <span style="margin-left:80px"><ruby>彼女<rt>kanojo</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>とても<rt>totemo</rt></ruby><ruby>優しい<rt>yasashii</rt></ruby> <em><ruby>です<rt>desu</rt></ruby></em>。</span><br>
+    <span class="en" style="margin-left:80px">She is very kind.</span></p>
+
+    <p><span class="speaker">YUKI:</span> <ruby>いい<rt>ii</rt></ruby> <em><ruby>です<rt>desu</rt></ruby></em> <ruby>ね<rt>ne</rt></ruby>！<ruby>あの<rt>ano</rt></ruby><ruby>人たち<rt>hito-tachi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>クラスメート<rt>kurasumeeto</rt></ruby> <em><ruby>です<rt>desu</rt></ruby></em> <ruby>か<rt>ka</rt></ruby>？<br>
+    <span class="en" style="margin-left:80px">That's nice! Are those people your classmates?</span></p>
+
+    <p><span class="speaker">ALEX:</span> <ruby>はい<rt>hai</rt></ruby>！<ruby>彼ら<rt>karera</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>私<rt>watashi</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>クラスメート<rt>kurasumeeto</rt></ruby> <em><ruby>です<rt>desu</rt></ruby></em>。<br>
+    <span class="en" style="margin-left:80px">Yes! They are my classmates.</span><br>
+    <span style="margin-left:80px"><ruby>彼ら<rt>karera</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>とても<rt>totemo</rt></ruby><ruby>面白い<rt>omoshiroi</rt></ruby> <em><ruby>です<rt>desu</rt></ruby></em>！</span><br>
+    <span class="en" style="margin-left:80px">They are really fun!</span></p>
+  </div>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="p3">
+  <h1>CONVERSATION: SPEED &amp; MEMORY CHECK</h1>
+  <h2></h2>
+
+  <div class="dialogue" style="margin-top:16px">
+    <p><span class="speaker">YUKI:</span> <span class="blank"></span><br>
+    <span class="en" style="margin-left:70px">(Hello! I am Yuki. I am a student.)</span></p>
+
+    <p><span class="speaker">ALEX:</span> <ruby>こんにちは<rt>konnichiwa</rt></ruby>！<ruby>私<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>アレックス<rt>Arekkusu</rt></ruby><ruby>です<rt>desu</rt></ruby>。<ruby>私<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>先生<rt>sensei</rt></ruby><ruby>です<rt>desu</rt></ruby>。<ruby>よろしくお願いします<rt>yoroshiku onegai shimasu</rt></ruby>！</p>
+
+    <p><span class="speaker">YUKI:</span> <span class="blank"></span><br>
+    <span class="en" style="margin-left:70px">(Likewise! Is that person your friend?)</span></p>
+
+    <p><span class="speaker">ALEX:</span> <ruby>はい<rt>hai</rt></ruby>！<ruby>彼女<rt>kanojo</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>サラ<rt>Sara</rt></ruby><ruby>です<rt>desu</rt></ruby>。<ruby>彼女<rt>kanojo</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>ロンドン<rt>Rondon</rt></ruby><ruby>出身<rt>shusshin</rt></ruby><ruby>です<rt>desu</rt></ruby>。<ruby>彼女<rt>kanojo</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>とても<rt>totemo</rt></ruby><ruby>優しい<rt>yasashii</rt></ruby><ruby>です<rt>desu</rt></ruby>。</p>
+
+    <p><span class="speaker">YUKI:</span> <span class="blank"></span><br>
+    <span class="en" style="margin-left:70px">(That's nice! Are those people your classmates?)</span></p>
+
+    <p><span class="speaker">ALEX:</span> <ruby>はい<rt>hai</rt></ruby>！<ruby>彼ら<rt>karera</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>私<rt>watashi</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>クラスメート<rt>kurasumeeto</rt></ruby><ruby>です<rt>desu</rt></ruby>。<ruby>彼ら<rt>karera</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>とても<rt>totemo</rt></ruby><ruby>面白い<rt>omoshiroi</rt></ruby><ruby>です<rt>desu</rt></ruby>！</p>
+  </div>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page" id="p4">
+  <h1>PATTERN DRILL: IDENTITY (<ruby>身分<rt>mibun</rt></ruby>)</h1>
+  <h2></h2>
+
+  <p>PATTERN: [Subject]<ruby>は<rt>wa</rt></ruby> [noun]<ruby>です<rt>desu</rt></ruby>。</p>
+
+  <div class="section">
+    <p><strong>1. Read Together:</strong></p>
+    <div class="pattern">
+      &bull; <ruby>私<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>学生<rt>gakusei</rt></ruby><ruby>です<rt>desu</rt></ruby>。 <span class="en">I am a student.</span><br>
+      &bull; <ruby>彼女<rt>kanojo</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>医者<rt>isha</rt></ruby><ruby>です<rt>desu</rt></ruby>。 <span class="en">She is a doctor.</span><br>
+      &bull; <ruby>彼ら<rt>karera</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>会社員<rt>kaishain</rt></ruby><ruby>です<rt>desu</rt></ruby>。 <span class="en">They are office workers.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <p><strong>2. Fill in the Blanks:</strong></p>
+    <div class="pattern">
+      &bull; <ruby>彼<rt>kare</rt></ruby> <span class="blank" style="min-width:80px"></span> <ruby>先生<rt>sensei</rt></ruby><ruby>です<rt>desu</rt></ruby>。 <span class="en">He is a teacher.</span><br>
+      &bull; <ruby>私たち<rt>watashi-tachi</rt></ruby> <span class="blank" style="min-width:80px"></span> <ruby>学生<rt>gakusei</rt></ruby><ruby>です<rt>desu</rt></ruby>。 <span class="en">We are students.</span><br>
+      &bull; <ruby>彼女<rt>kanojo</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>看護師<rt>kangoshi</rt></ruby><ruby>です<rt>desu</rt></ruby> <span class="blank" style="min-width:40px"></span> ？ <span class="en">Is she a nurse?</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <p><strong>3. Translate</strong> (Translate to Japanese):</p>
+    <div class="pattern">
+      &bull; I am a chef.<br>
+      <span class="blank-full"></span>
+      <span style="color:#999; font-size:12px">(<ruby>料理人<rt>ryōrinin</rt></ruby>)</span>
+    </div>
+    <div class="pattern" style="margin-top:12px">
+      &bull; They are police officers.<br>
+      <span class="blank-full"></span>
+      <span style="color:#999; font-size:12px">(<ruby>警察官<rt>keisatsukan</rt></ruby>)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <p><strong>4. Make Your Own:</strong></p>
+    <p style="margin-left:16px">Use the pattern to make your own sentence!</p>
+    <span class="blank-full"></span>
+  </div>
+</div>
+
+<!-- PAGE 5 -->
+<div class="page" id="p5">
+  <h1>PATTERN DRILL: DESCRIPTION (<ruby>描写<rt>byōsha</rt></ruby>)</h1>
+  <h2></h2>
+
+  <p>PATTERN: [Subject]<ruby>は<rt>wa</rt></ruby> [adjective]<ruby>です<rt>desu</rt></ruby> / [place]<ruby>出身<rt>shusshin</rt></ruby><ruby>です<rt>desu</rt></ruby></p>
+
+  <div class="section">
+    <p><strong>1. Read Together:</strong></p>
+    <div class="pattern">
+      &bull; <ruby>私<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>嬉しい<rt>ureshii</rt></ruby><ruby>です<rt>desu</rt></ruby>。 <span class="en">I am happy.</span><br>
+      &bull; <ruby>彼<rt>kare</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>日本<rt>Nihon</rt></ruby><ruby>出身<rt>shusshin</rt></ruby><ruby>です<rt>desu</rt></ruby>。 <span class="en">He is from Japan.</span><br>
+      &bull; <ruby>彼ら<rt>karera</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>とても<rt>totemo</rt></ruby><ruby>疲れて<rt>tsukarete</rt></ruby><ruby>います<rt>imasu</rt></ruby>。 <span class="en">They are very tired.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <p><strong>2. Fill in the Blanks:</strong></p>
+    <div class="pattern">
+      &bull; <ruby>彼女<rt>kanojo</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>東京<rt>Tōkyō</rt></ruby><ruby>出身<rt>shusshin</rt></ruby> <span class="blank" style="min-width:80px"></span>。 <span class="en">She is from Tokyo.</span><br>
+      &bull; <ruby>私<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>とても<rt>totemo</rt></ruby><ruby>元気<rt>genki</rt></ruby> <span class="blank" style="min-width:80px"></span>。 <span class="en">I am very energetic.</span><br>
+      &bull; <ruby>あなた<rt>anata</rt></ruby> <span class="blank" style="min-width:80px"></span> <ruby>疲れて<rt>tsukarete</rt></ruby><ruby>います<rt>imasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？ <span class="en">Are you tired?</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <p><strong>3. Translate</strong> (Translate to Japanese):</p>
+    <div class="pattern">
+      &bull; We are from Korea.<br>
+      <span class="blank-full"></span>
+      <span style="color:#999; font-size:12px">(<ruby>韓国<rt>Kankoku</rt></ruby>)</span>
+    </div>
+    <div class="pattern" style="margin-top:12px">
+      &bull; She is very kind.<br>
+      <span class="blank-full"></span>
+      <span style="color:#999; font-size:12px">(<ruby>とても<rt>totemo</rt></ruby> / <ruby>優しい<rt>yasashii</rt></ruby>)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <p><strong>4. Make Your Own:</strong></p>
+    <p style="margin-left:16px">Use the pattern to make your own sentence!</p>
+    <span class="blank-full"></span>
+  </div>
+</div>
+
+<!-- PAGE 6 -->
+<div class="page" id="p6">
+  <h1>SHORT DIALOGUES</h1>
+  <h2></h2>
+
+  <div class="section">
+    <p><strong>DIALOGUE 1:</strong></p>
+    <div class="dialogue">
+      <p><span class="speaker">Tutor:</span> <ruby>お仕事<rt>oshigoto</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>何<rt>nan</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？<br>
+      <span class="en" style="margin-left:80px">What is your job?</span></p>
+      <p><span class="speaker">Student:</span> <span class="blank"></span><br>
+      <span class="en" style="margin-left:80px">(I am a student. | <ruby>学生<rt>gakusei</rt></ruby>)</span></p>
+    </div>
+  </div>
+
+  <div class="section">
+    <p><strong>DIALOGUE 2:</strong></p>
+    <div class="dialogue">
+      <p><span class="speaker">Student:</span> <span class="blank"></span><br>
+      <span class="en" style="margin-left:80px">(Is she a doctor? | <ruby>医者<rt>isha</rt></ruby>)</span></p>
+      <p><span class="speaker">Tutor:</span> <ruby>いいえ<rt>iie</rt></ruby>、<ruby>彼女<rt>kanojo</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>看護師<rt>kangoshi</rt></ruby><ruby>です<rt>desu</rt></ruby>。<br>
+      <span class="en" style="margin-left:80px">No, she is a nurse.</span></p>
+    </div>
+  </div>
+
+  <div class="section">
+    <p><strong>DIALOGUE 3:</strong></p>
+    <div class="dialogue">
+      <p><span class="speaker">Tutor:</span> <ruby>今日<rt>kyō</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>気分<rt>kibun</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>どう<rt>dō</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？<br>
+      <span class="en" style="margin-left:80px">How are you feeling today?</span></p>
+      <p><span class="speaker">Student:</span> <span class="blank"></span><br>
+      <span class="en" style="margin-left:80px">(I am very happy today! | <ruby>とても<rt>totemo</rt></ruby> / <ruby>嬉しい<rt>ureshii</rt></ruby>)</span></p>
+    </div>
+  </div>
+
+  <div class="section">
+    <p><strong>DIALOGUE 4:</strong></p>
+    <div class="dialogue">
+      <p><span class="speaker">Student:</span> <span class="blank"></span><br>
+      <span class="en" style="margin-left:80px">(Where is he from? | <ruby>どこ<rt>doko</rt></ruby> / <ruby>出身<rt>shusshin</rt></ruby>)</span></p>
+      <p><span class="speaker">Tutor:</span> <ruby>彼<rt>kare</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>カナダ<rt>Kanada</rt></ruby><ruby>出身<rt>shusshin</rt></ruby><ruby>です<rt>desu</rt></ruby>。<br>
+      <span class="en" style="margin-left:80px">He is from Canada.</span></p>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 7 -->
+<div class="page" id="p7">
+  <h1>REAL-LIFE PRACTICE: ROLEPLAY</h1>
+  <h2>"The Welcome Party"</h2>
+
+  <p>SCENARIO:<br>
+  You are at a welcome party for new international students. Meet the tutor (another student) and make a new friend!<br>
+  <ruby>状況<rt>jōkyō</rt></ruby>: <ruby>外国人<rt>gaikokujin</rt></ruby><ruby>学生<rt>gakusei</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>歓迎<rt>kangei</rt></ruby><ruby>パーティー<rt>pātii</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>来ました<rt>kimashita</rt></ruby>。<ruby>チューター<rt>chūtā</rt></ruby>（<ruby>他<rt>hoka</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>学生<rt>gakusei</rt></ruby>）<ruby>に<rt>ni</rt></ruby><ruby>会いましょう<rt>aimashō</rt></ruby>！</p>
+
+  <div class="box" style="margin-top:20px">
+    <div class="box-label"><ruby>チューター用<rt>chūtā-yō</rt></ruby></div>
+    <p><ruby>目標<rt>mokuhyō</rt></ruby>: <ruby>学生<rt>gakusei</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>自然<rt>shizen</rt></ruby><ruby>な<rt>na</rt></ruby><ruby>会話<rt>kaiwa</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>できる<rt>dekiru</rt></ruby><ruby>よう<rt>yō</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>サポート<rt>sapōto</rt></ruby><ruby>する<rt>suru</rt></ruby>。</p>
+    <p style="margin-top:8px"><ruby>ルール<rt>rūru</rt></ruby>:</p>
+    <div class="pattern">
+      &#10003; "<ruby>こんにちは<rt>konnichiwa</rt></ruby>！<ruby>初めて<rt>hajimete</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？" <ruby>から<rt>kara</rt></ruby><ruby>始める<rt>hajimeru</rt></ruby><br>
+      &#10003; <ruby>簡単<rt>kantan</rt></ruby><ruby>な<rt>na</rt></ruby><ruby>文<rt>bun</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>使う<rt>tsukau</rt></ruby>。<ruby>役<rt>yaku</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>なりきる<rt>narikiru</rt></ruby>。<br>
+      &#10007; <ruby>会話中<rt>kaiwachū</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>文法<rt>bunpō</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>直さない<rt>naosanai</rt></ruby>。
+    </div>
+    <p style="margin-top:8px"><ruby>フレーズ<rt>furēzu</rt></ruby>:</p>
+    <div class="pattern">
+      "___<ruby>出身<rt>shusshin</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？"<br>
+      "___<ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？"
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="box-label">FOR STUDENT</div>
+    <p><strong>GOAL:</strong> Make a new friend!</p>
+    <p style="margin-top:8px"><strong>RULES:</strong></p>
+    <div class="pattern">
+      &#10003; Introduce yourself (name + occupation)<br>
+      &#10003; Use "<ruby>私<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby>...<ruby>です<rt>desu</rt></ruby>" at least 2 times<br>
+      &#10007; Don't just say "<ruby>はい<rt>hai</rt></ruby>" / "<ruby>いいえ<rt>iie</rt></ruby>"!
+    </div>
+    <p style="margin-top:8px"><strong>USE THESE PHRASES:</strong></p>
+    <div class="pattern">
+      "<ruby>私<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby>[name]<ruby>です<rt>desu</rt></ruby>。<ruby>私<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby>[occupation]<ruby>です<rt>desu</rt></ruby>。"<br>
+      "<ruby>私<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby>[country]<ruby>出身<rt>shusshin</rt></ruby><ruby>です<rt>desu</rt></ruby>。"
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 8 -->
+<div class="page" id="p8">
+  <h1>FREE DISCUSSION</h1>
+  <h2></h2>
+
+  <div class="section">
+    <p><strong>1.</strong> <ruby>自己紹介<rt>jiko shōkai</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>して<rt>shite</rt></ruby><ruby>ください<rt>kudasai</rt></ruby>！<ruby>名前<rt>namae</rt></ruby><ruby>と<rt>to</rt></ruby><ruby>仕事<rt>shigoto</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>教えて<rt>oshiete</rt></ruby><ruby>ください<rt>kudasai</rt></ruby>。<br>
+    <span class="en">Introduce yourself! Tell me your name and your job (or what you want to be).</span></p>
+    <div class="help-box">
+      HINTS<br>
+      "<ruby>私<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby>___<ruby>です<rt>desu</rt></ruby>。"<br>
+      "<ruby>私<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby>___<ruby>です<rt>desu</rt></ruby>。" (occupation)
+    </div>
+    <p style="margin-top:6px"><strong>→ Now ask the tutor:</strong> "<ruby>お名前<rt>onamae</rt></ruby><ruby>は<rt>wa</rt></ruby>？___<ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？"</p>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <p><strong>2.</strong> <ruby>家族<rt>kazoku</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>誰<rt>dare</rt></ruby><ruby>か<rt>ka</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>説明<rt>setsumei</rt></ruby><ruby>して<rt>shite</rt></ruby><ruby>ください<rt>kudasai</rt></ruby>。<br>
+    <span class="en">Describe someone in your family. Tell me about one family member.</span></p>
+    <div class="help-box">
+      HINTS<br>
+      "<ruby>彼<rt>kare</rt></ruby>/<ruby>彼女<rt>kanojo</rt></ruby><ruby>は<rt>wa</rt></ruby>___<ruby>です<rt>desu</rt></ruby>。"<br>
+      "<ruby>彼<rt>kare</rt></ruby>/<ruby>彼女<rt>kanojo</rt></ruby><ruby>は<rt>wa</rt></ruby>___<ruby>です<rt>desu</rt></ruby>。" (occupation)<br>
+      "<ruby>彼<rt>kare</rt></ruby>/<ruby>彼女<rt>kanojo</rt></ruby><ruby>は<rt>wa</rt></ruby>___<ruby>出身<rt>shusshin</rt></ruby><ruby>です<rt>desu</rt></ruby>。"
+    </div>
+    <p style="margin-top:6px"><strong>→ Now ask the tutor:</strong> "<ruby>ご家族<rt>gokazoku</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>こと<rt>koto</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>教えて<rt>oshiete</rt></ruby><ruby>ください<rt>kudasai</rt></ruby>！"</p>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <p><strong>3.</strong> <ruby>今<rt>ima</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>気分<rt>kibun</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>どう<rt>dō</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？<ruby>形容詞<rt>keiyōshi</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>使って<rt>tsukatte</rt></ruby><ruby>ください<rt>kudasai</rt></ruby>。<br>
+    <span class="en">How are you feeling right now? Use an adjective to describe yourself.</span></p>
+    <div class="help-box">
+      HINTS<br>
+      "<ruby>私<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby>[adjective]<ruby>です<rt>desu</rt></ruby>。"
+    </div>
+    <p style="margin-top:6px"><strong>→ Now ask the tutor:</strong> "<ruby>今日<rt>kyō</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>気分<rt>kibun</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>どう<rt>dō</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？"</p>
+  </div>
+</div>
+
+<!-- PAGE 8B -->
+<div class="page" id="p8b">
+  <h1>FREE DISCUSSION (Script Version)</h1>
+  <h2></h2>
+
+  <div class="section">
+    <p><strong>ROUND 1: INTRODUCTIONS</strong></p>
+    <div class="dialogue">
+      <p><span class="speaker">Tutor:</span> "<ruby>自己紹介<rt>jiko shōkai</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>して<rt>shite</rt></ruby><ruby>ください<rt>kudasai</rt></ruby>！<ruby>お名前<rt>onamae</rt></ruby><ruby>は<rt>wa</rt></ruby>？<ruby>お仕事<rt>oshigoto</rt></ruby><ruby>は<rt>wa</rt></ruby>？"<br>
+      <span class="en" style="margin-left:80px">Tell me about yourself! What is your name? What do you do?</span></p>
+      <p><span class="speaker">Student:</span> <span class="blank"></span><br>
+      <span class="en" style="margin-left:80px">(<ruby>私<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby>___<ruby>です<rt>desu</rt></ruby>。<ruby>私<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby>___<ruby>です<rt>desu</rt></ruby>。)</span></p>
+      <p><span class="speaker">Student:</span> "<ruby>お名前<rt>onamae</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>何<rt>nan</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？___<ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？"<br>
+      <span class="en" style="margin-left:80px">What is your name? Are you a ___?</span></p>
+      <p><span class="speaker">Tutor:</span> <em>(answers naturally)</em></p>
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <p><strong>ROUND 2: FAMILY</strong></p>
+    <div class="dialogue">
+      <p><span class="speaker">Tutor:</span> "<ruby>ご家族<rt>gokazoku</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>こと<rt>koto</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>教えて<rt>oshiete</rt></ruby><ruby>ください<rt>kudasai</rt></ruby>！"<br>
+      <span class="en" style="margin-left:80px">Tell me about someone in your family!</span></p>
+      <p><span class="speaker">Student:</span> <span class="blank"></span><br>
+      <span class="en" style="margin-left:80px">(<ruby>彼<rt>kare</rt></ruby>/<ruby>彼女<rt>kanojo</rt></ruby><ruby>は<rt>wa</rt></ruby>___<ruby>です<rt>desu</rt></ruby>。<ruby>彼<rt>kare</rt></ruby>/<ruby>彼女<rt>kanojo</rt></ruby><ruby>は<rt>wa</rt></ruby>___<ruby>です<rt>desu</rt></ruby>。)</span></p>
+      <p><span class="speaker">Student:</span> "<ruby>ご家族<rt>gokazoku</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>こと<rt>koto</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>教えて<rt>oshiete</rt></ruby><ruby>ください<rt>kudasai</rt></ruby>！"<br>
+      <span class="en" style="margin-left:80px">Tell me about your family!</span></p>
+      <p><span class="speaker">Tutor:</span> <em>(answers naturally)</em></p>
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <p><strong>ROUND 3: FEELINGS</strong></p>
+    <div class="dialogue">
+      <p><span class="speaker">Tutor:</span> "<ruby>今<rt>ima</rt></ruby>、<ruby>気分<rt>kibun</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>どう<rt>dō</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？"<br>
+      <span class="en" style="margin-left:80px">How are you feeling right now?</span></p>
+      <p><span class="speaker">Student:</span> <span class="blank"></span><br>
+      <span class="en" style="margin-left:80px">(<ruby>私<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby>___<ruby>です<rt>desu</rt></ruby>。)</span></p>
+      <p><span class="speaker">Student:</span> "<ruby>今日<rt>kyō</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>気分<rt>kibun</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>どう<rt>dō</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？"<br>
+      <span class="en" style="margin-left:80px">How are you feeling today?</span></p>
+      <p><span class="speaker">Tutor:</span> <em>(answers naturally)</em></p>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 9 -->
+<div class="page" id="p9">
+  <h1><ruby>ミッション<rt>misshon</rt></ruby><ruby>完了<rt>kanryō</rt></ruby>！</h1>
+  <h2></h2>
+
+  <div class="box">
+    <p style="margin-bottom:12px"><strong><ruby>今日<rt>kyō</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>ミッション<rt>misshon</rt></ruby>:</strong></p>
+
+    <div class="check-item">
+      <span class="check">&#10004;</span>
+      <strong>PATTERN 1:</strong> <ruby>私<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby>___<ruby>です<rt>desu</rt></ruby>。<br>
+      <span style="margin-left:36px">"<ruby>自己紹介<rt>jiko shōkai</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>できる<rt>dekiru</rt></ruby>！"</span>
+    </div>
+
+    <div class="check-item">
+      <span class="check">&#10004;</span>
+      <strong>PATTERN 2:</strong> <ruby>彼<rt>kare</rt></ruby>/<ruby>彼女<rt>kanojo</rt></ruby><ruby>は<rt>wa</rt></ruby>___<ruby>です<rt>desu</rt></ruby>。<br>
+      <span style="margin-left:36px">"<ruby>他<rt>hoka</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>人<rt>hito</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>説明<rt>setsumei</rt></ruby><ruby>できる<rt>dekiru</rt></ruby>！"</span>
+    </div>
+
+    <div class="check-item">
+      <span class="check">&#10004;</span>
+      <strong><ruby>目標<rt>mokuhyō</rt></ruby>:</strong> <ruby>パーティー<rt>pātii</rt></ruby><ruby>で<rt>de</rt></ruby><ruby>新しい<rt>atarashii</rt></ruby><ruby>友達<rt>tomodachi</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>できた<rt>dekita</rt></ruby>！<br>
+      <span style="margin-left:36px">"<ruby>日本語<rt>nihongo</rt></ruby><ruby>で<rt>de</rt></ruby><ruby>会話<rt>kaiwa</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>できる<rt>dekiru</rt></ruby>！"</span>
+    </div>
+  </div>
+
+  <div class="section" style="margin-top:20px">
+    <p><strong>KEY EXPRESSIONS</strong> — <ruby>もう一度<rt>mō ichido</rt></ruby><ruby>読んで<rt>yonde</rt></ruby><ruby>みましょう<rt>mimashō</rt></ruby>！</p>
+    <div class="pattern">
+      <ruby>私<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>学生<rt>gakusei</rt></ruby><ruby>です<rt>desu</rt></ruby>。 &nbsp;&nbsp; <ruby>彼女<rt>kanojo</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>医者<rt>isha</rt></ruby><ruby>です<rt>desu</rt></ruby>。<br>
+      <ruby>彼<rt>kare</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>優しい<rt>yasashii</rt></ruby><ruby>です<rt>desu</rt></ruby>。 &nbsp;&nbsp; <ruby>彼ら<rt>karera</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>韓国<rt>Kankoku</rt></ruby><ruby>出身<rt>shusshin</rt></ruby><ruby>です<rt>desu</rt></ruby>。
+    </div>
+  </div>
+
+</div>
+
+<nav class="nav">
+  <button id="prev" onclick="go(-1)" disabled>&larr; Back</button>
+  <span id="indicator">1 / 10</span>
+  <button id="next" onclick="go(1)">Next &rarr;</button>
+</nav>
+
+<script>
+const pages = ['p1','p2','p3','p4','p5','p6','p7','p8','p8b','p9'];
+let cur = 0;
+
+function go(dir) {
+  document.getElementById(pages[cur]).classList.remove('active');
+  cur += dir;
+  document.getElementById(pages[cur]).classList.add('active');
+  document.getElementById('prev').disabled = cur === 0;
+  document.getElementById('next').disabled = cur === pages.length - 1;
+  document.getElementById('indicator').textContent = (cur + 1) + ' / ' + pages.length;
+  window.scrollTo(0, 0);
+}
+</script>
+</body>
+</html>

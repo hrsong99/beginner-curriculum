@@ -288,16 +288,16 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |  会いましょう！                                                           |
 |                                                                         |
 |                                                                         |
-|  ┌─── FOR TUTOR ──────────────────────────────────────────┐            |
+|  ┌─── チューター用 ───────────────────────────────────────┐            |
 |  │                                                         │            |
-|  │  GOAL: Help the student have a real conversation.       │            |
+|  │  目標: 学生が自然な会話をできるようにサポートする。        │            |
 |  │                                                         │            |
-|  │  RULES:                                                 │            |
-|  │  ✓ Start with: "こんにちは！初めてですか？"                │            |
-|  │  ✓ Use simple sentences. Stay in character.             │            |
-|  │  ✗ Don't correct grammar mid-conversation.              │            |
+|  │  ルール:                                                 │            |
+|  │  ✓ "こんにちは！初めてですか？" から始める                │            |
+|  │  ✓ 簡単な文を使う。役になりきる。                         │            |
+|  │  ✗ 会話中に文法を直さない。                               │            |
 |  │                                                         │            |
-|  │  PHRASES:                                               │            |
+|  │  フレーズ:                                               │            |
 |  │  * "___出身ですか？"                                     │            |
 |  │  * "___ですか？"                                         │            |
 |  │                                                         │            |
@@ -332,8 +332,8 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |  ────────────────                                                       |
 |                                                                         |
 |                                                                         |
-|  1. Introduce yourself! Tell me your name and your job                  |
-|     (or what you want to be).                                           |
+|  1. 自己紹介をしてください！名前と仕事を教えてください。                  |
+|     Introduce yourself! Tell me your name and your job.                |
 |                                                                         |
 |     ┌─── HINTS ──────────────────────────────────┐                      |
 |     │  * "私は___です。"                            │                      |
@@ -343,8 +343,8 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |     → Now ask the tutor: "お名前は？___ですか？"                          |
 |                                                                         |
 |                                                                         |
-|  2. Describe someone in your family.                                    |
-|     Tell me about one family member.                                    |
+|  2. 家族の誰かを説明してください。                                       |
+|     Describe someone in your family.                                    |
 |                                                                         |
 |     ┌─── HINTS ──────────────────────────────────┐                      |
 |     │  * "彼/彼女は___です。"                       │                      |
@@ -355,8 +355,8 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |     → Now ask the tutor: "ご家族のことを教えてください！"                  |
 |                                                                         |
 |                                                                         |
-|  3. How are you feeling right now?                                      |
-|     Use an adjective to describe yourself.                              |
+|  3. 今の気分はどうですか？形容詞を使ってください。                         |
+|     How are you feeling right now?                                      |
 |                                                                         |
 |     ┌─── HINTS ──────────────────────────────────┐                      |
 |     │  * "私は[adjective]です。"                    │                      |
@@ -424,32 +424,32 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 ```
 +-------------------------------------------------------------------------+
 |                                                                         |
-|  MISSION COMPLETE!                                                      |
+|  ミッション完了！                                                        |
 |  ────────────────                                                       |
 |                                                                         |
-|  TODAY'S MISSIONS:                                                      |
+|  今日のミッション:                                                       |
 |  ┌─────────────────────────────────────────────────────────┐            |
 |  │                                                          │            |
 |  │                                                          │            |
 |  │  ┏━━━┓                                                   │            |
 |  │  ┃ ✔ ┃  PATTERN 1: 私は___です。                          │            |
-|  │  ┗━━━┛  "I can introduce myself!"                        │            |
+|  │  ┗━━━┛  "自己紹介ができる！"                               │            |
 |  │                                                          │            |
 |  │                                                          │            |
 |  │  ┏━━━┓                                                   │            |
 |  │  ┃ ✔ ┃  PATTERN 2: 彼/彼女は___です。                     │            |
-|  │  ┗━━━┛  "I can describe other people!"                   │            |
+|  │  ┗━━━┛  "他の人を説明できる！"                             │            |
 |  │                                                          │            |
 |  │                                                          │            |
 |  │  ┏━━━┓                                                   │            |
-|  │  ┃ ✔ ┃  GOAL: I made a new friend at the party!          │            |
-|  │  ┗━━━┛  "I can use Japanese in a real conversation!"     │            |
+|  │  ┃ ✔ ┃  目標: パーティーで新しい友達ができた！              │            |
+|  │  ┗━━━┛  "日本語で会話ができる！"                           │            |
 |  │                                                          │            |
 |  │                                                          │            |
 |  └─────────────────────────────────────────────────────────┘            |
 |                                                                         |
 |                                                                         |
-|  KEY EXPRESSIONS — Read one more time!                                  |
+|  KEY EXPRESSIONS — もう一度読んでみましょう！                            |
 |  * 私は学生です。          * 彼女は医者です。                               |
 |  * 彼は優しいです。        * 彼らは韓国出身です。                            |
 |                                                                         |
