@@ -279,26 +279,34 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |  ────────────────────────────                                           |
 |  "The Lost & Found"                                                     |
 |                                                                         |
-|  SCENARIO:                                                              |
+|  **SCENARIO:**                                                          |
 |  You are at the school lost & found. The tutor works there.             |
 |  Ask about items and find your things!                                  |
 |  状況: 学校の落とし物コーナーにいます。チューターが担当者です。           |
 |  アイテムについて聞いて、自分の物を見つけましょう！                       |
 |                                                                         |
+|  **GOAL:** Find your things!                                            |
 |                                                                         |
-|  ┌─── FOR STUDENT ────────────────────────────────────────┐            |
-|  │                                                         │            |
-|  │  GOAL: Find your things!                                │            |
-|  │                                                         │            |
-|  │  RULES:                                                 │            |
-|  │  ✓ Describe items using これ/それ/あれ                    │            |
-|  │  ✓ Use の to say whose things they are                   │            |
-|  │                                                         │            |
-|  │  USE THESE PHRASES:                                     │            |
-|  │  * "あれは私のかばんです。"                               │            |
-|  │  * "これは___の___です。"                                 │            |
-|  │                                                         │            |
-|  └─────────────────────────────────────────────────────────┘            |
+|  **RULES:**                                                             |
+|  ✓ Describe items using これ/それ/あれ                                   |
+|  ✓ Use の to say whose things they are                                  |
+|                                                                         |
+|                                                                         |
+|  ┌─── HINTS ────────────────────────────────────────────┐              |
+|  │                                                        │              |
+|  │  PATTERNS:                                             │              |
+|  │  * これ/それ/あれは ___です。    This/That is ___.      │              |
+|  │  * これは ___の ___です。        This is ___'s ___.     │              |
+|  │                                                        │              |
+|  │  WORDS:                                                │              |
+|  │  ほん(book)  ペン(pen)  ノート(notebook)                │              |
+|  │  かばん(bag)  でんわ(phone)  かぎ(key)                  │              |
+|  │  とけい(clock)  みず(water)                             │              |
+|  │                                                        │              |
+|  │  PEOPLE:                                               │              |
+|  │  わたし(I/my)  せんせい(teacher)  ともだち(friend)      │              |
+|  │                                                        │              |
+|  └────────────────────────────────────────────────────────┘              |
 |                                                                         |
 |                                                                  PAGE 7 |
 +-------------------------------------------------------------------------+
@@ -321,8 +329,7 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |  Student:  _____________________________________________                |
 |                                                                         |
 |     ┌─── WORDS ─────────────────────────────────────────┐               |
-|     │  本(book) ペン(pen) ノート(notebook) 時計(clock)    │               |
-|     │  かばん(bag) 電話(phone) かぎ(key) 水(water)       │               |
+|     │  本(book) ペン(pen) ノート(notebook) かばん(bag)    │               |
 |     └────────────────────────────────────────────────────┘               |
 |                                                                         |
 |  Student:  "それは何ですか？"                                              |
@@ -340,10 +347,7 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |  Student:  _____________________________________________                |
 |                                                                         |
 |     ┌─── WORDS ─────────────────────────────────────────┐               |
-|     │  People: 私(I/my) 先生(teacher) ゆきさん(Yuki)     │               |
-|     │  サラさん(Sara) アレックスさん(Alex) 友達(friend)    │               |
-|     │  Things: 本(book) ペン(pen) ノート(notebook)          │               |
-|     │  かばん(bag) 電話(phone) かぎ(key)                   │               |
+|     │  私(my) 先生(teacher) 友達(friend)                  │               |
 |     └────────────────────────────────────────────────────┘               |
 |                                                                         |
 |  Student:  "それは誰のですか？"                                           |
@@ -361,8 +365,7 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |  Student:  _____________________________________________                |
 |                                                                         |
 |     ┌─── WORDS ─────────────────────────────────────────┐               |
-|     │  まど(window) ドア(door) いす(chair) つくえ(desk)   │               |
-|     │  かべ(wall) え(picture) とけい(clock)               │               |
+|     │  まど(window) ドア(door) いす(chair) とけい(clock)  │               |
 |     └────────────────────────────────────────────────────┘               |
 |                                                                         |
 |  Student:  "あれは何ですか？"                                              |
@@ -388,20 +391,22 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |  │                                                          │            |
 |  │  ┏━━━┓                                                   │            |
 |  │  ┃ ✔ ┃  PATTERN 1: これは___です。                        │            |
-|  │  ┗━━━┛  "物を指して言える！"                              │            |
+|  │  ┗━━━┛                                                   │            |
 |  │                                                          │            |
 |  │                                                          │            |
 |  │  ┏━━━┓                                                   │            |
 |  │  ┃ ✔ ┃  PATTERN 2: これは___の___です。                    │            |
-|  │  ┗━━━┛  "誰の物か言える！"                                │            |
+|  │  ┗━━━┛                                                   │            |
 |  │                                                          │            |
 |  │                                                          │            |
 |  └─────────────────────────────────────────────────────────┘            |
 |                                                                         |
 |                                                                         |
 |  KEY EXPRESSIONS — もう一度読んでみましょう！                            |
-|  * これは本です。              * それは先生のペンです。                    |
-|  * あれはかばんです。          * これは私のノートです。                    |
+|  * これは本です。              — This is a book.                         |
+|  * それは先生のペンです。      — That is the teacher's pen.              |
+|  * あれはかばんです。          — That over there is a bag.               |
+|  * これは私のノートです。      — This is my notebook.                    |
 |                                                                         |
 |                                                                  PAGE 9 |
 +-------------------------------------------------------------------------+
