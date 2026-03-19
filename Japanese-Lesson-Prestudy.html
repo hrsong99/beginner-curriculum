@@ -71,6 +71,9 @@
   .reorder-controls { display: flex; align-items: center; gap: 8px; margin-top: 8px; }
   .reorder-item.correct .reorder-answer { border-color: #4caf50; border-style: solid; background: #e8f5e9; }
   .reorder-item.wrong .reorder-answer { border-color: #ef5350; border-style: solid; background: #ffebee; }
+  .reveal-btn { font-family: monospace; font-size: 13px; padding: 4px 12px; border: 1px solid #999; background: #fff; cursor: pointer; display: none; }
+  .reveal-btn:hover { background: #f0f0f0; border-color: #111; }
+  .reorder-item.wrong .reveal-btn { display: inline-block; }
 </style>
 </head>
 <body>
@@ -296,7 +299,7 @@
     <p><strong>Activity 2: Build the sentence</strong></p>
     <p style="margin-bottom:12px">Click the words in the correct order to build each sentence.</p>
 
-    <div class="reorder-item" id="ro1">
+    <div class="reorder-item" id="ro1" data-answer="わたし|は|がくせい|です">
       <p class="translate-prompt">1. I am a student.</p>
       <div class="reorder-answer" id="ro1-answer"></div>
       <div class="reorder-bank" id="ro1-bank">
@@ -308,11 +311,12 @@
       <div class="reorder-controls">
         <button class="check-btn" onclick="checkOrder('ro1','わたし|は|がくせい|です')">Check</button>
         <button class="check-btn" onclick="resetOrder('ro1')">Reset</button>
+        <button class="reveal-btn" onclick="revealAnswer(this)">Show Answer</button>
         <span class="fill-feedback" id="ro1-fb"></span>
       </div>
     </div>
 
-    <div class="reorder-item" id="ro2">
+    <div class="reorder-item" id="ro2" data-answer="かのじょ|は|かんこく|しゅっしん|です">
       <p class="translate-prompt">2. She is from Korea.</p>
       <div class="reorder-answer" id="ro2-answer"></div>
       <div class="reorder-bank" id="ro2-bank">
@@ -325,11 +329,12 @@
       <div class="reorder-controls">
         <button class="check-btn" onclick="checkOrder('ro2','かのじょ|は|かんこく|しゅっしん|です')">Check</button>
         <button class="check-btn" onclick="resetOrder('ro2')">Reset</button>
+        <button class="reveal-btn" onclick="revealAnswer(this)">Show Answer</button>
         <span class="fill-feedback" id="ro2-fb"></span>
       </div>
     </div>
 
-    <div class="reorder-item" id="ro3">
+    <div class="reorder-item" id="ro3" data-answer="かれら|は|とても|ねむい|です">
       <p class="translate-prompt">3. They are very sleepy.</p>
       <div class="reorder-answer" id="ro3-answer"></div>
       <div class="reorder-bank" id="ro3-bank">
@@ -342,6 +347,7 @@
       <div class="reorder-controls">
         <button class="check-btn" onclick="checkOrder('ro3','かれら|は|とても|ねむい|です')">Check</button>
         <button class="check-btn" onclick="resetOrder('ro3')">Reset</button>
+        <button class="reveal-btn" onclick="revealAnswer(this)">Show Answer</button>
         <span class="fill-feedback" id="ro3-fb"></span>
       </div>
     </div>
@@ -556,6 +562,37 @@ function checkOrder(id, correctStr) {
     fb.textContent = 'Not quite — try again!';
     fb.className = 'fill-feedback wrong';
   }
+}
+
+function revealAnswer(btn) {
+  var item = btn.closest('.reorder-item');
+  var id = item.id;
+  var correctWords = item.getAttribute('data-answer').split('|');
+  // Reset first
+  item.classList.remove('wrong');
+  document.getElementById(id + '-answer').innerHTML = '';
+  var bankBtns = document.getElementById(id + '-bank').querySelectorAll('.word-btn');
+  bankBtns.forEach(function(b) { b.classList.remove('used'); });
+  // Place each word in correct order by finding matching bank button
+  correctWords.forEach(function(word) {
+    for (var i = 0; i < bankBtns.length; i++) {
+      if (!bankBtns[i].classList.contains('used') && getBaseText(bankBtns[i]) === word) {
+        bankBtns[i].classList.add('used');
+        var clone = document.createElement('button');
+        clone.className = 'word-btn';
+        clone.innerHTML = bankBtns[i].innerHTML;
+        clone.style.cursor = 'default';
+        document.getElementById(id + '-answer').appendChild(clone);
+        break;
+      }
+    }
+  });
+  // Mark as correct
+  item.classList.add('correct');
+  var fb = document.getElementById(id + '-fb');
+  fb.textContent = '';
+  fb.className = 'fill-feedback';
+  btn.style.display = 'none';
 }
 
 function resetOrder(id) {
