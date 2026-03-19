@@ -342,7 +342,8 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |     ┌─── WORDS ─────────────────────────────────────────┐               |
 |     │  People: 私(I/my) 先生(teacher) ゆきさん(Yuki)     │               |
 |     │  サラさん(Sara) アレックスさん(Alex) 友達(friend)    │               |
-|     │  Things: 本 ペン ノート かばん 電話 かぎ             │               |
+|     │  Things: 本(book) ペン(pen) ノート(notebook)          │               |
+|     │  かばん(bag) 電話(phone) かぎ(key)                   │               |
 |     └────────────────────────────────────────────────────┘               |
 |                                                                         |
 |  Student:  "それは誰のですか？"                                           |
