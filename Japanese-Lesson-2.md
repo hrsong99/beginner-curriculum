@@ -245,26 +245,19 @@ Best for: When you want a complete lesson experience in under 20 minutes with le
 |                                                                         |
 |                                                                         |
 |  DIALOGUE 2:                                                            |
+|  Tutor:   それは何ですか？                                                |
+|           What is that?                                                 |
 |  Student: _____________________________________________                 |
-|           (What is that? | that = それ / what = なん)                    |
-|  Tutor:   それはペンです。先生のペンです。                                  |
-|           That is a pen. It's the teacher's pen.                        |
+|           (That is the teacher's pen.                                   |
+|            | that = それ / teacher's = せんせいの / pen = ペン)            |
 |                                                                         |
 |                                                                         |
 |  DIALOGUE 3:                                                            |
-|  Tutor:   あれは誰のかばんですか？                                        |
-|           Whose bag is that over there?                                 |
+|  Tutor:   あれは何ですか？                                                |
+|           What is that over there?                                      |
 |  Student: _____________________________________________                 |
 |           (That is Yuki's bag.                                          |
-|            | that = あれ / Yuki = ゆきさん / bag = かばん)                   |
-|                                                                         |
-|                                                                         |
-|  DIALOGUE 4:                                                            |
-|  Student: _____________________________________________                 |
-|           (Is this your notebook?                                       |
-|            | this = これ / your = あなた / notebook = ノート)              |
-|  Tutor:   はい、それは私のノートです。                                     |
-|           Yes, that is my notebook.                                     |
+|            | that = あれ / Yuki's = ゆきさんの / bag = かばん)             |
 |                                                                         |
 |                                                                  PAGE 6 |
 +-------------------------------------------------------------------------+
