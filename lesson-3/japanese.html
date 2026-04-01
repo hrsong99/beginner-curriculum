@@ -1557,7 +1557,45 @@ document.getElementById('finishBtn').addEventListener('click', function() {
 (function() {
   var params = new URLSearchParams(window.location.search);
   var room = params.get('sync');
-  if (!room) return; // sync disabled unless ?sync=ROOM is in URL
+
+  // If no room in URL, show a popup to enter one
+  if (!room) {
+    var saved = localStorage.getItem('sync-room') || '';
+    var overlay = document.createElement('div');
+    overlay.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.3);z-index:9999;display:flex;align-items:center;justify-content:center;';
+    var box = document.createElement('div');
+    box.style.cssText = 'background:#fff;padding:28px 32px;border-radius:8px;font-family:monospace;text-align:center;max-width:340px;box-shadow:0 4px 20px rgba(0,0,0,0.15);';
+    box.innerHTML = '<p style="font-size:16px;margin-bottom:6px;font-weight:bold;">Enter room name</p>' +
+      '<p style="font-size:13px;color:#888;margin-bottom:16px;">Both devices use the same room to sync live</p>' +
+      '<input id="syncRoomPopup" type="text" value="' + saved.replace(/"/g, '&quot;') + '" placeholder="e.g. classroom1" style="font-family:monospace;font-size:15px;padding:8px 12px;border:1.5px solid #ccc;border-radius:4px;width:100%;margin-bottom:14px;text-align:center;">' +
+      '<div style="display:flex;gap:10px;justify-content:center;">' +
+      '<button id="syncJoinBtn" style="font-family:monospace;font-size:14px;padding:8px 24px;border:2px solid #e33;background:#e33;color:#fff;border-radius:4px;cursor:pointer;">Join</button>' +
+      '<button id="syncSkipBtn" style="font-family:monospace;font-size:14px;padding:8px 24px;border:1px solid #ccc;background:#fff;color:#666;border-radius:4px;cursor:pointer;">Skip</button>' +
+      '</div>';
+    overlay.appendChild(box);
+    document.body.appendChild(overlay);
+
+    var input = document.getElementById('syncRoomPopup');
+    input.focus();
+    input.select();
+
+    document.getElementById('syncJoinBtn').addEventListener('click', function() {
+      var val = input.value.trim();
+      if (!val) return;
+      localStorage.setItem('sync-room', val);
+      // Reload with ?sync=ROOM
+      var url = new URL(window.location);
+      url.searchParams.set('sync', val);
+      window.location.replace(url.toString());
+    });
+    input.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') document.getElementById('syncJoinBtn').click();
+    });
+    document.getElementById('syncSkipBtn').addEventListener('click', function() {
+      overlay.remove();
+    });
+    return; // don't connect yet — page will reload with ?sync= param
+  }
 
   // Auto-detect WebSocket URL from current host (same server serves pages + WS)
   var wsProto = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
