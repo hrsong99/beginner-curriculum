@@ -9,7 +9,7 @@
 - Short dialogues come BEFORE roleplay (scaffolding progression)
 - Roleplay moved to BONUS page with full script (students didn't know what to do)
 - Pages kept smaller for breathing room
-- Vocab activity added as BONUS after Mission Complete
+- Vocab activity added as BONUS before Mission Complete (skip if short on time)
 - Only TWO focused patterns (no あります/います — save for Lesson 4)
 
 **Styling conventions (HTML implementation):**
@@ -39,8 +39,8 @@
 | 7    | Memory Conversation          | 3 min | Fill-in-the-blank of Page 6 |
 | 8    | Free Discussion              | 3 min | Open practice               |
 | 9    | Roleplay                     | 3 min | Constrained scenario        |
-| 10   | Mission Complete             | 2 min |                             |
-| B1   | BONUS: Vocab Challenge       | 2 min | Optional extension          |
+| 10   | BONUS: Vocab Challenge       | 2 min | Skip if short on time       |
+| 11   | Mission Complete             | 2 min |                             |
 
 
 **Core: ~28 min / With bonus: ~30 min**
@@ -116,7 +116,7 @@ Dashed separators between the three sections.
 |      What is this?                                                      |
 |                                                                         |
 |  A:  これは[_______]です。                                               |
-|      (inline input box inside the sentence)                             |
+|                                                                         |
 |                                                                         |
 |     ┌─────────────────────────────────────────────────────┐             |
 |     │  ほん(book)  ペン(pen)  ノート(notebook)             │             |
@@ -144,7 +144,7 @@ Dashed separators between the three sections.
 |      What is that over there?                                           |
 |                                                                         |
 |  A:  あれは[_______]です。                                               |
-|      (inline input box inside the sentence)                             |
+|                                                                         |
 |                                                                         |
 |     ┌─────────────────────────────────────────────────────┐             |
 |     │  かばん(bag)  とけい(clock)  いす(chair)             │             |
@@ -449,51 +449,15 @@ translation below. PHRASES and WORDS merged into one help-box under HINTS. 3つ 
 +-------------------------------------------------------------------------+
 ```
 
-### PAGE 10 — Mission Complete
-
-Note: h1 is "ミッションかんりょう！" (hiragana), h2 subtitle is "Mission Complete!". Checkboxes are
-empty — tutor clicks to check them (triggers animated hanamaru花丸 SVG drawn on click). Larger
-font size (18px) and more spacing (20px margin) in the mission box. Interactive hanamaru drawn
-on click via stroke-dashoffset animation (flower petals + inward spiral).
-
-```
-+-------------------------------------------------------------------------+
-|                                                                         |
-|  ミッションかんりょう！                                                   |
-|  Mission Complete!                                                      |
-|  ─────────────────                                                      |
-|                                                                         |
-|  きょうのミッション:                                                      |
-|  ┌─────────────────────────────────────────────────────────┐            |
-|  │                                                          │            |
-|  │  ┌──┐                                                    │            |
-|  │  │  │  PATTERN 1: ＿＿はどこですか？                      │            |
-|  │  └──┘  (tutor clicks to draw hanamaru)                   │            |
-|  │                                                          │            |
-|  │  ┌──┐                                                    │            |
-|  │  │  │  PATTERN 2: ＿＿はここ/そこ/あそこです。             │            |
-|  │  └──┘  (tutor clicks to draw hanamaru)                   │            |
-|  │                                                          │            |
-|  └─────────────────────────────────────────────────────────┘            |
-|                                                                         |
-|                                                                         |
-|  KEY EXPRESSIONS — もういちどよんでみましょう！                           |
-|  • ほんはどこですか？          — Where is the book?                      |
-|  • ほんはここです。            — The book is here.                       |
-|  • ペンはそこです。            — The pen is there.                       |
-|  • かばんはあそこです。        — The bag is over there.                  |
-|                                                                         |
-|                                                                 PAGE 10 |
-+-------------------------------------------------------------------------+
-```
-
-### BONUS PAGE 1 — Vocab Challenge
+### PAGE 10 — Bonus: Vocab Challenge
 
 ```
 +-------------------------------------------------------------------------+
 |                                                                         |
 |  BONUS: VOCAB CHALLENGE                                                 |
+|  (Skip if you don't have time!)                                         |
 |  ───────────────────────                                                |
+|  (Skip if you don't have time!)                                         |
 |                                                                         |
 |  Can you match the Japanese to the English?                             |
 |  日本語と英語を合わせましょう！                                          |
@@ -530,7 +494,45 @@ on click via stroke-dashoffset animation (flower petals + inward spiral).
 |           over there)               over there)                         |
 |                                                                         |
 |                                                                         |
-|                                                               BONUS  1 |
+|                                                                 PAGE 10 |
++-------------------------------------------------------------------------+
+```
+
+### PAGE 11 — Mission Complete
+
+Note: h1 is "ミッションかんりょう！" (hiragana), h2 subtitle is "Mission Complete!". Checkboxes are
+empty — tutor clicks to check them (triggers animated hanamaru花丸 SVG drawn on click). Larger
+font size (18px) and more spacing (20px margin) in the mission box. Interactive hanamaru drawn
+on click via stroke-dashoffset animation (flower petals + inward spiral).
+
+```
++-------------------------------------------------------------------------+
+|                                                                         |
+|  ミッションかんりょう！                                                   |
+|  Mission Complete!                                                      |
+|  ─────────────────                                                      |
+|                                                                         |
+|  きょうのミッション:                                                      |
+|  ┌─────────────────────────────────────────────────────────┐            |
+|  │                                                          │            |
+|  │  ┌──┐                                                    │            |
+|  │  │  │  PATTERN 1: ＿＿はどこですか？                      │            |
+|  │  └──┘                                                    │            |
+|  │                                                          │            |
+|  │  ┌──┐                                                    │            |
+|  │  │  │  PATTERN 2: ＿＿はここ/そこ/あそこです。             │            |
+|  │  └──┘                                                    │            |
+|  │                                                          │            |
+|  └─────────────────────────────────────────────────────────┘            |
+|                                                                         |
+|                                                                         |
+|  KEY EXPRESSIONS — もういちどよんでみましょう！                           |
+|  • ほんはどこですか？          — Where is the book?                      |
+|  • ほんはここです。            — The book is here.                       |
+|  • ペンはそこです。            — The pen is there.                       |
+|  • かばんはあそこです。        — The bag is over there.                  |
+|                                                                         |
+|                                                                 PAGE 11 |
 +-------------------------------------------------------------------------+
 ```
 
