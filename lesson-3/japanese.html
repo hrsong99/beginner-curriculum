@@ -749,11 +749,10 @@
 
   <div class="section">
     <p><strong>LOCATION WORDS:</strong></p>
-    <div class="pattern" style="font-size:19px">
-      <ruby>ここ<rt>koko</rt></ruby> &nbsp; ・ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・ &nbsp; over there<br>
-      <ruby>そこ<rt>soko</rt></ruby> &nbsp; ・ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・ &nbsp; here<br>
-      <ruby>あそこ<rt>asoko</rt></ruby> &nbsp; ・ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・ &nbsp; where<br>
-      <ruby>どこ<rt>doko</rt></ruby> &nbsp; ・ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・ &nbsp; there
+    <div class="match-game" id="match1"
+         data-left='[{"id":"koko","html":"<ruby>ここ<rt>koko</rt></ruby>"},{"id":"soko","html":"<ruby>そこ<rt>soko</rt></ruby>"},{"id":"asoko","html":"<ruby>あそこ<rt>asoko</rt></ruby>"},{"id":"doko","html":"<ruby>どこ<rt>doko</rt></ruby>"}]'
+         data-right='[{"id":"overthere","text":"over there"},{"id":"here","text":"here"},{"id":"where","text":"where"},{"id":"there","text":"there"}]'
+         data-answers='{"koko":"here","soko":"there","asoko":"overthere","doko":"where"}'>
     </div>
   </div>
 
@@ -761,11 +760,10 @@
 
   <div class="section">
     <p><strong>THINGS (from this lesson):</strong></p>
-    <div class="pattern" style="font-size:19px">
-      <ruby>ほん<rt>hon</rt></ruby> &nbsp; ・ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・ &nbsp; pen<br>
-      <ruby>ペン<rt>pen</rt></ruby> &nbsp; ・ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・ &nbsp; bag<br>
-      <ruby>ノート<rt>nōto</rt></ruby> &nbsp; ・ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・ &nbsp; book<br>
-      <ruby>かばん<rt>kaban</rt></ruby> &nbsp; ・ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・ &nbsp; notebook
+    <div class="match-game" id="match2"
+         data-left='[{"id":"hon","html":"<ruby>ほん<rt>hon</rt></ruby>"},{"id":"pen","html":"<ruby>ペン<rt>pen</rt></ruby>"},{"id":"nooto","html":"<ruby>ノート<rt>nōto</rt></ruby>"},{"id":"kaban","html":"<ruby>かばん<rt>kaban</rt></ruby>"}]'
+         data-right='[{"id":"r_pen","text":"pen"},{"id":"r_bag","text":"bag"},{"id":"r_book","text":"book"},{"id":"r_notebook","text":"notebook"}]'
+         data-answers='{"hon":"r_book","pen":"r_pen","nooto":"r_notebook","kaban":"r_bag"}'>
     </div>
   </div>
 
@@ -773,13 +771,10 @@
 
   <div class="section">
     <p><strong>MORE THINGS (from drills &amp; discussion):</strong></p>
-    <div class="pattern" style="font-size:19px">
-      <ruby>でんわ<rt>denwa</rt></ruby> &nbsp; ・ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・ &nbsp; key<br>
-      <ruby>かぎ<rt>kagi</rt></ruby> &nbsp; ・ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・ &nbsp; clock<br>
-      <ruby>とけい<rt>tokei</rt></ruby> &nbsp; ・ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・ &nbsp; water<br>
-      <ruby>みず<rt>mizu</rt></ruby> &nbsp; ・ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・ &nbsp; phone<br>
-      <ruby>いす<rt>isu</rt></ruby> &nbsp; ・ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・ &nbsp; desk<br>
-      <ruby>つくえ<rt>tsukue</rt></ruby> &nbsp; ・ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・ &nbsp; chair
+    <div class="match-game" id="match3"
+         data-left='[{"id":"denwa","html":"<ruby>でんわ<rt>denwa</rt></ruby>"},{"id":"kagi","html":"<ruby>かぎ<rt>kagi</rt></ruby>"},{"id":"tokei","html":"<ruby>とけい<rt>tokei</rt></ruby>"},{"id":"mizu","html":"<ruby>みず<rt>mizu</rt></ruby>"},{"id":"isu","html":"<ruby>いす<rt>isu</rt></ruby>"},{"id":"tsukue","html":"<ruby>つくえ<rt>tsukue</rt></ruby>"}]'
+         data-right='[{"id":"r_key","text":"key"},{"id":"r_clock","text":"clock"},{"id":"r_water","text":"water"},{"id":"r_phone","text":"phone"},{"id":"r_desk","text":"desk"},{"id":"r_chair","text":"chair"}]'
+         data-answers='{"denwa":"r_phone","kagi":"r_key","tokei":"r_clock","mizu":"r_water","isu":"r_chair","tsukue":"r_desk"}'>
     </div>
   </div>
 
@@ -844,6 +839,8 @@
     </div>
   </div>
 
+  <button class="finish-btn" id="finishBtn">おわり！ / Class Complete!</button>
+
 </div>
 
 <!-- Drawing/Typing overlay canvas -->
@@ -877,6 +874,35 @@
   #textLayer .anno-delete:hover { color: #c33; }
   #textLayer .annotation { background: rgba(255,255,255,0.85); border: 1px dashed #e0b0b0; font-family: monospace; font-size: 16px; color: #c33; outline: none; min-width: 60px; max-width: 300px; padding: 4px 6px; resize: none; overflow: hidden; field-sizing: content; }
   .nav button.active-mode { background: #111 !important; color: #fff !important; }
+
+  /* --- Matching Game --- */
+  .match-game { position: relative; margin: 12px 0 12px 0; padding: 12px 0; }
+  .match-game .match-columns { display: flex; justify-content: space-between; align-items: flex-start; position: relative; }
+  .match-left, .match-right { display: flex; flex-direction: column; gap: 14px; z-index: 1; }
+  .match-left { align-items: flex-end; }
+  .match-right { align-items: flex-start; }
+  .match-item { display: flex; align-items: center; gap: 8px; font-size: 19px; letter-spacing: 1px; user-select: none; }
+  .match-left .match-item { flex-direction: row; }
+  .match-right .match-item { flex-direction: row-reverse; }
+  .match-dot { width: 14px; height: 14px; border-radius: 50%; border: 2px solid #e33; background: #fff; cursor: pointer; flex-shrink: 0; transition: background 0.15s; }
+  .match-dot:hover { background: #fdd; }
+  .match-dot.connected { background: #e33; }
+  .match-game svg.match-svg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+  .match-game svg.match-svg line { stroke: #e33; stroke-width: 2; stroke-linecap: round; }
+  .match-game svg.match-svg line.temp-line { stroke-dasharray: 4 4; opacity: 0.6; }
+
+  /* --- Hanamaru Festival --- */
+  .finish-btn { display: block; margin: 32px auto 0; font-family: monospace; font-size: 18px; padding: 14px 40px; border: 2px solid #e33; background: #fff; color: #e33; cursor: pointer; border-radius: 6px; transition: background 0.2s, color 0.2s; }
+  .finish-btn:hover { background: #e33; color: #fff; }
+  .hanamaru-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 300; display: flex; align-items: center; justify-content: center; }
+  .hanamaru-overlay .hana-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255, 245, 238, 0.92); }
+  .hanamaru-overlay .hana-item { position: absolute; z-index: 1; }
+  .hanamaru-overlay .hana-item path { stroke-dasharray: 2000; stroke-dashoffset: 2000; animation: drawHanamaru 1.5s ease forwards; }
+  .hanamaru-overlay .hana-msg { position: relative; z-index: 2; text-align: center; opacity: 0; transition: opacity 0.8s ease; }
+  .hanamaru-overlay .hana-msg.visible { opacity: 1; }
+  .hanamaru-overlay .hana-msg p { font-family: monospace; font-size: 28px; color: #c33; font-weight: bold; margin-bottom: 20px; }
+  .hanamaru-overlay .hana-msg button { font-family: monospace; font-size: 16px; padding: 10px 32px; border: 2px solid #c33; background: #fff; color: #c33; cursor: pointer; border-radius: 4px; }
+  .hanamaru-overlay .hana-msg button:hover { background: #c33; color: #fff; }
 </style>
 
 <script>
@@ -1174,6 +1200,294 @@ textLayer.addEventListener('mousedown', e => {
 window.addEventListener('resize', resizeCanvas);
 resizeCanvas();
 loadAnnotations();
+
+// =============================================
+// MATCHING GAME
+// =============================================
+(function() {
+  document.querySelectorAll('.match-game').forEach(function(game) {
+    var leftData = JSON.parse(game.dataset.left);
+    var rightData = JSON.parse(game.dataset.right);
+    var connections = {}; // leftId -> rightId
+    var dragging = null; // { side: 'left'|'right', id: string, dotEl: element }
+    var tempLine = null;
+
+    // Build DOM
+    var columns = document.createElement('div');
+    columns.className = 'match-columns';
+
+    var leftCol = document.createElement('div');
+    leftCol.className = 'match-left';
+
+    var rightCol = document.createElement('div');
+    rightCol.className = 'match-right';
+
+    var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('class', 'match-svg');
+
+    var dots = {}; // id -> dot element
+
+    leftData.forEach(function(item) {
+      var row = document.createElement('div');
+      row.className = 'match-item';
+      var label = document.createElement('span');
+      label.innerHTML = item.html;
+      var dot = document.createElement('div');
+      dot.className = 'match-dot';
+      dot.dataset.side = 'left';
+      dot.dataset.id = item.id;
+      dots['L_' + item.id] = dot;
+      row.appendChild(label);
+      row.appendChild(dot);
+      leftCol.appendChild(row);
+    });
+
+    rightData.forEach(function(item) {
+      var row = document.createElement('div');
+      row.className = 'match-item';
+      var label = document.createElement('span');
+      label.textContent = item.text;
+      var dot = document.createElement('div');
+      dot.className = 'match-dot';
+      dot.dataset.side = 'right';
+      dot.dataset.id = item.id;
+      dots['R_' + item.id] = dot;
+      row.appendChild(label);
+      row.appendChild(dot);
+      rightCol.appendChild(row);
+    });
+
+    columns.appendChild(leftCol);
+    columns.appendChild(svg);
+    columns.appendChild(rightCol);
+    game.appendChild(columns);
+
+    function getDotCenter(dot) {
+      var gr = game.getBoundingClientRect();
+      var dr = dot.getBoundingClientRect();
+      return { x: dr.left + dr.width / 2 - gr.left, y: dr.top + dr.height / 2 - gr.top };
+    }
+
+    function redrawLines() {
+      // Remove all lines except temp
+      svg.querySelectorAll('line:not(.temp-line)').forEach(function(l) { l.remove(); });
+      Object.keys(connections).forEach(function(lid) {
+        var rid = connections[lid];
+        var ld = dots['L_' + lid];
+        var rd = dots['R_' + rid];
+        if (!ld || !rd) return;
+        var lc = getDotCenter(ld);
+        var rc = getDotCenter(rd);
+        var line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+        line.setAttribute('x1', lc.x); line.setAttribute('y1', lc.y);
+        line.setAttribute('x2', rc.x); line.setAttribute('y2', rc.y);
+        svg.appendChild(line);
+      });
+      // Update dot styles
+      Object.keys(dots).forEach(function(key) {
+        dots[key].classList.remove('connected');
+      });
+      Object.keys(connections).forEach(function(lid) {
+        var rid = connections[lid];
+        if (dots['L_' + lid]) dots['L_' + lid].classList.add('connected');
+        if (dots['R_' + rid]) dots['R_' + rid].classList.add('connected');
+      });
+    }
+
+    function findConnectionByRight(rid) {
+      for (var lid in connections) {
+        if (connections[lid] === rid) return lid;
+      }
+      return null;
+    }
+
+    function startDrag(side, id, dotEl, px, py) {
+      // If already connected, disconnect
+      if (side === 'left' && connections[id]) {
+        delete connections[id];
+        redrawLines();
+        return;
+      }
+      if (side === 'right') {
+        var existingLeft = findConnectionByRight(id);
+        if (existingLeft) {
+          delete connections[existingLeft];
+          redrawLines();
+          return;
+        }
+      }
+      dragging = { side: side, id: id, dotEl: dotEl };
+      // Create temp line
+      tempLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      tempLine.setAttribute('class', 'temp-line');
+      var c = getDotCenter(dotEl);
+      tempLine.setAttribute('x1', c.x); tempLine.setAttribute('y1', c.y);
+      tempLine.setAttribute('x2', c.x); tempLine.setAttribute('y2', c.y);
+      svg.appendChild(tempLine);
+    }
+
+    function moveDrag(px, py) {
+      if (!dragging || !tempLine) return;
+      var gr = game.getBoundingClientRect();
+      tempLine.setAttribute('x2', px - gr.left);
+      tempLine.setAttribute('y2', py - gr.top);
+    }
+
+    function endDrag(targetEl) {
+      if (!dragging) return;
+      if (tempLine) { tempLine.remove(); tempLine = null; }
+      if (targetEl && targetEl.classList.contains('match-dot')) {
+        var targetSide = targetEl.dataset.side;
+        var targetId = targetEl.dataset.id;
+        if (targetSide !== dragging.side) {
+          var leftId = dragging.side === 'left' ? dragging.id : targetId;
+          var rightId = dragging.side === 'right' ? dragging.id : targetId;
+          // Remove any existing connection to this right item
+          var existingLeft = findConnectionByRight(rightId);
+          if (existingLeft) delete connections[existingLeft];
+          connections[leftId] = rightId;
+        }
+      }
+      dragging = null;
+      redrawLines();
+    }
+
+    // Mouse events
+    game.addEventListener('mousedown', function(e) {
+      var dot = e.target.closest('.match-dot');
+      if (!dot) return;
+      e.preventDefault();
+      startDrag(dot.dataset.side, dot.dataset.id, dot, e.clientX, e.clientY);
+    });
+
+    document.addEventListener('mousemove', function(e) {
+      if (!dragging || dragging.dotEl.closest('.match-game') !== game) return;
+      moveDrag(e.clientX, e.clientY);
+    });
+
+    document.addEventListener('mouseup', function(e) {
+      if (!dragging || dragging.dotEl.closest('.match-game') !== game) return;
+      var target = document.elementFromPoint(e.clientX, e.clientY);
+      endDrag(target);
+    });
+
+    // Touch events
+    game.addEventListener('touchstart', function(e) {
+      var dot = e.target.closest('.match-dot');
+      if (!dot) return;
+      e.preventDefault();
+      var t = e.touches[0];
+      startDrag(dot.dataset.side, dot.dataset.id, dot, t.clientX, t.clientY);
+    }, { passive: false });
+
+    document.addEventListener('touchmove', function(e) {
+      if (!dragging || dragging.dotEl.closest('.match-game') !== game) return;
+      e.preventDefault();
+      var t = e.touches[0];
+      moveDrag(t.clientX, t.clientY);
+    }, { passive: false });
+
+    document.addEventListener('touchend', function(e) {
+      if (!dragging || dragging.dotEl.closest('.match-game') !== game) return;
+      var t = e.changedTouches[0];
+      var target = document.elementFromPoint(t.clientX, t.clientY);
+      endDrag(target);
+    });
+
+    // Redraw on resize/scroll
+    window.addEventListener('resize', function() { redrawLines(); });
+
+    // Update SVG size to match container
+    function sizeSvg() {
+      svg.setAttribute('width', columns.offsetWidth);
+      svg.setAttribute('height', columns.offsetHeight);
+      redrawLines();
+    }
+    // Use ResizeObserver for accurate sizing
+    if (window.ResizeObserver) {
+      new ResizeObserver(sizeSvg).observe(columns);
+    }
+    // Initial sizing after layout
+    requestAnimationFrame(sizeSvg);
+  });
+})();
+
+// =============================================
+// HANAMARU FESTIVAL
+// =============================================
+document.getElementById('finishBtn').addEventListener('click', function() {
+  var overlay = document.createElement('div');
+  overlay.className = 'hanamaru-overlay';
+
+  var bg = document.createElement('div');
+  bg.className = 'hana-bg';
+  overlay.appendChild(bg);
+
+  // Generate 15-25 hanamarus
+  var count = 15 + Math.floor(Math.random() * 11);
+  var maxDelay = 0;
+  for (var i = 0; i < count; i++) {
+    var size = 40 + Math.floor(Math.random() * 111); // 40-150
+    var x = Math.random() * (window.innerWidth - size);
+    var y = Math.random() * (window.innerHeight - size);
+    var delay = i * (0.1 + Math.random() * 0.2); // staggered
+    if (delay > maxDelay) maxDelay = delay;
+
+    // Color variation around #e33
+    var r = 200 + Math.floor(Math.random() * 56); // 200-255
+    var g = 30 + Math.floor(Math.random() * 40);  // 30-70
+    var b = 30 + Math.floor(Math.random() * 40);  // 30-70
+    var color = 'rgb(' + r + ',' + g + ',' + b + ')';
+
+    var item = document.createElement('div');
+    item.className = 'hana-item';
+    item.style.left = x + 'px';
+    item.style.top = y + 'px';
+    item.style.width = size + 'px';
+    item.style.height = size + 'px';
+
+    var svgEl = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svgEl.setAttribute('viewBox', '0 0 72 72');
+    svgEl.setAttribute('width', size);
+    svgEl.setAttribute('height', size);
+    svgEl.setAttribute('fill', 'none');
+
+    var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', makeHanamaruPath());
+    path.setAttribute('stroke', color);
+    path.setAttribute('stroke-width', '2.5');
+    path.setAttribute('stroke-linecap', 'round');
+    path.setAttribute('stroke-linejoin', 'round');
+    path.setAttribute('fill', 'none');
+    path.style.animationDelay = delay.toFixed(2) + 's';
+
+    svgEl.appendChild(path);
+    item.appendChild(svgEl);
+    overlay.appendChild(item);
+  }
+
+  // Message (shown after all hanamarus finish drawing)
+  var msg = document.createElement('div');
+  msg.className = 'hana-msg';
+  var msgText = document.createElement('p');
+  msgText.textContent = 'またね！/ See you next time!';
+  var closeBtn = document.createElement('button');
+  closeBtn.textContent = 'Close';
+  closeBtn.addEventListener('click', function() {
+    overlay.remove();
+  });
+  msg.appendChild(msgText);
+  msg.appendChild(closeBtn);
+  overlay.appendChild(msg);
+
+  document.body.appendChild(overlay);
+
+  // Show message after all animations complete
+  var totalTime = (maxDelay + 1.5) * 1000 + 200;
+  setTimeout(function() {
+    msg.classList.add('visible');
+  }, totalTime);
+});
 </script>
 </body>
 </html>
