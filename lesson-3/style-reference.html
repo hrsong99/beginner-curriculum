@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Style Reference — Japanese Text with Romaji</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: monospace; background: #fff; color: #111; max-width: 760px; margin: 0 auto; padding: 40px; }
+  h1 { font-size: 20px; margin-bottom: 8px; }
+  h2 { font-size: 14px; font-weight: normal; color: #666; margin-bottom: 40px; }
+
+  /* ============================================ */
+  /* CHOSEN STYLE: Warm romaji, generous spacing  */
+  /* ============================================ */
+  ruby { ruby-position: over; }
+  rt { font-size: 0.6em; color: #c4b8a8; font-weight: normal; font-family: 'Helvetica Neue', Arial, sans-serif; letter-spacing: 1px; padding-bottom: 2px; }
+
+  .jp { font-size: 19px; letter-spacing: 1px; padding-top: 16px; margin-bottom: 1px; }
+  .en { color: #bbb; font-size: 12px; margin-top: 0; margin-bottom: 18px; }
+
+  /* Pair wrapper — keeps JP + EN aligned */
+  .pair { display: flex; flex-direction: column; margin-bottom: 4px; }
+
+  /* Bullet-point samples: indent text, hang bullet left */
+  .sample .pair { padding-left: 24px; }
+  .sample .pair .jp { margin-left: -24px; }
+
+  /* Dialogue: speaker inline with text */
+  .dialogue .turn { display: grid; grid-template-columns: 70px 1fr; align-items: start; }
+  .dialogue .spk { font-weight: bold; font-size: 15px; padding-top: 16px; }
+  .dialogue .pair { padding-left: 0; }
+  .dialogue .pair .jp { margin-left: 0; }
+  .dialogue .pair .en { margin-left: 0; padding-left: 0; }
+</style>
+</head>
+<body>
+
+<h1>Style Reference</h1>
+<h2>Warm romaji (#c4b8a8), 19px Japanese, generous spacing, translation aligned below</h2>
+
+<!-- Bullet-point examples -->
+<div class="sample">
+  <div class="pair">
+    <div class="jp">&bull; <ruby>ほん<rt>hon</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+    <div class="en">Where is the book?</div>
+  </div>
+  <div class="pair">
+    <div class="jp">&bull; <ruby>ペン<rt>pen</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>そこ<rt>soko</rt></ruby><ruby>です<rt>desu</rt></ruby>。</div>
+    <div class="en">The pen is there.</div>
+  </div>
+  <div class="pair">
+    <div class="jp">&bull; <ruby>かばん<rt>kaban</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>あそこ<rt>asoko</rt></ruby><ruby>です<rt>desu</rt></ruby>。</div>
+    <div class="en">The bag is over there.</div>
+  </div>
+</div>
+
+<!-- Dialogue examples -->
+<div class="dialogue">
+  <div class="turn">
+    <div class="spk">YUKI:</div>
+    <div class="pair">
+      <div class="jp"><ruby>わたし<rt>watashi</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>ペン<rt>pen</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+      <div class="en">Where is my pen?</div>
+    </div>
+  </div>
+  <div class="turn">
+    <div class="spk">ALEX:</div>
+    <div class="pair">
+      <div class="jp"><ruby>ペン<rt>pen</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>そこ<rt>soko</rt></ruby><ruby>です<rt>desu</rt></ruby>。</div>
+      <div class="en">The pen is there.</div>
+    </div>
+  </div>
+  <div class="turn">
+    <div class="spk">YUKI:</div>
+    <div class="pair">
+      <div class="jp"><ruby>あ<rt>a</rt></ruby>、<ruby>ありがとう<rt>arigatō</rt></ruby>！<ruby>ノート<rt>nōto</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+      <div class="en">Oh, thanks! Where is the notebook?</div>
+    </div>
+  </div>
+  <div class="turn">
+    <div class="spk">ALEX:</div>
+    <div class="pair">
+      <div class="jp"><ruby>ノート<rt>nōto</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>ここ<rt>koko</rt></ruby><ruby>です<rt>desu</rt></ruby>。</div>
+      <div class="en">The notebook is here.</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

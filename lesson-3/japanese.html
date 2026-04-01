@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 3: どこですか？</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: monospace; background: #fff; color: #111; overflow-x: hidden; }
+  .page { display: none; max-width: 720px; margin: 0 auto; padding: 60px 40px 100px; position: relative; overflow: visible; }
+  .page.active { display: block; }
+  .ts { float: right; clear: right; width: 175px; margin: 0 -200px 16px 16px; padding: 10px 12px; border-left: 3px solid #d0d7e0; font-size: 12px; line-height: 1.7; background: #f8f9fb; }
+  .ts .ts-jp { color: #333; margin-bottom: 4px; }
+  .ts .ts-en { color: #999; font-size: 11px; font-style: italic; }
+  @media (max-width: 1100px) { .ts { display: none; } }
+  h1 { font-size: 22px; margin-bottom: 8px; letter-spacing: 0.5px; }
+  h2 { font-size: 18px; font-weight: normal; margin-bottom: 32px; border-bottom: 1px solid #111; padding-bottom: 12px; }
+  h3 { font-size: 17px; margin: 32px 0 12px; }
+  p, li { font-size: 16px; line-height: 1.8; }
+  .en { color: #bbb; font-size: 12px; }
+  .section { margin: 32px 0; }
+  .pattern { margin: 12px 0 12px 20px; line-height: 2.2; }
+  .blank { display: inline-block; border-bottom: 1px solid #111; min-width: 280px; height: 1.6em; vertical-align: bottom; }
+  .blank-full { display: block; border-bottom: 1px solid #111; margin: 8px 0 8px 20px; max-width: 420px; height: 1.6em; }
+  .blank-input { font-family: monospace; font-size: 16px; border: none; border-bottom: 1px solid #111; outline: none; min-width: 200px; padding: 2px 4px; background: transparent; }
+  .blank-input:focus { border-bottom: 2px solid #c33; }
+  .blank-input-full { display: block; font-family: monospace; font-size: 16px; border: none; border-bottom: 1px solid #111; outline: none; width: 100%; max-width: 420px; margin: 8px 0 8px 20px; padding: 2px 4px; background: transparent; }
+  .blank-input-full:focus { border-bottom: 2px solid #c33; }
+  .box { border: 1px solid #111; padding: 20px 24px; margin: 20px 0; }
+  .box-label { font-size: 14px; font-weight: bold; margin-bottom: 10px; letter-spacing: 0.5px; }
+  .help-box { border: 1px solid #999; padding: 14px 18px; margin: 12px 0 12px 20px; max-width: 380px; line-height: 2.2; }
+  .dialogue { margin: 12px 0 12px 20px; }
+  .dialogue p { margin-bottom: 16px; line-height: 1.6; }
+  .dialogue .en { display: block; margin-top: -2px; margin-bottom: 4px; }
+  .dialogue .speaker { font-weight: bold; display: inline-block; min-width: 80px; }
+  .check-item { margin: 16px 0; padding-left: 10px; }
+  .check { display: inline-block; border: 2px solid #111; width: 22px; height: 22px; text-align: center; line-height: 20px; margin-right: 10px; vertical-align: middle; font-size: 14px; }
+  .nav { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; border-top: 1px solid #ddd; padding: 16px; display: flex; justify-content: center; gap: 16px; align-items: center; z-index: 200; }
+  .nav button { font-family: monospace; font-size: 14px; padding: 8px 24px; border: 1px solid #111; background: #fff; cursor: pointer; }
+  .nav button:hover { background: #f0f0f0; }
+  .nav button:disabled { color: #ccc; border-color: #ccc; cursor: default; background: #fff; }
+  .nav span { font-size: 13px; color: #666; min-width: 80px; text-align: center; }
+  .separator { border: none; border-top: 1px dashed #ccc; margin: 28px 0; }
+  ol { padding-left: 20px; }
+  ol li { margin: 4px 0; }
+  ruby { ruby-position: over; }
+  rt { font-size: 0.7em; color: #7a8a9e; font-weight: normal !important; font-style: normal !important; font-family: 'Helvetica Neue', Arial, sans-serif; letter-spacing: 0.5px; padding: 0 1px; }
+</style>
+</head>
+<body>
+
+<!-- PAGE 0: COVER -->
+<div class="page active" id="p0">
+  <div style="text-align:center; margin: 40px 0 20px">
+    <p style="font-size: 32px; font-weight: bold; line-height: 1.5; font-family: sans-serif;">
+      <ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？<br>
+      <ruby>ここ<rt>koko</rt></ruby>・<ruby>そこ<rt>soko</rt></ruby>・<ruby>あそこ<rt>asoko</rt></ruby>
+    </p>
+    <p class="en" style="font-size: 14px; margin-top: 12px;">Where is it? — here / there / over there</p>
+  </div>
+
+  <div class="section" style="margin-top: 40px;">
+    <p style="margin-bottom: 20px;">
+      <strong>①</strong>&nbsp; <ruby>〜さん<rt>~san</rt></ruby>、<ruby>わたし<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>にほんご<rt>nihongo</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>せんせい<rt>sensei</rt></ruby><ruby>です<rt>desu</rt></ruby>。<ruby>〜と<rt>~to</rt></ruby><ruby>もうします<rt>mōshimasu</rt></ruby>。<br>
+      <span style="margin-left: 24px;"><ruby>これから<rt>korekara</rt></ruby><ruby>よろしく<rt>yoroshiku</rt></ruby><ruby>おねがいします<rt>onegai shimasu</rt></ruby>。</span><br>
+      <span class="en" style="margin-left: 24px;">"~, I'm your Japanese teacher. My name is ~.<br>
+      <span style="margin-left: 24px;">Nice to meet you, let's have a great time!"</span></span>
+    </p>
+
+    <p style="margin-bottom: 20px;">
+      <strong>②</strong>&nbsp; <ruby>それでは<rt>soredewa</rt></ruby>、<ruby>きょう<rt>kyō</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>じゅぎょう<rt>jugyō</rt></ruby><ruby>はじめます<rt>hajimemasu</rt></ruby>！<br>
+      <span class="en" style="margin-left: 24px;">"Alright, let's start today's lesson!"</span>
+    </p>
+
+    <p>
+      <strong>③</strong>&nbsp; <ruby>これ<rt>kore</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>よんで<rt>yonde</rt></ruby><ruby>ください<rt>kudasai</rt></ruby>。<br>
+      <span class="en" style="margin-left: 24px;">"Please read this."</span>
+    </p>
+  </div>
+  <hr class="separator">
+
+  <div class="ts">
+    <div class="ts-jp">「きょうのもくひょうをよみましょう。」</div>
+    <div class="ts-en">"Let's read today's goal."</div>
+  </div>
+  <div class="box">
+    <div class="box-label">OUTCOME / <ruby>もくひょう<rt>mokuhyō</rt></ruby></div>
+    You can ask where things are and say where they are.<br>
+    <ruby>もの<rt>mono</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>ある<rt>aru</rt></ruby><ruby>か<rt>ka</rt></ruby><ruby>きいたり<rt>kiitari</rt></ruby>、<ruby>こたえられる<rt>kotaerareru</rt></ruby><ruby>ように<rt>yō ni</rt></ruby><ruby>なります<rt>narimasu</rt></ruby>。
+  </div>
+
+  <div class="section">
+    <div class="ts">
+      <div class="ts-jp">「いっしょによんでみましょう！わたしのあとにリピートしてください。」</div>
+      <div class="ts-en">"Let's read together! Repeat after me."</div>
+    </div>
+    <h3>TODAY'S PATTERNS</h3>
+
+    <p><strong>1. Asking Where</strong> (<ruby>どこ<rt>doko</rt></ruby>)</p>
+    <div class="pattern">
+      [<ruby>ほん<rt>hon</rt></ruby>]<ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？ <span class="en">Where is [the book]?</span><br>
+      [<ruby>ペン<rt>pen</rt></ruby>]<ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？ <span class="en">Where is [the pen]?</span><br>
+      [<ruby>かばん<rt>kaban</rt></ruby>]<ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？ <span class="en">Where is [the bag]?</span>
+    </div>
+
+    <p style="margin-top:16px"><strong>2. Answering Where</strong> (<ruby>ここ<rt>koko</rt></ruby>・<ruby>そこ<rt>soko</rt></ruby>・<ruby>あそこ<rt>asoko</rt></ruby>)</p>
+    <div class="pattern">
+      [<ruby>ほん<rt>hon</rt></ruby>]<ruby>は<rt>wa</rt></ruby><ruby>ここ<rt>koko</rt></ruby><ruby>です<rt>desu</rt></ruby>。 <span class="en">[The book] is here. (near me)</span><br>
+      [<ruby>ペン<rt>pen</rt></ruby>]<ruby>は<rt>wa</rt></ruby><ruby>そこ<rt>soko</rt></ruby><ruby>です<rt>desu</rt></ruby>。 <span class="en">[The pen] is there. (near you)</span><br>
+      [<ruby>かばん<rt>kaban</rt></ruby>]<ruby>は<rt>wa</rt></ruby><ruby>あそこ<rt>asoko</rt></ruby><ruby>です<rt>desu</rt></ruby>。 <span class="en">[The bag] is over there. (far from both)</span>
+    </div>
+  </div>
+
+</div>
+
+<div class="page" id="p1">
+  <h1>REVIEW: LESSON 2</h1>
+  <h2></h2>
+
+  <div class="ts">
+    <div class="ts-jp">「まず、まえのレッスンのふくしゅうをしましょう。」</div>
+    <div class="ts-en">"First, let's review the previous lesson."</div>
+  </div>
+
+  <div class="section">
+    <p><strong>1.</strong> <ruby>これ<rt>kore</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>なん<rt>nan</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？ <span class="en">What is this?</span></p>
+    <input type="text" class="blank-input-full" placeholder="これは＿＿です。">
+    <div class="help-box">
+      <ruby>ほん<rt>hon</rt></ruby>(book) &nbsp; <ruby>ペン<rt>pen</rt></ruby>(pen) &nbsp; <ruby>ノート<rt>nōto</rt></ruby>(notebook)
+    </div>
+  </div>
+
+  <div class="section">
+    <p><strong>2.</strong> <ruby>それ<rt>sore</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>だれ<rt>dare</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？ <span class="en">Whose is that?</span></p>
+    <input type="text" class="blank-input-full" placeholder="それは＿＿の＿＿です。">
+    <div class="help-box">
+      <ruby>わたし<rt>watashi</rt></ruby>(my) &nbsp; <ruby>せんせい<rt>sensei</rt></ruby>(teacher) &nbsp; <ruby>ともだち<rt>tomodachi</rt></ruby>(friend)
+    </div>
+  </div>
+
+  <div class="section">
+    <p><strong>3.</strong> <ruby>あれ<rt>are</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>なん<rt>nan</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？ <span class="en">What is that over there?</span></p>
+    <input type="text" class="blank-input-full" placeholder="あれは＿＿です。">
+    <div class="help-box">
+      <ruby>かばん<rt>kaban</rt></ruby>(bag) &nbsp; <ruby>とけい<rt>tokei</rt></ruby>(clock) &nbsp; <ruby>いす<rt>isu</rt></ruby>(chair)
+    </div>
+  </div>
+</div>
+
+<div class="page" id="p2">
+  <h1>PATTERN DRILL: ASKING WHERE (<ruby>どこ<rt>doko</rt></ruby>)</h1>
+  <h2></h2>
+
+  <p>PATTERN: [noun]<ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</p>
+
+  <div class="section">
+    <div class="ts">
+      <div class="ts-jp">「いっしょによみましょう。わたしのあとにリピートしてください。」</div>
+      <div class="ts-en">"Let's read together. Repeat after me."</div>
+    </div>
+    <p><strong>1. Read Together:</strong></p>
+    <div class="pattern">
+      &bull; <ruby>ほん<rt>hon</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？ <span class="en">Where is the book?</span><br>
+      &bull; <ruby>ペン<rt>pen</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？ <span class="en">Where is the pen?</span><br>
+      &bull; <ruby>かばん<rt>kaban</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？ <span class="en">Where is the bag?</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="ts">
+      <div class="ts-jp">「くうらんにことばをいれて、ぜんぶよんでみましょう！」</div>
+      <div class="ts-en">"Fill in the blank and read the whole thing!"</div>
+    </div>
+    <p><strong>2. Fill in the Blanks:</strong></p>
+    <div class="pattern">
+      &bull; <ruby>ほん<rt>hon</rt></ruby><ruby>は<rt>wa</rt></ruby><input type="text" class="blank-input" style="min-width:80px"><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？ <span class="en">_______ is the book?</span><br>
+      &bull; <input type="text" class="blank-input" style="min-width:80px"><ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？ <span class="en">Where is the ________?</span><br>
+      &bull; <ruby>ノート<rt>nōto</rt></ruby><ruby>は<rt>wa</rt></ruby><input type="text" class="blank-input" style="min-width:80px"><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？ <span class="en">_______ is the notebook?</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="ts">
+      <div class="ts-jp">「えいごをにほんごにしてみてください。ヒントをみてもいいですよ。」</div>
+      <div class="ts-en">"Try turning the English into Japanese. You can look at the hint."</div>
+    </div>
+    <p><strong>3. Translate</strong> (Translate to Japanese):</p>
+    <div class="pattern">
+      &bull; Where is the phone?<br>
+      <input type="text" class="blank-input-full">
+      <span style="color:#999; font-size:14px">(phone = <ruby>でんわ<rt>denwa</rt></ruby>)</span>
+    </div>
+    <div class="pattern" style="margin-top:12px">
+      &bull; Where is the clock?<br>
+      <input type="text" class="blank-input-full">
+      <span style="color:#999; font-size:14px">(clock = <ruby>とけい<rt>tokei</rt></ruby>)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="ts">
+      <div class="ts-jp">「じぶんのぶんをつくってみましょう！なにかについてきいてみてね。」</div>
+      <div class="ts-en">"Try making your own sentence! Ask where something is."</div>
+    </div>
+    <p><strong>4. Make Your Own:</strong></p>
+    <p style="margin-left:16px">Ask where something is!</p>
+    <input type="text" class="blank-input-full">
+  </div>
+</div>
+
+<div class="page" id="p3">
+  <h1>PATTERN DRILL: ANSWERING WHERE (<ruby>ここ<rt>koko</rt></ruby>・<ruby>そこ<rt>soko</rt></ruby>・<ruby>あそこ<rt>asoko</rt></ruby>)</h1>
+  <h2></h2>
+
+  <p>PATTERN: [noun]<ruby>は<rt>wa</rt></ruby> <ruby>ここ<rt>koko</rt></ruby>/<ruby>そこ<rt>soko</rt></ruby>/<ruby>あそこ<rt>asoko</rt></ruby> <ruby>です<rt>desu</rt></ruby>。</p>
+  <div class="pattern" style="margin-top:8px; margin-bottom:20px;">
+    <ruby>ここ<rt>koko</rt></ruby> = here (near me)<br>
+    <ruby>そこ<rt>soko</rt></ruby> = there (near you)<br>
+    <ruby>あそこ<rt>asoko</rt></ruby> = over there (far from both)
+  </div>
+
+  <div class="section">
+    <div class="ts">
+      <div class="ts-jp">「つぎのパターンです。いっしょによみましょう。」</div>
+      <div class="ts-en">"Next pattern. Let's read together."</div>
+    </div>
+    <p><strong>1. Read Together:</strong></p>
+    <div class="pattern">
+      &bull; <ruby>ほん<rt>hon</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>ここ<rt>koko</rt></ruby><ruby>です<rt>desu</rt></ruby>。 <span class="en">The book is here.</span><br>
+      &bull; <ruby>ペン<rt>pen</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>そこ<rt>soko</rt></ruby><ruby>です<rt>desu</rt></ruby>。 <span class="en">The pen is there.</span><br>
+      &bull; <ruby>かばん<rt>kaban</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>あそこ<rt>asoko</rt></ruby><ruby>です<rt>desu</rt></ruby>。 <span class="en">The bag is over there.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="ts">
+      <div class="ts-jp">「くうらんにことばをいれて、ぜんぶよんでみましょう！」</div>
+      <div class="ts-en">"Fill in the blank and read the whole thing!"</div>
+    </div>
+    <p><strong>2. Fill in the Blanks:</strong></p>
+    <div class="pattern">
+      &bull; <ruby>ほん<rt>hon</rt></ruby><ruby>は<rt>wa</rt></ruby><input type="text" class="blank-input" style="min-width:80px"><ruby>です<rt>desu</rt></ruby>。 <span class="en">The book is here.</span><br>
+      &bull; <ruby>ペン<rt>pen</rt></ruby><ruby>は<rt>wa</rt></ruby><input type="text" class="blank-input" style="min-width:80px"><ruby>です<rt>desu</rt></ruby>。 <span class="en">The pen is there (near you).</span><br>
+      &bull; <ruby>かばん<rt>kaban</rt></ruby><ruby>は<rt>wa</rt></ruby><input type="text" class="blank-input" style="min-width:80px"><ruby>です<rt>desu</rt></ruby>。 <span class="en">The bag is over there.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="ts">
+      <div class="ts-jp">「えいごをにほんごにしてみてください。」</div>
+      <div class="ts-en">"Try turning the English into Japanese."</div>
+    </div>
+    <p><strong>3. Translate</strong> (Translate to Japanese):</p>
+    <div class="pattern">
+      &bull; The phone is here.<br>
+      <input type="text" class="blank-input-full">
+      <span style="color:#999; font-size:14px">(phone = <ruby>でんわ<rt>denwa</rt></ruby> / here = <ruby>ここ<rt>koko</rt></ruby>)</span>
+    </div>
+    <div class="pattern" style="margin-top:12px">
+      &bull; The clock is over there.<br>
+      <input type="text" class="blank-input-full">
+      <span style="color:#999; font-size:14px">(clock = <ruby>とけい<rt>tokei</rt></ruby> / over there = <ruby>あそこ<rt>asoko</rt></ruby>)</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="ts">
+      <div class="ts-jp">「じぶんのぶんをつくってみましょう！なにかをさしてこたえてね。」</div>
+      <div class="ts-en">"Try making your own sentence! Point at something and say where it is."</div>
+    </div>
+    <p><strong>4. Make Your Own:</strong></p>
+    <p style="margin-left:16px">Point at something and say where it is!</p>
+    <input type="text" class="blank-input-full">
+  </div>
+</div>
+
+<div class="page" id="p4">
+  <h1>SHORT DIALOGUES</h1>
+  <h2></h2>
+
+  <div class="section">
+    <div class="ts">
+      <div class="ts-jp">「にほんごでしつもんしてみてください。」</div>
+      <div class="ts-en">"Try asking the question in Japanese."</div>
+    </div>
+    <p><strong>DIALOGUE 1:</strong> <span class="en">(Student asks!)</span></p>
+    <div class="dialogue">
+      <p><span class="speaker">Student:</span> <input type="text" class="blank-input"><br>
+      <span class="en" style="margin-left:80px">(Where is the book? | book = <ruby>ほん<rt>hon</rt></ruby> / where = <ruby>どこ<rt>doko</rt></ruby>)</span></p>
+      <p><span class="speaker">Tutor:</span> <ruby>ほん<rt>hon</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>ここ<rt>koko</rt></ruby><ruby>です<rt>desu</rt></ruby>。<br>
+      <span class="en" style="margin-left:80px">The book is here.</span></p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="ts">
+      <div class="ts-jp">「わたしがしつもんします。にほんごでこたえてください。」</div>
+      <div class="ts-en">"I'll ask the question. Answer in Japanese."</div>
+    </div>
+    <p><strong>DIALOGUE 2:</strong></p>
+    <div class="dialogue">
+      <p><span class="speaker">Tutor:</span> <ruby>ペン<rt>pen</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？<br>
+      <span class="en" style="margin-left:80px">Where is the pen?</span></p>
+      <p><span class="speaker">Student:</span> <input type="text" class="blank-input"><br>
+      <span class="en" style="margin-left:80px">(The pen is there. | there = <ruby>そこ<rt>soko</rt></ruby>)</span></p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="ts">
+      <div class="ts-jp">「さいごです！にほんごでしつもんしてみてください。」</div>
+      <div class="ts-en">"Last one! Try asking in Japanese."</div>
+    </div>
+    <p><strong>DIALOGUE 3:</strong> <span class="en">(Student asks!)</span></p>
+    <div class="dialogue">
+      <p><span class="speaker">Student:</span> <input type="text" class="blank-input"><br>
+      <span class="en" style="margin-left:80px">(Where is the notebook? | notebook = <ruby>ノート<rt>nōto</rt></ruby> / where = <ruby>どこ<rt>doko</rt></ruby>)</span></p>
+      <p><span class="speaker">Tutor:</span> <ruby>ノート<rt>nōto</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>あそこ<rt>asoko</rt></ruby><ruby>です<rt>desu</rt></ruby>。<br>
+      <span class="en" style="margin-left:80px">The notebook is over there.</span></p>
+    </div>
+  </div>
+</div>
+
+<div class="page" id="p5">
+  <h1>CONVERSATION: GUIDED READING</h1>
+  <h2></h2>
+
+  <div class="box">
+    <div class="box-label">CONTEXT / <ruby>じょうきょう<rt>jōkyō</rt></ruby></div>
+    Yuki can't find things in the classroom. Alex helps.<br>
+    <ruby>ゆき<rt>Yuki</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>きょうしつ<rt>kyōshitsu</rt></ruby><ruby>で<rt>de</rt></ruby><ruby>もの<rt>mono</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>さがして<rt>sagashite</rt></ruby><ruby>います<rt>imasu</rt></ruby>。<ruby>アレックス<rt>Arekkusu</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>てつだいます<rt>tetsudaimasu</rt></ruby>。
+  </div>
+
+  <div class="ts">
+    <div class="ts-jp">「いっしょによみましょう。わたしがアレックスで、あなたがゆきです。」</div>
+    <div class="ts-en">"Let's read together. I'll be Alex, you be Yuki."</div>
+  </div>
+  <div class="dialogue" style="margin-top:16px">
+    <p><span class="speaker">YUKI:</span> <ruby>わたし<rt>watashi</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>ペン<rt>pen</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？<br>
+    <span class="en" style="margin-left:80px">Where is my pen?</span></p>
+
+    <p><span class="speaker">ALEX:</span> <ruby>ペン<rt>pen</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>そこ<rt>soko</rt></ruby><ruby>です<rt>desu</rt></ruby>。<br>
+    <span class="en" style="margin-left:80px">The pen is there.</span></p>
+
+    <p><span class="speaker">YUKI:</span> <ruby>あ<rt>a</rt></ruby>、<ruby>ありがとう<rt>arigatō</rt></ruby>！<ruby>ノート<rt>nōto</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？<br>
+    <span class="en" style="margin-left:80px">Oh, thanks! Where is the notebook?</span></p>
+
+    <p><span class="speaker">ALEX:</span> <ruby>ノート<rt>nōto</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>ここ<rt>koko</rt></ruby><ruby>です<rt>desu</rt></ruby>。<br>
+    <span class="en" style="margin-left:80px">The notebook is here.</span></p>
+
+    <p><span class="speaker">YUKI:</span> <ruby>じゃあ<rt>jaa</rt></ruby>、<ruby>わたし<rt>watashi</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>かばん<rt>kaban</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？<br>
+    <span class="en" style="margin-left:80px">Then, where is my bag?</span></p>
+
+    <p><span class="speaker">ALEX:</span> <ruby>かばん<rt>kaban</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>あそこ<rt>asoko</rt></ruby><ruby>です<rt>desu</rt></ruby>。<br>
+    <span class="en" style="margin-left:80px">The bag is over there.</span></p>
+
+    <p><span class="speaker">YUKI:</span> <ruby>ありがとう<rt>arigatō</rt></ruby>、<ruby>アレックス<rt>Arekkusu</rt></ruby><ruby>さん<rt>san</rt></ruby>！<br>
+    <span class="en" style="margin-left:80px">Thanks, Alex!</span></p>
+  </div>
+  <div class="ts">
+    <div class="ts-jp">「じょうずですね！じゃあ、こうたいしましょう。こんどはわたしがゆきです。」</div>
+    <div class="ts-en">"Great job! Now let's swap. This time I'll be Yuki."</div>
+  </div>
+  <div style="clear:both"></div>
+</div>
+
+<div class="page" id="p6">
+  <h1>CONVERSATION: SPEED &amp; MEMORY CHECK</h1>
+  <h2></h2>
+
+  <div class="ts">
+    <div class="ts-jp">「おなじかいわです。くうらんのところをうめて、にほんごでいってください。」</div>
+    <div class="ts-en">"Same conversation! Fill in the blanks and say it in Japanese."</div>
+  </div>
+  <div class="dialogue" style="margin-top:16px">
+    <p><span class="speaker">YUKI:</span> <ruby>わたし<rt>watashi</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>ペン<rt>pen</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？<br>
+    <span class="en" style="margin-left:80px">Where is my pen?</span></p>
+
+    <p><span class="speaker">ALEX:</span> <ruby>ペン<rt>pen</rt></ruby><ruby>は<rt>wa</rt></ruby><input type="text" class="blank-input" style="min-width:80px"><ruby>です<rt>desu</rt></ruby>。<br>
+    <span class="en" style="margin-left:80px">(The pen is there.)</span></p>
+
+    <p><span class="speaker">YUKI:</span> <ruby>あ<rt>a</rt></ruby>、<ruby>ありがとう<rt>arigatō</rt></ruby>！<ruby>ノート<rt>nōto</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？<br>
+    <span class="en" style="margin-left:80px">Oh, thanks! Where is the notebook?</span></p>
+
+    <p><span class="speaker">ALEX:</span> <ruby>ノート<rt>nōto</rt></ruby><ruby>は<rt>wa</rt></ruby><input type="text" class="blank-input" style="min-width:80px"><ruby>です<rt>desu</rt></ruby>。<br>
+    <span class="en" style="margin-left:80px">(The notebook is here.)</span></p>
+
+    <p><span class="speaker">YUKI:</span> <ruby>じゃあ<rt>jaa</rt></ruby>、<ruby>わたし<rt>watashi</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>かばん<rt>kaban</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？<br>
+    <span class="en" style="margin-left:80px">Then, where is my bag?</span></p>
+
+    <p><span class="speaker">ALEX:</span> <ruby>かばん<rt>kaban</rt></ruby><ruby>は<rt>wa</rt></ruby><input type="text" class="blank-input" style="min-width:80px"><ruby>です<rt>desu</rt></ruby>。<br>
+    <span class="en" style="margin-left:80px">(The bag is over there.)</span></p>
+
+    <p><span class="speaker">YUKI:</span> <ruby>ありがとう<rt>arigatō</rt></ruby>、<ruby>アレックス<rt>Arekkusu</rt></ruby><ruby>さん<rt>san</rt></ruby>！<br>
+    <span class="en" style="margin-left:80px">Thanks, Alex!</span></p>
+  </div>
+</div>
+
+<div class="page" id="p7">
+  <h1>FREE DISCUSSION</h1>
+  <h2></h2>
+
+  <div class="section">
+    <div class="ts">
+      <div class="ts-jp">「ほんはどこですか？にほんごでこたえてください。」</div>
+      <div class="ts-en">"Where is the book? Answer in Japanese."</div>
+    </div>
+    <p><strong>ROUND 1: WHERE IS IT?</strong></p>
+    <div class="dialogue">
+      <p><span class="speaker">Tutor:</span> 「<ruby>ほん<rt>hon</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？」<br>
+      <span class="en" style="margin-left:80px">"Where is the book?"</span></p>
+      <p><span class="speaker">Student:</span> <input type="text" class="blank-input"></p>
+      <p><span class="speaker">Student:</span> 「<ruby>ペン<rt>pen</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？」<br>
+      <span class="en" style="margin-left:80px">"Where is the pen?"</span></p>
+      <p><span class="speaker">Tutor:</span> <em>(answers naturally)</em></p>
+    </div>
+    <div class="help-box">
+      WORDS: <ruby>ほん<rt>hon</rt></ruby>(book) <ruby>ペン<rt>pen</rt></ruby>(pen) <ruby>ノート<rt>nōto</rt></ruby>(notebook)<br>
+      <ruby>ここ<rt>koko</rt></ruby>(here) <ruby>そこ<rt>soko</rt></ruby>(there) <ruby>あそこ<rt>asoko</rt></ruby>(over there)
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <div class="ts">
+      <div class="ts-jp">「かばんはどこですか？ゆびをさしてこたえてね。」</div>
+      <div class="ts-en">"Where is the bag? Point and answer."</div>
+    </div>
+    <p><strong>ROUND 2: POINT AND ANSWER</strong></p>
+    <div class="dialogue">
+      <p><span class="speaker">Tutor:</span> 「<ruby>かばん<rt>kaban</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？」<br>
+      <span class="en" style="margin-left:80px">"Where is the bag?"</span></p>
+      <p><span class="speaker">Student:</span> <input type="text" class="blank-input"></p>
+      <p><span class="speaker">Student:</span> 「<ruby>とけい<rt>tokei</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？」<br>
+      <span class="en" style="margin-left:80px">"Where is the clock?"</span></p>
+      <p><span class="speaker">Tutor:</span> <em>(answers naturally)</em></p>
+    </div>
+    <div class="help-box">
+      WORDS: <ruby>かばん<rt>kaban</rt></ruby>(bag) <ruby>とけい<rt>tokei</rt></ruby>(clock) <ruby>でんわ<rt>denwa</rt></ruby>(phone) <ruby>かぎ<rt>kagi</rt></ruby>(key)<br>
+      <ruby>ここ<rt>koko</rt></ruby>(here) <ruby>そこ<rt>soko</rt></ruby>(there) <ruby>あそこ<rt>asoko</rt></ruby>(over there)
+    </div>
+  </div>
+</div>
+
+<div class="page" id="p8">
+  <h1>ROLEPLAY</h1>
+  <h2>"Find Your 3 Lost Items!"</h2>
+
+  <div class="box">
+    <div class="box-label">SCENARIO / <ruby>じょうきょう<rt>jōkyō</rt></ruby></div>
+    You lost 3 things in the classroom!<br>
+    <ruby>きょうしつ<rt>kyōshitsu</rt></ruby><ruby>で<rt>de</rt></ruby>3<ruby>つ<rt>tsu</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>もの<rt>mono</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>なくしました<rt>nakushimashita</rt></ruby>！
+  </div>
+
+  <p style="margin-top:16px"><strong>GOAL:</strong> Ask the tutor where each item is. Find all 3!<br>
+  You lost your: pen, notebook, and bag.</p>
+
+  <div class="help-box" style="max-width:520px; margin-left:0; margin-top:20px">
+    <strong>PHRASES</strong><br>
+    ＿＿<ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？ &nbsp; <span class="en">Where is ___?</span>
+  </div>
+
+  <div class="help-box" style="max-width:520px; margin-left:0">
+    <strong>WORDS</strong><br>
+    <ruby>ペン<rt>pen</rt></ruby>(pen) &nbsp; <ruby>ノート<rt>nōto</rt></ruby>(notebook) &nbsp; <ruby>かばん<rt>kaban</rt></ruby>(bag)
+  </div>
+</div>
+
+<!-- PAGE_DONE 1: MISSION COMPLETE -->
+<div class="page" id="p9">
+  <h1><ruby>ミッション<rt>misshon</rt></ruby><ruby>かんりょう<rt>kanryō</rt></ruby>！</h1>
+  <h2></h2>
+
+  <div class="ts">
+    <div class="ts-jp">「きょうはとてもじょうずでした！すごい！いっしょにチェックしましょう。」</div>
+    <div class="ts-en">"You did great today! Amazing! Let's check them off together."</div>
+  </div>
+  <div class="box">
+    <p style="margin-bottom:12px"><strong><ruby>きょう<rt>kyō</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>ミッション<rt>misshon</rt></ruby>:</strong></p>
+
+    <div class="check-item">
+      <span class="check">&#10004;</span>
+      <strong>PATTERN 1:</strong> ＿＿<ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？
+    </div>
+
+    <div class="check-item">
+      <span class="check">&#10004;</span>
+      <strong>PATTERN 2:</strong> ＿＿<ruby>は<rt>wa</rt></ruby><ruby>ここ<rt>koko</rt></ruby>/<ruby>そこ<rt>soko</rt></ruby>/<ruby>あそこ<rt>asoko</rt></ruby><ruby>です<rt>desu</rt></ruby>。
+    </div>
+  </div>
+
+  <div class="section" style="margin-top:20px">
+    <div class="ts">
+      <div class="ts-jp">「さいごにもういちどよみましょう。かんぺき！つぎのレッスンであいましょう！」</div>
+      <div class="ts-en">"Let's read one more time. Perfect! See you in the next lesson!"</div>
+    </div>
+    <p><strong>KEY EXPRESSIONS</strong> — <ruby>もういちど<rt>mō ichido</rt></ruby><ruby>よんで<rt>yonde</rt></ruby><ruby>みましょう<rt>mimashō</rt></ruby>！</p>
+    <div class="pattern" style="line-height: 1.6;">
+      &bull; <ruby>ほん<rt>hon</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？ <span class="en">— Where is the book?</span><br>
+      &bull; <ruby>ほん<rt>hon</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>ここ<rt>koko</rt></ruby><ruby>です<rt>desu</rt></ruby>。 <span class="en">— The book is here.</span><br>
+      &bull; <ruby>ペン<rt>pen</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>そこ<rt>soko</rt></ruby><ruby>です<rt>desu</rt></ruby>。 <span class="en">— The pen is there.</span><br>
+      &bull; <ruby>かばん<rt>kaban</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>あそこ<rt>asoko</rt></ruby><ruby>です<rt>desu</rt></ruby>。 <span class="en">— The bag is over there.</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- PAGE_DONE 1: BONUS VOCAB CHALLENGE -->
+<div class="page" id="p10">
+  <h1>BONUS: VOCAB CHALLENGE</h1>
+  <h2></h2>
+
+  <p>Can you match the Japanese to the English?<br>
+  <ruby>にほんご<rt>nihongo</rt></ruby><ruby>と<rt>to</rt></ruby><ruby>えいご<rt>eigo</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>あわせましょう<rt>awasemashō</rt></ruby>！</p>
+
+  <div class="section">
+    <p><strong>LOCATION WORDS:</strong></p>
+    <div class="pattern">
+      <ruby>ここ<rt>koko</rt></ruby> &nbsp; ・ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・ &nbsp; over there<br>
+      <ruby>そこ<rt>soko</rt></ruby> &nbsp; ・ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・ &nbsp; here<br>
+      <ruby>あそこ<rt>asoko</rt></ruby> &nbsp; ・ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・ &nbsp; where<br>
+      <ruby>どこ<rt>doko</rt></ruby> &nbsp; ・ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・ &nbsp; there
+    </div>
+  </div>
+
+  <div class="section">
+    <p><strong>THINGS (from this lesson):</strong></p>
+    <div class="pattern">
+      <ruby>ほん<rt>hon</rt></ruby> &nbsp; ・ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・ &nbsp; pen<br>
+      <ruby>ペン<rt>pen</rt></ruby> &nbsp; ・ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・ &nbsp; bag<br>
+      <ruby>ノート<rt>nōto</rt></ruby> &nbsp; ・ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・ &nbsp; book<br>
+      <ruby>かばん<rt>kaban</rt></ruby> &nbsp; ・ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・ &nbsp; notebook
+    </div>
+  </div>
+
+  <div class="section">
+    <p><strong>MORE THINGS (from drills &amp; discussion):</strong></p>
+    <div class="pattern">
+      <ruby>でんわ<rt>denwa</rt></ruby> &nbsp; ・ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・ &nbsp; key<br>
+      <ruby>かぎ<rt>kagi</rt></ruby> &nbsp; ・ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・ &nbsp; clock<br>
+      <ruby>とけい<rt>tokei</rt></ruby> &nbsp; ・ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・ &nbsp; water<br>
+      <ruby>みず<rt>mizu</rt></ruby> &nbsp; ・ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・ &nbsp; phone<br>
+      <ruby>いす<rt>isu</rt></ruby> &nbsp; ・ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・ &nbsp; desk<br>
+      <ruby>つくえ<rt>tsukue</rt></ruby> &nbsp; ・ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ・ &nbsp; chair
+    </div>
+  </div>
+
+  <div class="section">
+    <p><strong>LESSON 2 &harr; LESSON 3 CONNECTION:</strong></p>
+    <div class="pattern" style="line-height:2.0">
+      <ruby>これ<rt>kore</rt></ruby> (this thing) &nbsp; &harr; &nbsp; <ruby>ここ<rt>koko</rt></ruby> (this place / here)<br>
+      <ruby>それ<rt>sore</rt></ruby> (that thing) &nbsp; &harr; &nbsp; <ruby>そこ<rt>soko</rt></ruby> (that place / there)<br>
+      <ruby>あれ<rt>are</rt></ruby> (that thing over there) &nbsp; &harr; &nbsp; <ruby>あそこ<rt>asoko</rt></ruby> (that place / over there)
+    </div>
+  </div>
+</div>
+
+<!-- Drawing/Typing overlay canvas -->
+<canvas id="drawCanvas"></canvas>
+<!-- Text annotations container -->
+<div id="textLayer"></div>
+
+<nav class="nav">
+  <button id="prev" onclick="go(-1)" disabled>&larr; Back</button>
+  <span id="indicator">1 / 12</span>
+  <button id="next" onclick="go(1)">Next &rarr;</button>
+  <span style="border-left:1px solid #ddd; height:20px; margin:0 4px"></span>
+  <button id="btnDraw" onclick="setMode('draw')" style="padding:8px 14px">&#9998; Draw</button>
+  <button id="btnType" onclick="setMode('type')" style="padding:8px 14px">T Type</button>
+  <button id="btnErase" onclick="setMode('erase')" style="padding:8px 14px">&#9003; Erase</button>
+  <button id="btnClear" onclick="clearPage()" style="padding:8px 14px; color:#c33">&#10005; Clear</button>
+</nav>
+
+<style>
+  #drawCanvas { position: absolute; top: 0; left: 0; z-index: 100; pointer-events: none; }
+  #drawCanvas.active { pointer-events: auto; cursor: crosshair; }
+  #drawCanvas.erase { cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><circle cx="10" cy="10" r="9" fill="none" stroke="%23999" stroke-width="1.5"/></svg>') 10 10, auto; }
+  #textLayer { position: absolute; top: 0; left: 0; width: 100%; min-height: 100vh; pointer-events: none; z-index: 101; }
+  #textLayer.active { pointer-events: auto; cursor: text; }
+  #textLayer .anno-wrap { position: absolute; display: flex; align-items: flex-start; pointer-events: auto; }
+  #textLayer .anno-controls { display: flex; flex-direction: column; gap: 2px; padding: 2px 3px 0 0; }
+  #textLayer .anno-handle { cursor: grab; color: #ccc; font-size: 11px; user-select: none; line-height: 1; }
+  #textLayer .anno-handle:hover { color: #999; }
+  #textLayer .anno-handle:active { cursor: grabbing; }
+  #textLayer .anno-delete { cursor: pointer; color: #ddd; font-size: 11px; user-select: none; line-height: 1; border: none; background: none; padding: 0; }
+  #textLayer .anno-delete:hover { color: #c33; }
+  #textLayer .annotation { background: rgba(255,255,255,0.85); border: 1px dashed #e0b0b0; font-family: monospace; font-size: 16px; color: #c33; outline: none; min-width: 60px; max-width: 300px; padding: 4px 6px; resize: none; overflow: hidden; field-sizing: content; }
+  .nav button.active-mode { background: #111 !important; color: #fff !important; }
+</style>
+
+<script>
+const pages = ['p0','p1','p2','p3','p4','p5','p6','p7','p8','p9','p10'];
+let cur = 0;
+
+function go(dir) {
+  saveAnnotations();
+  document.getElementById(pages[cur]).classList.remove('active');
+  cur += dir;
+  document.getElementById(pages[cur]).classList.add('active');
+  document.getElementById('prev').disabled = cur === 0;
+  document.getElementById('next').disabled = cur === pages.length - 1;
+  document.getElementById('indicator').textContent = (cur + 1) + ' / ' + pages.length;
+  window.scrollTo(0, 0);
+  loadAnnotations();
+  resizeCanvas();
+}
+
+// --- Annotation system ---
+const canvas = document.getElementById('drawCanvas');
+const ctx = canvas.getContext('2d');
+const textLayer = document.getElementById('textLayer');
+let mode = null; // 'draw', 'type', 'erase', or null
+let drawing = false;
+let lastX = 0, lastY = 0;
+
+// Drawing state per page: stored as canvas image data URLs
+const STORAGE_KEY = 'jp-lesson3-annotations';
+
+function getStore() {
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; }
+  catch(e) { return {}; }
+}
+
+function saveAnnotations() {
+  const store = getStore();
+  const pageId = pages[cur];
+  // Save canvas drawing
+  store[pageId] = store[pageId] || {};
+  store[pageId].canvas = canvas.toDataURL();
+  // Save text annotations
+  const texts = [];
+  textLayer.querySelectorAll('.anno-wrap').forEach(wrap => {
+    const input = wrap.querySelector('.annotation');
+    if (input && input.value.trim()) {
+      texts.push({ x: parseInt(wrap.style.left), y: parseInt(wrap.style.top), text: input.value });
+    }
+  });
+  store[pageId].texts = texts;
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(store));
+}
+
+function loadAnnotations() {
+  const store = getStore();
+  const pageId = pages[cur];
+  const data = store[pageId];
+  // Clear canvas
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  // Clear text annotations
+  textLayer.innerHTML = '';
+  if (!data) return;
+  // Restore canvas
+  if (data.canvas) {
+    const img = new Image();
+    img.onload = () => ctx.drawImage(img, 0, 0);
+    img.src = data.canvas;
+  }
+  // Restore text annotations
+  if (data.texts) {
+    data.texts.forEach(t => createTextAt(t.x, t.y, t.text));
+  }
+}
+
+function resizeCanvas() {
+  const h = Math.max(document.documentElement.scrollHeight, window.innerHeight);
+  const w = document.documentElement.scrollWidth;
+  // Save current drawing
+  const tmp = canvas.toDataURL();
+  canvas.width = w;
+  canvas.height = h;
+  ctx.lineJoin = 'round';
+  ctx.lineCap = 'round';
+  // Restore drawing after resize
+  const img = new Image();
+  img.onload = () => ctx.drawImage(img, 0, 0);
+  img.src = tmp;
+  // Match text layer size
+  textLayer.style.height = h + 'px';
+}
+
+function setMode(m) {
+  if (mode === m) { mode = null; } else { mode = m; }
+  canvas.classList.remove('active', 'erase');
+  textLayer.classList.remove('active');
+  document.querySelectorAll('.nav button').forEach(b => b.classList.remove('active-mode'));
+  if (mode === 'draw') {
+    canvas.classList.add('active');
+    document.getElementById('btnDraw').classList.add('active-mode');
+  } else if (mode === 'erase') {
+    canvas.classList.add('active', 'erase');
+    document.getElementById('btnErase').classList.add('active-mode');
+  } else if (mode === 'type') {
+    textLayer.classList.add('active');
+    document.getElementById('btnType').classList.add('active-mode');
+  }
+}
+
+function clearPage() {
+  if (!confirm('Clear all annotations on this page?')) return;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  textLayer.innerHTML = '';
+  saveAnnotations();
+}
+
+function createTextAt(x, y, text) {
+  const wrap = document.createElement('div');
+  wrap.className = 'anno-wrap';
+  wrap.style.left = x + 'px';
+  wrap.style.top = y + 'px';
+
+  const controls = document.createElement('div');
+  controls.className = 'anno-controls';
+
+  const handle = document.createElement('span');
+  handle.className = 'anno-handle';
+  handle.textContent = '\u2803';
+
+  const del = document.createElement('button');
+  del.className = 'anno-delete';
+  del.textContent = '\u2715';
+  del.addEventListener('click', () => { wrap.remove(); saveAnnotations(); });
+
+  controls.appendChild(handle);
+  controls.appendChild(del);
+
+  const ta = document.createElement('textarea');
+  ta.className = 'annotation';
+  ta.rows = 1;
+  ta.value = text || '';
+  ta.addEventListener('focus', () => { activeAnnotation = ta; });
+  ta.addEventListener('blur', () => {
+    activeAnnotation = null;
+    if (!ta.value.trim()) { wrap.remove(); }
+    saveAnnotations();
+    setMode(null);
+  });
+  ta.addEventListener('input', () => { ta.style.height = 'auto'; ta.style.height = ta.scrollHeight + 'px'; });
+
+  // Drag logic
+  let dragging = false, dragX, dragY;
+  handle.addEventListener('mousedown', e => {
+    dragging = true;
+    dragX = e.clientX - parseInt(wrap.style.left);
+    dragY = e.clientY - parseInt(wrap.style.top);
+    e.preventDefault();
+  });
+  document.addEventListener('mousemove', e => {
+    if (!dragging) return;
+    wrap.style.left = (e.clientX - dragX) + 'px';
+    wrap.style.top = (e.clientY - dragY + window.scrollY) + 'px';
+  });
+  document.addEventListener('mouseup', () => { if (dragging) { dragging = false; saveAnnotations(); }});
+
+  wrap.appendChild(controls);
+  wrap.appendChild(ta);
+  textLayer.appendChild(wrap);
+  if (!text) ta.focus();
+  // Auto-size on load
+  if (text) { requestAnimationFrame(() => { ta.style.height = 'auto'; ta.style.height = ta.scrollHeight + 'px'; }); }
+  return wrap;
+}
+
+// Drawing events
+canvas.addEventListener('mousedown', e => {
+  if (mode === 'draw' || mode === 'erase') {
+    drawing = true;
+    lastX = e.pageX;
+    lastY = e.pageY;
+    if (mode === 'erase') {
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.lineWidth = 20;
+    } else {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.strokeStyle = '#c33';
+      ctx.lineWidth = 2.5;
+    }
+  }
+});
+
+canvas.addEventListener('mousemove', e => {
+  if (!drawing) return;
+  ctx.beginPath();
+  ctx.moveTo(lastX, lastY);
+  ctx.lineTo(e.pageX, e.pageY);
+  ctx.stroke();
+  lastX = e.pageX;
+  lastY = e.pageY;
+});
+
+canvas.addEventListener('mouseup', () => { drawing = false; saveAnnotations(); });
+canvas.addEventListener('mouseleave', () => { drawing = false; });
+
+// Touch support
+canvas.addEventListener('touchstart', e => {
+  if (mode === 'draw' || mode === 'erase') {
+    e.preventDefault();
+    drawing = true;
+    const t = e.touches[0];
+    lastX = t.pageX;
+    lastY = t.pageY;
+    if (mode === 'erase') {
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.lineWidth = 20;
+    } else {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.strokeStyle = '#c33';
+      ctx.lineWidth = 2.5;
+    }
+  }
+}, { passive: false });
+
+canvas.addEventListener('touchmove', e => {
+  if (!drawing) return;
+  e.preventDefault();
+  const t = e.touches[0];
+  ctx.beginPath();
+  ctx.moveTo(lastX, lastY);
+  ctx.lineTo(t.pageX, t.pageY);
+  ctx.stroke();
+  lastX = t.pageX;
+  lastY = t.pageY;
+}, { passive: false });
+
+canvas.addEventListener('touchend', () => { drawing = false; saveAnnotations(); });
+
+// Text layer click — only create if no annotation is currently focused
+let activeAnnotation = null;
+textLayer.addEventListener('mousedown', e => {
+  if (mode === 'type' && e.target === textLayer && !activeAnnotation) {
+    // Small delay so the mousedown doesn't steal focus from the new textarea
+    const x = e.pageX - 4, y = e.pageY - 12;
+    setTimeout(() => createTextAt(x, y, ''), 10);
+  }
+});
+
+// Init
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
+loadAnnotations();
+</script>
+</body>
+</html>
