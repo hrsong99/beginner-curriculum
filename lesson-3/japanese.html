@@ -19,15 +19,22 @@
   p, li { font-size: 16px; line-height: 1.8; }
   .en { color: #bbb; font-size: 12px; margin-top: 0; margin-bottom: 0; }
   .pair { display: flex; flex-direction: column; margin-bottom: 6px; line-height: 1.5; }
+  .pair > .en { padding-left: 24px; }
+  .section > .pair > .en { padding-left: 36px; }
   .jp { font-size: 19px; letter-spacing: 1px; padding-top: 2px; margin-bottom: 0; }
   .section { margin: 32px 0; }
   .pattern { margin: 12px 0 12px 20px; line-height: 2.2; }
   .blank { display: inline-block; border-bottom: 1px solid #111; min-width: 280px; height: 1.6em; vertical-align: bottom; }
   .blank-full { display: block; border-bottom: 1px solid #111; margin: 8px 0 8px 20px; max-width: 420px; height: 1.6em; }
-  .blank-input { font-family: monospace; font-size: 16px; border: none; border-bottom: 1px solid #111; outline: none; min-width: 200px; padding: 2px 4px; background: transparent; }
-  .blank-input:focus { border-bottom: 2px solid #c33; }
-  .blank-input-full { display: block; font-family: monospace; font-size: 16px; border: none; border-bottom: 1px solid #111; outline: none; width: 100%; max-width: 420px; margin: 8px 0 8px 20px; padding: 2px 4px; background: transparent; }
-  .blank-input-full:focus { border-bottom: 2px solid #c33; }
+  .blank-input { font-family: monospace; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; outline: none; min-width: 60px; width: 60px; padding: 6px 10px; margin: 0 6px; background: #fafafa; vertical-align: baseline; }
+  .blank-input:focus { border-color: #c33; background: #fff; }
+  .blank-input-full { display: block; font-family: monospace; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; outline: none; width: 100%; max-width: 420px; margin: 4px 0 8px 0; padding: 8px 10px; background: #fafafa; }
+  .blank-input-full:focus { border-color: #c33; background: #fff; }
+  .answer-hint { font-size: 19px; letter-spacing: 1px; color: #111; margin: 0; padding-top: 2px; }
+  .qa { display: grid; grid-template-columns: 30px 1fr; align-items: start; margin: 4px 0; }
+  .qa + .qa { margin-top: 8px; }
+  .qa .pair > .en { padding-left: 0; }
+  .qa-label { font-weight: bold; font-size: 14px; color: #888; padding-top: 4px; }
   .box { border: 1px solid #111; padding: 20px 24px; margin: 20px 0; }
   .box-label { font-size: 14px; font-weight: bold; margin-bottom: 10px; letter-spacing: 0.5px; }
   .help-box { border: 1px solid #999; padding: 14px 18px; margin: 12px 0 12px 20px; max-width: 380px; line-height: 2.2; }
@@ -65,19 +72,19 @@
 
   <div class="section" style="margin-top: 40px;">
     <div class="pair">
-      <div class="jp"><strong>①</strong>&nbsp; <ruby>〜さん<rt>~san</rt></ruby>、<ruby>わたし<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>にほんご<rt>nihongo</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>せんせい<rt>sensei</rt></ruby><ruby>です<rt>desu</rt></ruby>。<ruby>〜と<rt>~to</rt></ruby><ruby>もうします<rt>mōshimasu</rt></ruby>。<br>
-      <span style="margin-left: 24px;"><ruby>これから<rt>korekara</rt></ruby><ruby>よろしく<rt>yoroshiku</rt></ruby><ruby>おねがいします<rt>onegai shimasu</rt></ruby>。</span></div>
+      <div class="jp"><strong>①</strong>&nbsp; 〜さん、わたしはにほんごのせんせいです。〜ともうします。<br>
+      <span style="margin-left: 24px;">これからよろしくおねがいします。</span></div>
       <div class="en">"~, I'm your Japanese teacher. My name is ~.<br>
       Nice to meet you, let's have a great time!"</div>
     </div>
 
     <div class="pair">
-      <div class="jp"><strong>②</strong>&nbsp; <ruby>それでは<rt>soredewa</rt></ruby>、<ruby>きょう<rt>kyō</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>じゅぎょう<rt>jugyō</rt></ruby><ruby>はじめます<rt>hajimemasu</rt></ruby>！</div>
+      <div class="jp"><strong>②</strong>&nbsp; それでは、きょうのじゅぎょうはじめます！</div>
       <div class="en">"Alright, let's start today's lesson!"</div>
     </div>
 
     <div class="pair">
-      <div class="jp"><strong>③</strong>&nbsp; <ruby>これ<rt>kore</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>よんで<rt>yonde</rt></ruby><ruby>ください<rt>kudasai</rt></ruby>。</div>
+      <div class="jp"><strong>③</strong>&nbsp; これをよんでください。</div>
       <div class="en">"Please read this."</div>
     </div>
   </div>
@@ -103,15 +110,15 @@
     <p><strong>1. Asking Where</strong> (<ruby>どこ<rt>doko</rt></ruby>)</p>
     <div class="pattern">
       <div class="pair">
-        <div class="jp">[<ruby>ほん<rt>hon</rt></ruby>]<ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="jp">&bull; [<ruby>ほん<rt>hon</rt></ruby>]<ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
         <div class="en">Where is [the book]?</div>
       </div>
       <div class="pair">
-        <div class="jp">[<ruby>ペン<rt>pen</rt></ruby>]<ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="jp">&bull; [<ruby>ペン<rt>pen</rt></ruby>]<ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
         <div class="en">Where is [the pen]?</div>
       </div>
       <div class="pair">
-        <div class="jp">[<ruby>かばん<rt>kaban</rt></ruby>]<ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="jp">&bull; [<ruby>かばん<rt>kaban</rt></ruby>]<ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
         <div class="en">Where is [the bag]?</div>
       </div>
     </div>
@@ -119,15 +126,15 @@
     <p style="margin-top:16px"><strong>2. Answering Where</strong> (<ruby>ここ<rt>koko</rt></ruby>・<ruby>そこ<rt>soko</rt></ruby>・<ruby>あそこ<rt>asoko</rt></ruby>)</p>
     <div class="pattern">
       <div class="pair">
-        <div class="jp">[<ruby>ほん<rt>hon</rt></ruby>]<ruby>は<rt>wa</rt></ruby><ruby>ここ<rt>koko</rt></ruby><ruby>です<rt>desu</rt></ruby>。</div>
+        <div class="jp">&bull; [<ruby>ほん<rt>hon</rt></ruby>]<ruby>は<rt>wa</rt></ruby><ruby>ここ<rt>koko</rt></ruby><ruby>です<rt>desu</rt></ruby>。</div>
         <div class="en">[The book] is here. (near me)</div>
       </div>
       <div class="pair">
-        <div class="jp">[<ruby>ペン<rt>pen</rt></ruby>]<ruby>は<rt>wa</rt></ruby><ruby>そこ<rt>soko</rt></ruby><ruby>です<rt>desu</rt></ruby>。</div>
+        <div class="jp">&bull; [<ruby>ペン<rt>pen</rt></ruby>]<ruby>は<rt>wa</rt></ruby><ruby>そこ<rt>soko</rt></ruby><ruby>です<rt>desu</rt></ruby>。</div>
         <div class="en">[The pen] is there. (near you)</div>
       </div>
       <div class="pair">
-        <div class="jp">[<ruby>かばん<rt>kaban</rt></ruby>]<ruby>は<rt>wa</rt></ruby><ruby>あそこ<rt>asoko</rt></ruby><ruby>です<rt>desu</rt></ruby>。</div>
+        <div class="jp">&bull; [<ruby>かばん<rt>kaban</rt></ruby>]<ruby>は<rt>wa</rt></ruby><ruby>あそこ<rt>asoko</rt></ruby><ruby>です<rt>desu</rt></ruby>。</div>
         <div class="en">[The bag] is over there. (far from both)</div>
       </div>
     </div>
@@ -145,33 +152,58 @@
   </div>
 
   <div class="section">
-    <div class="pair">
-      <div class="jp"><strong>1.</strong> <ruby>これ<rt>kore</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>なん<rt>nan</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
-      <div class="en">What is this?</div>
+    <p><strong>1. What is this?</strong></p>
+    <div class="qa">
+      <div class="qa-label">Q:</div>
+      <div class="pair">
+        <div class="jp"><ruby>これ<rt>kore</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>なん<rt>nan</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="en">What is this?</div>
+      </div>
     </div>
-    <input type="text" class="blank-input-full" placeholder="これは＿＿です。">
+    <div class="qa">
+      <div class="qa-label">A:</div>
+      <div class="answer-hint"><ruby>これ<rt>kore</rt></ruby><ruby>は<rt>wa</rt></ruby><input type="text" class="blank-input" style="min-width:100px"><ruby>です<rt>desu</rt></ruby>。</div>
+    </div>
     <div class="help-box">
       <ruby>ほん<rt>hon</rt></ruby>(book) &nbsp; <ruby>ペン<rt>pen</rt></ruby>(pen) &nbsp; <ruby>ノート<rt>nōto</rt></ruby>(notebook)
     </div>
   </div>
 
+  <hr class="separator">
+
   <div class="section">
-    <div class="pair">
-      <div class="jp"><strong>2.</strong> <ruby>それ<rt>sore</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>だれ<rt>dare</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
-      <div class="en">Whose is that?</div>
+    <p><strong>2. Whose is that?</strong></p>
+    <div class="qa">
+      <div class="qa-label">Q:</div>
+      <div class="pair">
+        <div class="jp"><ruby>それ<rt>sore</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>だれ<rt>dare</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="en">Whose is that?</div>
+      </div>
     </div>
-    <input type="text" class="blank-input-full" placeholder="それは＿＿の＿＿です。">
+    <div class="qa">
+      <div class="qa-label">A:</div>
+      <div class="answer-hint"><ruby>それ<rt>sore</rt></ruby><ruby>は<rt>wa</rt></ruby><input type="text" class="blank-input" style="min-width:80px"><ruby>の<rt>no</rt></ruby><input type="text" class="blank-input" style="min-width:80px"><ruby>です<rt>desu</rt></ruby>。</div>
+    </div>
     <div class="help-box">
       <ruby>わたし<rt>watashi</rt></ruby>(my) &nbsp; <ruby>せんせい<rt>sensei</rt></ruby>(teacher) &nbsp; <ruby>ともだち<rt>tomodachi</rt></ruby>(friend)
     </div>
   </div>
 
+  <hr class="separator">
+
   <div class="section">
-    <div class="pair">
-      <div class="jp"><strong>3.</strong> <ruby>あれ<rt>are</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>なん<rt>nan</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
-      <div class="en">What is that over there?</div>
+    <p><strong>3. What is that over there?</strong></p>
+    <div class="qa">
+      <div class="qa-label">Q:</div>
+      <div class="pair">
+        <div class="jp"><ruby>あれ<rt>are</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>なん<rt>nan</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="en">What is that over there?</div>
+      </div>
     </div>
-    <input type="text" class="blank-input-full" placeholder="あれは＿＿です。">
+    <div class="qa">
+      <div class="qa-label">A:</div>
+      <div class="answer-hint"><ruby>あれ<rt>are</rt></ruby><ruby>は<rt>wa</rt></ruby><input type="text" class="blank-input" style="min-width:100px"><ruby>です<rt>desu</rt></ruby>。</div>
+    </div>
     <div class="help-box">
       <ruby>かばん<rt>kaban</rt></ruby>(bag) &nbsp; <ruby>とけい<rt>tokei</rt></ruby>(clock) &nbsp; <ruby>いす<rt>isu</rt></ruby>(chair)
     </div>
@@ -809,6 +841,18 @@
 </style>
 
 <script>
+// Auto-expand inline inputs
+document.addEventListener('input', function(e) {
+  if (e.target.classList.contains('blank-input')) {
+    const tmp = document.createElement('span');
+    tmp.style.cssText = 'visibility:hidden;position:absolute;white-space:pre;font:' + getComputedStyle(e.target).font;
+    tmp.textContent = e.target.value || '';
+    document.body.appendChild(tmp);
+    e.target.style.width = Math.max(60, tmp.offsetWidth + 24) + 'px';
+    document.body.removeChild(tmp);
+  }
+});
+
 const pages = ['p0','p1','p2','p3','p4','p5','p6','p7','p8','p9','p10'];
 let cur = 0;
 
