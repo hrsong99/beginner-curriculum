@@ -226,10 +226,10 @@
 |  Tutor:    ペンはどこですか？                                             |
 |            Where is the pen?                                            |
 |  Student:  _____________________________________________                |
-|            (The pen is there. | there = そこ)                            |
+|            (The pen is there. | pen = ペン / there = そこ)                |
 |                                                                         |
 |                                                                         |
-|  DIALOGUE 3:  (Student asks!)                                           |
+|  DIALOGUE 3:                                             |
 |  Student:  _____________________________________________                |
 |            (Where is the notebook? | notebook = ノート / where = どこ)    |
 |  Tutor:    ノートはあそこです。                                           |

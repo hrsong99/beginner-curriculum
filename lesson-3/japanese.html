@@ -39,7 +39,7 @@
   .box-label { font-size: 14px; font-weight: bold; margin-bottom: 10px; letter-spacing: 0.5px; }
   .help-box { border: 1px solid #999; padding: 14px 18px; margin: 12px 0 12px 20px; max-width: 380px; line-height: 2.2; }
   .dialogue { margin: 12px 0 12px 20px; }
-  .dialogue .turn { display: grid; grid-template-columns: 80px 1fr; align-items: start; }
+  .dialogue .turn { display: grid; grid-template-columns: 80px 1fr; align-items: start; margin-bottom: 12px; }
   .dialogue .spk { font-weight: bold; font-size: 15px; padding-top: 16px; }
   .dialogue .pair { padding-left: 0; }
   .dialogue .pair .jp { margin-left: 0; }
@@ -376,13 +376,13 @@
       <div class="ts-jp">「にほんごでしつもんしてみてください。」</div>
       <div class="ts-en">"Try asking the question in Japanese."</div>
     </div>
-    <p><strong>DIALOGUE 1:</strong> <span class="en">(Student asks!)</span></p>
+    <p><strong>DIALOGUE 1:</strong></p>
     <div class="dialogue">
       <div class="turn">
         <div class="spk">Student:</div>
         <div class="pair">
-          <div class="jp"><input type="text" class="blank-input"></div>
-          <div class="en">(Where is the book? | book = <ruby>ほん<rt>hon</rt></ruby> / where = <ruby>どこ<rt>doko</rt></ruby>)</div>
+          <div class="jp"><input type="text" class="blank-input" style="min-width:280px"></div>
+          <div class="en">Where is the book?</div>
         </div>
       </div>
       <div class="turn">
@@ -393,7 +393,12 @@
         </div>
       </div>
     </div>
+    <div class="help-box">
+      <ruby>ほん<rt>hon</rt></ruby>(book) &nbsp; <ruby>どこ<rt>doko</rt></ruby>(where)
+    </div>
   </div>
+
+  <hr class="separator">
 
   <div class="section">
     <div class="ts">
@@ -412,25 +417,30 @@
       <div class="turn">
         <div class="spk">Student:</div>
         <div class="pair">
-          <div class="jp"><input type="text" class="blank-input"></div>
-          <div class="en">(The pen is there. | there = <ruby>そこ<rt>soko</rt></ruby>)</div>
+          <div class="jp"><input type="text" class="blank-input" style="min-width:280px"></div>
+          <div class="en">The pen is there.</div>
         </div>
       </div>
     </div>
+    <div class="help-box">
+      <ruby>ペン<rt>pen</rt></ruby>(pen) &nbsp; <ruby>そこ<rt>soko</rt></ruby>(there)
+    </div>
   </div>
+
+  <hr class="separator">
 
   <div class="section">
     <div class="ts">
       <div class="ts-jp">「さいごです！にほんごでしつもんしてみてください。」</div>
       <div class="ts-en">"Last one! Try asking in Japanese."</div>
     </div>
-    <p><strong>DIALOGUE 3:</strong> <span class="en">(Student asks!)</span></p>
+    <p><strong>DIALOGUE 3:</strong></p>
     <div class="dialogue">
       <div class="turn">
         <div class="spk">Student:</div>
         <div class="pair">
-          <div class="jp"><input type="text" class="blank-input"></div>
-          <div class="en">(Where is the notebook? | notebook = <ruby>ノート<rt>nōto</rt></ruby> / where = <ruby>どこ<rt>doko</rt></ruby>)</div>
+          <div class="jp"><input type="text" class="blank-input" style="min-width:280px"></div>
+          <div class="en">Where is the notebook?</div>
         </div>
       </div>
       <div class="turn">
@@ -440,6 +450,9 @@
           <div class="en">The notebook is over there.</div>
         </div>
       </div>
+    </div>
+    <div class="help-box">
+      <ruby>ノート<rt>nōto</rt></ruby>(notebook) &nbsp; <ruby>どこ<rt>doko</rt></ruby>(where)
     </div>
   </div>
 </div>
