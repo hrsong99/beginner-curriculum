@@ -884,12 +884,12 @@
   .match-item { display: flex; align-items: center; gap: 8px; font-size: 19px; letter-spacing: 1px; user-select: none; }
   .match-left .match-item { flex-direction: row; }
   .match-right .match-item { flex-direction: row-reverse; }
-  .match-dot { width: 14px; height: 14px; border-radius: 50%; border: 2px solid #e33; background: #fff; cursor: pointer; flex-shrink: 0; transition: background 0.15s; }
-  .match-dot:hover { background: #fdd; }
+  .match-dot { width: 20px; height: 20px; border-radius: 50%; border: 2.5px solid #e33; background: #fff; cursor: pointer; flex-shrink: 0; transition: background 0.15s, transform 0.15s, box-shadow 0.15s; }
+  .match-dot:hover { background: #fdd; transform: scale(1.3); box-shadow: 0 0 0 4px rgba(227,51,51,0.15); }
   .match-dot.connected { background: #e33; }
   .match-game svg.match-svg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
-  .match-game svg.match-svg line { stroke: #e33; stroke-width: 2; stroke-linecap: round; }
-  .match-game svg.match-svg line.temp-line { stroke-dasharray: 4 4; opacity: 0.6; }
+  .match-game svg.match-svg line { stroke: #e33; stroke-width: 2.5; stroke-linecap: round; }
+  .match-game svg.match-svg line.temp-line { stroke-dasharray: 6 4; opacity: 0.8; }
 
   /* --- Hanamaru Festival --- */
   .finish-btn { display: block; margin: 32px auto 0; font-family: monospace; font-size: 18px; padding: 14px 40px; border: 2px solid #e33; background: #fff; color: #e33; cursor: pointer; border-radius: 6px; transition: background 0.2s, color 0.2s; }
@@ -1263,13 +1263,17 @@ loadAnnotations();
     game.appendChild(columns);
 
     function getDotCenter(dot) {
-      var gr = game.getBoundingClientRect();
+      var sr = svg.getBoundingClientRect();
       var dr = dot.getBoundingClientRect();
-      return { x: dr.left + dr.width / 2 - gr.left, y: dr.top + dr.height / 2 - gr.top };
+      return { x: dr.left + dr.width / 2 - sr.left, y: dr.top + dr.height / 2 - sr.top };
+    }
+
+    function toSvgCoords(clientX, clientY) {
+      var sr = svg.getBoundingClientRect();
+      return { x: clientX - sr.left, y: clientY - sr.top };
     }
 
     function redrawLines() {
-      // Remove all lines except temp
       svg.querySelectorAll('line:not(.temp-line)').forEach(function(l) { l.remove(); });
       Object.keys(connections).forEach(function(lid) {
         var rid = connections[lid];
@@ -1283,7 +1287,6 @@ loadAnnotations();
         line.setAttribute('x2', rc.x); line.setAttribute('y2', rc.y);
         svg.appendChild(line);
       });
-      // Update dot styles
       Object.keys(dots).forEach(function(key) {
         dots[key].classList.remove('connected');
       });
@@ -1301,23 +1304,22 @@ loadAnnotations();
       return null;
     }
 
-    function startDrag(side, id, dotEl, px, py) {
-      // If already connected, disconnect
+    // Click-to-start, click-to-connect interaction
+    function startConnect(side, id, dotEl) {
+      // If already connected, disconnect first then start re-connect from this dot
       if (side === 'left' && connections[id]) {
         delete connections[id];
         redrawLines();
-        return;
       }
       if (side === 'right') {
         var existingLeft = findConnectionByRight(id);
         if (existingLeft) {
           delete connections[existingLeft];
           redrawLines();
-          return;
         }
       }
       dragging = { side: side, id: id, dotEl: dotEl };
-      // Create temp line
+      dotEl.classList.add('connected');
       tempLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
       tempLine.setAttribute('class', 'temp-line');
       var c = getDotCenter(dotEl);
@@ -1326,23 +1328,15 @@ loadAnnotations();
       svg.appendChild(tempLine);
     }
 
-    function moveDrag(px, py) {
-      if (!dragging || !tempLine) return;
-      var gr = game.getBoundingClientRect();
-      tempLine.setAttribute('x2', px - gr.left);
-      tempLine.setAttribute('y2', py - gr.top);
-    }
-
-    function endDrag(targetEl) {
+    function finishConnect(targetDot) {
       if (!dragging) return;
       if (tempLine) { tempLine.remove(); tempLine = null; }
-      if (targetEl && targetEl.classList.contains('match-dot')) {
-        var targetSide = targetEl.dataset.side;
-        var targetId = targetEl.dataset.id;
+      if (targetDot) {
+        var targetSide = targetDot.dataset.side;
+        var targetId = targetDot.dataset.id;
         if (targetSide !== dragging.side) {
           var leftId = dragging.side === 'left' ? dragging.id : targetId;
           var rightId = dragging.side === 'right' ? dragging.id : targetId;
-          // Remove any existing connection to this right item
           var existingLeft = findConnectionByRight(rightId);
           if (existingLeft) delete connections[existingLeft];
           connections[leftId] = rightId;
@@ -1352,46 +1346,68 @@ loadAnnotations();
       redrawLines();
     }
 
-    // Mouse events
-    game.addEventListener('mousedown', function(e) {
+    function cancelConnect() {
+      if (!dragging) return;
+      if (tempLine) { tempLine.remove(); tempLine = null; }
+      dragging = null;
+      redrawLines();
+    }
+
+    // Mouse: click dot to start, move to see line, click another dot to connect
+    game.addEventListener('click', function(e) {
       var dot = e.target.closest('.match-dot');
-      if (!dot) return;
+      if (!dot) {
+        // Clicked empty space — cancel any active connection
+        cancelConnect();
+        return;
+      }
       e.preventDefault();
-      startDrag(dot.dataset.side, dot.dataset.id, dot, e.clientX, e.clientY);
+      if (dragging) {
+        // Second click — finish connection
+        finishConnect(dot);
+      } else {
+        // First click — start connection
+        startConnect(dot.dataset.side, dot.dataset.id, dot);
+      }
     });
 
     document.addEventListener('mousemove', function(e) {
-      if (!dragging || dragging.dotEl.closest('.match-game') !== game) return;
-      moveDrag(e.clientX, e.clientY);
+      if (!dragging || !tempLine || dragging.dotEl.closest('.match-game') !== game) return;
+      var p = toSvgCoords(e.clientX, e.clientY);
+      tempLine.setAttribute('x2', p.x);
+      tempLine.setAttribute('y2', p.y);
     });
 
-    document.addEventListener('mouseup', function(e) {
-      if (!dragging || dragging.dotEl.closest('.match-game') !== game) return;
-      var target = document.elementFromPoint(e.clientX, e.clientY);
-      endDrag(target);
-    });
-
-    // Touch events
+    // Touch: tap dot to start, drag to target dot, release to connect
     game.addEventListener('touchstart', function(e) {
       var dot = e.target.closest('.match-dot');
       if (!dot) return;
       e.preventDefault();
-      var t = e.touches[0];
-      startDrag(dot.dataset.side, dot.dataset.id, dot, t.clientX, t.clientY);
+      if (dragging) {
+        finishConnect(dot);
+      } else {
+        startConnect(dot.dataset.side, dot.dataset.id, dot);
+      }
     }, { passive: false });
 
     document.addEventListener('touchmove', function(e) {
-      if (!dragging || dragging.dotEl.closest('.match-game') !== game) return;
+      if (!dragging || !tempLine || dragging.dotEl.closest('.match-game') !== game) return;
       e.preventDefault();
       var t = e.touches[0];
-      moveDrag(t.clientX, t.clientY);
+      var p = toSvgCoords(t.clientX, t.clientY);
+      tempLine.setAttribute('x2', p.x);
+      tempLine.setAttribute('y2', p.y);
     }, { passive: false });
 
     document.addEventListener('touchend', function(e) {
       if (!dragging || dragging.dotEl.closest('.match-game') !== game) return;
       var t = e.changedTouches[0];
       var target = document.elementFromPoint(t.clientX, t.clientY);
-      endDrag(target);
+      var dot = target ? target.closest('.match-dot') : null;
+      if (dot && dot.dataset.side !== dragging.side) {
+        finishConnect(dot);
+      }
+      // On touch, don't cancel — let them tap another dot
     });
 
     // Redraw on resize/scroll
@@ -1399,13 +1415,13 @@ loadAnnotations();
 
     // Update SVG size to match container
     function sizeSvg() {
-      svg.setAttribute('width', columns.offsetWidth);
-      svg.setAttribute('height', columns.offsetHeight);
+      svg.setAttribute('width', game.offsetWidth);
+      svg.setAttribute('height', game.offsetHeight);
       redrawLines();
     }
     // Use ResizeObserver for accurate sizing
     if (window.ResizeObserver) {
-      new ResizeObserver(sizeSvg).observe(columns);
+      new ResizeObserver(sizeSvg).observe(game);
     }
     // Initial sizing after layout
     requestAnimationFrame(sizeSvg);
