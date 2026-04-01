@@ -12,6 +12,19 @@
 - Vocab activity added as BONUS after Mission Complete
 - Only TWO focused patterns (no あります/います — save for Lesson 4)
 
+**Styling conventions (HTML implementation):**
+
+- Warm romaji color (#c4b8a8) used for furigana `<rt>` text
+- JP/EN paired layout uses `.pair` wrappers with `.jp` and `.en` child divs
+- Inline fill-in-the-blank inputs use `.blank-input` class (bordered box, auto-sizing)
+- Full-width answer inputs use `.blank-input-full` class
+- Q:/A: grid layout (`.qa` + `.qa-label`) for review exercises — replaces Tutor:/Student: labels
+- Help-word boxes use `.help-box` class (smaller border, indented)
+- Dashed separators (`<hr class="separator">`) between sections throughout
+- Interactive hanamaru (花丸) drawn on checkbox click via SVG animation — flower petals + spiral drawn with stroke-dashoffset animation
+- Page 1 intro lines ①②③ are plain hiragana (no furigana)
+- Roleplay HINTS box merges PHRASES and WORDS into one `.help-box`
+
 ## Lesson Flow (10 Core + 1 Bonus Page)
 
 
@@ -36,15 +49,31 @@
 
 ### PAGE 1 — Title & Pattern Intro
 
+Note: Intro lines ①②③ are plain hiragana (no furigana). TODAY'S PATTERNS examples have bullet points (•) with furigana on all words.
+
 ```
 +-------------------------------------------------------------------------+
 |                                                                         |
-|  LESSON 3: どこですか？                                                   |
-|  ----------------------                                                  |
+|  どこですか？                                                             |
+|  ここ・そこ・あそこ                                                       |
+|  Where is it? — here / there / over there                               |
 |                                                                         |
-|  ┌─── OUTCOME / 目標 ──────────────────────────────────────────┐         |
+|  ① 〜さん、わたしはにほんごのせんせいです。〜ともうします。               |
+|       これからよろしくおねがいします。                                    |
+|     "~, I'm your Japanese teacher. My name is ~.                        |
+|      Nice to meet you, let's have a great time!"                        |
+|                                                                         |
+|  ② それでは、きょうのじゅぎょうはじめます！                              |
+|     "Alright, let's start today's lesson!"                              |
+|                                                                         |
+|  ③ これをよんでください。                                                 |
+|     "Please read this."                                                 |
+|                                                                         |
+|  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
+|                                                                         |
+|  ┌─── OUTCOME / もくひょう ────────────────────────────────────┐         |
 |  │  You can ask where things are and say where they are.       │         |
-|  │  物がどこにあるか聞いたり、答えられるようになります。           │         |
+|  │  ものがどこにあるかきいたり、こたえられるようになります。      │         |
 |  └─────────────────────────────────────────────────────────────┘         |
 |                                                                         |
 |                                                                         |
@@ -53,20 +82,17 @@
 |                                                                         |
 |  1. Asking Where (どこ)                                                  |
 |                                                                         |
-|     * [本]はどこですか？              Where is [the book]?               |
-|     * [ペン]はどこですか？            Where is [the pen]?                |
-|     * [かばん]はどこですか？          Where is [the bag]?                |
+|     • [ほん]はどこですか？            Where is [the book]?               |
+|     • [ペン]はどこですか？            Where is [the pen]?                |
+|     • [かばん]はどこですか？          Where is [the bag]?                |
 |                                                                         |
 |                                                                         |
 |  2. Answering Where (ここ・そこ・あそこ)                                  |
 |                                                                         |
-|     * [本]はここです。                [The book] is here.                |
-|       (near me)                                                         |
-|     * [ペン]はそこです。              [The pen] is there.                |
-|       (near you)                                                        |
-|     * [かばん]はあそこです。          [The bag] is over there.           |
-|       (far from both of us)                                             |
-|                                                                         |
+|     • [ほん]はここです。              [The book] is here. (near me)      |
+|     • [ペン]はそこです。              [The pen] is there. (near you)     |
+|     • [かばん]はあそこです。          [The bag] is over there.           |
+|                                        (far from both)                  |
 |                                                                         |
 |                                                                  PAGE 1 |
 +-------------------------------------------------------------------------+
@@ -74,45 +100,55 @@
 
 ### PAGE 2 — Review: Lesson 2 Quick Check
 
+Note: Uses Q:/A: grid layout (not Tutor:/Student: labels). Answer line has inline fill-in-the-blank
+input boxes inside the sentence. Hint text shows the answer pattern with furigana (not placeholder).
+Dashed separators between the three sections.
+
 ```
 +-------------------------------------------------------------------------+
 |                                                                         |
 |  REVIEW: LESSON 2                                                       |
 |  ────────────────                                                       |
 |                                                                         |
+|  1. What is this?                                                       |
 |                                                                         |
-|  1. Tutor:  これは何ですか？                                             |
-|             What is this?                                               |
+|  Q:  これはなんですか？                                                   |
+|      What is this?                                                      |
 |                                                                         |
-|     Student: _____________________________________________              |
-|              (これは＿＿です。)                                           |
+|  A:  これは[_______]です。                                               |
+|      (inline input box inside the sentence)                             |
 |                                                                         |
-|     ┌─── WORDS ─────────────────────────────────────────┐               |
-|     │  本(book) ペン(pen) ノート(notebook)                │               |
-|     └────────────────────────────────────────────────────┘               |
+|     ┌─────────────────────────────────────────────────────┐             |
+|     │  ほん(book)  ペン(pen)  ノート(notebook)             │             |
+|     └─────────────────────────────────────────────────────┘             |
 |                                                                         |
+|  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
 |                                                                         |
-|  2. Tutor:  それは誰のですか？                                           |
-|             Whose is that?                                              |
+|  2. Whose is that?                                                      |
 |                                                                         |
-|     Student: _____________________________________________              |
-|              (それは＿＿の＿＿です。)                                     |
+|  Q:  それはだれのですか？                                                 |
+|      Whose is that?                                                     |
 |                                                                         |
-|     ┌─── WORDS ─────────────────────────────────────────┐               |
-|     │  私(my) 先生(teacher) ともだち(friend)              │               |
-|     └────────────────────────────────────────────────────┘               |
+|  A:  それは[_____]の[_______]です。                                      |
+|      (two inline input boxes inside the sentence)                       |
 |                                                                         |
+|     ┌─────────────────────────────────────────────────────┐             |
+|     │  わたし(my)  せんせい(teacher)  ともだち(friend)     │             |
+|     └─────────────────────────────────────────────────────┘             |
 |                                                                         |
-|  3. Tutor:  あれは何ですか？                                             |
-|             What is that over there?                                    |
+|  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
 |                                                                         |
-|     Student: _____________________________________________              |
-|              (あれは＿＿です。)                                           |
+|  3. What is that over there?                                            |
 |                                                                         |
-|     ┌─── WORDS ─────────────────────────────────────────┐               |
-|     │  かばん(bag) とけい(clock) いす(chair)              │               |
-|     └────────────────────────────────────────────────────┘     |
+|  Q:  あれはなんですか？                                                   |
+|      What is that over there?                                           |
 |                                                                         |
+|  A:  あれは[_______]です。                                               |
+|      (inline input box inside the sentence)                             |
+|                                                                         |
+|     ┌─────────────────────────────────────────────────────┐             |
+|     │  かばん(bag)  とけい(clock)  いす(chair)             │             |
+|     └─────────────────────────────────────────────────────┘             |
 |                                                                         |
 |                                                                  PAGE 2 |
 +-------------------------------------------------------------------------+
@@ -208,33 +244,48 @@
 
 ### PAGE 5 — Short Dialogues
 
+Note: No "(Student asks!)" labels. Each dialogue has a help-box with hint words below it.
+Dashed separators between dialogues. Student's blank line is an inline input box.
+
 ```
 +-------------------------------------------------------------------------+
 |                                                                         |
 |  SHORT DIALOGUES                                                        |
 |  ────────────────                                                       |
 |                                                                         |
-|                                                                         |
 |  DIALOGUE 1:                                                            |
-|  Student:  _____________________________________________                |
-|            (Where is the book? | book = 本 / where = どこ)               |
-|  Tutor:    本はここです。                                                 |
+|  Student:  [_________________________________]                          |
+|            Where is the book?                                           |
+|  Tutor:    ほんはここです。                                               |
 |            The book is here.                                            |
 |                                                                         |
+|     ┌─────────────────────────────────────────┐                         |
+|     │  ほん(book)  どこ(where)                 │                         |
+|     └─────────────────────────────────────────┘                         |
+|                                                                         |
+|  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
 |                                                                         |
 |  DIALOGUE 2:                                                            |
 |  Tutor:    ペンはどこですか？                                             |
 |            Where is the pen?                                            |
-|  Student:  _____________________________________________                |
-|            (The pen is there. | pen = ペン / there = そこ)                |
+|  Student:  [_________________________________]                          |
+|            The pen is there.                                            |
 |                                                                         |
+|     ┌─────────────────────────────────────────┐                         |
+|     │  ペン(pen)  そこ(there)                  │                         |
+|     └─────────────────────────────────────────┘                         |
 |                                                                         |
-|  DIALOGUE 3:                                             |
-|  Student:  _____________________________________________                |
-|            (Where is the notebook? | notebook = ノート / where = どこ)    |
+|  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
+|                                                                         |
+|  DIALOGUE 3:                                                            |
+|  Student:  [_________________________________]                          |
+|            Where is the notebook?                                       |
 |  Tutor:    ノートはあそこです。                                           |
 |            The notebook is over there.                                  |
 |                                                                         |
+|     ┌─────────────────────────────────────────┐                         |
+|     │  ノート(notebook)  どこ(where)            │                         |
+|     └─────────────────────────────────────────┘                         |
 |                                                                         |
 |                                                                  PAGE 5 |
 +-------------------------------------------------------------------------+
@@ -332,7 +383,7 @@
 |  Student:  「ペンはどこですか？」                                         |
 |            "Where is the pen?"                                          |
 |                                                                         |
-|  Tutor:    (answer naturally)                                          |
+|  Tutor:    (answer naturally)                                           |
 |                                                                         |
 |     ┌─── WORDS ─────────────────────────────────────────┐               |
 |     │  本(book) ペン(pen) ノート(notebook)                │               |
@@ -351,7 +402,7 @@
 |  Student:  「とけいはどこですか？」                                       |
 |            "Where is the clock?"                                        |
 |                                                                         |
-|  Tutor:    (answer naturally)                                          |
+|  Tutor:    (answer naturally)                                           |
 |                                                                         |
 |     ┌─── WORDS ─────────────────────────────────────────┐               |
 |     │  かばん(bag) とけい(clock) でんわ(phone) かぎ(key)  │               |
@@ -364,28 +415,35 @@
 
 ### PAGE 9 — Roleplay
 
+Note: No SCENARIO box. Uses h3 headings (SCENARIO, GOAL, HINTS). Japanese is main text, English
+translation below. PHRASES and WORDS merged into one help-box under HINTS. 3つ has furigana (mittsu).
+"You lost your" line shown in Japanese first with EN below.
+
 ```
 +-------------------------------------------------------------------------+
 |                                                                         |
-|  ROLEPLAY                                                                |
+|  ROLEPLAY                                                               |
 |  ────────                                                               |
 |  "Find Your 3 Lost Items!"                                              |
 |                                                                         |
-|  ┌─── SCENARIO / 状況 ────────────────────────────────────┐             |
-|  │  You lost 3 things in the classroom!                    │             |
-|  │  教室で3つの物をなくしました！                            │             |
-|  └─────────────────────────────────────────────────────────┘             |
+|  SCENARIO                                                               |
+|  きょうしつで3つ(mittsu)のものをなくしました！                            |
+|  You lost 3 things in the classroom!                                    |
 |                                                                         |
-|  **GOAL:** Ask the tutor where each item is. Find all 3!                |
+|  GOAL                                                                   |
+|  せんせいにきいて、3つぜんぶみつけましょう！                              |
+|  Ask the tutor where each item is. Find all 3!                          |
+|                                                                         |
+|  なくしたもの：ペン、ノート、かばん                                       |
 |  You lost your: pen, notebook, and bag.                                 |
 |                                                                         |
-|     ┌─── PHRASES ───────────────────────────────────────┐               |
-|     │  ＿＿はどこですか？         Where is ___?          │               |
-|     └────────────────────────────────────────────────────┘               |
-|                                                                         |
-|     ┌─── WORDS ─────────────────────────────────────────┐               |
-|     │  ペン(pen) ノート(notebook) かばん(bag)             │               |
-|     └────────────────────────────────────────────────────┘               |
+|  HINTS                                                                  |
+|  ┌──────────────────────────────────────────────────────────┐           |
+|  │  PATTERN                                                  │           |
+|  │  ＿＿はどこですか？         Where is ___?                 │           |
+|  │  WORDS                                                    │           |
+|  │  ペン(pen)  ノート(notebook)  かばん(bag)                 │           |
+|  └──────────────────────────────────────────────────────────┘           |
 |                                                                         |
 |                                                                  PAGE 9 |
 +-------------------------------------------------------------------------+
@@ -393,34 +451,37 @@
 
 ### PAGE 10 — Mission Complete
 
+Note: h1 is "ミッションかんりょう！" (hiragana), h2 subtitle is "Mission Complete!". Checkboxes are
+empty — tutor clicks to check them (triggers animated hanamaru花丸 SVG drawn on click). Larger
+font size (18px) and more spacing (20px margin) in the mission box. Interactive hanamaru drawn
+on click via stroke-dashoffset animation (flower petals + inward spiral).
+
 ```
 +-------------------------------------------------------------------------+
 |                                                                         |
-|  ミッション完了！                                                        |
-|  ────────────────                                                       |
+|  ミッションかんりょう！                                                   |
+|  Mission Complete!                                                      |
+|  ─────────────────                                                      |
 |                                                                         |
-|  今日のミッション:                                                       |
+|  きょうのミッション:                                                      |
 |  ┌─────────────────────────────────────────────────────────┐            |
 |  │                                                          │            |
+|  │  ┌──┐                                                    │            |
+|  │  │  │  PATTERN 1: ＿＿はどこですか？                      │            |
+|  │  └──┘  (tutor clicks to draw hanamaru)                   │            |
 |  │                                                          │            |
-|  │  ┏━━━┓                                                   │            |
-|  │  ┃ ✔ ┃  PATTERN 1: ＿＿はどこですか？                     │            |
-|  │  ┗━━━┛                                                   │            |
-|  │                                                          │            |
-|  │                                                          │            |
-|  │  ┏━━━┓                                                   │            |
-|  │  ┃ ✔ ┃  PATTERN 2: ＿＿はここ/そこ/あそこです。            │            |
-|  │  ┗━━━┛                                                   │            |
-|  │                                                          │            |
+|  │  ┌──┐                                                    │            |
+|  │  │  │  PATTERN 2: ＿＿はここ/そこ/あそこです。             │            |
+|  │  └──┘  (tutor clicks to draw hanamaru)                   │            |
 |  │                                                          │            |
 |  └─────────────────────────────────────────────────────────┘            |
 |                                                                         |
 |                                                                         |
-|  KEY EXPRESSIONS — もう一度読んでみましょう！                            |
-|  * 本はどこですか？            — Where is the book?                      |
-|  * 本はここです。              — The book is here.                       |
-|  * ペンはそこです。            — The pen is there.                       |
-|  * かばんはあそこです。        — The bag is over there.                  |
+|  KEY EXPRESSIONS — もういちどよんでみましょう！                           |
+|  • ほんはどこですか？          — Where is the book?                      |
+|  • ほんはここです。            — The book is here.                       |
+|  • ペンはそこです。            — The pen is there.                       |
+|  • かばんはあそこです。        — The bag is over there.                  |
 |                                                                         |
 |                                                                 PAGE 10 |
 +-------------------------------------------------------------------------+
