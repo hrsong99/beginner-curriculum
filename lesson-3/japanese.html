@@ -1425,6 +1425,15 @@ loadAnnotations();
     }
     // Initial sizing after layout
     requestAnimationFrame(sizeSvg);
+
+    // Expose connections for sync
+    game._syncConnections = connections;
+    game._applyConnections = function(newConns) {
+      // Clear and replace connections
+      Object.keys(connections).forEach(function(k) { delete connections[k]; });
+      Object.keys(newConns).forEach(function(k) { connections[k] = newConns[k]; });
+      redrawLines();
+    };
   });
 })();
 
@@ -1539,6 +1548,217 @@ document.getElementById('finishBtn').addEventListener('click', function() {
     msg.classList.add('visible');
   }, totalTime);
 });
+
+// =============================================
+// LIVE SYNC
+// =============================================
+// Connect: add ?sync=ROOM_NAME&ws=wss://your-server to the URL
+// Both viewers join the same room and all interactions sync.
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var room = params.get('sync');
+  if (!room) return; // sync disabled unless ?sync=ROOM is in URL
+
+  // Auto-detect WebSocket URL from current host (same server serves pages + WS)
+  var wsProto = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+  var wsUrl = params.get('ws') || (wsProto + '//' + window.location.host + '/ws');
+  var ws = null;
+  var syncing = false; // true while applying a remote event (prevents echo)
+
+  function connect() {
+    ws = new WebSocket(wsUrl + '/?room=' + encodeURIComponent(room));
+    ws.onopen = function() { console.log('[sync] connected to room: ' + room); };
+    ws.onclose = function() { console.log('[sync] disconnected, reconnecting...'); setTimeout(connect, 2000); };
+    ws.onmessage = function(e) {
+      var msg;
+      try { msg = JSON.parse(e.data); } catch(err) { return; }
+      syncing = true;
+      applyRemote(msg);
+      syncing = false;
+    };
+  }
+  connect();
+
+  function send(msg) {
+    if (syncing) return; // don't echo remote events back
+    if (ws && ws.readyState === 1) ws.send(JSON.stringify(msg));
+  }
+
+  // --- Hook into page navigation ---
+  var origGo = window.go;
+  window.go = function(dir) {
+    origGo(dir);
+    send({ t: 'page', page: cur });
+  };
+
+  // --- Hook into text inputs ---
+  document.addEventListener('input', function(e) {
+    if (syncing) return;
+    if (e.target.classList.contains('blank-input') || e.target.classList.contains('blank-input-full')) {
+      var inputs = Array.from(document.querySelectorAll('.blank-input, .blank-input-full'));
+      var idx = inputs.indexOf(e.target);
+      if (idx >= 0) send({ t: 'input', idx: idx, val: e.target.value });
+    }
+  });
+
+  // --- Hook into checkbox clicks ---
+  document.addEventListener('click', function(e) {
+    if (syncing) return;
+    var check = e.target.closest('.check');
+    if (check) {
+      var checks = Array.from(document.querySelectorAll('.check'));
+      var idx = checks.indexOf(check);
+      if (idx >= 0) send({ t: 'check', idx: idx, done: check.classList.contains('done') });
+    }
+  });
+
+  // --- Hook into hanamaru festival ---
+  var finishBtn = document.getElementById('finishBtn');
+  if (finishBtn) {
+    finishBtn.addEventListener('click', function() {
+      if (!syncing) send({ t: 'hanamaru' });
+    });
+  }
+
+  // --- Hook into drawing ---
+  var drawCanvas = document.getElementById('drawCanvas');
+  var drawCtx = drawCanvas ? drawCanvas.getContext('2d') : null;
+
+  // Intercept canvas drawing strokes
+  if (drawCanvas) {
+    drawCanvas.addEventListener('mousedown', function(e) {
+      if (!syncing && (mode === 'draw' || mode === 'erase')) {
+        send({ t: 'drawstart', x: e.pageX, y: e.pageY, erase: mode === 'erase' });
+      }
+    });
+    drawCanvas.addEventListener('mousemove', function(e) {
+      if (!syncing && drawing) {
+        send({ t: 'drawmove', x: e.pageX, y: e.pageY });
+      }
+    });
+    drawCanvas.addEventListener('mouseup', function() {
+      if (!syncing) send({ t: 'drawend' });
+    });
+    // Touch drawing sync
+    drawCanvas.addEventListener('touchstart', function(e) {
+      if (!syncing && (mode === 'draw' || mode === 'erase')) {
+        var t = e.touches[0];
+        send({ t: 'drawstart', x: t.pageX, y: t.pageY, erase: mode === 'erase' });
+      }
+    });
+    drawCanvas.addEventListener('touchmove', function(e) {
+      if (!syncing && drawing) {
+        var t = e.touches[0];
+        send({ t: 'drawmove', x: t.pageX, y: t.pageY });
+      }
+    });
+    drawCanvas.addEventListener('touchend', function() {
+      if (!syncing) send({ t: 'drawend' });
+    });
+  }
+
+  // --- Hook into matching game ---
+  document.querySelectorAll('.match-game').forEach(function(game, gameIdx) {
+    game.addEventListener('click', function(e) {
+      // After a connection is made, send the full connection state
+      if (syncing) return;
+      // Small delay to let the connection logic finish first
+      setTimeout(function() {
+        // Read connections from the game's closure — we stored them on the element
+        if (game._syncConnections) {
+          send({ t: 'match', gameIdx: gameIdx, connections: JSON.parse(JSON.stringify(game._syncConnections)) });
+        }
+      }, 50);
+    });
+  });
+
+  // --- Apply remote events ---
+  var remoteDrawing = false;
+  var remoteLastX = 0, remoteLastY = 0;
+
+  function applyRemote(msg) {
+    switch (msg.t) {
+      case 'page':
+        // Navigate to the specified page
+        while (cur < msg.page) { document.getElementById(pages[cur]).classList.remove('active'); cur++; }
+        while (cur > msg.page) { document.getElementById(pages[cur]).classList.remove('active'); cur--; }
+        document.getElementById(pages[cur]).classList.add('active');
+        document.getElementById('prev').disabled = cur === 0;
+        document.getElementById('next').disabled = cur === pages.length - 1;
+        document.getElementById('indicator').textContent = (cur + 1) + ' / ' + pages.length;
+        window.scrollTo(0, 0);
+        loadAnnotations();
+        resizeCanvas();
+        break;
+
+      case 'input':
+        var inputs = document.querySelectorAll('.blank-input, .blank-input-full');
+        if (inputs[msg.idx]) {
+          inputs[msg.idx].value = msg.val;
+          // Trigger resize for inline inputs
+          inputs[msg.idx].dispatchEvent(new Event('input', { bubbles: true }));
+        }
+        break;
+
+      case 'check':
+        var checks = document.querySelectorAll('.check');
+        if (checks[msg.idx]) {
+          var check = checks[msg.idx];
+          if (msg.done && !check.classList.contains('done')) {
+            check.classList.add('done');
+            check.innerHTML = '<svg class="hanamaru" viewBox="0 0 72 72" fill="none">' +
+              '<path d="' + makeHanamaruPath() + '" stroke="#e33" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>';
+          } else if (!msg.done && check.classList.contains('done')) {
+            check.classList.remove('done');
+            check.innerHTML = '&nbsp;';
+          }
+        }
+        break;
+
+      case 'hanamaru':
+        // Trigger the hanamaru festival
+        if (finishBtn) finishBtn.click();
+        break;
+
+      case 'drawstart':
+        if (!drawCtx) break;
+        remoteDrawing = true;
+        remoteLastX = msg.x;
+        remoteLastY = msg.y;
+        if (msg.erase) {
+          drawCtx.globalCompositeOperation = 'destination-out';
+          drawCtx.lineWidth = 20;
+        } else {
+          drawCtx.globalCompositeOperation = 'source-over';
+          drawCtx.strokeStyle = '#c33';
+          drawCtx.lineWidth = 2.5;
+        }
+        break;
+
+      case 'drawmove':
+        if (!drawCtx || !remoteDrawing) break;
+        drawCtx.beginPath();
+        drawCtx.moveTo(remoteLastX, remoteLastY);
+        drawCtx.lineTo(msg.x, msg.y);
+        drawCtx.stroke();
+        remoteLastX = msg.x;
+        remoteLastY = msg.y;
+        break;
+
+      case 'drawend':
+        remoteDrawing = false;
+        saveAnnotations();
+        break;
+
+      case 'match':
+        var games = document.querySelectorAll('.match-game');
+        if (games[msg.gameIdx] && games[msg.gameIdx]._applyConnections) {
+          games[msg.gameIdx]._applyConnections(msg.connections);
+        }
+        break;
+    }
+  }
+})();
 </script>
 </body>
 </html>

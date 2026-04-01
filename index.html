@@ -18,12 +18,23 @@
   .lesson-list li:last-child a { border-bottom: 1px solid #ddd; }
   .lesson-list a:hover { background: #f0f0f0; }
   .tag { font-size: 11px; color: #999; margin-left: 8px; }
+  .sync-bar { margin-bottom: 28px; padding: 14px 18px; border: 1px solid #ddd; background: #fafafa; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .sync-bar label { font-size: 14px; }
+  .sync-bar input { font-family: monospace; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; padding: 6px 10px; width: 180px; }
+  .sync-bar input:focus { border-color: #c33; outline: none; }
+  .sync-bar .sync-status { font-size: 12px; color: #999; }
 </style>
 </head>
 <body>
 <div class="container">
   <h1>Beginner Curriculum</h1>
   <h2>Lesson Index</h2>
+
+  <div class="sync-bar">
+    <label for="roomInput">Room:</label>
+    <input type="text" id="roomInput" placeholder="Enter room name to sync">
+    <span class="sync-status" id="syncStatus">Enter a room name so both devices see the same lesson live</span>
+  </div>
 
   <div class="lesson-group">
     <h3>Lesson 1 — はじめまして！ / Nice to Meet You!</h3>
@@ -51,5 +62,28 @@
     </ul>
   </div>
 </div>
+<script>
+  var roomInput = document.getElementById('roomInput');
+  var syncStatus = document.getElementById('syncStatus');
+  var links = document.querySelectorAll('.lesson-list a');
+
+  // Restore saved room name
+  var saved = localStorage.getItem('sync-room');
+  if (saved) { roomInput.value = saved; updateLinks(); }
+
+  roomInput.addEventListener('input', updateLinks);
+
+  function updateLinks() {
+    var room = roomInput.value.trim();
+    localStorage.setItem('sync-room', room);
+    links.forEach(function(a) {
+      var base = a.getAttribute('href').split('?')[0];
+      a.href = room ? base + '?sync=' + encodeURIComponent(room) : base;
+    });
+    syncStatus.textContent = room
+      ? 'Sync ON — both devices use room "' + room + '"'
+      : 'Enter a room name so both devices see the same lesson live';
+  }
+</script>
 </body>
 </html>

@@ -1,0 +1,11 @@
+{
+  "name": "lesson-sync",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "sync": "node sync-server.js"
+  },
+  "dependencies": {
+    "ws": "^8.0.0"
+  }
+}
