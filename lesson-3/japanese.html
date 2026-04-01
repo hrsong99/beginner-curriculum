@@ -897,7 +897,7 @@
   .hanamaru-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 300; display: flex; align-items: center; justify-content: center; }
   .hanamaru-overlay .hana-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255, 245, 238, 0.92); }
   .hanamaru-overlay .hana-item { position: absolute; z-index: 1; }
-  .hanamaru-overlay .hana-item path { stroke-dasharray: 2000; stroke-dashoffset: 2000; animation: drawHanamaru 1.5s ease forwards; }
+  .hanamaru-overlay .hana-item path { stroke-dasharray: 2000; stroke-dashoffset: 2000; animation: drawHanamaru 2s ease forwards; }
   .hanamaru-overlay .hana-msg { position: relative; z-index: 2; text-align: center; opacity: 0; transition: opacity 0.8s ease; }
   .hanamaru-overlay .hana-msg.visible { opacity: 1; }
   .hanamaru-overlay .hana-msg p { font-family: monospace; font-size: 28px; color: #c33; font-weight: bold; margin-bottom: 20px; }
@@ -1423,14 +1423,49 @@ document.getElementById('finishBtn').addEventListener('click', function() {
   bg.className = 'hana-bg';
   overlay.appendChild(bg);
 
-  // Generate 15-25 hanamarus
-  var count = 15 + Math.floor(Math.random() * 11);
+  // Generate 45-65 hanamarus of various sizes, well-distributed
+  var count = 45 + Math.floor(Math.random() * 21);
   var maxDelay = 0;
+  var vw = window.innerWidth;
+  var vh = window.innerHeight;
+  // Center exclusion zone (where message text + button appear)
+  var cx1 = vw * 0.3, cx2 = vw * 0.7, cy1 = vh * 0.3, cy2 = vh * 0.65;
+  // Track placed hanamaru centers for spacing
+  var placed = [];
   for (var i = 0; i < count; i++) {
-    var size = 40 + Math.floor(Math.random() * 111); // 40-150
-    var x = Math.random() * (window.innerWidth - size);
-    var y = Math.random() * (window.innerHeight - size);
-    var delay = i * (0.1 + Math.random() * 0.2); // staggered
+    // Mix of sizes: ~20% very big (200-350), ~30% big (100-200), ~50% small-medium (25-100)
+    var roll = Math.random();
+    var size;
+    if (roll < 0.2) { size = 200 + Math.floor(Math.random() * 151); }
+    else if (roll < 0.5) { size = 100 + Math.floor(Math.random() * 101); }
+    else { size = 25 + Math.floor(Math.random() * 76); }
+    // Place hanamaru: avoid center zone AND keep spacing from others
+    var x, y, attempts = 0, bestX = 0, bestY = 0, bestDist = -1;
+    var minSpacing = size * 0.4; // minimum distance between centers
+    do {
+      x = Math.random() * vw - size * 0.3;
+      y = Math.random() * vh - size * 0.3;
+      var centerX = x + size / 2;
+      var centerY = y + size / 2;
+      // Skip if in exclusion zone
+      if (centerX > cx1 && centerX < cx2 && centerY > cy1 && centerY < cy2) { attempts++; continue; }
+      // Find minimum distance to any placed hanamaru
+      var closestDist = Infinity;
+      for (var j = 0; j < placed.length; j++) {
+        var dx = centerX - placed[j][0];
+        var dy = centerY - placed[j][1];
+        var d = Math.sqrt(dx * dx + dy * dy) - (size + placed[j][2]) * 0.3;
+        if (d < closestDist) closestDist = d;
+      }
+      // Keep the best candidate (most spaced out)
+      if (closestDist > bestDist) { bestDist = closestDist; bestX = x; bestY = y; }
+      // Good enough if spaced well
+      if (closestDist >= minSpacing) break;
+      attempts++;
+    } while (attempts < 30);
+    x = bestX; y = bestY;
+    placed.push([x + size / 2, y + size / 2, size]);
+    var delay = Math.random() * 0.9; // all start within first 0.8-1s
     if (delay > maxDelay) maxDelay = delay;
 
     // Color variation around #e33
@@ -1482,8 +1517,8 @@ document.getElementById('finishBtn').addEventListener('click', function() {
 
   document.body.appendChild(overlay);
 
-  // Show message after all animations complete
-  var totalTime = (maxDelay + 1.5) * 1000 + 200;
+  // Show message early while hanamarus are still drawing
+  var totalTime = 800;
   setTimeout(function() {
     msg.classList.add('visible');
   }, totalTime);
