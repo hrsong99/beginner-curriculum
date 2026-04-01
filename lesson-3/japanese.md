@@ -332,7 +332,7 @@
 |  Student:  「ペンはどこですか？」                                         |
 |            "Where is the pen?"                                          |
 |                                                                         |
-|  Tutor:    (answers naturally)                                          |
+|  Tutor:    (answer naturally)                                          |
 |                                                                         |
 |     ┌─── WORDS ─────────────────────────────────────────┐               |
 |     │  本(book) ペン(pen) ノート(notebook)                │               |
@@ -351,7 +351,7 @@
 |  Student:  「とけいはどこですか？」                                       |
 |            "Where is the clock?"                                        |
 |                                                                         |
-|  Tutor:    (answers naturally)                                          |
+|  Tutor:    (answer naturally)                                          |
 |                                                                         |
 |     ┌─── WORDS ─────────────────────────────────────────┐               |
 |     │  かばん(bag) とけい(clock) でんわ(phone) かぎ(key)  │               |
