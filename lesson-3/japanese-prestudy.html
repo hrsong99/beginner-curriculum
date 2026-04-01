@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prestudy: どこですか？</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: monospace; background: #fff; color: #111; }
+  .page { display: none; max-width: 720px; margin: 0 auto; padding: 60px 40px 100px; position: relative; }
+  .page.active { display: block; }
+  h1 { font-size: 22px; margin-bottom: 8px; letter-spacing: 0.5px; }
+  h2 { font-size: 18px; font-weight: normal; margin-bottom: 32px; border-bottom: 1px solid #111; padding-bottom: 12px; }
+  h3 { font-size: 17px; margin: 32px 0 12px; }
+  p, li { font-size: 16px; line-height: 1.8; }
+  .en { color: #bbb; font-size: 12px; }
+  .section { margin: 32px 0; }
+  .pattern { margin: 12px 0 12px 20px; line-height: 2.2; }
+  .box { border: 1px solid #111; padding: 20px 24px; margin: 20px 0; }
+  .box-label { font-size: 14px; font-weight: bold; margin-bottom: 10px; letter-spacing: 0.5px; }
+  .help-box { border: 1px solid #999; padding: 14px 18px; margin: 12px 0 12px 20px; max-width: 480px; line-height: 2.2; }
+  .explain-box { border: 1px solid #ccc; background: #fafafa; padding: 16px 20px; margin: 16px 0; line-height: 1.8; }
+  .explain-box p { margin-bottom: 8px; }
+  .explain-box .label { font-size: 12px; font-weight: bold; letter-spacing: 1px; color: #999; text-transform: uppercase; margin-bottom: 8px; }
+  .dialogue { margin: 12px 0 12px 20px; }
+  .dialogue p { margin-bottom: 16px; line-height: 1.6; }
+  .dialogue .en { display: block; margin-top: -2px; margin-bottom: 4px; }
+  .dialogue .speaker { font-weight: bold; display: inline-block; min-width: 80px; }
+  .vocab-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+  .vocab-table th { text-align: left; font-size: 12px; font-weight: bold; letter-spacing: 1px; color: #999; text-transform: uppercase; padding: 8px 12px; border-bottom: 2px solid #111; }
+  .vocab-table td { padding: 10px 12px; border-bottom: 1px solid #eee; font-size: 16px; line-height: 1.6; }
+  .vocab-table tr:last-child td { border-bottom: 1px solid #111; }
+  .check-item { margin: 16px 0; padding-left: 10px; }
+  .check { display: inline-block; border: 2px solid #111; width: 22px; height: 22px; text-align: center; line-height: 20px; margin-right: 10px; vertical-align: middle; font-size: 14px; }
+  .nav { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; border-top: 1px solid #ddd; padding: 16px; display: flex; justify-content: center; gap: 16px; align-items: center; }
+  .nav button { font-family: monospace; font-size: 14px; padding: 8px 24px; border: 1px solid #111; background: #fff; cursor: pointer; }
+  .nav button:hover { background: #f0f0f0; }
+  .nav button:disabled { color: #ccc; border-color: #ccc; cursor: default; background: #fff; }
+  .nav span { font-size: 13px; color: #666; min-width: 80px; text-align: center; }
+  .separator { border: none; border-top: 1px dashed #ccc; margin: 28px 0; }
+  ruby { ruby-position: over; }
+  rt { font-size: 0.7em; color: #7a8a9e; font-weight: normal !important; font-style: normal !important; font-family: 'Helvetica Neue', Arial, sans-serif; letter-spacing: 0.5px; padding: 0 1px; }
+
+  /* Interactive activity styles */
+  .match-item { display: flex; align-items: center; gap: 12px; margin: 10px 0 10px 20px; flex-wrap: wrap; }
+  .match-jp { font-size: 16px; min-width: 300px; }
+  .match-choices { display: flex; gap: 8px; flex-wrap: wrap; }
+  .match-btn { font-family: monospace; font-size: 13px; padding: 6px 14px; border: 1px solid #999; background: #fff; cursor: pointer; transition: all 0.15s; }
+  .match-btn:hover { background: #f0f0f0; border-color: #111; }
+  .match-btn.correct { background: #e8f5e9; border-color: #4caf50; color: #2e7d32; cursor: default; }
+  .match-btn.wrong { background: #ffebee; border-color: #ef5350; color: #c62828; }
+
+  .fill-item { margin: 16px 0 16px 20px; }
+  .check-btn { font-family: monospace; font-size: 13px; padding: 4px 12px; border: 1px solid #999; background: #fff; cursor: pointer; }
+  .check-btn:hover { background: #f0f0f0; border-color: #111; }
+  .fill-feedback { font-size: 13px; margin-left: 4px; }
+  .fill-feedback.correct { color: #2e7d32; }
+  .fill-feedback.wrong { color: #c62828; }
+
+  .translate-prompt { margin-bottom: 6px; }
+
+  .reorder-item { margin: 20px 0 20px 20px; }
+  .reorder-answer { min-height: 42px; border: 1px dashed #ccc; padding: 6px 10px; margin: 8px 0; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; background: #fafafa; }
+  .reorder-answer .word-btn { background: #e8f5e9; border-color: #4caf50; }
+  .reorder-bank { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+  .word-btn { font-family: monospace; font-size: 15px; padding: 6px 14px; border: 1px solid #999; background: #fff; cursor: pointer; transition: all 0.15s; }
+  .word-btn:hover { background: #f0f0f0; border-color: #111; }
+  .word-btn.used { opacity: 0.3; pointer-events: none; }
+  .reorder-controls { display: flex; align-items: center; gap: 8px; margin-top: 8px; }
+  .reorder-item.correct .reorder-answer { border-color: #4caf50; border-style: solid; background: #e8f5e9; }
+  .reorder-item.wrong .reorder-answer { border-color: #ef5350; border-style: solid; background: #ffebee; }
+  .reveal-btn { font-family: monospace; font-size: 13px; padding: 4px 12px; border: 1px solid #999; background: #fff; cursor: pointer; display: none; }
+  .reveal-btn:hover { background: #f0f0f0; border-color: #111; }
+  .reorder-item.wrong .reveal-btn { display: inline-block; }
+
+  .demo-diagram { display: flex; justify-content: center; align-items: flex-end; gap: 40px; margin: 24px 0; padding: 20px; }
+  .demo-item { text-align: center; }
+  .demo-label { font-size: 14px; font-weight: bold; margin-bottom: 6px; }
+  .demo-desc { font-size: 12px; color: #666; }
+  .demo-icon { font-size: 28px; margin-bottom: 4px; }
+  .demo-arrow { color: #bbb; font-size: 20px; align-self: center; }
+
+  .compare-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+  .compare-table th { text-align: center; font-size: 12px; font-weight: bold; letter-spacing: 1px; color: #999; text-transform: uppercase; padding: 8px 12px; border-bottom: 2px solid #111; }
+  .compare-table td { padding: 12px; border-bottom: 1px solid #eee; font-size: 16px; text-align: center; line-height: 1.6; }
+  .compare-table tr:last-child td { border-bottom: 1px solid #111; }
+</style>
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active" id="p1">
+  <h1>PRESTUDY: <ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</h1>
+  <h2>Where Is It? &mdash; <ruby>ここ<rt>koko</rt></ruby>・<ruby>そこ<rt>soko</rt></ruby>・<ruby>あそこ<rt>asoko</rt></ruby></h2>
+
+  <div class="box">
+    <div class="box-label">WHAT YOU WILL LEARN</div>
+    In this lesson, you will learn how to:<br>
+    <div class="pattern">
+      &bull; Ask where something is<br>
+      &bull; Say "here," "there," and "over there"<br>
+      &bull; Answer "Where is ___?" questions
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>THE BIG IDEA: <ruby>ここ<rt>koko</rt></ruby>・<ruby>そこ<rt>soko</rt></ruby>・<ruby>あそこ<rt>asoko</rt></ruby></h3>
+
+    <div class="explain-box">
+      <div class="label">English Explanation</div>
+      <p>In Lesson 2 you learned <ruby>これ<rt>kore</rt></ruby>・<ruby>それ<rt>sore</rt></ruby>・<ruby>あれ<rt>are</rt></ruby> for pointing at <strong>things</strong>.</p>
+      <p>Now we learn the <strong>place</strong> versions &mdash; same distance logic!</p>
+      <p>&bull; <strong><ruby>ここ<rt>koko</rt></ruby></strong> = <strong>here</strong> &mdash; near <em>me</em></p>
+      <p>&bull; <strong><ruby>そこ<rt>soko</rt></ruby></strong> = <strong>there</strong> &mdash; near <em>you</em></p>
+      <p>&bull; <strong><ruby>あそこ<rt>asoko</rt></ruby></strong> = <strong>over there</strong> &mdash; far from <em>both</em> of us</p>
+    </div>
+
+    <div class="demo-diagram">
+      <div class="demo-item">
+        <div class="demo-icon">&#128205;</div>
+        <div class="demo-label"><ruby>ここ<rt>koko</rt></ruby></div>
+        <div class="demo-desc">here (near me)</div>
+      </div>
+      <div class="demo-arrow">&rarr;</div>
+      <div class="demo-item">
+        <div class="demo-icon">&#128205;</div>
+        <div class="demo-label"><ruby>そこ<rt>soko</rt></ruby></div>
+        <div class="demo-desc">there (near you)</div>
+      </div>
+      <div class="demo-arrow">&rarr;</div>
+      <div class="demo-item">
+        <div class="demo-icon">&#128205;</div>
+        <div class="demo-label"><ruby>あそこ<rt>asoko</rt></ruby></div>
+        <div class="demo-desc">over there</div>
+      </div>
+    </div>
+
+    <div class="explain-box">
+      <div class="label">Lesson 2 &harr; Lesson 3 Connection</div>
+      <table class="compare-table">
+        <tr><th>Thing (Lesson 2)</th><th></th><th>Place (Lesson 3)</th></tr>
+        <tr><td><ruby>これ<rt>kore</rt></ruby> &mdash; this</td><td>&harr;</td><td><ruby>ここ<rt>koko</rt></ruby> &mdash; here</td></tr>
+        <tr><td><ruby>それ<rt>sore</rt></ruby> &mdash; that</td><td>&harr;</td><td><ruby>そこ<rt>soko</rt></ruby> &mdash; there</td></tr>
+        <tr><td><ruby>あれ<rt>are</rt></ruby> &mdash; that over there</td><td>&harr;</td><td><ruby>あそこ<rt>asoko</rt></ruby> &mdash; over there</td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="p2">
+  <h1>PATTERN 1: ASKING WHERE</h1>
+  <h2>"Where is the ___?"</h2>
+
+  <p><strong>Pattern:</strong> [noun]<ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</p>
+
+  <div class="explain-box">
+    <div class="label">How to use</div>
+    <p>Put the thing you're looking for before <ruby>は<rt>wa</rt></ruby>, then say <ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？ (where is it?)</p>
+    <p><ruby>どこ<rt>doko</rt></ruby> = <strong>where</strong></p>
+  </div>
+
+  <div class="section">
+    <h3>EXAMPLES</h3>
+    <div class="pattern">
+      &bull; <ruby>ほん<rt>hon</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？<br>
+      <span class="en" style="margin-left:16px">Where is the book?</span><br><br>
+
+      &bull; <ruby>ペン<rt>pen</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？<br>
+      <span class="en" style="margin-left:16px">Where is the pen?</span><br><br>
+
+      &bull; <ruby>かばん<rt>kaban</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？<br>
+      <span class="en" style="margin-left:16px">Where is the bag?</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>THING WORDS (NOUNS)</h3>
+    <table class="vocab-table">
+      <tr><th>Japanese</th><th>Reading</th><th>English</th></tr>
+      <tr><td><ruby>ほん<rt>hon</rt></ruby></td><td>hon</td><td>book</td></tr>
+      <tr><td><ruby>ペン<rt>pen</rt></ruby></td><td>pen</td><td>pen</td></tr>
+      <tr><td><ruby>ノート<rt>nōto</rt></ruby></td><td>nōto</td><td>notebook</td></tr>
+      <tr><td><ruby>かばん<rt>kaban</rt></ruby></td><td>kaban</td><td>bag</td></tr>
+      <tr><td><ruby>でんわ<rt>denwa</rt></ruby></td><td>denwa</td><td>phone</td></tr>
+      <tr><td><ruby>かぎ<rt>kagi</rt></ruby></td><td>kagi</td><td>key</td></tr>
+      <tr><td><ruby>とけい<rt>tokei</rt></ruby></td><td>tokei</td><td>clock</td></tr>
+      <tr><td><ruby>つくえ<rt>tsukue</rt></ruby></td><td>tsukue</td><td>desk</td></tr>
+      <tr><td><ruby>いす<rt>isu</rt></ruby></td><td>isu</td><td>chair</td></tr>
+      <tr><td><ruby>みず<rt>mizu</rt></ruby></td><td>mizu</td><td>water</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="p3">
+  <h1>PATTERN 1: PRACTICE</h1>
+  <h2></h2>
+
+  <div class="section">
+    <p><strong>Activity 1: Match the question</strong></p>
+    <p style="margin-bottom:12px">Click the correct English meaning.</p>
+
+    <div class="fill-item">
+      <p>1. <ruby>ほん<rt>hon</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</p>
+      <div class="match-choices" style="margin-left:20px">
+        <button class="match-btn" onclick="checkMatch(this,'wrong')">What is the book?</button>
+        <button class="match-btn" onclick="checkMatch(this,'correct')">Where is the book?</button>
+        <button class="match-btn" onclick="checkMatch(this,'wrong')">Whose is the book?</button>
+      </div>
+    </div>
+
+    <div class="fill-item">
+      <p>2. <ruby>かぎ<rt>kagi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</p>
+      <div class="match-choices" style="margin-left:20px">
+        <button class="match-btn" onclick="checkMatch(this,'wrong')">Where is the clock?</button>
+        <button class="match-btn" onclick="checkMatch(this,'wrong')">What is the key?</button>
+        <button class="match-btn" onclick="checkMatch(this,'correct')">Where is the key?</button>
+      </div>
+    </div>
+
+    <div class="fill-item">
+      <p>3. <ruby>でんわ<rt>denwa</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</p>
+      <div class="match-choices" style="margin-left:20px">
+        <button class="match-btn" onclick="checkMatch(this,'correct')">Where is the phone?</button>
+        <button class="match-btn" onclick="checkMatch(this,'wrong')">Where is the pen?</button>
+        <button class="match-btn" onclick="checkMatch(this,'wrong')">What is the phone?</button>
+      </div>
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <p><strong>Activity 2: Build the question</strong></p>
+    <p style="margin-bottom:12px">Click the words in the correct order.</p>
+
+    <div class="reorder-item" id="ro1" data-answer="ほん|は|どこ|です|か">
+      <p class="translate-prompt">1. Where is the book?</p>
+      <div class="reorder-answer" id="ro1-answer"></div>
+      <div class="reorder-bank" id="ro1-bank">
+        <button class="word-btn" onclick="pickWord(this,'ro1')"><ruby>です<rt>desu</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro1')"><ruby>ほん<rt>hon</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro1')"><ruby>か<rt>ka</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro1')"><ruby>は<rt>wa</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro1')"><ruby>どこ<rt>doko</rt></ruby></button>
+      </div>
+      <div class="reorder-controls">
+        <button class="check-btn" onclick="checkOrder('ro1','ほん|は|どこ|です|か')">Check</button>
+        <button class="check-btn" onclick="resetOrder('ro1')">Reset</button>
+        <button class="reveal-btn" onclick="revealAnswer(this)">Show Answer</button>
+        <span class="fill-feedback" id="ro1-fb"></span>
+      </div>
+    </div>
+
+    <div class="reorder-item" id="ro2" data-answer="かばん|は|どこ|です|か">
+      <p class="translate-prompt">2. Where is the bag?</p>
+      <div class="reorder-answer" id="ro2-answer"></div>
+      <div class="reorder-bank" id="ro2-bank">
+        <button class="word-btn" onclick="pickWord(this,'ro2')"><ruby>どこ<rt>doko</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro2')"><ruby>は<rt>wa</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro2')"><ruby>か<rt>ka</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro2')"><ruby>かばん<rt>kaban</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro2')"><ruby>です<rt>desu</rt></ruby></button>
+      </div>
+      <div class="reorder-controls">
+        <button class="check-btn" onclick="checkOrder('ro2','かばん|は|どこ|です|か')">Check</button>
+        <button class="check-btn" onclick="resetOrder('ro2')">Reset</button>
+        <button class="reveal-btn" onclick="revealAnswer(this)">Show Answer</button>
+        <span class="fill-feedback" id="ro2-fb"></span>
+      </div>
+    </div>
+
+    <div class="reorder-item" id="ro3" data-answer="とけい|は|どこ|です|か">
+      <p class="translate-prompt">3. Where is the clock?</p>
+      <div class="reorder-answer" id="ro3-answer"></div>
+      <div class="reorder-bank" id="ro3-bank">
+        <button class="word-btn" onclick="pickWord(this,'ro3')"><ruby>か<rt>ka</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro3')"><ruby>とけい<rt>tokei</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro3')"><ruby>です<rt>desu</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro3')"><ruby>は<rt>wa</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro3')"><ruby>どこ<rt>doko</rt></ruby></button>
+      </div>
+      <div class="reorder-controls">
+        <button class="check-btn" onclick="checkOrder('ro3','とけい|は|どこ|です|か')">Check</button>
+        <button class="check-btn" onclick="resetOrder('ro3')">Reset</button>
+        <button class="reveal-btn" onclick="revealAnswer(this)">Show Answer</button>
+        <span class="fill-feedback" id="ro3-fb"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page" id="p4">
+  <h1>PATTERN 2: ANSWERING WHERE</h1>
+  <h2>"The ___ is here / there / over there."</h2>
+
+  <p><strong>Pattern:</strong> [noun]<ruby>は<rt>wa</rt></ruby> <ruby>ここ<rt>koko</rt></ruby>/<ruby>そこ<rt>soko</rt></ruby>/<ruby>あそこ<rt>asoko</rt></ruby> <ruby>です<rt>desu</rt></ruby>。</p>
+
+  <div class="explain-box">
+    <div class="label">How to use</div>
+    <p>When someone asks <ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？, answer with the location word that matches the distance:</p>
+    <p>&bull; <strong><ruby>ここ<rt>koko</rt></ruby></strong> = here (near me, the speaker)</p>
+    <p>&bull; <strong><ruby>そこ<rt>soko</rt></ruby></strong> = there (near you, the listener)</p>
+    <p>&bull; <strong><ruby>あそこ<rt>asoko</rt></ruby></strong> = over there (far from both of us)</p>
+  </div>
+
+  <div class="section">
+    <h3>EXAMPLES</h3>
+    <div class="pattern">
+      &bull; <ruby>ほん<rt>hon</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>ここ<rt>koko</rt></ruby><ruby>です<rt>desu</rt></ruby>。<br>
+      <span class="en" style="margin-left:16px">The book is here.</span><br><br>
+
+      &bull; <ruby>ペン<rt>pen</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>そこ<rt>soko</rt></ruby><ruby>です<rt>desu</rt></ruby>。<br>
+      <span class="en" style="margin-left:16px">The pen is there.</span><br><br>
+
+      &bull; <ruby>かばん<rt>kaban</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>あそこ<rt>asoko</rt></ruby><ruby>です<rt>desu</rt></ruby>。<br>
+      <span class="en" style="margin-left:16px">The bag is over there.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>LOCATION WORDS</h3>
+    <table class="vocab-table">
+      <tr><th>Japanese</th><th>Reading</th><th>English</th></tr>
+      <tr><td><ruby>ここ<rt>koko</rt></ruby></td><td>koko</td><td>here (near me)</td></tr>
+      <tr><td><ruby>そこ<rt>soko</rt></ruby></td><td>soko</td><td>there (near you)</td></tr>
+      <tr><td><ruby>あそこ<rt>asoko</rt></ruby></td><td>asoko</td><td>over there (far)</td></tr>
+      <tr><td><ruby>どこ<rt>doko</rt></ruby></td><td>doko</td><td>where?</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- PAGE 5 -->
+<div class="page" id="p5">
+  <h1>PATTERN 2: PRACTICE</h1>
+  <h2></h2>
+
+  <div class="section">
+    <p><strong>Activity 1: Choose the correct location word</strong></p>
+    <p style="margin-bottom:12px">Click the right word to complete each sentence.</p>
+
+    <div class="fill-item">
+      <p>1. <ruby>ほん<rt>hon</rt></ruby><ruby>は<rt>wa</rt></ruby>（　　）<ruby>です<rt>desu</rt></ruby>。 <span class="en">&mdash; The book is here (near me).</span></p>
+      <div class="match-choices" style="margin-left:20px">
+        <button class="match-btn" onclick="checkMatch(this,'correct')"><ruby>ここ<rt>koko</rt></ruby></button>
+        <button class="match-btn" onclick="checkMatch(this,'wrong')"><ruby>そこ<rt>soko</rt></ruby></button>
+        <button class="match-btn" onclick="checkMatch(this,'wrong')"><ruby>あそこ<rt>asoko</rt></ruby></button>
+      </div>
+    </div>
+
+    <div class="fill-item">
+      <p>2. <ruby>ペン<rt>pen</rt></ruby><ruby>は<rt>wa</rt></ruby>（　　）<ruby>です<rt>desu</rt></ruby>。 <span class="en">&mdash; The pen is there (near you).</span></p>
+      <div class="match-choices" style="margin-left:20px">
+        <button class="match-btn" onclick="checkMatch(this,'wrong')"><ruby>ここ<rt>koko</rt></ruby></button>
+        <button class="match-btn" onclick="checkMatch(this,'correct')"><ruby>そこ<rt>soko</rt></ruby></button>
+        <button class="match-btn" onclick="checkMatch(this,'wrong')"><ruby>あそこ<rt>asoko</rt></ruby></button>
+      </div>
+    </div>
+
+    <div class="fill-item">
+      <p>3. <ruby>かばん<rt>kaban</rt></ruby><ruby>は<rt>wa</rt></ruby>（　　）<ruby>です<rt>desu</rt></ruby>。 <span class="en">&mdash; The bag is over there (far away).</span></p>
+      <div class="match-choices" style="margin-left:20px">
+        <button class="match-btn" onclick="checkMatch(this,'wrong')"><ruby>ここ<rt>koko</rt></ruby></button>
+        <button class="match-btn" onclick="checkMatch(this,'wrong')"><ruby>そこ<rt>soko</rt></ruby></button>
+        <button class="match-btn" onclick="checkMatch(this,'correct')"><ruby>あそこ<rt>asoko</rt></ruby></button>
+      </div>
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <p><strong>Activity 2: Match the answer to the question</strong></p>
+    <p style="margin-bottom:12px">Click the correct English meaning.</p>
+
+    <div class="match-item">
+      <span class="match-jp">1. <ruby>ノート<rt>nōto</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>ここ<rt>koko</rt></ruby><ruby>です<rt>desu</rt></ruby>。</span>
+      <div class="match-choices">
+        <button class="match-btn" onclick="checkMatch(this,'wrong')">The notebook is over there.</button>
+        <button class="match-btn" onclick="checkMatch(this,'correct')">The notebook is here.</button>
+        <button class="match-btn" onclick="checkMatch(this,'wrong')">The notebook is there.</button>
+      </div>
+    </div>
+
+    <div class="match-item">
+      <span class="match-jp">2. <ruby>でんわ<rt>denwa</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>あそこ<rt>asoko</rt></ruby><ruby>です<rt>desu</rt></ruby>。</span>
+      <div class="match-choices">
+        <button class="match-btn" onclick="checkMatch(this,'wrong')">The phone is here.</button>
+        <button class="match-btn" onclick="checkMatch(this,'wrong')">The phone is there.</button>
+        <button class="match-btn" onclick="checkMatch(this,'correct')">The phone is over there.</button>
+      </div>
+    </div>
+
+    <div class="match-item">
+      <span class="match-jp">3. <ruby>かぎ<rt>kagi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>そこ<rt>soko</rt></ruby><ruby>です<rt>desu</rt></ruby>。</span>
+      <div class="match-choices">
+        <button class="match-btn" onclick="checkMatch(this,'correct')">The key is there.</button>
+        <button class="match-btn" onclick="checkMatch(this,'wrong')">The key is here.</button>
+        <button class="match-btn" onclick="checkMatch(this,'wrong')">The key is over there.</button>
+      </div>
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <p><strong>Activity 3: Build the answer</strong></p>
+    <p style="margin-bottom:12px">Click the words in the correct order.</p>
+
+    <div class="reorder-item" id="ro4" data-answer="ほん|は|ここ|です">
+      <p class="translate-prompt">1. The book is here.</p>
+      <div class="reorder-answer" id="ro4-answer"></div>
+      <div class="reorder-bank" id="ro4-bank">
+        <button class="word-btn" onclick="pickWord(this,'ro4')"><ruby>ここ<rt>koko</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro4')"><ruby>は<rt>wa</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro4')"><ruby>です<rt>desu</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro4')"><ruby>ほん<rt>hon</rt></ruby></button>
+      </div>
+      <div class="reorder-controls">
+        <button class="check-btn" onclick="checkOrder('ro4','ほん|は|ここ|です')">Check</button>
+        <button class="check-btn" onclick="resetOrder('ro4')">Reset</button>
+        <button class="reveal-btn" onclick="revealAnswer(this)">Show Answer</button>
+        <span class="fill-feedback" id="ro4-fb"></span>
+      </div>
+    </div>
+
+    <div class="reorder-item" id="ro5" data-answer="かばん|は|あそこ|です">
+      <p class="translate-prompt">2. The bag is over there.</p>
+      <div class="reorder-answer" id="ro5-answer"></div>
+      <div class="reorder-bank" id="ro5-bank">
+        <button class="word-btn" onclick="pickWord(this,'ro5')"><ruby>です<rt>desu</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro5')"><ruby>あそこ<rt>asoko</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro5')"><ruby>かばん<rt>kaban</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro5')"><ruby>は<rt>wa</rt></ruby></button>
+      </div>
+      <div class="reorder-controls">
+        <button class="check-btn" onclick="checkOrder('ro5','かばん|は|あそこ|です')">Check</button>
+        <button class="check-btn" onclick="resetOrder('ro5')">Reset</button>
+        <button class="reveal-btn" onclick="revealAnswer(this)">Show Answer</button>
+        <span class="fill-feedback" id="ro5-fb"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 6 -->
+<div class="page" id="p6">
+  <h1>CONVERSATION PREVIEW</h1>
+  <h2></h2>
+
+  <div class="box">
+    <div class="box-label">CONTEXT / <ruby>じょうきょう<rt>jōkyō</rt></ruby></div>
+    Yuki can't find things in the classroom. Alex helps.<br>
+    <ruby>ゆき<rt>Yuki</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>きょうしつ<rt>kyōshitsu</rt></ruby><ruby>で<rt>de</rt></ruby><ruby>もの<rt>mono</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>さがして<rt>sagashite</rt></ruby><ruby>います<rt>imasu</rt></ruby>。<ruby>アレックス<rt>Arekkusu</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>てつだいます<rt>tetsudaimasu</rt></ruby>。
+  </div>
+
+  <div class="explain-box">
+    <div class="label">How to read this</div>
+    <p>Read through the conversation slowly. The words in <em>italics</em> are the patterns you are learning. English translations are below each line.</p>
+  </div>
+
+  <div class="dialogue" style="margin-top:16px">
+    <p><span class="speaker">YUKI:</span> <ruby>わたし<rt>watashi</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>ペン<rt>pen</rt></ruby><ruby>は<rt>wa</rt></ruby><em><ruby>どこ<rt>doko</rt></ruby></em><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？<br>
+    <span class="en" style="margin-left:80px">Where is my pen?</span></p>
+
+    <p><span class="speaker">ALEX:</span> <ruby>ペン<rt>pen</rt></ruby><ruby>は<rt>wa</rt></ruby><em><ruby>そこ<rt>soko</rt></ruby></em><ruby>です<rt>desu</rt></ruby>。<br>
+    <span class="en" style="margin-left:80px">The pen is there.</span></p>
+
+    <p><span class="speaker">YUKI:</span> <ruby>あ<rt>a</rt></ruby>、<ruby>ありがとう<rt>arigatō</rt></ruby>！<ruby>ノート<rt>nōto</rt></ruby><ruby>は<rt>wa</rt></ruby><em><ruby>どこ<rt>doko</rt></ruby></em><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？<br>
+    <span class="en" style="margin-left:80px">Oh, thanks! Where is the notebook?</span></p>
+
+    <p><span class="speaker">ALEX:</span> <ruby>ノート<rt>nōto</rt></ruby><ruby>は<rt>wa</rt></ruby><em><ruby>ここ<rt>koko</rt></ruby></em><ruby>です<rt>desu</rt></ruby>。<br>
+    <span class="en" style="margin-left:80px">The notebook is here.</span></p>
+
+    <p><span class="speaker">YUKI:</span> <ruby>じゃあ<rt>jaa</rt></ruby>、<ruby>わたし<rt>watashi</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>かばん<rt>kaban</rt></ruby><ruby>は<rt>wa</rt></ruby><em><ruby>どこ<rt>doko</rt></ruby></em><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？<br>
+    <span class="en" style="margin-left:80px">Then, where is my bag?</span></p>
+
+    <p><span class="speaker">ALEX:</span> <ruby>かばん<rt>kaban</rt></ruby><ruby>は<rt>wa</rt></ruby><em><ruby>あそこ<rt>asoko</rt></ruby></em><ruby>です<rt>desu</rt></ruby>。<br>
+    <span class="en" style="margin-left:80px">The bag is over there.</span></p>
+
+    <p><span class="speaker">YUKI:</span> <ruby>ありがとう<rt>arigatō</rt></ruby>、<ruby>アレックス<rt>Arekkusu</rt></ruby><ruby>さん<rt>san</rt></ruby>！<br>
+    <span class="en" style="margin-left:80px">Thanks, Alex!</span></p>
+  </div>
+</div>
+
+<!-- PAGE 7 -->
+<div class="page" id="p7">
+  <h1>PRESTUDY COMPLETE!</h1>
+  <h2></h2>
+
+  <div class="box">
+    <p style="margin-bottom:12px"><strong>Prestudy Checklist:</strong></p>
+
+    <div class="check-item">
+      <span class="check">&#10004;</span>
+      <strong><ruby>ここ<rt>koko</rt></ruby></strong> = here &nbsp;/&nbsp; <strong><ruby>そこ<rt>soko</rt></ruby></strong> = there &nbsp;/&nbsp; <strong><ruby>あそこ<rt>asoko</rt></ruby></strong> = over there
+    </div>
+
+    <div class="check-item">
+      <span class="check">&#10004;</span>
+      <strong>Pattern 1:</strong> [noun]<ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？ &mdash; "Where is ___?"
+    </div>
+
+    <div class="check-item">
+      <span class="check">&#10004;</span>
+      <strong>Pattern 2:</strong> [noun]<ruby>は<rt>wa</rt></ruby><ruby>ここ<rt>koko</rt></ruby>/<ruby>そこ<rt>soko</rt></ruby>/<ruby>あそこ<rt>asoko</rt></ruby><ruby>です<rt>desu</rt></ruby>。 &mdash; "The ___ is here/there/over there."
+    </div>
+  </div>
+
+  <div class="section" style="margin-top:20px">
+    <p><strong>KEY EXPRESSIONS</strong> &mdash; <ruby>もういちど<rt>mō ichido</rt></ruby><ruby>よんで<rt>yonde</rt></ruby><ruby>みましょう<rt>mimashō</rt></ruby>！</p>
+    <div class="pattern" style="line-height: 1.6;">
+      &bull; <ruby>ほん<rt>hon</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？ <span class="en">&mdash; Where is the book?</span><br>
+      &bull; <ruby>ほん<rt>hon</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>ここ<rt>koko</rt></ruby><ruby>です<rt>desu</rt></ruby>。 <span class="en">&mdash; The book is here.</span><br>
+      &bull; <ruby>ペン<rt>pen</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>そこ<rt>soko</rt></ruby><ruby>です<rt>desu</rt></ruby>。 <span class="en">&mdash; The pen is there.</span><br>
+      &bull; <ruby>かばん<rt>kaban</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>あそこ<rt>asoko</rt></ruby><ruby>です<rt>desu</rt></ruby>。 <span class="en">&mdash; The bag is over there.</span>
+    </div>
+  </div>
+
+  <div class="explain-box" style="margin-top:24px">
+    <div class="label">You are ready!</div>
+    <p>You now know the key patterns and vocabulary for Lesson 3. In class, you will practice asking where things are, answering with location words, and doing a "Find Your Lost Items" roleplay with your tutor.</p>
+  </div>
+</div>
+
+<nav class="nav">
+  <button id="prev" onclick="go(-1)" disabled>&larr; Back</button>
+  <span id="indicator">1 / 7</span>
+  <button id="next" onclick="go(1)">Next &rarr;</button>
+</nav>
+
+<script>
+const pages = ['p1','p2','p3','p4','p5','p6','p7'];
+let cur = 0;
+
+function go(dir) {
+  document.getElementById(pages[cur]).classList.remove('active');
+  cur += dir;
+  document.getElementById(pages[cur]).classList.add('active');
+  document.getElementById('prev').disabled = cur === 0;
+  document.getElementById('next').disabled = cur === pages.length - 1;
+  document.getElementById('indicator').textContent = (cur + 1) + ' / ' + pages.length;
+  window.scrollTo(0, 0);
+}
+
+/* Matching activity */
+function checkMatch(btn, result) {
+  var siblings = btn.parentElement.querySelectorAll('.match-btn');
+  if (result === 'correct') {
+    siblings.forEach(function(b) { b.disabled = true; b.classList.remove('wrong'); });
+    btn.classList.add('correct');
+  } else {
+    btn.classList.add('wrong');
+    setTimeout(function() { btn.classList.remove('wrong'); }, 600);
+  }
+}
+
+/* Word reorder activity */
+function getBaseText(el) {
+  var clone = el.cloneNode(true);
+  var rts = clone.querySelectorAll('rt');
+  rts.forEach(function(rt) { rt.remove(); });
+  return clone.textContent.trim();
+}
+
+function pickWord(btn, id) {
+  var item = document.getElementById(id);
+  if (item.classList.contains('correct')) return;
+  item.classList.remove('wrong');
+  var fb = document.getElementById(id + '-fb');
+  fb.textContent = '';
+  fb.className = 'fill-feedback';
+  btn.classList.add('used');
+  var clone = document.createElement('button');
+  clone.className = 'word-btn';
+  clone.innerHTML = btn.innerHTML;
+  clone.onclick = function() { unpickWord(clone, btn, id); };
+  document.getElementById(id + '-answer').appendChild(clone);
+}
+
+function unpickWord(clone, original, id) {
+  var item = document.getElementById(id);
+  if (item.classList.contains('correct')) return;
+  item.classList.remove('wrong');
+  var fb = document.getElementById(id + '-fb');
+  fb.textContent = '';
+  fb.className = 'fill-feedback';
+  clone.remove();
+  original.classList.remove('used');
+}
+
+function checkOrder(id, correctStr) {
+  var item = document.getElementById(id);
+  if (item.classList.contains('correct')) return;
+  var answer = document.getElementById(id + '-answer');
+  var words = Array.from(answer.querySelectorAll('.word-btn')).map(function(b) { return getBaseText(b); });
+  var fb = document.getElementById(id + '-fb');
+  if (words.length === 0) return;
+  if (words.join('|') === correctStr) {
+    item.classList.remove('wrong');
+    item.classList.add('correct');
+    fb.textContent = 'Correct!';
+    fb.className = 'fill-feedback correct';
+    answer.querySelectorAll('.word-btn').forEach(function(b) { b.style.cursor = 'default'; });
+  } else {
+    item.classList.remove('correct');
+    item.classList.add('wrong');
+    fb.textContent = 'Not quite — try again!';
+    fb.className = 'fill-feedback wrong';
+  }
+}
+
+function revealAnswer(btn) {
+  var item = btn.closest('.reorder-item');
+  var id = item.id;
+  var correctWords = item.getAttribute('data-answer').split('|');
+  item.classList.remove('wrong');
+  document.getElementById(id + '-answer').innerHTML = '';
+  var bankBtns = document.getElementById(id + '-bank').querySelectorAll('.word-btn');
+  bankBtns.forEach(function(b) { b.classList.remove('used'); });
+  correctWords.forEach(function(word) {
+    for (var i = 0; i < bankBtns.length; i++) {
+      if (!bankBtns[i].classList.contains('used') && getBaseText(bankBtns[i]) === word) {
+        bankBtns[i].classList.add('used');
+        var clone = document.createElement('button');
+        clone.className = 'word-btn';
+        clone.innerHTML = bankBtns[i].innerHTML;
+        clone.style.cursor = 'default';
+        document.getElementById(id + '-answer').appendChild(clone);
+        break;
+      }
+    }
+  });
+  item.classList.add('correct');
+  var fb = document.getElementById(id + '-fb');
+  fb.textContent = '';
+  fb.className = 'fill-feedback';
+  btn.style.display = 'none';
+}
+
+function resetOrder(id) {
+  var item = document.getElementById(id);
+  if (item.classList.contains('correct')) return;
+  item.classList.remove('wrong');
+  document.getElementById(id + '-answer').innerHTML = '';
+  document.getElementById(id + '-bank').querySelectorAll('.word-btn').forEach(function(b) { b.classList.remove('used'); });
+  var fb = document.getElementById(id + '-fb');
+  fb.textContent = '';
+  fb.className = 'fill-feedback';
+}
+</script>
+</body>
+</html>
