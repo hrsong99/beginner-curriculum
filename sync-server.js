@@ -22,7 +22,18 @@ const MIME = {
 };
 
 const server = http.createServer((req, res) => {
-  let filePath = path.join(staticDir, decodeURIComponent(new URL(req.url, 'http://localhost').pathname));
+  const url = new URL(req.url, 'http://localhost');
+
+  // Health check / WS status endpoint
+  if (url.pathname === '/ws') {
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    const roomInfo = {};
+    for (const [name, clients] of Object.entries(rooms)) roomInfo[name] = clients.size;
+    res.end(JSON.stringify({ status: 'ok', rooms: roomInfo }));
+    return;
+  }
+
+  let filePath = path.join(staticDir, decodeURIComponent(url.pathname));
   if (filePath.endsWith('/')) filePath += 'index.html';
 
   // Security: prevent directory traversal
@@ -36,9 +47,20 @@ const server = http.createServer((req, res) => {
   });
 });
 
-// WebSocket on the same server
-const wss = new WebSocketServer({ server, path: '/ws' });
+// WebSocket — handle upgrade manually (more reliable behind reverse proxies)
+const wss = new WebSocketServer({ noServer: true });
 const rooms = {};
+
+server.on('upgrade', (req, socket, head) => {
+  const url = new URL(req.url, 'http://localhost');
+  if (url.pathname !== '/ws') {
+    socket.destroy();
+    return;
+  }
+  wss.handleUpgrade(req, socket, head, (ws) => {
+    wss.emit('connection', ws, req);
+  });
+});
 
 wss.on('connection', (ws, req) => {
   const url = new URL(req.url, 'http://localhost');

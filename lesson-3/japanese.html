@@ -1566,7 +1566,7 @@ document.getElementById('finishBtn').addEventListener('click', function() {
   var syncing = false; // true while applying a remote event (prevents echo)
 
   function connect() {
-    ws = new WebSocket(wsUrl + '/?room=' + encodeURIComponent(room));
+    ws = new WebSocket(wsUrl + '?room=' + encodeURIComponent(room));
     ws.onopen = function() { console.log('[sync] connected to room: ' + room); };
     ws.onclose = function() { console.log('[sync] disconnected, reconnecting...'); setTimeout(connect, 2000); };
     ws.onmessage = function(e) {
