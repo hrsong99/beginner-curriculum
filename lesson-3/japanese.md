@@ -136,9 +136,9 @@
 |                                                                         |
 |                                                                         |
 |  2. Fill in the Blanks:                                                 |
-|     * 本は（　　　）ですか？          _______ is the book?               |
-|     * （　　　）はどこですか？        Where is the ________?             |
-|     * ノートは（　　　）ですか？      _______ is the notebook?           |
+|     * 本は（　　　）ですか？          Where is the book?                 |
+|     * （　　　）はどこですか？        Where is the pen?                  |
+|     * ノートは（　　　）ですか？      Where is the notebook?             |
 |                                                                         |
 |                                                                         |
 |  3. Translate:                                                          |
@@ -183,7 +183,7 @@
 |                                                                         |
 |  2. Fill in the Blanks:                                                 |
 |     * 本は（　　　）です。            The book is here.                  |
-|     * ペンは（　　　）です。          The pen is there (near you).       |
+|     * ペンは（　　　）です。          The pen is there.                  |
 |     * かばんは（　　　）です。        The bag is over there.             |
 |                                                                         |
 |                                                                         |
