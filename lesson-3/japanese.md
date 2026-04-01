@@ -49,7 +49,6 @@
 
 ### PAGE 1 — Title & Pattern Intro
 
-Note: Intro lines ①②③ are plain hiragana (no furigana). TODAY'S PATTERNS examples have bullet points (•) with furigana on all words.
 
 ```
 +-------------------------------------------------------------------------+
@@ -99,10 +98,6 @@ Note: Intro lines ①②③ are plain hiragana (no furigana). TODAY'S PATTERNS e
 ```
 
 ### PAGE 2 — Review: Lesson 2 Quick Check
-
-Note: Uses Q:/A: grid layout (not Tutor:/Student: labels). Answer line has inline fill-in-the-blank
-input boxes inside the sentence. Hint text shows the answer pattern with furigana (not placeholder).
-Dashed separators between the three sections.
 
 ```
 +-------------------------------------------------------------------------+
@@ -243,9 +238,6 @@ Dashed separators between the three sections.
 ```
 
 ### PAGE 5 — Short Dialogues
-
-Note: No "(Student asks!)" labels. Each dialogue has a help-box with hint words below it.
-Dashed separators between dialogues. Student's blank line is an inline input box.
 
 ```
 +-------------------------------------------------------------------------+
@@ -415,10 +407,6 @@ Dashed separators between dialogues. Student's blank line is an inline input box
 
 ### PAGE 9 — Roleplay
 
-Note: No SCENARIO box. Uses h3 headings (SCENARIO, GOAL, HINTS). Japanese is main text, English
-translation below. PHRASES and WORDS merged into one help-box under HINTS. 3つ has furigana (mittsu).
-"You lost your" line shown in Japanese first with EN below.
-
 ```
 +-------------------------------------------------------------------------+
 |                                                                         |
@@ -499,11 +487,6 @@ translation below. PHRASES and WORDS merged into one help-box under HINTS. 3つ 
 ```
 
 ### PAGE 11 — Mission Complete
-
-Note: h1 is "ミッションかんりょう！" (hiragana), h2 subtitle is "Mission Complete!". Checkboxes are
-empty — tutor clicks to check them (triggers animated hanamaru花丸 SVG drawn on click). Larger
-font size (18px) and more spacing (20px margin) in the mission box. Interactive hanamaru drawn
-on click via stroke-dashoffset animation (flower petals + inward spiral).
 
 ```
 +-------------------------------------------------------------------------+
