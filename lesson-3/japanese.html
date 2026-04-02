@@ -58,7 +58,7 @@
   .nav span { font-size: 13px; color: #666; min-width: 80px; text-align: center; }
 
   /* Chat sidebar */
-  #chatPanel { position: fixed; top: 0; right: -360px; width: 360px; height: 100vh; background: #fff; border-left: 1px solid #ddd; z-index: 500; display: flex; flex-direction: column; transition: right 0.25s ease; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+  #chatPanel { position: fixed; top: 0; right: -360px; width: 360px; bottom: 53px; background: #fff; border-left: 1px solid #ddd; z-index: 190; display: flex; flex-direction: column; transition: right 0.25s ease; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
   #chatPanel.open { right: 0; }
   #chatHeader { padding: 14px 16px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; }
   #chatHeader h4 { margin: 0; font-size: 14px; font-weight: 600; }
@@ -77,6 +77,16 @@
   #chatSendBtn { background: #4a90d9; color: #fff; border: none; border-radius: 50%; width: 36px; height: 36px; cursor: pointer; font-size: 16px; display: flex; align-items: center; justify-content: center; }
   #chatSendBtn:hover { background: #3a7bc8; }
   .chat-badge { position: absolute; top: -4px; right: -4px; background: #e33; color: #fff; font-size: 10px; width: 16px; height: 16px; border-radius: 50%; display: flex; align-items: center; justify-content: center; display: none; }
+
+  /* Chat toast (IG-live style bubble above chat button when panel is closed) */
+  #chatToast { position: fixed; bottom: 62px; right: 12px; max-width: 280px; background: rgba(0,0,0,0.8); color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 13px; padding: 8px 14px; border-radius: 14px; z-index: 210; pointer-events: none; opacity: 0; transform: translateY(8px); transition: opacity 0.3s, transform 0.3s; line-height: 1.4; }
+  #chatToast.show { opacity: 1; transform: translateY(0); }
+  #chatToast .toast-name { font-weight: 600; margin-right: 6px; font-size: 11px; opacity: 0.7; }
+  #chatToast .toast-translation { display: block; font-size: 11px; opacity: 0.6; font-style: italic; margin-top: 2px; }
+
+  /* Flash animation for new message when panel is open */
+  @keyframes chatFlash { 0% { background: #e8f0fe; } 100% { background: transparent; } }
+  .chat-msg.flash { animation: chatFlash 1.2s ease; }
   .separator { border: none; border-top: 1px dashed #ccc; margin: 28px 0; }
   ol { padding-left: 20px; }
   ol li { margin: 4px 0; }
@@ -908,6 +918,9 @@
     <button id="chatSendBtn">↑</button>
   </div>
 </div>
+
+<!-- Chat toast bubble -->
+<div id="chatToast"></div>
 
 <!-- Remote cursor -->
 <div id="remoteCursor" style="display:none; position:absolute; z-index:300; pointer-events:none; ">
@@ -2127,6 +2140,8 @@ document.getElementById('finishBtn').addEventListener('click', function() {
   var sendBtn = document.getElementById('chatSendBtn');
   var closeBtn = document.getElementById('chatClose');
   var badge = document.getElementById('chatBadge');
+  var toast = document.getElementById('chatToast');
+  var toastTimer = null;
   var chatOpen = false;
   var unread = 0;
 
@@ -2181,14 +2196,30 @@ document.getElementById('finishBtn').addEventListener('click', function() {
     }
     messagesDiv.appendChild(div);
     messagesDiv.scrollTop = messagesDiv.scrollHeight;
-    if (!isMine && !chatOpen) {
-      unread++;
-      badge.textContent = unread > 9 ? '9+' : unread;
-      badge.style.display = 'flex';
+    if (!isMine) {
+      if (!chatOpen) {
+        // Show IG-live style toast above the chat button
+        unread++;
+        badge.textContent = unread > 9 ? '9+' : unread;
+        badge.style.display = 'flex';
+        showToast(name, text, translation);
+      } else {
+        // Flash the message so it's noticeable
+        div.classList.add('flash');
+      }
     }
     return div;
   }
   window.appendChatMessage = appendChatMessage;
+
+  function showToast(name, text, translation) {
+    clearTimeout(toastTimer);
+    toast.innerHTML = '<span class="toast-name">' + (name || 'Anonymous') + '</span>' +
+      text.substring(0, 80) + (text.length > 80 ? '...' : '') +
+      (translation ? '<span class="toast-translation">' + translation.substring(0, 60) + (translation.length > 60 ? '...' : '') + '</span>' : '');
+    toast.classList.add('show');
+    toastTimer = setTimeout(function() { toast.classList.remove('show'); }, 4000);
+  }
 
   // Detect predominant language: returns 'ja' or 'en'
   function detectLang(text) {
