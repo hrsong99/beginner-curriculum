@@ -735,7 +735,7 @@
   </div>
 
   <div style="margin-top:32px">
-    <input type="text" class="blank-input-full" placeholder="">
+    <textarea class="roleplay-notes" placeholder="Write your conversation here..." style="display:block; font-family:monospace; font-size:16px; border:1px solid #ccc; border-radius:4px; outline:none; width:100%; min-height:120px; padding:10px 12px; background:#fafafa; resize:vertical; line-height:1.6; box-sizing:border-box;"></textarea>
   </div>
 </div>
 
@@ -1090,7 +1090,7 @@ function clearPage() {
   saveAnnotations();
   var pg = document.getElementById(pages[cur]);
   if (pg) {
-    pg.querySelectorAll('.blank-input, .blank-input-full').forEach(function(inp) { inp.value = ''; });
+    pg.querySelectorAll('.blank-input, .blank-input-full, .roleplay-notes').forEach(function(inp) { inp.value = ''; });
     pg.querySelectorAll('.check.done').forEach(function(c) { c.classList.remove('done'); c.innerHTML = '&nbsp;'; });
     pg.querySelectorAll('.match-game').forEach(function(g) { if (g._reset) g._reset(); });
   }
@@ -1104,7 +1104,7 @@ function clearAll() {
   // Clear all stored annotations
   localStorage.removeItem(STORAGE_KEY);
   // Clear all text inputs
-  document.querySelectorAll('.blank-input, .blank-input-full').forEach(function(inp) { inp.value = ''; });
+  document.querySelectorAll('.blank-input, .blank-input-full, .roleplay-notes').forEach(function(inp) { inp.value = ''; });
   // Reset all checkboxes
   document.querySelectorAll('.check.done').forEach(function(c) { c.classList.remove('done'); c.innerHTML = '&nbsp;'; });
   // Reset matching games
@@ -1687,8 +1687,8 @@ document.getElementById('finishBtn').addEventListener('click', function() {
   // --- Hook into text inputs ---
   document.addEventListener('input', function(e) {
     if (syncing) return;
-    if (e.target.classList.contains('blank-input') || e.target.classList.contains('blank-input-full')) {
-      var inputs = Array.from(document.querySelectorAll('.blank-input, .blank-input-full'));
+    if (e.target.classList.contains('blank-input') || e.target.classList.contains('blank-input-full') || e.target.classList.contains('roleplay-notes')) {
+      var inputs = Array.from(document.querySelectorAll('.blank-input, .blank-input-full, .roleplay-notes'));
       var idx = inputs.indexOf(e.target);
       if (idx >= 0) send({ t: 'input', idx: idx, val: e.target.value });
     }
@@ -1799,7 +1799,7 @@ document.getElementById('finishBtn').addEventListener('click', function() {
         break;
 
       case 'input':
-        var inputs = document.querySelectorAll('.blank-input, .blank-input-full');
+        var inputs = document.querySelectorAll('.blank-input, .blank-input-full, .roleplay-notes');
         if (inputs[msg.idx]) {
           inputs[msg.idx].value = msg.val;
           // Trigger resize for inline inputs
@@ -1833,7 +1833,7 @@ document.getElementById('finishBtn').addEventListener('click', function() {
         saveAnnotations();
         var cpg = document.getElementById(pages[cur]);
         if (cpg) {
-          cpg.querySelectorAll('.blank-input, .blank-input-full').forEach(function(inp) { inp.value = ''; });
+          cpg.querySelectorAll('.blank-input, .blank-input-full, .roleplay-notes').forEach(function(inp) { inp.value = ''; });
           cpg.querySelectorAll('.check.done').forEach(function(c) { c.classList.remove('done'); c.innerHTML = '&nbsp;'; });
           cpg.querySelectorAll('.match-game').forEach(function(g) { if (g._reset) g._reset(); });
         }
@@ -1875,7 +1875,7 @@ document.getElementById('finishBtn').addEventListener('click', function() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         textLayer.innerHTML = '';
         localStorage.removeItem(STORAGE_KEY);
-        document.querySelectorAll('.blank-input, .blank-input-full').forEach(function(inp) { inp.value = ''; });
+        document.querySelectorAll('.blank-input, .blank-input-full, .roleplay-notes').forEach(function(inp) { inp.value = ''; });
         document.querySelectorAll('.check.done').forEach(function(c) { c.classList.remove('done'); c.innerHTML = '&nbsp;'; });
         document.querySelectorAll('.match-game').forEach(function(g) { if (g._reset) g._reset(); });
         break;
