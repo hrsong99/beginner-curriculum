@@ -858,8 +858,13 @@
   <span style="border-left:1px solid #ddd; height:20px; margin:0 4px"></span>
   <button id="btnDraw" onclick="setMode('draw')" style="padding:8px 14px">&#9998; Draw</button>
   <button id="btnErase" onclick="setMode('erase')" style="padding:8px 14px">&#9003; Erase</button>
-  <button id="btnClear" onclick="clearPage()" style="padding:8px 14px; color:#c33">&#10005; Clear Page</button>
-  <button id="btnClearAll" onclick="clearAll()" style="padding:8px 14px; color:#c33">&#10005; Clear All</button>
+  <span style="position:relative; display:inline-block;">
+    <button id="btnClear" onclick="toggleClearMenu()" style="padding:8px 14px; color:#c33">&#10005; Clear</button>
+    <div id="clearMenu" style="display:none; position:absolute; bottom:100%; left:0; margin-bottom:6px; background:#fff; border:1px solid #ddd; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,.15); min-width:140px; z-index:400;">
+      <button onclick="clearPage(); hideClearMenu()" style="display:block; width:100%; text-align:left; padding:10px 14px; border:none; background:none; cursor:pointer; font-family:monospace; font-size:13px; color:#c33;">This page</button>
+      <button onclick="clearAll(); hideClearMenu()" style="display:block; width:100%; text-align:left; padding:10px 14px; border:none; border-top:1px solid #eee; background:none; cursor:pointer; font-family:monospace; font-size:13px; color:#c33;">All pages</button>
+    </div>
+  </span>
 </nav>
 
 <!-- Remote cursor -->
@@ -870,7 +875,7 @@
 <style>
   #drawCanvas { position: absolute; top: 0; left: 0; z-index: 100; pointer-events: none; }
   #drawCanvas.active { pointer-events: auto; cursor: crosshair; }
-  #drawCanvas.erase { cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><circle cx="10" cy="10" r="9" fill="none" stroke="%23999" stroke-width="1.5"/></svg>') 10 10, auto; }
+  #drawCanvas.erase { cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><circle cx="20" cy="20" r="19" fill="none" stroke="%23999" stroke-width="1.5"/></svg>') 20 20, auto; }
   #textLayer { position: absolute; top: 0; left: 0; width: 100%; min-height: 100vh; pointer-events: none; z-index: 101; }
   #textLayer.active { pointer-events: auto; cursor: text; }
   #textLayer .anno-wrap { position: absolute; display: flex; align-items: flex-start; pointer-events: auto; }
@@ -1066,8 +1071,18 @@ function setMode(m) {
   }
 }
 
+function toggleClearMenu() {
+  var m = document.getElementById('clearMenu');
+  m.style.display = m.style.display === 'none' ? 'block' : 'none';
+}
+function hideClearMenu() {
+  document.getElementById('clearMenu').style.display = 'none';
+}
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('#btnClear') && !e.target.closest('#clearMenu')) hideClearMenu();
+});
+
 function clearPage() {
-  if (!confirm('Clear everything on this page?')) return;
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   textLayer.innerHTML = '';
   saveAnnotations();
@@ -1081,7 +1096,6 @@ function clearPage() {
 }
 
 function clearAll() {
-  if (!confirm('Clear ALL annotations, drawings, and text inputs from every page?')) return;
   // Clear current canvas and text annotations
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   textLayer.innerHTML = '';
@@ -1162,7 +1176,7 @@ canvas.addEventListener('mousedown', e => {
     lastY = e.pageY;
     if (mode === 'erase') {
       ctx.globalCompositeOperation = 'destination-out';
-      ctx.lineWidth = 20;
+      ctx.lineWidth = 40;
     } else {
       ctx.globalCompositeOperation = 'source-over';
       ctx.strokeStyle = '#c33';
@@ -1194,7 +1208,7 @@ canvas.addEventListener('touchstart', e => {
     lastY = t.pageY;
     if (mode === 'erase') {
       ctx.globalCompositeOperation = 'destination-out';
-      ctx.lineWidth = 20;
+      ctx.lineWidth = 40;
     } else {
       ctx.globalCompositeOperation = 'source-over';
       ctx.strokeStyle = '#c33';
