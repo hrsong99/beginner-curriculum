@@ -30,10 +30,10 @@
   .blank-input-full { display: block; font-family: monospace; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; outline: none; width: 100%; max-width: 420px; margin: 4px 0 8px 0; padding: 8px 10px; background: #fafafa; }
   .blank-input-full:focus { border-color: #c33; background: #fff; }
   .answer-hint { font-size: 19px; letter-spacing: 1px; color: #111; margin: 0; padding-top: 2px; }
-  .qa { display: grid; grid-template-columns: 30px 1fr; align-items: start; margin: 4px 0; }
+  .qa { display: grid; grid-template-columns: 64px 1fr; align-items: center; margin: 4px 0; }
   .qa + .qa { margin-top: 8px; }
   .qa .pair > .en { padding-left: 0; }
-  .qa-label { font-weight: bold; font-size: 14px; color: #888; padding-top: 4px; }
+  .qa-label { font-weight: bold; font-size: 14px; color: #888; }
   .box { border: 1px solid #111; padding: 20px 24px; margin: 20px 0; overflow: visible; }
   .box-label { font-size: 14px; font-weight: bold; margin-bottom: 10px; letter-spacing: 0.5px; }
   .help-box { border: 1px solid #999; padding: 14px 18px; margin: 12px 0 12px 20px; max-width: 380px; line-height: 2.2; }
@@ -147,18 +147,21 @@
   <div class="section">
     <p><strong>1. What is this?</strong></p>
     <div class="qa">
-      <div class="qa-label">Q:</div>
+      <div class="qa-label">Tutor:</div>
       <div class="pair">
         <div class="jp"><ruby>これ<rt>kore</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>なん<rt>nan</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
         <div class="en">What is this?</div>
       </div>
     </div>
     <div class="qa">
-      <div class="qa-label">A:</div>
-      <div class="answer-hint"><ruby>これ<rt>kore</rt></ruby><ruby>は<rt>wa</rt></ruby><input type="text" class="blank-input" style="min-width:100px"><ruby>です<rt>desu</rt></ruby>。</div>
+      <div class="qa-label">Student:</div>
+      <div class="pair">
+        <div class="answer-hint"><input type="text" class="blank-input" style="min-width:80px"><ruby>は<rt>wa</rt></ruby><ruby>ほん<rt>hon</rt></ruby><ruby>です<rt>desu</rt></ruby>。</div>
+        <div class="en">This is a book.</div>
+      </div>
     </div>
     <div class="help-box">
-      <ruby>ほん<rt>hon</rt></ruby>(book) &nbsp; <ruby>ペン<rt>pen</rt></ruby>(pen) &nbsp; <ruby>ノート<rt>nōto</rt></ruby>(notebook)
+      <ruby>これ<rt>kore</rt></ruby> = this
     </div>
   </div>
 
@@ -167,18 +170,21 @@
   <div class="section">
     <p><strong>2. Whose is that?</strong></p>
     <div class="qa">
-      <div class="qa-label">Q:</div>
+      <div class="qa-label">Tutor:</div>
       <div class="pair">
         <div class="jp"><ruby>それ<rt>sore</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>だれ<rt>dare</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
         <div class="en">Whose is that?</div>
       </div>
     </div>
     <div class="qa">
-      <div class="qa-label">A:</div>
-      <div class="answer-hint"><ruby>それ<rt>sore</rt></ruby><ruby>は<rt>wa</rt></ruby><input type="text" class="blank-input" style="min-width:80px"><ruby>の<rt>no</rt></ruby><input type="text" class="blank-input" style="min-width:80px"><ruby>です<rt>desu</rt></ruby>。</div>
+      <div class="qa-label">Student:</div>
+      <div class="pair">
+        <div class="answer-hint"><input type="text" class="blank-input" style="min-width:80px"><ruby>は<rt>wa</rt></ruby><ruby>わたし<rt>watashi</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>ペン<rt>pen</rt></ruby><ruby>です<rt>desu</rt></ruby>。</div>
+        <div class="en">That is my pen.</div>
+      </div>
     </div>
     <div class="help-box">
-      <ruby>わたし<rt>watashi</rt></ruby>(my) &nbsp; <ruby>せんせい<rt>sensei</rt></ruby>(teacher) &nbsp; <ruby>ともだち<rt>tomodachi</rt></ruby>(friend)
+      <ruby>それ<rt>sore</rt></ruby> = that
     </div>
   </div>
 
@@ -187,34 +193,27 @@
   <div class="section">
     <p><strong>3. What is that over there?</strong></p>
     <div class="qa">
-      <div class="qa-label">Q:</div>
+      <div class="qa-label">Tutor:</div>
       <div class="pair">
         <div class="jp"><ruby>あれ<rt>are</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>なん<rt>nan</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
         <div class="en">What is that over there?</div>
       </div>
     </div>
     <div class="qa">
-      <div class="qa-label">A:</div>
-      <div class="answer-hint"><ruby>あれ<rt>are</rt></ruby><ruby>は<rt>wa</rt></ruby><input type="text" class="blank-input" style="min-width:100px"><ruby>です<rt>desu</rt></ruby>。</div>
+      <div class="qa-label">Student:</div>
+      <div class="pair">
+        <div class="answer-hint"><input type="text" class="blank-input" style="min-width:80px"><ruby>は<rt>wa</rt></ruby><ruby>かばん<rt>kaban</rt></ruby><ruby>です<rt>desu</rt></ruby>。</div>
+        <div class="en">That is a bag.</div>
+      </div>
     </div>
     <div class="help-box">
-      <ruby>かばん<rt>kaban</rt></ruby>(bag) &nbsp; <ruby>とけい<rt>tokei</rt></ruby>(clock) &nbsp; <ruby>いす<rt>isu</rt></ruby>(chair)
+      <ruby>あれ<rt>are</rt></ruby> = that over there
     </div>
   </div>
 </div>
 
 <!-- PAGE 2: TODAY'S OUTCOME & PATTERNS -->
 <div class="page" id="p2">
-  <div class="tg">
-    <div class="tg-en">"Let's read today's goal."</div>
-    <div class="tg-jp">「きょうのもくひょうをよみましょう。」</div>
-  </div>
-  <div class="box">
-    <div class="box-label">OUTCOME / <ruby>もくひょう<rt>mokuhyō</rt></ruby></div>
-    You can ask where things are and say where they are.<br>
-    <ruby>もの<rt>mono</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>ある<rt>aru</rt></ruby><ruby>か<rt>ka</rt></ruby><ruby>きいたり<rt>kiitari</rt></ruby>、<ruby>こたえられる<rt>kotaerareru</rt></ruby><ruby>ように<rt>yō ni</rt></ruby><ruby>なります<rt>narimasu</rt></ruby>。
-  </div>
-
   <div class="tg">
     <div class="tg-en">"Let's read together! Repeat after me."</div>
     <div class="tg-jp">「いっしょによんでみましょう！わたしのあとにリピートしてください。」</div>
@@ -807,7 +806,7 @@
   </div>
 
   <div style="margin-top:32px">
-    <textarea class="roleplay-notes" placeholder="Write your conversation here..." style="display:block; font-family:monospace; font-size:16px; border:1px solid #ccc; border-radius:4px; outline:none; width:100%; min-height:120px; padding:10px 12px; background:#fafafa; resize:vertical; line-height:1.6; box-sizing:border-box;"></textarea>
+    <textarea class="roleplay-notes" placeholder="Write your conversation here..." oninput="this.style.height='auto';this.style.height=this.scrollHeight+'px'" style="display:block; font-family:monospace; font-size:16px; border:1px solid #ccc; border-radius:4px; outline:none; width:100%; min-height:240px; padding:14px 16px; background:#fafafa; resize:none; line-height:1.8; box-sizing:border-box; overflow:hidden;"></textarea>
   </div>
 </div>
 
@@ -832,8 +831,8 @@
   <div class="help-box" style="margin-left:0; max-width:520px;">
     <strong>NEW WORDS</strong><br>
     <ruby>すみません<rt>sumimasen</rt></ruby> (excuse me) &nbsp; <ruby>トイレ<rt>toire</rt></ruby> (toilet/restroom)<br>
-    <ruby>えき<rt>eki</rt></ruby> (station) &nbsp; <ruby>コンビニ<rt>konbini</rt></ruby> (convenience store)<br>
-    <ruby>でぐち<rt>deguchi</rt></ruby> (exit) &nbsp; <ruby>ありがとうございます<rt>arigatō gozaimasu</rt></ruby> (thank you)
+    <ruby>コンビニ<rt>konbini</rt></ruby> (convenience store) &nbsp; <ruby>でぐち<rt>deguchi</rt></ruby> (exit)<br>
+    <ruby>ありがとうございます<rt>arigatō gozaimasu</rt></ruby> (thank you)
   </div>
 
   <div class="dialogue" style="margin-top:20px">

@@ -38,8 +38,8 @@
 | Page | Activity                     | Time  | Notes                          |
 | ---- | ---------------------------- | ----- | ------------------------------ |
 | 1    | Greeting & Intro             | 1 min | Hello, let's start             |
-| 2    | Review: Lesson 2 Quick Check | 3 min | Review previous lesson         |
-| 3    | Today's Outcome & Patterns   | 2 min | Introduce today's focus        |
+| 2    | Review: Lesson 2 Quick Check | 3 min | Reading exercise (no blanks)   |
+| 3    | Today's Patterns             | 2 min | Patterns only (no goal box)    |
 | 4    | Pattern Drill A (どこですか？)     | 3 min | Asking "where is ___?"         |
 | 5    | Pattern Drill B (ここ/そこ/あそこ)  | 3 min | Answering "it's here/there"    |
 | 6    | Short Dialogues              | 3 min | Student asks first             |
@@ -47,11 +47,12 @@
 | 8    | Memory Conversation          | 3 min | Fill-in-the-blank of Page 7    |
 | 9    | Free Discussion              | 3 min | Open practice                  |
 | 10   | Roleplay                     | 3 min | Constrained scenario           |
-| 11   | Travel in Japan              | 3 min | Real-world application         |
+| 11   | Travel in Japan              | 3 min | New vocab color-highlighted    |
 | 12   | BONUS 1: Vocab Quiz          | 2 min | Skip if short on time          |
 | 13   | BONUS 2: Translate (no hints)| 2 min | Skip if short on time          |
 | 14   | Mission Complete             | 2 min |                                |
 
+Travel conversation also appears in prestudy (plain, no highlights).
 
 **Core: ~30 min / With bonus: ~34 min**
 
@@ -96,58 +97,52 @@
 |                                                                         |
 |  1. What is this?                                                       |
 |                                                                         |
-|  Q:  これはなんですか？                                                   |
-|      What is this?                                                      |
+|  Tutor:    これはなんですか？                                              |
+|            What is this?                                                |
 |                                                                         |
-|  A:  これは[_______]です。                                               |
+|  Student:  [_______]はほんです。                                          |
+|            This is a book.                                              |
 |                                                                         |
-|     ┌─────────────────────────────────────────────────────┐             |
-|     │  ほん(book)  ペン(pen)  ノート(notebook)             │             |
-|     └─────────────────────────────────────────────────────┘             |
+|     ┌──────────────────────┐                                            |
+|     │  これ = this          │                                            |
+|     └──────────────────────┘                                            |
 |                                                                         |
 |  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
 |                                                                         |
 |  2. Whose is that?                                                      |
 |                                                                         |
-|  Q:  それはだれのですか？                                                 |
-|      Whose is that?                                                     |
+|  Tutor:    それはだれのですか？                                            |
+|            Whose is that?                                               |
 |                                                                         |
-|  A:  それは[_____]の[_______]です。                                      |
+|  Student:  [_______]はわたしのペンです。                                   |
+|            That is my pen.                                              |
 |                                                                         |
-|     ┌─────────────────────────────────────────────────────┐             |
-|     │  わたし(my)  せんせい(teacher)  ともだち(friend)     │             |
-|     └─────────────────────────────────────────────────────┘             |
+|     ┌──────────────────────┐                                            |
+|     │  それ = that          │                                            |
+|     └──────────────────────┘                                            |
 |                                                                         |
 |  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
 |                                                                         |
 |  3. What is that over there?                                            |
 |                                                                         |
-|  Q:  あれはなんですか？                                                   |
-|      What is that over there?                                           |
+|  Tutor:    あれはなんですか？                                              |
+|            What is that over there?                                     |
 |                                                                         |
-|  A:  あれは[_______]です。                                               |
+|  Student:  [_______]はかばんです。                                        |
+|            That is a bag.                                               |
 |                                                                         |
-|     ┌─────────────────────────────────────────────────────┐             |
-|     │  かばん(bag)  とけい(clock)  いす(chair)             │             |
-|     └─────────────────────────────────────────────────────┘             |
+|     ┌──────────────────────────────┐                                    |
+|     │  あれ = that over there      │                                    |
+|     └──────────────────────────────┘                                    |
 |                                                                         |
 |                                                                  PAGE 2 |
 +-------------------------------------------------------------------------+
 ```
 
-### PAGE 3 — Today's Outcome & Patterns
+### PAGE 3 — Today's Patterns
 
 ```
 +-------------------------------------------------------------------------+
-|                                                                         |
-|  ▸ "Let's read today's goal."                                           |
-|    「きょうのもくひょうをよみましょう。」                                |
-|                                                                         |
-|  ┌─── OUTCOME / もくひょう ────────────────────────────────────┐         |
-|  │  You can ask where things are and say where they are.       │         |
-|  │  ものがどこにあるかきいたり、こたえられるようになります。      │         |
-|  └─────────────────────────────────────────────────────────────┘         |
-|                                                                         |
 |                                                                         |
 |  ▸ "Let's read together! Repeat after me."                              |
 |    「いっしょによんでみましょう！わたしのあとにリピートしてください。」  |
@@ -535,8 +530,8 @@
 |                                                                         |
 |     ┌─── NEW WORDS ──────────────────────────────────────┐              |
 |     │  すみません (excuse me)   トイレ (toilet/restroom)    │              |
-|     │  えき (station)          コンビニ (convenience store) │              |
-|     │  でぐち (exit)           ありがとうございます (thanks) │              |
+|     │  コンビニ (convenience store)  でぐち (exit)          │              |
+|     │  ありがとうございます (thank you)                      │              |
 |     └─────────────────────────────────────────────────────┘              |
 |                                                                         |
 |                                                                         |
