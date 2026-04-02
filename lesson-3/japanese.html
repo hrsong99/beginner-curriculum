@@ -58,7 +58,7 @@
   .nav span { font-size: 13px; color: #666; min-width: 80px; text-align: center; }
 
   /* Chat sidebar */
-  #chatPanel { position: fixed; top: 0; right: -360px; width: 360px; bottom: 53px; background: #fff; border-left: 1px solid #ddd; z-index: 190; display: flex; flex-direction: column; transition: right 0.25s ease; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+  #chatPanel { position: fixed; top: 0; right: -360px; width: 360px; bottom: 57px; background: #fff; border-left: 1px solid #ddd; border-bottom: 1px solid #ddd; z-index: 190; display: flex; flex-direction: column; transition: right 0.25s ease; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
   #chatPanel.open { right: 0; }
   #chatHeader { padding: 14px 16px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; }
   #chatHeader h4 { margin: 0; font-size: 14px; font-weight: 600; }
@@ -2144,6 +2144,14 @@ document.getElementById('finishBtn').addEventListener('click', function() {
   var toastTimer = null;
   var chatOpen = false;
   var unread = 0;
+
+  // Dynamically set panel bottom to match nav bar height
+  var navEl = document.querySelector('.nav');
+  if (navEl) {
+    var navH = navEl.offsetHeight;
+    panel.style.bottom = navH + 'px';
+    toast.style.bottom = (navH + 8) + 'px';
+  }
 
   // ── Gemini API key ──
   // Option 1: Paste your key here directly
