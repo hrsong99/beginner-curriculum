@@ -690,10 +690,10 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |                                                                         |
 |  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
 |                                                                         |
-|  3. DRAW — Fill in the missing か!                                      |
+|  3. DRAW — Fill in the missing か/カ!                                      |
 |                                                                         |
-|  ▸ "Draw the missing か to complete the word!"                          |
-|    「か をかいて、ことばをかんせいさせてね！」                           |
+|  ▸ "Draw the missing character to complete the word!"                    |
+|    「か をかいて、ことばをかんせいさせてね！」                                       |
 |                                                                         |
 |     Hiragana か:                                                        |
 |     kagi (key)          =  [   ]ぎ                                      |
