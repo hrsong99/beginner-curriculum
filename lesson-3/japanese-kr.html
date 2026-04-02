@@ -9,10 +9,6 @@
   body { font-family: monospace; background: #fff; color: #111; overflow-x: hidden; }
   .page { display: none; max-width: 720px; margin: 0 auto; padding: 60px 40px 100px; position: relative; overflow: visible; }
   .page.active { display: block; }
-  .ts { float: right; clear: right; width: 175px; margin: 0 -200px 16px 16px; padding: 10px 12px; border-left: 3px solid #d0d7e0; font-size: 12px; line-height: 1.7; background: #f8f9fb; }
-  .ts .ts-jp { color: #333; margin-bottom: 4px; }
-  .ts .ts-en { color: #999; font-size: 11px; font-style: italic; }
-  @media (max-width: 1100px) { .ts { display: none; } }
   h1 { font-size: 22px; margin-bottom: 8px; letter-spacing: 0.5px; }
   h2 { font-size: 18px; font-weight: normal; margin-bottom: 32px; border-bottom: 1px solid #111; padding-bottom: 12px; }
   h3 { font-size: 17px; margin: 32px 0 12px; }
@@ -31,10 +27,10 @@
   .blank-input-full { display: block; font-family: monospace; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; outline: none; width: 100%; max-width: 420px; margin: 4px 0 8px 0; padding: 8px 10px; background: #fafafa; }
   .blank-input-full:focus { border-color: #c33; background: #fff; }
   .answer-hint { font-size: 19px; letter-spacing: 1px; color: #111; margin: 0; padding-top: 2px; }
-  .qa { display: grid; grid-template-columns: 30px 1fr; align-items: start; margin: 4px 0; }
+  .qa { display: grid; grid-template-columns: 64px 1fr; align-items: center; margin: 4px 0; }
   .qa + .qa { margin-top: 8px; }
   .qa .pair > .en { padding-left: 0; }
-  .qa-label { font-weight: bold; font-size: 14px; color: #888; padding-top: 4px; }
+  .qa-label { font-weight: bold; font-size: 14px; color: #888; }
   .box { border: 1px solid #111; padding: 20px 24px; margin: 20px 0; overflow: visible; }
   .box-label { font-size: 14px; font-weight: bold; margin-bottom: 10px; letter-spacing: 0.5px; }
   .help-box { border: 1px solid #999; padding: 14px 18px; margin: 12px 0 12px 20px; max-width: 380px; line-height: 2.2; }
@@ -94,6 +90,13 @@
   /* Flash animation for new message when panel is open */
   @keyframes chatFlash { 0% { background: #e8f0fe; } 100% { background: transparent; } }
   .chat-msg.flash { animation: chatFlash 1.2s ease; }
+  .tg { margin: 16px 0; padding: 10px 16px; background: #f0f4ff; border-left: 3px solid #a0b4d8; border-radius: 0 6px 6px 0; font-size: 13px; line-height: 1.6; }
+  .tg .tg-en { color: #444; margin-bottom: 2px; }
+  .tg .tg-jp { color: #999; font-size: 12px; }
+  .match-btn { font-family: monospace; font-size: 13px; padding: 6px 14px; border: 1px solid #999; background: #fff; cursor: pointer; transition: all 0.15s; border-radius: 4px; }
+  .match-btn:hover { background: #f0f0f0; border-color: #111; }
+  .match-btn.correct { background: #e8f5e9; border-color: #4caf50; color: #2e7d32; cursor: default; }
+  .match-btn.wrong { background: #ffebee; border-color: #ef5350; color: #c62828; }
   .separator { border: none; border-top: 1px dashed #ccc; margin: 28px 0; }
   ol { padding-left: 20px; }
   ol li { margin: 4px 0; }
@@ -110,7 +113,7 @@
       <ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？<br>
       <ruby>ここ<rt>koko</rt></ruby>・<ruby>そこ<rt>soko</rt></ruby>・<ruby>あそこ<rt>asoko</rt></ruby>
     </p>
-    <p class="en" style="font-size: 14px; margin-top: 12px;">Where is it? — here / there / over there</p>
+    <p class="en" style="font-size: 14px; margin-top: 12px;">어디에 있어요? — 여기 / 거기 / 저기</p>
   </div>
 
   <div class="section" style="margin-top: 40px;">
@@ -130,38 +133,111 @@
       <div class="en">이것을 읽어주세요.</div>
     </div>
   </div>
+
+</div>
+
+<div class="page" id="p1">
+  <h1>복습: 2과</h1>
+  <h2></h2>
+
+  <div class="tg">
+    <div class="tg-en">먼저, 지난 수업 복습해볼까요?</div>
+    <div class="tg-jp">「まず、まえのレッスンのふくしゅうをしましょう。」</div>
+  </div>
+
+  <p style="margin-bottom:20px">지난 시간에 배운 것 기억나는지 확인해봐요!</p>
+
+  <div class="section">
+    <p><strong>1. 이것은 뭐예요?</strong></p>
+    <div class="qa">
+      <div class="qa-label">선생님:</div>
+      <div class="pair">
+        <div class="jp"><ruby>これ<rt>kore</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>なん<rt>nan</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="en">이것은 뭐예요?</div>
+      </div>
+    </div>
+    <div class="qa">
+      <div class="qa-label">학생:</div>
+      <div class="pair">
+        <div class="answer-hint"><input type="text" class="blank-input" style="min-width:80px"><ruby>は<rt>wa</rt></ruby><ruby>ほん<rt>hon</rt></ruby><ruby>です<rt>desu</rt></ruby>。</div>
+        <div class="en">이것은 책이에요.</div>
+      </div>
+    </div>
+    <div class="help-box">
+      <ruby>これ<rt>kore</rt></ruby> = 이것
+    </div>
+  </div>
+
   <hr class="separator">
 
-  <div class="ts">
-    <div class="ts-jp">「きょうのもくひょうをよみましょう。」</div>
-    <div class="ts-en">오늘의 목표를 읽어봅시다.</div>
+  <div class="section">
+    <p><strong>2. 그것은 누구 거예요?</strong></p>
+    <div class="qa">
+      <div class="qa-label">선생님:</div>
+      <div class="pair">
+        <div class="jp"><ruby>それ<rt>sore</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>だれ<rt>dare</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="en">그것은 누구 거예요?</div>
+      </div>
+    </div>
+    <div class="qa">
+      <div class="qa-label">학생:</div>
+      <div class="pair">
+        <div class="answer-hint"><input type="text" class="blank-input" style="min-width:80px"><ruby>は<rt>wa</rt></ruby><ruby>わたし<rt>watashi</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>ペン<rt>pen</rt></ruby><ruby>です<rt>desu</rt></ruby>。</div>
+        <div class="en">그것은 나의 펜이에요.</div>
+      </div>
+    </div>
+    <div class="help-box">
+      <ruby>それ<rt>sore</rt></ruby> = 그것
+    </div>
   </div>
-  <div class="box">
-    <div class="box-label">OUTCOME / <ruby>もくひょう<rt>mokuhyō</rt></ruby></div>
-    물건이 어디에 있는지 묻고 답할 수 있습니다.<br>
-    <ruby>もの<rt>mono</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>ある<rt>aru</rt></ruby><ruby>か<rt>ka</rt></ruby><ruby>きいたり<rt>kiitari</rt></ruby>、<ruby>こたえられる<rt>kotaerareru</rt></ruby><ruby>ように<rt>yō ni</rt></ruby><ruby>なります<rt>narimasu</rt></ruby>。
+
+  <hr class="separator">
+
+  <div class="section">
+    <p><strong>3. 저것은 뭐예요?</strong></p>
+    <div class="qa">
+      <div class="qa-label">선생님:</div>
+      <div class="pair">
+        <div class="jp"><ruby>あれ<rt>are</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>なん<rt>nan</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="en">저것은 뭐예요?</div>
+      </div>
+    </div>
+    <div class="qa">
+      <div class="qa-label">학생:</div>
+      <div class="pair">
+        <div class="answer-hint"><input type="text" class="blank-input" style="min-width:80px"><ruby>は<rt>wa</rt></ruby><ruby>かばん<rt>kaban</rt></ruby><ruby>です<rt>desu</rt></ruby>。</div>
+        <div class="en">저것은 가방이에요.</div>
+      </div>
+    </div>
+    <div class="help-box">
+      <ruby>あれ<rt>are</rt></ruby> = 저것
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 2: TODAY'S PATTERNS -->
+<div class="page" id="p2">
+  <div class="tg">
+    <div class="tg-en">같이 읽어볼까요? 따라 읽어봐요!</div>
+    <div class="tg-jp">「いっしょによんでみましょう！わたしのあとにリピートしてください。」</div>
   </div>
 
   <div class="section">
-    <div class="ts">
-      <div class="ts-jp">「いっしょによんでみましょう！わたしのあとにリピートしてください。」</div>
-      <div class="ts-en">같이 읽어봅시다! 따라 읽어주세요.</div>
-    </div>
     <h3>오늘의 패턴</h3>
 
     <p><strong>1. 어디에 있는지 묻기</strong> (<ruby>どこ<rt>doko</rt></ruby>)</p>
     <div class="pattern">
       <div class="pair">
         <div class="jp">&bull; [<ruby>ほん<rt>hon</rt></ruby>]<ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
-        <div class="en">[책/펜/가방]은/는 어디에 있어요?</div>
+        <div class="en">[책]은 어디에 있어요?</div>
       </div>
       <div class="pair">
         <div class="jp">&bull; [<ruby>ペン<rt>pen</rt></ruby>]<ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
-        <div class="en">[펜]은/는 어디에 있어요?</div>
+        <div class="en">[펜]은 어디에 있어요?</div>
       </div>
       <div class="pair">
         <div class="jp">&bull; [<ruby>かばん<rt>kaban</rt></ruby>]<ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
-        <div class="en">[가방]은/는 어디에 있어요?</div>
+        <div class="en">[가방]은 어디에 있어요?</div>
       </div>
     </div>
 
@@ -181,87 +257,18 @@
       </div>
     </div>
   </div>
-
 </div>
 
-<div class="page" id="p1">
-  <h1>복습: 2과</h1>
-  <h2></h2>
-
-  <div class="ts">
-    <div class="ts-jp">「まず、まえのレッスンのふくしゅうをしましょう。」</div>
-    <div class="ts-en">먼저, 지난 레슨을 복습합시다.</div>
-  </div>
-
-  <div class="section">
-    <p><strong>1. 이것은 뭐예요?</strong></p>
-    <div class="qa">
-      <div class="qa-label">Q:</div>
-      <div class="pair">
-        <div class="jp"><ruby>これ<rt>kore</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>なん<rt>nan</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
-        <div class="en">이것은 뭐예요?</div>
-      </div>
-    </div>
-    <div class="qa">
-      <div class="qa-label">A:</div>
-      <div class="answer-hint"><ruby>これ<rt>kore</rt></ruby><ruby>は<rt>wa</rt></ruby><input type="text" class="blank-input" style="min-width:100px"><ruby>です<rt>desu</rt></ruby>。</div>
-    </div>
-    <div class="help-box">
-      <ruby>ほん<rt>hon</rt></ruby>(책) &nbsp; <ruby>ペン<rt>pen</rt></ruby>(펜) &nbsp; <ruby>ノート<rt>nōto</rt></ruby>(노트)
-    </div>
-  </div>
-
-  <hr class="separator">
-
-  <div class="section">
-    <p><strong>2. 그것은 누구 거예요?</strong></p>
-    <div class="qa">
-      <div class="qa-label">Q:</div>
-      <div class="pair">
-        <div class="jp"><ruby>それ<rt>sore</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>だれ<rt>dare</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
-        <div class="en">그것은 누구 거예요?</div>
-      </div>
-    </div>
-    <div class="qa">
-      <div class="qa-label">A:</div>
-      <div class="answer-hint"><ruby>それ<rt>sore</rt></ruby><ruby>は<rt>wa</rt></ruby><input type="text" class="blank-input" style="min-width:80px"><ruby>の<rt>no</rt></ruby><input type="text" class="blank-input" style="min-width:80px"><ruby>です<rt>desu</rt></ruby>。</div>
-    </div>
-    <div class="help-box">
-      <ruby>わたし<rt>watashi</rt></ruby>(나의) &nbsp; <ruby>せんせい<rt>sensei</rt></ruby>(선생님) &nbsp; <ruby>ともだち<rt>tomodachi</rt></ruby>(친구)
-    </div>
-  </div>
-
-  <hr class="separator">
-
-  <div class="section">
-    <p><strong>3. 저것은 뭐예요?</strong></p>
-    <div class="qa">
-      <div class="qa-label">Q:</div>
-      <div class="pair">
-        <div class="jp"><ruby>あれ<rt>are</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>なん<rt>nan</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
-        <div class="en">저것은 뭐예요?</div>
-      </div>
-    </div>
-    <div class="qa">
-      <div class="qa-label">A:</div>
-      <div class="answer-hint"><ruby>あれ<rt>are</rt></ruby><ruby>は<rt>wa</rt></ruby><input type="text" class="blank-input" style="min-width:100px"><ruby>です<rt>desu</rt></ruby>。</div>
-    </div>
-    <div class="help-box">
-      <ruby>かばん<rt>kaban</rt></ruby>(가방) &nbsp; <ruby>とけい<rt>tokei</rt></ruby>(시계) &nbsp; <ruby>いす<rt>isu</rt></ruby>(의자)
-    </div>
-  </div>
-</div>
-
-<div class="page" id="p2">
+<div class="page" id="p3">
   <h1>패턴 연습: 어디에 있는지 묻기 (<ruby>どこ<rt>doko</rt></ruby>)</h1>
   <h2></h2>
 
-  <p>PATTERN: [noun]<ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</p>
+  <p>패턴: [noun]<ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</p>
 
   <div class="section">
-    <div class="ts">
-      <div class="ts-jp">「いっしょによみましょう。わたしのあとにリピートしてください。」</div>
-      <div class="ts-en">같이 읽어봅시다. 따라 읽어주세요.</div>
+    <div class="tg">
+      <div class="tg-en">같이 읽어볼까요? 따라 읽어봐요!</div>
+      <div class="tg-jp">「いっしょによみましょう。わたしのあとにリピートしてください。」</div>
     </div>
     <p><strong>1. 같이 읽기:</strong></p>
     <div class="pattern">
@@ -283,9 +290,9 @@
   <hr class="separator">
 
   <div class="section">
-    <div class="ts">
-      <div class="ts-jp">「くうらんにことばをいれて、ぜんぶよんでみましょう！」</div>
-      <div class="ts-en">빈칸에 단어를 넣고 전체를 읽어봅시다!</div>
+    <div class="tg">
+      <div class="tg-en">빈칸에 단어 넣고 전체를 읽어봐요!</div>
+      <div class="tg-jp">「くうらんにことばをいれて、ぜんぶよんでみましょう！」</div>
     </div>
     <p><strong>2. 빈칸 채우기:</strong></p>
     <div class="pattern">
@@ -304,29 +311,29 @@
   <hr class="separator">
 
   <div class="section">
-    <div class="ts">
-      <div class="ts-jp">「えいごをにほんごにしてみてください。ヒントをみてもいいですよ。」</div>
-      <div class="ts-en">한국어를 일본어로 바꿔보세요. 힌트를 봐도 됩니다.</div>
+    <div class="tg">
+      <div class="tg-en">한국어를 일본어로 바꿔봐요! 힌트 봐도 괜찮아요.</div>
+      <div class="tg-jp">「えいごをにほんごにしてみてください。ヒントをみてもいいですよ。」</div>
     </div>
     <p><strong>3. 번역하기</strong> (일본어로 번역하세요):</p>
     <div class="pattern">
       &bull; 전화는 어디에 있어요?<br>
       <input type="text" class="blank-input-full">
-      <span style="color:#999; font-size:14px">(phone = <ruby>でんわ<rt>denwa</rt></ruby>)</span>
+      <span style="color:#999; font-size:14px">(전화 = <ruby>でんわ<rt>denwa</rt></ruby>)</span>
     </div>
     <div class="pattern" style="margin-top:12px">
       &bull; 시계는 어디에 있어요?<br>
       <input type="text" class="blank-input-full">
-      <span style="color:#999; font-size:14px">(clock = <ruby>とけい<rt>tokei</rt></ruby>)</span>
+      <span style="color:#999; font-size:14px">(시계 = <ruby>とけい<rt>tokei</rt></ruby>)</span>
     </div>
   </div>
 
   <hr class="separator">
 
   <div class="section">
-    <div class="ts">
-      <div class="ts-jp">「じぶんのぶんをつくってみましょう！なにかについてきいてみてね。」</div>
-      <div class="ts-en">직접 문장을 만들어봅시다! 무언가 어디에 있는지 물어보세요.</div>
+    <div class="tg">
+      <div class="tg-en">직접 문장을 만들어봐요! 무언가 어디에 있는지 물어봐요!</div>
+      <div class="tg-jp">「じぶんのぶんをつくってみましょう！なにかについてきいてみてね。」</div>
     </div>
     <p><strong>4. 직접 만들기:</strong></p>
     <p style="margin-left:16px">무언가 어디에 있는지 물어보세요!</p>
@@ -334,11 +341,11 @@
   </div>
 </div>
 
-<div class="page" id="p3">
+<div class="page" id="p4">
   <h1>패턴 연습: 어디에 있는지 답하기 (<ruby>ここ<rt>koko</rt></ruby>・<ruby>そこ<rt>soko</rt></ruby>・<ruby>あそこ<rt>asoko</rt></ruby>)</h1>
   <h2></h2>
 
-  <p>PATTERN: [noun]<ruby>は<rt>wa</rt></ruby> <ruby>ここ<rt>koko</rt></ruby>/<ruby>そこ<rt>soko</rt></ruby>/<ruby>あそこ<rt>asoko</rt></ruby> <ruby>です<rt>desu</rt></ruby>。</p>
+  <p>패턴: [noun]<ruby>は<rt>wa</rt></ruby> <ruby>ここ<rt>koko</rt></ruby>/<ruby>そこ<rt>soko</rt></ruby>/<ruby>あそこ<rt>asoko</rt></ruby> <ruby>です<rt>desu</rt></ruby>。</p>
   <div class="pattern" style="margin-top:8px; margin-bottom:20px;">
     <ruby>ここ<rt>koko</rt></ruby> = 여기 (나에게 가까운)<br>
     <ruby>そこ<rt>soko</rt></ruby> = 거기 (상대방에게 가까운)<br>
@@ -346,9 +353,9 @@
   </div>
 
   <div class="section">
-    <div class="ts">
-      <div class="ts-jp">「つぎのパターンです。いっしょによみましょう。」</div>
-      <div class="ts-en">다음 패턴입니다. 같이 읽어봅시다.</div>
+    <div class="tg">
+      <div class="tg-en">다음 패턴이에요! 같이 읽어볼까요?</div>
+      <div class="tg-jp">「つぎのパターンです。いっしょによみましょう。」</div>
     </div>
     <p><strong>1. 같이 읽기:</strong></p>
     <div class="pattern">
@@ -370,9 +377,9 @@
   <hr class="separator">
 
   <div class="section">
-    <div class="ts">
-      <div class="ts-jp">「くうらんにことばをいれて、ぜんぶよんでみましょう！」</div>
-      <div class="ts-en">빈칸에 단어를 넣고 전체를 읽어봅시다!</div>
+    <div class="tg">
+      <div class="tg-en">빈칸에 단어 넣고 전체를 읽어봐요!</div>
+      <div class="tg-jp">「くうらんにことばをいれて、ぜんぶよんでみましょう！」</div>
     </div>
     <p><strong>2. 빈칸 채우기:</strong></p>
     <div class="pattern">
@@ -391,29 +398,29 @@
   <hr class="separator">
 
   <div class="section">
-    <div class="ts">
-      <div class="ts-jp">「えいごをにほんごにしてみてください。」</div>
-      <div class="ts-en">한국어를 일본어로 바꿔보세요.</div>
+    <div class="tg">
+      <div class="tg-en">한국어를 일본어로 바꿔봐요!</div>
+      <div class="tg-jp">「えいごをにほんごにしてみてください。」</div>
     </div>
     <p><strong>3. 번역하기</strong> (일본어로 번역하세요):</p>
     <div class="pattern">
       &bull; 전화는 여기에 있어요.<br>
       <input type="text" class="blank-input-full">
-      <span style="color:#999; font-size:14px">(여기 = <ruby>ここ<rt>koko</rt></ruby> / phone = <ruby>でんわ<rt>denwa</rt></ruby>)</span>
+      <span style="color:#999; font-size:14px">(여기 = <ruby>ここ<rt>koko</rt></ruby> / 전화 = <ruby>でんわ<rt>denwa</rt></ruby>)</span>
     </div>
     <div class="pattern" style="margin-top:12px">
       &bull; 시계는 저기에 있어요.<br>
       <input type="text" class="blank-input-full">
-      <span style="color:#999; font-size:14px">(저기 = <ruby>あそこ<rt>asoko</rt></ruby> / clock = <ruby>とけい<rt>tokei</rt></ruby>)</span>
+      <span style="color:#999; font-size:14px">(저기 = <ruby>あそこ<rt>asoko</rt></ruby> / 시계 = <ruby>とけい<rt>tokei</rt></ruby>)</span>
     </div>
   </div>
 
   <hr class="separator">
 
   <div class="section">
-    <div class="ts">
-      <div class="ts-jp">「じぶんのぶんをつくってみましょう！なにかをさしてこたえてね。」</div>
-      <div class="ts-en">직접 문장을 만들어봅시다! 무언가를 가리키며 어디에 있는지 말해보세요.</div>
+    <div class="tg">
+      <div class="tg-en">직접 문장을 만들어봐요! 무언가를 가리키며 말해봐요!</div>
+      <div class="tg-jp">「じぶんのぶんをつくってみましょう！なにかをさしてこたえてね。」</div>
     </div>
     <p><strong>4. 직접 만들기:</strong></p>
     <p style="margin-left:16px">무언가를 가리키며 어디에 있는지 말해보세요!</p>
@@ -421,26 +428,26 @@
   </div>
 </div>
 
-<div class="page" id="p4">
+<div class="page" id="p5">
   <h1>짧은 대화</h1>
   <h2></h2>
 
   <div class="section">
-    <div class="ts">
-      <div class="ts-jp">「にほんごでしつもんしてみてください。」</div>
-      <div class="ts-en">일본어로 질문해보세요.</div>
+    <div class="tg">
+      <div class="tg-en">일본어로 질문해봐요!</div>
+      <div class="tg-jp">「にほんごでしつもんしてみてください。」</div>
     </div>
     <p><strong>대화 1:</strong></p>
     <div class="dialogue">
       <div class="turn">
-        <div class="spk">Student:</div>
+        <div class="spk">학생:</div>
         <div class="pair">
           <div class="jp"><input type="text" class="blank-input" style="min-width:280px"></div>
           <div class="en">책은 어디에 있어요?</div>
         </div>
       </div>
       <div class="turn">
-        <div class="spk">Tutor:</div>
+        <div class="spk">선생님:</div>
         <div class="pair">
           <div class="jp"><ruby>ほん<rt>hon</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>ここ<rt>koko</rt></ruby><ruby>です<rt>desu</rt></ruby>。</div>
           <div class="en">책은 여기에 있어요.</div>
@@ -455,21 +462,21 @@
   <hr class="separator">
 
   <div class="section">
-    <div class="ts">
-      <div class="ts-jp">「わたしがしつもんします。にほんごでこたえてください。」</div>
-      <div class="ts-en">제가 질문합니다. 일본어로 답해주세요.</div>
+    <div class="tg">
+      <div class="tg-en">제가 질문할게요. 일본어로 답해봐요!</div>
+      <div class="tg-jp">「わたしがしつもんします。にほんごでこたえてください。」</div>
     </div>
     <p><strong>대화 2:</strong></p>
     <div class="dialogue">
       <div class="turn">
-        <div class="spk">Tutor:</div>
+        <div class="spk">선생님:</div>
         <div class="pair">
           <div class="jp"><ruby>ペン<rt>pen</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
           <div class="en">펜은 어디에 있어요?</div>
         </div>
       </div>
       <div class="turn">
-        <div class="spk">Student:</div>
+        <div class="spk">학생:</div>
         <div class="pair">
           <div class="jp"><input type="text" class="blank-input" style="min-width:280px"></div>
           <div class="en">펜은 거기에 있어요.</div>
@@ -484,21 +491,21 @@
   <hr class="separator">
 
   <div class="section">
-    <div class="ts">
-      <div class="ts-jp">「さいごです！にほんごでしつもんしてみてください。」</div>
-      <div class="ts-en">마지막이에요! 일본어로 질문해보세요.</div>
+    <div class="tg">
+      <div class="tg-en">마지막이에요! 일본어로 질문해봐요!</div>
+      <div class="tg-jp">「さいごです！にほんごでしつもんしてみてください。」</div>
     </div>
     <p><strong>대화 3:</strong></p>
     <div class="dialogue">
       <div class="turn">
-        <div class="spk">Student:</div>
+        <div class="spk">학생:</div>
         <div class="pair">
           <div class="jp"><input type="text" class="blank-input" style="min-width:280px"></div>
           <div class="en">노트는 어디에 있어요?</div>
         </div>
       </div>
       <div class="turn">
-        <div class="spk">Tutor:</div>
+        <div class="spk">선생님:</div>
         <div class="pair">
           <div class="jp"><ruby>ノート<rt>nōto</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>あそこ<rt>asoko</rt></ruby><ruby>です<rt>desu</rt></ruby>。</div>
           <div class="en">노트는 저기에 있어요.</div>
@@ -511,19 +518,19 @@
   </div>
 </div>
 
-<div class="page" id="p5">
+<div class="page" id="p6">
   <h1>대화: 가이드 리딩</h1>
   <h2></h2>
 
   <div class="box">
-    <div class="box-label">CONTEXT / <ruby>じょうきょう<rt>jōkyō</rt></ruby></div>
+    <div class="box-label">상황 / <ruby>じょうきょう<rt>jōkyō</rt></ruby></div>
     유키가 교실에서 물건을 찾지 못합니다. 알렉스가 도와줍니다.<br>
     <ruby>ゆき<rt>Yuki</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>きょうしつ<rt>kyōshitsu</rt></ruby><ruby>で<rt>de</rt></ruby><ruby>もの<rt>mono</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>さがして<rt>sagashite</rt></ruby><ruby>います<rt>imasu</rt></ruby>。<ruby>アレックス<rt>Arekkusu</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>てつだいます<rt>tetsudaimasu</rt></ruby>。
   </div>
 
-  <div class="ts">
-    <div class="ts-jp">「いっしょによみましょう。わたしがアレックスで、あなたがゆきです。」</div>
-    <div class="ts-en">같이 읽어봅시다. 제가 알렉스, 당신이 유키입니다.</div>
+  <div class="tg">
+    <div class="tg-en">같이 읽어볼까요? 제가 알렉스, 학생분이 유키예요!</div>
+    <div class="tg-jp">「いっしょによみましょう。わたしがアレックスで、あなたがゆきです。」</div>
   </div>
   <div class="dialogue" style="margin-top:16px">
     <div class="turn">
@@ -582,20 +589,20 @@
       </div>
     </div>
   </div>
-  <div class="ts">
-    <div class="ts-jp">「じょうずですね！じゃあ、こうたいしましょう。こんどはわたしがゆきです。」</div>
-    <div class="ts-en">잘했어요! 이번에는 바꿔봅시다. 이번에는 제가 유키입니다.</div>
+  <div class="tg">
+    <div class="tg-en">잘했어요! 이번에는 바꿔볼까요? 이번엔 제가 유키예요!</div>
+    <div class="tg-jp">「じょうずですね！じゃあ、こうたいしましょう。こんどはわたしがゆきです。」</div>
   </div>
   <div style="clear:both"></div>
 </div>
 
-<div class="page" id="p6">
+<div class="page" id="p7">
   <h1>대화: 속도 &amp; 기억력 체크</h1>
   <h2></h2>
 
-  <div class="ts">
-    <div class="ts-jp">「おなじかいわです。くうらんのところをうめて、にほんごでいってください。」</div>
-    <div class="ts-en">같은 대화입니다! 빈칸을 채우고 일본어로 말해보세요.</div>
+  <div class="tg">
+    <div class="tg-en">같은 대화예요! 이번에는 기억해서 말해봐요! 제가 유키예요. 학생분은 알렉스 — 전체 문장을 말해봐요!</div>
+    <div class="tg-jp">「おなじかいわです。こんどはおぼえていってみましょう！わたしがゆきです。あなたはアレックス — ぜんぶのぶんをいってください。」</div>
   </div>
   <div class="dialogue" style="margin-top:16px">
     <div class="turn">
@@ -656,39 +663,40 @@
   </div>
 </div>
 
-<div class="page" id="p7">
+<div class="page" id="p8">
   <h1>자유 대화</h1>
   <h2></h2>
 
+  <div class="tg">
+    <div class="tg-en">질문할게요. 대답해봐요! 그리고 같은 질문을 저한테도 해봐요!</div>
+    <div class="tg-jp">「わたしがしつもんします。こたえてください。そのあと、おなじしつもんをわたしにしてね！」</div>
+  </div>
+
   <div class="section">
-    <div class="ts">
-      <div class="ts-jp">「ほんはどこですか？にほんごでこたえてください。」</div>
-      <div class="ts-en">책은 어디에 있어요? 일본어로 답해주세요.</div>
-    </div>
     <p><strong>라운드 1: 어디에 있어요?</strong></p>
     <div class="dialogue">
       <div class="turn">
-        <div class="spk">Tutor:</div>
+        <div class="spk">선생님:</div>
         <div class="pair">
           <div class="jp">「<ruby>ほん<rt>hon</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？」</div>
           <div class="en">"책은 어디에 있어요?"</div>
         </div>
       </div>
       <div class="turn">
-        <div class="spk">Student:</div>
+        <div class="spk">학생:</div>
         <div class="pair">
           <div class="jp"><input type="text" class="blank-input" style="min-width:280px"></div>
         </div>
       </div>
       <div class="turn">
-        <div class="spk">Student:</div>
+        <div class="spk">학생:</div>
         <div class="pair">
           <div class="jp">「<ruby>ペン<rt>pen</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？」</div>
           <div class="en">"펜은 어디에 있어요?"</div>
         </div>
       </div>
       <div class="turn">
-        <div class="spk">Tutor:</div>
+        <div class="spk">선생님:</div>
         <div class="pair">
           <div class="jp"><input type="text" class="blank-input" style="min-width:280px"></div>
         </div>
@@ -703,34 +711,30 @@
   <hr class="separator">
 
   <div class="section">
-    <div class="ts">
-      <div class="ts-jp">「かばんはどこですか？ゆびをさしてこたえてね。」</div>
-      <div class="ts-en">가방은 어디에 있어요? 가리키고 답하세요.</div>
-    </div>
     <p><strong>라운드 2: 가리키고 답하기</strong></p>
     <div class="dialogue">
       <div class="turn">
-        <div class="spk">Tutor:</div>
+        <div class="spk">선생님:</div>
         <div class="pair">
           <div class="jp">「<ruby>かばん<rt>kaban</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？」</div>
           <div class="en">"가방은 어디에 있어요?"</div>
         </div>
       </div>
       <div class="turn">
-        <div class="spk">Student:</div>
+        <div class="spk">학생:</div>
         <div class="pair">
           <div class="jp"><input type="text" class="blank-input" style="min-width:280px"></div>
         </div>
       </div>
       <div class="turn">
-        <div class="spk">Student:</div>
+        <div class="spk">학생:</div>
         <div class="pair">
           <div class="jp">「<ruby>とけい<rt>tokei</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？」</div>
           <div class="en">"시계는 어디에 있어요?"</div>
         </div>
       </div>
       <div class="turn">
-        <div class="spk">Tutor:</div>
+        <div class="spk">선생님:</div>
         <div class="pair">
           <div class="jp"><input type="text" class="blank-input" style="min-width:280px"></div>
         </div>
@@ -743,17 +747,17 @@
   </div>
 </div>
 
-<div class="page" id="p8">
+<div class="page" id="p9">
   <h1>롤플레이</h1>
   <h2>"잃어버린 3가지를 찾아라!"</h2>
 
-  <h3>SCENARIO</h3>
+  <h3>시나리오</h3>
   <div class="pair" style="margin-bottom:16px">
     <div class="jp"><ruby>きょうしつ<rt>kyōshitsu</rt></ruby><ruby>で<rt>de</rt></ruby><ruby>3つ<rt>mittsu</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>もの<rt>mono</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>なくしました<rt>nakushimashita</rt></ruby>！</div>
     <div class="en" style="font-size:16px; padding-left:0; color:#888">교실에서 3가지를 잃어버렸어요!</div>
   </div>
 
-  <h3>GOAL</h3>
+  <h3>목표</h3>
   <div class="pair" style="margin-bottom:16px">
     <div class="jp"><ruby>せんせい<rt>sensei</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>きいて<rt>kiite</rt></ruby>、<ruby>3つ<rt>mittsu</rt></ruby><ruby>ぜんぶ<rt>zenbu</rt></ruby><ruby>みつけましょう<rt>mitsukemashō</rt></ruby>！</div>
     <div class="en" style="font-size:16px; padding-left:0; color:#888">튜터에게 각 물건이 어디에 있는지 물어보세요. 3개 모두 찾기!</div>
@@ -763,61 +767,131 @@
     <div class="en" style="font-size:16px; padding-left:0; color:#888">잃어버린 것: 펜, 노트, 가방</div>
   </div>
 
-  <h3 style="margin-top:40px">HINTS</h3>
+  <h3 style="margin-top:40px">힌트</h3>
   <div class="help-box" style="max-width:520px; margin-left:0; margin-top:8px; line-height:2.4">
-    <strong>PATTERN</strong><br>
+    <strong>표현</strong><br>
     ＿＿<ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？ &nbsp; <span class="en">___은/는 어디에 있어요?</span><br>
-    <strong>WORDS</strong><br>
+    <strong>단어</strong><br>
     <ruby>ペン<rt>pen</rt></ruby>(펜) &nbsp; <ruby>ノート<rt>nōto</rt></ruby>(노트) &nbsp; <ruby>かばん<rt>kaban</rt></ruby>(가방)
   </div>
 
   <div style="margin-top:32px">
-    <textarea class="roleplay-notes" placeholder="여기에 대화를 적어보세요..." style="display:block; font-family:monospace; font-size:16px; border:1px solid #ccc; border-radius:4px; outline:none; width:100%; min-height:120px; padding:10px 12px; background:#fafafa; resize:vertical; line-height:1.6; box-sizing:border-box;"></textarea>
+    <textarea class="roleplay-notes" placeholder="여기에 대화를 적어보세요..." oninput="this.style.height='auto';this.style.height=this.scrollHeight+'px'" style="display:block; font-family:monospace; font-size:16px; border:1px solid #ccc; border-radius:4px; outline:none; width:100%; min-height:240px; padding:14px 16px; background:#fafafa; resize:none; line-height:1.8; box-sizing:border-box; overflow:hidden;"></textarea>
+  </div>
+</div>
+
+<!-- PAGE 10: TRAVEL IN JAPAN -->
+<div class="page" id="p10">
+  <div class="tg">
+    <div class="tg-en">오늘 배운 것을 써볼까요? 일본 여행 중이라고 상상해봐요!</div>
+    <div class="tg-jp">「きょうならったことをつかってみましょう — にほんをりょこうしているとおもってね！」</div>
+  </div>
+
+  <h1>일본 여행: 길 묻기</h1>
+  <h2></h2>
+
+  <p>당신은 여행자입니다. 빈칸을 채우고 소리 내어 말해보세요!</p>
+
+  <div class="box">
+    <div class="box-label">상황 / <ruby>じょうきょう<rt>jōkyō</rt></ruby></div>
+    도쿄의 기차역에 막 도착했어요.<br>
+    직원에게 물건이 어디에 있는지 물어보세요!
+  </div>
+
+  <div class="help-box" style="margin-left:0; max-width:520px;">
+    <strong>새 단어</strong><br>
+    <ruby>すみません<rt>sumimasen</rt></ruby> (실례합니다) &nbsp; <ruby>トイレ<rt>toire</rt></ruby> (화장실)<br>
+    <ruby>コンビニ<rt>konbini</rt></ruby> (편의점) &nbsp; <ruby>でぐち<rt>deguchi</rt></ruby> (출구)<br>
+    <ruby>ありがとうございます<rt>arigatō gozaimasu</rt></ruby> (감사합니다)
+  </div>
+
+  <div class="dialogue" style="margin-top:20px">
+    <div class="turn">
+      <div class="spk">YOU:</div>
+      <div class="pair">
+        <div class="jp"><ruby>すみません<rt>sumimasen</rt></ruby>、<ruby>トイレ<rt>toire</rt></ruby><ruby>は<rt>wa</rt></ruby><input type="text" class="blank-input" style="min-width:60px"><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="en">실례합니다, 화장실은 어디에 있어요?</div>
+      </div>
+    </div>
+    <div class="turn">
+      <div class="spk">STAFF:</div>
+      <div class="pair">
+        <div class="jp"><ruby>トイレ<rt>toire</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>あそこ<rt>asoko</rt></ruby><ruby>です<rt>desu</rt></ruby>。</div>
+        <div class="en">화장실은 저기에 있어요.</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">YOU:</div>
+      <div class="pair">
+        <div class="jp"><ruby>ありがとうございます<rt>arigatō gozaimasu</rt></ruby>！<ruby>でぐち<rt>deguchi</rt></ruby><ruby>は<rt>wa</rt></ruby><input type="text" class="blank-input" style="min-width:60px"><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="en">감사합니다! 출구는 어디에 있어요?</div>
+      </div>
+    </div>
+    <div class="turn">
+      <div class="spk">STAFF:</div>
+      <div class="pair">
+        <div class="jp"><ruby>でぐち<rt>deguchi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>そこ<rt>soko</rt></ruby><ruby>です<rt>desu</rt></ruby>。</div>
+        <div class="en">출구는 거기에 있어요.</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">YOU:</div>
+      <div class="pair">
+        <div class="jp"><ruby>コンビニ<rt>konbini</rt></ruby><ruby>は<rt>wa</rt></ruby><input type="text" class="blank-input" style="min-width:60px"><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="en">편의점은 어디에 있어요?</div>
+      </div>
+    </div>
+    <div class="turn">
+      <div class="spk">STAFF:</div>
+      <div class="pair">
+        <div class="jp"><ruby>コンビニ<rt>konbini</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>ここ<rt>koko</rt></ruby><ruby>です<rt>desu</rt></ruby>。</div>
+        <div class="en">편의점은 바로 여기에 있어요.</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">YOU:</div>
+      <div class="pair">
+        <div class="jp"><input type="text" class="blank-input" style="min-width:100px"><ruby>ございます<rt>gozaimasu</rt></ruby>！</div>
+        <div class="en">정말 감사합니다!</div>
+      </div>
+    </div>
   </div>
 </div>
 
 <!-- BONUS VOCAB CHALLENGE -->
-<div class="page" id="p9">
-  <h1>보너스: 단어 챌린지</h1>
+<div class="page" id="p11">
+  <h1>보너스 1: 단어 퀴즈</h1>
   <h2><span class="en" style="font-size:14px">(시간이 없으면 건너뛰세요!)</span></h2>
 
-
-
-  <div class="pair">
-    <div class="jp"><ruby>にほんご<rt>nihongo</rt></ruby><ruby>と<rt>to</rt></ruby><ruby>えいご<rt>eigo</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>あわせましょう<rt>awasemashō</rt></ruby>！</div>
-    <div class="en">일본어와 한국어를 연결할 수 있나요?</div>
+  <div class="tg">
+    <div class="tg-en">이 단어들 일본어로 말할 수 있어요?</div>
+    <div class="tg-jp">「にほんごでいえるかな？」</div>
   </div>
 
-  <div class="section">
-    <p><strong>장소 단어:</strong></p>
-    <div class="match-game" id="match1"
-         data-left='[{"id":"koko","html":"<ruby>ここ<rt>koko</rt></ruby>"},{"id":"soko","html":"<ruby>そこ<rt>soko</rt></ruby>"},{"id":"asoko","html":"<ruby>あそこ<rt>asoko</rt></ruby>"},{"id":"doko","html":"<ruby>どこ<rt>doko</rt></ruby>"}]'
-         data-right='[{"id":"overthere","text":"저기"},{"id":"here","text":"여기"},{"id":"where","text":"어디"},{"id":"there","text":"거기"}]'
-         data-answers='{"koko":"here","soko":"there","asoko":"overthere","doko":"where"}'>
-    </div>
-  </div>
-
-  <hr class="separator">
-
-  <div class="section">
-    <p><strong>사물 (이번 수업):</strong></p>
-    <div class="match-game" id="match2"
-         data-left='[{"id":"hon","html":"<ruby>ほん<rt>hon</rt></ruby>"},{"id":"pen","html":"<ruby>ペン<rt>pen</rt></ruby>"},{"id":"nooto","html":"<ruby>ノート<rt>nōto</rt></ruby>"},{"id":"kaban","html":"<ruby>かばん<rt>kaban</rt></ruby>"}]'
-         data-right='[{"id":"r_pen","text":"펜"},{"id":"r_bag","text":"가방"},{"id":"r_book","text":"책"},{"id":"r_notebook","text":"노트"}]'
-         data-answers='{"hon":"r_book","pen":"r_pen","nooto":"r_notebook","kaban":"r_bag"}'>
-    </div>
-  </div>
-
-  <hr class="separator">
-
-  <div class="section">
-    <p><strong>추가 단어 (연습 &amp; 토론):</strong></p>
-    <div class="match-game" id="match3"
-         data-left='[{"id":"denwa","html":"<ruby>でんわ<rt>denwa</rt></ruby>"},{"id":"kagi","html":"<ruby>かぎ<rt>kagi</rt></ruby>"},{"id":"tokei","html":"<ruby>とけい<rt>tokei</rt></ruby>"},{"id":"mizu","html":"<ruby>みず<rt>mizu</rt></ruby>"},{"id":"isu","html":"<ruby>いす<rt>isu</rt></ruby>"},{"id":"tsukue","html":"<ruby>つくえ<rt>tsukue</rt></ruby>"}]'
-         data-right='[{"id":"r_key","text":"열쇠"},{"id":"r_clock","text":"시계"},{"id":"r_water","text":"물"},{"id":"r_phone","text":"전화"},{"id":"r_desk","text":"책상"},{"id":"r_chair","text":"의자"}]'
-         data-answers='{"denwa":"r_phone","kagi":"r_key","tokei":"r_clock","mizu":"r_water","isu":"r_chair","tsukue":"r_desk"}'>
-    </div>
-  </div>
+  <table style="width:100%; max-width:440px; border-collapse:collapse; margin:20px 0; font-size:16px;">
+    <thead>
+      <tr>
+        <th style="text-align:left; padding:8px 12px; border-bottom:2px solid #111;">한국어</th>
+        <th style="text-align:left; padding:8px 12px; border-bottom:2px solid #111;">일본어로 말하기</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="padding:8px 12px; border-bottom:1px solid #eee;">어디</td><td style="padding:8px 12px; border-bottom:1px solid #eee;"><input type="text" class="blank-input" style="min-width:100px"></td></tr>
+      <tr><td style="padding:8px 12px; border-bottom:1px solid #eee;">여기</td><td style="padding:8px 12px; border-bottom:1px solid #eee;"><input type="text" class="blank-input" style="min-width:100px"></td></tr>
+      <tr><td style="padding:8px 12px; border-bottom:1px solid #eee;">거기</td><td style="padding:8px 12px; border-bottom:1px solid #eee;"><input type="text" class="blank-input" style="min-width:100px"></td></tr>
+      <tr><td style="padding:8px 12px; border-bottom:2px solid #ccc;">저기</td><td style="padding:8px 12px; border-bottom:2px solid #ccc;"><input type="text" class="blank-input" style="min-width:100px"></td></tr>
+      <tr><td style="padding:8px 12px; border-bottom:1px solid #eee;">책</td><td style="padding:8px 12px; border-bottom:1px solid #eee;"><input type="text" class="blank-input" style="min-width:100px"></td></tr>
+      <tr><td style="padding:8px 12px; border-bottom:1px solid #eee;">펜</td><td style="padding:8px 12px; border-bottom:1px solid #eee;"><input type="text" class="blank-input" style="min-width:100px"></td></tr>
+      <tr><td style="padding:8px 12px; border-bottom:1px solid #eee;">노트</td><td style="padding:8px 12px; border-bottom:1px solid #eee;"><input type="text" class="blank-input" style="min-width:100px"></td></tr>
+      <tr><td style="padding:8px 12px; border-bottom:1px solid #eee;">가방</td><td style="padding:8px 12px; border-bottom:1px solid #eee;"><input type="text" class="blank-input" style="min-width:100px"></td></tr>
+      <tr><td style="padding:8px 12px; border-bottom:1px solid #eee;">전화</td><td style="padding:8px 12px; border-bottom:1px solid #eee;"><input type="text" class="blank-input" style="min-width:100px"></td></tr>
+      <tr><td style="padding:8px 12px; border-bottom:1px solid #eee;">시계</td><td style="padding:8px 12px; border-bottom:1px solid #eee;"><input type="text" class="blank-input" style="min-width:100px"></td></tr>
+      <tr><td style="padding:8px 12px; border-bottom:1px solid #eee;">열쇠</td><td style="padding:8px 12px; border-bottom:1px solid #eee;"><input type="text" class="blank-input" style="min-width:100px"></td></tr>
+    </tbody>
+  </table>
 
   <hr class="separator">
 
@@ -831,33 +905,195 @@
   </div>
 </div>
 
-<!-- MISSION COMPLETE -->
-<div class="page" id="p10">
-  <h1><ruby>ミッション<rt>misshon</rt></ruby><ruby>かんりょう<rt>kanryō</rt></ruby>！</h1>
-  <h2>Mission Complete!</h2>
+<!-- BONUS 2: TRANSLATE (NO HINTS) -->
+<div class="page" id="p12">
+  <h1>보너스 2: 번역 — 힌트 없음!</h1>
+  <h2><span class="en" style="font-size:14px">(시간이 없으면 건너뛰세요!)</span></h2>
 
-  <div class="ts">
-    <div class="ts-jp">「きょうはとてもじょうずでした！すごい！いっしょにチェックしましょう。」</div>
-    <div class="ts-en">오늘 정말 잘했어요! 대단해요! 같이 체크합시다.</div>
+  <div class="tg">
+    <div class="tg-en">힌트 없이 일본어로 번역할 수 있을까요? 해봐요!</div>
+    <div class="tg-jp">「ヒントなしでにほんごにできるかな？やってみよう！」</div>
+  </div>
+
+  <div class="section">
+    <p><strong>1.</strong> 펜은 어디에 있어요?</p>
+    <input type="text" class="blank-input-full">
+  </div>
+
+  <div class="section">
+    <p><strong>2.</strong> 책은 여기에 있어요.</p>
+    <input type="text" class="blank-input-full">
+  </div>
+
+  <div class="section">
+    <p><strong>3.</strong> 가방은 어디에 있어요?</p>
+    <input type="text" class="blank-input-full">
+  </div>
+
+  <div class="section">
+    <p><strong>4.</strong> 시계는 저기에 있어요.</p>
+    <input type="text" class="blank-input-full">
+  </div>
+
+  <div class="section">
+    <p><strong>5.</strong> 전화는 어디에 있어요?</p>
+    <input type="text" class="blank-input-full">
+  </div>
+
+  <div class="section">
+    <p><strong>6.</strong> 노트는 거기에 있어요.</p>
+    <input type="text" class="blank-input-full">
+  </div>
+</div>
+
+<!-- BONUS 3: TODAY'S CHARACTER -->
+<div class="page" id="p13">
+  <h1>보너스 3: 오늘의 글자</h1>
+  <h2><span class="en" style="font-size:14px">(시간이 없으면 건너뛰세요!)</span></h2>
+
+  <div class="tg">
+    <div class="tg-en">오늘 글자 하나 배워봐요!</div>
+    <div class="tg-jp">「きょうはひとつ、もじをおぼえましょう！」</div>
+  </div>
+
+  <div class="box" style="text-align:center; padding:24px">
+    <span style="font-size:56px; letter-spacing:40px"><ruby>か<rt style="font-size:14px">hiragana</rt></ruby>&nbsp;&nbsp;<ruby>カ<rt style="font-size:14px">katakana</rt></ruby></span><br>
+    <span style="font-size:18px; color:#888; margin-top:8px; display:inline-block">소리: <strong>ka</strong></span>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <p><strong>1. 인식 — "ka"는 어느 것?</strong></p>
+    <div class="tg">
+      <div class="tg-en">か 찾을 수 있어요? 손가락으로 가리켜봐요!</div>
+      <div class="tg-jp">「か はどれですか？ゆびでさしてね！」</div>
+    </div>
+    <div style="margin:12px 0 12px 20px">
+      <p style="margin-bottom:8px">"ka"는 어느 것?</p>
+      <div style="display:flex; gap:12px; margin-bottom:16px">
+        <button class="match-btn" onclick="checkMatch(this,'wrong')" style="font-size:24px; padding:12px 24px">き</button>
+        <button class="match-btn" onclick="checkMatch(this,'correct')" style="font-size:24px; padding:12px 24px">か</button>
+        <button class="match-btn" onclick="checkMatch(this,'wrong')" style="font-size:24px; padding:12px 24px">さ</button>
+      </div>
+      <p style="margin-bottom:8px">"ka"는 어느 것?</p>
+      <div style="display:flex; gap:12px">
+        <button class="match-btn" onclick="checkMatch(this,'wrong')" style="font-size:24px; padding:12px 24px">ク</button>
+        <button class="match-btn" onclick="checkMatch(this,'wrong')" style="font-size:24px; padding:12px 24px">キ</button>
+        <button class="match-btn" onclick="checkMatch(this,'correct')" style="font-size:24px; padding:12px 24px">カ</button>
+      </div>
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <p><strong>2. 읽기 — 로마자 없이 이 단어를 읽어보세요!</strong></p>
+    <div class="tg">
+      <div class="tg-en">로마자 없이 읽을 수 있어요? か 찾아봐요!</div>
+      <div class="tg-jp">「よめるかな？か をみつけてね！」</div>
+    </div>
+    <div style="margin:12px 0 12px 20px; line-height:2.6">
+      <div style="font-size:36px; margin-bottom:8px">かばん <span class="en" style="font-size:16px; margin-left:24px">가방</span></div>
+      <div style="font-size:36px; margin-bottom:8px">かぎ <span class="en" style="font-size:16px; margin-left:24px">열쇠</span></div>
+      <div style="font-size:36px; margin-bottom:8px">どこですか？ <span class="en" style="font-size:16px; margin-left:24px">___은/는 어디에 있어요?</span></div>
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <p><strong>3. 쓰기 — 빠진 か / カ 를 채워보세요!</strong></p>
+    <div class="tg">
+      <div class="tg-en">빠진 글자 써서 단어를 완성해봐요!</div>
+      <div class="tg-jp">「か をかいて、ことばをかんせいさせてね！」</div>
+    </div>
+    <p style="margin:12px 0 12px; font-size:16px; color:#888">히라가나 か:</p>
+
+    <div style="margin:12px 0 12px 20px">
+      <p style="font-size:14px; color:#888; margin-bottom:4px">kagi (열쇠)</p>
+      <div style="display:inline-flex; border:2px solid #ccc; border-radius:4px; overflow:hidden; margin-bottom:16px">
+        <div style="width:160px; height:160px; border-right:1px dashed #ddd; background:repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.015) 10px, rgba(0,0,0,0.015) 20px)"></div>
+        <div style="width:160px; height:160px; display:flex; align-items:center; justify-content:center; font-size:96px"><ruby>ぎ<rt style="font-size:20px">gi</rt></ruby></div>
+      </div>
+    </div>
+
+    <div style="margin:0 0 12px 20px">
+      <p style="font-size:14px; color:#888; margin-bottom:4px">kaban (가방)</p>
+      <div style="display:inline-flex; border:2px solid #ccc; border-radius:4px; overflow:hidden; margin-bottom:16px">
+        <div style="width:160px; height:160px; border-right:1px dashed #ddd; background:repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.015) 10px, rgba(0,0,0,0.015) 20px)"></div>
+        <div style="width:160px; height:160px; display:flex; align-items:center; justify-content:center; font-size:96px; border-right:1px dashed #ddd"><ruby>ば<rt style="font-size:20px">ba</rt></ruby></div>
+        <div style="width:160px; height:160px; display:flex; align-items:center; justify-content:center; font-size:96px"><ruby>ん<rt style="font-size:20px">n</rt></ruby></div>
+      </div>
+    </div>
+
+    <div style="margin:0 0 12px 20px">
+      <p style="font-size:14px; color:#888; margin-bottom:4px">sakana (물고기)</p>
+      <div style="display:inline-flex; border:2px solid #ccc; border-radius:4px; overflow:hidden; margin-bottom:16px">
+        <div style="width:160px; height:160px; display:flex; align-items:center; justify-content:center; font-size:96px; border-right:1px dashed #ddd"><ruby>さ<rt style="font-size:20px">sa</rt></ruby></div>
+        <div style="width:160px; height:160px; border-right:1px dashed #ddd; background:repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.015) 10px, rgba(0,0,0,0.015) 20px)"></div>
+        <div style="width:160px; height:160px; display:flex; align-items:center; justify-content:center; font-size:96px"><ruby>な<rt style="font-size:20px">na</rt></ruby></div>
+      </div>
+    </div>
+
+    <p style="margin:24px 0 12px; font-size:16px; color:#888">가타카나 カ:</p>
+
+    <div style="margin:12px 0 12px 20px">
+      <p style="font-size:14px; color:#888; margin-bottom:4px">kamera (카메라)</p>
+      <div style="display:inline-flex; border:2px solid #ccc; border-radius:4px; overflow:hidden; margin-bottom:16px">
+        <div style="width:160px; height:160px; border-right:1px dashed #ddd; background:repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.015) 10px, rgba(0,0,0,0.015) 20px)"></div>
+        <div style="width:160px; height:160px; display:flex; align-items:center; justify-content:center; font-size:96px; border-right:1px dashed #ddd"><ruby>メ<rt style="font-size:20px">me</rt></ruby></div>
+        <div style="width:160px; height:160px; display:flex; align-items:center; justify-content:center; font-size:96px"><ruby>ラ<rt style="font-size:20px">ra</rt></ruby></div>
+      </div>
+    </div>
+
+    <div style="margin:0 0 12px 20px">
+      <p style="font-size:14px; color:#888; margin-bottom:4px">karee (카레)</p>
+      <div style="display:inline-flex; border:2px solid #ccc; border-radius:4px; overflow:hidden; margin-bottom:16px">
+        <div style="width:160px; height:160px; border-right:1px dashed #ddd; background:repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.015) 10px, rgba(0,0,0,0.015) 20px)"></div>
+        <div style="width:160px; height:160px; display:flex; align-items:center; justify-content:center; font-size:96px; border-right:1px dashed #ddd"><ruby>レ<rt style="font-size:20px">re</rt></ruby></div>
+        <div style="width:160px; height:160px; display:flex; align-items:center; justify-content:center; font-size:96px"><ruby>ー<rt style="font-size:20px">&nbsp;</rt></ruby></div>
+      </div>
+    </div>
+
+    <div style="margin:0 0 12px 20px">
+      <p style="font-size:14px; color:#888; margin-bottom:4px">kaado (카드)</p>
+      <div style="display:inline-flex; border:2px solid #ccc; border-radius:4px; overflow:hidden; margin-bottom:16px">
+        <div style="width:160px; height:160px; border-right:1px dashed #ddd; background:repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.015) 10px, rgba(0,0,0,0.015) 20px)"></div>
+        <div style="width:160px; height:160px; display:flex; align-items:center; justify-content:center; font-size:96px; border-right:1px dashed #ddd"><ruby>ー<rt style="font-size:20px">&nbsp;</rt></ruby></div>
+        <div style="width:160px; height:160px; display:flex; align-items:center; justify-content:center; font-size:96px"><ruby>ド<rt style="font-size:20px">do</rt></ruby></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MISSION COMPLETE -->
+<div class="page" id="p14">
+  <h1><ruby>ミッション<rt>misshon</rt></ruby><ruby>かんりょう<rt>kanryō</rt></ruby>！</h1>
+  <h2>미션 완료!</h2>
+
+  <div class="tg">
+    <div class="tg-en">오늘 정말 잘했어요! 대단해요! 같이 체크해봐요!</div>
+    <div class="tg-jp">「きょうはとてもじょうずでした！すごい！いっしょにチェックしましょう。」</div>
   </div>
   <div class="box" style="padding:24px 28px">
     <p style="margin-bottom:16px; font-size:17px"><strong><ruby>きょう<rt>kyō</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>ミッション<rt>misshon</rt></ruby>:</strong></p>
 
     <div class="check-item" style="font-size:18px; margin:20px 0">
       <span class="check">&nbsp;</span>
-      <strong>PATTERN 1:</strong> ＿＿<ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？
+      <strong>패턴 1:</strong> ＿＿<ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？
     </div>
 
     <div class="check-item" style="font-size:18px; margin:20px 0">
       <span class="check">&nbsp;</span>
-      <strong>PATTERN 2:</strong> ＿＿<ruby>は<rt>wa</rt></ruby><ruby>ここ<rt>koko</rt></ruby>/<ruby>そこ<rt>soko</rt></ruby>/<ruby>あそこ<rt>asoko</rt></ruby><ruby>です<rt>desu</rt></ruby>。
+      <strong>패턴 2:</strong> ＿＿<ruby>は<rt>wa</rt></ruby><ruby>ここ<rt>koko</rt></ruby>/<ruby>そこ<rt>soko</rt></ruby>/<ruby>あそこ<rt>asoko</rt></ruby><ruby>です<rt>desu</rt></ruby>。
     </div>
   </div>
 
   <div class="section" style="margin-top:28px">
-    <div class="ts">
-      <div class="ts-jp">「さいごにもういちどよみましょう。かんぺき！つぎのレッスンであいましょう！」</div>
-      <div class="ts-en">한 번 더 읽어봅시다. 완벽해요! 다음 레슨에서 만나요!</div>
+    <div class="tg">
+      <div class="tg-en">한 번 더 읽어봐요! 완벽해요! 다음 수업에서 만나요!</div>
+      <div class="tg-jp">「さいごにもういちどよみましょう。かんぺき！つぎのレッスンであいましょう！」</div>
     </div>
     <p><strong>핵심 표현</strong> — <ruby>もういちど<rt>mō ichido</rt></ruby><ruby>よんで<rt>yonde</rt></ruby><ruby>みましょう<rt>mimashō</rt></ruby>！</p>
     <div class="pattern">
@@ -892,9 +1128,9 @@
 <div id="textLayer"></div>
 
 <nav class="nav">
-  <button id="prev" onclick="go(-1)" disabled>&larr; Back</button>
-  <span id="indicator">1 / 11</span>
-  <button id="next" onclick="go(1)">Next &rarr;</button>
+  <button id="prev" onclick="go(-1)" disabled>&larr; 이전</button>
+  <span id="indicator">1 / 15</span>
+  <button id="next" onclick="go(1)">다음 &rarr;</button>
   <span style="border-left:1px solid #ddd; height:20px; margin:0 4px"></span>
   <button id="btnDraw" onclick="setMode('draw')" style="padding:8px 14px">&#9998; Draw</button>
   <button id="btnErase" onclick="setMode('erase')" style="padding:8px 14px">&#9003; Erase</button>
@@ -990,6 +1226,18 @@
 </style>
 
 <script>
+// Character recognition buttons
+function checkMatch(btn, result) {
+  var siblings = btn.parentElement.querySelectorAll('.match-btn');
+  if (result === 'correct') {
+    siblings.forEach(function(b) { b.disabled = true; b.classList.remove('wrong'); });
+    btn.classList.add('correct');
+  } else {
+    btn.classList.add('wrong');
+    setTimeout(function() { btn.classList.remove('wrong'); }, 600);
+  }
+}
+
 // Hanamaru checkbox toggle
 function makeHanamaruPath() {
   var cx=36, cy=36, R=14, pR=28, N=10, d='';
@@ -1037,7 +1285,7 @@ document.addEventListener('input', function(e) {
   }
 });
 
-const pages = ['p0','p1','p2','p3','p4','p5','p6','p7','p8','p9','p10'];
+const pages = ['p0','p1','p2','p3','p4','p5','p6','p7','p8','p9','p10','p11','p12','p13','p14'];
 let cur = 0;
 
 function go(dir) {
