@@ -915,7 +915,7 @@
 <!-- Chat panel -->
 <div id="chatPanel">
   <div id="chatHeader">
-    <h4 style="margin:0;">Chat <span style="font-weight:normal; color:#999; font-size:12px;">EN ↔ JP auto-translate</span></h4>
+    <h4 style="margin:0;">Chat <span style="font-weight:normal; color:#999; font-size:12px;">KO ↔ JP auto-translate</span></h4>
     <button id="chatClose">&times;</button>
   </div>
   <div id="chatKeyBar">
@@ -2233,10 +2233,13 @@ document.getElementById('finishBtn').addEventListener('click', function() {
     toastTimer = setTimeout(function() { toast.classList.remove('show'); }, 4000);
   }
 
-  // Auto-detect language: Japanese ↔ English
+  // Auto-detect language: Japanese ↔ Korean
   function detectLang(text) {
-    var jpChars = (text.match(/[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF]/g) || []).length;
-    return jpChars > text.length * 0.15 ? 'ja' : 'en';
+    var jpChars = (text.match(/[\u3040-\u309F\u30A0-\u30FF]/g) || []).length; // hiragana + katakana only
+    var koChars = (text.match(/[\uAC00-\uD7AF\u1100-\u11FF\u3130-\u318F]/g) || []).length; // hangul
+    if (jpChars > koChars) return 'ja';
+    if (koChars > jpChars) return 'ko';
+    return koChars > 0 ? 'ko' : 'ja';
   }
 
   var GEMINI_MODELS = ['gemini-3-flash-preview', 'gemini-2.5-flash'];
@@ -2244,8 +2247,8 @@ document.getElementById('finishBtn').addEventListener('click', function() {
   async function translateWithGemini(text) {
     if (!GEMINI_API_KEY) return null;
     var lang = detectLang(text);
-    var sourceLang = lang === 'ja' ? 'Japanese' : 'English';
-    var targetLang = lang === 'ja' ? 'English' : 'Japanese';
+    var sourceLang = lang === 'ja' ? 'Japanese' : 'Korean';
+    var targetLang = lang === 'ja' ? 'Korean' : 'Japanese';
 
     for (var i = 0; i < GEMINI_MODELS.length; i++) {
       try {
