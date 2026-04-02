@@ -848,6 +848,8 @@
 
 <!-- Drawing/Typing overlay canvas -->
 <canvas id="drawCanvas"></canvas>
+<!-- Laser pointer canvas (fading trails) -->
+<canvas id="laserCanvas"></canvas>
 <!-- Text annotations container -->
 <div id="textLayer"></div>
 
@@ -875,6 +877,7 @@
 
 <style>
   #drawCanvas { position: absolute; top: 0; left: 0; z-index: 100; pointer-events: none; }
+  #laserCanvas { position: absolute; top: 0; left: 0; z-index: 99; pointer-events: none; }
   #drawCanvas.active { pointer-events: auto; cursor: crosshair; }
   #drawCanvas.erase { cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><circle cx="20" cy="20" r="19" fill="none" stroke="%23999" stroke-width="1.5"/></svg>') 20 20, auto; }
   #textLayer { position: absolute; top: 0; left: 0; width: 100%; min-height: 100vh; pointer-events: none; z-index: 101; }
@@ -1038,6 +1041,48 @@ function loadAnnotations() {
   }
 }
 
+// Laser pointer
+const laserCanvas = document.getElementById('laserCanvas');
+const laserCtx = laserCanvas.getContext('2d');
+let lasering = false;
+let laserLastX = 0, laserLastY = 0;
+let laserFadeTimer = null;
+let laserFadeRAF = null;
+
+function fadeOutLaser() {
+  clearTimeout(laserFadeTimer);
+  laserFadeTimer = setTimeout(function() {
+    cancelAnimationFrame(laserFadeRAF);
+    var fadeCount = 0;
+    (function fade() {
+      laserCtx.globalCompositeOperation = 'destination-out';
+      laserCtx.fillStyle = 'rgba(0,0,0,0.06)';
+      laserCtx.fillRect(0, 0, laserCanvas.width, laserCanvas.height);
+      laserCtx.globalCompositeOperation = 'source-over';
+      fadeCount++;
+      if (fadeCount < 60) {
+        laserFadeRAF = requestAnimationFrame(fade);
+      } else {
+        laserCtx.clearRect(0, 0, laserCanvas.width, laserCanvas.height);
+      }
+    })();
+  }, 500);
+}
+
+function drawLaserSegment(x1, y1, x2, y2) {
+  laserCtx.beginPath();
+  laserCtx.moveTo(x1, y1);
+  laserCtx.lineTo(x2, y2);
+  laserCtx.strokeStyle = 'rgba(255, 50, 50, 0.8)';
+  laserCtx.lineWidth = 3;
+  laserCtx.lineCap = 'round';
+  laserCtx.lineJoin = 'round';
+  laserCtx.shadowColor = 'rgba(255, 0, 0, 0.6)';
+  laserCtx.shadowBlur = 8;
+  laserCtx.stroke();
+  laserCtx.shadowBlur = 0;
+}
+
 function resizeCanvas() {
   const h = Math.max(document.documentElement.scrollHeight, window.innerHeight);
   const w = document.documentElement.scrollWidth;
@@ -1051,6 +1096,9 @@ function resizeCanvas() {
   const img = new Image();
   img.onload = () => ctx.drawImage(img, 0, 0);
   img.src = tmp;
+  // Resize laser canvas
+  laserCanvas.width = w;
+  laserCanvas.height = h;
   // Match text layer size
   textLayer.style.height = h + 'px';
 }
@@ -1231,6 +1279,55 @@ canvas.addEventListener('touchmove', e => {
 }, { passive: false });
 
 canvas.addEventListener('touchend', () => { drawing = false; saveAnnotations(); });
+
+// Laser pointer events (active when no mode is selected)
+document.addEventListener('mousedown', function(e) {
+  if (mode || e.target.closest('.nav') || e.target.closest('#clearMenu') || e.target.closest('.anno-wrap') || e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'BUTTON' || e.target.tagName === 'A') return;
+  lasering = true;
+  laserLastX = e.pageX;
+  laserLastY = e.pageY;
+  clearTimeout(laserFadeTimer);
+  cancelAnimationFrame(laserFadeRAF);
+  if (window.syncSend) window.syncSend({ t: 'laserstart', rx: e.pageX / (laserCanvas.width || 1), ry: e.pageY / (laserCanvas.height || 1) });
+});
+document.addEventListener('mousemove', function(e) {
+  if (!lasering) return;
+  drawLaserSegment(laserLastX, laserLastY, e.pageX, e.pageY);
+  if (window.syncSend) window.syncSend({ t: 'lasermove', rx: e.pageX / (laserCanvas.width || 1), ry: e.pageY / (laserCanvas.height || 1) });
+  laserLastX = e.pageX;
+  laserLastY = e.pageY;
+});
+document.addEventListener('mouseup', function() {
+  if (!lasering) return;
+  lasering = false;
+  fadeOutLaser();
+  if (window.syncSend) window.syncSend({ t: 'laserend' });
+});
+// Touch laser
+document.addEventListener('touchstart', function(e) {
+  if (mode || e.target.closest('.nav') || e.target.closest('#clearMenu') || e.target.closest('.anno-wrap') || e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'BUTTON' || e.target.tagName === 'A') return;
+  lasering = true;
+  var t = e.touches[0];
+  laserLastX = t.pageX;
+  laserLastY = t.pageY;
+  clearTimeout(laserFadeTimer);
+  cancelAnimationFrame(laserFadeRAF);
+  if (window.syncSend) window.syncSend({ t: 'laserstart', rx: t.pageX / (laserCanvas.width || 1), ry: t.pageY / (laserCanvas.height || 1) });
+});
+document.addEventListener('touchmove', function(e) {
+  if (!lasering) return;
+  var t = e.touches[0];
+  drawLaserSegment(laserLastX, laserLastY, t.pageX, t.pageY);
+  if (window.syncSend) window.syncSend({ t: 'lasermove', rx: t.pageX / (laserCanvas.width || 1), ry: t.pageY / (laserCanvas.height || 1) });
+  laserLastX = t.pageX;
+  laserLastY = t.pageY;
+});
+document.addEventListener('touchend', function() {
+  if (!lasering) return;
+  lasering = false;
+  fadeOutLaser();
+  if (window.syncSend) window.syncSend({ t: 'laserend' });
+});
 
 // Text layer click — only create if no annotation is currently focused
 let activeAnnotation = null;
@@ -1890,6 +1987,31 @@ document.getElementById('finishBtn').addEventListener('click', function() {
           clearTimeout(cursorHideTimer);
           cursorHideTimer = setTimeout(function() { remoteCursor.style.display = 'none'; }, 3000);
         }
+        break;
+
+      case 'laserstart':
+        var rlc = document.getElementById('laserCanvas');
+        if (rlc) {
+          window._remoteLaserX = msg.rx * rlc.width;
+          window._remoteLaserY = msg.ry * rlc.height;
+          clearTimeout(laserFadeTimer);
+          cancelAnimationFrame(laserFadeRAF);
+        }
+        break;
+
+      case 'lasermove':
+        var rlc2 = document.getElementById('laserCanvas');
+        if (rlc2) {
+          var nx = msg.rx * rlc2.width;
+          var ny = msg.ry * rlc2.height;
+          drawLaserSegment(window._remoteLaserX || nx, window._remoteLaserY || ny, nx, ny);
+          window._remoteLaserX = nx;
+          window._remoteLaserY = ny;
+        }
+        break;
+
+      case 'laserend':
+        fadeOutLaser();
         break;
 
       case 'match':
