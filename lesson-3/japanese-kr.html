@@ -652,7 +652,7 @@
       <div class="turn">
         <div class="spk">Tutor:</div>
         <div class="pair">
-          <div class="jp"><em class="en" style="font-size:13px">(자연스럽게 답합니다)</em></div>
+          <div class="jp"><input type="text" class="blank-input" style="min-width:280px"></div>
         </div>
       </div>
     </div>
@@ -694,7 +694,7 @@
       <div class="turn">
         <div class="spk">Tutor:</div>
         <div class="pair">
-          <div class="jp"><em class="en" style="font-size:13px">(자연스럽게 답합니다)</em></div>
+          <div class="jp"><input type="text" class="blank-input" style="min-width:280px"></div>
         </div>
       </div>
     </div>
@@ -731,6 +731,10 @@
     ＿＿<ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？ &nbsp; <span class="en">___은/는 어디에 있어요?</span><br>
     <strong>WORDS</strong><br>
     <ruby>ペン<rt>pen</rt></ruby>(펜) &nbsp; <ruby>ノート<rt>nōto</rt></ruby>(노트) &nbsp; <ruby>かばん<rt>kaban</rt></ruby>(가방)
+  </div>
+
+  <div style="margin-top:32px">
+    <input type="text" class="blank-input-full" placeholder="">
   </div>
 </div>
 
@@ -853,10 +857,15 @@
   <button id="next" onclick="go(1)">Next &rarr;</button>
   <span style="border-left:1px solid #ddd; height:20px; margin:0 4px"></span>
   <button id="btnDraw" onclick="setMode('draw')" style="padding:8px 14px">&#9998; Draw</button>
-  <button id="btnType" onclick="setMode('type')" style="padding:8px 14px">T Type</button>
   <button id="btnErase" onclick="setMode('erase')" style="padding:8px 14px">&#9003; Erase</button>
-  <button id="btnClear" onclick="clearPage()" style="padding:8px 14px; color:#c33">&#10005; Clear</button>
+  <button id="btnClear" onclick="clearPage()" style="padding:8px 14px; color:#c33">&#10005; Clear Page</button>
+  <button id="btnClearAll" onclick="clearAll()" style="padding:8px 14px; color:#c33">&#10005; Clear All</button>
 </nav>
+
+<!-- Remote cursor -->
+<div id="remoteCursor" style="display:none; position:absolute; z-index:300; pointer-events:none;">
+  <svg width="20" height="20" viewBox="0 0 20 20"><polygon points="0,0 0,16 4.5,12.5 8,19 10,18 6.5,11 12,11" fill="#4a90d9" stroke="#fff" stroke-width="1"/></svg>
+</div>
 
 <style>
   #drawCanvas { position: absolute; top: 0; left: 0; z-index: 100; pointer-events: none; }
@@ -1058,10 +1067,33 @@ function setMode(m) {
 }
 
 function clearPage() {
-  if (!confirm('Clear all annotations on this page?')) return;
+  if (!confirm('Clear everything on this page?')) return;
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   textLayer.innerHTML = '';
   saveAnnotations();
+  var pg = document.getElementById(pages[cur]);
+  if (pg) {
+    pg.querySelectorAll('.blank-input, .blank-input-full').forEach(function(inp) { inp.value = ''; });
+    pg.querySelectorAll('.check.done').forEach(function(c) { c.classList.remove('done'); c.innerHTML = '&nbsp;'; });
+    pg.querySelectorAll('.match-game').forEach(function(g) { if (g._reset) g._reset(); });
+  }
+  if (typeof send === 'function') send({ t: 'clear' });
+}
+
+function clearAll() {
+  if (!confirm('Clear ALL annotations, drawings, and text inputs from every page?')) return;
+  // Clear current canvas and text annotations
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  textLayer.innerHTML = '';
+  // Clear all stored annotations
+  localStorage.removeItem(STORAGE_KEY);
+  // Clear all text inputs
+  document.querySelectorAll('.blank-input, .blank-input-full').forEach(function(inp) { inp.value = ''; });
+  // Reset all checkboxes
+  document.querySelectorAll('.check.done').forEach(function(c) { c.classList.remove('done'); c.innerHTML = '&nbsp;'; });
+  // Reset matching games
+  document.querySelectorAll('.match-game').forEach(function(g) { if (g._reset) g._reset(); });
+  if (typeof send === 'function') send({ t: 'clearall' });
 }
 
 function createTextAt(x, y, text) {
@@ -1665,12 +1697,12 @@ document.getElementById('finishBtn').addEventListener('click', function() {
   if (drawCanvas) {
     drawCanvas.addEventListener('mousedown', function(e) {
       if (!syncing && (mode === 'draw' || mode === 'erase')) {
-        send({ t: 'drawstart', x: e.pageX, y: e.pageY, erase: mode === 'erase' });
+        send({ t: 'drawstart', rx: e.pageX / drawCanvas.width, ry: e.pageY / drawCanvas.height, erase: mode === 'erase' });
       }
     });
     drawCanvas.addEventListener('mousemove', function(e) {
       if (!syncing && drawing) {
-        send({ t: 'drawmove', x: e.pageX, y: e.pageY });
+        send({ t: 'drawmove', rx: e.pageX / drawCanvas.width, ry: e.pageY / drawCanvas.height });
       }
     });
     drawCanvas.addEventListener('mouseup', function() {
@@ -1680,13 +1712,13 @@ document.getElementById('finishBtn').addEventListener('click', function() {
     drawCanvas.addEventListener('touchstart', function(e) {
       if (!syncing && (mode === 'draw' || mode === 'erase')) {
         var t = e.touches[0];
-        send({ t: 'drawstart', x: t.pageX, y: t.pageY, erase: mode === 'erase' });
+        send({ t: 'drawstart', rx: t.pageX / drawCanvas.width, ry: t.pageY / drawCanvas.height, erase: mode === 'erase' });
       }
     });
     drawCanvas.addEventListener('touchmove', function(e) {
       if (!syncing && drawing) {
         var t = e.touches[0];
-        send({ t: 'drawmove', x: t.pageX, y: t.pageY });
+        send({ t: 'drawmove', rx: t.pageX / drawCanvas.width, ry: t.pageY / drawCanvas.height });
       }
     });
     drawCanvas.addEventListener('touchend', function() {
@@ -1707,6 +1739,18 @@ document.getElementById('finishBtn').addEventListener('click', function() {
         }
       }, 50);
     });
+  });
+
+  // --- Cursor tracking (throttled to ~30fps) ---
+  var remoteCursor = document.getElementById('remoteCursor');
+  var cursorHideTimer = null;
+  var lastCursorSend = 0;
+  document.addEventListener('mousemove', function(e) {
+    if (syncing) return;
+    var now = Date.now();
+    if (now - lastCursorSend < 33) return;
+    lastCursorSend = now;
+    send({ t: 'cursor', rx: e.pageX / (document.documentElement.scrollWidth || 1), ry: e.pageY / (Math.max(document.documentElement.scrollHeight, window.innerHeight) || 1) });
   });
 
   // --- Apply remote events ---
@@ -1757,11 +1801,23 @@ document.getElementById('finishBtn').addEventListener('click', function() {
         if (finishBtn) finishBtn.click();
         break;
 
+      case 'clear':
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        textLayer.innerHTML = '';
+        saveAnnotations();
+        var cpg = document.getElementById(pages[cur]);
+        if (cpg) {
+          cpg.querySelectorAll('.blank-input, .blank-input-full').forEach(function(inp) { inp.value = ''; });
+          cpg.querySelectorAll('.check.done').forEach(function(c) { c.classList.remove('done'); c.innerHTML = '&nbsp;'; });
+          cpg.querySelectorAll('.match-game').forEach(function(g) { if (g._reset) g._reset(); });
+        }
+        break;
+
       case 'drawstart':
         if (!drawCtx) break;
         remoteDrawing = true;
-        remoteLastX = msg.x;
-        remoteLastY = msg.y;
+        remoteLastX = msg.rx * drawCanvas.width;
+        remoteLastY = msg.ry * drawCanvas.height;
         if (msg.erase) {
           drawCtx.globalCompositeOperation = 'destination-out';
           drawCtx.lineWidth = 20;
@@ -1774,17 +1830,40 @@ document.getElementById('finishBtn').addEventListener('click', function() {
 
       case 'drawmove':
         if (!drawCtx || !remoteDrawing) break;
+        var localX = msg.rx * drawCanvas.width;
+        var localY = msg.ry * drawCanvas.height;
         drawCtx.beginPath();
         drawCtx.moveTo(remoteLastX, remoteLastY);
-        drawCtx.lineTo(msg.x, msg.y);
+        drawCtx.lineTo(localX, localY);
         drawCtx.stroke();
-        remoteLastX = msg.x;
-        remoteLastY = msg.y;
+        remoteLastX = localX;
+        remoteLastY = localY;
         break;
 
       case 'drawend':
         remoteDrawing = false;
         saveAnnotations();
+        break;
+
+      case 'clearall':
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        textLayer.innerHTML = '';
+        localStorage.removeItem(STORAGE_KEY);
+        document.querySelectorAll('.blank-input, .blank-input-full').forEach(function(inp) { inp.value = ''; });
+        document.querySelectorAll('.check.done').forEach(function(c) { c.classList.remove('done'); c.innerHTML = '&nbsp;'; });
+        document.querySelectorAll('.match-game').forEach(function(g) { if (g._reset) g._reset(); });
+        break;
+
+      case 'cursor':
+        if (remoteCursor) {
+          var cx = msg.rx * (document.documentElement.scrollWidth || 1);
+          var cy = msg.ry * (Math.max(document.documentElement.scrollHeight, window.innerHeight) || 1);
+          remoteCursor.style.left = cx + 'px';
+          remoteCursor.style.top = cy + 'px';
+          remoteCursor.style.display = 'block';
+          clearTimeout(cursorHideTimer);
+          cursorHideTimer = setTimeout(function() { remoteCursor.style.display = 'none'; }, 3000);
+        }
         break;
 
       case 'match':
