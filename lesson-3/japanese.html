@@ -869,7 +869,7 @@
 </nav>
 
 <!-- Remote cursor -->
-<div id="remoteCursor" style="display:none; position:absolute; z-index:300; pointer-events:none;">
+<div id="remoteCursor" style="display:none; position:absolute; z-index:300; pointer-events:none; transition:left 80ms linear, top 80ms linear;">
   <svg width="20" height="20" viewBox="0 0 20 20"><polygon points="0,0 0,16 4.5,12.5 8,19 10,18 6.5,11 12,11" fill="#4a90d9" stroke="#fff" stroke-width="1"/></svg>
   <span id="remoteCursorName" style="position:absolute; left:18px; top:14px; background:#4a90d9; color:#fff; font-family:monospace; font-size:11px; padding:2px 6px; border-radius:3px; white-space:nowrap;"></span>
 </div>
@@ -1774,7 +1774,7 @@ document.getElementById('finishBtn').addEventListener('click', function() {
   document.addEventListener('mousemove', function(e) {
     if (syncing) return;
     var now = Date.now();
-    if (now - lastCursorSend < 33) return;
+    if (now - lastCursorSend < 16) return;
     lastCursorSend = now;
     send({ t: 'cursor', rx: e.pageX / (document.documentElement.scrollWidth || 1), ry: e.pageY / (Math.max(document.documentElement.scrollHeight, window.innerHeight) || 1), name: myName });
   });
