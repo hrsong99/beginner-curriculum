@@ -12,6 +12,12 @@
 - Vocab activity added as BONUS before Mission Complete (skip if short on time)
 - Only TWO focused patterns (no あります/います — save for Lesson 4)
 
+**Page restructure (v2):**
+
+- Page 1 is greeting only — jump straight to review after hello
+- Outcome + Today's Patterns moved to Page 3 (after review, before drills)
+- Tutor scripts embedded inline with each activity (English first, Japanese below)
+
 **Styling conventions (HTML implementation):**
 
 - Warm romaji color (#c4b8a8) used for furigana `<rt>` text
@@ -24,30 +30,34 @@
 - Interactive hanamaru (花丸) drawn on checkbox click via SVG animation — flower petals + spiral drawn with stroke-dashoffset animation
 - Page 1 intro lines ①②③ are plain hiragana (no furigana)
 - Roleplay HINTS box merges PHRASES and WORDS into one `.help-box`
+- Tutor script notation: `▸ "English text" ／ 「にほんご」` — embedded at point of use
 
-## Lesson Flow (10 Core + 1 Bonus Page)
-
-
-| Page | Activity                     | Time  | Notes                       |
-| ---- | ---------------------------- | ----- | --------------------------- |
-| 1    | Title & Pattern Intro        | 2 min |                             |
-| 2    | Review: Lesson 2 Quick Check | 3 min | Review previous lesson      |
-| 3    | Pattern Drill A (どこですか？)     | 3 min | Asking "where is ___?"      |
-| 4    | Pattern Drill B (ここ/そこ/あそこ)  | 3 min | Answering "it's here/there" |
-| 5    | Short Dialogues              | 3 min | Student asks first          |
-| 6    | Guided Conversation          | 3 min | Moved AFTER drills          |
-| 7    | Memory Conversation          | 3 min | Fill-in-the-blank of Page 6 |
-| 8    | Free Discussion              | 3 min | Open practice               |
-| 9    | Roleplay                     | 3 min | Constrained scenario        |
-| 10   | BONUS: Vocab Challenge       | 2 min | Skip if short on time       |
-| 11   | Mission Complete             | 2 min |                             |
+## Lesson Flow (11 Core + 3 Bonus Pages)
 
 
-**Core: ~28 min / With bonus: ~30 min**
+| Page | Activity                     | Time  | Notes                          |
+| ---- | ---------------------------- | ----- | ------------------------------ |
+| 1    | Greeting & Intro             | 1 min | Hello, let's start             |
+| 2    | Review: Lesson 2 Quick Check | 3 min | Review previous lesson         |
+| 3    | Today's Outcome & Patterns   | 2 min | Introduce today's focus        |
+| 4    | Pattern Drill A (どこですか？)     | 3 min | Asking "where is ___?"         |
+| 5    | Pattern Drill B (ここ/そこ/あそこ)  | 3 min | Answering "it's here/there"    |
+| 6    | Short Dialogues              | 3 min | Student asks first             |
+| 7    | Guided Conversation          | 3 min | Moved AFTER drills             |
+| 8    | Memory Conversation          | 3 min | Fill-in-the-blank of Page 7    |
+| 9    | Free Discussion              | 3 min | Open practice                  |
+| 10   | Roleplay                     | 3 min | Constrained scenario           |
+| 11   | Travel in Japan              | 3 min | Real-world application         |
+| 12   | BONUS 1: Vocab Quiz          | 2 min | Skip if short on time          |
+| 13   | BONUS 2: Translate (no hints)| 2 min | Skip if short on time          |
+| 14   | Mission Complete             | 2 min |                                |
+
+
+**Core: ~30 min / With bonus: ~34 min**
 
 ---
 
-### PAGE 1 — Title & Pattern Intro
+### PAGE 1 — Greeting & Intro
 
 
 ```
@@ -68,13 +78,79 @@
 |  ③ これをよんでください。                                                 |
 |     "Please read this."                                                 |
 |                                                                         |
+|                                                                  PAGE 1 |
++-------------------------------------------------------------------------+
+```
+
+### PAGE 2 — Review: Lesson 2 Quick Check
+
+```
++-------------------------------------------------------------------------+
+|                                                                         |
+|  ▸ "First, let's review the previous lesson."                           |
+|    「まず、まえのレッスンのふくしゅうをしましょう。」                    |
+|                                                                         |
+|  REVIEW: LESSON 2                                                       |
+|  ────────────────                                                       |
+|  Let's make sure we remember what we learned last time!                 |
+|                                                                         |
+|  1. What is this?                                                       |
+|                                                                         |
+|  Q:  これはなんですか？                                                   |
+|      What is this?                                                      |
+|                                                                         |
+|  A:  これは[_______]です。                                               |
+|                                                                         |
+|     ┌─────────────────────────────────────────────────────┐             |
+|     │  ほん(book)  ペン(pen)  ノート(notebook)             │             |
+|     └─────────────────────────────────────────────────────┘             |
+|                                                                         |
 |  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
+|                                                                         |
+|  2. Whose is that?                                                      |
+|                                                                         |
+|  Q:  それはだれのですか？                                                 |
+|      Whose is that?                                                     |
+|                                                                         |
+|  A:  それは[_____]の[_______]です。                                      |
+|                                                                         |
+|     ┌─────────────────────────────────────────────────────┐             |
+|     │  わたし(my)  せんせい(teacher)  ともだち(friend)     │             |
+|     └─────────────────────────────────────────────────────┘             |
+|                                                                         |
+|  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
+|                                                                         |
+|  3. What is that over there?                                            |
+|                                                                         |
+|  Q:  あれはなんですか？                                                   |
+|      What is that over there?                                           |
+|                                                                         |
+|  A:  あれは[_______]です。                                               |
+|                                                                         |
+|     ┌─────────────────────────────────────────────────────┐             |
+|     │  かばん(bag)  とけい(clock)  いす(chair)             │             |
+|     └─────────────────────────────────────────────────────┘             |
+|                                                                         |
+|                                                                  PAGE 2 |
++-------------------------------------------------------------------------+
+```
+
+### PAGE 3 — Today's Outcome & Patterns
+
+```
++-------------------------------------------------------------------------+
+|                                                                         |
+|  ▸ "Let's read today's goal."                                           |
+|    「きょうのもくひょうをよみましょう。」                                |
 |                                                                         |
 |  ┌─── OUTCOME / もくひょう ────────────────────────────────────┐         |
 |  │  You can ask where things are and say where they are.       │         |
 |  │  ものがどこにあるかきいたり、こたえられるようになります。      │         |
 |  └─────────────────────────────────────────────────────────────┘         |
 |                                                                         |
+|                                                                         |
+|  ▸ "Let's read together! Repeat after me."                              |
+|    「いっしょによんでみましょう！わたしのあとにリピートしてください。」  |
 |                                                                         |
 |  TODAY'S PATTERNS                                                       |
 |  ================                                                       |
@@ -93,63 +169,11 @@
 |     • [かばん]はあそこです。          [The bag] is over there.           |
 |                                        (far from both)                  |
 |                                                                         |
-|                                                                  PAGE 1 |
+|                                                                  PAGE 3 |
 +-------------------------------------------------------------------------+
 ```
 
-### PAGE 2 — Review: Lesson 2 Quick Check
-
-```
-+-------------------------------------------------------------------------+
-|                                                                         |
-|  REVIEW: LESSON 2                                                       |
-|  ────────────────                                                       |
-|                                                                         |
-|  1. What is this?                                                       |
-|                                                                         |
-|  Q:  これはなんですか？                                                   |
-|      What is this?                                                      |
-|                                                                         |
-|  A:  これは[_______]です。                                               |
-|                                                                         |
-|                                                                         |
-|     ┌─────────────────────────────────────────────────────┐             |
-|     │  ほん(book)  ペン(pen)  ノート(notebook)             │             |
-|     └─────────────────────────────────────────────────────┘             |
-|                                                                         |
-|  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
-|                                                                         |
-|  2. Whose is that?                                                      |
-|                                                                         |
-|  Q:  それはだれのですか？                                                 |
-|      Whose is that?                                                     |
-|                                                                         |
-|  A:  それは[_____]の[_______]です。                                      |
-|      (two inline input boxes inside the sentence)                       |
-|                                                                         |
-|     ┌─────────────────────────────────────────────────────┐             |
-|     │  わたし(my)  せんせい(teacher)  ともだち(friend)     │             |
-|     └─────────────────────────────────────────────────────┘             |
-|                                                                         |
-|  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
-|                                                                         |
-|  3. What is that over there?                                            |
-|                                                                         |
-|  Q:  あれはなんですか？                                                   |
-|      What is that over there?                                           |
-|                                                                         |
-|  A:  あれは[_______]です。                                               |
-|                                                                         |
-|                                                                         |
-|     ┌─────────────────────────────────────────────────────┐             |
-|     │  かばん(bag)  とけい(clock)  いす(chair)             │             |
-|     └─────────────────────────────────────────────────────┘             |
-|                                                                         |
-|                                                                  PAGE 2 |
-+-------------------------------------------------------------------------+
-```
-
-### PAGE 3 — Pattern Drill A (Asking Where)
+### PAGE 4 — Pattern Drill A (Asking Where)
 
 ```
 +-------------------------------------------------------------------------+
@@ -160,17 +184,26 @@
 |  PATTERN:  [noun]はどこですか？                                          |
 |                                                                         |
 |                                                                         |
+|  ▸ "Let's read together. Repeat after me."                              |
+|    「いっしょによみましょう。わたしのあとにリピートしてください。」      |
+|                                                                         |
 |  1. Read Together:                                                      |
 |     * 本はどこですか？                Where is the book?                 |
 |     * ペンはどこですか？              Where is the pen?                  |
 |     * かばんはどこですか？            Where is the bag?                  |
 |                                                                         |
 |                                                                         |
+|  ▸ "Fill in the blank and read the whole thing!"                        |
+|    「くうらんにことばをいれて、ぜんぶよんでみましょう！」                |
+|                                                                         |
 |  2. Fill in the Blanks:                                                 |
 |     * 本は（　　　）ですか？          Where is the book?                 |
 |     * （　　　）はどこですか？        Where is the pen?                  |
 |     * ノートは（　　　）ですか？      Where is the notebook?             |
 |                                                                         |
+|                                                                         |
+|  ▸ "Try turning the English into Japanese. You can look at the hint."   |
+|    「えいごをにほんごにしてみてください。ヒントをみてもいいですよ。」    |
 |                                                                         |
 |  3. Translate:                                                          |
 |     * Where is the phone?                                               |
@@ -182,16 +215,19 @@
 |       (clock = とけい)                                                   |
 |                                                                         |
 |                                                                         |
+|  ▸ "Try making your own sentence! Ask where something is."              |
+|    「じぶんのぶんをつくってみましょう！なにかについてきいてみてね。」    |
+|                                                                         |
 |  4. Make Your Own:                                                      |
 |     Ask where something is!                                             |
 |                                                                         |
 |     _____________________________________________________               |
 |                                                                         |
-|                                                                  PAGE 3 |
+|                                                                  PAGE 4 |
 +-------------------------------------------------------------------------+
 ```
 
-### PAGE 4 — Pattern Drill B (Answering Where)
+### PAGE 5 — Pattern Drill B (Answering Where)
 
 ```
 +-------------------------------------------------------------------------+
@@ -206,17 +242,26 @@
 |     あそこ = over there (far from both)                                 |
 |                                                                         |
 |                                                                         |
+|  ▸ "Next pattern. Let's read together."                                 |
+|    「つぎのパターンです。いっしょによみましょう。」                      |
+|                                                                         |
 |  1. Read Together:                                                      |
 |     * 本はここです。                  The book is here.                  |
 |     * ペンはそこです。                The pen is there.                  |
 |     * かばんはあそこです。            The bag is over there.             |
 |                                                                         |
 |                                                                         |
+|  ▸ "Fill in the blank and read the whole thing!"                        |
+|    「くうらんにことばをいれて、ぜんぶよんでみましょう！」                |
+|                                                                         |
 |  2. Fill in the Blanks:                                                 |
 |     * 本は（　　　）です。            The book is here.                  |
 |     * ペンは（　　　）です。          The pen is there.                  |
 |     * かばんは（　　　）です。        The bag is over there.             |
 |                                                                         |
+|                                                                         |
+|  ▸ "Try turning the English into Japanese."                             |
+|    「えいごをにほんごにしてみてください。」                              |
 |                                                                         |
 |  3. Translate:                                                          |
 |     * The phone is here.                                                |
@@ -228,22 +273,28 @@
 |       (clock = とけい / over there = あそこ)                              |
 |                                                                         |
 |                                                                         |
+|  ▸ "Try making your own! Point at something and say where it is."       |
+|    「じぶんのぶんをつくってみましょう！なにかをさしてこたえてね。」      |
+|                                                                         |
 |  4. Make Your Own:                                                      |
 |     Point at something and say where it is!                             |
 |                                                                         |
 |     _____________________________________________________               |
 |                                                                         |
-|                                                                  PAGE 4 |
+|                                                                  PAGE 5 |
 +-------------------------------------------------------------------------+
 ```
 
-### PAGE 5 — Short Dialogues
+### PAGE 6 — Short Dialogues
 
 ```
 +-------------------------------------------------------------------------+
 |                                                                         |
 |  SHORT DIALOGUES                                                        |
 |  ────────────────                                                       |
+|                                                                         |
+|  ▸ "Try asking the question in Japanese."                               |
+|    「にほんごでしつもんしてみてください。」                              |
 |                                                                         |
 |  DIALOGUE 1:                                                            |
 |  Student:  [_________________________________]                          |
@@ -257,6 +308,9 @@
 |                                                                         |
 |  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
 |                                                                         |
+|  ▸ "I'll ask the question. Answer in Japanese."                         |
+|    「わたしがしつもんします。にほんごでこたえてください。」              |
+|                                                                         |
 |  DIALOGUE 2:                                                            |
 |  Tutor:    ペンはどこですか？                                             |
 |            Where is the pen?                                            |
@@ -269,6 +323,9 @@
 |                                                                         |
 |  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
 |                                                                         |
+|  ▸ "Last one! Try asking in Japanese."                                  |
+|    「さいごです！にほんごでしつもんしてみてください。」                  |
+|                                                                         |
 |  DIALOGUE 3:                                                            |
 |  Student:  [_________________________________]                          |
 |            Where is the notebook?                                       |
@@ -279,14 +336,17 @@
 |     │  ノート(notebook)  どこ(where)            │                         |
 |     └─────────────────────────────────────────┘                         |
 |                                                                         |
-|                                                                  PAGE 5 |
+|                                                                  PAGE 6 |
 +-------------------------------------------------------------------------+
 ```
 
-### PAGE 6 — Guided Conversation
+### PAGE 7 — Guided Conversation
 
 ```
 +-------------------------------------------------------------------------+
+|                                                                         |
+|  ▸ "Let's read together. I'll be Alex, you be Yuki."                    |
+|    「いっしょによみましょう。わたしがアレックスで、あなたがゆきです。」  |
 |                                                                         |
 |  CONVERSATION: GUIDED READING                                           |
 |  ----------------------------                                           |
@@ -318,45 +378,55 @@
 |  YUKI:   ありがとう、アレックスさん！                                    |
 |          Thanks, Alex!                                                  |
 |                                                                         |
-|                                                                  PAGE 6 |
-+-------------------------------------------------------------------------+
-```
-
-### PAGE 7 — Memory Conversation
-
-```
-+-------------------------------------------------------------------------+
+|  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
 |                                                                         |
-|  CONVERSATION: SPEED & MEMORY CHECK                                     |
-|  -----------------------------------                                    |
-|                                                                         |
-|                                                                         |
-|  YUKI:   私のペンはどこですか？                                          |
-|          Where is my pen?                                               |
-|                                                                         |
-|  ALEX:   ペンは______です。                                                   |
-|          (The pen is there.)                                            |
-|                                                                         |
-|  YUKI:   あ、ありがとう！ノートはどこですか？                             |
-|          Oh, thanks! Where is the notebook?                             |
-|                                                                         |
-|  ALEX:   ノートは______です。                                                 |
-|          (The notebook is here.)                                        |
-|                                                                         |
-|  YUKI:   じゃあ、私のかばんはどこですか？                                 |
-|          Then, where is my bag?                                         |
-|                                                                         |
-|  ALEX:   かばんは______です。                                                 |
-|          (The bag is over there.)                                       |
-|                                                                         |
-|  YUKI:   ありがとう、アレックスさん！                                    |
-|          Thanks, Alex!                                                  |
+|  ▸ "Great job! Now let's swap. This time I'll be Yuki."                 |
+|    「じょうずですね！じゃあ、こうたいしましょう。                        |
+|     こんどはわたしがゆきです。」                                        |
 |                                                                         |
 |                                                                  PAGE 7 |
 +-------------------------------------------------------------------------+
 ```
 
-### PAGE 8 — Free Discussion
+### PAGE 8 — Memory Conversation
+
+```
++-------------------------------------------------------------------------+
+|                                                                         |
+|  ▸ "Same conversation, but now from memory!                             |
+|     I'll be Yuki. You're Alex — say the full sentence."                 |
+|    「おなじかいわです。こんどはおぼえていってみましょう！                |
+|     わたしがゆきです。あなたはアレックス                                |
+|     — ぜんぶのぶんをいってください。」                                  |
+|                                                                         |
+|  CONVERSATION: MEMORY CHECK                                             |
+|  --------------------------                                             |
+|  Tutor = Yuki / Student = Alex                                          |
+|                                                                         |
+|                                                                         |
+|  YUKI (tutor):   私のペンはどこですか？                                  |
+|                  Where is my pen?                                       |
+|                                                                         |
+|  ALEX (you):     ペンは______です。                                      |
+|                                                                         |
+|  YUKI (tutor):   あ、ありがとう！ノートはどこですか？                     |
+|                  Oh, thanks! Where is the notebook?                     |
+|                                                                         |
+|  ALEX (you):     ノートは______です。                                    |
+|                                                                         |
+|  YUKI (tutor):   じゃあ、私のかばんはどこですか？                         |
+|                  Then, where is my bag?                                 |
+|                                                                         |
+|  ALEX (you):     かばんは______です。                                    |
+|                                                                         |
+|  YUKI (tutor):   ありがとう、アレックスさん！                            |
+|                  Thanks, Alex!                                          |
+|                                                                         |
+|                                                                  PAGE 8 |
++-------------------------------------------------------------------------+
+```
+
+### PAGE 9 — Free Discussion
 
 ```
 +-------------------------------------------------------------------------+
@@ -364,6 +434,13 @@
 |  FREE DISCUSSION                                                        |
 |  ────────────────                                                       |
 |                                                                         |
+|  ▸ "I'll ask you a question. You answer.                                |
+|     Then ask me the same question back!"                                |
+|    「わたしがしつもんします。こたえてください。                          |
+|     そのあと、おなじしつもんをわたしにしてね！」                        |
+|                                                                         |
+|                                                                         |
+|  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
 |                                                                         |
 |  ROUND 1: WHERE IS IT?                                                  |
 |                                                                         |
@@ -401,11 +478,11 @@
 |     │  ここ(here) そこ(there) あそこ(over there)         │               |
 |     └────────────────────────────────────────────────────┘               |
 |                                                                         |
-|                                                                  PAGE 8 |
+|                                                                  PAGE 9 |
 +-------------------------------------------------------------------------+
 ```
 
-### PAGE 9 — Roleplay
+### PAGE 10 — Roleplay
 
 ```
 +-------------------------------------------------------------------------+
@@ -433,45 +510,90 @@
 |  │  ペン(pen)  ノート(notebook)  かばん(bag)                 │           |
 |  └──────────────────────────────────────────────────────────┘           |
 |                                                                         |
-|                                                                  PAGE 9 |
+|                                                                 PAGE 10 |
 +-------------------------------------------------------------------------+
 ```
 
-### PAGE 10 — Bonus: Vocab Challenge
+### PAGE 11 — Travel in Japan
 
 ```
 +-------------------------------------------------------------------------+
 |                                                                         |
-|  BONUS: VOCAB CHALLENGE                                                 |
+|  ▸ "Let's try using what we learned — imagine you're traveling           |
+|     in Japan!"                                                          |
+|    「きょうならったことをつかってみましょう                              |
+|     — にほんをりょこうしているとおもってね！」                          |
+|                                                                         |
+|  TRAVEL IN JAPAN: ASKING FOR DIRECTIONS                                 |
+|  ──────────────────────────────────────                                 |
+|  You are a traveler. Fill in the blanks and say them out loud!          |
+|                                                                         |
+|  ┌─── CONTEXT / 状況 ─────────────────────────────────────────┐         |
+|  │  You just arrived at a train station in Tokyo.              │         |
+|  │  Ask the staff where things are!                            │         |
+|  └────────────────────────────────────────────────────────────┘         |
+|                                                                         |
+|     ┌─── NEW WORDS ──────────────────────────────────────┐              |
+|     │  すみません (excuse me)   トイレ (toilet/restroom)    │              |
+|     │  えき (station)          コンビニ (convenience store) │              |
+|     │  でぐち (exit)           ありがとうございます (thanks) │              |
+|     └─────────────────────────────────────────────────────┘              |
+|                                                                         |
+|                                                                         |
+|  YOU:      すみません、トイレは______ですか？                             |
+|            Excuse me, where is the restroom?                            |
+|                                                                         |
+|  STAFF:    トイレはあそこです。                                           |
+|            The restroom is over there.                                  |
+|                                                                         |
+|  YOU:      ありがとうございます！でぐちは______ですか？                   |
+|            Thank you! Where is the exit?                                |
+|                                                                         |
+|  STAFF:    でぐちはそこです。                                             |
+|            The exit is there.                                           |
+|                                                                         |
+|  YOU:      コンビニは______ですか？                                       |
+|            Where is the convenience store?                              |
+|                                                                         |
+|  STAFF:    コンビニはここです。                                           |
+|            The convenience store is right here.                         |
+|                                                                         |
+|  YOU:      ______ございます！                                             |
+|            Thank you very much!                                         |
+|                                                                         |
+|                                                                 PAGE 11 |
++-------------------------------------------------------------------------+
+```
+
+### PAGE 12 — Bonus 1: Vocab Quiz
+
+```
++-------------------------------------------------------------------------+
+|                                                                         |
+|  BONUS 1: VOCAB QUIZ                                                    |
+|  ─────────────────────                                                  |
 |  (Skip if you don't have time!)                                         |
-|  ───────────────────────                                                |
-|  (Skip if you don't have time!)                                         |
 |                                                                         |
-|  Can you match the Japanese to the English?                             |
-|  日本語と英語を合わせましょう！                                          |
+|  ▸ "Can you say these words in Japanese?"                               |
+|    「にほんごでいえるかな？」                                            |
 |                                                                         |
 |                                                                         |
-|  LOCATION WORDS:                                                        |
-|  ここ       ・              ・  over there                              |
-|  そこ       ・              ・  here                                    |
-|  あそこ     ・              ・  where                                   |
-|  どこ       ・              ・  there                                   |
-|                                                                         |
-|                                                                         |
-|  THINGS (from this lesson):                                             |
-|  本         ・              ・  pen                                     |
-|  ペン       ・              ・  bag                                     |
-|  ノート     ・              ・  book                                    |
-|  かばん     ・              ・  notebook                                |
-|                                                                         |
-|                                                                         |
-|  MORE THINGS (from drills & discussion):                                |
-|  でんわ     ・              ・  key                                     |
-|  かぎ       ・              ・  clock                                   |
-|  とけい     ・              ・  water                                   |
-|  みず       ・              ・  phone                                   |
-|  いす       ・              ・  desk                                    |
-|  つくえ     ・              ・  chair                                   |
+|  ┌──────────────────────┬──────────────────────┐                        |
+|  │  English              │  Say in Japanese      │                        |
+|  ├──────────────────────┼──────────────────────┤                        |
+|  │  where                │  __________           │                        |
+|  │  here                 │  __________           │                        |
+|  │  there                │  __________           │                        |
+|  │  over there           │  __________           │                        |
+|  ├──────────────────────┼──────────────────────┤                        |
+|  │  book                 │  __________           │                        |
+|  │  pen                  │  __________           │                        |
+|  │  notebook             │  __________           │                        |
+|  │  bag                  │  __________           │                        |
+|  │  phone                │  __________           │                        |
+|  │  clock                │  __________           │                        |
+|  │  key                  │  __________           │                        |
+|  └──────────────────────┴──────────────────────┘                        |
 |                                                                         |
 |                                                                         |
 |  LESSON 2 ←→ LESSON 3 CONNECTION:                                       |
@@ -481,15 +603,59 @@
 |     あれ (that thing     ←→   あそこ (that place /                      |
 |           over there)               over there)                         |
 |                                                                         |
+|                                                                 PAGE 12 |
++-------------------------------------------------------------------------+
+```
+
+### PAGE 13 — Bonus 2: Translate (No Hints)
+
+```
++-------------------------------------------------------------------------+
 |                                                                         |
-|                                                                 PAGE 10 |
+|  BONUS 2: TRANSLATE — NO HINTS!                                         |
+|  ────────────────────────────────                                       |
+|  (Skip if you don't have time!)                                         |
+|                                                                         |
+|  ▸ "Can you translate these without any hints? Let's try!"              |
+|    「ヒントなしでにほんごにできるかな？やってみよう！」                  |
+|                                                                         |
+|                                                                         |
+|  1. Where is the pen?                                                   |
+|                                                                         |
+|     _____________________________________________________               |
+|                                                                         |
+|  2. The book is here.                                                   |
+|                                                                         |
+|     _____________________________________________________               |
+|                                                                         |
+|  3. Where is the bag?                                                   |
+|                                                                         |
+|     _____________________________________________________               |
+|                                                                         |
+|  4. The clock is over there.                                            |
+|                                                                         |
+|     _____________________________________________________               |
+|                                                                         |
+|  5. Where is the phone?                                                 |
+|                                                                         |
+|     _____________________________________________________               |
+|                                                                         |
+|  6. The notebook is there.                                              |
+|                                                                         |
+|     _____________________________________________________               |
+|                                                                         |
+|                                                                 PAGE 13 |
 +-------------------------------------------------------------------------+
 ```
 
-### PAGE 11 — Mission Complete
+### PAGE 14 — Mission Complete
 
 ```
 +-------------------------------------------------------------------------+
+|                                                                         |
+|  ▸ "You did great today! Amazing! Let's check them off together."       |
+|    「きょうはとてもじょうずでした！すごい！                              |
+|     いっしょにチェックしましょう。」                                    |
 |                                                                         |
 |  ミッションかんりょう！                                                   |
 |  Mission Complete!                                                      |
@@ -509,13 +675,16 @@
 |  └─────────────────────────────────────────────────────────┘            |
 |                                                                         |
 |                                                                         |
+|  ▸ "Let's read one more time. Perfect! See you next lesson!"            |
+|    「さいごにもういちどよみましょう。かんぺき！                          |
+|     つぎのレッスンであいましょう！」                                    |
+|                                                                         |
 |  KEY EXPRESSIONS — もういちどよんでみましょう！                           |
 |  • ほんはどこですか？          — Where is the book?                      |
 |  • ほんはここです。            — The book is here.                       |
 |  • ペンはそこです。            — The pen is there.                       |
 |  • かばんはあそこです。        — The bag is over there.                  |
 |                                                                         |
-|                                                                 PAGE 11 |
+|                                                                 PAGE 14 |
 +-------------------------------------------------------------------------+
 ```
-
