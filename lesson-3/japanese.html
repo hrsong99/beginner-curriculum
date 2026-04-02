@@ -58,7 +58,7 @@
   .nav span { font-size: 13px; color: #666; min-width: 80px; text-align: center; }
 
   /* Chat sidebar */
-  #chatPanel { position: fixed; top: 0; right: -360px; width: 360px; bottom: 57px; background: #fff; border-left: 1px solid #ddd; border-bottom: 1px solid #ddd; z-index: 190; display: flex; flex-direction: column; transition: right 0.25s ease; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+  #chatPanel { position: fixed; top: 0; right: -360px; width: 360px; bottom: 57px; background: #fff; border-left: 1px solid #ddd; border-bottom: 1px solid #ddd; z-index: 500; display: flex; flex-direction: column; transition: right 0.25s ease; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
   #chatPanel.open { right: 0; }
   #chatHeader { padding: 14px 16px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; }
   #chatHeader h4 { margin: 0; font-size: 14px; font-weight: 600; }
@@ -79,10 +79,10 @@
   #btnChat.has-unread { background: #fff0f0; border-color: #e33; }
 
   /* Chat toast (IG-live style bubble above chat button when panel is closed) */
-  #chatToast { position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%) translateY(8px); margin-bottom: 8px; max-width: 280px; width: max-content; background: rgba(0,0,0,0.85); color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 13px; padding: 8px 14px; border-radius: 14px; z-index: 210; pointer-events: none; opacity: 0; transition: opacity 0.3s, transform 0.3s; line-height: 1.4; white-space: normal; }
+  #chatToast { position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%) translateY(8px); margin-bottom: 8px; max-width: 300px; width: max-content; background: #fff; color: #111; border: 1px solid #ddd; box-shadow: 0 2px 12px rgba(0,0,0,0.12); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 14px; padding: 10px 14px; border-radius: 12px; z-index: 210; pointer-events: none; opacity: 0; transition: opacity 0.3s, transform 0.3s; line-height: 1.5; white-space: normal; }
   #chatToast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
-  #chatToast .toast-name { font-weight: 600; margin-right: 6px; font-size: 11px; opacity: 0.7; }
-  #chatToast .toast-translation { display: block; font-size: 11px; opacity: 0.6; font-style: italic; margin-top: 2px; }
+  #chatToast .toast-name { font-weight: 600; margin-right: 6px; font-size: 12px; color: #4a90d9; }
+  #chatToast .toast-translation { display: block; font-size: 13px; color: #888; margin-top: 4px; padding-top: 4px; border-top: 1px solid #eee; }
 
   /* Flash animation for new message when panel is open */
   @keyframes chatFlash { 0% { background: #e8f0fe; } 100% { background: transparent; } }
