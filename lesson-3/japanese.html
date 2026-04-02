@@ -875,6 +875,11 @@
   <svg width="20" height="20" viewBox="0 0 20 20"><polygon points="0,0 0,16 4.5,12.5 8,19 10,18 6.5,11 12,11" fill="#4a90d9" stroke="#fff" stroke-width="1"/></svg>
   <span id="remoteCursorName" style="position:absolute; left:18px; top:14px; background:#4a90d9; color:#fff; font-family:monospace; font-size:11px; padding:2px 6px; border-radius:3px; white-space:nowrap;"></span>
 </div>
+<!-- Off-screen cursor indicator -->
+<div id="cursorIndicator" style="display:none; position:fixed; z-index:350; pointer-events:none;">
+  <svg width="28" height="28" viewBox="0 0 28 28"><polygon points="14,2 26,26 14,20 2,26" fill="#4a90d9" stroke="#fff" stroke-width="1.5"/></svg>
+  <span id="indicatorName" style="position:absolute; left:50%; transform:translateX(-50%); top:30px; background:#4a90d9; color:#fff; font-family:monospace; font-size:10px; padding:1px 5px; border-radius:3px; white-space:nowrap;"></span>
+</div>
 
 <style>
   #drawCanvas { position: absolute; top: 0; left: 0; z-index: 100; pointer-events: none; }
@@ -1881,6 +1886,8 @@ document.getElementById('finishBtn').addEventListener('click', function() {
   // --- Cursor tracking (throttled to ~30fps) ---
   var remoteCursor = document.getElementById('remoteCursor');
   var remoteCursorName = document.getElementById('remoteCursorName');
+  var cursorIndicator = document.getElementById('cursorIndicator');
+  var indicatorName = document.getElementById('indicatorName');
   var cursorHideTimer = null;
   var lastCursorSend = 0;
   var myName = localStorage.getItem('sync-name') || '';
@@ -1999,10 +2006,36 @@ document.getElementById('finishBtn').addEventListener('click', function() {
           var cy = msg.ry * (Math.max(document.documentElement.scrollHeight, window.innerHeight) || 1);
           remoteCursor.style.left = cx + 'px';
           remoteCursor.style.top = cy + 'px';
-          remoteCursor.style.display = 'block';
           if (remoteCursorName && msg.name) remoteCursorName.textContent = msg.name;
+          // Check if cursor is in viewport
+          var vt = window.scrollY;
+          var vb = vt + window.innerHeight - 60; // account for nav bar
+          var vl = window.scrollX;
+          var vr = vl + window.innerWidth;
+          var inView = cx >= vl && cx <= vr && cy >= vt && cy <= vb;
+          if (inView) {
+            remoteCursor.style.display = 'block';
+            if (cursorIndicator) cursorIndicator.style.display = 'none';
+          } else {
+            remoteCursor.style.display = 'none';
+            if (cursorIndicator) {
+              // Clamp to screen edges
+              var sx = Math.max(20, Math.min(window.innerWidth - 48, cx - vl));
+              var sy = cy < vt ? 8 : (cy > vb ? window.innerHeight - 80 : Math.max(8, Math.min(window.innerHeight - 80, cy - vt)));
+              // Rotation: point arrow toward the remote cursor
+              var angle = Math.atan2(cy - (vt + window.innerHeight / 2), cx - (vl + window.innerWidth / 2)) * 180 / Math.PI;
+              cursorIndicator.style.left = sx + 'px';
+              cursorIndicator.style.top = sy + 'px';
+              cursorIndicator.querySelector('svg').style.transform = 'rotate(' + angle + 'deg)';
+              cursorIndicator.style.display = 'block';
+              if (indicatorName && msg.name) indicatorName.textContent = msg.name;
+            }
+          }
           clearTimeout(cursorHideTimer);
-          cursorHideTimer = setTimeout(function() { remoteCursor.style.display = 'none'; }, 3000);
+          cursorHideTimer = setTimeout(function() {
+            remoteCursor.style.display = 'none';
+            if (cursorIndicator) cursorIndicator.style.display = 'none';
+          }, 3000);
         }
         break;
 
