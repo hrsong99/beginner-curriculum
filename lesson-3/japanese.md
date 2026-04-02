@@ -690,15 +690,15 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |                                                                         |
 |  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
 |                                                                         |
-|  3. WRITE — Fill in the missing か!                                     |
+|  3. DRAW — Fill in the missing か!                                      |
 |                                                                         |
-|  ▸ "Write the missing か to complete the word!"                         |
+|  ▸ "Draw the missing か to complete the word!"                          |
 |    「か をかいて、ことばをかんせいさせてね！」                           |
 |                                                                         |
 |     Hiragana か:                                                        |
 |     kagi (key)          =  [   ]ぎ                                      |
 |     kaban (bag)         =  [   ]ばん                                    |
-|     doko desu ka?       =  どこです[   ]？                              |
+|     sakana (fish)       =  さ[   ]な                                    |
 |                                                                         |
 |     Katakana カ:                                                        |
 |     kamera (camera)     =  [   ]メラ                                    |

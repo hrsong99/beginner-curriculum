@@ -93,6 +93,10 @@
   /* Flash animation for new message when panel is open */
   @keyframes chatFlash { 0% { background: #e8f0fe; } 100% { background: transparent; } }
   .chat-msg.flash { animation: chatFlash 1.2s ease; }
+  .match-btn { font-family: monospace; font-size: 13px; padding: 6px 14px; border: 1px solid #999; background: #fff; cursor: pointer; transition: all 0.15s; border-radius: 4px; }
+  .match-btn:hover { background: #f0f0f0; border-color: #111; }
+  .match-btn.correct { background: #e8f5e9; border-color: #4caf50; color: #2e7d32; cursor: default; }
+  .match-btn.wrong { background: #ffebee; border-color: #ef5350; color: #c62828; }
   .separator { border: none; border-top: 1px dashed #ccc; margin: 28px 0; }
   ol { padding-left: 20px; }
   ol li { margin: 4px 0; }
@@ -976,8 +980,129 @@
   </div>
 </div>
 
-<!-- MISSION COMPLETE -->
+<!-- BONUS 3: TODAY'S CHARACTER -->
 <div class="page" id="p13">
+  <h1>BONUS 3: TODAY'S CHARACTER</h1>
+  <h2><span class="en" style="font-size:14px">(Skip if you don't have time!)</span></h2>
+
+  <div class="tg">
+    <div class="tg-en">"Let's learn one character today!"</div>
+    <div class="tg-jp">「きょうはひとつ、もじをおぼえましょう！」</div>
+  </div>
+
+  <div class="box" style="text-align:center; padding:24px">
+    <span style="font-size:56px; letter-spacing:40px"><ruby>か<rt style="font-size:14px">hiragana</rt></ruby>&nbsp;&nbsp;<ruby>カ<rt style="font-size:14px">katakana</rt></ruby></span><br>
+    <span style="font-size:18px; color:#888; margin-top:8px; display:inline-block">Sound: <strong>ka</strong></span>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <p><strong>1. RECOGNITION — Which one is "ka"?</strong></p>
+    <div class="tg">
+      <div class="tg-en">"Can you find ka? Point to it!"</div>
+      <div class="tg-jp">「か はどれですか？ゆびでさしてね！」</div>
+    </div>
+    <div style="margin:12px 0 12px 20px">
+      <p style="margin-bottom:8px">Which one is "ka"?</p>
+      <div style="display:flex; gap:12px; margin-bottom:16px">
+        <button class="match-btn" onclick="checkMatch(this,'wrong')" style="font-size:24px; padding:12px 24px">き</button>
+        <button class="match-btn" onclick="checkMatch(this,'correct')" style="font-size:24px; padding:12px 24px">か</button>
+        <button class="match-btn" onclick="checkMatch(this,'wrong')" style="font-size:24px; padding:12px 24px">さ</button>
+      </div>
+      <p style="margin-bottom:8px">Which one is "ka"?</p>
+      <div style="display:flex; gap:12px">
+        <button class="match-btn" onclick="checkMatch(this,'wrong')" style="font-size:24px; padding:12px 24px">ク</button>
+        <button class="match-btn" onclick="checkMatch(this,'wrong')" style="font-size:24px; padding:12px 24px">キ</button>
+        <button class="match-btn" onclick="checkMatch(this,'correct')" style="font-size:24px; padding:12px 24px">カ</button>
+      </div>
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <p><strong>2. READ — Read these words without romaji!</strong></p>
+    <div class="tg">
+      <div class="tg-en">"Can you read these words without romaji?"</div>
+      <div class="tg-jp">「よめるかな？か をみつけてね！」</div>
+    </div>
+    <div style="margin:12px 0 12px 20px; line-height:2.6">
+      <div style="font-size:36px; margin-bottom:8px">かばん <span class="en" style="font-size:16px; margin-left:24px">bag</span></div>
+      <div style="font-size:36px; margin-bottom:8px">かぎ <span class="en" style="font-size:16px; margin-left:24px">key</span></div>
+      <div style="font-size:36px; margin-bottom:8px">どこですか？ <span class="en" style="font-size:16px; margin-left:24px">Where is ___?</span></div>
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <p><strong>3. DRAW — Fill in the missing か / カ!</strong></p>
+    <div class="tg">
+      <div class="tg-en">"Draw the missing character to complete the word!"</div>
+      <div class="tg-jp">「か をかいて、ことばをかんせいさせてね！」</div>
+    </div>
+    <p style="margin:12px 0 12px; font-size:16px; color:#888">Hiragana か:</p>
+
+    <div style="margin:12px 0 12px 20px">
+      <p style="font-size:14px; color:#888; margin-bottom:4px">kagi (key)</p>
+      <div style="display:inline-flex; border:2px solid #ccc; border-radius:4px; overflow:hidden; margin-bottom:16px">
+        <div style="width:160px; height:160px; border-right:1px dashed #ddd; background:repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.015) 10px, rgba(0,0,0,0.015) 20px)"></div>
+        <div style="width:160px; height:160px; display:flex; align-items:center; justify-content:center; font-size:96px"><ruby>ぎ<rt style="font-size:20px">gi</rt></ruby></div>
+      </div>
+    </div>
+
+    <div style="margin:0 0 12px 20px">
+      <p style="font-size:14px; color:#888; margin-bottom:4px">kaban (bag)</p>
+      <div style="display:inline-flex; border:2px solid #ccc; border-radius:4px; overflow:hidden; margin-bottom:16px">
+        <div style="width:160px; height:160px; border-right:1px dashed #ddd; background:repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.015) 10px, rgba(0,0,0,0.015) 20px)"></div>
+        <div style="width:160px; height:160px; display:flex; align-items:center; justify-content:center; font-size:96px; border-right:1px dashed #ddd"><ruby>ば<rt style="font-size:20px">ba</rt></ruby></div>
+        <div style="width:160px; height:160px; display:flex; align-items:center; justify-content:center; font-size:96px"><ruby>ん<rt style="font-size:20px">n</rt></ruby></div>
+      </div>
+    </div>
+
+    <div style="margin:0 0 12px 20px">
+      <p style="font-size:14px; color:#888; margin-bottom:4px">sakana (fish)</p>
+      <div style="display:inline-flex; border:2px solid #ccc; border-radius:4px; overflow:hidden; margin-bottom:16px">
+        <div style="width:160px; height:160px; display:flex; align-items:center; justify-content:center; font-size:96px; border-right:1px dashed #ddd"><ruby>さ<rt style="font-size:20px">sa</rt></ruby></div>
+        <div style="width:160px; height:160px; border-right:1px dashed #ddd; background:repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.015) 10px, rgba(0,0,0,0.015) 20px)"></div>
+        <div style="width:160px; height:160px; display:flex; align-items:center; justify-content:center; font-size:96px"><ruby>な<rt style="font-size:20px">na</rt></ruby></div>
+      </div>
+    </div>
+
+    <p style="margin:24px 0 12px; font-size:16px; color:#888">Katakana カ:</p>
+
+    <div style="margin:12px 0 12px 20px">
+      <p style="font-size:14px; color:#888; margin-bottom:4px">kamera (camera)</p>
+      <div style="display:inline-flex; border:2px solid #ccc; border-radius:4px; overflow:hidden; margin-bottom:16px">
+        <div style="width:160px; height:160px; border-right:1px dashed #ddd; background:repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.015) 10px, rgba(0,0,0,0.015) 20px)"></div>
+        <div style="width:160px; height:160px; display:flex; align-items:center; justify-content:center; font-size:96px; border-right:1px dashed #ddd"><ruby>メ<rt style="font-size:20px">me</rt></ruby></div>
+        <div style="width:160px; height:160px; display:flex; align-items:center; justify-content:center; font-size:96px"><ruby>ラ<rt style="font-size:20px">ra</rt></ruby></div>
+      </div>
+    </div>
+
+    <div style="margin:0 0 12px 20px">
+      <p style="font-size:14px; color:#888; margin-bottom:4px">karee (curry)</p>
+      <div style="display:inline-flex; border:2px solid #ccc; border-radius:4px; overflow:hidden; margin-bottom:16px">
+        <div style="width:160px; height:160px; border-right:1px dashed #ddd; background:repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.015) 10px, rgba(0,0,0,0.015) 20px)"></div>
+        <div style="width:160px; height:160px; display:flex; align-items:center; justify-content:center; font-size:96px; border-right:1px dashed #ddd"><ruby>レ<rt style="font-size:20px">re</rt></ruby></div>
+        <div style="width:160px; height:160px; display:flex; align-items:center; justify-content:center; font-size:96px"><ruby>ー<rt style="font-size:20px">&nbsp;</rt></ruby></div>
+      </div>
+    </div>
+
+    <div style="margin:0 0 12px 20px">
+      <p style="font-size:14px; color:#888; margin-bottom:4px">kaado (card)</p>
+      <div style="display:inline-flex; border:2px solid #ccc; border-radius:4px; overflow:hidden; margin-bottom:16px">
+        <div style="width:160px; height:160px; border-right:1px dashed #ddd; background:repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.015) 10px, rgba(0,0,0,0.015) 20px)"></div>
+        <div style="width:160px; height:160px; display:flex; align-items:center; justify-content:center; font-size:96px; border-right:1px dashed #ddd"><ruby>ー<rt style="font-size:20px">&nbsp;</rt></ruby></div>
+        <div style="width:160px; height:160px; display:flex; align-items:center; justify-content:center; font-size:96px"><ruby>ド<rt style="font-size:20px">do</rt></ruby></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MISSION COMPLETE -->
+<div class="page" id="p14">
   <h1><ruby>ミッション<rt>misshon</rt></ruby><ruby>かんりょう<rt>kanryō</rt></ruby>！</h1>
   <h2>Mission Complete!</h2>
 
@@ -1038,7 +1163,7 @@
 
 <nav class="nav">
   <button id="prev" onclick="go(-1)" disabled>&larr; Back</button>
-  <span id="indicator">1 / 14</span>
+  <span id="indicator">1 / 15</span>
   <button id="next" onclick="go(1)">Next &rarr;</button>
   <span style="border-left:1px solid #ddd; height:20px; margin:0 4px"></span>
   <button id="btnDraw" onclick="setMode('draw')" style="padding:8px 14px">&#9998; Draw</button>
@@ -1135,6 +1260,18 @@
 </style>
 
 <script>
+// Character recognition buttons
+function checkMatch(btn, result) {
+  var siblings = btn.parentElement.querySelectorAll('.match-btn');
+  if (result === 'correct') {
+    siblings.forEach(function(b) { b.disabled = true; b.classList.remove('wrong'); });
+    btn.classList.add('correct');
+  } else {
+    btn.classList.add('wrong');
+    setTimeout(function() { btn.classList.remove('wrong'); }, 600);
+  }
+}
+
 // Hanamaru checkbox toggle
 function makeHanamaruPath() {
   var cx=36, cy=36, R=14, pR=28, N=10, d='';
@@ -1182,7 +1319,7 @@ document.addEventListener('input', function(e) {
   }
 });
 
-const pages = ['p0','p1','p2','p3','p4','p5','p6','p7','p8','p9','p10','p11','p12','p13'];
+const pages = ['p0','p1','p2','p3','p4','p5','p6','p7','p8','p9','p10','p11','p12','p13','p14'];
 let cur = 0;
 
 function go(dir) {
