@@ -2022,8 +2022,8 @@ document.getElementById('finishBtn').addEventListener('click', function() {
               // Clamp to screen edges
               var sx = Math.max(20, Math.min(window.innerWidth - 48, cx - vl));
               var sy = cy < vt ? 8 : (cy > vb ? window.innerHeight - 80 : Math.max(8, Math.min(window.innerHeight - 80, cy - vt)));
-              // Rotation: point arrow toward the remote cursor
-              var angle = Math.atan2(cy - (vt + window.innerHeight / 2), cx - (vl + window.innerWidth / 2)) * 180 / Math.PI;
+              // Rotation: point arrow from indicator position toward remote cursor
+              var angle = Math.atan2(cy - (vt + sy + 14), cx - (vl + sx + 14)) * 180 / Math.PI + 90;
               cursorIndicator.style.left = sx + 'px';
               cursorIndicator.style.top = sy + 'px';
               cursorIndicator.querySelector('svg').style.transform = 'rotate(' + angle + 'deg)';
