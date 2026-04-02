@@ -1092,7 +1092,7 @@ function clearPage() {
     pg.querySelectorAll('.check.done').forEach(function(c) { c.classList.remove('done'); c.innerHTML = '&nbsp;'; });
     pg.querySelectorAll('.match-game').forEach(function(g) { if (g._reset) g._reset(); });
   }
-  if (typeof send === 'function') send({ t: 'clear' });
+  if (window.syncSend) window.syncSend({ t: 'clear' });
 }
 
 function clearAll() {
@@ -1107,7 +1107,7 @@ function clearAll() {
   document.querySelectorAll('.check.done').forEach(function(c) { c.classList.remove('done'); c.innerHTML = '&nbsp;'; });
   // Reset matching games
   document.querySelectorAll('.match-game').forEach(function(g) { if (g._reset) g._reset(); });
-  if (typeof send === 'function') send({ t: 'clearall' });
+  if (window.syncSend) window.syncSend({ t: 'clearall' });
 }
 
 function createTextAt(x, y, text) {
@@ -1666,6 +1666,7 @@ document.getElementById('finishBtn').addEventListener('click', function() {
     if (syncing) return; // don't echo remote events back
     if (ws && ws.readyState === 1) ws.send(JSON.stringify(msg));
   }
+  window.syncSend = send;
 
   // --- Hook into page navigation ---
   var origGo = window.go;
