@@ -910,7 +910,20 @@
 <!-- Chat panel -->
 <div id="chatPanel">
   <div id="chatHeader">
-    <h4>💬 Chat <span style="font-weight:normal; color:#999; font-size:12px;">(auto-translates EN↔JP)</span></h4>
+    <div style="display:flex; align-items:center; gap:8px; flex:1;">
+      <h4 style="margin:0; white-space:nowrap;">💬 Chat</h4>
+      <select id="chatMyLang" style="font-size:12px; padding:2px 4px; border:1px solid #ddd; border-radius:4px; font-family:inherit;">
+        <option value="en">English</option>
+        <option value="ja">日本語</option>
+        <option value="ko">한국어</option>
+      </select>
+      <span style="font-size:11px; color:#999;">↔</span>
+      <select id="chatTargetLang" style="font-size:12px; padding:2px 4px; border:1px solid #ddd; border-radius:4px; font-family:inherit;">
+        <option value="ja">日本語</option>
+        <option value="en">English</option>
+        <option value="ko">한국어</option>
+      </select>
+    </div>
     <button id="chatClose">&times;</button>
   </div>
   <div id="chatMessages"></div>
@@ -2224,18 +2237,23 @@ document.getElementById('finishBtn').addEventListener('click', function() {
     toastTimer = setTimeout(function() { toast.classList.remove('show'); }, 4000);
   }
 
-  // Detect predominant language: returns 'ja' or 'en'
-  function detectLang(text) {
-    // Count Japanese characters (hiragana, katakana, kanji)
-    var jpChars = (text.match(/[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF]/g) || []).length;
-    return jpChars > text.length * 0.15 ? 'ja' : 'en';
-  }
+  var LANG_NAMES = { en: 'English', ja: 'Japanese', ko: 'Korean' };
+  var myLangSelect = document.getElementById('chatMyLang');
+  var targetLangSelect = document.getElementById('chatTargetLang');
+
+  // Persist language choices
+  var savedMyLang = localStorage.getItem('chat-my-lang');
+  var savedTargetLang = localStorage.getItem('chat-target-lang');
+  if (savedMyLang) myLangSelect.value = savedMyLang;
+  if (savedTargetLang) targetLangSelect.value = savedTargetLang;
+  myLangSelect.addEventListener('change', function() { localStorage.setItem('chat-my-lang', this.value); });
+  targetLangSelect.addEventListener('change', function() { localStorage.setItem('chat-target-lang', this.value); });
 
   async function translateWithGemini(text) {
     if (!GEMINI_API_KEY) return null;
-    var lang = detectLang(text);
-    var targetLang = lang === 'ja' ? 'English' : 'Japanese';
-    var sourceLang = lang === 'ja' ? 'Japanese' : 'English';
+    var sourceLang = LANG_NAMES[myLangSelect.value];
+    var targetLang = LANG_NAMES[targetLangSelect.value];
+    if (myLangSelect.value === targetLangSelect.value) return null;
     try {
       var res = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=' + GEMINI_API_KEY, {
         method: 'POST',
