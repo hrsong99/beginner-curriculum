@@ -32,13 +32,13 @@
 - Roleplay HINTS box merges PHRASES and WORDS into one `.help-box`
 - Tutor script notation: `▸ "English text" ／ 「にほんご」` — embedded at point of use
 
-## Lesson Flow (11 Core + 3 Bonus Pages)
+## Lesson Flow (11 Core + 4 Bonus Pages)
 
 
 | Page | Activity                     | Time  | Notes                          |
 | ---- | ---------------------------- | ----- | ------------------------------ |
 | 1    | Greeting & Intro             | 1 min | Hello, let's start             |
-| 2    | Review: Lesson 2 Quick Check | 3 min | Reading exercise (no blanks)   |
+| 2    | Review: Lesson 2 Quick Check | 3 min | Reading exercise w/ blanks     |
 | 3    | Today's Patterns             | 2 min | Patterns only (no goal box)    |
 | 4    | Pattern Drill A (どこですか？)     | 3 min | Asking "where is ___?"         |
 | 5    | Pattern Drill B (ここ/そこ/あそこ)  | 3 min | Answering "it's here/there"    |
@@ -47,14 +47,15 @@
 | 8    | Memory Conversation          | 3 min | Fill-in-the-blank of Page 7    |
 | 9    | Free Discussion              | 3 min | Open practice                  |
 | 10   | Roleplay                     | 3 min | Constrained scenario           |
-| 11   | Travel in Japan              | 3 min | New vocab color-highlighted    |
+| 11   | Travel in Japan              | 3 min | Real-world application         |
 | 12   | BONUS 1: Vocab Quiz          | 2 min | Skip if short on time          |
 | 13   | BONUS 2: Translate (no hints)| 2 min | Skip if short on time          |
-| 14   | Mission Complete             | 2 min |                                |
+| 14   | BONUS 3: Today's Character   | 2 min | か/カ (ka) — trace, find, match |
+| 15   | Mission Complete             | 2 min |                                |
 
 Travel conversation also appears in prestudy (plain, no highlights).
 
-**Core: ~30 min / With bonus: ~34 min**
+**Core: ~30 min / With bonus: ~36 min**
 
 ---
 
@@ -643,7 +644,72 @@ Travel conversation also appears in prestudy (plain, no highlights).
 +-------------------------------------------------------------------------+
 ```
 
-### PAGE 14 — Mission Complete
+### PAGE 14 — Bonus 3: Today's Character — か / カ (ka)
+
+```
++-------------------------------------------------------------------------+
+|                                                                         |
+|  BONUS 3: TODAY'S CHARACTER                                             |
+|  ──────────────────────────                                             |
+|  (Skip if you don't have time!)                                         |
+|                                                                         |
+|  ▸ "Let's learn one character today!"                                   |
+|    「きょうはひとつ、もじをおぼえましょう！」                                         |
+|                                                                         |
+|                                                                         |
+|  ┌────────────────────────────────────────────┐                         |
+|  │                                              │                         |
+|  │   Hiragana:  か        Katakana:  カ          │                         |
+|  │   Sound:     ka                               │                         |
+|  │                                              │                         |
+|  └────────────────────────────────────────────┘                         |
+|                                                                         |
+|  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
+|                                                                         |
+|  1. RECOGNITION — Which one is `ka`?                                      |
+|                                                                         |
+|  ▸ "Can you find `ka`? Point to it!"                                      |
+|    「か はどれですか？ゆびでさしてね！」                                  |
+|                                                                         |
+|     a)  き       b)  か       c)  さ                                    |
+|                                                                         |
+|     Which one is `ka`?                                                     |
+|                                                                         |
+|     a)  ク       b)  キ       c)  カ                                    |
+|                                                                         |
+|  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
+|                                                                         |
+|  2. READ — Read these words out loud!                                   |
+|                                                                         |
+|  ▸ "Can you read these words without romaji?                            |
+|    「よめるかな？か をみつけてね！」                                               |
+|                                                                         |
+|     • かばん           bag                                              |
+|     • かぎ             key                                              |
+|     • どこですか ？      Where is ___?                                     |
+|                                                                         |
+|  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
+|                                                                         |
+|  3. WRITE — Fill in the missing か!                                     |
+|                                                                         |
+|  ▸ "Write the missing か to complete the word!"                         |
+|    「か をかいて、ことばをかんせいさせてね！」                           |
+|                                                                         |
+|     Hiragana か:                                                        |
+|     kagi (key)          =  [   ]ぎ                                      |
+|     kaban (bag)         =  [   ]ばん                                    |
+|     doko desu ka?       =  どこです[   ]？                              |
+|                                                                         |
+|     Katakana カ:                                                        |
+|     kamera (camera)     =  [   ]メラ                                    |
+|     karee (curry)       =  [   ]レー                                    |
+|     kaado (card)        =  [   ]ード                                    |
+|                                                                         |
+|                                                                 PAGE 14 |
++-------------------------------------------------------------------------+
+```
+
+### PAGE 15 — Mission Complete
 
 ```
 +-------------------------------------------------------------------------+
@@ -680,6 +746,6 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  • ペンはそこです。            — The pen is there.                       |
 |  • かばんはあそこです。        — The bag is over there.                  |
 |                                                                         |
-|                                                                 PAGE 14 |
+|                                                                 PAGE 15 |
 +-------------------------------------------------------------------------+
 ```
