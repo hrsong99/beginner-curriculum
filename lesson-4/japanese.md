@@ -5,7 +5,7 @@
 **Changes from Lesson 3 (extending 15 min → 25 min):**
 
 - Cumulative review now covers L1 (です) + L2 (これ/それ/あれ) + L3 (どこ), not just the previous lesson
-- NEW: Dedicated **Pronunciation Practice** page (Page 4) — light, short, "speak slowly and copy the tutor"
+- **Pronunciation cues embedded** in the Today's Patterns page and both Pattern Drill "Read Together" steps — "listen closely and repeat closely" phrasing, no dedicated page, no shadowing loops (would get boring fast)
 - NEW: **Vocab Recall** page moved from bonus to CORE (production, not recognition)
 - Pattern drills now have **5 items per sub-activity** (was 3)
 - Short Dialogues extended from 3 → 4
@@ -31,31 +31,30 @@
 - Tutor script notation: `▸ "English text" ／ 「にほんご」` — embedded at point of use
 - Roleplay HINTS box merges PHRASES and WORDS into one `.help-box`
 
-## Lesson Flow (13 Core + 2 Bonus + Mission Complete)
+## Lesson Flow (12 Core + 2 Bonus + Mission Complete)
 
 
 | Page | Activity                          | Time  | Notes                                   |
 | ---- | --------------------------------- | ----- | --------------------------------------- |
 | 1    | Greeting & Intro                  | 1 min | Hello, let's start                      |
 | 2    | Review: L1 + L2 + L3              | 4 min | Cumulative check                        |
-| 3    | Today's Patterns                  | 2 min | あります / います                         |
-| 4    | Pronunciation Practice            | 2 min | Light — slow & copy                     |
-| 5    | Pattern Drill A (あります)          | 3 min | Things — 5 items per sub                |
-| 6    | Pattern Drill B (います)            | 3 min | People/animals — 5 items per sub        |
-| 7    | Vocab Recall                      | 2 min | Production (EN → JP)                    |
-| 8    | Short Dialogues                   | 2 min | 4 dialogues                             |
-| 9    | Guided Conversation               | 2 min | Classroom / cafe scene                  |
-| 10   | Memory Conversation               | 2 min | Fill-in of Page 9                       |
-| 11   | Free Discussion                   | 2 min | 3 rounds                                |
-| 12   | Roleplay                          | 2 min | Find 3 things + 1 person                |
-| 13   | Travel in Japan                   | 2 min | Convenience store / restaurant          |
-| 14   | BONUS 1: Translate (no hints)     | 2 min | Skip if short on time                   |
-| 15   | BONUS 2: Today's Character の/ノ    | 2 min | Trace, find, match                      |
-| 16   | Mission Complete                  | 1 min |                                         |
+| 3    | Today's Patterns                  | 3 min | あります / います (+ pronunciation cue)  |
+| 4    | Pattern Drill A (あります)          | 3 min | Things — 5 items per sub                |
+| 5    | Pattern Drill B (います)            | 3 min | People/animals — 5 items per sub        |
+| 6    | Vocab Recall                      | 2 min | Production (EN → JP)                    |
+| 7    | Short Dialogues                   | 2 min | 4 dialogues                             |
+| 8    | Guided Conversation               | 2 min | Classroom / cafe scene                  |
+| 9    | Memory Conversation               | 2 min | Fill-in of Page 8                       |
+| 10   | Free Discussion                   | 2 min | 3 rounds                                |
+| 11   | Roleplay                          | 2 min | Find 3 things + 1 person                |
+| 12   | Travel in Japan                   | 2 min | Convenience store / restaurant          |
+| 13   | BONUS 1: Translate (no hints)     | 2 min | Skip if short on time                   |
+| 14   | BONUS 2: Today's Character の/ノ    | 2 min | Trace, find, match                      |
+| 15   | Mission Complete                  | 1 min |                                         |
 
 Travel conversation also appears in prestudy (plain, no highlights).
 
-**Core: ~29 min / With bonus: ~33 min** (planning for 25 min actual class time)
+**Core: ~28 min / With bonus: ~32 min** (planning for 25 min actual class time)
 
 ---
 
@@ -86,54 +85,59 @@ Travel conversation also appears in prestudy (plain, no highlights).
 ```
 +-------------------------------------------------------------------------+
 |                                                                         |
-|  ▸ "First, let's review everything we've learned so far."               |
-|    「まず、これまでならったことをふくしゅうしましょう。」                |
+|  ▸ "Let's review — translate each sentence into Japanese."              |
+|    「ふくしゅうしましょう。にほんごにしてみてね。」                      |
 |                                                                         |
 |  REVIEW: LESSONS 1, 2 & 3                                               |
 |  ──────────────────────                                                 |
 |                                                                         |
-|  1. LESSON 1 — です (I am / he is)                                       |
-|                                                                         |
-|  Tutor:    おしごとはなんですか？                                         |
-|            What's your job?                                             |
-|                                                                         |
-|  Student:  わたしは[_________]です。                                      |
-|            I am a ______.                                               |
-|                                                                         |
-|     ┌────────────────────────────────────┐                              |
-|     │  がくせい(student)  せんせい(teacher) │                              |
-|     │  いしゃ(doctor)  かいしゃいん(worker) │                              |
-|     └────────────────────────────────────┘                              |
-|                                                                         |
-|  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
-|                                                                         |
-|  2. LESSON 2 — これ・それ・あれ (this / that / that over there)           |
-|                                                                         |
-|  Tutor:    これはなんですか？                                              |
-|            What is this?                                                |
-|                                                                         |
-|  Student:  [_______]はわたしのかばんです。                                 |
-|            That is my bag.                                              |
-|                                                                         |
-|     ┌──────────────────────────────────┐                                |
-|     │  これ = this    それ = that       │                                |
-|     │  あれ = that over there          │                                |
-|     └──────────────────────────────────┘                                |
+|  ┌─ LESSON 1: です (I am / he is) ─────────────────────────┐            |
+|  │                                                          │            |
+|  │  PATTERN:  [person]は [noun / adjective]です。           │            |
+|  │                                                          │            |
+|  │  1. I am a student.       →  ______________________     │            |
+|  │  2. He is kind.           →  ______________________     │            |
+|  │  ★ She is from Tokyo.     →  ______________________     │            |
+|  │                                                          │            |
+|  │  ┌─ WORDS ────────────────────────────────────────┐     │            |
+|  │  │  がくせい(student)  しんせつ(kind)               │     │            |
+|  │  │  とうきょう(Tokyo)  〜から(from)                 │     │            |
+|  │  └─────────────────────────────────────────────────┘     │            |
+|  └──────────────────────────────────────────────────────────┘            |
 |                                                                         |
 |  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
 |                                                                         |
-|  3. LESSON 3 — どこ (where)                                               |
+|  ┌─ LESSON 2: これ・それ・あれ (this / that / over there) ──┐            |
+|  │                                                          │            |
+|  │  PATTERN:  これ / それ / あれ は [noun]です。             │            |
+|  │                                                          │            |
+|  │  1. This is a book.       →  ______________________     │            |
+|  │  2. That is my pen.       →  ______________________     │            |
+|  │  ★ That (over there) is   →  ______________________     │            |
+|  │     the teacher's bag.                                   │            |
+|  │                                                          │            |
+|  │  ┌─ WORDS ────────────────────────────────────────┐     │            |
+|  │  │  ほん(book)  ペン(pen)  かばん(bag)              │     │            |
+|  │  │  せんせい(teacher)   〜の(possessive 'of/'s')    │     │            |
+|  │  └─────────────────────────────────────────────────┘     │            |
+|  └──────────────────────────────────────────────────────────┘            |
 |                                                                         |
-|  Tutor:    ペンはどこですか？                                              |
-|            Where is the pen?                                            |
+|  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
 |                                                                         |
-|  Student:  ペンは[_______]です。                                          |
-|            The pen is _______.                                          |
-|                                                                         |
-|     ┌──────────────────────────────────┐                                |
-|     │  ここ(here) そこ(there)           │                                |
-|     │  あそこ(over there)               │                                |
-|     └──────────────────────────────────┘                                |
+|  ┌─ LESSON 3: どこ (where) ────────────────────────────────┐            |
+|  │                                                          │            |
+|  │  PATTERN:  [noun]は どこですか？                          │            |
+|  │            [noun]は ここ / そこ / あそこです。             │            |
+|  │                                                          │            |
+|  │  1. Where is the book?    →  ______________________     │            |
+|  │  2. The pen is there.     →  ______________________     │            |
+|  │  ★ Where is my bag?       →  ______________________     │            |
+|  │                                                          │            |
+|  │  ┌─ WORDS ────────────────────────────────────────┐     │            |
+|  │  │  ほん(book)  ペン(pen)  かばん(bag)              │     │            |
+|  │  │  ここ(here)  そこ(there)  あそこ(over there)     │     │            |
+|  │  └─────────────────────────────────────────────────┘     │            |
+|  └──────────────────────────────────────────────────────────┘            |
 |                                                                         |
 |                                                                  PAGE 2 |
 +-------------------------------------------------------------------------+
@@ -144,9 +148,9 @@ Travel conversation also appears in prestudy (plain, no highlights).
 ```
 +-------------------------------------------------------------------------+
 |                                                                         |
-|  ▸ "Let's read today's patterns together! Repeat after me."             |
-|    「きょうのパターンをいっしょによみましょう！                          |
-|     わたしのあとにリピートしてください。」                              |
+|  ▸ "Let's read together. Copy my pronunciation closely — slow is OK."  |
+|    「いっしょによみましょう。はつおんをよくまねしてね。                  |
+|     ゆっくりでいいですよ。」                                            |
 |                                                                         |
 |  TODAY'S PATTERNS                                                       |
 |  ================                                                       |
@@ -178,49 +182,7 @@ Travel conversation also appears in prestudy (plain, no highlights).
 +-------------------------------------------------------------------------+
 ```
 
-### PAGE 4 — Pronunciation Practice
-
-```
-+-------------------------------------------------------------------------+
-|                                                                         |
-|  PRONUNCIATION PRACTICE                                                 |
-|  ──────────────────────                                                 |
-|                                                                         |
-|  ▸ "Let's practice saying today's patterns clearly.                     |
-|     Speak slowly — copy my pronunciation as closely as you can.         |
-|     Don't rush! Smooth is fast."                                        |
-|    「きょうのパターンをきれいにいってみましょう。                         |
-|     ゆっくりはなしてください。                                           |
-|     わたしのはつおんをよくきいて、まねしてみてね！」                    |
-|                                                                         |
-|                                                                         |
-|  Listen first. Then say it slowly with me.                              |
-|                                                                         |
-|                                                                         |
-|  1.  あ・り・ま・す                                                      |
-|      a - ri - ma - su                                                   |
-|                                                                         |
-|  2.  い・ま・す                                                          |
-|      i - ma - su                                                        |
-|                                                                         |
-|  3.  つくえのうえに ほんが あります。                                     |
-|      tsukue no ue ni, hon ga arimasu.                                   |
-|                                                                         |
-|  4.  きょうしつに せんせいが います。                                     |
-|      kyoushitsu ni, sensei ga imasu.                                    |
-|                                                                         |
-|                                                                         |
-|     ┌─── TIPS ──────────────────────────────────────────────┐           |
-|     │  • Every syllable takes the same amount of time        │           |
-|     │  • The "u" in ます is very soft (almost "mas")          │           |
-|     │  • Don't stress any syllable — stay flat                │           |
-|     └────────────────────────────────────────────────────────┘           |
-|                                                                         |
-|                                                                  PAGE 4 |
-+-------------------------------------------------------------------------+
-```
-
-### PAGE 5 — Pattern Drill A (あります — Things)
+### PAGE 4 — Pattern Drill A (あります — Things)
 
 ```
 +-------------------------------------------------------------------------+
@@ -232,8 +194,9 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |            There is a [thing] at [place].                               |
 |                                                                         |
 |                                                                         |
-|  ▸ "Let's read together. Repeat after me."                              |
-|    「いっしょによみましょう。わたしのあとにリピートしてください。」      |
+|  ▸ "Let's read together. Copy my pronunciation closely — slow is OK."  |
+|    「いっしょによみましょう。はつおんをよくまねしてね。                  |
+|     ゆっくりでいいですよ。」                                            |
 |                                                                         |
 |  1. Read Together:                                                      |
 |     * つくえのうえに ほんが あります。    A book is on the desk.         |
@@ -254,8 +217,8 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |     * つくえのうえ（　　　）とけいがあります。      There's a clock...   |
 |                                                                         |
 |                                                                         |
-|  ▸ "Try turning the English into Japanese. You can look at the hint."   |
-|    「えいごをにほんごにしてみてください。ヒントをみてもいいですよ。」    |
+|  ▸ "Translate to Japanese — hints are OK."                              |
+|    「にほんごにしてみましょう。ヒントをみてもいいですよ。」              |
 |                                                                         |
 |  3. Translate:                                                          |
 |     * There is a phone on the desk.                                     |
@@ -286,11 +249,11 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  4. Make Your Own:                                                      |
 |     _____________________________________________________               |
 |                                                                         |
-|                                                                  PAGE 5 |
+|                                                                  PAGE 4 |
 +-------------------------------------------------------------------------+
 ```
 
-### PAGE 6 — Pattern Drill B (います — People & Animals)
+### PAGE 5 — Pattern Drill B (います — People & Animals)
 
 ```
 +-------------------------------------------------------------------------+
@@ -302,8 +265,8 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |            There is a [person/animal] at [place].                       |
 |                                                                         |
 |                                                                         |
-|  ▸ "Next pattern. Let's read together."                                 |
-|    「つぎのパターンです。いっしょによみましょう。」                      |
+|  ▸ "Next pattern. Same idea — copy my pronunciation closely."           |
+|    「つぎのパターンです。おなじように、はつおんをまねしてみてね。」      |
 |                                                                         |
 |  1. Read Together:                                                      |
 |     * きょうしつに せんせいが います。    A teacher is in the classroom. |
@@ -324,8 +287,8 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |     * こうえん（　　　）こどもがいます。            There's a child...   |
 |                                                                         |
 |                                                                         |
-|  ▸ "Try turning the English into Japanese."                             |
-|    「えいごをにほんごにしてみてください。」                              |
+|  ▸ "Translate to Japanese."                                             |
+|    「にほんごにしてみましょう。」                                        |
 |                                                                         |
 |  3. Translate:                                                          |
 |     * There is a teacher in the room.                                   |
@@ -356,11 +319,11 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  4. Make Your Own:                                                      |
 |     _____________________________________________________               |
 |                                                                         |
-|                                                                  PAGE 6 |
+|                                                                  PAGE 5 |
 +-------------------------------------------------------------------------+
 ```
 
-### PAGE 7 — Vocab Recall
+### PAGE 6 — Vocab Recall
 
 ```
 +-------------------------------------------------------------------------+
@@ -368,10 +331,8 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  VOCAB RECALL                                                           |
 |  ────────────                                                           |
 |                                                                         |
-|  ▸ "Can you say these in Japanese? Don't peek at your notes —           |
-|     try from memory first!"                                             |
-|    「にほんごでいえるかな？                                              |
-|     ノートをみないで、おぼえているかためしてみよう！」                  |
+|  ▸ "Say these in Japanese — from memory!"                               |
+|    「にほんごでいってみましょう。おぼえているかな？」                    |
 |                                                                         |
 |                                                                         |
 |  PLACES                                                                 |
@@ -396,11 +357,11 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  │  there is (person)   │  __________           │                        |
 |  └──────────────────────┴──────────────────────┘                        |
 |                                                                         |
-|                                                                  PAGE 7 |
+|                                                                  PAGE 6 |
 +-------------------------------------------------------------------------+
 ```
 
-### PAGE 8 — Short Dialogues
+### PAGE 7 — Short Dialogues
 
 ```
 +-------------------------------------------------------------------------+
@@ -408,8 +369,8 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  SHORT DIALOGUES                                                        |
 |  ────────────────                                                       |
 |                                                                         |
-|  ▸ "Try asking the question in Japanese."                               |
-|    「にほんごでしつもんしてみてください。」                              |
+|  ▸ "Ask this in Japanese."                                              |
+|    「にほんごできいてみましょう。」                                      |
 |                                                                         |
 |  DIALOGUE 1:                                                            |
 |  Student:  [_________________________________]                          |
@@ -424,8 +385,8 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |                                                                         |
 |  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
 |                                                                         |
-|  ▸ "I'll ask the question. Answer in Japanese."                         |
-|    「わたしがしつもんします。にほんごでこたえてください。」              |
+|  ▸ "I'll ask. Answer in Japanese."                                      |
+|    「わたしがききます。にほんごでこたえてね。」                          |
 |                                                                         |
 |  DIALOGUE 2:                                                            |
 |  Tutor:    へやに ねこが いますか？                                       |
@@ -439,7 +400,7 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |                                                                         |
 |  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
 |                                                                         |
-|  ▸ "Your turn. Try asking in Japanese."                                 |
+|  ▸ "Your turn — ask in Japanese."                                       |
 |    「あなたのばんです。にほんごできいてみてね。」                        |
 |                                                                         |
 |  DIALOGUE 3:                                                            |
@@ -467,11 +428,11 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |     │  きょうしつ(classroom)  せんせい(teacher)│                         |
 |     └─────────────────────────────────────────┘                         |
 |                                                                         |
-|                                                                  PAGE 8 |
+|                                                                  PAGE 7 |
 +-------------------------------------------------------------------------+
 ```
 
-### PAGE 9 — Guided Conversation
+### PAGE 8 — Guided Conversation
 
 ```
 +-------------------------------------------------------------------------+
@@ -515,11 +476,11 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |    「じょうずですね！こうたいしましょう。                                |
 |     こんどはわたしがアレックスです。」                                  |
 |                                                                         |
-|                                                                  PAGE 9 |
+|                                                                  PAGE 8 |
 +-------------------------------------------------------------------------+
 ```
 
-### PAGE 10 — Memory Conversation
+### PAGE 9 — Memory Conversation
 
 ```
 +-------------------------------------------------------------------------+
@@ -539,25 +500,28 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |                  Is there a TV?                                         |
 |                                                                         |
 |  YUKI (you):     はい、あそこに______があります。                         |
+|                  Yes, the TV is over there.                             |
 |                                                                         |
 |  ALEX (tutor):   ねこがいますか？                                         |
 |                  Is there a cat?                                        |
 |                                                                         |
 |  YUKI (you):     はい、いすのしたに______がいます。                       |
+|                  Yes, there's a cat under the chair.                    |
 |                                                                         |
 |  ALEX (tutor):   おかあさんはいますか？                                   |
 |                  Is your mom here?                                      |
 |                                                                         |
 |  YUKI (you):     いいえ、カフェに______。                                 |
+|                  No, she's at a cafe.                                   |
 |                                                                         |
 |  ALEX (tutor):   そうですか。ありがとう！                                 |
 |                  I see. Thanks!                                         |
 |                                                                         |
-|                                                                 PAGE 10 |
+|                                                                  PAGE 9 |
 +-------------------------------------------------------------------------+
 ```
 
-### PAGE 11 — Free Discussion
+### PAGE 10 — Free Discussion
 
 ```
 +-------------------------------------------------------------------------+
@@ -565,10 +529,9 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  FREE DISCUSSION                                                        |
 |  ────────────────                                                       |
 |                                                                         |
-|  ▸ "I'll ask you a question. You answer.                                |
-|     Then ask me the same question back!"                                |
-|    「わたしがしつもんします。こたえてください。                          |
-|     そのあと、おなじしつもんをわたしにしてね！」                        |
+|  ▸ "I'll ask — you answer. Then ask me the same question back!"         |
+|    「わたしがききます、こたえてください。                                |
+|     そのあと、おなじしつもんをしてね！」                                |
 |                                                                         |
 |                                                                         |
 |  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
@@ -625,11 +588,11 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |     │  でんわ(phone) とけい(clock)                        │               |
 |     └────────────────────────────────────────────────────┘               |
 |                                                                         |
-|                                                                 PAGE 11 |
+|                                                                 PAGE 10 |
 +-------------------------------------------------------------------------+
 ```
 
-### PAGE 12 — Roleplay
+### PAGE 11 — Roleplay
 
 ```
 +-------------------------------------------------------------------------+
@@ -662,19 +625,17 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  │  つくえのうえ / いすのした / あそこ / ここ                  │           |
 |  └──────────────────────────────────────────────────────────┘           |
 |                                                                         |
-|                                                                 PAGE 12 |
+|                                                                 PAGE 11 |
 +-------------------------------------------------------------------------+
 ```
 
-### PAGE 13 — Travel in Japan
+### PAGE 12 — Travel in Japan
 
 ```
 +-------------------------------------------------------------------------+
 |                                                                         |
-|  ▸ "Let's use what we learned — imagine you're at a Japanese            |
-|     convenience store!"                                                 |
-|    「きょうならったことをつかってみましょう                              |
-|     — にほんのコンビニにいるとおもってね！」                            |
+|  ▸ "Imagine you're at a Japanese convenience store!"                    |
+|    「にほんのコンビニにいるとおもってね！」                              |
 |                                                                         |
 |  TRAVEL IN JAPAN: AT A CONVENIENCE STORE                                |
 |  ────────────────────────────────────────                               |
@@ -713,11 +674,11 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  YOU:      ありがとうございます！                                         |
 |            Thank you very much!                                         |
 |                                                                         |
-|                                                                 PAGE 13 |
+|                                                                 PAGE 12 |
 +-------------------------------------------------------------------------+
 ```
 
-### PAGE 14 — Bonus 1: Translate (No Hints)
+### PAGE 13 — Bonus 1: Translate (No Hints)
 
 ```
 +-------------------------------------------------------------------------+
@@ -726,8 +687,8 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  ────────────────────────────────                                       |
 |  (Skip if you don't have time!)                                         |
 |                                                                         |
-|  ▸ "Can you translate these without any hints? Let's try!"              |
-|    「ヒントなしでにほんごにできるかな？やってみよう！」                  |
+|  ▸ "Translate these — no hints!"                                        |
+|    「ヒントなしでにほんごにしてみましょう！」                            |
 |                                                                         |
 |                                                                         |
 |  1. There is a book on the desk.                                        |
@@ -754,11 +715,11 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |                                                                         |
 |     _____________________________________________________               |
 |                                                                         |
-|                                                                 PAGE 14 |
+|                                                                 PAGE 13 |
 +-------------------------------------------------------------------------+
 ```
 
-### PAGE 15 — Bonus 2: Today's Character — の / ノ (no)
+### PAGE 14 — Bonus 2: Today's Character — の / ノ (no)
 
 ```
 +-------------------------------------------------------------------------+
@@ -823,18 +784,17 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |     nokku (knock)              =  [   ]ック                             |
 |     pasokon (PC)               =  パソコ[   ]                           |
 |                                                                         |
-|                                                                 PAGE 15 |
+|                                                                 PAGE 14 |
 +-------------------------------------------------------------------------+
 ```
 
-### PAGE 16 — Mission Complete
+### PAGE 15 — Mission Complete
 
 ```
 +-------------------------------------------------------------------------+
 |                                                                         |
-|  ▸ "You did great today! Amazing! Let's check them off together."       |
-|    「きょうはとてもじょうずでした！すごい！                              |
-|     いっしょにチェックしましょう。」                                    |
+|  ▸ "Great job today! Let's check them off."                             |
+|    「きょうはじょうずでしたね！いっしょにチェックしましょう。」          |
 |                                                                         |
 |  ミッションかんりょう！                                                   |
 |  Mission Complete!                                                      |
@@ -864,6 +824,6 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  • きょうしつにせんせいがいます。    — There's a teacher in the classroom.|
 |  • へやにねこがいます。              — There's a cat in the room.         |
 |                                                                         |
-|                                                                 PAGE 16 |
+|                                                                 PAGE 15 |
 +-------------------------------------------------------------------------+
 ```
