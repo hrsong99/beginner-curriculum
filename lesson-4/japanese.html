@@ -1,0 +1,2716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 4: あります・います — Is There...?</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: monospace; background: #fff; color: #111; overflow-x: hidden; }
+  .page { display: none; max-width: 720px; margin: 0 auto; padding: 60px 40px 100px; position: relative; overflow: visible; }
+  .page.active { display: block; }
+  .tg { margin: 16px 0; padding: 10px 16px; background: #f0f4ff; border-left: 3px solid #a0b4d8; border-radius: 0 6px 6px 0; font-size: 13px; line-height: 1.6; }
+  .tg .tg-en { color: #444; margin-bottom: 2px; }
+  .tg .tg-jp { color: #999; font-size: 12px; }
+  h1 { font-size: 22px; margin-bottom: 8px; letter-spacing: 0.5px; }
+  h2 { font-size: 18px; font-weight: normal; margin-bottom: 32px; border-bottom: 1px solid #111; padding-bottom: 12px; }
+  h3 { font-size: 17px; margin: 32px 0 12px; }
+  p, li { font-size: 16px; line-height: 1.8; }
+  .en { color: #bbb; font-size: 12px; margin-top: 0; margin-bottom: 0; }
+  .pair { display: flex; flex-direction: column; margin-bottom: 6px; line-height: 1.5; }
+  .pair > .en { padding-left: 24px; }
+  .section > .pair > .en { padding-left: 36px; }
+  .jp { font-size: 19px; letter-spacing: 1px; padding-top: 2px; margin-bottom: 0; }
+  .section { margin: 32px 0; }
+  .pattern { margin: 12px 0 12px 20px; line-height: 2.2; }
+  .blank { display: inline-block; border-bottom: 1px solid #111; min-width: 280px; height: 1.6em; vertical-align: bottom; }
+  .blank-full { display: block; border-bottom: 1px solid #111; margin: 8px 0 8px 20px; max-width: 420px; height: 1.6em; }
+  .blank-input { font-family: monospace; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; outline: none; min-width: 60px; width: 60px; padding: 6px 10px; margin: 0 6px; background: #fafafa; vertical-align: baseline; }
+  .blank-input:focus { border-color: #c33; background: #fff; }
+  .blank-input-full { display: block; font-family: monospace; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; outline: none; width: 100%; max-width: 420px; margin: 4px 0 8px 0; padding: 8px 10px; background: #fafafa; }
+  .blank-input-full:focus { border-color: #c33; background: #fff; }
+  .answer-hint { font-size: 19px; letter-spacing: 1px; color: #111; margin: 0; padding-top: 2px; }
+  .qa { display: grid; grid-template-columns: 64px 1fr; align-items: center; margin: 4px 0; }
+  .qa + .qa { margin-top: 8px; }
+  .qa .pair > .en { padding-left: 0; }
+  .qa-label { font-weight: bold; font-size: 14px; color: #888; }
+  .box { border: 1px solid #111; padding: 20px 24px; margin: 20px 0; overflow: visible; }
+  .box-label { font-size: 14px; font-weight: bold; margin-bottom: 10px; letter-spacing: 0.5px; }
+  .help-box { border: 1px solid #999; padding: 14px 18px; margin: 12px 0 12px 20px; max-width: 380px; line-height: 2.2; }
+  .review-card { border: 1px solid #111; padding: 18px 22px; margin: 16px 0; }
+  .review-card .card-label { font-size: 13px; font-weight: bold; letter-spacing: 0.5px; color: #666; margin-bottom: 6px; text-transform: uppercase; }
+  .review-card .card-pattern { font-size: 16px; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px dashed #ccc; }
+  .review-card .card-items { margin: 10px 0; }
+  .review-card .card-items .prompt { font-size: 15px; margin: 8px 0 2px; }
+  .review-card .card-items .prompt.star::before { content: "★ "; color: #c33; }
+  .review-card .card-items .prompt:not(.star)::before { content: counter(revitem) ". "; color: #888; }
+  .review-card .card-items { counter-reset: revitem; }
+  .review-card .card-items .prompt:not(.star) { counter-increment: revitem; }
+  .review-card .card-help { border: 1px solid #bbb; background: #fafafa; padding: 10px 14px; margin-top: 12px; font-size: 14px; line-height: 1.9; max-width: 100%; }
+  .review-card .card-help .label { font-size: 11px; font-weight: bold; letter-spacing: 1px; color: #888; margin-bottom: 4px; display: block; }
+  .dialogue { margin: 12px 0 12px 20px; }
+  .dialogue .turn { display: grid; grid-template-columns: 80px 1fr; align-items: start; margin-bottom: 12px; }
+  .dialogue .spk { font-weight: bold; font-size: 15px; padding-top: 16px; }
+  .dialogue .pair { padding-left: 0; }
+  .dialogue .pair .jp { margin-left: 0; }
+  .dialogue .pair .en { margin-left: 0; padding-left: 0; }
+  .check-item { margin: 16px 0; padding-left: 10px; }
+  .check { display: inline-block; border: 2px solid #111; width: 28px; height: 28px; text-align: center; line-height: 26px; margin-right: 10px; vertical-align: middle; font-size: 14px; cursor: pointer; position: relative; overflow: visible; }
+  .check.done { border-color: transparent; }
+  .check .hanamaru { position: absolute; top: -22px; left: -22px; width: 72px; height: 72px; pointer-events: none; }
+  .check .hanamaru path { stroke-dasharray: 2000; stroke-dashoffset: 2000; animation: drawHanamaru 1.5s ease forwards; }
+  @keyframes drawHanamaru { to { stroke-dashoffset: 0; } }
+  .check-item { overflow: visible; }
+  .nav { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; border-top: 1px solid #ddd; padding: 16px; display: flex; justify-content: center; gap: 16px; align-items: center; z-index: 200; }
+  .nav button { font-family: monospace; font-size: 14px; padding: 8px 24px; border: 1px solid #111; background: #fff; cursor: pointer; }
+  .nav button:hover { background: #f0f0f0; }
+  .nav button:disabled { color: #ccc; border-color: #ccc; cursor: default; background: #fff; }
+  .nav span { font-size: 13px; color: #666; min-width: 80px; text-align: center; }
+
+  /* Chat sidebar */
+  #chatPanel { position: fixed; top: 0; right: -360px; width: 360px; bottom: 57px; background: #fff; border-left: 1px solid #ddd; border-bottom: 1px solid #ddd; z-index: 500; display: flex; flex-direction: column; transition: right 0.25s ease; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+  #chatPanel.open { right: 0; }
+  #chatHeader { padding: 14px 16px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; }
+  #chatKeyBar { padding: 8px 16px; border-bottom: 1px solid #eee; background: #f8f8f8; display: flex; gap: 6px; align-items: center; }
+  #chatKeyBar input { flex: 1; font-family: monospace; font-size: 12px; padding: 5px 8px; border: 1px solid #ddd; border-radius: 4px; outline: none; }
+  #chatKeyBar input:focus { border-color: #4a90d9; }
+  #chatKeyBar button { font-size: 11px; padding: 5px 10px; border: 1px solid #ddd; border-radius: 4px; background: #fff; cursor: pointer; white-space: nowrap; }
+  #chatKeyBar button:hover { background: #f0f0f0; }
+  #chatKeyBar .key-status { font-size: 11px; color: #4a4; white-space: nowrap; }
+  #chatKeyWarn { display: none; padding: 6px 16px; background: #fff8e1; font-size: 12px; color: #856404; border-bottom: 1px solid #eee; }
+  #chatHeader h4 { margin: 0; font-size: 14px; font-weight: 600; }
+  #chatClose { background: none; border: none; font-size: 20px; cursor: pointer; color: #999; padding: 0 4px; }
+  #chatClose:hover { color: #333; }
+  #chatMessages { flex: 1; overflow-y: auto; padding: 12px 16px; display: flex; flex-direction: column; gap: 8px; }
+  .chat-msg { max-width: 85%; padding: 8px 12px; border-radius: 12px; font-size: 14px; line-height: 1.5; word-wrap: break-word; }
+  .chat-msg.mine { align-self: flex-end; background: #4a90d9; color: #fff; border-bottom-right-radius: 4px; }
+  .chat-msg.theirs { align-self: flex-start; background: #f0f0f0; color: #111; border-bottom-left-radius: 4px; }
+  .chat-msg .chat-name { font-size: 11px; font-weight: 600; margin-bottom: 2px; opacity: 0.7; }
+  .chat-msg .chat-translation { font-size: 12px; opacity: 0.7; margin-top: 4px; font-style: italic; border-top: 1px solid rgba(128,128,128,0.2); padding-top: 4px; }
+  .chat-msg.mine .chat-translation { border-top-color: rgba(255,255,255,0.25); }
+  #chatInputArea { padding: 10px 12px; border-top: 1px solid #eee; display: flex; gap: 8px; }
+  #chatInput { flex: 1; font-family: inherit; font-size: 14px; padding: 8px 12px; border: 1px solid #ddd; border-radius: 20px; outline: none; }
+  #chatInput:focus { border-color: #4a90d9; }
+  #chatSendBtn { background: #4a90d9; color: #fff; border: none; border-radius: 50%; width: 36px; height: 36px; cursor: pointer; font-size: 16px; display: flex; align-items: center; justify-content: center; }
+  #chatSendBtn:hover { background: #3a7bc8; }
+  #btnChat.has-unread { background: #fff0f0; border-color: #e33; }
+
+  /* Chat toast (IG-live style bubble above chat button when panel is closed) */
+  #chatToast { position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%) translateY(8px); margin-bottom: 8px; max-width: 300px; width: max-content; background: #fff; color: #111; border: 1px solid #ddd; box-shadow: 0 2px 12px rgba(0,0,0,0.12); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 14px; padding: 10px 14px; border-radius: 12px; z-index: 210; pointer-events: none; opacity: 0; transition: opacity 0.3s, transform 0.3s; line-height: 1.5; white-space: normal; }
+  #chatToast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+  #chatToast .toast-name { font-weight: 600; margin-right: 6px; font-size: 12px; color: #4a90d9; }
+  #chatToast .toast-translation { display: block; font-size: 13px; color: #888; margin-top: 4px; padding-top: 4px; border-top: 1px solid #eee; }
+
+  /* Flash animation for new message when panel is open */
+  @keyframes chatFlash { 0% { background: #e8f0fe; } 100% { background: transparent; } }
+  .chat-msg.flash { animation: chatFlash 1.2s ease; }
+  .match-btn { font-family: monospace; font-size: 13px; padding: 6px 14px; border: 1px solid #999; background: #fff; cursor: pointer; transition: all 0.15s; border-radius: 4px; }
+  .match-btn:hover { background: #f0f0f0; border-color: #111; }
+  .match-btn.correct { background: #e8f5e9; border-color: #4caf50; color: #2e7d32; cursor: default; }
+  .match-btn.wrong { background: #ffebee; border-color: #ef5350; color: #c62828; }
+  .separator { border: none; border-top: 1px dashed #ccc; margin: 28px 0; }
+  ol { padding-left: 20px; }
+  ol li { margin: 4px 0; }
+  ruby { ruby-position: over; }
+  rt { font-size: 0.6em; color: #c4b8a8; font-weight: normal; font-family: 'Helvetica Neue', Arial, sans-serif; letter-spacing: 1px; padding-bottom: 2px; }
+</style>
+</head>
+<body>
+
+<!-- PAGE 0: COVER -->
+<div class="page active" id="p0">
+  <div style="text-align:center; margin: 40px 0 20px">
+    <p style="font-size: 32px; font-weight: bold; line-height: 1.5; font-family: sans-serif;">
+      あります・います
+    </p>
+    <p class="en" style="font-size: 14px; margin-top: 12px;">Is There...? — There is / There are</p>
+  </div>
+
+  <div class="section" style="margin-top: 40px;">
+    <div class="pair">
+      <div class="jp"><strong>①</strong>&nbsp; 〜さん、こんにちは！おかえりなさい。</div>
+      <div class="en">"Hi ~, welcome back!"</div>
+    </div>
+
+    <div class="pair">
+      <div class="jp"><strong>②</strong>&nbsp; きょうもよろしくおねがいします。</div>
+      <div class="en">"Let's have a great lesson today."</div>
+    </div>
+
+    <div class="pair">
+      <div class="jp"><strong>③</strong>&nbsp; これをよんでください。</div>
+      <div class="en">"Please read this."</div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 1: REVIEW L1 + L2 + L3 -->
+<div class="page" id="p1">
+  <h1>REVIEW: LESSONS 1, 2 &amp; 3</h1>
+  <h2></h2>
+
+  <div class="tg">
+    <div class="tg-en">"Let's review — translate each sentence into Japanese."</div>
+    <div class="tg-jp">「ふくしゅうしましょう。にほんごにしてみてね。」</div>
+  </div>
+
+  <div class="review-card">
+    <div class="card-label">LESSON 1: です (I am / he is)</div>
+    <div class="card-pattern"><strong>PATTERN:</strong> [person]<ruby>は<rt>wa</rt></ruby> [noun / adjective]<ruby>です<rt>desu</rt></ruby>。</div>
+    <div class="card-items">
+      <div class="prompt">I am a student.</div>
+      <input type="text" class="blank-input-full">
+      <div class="prompt">He is kind.</div>
+      <input type="text" class="blank-input-full">
+      <div class="prompt star">She is from Tokyo.</div>
+      <input type="text" class="blank-input-full">
+    </div>
+    <div class="card-help">
+      <span class="label">WORDS</span>
+      <ruby>がくせい<rt>gakusei</rt></ruby>(student) &nbsp; <ruby>しんせつ<rt>shinsetsu</rt></ruby>(kind)<br>
+      <ruby>とうきょう<rt>Tōkyō</rt></ruby>(Tokyo) &nbsp; 〜<ruby>から<rt>kara</rt></ruby>(from)
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="review-card">
+    <div class="card-label">LESSON 2: これ・それ・あれ (this / that / over there)</div>
+    <div class="card-pattern"><strong>PATTERN:</strong> <ruby>これ<rt>kore</rt></ruby> / <ruby>それ<rt>sore</rt></ruby> / <ruby>あれ<rt>are</rt></ruby><ruby>は<rt>wa</rt></ruby> [noun]<ruby>です<rt>desu</rt></ruby>。</div>
+    <div class="card-items">
+      <div class="prompt">This is a book.</div>
+      <input type="text" class="blank-input-full">
+      <div class="prompt">That is my pen.</div>
+      <input type="text" class="blank-input-full">
+      <div class="prompt star">That (over there) is the teacher's bag.</div>
+      <input type="text" class="blank-input-full">
+    </div>
+    <div class="card-help">
+      <span class="label">WORDS</span>
+      <ruby>ほん<rt>hon</rt></ruby>(book) &nbsp; <ruby>ペン<rt>pen</rt></ruby>(pen) &nbsp; <ruby>かばん<rt>kaban</rt></ruby>(bag)<br>
+      <ruby>せんせい<rt>sensei</rt></ruby>(teacher) &nbsp; 〜<ruby>の<rt>no</rt></ruby>(possessive 'of / 's')
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="review-card">
+    <div class="card-label">LESSON 3: どこ (where)</div>
+    <div class="card-pattern"><strong>PATTERN:</strong> [noun]<ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？<br>
+      [noun]<ruby>は<rt>wa</rt></ruby><ruby>ここ<rt>koko</rt></ruby> / <ruby>そこ<rt>soko</rt></ruby> / <ruby>あそこ<rt>asoko</rt></ruby><ruby>です<rt>desu</rt></ruby>。</div>
+    <div class="card-items">
+      <div class="prompt">Where is the book?</div>
+      <input type="text" class="blank-input-full">
+      <div class="prompt">The pen is there.</div>
+      <input type="text" class="blank-input-full">
+      <div class="prompt star">Where is my bag?</div>
+      <input type="text" class="blank-input-full">
+    </div>
+    <div class="card-help">
+      <span class="label">WORDS</span>
+      <ruby>ほん<rt>hon</rt></ruby>(book) &nbsp; <ruby>ペン<rt>pen</rt></ruby>(pen) &nbsp; <ruby>かばん<rt>kaban</rt></ruby>(bag)<br>
+      <ruby>ここ<rt>koko</rt></ruby>(here) &nbsp; <ruby>そこ<rt>soko</rt></ruby>(there) &nbsp; <ruby>あそこ<rt>asoko</rt></ruby>(over there)
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 2: TODAY'S PATTERNS -->
+<div class="page" id="p2">
+  <div class="tg">
+    <div class="tg-en">"Let's read together. Copy my pronunciation closely — slow is OK."</div>
+    <div class="tg-jp">「いっしょによみましょう。はつおんをよくまねしてね。ゆっくりでいいですよ。」</div>
+  </div>
+
+  <div class="section">
+    <h3>TODAY'S PATTERNS</h3>
+
+    <p><strong>1. There IS a [thing]</strong> — <ruby>あります<rt>arimasu</rt></ruby></p>
+    <div class="pattern">
+      <div class="pair">
+        <div class="jp">&bull; <ruby>つくえ<rt>tsukue</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>うえ<rt>ue</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>ほん<rt>hon</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby>。</div>
+        <div class="en">There is a book on the desk.</div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <ruby>かばん<rt>kaban</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>なか<rt>naka</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>ペン<rt>pen</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby>。</div>
+        <div class="en">There is a pen in the bag.</div>
+      </div>
+    </div>
+
+    <p style="margin-top:20px"><strong>2. There IS a [person / animal]</strong> — <ruby>います<rt>imasu</rt></ruby></p>
+    <div class="pattern">
+      <div class="pair">
+        <div class="jp">&bull; <ruby>きょうしつ<rt>kyōshitsu</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>せんせい<rt>sensei</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>います<rt>imasu</rt></ruby>。</div>
+        <div class="en">There is a teacher in the classroom.</div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <ruby>へや<rt>heya</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>ねこ<rt>neko</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>います<rt>imasu</rt></ruby>。</div>
+        <div class="en">There is a cat in the room.</div>
+      </div>
+    </div>
+
+    <div class="help-box" style="margin-left:20px; max-width:520px; margin-top:20px">
+      <strong>REMEMBER</strong><br>
+      <ruby>あります<rt>arimasu</rt></ruby> &rarr; for <strong>THINGS</strong> (book, pen, desk...)<br>
+      <ruby>います<rt>imasu</rt></ruby> &rarr; for <strong>LIVING</strong> things (people, animals)
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 3: PATTERN DRILL A — あります -->
+<div class="page" id="p3">
+  <h1>PATTERN DRILL A: <ruby>あります<rt>arimasu</rt></ruby> (THINGS)</h1>
+  <h2></h2>
+
+  <p>PATTERN: [place]<ruby>に<rt>ni</rt></ruby> [thing]<ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby>。</p>
+  <p class="en" style="margin-left:16px; margin-bottom:20px">There is a [thing] at [place].</p>
+
+  <div class="section">
+    <div class="tg">
+      <div class="tg-en">"Let's read together. Copy my pronunciation closely — slow is OK."</div>
+      <div class="tg-jp">「いっしょによみましょう。はつおんをよくまねしてね。ゆっくりでいいですよ。」</div>
+    </div>
+    <p><strong>1. Read Together:</strong></p>
+    <div class="pattern">
+      <div class="pair">
+        <div class="jp">&bull; <ruby>つくえ<rt>tsukue</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>うえ<rt>ue</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>ほん<rt>hon</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby>。</div>
+        <div class="en">A book is on the desk.</div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <ruby>かばん<rt>kaban</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>なか<rt>naka</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>ペン<rt>pen</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby>。</div>
+        <div class="en">A pen is in the bag.</div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <ruby>へや<rt>heya</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>テレビ<rt>terebi</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby>。</div>
+        <div class="en">A TV is in the room.</div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <ruby>つくえ<rt>tsukue</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>うえ<rt>ue</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>とけい<rt>tokei</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby>。</div>
+        <div class="en">A clock is on the desk.</div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <ruby>いす<rt>isu</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>した<rt>shita</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>かばん<rt>kaban</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby>。</div>
+        <div class="en">A bag is under the chair.</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <div class="tg">
+      <div class="tg-en">"Fill in the blank and read the whole thing!"</div>
+      <div class="tg-jp">「くうらんにことばをいれて、ぜんぶよんでみましょう！」</div>
+    </div>
+    <p><strong>2. Fill in the Blanks:</strong></p>
+    <div class="pattern">
+      <div class="pair">
+        <div class="jp">&bull; <ruby>つくえ<rt>tsukue</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>うえ<rt>ue</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>ほん<rt>hon</rt></ruby><input type="text" class="blank-input" style="min-width:80px"><ruby>あります<rt>arimasu</rt></ruby>。 <span class="en">There's a book on the desk.</span></div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <ruby>かばん<rt>kaban</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>なか<rt>naka</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>ペン<rt>pen</rt></ruby><ruby>が<rt>ga</rt></ruby><input type="text" class="blank-input" style="min-width:80px">。 <span class="en">There's a pen in the bag.</span></div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <ruby>へや<rt>heya</rt></ruby><input type="text" class="blank-input" style="min-width:80px"><ruby>テレビ<rt>terebi</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby>。 <span class="en">There's a TV in the room.</span></div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <ruby>いす<rt>isu</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>した<rt>shita</rt></ruby><ruby>に<rt>ni</rt></ruby><input type="text" class="blank-input" style="min-width:80px"><ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby>。 <span class="en">There's a bag under the chair.</span></div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <ruby>つくえ<rt>tsukue</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>うえ<rt>ue</rt></ruby><input type="text" class="blank-input" style="min-width:80px"><ruby>とけい<rt>tokei</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby>。 <span class="en">There's a clock on the desk.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <div class="tg">
+      <div class="tg-en">"Translate to Japanese — hints are OK."</div>
+      <div class="tg-jp">「にほんごにしてみましょう。ヒントをみてもいいですよ。」</div>
+    </div>
+    <p><strong>3. Translate:</strong></p>
+    <div class="pattern">
+      &bull; There is a phone on the desk.<br>
+      <input type="text" class="blank-input-full">
+      <span style="color:#999; font-size:14px">(phone = <ruby>でんわ<rt>denwa</rt></ruby> / on the desk = <ruby>つくえ<rt>tsukue</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>うえ<rt>ue</rt></ruby>)</span>
+    </div>
+    <div class="pattern" style="margin-top:12px">
+      &bull; There is a key in the bag.<br>
+      <input type="text" class="blank-input-full">
+      <span style="color:#999; font-size:14px">(key = <ruby>かぎ<rt>kagi</rt></ruby> / in the bag = <ruby>かばん<rt>kaban</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>なか<rt>naka</rt></ruby>)</span>
+    </div>
+    <div class="pattern" style="margin-top:12px">
+      &bull; There is a notebook on the desk.<br>
+      <input type="text" class="blank-input-full">
+      <span style="color:#999; font-size:14px">(notebook = <ruby>ノート<rt>nōto</rt></ruby>)</span>
+    </div>
+    <div class="pattern" style="margin-top:12px">
+      &bull; There is a clock in the room.<br>
+      <input type="text" class="blank-input-full">
+      <span style="color:#999; font-size:14px">(in the room = <ruby>へや<rt>heya</rt></ruby>)</span>
+    </div>
+    <div class="pattern" style="margin-top:12px">
+      &bull; There is a book under the chair.<br>
+      <input type="text" class="blank-input-full">
+      <span style="color:#999; font-size:14px">(under the chair = <ruby>いす<rt>isu</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>した<rt>shita</rt></ruby>)</span>
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <div class="tg">
+      <div class="tg-en">"Make your own! Say something that exists in your room right now."</div>
+      <div class="tg-jp">「じぶんのぶんをつくってみましょう！いまのへやにあるものをいってみてね。」</div>
+    </div>
+    <p><strong>4. Make Your Own:</strong></p>
+    <input type="text" class="blank-input-full">
+  </div>
+</div>
+
+<!-- PAGE 4: PATTERN DRILL B — います -->
+<div class="page" id="p4">
+  <h1>PATTERN DRILL B: <ruby>います<rt>imasu</rt></ruby> (PEOPLE / ANIMALS)</h1>
+  <h2></h2>
+
+  <p>PATTERN: [place]<ruby>に<rt>ni</rt></ruby> [person / animal]<ruby>が<rt>ga</rt></ruby><ruby>います<rt>imasu</rt></ruby>。</p>
+  <p class="en" style="margin-left:16px; margin-bottom:20px">There is a [person / animal] at [place].</p>
+
+  <div class="section">
+    <div class="tg">
+      <div class="tg-en">"Next pattern. Same idea — copy my pronunciation closely."</div>
+      <div class="tg-jp">「つぎのパターンです。おなじように、はつおんをまねしてみてね。」</div>
+    </div>
+    <p><strong>1. Read Together:</strong></p>
+    <div class="pattern">
+      <div class="pair">
+        <div class="jp">&bull; <ruby>きょうしつ<rt>kyōshitsu</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>せんせい<rt>sensei</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>います<rt>imasu</rt></ruby>。</div>
+        <div class="en">A teacher is in the classroom.</div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <ruby>へや<rt>heya</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>ねこ<rt>neko</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>います<rt>imasu</rt></ruby>。</div>
+        <div class="en">A cat is in the room.</div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <ruby>カフェ<rt>kafe</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>ともだち<rt>tomodachi</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>います<rt>imasu</rt></ruby>。</div>
+        <div class="en">A friend is in the cafe.</div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <ruby>いえ<rt>ie</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>いぬ<rt>inu</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>います<rt>imasu</rt></ruby>。</div>
+        <div class="en">A dog is at home.</div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <ruby>こうえん<rt>kōen</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>こども<rt>kodomo</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>います<rt>imasu</rt></ruby>。</div>
+        <div class="en">A child is in the park.</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <div class="tg">
+      <div class="tg-en">"Fill in the blank and read the whole thing!"</div>
+      <div class="tg-jp">「くうらんにことばをいれて、ぜんぶよんでみましょう！」</div>
+    </div>
+    <p><strong>2. Fill in the Blanks:</strong></p>
+    <div class="pattern">
+      <div class="pair">
+        <div class="jp">&bull; <ruby>きょうしつ<rt>kyōshitsu</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>せんせい<rt>sensei</rt></ruby><input type="text" class="blank-input" style="min-width:80px"><ruby>います<rt>imasu</rt></ruby>。 <span class="en">There's a teacher in the classroom.</span></div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <ruby>へや<rt>heya</rt></ruby><ruby>に<rt>ni</rt></ruby><input type="text" class="blank-input" style="min-width:80px"><ruby>が<rt>ga</rt></ruby><ruby>います<rt>imasu</rt></ruby>。 <span class="en">There's a cat in the room.</span></div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <ruby>カフェ<rt>kafe</rt></ruby><input type="text" class="blank-input" style="min-width:80px"><ruby>ともだち<rt>tomodachi</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>います<rt>imasu</rt></ruby>。 <span class="en">There's a friend in the cafe.</span></div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <ruby>いえ<rt>ie</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>いぬ<rt>inu</rt></ruby><ruby>が<rt>ga</rt></ruby><input type="text" class="blank-input" style="min-width:80px">。 <span class="en">There's a dog at home.</span></div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <ruby>こうえん<rt>kōen</rt></ruby><input type="text" class="blank-input" style="min-width:80px"><ruby>こども<rt>kodomo</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>います<rt>imasu</rt></ruby>。 <span class="en">There's a child in the park.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <div class="tg">
+      <div class="tg-en">"Translate to Japanese."</div>
+      <div class="tg-jp">「にほんごにしてみましょう。」</div>
+    </div>
+    <p><strong>3. Translate:</strong></p>
+    <div class="pattern">
+      &bull; There is a teacher in the room.<br>
+      <input type="text" class="blank-input-full">
+      <span style="color:#999; font-size:14px">(teacher = <ruby>せんせい<rt>sensei</rt></ruby> / room = <ruby>へや<rt>heya</rt></ruby>)</span>
+    </div>
+    <div class="pattern" style="margin-top:12px">
+      &bull; There is a dog in the park.<br>
+      <input type="text" class="blank-input-full">
+      <span style="color:#999; font-size:14px">(dog = <ruby>いぬ<rt>inu</rt></ruby> / park = <ruby>こうえん<rt>kōen</rt></ruby>)</span>
+    </div>
+    <div class="pattern" style="margin-top:12px">
+      &bull; There is a friend at home.<br>
+      <input type="text" class="blank-input-full">
+      <span style="color:#999; font-size:14px">(friend = <ruby>ともだち<rt>tomodachi</rt></ruby> / home = <ruby>いえ<rt>ie</rt></ruby>)</span>
+    </div>
+    <div class="pattern" style="margin-top:12px">
+      &bull; There is a cat under the chair.<br>
+      <input type="text" class="blank-input-full">
+      <span style="color:#999; font-size:14px">(cat = <ruby>ねこ<rt>neko</rt></ruby>)</span>
+    </div>
+    <div class="pattern" style="margin-top:12px">
+      &bull; There is a child in the classroom.<br>
+      <input type="text" class="blank-input-full">
+      <span style="color:#999; font-size:14px">(child = <ruby>こども<rt>kodomo</rt></ruby> / classroom = <ruby>きょうしつ<rt>kyōshitsu</rt></ruby>)</span>
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <div class="tg">
+      <div class="tg-en">"Make your own! Say who is in the room with you right now."</div>
+      <div class="tg-jp">「じぶんのぶんをつくってみましょう！いま、だれがへやにいますか？」</div>
+    </div>
+    <p><strong>4. Make Your Own:</strong></p>
+    <input type="text" class="blank-input-full">
+  </div>
+</div>
+
+<!-- PAGE 5: VOCAB RECALL -->
+<div class="page" id="p5">
+  <h1>VOCAB RECALL</h1>
+  <h2></h2>
+
+  <div class="tg">
+    <div class="tg-en">"Say these in Japanese — from memory!"</div>
+    <div class="tg-jp">「にほんごでいってみましょう。おぼえているかな？」</div>
+  </div>
+
+  <div class="section">
+    <p><strong>PLACES</strong></p>
+    <table style="width:100%; max-width:440px; border-collapse:collapse; margin:12px 0; font-size:16px;">
+      <tbody>
+        <tr><td style="padding:8px 12px; border-bottom:1px solid #eee;">on the desk</td><td style="padding:8px 12px; border-bottom:1px solid #eee;"><input type="text" class="blank-input" style="min-width:120px"></td></tr>
+        <tr><td style="padding:8px 12px; border-bottom:1px solid #eee;">in the bag</td><td style="padding:8px 12px; border-bottom:1px solid #eee;"><input type="text" class="blank-input" style="min-width:120px"></td></tr>
+        <tr><td style="padding:8px 12px; border-bottom:1px solid #eee;">in the room</td><td style="padding:8px 12px; border-bottom:1px solid #eee;"><input type="text" class="blank-input" style="min-width:120px"></td></tr>
+        <tr><td style="padding:8px 12px; border-bottom:1px solid #111;">under the chair</td><td style="padding:8px 12px; border-bottom:1px solid #111;"><input type="text" class="blank-input" style="min-width:120px"></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <p><strong>PEOPLE &amp; ANIMALS</strong></p>
+    <table style="width:100%; max-width:440px; border-collapse:collapse; margin:12px 0; font-size:16px;">
+      <tbody>
+        <tr><td style="padding:8px 12px; border-bottom:1px solid #eee;">teacher</td><td style="padding:8px 12px; border-bottom:1px solid #eee;"><input type="text" class="blank-input" style="min-width:120px"></td></tr>
+        <tr><td style="padding:8px 12px; border-bottom:1px solid #eee;">friend</td><td style="padding:8px 12px; border-bottom:1px solid #eee;"><input type="text" class="blank-input" style="min-width:120px"></td></tr>
+        <tr><td style="padding:8px 12px; border-bottom:1px solid #eee;">cat</td><td style="padding:8px 12px; border-bottom:1px solid #eee;"><input type="text" class="blank-input" style="min-width:120px"></td></tr>
+        <tr><td style="padding:8px 12px; border-bottom:1px solid #111;">dog</td><td style="padding:8px 12px; border-bottom:1px solid #111;"><input type="text" class="blank-input" style="min-width:120px"></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <p><strong>KEY VERBS</strong></p>
+    <table style="width:100%; max-width:440px; border-collapse:collapse; margin:12px 0; font-size:16px;">
+      <tbody>
+        <tr><td style="padding:8px 12px; border-bottom:1px solid #eee;">there is (thing)</td><td style="padding:8px 12px; border-bottom:1px solid #eee;"><input type="text" class="blank-input" style="min-width:120px"></td></tr>
+        <tr><td style="padding:8px 12px; border-bottom:1px solid #111;">there is (person)</td><td style="padding:8px 12px; border-bottom:1px solid #111;"><input type="text" class="blank-input" style="min-width:120px"></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- PAGE 6: SHORT DIALOGUES -->
+<div class="page" id="p6">
+  <h1>SHORT DIALOGUES</h1>
+  <h2></h2>
+
+  <div class="section">
+    <div class="tg">
+      <div class="tg-en">"Ask this in Japanese."</div>
+      <div class="tg-jp">「にほんごできいてみましょう。」</div>
+    </div>
+    <p><strong>DIALOGUE 1:</strong></p>
+    <div class="dialogue">
+      <div class="turn">
+        <div class="spk">Student:</div>
+        <div class="pair">
+          <div class="jp"><input type="text" class="blank-input" style="min-width:280px"></div>
+          <div class="en">Is there a book on the desk?</div>
+        </div>
+      </div>
+      <div class="turn">
+        <div class="spk">Tutor:</div>
+        <div class="pair">
+          <div class="jp"><ruby>はい<rt>hai</rt></ruby>、<ruby>つくえ<rt>tsukue</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>うえ<rt>ue</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>ほん<rt>hon</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby>。</div>
+          <div class="en">Yes, there is a book on the desk.</div>
+        </div>
+      </div>
+    </div>
+    <div class="help-box">
+      <ruby>つくえ<rt>tsukue</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>うえ<rt>ue</rt></ruby>(on the desk) &nbsp; <ruby>ほん<rt>hon</rt></ruby>(book)<br>
+      〜<ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？(is there...?)
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <div class="tg">
+      <div class="tg-en">"I'll ask. Answer in Japanese."</div>
+      <div class="tg-jp">「わたしがききます。にほんごでこたえてね。」</div>
+    </div>
+    <p><strong>DIALOGUE 2:</strong></p>
+    <div class="dialogue">
+      <div class="turn">
+        <div class="spk">Tutor:</div>
+        <div class="pair">
+          <div class="jp"><ruby>へや<rt>heya</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>ねこ<rt>neko</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>います<rt>imasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+          <div class="en">Is there a cat in the room?</div>
+        </div>
+      </div>
+      <div class="turn">
+        <div class="spk">Student:</div>
+        <div class="pair">
+          <div class="jp"><input type="text" class="blank-input" style="min-width:280px"></div>
+          <div class="en">Yes, there is a cat in the room.</div>
+        </div>
+      </div>
+    </div>
+    <div class="help-box">
+      <ruby>へや<rt>heya</rt></ruby>(room) &nbsp; <ruby>ねこ<rt>neko</rt></ruby>(cat) &nbsp; <ruby>います<rt>imasu</rt></ruby>(is)
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <div class="tg">
+      <div class="tg-en">"Your turn — ask in Japanese."</div>
+      <div class="tg-jp">「あなたのばんです。にほんごできいてみてね。」</div>
+    </div>
+    <p><strong>DIALOGUE 3:</strong></p>
+    <div class="dialogue">
+      <div class="turn">
+        <div class="spk">Student:</div>
+        <div class="pair">
+          <div class="jp"><input type="text" class="blank-input" style="min-width:280px"></div>
+          <div class="en">Is there a pen in the bag?</div>
+        </div>
+      </div>
+      <div class="turn">
+        <div class="spk">Tutor:</div>
+        <div class="pair">
+          <div class="jp"><ruby>はい<rt>hai</rt></ruby>、<ruby>かばん<rt>kaban</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>なか<rt>naka</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>ペン<rt>pen</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby>。</div>
+          <div class="en">Yes, there is a pen in the bag.</div>
+        </div>
+      </div>
+    </div>
+    <div class="help-box">
+      <ruby>かばん<rt>kaban</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>なか<rt>naka</rt></ruby>(in the bag) &nbsp; <ruby>ペン<rt>pen</rt></ruby>(pen)
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <div class="tg">
+      <div class="tg-en">"Last one! I'll ask — answer in Japanese."</div>
+      <div class="tg-jp">「さいごです！しつもんします、にほんごでこたえてね。」</div>
+    </div>
+    <p><strong>DIALOGUE 4:</strong></p>
+    <div class="dialogue">
+      <div class="turn">
+        <div class="spk">Tutor:</div>
+        <div class="pair">
+          <div class="jp"><ruby>きょうしつ<rt>kyōshitsu</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>せんせい<rt>sensei</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>います<rt>imasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+          <div class="en">Is there a teacher in the classroom?</div>
+        </div>
+      </div>
+      <div class="turn">
+        <div class="spk">Student:</div>
+        <div class="pair">
+          <div class="jp"><input type="text" class="blank-input" style="min-width:280px"></div>
+          <div class="en">Yes, there is a teacher in the classroom.</div>
+        </div>
+      </div>
+    </div>
+    <div class="help-box">
+      <ruby>きょうしつ<rt>kyōshitsu</rt></ruby>(classroom) &nbsp; <ruby>せんせい<rt>sensei</rt></ruby>(teacher)
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 7: GUIDED CONVERSATION -->
+<div class="page" id="p7">
+  <h1>CONVERSATION: GUIDED READING</h1>
+  <h2></h2>
+
+  <div class="tg">
+    <div class="tg-en">"Let's read together. I'll be Yuki, you be Alex."</div>
+    <div class="tg-jp">「いっしょによみましょう。わたしがゆきで、あなたがアレックスです。」</div>
+  </div>
+
+  <div class="box">
+    <div class="box-label">CONTEXT / <ruby>じょうきょう<rt>jōkyō</rt></ruby></div>
+    Alex is visiting Yuki's house for the first time.<br>
+    <ruby>アレックス<rt>Arekkusu</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>ゆき<rt>Yuki</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>いえ<rt>ie</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>はじめて<rt>hajimete</rt></ruby><ruby>きました<rt>kimashita</rt></ruby>。
+  </div>
+
+  <div class="dialogue" style="margin-top:16px">
+    <div class="turn">
+      <div class="spk">ALEX:</div>
+      <div class="pair">
+        <div class="jp"><ruby>わあ<rt>waa</rt></ruby>、<ruby>おおきい<rt>ōkii</rt></ruby><ruby>へや<rt>heya</rt></ruby><ruby>です<rt>desu</rt></ruby>ね！<ruby>テレビ<rt>terebi</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="en">Wow, what a big room! Is there a TV?</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">YUKI:</div>
+      <div class="pair">
+        <div class="jp"><ruby>はい<rt>hai</rt></ruby>、<ruby>あそこ<rt>asoko</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>テレビ<rt>terebi</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby>。</div>
+        <div class="en">Yes, the TV is over there.</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">ALEX:</div>
+      <div class="pair">
+        <div class="jp"><ruby>ねこ<rt>neko</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>います<rt>imasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="en">Do you have a cat? (lit. Is there a cat?)</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">YUKI:</div>
+      <div class="pair">
+        <div class="jp"><ruby>はい<rt>hai</rt></ruby>、<ruby>いす<rt>isu</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>した<rt>shita</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>ねこ<rt>neko</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>います<rt>imasu</rt></ruby>。</div>
+        <div class="en">Yes, there's a cat under the chair.</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">ALEX:</div>
+      <div class="pair">
+        <div class="jp"><ruby>かわいい<rt>kawaii</rt></ruby>！<ruby>おかあさん<rt>okāsan</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>います<rt>imasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="en">Cute! Is your mom here?</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">YUKI:</div>
+      <div class="pair">
+        <div class="jp"><ruby>いいえ<rt>iie</rt></ruby>、<ruby>いま<rt>ima</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>いません<rt>imasen</rt></ruby>。<ruby>カフェ<rt>kafe</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>います<rt>imasu</rt></ruby>。</div>
+        <div class="en">No, she's not here right now. She's at a cafe.</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">ALEX:</div>
+      <div class="pair">
+        <div class="jp"><ruby>そうですか<rt>sō desu ka</rt></ruby>。<ruby>ありがとう<rt>arigatō</rt></ruby>、<ruby>ゆき<rt>Yuki</rt></ruby>さん！</div>
+        <div class="en">I see. Thanks, Yuki!</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tg">
+    <div class="tg-en">"Great job! Now let's swap. This time I'll be Alex."</div>
+    <div class="tg-jp">「じょうずですね！こうたいしましょう。こんどはわたしがアレックスです。」</div>
+  </div>
+</div>
+
+<!-- PAGE 8: MEMORY CONVERSATION -->
+<div class="page" id="p8">
+  <h1>CONVERSATION: MEMORY CHECK</h1>
+  <h2></h2>
+
+  <div class="tg">
+    <div class="tg-en">"Same conversation, but now from memory! I'll be Alex. You're Yuki — say the full sentence."</div>
+    <div class="tg-jp">「おなじかいわです。こんどはおぼえていってみましょう！わたしがアレックスです。あなたはゆき — ぜんぶのぶんをいってください。」</div>
+  </div>
+
+  <p style="margin-bottom:16px; font-size:16px; font-weight:bold;">Tutor = Alex / Student = Yuki</p>
+
+  <div class="dialogue" style="margin-top:16px">
+    <div class="turn">
+      <div class="spk">ALEX (tutor):</div>
+      <div class="pair">
+        <div class="jp"><ruby>テレビ<rt>terebi</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="en">Is there a TV?</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">YUKI (you):</div>
+      <div class="pair">
+        <div class="jp"><ruby>はい<rt>hai</rt></ruby>、<ruby>あそこ<rt>asoko</rt></ruby><ruby>に<rt>ni</rt></ruby><input type="text" class="blank-input" style="min-width:80px"><ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby>。</div>
+        <div class="en">Yes, the TV is over there.</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">ALEX (tutor):</div>
+      <div class="pair">
+        <div class="jp"><ruby>ねこ<rt>neko</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>います<rt>imasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="en">Is there a cat?</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">YUKI (you):</div>
+      <div class="pair">
+        <div class="jp"><ruby>はい<rt>hai</rt></ruby>、<ruby>いす<rt>isu</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>した<rt>shita</rt></ruby><ruby>に<rt>ni</rt></ruby><input type="text" class="blank-input" style="min-width:80px"><ruby>が<rt>ga</rt></ruby><ruby>います<rt>imasu</rt></ruby>。</div>
+        <div class="en">Yes, there's a cat under the chair.</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">ALEX (tutor):</div>
+      <div class="pair">
+        <div class="jp"><ruby>おかあさん<rt>okāsan</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>います<rt>imasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="en">Is your mom here?</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">YUKI (you):</div>
+      <div class="pair">
+        <div class="jp"><ruby>いいえ<rt>iie</rt></ruby>、<ruby>カフェ<rt>kafe</rt></ruby><ruby>に<rt>ni</rt></ruby><input type="text" class="blank-input" style="min-width:120px">。</div>
+        <div class="en">No, she's at a cafe.</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">ALEX (tutor):</div>
+      <div class="pair">
+        <div class="jp"><ruby>そうですか<rt>sō desu ka</rt></ruby>。<ruby>ありがとう<rt>arigatō</rt></ruby>！</div>
+        <div class="en">I see. Thanks!</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 9: FREE DISCUSSION -->
+<div class="page" id="p9">
+  <h1>FREE DISCUSSION</h1>
+  <h2></h2>
+
+  <div class="tg">
+    <div class="tg-en">"I'll ask — you answer. Then ask me the same question back!"</div>
+    <div class="tg-jp">「わたしがききます、こたえてください。そのあと、おなじしつもんをしてね！」</div>
+  </div>
+
+  <div class="section">
+    <p><strong>ROUND 1: WHAT'S IN YOUR ROOM?</strong></p>
+    <div class="dialogue">
+      <div class="turn">
+        <div class="spk">Tutor:</div>
+        <div class="pair">
+          <div class="jp">「<ruby>へや<rt>heya</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>なに<rt>nani</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？」</div>
+          <div class="en">"What's in your room?"</div>
+        </div>
+      </div>
+      <div class="turn">
+        <div class="spk">Student:</div>
+        <div class="pair">
+          <div class="jp"><input type="text" class="blank-input" style="min-width:280px"></div>
+        </div>
+      </div>
+      <div class="turn">
+        <div class="spk">Student:</div>
+        <div class="pair">
+          <div class="jp">「<ruby>へや<rt>heya</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>なに<rt>nani</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？」</div>
+          <div class="en">(Ask the same question back!)</div>
+        </div>
+      </div>
+      <div class="turn">
+        <div class="spk">Tutor:</div>
+        <div class="pair">
+          <div class="jp"><input type="text" class="blank-input" style="min-width:280px" placeholder="しぜんにこたえましょう"></div>
+        </div>
+      </div>
+    </div>
+    <div class="help-box" style="margin-left:0; max-width:520px;">
+      <strong>WORDS</strong><br>
+      <ruby>テレビ<rt>terebi</rt></ruby>(TV) &nbsp; <ruby>つくえ<rt>tsukue</rt></ruby>(desk) &nbsp; <ruby>ベッド<rt>beddo</rt></ruby>(bed)<br>
+      <ruby>ほん<rt>hon</rt></ruby>(book) &nbsp; <ruby>とけい<rt>tokei</rt></ruby>(clock)
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <p><strong>ROUND 2: WHO'S AT HOME?</strong></p>
+    <div class="dialogue">
+      <div class="turn">
+        <div class="spk">Tutor:</div>
+        <div class="pair">
+          <div class="jp">「<ruby>いえ<rt>ie</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>だれ<rt>dare</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>います<rt>imasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？」</div>
+          <div class="en">"Who's at your home?"</div>
+        </div>
+      </div>
+      <div class="turn">
+        <div class="spk">Student:</div>
+        <div class="pair">
+          <div class="jp"><input type="text" class="blank-input" style="min-width:280px"></div>
+        </div>
+      </div>
+      <div class="turn">
+        <div class="spk">Student:</div>
+        <div class="pair">
+          <div class="jp">「<ruby>いえ<rt>ie</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>だれ<rt>dare</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>います<rt>imasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？」</div>
+          <div class="en">(Ask the same question back!)</div>
+        </div>
+      </div>
+      <div class="turn">
+        <div class="spk">Tutor:</div>
+        <div class="pair">
+          <div class="jp"><input type="text" class="blank-input" style="min-width:280px" placeholder="しぜんにこたえましょう"></div>
+        </div>
+      </div>
+    </div>
+    <div class="help-box" style="margin-left:0; max-width:520px;">
+      <strong>WORDS</strong><br>
+      <ruby>おかあさん<rt>okāsan</rt></ruby>(mom) &nbsp; <ruby>おとうさん<rt>otōsan</rt></ruby>(dad)<br>
+      <ruby>ともだち<rt>tomodachi</rt></ruby>(friend) &nbsp; <ruby>ねこ<rt>neko</rt></ruby>(cat) &nbsp; <ruby>いぬ<rt>inu</rt></ruby>(dog)
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <p><strong>ROUND 3: WHAT'S ON YOUR DESK?</strong></p>
+    <div class="dialogue">
+      <div class="turn">
+        <div class="spk">Tutor:</div>
+        <div class="pair">
+          <div class="jp">「<ruby>つくえ<rt>tsukue</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>うえ<rt>ue</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>なに<rt>nani</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？」</div>
+          <div class="en">"What's on your desk?"</div>
+        </div>
+      </div>
+      <div class="turn">
+        <div class="spk">Student:</div>
+        <div class="pair">
+          <div class="jp"><input type="text" class="blank-input" style="min-width:280px"></div>
+        </div>
+      </div>
+      <div class="turn">
+        <div class="spk">Student:</div>
+        <div class="pair">
+          <div class="jp">「<ruby>つくえ<rt>tsukue</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>うえ<rt>ue</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>なに<rt>nani</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？」</div>
+          <div class="en">(Ask the same question back!)</div>
+        </div>
+      </div>
+      <div class="turn">
+        <div class="spk">Tutor:</div>
+        <div class="pair">
+          <div class="jp"><input type="text" class="blank-input" style="min-width:280px" placeholder="しぜんにこたえましょう"></div>
+        </div>
+      </div>
+    </div>
+    <div class="help-box" style="margin-left:0; max-width:520px;">
+      <strong>WORDS</strong><br>
+      <ruby>ほん<rt>hon</rt></ruby>(book) &nbsp; <ruby>ペン<rt>pen</rt></ruby>(pen) &nbsp; <ruby>ノート<rt>nōto</rt></ruby>(notebook)<br>
+      <ruby>でんわ<rt>denwa</rt></ruby>(phone) &nbsp; <ruby>とけい<rt>tokei</rt></ruby>(clock)
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 10: ROLEPLAY -->
+<div class="page" id="p10">
+  <h1>ROLEPLAY</h1>
+  <h2>"Who and What Is in the Classroom?"</h2>
+
+  <h3>SCENARIO</h3>
+  <div class="pair" style="margin-bottom:16px">
+    <div class="jp"><ruby>あなた<rt>anata</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>きょうしつ<rt>kyōshitsu</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>きました<rt>kimashita</rt></ruby>。<br>
+    <ruby>でも<rt>demo</rt></ruby>、<ruby>いろいろ<rt>iroiro</rt></ruby><ruby>な<rt>na</rt></ruby><ruby>もの<rt>mono</rt></ruby><ruby>と<rt>to</rt></ruby><ruby>ひと<rt>hito</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>さがして<rt>sagashite</rt></ruby><ruby>います<rt>imasu</rt></ruby>！</div>
+    <div class="en" style="font-size:16px; padding-left:0; color:#888">You've arrived at the classroom, but you're looking for things AND a person!</div>
+  </div>
+
+  <h3>GOAL</h3>
+  <div class="pair" style="margin-bottom:16px">
+    <div class="jp"><ruby>せんせい<rt>sensei</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>きいて<rt>kiite</rt></ruby>、<ruby>ぜんぶ<rt>zenbu</rt></ruby><ruby>みつけましょう<rt>mitsukemashō</rt></ruby>！</div>
+    <div class="en" style="font-size:16px; padding-left:0; color:#888">Ask the tutor where everything and everyone is!</div>
+  </div>
+  <div class="pair" style="margin-bottom:16px">
+    <div class="jp"><ruby>さがす<rt>sagasu</rt></ruby><ruby>もの<rt>mono</rt></ruby>：<strong><ruby>ほん<rt>hon</rt></ruby></strong>、<strong><ruby>ペン<rt>pen</rt></ruby></strong>、<strong><ruby>かばん<rt>kaban</rt></ruby></strong><br>
+    <ruby>さがす<rt>sagasu</rt></ruby><ruby>ひと<rt>hito</rt></ruby>：<strong><ruby>ともだち<rt>tomodachi</rt></ruby></strong></div>
+    <div class="en" style="font-size:16px; padding-left:0; color:#888">You're looking for: a book, a pen, a bag, AND a friend.</div>
+  </div>
+
+  <h3 style="margin-top:40px">HINTS</h3>
+  <div class="help-box" style="max-width:520px; margin-left:0; margin-top:8px; line-height:2.4">
+    <strong>PATTERN</strong><br>
+    ＿＿<ruby>は<rt>wa</rt></ruby><ruby>あります<rt>arimasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？ &nbsp; <span class="en">Is there a ＿＿ (thing)?</span><br>
+    ＿＿<ruby>は<rt>wa</rt></ruby><ruby>います<rt>imasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？ &nbsp; <span class="en">Is there a ＿＿ (person)?</span><br>
+    <strong>WORDS</strong><br>
+    <ruby>ほん<rt>hon</rt></ruby>(book) &nbsp; <ruby>ペン<rt>pen</rt></ruby>(pen) &nbsp; <ruby>かばん<rt>kaban</rt></ruby>(bag) &nbsp; <ruby>ともだち<rt>tomodachi</rt></ruby>(friend)<br>
+    <ruby>つくえ<rt>tsukue</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>うえ<rt>ue</rt></ruby> / <ruby>いす<rt>isu</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>した<rt>shita</rt></ruby> / <ruby>あそこ<rt>asoko</rt></ruby> / <ruby>ここ<rt>koko</rt></ruby>
+  </div>
+
+  <div style="margin-top:32px">
+    <textarea class="roleplay-notes" placeholder="Write your conversation here..." oninput="this.style.height='auto';this.style.height=this.scrollHeight+'px'" style="display:block; font-family:monospace; font-size:16px; border:1px solid #ccc; border-radius:4px; outline:none; width:100%; min-height:240px; padding:14px 16px; background:#fafafa; resize:none; line-height:1.8; box-sizing:border-box; overflow:hidden;"></textarea>
+  </div>
+</div>
+
+<!-- PAGE 11: TRAVEL IN JAPAN — CONVENIENCE STORE -->
+<div class="page" id="p11">
+  <div class="tg">
+    <div class="tg-en">"Imagine you're at a Japanese convenience store!"</div>
+    <div class="tg-jp">「にほんのコンビニにいるとおもってね！」</div>
+  </div>
+
+  <h1>TRAVEL IN JAPAN: AT A CONVENIENCE STORE</h1>
+  <h2></h2>
+
+  <p>You are a traveler. Fill in the blanks and say them out loud!</p>
+
+  <div class="box">
+    <div class="box-label">CONTEXT / <ruby>じょうきょう<rt>jōkyō</rt></ruby></div>
+    You walk into a Japanese convenience store looking for water,<br>
+    a snack, and a staff member who speaks English.
+  </div>
+
+  <div class="help-box" style="margin-left:0; max-width:520px;">
+    <strong>NEW WORDS</strong><br>
+    <ruby>みず<rt>mizu</rt></ruby> (water) &nbsp; <ruby>おにぎり<rt>onigiri</rt></ruby> (rice ball)<br>
+    <ruby>スタッフ<rt>sutaffu</rt></ruby> (staff) &nbsp; <ruby>えいご<rt>eigo</rt></ruby> (English language)<br>
+    <ruby>すみません<rt>sumimasen</rt></ruby> (excuse me)
+  </div>
+
+  <div class="dialogue" style="margin-top:20px">
+    <div class="turn">
+      <div class="spk">YOU:</div>
+      <div class="pair">
+        <div class="jp"><ruby>すみません<rt>sumimasen</rt></ruby>、<ruby>みず<rt>mizu</rt></ruby><ruby>は<rt>wa</rt></ruby><input type="text" class="blank-input" style="min-width:100px"><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="en">Excuse me, is there water?</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">STAFF:</div>
+      <div class="pair">
+        <div class="jp"><ruby>はい<rt>hai</rt></ruby>、<ruby>あそこ<rt>asoko</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>あります<rt>arimasu</rt></ruby>。</div>
+        <div class="en">Yes, it's over there.</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">YOU:</div>
+      <div class="pair">
+        <div class="jp"><ruby>おにぎり<rt>onigiri</rt></ruby><ruby>も<rt>mo</rt></ruby><input type="text" class="blank-input" style="min-width:100px"><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="en">Are there rice balls too?</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">STAFF:</div>
+      <div class="pair">
+        <div class="jp"><ruby>はい<rt>hai</rt></ruby>、<ruby>ここ<rt>koko</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>おにぎり<rt>onigiri</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby>。</div>
+        <div class="en">Yes, the rice balls are here.</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">YOU:</div>
+      <div class="pair">
+        <div class="jp"><ruby>えいご<rt>eigo</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>スタッフ<rt>sutaffu</rt></ruby><ruby>は<rt>wa</rt></ruby><input type="text" class="blank-input" style="min-width:100px"><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="en">Is there any English-speaking staff?</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">STAFF:</div>
+      <div class="pair">
+        <div class="jp"><ruby>はい<rt>hai</rt></ruby>、<ruby>あそこ<rt>asoko</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>います<rt>imasu</rt></ruby>！</div>
+        <div class="en">Yes, they're over there!</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">YOU:</div>
+      <div class="pair">
+        <div class="jp"><ruby>ありがとうございます<rt>arigatō gozaimasu</rt></ruby>！</div>
+        <div class="en">Thank you very much!</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 12: BONUS 1 — TRANSLATE (NO HINTS) -->
+<div class="page" id="p12">
+  <h1>BONUS 1: TRANSLATE — NO HINTS!</h1>
+  <h2><span class="en" style="font-size:14px">(Skip if you don't have time!)</span></h2>
+
+  <div class="tg">
+    <div class="tg-en">"Translate these — no hints!"</div>
+    <div class="tg-jp">「ヒントなしでにほんごにしてみましょう！」</div>
+  </div>
+
+  <div class="section">
+    <p><strong>1.</strong> There is a book on the desk.</p>
+    <input type="text" class="blank-input-full">
+  </div>
+
+  <div class="section">
+    <p><strong>2.</strong> There is a cat in the room.</p>
+    <input type="text" class="blank-input-full">
+  </div>
+
+  <div class="section">
+    <p><strong>3.</strong> Is there a pen in the bag?</p>
+    <input type="text" class="blank-input-full">
+  </div>
+
+  <div class="section">
+    <p><strong>4.</strong> There is a teacher in the classroom.</p>
+    <input type="text" class="blank-input-full">
+  </div>
+
+  <div class="section">
+    <p><strong>5.</strong> Is there a dog at home?</p>
+    <input type="text" class="blank-input-full">
+  </div>
+
+  <div class="section">
+    <p><strong>6.</strong> There is a friend at the cafe.</p>
+    <input type="text" class="blank-input-full">
+  </div>
+</div>
+
+<!-- PAGE 13: BONUS 2 — TODAY'S CHARACTER の / ノ -->
+<div class="page" id="p13">
+  <h1>BONUS 2: TODAY'S CHARACTER</h1>
+  <h2><span class="en" style="font-size:14px">(Skip if you don't have time!)</span></h2>
+
+  <div class="tg">
+    <div class="tg-en">"Let's learn one character today!"</div>
+    <div class="tg-jp">「きょうはひとつ、もじをおぼえましょう！」</div>
+  </div>
+
+  <div class="box" style="text-align:center; padding:24px">
+    <span style="font-size:56px; letter-spacing:40px"><ruby>の<rt style="font-size:14px">hiragana</rt></ruby>&nbsp;&nbsp;<ruby>ノ<rt style="font-size:14px">katakana</rt></ruby></span><br>
+    <span style="font-size:18px; color:#888; margin-top:8px; display:inline-block">Sound: <strong>no</strong></span><br>
+    <span style="font-size:14px; color:#888; margin-top:10px; display:inline-block">You already know の! &nbsp; <em>"つくえのうえ"</em> — the の connects two things.</span>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <p><strong>1. RECOGNITION — Which one is "no"?</strong></p>
+    <div class="tg">
+      <div class="tg-en">"Can you find 'no'? Point to it!"</div>
+      <div class="tg-jp">「の はどれですか？ゆびでさしてね！」</div>
+    </div>
+    <div style="margin:12px 0 12px 20px">
+      <p style="margin-bottom:8px">Which one is "no"?</p>
+      <div style="display:flex; gap:12px; margin-bottom:16px">
+        <button class="match-btn" onclick="checkMatch(this,'wrong')" style="font-size:24px; padding:12px 24px">め</button>
+        <button class="match-btn" onclick="checkMatch(this,'correct')" style="font-size:24px; padding:12px 24px">の</button>
+        <button class="match-btn" onclick="checkMatch(this,'wrong')" style="font-size:24px; padding:12px 24px">ぬ</button>
+      </div>
+      <p style="margin-bottom:8px">Which one is "no"?</p>
+      <div style="display:flex; gap:12px">
+        <button class="match-btn" onclick="checkMatch(this,'wrong')" style="font-size:24px; padding:12px 24px">ソ</button>
+        <button class="match-btn" onclick="checkMatch(this,'wrong')" style="font-size:24px; padding:12px 24px">ン</button>
+        <button class="match-btn" onclick="checkMatch(this,'correct')" style="font-size:24px; padding:12px 24px">ノ</button>
+      </div>
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <p><strong>2. READ — Read these words out loud!</strong></p>
+    <div class="tg">
+      <div class="tg-en">"Can you read these without romaji? Find the の!"</div>
+      <div class="tg-jp">「よめるかな？ の をみつけてね！」</div>
+    </div>
+    <div style="margin:12px 0 12px 20px; line-height:2.6">
+      <div style="font-size:36px; margin-bottom:8px">つくえのうえ <span class="en" style="font-size:16px; margin-left:24px">on the desk</span></div>
+      <div style="font-size:36px; margin-bottom:8px">かばんのなか <span class="en" style="font-size:16px; margin-left:24px">in the bag</span></div>
+      <div style="font-size:36px; margin-bottom:8px">のみもの <span class="en" style="font-size:16px; margin-left:24px">drink</span></div>
+      <div style="font-size:36px; margin-bottom:8px">ノート <span class="en" style="font-size:16px; margin-left:24px">notebook</span></div>
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <p><strong>3. DRAW — Fill in the missing の / ノ!</strong></p>
+    <div class="tg">
+      <div class="tg-en">"Draw the missing character to complete the word!"</div>
+      <div class="tg-jp">「の をかいて、ことばをかんせいさせてね！」</div>
+    </div>
+    <p style="margin:12px 0 12px; font-size:16px; color:#888">Hiragana の:</p>
+
+    <div style="margin:12px 0 12px 20px">
+      <p style="font-size:14px; color:#888; margin-bottom:4px">tsukue no ue (on the desk)</p>
+      <div style="display:inline-flex; border:2px solid #ccc; border-radius:4px; overflow:hidden; margin-bottom:16px">
+        <div style="width:140px; height:140px; display:flex; align-items:center; justify-content:center; font-size:88px; border-right:1px dashed #ddd"><ruby>つ<rt style="font-size:18px">tsu</rt></ruby></div>
+        <div style="width:140px; height:140px; display:flex; align-items:center; justify-content:center; font-size:88px; border-right:1px dashed #ddd"><ruby>くえ<rt style="font-size:18px">kue</rt></ruby></div>
+        <div style="width:140px; height:140px; border-right:1px dashed #ddd; background:repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.015) 10px, rgba(0,0,0,0.015) 20px)"></div>
+        <div style="width:140px; height:140px; display:flex; align-items:center; justify-content:center; font-size:88px"><ruby>うえ<rt style="font-size:18px">ue</rt></ruby></div>
+      </div>
+    </div>
+
+    <div style="margin:0 0 12px 20px">
+      <p style="font-size:14px; color:#888; margin-bottom:4px">kaban no naka (in the bag)</p>
+      <div style="display:inline-flex; border:2px solid #ccc; border-radius:4px; overflow:hidden; margin-bottom:16px">
+        <div style="width:140px; height:140px; display:flex; align-items:center; justify-content:center; font-size:88px; border-right:1px dashed #ddd"><ruby>かば<rt style="font-size:18px">kaba</rt></ruby></div>
+        <div style="width:140px; height:140px; display:flex; align-items:center; justify-content:center; font-size:88px; border-right:1px dashed #ddd"><ruby>ん<rt style="font-size:18px">n</rt></ruby></div>
+        <div style="width:140px; height:140px; border-right:1px dashed #ddd; background:repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.015) 10px, rgba(0,0,0,0.015) 20px)"></div>
+        <div style="width:140px; height:140px; display:flex; align-items:center; justify-content:center; font-size:88px"><ruby>なか<rt style="font-size:18px">naka</rt></ruby></div>
+      </div>
+    </div>
+
+    <div style="margin:0 0 12px 20px">
+      <p style="font-size:14px; color:#888; margin-bottom:4px">nomimono (drink)</p>
+      <div style="display:inline-flex; border:2px solid #ccc; border-radius:4px; overflow:hidden; margin-bottom:16px">
+        <div style="width:140px; height:140px; border-right:1px dashed #ddd; background:repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.015) 10px, rgba(0,0,0,0.015) 20px)"></div>
+        <div style="width:140px; height:140px; display:flex; align-items:center; justify-content:center; font-size:88px"><ruby>みもの<rt style="font-size:18px">mimono</rt></ruby></div>
+      </div>
+    </div>
+
+    <p style="margin:24px 0 12px; font-size:16px; color:#888">Katakana ノ:</p>
+
+    <div style="margin:12px 0 12px 20px">
+      <p style="font-size:14px; color:#888; margin-bottom:4px">nooto (notebook)</p>
+      <div style="display:inline-flex; border:2px solid #ccc; border-radius:4px; overflow:hidden; margin-bottom:16px">
+        <div style="width:140px; height:140px; border-right:1px dashed #ddd; background:repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.015) 10px, rgba(0,0,0,0.015) 20px)"></div>
+        <div style="width:140px; height:140px; display:flex; align-items:center; justify-content:center; font-size:88px"><ruby>ート<rt style="font-size:18px">ōto</rt></ruby></div>
+      </div>
+    </div>
+
+    <div style="margin:0 0 12px 20px">
+      <p style="font-size:14px; color:#888; margin-bottom:4px">nokku (knock)</p>
+      <div style="display:inline-flex; border:2px solid #ccc; border-radius:4px; overflow:hidden; margin-bottom:16px">
+        <div style="width:140px; height:140px; border-right:1px dashed #ddd; background:repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.015) 10px, rgba(0,0,0,0.015) 20px)"></div>
+        <div style="width:140px; height:140px; display:flex; align-items:center; justify-content:center; font-size:88px"><ruby>ック<rt style="font-size:18px">kku</rt></ruby></div>
+      </div>
+    </div>
+
+    <div style="margin:0 0 12px 20px">
+      <p style="font-size:14px; color:#888; margin-bottom:4px">pasokon (PC)</p>
+      <div style="display:inline-flex; border:2px solid #ccc; border-radius:4px; overflow:hidden; margin-bottom:16px">
+        <div style="width:140px; height:140px; display:flex; align-items:center; justify-content:center; font-size:88px; border-right:1px dashed #ddd"><ruby>パ<rt style="font-size:18px">pa</rt></ruby></div>
+        <div style="width:140px; height:140px; display:flex; align-items:center; justify-content:center; font-size:88px; border-right:1px dashed #ddd"><ruby>ソ<rt style="font-size:18px">so</rt></ruby></div>
+        <div style="width:140px; height:140px; display:flex; align-items:center; justify-content:center; font-size:88px; border-right:1px dashed #ddd"><ruby>コ<rt style="font-size:18px">ko</rt></ruby></div>
+        <div style="width:140px; height:140px; background:repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.015) 10px, rgba(0,0,0,0.015) 20px)"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 14: MISSION COMPLETE -->
+<div class="page" id="p14">
+  <h1><ruby>ミッション<rt>misshon</rt></ruby><ruby>かんりょう<rt>kanryō</rt></ruby>！</h1>
+  <h2>Mission Complete!</h2>
+
+  <div class="tg">
+    <div class="tg-en">"Great job today! Let's check them off."</div>
+    <div class="tg-jp">「きょうはじょうずでしたね！いっしょにチェックしましょう。」</div>
+  </div>
+
+  <div class="box" style="padding:24px 28px">
+    <p style="margin-bottom:16px; font-size:17px"><strong><ruby>きょう<rt>kyō</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>ミッション<rt>misshon</rt></ruby>:</strong></p>
+
+    <div class="check-item" style="font-size:18px; margin:20px 0">
+      <span class="check">&nbsp;</span>
+      <strong>PATTERN 1:</strong> ＿＿<ruby>に<rt>ni</rt></ruby> ＿＿<ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby>。
+      <div style="font-size:13px; color:#888; margin-left:50px; margin-top:4px">(There is a THING at a PLACE)</div>
+    </div>
+
+    <div class="check-item" style="font-size:18px; margin:20px 0">
+      <span class="check">&nbsp;</span>
+      <strong>PATTERN 2:</strong> ＿＿<ruby>に<rt>ni</rt></ruby> ＿＿<ruby>が<rt>ga</rt></ruby><ruby>います<rt>imasu</rt></ruby>。
+      <div style="font-size:13px; color:#888; margin-left:50px; margin-top:4px">(There is a PERSON / ANIMAL at a PLACE)</div>
+    </div>
+  </div>
+
+  <div class="section" style="margin-top:28px">
+    <div class="tg">
+      <div class="tg-en">"Let's read one more time. Perfect! See you next lesson!"</div>
+      <div class="tg-jp">「さいごにもういちどよみましょう。かんぺき！つぎのレッスンであいましょう！」</div>
+    </div>
+    <p><strong>KEY EXPRESSIONS</strong> — <ruby>もういちど<rt>mō ichido</rt></ruby><ruby>よんで<rt>yonde</rt></ruby><ruby>みましょう<rt>mimashō</rt></ruby>！</p>
+    <div class="pattern">
+      <div class="pair">
+        <div class="jp">&bull; <ruby>つくえ<rt>tsukue</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>うえ<rt>ue</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>ほん<rt>hon</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby>。</div>
+        <div class="en">There's a book on the desk.</div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <ruby>かばん<rt>kaban</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>なか<rt>naka</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>ペン<rt>pen</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby>。</div>
+        <div class="en">There's a pen in the bag.</div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <ruby>きょうしつ<rt>kyōshitsu</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>せんせい<rt>sensei</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>います<rt>imasu</rt></ruby>。</div>
+        <div class="en">There's a teacher in the classroom.</div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <ruby>へや<rt>heya</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>ねこ<rt>neko</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>います<rt>imasu</rt></ruby>。</div>
+        <div class="en">There's a cat in the room.</div>
+      </div>
+    </div>
+  </div>
+
+  <button class="finish-btn" id="finishBtn">おわり！ / Class Complete!</button>
+
+</div>
+
+<!-- Drawing/Typing overlay canvas -->
+<canvas id="drawCanvas"></canvas>
+<!-- Laser pointer canvas (fading trails) -->
+<canvas id="laserCanvas"></canvas>
+<!-- Text annotations container -->
+<div id="textLayer"></div>
+
+<nav class="nav">
+  <button id="prev" onclick="go(-1)" disabled>&larr; Back</button>
+  <span id="indicator">1 / 15</span>
+  <button id="next" onclick="go(1)">Next &rarr;</button>
+  <span style="border-left:1px solid #ddd; height:20px; margin:0 4px"></span>
+  <button id="btnDraw" onclick="setMode('draw')" style="padding:8px 14px">&#9998; Draw</button>
+  <button id="btnErase" onclick="setMode('erase')" style="padding:8px 14px">&#9003; Erase</button>
+  <span style="position:relative; display:inline-block;">
+    <button id="btnClear" onclick="toggleClearMenu()" style="padding:8px 14px; color:#c33">&#10005; Clear</button>
+    <div id="clearMenu" style="display:none; position:absolute; bottom:100%; left:0; margin-bottom:6px; background:#fff; border:1px solid #ddd; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,.15); min-width:140px; z-index:400;">
+      <button onclick="clearPage(); hideClearMenu()" style="display:block; width:100%; text-align:left; padding:10px 14px; border:none; background:none; cursor:pointer; font-family:monospace; font-size:13px; color:#c33;">This page</button>
+      <button onclick="clearAll(); hideClearMenu()" style="display:block; width:100%; text-align:left; padding:10px 14px; border:none; border-top:1px solid #eee; background:none; cursor:pointer; font-family:monospace; font-size:13px; color:#c33;">All pages</button>
+    </div>
+  </span>
+  <span style="border-left:1px solid #ddd; height:20px; margin:0 4px"></span>
+  <span style="position:relative; display:inline-block;">
+    <button id="btnChat" onclick="toggleChat()" style="padding:8px 14px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Chat</button>
+    <div id="chatToast"></div>
+  </span>
+</nav>
+
+<!-- Chat panel -->
+<div id="chatPanel">
+  <div id="chatHeader">
+    <h4 style="margin:0;">Chat <span style="font-weight:normal; color:#999; font-size:12px;">EN ↔ JP auto-translate</span></h4>
+    <button id="chatClose">&times;</button>
+  </div>
+  <div id="chatKeyBar">
+    <input id="chatKeyInput" type="password" placeholder="Gemini API key">
+    <button id="chatKeySave">Save</button>
+    <span id="chatKeyStatus"></span>
+  </div>
+  <div id="chatKeyWarn">Enter a Gemini API key above to enable translation.</div>
+  <div id="chatMessages"></div>
+  <div id="chatInputArea">
+    <input id="chatInput" type="text" placeholder="Type a message..." autocomplete="off">
+    <button id="chatSendBtn">↑</button>
+  </div>
+</div>
+
+<!-- Remote cursor -->
+<div id="remoteCursor" style="display:none; position:absolute; z-index:300; pointer-events:none; ">
+  <svg width="20" height="20" viewBox="0 0 20 20"><polygon points="0,0 0,16 4.5,12.5 8,19 10,18 6.5,11 12,11" fill="#4a90d9" stroke="#fff" stroke-width="1"/></svg>
+  <span id="remoteCursorName" style="position:absolute; left:18px; top:14px; background:#4a90d9; color:#fff; font-family:monospace; font-size:11px; padding:2px 6px; border-radius:3px; white-space:nowrap;"></span>
+</div>
+<!-- Off-screen cursor indicator -->
+<div id="cursorIndicator" style="display:none; position:fixed; z-index:350; pointer-events:none;">
+  <svg width="28" height="28" viewBox="0 0 28 28"><polygon points="14,2 26,26 14,20 2,26" fill="#4a90d9" stroke="#fff" stroke-width="1.5"/></svg>
+  <span id="indicatorName" style="position:absolute; left:50%; transform:translateX(-50%); top:30px; background:#4a90d9; color:#fff; font-family:monospace; font-size:10px; padding:1px 5px; border-radius:3px; white-space:nowrap;"></span>
+</div>
+
+<style>
+  #drawCanvas { position: absolute; top: 0; left: 0; z-index: 100; pointer-events: none; }
+  #laserCanvas { position: absolute; top: 0; left: 0; z-index: 99; pointer-events: none; }
+  #drawCanvas.active { pointer-events: auto; cursor: crosshair; }
+  #drawCanvas.erase { cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><circle cx="20" cy="20" r="19" fill="none" stroke="%23999" stroke-width="1.5"/></svg>') 20 20, auto; }
+  #textLayer { position: absolute; top: 0; left: 0; width: 100%; min-height: 100vh; pointer-events: none; z-index: 101; }
+  #textLayer.active { pointer-events: auto; cursor: text; }
+  #textLayer .anno-wrap { position: absolute; display: flex; align-items: flex-start; pointer-events: auto; }
+  #textLayer .anno-controls { display: flex; flex-direction: column; gap: 2px; padding: 2px 3px 0 0; }
+  #textLayer .anno-handle { cursor: grab; color: #ccc; font-size: 11px; user-select: none; line-height: 1; }
+  #textLayer .anno-handle:hover { color: #999; }
+  #textLayer .anno-handle:active { cursor: grabbing; }
+  #textLayer .anno-delete { cursor: pointer; color: #ddd; font-size: 11px; user-select: none; line-height: 1; border: none; background: none; padding: 0; }
+  #textLayer .anno-delete:hover { color: #c33; }
+  #textLayer .annotation { background: rgba(255,255,255,0.85); border: 1px dashed #e0b0b0; font-family: monospace; font-size: 16px; color: #c33; outline: none; min-width: 60px; max-width: 300px; padding: 4px 6px; resize: none; overflow: hidden; field-sizing: content; }
+  .nav button.active-mode { background: #111 !important; color: #fff !important; }
+
+  /* --- Matching Game --- */
+  .match-game { position: relative; margin: 12px 0 12px 0; padding: 12px 0; }
+  .match-game .match-columns { display: flex; justify-content: space-between; align-items: flex-start; position: relative; }
+  .match-left, .match-right { display: flex; flex-direction: column; gap: 14px; z-index: 1; }
+  .match-left { align-items: flex-end; }
+  .match-right { align-items: flex-start; }
+  .match-item { display: flex; align-items: center; gap: 8px; font-size: 19px; letter-spacing: 1px; user-select: none; }
+  .match-left .match-item { flex-direction: row; }
+  .match-right .match-item { flex-direction: row-reverse; }
+  .match-dot { width: 20px; height: 20px; border-radius: 50%; border: 2.5px solid #e33; background: #fff; cursor: pointer; flex-shrink: 0; transition: background 0.15s, transform 0.15s, box-shadow 0.15s; }
+  .match-dot:hover { background: #fdd; transform: scale(1.3); box-shadow: 0 0 0 4px rgba(227,51,51,0.15); }
+  .match-dot.connected { background: #e33; }
+  .match-game svg.match-svg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+  .match-game svg.match-svg line { stroke: #e33; stroke-width: 2.5; stroke-linecap: round; }
+  .match-game svg.match-svg line.temp-line { stroke-dasharray: 6 4; opacity: 0.8; }
+
+  /* --- Hanamaru Festival --- */
+  .finish-btn { display: block; margin: 32px auto 0; font-family: monospace; font-size: 18px; padding: 14px 40px; border: 2px solid #e33; background: #fff; color: #e33; cursor: pointer; border-radius: 6px; transition: background 0.2s, color 0.2s; }
+  .finish-btn:hover { background: #e33; color: #fff; }
+  .hanamaru-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 300; display: flex; align-items: center; justify-content: center; }
+  .hanamaru-overlay .hana-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255, 245, 238, 0.92); }
+  .hanamaru-overlay .hana-item { position: absolute; z-index: 1; }
+  .hanamaru-overlay .hana-item path { stroke-dasharray: 2000; stroke-dashoffset: 2000; animation: drawHanamaru 2s ease forwards; }
+  .hanamaru-overlay .hana-msg { position: relative; z-index: 2; text-align: center; opacity: 0; transition: opacity 0.8s ease; }
+  .hanamaru-overlay .hana-msg.visible { opacity: 1; }
+  .hanamaru-overlay .hana-msg p { font-family: monospace; font-size: 28px; color: #c33; font-weight: bold; margin-bottom: 20px; }
+  .hanamaru-overlay .hana-msg button { font-family: monospace; font-size: 16px; padding: 10px 32px; border: 2px solid #c33; background: #fff; color: #c33; cursor: pointer; border-radius: 4px; }
+  .hanamaru-overlay .hana-msg button:hover { background: #c33; color: #fff; }
+</style>
+
+<script>
+// Character recognition buttons
+function checkMatch(btn, result) {
+  var siblings = btn.parentElement.querySelectorAll('.match-btn');
+  if (result === 'correct') {
+    siblings.forEach(function(b) { b.disabled = true; b.classList.remove('wrong'); });
+    btn.classList.add('correct');
+  } else {
+    btn.classList.add('wrong');
+    setTimeout(function() { btn.classList.remove('wrong'); }, 600);
+  }
+}
+
+// Hanamaru checkbox toggle
+function makeHanamaruPath() {
+  var cx=36, cy=36, R=14, pR=28, N=10, d='';
+  // Flower petals — Q curves looping out and back
+  for (var i=0; i<N; i++) {
+    var a1 = i*2*Math.PI/N, a2 = (i+0.5)*2*Math.PI/N, a3 = (i+1)*2*Math.PI/N;
+    var x1=cx+R*Math.cos(a1), y1=cy+R*Math.sin(a1);
+    var px=cx+pR*Math.cos(a2), py=cy+pR*Math.sin(a2);
+    var x2=cx+R*Math.cos(a3), y2=cy+R*Math.sin(a3);
+    if (i===0) d += 'M '+x1.toFixed(1)+' '+y1.toFixed(1)+' ';
+    d += 'Q '+px.toFixed(1)+' '+py.toFixed(1)+', '+x2.toFixed(1)+' '+y2.toFixed(1)+' ';
+  }
+  d += 'Z ';
+  // Spiral from outer edge inward (~2.5 turns)
+  var sr=13, pts=80;
+  for (var i=0; i<=pts; i++) {
+    var t=i/pts, angle=t*2.5*2*Math.PI, r=sr*(1-t*0.9);
+    var x=cx+r*Math.cos(angle), y=cy+r*Math.sin(angle);
+    d += (i===0?'M ':'L ') + x.toFixed(1)+' '+y.toFixed(1)+' ';
+  }
+  return d;
+}
+document.addEventListener('click', function(e) {
+  var check = e.target.closest('.check');
+  if (!check) return;
+  if (check.classList.contains('done')) {
+    check.classList.remove('done');
+    check.innerHTML = '&nbsp;';
+  } else {
+    check.classList.add('done');
+    check.innerHTML = '<svg class="hanamaru" viewBox="0 0 72 72" fill="none">' +
+      '<path d="' + makeHanamaruPath() + '" stroke="#e33" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>';
+  }
+});
+
+// Auto-expand inline inputs
+document.addEventListener('input', function(e) {
+  if (e.target.classList.contains('blank-input')) {
+    const tmp = document.createElement('span');
+    tmp.style.cssText = 'visibility:hidden;position:absolute;white-space:pre;font:' + getComputedStyle(e.target).font;
+    tmp.textContent = e.target.value || '';
+    document.body.appendChild(tmp);
+    e.target.style.width = Math.max(60, tmp.offsetWidth + 24) + 'px';
+    document.body.removeChild(tmp);
+  }
+});
+
+const pages = ['p0','p1','p2','p3','p4','p5','p6','p7','p8','p9','p10','p11','p12','p13','p14'];
+let cur = 0;
+
+function go(dir) {
+  saveAnnotations();
+  document.getElementById(pages[cur]).classList.remove('active');
+  cur += dir;
+  document.getElementById(pages[cur]).classList.add('active');
+  document.getElementById('prev').disabled = cur === 0;
+  document.getElementById('next').disabled = cur === pages.length - 1;
+  document.getElementById('indicator').textContent = (cur + 1) + ' / ' + pages.length;
+  window.scrollTo(0, 0);
+  loadAnnotations();
+  resizeCanvas();
+}
+
+// --- Annotation system ---
+const canvas = document.getElementById('drawCanvas');
+const ctx = canvas.getContext('2d');
+const textLayer = document.getElementById('textLayer');
+let mode = null; // 'draw', 'type', 'erase', or null
+let drawing = false;
+let lastX = 0, lastY = 0;
+
+// Drawing state per page: stored as canvas image data URLs
+const STORAGE_KEY = 'jp-lesson4-annotations';
+
+function getStore() {
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; }
+  catch(e) { return {}; }
+}
+
+function saveAnnotations() {
+  const store = getStore();
+  const pageId = pages[cur];
+  // Save canvas drawing
+  store[pageId] = store[pageId] || {};
+  store[pageId].canvas = canvas.toDataURL();
+  // Save text annotations
+  const texts = [];
+  textLayer.querySelectorAll('.anno-wrap').forEach(wrap => {
+    const input = wrap.querySelector('.annotation');
+    if (input && input.value.trim()) {
+      texts.push({ x: parseInt(wrap.style.left), y: parseInt(wrap.style.top), text: input.value });
+    }
+  });
+  store[pageId].texts = texts;
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(store));
+}
+
+function loadAnnotations() {
+  const store = getStore();
+  const pageId = pages[cur];
+  const data = store[pageId];
+  // Clear canvas
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  // Clear text annotations
+  textLayer.innerHTML = '';
+  if (!data) return;
+  // Restore canvas
+  if (data.canvas) {
+    const img = new Image();
+    img.onload = () => ctx.drawImage(img, 0, 0);
+    img.src = data.canvas;
+  }
+  // Restore text annotations
+  if (data.texts) {
+    data.texts.forEach(t => createTextAt(t.x, t.y, t.text));
+  }
+}
+
+// Laser pointer
+const laserCanvas = document.getElementById('laserCanvas');
+const laserCtx = laserCanvas.getContext('2d');
+let lasering = false;
+let laserLastX = 0, laserLastY = 0;
+let laserFadeTimer = null;
+let laserFadeRAF = null;
+
+function fadeOutLaser() {
+  clearTimeout(laserFadeTimer);
+  laserFadeTimer = setTimeout(function() {
+    function fade() {
+      laserCtx.globalCompositeOperation = 'destination-out';
+      laserCtx.fillStyle = 'rgba(0,0,0,0.08)';
+      laserCtx.fillRect(0, 0, laserCanvas.width, laserCanvas.height);
+      laserCtx.globalCompositeOperation = 'source-over';
+      // Check if canvas is effectively empty
+      var d = laserCtx.getImageData(0, 0, 1, 1).data;
+      // Keep fading until mostly transparent
+      laserFadeRAF = requestAnimationFrame(fade);
+    }
+    // Stop any previous fade loop
+    cancelAnimationFrame(laserFadeRAF);
+    var fadeCount = 0;
+    (function fade() {
+      laserCtx.globalCompositeOperation = 'destination-out';
+      laserCtx.fillStyle = 'rgba(0,0,0,0.06)';
+      laserCtx.fillRect(0, 0, laserCanvas.width, laserCanvas.height);
+      laserCtx.globalCompositeOperation = 'source-over';
+      fadeCount++;
+      if (fadeCount < 60) {
+        laserFadeRAF = requestAnimationFrame(fade);
+      } else {
+        laserCtx.clearRect(0, 0, laserCanvas.width, laserCanvas.height);
+      }
+    })();
+  }, 500);
+}
+
+function drawLaserSegment(x1, y1, x2, y2) {
+  laserCtx.beginPath();
+  laserCtx.moveTo(x1, y1);
+  laserCtx.lineTo(x2, y2);
+  laserCtx.strokeStyle = 'rgba(255, 50, 50, 0.8)';
+  laserCtx.lineWidth = 3;
+  laserCtx.lineCap = 'round';
+  laserCtx.lineJoin = 'round';
+  laserCtx.shadowColor = 'rgba(255, 0, 0, 0.6)';
+  laserCtx.shadowBlur = 8;
+  laserCtx.stroke();
+  laserCtx.shadowBlur = 0;
+}
+
+function resizeCanvas() {
+  const h = Math.max(document.documentElement.scrollHeight, window.innerHeight);
+  const w = document.documentElement.scrollWidth;
+  // Save current drawing
+  const tmp = canvas.toDataURL();
+  canvas.width = w;
+  canvas.height = h;
+  ctx.lineJoin = 'round';
+  ctx.lineCap = 'round';
+  // Restore drawing after resize
+  const img = new Image();
+  img.onload = () => ctx.drawImage(img, 0, 0);
+  img.src = tmp;
+  // Resize laser canvas
+  laserCanvas.width = w;
+  laserCanvas.height = h;
+  // Match text layer size
+  textLayer.style.height = h + 'px';
+}
+
+function setMode(m) {
+  if (mode === m) { mode = null; } else { mode = m; }
+  canvas.classList.remove('active', 'erase');
+  textLayer.classList.remove('active');
+  document.querySelectorAll('.nav button').forEach(b => b.classList.remove('active-mode'));
+  if (mode === 'draw') {
+    canvas.classList.add('active');
+    document.getElementById('btnDraw').classList.add('active-mode');
+  } else if (mode === 'erase') {
+    canvas.classList.add('active', 'erase');
+    document.getElementById('btnErase').classList.add('active-mode');
+  } else if (mode === 'type') {
+    textLayer.classList.add('active');
+    document.getElementById('btnType').classList.add('active-mode');
+  }
+}
+
+function toggleClearMenu() {
+  var m = document.getElementById('clearMenu');
+  m.style.display = m.style.display === 'none' ? 'block' : 'none';
+}
+function hideClearMenu() {
+  document.getElementById('clearMenu').style.display = 'none';
+}
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('#btnClear') && !e.target.closest('#clearMenu')) hideClearMenu();
+});
+
+function clearPage() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  textLayer.innerHTML = '';
+  saveAnnotations();
+  var pg = document.getElementById(pages[cur]);
+  if (pg) {
+    pg.querySelectorAll('.blank-input, .blank-input-full, .roleplay-notes').forEach(function(inp) { inp.value = ''; });
+    pg.querySelectorAll('.check.done').forEach(function(c) { c.classList.remove('done'); c.innerHTML = '&nbsp;'; });
+    pg.querySelectorAll('.match-game').forEach(function(g) { if (g._reset) g._reset(); });
+  }
+  if (window.syncSend) window.syncSend({ t: 'clear' });
+}
+
+function clearAll() {
+  // Clear current canvas and text annotations
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  textLayer.innerHTML = '';
+  // Clear all stored annotations
+  localStorage.removeItem(STORAGE_KEY);
+  // Clear all text inputs
+  document.querySelectorAll('.blank-input, .blank-input-full, .roleplay-notes').forEach(function(inp) { inp.value = ''; });
+  // Reset all checkboxes
+  document.querySelectorAll('.check.done').forEach(function(c) { c.classList.remove('done'); c.innerHTML = '&nbsp;'; });
+  // Reset matching games
+  document.querySelectorAll('.match-game').forEach(function(g) { if (g._reset) g._reset(); });
+  if (window.syncSend) window.syncSend({ t: 'clearall' });
+}
+
+function createTextAt(x, y, text) {
+  const wrap = document.createElement('div');
+  wrap.className = 'anno-wrap';
+  wrap.style.left = x + 'px';
+  wrap.style.top = y + 'px';
+
+  const controls = document.createElement('div');
+  controls.className = 'anno-controls';
+
+  const handle = document.createElement('span');
+  handle.className = 'anno-handle';
+  handle.textContent = '\u2803';
+
+  const del = document.createElement('button');
+  del.className = 'anno-delete';
+  del.textContent = '\u2715';
+  del.addEventListener('click', () => { wrap.remove(); saveAnnotations(); });
+
+  controls.appendChild(handle);
+  controls.appendChild(del);
+
+  const ta = document.createElement('textarea');
+  ta.className = 'annotation';
+  ta.rows = 1;
+  ta.value = text || '';
+  ta.addEventListener('focus', () => { activeAnnotation = ta; });
+  ta.addEventListener('blur', () => {
+    activeAnnotation = null;
+    if (!ta.value.trim()) { wrap.remove(); }
+    saveAnnotations();
+    setMode(null);
+  });
+  ta.addEventListener('input', () => { ta.style.height = 'auto'; ta.style.height = ta.scrollHeight + 'px'; });
+
+  // Drag logic
+  let dragging = false, dragX, dragY;
+  handle.addEventListener('mousedown', e => {
+    dragging = true;
+    dragX = e.clientX - parseInt(wrap.style.left);
+    dragY = e.clientY - parseInt(wrap.style.top);
+    e.preventDefault();
+  });
+  document.addEventListener('mousemove', e => {
+    if (!dragging) return;
+    wrap.style.left = (e.clientX - dragX) + 'px';
+    wrap.style.top = (e.clientY - dragY + window.scrollY) + 'px';
+  });
+  document.addEventListener('mouseup', () => { if (dragging) { dragging = false; saveAnnotations(); }});
+
+  wrap.appendChild(controls);
+  wrap.appendChild(ta);
+  textLayer.appendChild(wrap);
+  if (!text) ta.focus();
+  // Auto-size on load
+  if (text) { requestAnimationFrame(() => { ta.style.height = 'auto'; ta.style.height = ta.scrollHeight + 'px'; }); }
+  return wrap;
+}
+
+// Drawing events
+canvas.addEventListener('mousedown', e => {
+  if (mode === 'draw' || mode === 'erase') {
+    drawing = true;
+    lastX = e.pageX;
+    lastY = e.pageY;
+    if (mode === 'erase') {
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.lineWidth = 40;
+    } else {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.strokeStyle = '#c33';
+      ctx.lineWidth = 2.5;
+    }
+  }
+});
+
+canvas.addEventListener('mousemove', e => {
+  if (!drawing) return;
+  ctx.beginPath();
+  ctx.moveTo(lastX, lastY);
+  ctx.lineTo(e.pageX, e.pageY);
+  ctx.stroke();
+  lastX = e.pageX;
+  lastY = e.pageY;
+});
+
+canvas.addEventListener('mouseup', () => { drawing = false; saveAnnotations(); });
+canvas.addEventListener('mouseleave', () => { drawing = false; });
+
+// Touch support
+canvas.addEventListener('touchstart', e => {
+  if (mode === 'draw' || mode === 'erase') {
+    e.preventDefault();
+    drawing = true;
+    const t = e.touches[0];
+    lastX = t.pageX;
+    lastY = t.pageY;
+    if (mode === 'erase') {
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.lineWidth = 40;
+    } else {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.strokeStyle = '#c33';
+      ctx.lineWidth = 2.5;
+    }
+  }
+}, { passive: false });
+
+canvas.addEventListener('touchmove', e => {
+  if (!drawing) return;
+  e.preventDefault();
+  const t = e.touches[0];
+  ctx.beginPath();
+  ctx.moveTo(lastX, lastY);
+  ctx.lineTo(t.pageX, t.pageY);
+  ctx.stroke();
+  lastX = t.pageX;
+  lastY = t.pageY;
+}, { passive: false });
+
+canvas.addEventListener('touchend', () => { drawing = false; saveAnnotations(); });
+
+// Laser pointer events (active when no mode is selected)
+document.addEventListener('mousedown', function(e) {
+  if (mode || e.target.closest('.nav') || e.target.closest('#clearMenu') || e.target.closest('.anno-wrap') || e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'BUTTON' || e.target.tagName === 'A') return;
+  e.preventDefault();
+  lasering = true;
+  document.body.style.userSelect = 'none';
+  document.body.style.webkitUserSelect = 'none';
+  laserLastX = e.pageX;
+  laserLastY = e.pageY;
+  clearTimeout(laserFadeTimer);
+  cancelAnimationFrame(laserFadeRAF);
+  if (window.syncSend) window.syncSend({ t: 'laserstart', rx: e.pageX / (laserCanvas.width || 1), ry: e.pageY / (laserCanvas.height || 1) });
+});
+document.addEventListener('mousemove', function(e) {
+  if (!lasering) return;
+  drawLaserSegment(laserLastX, laserLastY, e.pageX, e.pageY);
+  if (window.syncSend) window.syncSend({ t: 'lasermove', rx: e.pageX / (laserCanvas.width || 1), ry: e.pageY / (laserCanvas.height || 1) });
+  laserLastX = e.pageX;
+  laserLastY = e.pageY;
+});
+document.addEventListener('mouseup', function() {
+  if (!lasering) return;
+  lasering = false;
+  document.body.style.userSelect = '';
+  document.body.style.webkitUserSelect = '';
+  fadeOutLaser();
+  if (window.syncSend) window.syncSend({ t: 'laserend' });
+});
+// Touch laser
+document.addEventListener('touchstart', function(e) {
+  if (mode || e.target.closest('.nav') || e.target.closest('#clearMenu') || e.target.closest('.anno-wrap') || e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'BUTTON' || e.target.tagName === 'A') return;
+  lasering = true;
+  var t = e.touches[0];
+  laserLastX = t.pageX;
+  laserLastY = t.pageY;
+  clearTimeout(laserFadeTimer);
+  cancelAnimationFrame(laserFadeRAF);
+  if (window.syncSend) window.syncSend({ t: 'laserstart', rx: t.pageX / (laserCanvas.width || 1), ry: t.pageY / (laserCanvas.height || 1) });
+});
+document.addEventListener('touchmove', function(e) {
+  if (!lasering) return;
+  var t = e.touches[0];
+  drawLaserSegment(laserLastX, laserLastY, t.pageX, t.pageY);
+  if (window.syncSend) window.syncSend({ t: 'lasermove', rx: t.pageX / (laserCanvas.width || 1), ry: t.pageY / (laserCanvas.height || 1) });
+  laserLastX = t.pageX;
+  laserLastY = t.pageY;
+});
+document.addEventListener('touchend', function() {
+  if (!lasering) return;
+  lasering = false;
+  fadeOutLaser();
+  if (window.syncSend) window.syncSend({ t: 'laserend' });
+});
+
+// Text layer click — only create if no annotation is currently focused
+let activeAnnotation = null;
+textLayer.addEventListener('mousedown', e => {
+  if (mode === 'type' && e.target === textLayer && !activeAnnotation) {
+    // Small delay so the mousedown doesn't steal focus from the new textarea
+    const x = e.pageX - 4, y = e.pageY - 12;
+    setTimeout(() => createTextAt(x, y, ''), 10);
+  }
+});
+
+// Init
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
+loadAnnotations();
+
+// =============================================
+// MATCHING GAME
+// =============================================
+(function() {
+  document.querySelectorAll('.match-game').forEach(function(game) {
+    var leftData = JSON.parse(game.dataset.left);
+    var rightData = JSON.parse(game.dataset.right);
+    var connections = {}; // leftId -> rightId
+    var dragging = null; // { side: 'left'|'right', id: string, dotEl: element }
+    var tempLine = null;
+
+    // Build DOM
+    var columns = document.createElement('div');
+    columns.className = 'match-columns';
+
+    var leftCol = document.createElement('div');
+    leftCol.className = 'match-left';
+
+    var rightCol = document.createElement('div');
+    rightCol.className = 'match-right';
+
+    var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('class', 'match-svg');
+
+    var dots = {}; // id -> dot element
+
+    leftData.forEach(function(item) {
+      var row = document.createElement('div');
+      row.className = 'match-item';
+      var label = document.createElement('span');
+      label.innerHTML = item.html;
+      var dot = document.createElement('div');
+      dot.className = 'match-dot';
+      dot.dataset.side = 'left';
+      dot.dataset.id = item.id;
+      dots['L_' + item.id] = dot;
+      row.appendChild(label);
+      row.appendChild(dot);
+      leftCol.appendChild(row);
+    });
+
+    rightData.forEach(function(item) {
+      var row = document.createElement('div');
+      row.className = 'match-item';
+      var label = document.createElement('span');
+      label.textContent = item.text;
+      var dot = document.createElement('div');
+      dot.className = 'match-dot';
+      dot.dataset.side = 'right';
+      dot.dataset.id = item.id;
+      dots['R_' + item.id] = dot;
+      row.appendChild(label);
+      row.appendChild(dot);
+      rightCol.appendChild(row);
+    });
+
+    columns.appendChild(leftCol);
+    columns.appendChild(svg);
+    columns.appendChild(rightCol);
+    game.appendChild(columns);
+
+    function getDotCenter(dot) {
+      var sr = svg.getBoundingClientRect();
+      var dr = dot.getBoundingClientRect();
+      return { x: dr.left + dr.width / 2 - sr.left, y: dr.top + dr.height / 2 - sr.top };
+    }
+
+    function toSvgCoords(clientX, clientY) {
+      var sr = svg.getBoundingClientRect();
+      return { x: clientX - sr.left, y: clientY - sr.top };
+    }
+
+    function redrawLines() {
+      svg.querySelectorAll('line:not(.temp-line)').forEach(function(l) { l.remove(); });
+      Object.keys(connections).forEach(function(lid) {
+        var rid = connections[lid];
+        var ld = dots['L_' + lid];
+        var rd = dots['R_' + rid];
+        if (!ld || !rd) return;
+        var lc = getDotCenter(ld);
+        var rc = getDotCenter(rd);
+        var line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+        line.setAttribute('x1', lc.x); line.setAttribute('y1', lc.y);
+        line.setAttribute('x2', rc.x); line.setAttribute('y2', rc.y);
+        svg.appendChild(line);
+      });
+      Object.keys(dots).forEach(function(key) {
+        dots[key].classList.remove('connected');
+      });
+      Object.keys(connections).forEach(function(lid) {
+        var rid = connections[lid];
+        if (dots['L_' + lid]) dots['L_' + lid].classList.add('connected');
+        if (dots['R_' + rid]) dots['R_' + rid].classList.add('connected');
+      });
+    }
+
+    function findConnectionByRight(rid) {
+      for (var lid in connections) {
+        if (connections[lid] === rid) return lid;
+      }
+      return null;
+    }
+
+    // Click-to-start, click-to-connect interaction
+    function startConnect(side, id, dotEl) {
+      // If already connected, disconnect first then start re-connect from this dot
+      if (side === 'left' && connections[id]) {
+        delete connections[id];
+        redrawLines();
+      }
+      if (side === 'right') {
+        var existingLeft = findConnectionByRight(id);
+        if (existingLeft) {
+          delete connections[existingLeft];
+          redrawLines();
+        }
+      }
+      dragging = { side: side, id: id, dotEl: dotEl };
+      dotEl.classList.add('connected');
+      tempLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      tempLine.setAttribute('class', 'temp-line');
+      var c = getDotCenter(dotEl);
+      tempLine.setAttribute('x1', c.x); tempLine.setAttribute('y1', c.y);
+      tempLine.setAttribute('x2', c.x); tempLine.setAttribute('y2', c.y);
+      svg.appendChild(tempLine);
+    }
+
+    function finishConnect(targetDot) {
+      if (!dragging) return;
+      if (tempLine) { tempLine.remove(); tempLine = null; }
+      if (targetDot) {
+        var targetSide = targetDot.dataset.side;
+        var targetId = targetDot.dataset.id;
+        if (targetSide !== dragging.side) {
+          var leftId = dragging.side === 'left' ? dragging.id : targetId;
+          var rightId = dragging.side === 'right' ? dragging.id : targetId;
+          var existingLeft = findConnectionByRight(rightId);
+          if (existingLeft) delete connections[existingLeft];
+          connections[leftId] = rightId;
+        }
+      }
+      dragging = null;
+      redrawLines();
+    }
+
+    function cancelConnect() {
+      if (!dragging) return;
+      if (tempLine) { tempLine.remove(); tempLine = null; }
+      dragging = null;
+      redrawLines();
+    }
+
+    // Mouse: click dot to start, move to see line, click another dot to connect
+    game.addEventListener('click', function(e) {
+      var dot = e.target.closest('.match-dot');
+      if (!dot) {
+        // Clicked empty space — cancel any active connection
+        cancelConnect();
+        return;
+      }
+      e.preventDefault();
+      if (dragging) {
+        // Second click — finish connection
+        finishConnect(dot);
+      } else {
+        // First click — start connection
+        startConnect(dot.dataset.side, dot.dataset.id, dot);
+      }
+    });
+
+    document.addEventListener('mousemove', function(e) {
+      if (!dragging || !tempLine || dragging.dotEl.closest('.match-game') !== game) return;
+      var p = toSvgCoords(e.clientX, e.clientY);
+      tempLine.setAttribute('x2', p.x);
+      tempLine.setAttribute('y2', p.y);
+    });
+
+    // Touch: tap dot to start, drag to target dot, release to connect
+    game.addEventListener('touchstart', function(e) {
+      var dot = e.target.closest('.match-dot');
+      if (!dot) return;
+      e.preventDefault();
+      if (dragging) {
+        finishConnect(dot);
+      } else {
+        startConnect(dot.dataset.side, dot.dataset.id, dot);
+      }
+    }, { passive: false });
+
+    document.addEventListener('touchmove', function(e) {
+      if (!dragging || !tempLine || dragging.dotEl.closest('.match-game') !== game) return;
+      e.preventDefault();
+      var t = e.touches[0];
+      var p = toSvgCoords(t.clientX, t.clientY);
+      tempLine.setAttribute('x2', p.x);
+      tempLine.setAttribute('y2', p.y);
+    }, { passive: false });
+
+    document.addEventListener('touchend', function(e) {
+      if (!dragging || dragging.dotEl.closest('.match-game') !== game) return;
+      var t = e.changedTouches[0];
+      var target = document.elementFromPoint(t.clientX, t.clientY);
+      var dot = target ? target.closest('.match-dot') : null;
+      if (dot && dot.dataset.side !== dragging.side) {
+        finishConnect(dot);
+      }
+      // On touch, don't cancel — let them tap another dot
+    });
+
+    // Redraw on resize/scroll
+    window.addEventListener('resize', function() { redrawLines(); });
+
+    // Update SVG size to match container
+    function sizeSvg() {
+      svg.setAttribute('width', game.offsetWidth);
+      svg.setAttribute('height', game.offsetHeight);
+      redrawLines();
+    }
+    // Use ResizeObserver for accurate sizing
+    if (window.ResizeObserver) {
+      new ResizeObserver(sizeSvg).observe(game);
+    }
+    // Initial sizing after layout
+    requestAnimationFrame(sizeSvg);
+
+    // Expose connections for sync
+    game._syncConnections = connections;
+    game._applyConnections = function(newConns) {
+      // Clear and replace connections
+      Object.keys(connections).forEach(function(k) { delete connections[k]; });
+      Object.keys(newConns).forEach(function(k) { connections[k] = newConns[k]; });
+      redrawLines();
+    };
+  });
+})();
+
+// =============================================
+// HANAMARU FESTIVAL
+// =============================================
+document.getElementById('finishBtn').addEventListener('click', function() {
+  var overlay = document.createElement('div');
+  overlay.className = 'hanamaru-overlay';
+
+  var bg = document.createElement('div');
+  bg.className = 'hana-bg';
+  overlay.appendChild(bg);
+
+  // Generate 45-65 hanamarus of various sizes, well-distributed
+  var count = 45 + Math.floor(Math.random() * 21);
+  var maxDelay = 0;
+  var vw = window.innerWidth;
+  var vh = window.innerHeight;
+  // Center exclusion zone (where message text + button appear)
+  var cx1 = vw * 0.3, cx2 = vw * 0.7, cy1 = vh * 0.3, cy2 = vh * 0.65;
+  // Track placed hanamaru centers for spacing
+  var placed = [];
+  for (var i = 0; i < count; i++) {
+    // Mix of sizes: ~20% very big (200-350), ~30% big (100-200), ~50% small-medium (25-100)
+    var roll = Math.random();
+    var size;
+    if (roll < 0.2) { size = 200 + Math.floor(Math.random() * 151); }
+    else if (roll < 0.5) { size = 100 + Math.floor(Math.random() * 101); }
+    else { size = 25 + Math.floor(Math.random() * 76); }
+    // Place hanamaru: avoid center zone AND keep spacing from others
+    var x, y, attempts = 0, bestX = 0, bestY = 0, bestDist = -1;
+    var minSpacing = size * 0.4; // minimum distance between centers
+    do {
+      x = Math.random() * vw - size * 0.3;
+      y = Math.random() * vh - size * 0.3;
+      var centerX = x + size / 2;
+      var centerY = y + size / 2;
+      // Skip if in exclusion zone
+      if (centerX > cx1 && centerX < cx2 && centerY > cy1 && centerY < cy2) { attempts++; continue; }
+      // Find minimum distance to any placed hanamaru
+      var closestDist = Infinity;
+      for (var j = 0; j < placed.length; j++) {
+        var dx = centerX - placed[j][0];
+        var dy = centerY - placed[j][1];
+        var d = Math.sqrt(dx * dx + dy * dy) - (size + placed[j][2]) * 0.3;
+        if (d < closestDist) closestDist = d;
+      }
+      // Keep the best candidate (most spaced out)
+      if (closestDist > bestDist) { bestDist = closestDist; bestX = x; bestY = y; }
+      // Good enough if spaced well
+      if (closestDist >= minSpacing) break;
+      attempts++;
+    } while (attempts < 30);
+    x = bestX; y = bestY;
+    placed.push([x + size / 2, y + size / 2, size]);
+    var delay = Math.random() * 0.9; // all start within first 0.8-1s
+    if (delay > maxDelay) maxDelay = delay;
+
+    // Color variation around #e33
+    var r = 200 + Math.floor(Math.random() * 56); // 200-255
+    var g = 30 + Math.floor(Math.random() * 40);  // 30-70
+    var b = 30 + Math.floor(Math.random() * 40);  // 30-70
+    var color = 'rgb(' + r + ',' + g + ',' + b + ')';
+
+    var item = document.createElement('div');
+    item.className = 'hana-item';
+    item.style.left = x + 'px';
+    item.style.top = y + 'px';
+    item.style.width = size + 'px';
+    item.style.height = size + 'px';
+
+    var svgEl = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svgEl.setAttribute('viewBox', '0 0 72 72');
+    svgEl.setAttribute('width', size);
+    svgEl.setAttribute('height', size);
+    svgEl.setAttribute('fill', 'none');
+
+    var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', makeHanamaruPath());
+    path.setAttribute('stroke', color);
+    path.setAttribute('stroke-width', '2.5');
+    path.setAttribute('stroke-linecap', 'round');
+    path.setAttribute('stroke-linejoin', 'round');
+    path.setAttribute('fill', 'none');
+    path.style.animationDelay = delay.toFixed(2) + 's';
+
+    svgEl.appendChild(path);
+    item.appendChild(svgEl);
+    overlay.appendChild(item);
+  }
+
+  // Message (shown after all hanamarus finish drawing)
+  var msg = document.createElement('div');
+  msg.className = 'hana-msg';
+  var msgText = document.createElement('p');
+  msgText.textContent = 'またね！/ See you next time!';
+  var closeBtn = document.createElement('button');
+  closeBtn.textContent = 'Close';
+  closeBtn.addEventListener('click', function() {
+    overlay.remove();
+  });
+  msg.appendChild(msgText);
+  msg.appendChild(closeBtn);
+  overlay.appendChild(msg);
+
+  document.body.appendChild(overlay);
+
+  // Show message early while hanamarus are still drawing
+  var totalTime = 800;
+  setTimeout(function() {
+    msg.classList.add('visible');
+  }, totalTime);
+});
+
+// =============================================
+// LIVE SYNC
+// =============================================
+// Connect: add ?sync=ROOM_NAME&ws=wss://your-server to the URL
+// Both viewers join the same room and all interactions sync.
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var room = params.get('sync');
+
+  // If no room in URL, show a popup to enter one
+  if (!room) {
+    var saved = localStorage.getItem('sync-room') || '';
+    var overlay = document.createElement('div');
+    overlay.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.3);z-index:9999;display:flex;align-items:center;justify-content:center;';
+    var box = document.createElement('div');
+    box.style.cssText = 'background:#fff;padding:28px 32px;border-radius:8px;font-family:monospace;text-align:center;max-width:340px;box-shadow:0 4px 20px rgba(0,0,0,0.15);';
+    var savedName = localStorage.getItem('sync-name') || '';
+    box.innerHTML = '<p style="font-size:16px;margin-bottom:6px;font-weight:bold;">Enter room name</p>' +
+      '<p style="font-size:13px;color:#888;margin-bottom:16px;">Both devices use the same room to sync live</p>' +
+      '<input id="syncRoomPopup" type="text" value="' + saved.replace(/"/g, '&quot;') + '" placeholder="e.g. classroom1" style="font-family:monospace;font-size:15px;padding:8px 12px;border:1.5px solid #ccc;border-radius:4px;width:100%;margin-bottom:10px;text-align:center;">' +
+      '<input id="syncNamePopup" type="text" value="' + savedName.replace(/"/g, '&quot;') + '" placeholder="Your name" style="font-family:monospace;font-size:15px;padding:8px 12px;border:1.5px solid #ccc;border-radius:4px;width:100%;margin-bottom:14px;text-align:center;">' +
+      '<div style="display:flex;gap:10px;justify-content:center;">' +
+      '<button id="syncJoinBtn" style="font-family:monospace;font-size:14px;padding:8px 24px;border:2px solid #e33;background:#e33;color:#fff;border-radius:4px;cursor:pointer;">Join</button>' +
+      '<button id="syncSkipBtn" style="font-family:monospace;font-size:14px;padding:8px 24px;border:1px solid #ccc;background:#fff;color:#666;border-radius:4px;cursor:pointer;">Skip</button>' +
+      '</div>';
+    overlay.appendChild(box);
+    document.body.appendChild(overlay);
+
+    var input = document.getElementById('syncRoomPopup');
+    input.focus();
+    input.select();
+
+    var nameInput = document.getElementById('syncNamePopup');
+    document.getElementById('syncJoinBtn').addEventListener('click', function() {
+      var val = input.value.trim();
+      if (!val) return;
+      localStorage.setItem('sync-room', val);
+      localStorage.setItem('sync-name', nameInput.value.trim());
+      // Reload with ?sync=ROOM
+      var url = new URL(window.location);
+      url.searchParams.set('sync', val);
+      window.location.replace(url.toString());
+    });
+    input.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') nameInput.focus();
+    });
+    nameInput.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') document.getElementById('syncJoinBtn').click();
+    });
+    document.getElementById('syncSkipBtn').addEventListener('click', function() {
+      overlay.remove();
+    });
+    return; // don't connect yet — page will reload with ?sync= param
+  }
+
+  // Auto-detect WebSocket URL from current host (same server serves pages + WS)
+  var wsProto = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+  var wsUrl = params.get('ws') || (wsProto + '//' + window.location.host + '/ws');
+  var ws = null;
+  var syncing = false; // true while applying a remote event (prevents echo)
+
+  function connect() {
+    ws = new WebSocket(wsUrl + '?room=' + encodeURIComponent(room));
+    ws.onopen = function() { console.log('[sync] connected to room: ' + room); };
+    ws.onclose = function() { console.log('[sync] disconnected, reconnecting...'); setTimeout(connect, 2000); };
+    ws.onmessage = function(e) {
+      var msg;
+      try { msg = JSON.parse(e.data); } catch(err) { return; }
+      syncing = true;
+      applyRemote(msg);
+      syncing = false;
+    };
+  }
+  connect();
+
+  function send(msg) {
+    if (syncing) return; // don't echo remote events back
+    if (ws && ws.readyState === 1) ws.send(JSON.stringify(msg));
+  }
+  window.syncSend = send;
+
+  // --- Hook into page navigation ---
+  var origGo = window.go;
+  window.go = function(dir) {
+    origGo(dir);
+    send({ t: 'page', page: cur });
+  };
+
+  // --- Hook into text inputs ---
+  document.addEventListener('input', function(e) {
+    if (syncing) return;
+    if (e.target.classList.contains('blank-input') || e.target.classList.contains('blank-input-full') || e.target.classList.contains('roleplay-notes')) {
+      var inputs = Array.from(document.querySelectorAll('.blank-input, .blank-input-full, .roleplay-notes'));
+      var idx = inputs.indexOf(e.target);
+      if (idx >= 0) send({ t: 'input', idx: idx, val: e.target.value });
+    }
+  });
+
+  // --- Hook into checkbox clicks ---
+  document.addEventListener('click', function(e) {
+    if (syncing) return;
+    var check = e.target.closest('.check');
+    if (check) {
+      var checks = Array.from(document.querySelectorAll('.check'));
+      var idx = checks.indexOf(check);
+      if (idx >= 0) send({ t: 'check', idx: idx, done: check.classList.contains('done') });
+    }
+  });
+
+  // --- Hook into hanamaru festival ---
+  var finishBtn = document.getElementById('finishBtn');
+  if (finishBtn) {
+    finishBtn.addEventListener('click', function() {
+      if (!syncing) send({ t: 'hanamaru' });
+    });
+  }
+
+  // --- Hook into drawing ---
+  var drawCanvas = document.getElementById('drawCanvas');
+  var drawCtx = drawCanvas ? drawCanvas.getContext('2d') : null;
+
+  // Intercept canvas drawing strokes
+  if (drawCanvas) {
+    drawCanvas.addEventListener('mousedown', function(e) {
+      if (!syncing && (mode === 'draw' || mode === 'erase')) {
+        send({ t: 'drawstart', rx: e.pageX / drawCanvas.width, ry: e.pageY / drawCanvas.height, erase: mode === 'erase' });
+      }
+    });
+    drawCanvas.addEventListener('mousemove', function(e) {
+      if (!syncing && drawing) {
+        send({ t: 'drawmove', rx: e.pageX / drawCanvas.width, ry: e.pageY / drawCanvas.height });
+      }
+    });
+    drawCanvas.addEventListener('mouseup', function() {
+      if (!syncing) send({ t: 'drawend' });
+    });
+    // Touch drawing sync
+    drawCanvas.addEventListener('touchstart', function(e) {
+      if (!syncing && (mode === 'draw' || mode === 'erase')) {
+        var t = e.touches[0];
+        send({ t: 'drawstart', rx: t.pageX / drawCanvas.width, ry: t.pageY / drawCanvas.height, erase: mode === 'erase' });
+      }
+    });
+    drawCanvas.addEventListener('touchmove', function(e) {
+      if (!syncing && drawing) {
+        var t = e.touches[0];
+        send({ t: 'drawmove', rx: t.pageX / drawCanvas.width, ry: t.pageY / drawCanvas.height });
+      }
+    });
+    drawCanvas.addEventListener('touchend', function() {
+      if (!syncing) send({ t: 'drawend' });
+    });
+  }
+
+  // --- Hook into matching game ---
+  document.querySelectorAll('.match-game').forEach(function(game, gameIdx) {
+    game.addEventListener('click', function(e) {
+      // After a connection is made, send the full connection state
+      if (syncing) return;
+      // Small delay to let the connection logic finish first
+      setTimeout(function() {
+        // Read connections from the game's closure — we stored them on the element
+        if (game._syncConnections) {
+          send({ t: 'match', gameIdx: gameIdx, connections: JSON.parse(JSON.stringify(game._syncConnections)) });
+        }
+      }, 50);
+    });
+  });
+
+  // --- Cursor tracking (throttled to ~30fps) ---
+  var remoteCursor = document.getElementById('remoteCursor');
+  var remoteCursorName = document.getElementById('remoteCursorName');
+  var cursorIndicator = document.getElementById('cursorIndicator');
+  var indicatorName = document.getElementById('indicatorName');
+  var cursorHideTimer = null;
+  var lastCursorSend = 0;
+  var myName = localStorage.getItem('sync-name') || '';
+  document.addEventListener('mousemove', function(e) {
+    if (syncing) return;
+    var now = Date.now();
+    if (now - lastCursorSend < 16) return;
+    lastCursorSend = now;
+    send({ t: 'cursor', rx: e.pageX / (document.documentElement.scrollWidth || 1), ry: e.pageY / (Math.max(document.documentElement.scrollHeight, window.innerHeight) || 1), name: myName });
+  });
+
+  // --- Apply remote events ---
+  var remoteDrawing = false;
+  var remoteLastX = 0, remoteLastY = 0;
+
+  function applyRemote(msg) {
+    switch (msg.t) {
+      case 'page':
+        // Navigate to the specified page
+        while (cur < msg.page) { document.getElementById(pages[cur]).classList.remove('active'); cur++; }
+        while (cur > msg.page) { document.getElementById(pages[cur]).classList.remove('active'); cur--; }
+        document.getElementById(pages[cur]).classList.add('active');
+        document.getElementById('prev').disabled = cur === 0;
+        document.getElementById('next').disabled = cur === pages.length - 1;
+        document.getElementById('indicator').textContent = (cur + 1) + ' / ' + pages.length;
+        window.scrollTo(0, 0);
+        loadAnnotations();
+        resizeCanvas();
+        break;
+
+      case 'input':
+        var inputs = document.querySelectorAll('.blank-input, .blank-input-full, .roleplay-notes');
+        if (inputs[msg.idx]) {
+          inputs[msg.idx].value = msg.val;
+          // Trigger resize for inline inputs
+          inputs[msg.idx].dispatchEvent(new Event('input', { bubbles: true }));
+        }
+        break;
+
+      case 'check':
+        var checks = document.querySelectorAll('.check');
+        if (checks[msg.idx]) {
+          var check = checks[msg.idx];
+          if (msg.done && !check.classList.contains('done')) {
+            check.classList.add('done');
+            check.innerHTML = '<svg class="hanamaru" viewBox="0 0 72 72" fill="none">' +
+              '<path d="' + makeHanamaruPath() + '" stroke="#e33" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>';
+          } else if (!msg.done && check.classList.contains('done')) {
+            check.classList.remove('done');
+            check.innerHTML = '&nbsp;';
+          }
+        }
+        break;
+
+      case 'hanamaru':
+        // Trigger the hanamaru festival
+        if (finishBtn) finishBtn.click();
+        break;
+
+      case 'clear':
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        textLayer.innerHTML = '';
+        saveAnnotations();
+        var cpg = document.getElementById(pages[cur]);
+        if (cpg) {
+          cpg.querySelectorAll('.blank-input, .blank-input-full, .roleplay-notes').forEach(function(inp) { inp.value = ''; });
+          cpg.querySelectorAll('.check.done').forEach(function(c) { c.classList.remove('done'); c.innerHTML = '&nbsp;'; });
+          cpg.querySelectorAll('.match-game').forEach(function(g) { if (g._reset) g._reset(); });
+        }
+        break;
+
+      case 'drawstart':
+        if (!drawCtx) break;
+        remoteDrawing = true;
+        remoteLastX = msg.rx * drawCanvas.width;
+        remoteLastY = msg.ry * drawCanvas.height;
+        if (msg.erase) {
+          drawCtx.globalCompositeOperation = 'destination-out';
+          drawCtx.lineWidth = 20;
+        } else {
+          drawCtx.globalCompositeOperation = 'source-over';
+          drawCtx.strokeStyle = '#c33';
+          drawCtx.lineWidth = 2.5;
+        }
+        break;
+
+      case 'drawmove':
+        if (!drawCtx || !remoteDrawing) break;
+        var localX = msg.rx * drawCanvas.width;
+        var localY = msg.ry * drawCanvas.height;
+        drawCtx.beginPath();
+        drawCtx.moveTo(remoteLastX, remoteLastY);
+        drawCtx.lineTo(localX, localY);
+        drawCtx.stroke();
+        remoteLastX = localX;
+        remoteLastY = localY;
+        break;
+
+      case 'drawend':
+        remoteDrawing = false;
+        saveAnnotations();
+        break;
+
+      case 'clearall':
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        textLayer.innerHTML = '';
+        localStorage.removeItem(STORAGE_KEY);
+        document.querySelectorAll('.blank-input, .blank-input-full, .roleplay-notes').forEach(function(inp) { inp.value = ''; });
+        document.querySelectorAll('.check.done').forEach(function(c) { c.classList.remove('done'); c.innerHTML = '&nbsp;'; });
+        document.querySelectorAll('.match-game').forEach(function(g) { if (g._reset) g._reset(); });
+        break;
+
+      case 'cursor':
+        if (remoteCursor) {
+          var cx = msg.rx * (document.documentElement.scrollWidth || 1);
+          var cy = msg.ry * (Math.max(document.documentElement.scrollHeight, window.innerHeight) || 1);
+          remoteCursor.style.left = cx + 'px';
+          remoteCursor.style.top = cy + 'px';
+          if (remoteCursorName && msg.name) remoteCursorName.textContent = msg.name;
+          // Check if cursor is in viewport
+          var vt = window.scrollY;
+          var vb = vt + window.innerHeight - 60; // account for nav bar
+          var vl = window.scrollX;
+          var vr = vl + window.innerWidth;
+          var inView = cx >= vl && cx <= vr && cy >= vt && cy <= vb;
+          if (inView) {
+            remoteCursor.style.display = 'block';
+            if (cursorIndicator) cursorIndicator.style.display = 'none';
+          } else {
+            remoteCursor.style.display = 'none';
+            if (cursorIndicator) {
+              // Clamp to screen edges
+              var sx = Math.max(20, Math.min(window.innerWidth - 48, cx - vl));
+              var sy = cy < vt ? 8 : (cy > vb ? window.innerHeight - 80 : Math.max(8, Math.min(window.innerHeight - 80, cy - vt)));
+              // Rotation: point arrow from indicator position toward remote cursor
+              var angle = Math.atan2(cy - (vt + sy + 14), cx - (vl + sx + 14)) * 180 / Math.PI + 90;
+              cursorIndicator.style.left = sx + 'px';
+              cursorIndicator.style.top = sy + 'px';
+              cursorIndicator.querySelector('svg').style.transform = 'rotate(' + angle + 'deg)';
+              cursorIndicator.style.display = 'block';
+              if (indicatorName && msg.name) indicatorName.textContent = msg.name;
+            }
+          }
+          clearTimeout(cursorHideTimer);
+          cursorHideTimer = setTimeout(function() {
+            remoteCursor.style.display = 'none';
+            if (cursorIndicator) cursorIndicator.style.display = 'none';
+          }, 3000);
+        }
+        break;
+
+      case 'laserstart':
+        var rlc = document.getElementById('laserCanvas');
+        if (rlc) {
+          window._remoteLaserX = msg.rx * rlc.width;
+          window._remoteLaserY = msg.ry * rlc.height;
+          clearTimeout(laserFadeTimer);
+          cancelAnimationFrame(laserFadeRAF);
+        }
+        break;
+
+      case 'lasermove':
+        var rlc2 = document.getElementById('laserCanvas');
+        if (rlc2) {
+          var nx = msg.rx * rlc2.width;
+          var ny = msg.ry * rlc2.height;
+          drawLaserSegment(window._remoteLaserX || nx, window._remoteLaserY || ny, nx, ny);
+          window._remoteLaserX = nx;
+          window._remoteLaserY = ny;
+        }
+        break;
+
+      case 'laserend':
+        fadeOutLaser();
+        break;
+
+      case 'match':
+        var games = document.querySelectorAll('.match-game');
+        if (games[msg.gameIdx] && games[msg.gameIdx]._applyConnections) {
+          games[msg.gameIdx]._applyConnections(msg.connections);
+        }
+        break;
+
+      case 'chat':
+        appendChatMessage(msg.name, msg.text, msg.translation, false);
+        break;
+    }
+  }
+})();
+
+// =============================================
+// CHAT WITH AUTO-TRANSLATION (Groq API)
+// =============================================
+(function() {
+  var panel = document.getElementById('chatPanel');
+  var messagesDiv = document.getElementById('chatMessages');
+  var input = document.getElementById('chatInput');
+  var sendBtn = document.getElementById('chatSendBtn');
+  var closeBtn = document.getElementById('chatClose');
+  var chatBtn = document.getElementById('btnChat');
+  var toast = document.getElementById('chatToast');
+  var toastTimer = null;
+  var chatOpen = false;
+  var unread = 0;
+
+  // Dynamically set panel bottom to match nav bar height
+  var navEl = document.querySelector('.nav');
+  if (navEl) {
+    panel.style.bottom = navEl.offsetHeight + 'px';
+  }
+
+  // Gemini API key — stored in browser localStorage
+  var GEMINI_API_KEY = localStorage.getItem('gemini-api-key') || '';
+  var keyInput = document.getElementById('chatKeyInput');
+  var keySaveBtn = document.getElementById('chatKeySave');
+  var keyStatus = document.getElementById('chatKeyStatus');
+  var keyWarn = document.getElementById('chatKeyWarn');
+
+  // Show saved state on load
+  if (GEMINI_API_KEY) {
+    keyInput.value = GEMINI_API_KEY;
+    keyStatus.textContent = '✓ saved';
+    keyStatus.className = 'key-status';
+  }
+
+  keySaveBtn.addEventListener('click', function() {
+    var val = keyInput.value.trim();
+    if (val) {
+      GEMINI_API_KEY = val;
+      localStorage.setItem('gemini-api-key', val);
+      keyStatus.textContent = '✓ saved';
+      keyStatus.className = 'key-status';
+      keyWarn.style.display = 'none';
+    }
+  });
+  keyInput.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') keySaveBtn.click();
+  });
+
+  window.toggleChat = function() {
+    chatOpen = !chatOpen;
+    panel.classList.toggle('open', chatOpen);
+    if (chatOpen) {
+      unread = 0;
+      chatBtn.classList.remove('has-unread');
+      input.focus();
+      messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    }
+  };
+
+  closeBtn.addEventListener('click', function() {
+    chatOpen = false;
+    panel.classList.remove('open');
+  });
+
+  function appendChatMessage(name, text, translation, isMine) {
+    var div = document.createElement('div');
+    div.className = 'chat-msg ' + (isMine ? 'mine' : 'theirs');
+    var nameEl = document.createElement('div');
+    nameEl.className = 'chat-name';
+    nameEl.textContent = name || 'Anonymous';
+    div.appendChild(nameEl);
+    var textEl = document.createElement('div');
+    textEl.textContent = text;
+    div.appendChild(textEl);
+    if (translation) {
+      var transEl = document.createElement('div');
+      transEl.className = 'chat-translation';
+      transEl.textContent = translation;
+      div.appendChild(transEl);
+    }
+    messagesDiv.appendChild(div);
+    messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    if (!isMine) {
+      if (!chatOpen) {
+        // Show IG-live style toast above the chat button
+        unread++;
+        chatBtn.classList.add('has-unread');
+        showToast(name, text, translation);
+      } else {
+        // Flash the message so it's noticeable
+        div.classList.add('flash');
+      }
+    }
+    return div;
+  }
+  window.appendChatMessage = appendChatMessage;
+
+  function showToast(name, text, translation) {
+    clearTimeout(toastTimer);
+    toast.innerHTML = '<span class="toast-name">' + (name || 'Anonymous') + '</span>' +
+      text.substring(0, 80) + (text.length > 80 ? '...' : '') +
+      (translation ? '<span class="toast-translation">' + translation.substring(0, 60) + (translation.length > 60 ? '...' : '') + '</span>' : '');
+    toast.classList.add('show');
+    toastTimer = setTimeout(function() { toast.classList.remove('show'); }, 4000);
+  }
+
+  // Auto-detect language: Japanese ↔ English
+  function detectLang(text) {
+    var jpChars = (text.match(/[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF]/g) || []).length;
+    return jpChars > text.length * 0.15 ? 'ja' : 'en';
+  }
+
+  var GEMINI_MODELS = ['gemini-3-flash-preview', 'gemini-2.5-flash'];
+
+  async function translateWithGemini(text) {
+    if (!GEMINI_API_KEY) return null;
+    var lang = detectLang(text);
+    var sourceLang = lang === 'ja' ? 'Japanese' : 'English';
+    var targetLang = lang === 'ja' ? 'English' : 'Japanese';
+
+    for (var i = 0; i < GEMINI_MODELS.length; i++) {
+      try {
+        var res = await fetch('https://generativelanguage.googleapis.com/v1beta/models/' + GEMINI_MODELS[i] + ':generateContent?key=' + GEMINI_API_KEY, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            contents: [{ parts: [{ text: 'Translate the following ' + sourceLang + ' text to ' + targetLang + '. Output ONLY the translation, nothing else.\n\n' + text }] }],
+            generationConfig: { temperature: 0.3, maxOutputTokens: 256 }
+          })
+        });
+        var data = await res.json();
+        if (data.candidates && data.candidates[0]) {
+          return data.candidates[0].content.parts[0].text.trim();
+        }
+        console.warn('[chat] model ' + GEMINI_MODELS[i] + ':', JSON.stringify(data));
+      } catch (e) {
+        console.warn('[chat] model ' + GEMINI_MODELS[i] + ' failed:', e);
+      }
+    }
+    return null;
+  }
+
+  async function sendMessage() {
+    var text = input.value.trim();
+    if (!text) return;
+    if (!GEMINI_API_KEY) { keyWarn.style.display = 'block'; keyInput.focus(); return; }
+    input.value = '';
+    var name = localStorage.getItem('sync-name') || 'Me';
+
+    // Show message immediately with pending translation
+    var div = appendChatMessage(name, text, null, true);
+
+    // Translate then update
+    var translation = await translateWithGemini(text);
+    if (translation) {
+      var transEl = document.createElement('div');
+      transEl.className = 'chat-translation';
+      transEl.textContent = translation;
+      div.appendChild(transEl);
+      messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    }
+
+    // Send via WebSocket
+    if (window.syncSend) {
+      window.syncSend({ t: 'chat', name: name, text: text, translation: translation || '' });
+    }
+  }
+
+  sendBtn.addEventListener('click', sendMessage);
+  input.addEventListener('keydown', function(e) {
+    if (e.isComposing || e.keyCode === 229) return; // ignore IME composition
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      sendMessage();
+    }
+  });
+})();
+</script>
+</body>
+</html>
