@@ -18,6 +18,11 @@
 - Pattern A: `[place]に [thing]が あります` — for inanimate things
 - Pattern B: `[place]に [person/animal]が います` — for living beings
 
+**Hint principles:**
+
+- Hint boxes contain **vocab only** (nouns, verbs, adjectives, demonstratives, question words). No particles (は, が, に, の, から), no copula (〜です), no pattern templates (〜は 〜ですか, 〜がありますか). Patterns live at the top of each drill page, not inside every hint.
+- **Page 13 (Bonus 1 "No Hints Translate") prerequisite:** every vocab word required by Page 13 sentences must already be tested on Page 6 (Vocab Recall). If you add a new word to Page 13, add it to Page 6 first.
+
 **Styling conventions (carried over from Lesson 3):**
 
 - Warm romaji color (#c4b8a8) used for furigana `<rt>` text
@@ -100,8 +105,11 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  │  ★ She is from Tokyo.     →  ______________________     │            |
 |  │                                                          │            |
 |  │  ┌─ WORDS ────────────────────────────────────────┐     │            |
-|  │  │  がくせい(student)  しんせつ(kind)               │     │            |
-|  │  │  とうきょう(Tokyo)  〜から(from)                 │     │            |
+|  │  │  Q1: わたし(I)  がくせい(student)                │     │            |
+|  │  │  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─       │     │            |
+|  │  │  Q2: かれ(he)  しんせつ(kind)                    │     │            |
+|  │  │  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─       │     │            |
+|  │  │  Q3: かのじょ(she)  とうきょう(Tokyo)            │     │            |
 |  │  └─────────────────────────────────────────────────┘     │            |
 |  └──────────────────────────────────────────────────────────┘            |
 |                                                                         |
@@ -117,8 +125,12 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  │     the teacher's bag.                                   │            |
 |  │                                                          │            |
 |  │  ┌─ WORDS ────────────────────────────────────────┐     │            |
-|  │  │  ほん(book)  ペン(pen)  かばん(bag)              │     │            |
-|  │  │  せんせい(teacher)   〜の(possessive 'of/'s')    │     │            |
+|  │  │  Q1: これ(this)  ほん(book)                      │     │            |
+|  │  │  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─       │     │            |
+|  │  │  Q2: それ(that)  わたし(I)  ペン(pen)            │     │            |
+|  │  │  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─       │     │            |
+|  │  │  Q3: あれ(that over there)  せんせい(teacher)    │     │            |
+|  │  │      かばん(bag)                                  │     │            |
 |  │  └─────────────────────────────────────────────────┘     │            |
 |  └──────────────────────────────────────────────────────────┘            |
 |                                                                         |
@@ -134,8 +146,11 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  │  ★ Where is my bag?       →  ______________________     │            |
 |  │                                                          │            |
 |  │  ┌─ WORDS ────────────────────────────────────────┐     │            |
-|  │  │  ほん(book)  ペン(pen)  かばん(bag)              │     │            |
-|  │  │  ここ(here)  そこ(there)  あそこ(over there)     │     │            |
+|  │  │  Q1: ほん(book)  どこ(where)                     │     │            |
+|  │  │  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─       │     │            |
+|  │  │  Q2: ペン(pen)  そこ(there)                      │     │            |
+|  │  │  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─       │     │            |
+|  │  │  Q3: わたし(I)  かばん(bag)  どこ(where)         │     │            |
 |  │  └─────────────────────────────────────────────────┘     │            |
 |  └──────────────────────────────────────────────────────────┘            |
 |                                                                         |
@@ -157,11 +172,11 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |                                                                         |
 |  1. There IS a [thing]  —  あります                                      |
 |                                                                         |
-|     • つくえのうえに ほんが あります。                                    |
-|       There is a book on the desk.                                      |
+|     • へやに テレビが あります。                                          |
+|       There is a TV in the room.                                        |
 |                                                                         |
-|     • かばんのなかに ペンが あります。                                    |
-|       There is a pen in the bag.                                        |
+|     • いえに ほんが あります。                                            |
+|       There is a book at home.                                          |
 |                                                                         |
 |                                                                         |
 |  2. There IS a [person/animal]  —  います                                 |
@@ -199,47 +214,47 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |     ゆっくりでいいですよ。」                                            |
 |                                                                         |
 |  1. Read Together:                                                      |
-|     * つくえのうえに ほんが あります。    A book is on the desk.         |
-|     * かばんのなかに ペンが あります。    A pen is in the bag.           |
 |     * へやに テレビが あります。          A TV is in the room.            |
-|     * つくえのうえに とけいが あります。  A clock is on the desk.        |
-|     * いすのしたに かばんが あります。    A bag is under the chair.       |
+|     * きょうしつに とけいが あります。    A clock is in the classroom.   |
+|     * いえに ほんが あります。            A book is at home.             |
+|     * カフェに ペンが あります。          A pen is at the cafe.          |
+|     * コンビニに ノートが あります。      A notebook is at the store.    |
 |                                                                         |
 |                                                                         |
 |  ▸ "Fill in the blank and read the whole thing!"                        |
 |    「くうらんにことばをいれて、ぜんぶよんでみましょう！」                |
 |                                                                         |
 |  2. Fill in the Blanks:                                                 |
-|     * つくえのうえに ほん（　　　）あります。       There's a book...    |
-|     * かばんのなかに ペンが（　　　）。             There's a pen...     |
-|     * へや（　　　）テレビが あります。             There's a TV...      |
-|     * いすのしたに（　　　）があります。            There's a bag...     |
-|     * つくえのうえ（　　　）とけいがあります。      There's a clock...   |
+|     * へやに テレビ（　　　）あります。             There's a TV...      |
+|     * きょうしつに とけいが（　　　）。             There's a clock...   |
+|     * いえ（　　　）ほんが あります。               There's a book...    |
+|     * カフェに（　　　）があります。                There's a pen...     |
+|     * コンビニ（　　　）ノートがあります。          There's a notebook...|
 |                                                                         |
 |                                                                         |
 |  ▸ "Translate to Japanese — hints are OK."                              |
 |    「にほんごにしてみましょう。ヒントをみてもいいですよ。」              |
 |                                                                         |
 |  3. Translate:                                                          |
-|     * There is a phone on the desk.                                     |
+|     * There is a phone in the room.                                     |
 |       _____________________________________________________             |
-|       (phone = でんわ / on the desk = つくえのうえ)                       |
+|       (phone = でんわ / room = へや)                                      |
 |                                                                         |
-|     * There is a key in the bag.                                        |
+|     * There is a key at home.                                           |
 |       _____________________________________________________             |
-|       (key = かぎ / in the bag = かばんのなか)                            |
+|       (key = かぎ / home = いえ)                                          |
 |                                                                         |
-|     * There is a notebook on the desk.                                  |
+|     * There is a notebook at the cafe.                                  |
 |       _____________________________________________________             |
-|       (notebook = ノート)                                                |
+|       (notebook = ノート / cafe = カフェ)                                 |
 |                                                                         |
-|     * There is a clock in the room.                                     |
+|     * There is a clock in the classroom.                                |
 |       _____________________________________________________             |
-|       (in the room = へや)                                              |
+|       (clock = とけい / classroom = きょうしつ)                           |
 |                                                                         |
-|     * There is a book under the chair.                                  |
+|     * There is a book at the convenience store.                         |
 |       _____________________________________________________             |
-|       (under the chair = いすのした)                                     |
+|       (book = ほん / convenience store = コンビニ)                        |
 |                                                                         |
 |                                                                         |
 |  ▸ "Make your own! Say something that exists in your room right now."   |
@@ -303,9 +318,9 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |       _____________________________________________________             |
 |       (friend = ともだち / home = いえ)                                   |
 |                                                                         |
-|     * There is a cat under the chair.                                   |
+|     * There is a cat at the cafe.                                       |
 |       _____________________________________________________             |
-|       (cat = ねこ)                                                       |
+|       (cat = ねこ / cafe = カフェ)                                        |
 |                                                                         |
 |     * There is a child in the classroom.                                |
 |       _____________________________________________________             |
@@ -337,10 +352,16 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |                                                                         |
 |  PLACES                                                                 |
 |  ┌──────────────────────┬──────────────────────┐                        |
-|  │  on the desk         │  __________           │                        |
-|  │  in the bag          │  __________           │                        |
-|  │  in the room         │  __________           │                        |
-|  │  under the chair     │  __________           │                        |
+|  │  room                │  __________           │                        |
+|  │  classroom           │  __________           │                        |
+|  │  home                │  __________           │                        |
+|  │  cafe                │  __________           │                        |
+|  └──────────────────────┴──────────────────────┘                        |
+|                                                                         |
+|  THINGS                                                                 |
+|  ┌──────────────────────┬──────────────────────┐                        |
+|  │  TV                  │  __________           │                        |
+|  │  pen                 │  __________           │                        |
 |  └──────────────────────┴──────────────────────┘                        |
 |                                                                         |
 |  PEOPLE & ANIMALS                                                       |
@@ -374,13 +395,12 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |                                                                         |
 |  DIALOGUE 1:                                                            |
 |  Student:  [_________________________________]                          |
-|            Is there a book on the desk?                                 |
-|  Tutor:    はい、つくえのうえにほんがあります。                            |
-|            Yes, there is a book on the desk.                            |
+|            Is there a book in the room?                                 |
+|  Tutor:    はい、へやにほんがあります。                                    |
+|            Yes, there is a book in the room.                            |
 |                                                                         |
 |     ┌─────────────────────────────────────────┐                         |
-|     │  つくえのうえ(on the desk)  ほん(book)    │                         |
-|     │  〜がありますか？(is there...?)           │                         |
+|     │  へや(room)  ほん(book)  あります(is)    │                         |
 |     └─────────────────────────────────────────┘                         |
 |                                                                         |
 |  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
@@ -405,12 +425,12 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |                                                                         |
 |  DIALOGUE 3:                                                            |
 |  Student:  [_________________________________]                          |
-|            Is there a pen in the bag?                                   |
-|  Tutor:    はい、かばんのなかにペンがあります。                            |
-|            Yes, there is a pen in the bag.                              |
+|            Is there a pen at the cafe?                                  |
+|  Tutor:    はい、カフェにペンがあります。                                  |
+|            Yes, there is a pen at the cafe.                             |
 |                                                                         |
 |     ┌─────────────────────────────────────────┐                         |
-|     │  かばんのなか(in the bag)  ペン(pen)     │                         |
+|     │  カフェ(cafe)  ペン(pen)  あります(is)    │                         |
 |     └─────────────────────────────────────────┘                         |
 |                                                                         |
 |  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
@@ -426,6 +446,7 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |                                                                         |
 |     ┌─────────────────────────────────────────┐                         |
 |     │  きょうしつ(classroom)  せんせい(teacher)│                         |
+|     │  います(is)                               │                         |
 |     └─────────────────────────────────────────┘                         |
 |                                                                         |
 |                                                                  PAGE 7 |
@@ -449,17 +470,17 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  └────────────────────────────────────────────────────────────┘         |
 |                                                                         |
 |                                                                         |
-|  ALEX:   わあ、おおきいへやですね！テレビがありますか？                    |
-|          Wow, what a big room! Is there a TV?                           |
+|  ALEX:   わあ、おおきいいえですね！テレビがありますか？                    |
+|          Wow, what a big house! Is there a TV?                          |
 |                                                                         |
-|  YUKI:   はい、あそこにテレビがあります。                                 |
-|          Yes, the TV is over there.                                     |
+|  YUKI:   はい、へやにテレビがあります。                                    |
+|          Yes, there is a TV in the room.                                |
 |                                                                         |
 |  ALEX:   ねこがいますか？                                                 |
 |          Do you have a cat? (lit. Is there a cat?)                      |
 |                                                                         |
-|  YUKI:   はい、いすのしたにねこがいます。                                 |
-|          Yes, there's a cat under the chair.                            |
+|  YUKI:   はい、へやにねこがいます。                                        |
+|          Yes, there's a cat in the room.                                |
 |                                                                         |
 |  ALEX:   かわいい！おかあさんはいますか？                                  |
 |          Cute! Is your mom here?                                        |
@@ -499,14 +520,14 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  ALEX (tutor):   テレビがありますか？                                     |
 |                  Is there a TV?                                         |
 |                                                                         |
-|  YUKI (you):     はい、あそこに______があります。                         |
-|                  Yes, the TV is over there.                             |
+|  YUKI (you):     はい、へやに______があります。                            |
+|                  Yes, there is a TV in the room.                        |
 |                                                                         |
 |  ALEX (tutor):   ねこがいますか？                                         |
 |                  Is there a cat?                                        |
 |                                                                         |
-|  YUKI (you):     はい、いすのしたに______がいます。                       |
-|                  Yes, there's a cat under the chair.                    |
+|  YUKI (you):     はい、へやに______がいます。                              |
+|                  Yes, there's a cat in the room.                        |
 |                                                                         |
 |  ALEX (tutor):   おかあさんはいますか？                                   |
 |                  Is your mom here?                                      |
@@ -572,14 +593,14 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |                                                                         |
 |  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─    |
 |                                                                         |
-|  ROUND 3: WHAT'S ON YOUR DESK?                                          |
+|  ROUND 3: WHAT'S AT YOUR FAVORITE CAFE?                                 |
 |                                                                         |
-|  Tutor:    「つくえのうえに なにが ありますか？」                          |
-|            "What's on your desk?"                                       |
+|  Tutor:    「カフェに なにが ありますか？」                                |
+|            "What's at your favorite cafe?"                              |
 |                                                                         |
 |  Student:  _____________________________________________                |
 |                                                                         |
-|  Student:  「つくえのうえに なにが ありますか？」                          |
+|  Student:  「カフェに なにが ありますか？」                                |
 |                                                                         |
 |  Tutor:    (answer naturally)                                           |
 |                                                                         |
@@ -622,7 +643,6 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  │  ＿＿は いますか？         Is there a ＿＿ (person)?       │           |
 |  │  WORDS                                                    │           |
 |  │  ほん(book) ペン(pen) かばん(bag) ともだち(friend)          │           |
-|  │  つくえのうえ / いすのした / あそこ / ここ                  │           |
 |  └──────────────────────────────────────────────────────────┘           |
 |                                                                         |
 |                                                                 PAGE 11 |
@@ -691,7 +711,7 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |    「ヒントなしでにほんごにしてみましょう！」                            |
 |                                                                         |
 |                                                                         |
-|  1. There is a book on the desk.                                        |
+|  1. There is a TV in the room.                                          |
 |                                                                         |
 |     _____________________________________________________               |
 |                                                                         |
@@ -699,7 +719,7 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |                                                                         |
 |     _____________________________________________________               |
 |                                                                         |
-|  3. Is there a pen in the bag?                                          |
+|  3. Is there a pen at the cafe?                                         |
 |                                                                         |
 |     _____________________________________________________               |
 |                                                                         |
@@ -738,7 +758,8 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  │   Sound:     no                               │                         |
 |  │                                              │                         |
 |  │   You already know の!                        │                         |
-|  │   "つくえのうえ" — the の connects two things. │                         |
+|  │   "わたしのほん" — the の connects two things  │                         |
+|  │   (like "my book").                           │                         |
 |  │                                              │                         |
 |  └────────────────────────────────────────────┘                         |
 |                                                                         |
@@ -762,8 +783,8 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  ▸ "Can you read these without romaji? Find the の!"                     |
 |    「よめるかな？ の をみつけてね！」                                     |
 |                                                                         |
-|     • つくえのうえ        on the desk                                    |
-|     • かばんのなか        in the bag                                     |
+|     • わたしのほん        my book                                        |
+|     • せんせいのかばん    the teacher's bag                              |
 |     • のみもの            drink                                          |
 |     • ノート              notebook                                       |
 |                                                                         |
@@ -775,9 +796,9 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |    「の をかいて、ことばをかんせいさせてね！」                            |
 |                                                                         |
 |     Hiragana の:                                                        |
-|     tsukue no ue (on the desk) =  つくえ[   ]うえ                       |
-|     kaban no naka (in the bag) =  かばん[   ]なか                       |
-|     nomimono (drink)           =  [   ]みもの                           |
+|     watashi no hon (my book)        =  わたし[   ]ほん                  |
+|     sensei no kaban (teacher's bag) =  せんせい[   ]かばん              |
+|     nomimono (drink)                =  [   ]みもの                      |
 |                                                                         |
 |     Katakana ノ:                                                        |
 |     nooto (notebook)           =  [   ]ート                             |
@@ -819,8 +840,8 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |     つぎのレッスンであいましょう！」                                    |
 |                                                                         |
 |  KEY EXPRESSIONS — もういちどよんでみましょう！                           |
-|  • つくえのうえにほんがあります。    — There's a book on the desk.       |
-|  • かばんのなかにペンがあります。    — There's a pen in the bag.          |
+|  • へやにテレビがあります。          — There's a TV in the room.          |
+|  • いえにほんがあります。            — There's a book at home.            |
 |  • きょうしつにせんせいがいます。    — There's a teacher in the classroom.|
 |  • へやにねこがいます。              — There's a cat in the room.         |
 |                                                                         |
