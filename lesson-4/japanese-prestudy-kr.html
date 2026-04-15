@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>예습: あります・います</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: monospace; background: #fff; color: #111; }
+  .page { display: none; max-width: 720px; margin: 0 auto; padding: 60px 40px 100px; position: relative; }
+  .page.active { display: block; }
+  h1 { font-size: 22px; margin-bottom: 8px; letter-spacing: 0.5px; }
+  h2 { font-size: 18px; font-weight: normal; margin-bottom: 32px; border-bottom: 1px solid #111; padding-bottom: 12px; }
+  h3 { font-size: 17px; margin: 32px 0 12px; }
+  p, li { font-size: 16px; line-height: 1.8; }
+  .en { color: #bbb; font-size: 12px; }
+  .section { margin: 32px 0; }
+  .pattern { margin: 12px 0 12px 20px; line-height: 2.2; }
+  .box { border: 1px solid #111; padding: 20px 24px; margin: 20px 0; }
+  .box-label { font-size: 14px; font-weight: bold; margin-bottom: 10px; letter-spacing: 0.5px; }
+  .help-box { border: 1px solid #999; padding: 14px 18px; margin: 12px 0 12px 20px; max-width: 480px; line-height: 2.2; }
+  .explain-box { border: 1px solid #ccc; background: #fafafa; padding: 16px 20px; margin: 16px 0; line-height: 1.8; }
+  .explain-box p { margin-bottom: 8px; }
+  .explain-box .label { font-size: 12px; font-weight: bold; letter-spacing: 1px; color: #999; text-transform: uppercase; margin-bottom: 8px; }
+  .dialogue { margin: 12px 0 12px 20px; }
+  .dialogue p { margin-bottom: 16px; line-height: 1.6; }
+  .dialogue .en { display: block; margin-top: -2px; margin-bottom: 4px; }
+  .dialogue .speaker { font-weight: bold; display: inline-block; min-width: 80px; }
+  .vocab-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+  .vocab-table th { text-align: left; font-size: 12px; font-weight: bold; letter-spacing: 1px; color: #999; text-transform: uppercase; padding: 8px 12px; border-bottom: 2px solid #111; }
+  .vocab-table td { padding: 10px 12px; border-bottom: 1px solid #eee; font-size: 16px; line-height: 1.6; }
+  .vocab-table tr:last-child td { border-bottom: 1px solid #111; }
+  .check-item { margin: 16px 0; padding-left: 10px; }
+  .check { display: inline-block; border: 2px solid #111; width: 22px; height: 22px; text-align: center; line-height: 20px; margin-right: 10px; vertical-align: middle; font-size: 14px; }
+  .nav { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; border-top: 1px solid #ddd; padding: 16px; display: flex; justify-content: center; gap: 16px; align-items: center; }
+  .nav button { font-family: monospace; font-size: 14px; padding: 8px 24px; border: 1px solid #111; background: #fff; cursor: pointer; }
+  .nav button:hover { background: #f0f0f0; }
+  .nav button:disabled { color: #ccc; border-color: #ccc; cursor: default; background: #fff; }
+  .nav span { font-size: 13px; color: #666; min-width: 80px; text-align: center; }
+  .separator { border: none; border-top: 1px dashed #ccc; margin: 28px 0; }
+  ruby { ruby-position: over; }
+  rt { font-size: 0.7em; color: #7a8a9e; font-weight: normal !important; font-style: normal !important; font-family: 'Helvetica Neue', Arial, sans-serif; letter-spacing: 0.5px; padding: 0 1px; }
+
+  /* Interactive activity styles */
+  .match-item { display: flex; align-items: center; gap: 12px; margin: 10px 0 10px 20px; flex-wrap: wrap; }
+  .match-jp { font-size: 16px; min-width: 300px; }
+  .match-choices { display: flex; gap: 8px; flex-wrap: wrap; }
+  .match-btn { font-family: monospace; font-size: 13px; padding: 6px 14px; border: 1px solid #999; background: #fff; cursor: pointer; transition: all 0.15s; }
+  .match-btn:hover { background: #f0f0f0; border-color: #111; }
+  .match-btn.correct { background: #e8f5e9; border-color: #4caf50; color: #2e7d32; cursor: default; }
+  .match-btn.wrong { background: #ffebee; border-color: #ef5350; color: #c62828; }
+
+  .fill-item { margin: 16px 0 16px 20px; }
+  .check-btn { font-family: monospace; font-size: 13px; padding: 4px 12px; border: 1px solid #999; background: #fff; cursor: pointer; }
+  .check-btn:hover { background: #f0f0f0; border-color: #111; }
+  .fill-feedback { font-size: 13px; margin-left: 4px; }
+  .fill-feedback.correct { color: #2e7d32; }
+  .fill-feedback.wrong { color: #c62828; }
+
+  .translate-prompt { margin-bottom: 6px; }
+
+  .reorder-item { margin: 20px 0 20px 20px; }
+  .reorder-answer { min-height: 42px; border: 1px dashed #ccc; padding: 6px 10px; margin: 8px 0; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; background: #fafafa; }
+  .reorder-answer .word-btn { background: #e8f5e9; border-color: #4caf50; }
+  .reorder-bank { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+  .word-btn { font-family: monospace; font-size: 15px; padding: 6px 14px; border: 1px solid #999; background: #fff; cursor: pointer; transition: all 0.15s; }
+  .word-btn:hover { background: #f0f0f0; border-color: #111; }
+  .word-btn.used { opacity: 0.3; pointer-events: none; }
+  .reorder-controls { display: flex; align-items: center; gap: 8px; margin-top: 8px; }
+  .reorder-item.correct .reorder-answer { border-color: #4caf50; border-style: solid; background: #e8f5e9; }
+  .reorder-item.wrong .reorder-answer { border-color: #ef5350; border-style: solid; background: #ffebee; }
+  .reveal-btn { font-family: monospace; font-size: 13px; padding: 4px 12px; border: 1px solid #999; background: #fff; cursor: pointer; display: none; }
+  .reveal-btn:hover { background: #f0f0f0; border-color: #111; }
+  .reorder-item.wrong .reveal-btn { display: inline-block; }
+
+  .demo-diagram { display: flex; justify-content: center; align-items: flex-end; gap: 40px; margin: 24px 0; padding: 20px; }
+  .demo-item { text-align: center; }
+  .demo-label { font-size: 14px; font-weight: bold; margin-bottom: 6px; }
+  .demo-desc { font-size: 12px; color: #666; }
+  .demo-icon { font-size: 28px; margin-bottom: 4px; }
+  .demo-arrow { color: #bbb; font-size: 20px; align-self: center; }
+
+  .compare-table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+  .compare-table th { text-align: center; font-size: 12px; font-weight: bold; letter-spacing: 1px; color: #999; text-transform: uppercase; padding: 8px 12px; border-bottom: 2px solid #111; }
+  .compare-table td { padding: 12px; border-bottom: 1px solid #eee; font-size: 16px; text-align: center; line-height: 1.6; }
+  .compare-table tr:last-child td { border-bottom: 1px solid #111; }
+
+</style>
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active" id="p1">
+  <h1>예습: <ruby>あります<rt>arimasu</rt></ruby>・<ruby>います<rt>imasu</rt></ruby></h1>
+  <h2>~이/가 있어요 &mdash; 있습니다 / 존재합니다</h2>
+
+  <div class="box">
+    <div class="box-label">학습 목표</div>
+    이 수업에서 배울 내용:<br>
+    <div class="pattern">
+      &bull; 어떤 장소에 무엇이 있는지 말하기<br>
+      &bull; 사물에는 <ruby>あります<rt>arimasu</rt></ruby>, 사람·동물에는 <ruby>います<rt>imasu</rt></ruby> 사용하기<br>
+      &bull; "~이/가 있어요?" 질문하기
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>핵심 개념: <ruby>あります<rt>arimasu</rt></ruby> vs <ruby>います<rt>imasu</rt></ruby></h3>
+
+    <div class="explain-box">
+      <div class="label">한국어 설명</div>
+      <p>한국어에서는 책, 고양이, 친구, 책상 등 무엇이든 "있어요"라고 말합니다.</p>
+      <p>그런데 일본어에서는 <em>살아 있는지 아닌지</em>에 따라 <strong>두 가지</strong> 버전을 사용합니다:</p>
+      <p>&bull; <strong><ruby>あります<rt>arimasu</rt></ruby></strong> &mdash; <strong>사물</strong>에 사용 (책, 펜, 책상, TV...)</p>
+      <p>&bull; <strong><ruby>います<rt>imasu</rt></ruby></strong> &mdash; <strong>살아 있는 것</strong>에 사용 (사람, 동물)</p>
+    </div>
+
+    <div class="demo-diagram">
+      <div class="demo-item">
+        <div class="demo-icon">&#128218;</div>
+        <div class="demo-label"><ruby>あります<rt>arimasu</rt></ruby></div>
+        <div class="demo-desc">사물용</div>
+      </div>
+      <div class="demo-arrow">vs</div>
+      <div class="demo-item">
+        <div class="demo-icon">&#128049;</div>
+        <div class="demo-label"><ruby>います<rt>imasu</rt></ruby></div>
+        <div class="demo-desc">살아 있는 것용</div>
+      </div>
+    </div>
+
+    <div class="explain-box">
+      <div class="label">간단 규칙</div>
+      <p><strong>스스로 움직일 수 있다</strong> &rarr; <ruby>います<rt>imasu</rt></ruby></p>
+      <p><strong>그냥 가만히 있다</strong> &rarr; <ruby>あります<rt>arimasu</rt></ruby></p>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="p2">
+  <h1>패턴 1: <ruby>あります<rt>arimasu</rt></ruby> (사물)</h1>
+  <h2>"[장소]에 [사물]이/가 있어요."</h2>
+
+  <p><strong>패턴:</strong> [장소]<ruby>に<rt>ni</rt></ruby> [사물]<ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby>。</p>
+
+  <div class="explain-box">
+    <div class="label">사용법</div>
+    <p>먼저 <strong>장소</strong>를 말하고, <ruby>に<rt>ni</rt></ruby> (~에)를 붙입니다.</p>
+    <p>그다음 <strong>사물</strong>을 말하고 <ruby>が<rt>ga</rt></ruby>를 붙인 뒤, <ruby>あります<rt>arimasu</rt></ruby>로 마무리합니다.</p>
+    <p><ruby>に<rt>ni</rt></ruby> = ~에 (장소를 나타냄) &nbsp; <ruby>が<rt>ga</rt></ruby> = 무엇이 존재하는지를 나타냄</p>
+  </div>
+
+  <div class="section">
+    <h3>예문</h3>
+    <div class="pattern">
+      &bull; <ruby>へや<rt>heya</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>テレビ<rt>terebi</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby>。<br>
+      <span class="en" style="margin-left:16px">방에 TV가 있어요.</span><br><br>
+
+      &bull; <ruby>いえ<rt>ie</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>ほん<rt>hon</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby>。<br>
+      <span class="en" style="margin-left:16px">집에 책이 있어요.</span><br><br>
+
+      &bull; <ruby>カフェ<rt>kafe</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>ペン<rt>pen</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby>。<br>
+      <span class="en" style="margin-left:16px">카페에 펜이 있어요.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>사물 단어</h3>
+    <table class="vocab-table">
+      <tr><th>Japanese</th><th>Reading</th><th>한국어</th></tr>
+      <tr><td><ruby>ほん<rt>hon</rt></ruby></td><td>hon</td><td>책</td></tr>
+      <tr><td><ruby>ペン<rt>pen</rt></ruby></td><td>pen</td><td>펜</td></tr>
+      <tr><td><ruby>ノート<rt>nōto</rt></ruby></td><td>nōto</td><td>노트</td></tr>
+      <tr><td><ruby>かばん<rt>kaban</rt></ruby></td><td>kaban</td><td>가방</td></tr>
+      <tr><td><ruby>でんわ<rt>denwa</rt></ruby></td><td>denwa</td><td>전화</td></tr>
+      <tr><td><ruby>とけい<rt>tokei</rt></ruby></td><td>tokei</td><td>시계</td></tr>
+      <tr><td><ruby>テレビ<rt>terebi</rt></ruby></td><td>terebi</td><td>TV</td></tr>
+      <tr><td><ruby>かぎ<rt>kagi</rt></ruby></td><td>kagi</td><td>열쇠</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h3>장소 단어</h3>
+    <table class="vocab-table">
+      <tr><th>Japanese</th><th>Reading</th><th>한국어</th></tr>
+      <tr><td><ruby>へや<rt>heya</rt></ruby></td><td>heya</td><td>방</td></tr>
+      <tr><td><ruby>きょうしつ<rt>kyōshitsu</rt></ruby></td><td>kyōshitsu</td><td>교실</td></tr>
+      <tr><td><ruby>いえ<rt>ie</rt></ruby></td><td>ie</td><td>집</td></tr>
+      <tr><td><ruby>カフェ<rt>kafe</rt></ruby></td><td>kafe</td><td>카페</td></tr>
+      <tr><td><ruby>コンビニ<rt>konbini</rt></ruby></td><td>konbini</td><td>편의점</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="p3">
+  <h1>패턴 1: 연습</h1>
+  <h2></h2>
+
+  <div class="section">
+    <p><strong>활동 1: 뜻 맞추기</strong></p>
+    <p style="margin-bottom:12px">올바른 한국어 뜻을 클릭하세요.</p>
+
+    <div class="fill-item">
+      <p>1. <ruby>いえ<rt>ie</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>ほん<rt>hon</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby>。</p>
+      <div class="match-choices" style="margin-left:20px">
+        <button class="match-btn" onclick="checkMatch(this,'wrong')">카페에 책이 있어요.</button>
+        <button class="match-btn" onclick="checkMatch(this,'correct')">집에 책이 있어요.</button>
+        <button class="match-btn" onclick="checkMatch(this,'wrong')">교실에 책이 있어요.</button>
+      </div>
+    </div>
+
+    <div class="fill-item">
+      <p>2. <ruby>カフェ<rt>kafe</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>ペン<rt>pen</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby>。</p>
+      <div class="match-choices" style="margin-left:20px">
+        <button class="match-btn" onclick="checkMatch(this,'wrong')">집에 펜이 있어요.</button>
+        <button class="match-btn" onclick="checkMatch(this,'correct')">카페에 펜이 있어요.</button>
+        <button class="match-btn" onclick="checkMatch(this,'wrong')">방에 펜이 있어요.</button>
+      </div>
+    </div>
+
+    <div class="fill-item">
+      <p>3. <ruby>へや<rt>heya</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>テレビ<rt>terebi</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby>。</p>
+      <div class="match-choices" style="margin-left:20px">
+        <button class="match-btn" onclick="checkMatch(this,'correct')">방에 TV가 있어요.</button>
+        <button class="match-btn" onclick="checkMatch(this,'wrong')">방에 시계가 있어요.</button>
+        <button class="match-btn" onclick="checkMatch(this,'wrong')">집에 TV가 있어요.</button>
+      </div>
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <p><strong>활동 2: 문장 만들기</strong></p>
+    <p style="margin-bottom:12px">올바른 순서로 단어를 클릭하세요.</p>
+
+    <div class="reorder-item" id="ro1" data-answer="いえ|に|ほん|が|あります">
+      <p class="translate-prompt">1. 집에 책이 있어요.</p>
+      <div class="reorder-answer" id="ro1-answer"></div>
+      <div class="reorder-bank" id="ro1-bank">
+        <button class="word-btn" onclick="pickWord(this,'ro1')"><ruby>あります<rt>arimasu</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro1')"><ruby>いえ<rt>ie</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro1')"><ruby>が<rt>ga</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro1')"><ruby>に<rt>ni</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro1')"><ruby>ほん<rt>hon</rt></ruby></button>
+      </div>
+      <div class="reorder-controls">
+        <button class="check-btn" onclick="checkOrder('ro1','いえ|に|ほん|が|あります')">확인</button>
+        <button class="check-btn" onclick="resetOrder('ro1')">다시</button>
+        <button class="reveal-btn" onclick="revealAnswer(this)">정답 보기</button>
+        <span class="fill-feedback" id="ro1-fb"></span>
+      </div>
+    </div>
+
+    <div class="reorder-item" id="ro2" data-answer="へや|に|テレビ|が|あります">
+      <p class="translate-prompt">2. 방에 TV가 있어요.</p>
+      <div class="reorder-answer" id="ro2-answer"></div>
+      <div class="reorder-bank" id="ro2-bank">
+        <button class="word-btn" onclick="pickWord(this,'ro2')"><ruby>テレビ<rt>terebi</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro2')"><ruby>に<rt>ni</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro2')"><ruby>あります<rt>arimasu</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro2')"><ruby>へや<rt>heya</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro2')"><ruby>が<rt>ga</rt></ruby></button>
+      </div>
+      <div class="reorder-controls">
+        <button class="check-btn" onclick="checkOrder('ro2','へや|に|テレビ|が|あります')">확인</button>
+        <button class="check-btn" onclick="resetOrder('ro2')">다시</button>
+        <button class="reveal-btn" onclick="revealAnswer(this)">정답 보기</button>
+        <span class="fill-feedback" id="ro2-fb"></span>
+      </div>
+    </div>
+
+    <div class="reorder-item" id="ro3" data-answer="カフェ|に|ペン|が|あります">
+      <p class="translate-prompt">3. 카페에 펜이 있어요.</p>
+      <div class="reorder-answer" id="ro3-answer"></div>
+      <div class="reorder-bank" id="ro3-bank">
+        <button class="word-btn" onclick="pickWord(this,'ro3')"><ruby>が<rt>ga</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro3')"><ruby>カフェ<rt>kafe</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro3')"><ruby>あります<rt>arimasu</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro3')"><ruby>に<rt>ni</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro3')"><ruby>ペン<rt>pen</rt></ruby></button>
+      </div>
+      <div class="reorder-controls">
+        <button class="check-btn" onclick="checkOrder('ro3','カフェ|に|ペン|が|あります')">확인</button>
+        <button class="check-btn" onclick="resetOrder('ro3')">다시</button>
+        <button class="reveal-btn" onclick="revealAnswer(this)">정답 보기</button>
+        <span class="fill-feedback" id="ro3-fb"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page" id="p4">
+  <h1>패턴 2: <ruby>います<rt>imasu</rt></ruby> (사람 / 동물)</h1>
+  <h2>"[장소]에 [사람/동물]이/가 있어요."</h2>
+
+  <p><strong>패턴:</strong> [장소]<ruby>に<rt>ni</rt></ruby> [사람/동물]<ruby>が<rt>ga</rt></ruby><ruby>います<rt>imasu</rt></ruby>。</p>
+
+  <div class="explain-box">
+    <div class="label">사용법</div>
+    <p>패턴 1과 구조는 같습니다 &mdash; 단, <strong>살아 있는</strong> 것에는 <ruby>あります<rt>arimasu</rt></ruby> 대신 <ruby>います<rt>imasu</rt></ruby>를 사용합니다.</p>
+    <p>&bull; 사람: 선생님, 친구, 가족, 아이</p>
+    <p>&bull; 동물: 고양이, 강아지, 새, 물고기</p>
+  </div>
+
+  <div class="section">
+    <h3>예문</h3>
+    <div class="pattern">
+      &bull; <ruby>きょうしつ<rt>kyōshitsu</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>せんせい<rt>sensei</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>います<rt>imasu</rt></ruby>。<br>
+      <span class="en" style="margin-left:16px">교실에 선생님이 있어요.</span><br><br>
+
+      &bull; <ruby>へや<rt>heya</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>ねこ<rt>neko</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>います<rt>imasu</rt></ruby>。<br>
+      <span class="en" style="margin-left:16px">방에 고양이가 있어요.</span><br><br>
+
+      &bull; <ruby>いえ<rt>ie</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>いぬ<rt>inu</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>います<rt>imasu</rt></ruby>。<br>
+      <span class="en" style="margin-left:16px">집에 강아지가 있어요.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>사람 &amp; 동물 단어</h3>
+    <table class="vocab-table">
+      <tr><th>Japanese</th><th>Reading</th><th>한국어</th></tr>
+      <tr><td><ruby>せんせい<rt>sensei</rt></ruby></td><td>sensei</td><td>선생님</td></tr>
+      <tr><td><ruby>ともだち<rt>tomodachi</rt></ruby></td><td>tomodachi</td><td>친구</td></tr>
+      <tr><td><ruby>こども<rt>kodomo</rt></ruby></td><td>kodomo</td><td>아이</td></tr>
+      <tr><td><ruby>おかあさん<rt>okāsan</rt></ruby></td><td>okāsan</td><td>엄마</td></tr>
+      <tr><td><ruby>おとうさん<rt>otōsan</rt></ruby></td><td>otōsan</td><td>아빠</td></tr>
+      <tr><td><ruby>ねこ<rt>neko</rt></ruby></td><td>neko</td><td>고양이</td></tr>
+      <tr><td><ruby>いぬ<rt>inu</rt></ruby></td><td>inu</td><td>강아지</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h3>장소 단어 (추가)</h3>
+    <table class="vocab-table">
+      <tr><th>Japanese</th><th>Reading</th><th>한국어</th></tr>
+      <tr><td><ruby>きょうしつ<rt>kyōshitsu</rt></ruby></td><td>kyōshitsu</td><td>교실</td></tr>
+      <tr><td><ruby>いえ<rt>ie</rt></ruby></td><td>ie</td><td>집</td></tr>
+      <tr><td><ruby>カフェ<rt>kafe</rt></ruby></td><td>kafe</td><td>카페</td></tr>
+      <tr><td><ruby>こうえん<rt>kōen</rt></ruby></td><td>kōen</td><td>공원</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- PAGE 5 -->
+<div class="page" id="p5">
+  <h1>패턴 2: 연습</h1>
+  <h2></h2>
+
+  <div class="section">
+    <p><strong>활동 1: <ruby>あります<rt>arimasu</rt></ruby> 또는 <ruby>います<rt>imasu</rt></ruby> 고르기</strong></p>
+    <p style="margin-bottom:12px">각 문장에 맞는 동사를 클릭하세요.</p>
+
+    <div class="fill-item">
+      <p>1. <ruby>へや<rt>heya</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>ねこ<rt>neko</rt></ruby><ruby>が<rt>ga</rt></ruby>（　　）。 <span class="en">&mdash; 방에 고양이가 있어요.</span></p>
+      <div class="match-choices" style="margin-left:20px">
+        <button class="match-btn" onclick="checkMatch(this,'wrong')"><ruby>あります<rt>arimasu</rt></ruby></button>
+        <button class="match-btn" onclick="checkMatch(this,'correct')"><ruby>います<rt>imasu</rt></ruby></button>
+      </div>
+    </div>
+
+    <div class="fill-item">
+      <p>2. <ruby>いえ<rt>ie</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>ほん<rt>hon</rt></ruby><ruby>が<rt>ga</rt></ruby>（　　）。 <span class="en">&mdash; 집에 책이 있어요.</span></p>
+      <div class="match-choices" style="margin-left:20px">
+        <button class="match-btn" onclick="checkMatch(this,'correct')"><ruby>あります<rt>arimasu</rt></ruby></button>
+        <button class="match-btn" onclick="checkMatch(this,'wrong')"><ruby>います<rt>imasu</rt></ruby></button>
+      </div>
+    </div>
+
+    <div class="fill-item">
+      <p>3. <ruby>きょうしつ<rt>kyōshitsu</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>せんせい<rt>sensei</rt></ruby><ruby>が<rt>ga</rt></ruby>（　　）。 <span class="en">&mdash; 교실에 선생님이 있어요.</span></p>
+      <div class="match-choices" style="margin-left:20px">
+        <button class="match-btn" onclick="checkMatch(this,'wrong')"><ruby>あります<rt>arimasu</rt></ruby></button>
+        <button class="match-btn" onclick="checkMatch(this,'correct')"><ruby>います<rt>imasu</rt></ruby></button>
+      </div>
+    </div>
+
+    <div class="fill-item">
+      <p>4. <ruby>カフェ<rt>kafe</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>ペン<rt>pen</rt></ruby><ruby>が<rt>ga</rt></ruby>（　　）。 <span class="en">&mdash; 카페에 펜이 있어요.</span></p>
+      <div class="match-choices" style="margin-left:20px">
+        <button class="match-btn" onclick="checkMatch(this,'correct')"><ruby>あります<rt>arimasu</rt></ruby></button>
+        <button class="match-btn" onclick="checkMatch(this,'wrong')"><ruby>います<rt>imasu</rt></ruby></button>
+      </div>
+    </div>
+
+    <div class="fill-item">
+      <p>5. <ruby>いえ<rt>ie</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>いぬ<rt>inu</rt></ruby><ruby>が<rt>ga</rt></ruby>（　　）。 <span class="en">&mdash; 집에 강아지가 있어요.</span></p>
+      <div class="match-choices" style="margin-left:20px">
+        <button class="match-btn" onclick="checkMatch(this,'wrong')"><ruby>あります<rt>arimasu</rt></ruby></button>
+        <button class="match-btn" onclick="checkMatch(this,'correct')"><ruby>います<rt>imasu</rt></ruby></button>
+      </div>
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <p><strong>활동 2: 문장 만들기</strong></p>
+    <p style="margin-bottom:12px">올바른 순서로 단어를 클릭하세요.</p>
+
+    <div class="reorder-item" id="ro4" data-answer="きょうしつ|に|せんせい|が|います">
+      <p class="translate-prompt">1. 교실에 선생님이 있어요.</p>
+      <div class="reorder-answer" id="ro4-answer"></div>
+      <div class="reorder-bank" id="ro4-bank">
+        <button class="word-btn" onclick="pickWord(this,'ro4')"><ruby>います<rt>imasu</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro4')"><ruby>に<rt>ni</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro4')"><ruby>せんせい<rt>sensei</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro4')"><ruby>が<rt>ga</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro4')"><ruby>きょうしつ<rt>kyōshitsu</rt></ruby></button>
+      </div>
+      <div class="reorder-controls">
+        <button class="check-btn" onclick="checkOrder('ro4','きょうしつ|に|せんせい|が|います')">확인</button>
+        <button class="check-btn" onclick="resetOrder('ro4')">다시</button>
+        <button class="reveal-btn" onclick="revealAnswer(this)">정답 보기</button>
+        <span class="fill-feedback" id="ro4-fb"></span>
+      </div>
+    </div>
+
+    <div class="reorder-item" id="ro5" data-answer="へや|に|ねこ|が|います">
+      <p class="translate-prompt">2. 방에 고양이가 있어요.</p>
+      <div class="reorder-answer" id="ro5-answer"></div>
+      <div class="reorder-bank" id="ro5-bank">
+        <button class="word-btn" onclick="pickWord(this,'ro5')"><ruby>が<rt>ga</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro5')"><ruby>ねこ<rt>neko</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro5')"><ruby>へや<rt>heya</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro5')"><ruby>に<rt>ni</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro5')"><ruby>います<rt>imasu</rt></ruby></button>
+      </div>
+      <div class="reorder-controls">
+        <button class="check-btn" onclick="checkOrder('ro5','へや|に|ねこ|が|います')">확인</button>
+        <button class="check-btn" onclick="resetOrder('ro5')">다시</button>
+        <button class="reveal-btn" onclick="revealAnswer(this)">정답 보기</button>
+        <span class="fill-feedback" id="ro5-fb"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 6 -->
+<div class="page" id="p6">
+  <h1>대화 미리보기</h1>
+  <h2></h2>
+
+  <div class="box">
+    <div class="box-label">상황 / <ruby>じょうきょう<rt>jōkyō</rt></ruby></div>
+    알렉스가 처음으로 유키네 집에 놀러 왔어요.<br>
+    <ruby>アレックス<rt>Arekkusu</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>ゆき<rt>Yuki</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>いえ<rt>ie</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>はじめて<rt>hajimete</rt></ruby><ruby>きました<rt>kimashita</rt></ruby>。
+  </div>
+
+  <div class="explain-box">
+    <div class="label">읽는 방법</div>
+    <p>대화를 천천히 읽어보세요. 기울임꼴로 된 단어가 배우는 패턴입니다. 각 줄 아래에 한국어 번역이 있습니다.</p>
+  </div>
+
+  <div class="dialogue" style="margin-top:16px">
+    <p><span class="speaker">ALEX:</span> <ruby>わあ<rt>waa</rt></ruby>、<ruby>おおきい<rt>ōkii</rt></ruby><ruby>いえ<rt>ie</rt></ruby><ruby>です<rt>desu</rt></ruby>ね！<ruby>テレビ<rt>terebi</rt></ruby><ruby>が<rt>ga</rt></ruby><em><ruby>あります<rt>arimasu</rt></ruby></em><ruby>か<rt>ka</rt></ruby>？<br>
+    <span class="en" style="margin-left:80px">와, 집이 정말 크네요! TV 있어요?</span></p>
+
+    <p><span class="speaker">YUKI:</span> <ruby>はい<rt>hai</rt></ruby>、<ruby>へや<rt>heya</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>テレビ<rt>terebi</rt></ruby><ruby>が<rt>ga</rt></ruby><em><ruby>あります<rt>arimasu</rt></ruby></em>。<br>
+    <span class="en" style="margin-left:80px">네, 방에 TV가 있어요.</span></p>
+
+    <p><span class="speaker">ALEX:</span> <ruby>ねこ<rt>neko</rt></ruby><ruby>が<rt>ga</rt></ruby><em><ruby>います<rt>imasu</rt></ruby></em><ruby>か<rt>ka</rt></ruby>？<br>
+    <span class="en" style="margin-left:80px">고양이 키워요?</span></p>
+
+    <p><span class="speaker">YUKI:</span> <ruby>はい<rt>hai</rt></ruby>、<ruby>へや<rt>heya</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>ねこ<rt>neko</rt></ruby><ruby>が<rt>ga</rt></ruby><em><ruby>います<rt>imasu</rt></ruby></em>。<br>
+    <span class="en" style="margin-left:80px">네, 방에 고양이가 있어요.</span></p>
+
+    <p><span class="speaker">ALEX:</span> <ruby>かわいい<rt>kawaii</rt></ruby>！<ruby>おかあさん<rt>okāsan</rt></ruby><ruby>は<rt>wa</rt></ruby><em><ruby>います<rt>imasu</rt></ruby></em><ruby>か<rt>ka</rt></ruby>？<br>
+    <span class="en" style="margin-left:80px">귀엽네요! 어머님은 계세요?</span></p>
+
+    <p><span class="speaker">YUKI:</span> <ruby>いいえ<rt>iie</rt></ruby>、<ruby>いま<rt>ima</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>いません<rt>imasen</rt></ruby>。<ruby>カフェ<rt>kafe</rt></ruby><ruby>に<rt>ni</rt></ruby><em><ruby>います<rt>imasu</rt></ruby></em>。<br>
+    <span class="en" style="margin-left:80px">아니요, 지금은 안 계세요. 카페에 계세요.</span></p>
+
+    <p><span class="speaker">ALEX:</span> <ruby>そうですか<rt>sō desu ka</rt></ruby>。<ruby>ありがとう<rt>arigatō</rt></ruby>、<ruby>ゆき<rt>Yuki</rt></ruby>さん！<br>
+    <span class="en" style="margin-left:80px">그렇군요. 고마워요, 유키 씨!</span></p>
+  </div>
+</div>
+
+<!-- PAGE 7: TRAVEL IN JAPAN -->
+<div class="page" id="p7">
+  <h1>일본 여행: 편의점에서</h1>
+  <h2></h2>
+
+  <p>일본 편의점에 있다고 상상해보세요. 대화를 소리 내어 읽어봐요!</p>
+
+  <div class="box">
+    <div class="box-label">상황 / <ruby>じょうきょう<rt>jōkyō</rt></ruby></div>
+    일본 편의점에 들어가서 물과 간식을 찾고,<br>
+    영어를 할 줄 아는 직원이 있는지 묻습니다.
+  </div>
+
+  <div class="help-box" style="margin-left:0; max-width:520px; margin-bottom:16px">
+    <strong>새 단어</strong><br>
+    <ruby>みず<rt>mizu</rt></ruby> (물) &nbsp; <ruby>おにぎり<rt>onigiri</rt></ruby> (주먹밥)<br>
+    <ruby>スタッフ<rt>sutaffu</rt></ruby> (직원) &nbsp; <ruby>えいご<rt>eigo</rt></ruby> (영어)<br>
+    <ruby>すみません<rt>sumimasen</rt></ruby> (실례합니다) &nbsp; <ruby>ありがとうございます<rt>arigatō gozaimasu</rt></ruby> (감사합니다)
+  </div>
+
+  <div class="dialogue" style="margin-top:20px">
+    <p><span class="speaker">YOU:</span> <ruby>すみません<rt>sumimasen</rt></ruby>、<ruby>みず<rt>mizu</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>あります<rt>arimasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？<br>
+    <span class="en" style="margin-left:80px">실례합니다, 물 있어요?</span></p>
+
+    <p><span class="speaker">STAFF:</span> <ruby>はい<rt>hai</rt></ruby>、<ruby>あそこ<rt>asoko</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>あります<rt>arimasu</rt></ruby>。<br>
+    <span class="en" style="margin-left:80px">네, 저기에 있어요.</span></p>
+
+    <p><span class="speaker">YOU:</span> <ruby>おにぎり<rt>onigiri</rt></ruby><ruby>も<rt>mo</rt></ruby><ruby>あります<rt>arimasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？<br>
+    <span class="en" style="margin-left:80px">주먹밥도 있어요?</span></p>
+
+    <p><span class="speaker">STAFF:</span> <ruby>はい<rt>hai</rt></ruby>、<ruby>ここ<rt>koko</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>おにぎり<rt>onigiri</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby>。<br>
+    <span class="en" style="margin-left:80px">네, 주먹밥은 여기에 있어요.</span></p>
+
+    <p><span class="speaker">YOU:</span> <ruby>えいご<rt>eigo</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>スタッフ<rt>sutaffu</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>います<rt>imasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？<br>
+    <span class="en" style="margin-left:80px">영어가 되는 직원분 계세요?</span></p>
+
+    <p><span class="speaker">STAFF:</span> <ruby>はい<rt>hai</rt></ruby>、<ruby>あそこ<rt>asoko</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>います<rt>imasu</rt></ruby>！<br>
+    <span class="en" style="margin-left:80px">네, 저기에 계세요!</span></p>
+
+    <p><span class="speaker">YOU:</span> <ruby>ありがとうございます<rt>arigatō gozaimasu</rt></ruby>！<br>
+    <span class="en" style="margin-left:80px">정말 감사합니다!</span></p>
+  </div>
+
+  <div class="explain-box" style="margin-top:20px">
+    <div class="label">포인트</div>
+    <p>&bull; <ruby>みず<rt>mizu</rt></ruby>와 <ruby>おにぎり<rt>onigiri</rt></ruby>는 <strong>사물</strong> &rarr; <ruby>あります<rt>arimasu</rt></ruby></p>
+    <p>&bull; <ruby>スタッフ<rt>sutaffu</rt></ruby> (직원)는 <strong>사람</strong> &rarr; <ruby>います<rt>imasu</rt></ruby></p>
+  </div>
+</div>
+
+<!-- PAGE 8 -->
+<div class="page" id="p8">
+  <h1>예습 완료!</h1>
+  <h2></h2>
+
+  <div class="box">
+    <p style="margin-bottom:12px"><strong>예습 체크리스트:</strong></p>
+
+    <div class="check-item">
+      <span class="check">&#10004;</span>
+      <strong><ruby>あります<rt>arimasu</rt></ruby></strong> = 있어요 (사물) &nbsp;/&nbsp; <strong><ruby>います<rt>imasu</rt></ruby></strong> = 있어요 (사람 / 동물)
+    </div>
+
+    <div class="check-item">
+      <span class="check">&#10004;</span>
+      <strong>패턴 1:</strong> [장소]<ruby>に<rt>ni</rt></ruby> [사물]<ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby>。 &mdash; "[장소]에 [사물]이/가 있어요."
+    </div>
+
+    <div class="check-item">
+      <span class="check">&#10004;</span>
+      <strong>패턴 2:</strong> [장소]<ruby>に<rt>ni</rt></ruby> [사람/동물]<ruby>が<rt>ga</rt></ruby><ruby>います<rt>imasu</rt></ruby>。 &mdash; "[장소]에 [사람/동물]이/가 있어요."
+    </div>
+  </div>
+
+  <div class="section" style="margin-top:20px">
+    <p><strong>핵심 표현</strong> &mdash; <ruby>もういちど<rt>mō ichido</rt></ruby><ruby>よんで<rt>yonde</rt></ruby><ruby>みましょう<rt>mimashō</rt></ruby>！</p>
+    <div class="pattern" style="line-height: 1.6;">
+      &bull; <ruby>へや<rt>heya</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>テレビ<rt>terebi</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby>。 <span class="en">&mdash; 방에 TV가 있어요.</span><br>
+      &bull; <ruby>いえ<rt>ie</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>ほん<rt>hon</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby>。 <span class="en">&mdash; 집에 책이 있어요.</span><br>
+      &bull; <ruby>きょうしつ<rt>kyōshitsu</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>せんせい<rt>sensei</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>います<rt>imasu</rt></ruby>。 <span class="en">&mdash; 교실에 선생님이 있어요.</span><br>
+      &bull; <ruby>へや<rt>heya</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>ねこ<rt>neko</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>います<rt>imasu</rt></ruby>。 <span class="en">&mdash; 방에 고양이가 있어요.</span>
+    </div>
+  </div>
+
+  <div class="explain-box" style="margin-top:24px">
+    <div class="label">준비 완료!</div>
+    <p>이제 4과의 핵심 패턴과 어휘를 알게 되었습니다. 수업에서는 어떤 장소에 무엇이 있는지 말하고, "~이/가 있어요?" 질문을 연습하며, 튜터와 함께 편의점 롤플레이를 해봅니다.</p>
+  </div>
+</div>
+
+<nav class="nav">
+  <button id="prev" onclick="go(-1)" disabled>&larr; Back</button>
+  <span id="indicator">1 / 8</span>
+  <button id="next" onclick="go(1)">Next &rarr;</button>
+</nav>
+
+<script>
+const pages = ['p1','p2','p3','p4','p5','p6','p7','p8'];
+let cur = 0;
+
+function go(dir) {
+  document.getElementById(pages[cur]).classList.remove('active');
+  cur += dir;
+  document.getElementById(pages[cur]).classList.add('active');
+  document.getElementById('prev').disabled = cur === 0;
+  document.getElementById('next').disabled = cur === pages.length - 1;
+  document.getElementById('indicator').textContent = (cur + 1) + ' / ' + pages.length;
+  window.scrollTo(0, 0);
+}
+
+/* Matching activity */
+function checkMatch(btn, result) {
+  var siblings = btn.parentElement.querySelectorAll('.match-btn');
+  if (result === 'correct') {
+    siblings.forEach(function(b) { b.disabled = true; b.classList.remove('wrong'); });
+    btn.classList.add('correct');
+  } else {
+    btn.classList.add('wrong');
+    setTimeout(function() { btn.classList.remove('wrong'); }, 600);
+  }
+}
+
+/* Word reorder activity */
+function getBaseText(el) {
+  var clone = el.cloneNode(true);
+  var rts = clone.querySelectorAll('rt');
+  rts.forEach(function(rt) { rt.remove(); });
+  return clone.textContent.trim();
+}
+
+function pickWord(btn, id) {
+  var item = document.getElementById(id);
+  if (item.classList.contains('correct')) return;
+  item.classList.remove('wrong');
+  var fb = document.getElementById(id + '-fb');
+  fb.textContent = '';
+  fb.className = 'fill-feedback';
+  btn.classList.add('used');
+  var clone = document.createElement('button');
+  clone.className = 'word-btn';
+  clone.innerHTML = btn.innerHTML;
+  clone.onclick = function() { unpickWord(clone, btn, id); };
+  document.getElementById(id + '-answer').appendChild(clone);
+}
+
+function unpickWord(clone, original, id) {
+  var item = document.getElementById(id);
+  if (item.classList.contains('correct')) return;
+  item.classList.remove('wrong');
+  var fb = document.getElementById(id + '-fb');
+  fb.textContent = '';
+  fb.className = 'fill-feedback';
+  clone.remove();
+  original.classList.remove('used');
+}
+
+function checkOrder(id, correctStr) {
+  var item = document.getElementById(id);
+  if (item.classList.contains('correct')) return;
+  var answer = document.getElementById(id + '-answer');
+  var words = Array.from(answer.querySelectorAll('.word-btn')).map(function(b) { return getBaseText(b); });
+  var fb = document.getElementById(id + '-fb');
+  if (words.length === 0) return;
+  if (words.join('|') === correctStr) {
+    item.classList.remove('wrong');
+    item.classList.add('correct');
+    fb.textContent = '정답!';
+    fb.className = 'fill-feedback correct';
+    answer.querySelectorAll('.word-btn').forEach(function(b) { b.style.cursor = 'default'; });
+  } else {
+    item.classList.remove('correct');
+    item.classList.add('wrong');
+    fb.textContent = '아쉽네요 — 다시 해보세요!';
+    fb.className = 'fill-feedback wrong';
+  }
+}
+
+function revealAnswer(btn) {
+  var item = btn.closest('.reorder-item');
+  var id = item.id;
+  var correctWords = item.getAttribute('data-answer').split('|');
+  item.classList.remove('wrong');
+  document.getElementById(id + '-answer').innerHTML = '';
+  var bankBtns = document.getElementById(id + '-bank').querySelectorAll('.word-btn');
+  bankBtns.forEach(function(b) { b.classList.remove('used'); });
+  correctWords.forEach(function(word) {
+    for (var i = 0; i < bankBtns.length; i++) {
+      if (!bankBtns[i].classList.contains('used') && getBaseText(bankBtns[i]) === word) {
+        bankBtns[i].classList.add('used');
+        var clone = document.createElement('button');
+        clone.className = 'word-btn';
+        clone.innerHTML = bankBtns[i].innerHTML;
+        clone.style.cursor = 'default';
+        document.getElementById(id + '-answer').appendChild(clone);
+        break;
+      }
+    }
+  });
+  item.classList.add('correct');
+  var fb = document.getElementById(id + '-fb');
+  fb.textContent = '';
+  fb.className = 'fill-feedback';
+  btn.style.display = 'none';
+}
+
+function resetOrder(id) {
+  var item = document.getElementById(id);
+  if (item.classList.contains('correct')) return;
+  item.classList.remove('wrong');
+  document.getElementById(id + '-answer').innerHTML = '';
+  document.getElementById(id + '-bank').querySelectorAll('.word-btn').forEach(function(b) { b.classList.remove('used'); });
+  var fb = document.getElementById(id + '-fb');
+  fb.textContent = '';
+  fb.className = 'fill-feedback';
+}
+</script>
+</body>
+</html>

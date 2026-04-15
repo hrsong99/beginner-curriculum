@@ -102,14 +102,14 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  │                                                          │            |
 |  │  1. I am a student.       →  ______________________     │            |
 |  │  2. He is kind.           →  ______________________     │            |
-|  │  ★ She is from Tokyo.     →  ______________________     │            |
+|  │  ★ She is a teacher.      →  ______________________     │            |
 |  │                                                          │            |
 |  │  ┌─ WORDS ────────────────────────────────────────┐     │            |
 |  │  │  Q1: わたし(I)  がくせい(student)                │     │            |
 |  │  │  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─       │     │            |
 |  │  │  Q2: かれ(he)  しんせつ(kind)                    │     │            |
 |  │  │  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─       │     │            |
-|  │  │  Q3: かのじょ(she)  とうきょう(Tokyo)            │     │            |
+|  │  │  Q3: かのじょ(she)  せんせい(teacher)            │     │            |
 |  │  └─────────────────────────────────────────────────┘     │            |
 |  └──────────────────────────────────────────────────────────┘            |
 |                                                                         |
@@ -400,7 +400,7 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |            Yes, there is a book in the room.                            |
 |                                                                         |
 |     ┌─────────────────────────────────────────┐                         |
-|     │  へや(room)  ほん(book)  あります(is)    │                         |
+|     │  へや(room)  ほん(book)                  │                         |
 |     └─────────────────────────────────────────┘                         |
 |                                                                         |
 |  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
@@ -415,7 +415,7 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |            Yes, there is a cat in the room.                             |
 |                                                                         |
 |     ┌─────────────────────────────────────────┐                         |
-|     │  へや(room)  ねこ(cat)  います(is)       │                         |
+|     │  へや(room)  ねこ(cat)                   │                         |
 |     └─────────────────────────────────────────┘                         |
 |                                                                         |
 |  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
@@ -430,7 +430,7 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |            Yes, there is a pen at the cafe.                             |
 |                                                                         |
 |     ┌─────────────────────────────────────────┐                         |
-|     │  カフェ(cafe)  ペン(pen)  あります(is)    │                         |
+|     │  カフェ(cafe)  ペン(pen)                  │                         |
 |     └─────────────────────────────────────────┘                         |
 |                                                                         |
 |  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
@@ -446,7 +446,6 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |                                                                         |
 |     ┌─────────────────────────────────────────┐                         |
 |     │  きょうしつ(classroom)  せんせい(teacher)│                         |
-|     │  います(is)                               │                         |
 |     └─────────────────────────────────────────┘                         |
 |                                                                         |
 |                                                                  PAGE 7 |
@@ -520,13 +519,13 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  ALEX (tutor):   テレビがありますか？                                     |
 |                  Is there a TV?                                         |
 |                                                                         |
-|  YUKI (you):     はい、へやに______があります。                            |
+|  YUKI (you):     はい、へやにテレビが______。                              |
 |                  Yes, there is a TV in the room.                        |
 |                                                                         |
 |  ALEX (tutor):   ねこがいますか？                                         |
 |                  Is there a cat?                                        |
 |                                                                         |
-|  YUKI (you):     はい、へやに______がいます。                              |
+|  YUKI (you):     はい、へやにねこが______。                                |
 |                  Yes, there's a cat in the room.                        |
 |                                                                         |
 |  ALEX (tutor):   おかあさんはいますか？                                   |
