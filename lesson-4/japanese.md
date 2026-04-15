@@ -5,6 +5,7 @@
 **Changes from Lesson 3 (extending 15 min → 25 min):**
 
 - Cumulative review now covers L1 (です) + L2 (これ/それ/あれ) + L3 (どこ), not just the previous lesson
+- **Review page is first-timer friendly**: 2 questions per pattern — Q1 is a fill-in-blank where most of the Japanese sentence is shown so a student who never took L1–L3 can still infer the missing piece from the pattern formula above; Q2 is a translate-from-English with vocab hints, which is the production rep for returning students. 6 questions total instead of 9.
 - **Pronunciation cues embedded** in the Today's Patterns page and both Pattern Drill "Read Together" steps — "listen closely and repeat closely" phrasing, no dedicated page, no shadowing loops (would get boring fast)
 - NEW: **Vocab Recall** page moved from bonus to CORE (production, not recognition)
 - Pattern drills now have **5 items per sub-activity** (was 3)
@@ -42,7 +43,7 @@
 | Page | Activity                          | Time  | Notes                                   |
 | ---- | --------------------------------- | ----- | --------------------------------------- |
 | 1    | Greeting & Intro                  | 1 min | Hello, let's start                      |
-| 2    | Review: L1 + L2 + L3              | 4 min | Cumulative check                        |
+| 2    | Review: L1 + L2 + L3              | 2 min | 2 Qs/lesson: fill-in-blank + translate  |
 | 3    | Today's Patterns                  | 3 min | あります / います (+ pronunciation cue)  |
 | 4    | Pattern Drill A (あります)          | 3 min | Things — 5 items per sub                |
 | 5    | Pattern Drill B (います)            | 3 min | People/animals — 5 items per sub        |
@@ -100,16 +101,14 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  │                                                          │            |
 |  │  PATTERN:  [person]は [noun / adjective]です。           │            |
 |  │                                                          │            |
-|  │  1. I am a student.       →  ______________________     │            |
-|  │  2. He is kind.           →  ______________________     │            |
-|  │  ★ She is a teacher.      →  ______________________     │            |
+|  │  1. FILL IN:  わたしはがくせい______。                    │            |
+|  │               "I am a student"                            │            |
 |  │                                                          │            |
-|  │  ┌─ WORDS ────────────────────────────────────────┐     │            |
-|  │  │  Q1: わたし(I)  がくせい(student)                │     │            |
-|  │  │  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─       │     │            |
-|  │  │  Q2: かれ(he)  しんせつ(kind)                    │     │            |
-|  │  │  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─       │     │            |
-|  │  │  Q3: かのじょ(she)  せんせい(teacher)            │     │            |
+|  │  2. TRANSLATE:  He is kind.                              │            |
+|  │     → ____________________________________              │            |
+|  │                                                          │            |
+|  │  ┌─ Q2 WORDS ─────────────────────────────────────┐     │            |
+|  │  │  かれ(he)  しんせつ(kind)                        │     │            |
 |  │  └─────────────────────────────────────────────────┘     │            |
 |  └──────────────────────────────────────────────────────────┘            |
 |                                                                         |
@@ -119,18 +118,14 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  │                                                          │            |
 |  │  PATTERN:  これ / それ / あれ は [noun]です。             │            |
 |  │                                                          │            |
-|  │  1. This is a book.       →  ______________________     │            |
-|  │  2. That is my pen.       →  ______________________     │            |
-|  │  ★ That (over there) is   →  ______________________     │            |
-|  │     the teacher's bag.                                   │            |
+|  │  1. FILL IN:  ______はほんです。                          │            |
+|  │               "This is a book"                            │            |
 |  │                                                          │            |
-|  │  ┌─ WORDS ────────────────────────────────────────┐     │            |
-|  │  │  Q1: これ(this)  ほん(book)                      │     │            |
-|  │  │  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─       │     │            |
-|  │  │  Q2: それ(that)  わたし(I)  ペン(pen)            │     │            |
-|  │  │  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─       │     │            |
-|  │  │  Q3: あれ(that over there)  せんせい(teacher)    │     │            |
-|  │  │      かばん(bag)                                  │     │            |
+|  │  2. TRANSLATE:  That is my pen.                          │            |
+|  │     → ____________________________________              │            |
+|  │                                                          │            |
+|  │  ┌─ Q2 WORDS ─────────────────────────────────────┐     │            |
+|  │  │  それ(that)  わたし(I)  ペン(pen)                │     │            |
 |  │  └─────────────────────────────────────────────────┘     │            |
 |  └──────────────────────────────────────────────────────────┘            |
 |                                                                         |
@@ -141,16 +136,14 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  │  PATTERN:  [noun]は どこですか？                          │            |
 |  │            [noun]は ここ / そこ / あそこです。             │            |
 |  │                                                          │            |
-|  │  1. Where is the book?    →  ______________________     │            |
-|  │  2. The pen is there.     →  ______________________     │            |
-|  │  ★ Where is my bag?       →  ______________________     │            |
+|  │  1. FILL IN:  ほんは______ですか？                        │            |
+|  │               "Where is the book?"                        │            |
 |  │                                                          │            |
-|  │  ┌─ WORDS ────────────────────────────────────────┐     │            |
-|  │  │  Q1: ほん(book)  どこ(where)                     │     │            |
-|  │  │  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─       │     │            |
-|  │  │  Q2: ペン(pen)  そこ(there)                      │     │            |
-|  │  │  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─       │     │            |
-|  │  │  Q3: わたし(I)  かばん(bag)  どこ(where)         │     │            |
+|  │  2. TRANSLATE:  The pen is there.                        │            |
+|  │     → ____________________________________              │            |
+|  │                                                          │            |
+|  │  ┌─ Q2 WORDS ─────────────────────────────────────┐     │            |
+|  │  │  ペン(pen)  そこ(there)                          │     │            |
 |  │  └─────────────────────────────────────────────────┘     │            |
 |  └──────────────────────────────────────────────────────────┘            |
 |                                                                         |
