@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 4: あります・います — Is There...? (Lighter Class Version)</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: monospace; background: #fff; color: #111; margin: 0; }
+  .page { display: none; max-width: 760px; margin: 0 auto; padding: 56px 40px 100px; }
+  .page.active { display: block; }
+  h1 { font-size: 24px; margin: 0 0 8px; letter-spacing: .4px; }
+  h2 { font-size: 18px; font-weight: normal; margin: 0 0 28px; border-bottom: 1px solid #111; padding-bottom: 12px; }
+  h3 { font-size: 17px; margin: 28px 0 10px; }
+  p, li { font-size: 16px; line-height: 1.8; }
+  .en { color: #888; font-size: 13px; }
+  .jp { font-size: 18px; line-height: 1.8; }
+  .pair { margin: 10px 0; }
+  .pair .en { padding-left: 22px; display: block; }
+  .tg { margin: 16px 0; padding: 10px 16px; background: #f7f7fb; border-left: 3px solid #a0b4d8; border-radius: 0 6px 6px 0; font-size: 13px; line-height: 1.6; }
+  .tg-en { color: #444; }
+  .tg-jp { color: #888; font-size: 12px; }
+  .help-box, .box, .image-box { border: 1px solid #999; padding: 14px 18px; margin: 16px 0; background: #fff; }
+  .box { border-color: #111; }
+  .image-box { background: #fafafa; color: #555; }
+  .section { margin: 26px 0; }
+  .separator { border: none; border-top: 1px dashed #ccc; margin: 28px 0; }
+  .blank-input, .blank-input-full { font-family: monospace; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; outline: none; background: #fafafa; }
+  .blank-input { min-width: 90px; padding: 6px 10px; margin: 0 6px; }
+  .blank-input-full { display: block; width: 100%; max-width: 480px; padding: 8px 10px; margin: 6px 0 10px; }
+  .choice-list, .bullet-list { margin: 8px 0 0 18px; }
+  .choice-list li, .bullet-list li { margin: 5px 0; }
+  .nav { position: fixed; left: 0; right: 0; bottom: 0; background: #fff; border-top: 1px solid #ddd; padding: 14px 16px; display: flex; justify-content: center; align-items: center; gap: 16px; }
+  .nav button { font-family: monospace; font-size: 14px; padding: 8px 24px; border: 1px solid #111; background: #fff; cursor: pointer; }
+  .nav button:hover { background: #f0f0f0; }
+  .nav button:disabled { color: #bbb; border-color: #ccc; cursor: default; }
+  .nav span { min-width: 84px; text-align: center; font-size: 13px; color: #666; }
+  rt { font-size: .62em; color: #c4b8a8; letter-spacing: .8px; }
+</style>
+</head>
+<body>
+
+<div class="page active" id="p0">
+  <h1><ruby>あります<rt>arimasu</rt></ruby>・<ruby>います<rt>imasu</rt></ruby></h1>
+  <h2>Is There...? — Lighter Class Version</h2>
+  <div class="box">
+    <p>This version reduces burnout by using:</p>
+    <ul class="bullet-list">
+      <li>multiple choice</li>
+      <li>one-blank writing</li>
+      <li>image-supported tasks</li>
+      <li>choice-first speaking</li>
+    </ul>
+  </div>
+  <div class="pair"><div class="jp">① 〜さん、こんにちは！おかえりなさい。</div><div class="en">Hi ~, welcome back!</div></div>
+  <div class="pair"><div class="jp">② きょうもよろしくおねがいします。</div><div class="en">Let's have a great lesson today.</div></div>
+  <div class="pair"><div class="jp">③ これをよんでください。</div><div class="en">Please read this.</div></div>
+</div>
+
+<div class="page" id="p1">
+  <h1>REVIEW: LESSONS 1, 2 &amp; 3</h1><h2></h2>
+  <div class="tg"><div class="tg-en">"Let's review — translate each sentence into Japanese."</div><div class="tg-jp">「ふくしゅうしましょう。にほんごにしてみてね。」</div></div>
+  <div class="box"><strong>LESSON 1: です</strong><br><br>
+    <div class="jp">わたしは がくせい <input class="blank-input">。</div>
+    <div class="en">I am a student.</div>
+    <div style="margin-top:12px">He is kind.</div>
+    <input class="blank-input-full">
+  </div>
+  <div class="box"><strong>LESSON 2: これ・それ・あれ</strong><br><br>
+    <div class="jp"><input class="blank-input"> は ほんです。</div>
+    <div class="en">This is a book.</div>
+    <div style="margin-top:12px">That is my pen.</div>
+    <input class="blank-input-full">
+  </div>
+  <div class="box"><strong>LESSON 3: どこ</strong><br><br>
+    <div class="jp">ほんは <input class="blank-input"> ですか？</div>
+    <div class="en">Where is the book?</div>
+    <div style="margin-top:12px">The pen is there.</div>
+    <input class="blank-input-full">
+  </div>
+</div>
+
+<div class="page" id="p2">
+  <h1>TODAY'S PATTERNS</h1><h2></h2>
+  <div class="tg"><div class="tg-en">"Let's read together. Copy my pronunciation closely — slow is OK."</div><div class="tg-jp">「いっしょによみましょう。はつおんをよくまねしてね。ゆっくりでいいですよ。」</div></div>
+  <div class="section">
+    <p><strong>1. There IS a [thing]</strong> — <ruby>あります<rt>arimasu</rt></ruby></p>
+    <div class="pair"><div class="jp">• <ruby>へや<rt>heya</rt></ruby>に <ruby>テレビ<rt>terebi</rt></ruby>が <ruby>あります<rt>arimasu</rt></ruby>。</div><div class="en">There is a TV in the room.</div></div>
+    <div class="pair"><div class="jp">• <ruby>いえ<rt>ie</rt></ruby>に <ruby>ほん<rt>hon</rt></ruby>が <ruby>あります<rt>arimasu</rt></ruby>。</div><div class="en">There is a book at home.</div></div>
+    <p style="margin-top:20px"><strong>2. There IS a [person / animal]</strong> — <ruby>います<rt>imasu</rt></ruby></p>
+    <div class="pair"><div class="jp">• <ruby>きょうしつ<rt>kyōshitsu</rt></ruby>に <ruby>せんせい<rt>sensei</rt></ruby>が <ruby>います<rt>imasu</rt></ruby>。</div><div class="en">There is a teacher in the classroom.</div></div>
+    <div class="pair"><div class="jp">• <ruby>へや<rt>heya</rt></ruby>に <ruby>ねこ<rt>neko</rt></ruby>が <ruby>います<rt>imasu</rt></ruby>。</div><div class="en">There is a cat in the room.</div></div>
+  </div>
+  <div class="help-box"><strong>REMEMBER</strong><br><ruby>あります<rt>arimasu</rt></ruby> → THINGS<br><ruby>います<rt>imasu</rt></ruby> → LIVING things</div>
+</div>
+
+<div class="page" id="p3">
+  <h1>VISUAL WARM-UP: CHOOSE THE SENTENCE</h1><h2></h2>
+  <div class="tg"><div class="tg-en">"Look at the picture. Choose first, then read it aloud."</div><div class="tg-jp">「えをみて、まずえらびましょう。えらんだらよんでみてね。」</div></div>
+  <div class="image-box">[IMAGE SUGGESTION: simple room picture with a TV, book, and cat]</div>
+  <ol class="choice-list">
+    <li>Which sentence matches the TV?<br>a) へやに テレビが あります。<br>b) へやに テレビが います。<br>c) へやに ねこが あります。</li>
+    <li>Which sentence matches the cat?<br>a) へやに ねこが あります。<br>b) へやに ねこが います。<br>c) へやに ほんが います。</li>
+    <li>Which sentence matches the book?<br>a) へやに ほんが あります。<br>b) へやに ほんが います。<br>c) へやに せんせいが あります。</li>
+  </ol>
+</div>
+
+<div class="page" id="p4">
+  <h1>PATTERN DRILL A LITE: <ruby>あります<rt>arimasu</rt></ruby></h1><h2>THINGS</h2>
+  <p>PATTERN: [place]に [thing]が あります。</p>
+  <div class="section"><p><strong>1. Read Together</strong></p>
+    <div class="pair"><div class="jp">• へやに テレビが あります。</div></div>
+    <div class="pair"><div class="jp">• きょうしつに とけいが あります。</div></div>
+    <div class="pair"><div class="jp">• いえに ほんが あります。</div></div>
+  </div>
+  <hr class="separator">
+  <div class="section"><p><strong>2. One-Blank Fill</strong></p>
+    <div class="jp">• へやに テレビが（あります / います）。</div>
+    <div class="jp">• きょうしつに とけいが（あります / います）。</div>
+    <div class="jp">• いえ（に / が）ほんが あります。</div>
+    <div class="jp">• カフェに（ペン / ねこ）が あります。</div>
+  </div>
+  <hr class="separator">
+  <div class="section"><p><strong>3. Guided Writing</strong></p>
+    There is a phone in the room.<input class="blank-input-full">
+    There is a key at home.<input class="blank-input-full">
+    There is a notebook at the cafe.<input class="blank-input-full">
+  </div>
+</div>
+
+<div class="page" id="p5">
+  <h1>PATTERN DRILL B LITE: <ruby>います<rt>imasu</rt></ruby></h1><h2>PEOPLE / ANIMALS</h2>
+  <p>PATTERN: [place]に [person/animal]が います。</p>
+  <div class="section"><p><strong>1. Read Together</strong></p>
+    <div class="pair"><div class="jp">• きょうしつに せんせいが います。</div></div>
+    <div class="pair"><div class="jp">• へやに ねこが います。</div></div>
+    <div class="pair"><div class="jp">• いえに いぬが います。</div></div>
+  </div>
+  <hr class="separator">
+  <div class="section"><p><strong>2. One-Blank Fill</strong></p>
+    <div class="jp">• きょうしつに せんせいが（います / あります）。</div>
+    <div class="jp">• へやに（ねこ / テレビ）が います。</div>
+    <div class="jp">• カフェ（に / が）ともだちが います。</div>
+    <div class="jp">• いえに いぬが（います / あります）。</div>
+  </div>
+  <hr class="separator">
+  <div class="section"><p><strong>3. Guided Writing</strong></p>
+    There is a teacher in the room.<input class="blank-input-full">
+    There is a dog in the park.<input class="blank-input-full">
+    There is a friend at home.<input class="blank-input-full">
+  </div>
+</div>
+
+<div class="page" id="p6">
+  <h1>QUICK CHECK: あります or います?</h1><h2></h2>
+  <ol class="choice-list">
+    <li>へやに テレビが (あります / います)</li>
+    <li>へやに ねこが (あります / います)</li>
+    <li>きょうしつに せんせいが (あります / います)</li>
+    <li>カフェに ペンが (あります / います)</li>
+  </ol>
+  <div class="help-box">あります → ほん / テレビ / ペン / ノート<br>います → ねこ / いぬ / せんせい / ともだち</div>
+</div>
+
+<div class="page" id="p7">
+  <h1>IMAGE FILL: LOOK AND COMPLETE</h1><h2></h2>
+  <div class="image-box">[IMAGE SUGGESTION: classroom picture with teacher, clock, bag, cat]</div>
+  <ol class="choice-list">
+    <li>きょうしつに せんせいが ______。 a) あります b) います</li>
+    <li>きょうしつに とけいが ______。 a) あります b) います</li>
+    <li>きょうしつに かばんが ______。 a) あります b) います</li>
+    <li>きょうしつに ねこが ______。 a) あります b) います</li>
+  </ol>
+  <div>Is there a bag in the classroom?</div><input class="blank-input-full">
+</div>
+
+<div class="page" id="p8">
+  <h1>SHORT DIALOGUES</h1><h2></h2>
+  <div class="jp">1. Is there a book in the room?</div><input class="blank-input-full">
+  <div class="jp">2. へやに ねこが いますか？</div><input class="blank-input-full">
+  <div class="jp">3. Is there a pen at the cafe?</div><input class="blank-input-full">
+</div>
+
+<div class="page" id="p9">
+  <h1>GUIDED CONVERSATION</h1><h2></h2>
+  <div class="box">
+    <div class="jp">ALEX: わあ、おおきいいえですね！テレビがありますか？</div>
+    <div class="jp">YUKI: はい、へやにテレビがあります。</div>
+    <div class="jp">ALEX: ねこがいますか？</div>
+    <div class="jp">YUKI: はい、へやにねこがいます。</div>
+    <div class="jp">ALEX: おかあさんはいますか？</div>
+    <div class="jp">YUKI: いいえ、いまはいません。カフェにいます。</div>
+  </div>
+</div>
+
+<div class="page" id="p10">
+  <h1>PICTURE HUNT</h1><h2></h2>
+  <div class="image-box">[IMAGE SUGGESTION: cafe picture with notebook, pen, friend, dog]</div>
+  <div>カフェに ノートが ありますか？</div><input class="blank-input-full">
+  <div>カフェに ともだちが いますか？</div><input class="blank-input-full">
+  <div>カフェに いぬが いますか？</div><input class="blank-input-full">
+  <div>カフェに テレビが ありますか？</div><input class="blank-input-full">
+</div>
+
+<div class="page" id="p11">
+  <h1>FREE DISCUSSION LITE</h1><h2></h2>
+  <div class="box">Choose one first: テレビ / ベッド / つくえ / ほん<br><br>へやに ______が あります。</div>
+  <div class="box">Choose one first: おかあさん / おとうさん / ともだち / ねこ / いぬ<br><br>いえに ______が います。</div>
+  <div>へやに なにが ありますか？</div><input class="blank-input-full">
+  <div>いえに だれが いますか？</div><input class="blank-input-full">
+</div>
+
+<div class="page" id="p12">
+  <h1>ROLEPLAY</h1><h2>Who and What Is in the Classroom?</h2>
+  <div class="box">Goal: ask the tutor and find:<br>ほん / ペン / かばん / ともだち</div>
+  <div class="help-box">＿＿は ありますか？<br>＿＿は いますか？</div>
+  <textarea class="blank-input-full" style="min-height:180px; resize:vertical;">Write your conversation here...</textarea>
+</div>
+
+<div class="page" id="p13">
+  <h1>TRAVEL IN JAPAN</h1><h2>Convenience Store</h2>
+  <div class="jp">すみません、みずは <input class="blank-input"> か？</div>
+  <div class="jp">おにぎりも <input class="blank-input"> か？</div>
+  <div class="jp">えいごの スタッフは <input class="blank-input"> か？</div>
+</div>
+
+<div class="page" id="p14">
+  <h1>BONUS 1: TRANSLATE — NO HINTS!</h1><h2></h2>
+  <div>There is a TV in the room.</div><input class="blank-input-full">
+  <div>There is a cat in the room.</div><input class="blank-input-full">
+  <div>Is there a pen at the cafe?</div><input class="blank-input-full">
+  <div>There is a teacher in the classroom.</div><input class="blank-input-full">
+</div>
+
+<div class="page" id="p15">
+  <h1>BONUS 2: TODAY'S CHARACTER</h1><h2>の / ノ</h2>
+  <div class="box">Which one is <strong>no</strong>?<br>a) め  b) の  c) ぬ<br><br>a) ソ  b) ン  c) ノ</div>
+  <div class="box">Read these words:<br>わたしのほん / せんせいのかばん / のみもの / ノート</div>
+  <div class="box">Fill in the missing の / ノ<br>わたし[ ]ほん<br>せんせい[ ]かばん<br>[ ]みもの<br>[ ]ート</div>
+</div>
+
+<div class="page" id="p16">
+  <h1>ミッションかんりょう！</h1><h2>Mission Complete</h2>
+  <div class="box">PATTERN 1: ＿＿に ＿＿が あります。<br>PATTERN 2: ＿＿に ＿＿が います。</div>
+  <div class="tg"><div class="tg-en">"Today you did choosing, filling, reading, and some speaking."</div><div class="tg-jp">「きょうは、えらぶ・うめる・よむ・はなす、ぜんぶできました！」</div></div>
+  <div class="pair"><div class="jp">• へやにテレビがあります。</div></div>
+  <div class="pair"><div class="jp">• いえにほんがあります。</div></div>
+  <div class="pair"><div class="jp">• きょうしつにせんせいがいます。</div></div>
+  <div class="pair"><div class="jp">• へやにねこがいます。</div></div>
+</div>
+
+<div class="nav">
+  <button id="prevBtn" onclick="changePage(-1)">Previous</button>
+  <span id="pageIndicator">1 / 17</span>
+  <button id="nextBtn" onclick="changePage(1)">Next</button>
+</div>
+
+<script>
+  let currentPage = 0;
+  const pages = Array.from(document.querySelectorAll('.page'));
+  function renderPage() {
+    pages.forEach((p, i) => p.classList.toggle('active', i === currentPage));
+    document.getElementById('pageIndicator').textContent = `${currentPage + 1} / ${pages.length}`;
+    document.getElementById('prevBtn').disabled = currentPage === 0;
+    document.getElementById('nextBtn').disabled = currentPage === pages.length - 1;
+    window.scrollTo({top: 0, behavior: 'instant'});
+  }
+  function changePage(delta) {
+    currentPage = Math.max(0, Math.min(pages.length - 1, currentPage + delta));
+    renderPage();
+  }
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') changePage(1);
+    if (e.key === 'ArrowLeft') changePage(-1);
+  });
+  renderPage();
+</script>
+
+</body>
+</html>
