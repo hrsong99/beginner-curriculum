@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prototype — Lesson 4 (stripped)</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: monospace; background: #fff; color: #111; }
+  .page { max-width: 720px; margin: 0 auto; padding: 60px 40px 100px; }
+
+  h1 { font-size: 22px; margin-bottom: 8px; letter-spacing: 0.5px; }
+  h2 { font-size: 18px; font-weight: normal; margin-bottom: 32px; border-bottom: 1px solid #111; padding-bottom: 12px; }
+  h3 { font-size: 17px; margin: 32px 0 12px; }
+  p  { font-size: 16px; line-height: 1.8; }
+
+  /* ============ Feature 1: text box with focus highlight ============ */
+  .blank-input-full {
+    display: block;
+    font-family: monospace;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+    max-width: 420px;
+    margin: 14px 0;
+    padding: 10px 12px;
+    background: #fafafa;
+    transition: border-color 0.15s, background 0.15s, box-shadow 0.15s, transform 0.15s;
+  }
+  .blank-input-full:focus {
+    border-color: #c33;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(204, 51, 51, 0.20);
+  }
+
+  /* ============ Feature 2: clickable tutor-script box ============ */
+  .tg {
+    margin: 16px 0;
+    padding: 12px 18px;
+    background: #f0f4ff;
+    border: 2px solid transparent;
+    border-left: 4px solid #a0b4d8;
+    border-radius: 0 6px 6px 0;
+    font-size: 13px;
+    line-height: 1.6;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+  }
+  .tg:hover { background: #e6ecff; }
+  .tg.active {
+    background: #d6e1ff;
+    border-color: #3558c4;
+    border-left: 5px solid #3558c4;
+    box-shadow: 0 0 0 3px rgba(53, 88, 196, 0.20);
+  }
+  .tg.active .tg-en { color: #111; font-weight: 600; }
+  .tg.active .tg-jp { color: #3558c4; }
+  .tg .tg-en { color: #444; margin-bottom: 2px; }
+  .tg .tg-jp { color: #999; font-size: 12px; }
+
+  /* ============ Feature 3: multiple choice ============ */
+  .mc { margin: 16px 0; }
+  .mc-question { font-size: 16px; margin-bottom: 12px; }
+  .mc-options { display: flex; flex-direction: column; gap: 8px; }
+  .mc-option {
+    font-family: monospace;
+    font-size: 15px;
+    text-align: left;
+    padding: 10px 14px;
+    border: 1px solid #111;
+    background: #fff;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s, color 0.15s;
+  }
+  .mc-option:hover { background: #f0f0f0; }
+  .mc-option.correct {
+    background: #eaf7ea;
+    border-color: #2a8a2a;
+    color: #2a8a2a;
+  }
+  .mc-option.wrong {
+    background: #fbecec;
+    border-color: #c33;
+    color: #c33;
+  }
+  .mc-option:disabled { cursor: default; }
+  .mc-option:disabled:hover { background: inherit; }
+  .mc-feedback {
+    margin-top: 10px;
+    font-size: 14px;
+    min-height: 1.4em;
+    color: #666;
+  }
+  .mc-feedback.correct { color: #2a8a2a; }
+  .mc-feedback.wrong   { color: #c33; }
+
+  .section { margin: 40px 0; }
+  .label-tag {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #888;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <h1>Lesson 4 — 인터랙션 프로토타입</h1>
+  <h2>stripped-down sample</h2>
+
+  <!-- Feature 2: tutor-script box (click to highlight) -->
+  <div class="section">
+    <span class="label-tag">① 튜터 스크립트</span>
+    <div class="tg" id="tg1">
+      <div class="tg-en">클릭해보세요 — 박스가 강조돼요.</div>
+      <div class="tg-jp">「クリックしてみてね。ボックスがハイライトされますよ。」</div>
+    </div>
+    <div class="tg" id="tg2">
+      <div class="tg-en">한 번에 하나만 활성화됩니다.</div>
+      <div class="tg-jp">「いちどにひとつだけハイライトされます。」</div>
+    </div>
+  </div>
+
+  <!-- Feature 1: text box with focus highlight -->
+  <div class="section">
+    <span class="label-tag">② 빈칸 채우기</span>
+    <p>아래 칸을 클릭하면 테두리가 강조돼요.</p>
+    <input type="text" class="blank-input-full" placeholder="여기에 입력…">
+    <input type="text" class="blank-input-full" placeholder="또 다른 입력 칸…">
+  </div>
+
+  <!-- Feature 3: multiple choice -->
+  <div class="section">
+    <span class="label-tag">③ 객관식</span>
+    <div class="mc" data-answer="2">
+      <div class="mc-question">「へやに テレビが ______」— 빈칸에 알맞은 것은?</div>
+      <div class="mc-options">
+        <button class="mc-option" data-idx="1">です</button>
+        <button class="mc-option" data-idx="2">あります</button>
+        <button class="mc-option" data-idx="3">います</button>
+        <button class="mc-option" data-idx="4">どこ</button>
+      </div>
+      <div class="mc-feedback"></div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // Feature 2: tutor script click-to-highlight (single-select)
+  document.querySelectorAll('.tg').forEach(el => {
+    el.addEventListener('click', () => {
+      const wasActive = el.classList.contains('active');
+      document.querySelectorAll('.tg.active').forEach(a => a.classList.remove('active'));
+      if (!wasActive) el.classList.add('active');
+    });
+  });
+
+  // Feature 3: multiple choice
+  document.querySelectorAll('.mc').forEach(mc => {
+    const answer = mc.dataset.answer;
+    const feedback = mc.querySelector('.mc-feedback');
+    mc.querySelectorAll('.mc-option').forEach(btn => {
+      btn.addEventListener('click', () => {
+        // reset any previous states
+        mc.querySelectorAll('.mc-option').forEach(b => {
+          b.classList.remove('correct', 'wrong');
+          b.disabled = false;
+        });
+        feedback.classList.remove('correct', 'wrong');
+
+        if (btn.dataset.idx === answer) {
+          btn.classList.add('correct');
+          feedback.textContent = '정답이에요! ✓';
+          feedback.classList.add('correct');
+          mc.querySelectorAll('.mc-option').forEach(b => b.disabled = true);
+        } else {
+          btn.classList.add('wrong');
+          feedback.textContent = '다시 시도해보세요. ✗';
+          feedback.classList.add('wrong');
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
