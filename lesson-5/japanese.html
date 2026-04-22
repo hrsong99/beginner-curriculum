@@ -9,9 +9,10 @@
   body { font-family: monospace; background: #fff; color: #111; overflow-x: hidden; }
   .page { display: none; max-width: 720px; margin: 0 auto; padding: 60px 40px 100px; position: relative; overflow: visible; }
   .page.active { display: block; }
-  /* Registered angle so the conic-gradient can animate */
-  @property --angle { syntax: '<angle>'; initial-value: 0deg; inherits: false; }
-  @keyframes run-border { to { --angle: 360deg; } }
+  /* The trace-border flash is drawn by JS via an SVG overlay (uniform speed along
+     the perimeter, unlike a conic-gradient which warps on rectangles). The
+     .flashing rules below override .active / :focus so the static border is
+     hidden while the SVG trace is drawing. */
 
   .tg { position: relative; margin: 16px 0; padding: 12px 44px 12px 18px; background: #f0f4ff; border: 2px solid transparent; border-left: 4px solid #a0b4d8; border-radius: 0 6px 6px 0; font-size: 13px; line-height: 1.6; cursor: pointer; transition: background 0.15s, border-color 0.15s, box-shadow 0.15s; }
   /* Subtle checkbox indicator — hints at clickability */
@@ -24,14 +25,6 @@
     border-left: 5px solid #3558c4;
     border-radius: 0 6px 6px 0;
     box-shadow: 0 0 0 3px rgba(53, 88, 196, 0.15);
-  }
-  .tg.flashing {
-    background:
-      linear-gradient(#d6e1ff, #d6e1ff) padding-box,
-      conic-gradient(from var(--angle), #3558c4 0deg, rgba(53,88,196,0.15) 60deg, rgba(53,88,196,0.15) 300deg, #3558c4 360deg) border-box;
-    border: 2px solid transparent;
-    border-left: 5px solid #3558c4;
-    animation: run-border 1s linear 1;
   }
   .tg.active .tg-en { color: #111; font-weight: 600; }
   .tg.active .tg-jp { color: #3558c4; }
@@ -56,24 +49,13 @@
   .blank-full { display: block; border-bottom: 1px solid #111; margin: 8px 0 8px 20px; max-width: 420px; height: 1.6em; }
   .blank-input { font-family: monospace; font-size: 16px; border: 2px solid #ccc; border-radius: 4px; outline: none; min-width: 60px; width: 60px; padding: 6px 10px; margin: 0 6px; background: #fafafa; vertical-align: baseline; transition: border-color 0.15s, background 0.15s, box-shadow 0.15s; }
   .blank-input:focus { border: 2px solid #c33; background: #fff; box-shadow: 0 0 0 3px rgba(204, 51, 51, 0.15); }
-  .blank-input.flashing {
-    border: 2px solid transparent;
-    background:
-      linear-gradient(#fff, #fff) padding-box,
-      conic-gradient(from var(--angle), #c33 0deg, rgba(204,51,51,0.18) 60deg, rgba(204,51,51,0.18) 300deg, #c33 360deg) border-box;
-    animation: run-border 1s linear 1;
-  }
   .blank-input-full { display: block; font-family: monospace; font-size: 16px; border: 2px solid #ccc; border-radius: 4px; outline: none; width: 100%; max-width: 420px; margin: 14px 0; padding: 10px 12px; background: #fafafa; transition: border-color 0.15s, background 0.15s, box-shadow 0.15s; }
   .blank-input-full:focus { border: 2px solid #c33; background: #fff; box-shadow: 0 0 0 3px rgba(204, 51, 51, 0.15); }
   /* Remote user is currently focused here — same look as :focus, but set by sync */
   .blank-input.remote-active, .blank-input-full.remote-active { border: 2px solid #c33; background: #fff; box-shadow: 0 0 0 3px rgba(204, 51, 51, 0.15); }
-  .blank-input-full.flashing {
-    border: 2px solid transparent;
-    background:
-      linear-gradient(#fff, #fff) padding-box,
-      conic-gradient(from var(--angle), #c33 0deg, rgba(204,51,51,0.18) 60deg, rgba(204,51,51,0.18) 300deg, #c33 360deg) border-box;
-    animation: run-border 1s linear 1;
-  }
+  /* While flashing, hide the static border/shadow so only the SVG trace is visible */
+  .tg.flashing, .tg.active.flashing { border-top-color: transparent !important; border-right-color: transparent !important; border-bottom-color: transparent !important; box-shadow: none !important; }
+  .blank-input.flashing, .blank-input-full.flashing { border-color: transparent !important; box-shadow: none !important; }
   .answer-hint { font-size: 19px; letter-spacing: 1px; color: #111; margin: 0; padding-top: 2px; }
   .qa { display: grid; grid-template-columns: 64px 1fr; align-items: center; margin: 4px 0; }
   .qa + .qa { margin-top: 8px; }
@@ -1681,19 +1663,69 @@ document.addEventListener('input', function(e) {
 // Both play a one-shot running-border animation via the .flashing class.
 // No cross-activation — the .tg and inputs highlight independently.
 // =============================================
+// One-shot trace-the-border flash using an absolutely-positioned SVG overlay.
+// Uses stroke-dashoffset on a rect so the visible line grows at constant speed
+// along the actual perimeter (a conic-gradient warps speed on non-square boxes).
+var FLASH_DURATION_MS = 500;
 function flashOnce(el) {
-  // Restart the animation even if the class is already present.
-  el.classList.remove('flashing');
-  void el.offsetWidth; // force reflow so the animation restarts
-  el.classList.add('flashing');
-}
+  var rect = el.getBoundingClientRect();
+  if (rect.width === 0 || rect.height === 0) return;
+  var isTg = el.classList.contains('tg');
+  var color = isTg ? '#3558c4' : '#c33';
+  var cs = getComputedStyle(el);
+  // Use the dominant border-radius (handles asymmetric radii like .tg's 0 6px 6px 0)
+  var rx = Math.max(
+    parseFloat(cs.borderTopLeftRadius) || 0,
+    parseFloat(cs.borderTopRightRadius) || 0,
+    parseFloat(cs.borderBottomLeftRadius) || 0,
+    parseFloat(cs.borderBottomRightRadius) || 0
+  );
+  var w = rect.width, h = rect.height;
+  // Perimeter of a rounded rect (straight sides + 4 quarter-arcs)
+  var perim = 2 * (w + h) - 8 * rx + 2 * Math.PI * rx;
 
-// Clean up .flashing after the animation finishes
-document.addEventListener('animationend', function(e) {
-  if (e.animationName === 'run-border') {
-    e.target.classList.remove('flashing');
-  }
-});
+  // Remove any lingering overlay from a previous rapid click
+  var existing = el._flashSvg;
+  if (existing && existing.parentNode) existing.parentNode.removeChild(existing);
+
+  var SVG_NS = 'http://www.w3.org/2000/svg';
+  var svg = document.createElementNS(SVG_NS, 'svg');
+  svg.setAttribute('class', 'flash-svg-overlay');
+  svg.setAttribute('width', w);
+  svg.setAttribute('height', h);
+  svg.style.cssText = 'position:absolute; left:' + (rect.left + window.scrollX) + 'px; top:' + (rect.top + window.scrollY) + 'px; width:' + w + 'px; height:' + h + 'px; pointer-events:none; z-index:150; overflow:visible;';
+
+  var r = document.createElementNS(SVG_NS, 'rect');
+  r.setAttribute('x', '1');
+  r.setAttribute('y', '1');
+  r.setAttribute('width', Math.max(0, w - 2));
+  r.setAttribute('height', Math.max(0, h - 2));
+  r.setAttribute('rx', rx);
+  r.setAttribute('fill', 'none');
+  r.setAttribute('stroke', color);
+  r.setAttribute('stroke-width', '2');
+  r.setAttribute('stroke-dasharray', perim);
+  r.setAttribute('stroke-dashoffset', perim);
+  r.style.transition = 'stroke-dashoffset ' + (FLASH_DURATION_MS / 1000) + 's linear';
+  svg.appendChild(r);
+  document.body.appendChild(svg);
+  el._flashSvg = svg;
+  // Hide the static border while the trace draws, so the line truly grows from 0
+  el.classList.add('flashing');
+
+  // Double-raf so the initial offset is painted before the transition kicks in
+  requestAnimationFrame(function() {
+    requestAnimationFrame(function() {
+      r.setAttribute('stroke-dashoffset', '0');
+    });
+  });
+
+  setTimeout(function() {
+    if (svg.parentNode) svg.parentNode.removeChild(svg);
+    if (el._flashSvg === svg) el._flashSvg = null;
+    el.classList.remove('flashing');
+  }, FLASH_DURATION_MS + 40);
+}
 
 // Click on .tg → toggle its own .active; flash the border once
 document.addEventListener('click', function(e) {
