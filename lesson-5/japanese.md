@@ -139,8 +139,8 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  │                                                          │            |
 |  │  PATTERN:  [noun]は どこですか？                          │            |
 |  │                                                          │            |
-|  │  1. FILL IN:  カフェは______ですか？                      │            |
-|  │               "Where is the cafe?"                        │            |
+|  │  1. FILL IN:  カフェは______です。                        │            |
+|  │               "The cafe is there"                         │            |
 |  │                                                          │            |
 |  │  2. TRANSLATE:  The book is here.                        │            |
 |  │     → ____________________________________              │            |

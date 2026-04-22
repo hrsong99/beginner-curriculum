@@ -1,0 +1,3274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 5: 〜を 〜ます — What Do You Eat, Drink, Read?</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: monospace; background: #fff; color: #111; overflow-x: hidden; }
+  .page { display: none; max-width: 720px; margin: 0 auto; padding: 60px 40px 100px; position: relative; overflow: visible; }
+  .page.active { display: block; }
+  /* Registered angle so the conic-gradient can animate */
+  @property --angle { syntax: '<angle>'; initial-value: 0deg; inherits: false; }
+  @keyframes run-border { to { --angle: 360deg; } }
+
+  .tg { position: relative; margin: 16px 0; padding: 12px 44px 12px 18px; background: #f0f4ff; border: 2px solid transparent; border-left: 4px solid #a0b4d8; border-radius: 0 6px 6px 0; font-size: 13px; line-height: 1.6; cursor: pointer; transition: background 0.15s, border-color 0.15s, box-shadow 0.15s; }
+  /* Subtle checkbox indicator — hints at clickability */
+  .tg::after { content: ''; position: absolute; top: 50%; right: 14px; transform: translateY(-50%); width: 15px; height: 15px; border-radius: 3px; border: 1.5px dashed #b3c1de; background: transparent; transition: all 0.2s; }
+  .tg:hover { background: #e6ecff; }
+  .tg:hover::after { border-color: #6b86c1; border-style: solid; background: #fff; }
+  .tg.active {
+    background: #d6e1ff;
+    border: 2px solid #3558c4;
+    border-left: 5px solid #3558c4;
+    border-radius: 0 6px 6px 0;
+    box-shadow: 0 0 0 3px rgba(53, 88, 196, 0.15);
+  }
+  .tg.flashing {
+    background:
+      linear-gradient(#d6e1ff, #d6e1ff) padding-box,
+      conic-gradient(from var(--angle), #3558c4 0deg, rgba(53,88,196,0.15) 60deg, rgba(53,88,196,0.15) 300deg, #3558c4 360deg) border-box;
+    border: 2px solid transparent;
+    border-left: 5px solid #3558c4;
+    animation: run-border 1s linear 1;
+  }
+  .tg.active .tg-en { color: #111; font-weight: 600; }
+  .tg.active .tg-jp { color: #3558c4; }
+  .tg.active::after {
+    border: 1.5px solid #3558c4;
+    background: #3558c4 url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'><path d='M3 7.2l2.6 2.6 5.4-5.4' stroke='white' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>") center / 11px no-repeat;
+  }
+  .tg .tg-en { color: #444; margin-bottom: 2px; }
+  .tg .tg-jp { color: #999; font-size: 12px; }
+  h1 { font-size: 22px; margin-bottom: 8px; letter-spacing: 0.5px; }
+  h2 { font-size: 18px; font-weight: normal; margin-bottom: 32px; border-bottom: 1px solid #111; padding-bottom: 12px; }
+  h3 { font-size: 17px; margin: 32px 0 12px; }
+  p, li { font-size: 16px; line-height: 1.8; }
+  .en { color: #bbb; font-size: 12px; margin-top: 0; margin-bottom: 0; }
+  .pair { display: flex; flex-direction: column; margin-bottom: 6px; line-height: 1.5; }
+  .pair > .en { padding-left: 24px; }
+  .section > .pair > .en { padding-left: 36px; }
+  .jp { font-size: 19px; letter-spacing: 1px; padding-top: 2px; margin-bottom: 0; }
+  .section { margin: 32px 0; }
+  .pattern { margin: 12px 0 12px 20px; line-height: 2.2; }
+  .blank { display: inline-block; border-bottom: 1px solid #111; min-width: 280px; height: 1.6em; vertical-align: bottom; }
+  .blank-full { display: block; border-bottom: 1px solid #111; margin: 8px 0 8px 20px; max-width: 420px; height: 1.6em; }
+  .blank-input { font-family: monospace; font-size: 16px; border: 2px solid #ccc; border-radius: 4px; outline: none; min-width: 60px; width: 60px; padding: 6px 10px; margin: 0 6px; background: #fafafa; vertical-align: baseline; transition: border-color 0.15s, background 0.15s, box-shadow 0.15s; }
+  .blank-input:focus { border: 2px solid #c33; background: #fff; box-shadow: 0 0 0 3px rgba(204, 51, 51, 0.15); }
+  .blank-input.flashing {
+    border: 2px solid transparent;
+    background:
+      linear-gradient(#fff, #fff) padding-box,
+      conic-gradient(from var(--angle), #c33 0deg, rgba(204,51,51,0.18) 60deg, rgba(204,51,51,0.18) 300deg, #c33 360deg) border-box;
+    animation: run-border 1s linear 1;
+  }
+  .blank-input-full { display: block; font-family: monospace; font-size: 16px; border: 2px solid #ccc; border-radius: 4px; outline: none; width: 100%; max-width: 420px; margin: 14px 0; padding: 10px 12px; background: #fafafa; transition: border-color 0.15s, background 0.15s, box-shadow 0.15s; }
+  .blank-input-full:focus { border: 2px solid #c33; background: #fff; box-shadow: 0 0 0 3px rgba(204, 51, 51, 0.15); }
+  /* Remote user is currently focused here — same look as :focus, but set by sync */
+  .blank-input.remote-active, .blank-input-full.remote-active { border: 2px solid #c33; background: #fff; box-shadow: 0 0 0 3px rgba(204, 51, 51, 0.15); }
+  .blank-input-full.flashing {
+    border: 2px solid transparent;
+    background:
+      linear-gradient(#fff, #fff) padding-box,
+      conic-gradient(from var(--angle), #c33 0deg, rgba(204,51,51,0.18) 60deg, rgba(204,51,51,0.18) 300deg, #c33 360deg) border-box;
+    animation: run-border 1s linear 1;
+  }
+  .answer-hint { font-size: 19px; letter-spacing: 1px; color: #111; margin: 0; padding-top: 2px; }
+  .qa { display: grid; grid-template-columns: 64px 1fr; align-items: center; margin: 4px 0; }
+  .qa + .qa { margin-top: 8px; }
+  .qa .pair > .en { padding-left: 0; }
+  .qa-label { font-weight: bold; font-size: 14px; color: #888; }
+  .box { border: 1px solid #111; padding: 20px 24px; margin: 20px 0; overflow: visible; }
+  .box-label { font-size: 14px; font-weight: bold; margin-bottom: 10px; letter-spacing: 0.5px; }
+  .help-box { border: 1px solid #999; padding: 14px 18px; margin: 12px 0 12px 20px; max-width: 380px; line-height: 2.2; }
+  .review-card { border: 1px solid #111; padding: 18px 22px; margin: 16px 0; }
+  .review-card .card-label { font-size: 13px; font-weight: bold; letter-spacing: 0.5px; color: #666; margin-bottom: 6px; text-transform: uppercase; }
+  .review-card .card-pattern { font-size: 16px; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px dashed #ccc; }
+  .review-card .card-items { margin: 10px 0; }
+  .review-card .card-items .prompt { font-size: 15px; margin: 8px 0 2px; }
+  .review-card .card-items .prompt.star::before { content: "★ "; color: #c33; }
+  .review-card .card-items .prompt:not(.star)::before { content: counter(revitem) ". "; color: #888; }
+  .review-card .card-items { counter-reset: revitem; }
+  .review-card .card-items .prompt:not(.star) { counter-increment: revitem; }
+  .review-card .card-help { border: 1px solid #bbb; background: #fafafa; padding: 10px 14px; margin-top: 12px; font-size: 14px; line-height: 1.9; max-width: 100%; }
+  .review-card .card-help .label { font-size: 11px; font-weight: bold; letter-spacing: 1px; color: #888; margin-bottom: 4px; display: block; }
+  .dialogue { margin: 12px 0 12px 20px; }
+  .dialogue .turn { display: grid; grid-template-columns: 80px 1fr; align-items: start; margin-bottom: 12px; }
+  .dialogue .spk { font-weight: bold; font-size: 15px; padding-top: 16px; }
+  .dialogue .pair { padding-left: 0; }
+  .dialogue .pair .jp { margin-left: 0; }
+  .dialogue .pair .en { margin-left: 0; padding-left: 0; }
+  .check-item { margin: 16px 0; padding-left: 10px; }
+  .check { display: inline-block; border: 2px solid #111; width: 28px; height: 28px; text-align: center; line-height: 26px; margin-right: 10px; vertical-align: middle; font-size: 14px; cursor: pointer; position: relative; overflow: visible; }
+  .check.done { border-color: transparent; }
+  .check .hanamaru { position: absolute; top: -22px; left: -22px; width: 72px; height: 72px; pointer-events: none; }
+  .check .hanamaru path { stroke-dasharray: 2000; stroke-dashoffset: 2000; animation: drawHanamaru 1.5s ease forwards; }
+  @keyframes drawHanamaru { to { stroke-dashoffset: 0; } }
+  .check-item { overflow: visible; }
+  .nav { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; border-top: 1px solid #ddd; padding: 16px; display: flex; justify-content: center; gap: 16px; align-items: center; z-index: 200; }
+  .nav button { font-family: monospace; font-size: 14px; padding: 8px 24px; border: 1px solid #111; background: #fff; cursor: pointer; }
+  .nav button:hover { background: #f0f0f0; }
+  .nav button:disabled { color: #ccc; border-color: #ccc; cursor: default; background: #fff; }
+  .nav span { font-size: 13px; color: #666; min-width: 80px; text-align: center; }
+
+  /* Chat sidebar */
+  #chatPanel { position: fixed; top: 0; right: -360px; width: 360px; bottom: 57px; background: #fff; border-left: 1px solid #ddd; border-bottom: 1px solid #ddd; z-index: 500; display: flex; flex-direction: column; transition: right 0.25s ease; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+  #chatPanel.open { right: 0; }
+  #chatHeader { padding: 14px 16px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; }
+  #chatKeyBar { padding: 8px 16px; border-bottom: 1px solid #eee; background: #f8f8f8; display: flex; gap: 6px; align-items: center; }
+  #chatKeyBar input { flex: 1; font-family: monospace; font-size: 12px; padding: 5px 8px; border: 1px solid #ddd; border-radius: 4px; outline: none; }
+  #chatKeyBar input:focus { border-color: #4a90d9; }
+  #chatKeyBar button { font-size: 11px; padding: 5px 10px; border: 1px solid #ddd; border-radius: 4px; background: #fff; cursor: pointer; white-space: nowrap; }
+  #chatKeyBar button:hover { background: #f0f0f0; }
+  #chatKeyBar .key-status { font-size: 11px; color: #4a4; white-space: nowrap; }
+  #chatKeyWarn { display: none; padding: 6px 16px; background: #fff8e1; font-size: 12px; color: #856404; border-bottom: 1px solid #eee; }
+  #chatHeader h4 { margin: 0; font-size: 14px; font-weight: 600; }
+  #chatClose { background: none; border: none; font-size: 20px; cursor: pointer; color: #999; padding: 0 4px; }
+  #chatClose:hover { color: #333; }
+  #chatMessages { flex: 1; overflow-y: auto; padding: 12px 16px; display: flex; flex-direction: column; gap: 8px; }
+  .chat-msg { max-width: 85%; padding: 8px 12px; border-radius: 12px; font-size: 14px; line-height: 1.5; word-wrap: break-word; }
+  .chat-msg.mine { align-self: flex-end; background: #4a90d9; color: #fff; border-bottom-right-radius: 4px; }
+  .chat-msg.theirs { align-self: flex-start; background: #f0f0f0; color: #111; border-bottom-left-radius: 4px; }
+  .chat-msg .chat-name { font-size: 11px; font-weight: 600; margin-bottom: 2px; opacity: 0.7; }
+  .chat-msg .chat-translation { font-size: 12px; opacity: 0.7; margin-top: 4px; font-style: italic; border-top: 1px solid rgba(128,128,128,0.2); padding-top: 4px; }
+  .chat-msg.mine .chat-translation { border-top-color: rgba(255,255,255,0.25); }
+  #chatInputArea { padding: 10px 12px; border-top: 1px solid #eee; display: flex; gap: 8px; }
+  #chatInput { flex: 1; font-family: inherit; font-size: 14px; padding: 8px 12px; border: 1px solid #ddd; border-radius: 20px; outline: none; }
+  #chatInput:focus { border-color: #4a90d9; }
+  #chatSendBtn { background: #4a90d9; color: #fff; border: none; border-radius: 50%; width: 36px; height: 36px; cursor: pointer; font-size: 16px; display: flex; align-items: center; justify-content: center; }
+  #chatSendBtn:hover { background: #3a7bc8; }
+  #btnChat.has-unread { background: #fff0f0; border-color: #e33; }
+
+  /* Chat toast (IG-live style bubble above chat button when panel is closed) */
+  #chatToast { position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%) translateY(8px); margin-bottom: 8px; max-width: 300px; width: max-content; background: #fff; color: #111; border: 1px solid #ddd; box-shadow: 0 2px 12px rgba(0,0,0,0.12); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 14px; padding: 10px 14px; border-radius: 12px; z-index: 210; pointer-events: none; opacity: 0; transition: opacity 0.3s, transform 0.3s; line-height: 1.5; white-space: normal; }
+  #chatToast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+  #chatToast .toast-name { font-weight: 600; margin-right: 6px; font-size: 12px; color: #4a90d9; }
+  #chatToast .toast-translation { display: block; font-size: 13px; color: #888; margin-top: 4px; padding-top: 4px; border-top: 1px solid #eee; }
+
+  /* Flash animation for new message when panel is open */
+  @keyframes chatFlash { 0% { background: #e8f0fe; } 100% { background: transparent; } }
+  .chat-msg.flash { animation: chatFlash 1.2s ease; }
+  .match-btn { font-family: monospace; font-size: 13px; padding: 6px 14px; border: 1px solid #999; background: #fff; cursor: pointer; transition: all 0.15s; border-radius: 4px; }
+  .match-btn:hover { background: #f0f0f0; border-color: #111; }
+  .match-btn.correct { background: #e8f5e9; border-color: #4caf50; color: #2e7d32; cursor: default; }
+  .match-btn.wrong { background: #ffebee; border-color: #ef5350; color: #c62828; }
+
+  /* --- Inline MC (two-option pick inside a blank) --- */
+  .mc-inline { display: inline-flex; align-items: center; gap: 4px; border: 2px solid #ccc; border-radius: 6px; padding: 2px 4px; margin: 0 4px; background: #fafafa; vertical-align: baseline; }
+  .mc-opt { font-family: monospace; font-size: 16px; padding: 4px 10px; border: none; background: transparent; cursor: pointer; border-radius: 4px; transition: background 0.15s, color 0.15s; }
+  .mc-opt:hover { background: #f0f0f0; }
+  .mc-sep { color: #aaa; font-size: 14px; }
+  .mc-opt.correct { background: #e8f5e9; color: #2e7d32; font-weight: bold; cursor: default; }
+  .mc-opt.wrong { background: #ffebee; color: #c62828; }
+  .mc-inline.locked .mc-opt:not(.correct):not(.wrong) { opacity: 0.4; cursor: default; }
+
+  /* --- Word Reorder --- */
+  .reorder-item { margin: 18px 0 22px 0; }
+  .reorder-item .ro-prompt { font-size: 15px; margin-bottom: 6px; color: #555; }
+  .reorder-answer { min-height: 46px; border: 2px dashed #ccc; border-radius: 6px; padding: 8px 10px; margin: 6px 0; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; background: #fafafa; transition: border-color 0.15s, background 0.15s; }
+  .reorder-answer:empty::before { content: "tap words below to build the sentence…"; color: #bbb; font-size: 13px; }
+  .reorder-item.correct .reorder-answer { border-color: #4caf50; border-style: solid; background: #e8f5e9; }
+  .reorder-item.wrong .reorder-answer { border-color: #ef5350; border-style: solid; background: #ffebee; }
+  .reorder-bank { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+  .word-btn { font-family: monospace; font-size: 15px; padding: 7px 14px; border: 1px solid #999; background: #fff; cursor: pointer; border-radius: 4px; transition: background 0.15s, border-color 0.15s, opacity 0.15s; }
+  .word-btn:hover { background: #f0f0f0; border-color: #111; }
+  .word-btn.used { opacity: 0.3; pointer-events: none; }
+  .reorder-answer .word-btn { background: #e8f5e9; border-color: #4caf50; }
+  .reorder-controls { display: flex; align-items: center; gap: 8px; margin-top: 6px; }
+  .reorder-controls button { font-family: monospace; font-size: 12px; padding: 5px 12px; border: 1px solid #999; background: #fff; cursor: pointer; border-radius: 4px; }
+  .reorder-controls button:hover { background: #f0f0f0; }
+  .reorder-fb { font-size: 13px; }
+  .reorder-fb.correct { color: #2e7d32; }
+  .reorder-fb.wrong { color: #c62828; }
+  .reveal-btn { display: none; }
+  .reorder-item.wrong .reveal-btn { display: inline-block; }
+
+  /* --- Listening: Audio Player + Transcript --- */
+  .audio-box { border: 1.5px solid #3558c4; border-radius: 8px; padding: 18px 22px; margin: 16px 0; background: #f0f4ff; }
+  .audio-box .audio-title { font-size: 14px; font-weight: bold; color: #3558c4; margin-bottom: 10px; letter-spacing: 0.5px; }
+  .audio-box audio { width: 100%; max-width: 460px; }
+  .audio-box .audio-subtitle { font-size: 12px; color: #888; margin-top: 6px; }
+
+  .transcript-btn { display: inline-block; font-family: monospace; font-size: 14px; padding: 10px 20px; border: 2px solid #3558c4; background: #fff; color: #3558c4; cursor: pointer; border-radius: 6px; transition: background 0.15s, color 0.15s; margin: 12px 0; }
+  .transcript-btn:hover { background: #3558c4; color: #fff; }
+  .transcript-reveal { display: none; margin-top: 14px; padding: 16px 20px; border: 1.5px solid #bbb; border-radius: 6px; background: #fafafa; }
+  .transcript-reveal.open { display: block; }
+  .transcript-reveal .pair { margin-bottom: 8px; }
+  .transcript-reveal .pair .jp { font-size: 17px; }
+  .transcript-reveal .pair .en { padding-left: 14px; }
+
+  /* --- Listening: stacked MC choices with bilingual labels --- */
+  .listen-q { margin: 18px 0; }
+  .listen-q .q-en { font-size: 16px; }
+  .listen-q .q-jp { font-size: 14px; color: #666; margin-top: 2px; }
+  .listen-opts { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; margin-left: 20px; }
+  .listen-opt { font-family: monospace; font-size: 15px; padding: 10px 14px; border: 1px solid #999; background: #fff; cursor: pointer; text-align: left; border-radius: 4px; transition: background 0.15s, border-color 0.15s, color 0.15s; }
+  .listen-opt:hover { background: #f0f0f0; border-color: #111; }
+  .listen-opt .opt-en { display: inline-block; min-width: 140px; }
+  .listen-opt .opt-jp { color: #888; font-size: 13px; }
+  .listen-opt.correct { background: #e8f5e9; border-color: #4caf50; color: #2e7d32; cursor: default; }
+  .listen-opt.correct .opt-jp { color: #4caf50; }
+  .listen-opt.wrong { background: #ffebee; border-color: #ef5350; color: #c62828; }
+  .listen-opts.locked .listen-opt:not(.correct):not(.wrong) { opacity: 0.4; cursor: default; }
+
+  .separator { border: none; border-top: 1px dashed #ccc; margin: 28px 0; }
+  ol { padding-left: 20px; }
+  ol li { margin: 4px 0; }
+  ruby { ruby-position: over; }
+  rt { font-size: 0.6em; color: #c4b8a8; font-weight: normal; font-family: 'Helvetica Neue', Arial, sans-serif; letter-spacing: 1px; padding-bottom: 2px; }
+</style>
+</head>
+<body>
+
+<!-- PAGE 0: COVER -->
+<div class="page active" id="p0">
+  <div style="text-align:center; margin: 40px 0 20px">
+    <p style="font-size: 32px; font-weight: bold; line-height: 1.5; font-family: sans-serif;">
+      〜<ruby>を<rt>wo</rt></ruby> 〜<ruby>ます<rt>masu</rt></ruby>
+    </p>
+    <p class="en" style="font-size: 14px; margin-top: 12px;">What Do You Eat, Drink, Read?</p>
+  </div>
+
+  <div class="section" style="margin-top: 40px;">
+    <div class="pair">
+      <div class="jp"><strong>①</strong>&nbsp; 〜さん、こんにちは！またあいましたね。</div>
+      <div class="en">"Hi ~, good to see you again!"</div>
+    </div>
+
+    <div class="pair">
+      <div class="jp"><strong>②</strong>&nbsp; きょうもよろしくおねがいします。</div>
+      <div class="en">"Let's have a great lesson today."</div>
+    </div>
+
+    <div class="pair">
+      <div class="jp"><strong>③</strong>&nbsp; これをよんでください。</div>
+      <div class="en">"Please read this."</div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 1: REVIEW L1 + L2 + L3 + L4 -->
+<div class="page" id="p1">
+  <h1>REVIEW: LESSONS 1 &ndash; 4</h1>
+  <h2></h2>
+
+  <div class="tg">
+    <div class="tg-en">"Quick review — translate each sentence into Japanese."</div>
+    <div class="tg-jp">「ふくしゅうしましょう。にほんごにしてみてね。」</div>
+  </div>
+
+  <div class="review-card">
+    <div class="card-label">LESSON 1: です (I am / he is)</div>
+    <div class="card-pattern"><strong>PATTERN:</strong> [person]<ruby>は<rt>wa</rt></ruby> [noun]<ruby>です<rt>desu</rt></ruby>。</div>
+    <div class="card-items">
+      <div class="prompt"><strong>1. Fill in:</strong> &nbsp; <ruby>わたし<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>がくせい<rt>gakusei</rt></ruby><input type="text" class="blank-input" style="min-width:100px">。 &nbsp; <span style="color:#888; font-size:14px">"I am a student"</span></div>
+      <div class="prompt" style="margin-top:14px"><strong>2. Translate:</strong> &nbsp; She is a teacher.</div>
+      <input type="text" class="blank-input-full">
+    </div>
+    <div class="card-help">
+      <span class="label">Q2 WORDS</span>
+      <ruby>かのじょ<rt>kanojo</rt></ruby>(she) &nbsp; <ruby>せんせい<rt>sensei</rt></ruby>(teacher)
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="review-card">
+    <div class="card-label">LESSON 2: これ・それ・あれ (this / that / over there)</div>
+    <div class="card-pattern"><strong>PATTERN:</strong> <ruby>これ<rt>kore</rt></ruby> / <ruby>それ<rt>sore</rt></ruby> / <ruby>あれ<rt>are</rt></ruby><ruby>は<rt>wa</rt></ruby> [noun]<ruby>です<rt>desu</rt></ruby>。</div>
+    <div class="card-items">
+      <div class="prompt"><strong>1. Fill in:</strong> &nbsp; <input type="text" class="blank-input" style="min-width:100px"><ruby>は<rt>wa</rt></ruby><ruby>ほん<rt>hon</rt></ruby><ruby>です<rt>desu</rt></ruby>。 &nbsp; <span style="color:#888; font-size:14px">"This is a book"</span></div>
+      <div class="prompt" style="margin-top:14px"><strong>2. Translate:</strong> &nbsp; That over there is a bag.</div>
+      <input type="text" class="blank-input-full">
+    </div>
+    <div class="card-help">
+      <span class="label">Q2 WORDS</span>
+      <ruby>あれ<rt>are</rt></ruby>(that over there) &nbsp; <ruby>かばん<rt>kaban</rt></ruby>(bag)
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="review-card">
+    <div class="card-label">LESSON 3: どこ (where)</div>
+    <div class="card-pattern"><strong>PATTERN:</strong> [noun]<ruby>は<rt>wa</rt></ruby><ruby>どこ<rt>doko</rt></ruby><ruby>です<rt>desu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+    <div class="card-items">
+      <div class="prompt"><strong>1. Fill in:</strong> &nbsp; <ruby>カフェ<rt>kafe</rt></ruby><ruby>は<rt>wa</rt></ruby><input type="text" class="blank-input" style="min-width:100px"><ruby>です<rt>desu</rt></ruby>。 &nbsp; <span style="color:#888; font-size:14px">"The cafe is there"</span></div>
+      <div class="prompt" style="margin-top:14px"><strong>2. Translate:</strong> &nbsp; The book is here.</div>
+      <input type="text" class="blank-input-full">
+    </div>
+    <div class="card-help">
+      <span class="label">Q2 WORDS</span>
+      <ruby>ほん<rt>hon</rt></ruby>(book) &nbsp; <ruby>ここ<rt>koko</rt></ruby>(here)
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="review-card">
+    <div class="card-label">LESSON 4: あります・います (is there)</div>
+    <div class="card-pattern"><strong>PATTERN:</strong> [place]<ruby>に<rt>ni</rt></ruby> [thing]<ruby>が<rt>ga</rt></ruby><ruby>あります<rt>arimasu</rt></ruby>。<br>
+      [place]<ruby>に<rt>ni</rt></ruby> [person / animal]<ruby>が<rt>ga</rt></ruby><ruby>います<rt>imasu</rt></ruby>。</div>
+    <div class="card-items">
+      <div class="prompt"><strong>1. Fill in:</strong> &nbsp; <ruby>へや<rt>heya</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>テレビ<rt>terebi</rt></ruby><ruby>が<rt>ga</rt></ruby><input type="text" class="blank-input" style="min-width:100px">。 &nbsp; <span style="color:#888; font-size:14px">"There is a TV in the room"</span></div>
+      <div class="prompt" style="margin-top:14px"><strong>2. Translate:</strong> &nbsp; There is a cat at home.</div>
+      <input type="text" class="blank-input-full">
+    </div>
+    <div class="card-help">
+      <span class="label">Q2 WORDS</span>
+      <ruby>いえ<rt>ie</rt></ruby>(home) &nbsp; <ruby>ねこ<rt>neko</rt></ruby>(cat)
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 2: TODAY'S PATTERNS -->
+<div class="page" id="p2">
+  <div class="tg">
+    <div class="tg-en">"Let's read together. Copy my pronunciation closely — slow is OK."</div>
+    <div class="tg-jp">「いっしょによみましょう。はつおんをよくまねしてね。ゆっくりでいいですよ。」</div>
+  </div>
+
+  <div class="section">
+    <h3>TODAY'S PATTERNS</h3>
+
+    <p><strong>1. I DO something</strong> &mdash; [noun]<ruby>を<rt>wo</rt></ruby> [verb]<ruby>ます<rt>masu</rt></ruby></p>
+    <div class="pattern">
+      <div class="pair">
+        <div class="jp">&bull; <ruby>わたし<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>ごはん<rt>gohan</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>たべます<rt>tabemasu</rt></ruby>。</div>
+        <div class="en">I eat rice.</div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <ruby>わたし<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>コーヒー<rt>kōhī</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>のみます<rt>nomimasu</rt></ruby>。</div>
+        <div class="en">I drink coffee.</div>
+      </div>
+    </div>
+
+    <p style="margin-top:20px"><strong>2. Do you…?</strong> &mdash; [noun]<ruby>を<rt>wo</rt></ruby> [verb]<ruby>ます<rt>masu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</p>
+    <p class="en" style="margin-left:16px; margin-bottom:8px">Answer: はい、〜ます。／ いいえ、〜ません。</p>
+    <div class="pattern">
+      <div class="pair">
+        <div class="jp">&bull; <ruby>ほん<rt>hon</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>よみます<rt>yomimasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="en">Do you read books?</div>
+      </div>
+      <div class="pair">
+        <div class="jp">&nbsp;&nbsp;&rarr; <ruby>はい<rt>hai</rt></ruby>、<ruby>よみます<rt>yomimasu</rt></ruby>。／ <ruby>いいえ<rt>iie</rt></ruby>、<ruby>よみません<rt>yomimasen</rt></ruby>。</div>
+        <div class="en">Yes, I do. / No, I don't.</div>
+      </div>
+      <div class="pair" style="margin-top:10px">
+        <div class="jp">&bull; <ruby>テレビ<rt>terebi</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>みます<rt>mimasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="en">Do you watch TV?</div>
+      </div>
+      <div class="pair">
+        <div class="jp">&nbsp;&nbsp;&rarr; <ruby>はい<rt>hai</rt></ruby>、<ruby>みます<rt>mimasu</rt></ruby>。／ <ruby>いいえ<rt>iie</rt></ruby>、<ruby>みません<rt>mimasen</rt></ruby>。</div>
+        <div class="en">Yes, I do. / No, I don't.</div>
+      </div>
+    </div>
+
+    <div class="help-box" style="margin-left:20px; max-width:560px; margin-top:20px">
+      <strong>REMEMBER</strong><br>
+      <ruby>を<rt>wo</rt></ruby> &rarr; the thing you act on (rice, coffee, book...)<br>
+      〜<ruby>ます<rt>masu</rt></ruby> &rarr; I do it &nbsp; (positive)<br>
+      〜<ruby>ます<rt>masu</rt></ruby><ruby>か<rt>ka</rt></ruby> &rarr; Do you…? &nbsp; (question)<br>
+      〜<ruby>ません<rt>masen</rt></ruby> &rarr; I don't &nbsp; (negative)
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 3: PATTERN DRILL A — 〜を〜ます (AFFIRMATIVE) -->
+<div class="page" id="p3">
+  <h1>PATTERN DRILL A: 〜<ruby>を<rt>wo</rt></ruby> 〜<ruby>ます<rt>masu</rt></ruby> (I DO something)</h1>
+  <h2></h2>
+
+  <p>PATTERN: [noun]<ruby>を<rt>wo</rt></ruby> [verb]<ruby>ます<rt>masu</rt></ruby>。</p>
+  <p class="en" style="margin-left:16px; margin-bottom:20px">I [verb] [noun].</p>
+
+  <div class="section">
+    <div class="tg">
+      <div class="tg-en">"Let's read together. Copy my pronunciation closely — slow is OK."</div>
+      <div class="tg-jp">「いっしょによみましょう。はつおんをよくまねしてね。ゆっくりでいいですよ。」</div>
+    </div>
+    <p><strong>1. Read Together:</strong></p>
+    <div class="pattern">
+      <div class="pair">
+        <div class="jp">&bull; <ruby>ごはん<rt>gohan</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>たべます<rt>tabemasu</rt></ruby>。</div>
+        <div class="en">I eat rice.</div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <ruby>みず<rt>mizu</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>のみます<rt>nomimasu</rt></ruby>。</div>
+        <div class="en">I drink water.</div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <ruby>ほん<rt>hon</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>よみます<rt>yomimasu</rt></ruby>。</div>
+        <div class="en">I read a book.</div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <ruby>テレビ<rt>terebi</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>みます<rt>mimasu</rt></ruby>。</div>
+        <div class="en">I watch TV.</div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <ruby>おんがく<rt>ongaku</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>ききます<rt>kikimasu</rt></ruby>。</div>
+        <div class="en">I listen to music.</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <div class="tg">
+      <div class="tg-en">"Fill in the blank and read the whole thing!"</div>
+      <div class="tg-jp">「くうらんにことばをいれて、ぜんぶよんでみましょう！」</div>
+    </div>
+    <p><strong>2. Fill in the Blanks:</strong></p>
+    <div class="pattern">
+      <div class="pair">
+        <div class="jp">&bull; <ruby>ごはん<rt>gohan</rt></ruby><input type="text" class="blank-input" style="min-width:80px"><ruby>たべます<rt>tabemasu</rt></ruby>。 <span class="en">I eat rice.</span></div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <ruby>みず<rt>mizu</rt></ruby><ruby>を<rt>wo</rt></ruby><input type="text" class="blank-input" style="min-width:80px">。 <span class="en">I drink water.</span></div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <ruby>ほん<rt>hon</rt></ruby><input type="text" class="blank-input" style="min-width:80px"><ruby>よみます<rt>yomimasu</rt></ruby>。 <span class="en">I read a book.</span></div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <input type="text" class="blank-input" style="min-width:80px"><ruby>を<rt>wo</rt></ruby><ruby>みます<rt>mimasu</rt></ruby>。 <span class="en">I watch TV.</span></div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <ruby>おんがく<rt>ongaku</rt></ruby><ruby>を<rt>wo</rt></ruby><input type="text" class="blank-input" style="min-width:80px">。 <span class="en">I listen to music.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <div class="tg">
+      <div class="tg-en">"Translate to Japanese — hints are OK."</div>
+      <div class="tg-jp">「にほんごにしてみましょう。ヒントをみてもいいですよ。」</div>
+    </div>
+    <p><strong>3. Translate:</strong></p>
+    <div class="pattern">
+      &bull; I drink coffee.<br>
+      <input type="text" class="blank-input-full">
+      <span style="color:#999; font-size:14px">(coffee = <ruby>コーヒー<rt>kōhī</rt></ruby>)</span>
+    </div>
+    <div class="pattern" style="margin-top:12px">
+      &bull; I eat bread.<br>
+      <input type="text" class="blank-input-full">
+      <span style="color:#999; font-size:14px">(bread = <ruby>パン<rt>pan</rt></ruby>)</span>
+    </div>
+    <div class="pattern" style="margin-top:12px">
+      &bull; I read a book.<br>
+      <input type="text" class="blank-input-full">
+      <span style="color:#999; font-size:14px">(book = <ruby>ほん<rt>hon</rt></ruby>)</span>
+    </div>
+    <div class="pattern" style="margin-top:12px">
+      &bull; I watch a movie.<br>
+      <input type="text" class="blank-input-full">
+      <span style="color:#999; font-size:14px">(movie = <ruby>えいが<rt>eiga</rt></ruby>)</span>
+    </div>
+    <div class="pattern" style="margin-top:12px">
+      &bull; I listen to music.<br>
+      <input type="text" class="blank-input-full">
+      <span style="color:#999; font-size:14px">(music = <ruby>おんがく<rt>ongaku</rt></ruby>)</span>
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <div class="tg">
+      <div class="tg-en">"Make your own! What do you eat or drink every day?"</div>
+      <div class="tg-jp">「じぶんのぶんをつくってみましょう！まいにちなにをたべますか？なにをのみますか？」</div>
+    </div>
+    <p><strong>4. Make Your Own:</strong></p>
+    <input type="text" class="blank-input-full">
+  </div>
+</div>
+
+<!-- PAGE 4: PATTERN DRILL B — 〜ますか / 〜ません -->
+<div class="page" id="p4">
+  <h1>PATTERN DRILL B: 〜<ruby>ます<rt>masu</rt></ruby><ruby>か<rt>ka</rt></ruby>？ / 〜<ruby>ません<rt>masen</rt></ruby> (DO YOU…? / I DON'T)</h1>
+  <h2></h2>
+
+  <p>PATTERN: [noun]<ruby>を<rt>wo</rt></ruby> [verb]<ruby>ます<rt>masu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</p>
+  <p class="en" style="margin-left:16px; margin-bottom:20px">&rarr; はい、〜ます。 / いいえ、〜ません。</p>
+
+  <div class="section">
+    <div class="tg">
+      <div class="tg-en">"Next pattern. Let's ask and answer together."</div>
+      <div class="tg-jp">「つぎのパターンです。しつもんとこたえ、いっしょにやってみましょう。」</div>
+    </div>
+    <p><strong>1. Read Together:</strong></p>
+    <div class="pattern">
+      <div class="pair">
+        <div class="jp">&bull; <ruby>コーヒー<rt>kōhī</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>のみます<rt>nomimasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="en">Do you drink coffee?</div>
+      </div>
+      <div class="pair">
+        <div class="jp">&nbsp;&nbsp;&rarr; <ruby>はい<rt>hai</rt></ruby>、<ruby>のみます<rt>nomimasu</rt></ruby>。</div>
+        <div class="en">Yes, I do.</div>
+      </div>
+      <div class="pair" style="margin-top:8px">
+        <div class="jp">&bull; <ruby>テレビ<rt>terebi</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>みます<rt>mimasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="en">Do you watch TV?</div>
+      </div>
+      <div class="pair">
+        <div class="jp">&nbsp;&nbsp;&rarr; <ruby>いいえ<rt>iie</rt></ruby>、<ruby>みません<rt>mimasen</rt></ruby>。</div>
+        <div class="en">No, I don't.</div>
+      </div>
+      <div class="pair" style="margin-top:8px">
+        <div class="jp">&bull; <ruby>ほん<rt>hon</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>よみます<rt>yomimasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="en">Do you read books?</div>
+      </div>
+      <div class="pair">
+        <div class="jp">&nbsp;&nbsp;&rarr; <ruby>はい<rt>hai</rt></ruby>、<ruby>よみます<rt>yomimasu</rt></ruby>。</div>
+        <div class="en">Yes, I do.</div>
+      </div>
+      <div class="pair" style="margin-top:8px">
+        <div class="jp">&bull; <ruby>パン<rt>pan</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>たべます<rt>tabemasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="en">Do you eat bread?</div>
+      </div>
+      <div class="pair">
+        <div class="jp">&nbsp;&nbsp;&rarr; <ruby>いいえ<rt>iie</rt></ruby>、<ruby>たべません<rt>tabemasen</rt></ruby>。</div>
+        <div class="en">No, I don't.</div>
+      </div>
+      <div class="pair" style="margin-top:8px">
+        <div class="jp">&bull; <ruby>おんがく<rt>ongaku</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>ききます<rt>kikimasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="en">Do you listen to music?</div>
+      </div>
+      <div class="pair">
+        <div class="jp">&nbsp;&nbsp;&rarr; <ruby>はい<rt>hai</rt></ruby>、<ruby>ききます<rt>kikimasu</rt></ruby>。</div>
+        <div class="en">Yes, I do.</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <div class="tg">
+      <div class="tg-en">"Fill in the blank and read the whole thing!"</div>
+      <div class="tg-jp">「くうらんにことばをいれて、ぜんぶよんでみましょう！」</div>
+    </div>
+    <p><strong>2. Fill in the Blanks:</strong></p>
+    <div class="pattern">
+      <div class="pair">
+        <div class="jp">&bull; <ruby>コーヒー<rt>kōhī</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>のみ<rt>nomi</rt></ruby><input type="text" class="blank-input" style="min-width:80px">？ <span class="en">Do you drink coffee?</span></div>
+      </div>
+      <div class="pair">
+        <div class="jp">&nbsp;&nbsp;&rarr; <ruby>はい<rt>hai</rt></ruby>、<ruby>のみ<rt>nomi</rt></ruby><input type="text" class="blank-input" style="min-width:80px">。 <span class="en">Yes, I do.</span></div>
+      </div>
+      <div class="pair" style="margin-top:6px">
+        <div class="jp">&bull; <ruby>テレビ<rt>terebi</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>み<rt>mi</rt></ruby><input type="text" class="blank-input" style="min-width:80px">？ <span class="en">Do you watch TV?</span></div>
+      </div>
+      <div class="pair">
+        <div class="jp">&nbsp;&nbsp;&rarr; <ruby>いいえ<rt>iie</rt></ruby>、<ruby>み<rt>mi</rt></ruby><input type="text" class="blank-input" style="min-width:80px">。 <span class="en">No, I don't.</span></div>
+      </div>
+      <div class="pair" style="margin-top:6px">
+        <div class="jp">&bull; <ruby>ほん<rt>hon</rt></ruby><input type="text" class="blank-input" style="min-width:80px"><ruby>よみます<rt>yomimasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？ <span class="en">Do you read books?</span></div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <div class="tg">
+      <div class="tg-en">"Translate to Japanese."</div>
+      <div class="tg-jp">「にほんごにしてみましょう。」</div>
+    </div>
+    <p><strong>3. Translate:</strong></p>
+    <div class="pattern">
+      &bull; Do you drink water?<br>
+      <input type="text" class="blank-input-full">
+      <span style="color:#999; font-size:14px">(water = <ruby>みず<rt>mizu</rt></ruby>)</span>
+    </div>
+    <div class="pattern" style="margin-top:12px">
+      &bull; Do you eat rice?<br>
+      <input type="text" class="blank-input-full">
+      <span style="color:#999; font-size:14px">(rice = <ruby>ごはん<rt>gohan</rt></ruby>)</span>
+    </div>
+    <div class="pattern" style="margin-top:12px">
+      &bull; No, I don't watch movies.<br>
+      <input type="text" class="blank-input-full">
+      <span style="color:#999; font-size:14px">(movie = <ruby>えいが<rt>eiga</rt></ruby>)</span>
+    </div>
+    <div class="pattern" style="margin-top:12px">
+      &bull; Yes, I listen to music.<br>
+      <input type="text" class="blank-input-full">
+      <span style="color:#999; font-size:14px">(music = <ruby>おんがく<rt>ongaku</rt></ruby>)</span>
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <div class="tg">
+      <div class="tg-en">"Now you ask ME a question!"</div>
+      <div class="tg-jp">「こんどは、あなたがわたしにしつもんしてね！」</div>
+    </div>
+    <p><strong>4. Ask the Tutor:</strong></p>
+    <input type="text" class="blank-input-full">
+  </div>
+</div>
+
+<!-- PAGE 5: VOCAB CONNECT (MATCHING) -->
+<div class="page" id="p5">
+  <h1>VOCAB CONNECT</h1>
+  <h2></h2>
+
+  <div class="tg">
+    <div class="tg-en">"Draw a line from English to Japanese. Say each pair out loud!"</div>
+    <div class="tg-jp">「えいごとにほんごを せんで つないでね。そして こえに だして よみましょう！」</div>
+  </div>
+
+  <div class="section">
+    <p><strong>TODAY'S VERBS</strong></p>
+    <div class="match-game"
+         data-left='[{"id":"v1","html":"eat"},{"id":"v2","html":"drink"},{"id":"v3","html":"read"},{"id":"v4","html":"watch"},{"id":"v5","html":"listen"}]'
+         data-right='[{"id":"v3","text":"よみます"},{"id":"v1","text":"たべます"},{"id":"v5","text":"ききます"},{"id":"v2","text":"のみます"},{"id":"v4","text":"みます"}]'></div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <p><strong>TODAY'S OBJECTS</strong></p>
+    <div class="match-game"
+         data-left='[{"id":"o1","html":"rice"},{"id":"o2","html":"water"},{"id":"o3","html":"coffee"},{"id":"o4","html":"movie"},{"id":"o5","html":"music"}]'
+         data-right='[{"id":"o3","text":"コーヒー"},{"id":"o1","text":"ごはん"},{"id":"o5","text":"おんがく"},{"id":"o2","text":"みず"},{"id":"o4","text":"えいが"}]'></div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <p><strong>REVIEW FROM BEFORE</strong> &nbsp; <span style="color:#888; font-size:14px">(L1 &middot; L2 &middot; L4)</span></p>
+    <div class="match-game"
+         data-left='[{"id":"r1","html":"student"},{"id":"r2","html":"teacher"},{"id":"r3","html":"book"},{"id":"r4","html":"cat"},{"id":"r5","html":"this"}]'
+         data-right='[{"id":"r4","text":"ねこ"},{"id":"r1","text":"がくせい"},{"id":"r3","text":"ほん"},{"id":"r2","text":"せんせい"},{"id":"r5","text":"これ"}]'></div>
+  </div>
+</div>
+
+<!-- PAGE 6: QUICK PRACTICE (MC + REORDER) -->
+<div class="page" id="p6">
+  <h1>QUICK PRACTICE</h1>
+  <h2></h2>
+
+  <div class="tg">
+    <div class="tg-en">"Easy round! Just tap and check."</div>
+    <div class="tg-jp">「かんたんなラウンドです。タップしてたしかめてみましょう！」</div>
+  </div>
+
+  <div class="section">
+    <p><strong>A. MULTIPLE CHOICE &mdash; Tap the right word.</strong></p>
+    <div class="pattern">
+      <div class="pair">
+        <div class="jp">&bull; <ruby>ごはん<rt>gohan</rt></ruby><ruby>を<rt>wo</rt></ruby>
+          <span class="mc-inline">
+            <button class="mc-opt" data-correct="1"><ruby>たべます<rt>tabemasu</rt></ruby></button>
+            <span class="mc-sep">/</span>
+            <button class="mc-opt"><ruby>のみます<rt>nomimasu</rt></ruby></button>
+          </span>。
+        </div>
+        <div class="en">I eat rice.</div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <ruby>みず<rt>mizu</rt></ruby><ruby>を<rt>wo</rt></ruby>
+          <span class="mc-inline">
+            <button class="mc-opt"><ruby>みます<rt>mimasu</rt></ruby></button>
+            <span class="mc-sep">/</span>
+            <button class="mc-opt" data-correct="1"><ruby>のみます<rt>nomimasu</rt></ruby></button>
+          </span>。
+        </div>
+        <div class="en">I drink water.</div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <ruby>ほん<rt>hon</rt></ruby><ruby>を<rt>wo</rt></ruby>
+          <span class="mc-inline">
+            <button class="mc-opt" data-correct="1"><ruby>よみます<rt>yomimasu</rt></ruby></button>
+            <span class="mc-sep">/</span>
+            <button class="mc-opt"><ruby>ききます<rt>kikimasu</rt></ruby></button>
+          </span>。
+        </div>
+        <div class="en">I read a book.</div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <ruby>テレビ<rt>terebi</rt></ruby>
+          <span class="mc-inline">
+            <button class="mc-opt" data-correct="1"><ruby>を<rt>wo</rt></ruby></button>
+            <span class="mc-sep">/</span>
+            <button class="mc-opt"><ruby>に<rt>ni</rt></ruby></button>
+          </span>
+          <ruby>みます<rt>mimasu</rt></ruby>。
+        </div>
+        <div class="en">I watch TV.</div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <ruby>コーヒー<rt>kōhī</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>のみ<rt>nomi</rt></ruby>
+          <span class="mc-inline">
+            <button class="mc-opt"><ruby>ます<rt>masu</rt></ruby></button>
+            <span class="mc-sep">/</span>
+            <button class="mc-opt" data-correct="1"><ruby>ますか<rt>masu ka</rt></ruby></button>
+          </span>？
+        </div>
+        <div class="en">Do you drink coffee?</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <div class="tg">
+      <div class="tg-en">"Now tap the words in the right order."</div>
+      <div class="tg-jp">「ことばをただしいじゅんばんにならべてみましょう。」</div>
+    </div>
+    <p><strong>B. WORD REORDER &mdash; Put the words in the correct order.</strong></p>
+
+    <div class="reorder-item" id="ro1" data-answer="ごはん|を|たべます">
+      <div class="ro-prompt">1. I eat rice.</div>
+      <div class="reorder-answer" id="ro1-answer"></div>
+      <div class="reorder-bank" id="ro1-bank">
+        <button class="word-btn" onclick="pickWord(this,'ro1')"><ruby>たべます<rt>tabemasu</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro1')"><ruby>を<rt>wo</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro1')"><ruby>ごはん<rt>gohan</rt></ruby></button>
+      </div>
+      <div class="reorder-controls">
+        <button onclick="checkOrder('ro1')">Check</button>
+        <button onclick="resetOrder('ro1')">Reset</button>
+        <button class="reveal-btn" onclick="revealOrder('ro1')">Show Answer</button>
+        <span class="reorder-fb" id="ro1-fb"></span>
+      </div>
+    </div>
+
+    <div class="reorder-item" id="ro2" data-answer="コーヒー|を|のみます">
+      <div class="ro-prompt">2. I drink coffee.</div>
+      <div class="reorder-answer" id="ro2-answer"></div>
+      <div class="reorder-bank" id="ro2-bank">
+        <button class="word-btn" onclick="pickWord(this,'ro2')"><ruby>のみます<rt>nomimasu</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro2')"><ruby>コーヒー<rt>kōhī</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro2')"><ruby>を<rt>wo</rt></ruby></button>
+      </div>
+      <div class="reorder-controls">
+        <button onclick="checkOrder('ro2')">Check</button>
+        <button onclick="resetOrder('ro2')">Reset</button>
+        <button class="reveal-btn" onclick="revealOrder('ro2')">Show Answer</button>
+        <span class="reorder-fb" id="ro2-fb"></span>
+      </div>
+    </div>
+
+    <div class="reorder-item" id="ro3" data-answer="ほん|を|よみます">
+      <div class="ro-prompt">3. I read a book.</div>
+      <div class="reorder-answer" id="ro3-answer"></div>
+      <div class="reorder-bank" id="ro3-bank">
+        <button class="word-btn" onclick="pickWord(this,'ro3')"><ruby>を<rt>wo</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro3')"><ruby>よみます<rt>yomimasu</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro3')"><ruby>ほん<rt>hon</rt></ruby></button>
+      </div>
+      <div class="reorder-controls">
+        <button onclick="checkOrder('ro3')">Check</button>
+        <button onclick="resetOrder('ro3')">Reset</button>
+        <button class="reveal-btn" onclick="revealOrder('ro3')">Show Answer</button>
+        <span class="reorder-fb" id="ro3-fb"></span>
+      </div>
+    </div>
+
+    <div class="reorder-item" id="ro4" data-answer="テレビ|を|みます|か">
+      <div class="ro-prompt">4. Do you watch TV?</div>
+      <div class="reorder-answer" id="ro4-answer"></div>
+      <div class="reorder-bank" id="ro4-bank">
+        <button class="word-btn" onclick="pickWord(this,'ro4')"><ruby>か<rt>ka</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro4')"><ruby>みます<rt>mimasu</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro4')"><ruby>テレビ<rt>terebi</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro4')"><ruby>を<rt>wo</rt></ruby></button>
+      </div>
+      <div class="reorder-controls">
+        <button onclick="checkOrder('ro4')">Check</button>
+        <button onclick="resetOrder('ro4')">Reset</button>
+        <button class="reveal-btn" onclick="revealOrder('ro4')">Show Answer</button>
+        <span class="reorder-fb" id="ro4-fb"></span>
+      </div>
+    </div>
+
+    <div class="reorder-item" id="ro5" data-answer="おんがく|を|ききません">
+      <div class="ro-prompt">5. I don't listen to music.</div>
+      <div class="reorder-answer" id="ro5-answer"></div>
+      <div class="reorder-bank" id="ro5-bank">
+        <button class="word-btn" onclick="pickWord(this,'ro5')"><ruby>ききません<rt>kikimasen</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro5')"><ruby>おんがく<rt>ongaku</rt></ruby></button>
+        <button class="word-btn" onclick="pickWord(this,'ro5')"><ruby>を<rt>wo</rt></ruby></button>
+      </div>
+      <div class="reorder-controls">
+        <button onclick="checkOrder('ro5')">Check</button>
+        <button onclick="resetOrder('ro5')">Reset</button>
+        <button class="reveal-btn" onclick="revealOrder('ro5')">Show Answer</button>
+        <span class="reorder-fb" id="ro5-fb"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 7: LISTENING ACTIVITY -->
+<div class="page" id="p7">
+  <h1>LISTENING</h1>
+  <h2></h2>
+
+  <div class="tg">
+    <div class="tg-en">"Press play and listen. Don't peek at the transcript yet!"</div>
+    <div class="tg-jp">「さいせいボタンをおして、きいてみましょう。まだ スクリプトは みないでね！」</div>
+  </div>
+
+  <div class="audio-box">
+    <div class="audio-title">Yuki's Daily Routine &nbsp; <span style="color:#888; font-weight:normal; font-size:12px">(<ruby>ゆき<rt>Yuki</rt></ruby>の<ruby>いちにち<rt>ichinichi</rt></ruby>)</span></div>
+    <audio controls preload="metadata" src="audio/yuki-daily-routine.mp3">
+      Your browser does not support the audio element.
+    </audio>
+    <div class="audio-subtitle">Listen as many times as you need!</div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <p><strong>COMPREHENSION &mdash; Multiple Choice</strong></p>
+    <div class="tg">
+      <div class="tg-en">"Answer the questions. Listen again if you need to!"</div>
+      <div class="tg-jp">「しつもんにこたえましょう。もういちどきいてもいいですよ！」</div>
+    </div>
+
+    <div class="listen-q">
+      <div class="q-en"><strong>1.</strong> What does Yuki drink in the morning?</div>
+      <div class="q-jp"><ruby>ゆき<rt>Yuki</rt></ruby>さんは<ruby>あさ<rt>asa</rt></ruby>なにを<ruby>のみます<rt>nomimasu</rt></ruby>か？</div>
+      <div class="listen-opts">
+        <button class="listen-opt"><span class="opt-en">water</span><span class="opt-jp"><ruby>みず<rt>mizu</rt></ruby></span></button>
+        <button class="listen-opt" data-correct="1"><span class="opt-en">coffee</span><span class="opt-jp"><ruby>コーヒー<rt>kōhī</rt></ruby></span></button>
+      </div>
+    </div>
+
+    <div class="listen-q">
+      <div class="q-en"><strong>2.</strong> Does Yuki eat rice?</div>
+      <div class="q-jp"><ruby>ゆき<rt>Yuki</rt></ruby>さんは<ruby>ごはん<rt>gohan</rt></ruby>を<ruby>たべます<rt>tabemasu</rt></ruby>か？</div>
+      <div class="listen-opts">
+        <button class="listen-opt" data-correct="1"><span class="opt-en">Yes</span><span class="opt-jp"><ruby>はい<rt>hai</rt></ruby>、<ruby>たべます<rt>tabemasu</rt></ruby></span></button>
+        <button class="listen-opt"><span class="opt-en">No</span><span class="opt-jp"><ruby>いいえ<rt>iie</rt></ruby>、<ruby>たべません<rt>tabemasen</rt></ruby></span></button>
+      </div>
+    </div>
+
+    <div class="listen-q">
+      <div class="q-en"><strong>3.</strong> What does Yuki do at night?</div>
+      <div class="q-jp"><ruby>よる<rt>yoru</rt></ruby>、<ruby>ゆき<rt>Yuki</rt></ruby>さんはなにをしますか？</div>
+      <div class="listen-opts">
+        <button class="listen-opt"><span class="opt-en">watches TV</span><span class="opt-jp"><ruby>テレビ<rt>terebi</rt></ruby>を<ruby>みます<rt>mimasu</rt></ruby></span></button>
+        <button class="listen-opt" data-correct="1"><span class="opt-en">reads a book</span><span class="opt-jp"><ruby>ほん<rt>hon</rt></ruby>を<ruby>よみます<rt>yomimasu</rt></ruby></span></button>
+      </div>
+    </div>
+
+    <div class="listen-q">
+      <div class="q-en"><strong>4.</strong> What does Yuki listen to before bed?</div>
+      <div class="q-jp"><ruby>ねるまえ<rt>neru mae</rt></ruby>に<ruby>ゆき<rt>Yuki</rt></ruby>さんはなにを<ruby>ききます<rt>kikimasu</rt></ruby>か？</div>
+      <div class="listen-opts">
+        <button class="listen-opt" data-correct="1"><span class="opt-en">music</span><span class="opt-jp"><ruby>おんがく<rt>ongaku</rt></ruby></span></button>
+        <button class="listen-opt"><span class="opt-en">the news</span><span class="opt-jp"><ruby>ニュース<rt>nyūsu</rt></ruby></span></button>
+      </div>
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <div class="tg">
+      <div class="tg-en">"All done? Click to see the full script and read along!"</div>
+      <div class="tg-jp">「ぜんぶできたら、ボタンをおしてスクリプトをみてみましょう！」</div>
+    </div>
+    <button class="transcript-btn" onclick="toggleTranscript(this)">&#9654; SHOW FULL TRANSCRIPT &nbsp; <span style="font-size:12px; color:#888">(スクリプトをみる)</span></button>
+    <div class="transcript-reveal" id="transcript1">
+      <div class="pair">
+        <div class="jp"><ruby>こんにちは<rt>konnichiwa</rt></ruby>、<ruby>ゆき<rt>Yuki</rt></ruby><ruby>です<rt>desu</rt></ruby>。</div>
+        <div class="en">Hi, I'm Yuki.</div>
+      </div>
+      <div class="pair">
+        <div class="jp"><ruby>まいあさ<rt>mai asa</rt></ruby><ruby>コーヒー<rt>kōhī</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>のみます<rt>nomimasu</rt></ruby>。</div>
+        <div class="en">Every morning I drink coffee.</div>
+      </div>
+      <div class="pair">
+        <div class="jp"><ruby>ごはん<rt>gohan</rt></ruby><ruby>も<rt>mo</rt></ruby><ruby>たべます<rt>tabemasu</rt></ruby>。</div>
+        <div class="en">I also eat rice.</div>
+      </div>
+      <div class="pair">
+        <div class="jp"><ruby>よる<rt>yoru</rt></ruby>、<ruby>うち<rt>uchi</rt></ruby><ruby>で<rt>de</rt></ruby><ruby>ほん<rt>hon</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>よみます<rt>yomimasu</rt></ruby>。</div>
+        <div class="en">At night, I read books at home.</div>
+      </div>
+      <div class="pair">
+        <div class="jp"><ruby>そして<rt>soshite</rt></ruby>、<ruby>ねるまえ<rt>neru mae</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>おんがく<rt>ongaku</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>ききます<rt>kikimasu</rt></ruby>。</div>
+        <div class="en">And before bed, I listen to music.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 8: SHORT DIALOGUES -->
+<div class="page" id="p8">
+  <h1>SHORT DIALOGUES</h1>
+  <h2></h2>
+
+  <div class="section">
+    <div class="tg">
+      <div class="tg-en">"Ask this in Japanese."</div>
+      <div class="tg-jp">「にほんごできいてみましょう。」</div>
+    </div>
+    <p><strong>DIALOGUE 1:</strong></p>
+    <div class="dialogue">
+      <div class="turn">
+        <div class="spk">Student:</div>
+        <div class="pair">
+          <div class="jp"><input type="text" class="blank-input" style="min-width:280px"></div>
+          <div class="en">Do you drink coffee?</div>
+        </div>
+      </div>
+      <div class="turn">
+        <div class="spk">Tutor:</div>
+        <div class="pair">
+          <div class="jp"><ruby>はい<rt>hai</rt></ruby>、<ruby>コーヒー<rt>kōhī</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>のみます<rt>nomimasu</rt></ruby>。</div>
+          <div class="en">Yes, I drink coffee.</div>
+        </div>
+      </div>
+    </div>
+    <div class="help-box">
+      <ruby>コーヒー<rt>kōhī</rt></ruby>(coffee)
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <div class="tg">
+      <div class="tg-en">"I'll ask. Answer in Japanese."</div>
+      <div class="tg-jp">「わたしがききます。にほんごでこたえてね。」</div>
+    </div>
+    <p><strong>DIALOGUE 2:</strong></p>
+    <div class="dialogue">
+      <div class="turn">
+        <div class="spk">Tutor:</div>
+        <div class="pair">
+          <div class="jp"><ruby>ほん<rt>hon</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>よみます<rt>yomimasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+          <div class="en">Do you read books?</div>
+        </div>
+      </div>
+      <div class="turn">
+        <div class="spk">Student:</div>
+        <div class="pair">
+          <div class="jp"><input type="text" class="blank-input" style="min-width:280px"></div>
+          <div class="en">Yes, I read books.</div>
+        </div>
+      </div>
+    </div>
+    <div class="help-box">
+      <ruby>ほん<rt>hon</rt></ruby>(book)
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <div class="tg">
+      <div class="tg-en">"Your turn — ask in Japanese."</div>
+      <div class="tg-jp">「あなたのばんです。にほんごできいてみてね。」</div>
+    </div>
+    <p><strong>DIALOGUE 3:</strong></p>
+    <div class="dialogue">
+      <div class="turn">
+        <div class="spk">Student:</div>
+        <div class="pair">
+          <div class="jp"><input type="text" class="blank-input" style="min-width:280px"></div>
+          <div class="en">Do you watch movies?</div>
+        </div>
+      </div>
+      <div class="turn">
+        <div class="spk">Tutor:</div>
+        <div class="pair">
+          <div class="jp"><ruby>いいえ<rt>iie</rt></ruby>、<ruby>みません<rt>mimasen</rt></ruby>。</div>
+          <div class="en">No, I don't.</div>
+        </div>
+      </div>
+    </div>
+    <div class="help-box">
+      <ruby>えいが<rt>eiga</rt></ruby>(movie)
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <div class="tg">
+      <div class="tg-en">"Last one! I'll ask — answer in Japanese."</div>
+      <div class="tg-jp">「さいごです！しつもんします、にほんごでこたえてね。」</div>
+    </div>
+    <p><strong>DIALOGUE 4:</strong></p>
+    <div class="dialogue">
+      <div class="turn">
+        <div class="spk">Tutor:</div>
+        <div class="pair">
+          <div class="jp"><ruby>おんがく<rt>ongaku</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>ききます<rt>kikimasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+          <div class="en">Do you listen to music?</div>
+        </div>
+      </div>
+      <div class="turn">
+        <div class="spk">Student:</div>
+        <div class="pair">
+          <div class="jp"><input type="text" class="blank-input" style="min-width:280px"></div>
+          <div class="en">Yes, I listen to music.</div>
+        </div>
+      </div>
+    </div>
+    <div class="help-box">
+      <ruby>おんがく<rt>ongaku</rt></ruby>(music)
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 9: GUIDED CONVERSATION -->
+<div class="page" id="p9">
+  <h1>CONVERSATION: GUIDED READING</h1>
+  <h2></h2>
+
+  <div class="tg">
+    <div class="tg-en">"Let's read together. I'll be Yuki, you be Alex."</div>
+    <div class="tg-jp">「いっしょによみましょう。わたしがゆきで、あなたがアレックスです。」</div>
+  </div>
+
+  <div class="box">
+    <div class="box-label">CONTEXT / <ruby>じょうきょう<rt>jōkyō</rt></ruby></div>
+    Alex and Yuki are at a cafe ordering lunch.<br>
+    <ruby>アレックス<rt>Arekkusu</rt></ruby><ruby>と<rt>to</rt></ruby><ruby>ゆき<rt>Yuki</rt></ruby><ruby>が<rt>ga</rt></ruby><ruby>カフェ<rt>kafe</rt></ruby><ruby>で<rt>de</rt></ruby><ruby>ひるごはん<rt>hirugohan</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>ちゅうもん<rt>chūmon</rt></ruby><ruby>します<rt>shimasu</rt></ruby>。
+  </div>
+
+  <div class="dialogue" style="margin-top:16px">
+    <div class="turn">
+      <div class="spk">YUKI:</div>
+      <div class="pair">
+        <div class="jp"><ruby>アレックス<rt>Arekkusu</rt></ruby>さん、<ruby>なに<rt>nani</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>のみます<rt>nomimasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="en">Alex, what will you drink?</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">ALEX:</div>
+      <div class="pair">
+        <div class="jp"><ruby>わたし<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>コーヒー<rt>kōhī</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>のみます<rt>nomimasu</rt></ruby>。</div>
+        <div class="en">I'll drink coffee.</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">YUKI:</div>
+      <div class="pair">
+        <div class="jp"><ruby>ごはん<rt>gohan</rt></ruby><ruby>は<rt>wa</rt></ruby>？ <ruby>パン<rt>pan</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>たべます<rt>tabemasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="en">How about food? Do you eat bread?</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">ALEX:</div>
+      <div class="pair">
+        <div class="jp"><ruby>はい<rt>hai</rt></ruby>、<ruby>パン<rt>pan</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>たべます<rt>tabemasu</rt></ruby>。<ruby>ゆき<rt>Yuki</rt></ruby>さんは？</div>
+        <div class="en">Yes, I'll eat bread. How about you, Yuki?</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">YUKI:</div>
+      <div class="pair">
+        <div class="jp"><ruby>わたし<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>ごはん<rt>gohan</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>たべます<rt>tabemasu</rt></ruby>。<ruby>みず<rt>mizu</rt></ruby><ruby>も<rt>mo</rt></ruby><ruby>のみます<rt>nomimasu</rt></ruby>。</div>
+        <div class="en">I'll eat rice. I'll drink water too.</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">ALEX:</div>
+      <div class="pair">
+        <div class="jp"><ruby>いい<rt>ii</rt></ruby><ruby>です<rt>desu</rt></ruby>ね！</div>
+        <div class="en">Sounds good!</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tg">
+    <div class="tg-en">"Great job! Now let's swap. This time I'll be Alex."</div>
+    <div class="tg-jp">「じょうずですね！こうたいしましょう。こんどはわたしがアレックスです。」</div>
+  </div>
+</div>
+
+<!-- PAGE 10: MEMORY CONVERSATION -->
+<div class="page" id="p10">
+  <h1>CONVERSATION: MEMORY CHECK</h1>
+  <h2></h2>
+
+  <div class="tg">
+    <div class="tg-en">"Same conversation, but now from memory! I'll be Yuki. You're Alex — say the full sentence."</div>
+    <div class="tg-jp">「おなじかいわです。こんどはおぼえていってみましょう！わたしがゆきです。あなたはアレックス — ぜんぶのぶんをいってください。」</div>
+  </div>
+
+  <p style="margin-bottom:16px; font-size:16px; font-weight:bold;">Tutor = Yuki / Student = Alex</p>
+
+  <div class="dialogue" style="margin-top:16px">
+    <div class="turn">
+      <div class="spk">YUKI (tutor):</div>
+      <div class="pair">
+        <div class="jp"><ruby>なに<rt>nani</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>のみます<rt>nomimasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="en">What will you drink?</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">ALEX (you):</div>
+      <div class="pair">
+        <div class="jp"><ruby>わたし<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>コーヒー<rt>kōhī</rt></ruby><ruby>を<rt>wo</rt></ruby><input type="text" class="blank-input" style="min-width:140px">。</div>
+        <div class="en">I'll drink coffee.</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">YUKI (tutor):</div>
+      <div class="pair">
+        <div class="jp"><ruby>パン<rt>pan</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>たべます<rt>tabemasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="en">Do you eat bread?</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">ALEX (you):</div>
+      <div class="pair">
+        <div class="jp"><ruby>はい<rt>hai</rt></ruby>、<ruby>パン<rt>pan</rt></ruby><ruby>を<rt>wo</rt></ruby><input type="text" class="blank-input" style="min-width:140px">。</div>
+        <div class="en">Yes, I'll eat bread.</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">YUKI (tutor):</div>
+      <div class="pair">
+        <div class="jp"><ruby>わたし<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>ごはん<rt>gohan</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>たべます<rt>tabemasu</rt></ruby>。<ruby>みず<rt>mizu</rt></ruby><ruby>も<rt>mo</rt></ruby><ruby>のみます<rt>nomimasu</rt></ruby>。</div>
+        <div class="en">I'll eat rice. I'll drink water too.</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">ALEX (you):</div>
+      <div class="pair">
+        <div class="jp"><input type="text" class="blank-input" style="min-width:120px"><ruby>です<rt>desu</rt></ruby>ね！</div>
+        <div class="en">Sounds good!</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 11: FREE DISCUSSION -->
+<div class="page" id="p11">
+  <h1>FREE DISCUSSION</h1>
+  <h2></h2>
+
+  <div class="tg">
+    <div class="tg-en">"I'll ask — you answer. Then ask me the same question back!"</div>
+    <div class="tg-jp">「わたしがききます、こたえてください。そのあと、おなじしつもんをしてね！」</div>
+  </div>
+
+  <div class="section">
+    <p><strong>ROUND 1: WHAT DO YOU DRINK?</strong></p>
+    <div class="dialogue">
+      <div class="turn">
+        <div class="spk">Tutor:</div>
+        <div class="pair">
+          <div class="jp">「<ruby>まいあさ<rt>mai asa</rt></ruby><ruby>なに<rt>nani</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>のみます<rt>nomimasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？」</div>
+          <div class="en">"What do you drink every morning?"</div>
+        </div>
+      </div>
+      <div class="turn">
+        <div class="spk">Student:</div>
+        <div class="pair">
+          <div class="jp"><input type="text" class="blank-input" style="min-width:280px"></div>
+        </div>
+      </div>
+      <div class="turn">
+        <div class="spk">Student:</div>
+        <div class="pair">
+          <div class="jp">「<ruby>まいあさ<rt>mai asa</rt></ruby><ruby>なに<rt>nani</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>のみます<rt>nomimasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？」</div>
+          <div class="en">(Ask the same question back!)</div>
+        </div>
+      </div>
+      <div class="turn">
+        <div class="spk">Tutor:</div>
+        <div class="pair">
+          <div class="jp"><input type="text" class="blank-input" style="min-width:280px" placeholder="しぜんにこたえましょう"></div>
+        </div>
+      </div>
+    </div>
+    <div class="help-box" style="margin-left:0; max-width:520px;">
+      <strong>WORDS</strong><br>
+      <ruby>コーヒー<rt>kōhī</rt></ruby>(coffee) &nbsp; <ruby>みず<rt>mizu</rt></ruby>(water)<br>
+      <ruby>おちゃ<rt>ocha</rt></ruby>(tea) &nbsp; <ruby>ぎゅうにゅう<rt>gyūnyū</rt></ruby>(milk)
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <p><strong>ROUND 2: WHAT DO YOU READ / WATCH?</strong></p>
+    <div class="dialogue">
+      <div class="turn">
+        <div class="spk">Tutor:</div>
+        <div class="pair">
+          <div class="jp">「<ruby>よる<rt>yoru</rt></ruby><ruby>なに<rt>nani</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>みます<rt>mimasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？ <ruby>なに<rt>nani</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>よみます<rt>yomimasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？」</div>
+          <div class="en">"What do you watch / read at night?"</div>
+        </div>
+      </div>
+      <div class="turn">
+        <div class="spk">Student:</div>
+        <div class="pair">
+          <div class="jp"><input type="text" class="blank-input" style="min-width:280px"></div>
+        </div>
+      </div>
+      <div class="turn">
+        <div class="spk">Student:</div>
+        <div class="pair">
+          <div class="jp">「<ruby>よる<rt>yoru</rt></ruby><ruby>なに<rt>nani</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>みます<rt>mimasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？」</div>
+          <div class="en">(Ask the same question back!)</div>
+        </div>
+      </div>
+      <div class="turn">
+        <div class="spk">Tutor:</div>
+        <div class="pair">
+          <div class="jp"><input type="text" class="blank-input" style="min-width:280px" placeholder="しぜんにこたえましょう"></div>
+        </div>
+      </div>
+    </div>
+    <div class="help-box" style="margin-left:0; max-width:520px;">
+      <strong>WORDS</strong><br>
+      <ruby>テレビ<rt>terebi</rt></ruby>(TV) &nbsp; <ruby>えいが<rt>eiga</rt></ruby>(movie) &nbsp; <ruby>ほん<rt>hon</rt></ruby>(book)<br>
+      <ruby>まんが<rt>manga</rt></ruby>(comic) &nbsp; <ruby>ニュース<rt>nyūsu</rt></ruby>(news)
+    </div>
+  </div>
+
+  <hr class="separator">
+
+  <div class="section">
+    <p><strong>ROUND 3: WHAT DO YOU NOT DO?</strong></p>
+    <div class="dialogue">
+      <div class="turn">
+        <div class="spk">Tutor:</div>
+        <div class="pair">
+          <div class="jp">「<ruby>なに<rt>nani</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>たべません<rt>tabemasen</rt></ruby><ruby>か<rt>ka</rt></ruby>？ <ruby>なに<rt>nani</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>のみません<rt>nomimasen</rt></ruby><ruby>か<rt>ka</rt></ruby>？」</div>
+          <div class="en">"What don't you eat or drink?"</div>
+        </div>
+      </div>
+      <div class="turn">
+        <div class="spk">Student:</div>
+        <div class="pair">
+          <div class="jp"><input type="text" class="blank-input" style="min-width:280px"></div>
+        </div>
+      </div>
+      <div class="turn">
+        <div class="spk">Student:</div>
+        <div class="pair">
+          <div class="jp">「<ruby>なに<rt>nani</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>たべません<rt>tabemasen</rt></ruby><ruby>か<rt>ka</rt></ruby>？」</div>
+          <div class="en">(Ask the same question back!)</div>
+        </div>
+      </div>
+      <div class="turn">
+        <div class="spk">Tutor:</div>
+        <div class="pair">
+          <div class="jp"><input type="text" class="blank-input" style="min-width:280px" placeholder="しぜんにこたえましょう"></div>
+        </div>
+      </div>
+    </div>
+    <div class="help-box" style="margin-left:0; max-width:520px;">
+      <strong>WORDS</strong><br>
+      <ruby>ごはん<rt>gohan</rt></ruby>(rice) &nbsp; <ruby>パン<rt>pan</rt></ruby>(bread) &nbsp; <ruby>にく<rt>niku</rt></ruby>(meat)<br>
+      <ruby>さかな<rt>sakana</rt></ruby>(fish) &nbsp; <ruby>やさい<rt>yasai</rt></ruby>(vegetables)
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 12: ROLEPLAY -->
+<div class="page" id="p12">
+  <h1>ROLEPLAY</h1>
+  <h2>"At the Cafe"</h2>
+
+  <h3>SCENARIO</h3>
+  <div class="pair" style="margin-bottom:16px">
+    <div class="jp"><ruby>あなた<rt>anata</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>カフェ<rt>kafe</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>きました<rt>kimashita</rt></ruby>。<br>
+    <ruby>メニュー<rt>menyū</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>みて<rt>mite</rt></ruby>、<ruby>ちゅうもん<rt>chūmon</rt></ruby>しましょう！</div>
+    <div class="en" style="font-size:16px; padding-left:0; color:#888">You've arrived at a cafe. Look at the menu and order!</div>
+  </div>
+
+  <h3>GOAL</h3>
+  <div class="pair" style="margin-bottom:16px">
+    <div class="jp"><ruby>ともだち<rt>tomodachi</rt></ruby>（＝チューター）<ruby>に<rt>ni</rt></ruby><ruby>なに<rt>nani</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>たべる<rt>taberu</rt></ruby>か、<ruby>なに<rt>nani</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>のむ<rt>nomu</rt></ruby>か<ruby>きいて<rt>kiite</rt></ruby>から、じぶんも<ruby>ちゅうもん<rt>chūmon</rt></ruby>しましょう！</div>
+    <div class="en" style="font-size:16px; padding-left:0; color:#888">Ask your friend (the tutor) what they'll eat and drink, then order for yourself!</div>
+  </div>
+  <div class="pair" style="margin-bottom:16px">
+    <div class="jp"><ruby>やる<rt>yaru</rt></ruby>こと:<br>
+      &nbsp;① ともだちに「<ruby>なに<rt>nani</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>のみます<rt>nomimasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？」ときく<br>
+      &nbsp;② ともだちに「<ruby>なに<rt>nani</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>たべます<rt>tabemasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？」ときく<br>
+      &nbsp;③ じぶんも<ruby>ちゅうもん<rt>chūmon</rt></ruby>する</div>
+    <div class="en" style="font-size:16px; padding-left:0; color:#888">To do:<br>
+      &nbsp;① Ask the friend what they'll drink<br>
+      &nbsp;② Ask the friend what they'll eat<br>
+      &nbsp;③ Order something for yourself</div>
+  </div>
+
+  <h3 style="margin-top:40px">HINTS</h3>
+  <div class="help-box" style="max-width:520px; margin-left:0; margin-top:8px; line-height:2.4">
+    <strong>PATTERN</strong><br>
+    <ruby>なに<rt>nani</rt></ruby><ruby>を<rt>wo</rt></ruby>＿＿<ruby>ます<rt>masu</rt></ruby><ruby>か<rt>ka</rt></ruby>？ &nbsp; <span class="en">What will you ＿＿?</span><br>
+    <ruby>わたし<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby>＿＿<ruby>を<rt>wo</rt></ruby>＿＿<ruby>ます<rt>masu</rt></ruby>。 &nbsp; <span class="en">I'll ＿＿ ＿＿.</span><br>
+    <strong>WORDS</strong><br>
+    <ruby>コーヒー<rt>kōhī</rt></ruby>(coffee) &nbsp; <ruby>みず<rt>mizu</rt></ruby>(water) &nbsp; <ruby>おちゃ<rt>ocha</rt></ruby>(tea)<br>
+    <ruby>ごはん<rt>gohan</rt></ruby>(rice) &nbsp; <ruby>パン<rt>pan</rt></ruby>(bread) &nbsp; <ruby>ケーキ<rt>kēki</rt></ruby>(cake)
+  </div>
+
+  <div style="margin-top:32px">
+    <textarea class="roleplay-notes" placeholder="Write your conversation here..." oninput="this.style.height='auto';this.style.height=this.scrollHeight+'px'" style="display:block; font-family:monospace; font-size:16px; border:2px solid #ccc; border-radius:4px; outline:none; width:100%; min-height:240px; padding:14px 16px; background:#fafafa; resize:none; line-height:1.8; box-sizing:border-box; overflow:hidden;"></textarea>
+  </div>
+</div>
+
+<!-- PAGE 13: TRAVEL IN JAPAN — AT A RESTAURANT -->
+<div class="page" id="p13">
+  <div class="tg">
+    <div class="tg-en">"Imagine you're at a small Japanese restaurant!"</div>
+    <div class="tg-jp">「にほんのちいさなレストランにいるとおもってね！」</div>
+  </div>
+
+  <h1>TRAVEL IN JAPAN: AT A RESTAURANT</h1>
+  <h2></h2>
+
+  <p>You are a traveler. Fill in the blanks and say them out loud!</p>
+
+  <div class="box">
+    <div class="box-label">CONTEXT / <ruby>じょうきょう<rt>jōkyō</rt></ruby></div>
+    The waiter is taking your order at a small Japanese restaurant.<br>
+    Tell them what you'll eat and drink.
+  </div>
+
+  <div class="help-box" style="margin-left:0; max-width:520px;">
+    <strong>NEW WORDS</strong><br>
+    <ruby>すし<rt>sushi</rt></ruby> (sushi) &nbsp; <ruby>おちゃ<rt>ocha</rt></ruby> (green tea)<br>
+    <ruby>おねがいします<rt>onegai shimasu</rt></ruby> (please) &nbsp; <ruby>メニュー<rt>menyū</rt></ruby> (menu)
+  </div>
+
+  <div class="dialogue" style="margin-top:20px">
+    <div class="turn">
+      <div class="spk">WAITER:</div>
+      <div class="pair">
+        <div class="jp"><ruby>いらっしゃいませ<rt>irasshaimase</rt></ruby>！<ruby>なに<rt>nani</rt></ruby><ruby>を<rt>wo</rt></ruby><input type="text" class="blank-input" style="min-width:120px"><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="en">Welcome! What will you eat?</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">YOU:</div>
+      <div class="pair">
+        <div class="jp"><ruby>わたし<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>すし<rt>sushi</rt></ruby><ruby>を<rt>wo</rt></ruby><input type="text" class="blank-input" style="min-width:120px">。</div>
+        <div class="en">I'll have sushi.</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">WAITER:</div>
+      <div class="pair">
+        <div class="jp"><ruby>なに<rt>nani</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>のみます<rt>nomimasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="en">What would you like to drink?</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">YOU:</div>
+      <div class="pair">
+        <div class="jp"><ruby>おちゃ<rt>ocha</rt></ruby><ruby>を<rt>wo</rt></ruby><input type="text" class="blank-input" style="min-width:120px">。</div>
+        <div class="en">I'll have green tea.</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">WAITER:</div>
+      <div class="pair">
+        <div class="jp"><ruby>パン<rt>pan</rt></ruby><ruby>も<rt>mo</rt></ruby><input type="text" class="blank-input" style="min-width:120px"><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="en">Will you also eat bread?</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">YOU:</div>
+      <div class="pair">
+        <div class="jp"><ruby>いいえ<rt>iie</rt></ruby>、<ruby>パン<rt>pan</rt></ruby><ruby>は<rt>wa</rt></ruby><input type="text" class="blank-input" style="min-width:120px">。</div>
+        <div class="en">No, I won't eat bread.</div>
+      </div>
+    </div>
+
+    <div class="turn">
+      <div class="spk">YOU:</div>
+      <div class="pair">
+        <div class="jp"><ruby>おねがいします<rt>onegai shimasu</rt></ruby>！</div>
+        <div class="en">Please (please bring it)!</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 14: BONUS — TRANSLATE (NO HINTS) -->
+<div class="page" id="p14">
+  <h1>BONUS: TRANSLATE &mdash; NO HINTS!</h1>
+  <h2><span class="en" style="font-size:14px">(Skip if you don't have time!)</span></h2>
+
+  <div class="tg">
+    <div class="tg-en">"Translate these — no hints!"</div>
+    <div class="tg-jp">「ヒントなしでにほんごにしてみましょう！」</div>
+  </div>
+
+  <div class="section">
+    <p><strong>1.</strong> I eat rice.</p>
+    <input type="text" class="blank-input-full">
+  </div>
+
+  <div class="section">
+    <p><strong>2.</strong> I drink coffee.</p>
+    <input type="text" class="blank-input-full">
+  </div>
+
+  <div class="section">
+    <p><strong>3.</strong> Do you read books?</p>
+    <input type="text" class="blank-input-full">
+  </div>
+
+  <div class="section">
+    <p><strong>4.</strong> I don't watch TV.</p>
+    <input type="text" class="blank-input-full">
+  </div>
+
+  <div class="section">
+    <p><strong>5.</strong> Do you listen to music?</p>
+    <input type="text" class="blank-input-full">
+  </div>
+
+  <div class="section">
+    <p><strong>6.</strong> I eat bread and drink water.</p>
+    <input type="text" class="blank-input-full">
+  </div>
+</div>
+
+<!-- PAGE 15: MISSION COMPLETE -->
+<div class="page" id="p15">
+  <h1><ruby>ミッション<rt>misshon</rt></ruby><ruby>かんりょう<rt>kanryō</rt></ruby>！</h1>
+  <h2>Mission Complete!</h2>
+
+  <div class="tg">
+    <div class="tg-en">"Great job today! Let's check them off."</div>
+    <div class="tg-jp">「きょうはじょうずでしたね！いっしょにチェックしましょう。」</div>
+  </div>
+
+  <div class="box" style="padding:24px 28px">
+    <p style="margin-bottom:16px; font-size:17px"><strong><ruby>きょう<rt>kyō</rt></ruby><ruby>の<rt>no</rt></ruby><ruby>ミッション<rt>misshon</rt></ruby>:</strong></p>
+
+    <div class="check-item" style="font-size:18px; margin:20px 0">
+      <span class="check">&nbsp;</span>
+      <strong>PATTERN 1:</strong> ＿＿<ruby>を<rt>wo</rt></ruby> ＿＿<ruby>ます<rt>masu</rt></ruby>。
+      <div style="font-size:13px; color:#888; margin-left:50px; margin-top:4px">(I do something)</div>
+    </div>
+
+    <div class="check-item" style="font-size:18px; margin:20px 0">
+      <span class="check">&nbsp;</span>
+      <strong>PATTERN 2:</strong> ＿＿<ruby>を<rt>wo</rt></ruby> ＿＿<ruby>ます<rt>masu</rt></ruby><ruby>か<rt>ka</rt></ruby>？
+      <div style="font-size:13px; color:#888; margin-left:50px; margin-top:4px">(Do you…? Yes / No)</div>
+    </div>
+  </div>
+
+  <div class="section" style="margin-top:28px">
+    <div class="tg">
+      <div class="tg-en">"Let's read one more time. Perfect! See you next lesson!"</div>
+      <div class="tg-jp">「さいごにもういちどよみましょう。かんぺき！つぎのレッスンであいましょう！」</div>
+    </div>
+    <p><strong>KEY EXPRESSIONS</strong> &mdash; <ruby>もういちど<rt>mō ichido</rt></ruby><ruby>よんで<rt>yonde</rt></ruby><ruby>みましょう<rt>mimashō</rt></ruby>！</p>
+    <div class="pattern">
+      <div class="pair">
+        <div class="jp">&bull; <ruby>ごはん<rt>gohan</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>たべます<rt>tabemasu</rt></ruby>。</div>
+        <div class="en">I eat rice.</div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <ruby>コーヒー<rt>kōhī</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>のみます<rt>nomimasu</rt></ruby>。</div>
+        <div class="en">I drink coffee.</div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <ruby>ほん<rt>hon</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>よみます<rt>yomimasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="en">Do you read books?</div>
+      </div>
+      <div class="pair">
+        <div class="jp">&bull; <ruby>テレビ<rt>terebi</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>みません<rt>mimasen</rt></ruby>。</div>
+        <div class="en">I don't watch TV.</div>
+      </div>
+    </div>
+  </div>
+
+  <button class="finish-btn" id="finishBtn">おわり！ / Class Complete!</button>
+
+</div>
+
+
+<!-- Drawing/Typing overlay canvas -->
+<canvas id="drawCanvas"></canvas>
+<!-- Laser pointer canvas (fading trails) -->
+<canvas id="laserCanvas"></canvas>
+<!-- Text annotations container -->
+<div id="textLayer"></div>
+
+<nav class="nav">
+  <button id="prev" onclick="go(-1)" disabled>&larr; Back</button>
+  <span id="indicator">1 / 16</span>
+  <button id="next" onclick="go(1)">Next &rarr;</button>
+  <span style="border-left:1px solid #ddd; height:20px; margin:0 4px"></span>
+  <button id="btnDraw" onclick="setMode('draw')" style="padding:8px 14px">&#9998; Draw</button>
+  <button id="btnErase" onclick="setMode('erase')" style="padding:8px 14px">&#9003; Erase</button>
+  <span style="position:relative; display:inline-block;">
+    <button id="btnClear" onclick="toggleClearMenu()" style="padding:8px 14px; color:#c33">&#10005; Clear</button>
+    <div id="clearMenu" style="display:none; position:absolute; bottom:100%; left:0; margin-bottom:6px; background:#fff; border:1px solid #ddd; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,.15); min-width:140px; z-index:400;">
+      <button onclick="clearPage(); hideClearMenu()" style="display:block; width:100%; text-align:left; padding:10px 14px; border:none; background:none; cursor:pointer; font-family:monospace; font-size:13px; color:#c33;">This page</button>
+      <button onclick="clearAll(); hideClearMenu()" style="display:block; width:100%; text-align:left; padding:10px 14px; border:none; border-top:1px solid #eee; background:none; cursor:pointer; font-family:monospace; font-size:13px; color:#c33;">All pages</button>
+    </div>
+  </span>
+  <span style="border-left:1px solid #ddd; height:20px; margin:0 4px"></span>
+  <span style="position:relative; display:inline-block;">
+    <button id="btnChat" onclick="toggleChat()" style="padding:8px 14px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Chat</button>
+    <div id="chatToast"></div>
+  </span>
+</nav>
+
+<!-- Chat panel -->
+<div id="chatPanel">
+  <div id="chatHeader">
+    <h4 style="margin:0;">Chat <span style="font-weight:normal; color:#999; font-size:12px;">EN ↔ JP auto-translate</span></h4>
+    <button id="chatClose">&times;</button>
+  </div>
+  <div id="chatKeyBar">
+    <input id="chatKeyInput" type="password" placeholder="Gemini API key">
+    <button id="chatKeySave">Save</button>
+    <span id="chatKeyStatus"></span>
+  </div>
+  <div id="chatKeyWarn">Enter a Gemini API key above to enable translation.</div>
+  <div id="chatMessages"></div>
+  <div id="chatInputArea">
+    <input id="chatInput" type="text" placeholder="Type a message..." autocomplete="off">
+    <button id="chatSendBtn">↑</button>
+  </div>
+</div>
+
+<!-- Remote cursor -->
+<div id="remoteCursor" style="display:none; position:absolute; z-index:300; pointer-events:none; ">
+  <svg width="20" height="20" viewBox="0 0 20 20"><polygon points="0,0 0,16 4.5,12.5 8,19 10,18 6.5,11 12,11" fill="#4a90d9" stroke="#fff" stroke-width="1"/></svg>
+  <span id="remoteCursorName" style="position:absolute; left:18px; top:14px; background:#4a90d9; color:#fff; font-family:monospace; font-size:11px; padding:2px 6px; border-radius:3px; white-space:nowrap;"></span>
+</div>
+<!-- Off-screen cursor indicator -->
+<div id="cursorIndicator" style="display:none; position:fixed; z-index:350; pointer-events:none;">
+  <svg width="28" height="28" viewBox="0 0 28 28"><polygon points="14,2 26,26 14,20 2,26" fill="#4a90d9" stroke="#fff" stroke-width="1.5"/></svg>
+  <span id="indicatorName" style="position:absolute; left:50%; transform:translateX(-50%); top:30px; background:#4a90d9; color:#fff; font-family:monospace; font-size:10px; padding:1px 5px; border-radius:3px; white-space:nowrap;"></span>
+</div>
+
+<style>
+  #drawCanvas { position: absolute; top: 0; left: 0; z-index: 100; pointer-events: none; }
+  #laserCanvas { position: absolute; top: 0; left: 0; z-index: 99; pointer-events: none; }
+  #drawCanvas.active { pointer-events: auto; cursor: crosshair; }
+  #drawCanvas.erase { cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><circle cx="20" cy="20" r="19" fill="none" stroke="%23999" stroke-width="1.5"/></svg>') 20 20, auto; }
+  #textLayer { position: absolute; top: 0; left: 0; width: 100%; min-height: 100vh; pointer-events: none; z-index: 101; }
+  #textLayer.active { pointer-events: auto; cursor: text; }
+  #textLayer .anno-wrap { position: absolute; display: flex; align-items: flex-start; pointer-events: auto; }
+  #textLayer .anno-controls { display: flex; flex-direction: column; gap: 2px; padding: 2px 3px 0 0; }
+  #textLayer .anno-handle { cursor: grab; color: #ccc; font-size: 11px; user-select: none; line-height: 1; }
+  #textLayer .anno-handle:hover { color: #999; }
+  #textLayer .anno-handle:active { cursor: grabbing; }
+  #textLayer .anno-delete { cursor: pointer; color: #ddd; font-size: 11px; user-select: none; line-height: 1; border: none; background: none; padding: 0; }
+  #textLayer .anno-delete:hover { color: #c33; }
+  #textLayer .annotation { background: rgba(255,255,255,0.85); border: 1px dashed #e0b0b0; font-family: monospace; font-size: 16px; color: #c33; outline: none; min-width: 60px; max-width: 300px; padding: 4px 6px; resize: none; overflow: hidden; field-sizing: content; }
+  .nav button.active-mode { background: #111 !important; color: #fff !important; }
+
+  /* --- Matching Game --- */
+  .match-game { position: relative; margin: 12px 0 12px 0; padding: 12px 0; }
+  .match-game .match-columns { display: flex; justify-content: space-between; align-items: flex-start; position: relative; }
+  .match-left, .match-right { display: flex; flex-direction: column; gap: 14px; z-index: 1; }
+  .match-left { align-items: flex-end; }
+  .match-right { align-items: flex-start; }
+  .match-item { display: flex; align-items: center; gap: 8px; font-size: 19px; letter-spacing: 1px; user-select: none; }
+  .match-left .match-item { flex-direction: row; }
+  .match-right .match-item { flex-direction: row-reverse; }
+  .match-dot { width: 20px; height: 20px; border-radius: 50%; border: 2.5px solid #e33; background: #fff; cursor: pointer; flex-shrink: 0; transition: background 0.15s, transform 0.15s, box-shadow 0.15s; }
+  .match-dot:hover { background: #fdd; transform: scale(1.3); box-shadow: 0 0 0 4px rgba(227,51,51,0.15); }
+  .match-dot.connected { background: #e33; }
+  .match-game svg.match-svg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+  .match-game svg.match-svg line { stroke: #e33; stroke-width: 2.5; stroke-linecap: round; }
+  .match-game svg.match-svg line.temp-line { stroke-dasharray: 6 4; opacity: 0.8; }
+
+  /* --- Hanamaru Festival --- */
+  .finish-btn { display: block; margin: 32px auto 0; font-family: monospace; font-size: 18px; padding: 14px 40px; border: 2px solid #e33; background: #fff; color: #e33; cursor: pointer; border-radius: 6px; transition: background 0.2s, color 0.2s; }
+  .finish-btn:hover { background: #e33; color: #fff; }
+  .hanamaru-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 300; display: flex; align-items: center; justify-content: center; }
+  .hanamaru-overlay .hana-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255, 245, 238, 0.92); }
+  .hanamaru-overlay .hana-item { position: absolute; z-index: 1; }
+  .hanamaru-overlay .hana-item path { stroke-dasharray: 2000; stroke-dashoffset: 2000; animation: drawHanamaru 2s ease forwards; }
+  .hanamaru-overlay .hana-msg { position: relative; z-index: 2; text-align: center; opacity: 0; transition: opacity 0.8s ease; }
+  .hanamaru-overlay .hana-msg.visible { opacity: 1; }
+  .hanamaru-overlay .hana-msg p { font-family: monospace; font-size: 28px; color: #c33; font-weight: bold; margin-bottom: 20px; }
+  .hanamaru-overlay .hana-msg button { font-family: monospace; font-size: 16px; padding: 10px 32px; border: 2px solid #c33; background: #fff; color: #c33; cursor: pointer; border-radius: 4px; }
+  .hanamaru-overlay .hana-msg button:hover { background: #c33; color: #fff; }
+</style>
+
+<script>
+// Character recognition buttons
+function checkMatch(btn, result) {
+  var siblings = btn.parentElement.querySelectorAll('.match-btn');
+  if (result === 'correct') {
+    siblings.forEach(function(b) { b.disabled = true; b.classList.remove('wrong'); });
+    btn.classList.add('correct');
+  } else {
+    btn.classList.add('wrong');
+    setTimeout(function() { btn.classList.remove('wrong'); }, 600);
+  }
+}
+
+// Hanamaru checkbox toggle
+function makeHanamaruPath() {
+  var cx=36, cy=36, R=14, pR=28, N=10, d='';
+  // Flower petals — Q curves looping out and back
+  for (var i=0; i<N; i++) {
+    var a1 = i*2*Math.PI/N, a2 = (i+0.5)*2*Math.PI/N, a3 = (i+1)*2*Math.PI/N;
+    var x1=cx+R*Math.cos(a1), y1=cy+R*Math.sin(a1);
+    var px=cx+pR*Math.cos(a2), py=cy+pR*Math.sin(a2);
+    var x2=cx+R*Math.cos(a3), y2=cy+R*Math.sin(a3);
+    if (i===0) d += 'M '+x1.toFixed(1)+' '+y1.toFixed(1)+' ';
+    d += 'Q '+px.toFixed(1)+' '+py.toFixed(1)+', '+x2.toFixed(1)+' '+y2.toFixed(1)+' ';
+  }
+  d += 'Z ';
+  // Spiral from outer edge inward (~2.5 turns)
+  var sr=13, pts=80;
+  for (var i=0; i<=pts; i++) {
+    var t=i/pts, angle=t*2.5*2*Math.PI, r=sr*(1-t*0.9);
+    var x=cx+r*Math.cos(angle), y=cy+r*Math.sin(angle);
+    d += (i===0?'M ':'L ') + x.toFixed(1)+' '+y.toFixed(1)+' ';
+  }
+  return d;
+}
+document.addEventListener('click', function(e) {
+  var check = e.target.closest('.check');
+  if (!check) return;
+  if (check.classList.contains('done')) {
+    check.classList.remove('done');
+    check.innerHTML = '&nbsp;';
+  } else {
+    check.classList.add('done');
+    check.innerHTML = '<svg class="hanamaru" viewBox="0 0 72 72" fill="none">' +
+      '<path d="' + makeHanamaruPath() + '" stroke="#e33" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>';
+  }
+});
+
+// Auto-expand inline inputs
+document.addEventListener('input', function(e) {
+  if (e.target.classList.contains('blank-input')) {
+    const tmp = document.createElement('span');
+    tmp.style.cssText = 'visibility:hidden;position:absolute;white-space:pre;font:' + getComputedStyle(e.target).font;
+    tmp.textContent = e.target.value || '';
+    document.body.appendChild(tmp);
+    e.target.style.width = Math.max(60, tmp.offsetWidth + 24) + 'px';
+    document.body.removeChild(tmp);
+  }
+});
+
+// =============================================
+// HIGHLIGHT ON CLICK — tutor-script toggles active; inputs use native :focus.
+// Both play a one-shot running-border animation via the .flashing class.
+// No cross-activation — the .tg and inputs highlight independently.
+// =============================================
+function flashOnce(el) {
+  // Restart the animation even if the class is already present.
+  el.classList.remove('flashing');
+  void el.offsetWidth; // force reflow so the animation restarts
+  el.classList.add('flashing');
+}
+
+// Clean up .flashing after the animation finishes
+document.addEventListener('animationend', function(e) {
+  if (e.animationName === 'run-border') {
+    e.target.classList.remove('flashing');
+  }
+});
+
+// Click on .tg → toggle its own .active; flash the border once
+document.addEventListener('click', function(e) {
+  var tg = e.target.closest('.tg');
+  if (!tg) return;
+  // Ignore clicks on interactive children (safe: no inputs inside .tg currently)
+  if (e.target.closest('input, textarea, button')) return;
+  var wasActive = tg.classList.contains('active');
+  // Single-select among .tg elements
+  document.querySelectorAll('.tg.active').forEach(function(t) {
+    if (t !== tg) t.classList.remove('active');
+  });
+  if (wasActive) {
+    tg.classList.remove('active');
+  } else {
+    tg.classList.add('active');
+    flashOnce(tg);
+  }
+  // Broadcast to other viewers (syncSend no-ops if not in a sync room)
+  if (window.syncSend) {
+    var allTg = Array.from(document.querySelectorAll('.tg'));
+    window.syncSend({ t: 'tg', idx: allTg.indexOf(tg), active: !wasActive });
+  }
+});
+
+// Focus an input → flash it once (native :focus handles the resting highlight)
+document.addEventListener('focusin', function(e) {
+  if (!e.target.matches || !e.target.matches('.blank-input, .blank-input-full')) return;
+  flashOnce(e.target);
+  if (window.syncSend) {
+    var allInputs = Array.from(document.querySelectorAll('.blank-input, .blank-input-full, .roleplay-notes'));
+    window.syncSend({ t: 'focus', idx: allInputs.indexOf(e.target) });
+  }
+});
+
+// =============================================
+// INLINE MC (tap one of two options inside a blank)
+// =============================================
+document.addEventListener('click', function(e) {
+  var opt = e.target.closest('.mc-opt');
+  if (!opt) return;
+  var group = opt.closest('.mc-inline');
+  if (!group || group.classList.contains('locked')) return;
+  if (opt.dataset.correct === '1') {
+    opt.classList.add('correct');
+    group.classList.add('locked');
+    // Mark the other option as faded (handled via CSS)
+    if (window.syncSend) {
+      var all = Array.from(document.querySelectorAll('.mc-inline'));
+      var gi = all.indexOf(group);
+      var opts = Array.from(group.querySelectorAll('.mc-opt'));
+      var oi = opts.indexOf(opt);
+      window.syncSend({ t: 'mcInline', groupIdx: gi, optIdx: oi });
+    }
+  } else {
+    opt.classList.add('wrong');
+    setTimeout(function() { opt.classList.remove('wrong'); }, 600);
+  }
+});
+
+// =============================================
+// WORD REORDER (click word from bank → answer tray)
+// =============================================
+function pickWord(btn, itemId) {
+  if (btn.classList.contains('used')) return;
+  var answerTray = document.getElementById(itemId + '-answer');
+  var clone = btn.cloneNode(true);
+  clone.onclick = function() { returnWord(this, btn); };
+  answerTray.appendChild(clone);
+  btn.classList.add('used');
+  // clear any previous feedback
+  var item = document.getElementById(itemId);
+  item.classList.remove('correct', 'wrong');
+  var fb = document.getElementById(itemId + '-fb');
+  fb.textContent = '';
+  fb.className = 'reorder-fb';
+  if (window.syncSend) syncReorder(itemId);
+}
+
+function returnWord(clone, originalBtn) {
+  clone.remove();
+  originalBtn.classList.remove('used');
+  var itemId = originalBtn.closest('.reorder-item').id;
+  var item = document.getElementById(itemId);
+  item.classList.remove('correct', 'wrong');
+  var fb = document.getElementById(itemId + '-fb');
+  fb.textContent = '';
+  fb.className = 'reorder-fb';
+  if (window.syncSend) syncReorder(itemId);
+}
+
+function checkOrder(itemId) {
+  var item = document.getElementById(itemId);
+  var expected = item.dataset.answer.split('|');
+  var answerTray = document.getElementById(itemId + '-answer');
+  var got = Array.from(answerTray.querySelectorAll('.word-btn')).map(function(b) {
+    // Use plain text (strip ruby annotations so comparison is on the main kana)
+    return b.textContent.trim().replace(/\s+/g, '').replace(/[a-zA-Zāīūēōâîûêô]+/g, '');
+  });
+  // Compare by extracting main text from original bank buttons too
+  var expectedStr = expected.join('');
+  var gotStr = got.join('');
+  var fb = document.getElementById(itemId + '-fb');
+  if (gotStr === expectedStr) {
+    item.classList.remove('wrong');
+    item.classList.add('correct');
+    fb.textContent = '✓ せいかい！';
+    fb.className = 'reorder-fb correct';
+  } else {
+    item.classList.remove('correct');
+    item.classList.add('wrong');
+    fb.textContent = '✗ もういちど';
+    fb.className = 'reorder-fb wrong';
+  }
+}
+
+function resetOrder(itemId) {
+  var answerTray = document.getElementById(itemId + '-answer');
+  answerTray.innerHTML = '';
+  var bank = document.getElementById(itemId + '-bank');
+  bank.querySelectorAll('.word-btn').forEach(function(b) { b.classList.remove('used'); });
+  var item = document.getElementById(itemId);
+  item.classList.remove('correct', 'wrong');
+  var fb = document.getElementById(itemId + '-fb');
+  fb.textContent = '';
+  fb.className = 'reorder-fb';
+  if (window.syncSend) syncReorder(itemId);
+}
+
+function revealOrder(itemId) {
+  var item = document.getElementById(itemId);
+  var expected = item.dataset.answer.split('|');
+  resetOrder(itemId);
+  var bank = document.getElementById(itemId + '-bank');
+  var answerTray = document.getElementById(itemId + '-answer');
+  expected.forEach(function(token) {
+    var btns = bank.querySelectorAll('.word-btn');
+    for (var i = 0; i < btns.length; i++) {
+      var bt = btns[i];
+      var txt = bt.textContent.trim().replace(/\s+/g, '').replace(/[a-zA-Zāīūēōâîûêô]+/g, '');
+      if (txt === token && !bt.classList.contains('used')) {
+        var clone = bt.cloneNode(true);
+        clone.onclick = function() { returnWord(this, bt); };
+        answerTray.appendChild(clone);
+        bt.classList.add('used');
+        break;
+      }
+    }
+  });
+  item.classList.add('correct');
+  item.classList.remove('wrong');
+  var fb = document.getElementById(itemId + '-fb');
+  fb.textContent = '(answer shown)';
+  fb.className = 'reorder-fb correct';
+}
+
+function syncReorder(itemId) {
+  var answerTray = document.getElementById(itemId + '-answer');
+  var order = Array.from(answerTray.querySelectorAll('.word-btn')).map(function(b) {
+    return b.textContent.trim().replace(/\s+/g, '').replace(/[a-zA-Zāīūēōâîûêô]+/g, '');
+  });
+  window.syncSend({ t: 'reorder', itemId: itemId, order: order });
+}
+
+// =============================================
+// LISTENING: MC answers + transcript reveal
+// =============================================
+document.addEventListener('click', function(e) {
+  var opt = e.target.closest('.listen-opt');
+  if (!opt) return;
+  var opts = opt.parentElement;
+  if (!opts.classList.contains('listen-opts') || opts.classList.contains('locked')) return;
+  if (opt.dataset.correct === '1') {
+    opt.classList.add('correct');
+    opts.classList.add('locked');
+  } else {
+    opt.classList.add('wrong');
+    setTimeout(function() { opt.classList.remove('wrong'); }, 600);
+  }
+});
+
+function toggleTranscript(btn) {
+  var target = document.getElementById('transcript1');
+  if (!target) return;
+  var open = target.classList.toggle('open');
+  btn.innerHTML = (open ? '&#9660;' : '&#9654;') + ' ' + (open ? 'HIDE' : 'SHOW') + ' FULL TRANSCRIPT &nbsp; <span style="font-size:12px; color:#888">(スクリプトを' + (open ? 'とじる' : 'みる') + ')</span>';
+}
+
+const pages = ['p0','p1','p2','p3','p4','p5','p6','p7','p8','p9','p10','p11','p12','p13','p14','p15'];
+let cur = 0;
+
+function go(dir) {
+  saveAnnotations();
+  document.getElementById(pages[cur]).classList.remove('active');
+  cur += dir;
+  document.getElementById(pages[cur]).classList.add('active');
+  document.getElementById('prev').disabled = cur === 0;
+  document.getElementById('next').disabled = cur === pages.length - 1;
+  document.getElementById('indicator').textContent = (cur + 1) + ' / ' + pages.length;
+  window.scrollTo(0, 0);
+  loadAnnotations();
+  resizeCanvas();
+}
+
+// --- Annotation system ---
+const canvas = document.getElementById('drawCanvas');
+const ctx = canvas.getContext('2d');
+const textLayer = document.getElementById('textLayer');
+let mode = null; // 'draw', 'type', 'erase', or null
+let drawing = false;
+let lastX = 0, lastY = 0;
+
+// Drawing state per page: stored as canvas image data URLs
+const STORAGE_KEY = 'jp-lesson5-annotations';
+
+function getStore() {
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; }
+  catch(e) { return {}; }
+}
+
+function saveAnnotations() {
+  const store = getStore();
+  const pageId = pages[cur];
+  // Save canvas drawing
+  store[pageId] = store[pageId] || {};
+  store[pageId].canvas = canvas.toDataURL();
+  // Save text annotations
+  const texts = [];
+  textLayer.querySelectorAll('.anno-wrap').forEach(wrap => {
+    const input = wrap.querySelector('.annotation');
+    if (input && input.value.trim()) {
+      texts.push({ x: parseInt(wrap.style.left), y: parseInt(wrap.style.top), text: input.value });
+    }
+  });
+  store[pageId].texts = texts;
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(store));
+}
+
+function loadAnnotations() {
+  const store = getStore();
+  const pageId = pages[cur];
+  const data = store[pageId];
+  // Clear canvas
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  // Clear text annotations
+  textLayer.innerHTML = '';
+  if (!data) return;
+  // Restore canvas
+  if (data.canvas) {
+    const img = new Image();
+    img.onload = () => ctx.drawImage(img, 0, 0);
+    img.src = data.canvas;
+  }
+  // Restore text annotations
+  if (data.texts) {
+    data.texts.forEach(t => createTextAt(t.x, t.y, t.text));
+  }
+}
+
+// Laser pointer
+const laserCanvas = document.getElementById('laserCanvas');
+const laserCtx = laserCanvas.getContext('2d');
+let lasering = false;
+let laserLastX = 0, laserLastY = 0;
+let laserFadeTimer = null;
+let laserFadeRAF = null;
+
+function fadeOutLaser() {
+  clearTimeout(laserFadeTimer);
+  laserFadeTimer = setTimeout(function() {
+    function fade() {
+      laserCtx.globalCompositeOperation = 'destination-out';
+      laserCtx.fillStyle = 'rgba(0,0,0,0.08)';
+      laserCtx.fillRect(0, 0, laserCanvas.width, laserCanvas.height);
+      laserCtx.globalCompositeOperation = 'source-over';
+      // Check if canvas is effectively empty
+      var d = laserCtx.getImageData(0, 0, 1, 1).data;
+      // Keep fading until mostly transparent
+      laserFadeRAF = requestAnimationFrame(fade);
+    }
+    // Stop any previous fade loop
+    cancelAnimationFrame(laserFadeRAF);
+    var fadeCount = 0;
+    (function fade() {
+      laserCtx.globalCompositeOperation = 'destination-out';
+      laserCtx.fillStyle = 'rgba(0,0,0,0.06)';
+      laserCtx.fillRect(0, 0, laserCanvas.width, laserCanvas.height);
+      laserCtx.globalCompositeOperation = 'source-over';
+      fadeCount++;
+      if (fadeCount < 60) {
+        laserFadeRAF = requestAnimationFrame(fade);
+      } else {
+        laserCtx.clearRect(0, 0, laserCanvas.width, laserCanvas.height);
+      }
+    })();
+  }, 500);
+}
+
+function drawLaserSegment(x1, y1, x2, y2) {
+  laserCtx.beginPath();
+  laserCtx.moveTo(x1, y1);
+  laserCtx.lineTo(x2, y2);
+  laserCtx.strokeStyle = 'rgba(255, 50, 50, 0.8)';
+  laserCtx.lineWidth = 3;
+  laserCtx.lineCap = 'round';
+  laserCtx.lineJoin = 'round';
+  laserCtx.shadowColor = 'rgba(255, 0, 0, 0.6)';
+  laserCtx.shadowBlur = 8;
+  laserCtx.stroke();
+  laserCtx.shadowBlur = 0;
+}
+
+function resizeCanvas() {
+  const h = Math.max(document.documentElement.scrollHeight, window.innerHeight);
+  const w = document.documentElement.scrollWidth;
+  // Save current drawing
+  const tmp = canvas.toDataURL();
+  canvas.width = w;
+  canvas.height = h;
+  ctx.lineJoin = 'round';
+  ctx.lineCap = 'round';
+  // Restore drawing after resize
+  const img = new Image();
+  img.onload = () => ctx.drawImage(img, 0, 0);
+  img.src = tmp;
+  // Resize laser canvas
+  laserCanvas.width = w;
+  laserCanvas.height = h;
+  // Match text layer size
+  textLayer.style.height = h + 'px';
+}
+
+function setMode(m) {
+  if (mode === m) { mode = null; } else { mode = m; }
+  canvas.classList.remove('active', 'erase');
+  textLayer.classList.remove('active');
+  document.querySelectorAll('.nav button').forEach(b => b.classList.remove('active-mode'));
+  if (mode === 'draw') {
+    canvas.classList.add('active');
+    document.getElementById('btnDraw').classList.add('active-mode');
+  } else if (mode === 'erase') {
+    canvas.classList.add('active', 'erase');
+    document.getElementById('btnErase').classList.add('active-mode');
+  } else if (mode === 'type') {
+    textLayer.classList.add('active');
+    document.getElementById('btnType').classList.add('active-mode');
+  }
+}
+
+function toggleClearMenu() {
+  var m = document.getElementById('clearMenu');
+  m.style.display = m.style.display === 'none' ? 'block' : 'none';
+}
+function hideClearMenu() {
+  document.getElementById('clearMenu').style.display = 'none';
+}
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('#btnClear') && !e.target.closest('#clearMenu')) hideClearMenu();
+});
+
+function resetLessonWidgets(scope) {
+  var root = scope || document;
+  root.querySelectorAll('.mc-inline').forEach(function(g) {
+    g.classList.remove('locked');
+    g.querySelectorAll('.mc-opt').forEach(function(o) { o.classList.remove('correct', 'wrong'); });
+  });
+  root.querySelectorAll('.listen-opts').forEach(function(g) {
+    g.classList.remove('locked');
+    g.querySelectorAll('.listen-opt').forEach(function(o) { o.classList.remove('correct', 'wrong'); });
+  });
+  root.querySelectorAll('.reorder-item').forEach(function(item) {
+    item.classList.remove('correct', 'wrong');
+    var tray = item.querySelector('.reorder-answer');
+    if (tray) tray.innerHTML = '';
+    item.querySelectorAll('.reorder-bank .word-btn').forEach(function(b) { b.classList.remove('used'); });
+    var fb = item.querySelector('.reorder-fb');
+    if (fb) { fb.textContent = ''; fb.className = 'reorder-fb'; }
+  });
+  root.querySelectorAll('.transcript-reveal.open').forEach(function(t) { t.classList.remove('open'); });
+  root.querySelectorAll('.tg.active').forEach(function(t) { t.classList.remove('active'); });
+  root.querySelectorAll('.flashing').forEach(function(i) { i.classList.remove('flashing'); });
+  root.querySelectorAll('.remote-active').forEach(function(i) { i.classList.remove('remote-active'); });
+}
+
+function clearPage() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  textLayer.innerHTML = '';
+  saveAnnotations();
+  var pg = document.getElementById(pages[cur]);
+  if (pg) {
+    pg.querySelectorAll('.blank-input, .blank-input-full, .roleplay-notes').forEach(function(inp) { inp.value = ''; });
+    pg.querySelectorAll('.check.done').forEach(function(c) { c.classList.remove('done'); c.innerHTML = '&nbsp;'; });
+    pg.querySelectorAll('.match-game').forEach(function(g) { if (g._reset) g._reset(); });
+    resetLessonWidgets(pg);
+  }
+  if (window.syncSend) window.syncSend({ t: 'clear' });
+}
+
+function clearAll() {
+  // Clear current canvas and text annotations
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  textLayer.innerHTML = '';
+  // Clear all stored annotations
+  localStorage.removeItem(STORAGE_KEY);
+  // Clear all text inputs
+  document.querySelectorAll('.blank-input, .blank-input-full, .roleplay-notes').forEach(function(inp) { inp.value = ''; });
+  // Reset all checkboxes
+  document.querySelectorAll('.check.done').forEach(function(c) { c.classList.remove('done'); c.innerHTML = '&nbsp;'; });
+  // Reset matching games
+  document.querySelectorAll('.match-game').forEach(function(g) { if (g._reset) g._reset(); });
+  resetLessonWidgets(document);
+  if (window.syncSend) window.syncSend({ t: 'clearall' });
+}
+
+function createTextAt(x, y, text) {
+  const wrap = document.createElement('div');
+  wrap.className = 'anno-wrap';
+  wrap.style.left = x + 'px';
+  wrap.style.top = y + 'px';
+
+  const controls = document.createElement('div');
+  controls.className = 'anno-controls';
+
+  const handle = document.createElement('span');
+  handle.className = 'anno-handle';
+  handle.textContent = '\u2803';
+
+  const del = document.createElement('button');
+  del.className = 'anno-delete';
+  del.textContent = '\u2715';
+  del.addEventListener('click', () => { wrap.remove(); saveAnnotations(); });
+
+  controls.appendChild(handle);
+  controls.appendChild(del);
+
+  const ta = document.createElement('textarea');
+  ta.className = 'annotation';
+  ta.rows = 1;
+  ta.value = text || '';
+  ta.addEventListener('focus', () => { activeAnnotation = ta; });
+  ta.addEventListener('blur', () => {
+    activeAnnotation = null;
+    if (!ta.value.trim()) { wrap.remove(); }
+    saveAnnotations();
+    setMode(null);
+  });
+  ta.addEventListener('input', () => { ta.style.height = 'auto'; ta.style.height = ta.scrollHeight + 'px'; });
+
+  // Drag logic
+  let dragging = false, dragX, dragY;
+  handle.addEventListener('mousedown', e => {
+    dragging = true;
+    dragX = e.clientX - parseInt(wrap.style.left);
+    dragY = e.clientY - parseInt(wrap.style.top);
+    e.preventDefault();
+  });
+  document.addEventListener('mousemove', e => {
+    if (!dragging) return;
+    wrap.style.left = (e.clientX - dragX) + 'px';
+    wrap.style.top = (e.clientY - dragY + window.scrollY) + 'px';
+  });
+  document.addEventListener('mouseup', () => { if (dragging) { dragging = false; saveAnnotations(); }});
+
+  wrap.appendChild(controls);
+  wrap.appendChild(ta);
+  textLayer.appendChild(wrap);
+  if (!text) ta.focus();
+  // Auto-size on load
+  if (text) { requestAnimationFrame(() => { ta.style.height = 'auto'; ta.style.height = ta.scrollHeight + 'px'; }); }
+  return wrap;
+}
+
+// Drawing events
+canvas.addEventListener('mousedown', e => {
+  if (mode === 'draw' || mode === 'erase') {
+    drawing = true;
+    lastX = e.pageX;
+    lastY = e.pageY;
+    if (mode === 'erase') {
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.lineWidth = 40;
+    } else {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.strokeStyle = '#c33';
+      ctx.lineWidth = 2.5;
+    }
+  }
+});
+
+canvas.addEventListener('mousemove', e => {
+  if (!drawing) return;
+  ctx.beginPath();
+  ctx.moveTo(lastX, lastY);
+  ctx.lineTo(e.pageX, e.pageY);
+  ctx.stroke();
+  lastX = e.pageX;
+  lastY = e.pageY;
+});
+
+canvas.addEventListener('mouseup', () => { drawing = false; saveAnnotations(); });
+canvas.addEventListener('mouseleave', () => { drawing = false; });
+
+// Touch support
+canvas.addEventListener('touchstart', e => {
+  if (mode === 'draw' || mode === 'erase') {
+    e.preventDefault();
+    drawing = true;
+    const t = e.touches[0];
+    lastX = t.pageX;
+    lastY = t.pageY;
+    if (mode === 'erase') {
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.lineWidth = 40;
+    } else {
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.strokeStyle = '#c33';
+      ctx.lineWidth = 2.5;
+    }
+  }
+}, { passive: false });
+
+canvas.addEventListener('touchmove', e => {
+  if (!drawing) return;
+  e.preventDefault();
+  const t = e.touches[0];
+  ctx.beginPath();
+  ctx.moveTo(lastX, lastY);
+  ctx.lineTo(t.pageX, t.pageY);
+  ctx.stroke();
+  lastX = t.pageX;
+  lastY = t.pageY;
+}, { passive: false });
+
+canvas.addEventListener('touchend', () => { drawing = false; saveAnnotations(); });
+
+// Laser pointer events (active when no mode is selected)
+document.addEventListener('mousedown', function(e) {
+  if (mode || e.target.closest('.nav') || e.target.closest('#clearMenu') || e.target.closest('.anno-wrap') || e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'BUTTON' || e.target.tagName === 'A') return;
+  e.preventDefault();
+  lasering = true;
+  document.body.style.userSelect = 'none';
+  document.body.style.webkitUserSelect = 'none';
+  laserLastX = e.pageX;
+  laserLastY = e.pageY;
+  clearTimeout(laserFadeTimer);
+  cancelAnimationFrame(laserFadeRAF);
+  if (window.syncSend) window.syncSend({ t: 'laserstart', rx: e.pageX / (laserCanvas.width || 1), ry: e.pageY / (laserCanvas.height || 1) });
+});
+document.addEventListener('mousemove', function(e) {
+  if (!lasering) return;
+  drawLaserSegment(laserLastX, laserLastY, e.pageX, e.pageY);
+  if (window.syncSend) window.syncSend({ t: 'lasermove', rx: e.pageX / (laserCanvas.width || 1), ry: e.pageY / (laserCanvas.height || 1) });
+  laserLastX = e.pageX;
+  laserLastY = e.pageY;
+});
+document.addEventListener('mouseup', function() {
+  if (!lasering) return;
+  lasering = false;
+  document.body.style.userSelect = '';
+  document.body.style.webkitUserSelect = '';
+  fadeOutLaser();
+  if (window.syncSend) window.syncSend({ t: 'laserend' });
+});
+// Touch laser
+document.addEventListener('touchstart', function(e) {
+  if (mode || e.target.closest('.nav') || e.target.closest('#clearMenu') || e.target.closest('.anno-wrap') || e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'BUTTON' || e.target.tagName === 'A') return;
+  lasering = true;
+  var t = e.touches[0];
+  laserLastX = t.pageX;
+  laserLastY = t.pageY;
+  clearTimeout(laserFadeTimer);
+  cancelAnimationFrame(laserFadeRAF);
+  if (window.syncSend) window.syncSend({ t: 'laserstart', rx: t.pageX / (laserCanvas.width || 1), ry: t.pageY / (laserCanvas.height || 1) });
+});
+document.addEventListener('touchmove', function(e) {
+  if (!lasering) return;
+  var t = e.touches[0];
+  drawLaserSegment(laserLastX, laserLastY, t.pageX, t.pageY);
+  if (window.syncSend) window.syncSend({ t: 'lasermove', rx: t.pageX / (laserCanvas.width || 1), ry: t.pageY / (laserCanvas.height || 1) });
+  laserLastX = t.pageX;
+  laserLastY = t.pageY;
+});
+document.addEventListener('touchend', function() {
+  if (!lasering) return;
+  lasering = false;
+  fadeOutLaser();
+  if (window.syncSend) window.syncSend({ t: 'laserend' });
+});
+
+// Text layer click — only create if no annotation is currently focused
+let activeAnnotation = null;
+textLayer.addEventListener('mousedown', e => {
+  if (mode === 'type' && e.target === textLayer && !activeAnnotation) {
+    // Small delay so the mousedown doesn't steal focus from the new textarea
+    const x = e.pageX - 4, y = e.pageY - 12;
+    setTimeout(() => createTextAt(x, y, ''), 10);
+  }
+});
+
+// Init
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
+loadAnnotations();
+
+// =============================================
+// MATCHING GAME
+// =============================================
+(function() {
+  document.querySelectorAll('.match-game').forEach(function(game) {
+    var leftData = JSON.parse(game.dataset.left);
+    var rightData = JSON.parse(game.dataset.right);
+    var connections = {}; // leftId -> rightId
+    var dragging = null; // { side: 'left'|'right', id: string, dotEl: element }
+    var tempLine = null;
+
+    // Build DOM
+    var columns = document.createElement('div');
+    columns.className = 'match-columns';
+
+    var leftCol = document.createElement('div');
+    leftCol.className = 'match-left';
+
+    var rightCol = document.createElement('div');
+    rightCol.className = 'match-right';
+
+    var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('class', 'match-svg');
+
+    var dots = {}; // id -> dot element
+
+    leftData.forEach(function(item) {
+      var row = document.createElement('div');
+      row.className = 'match-item';
+      var label = document.createElement('span');
+      label.innerHTML = item.html;
+      var dot = document.createElement('div');
+      dot.className = 'match-dot';
+      dot.dataset.side = 'left';
+      dot.dataset.id = item.id;
+      dots['L_' + item.id] = dot;
+      row.appendChild(label);
+      row.appendChild(dot);
+      leftCol.appendChild(row);
+    });
+
+    rightData.forEach(function(item) {
+      var row = document.createElement('div');
+      row.className = 'match-item';
+      var label = document.createElement('span');
+      label.textContent = item.text;
+      var dot = document.createElement('div');
+      dot.className = 'match-dot';
+      dot.dataset.side = 'right';
+      dot.dataset.id = item.id;
+      dots['R_' + item.id] = dot;
+      row.appendChild(label);
+      row.appendChild(dot);
+      rightCol.appendChild(row);
+    });
+
+    columns.appendChild(leftCol);
+    columns.appendChild(svg);
+    columns.appendChild(rightCol);
+    game.appendChild(columns);
+
+    function getDotCenter(dot) {
+      var sr = svg.getBoundingClientRect();
+      var dr = dot.getBoundingClientRect();
+      return { x: dr.left + dr.width / 2 - sr.left, y: dr.top + dr.height / 2 - sr.top };
+    }
+
+    function toSvgCoords(clientX, clientY) {
+      var sr = svg.getBoundingClientRect();
+      return { x: clientX - sr.left, y: clientY - sr.top };
+    }
+
+    function redrawLines() {
+      svg.querySelectorAll('line:not(.temp-line)').forEach(function(l) { l.remove(); });
+      Object.keys(connections).forEach(function(lid) {
+        var rid = connections[lid];
+        var ld = dots['L_' + lid];
+        var rd = dots['R_' + rid];
+        if (!ld || !rd) return;
+        var lc = getDotCenter(ld);
+        var rc = getDotCenter(rd);
+        var line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+        line.setAttribute('x1', lc.x); line.setAttribute('y1', lc.y);
+        line.setAttribute('x2', rc.x); line.setAttribute('y2', rc.y);
+        svg.appendChild(line);
+      });
+      Object.keys(dots).forEach(function(key) {
+        dots[key].classList.remove('connected');
+      });
+      Object.keys(connections).forEach(function(lid) {
+        var rid = connections[lid];
+        if (dots['L_' + lid]) dots['L_' + lid].classList.add('connected');
+        if (dots['R_' + rid]) dots['R_' + rid].classList.add('connected');
+      });
+    }
+
+    function findConnectionByRight(rid) {
+      for (var lid in connections) {
+        if (connections[lid] === rid) return lid;
+      }
+      return null;
+    }
+
+    // Click-to-start, click-to-connect interaction
+    function startConnect(side, id, dotEl) {
+      // If already connected, disconnect first then start re-connect from this dot
+      if (side === 'left' && connections[id]) {
+        delete connections[id];
+        redrawLines();
+      }
+      if (side === 'right') {
+        var existingLeft = findConnectionByRight(id);
+        if (existingLeft) {
+          delete connections[existingLeft];
+          redrawLines();
+        }
+      }
+      dragging = { side: side, id: id, dotEl: dotEl };
+      dotEl.classList.add('connected');
+      tempLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      tempLine.setAttribute('class', 'temp-line');
+      var c = getDotCenter(dotEl);
+      tempLine.setAttribute('x1', c.x); tempLine.setAttribute('y1', c.y);
+      tempLine.setAttribute('x2', c.x); tempLine.setAttribute('y2', c.y);
+      svg.appendChild(tempLine);
+    }
+
+    function finishConnect(targetDot) {
+      if (!dragging) return;
+      if (tempLine) { tempLine.remove(); tempLine = null; }
+      if (targetDot) {
+        var targetSide = targetDot.dataset.side;
+        var targetId = targetDot.dataset.id;
+        if (targetSide !== dragging.side) {
+          var leftId = dragging.side === 'left' ? dragging.id : targetId;
+          var rightId = dragging.side === 'right' ? dragging.id : targetId;
+          var existingLeft = findConnectionByRight(rightId);
+          if (existingLeft) delete connections[existingLeft];
+          connections[leftId] = rightId;
+        }
+      }
+      dragging = null;
+      redrawLines();
+    }
+
+    function cancelConnect() {
+      if (!dragging) return;
+      if (tempLine) { tempLine.remove(); tempLine = null; }
+      dragging = null;
+      redrawLines();
+    }
+
+    // Mouse: click dot to start, move to see line, click another dot to connect
+    game.addEventListener('click', function(e) {
+      var dot = e.target.closest('.match-dot');
+      if (!dot) {
+        // Clicked empty space — cancel any active connection
+        cancelConnect();
+        return;
+      }
+      e.preventDefault();
+      if (dragging) {
+        // Second click — finish connection
+        finishConnect(dot);
+      } else {
+        // First click — start connection
+        startConnect(dot.dataset.side, dot.dataset.id, dot);
+      }
+    });
+
+    document.addEventListener('mousemove', function(e) {
+      if (!dragging || !tempLine || dragging.dotEl.closest('.match-game') !== game) return;
+      var p = toSvgCoords(e.clientX, e.clientY);
+      tempLine.setAttribute('x2', p.x);
+      tempLine.setAttribute('y2', p.y);
+    });
+
+    // Touch: tap dot to start, drag to target dot, release to connect
+    game.addEventListener('touchstart', function(e) {
+      var dot = e.target.closest('.match-dot');
+      if (!dot) return;
+      e.preventDefault();
+      if (dragging) {
+        finishConnect(dot);
+      } else {
+        startConnect(dot.dataset.side, dot.dataset.id, dot);
+      }
+    }, { passive: false });
+
+    document.addEventListener('touchmove', function(e) {
+      if (!dragging || !tempLine || dragging.dotEl.closest('.match-game') !== game) return;
+      e.preventDefault();
+      var t = e.touches[0];
+      var p = toSvgCoords(t.clientX, t.clientY);
+      tempLine.setAttribute('x2', p.x);
+      tempLine.setAttribute('y2', p.y);
+    }, { passive: false });
+
+    document.addEventListener('touchend', function(e) {
+      if (!dragging || dragging.dotEl.closest('.match-game') !== game) return;
+      var t = e.changedTouches[0];
+      var target = document.elementFromPoint(t.clientX, t.clientY);
+      var dot = target ? target.closest('.match-dot') : null;
+      if (dot && dot.dataset.side !== dragging.side) {
+        finishConnect(dot);
+      }
+      // On touch, don't cancel — let them tap another dot
+    });
+
+    // Redraw on resize/scroll
+    window.addEventListener('resize', function() { redrawLines(); });
+
+    // Update SVG size to match container
+    function sizeSvg() {
+      svg.setAttribute('width', game.offsetWidth);
+      svg.setAttribute('height', game.offsetHeight);
+      redrawLines();
+    }
+    // Use ResizeObserver for accurate sizing
+    if (window.ResizeObserver) {
+      new ResizeObserver(sizeSvg).observe(game);
+    }
+    // Initial sizing after layout
+    requestAnimationFrame(sizeSvg);
+
+    // Expose connections for sync
+    game._syncConnections = connections;
+    game._applyConnections = function(newConns) {
+      // Clear and replace connections
+      Object.keys(connections).forEach(function(k) { delete connections[k]; });
+      Object.keys(newConns).forEach(function(k) { connections[k] = newConns[k]; });
+      redrawLines();
+    };
+    game._reset = function() {
+      Object.keys(connections).forEach(function(k) { delete connections[k]; });
+      cancelConnect();
+      redrawLines();
+    };
+  });
+})();
+
+// =============================================
+// HANAMARU FESTIVAL
+// =============================================
+document.getElementById('finishBtn').addEventListener('click', function() {
+  var overlay = document.createElement('div');
+  overlay.className = 'hanamaru-overlay';
+
+  var bg = document.createElement('div');
+  bg.className = 'hana-bg';
+  overlay.appendChild(bg);
+
+  // Generate 45-65 hanamarus of various sizes, well-distributed
+  var count = 45 + Math.floor(Math.random() * 21);
+  var maxDelay = 0;
+  var vw = window.innerWidth;
+  var vh = window.innerHeight;
+  // Center exclusion zone (where message text + button appear)
+  var cx1 = vw * 0.3, cx2 = vw * 0.7, cy1 = vh * 0.3, cy2 = vh * 0.65;
+  // Track placed hanamaru centers for spacing
+  var placed = [];
+  for (var i = 0; i < count; i++) {
+    // Mix of sizes: ~20% very big (200-350), ~30% big (100-200), ~50% small-medium (25-100)
+    var roll = Math.random();
+    var size;
+    if (roll < 0.2) { size = 200 + Math.floor(Math.random() * 151); }
+    else if (roll < 0.5) { size = 100 + Math.floor(Math.random() * 101); }
+    else { size = 25 + Math.floor(Math.random() * 76); }
+    // Place hanamaru: avoid center zone AND keep spacing from others
+    var x, y, attempts = 0, bestX = 0, bestY = 0, bestDist = -1;
+    var minSpacing = size * 0.4; // minimum distance between centers
+    do {
+      x = Math.random() * vw - size * 0.3;
+      y = Math.random() * vh - size * 0.3;
+      var centerX = x + size / 2;
+      var centerY = y + size / 2;
+      // Skip if in exclusion zone
+      if (centerX > cx1 && centerX < cx2 && centerY > cy1 && centerY < cy2) { attempts++; continue; }
+      // Find minimum distance to any placed hanamaru
+      var closestDist = Infinity;
+      for (var j = 0; j < placed.length; j++) {
+        var dx = centerX - placed[j][0];
+        var dy = centerY - placed[j][1];
+        var d = Math.sqrt(dx * dx + dy * dy) - (size + placed[j][2]) * 0.3;
+        if (d < closestDist) closestDist = d;
+      }
+      // Keep the best candidate (most spaced out)
+      if (closestDist > bestDist) { bestDist = closestDist; bestX = x; bestY = y; }
+      // Good enough if spaced well
+      if (closestDist >= minSpacing) break;
+      attempts++;
+    } while (attempts < 30);
+    x = bestX; y = bestY;
+    placed.push([x + size / 2, y + size / 2, size]);
+    var delay = Math.random() * 0.9; // all start within first 0.8-1s
+    if (delay > maxDelay) maxDelay = delay;
+
+    // Color variation around #e33
+    var r = 200 + Math.floor(Math.random() * 56); // 200-255
+    var g = 30 + Math.floor(Math.random() * 40);  // 30-70
+    var b = 30 + Math.floor(Math.random() * 40);  // 30-70
+    var color = 'rgb(' + r + ',' + g + ',' + b + ')';
+
+    var item = document.createElement('div');
+    item.className = 'hana-item';
+    item.style.left = x + 'px';
+    item.style.top = y + 'px';
+    item.style.width = size + 'px';
+    item.style.height = size + 'px';
+
+    var svgEl = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svgEl.setAttribute('viewBox', '0 0 72 72');
+    svgEl.setAttribute('width', size);
+    svgEl.setAttribute('height', size);
+    svgEl.setAttribute('fill', 'none');
+
+    var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', makeHanamaruPath());
+    path.setAttribute('stroke', color);
+    path.setAttribute('stroke-width', '2.5');
+    path.setAttribute('stroke-linecap', 'round');
+    path.setAttribute('stroke-linejoin', 'round');
+    path.setAttribute('fill', 'none');
+    path.style.animationDelay = delay.toFixed(2) + 's';
+
+    svgEl.appendChild(path);
+    item.appendChild(svgEl);
+    overlay.appendChild(item);
+  }
+
+  // Message (shown after all hanamarus finish drawing)
+  var msg = document.createElement('div');
+  msg.className = 'hana-msg';
+  var msgText = document.createElement('p');
+  msgText.textContent = 'またね！/ See you next time!';
+  var closeBtn = document.createElement('button');
+  closeBtn.textContent = 'Close';
+  closeBtn.addEventListener('click', function() {
+    overlay.remove();
+  });
+  msg.appendChild(msgText);
+  msg.appendChild(closeBtn);
+  overlay.appendChild(msg);
+
+  document.body.appendChild(overlay);
+
+  // Show message early while hanamarus are still drawing
+  var totalTime = 800;
+  setTimeout(function() {
+    msg.classList.add('visible');
+  }, totalTime);
+});
+
+// =============================================
+// LIVE SYNC
+// =============================================
+// Connect: add ?sync=ROOM_NAME&ws=wss://your-server to the URL
+// Both viewers join the same room and all interactions sync.
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var room = params.get('sync');
+
+  // If no room in URL, show a popup to enter one
+  if (!room) {
+    var saved = localStorage.getItem('sync-room') || '';
+    var overlay = document.createElement('div');
+    overlay.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.3);z-index:9999;display:flex;align-items:center;justify-content:center;';
+    var box = document.createElement('div');
+    box.style.cssText = 'background:#fff;padding:28px 32px;border-radius:8px;font-family:monospace;text-align:center;max-width:340px;box-shadow:0 4px 20px rgba(0,0,0,0.15);';
+    var savedName = localStorage.getItem('sync-name') || '';
+    box.innerHTML = '<p style="font-size:16px;margin-bottom:6px;font-weight:bold;">Live Sync (optional)</p>' +
+      '<p style="font-size:13px;color:#888;margin-bottom:16px;">Both devices use the same room name to sync live.<br>Skip to use this page by yourself.</p>' +
+      '<input id="syncRoomPopup" type="text" value="' + saved.replace(/"/g, '&quot;') + '" placeholder="e.g. classroom1" style="font-family:monospace;font-size:15px;padding:8px 12px;border:1.5px solid #ccc;border-radius:4px;width:100%;margin-bottom:10px;text-align:center;">' +
+      '<input id="syncNamePopup" type="text" value="' + savedName.replace(/"/g, '&quot;') + '" placeholder="Your name" style="font-family:monospace;font-size:15px;padding:8px 12px;border:1.5px solid #ccc;border-radius:4px;width:100%;margin-bottom:14px;text-align:center;">' +
+      '<div style="display:flex;gap:10px;justify-content:center;">' +
+      '<button id="syncJoinBtn" style="font-family:monospace;font-size:14px;padding:8px 24px;border:2px solid #e33;background:#e33;color:#fff;border-radius:4px;cursor:pointer;">Join</button>' +
+      '<button id="syncSkipBtn" style="font-family:monospace;font-size:14px;padding:8px 24px;border:1px solid #ccc;background:#fff;color:#666;border-radius:4px;cursor:pointer;">Skip</button>' +
+      '</div>' +
+      '<p style="font-size:11px;color:#aaa;margin-top:14px;">Press <kbd style="background:#eee;padding:1px 5px;border-radius:3px;font-family:monospace;">Esc</kbd> or click outside to skip</p>';
+    overlay.appendChild(box);
+    document.body.appendChild(overlay);
+
+    var input = document.getElementById('syncRoomPopup');
+    input.focus();
+    input.select();
+
+    function dismissSyncOverlay() {
+      if (overlay.parentNode) overlay.remove();
+      document.removeEventListener('keydown', onEsc);
+    }
+    function onEsc(e) {
+      if (e.key === 'Escape') { e.preventDefault(); dismissSyncOverlay(); }
+    }
+    document.addEventListener('keydown', onEsc);
+    // Click on backdrop (but not inside the popup box) dismisses
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) dismissSyncOverlay();
+    });
+
+    var nameInput = document.getElementById('syncNamePopup');
+    document.getElementById('syncJoinBtn').addEventListener('click', function() {
+      var val = input.value.trim();
+      if (!val) return;
+      localStorage.setItem('sync-room', val);
+      localStorage.setItem('sync-name', nameInput.value.trim());
+      // Reload with ?sync=ROOM
+      var url = new URL(window.location);
+      url.searchParams.set('sync', val);
+      window.location.replace(url.toString());
+    });
+    input.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') nameInput.focus();
+    });
+    nameInput.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') document.getElementById('syncJoinBtn').click();
+    });
+    document.getElementById('syncSkipBtn').addEventListener('click', dismissSyncOverlay);
+    return; // don't connect yet — page will reload with ?sync= param
+  }
+
+  // Auto-detect WebSocket URL from current host (same server serves pages + WS)
+  var wsProto = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+  var wsUrl = params.get('ws') || (wsProto + '//' + window.location.host + '/ws');
+  var ws = null;
+  var syncing = false; // true while applying a remote event (prevents echo)
+
+  function connect() {
+    ws = new WebSocket(wsUrl + '?room=' + encodeURIComponent(room));
+    ws.onopen = function() { console.log('[sync] connected to room: ' + room); };
+    ws.onclose = function() { console.log('[sync] disconnected, reconnecting...'); setTimeout(connect, 2000); };
+    ws.onmessage = function(e) {
+      var msg;
+      try { msg = JSON.parse(e.data); } catch(err) { return; }
+      syncing = true;
+      applyRemote(msg);
+      syncing = false;
+    };
+  }
+  connect();
+
+  function send(msg) {
+    if (syncing) return; // don't echo remote events back
+    if (ws && ws.readyState === 1) ws.send(JSON.stringify(msg));
+  }
+  window.syncSend = send;
+
+  // --- Hook into page navigation ---
+  var origGo = window.go;
+  window.go = function(dir) {
+    origGo(dir);
+    send({ t: 'page', page: cur });
+  };
+
+  // --- Hook into text inputs ---
+  document.addEventListener('input', function(e) {
+    if (syncing) return;
+    if (e.target.classList.contains('blank-input') || e.target.classList.contains('blank-input-full') || e.target.classList.contains('roleplay-notes')) {
+      var inputs = Array.from(document.querySelectorAll('.blank-input, .blank-input-full, .roleplay-notes'));
+      var idx = inputs.indexOf(e.target);
+      if (idx >= 0) send({ t: 'input', idx: idx, val: e.target.value });
+    }
+  });
+
+  // --- Hook into checkbox clicks ---
+  document.addEventListener('click', function(e) {
+    if (syncing) return;
+    var check = e.target.closest('.check');
+    if (check) {
+      var checks = Array.from(document.querySelectorAll('.check'));
+      var idx = checks.indexOf(check);
+      if (idx >= 0) send({ t: 'check', idx: idx, done: check.classList.contains('done') });
+    }
+  });
+
+  // --- Hook into hanamaru festival ---
+  var finishBtn = document.getElementById('finishBtn');
+  if (finishBtn) {
+    finishBtn.addEventListener('click', function() {
+      if (!syncing) send({ t: 'hanamaru' });
+    });
+  }
+
+  // --- Hook into drawing ---
+  var drawCanvas = document.getElementById('drawCanvas');
+  var drawCtx = drawCanvas ? drawCanvas.getContext('2d') : null;
+
+  // Intercept canvas drawing strokes
+  if (drawCanvas) {
+    drawCanvas.addEventListener('mousedown', function(e) {
+      if (!syncing && (mode === 'draw' || mode === 'erase')) {
+        send({ t: 'drawstart', rx: e.pageX / drawCanvas.width, ry: e.pageY / drawCanvas.height, erase: mode === 'erase' });
+      }
+    });
+    drawCanvas.addEventListener('mousemove', function(e) {
+      if (!syncing && drawing) {
+        send({ t: 'drawmove', rx: e.pageX / drawCanvas.width, ry: e.pageY / drawCanvas.height });
+      }
+    });
+    drawCanvas.addEventListener('mouseup', function() {
+      if (!syncing) send({ t: 'drawend' });
+    });
+    // Touch drawing sync
+    drawCanvas.addEventListener('touchstart', function(e) {
+      if (!syncing && (mode === 'draw' || mode === 'erase')) {
+        var t = e.touches[0];
+        send({ t: 'drawstart', rx: t.pageX / drawCanvas.width, ry: t.pageY / drawCanvas.height, erase: mode === 'erase' });
+      }
+    });
+    drawCanvas.addEventListener('touchmove', function(e) {
+      if (!syncing && drawing) {
+        var t = e.touches[0];
+        send({ t: 'drawmove', rx: t.pageX / drawCanvas.width, ry: t.pageY / drawCanvas.height });
+      }
+    });
+    drawCanvas.addEventListener('touchend', function() {
+      if (!syncing) send({ t: 'drawend' });
+    });
+  }
+
+  // --- Hook into matching game ---
+  document.querySelectorAll('.match-game').forEach(function(game, gameIdx) {
+    game.addEventListener('click', function(e) {
+      // After a connection is made, send the full connection state
+      if (syncing) return;
+      // Small delay to let the connection logic finish first
+      setTimeout(function() {
+        // Read connections from the game's closure — we stored them on the element
+        if (game._syncConnections) {
+          send({ t: 'match', gameIdx: gameIdx, connections: JSON.parse(JSON.stringify(game._syncConnections)) });
+        }
+      }, 50);
+    });
+  });
+
+  // --- Cursor tracking (throttled to ~30fps) ---
+  var remoteCursor = document.getElementById('remoteCursor');
+  var remoteCursorName = document.getElementById('remoteCursorName');
+  var cursorIndicator = document.getElementById('cursorIndicator');
+  var indicatorName = document.getElementById('indicatorName');
+  var cursorHideTimer = null;
+  var lastCursorSend = 0;
+  var myName = localStorage.getItem('sync-name') || '';
+  document.addEventListener('mousemove', function(e) {
+    if (syncing) return;
+    var now = Date.now();
+    if (now - lastCursorSend < 16) return;
+    lastCursorSend = now;
+    send({ t: 'cursor', rx: e.pageX / (document.documentElement.scrollWidth || 1), ry: e.pageY / (Math.max(document.documentElement.scrollHeight, window.innerHeight) || 1), name: myName });
+  });
+
+  // --- Apply remote events ---
+  var remoteDrawing = false;
+  var remoteLastX = 0, remoteLastY = 0;
+
+  function applyRemote(msg) {
+    switch (msg.t) {
+      case 'page':
+        // Navigate to the specified page
+        while (cur < msg.page) { document.getElementById(pages[cur]).classList.remove('active'); cur++; }
+        while (cur > msg.page) { document.getElementById(pages[cur]).classList.remove('active'); cur--; }
+        document.getElementById(pages[cur]).classList.add('active');
+        document.getElementById('prev').disabled = cur === 0;
+        document.getElementById('next').disabled = cur === pages.length - 1;
+        document.getElementById('indicator').textContent = (cur + 1) + ' / ' + pages.length;
+        window.scrollTo(0, 0);
+        loadAnnotations();
+        resizeCanvas();
+        break;
+
+      case 'input':
+        var inputs = document.querySelectorAll('.blank-input, .blank-input-full, .roleplay-notes');
+        if (inputs[msg.idx]) {
+          inputs[msg.idx].value = msg.val;
+          // Trigger resize for inline inputs
+          inputs[msg.idx].dispatchEvent(new Event('input', { bubbles: true }));
+        }
+        break;
+
+      case 'check':
+        var checks = document.querySelectorAll('.check');
+        if (checks[msg.idx]) {
+          var check = checks[msg.idx];
+          if (msg.done && !check.classList.contains('done')) {
+            check.classList.add('done');
+            check.innerHTML = '<svg class="hanamaru" viewBox="0 0 72 72" fill="none">' +
+              '<path d="' + makeHanamaruPath() + '" stroke="#e33" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>';
+          } else if (!msg.done && check.classList.contains('done')) {
+            check.classList.remove('done');
+            check.innerHTML = '&nbsp;';
+          }
+        }
+        break;
+
+      case 'hanamaru':
+        // Trigger the hanamaru festival
+        if (finishBtn) finishBtn.click();
+        break;
+
+      case 'clear':
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        textLayer.innerHTML = '';
+        saveAnnotations();
+        var cpg = document.getElementById(pages[cur]);
+        if (cpg) {
+          cpg.querySelectorAll('.blank-input, .blank-input-full, .roleplay-notes').forEach(function(inp) { inp.value = ''; });
+          cpg.querySelectorAll('.check.done').forEach(function(c) { c.classList.remove('done'); c.innerHTML = '&nbsp;'; });
+          cpg.querySelectorAll('.match-game').forEach(function(g) { if (g._reset) g._reset(); });
+        }
+        break;
+
+      case 'drawstart':
+        if (!drawCtx) break;
+        remoteDrawing = true;
+        remoteLastX = msg.rx * drawCanvas.width;
+        remoteLastY = msg.ry * drawCanvas.height;
+        if (msg.erase) {
+          drawCtx.globalCompositeOperation = 'destination-out';
+          drawCtx.lineWidth = 20;
+        } else {
+          drawCtx.globalCompositeOperation = 'source-over';
+          drawCtx.strokeStyle = '#c33';
+          drawCtx.lineWidth = 2.5;
+        }
+        break;
+
+      case 'drawmove':
+        if (!drawCtx || !remoteDrawing) break;
+        var localX = msg.rx * drawCanvas.width;
+        var localY = msg.ry * drawCanvas.height;
+        drawCtx.beginPath();
+        drawCtx.moveTo(remoteLastX, remoteLastY);
+        drawCtx.lineTo(localX, localY);
+        drawCtx.stroke();
+        remoteLastX = localX;
+        remoteLastY = localY;
+        break;
+
+      case 'drawend':
+        remoteDrawing = false;
+        saveAnnotations();
+        break;
+
+      case 'clearall':
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        textLayer.innerHTML = '';
+        localStorage.removeItem(STORAGE_KEY);
+        document.querySelectorAll('.blank-input, .blank-input-full, .roleplay-notes').forEach(function(inp) { inp.value = ''; });
+        document.querySelectorAll('.check.done').forEach(function(c) { c.classList.remove('done'); c.innerHTML = '&nbsp;'; });
+        document.querySelectorAll('.match-game').forEach(function(g) { if (g._reset) g._reset(); });
+        break;
+
+      case 'cursor':
+        if (remoteCursor) {
+          var cx = msg.rx * (document.documentElement.scrollWidth || 1);
+          var cy = msg.ry * (Math.max(document.documentElement.scrollHeight, window.innerHeight) || 1);
+          remoteCursor.style.left = cx + 'px';
+          remoteCursor.style.top = cy + 'px';
+          if (remoteCursorName && msg.name) remoteCursorName.textContent = msg.name;
+          // Check if cursor is in viewport
+          var vt = window.scrollY;
+          var vb = vt + window.innerHeight - 60; // account for nav bar
+          var vl = window.scrollX;
+          var vr = vl + window.innerWidth;
+          var inView = cx >= vl && cx <= vr && cy >= vt && cy <= vb;
+          if (inView) {
+            remoteCursor.style.display = 'block';
+            if (cursorIndicator) cursorIndicator.style.display = 'none';
+          } else {
+            remoteCursor.style.display = 'none';
+            if (cursorIndicator) {
+              // Clamp to screen edges
+              var sx = Math.max(20, Math.min(window.innerWidth - 48, cx - vl));
+              var sy = cy < vt ? 8 : (cy > vb ? window.innerHeight - 80 : Math.max(8, Math.min(window.innerHeight - 80, cy - vt)));
+              // Rotation: point arrow from indicator position toward remote cursor
+              var angle = Math.atan2(cy - (vt + sy + 14), cx - (vl + sx + 14)) * 180 / Math.PI + 90;
+              cursorIndicator.style.left = sx + 'px';
+              cursorIndicator.style.top = sy + 'px';
+              cursorIndicator.querySelector('svg').style.transform = 'rotate(' + angle + 'deg)';
+              cursorIndicator.style.display = 'block';
+              if (indicatorName && msg.name) indicatorName.textContent = msg.name;
+            }
+          }
+          clearTimeout(cursorHideTimer);
+          cursorHideTimer = setTimeout(function() {
+            remoteCursor.style.display = 'none';
+            if (cursorIndicator) cursorIndicator.style.display = 'none';
+          }, 3000);
+        }
+        break;
+
+      case 'laserstart':
+        var rlc = document.getElementById('laserCanvas');
+        if (rlc) {
+          window._remoteLaserX = msg.rx * rlc.width;
+          window._remoteLaserY = msg.ry * rlc.height;
+          clearTimeout(laserFadeTimer);
+          cancelAnimationFrame(laserFadeRAF);
+        }
+        break;
+
+      case 'lasermove':
+        var rlc2 = document.getElementById('laserCanvas');
+        if (rlc2) {
+          var nx = msg.rx * rlc2.width;
+          var ny = msg.ry * rlc2.height;
+          drawLaserSegment(window._remoteLaserX || nx, window._remoteLaserY || ny, nx, ny);
+          window._remoteLaserX = nx;
+          window._remoteLaserY = ny;
+        }
+        break;
+
+      case 'laserend':
+        fadeOutLaser();
+        break;
+
+      case 'match':
+        var games = document.querySelectorAll('.match-game');
+        if (games[msg.gameIdx] && games[msg.gameIdx]._applyConnections) {
+          games[msg.gameIdx]._applyConnections(msg.connections);
+        }
+        break;
+
+      case 'mcInline':
+        var mcAll = document.querySelectorAll('.mc-inline');
+        var mcGroup = mcAll[msg.groupIdx];
+        if (mcGroup && !mcGroup.classList.contains('locked')) {
+          var mcOpts = mcGroup.querySelectorAll('.mc-opt');
+          if (mcOpts[msg.optIdx]) {
+            mcOpts[msg.optIdx].classList.add('correct');
+            mcGroup.classList.add('locked');
+          }
+        }
+        break;
+
+      case 'reorder':
+        var rItem = document.getElementById(msg.itemId);
+        if (rItem) {
+          var rTray = rItem.querySelector('.reorder-answer');
+          var rBank = rItem.querySelector('.reorder-bank');
+          rTray.innerHTML = '';
+          rBank.querySelectorAll('.word-btn').forEach(function(b) { b.classList.remove('used'); });
+          (msg.order || []).forEach(function(token) {
+            var btns = rBank.querySelectorAll('.word-btn');
+            for (var i = 0; i < btns.length; i++) {
+              var bt = btns[i];
+              var txt = bt.textContent.trim().replace(/\s+/g, '').replace(/[a-zA-Zāīūēōâîûêô]+/g, '');
+              if (txt === token && !bt.classList.contains('used')) {
+                var clone = bt.cloneNode(true);
+                clone.onclick = function() { returnWord(this, bt); };
+                rTray.appendChild(clone);
+                bt.classList.add('used');
+                break;
+              }
+            }
+          });
+        }
+        break;
+
+      case 'tg':
+        var allTgRemote = document.querySelectorAll('.tg');
+        var targetTg = allTgRemote[msg.idx];
+        if (targetTg) {
+          // Mirror single-select + toggle behavior
+          allTgRemote.forEach(function(t) {
+            if (t !== targetTg) t.classList.remove('active');
+          });
+          if (msg.active) {
+            targetTg.classList.add('active');
+            flashOnce(targetTg);
+          } else {
+            targetTg.classList.remove('active');
+          }
+        }
+        break;
+
+      case 'focus':
+        var allInputsRemote = document.querySelectorAll('.blank-input, .blank-input-full, .roleplay-notes');
+        // Clear any prior remote-active indicator
+        document.querySelectorAll('.remote-active').forEach(function(i) { i.classList.remove('remote-active'); });
+        var targetInp = allInputsRemote[msg.idx];
+        if (targetInp) {
+          targetInp.classList.add('remote-active');
+          flashOnce(targetInp);
+        }
+        break;
+
+      case 'chat':
+        appendChatMessage(msg.name, msg.text, msg.translation, false);
+        break;
+    }
+  }
+})();
+
+// =============================================
+// CHAT WITH AUTO-TRANSLATION (Groq API)
+// =============================================
+(function() {
+  var panel = document.getElementById('chatPanel');
+  var messagesDiv = document.getElementById('chatMessages');
+  var input = document.getElementById('chatInput');
+  var sendBtn = document.getElementById('chatSendBtn');
+  var closeBtn = document.getElementById('chatClose');
+  var chatBtn = document.getElementById('btnChat');
+  var toast = document.getElementById('chatToast');
+  var toastTimer = null;
+  var chatOpen = false;
+  var unread = 0;
+
+  // Dynamically set panel bottom to match nav bar height
+  var navEl = document.querySelector('.nav');
+  if (navEl) {
+    panel.style.bottom = navEl.offsetHeight + 'px';
+  }
+
+  // Gemini API key — stored in browser localStorage
+  var GEMINI_API_KEY = localStorage.getItem('gemini-api-key') || '';
+  var keyInput = document.getElementById('chatKeyInput');
+  var keySaveBtn = document.getElementById('chatKeySave');
+  var keyStatus = document.getElementById('chatKeyStatus');
+  var keyWarn = document.getElementById('chatKeyWarn');
+
+  // Show saved state on load
+  if (GEMINI_API_KEY) {
+    keyInput.value = GEMINI_API_KEY;
+    keyStatus.textContent = '✓ saved';
+    keyStatus.className = 'key-status';
+  }
+
+  keySaveBtn.addEventListener('click', function() {
+    var val = keyInput.value.trim();
+    if (val) {
+      GEMINI_API_KEY = val;
+      localStorage.setItem('gemini-api-key', val);
+      keyStatus.textContent = '✓ saved';
+      keyStatus.className = 'key-status';
+      keyWarn.style.display = 'none';
+    }
+  });
+  keyInput.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') keySaveBtn.click();
+  });
+
+  window.toggleChat = function() {
+    chatOpen = !chatOpen;
+    panel.classList.toggle('open', chatOpen);
+    if (chatOpen) {
+      unread = 0;
+      chatBtn.classList.remove('has-unread');
+      input.focus();
+      messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    }
+  };
+
+  closeBtn.addEventListener('click', function() {
+    chatOpen = false;
+    panel.classList.remove('open');
+  });
+
+  function appendChatMessage(name, text, translation, isMine) {
+    var div = document.createElement('div');
+    div.className = 'chat-msg ' + (isMine ? 'mine' : 'theirs');
+    var nameEl = document.createElement('div');
+    nameEl.className = 'chat-name';
+    nameEl.textContent = name || 'Anonymous';
+    div.appendChild(nameEl);
+    var textEl = document.createElement('div');
+    textEl.textContent = text;
+    div.appendChild(textEl);
+    if (translation) {
+      var transEl = document.createElement('div');
+      transEl.className = 'chat-translation';
+      transEl.textContent = translation;
+      div.appendChild(transEl);
+    }
+    messagesDiv.appendChild(div);
+    messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    if (!isMine) {
+      if (!chatOpen) {
+        // Show IG-live style toast above the chat button
+        unread++;
+        chatBtn.classList.add('has-unread');
+        showToast(name, text, translation);
+      } else {
+        // Flash the message so it's noticeable
+        div.classList.add('flash');
+      }
+    }
+    return div;
+  }
+  window.appendChatMessage = appendChatMessage;
+
+  function showToast(name, text, translation) {
+    clearTimeout(toastTimer);
+    toast.innerHTML = '<span class="toast-name">' + (name || 'Anonymous') + '</span>' +
+      text.substring(0, 80) + (text.length > 80 ? '...' : '') +
+      (translation ? '<span class="toast-translation">' + translation.substring(0, 60) + (translation.length > 60 ? '...' : '') + '</span>' : '');
+    toast.classList.add('show');
+    toastTimer = setTimeout(function() { toast.classList.remove('show'); }, 4000);
+  }
+
+  // Auto-detect language: Japanese ↔ English
+  function detectLang(text) {
+    var jpChars = (text.match(/[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF]/g) || []).length;
+    return jpChars > text.length * 0.15 ? 'ja' : 'en';
+  }
+
+  var GEMINI_MODELS = ['gemini-3-flash-preview', 'gemini-2.5-flash'];
+
+  async function translateWithGemini(text) {
+    if (!GEMINI_API_KEY) return null;
+    var lang = detectLang(text);
+    var sourceLang = lang === 'ja' ? 'Japanese' : 'English';
+    var targetLang = lang === 'ja' ? 'English' : 'Japanese';
+
+    for (var i = 0; i < GEMINI_MODELS.length; i++) {
+      try {
+        var res = await fetch('https://generativelanguage.googleapis.com/v1beta/models/' + GEMINI_MODELS[i] + ':generateContent?key=' + GEMINI_API_KEY, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            contents: [{ parts: [{ text: 'Translate the following ' + sourceLang + ' text to ' + targetLang + '. Output ONLY the translation, nothing else.\n\n' + text }] }],
+            generationConfig: { temperature: 0.3, maxOutputTokens: 256 }
+          })
+        });
+        var data = await res.json();
+        if (data.candidates && data.candidates[0]) {
+          return data.candidates[0].content.parts[0].text.trim();
+        }
+        console.warn('[chat] model ' + GEMINI_MODELS[i] + ':', JSON.stringify(data));
+      } catch (e) {
+        console.warn('[chat] model ' + GEMINI_MODELS[i] + ' failed:', e);
+      }
+    }
+    return null;
+  }
+
+  async function sendMessage() {
+    var text = input.value.trim();
+    if (!text) return;
+    if (!GEMINI_API_KEY) { keyWarn.style.display = 'block'; keyInput.focus(); return; }
+    input.value = '';
+    var name = localStorage.getItem('sync-name') || 'Me';
+
+    // Show message immediately with pending translation
+    var div = appendChatMessage(name, text, null, true);
+
+    // Translate then update
+    var translation = await translateWithGemini(text);
+    if (translation) {
+      var transEl = document.createElement('div');
+      transEl.className = 'chat-translation';
+      transEl.textContent = translation;
+      div.appendChild(transEl);
+      messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    }
+
+    // Send via WebSocket
+    if (window.syncSend) {
+      window.syncSend({ t: 'chat', name: name, text: text, translation: translation || '' });
+    }
+  }
+
+  sendBtn.addEventListener('click', sendMessage);
+  input.addEventListener('keydown', function(e) {
+    if (e.isComposing || e.keyCode === 229) return; // ignore IME composition
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      sendMessage();
+    }
+  });
+})();
+</script>
+</body>
+</html>
