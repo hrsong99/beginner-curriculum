@@ -788,21 +788,27 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |                                                                         |
 |  ROLEPLAY — WEEKEND PLANS 🎉                                            |
 |                                                                         |
+|  ▸ "Let's roleplay! I'll be your friend — try all 3 missions."          |
+|    「ロールプレイしましょう！わたしはともだちです。                        |
+|     ミッションをぜんぶクリアしてね！」                                    |
+|                                                                         |
 |  Tutor = ともだち (friend).   Student = complete 3 missions!            |
 |                                                                         |
 |  ┌──────────────────────────────────────────────────────────┐           |
 |  │                                                           │           |
 |  │   ☐ MISSION 1:  Ask what the tutor watches / reads /      │           |
 |  │                  listens to        (なにを 〜ますか？)      │           |
-|  │                  ▸ 「わたしに しつもんしてね。」              │           |
+|  │                  ▸ 「チューターが なにを みる・よむ・きく      │           |
+|  │                      か、きいてね。」                        │           |
 |  │                                                           │           |
 |  │   ☐ MISSION 2:  Invite the tutor to do something          │           |
 |  │                  together!         (〜を 〜ませんか？)      │           |
-|  │                  ▸ 「わたしを さそってね！」                 │           |
+|  │                  ▸ 「いっしょに なにか しませんか？と         │           |
+|  │                      チューターを さそってね！」             │           |
 |  │                                                           │           |
 |  │   ☐ MISSION 3:  Say one thing you DON'T do                │           |
 |  │                                     (〜を 〜ません)         │           |
-|  │                  ▸ 「しないことを ひとつ おしえてね。」        │           |
+|  │                  ▸ 「じぶんが しないことを ひとつ いってね。」  │           |
 |  │                                                           │           |
 |  └──────────────────────────────────────────────────────────┘           |
 |                                                                         |
