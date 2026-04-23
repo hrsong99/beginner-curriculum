@@ -8,7 +8,7 @@
 - **Vocab page simplified to a Connect-the-Dots matching activity** (recognition, not production). It mixes L5 new words with a small number of L1/L2 review words so returning students get cumulative reinforcement without fresh cognitive load. Replaces L4's full EN→JP recall table.
 - **Dropped the Today's Character (hiragana/katakana) bonus page** — tested poorly as a class activity; the isolated character drill interrupted lesson flow without reinforcing the target pattern.
 - **NEW: Quick Practice page** — multiple choice (two inline options separated by `/` inside the blank) + word-reorder, modeled on the prestudy interaction style. Acts as low-stress downtime between heavier drill pages. No open production required.
-- **NEW: Listening Activity page** — a short **first-person monologue** delivered via **mp3** (not tutor-read): "Yuki's Daily Routine," ~20 seconds, uses only the affirmative slice of Pattern A naturally; question (〜ますか) and invitation (〜ませんか / Pattern B) forms aren't forced in since neither fits a self-introduction monologue. Student answers multiple-choice comprehension — each question and each option is bilingual (EN + JP). A "Show Full Transcript" button reveals the complete JP/EN script after students finish the MCs (replaces the second-pass fill-in activity).
+- **NEW: Listening Activity page** — 5 short mp3 clips (one per comprehension question), not tutor-read. Each question has its own inline audio player so students can re-play only the clip they need. Audio uses Pattern A naturally (affirmative + question + negative); invitation (〜ませんか) isn't forced in since the answer-form of comprehension Qs doesn't need it. Each question and each option is bilingual (EN + JP).
 - Pattern drills and conversation structure carried over from Lesson 4.
 
 **Two focused patterns:**
@@ -40,7 +40,7 @@
 - Roleplay HINTS box merges PHRASES and WORDS into one `.help-box`
 - Multiple choice: on Page 7, render the two inline options as a single tappable pair separated by `/` inside the blank (e.g. `（ たべます / のみます ）`); each option is independently clickable with green/red feedback. On Page 8, render as stacked buttons with EN label and JP translation on one line.
 - Word reorder: word-bank buttons + answer tray + Check/Reset/Show Answer (like prestudy `.reorder-item`)
-- Listening activity: embed an mp3 audio player at the top of the page; audio file covers the full monologue. The "Show Full Transcript" button toggles a hidden `.transcript-reveal` block containing the JP script with furigana + EN translation. No tutor-read path.
+- Listening activity: each MC question has its own inline `<audio controls>` element placed between the question text and the answer options. Audio URLs are per-question (lesson-5-0.mp3 … lesson-5-4.mp3). No top-level full-monologue player; no transcript reveal.
 
 ## Lesson Flow (14 Core + 1 Bonus + Mission Complete)
 
@@ -54,7 +54,7 @@
 | 5    | Pattern Drill B (ませんか invite)   | 3 min | Shall we…? / Would you like…?           |
 | 6    | Vocab Connect (matching)          | 2 min | EN ↔ JP — incl. L1/L2 review words      |
 | 7    | Quick Practice (MC + Reorder)     | 2 min | Low-stress downtime                     |
-| 8    | Listening Activity                | 3 min | mp3 monologue → MC (bilingual) + reveal |
+| 8    | Listening Activity                | 3 min | Per-Q mp3 clips → MC (bilingual)        |
 | 9    | Short Dialogues                   | 2 min | 4 dialogues                             |
 | 10   | Guided Conversation               | 2 min | Cafe scene                              |
 | 11   | Memory Conversation               | 2 min | Fill-in of Page 10                      |
@@ -255,10 +255,10 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |                                                                         |
 |  2. Fill in the Blanks:                                                 |
 |     * ごはん（　　　）たべます。           I eat rice.                   |
-|     * みずを（　　　）。                   I drink water.                |
+|     * みずを のみ（　　　）。               I drink water.                |
 |     * ほんを よみ（　　　）？              Do you read books?            |
 |     * テレビを み（　　　）。               I don't watch TV.            |
-|     * おんがくを（　　　）。               I listen to music.            |
+|     * おんがくを きき（　　　）。           I listen to music.            |
 |                                                                         |
 |                                                                         |
 |  ▸ "Translate to Japanese — hints are OK."                              |
@@ -267,23 +267,23 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  3. Translate:                                                          |
 |     * I drink coffee.                                                   |
 |       _____________________________________________________             |
-|       (coffee = コーヒー)                                                |
+|       (coffee = コーヒー, drink = のみ〜)                                 |
 |                                                                         |
 |     * Do you eat bread?                                                 |
 |       _____________________________________________________             |
-|       (bread = パン)                                                     |
+|       (bread = パン, eat = たべ〜)                                       |
 |                                                                         |
 |     * I don't read books.                                               |
 |       _____________________________________________________             |
-|       (book = ほん)                                                      |
+|       (book = ほん, read = よみ〜)                                       |
 |                                                                         |
 |     * Do you watch movies?                                              |
 |       _____________________________________________________             |
-|       (movie = えいが)                                                   |
+|       (movie = えいが, watch = み〜)                                     |
 |                                                                         |
 |     * I listen to music.                                                |
 |       _____________________________________________________             |
-|       (music = おんがく)                                                 |
+|       (music = おんがく, listen = きき〜)                                 |
 |                                                                         |
 |                                                                         |
 |  ▸ "Make your own! What do you eat, drink, or NOT eat every day?"       |
@@ -325,10 +325,10 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |                                                                         |
 |  2. Fill in the Blanks:                                                 |
 |     * コーヒーを のみ（　　　）か？       Shall we drink coffee?         |
-|     * えいがを（　　　）ませんか？        Shall we watch a movie?        |
+|     * えいがを み（　　　）か？           Shall we watch a movie?        |
 |     * ごはんを たべ（　　　）か？         Shall we eat rice?             |
 |     * ほん（　　　）よみませんか？        Shall we read a book?          |
-|     * おんがくを（　　　）ませんか？      Shall we listen to music?      |
+|     * おんがくを きき（　　　）か？       Shall we listen to music?      |
 |                                                                         |
 |                                                                         |
 |  ▸ "Translate to Japanese — hints are OK."                              |
@@ -337,23 +337,23 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  3. Translate:                                                          |
 |     * Shall we drink water?                                             |
 |       _____________________________________________________             |
-|       (water = みず)                                                     |
+|       (water = みず, drink = のみ〜)                                     |
 |                                                                         |
 |     * Would you like to read a book?                                    |
 |       _____________________________________________________             |
-|       (book = ほん)                                                      |
+|       (book = ほん, read = よみ〜)                                       |
 |                                                                         |
 |     * Shall we watch TV?                                                |
 |       _____________________________________________________             |
-|       (TV = テレビ)                                                      |
+|       (TV = テレビ, watch = み〜)                                        |
 |                                                                         |
 |     * Shall we eat bread together?                                      |
 |       _____________________________________________________             |
-|       (bread = パン, together = いっしょに)                              |
+|       (bread = パン, together = いっしょに, eat = たべ〜)                 |
 |                                                                         |
 |     * Shall we watch a movie?                                           |
 |       _____________________________________________________             |
-|       (movie = えいが)                                                   |
+|       (movie = えいが, watch = み〜)                                     |
 |                                                                         |
 |                                                                         |
 |  ▸ "Now YOU invite me to do something!"                                 |
@@ -477,35 +477,9 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  LISTENING                                                              |
 |  ──────────                                                             |
 |                                                                         |
-|  ▸ "Press play and listen. Don't peek at the transcript yet!"           |
-|    「さいせいボタンをおして、きいてみましょう。                          |
-|     まだ スクリプトは みないでね！」                                    |
-|                                                                         |
-|                                                                         |
-|  ┌─── AUDIO PLAYER ──────────────────────────────────────────┐          |
-|  │                                                            │          |
-|  │   ▶  [  ━━━━━━━━━━━━━━━━━━━━━━━━━  ]  0:00 / 0:22        │          |
-|  │                                                            │          |
-|  │   Yuki's Daily Routine  (ゆきの いちにち)                   │          |
-|  │                                                            │          |
-|  └────────────────────────────────────────────────────────────┘          |
-|                                                                         |
-|  ┌─── AUDIO SCRIPT (hidden from student — for tutor/dev ref) ┐          |
-|  │                                                            │          |
-|  │  こんにちは、ゆきです。                                      │          |
-|  │  まいあさ コーヒーを のみます。                              │          |
-|  │  ごはんも たべます。                                         │          |
-|  │  でも、テレビは みません。                                   │          |
-|  │  よる、うちで ほんを よみます。                              │          |
-|  │  そして、ねるまえに おんがくを ききます。                    │          |
-|  │                                                            │          |
-|  │  (Hi, I'm Yuki. Every morning I drink coffee.              │          |
-|  │   I also eat rice. But I don't watch TV.                   │          |
-|  │   At night, I read books at home.                          │          |
-|  │   And before bed, I listen to music.)                      │          |
-|  └────────────────────────────────────────────────────────────┘          |
-|                                                                         |
-|  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
+|  ▸ "Each question has its own audio. Press play, listen, and answer!"   |
+|    「しつもんごとに おんせいが あります。                                |
+|     さいせいボタンを おして、こたえてね！」                              |
 |                                                                         |
 |  COMPREHENSION — Multiple Choice                                        |
 |  ▸ "Answer the questions. Listen again if you need to!"                 |
@@ -514,43 +488,37 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |                                                                         |
 |  1. What does Yuki drink in the morning?                                |
 |     ゆきさんは あさ なにを のみますか？                                   |
+|     ▶ [ ━━━━━━ ] (lesson-5-0.mp3)                                       |
 |        a)  water / みず                                                  |
 |        b)  coffee / コーヒー                                             |
 |                                                                         |
 |                                                                         |
 |  2. Does Yuki eat rice?                                                 |
 |     ゆきさんは ごはんを たべますか？                                      |
+|     ▶ [ ━━━━━━ ] (lesson-5-1.mp3)                                       |
 |        a)  Yes / はい、たべます                                          |
 |        b)  No  / いいえ、たべません                                      |
 |                                                                         |
 |                                                                         |
 |  3. What does Yuki do at night?                                         |
 |     よる、ゆきさんは なにを しますか？                                    |
+|     ▶ [ ━━━━━━ ] (lesson-5-2.mp3)                                       |
 |        a)  watches TV / テレビを みます                                  |
 |        b)  reads a book / ほんを よみます                                |
 |                                                                         |
 |                                                                         |
 |  4. What does Yuki listen to before bed?                                |
 |     ねるまえに ゆきさんは なにを ききますか？                             |
+|     ▶ [ ━━━━━━ ] (lesson-5-3.mp3)                                       |
 |        a)  music / おんがく                                              |
 |        b)  the news / ニュース                                           |
 |                                                                         |
 |                                                                         |
 |  5. Does Yuki watch TV?                                                 |
 |     ゆきさんは テレビを みますか？                                        |
+|     ▶ [ ━━━━━━ ] (lesson-5-4.mp3)                                       |
 |        a)  Yes / はい、みます                                            |
 |        b)  No  / いいえ、みません                                        |
-|                                                                         |
-|                                                                         |
-|  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
-|                                                                         |
-|  ▸ "All done? Click to see the full script and read along!"             |
-|    「ぜんぶ できたら、ボタンをおして スクリプトをみてみましょう！」      |
-|                                                                         |
-|     ┌──────────────────────────────────────┐                            |
-|     │   ▶  SHOW FULL TRANSCRIPT            │                            |
-|     │      (スクリプトを みる)              │                            |
-|     └──────────────────────────────────────┘                            |
 |                                                                         |
 |                                                                  PAGE 8 |
 +-------------------------------------------------------------------------+
@@ -574,7 +542,7 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |            Yes, I drink coffee.                                         |
 |                                                                         |
 |     ┌─────────────────────────────────────────┐                         |
-|     │  コーヒー(coffee)                          │                         |
+|     │  コーヒー(coffee)  のみ〜(drink)            │                         |
 |     └─────────────────────────────────────────┘                         |
 |                                                                         |
 |  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
@@ -589,7 +557,7 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |            Yes, I read books.                                           |
 |                                                                         |
 |     ┌─────────────────────────────────────────┐                         |
-|     │  ほん(book)  はい(yes)                     │                         |
+|     │  ほん(book)  よみ〜(read)  はい(yes)        │                         |
 |     └─────────────────────────────────────────┘                         |
 |                                                                         |
 |  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
@@ -604,7 +572,7 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |            No, I don't.                                                 |
 |                                                                         |
 |     ┌─────────────────────────────────────────┐                         |
-|     │  えいが(movie)                             │                         |
+|     │  えいが(movie)  み〜(watch)                │                         |
 |     └─────────────────────────────────────────┘                         |
 |                                                                         |
 |  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
@@ -690,14 +658,14 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  YUKI (tutor):   なにを のみますか？                                     |
 |                  What will you drink?                                   |
 |                                                                         |
-|  ALEX (you):     わたしは コーヒーを______。                              |
+|  ALEX (you):     わたしは コーヒーを のみ______。                         |
 |                  I'll drink coffee.                                     |
 |                                                                         |
 |  YUKI (tutor):   いっしょに パンを たべませんか？                         |
 |                  Shall we eat bread together?                           |
 |                                                                         |
 |  ALEX (you):     はい、いいですね！                                       |
-|                  ゆきさんは なにを______？                                |
+|                  ゆきさんは なにを たべ______？                           |
 |                  Yuki, what will you eat?                               |
 |                                                                         |
 |  YUKI (tutor):   わたしは ごはんを たべます。みずも のみます。            |
@@ -739,6 +707,7 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |     ┌─── WORDS ─────────────────────────────────────────┐               |
 |     │  コーヒー(coffee)  みず(water)                      │               |
 |     │  おちゃ(tea)       ぎゅうにゅう(milk)                │               |
+|     │  のみ〜(drink)                                      │               |
 |     └────────────────────────────────────────────────────┘               |
 |                                                                         |
 |  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─    |
@@ -757,6 +726,7 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |     ┌─── WORDS ─────────────────────────────────────────┐               |
 |     │  テレビ(TV) えいが(movie) ほん(book)                │               |
 |     │  まんが(comic) ニュース(news)                       │               |
+|     │  み〜(watch)  よみ〜(read)                          │               |
 |     └────────────────────────────────────────────────────┘               |
 |                                                                         |
 |  ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─    |
@@ -775,6 +745,7 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |     ┌─── WORDS ─────────────────────────────────────────┐               |
 |     │  ごはん(rice) パン(bread) にく(meat)                │               |
 |     │  さかな(fish) やさい(vegetables)                    │               |
+|     │  たべ〜(eat)  のみ〜(drink)                         │               |
 |     └────────────────────────────────────────────────────┘               |
 |                                                                         |
 |                                                                 PAGE 12 |
@@ -798,17 +769,19 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  │                                                           │           |
 |  │   ☐ MISSION 1:  Ask what the tutor watches / reads /      │           |
 |  │                  listens to        (なにを 〜ますか？)      │           |
-|  │                  ▸ 「チューターが なにを みる・よむ・きく      │           |
-|  │                      か、きいてね。」                        │           |
+|  │                  ▸ 「『なにを みますか？／よみますか？／       │           |
+|  │                      ききますか？』と しつもんしてね。」       │           |
+|  │                      (しつもん = ask)                       │           |
 |  │                                                           │           |
 |  │   ☐ MISSION 2:  Invite the tutor to do something          │           |
 |  │                  together!         (〜を 〜ませんか？)      │           |
-|  │                  ▸ 「いっしょに なにか しませんか？と         │           |
-|  │                      チューターを さそってね！」             │           |
+|  │                  ▸ 「『〇〇を 〇〇ませんか？』と              │           |
+|  │                      さそってね！」  (さそう = invite)       │           |
 |  │                                                           │           |
 |  │   ☐ MISSION 3:  Say one thing you DON'T do                │           |
 |  │                                     (〜を 〜ません)         │           |
-|  │                  ▸ 「じぶんが しないことを ひとつ いってね。」  │           |
+|  │                  ▸ 「『〇〇を 〇〇ません。』と                │           |
+|  │                      いってね。」     (いう = say)           │           |
 |  │                                                           │           |
 |  └──────────────────────────────────────────────────────────┘           |
 |                                                                         |
@@ -850,19 +823,19 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  WAITER:   いらっしゃいませ！なにを たべますか？                          |
 |            Welcome! What will you eat?                                  |
 |                                                                         |
-|  YOU:      わたしは すしを ______。                                      |
+|  YOU:      わたしは すしを たべ______。                                  |
 |            I'll have sushi.                                             |
 |                                                                         |
 |  WAITER:   なにを のみますか？                                           |
 |            What would you like to drink?                                |
 |                                                                         |
-|  YOU:      おちゃを ______。                                             |
+|  YOU:      おちゃを のみ______。                                         |
 |            I'll have green tea.                                         |
 |                                                                         |
 |  WAITER:   パンも たべますか？                                            |
 |            Will you also eat bread?                                     |
 |                                                                         |
-|  YOU:      いいえ、パンは ______。                                        |
+|  YOU:      いいえ、パンは たべ______。                                   |
 |            No, I won't eat bread.                                       |
 |                                                                         |
 |  YOU:      おねがいします！                                               |
@@ -872,37 +845,38 @@ Travel conversation also appears in prestudy (plain, no highlights).
 +-------------------------------------------------------------------------+
 ```
 
-### PAGE 15 — Bonus: Translate (No Hints)
+### PAGE 15 — Bonus: Translate
 
 ```
 +-------------------------------------------------------------------------+
 |                                                                         |
-|  BONUS: TRANSLATE — NO HINTS!                                           |
-|  ──────────────────────────────                                         |
+|  BONUS: TRANSLATE                                                       |
+|  ──────────────────                                                     |
 |  (Skip if you don't have time!)                                         |
 |                                                                         |
-|  ▸ "Translate these — no hints!"                                        |
-|    「ヒントなしでにほんごにしてみましょう！」                            |
+|  ▸ "Try it on your own first! Tap a hint if you get stuck."             |
+|    「じぶんで にほんごにして みましょう！                                  |
+|     わからなかったら ヒントを みてね。」                                  |
 |                                                                         |
 |                                                                         |
 |  1. I eat rice.                                                         |
-|                                                                         |
+|     [▶ Show hints]  (click → ごはん(rice) · たべます(eat))               |
 |     _____________________________________________________               |
 |                                                                         |
 |  2. I drink coffee.                                                     |
-|                                                                         |
+|     [▶ Show hints]  (click → コーヒー(coffee) · のみます(drink))         |
 |     _____________________________________________________               |
 |                                                                         |
 |  3. Do you read books?                                                  |
-|                                                                         |
+|     [▶ Show hints]  (click → ほん(book) · よみます(read))                |
 |     _____________________________________________________               |
 |                                                                         |
 |  4. I don't watch TV.                                                   |
-|                                                                         |
+|     [▶ Show hints]  (click → テレビ(TV) · みます(watch))                 |
 |     _____________________________________________________               |
 |                                                                         |
 |  5. Shall we listen to music?                                           |
-|                                                                         |
+|     [▶ Show hints]  (click → おんがく(music) · ききます(listen))          |
 |     _____________________________________________________               |
 |                                                                         |
 |                                                                 PAGE 15 |

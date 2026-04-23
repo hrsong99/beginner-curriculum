@@ -180,24 +180,11 @@
   .reveal-btn { display: none; }
   .reorder-item.wrong .reveal-btn { display: inline-block; }
 
-  /* --- Listening: Audio Player + Transcript --- */
-  .audio-box { border: 1.5px solid #3558c4; border-radius: 8px; padding: 18px 22px; margin: 16px 0; background: #f0f4ff; }
-  .audio-box .audio-title { font-size: 14px; font-weight: bold; color: #3558c4; margin-bottom: 10px; letter-spacing: 0.5px; }
-  .audio-box audio { width: 100%; max-width: 460px; }
-  .audio-box .audio-subtitle { font-size: 12px; color: #888; margin-top: 6px; }
-
-  .transcript-btn { display: inline-block; font-family: monospace; font-size: 14px; padding: 10px 20px; border: 2px solid #3558c4; background: #fff; color: #3558c4; cursor: pointer; border-radius: 6px; transition: background 0.15s, color 0.15s; margin: 12px 0; }
-  .transcript-btn:hover { background: #3558c4; color: #fff; }
-  .transcript-reveal { display: none; margin-top: 14px; padding: 16px 20px; border: 1.5px solid #bbb; border-radius: 6px; background: #fafafa; }
-  .transcript-reveal.open { display: block; }
-  .transcript-reveal .pair { margin-bottom: 8px; }
-  .transcript-reveal .pair .jp { font-size: 17px; }
-  .transcript-reveal .pair .en { padding-left: 14px; }
-
   /* --- Listening: stacked MC choices with bilingual labels --- */
-  .listen-q { margin: 18px 0; }
+  .listen-q { margin: 24px 0; padding: 18px 20px; background: #fafafa; border: 1px solid #e8e8e8; border-radius: 8px; }
   .listen-q .q-en { font-size: 16px; }
-  .listen-q .q-jp { font-size: 14px; color: #666; margin-top: 2px; }
+  .listen-q .q-jp { font-size: 14px; color: #666; margin-top: 2px; margin-bottom: 10px; }
+  .listen-q audio { margin-bottom: 14px !important; }
   .listen-opts { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; margin-left: 20px; }
   .listen-opt { font-family: monospace; font-size: 15px; padding: 10px 14px; border: 1px solid #999; background: #fff; cursor: pointer; text-align: left; border-radius: 4px; transition: background 0.15s, border-color 0.15s, color 0.15s; }
   .listen-opt:hover { background: #f0f0f0; border-color: #111; }
@@ -207,6 +194,14 @@
   .listen-opt.correct .opt-jp { color: #4caf50; }
   .listen-opt.wrong { background: #ffebee; border-color: #ef5350; color: #c62828; }
   .listen-opts.locked .listen-opt:not(.correct):not(.wrong) { opacity: 0.4; cursor: default; }
+
+  .hint-reveal { margin: 8px 0 12px 0; max-width: 420px; }
+  .hint-reveal summary { cursor: pointer; color: #3558c4; font-size: 13px; list-style: none; padding: 6px 10px; border: 1px dashed #a0b4d8; border-radius: 4px; background: #f0f4ff; display: inline-block; user-select: none; }
+  .hint-reveal summary::-webkit-details-marker { display: none; }
+  .hint-reveal summary::before { content: "▶ "; font-size: 10px; }
+  .hint-reveal[open] summary::before { content: "▼ "; }
+  .hint-reveal[open] summary { border-style: solid; }
+  .hint-reveal .hint-content { padding: 10px 14px; background: #f0f4ff; border-left: 3px solid #a0b4d8; font-size: 15px; margin-top: 6px; line-height: 1.8; }
 
   .separator { border: none; border-top: 1px dashed #ccc; margin: 28px 0; }
   ol { padding-left: 20px; }
@@ -428,7 +423,7 @@
         <div class="jp">&bull; <ruby>ごはん<rt>gohan</rt></ruby><input type="text" class="blank-input" style="min-width:80px"><ruby>たべます<rt>tabemasu</rt></ruby>。 <span class="en">I eat rice.</span></div>
       </div>
       <div class="pair">
-        <div class="jp">&bull; <ruby>みず<rt>mizu</rt></ruby><ruby>を<rt>wo</rt></ruby><input type="text" class="blank-input" style="min-width:80px">。 <span class="en">I drink water.</span></div>
+        <div class="jp">&bull; <ruby>みず<rt>mizu</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>のみ<rt>nomi</rt></ruby><input type="text" class="blank-input" style="min-width:80px">。 <span class="en">I drink water.</span></div>
       </div>
       <div class="pair">
         <div class="jp">&bull; <ruby>ほん<rt>hon</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>よみ<rt>yomi</rt></ruby><input type="text" class="blank-input" style="min-width:80px">？ <span class="en">Do you read books?</span></div>
@@ -437,7 +432,7 @@
         <div class="jp">&bull; <ruby>テレビ<rt>terebi</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>み<rt>mi</rt></ruby><input type="text" class="blank-input" style="min-width:80px">。 <span class="en">I don't watch TV.</span></div>
       </div>
       <div class="pair">
-        <div class="jp">&bull; <ruby>おんがく<rt>ongaku</rt></ruby><ruby>を<rt>wo</rt></ruby><input type="text" class="blank-input" style="min-width:80px">。 <span class="en">I listen to music.</span></div>
+        <div class="jp">&bull; <ruby>おんがく<rt>ongaku</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>きき<rt>kiki</rt></ruby><input type="text" class="blank-input" style="min-width:80px">。 <span class="en">I listen to music.</span></div>
       </div>
     </div>
   </div>
@@ -453,27 +448,27 @@
     <div class="pattern">
       &bull; I drink coffee.<br>
       <input type="text" class="blank-input-full">
-      <span style="color:#999; font-size:14px">(coffee = <ruby>コーヒー<rt>kōhī</rt></ruby>)</span>
+      <span style="color:#999; font-size:14px">(coffee = <ruby>コーヒー<rt>kōhī</rt></ruby>, drink = <ruby>のみ<rt>nomi</rt></ruby>〜)</span>
     </div>
     <div class="pattern" style="margin-top:12px">
       &bull; Do you eat bread?<br>
       <input type="text" class="blank-input-full">
-      <span style="color:#999; font-size:14px">(bread = <ruby>パン<rt>pan</rt></ruby>)</span>
+      <span style="color:#999; font-size:14px">(bread = <ruby>パン<rt>pan</rt></ruby>, eat = <ruby>たべ<rt>tabe</rt></ruby>〜)</span>
     </div>
     <div class="pattern" style="margin-top:12px">
       &bull; I don't read books.<br>
       <input type="text" class="blank-input-full">
-      <span style="color:#999; font-size:14px">(book = <ruby>ほん<rt>hon</rt></ruby>)</span>
+      <span style="color:#999; font-size:14px">(book = <ruby>ほん<rt>hon</rt></ruby>, read = <ruby>よみ<rt>yomi</rt></ruby>〜)</span>
     </div>
     <div class="pattern" style="margin-top:12px">
       &bull; Do you watch movies?<br>
       <input type="text" class="blank-input-full">
-      <span style="color:#999; font-size:14px">(movie = <ruby>えいが<rt>eiga</rt></ruby>)</span>
+      <span style="color:#999; font-size:14px">(movie = <ruby>えいが<rt>eiga</rt></ruby>, watch = <ruby>み<rt>mi</rt></ruby>〜)</span>
     </div>
     <div class="pattern" style="margin-top:12px">
       &bull; I listen to music.<br>
       <input type="text" class="blank-input-full">
-      <span style="color:#999; font-size:14px">(music = <ruby>おんがく<rt>ongaku</rt></ruby>)</span>
+      <span style="color:#999; font-size:14px">(music = <ruby>おんがく<rt>ongaku</rt></ruby>, listen = <ruby>きき<rt>kiki</rt></ruby>〜)</span>
     </div>
   </div>
 
@@ -539,7 +534,7 @@
         <div class="jp">&bull; <ruby>コーヒー<rt>kōhī</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>のみ<rt>nomi</rt></ruby><input type="text" class="blank-input" style="min-width:80px"><ruby>か<rt>ka</rt></ruby>？ <span class="en">Shall we drink coffee?</span></div>
       </div>
       <div class="pair">
-        <div class="jp">&bull; <ruby>えいが<rt>eiga</rt></ruby><ruby>を<rt>wo</rt></ruby><input type="text" class="blank-input" style="min-width:80px"><ruby>ませんか<rt>masen ka</rt></ruby>？ <span class="en">Shall we watch a movie?</span></div>
+        <div class="jp">&bull; <ruby>えいが<rt>eiga</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>み<rt>mi</rt></ruby><input type="text" class="blank-input" style="min-width:80px"><ruby>か<rt>ka</rt></ruby>？ <span class="en">Shall we watch a movie?</span></div>
       </div>
       <div class="pair">
         <div class="jp">&bull; <ruby>ごはん<rt>gohan</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>たべ<rt>tabe</rt></ruby><input type="text" class="blank-input" style="min-width:80px"><ruby>か<rt>ka</rt></ruby>？ <span class="en">Shall we eat rice?</span></div>
@@ -548,7 +543,7 @@
         <div class="jp">&bull; <ruby>ほん<rt>hon</rt></ruby><input type="text" class="blank-input" style="min-width:80px"><ruby>よみませんか<rt>yomimasen ka</rt></ruby>？ <span class="en">Shall we read a book?</span></div>
       </div>
       <div class="pair">
-        <div class="jp">&bull; <ruby>おんがく<rt>ongaku</rt></ruby><ruby>を<rt>wo</rt></ruby><input type="text" class="blank-input" style="min-width:80px"><ruby>ませんか<rt>masen ka</rt></ruby>？ <span class="en">Shall we listen to music?</span></div>
+        <div class="jp">&bull; <ruby>おんがく<rt>ongaku</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>きき<rt>kiki</rt></ruby><input type="text" class="blank-input" style="min-width:80px"><ruby>か<rt>ka</rt></ruby>？ <span class="en">Shall we listen to music?</span></div>
       </div>
     </div>
   </div>
@@ -564,27 +559,27 @@
     <div class="pattern">
       &bull; Shall we drink water?<br>
       <input type="text" class="blank-input-full">
-      <span style="color:#999; font-size:14px">(water = <ruby>みず<rt>mizu</rt></ruby>)</span>
+      <span style="color:#999; font-size:14px">(water = <ruby>みず<rt>mizu</rt></ruby>, drink = <ruby>のみ<rt>nomi</rt></ruby>〜)</span>
     </div>
     <div class="pattern" style="margin-top:12px">
       &bull; Would you like to read a book?<br>
       <input type="text" class="blank-input-full">
-      <span style="color:#999; font-size:14px">(book = <ruby>ほん<rt>hon</rt></ruby>)</span>
+      <span style="color:#999; font-size:14px">(book = <ruby>ほん<rt>hon</rt></ruby>, read = <ruby>よみ<rt>yomi</rt></ruby>〜)</span>
     </div>
     <div class="pattern" style="margin-top:12px">
       &bull; Shall we watch TV?<br>
       <input type="text" class="blank-input-full">
-      <span style="color:#999; font-size:14px">(TV = <ruby>テレビ<rt>terebi</rt></ruby>)</span>
+      <span style="color:#999; font-size:14px">(TV = <ruby>テレビ<rt>terebi</rt></ruby>, watch = <ruby>み<rt>mi</rt></ruby>〜)</span>
     </div>
     <div class="pattern" style="margin-top:12px">
       &bull; Shall we eat bread together?<br>
       <input type="text" class="blank-input-full">
-      <span style="color:#999; font-size:14px">(bread = <ruby>パン<rt>pan</rt></ruby>, together = <ruby>いっしょに<rt>isshoni</rt></ruby>)</span>
+      <span style="color:#999; font-size:14px">(bread = <ruby>パン<rt>pan</rt></ruby>, together = <ruby>いっしょに<rt>isshoni</rt></ruby>, eat = <ruby>たべ<rt>tabe</rt></ruby>〜)</span>
     </div>
     <div class="pattern" style="margin-top:12px">
       &bull; Shall we watch a movie?<br>
       <input type="text" class="blank-input-full">
-      <span style="color:#999; font-size:14px">(movie = <ruby>えいが<rt>eiga</rt></ruby>)</span>
+      <span style="color:#999; font-size:14px">(movie = <ruby>えいが<rt>eiga</rt></ruby>, watch = <ruby>み<rt>mi</rt></ruby>〜)</span>
     </div>
   </div>
 
@@ -801,19 +796,9 @@
   <h2></h2>
 
   <div class="tg">
-    <div class="tg-en">"Press play and listen. Don't peek at the transcript yet!"</div>
-    <div class="tg-jp">「さいせいボタンをおして、きいてみましょう。まだ スクリプトは みないでね！」</div>
+    <div class="tg-en">"Each question has its own audio. Press play, listen, and answer!"</div>
+    <div class="tg-jp">「しつもんごとに おんせいが あります。さいせいボタンを おして、こたえてね！」</div>
   </div>
-
-  <div class="audio-box">
-    <div class="audio-title">Yuki's Daily Routine &nbsp; <span style="color:#888; font-weight:normal; font-size:12px">(<ruby>ゆき<rt>Yuki</rt></ruby>の<ruby>いちにち<rt>ichinichi</rt></ruby>)</span></div>
-    <audio controls preload="metadata" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/jp-lesson-5.mp3">
-      Your browser does not support the audio element.
-    </audio>
-    <div class="audio-subtitle">Listen as many times as you need!</div>
-  </div>
-
-  <hr class="separator">
 
   <div class="section">
     <p><strong>COMPREHENSION &mdash; Multiple Choice</strong></p>
@@ -825,6 +810,7 @@
     <div class="listen-q">
       <div class="q-en"><strong>1.</strong> What does Yuki drink in the morning?</div>
       <div class="q-jp"><ruby>ゆき<rt>Yuki</rt></ruby>さんは<ruby>あさ<rt>asa</rt></ruby>なにを<ruby>のみます<rt>nomimasu</rt></ruby>か？</div>
+      <audio controls preload="metadata" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/lesson-5-0.mp3" style="width:100%; max-width:360px; margin:8px 0; display:block;">Your browser does not support audio.</audio>
       <div class="listen-opts">
         <button class="listen-opt"><span class="opt-en">water</span><span class="opt-jp"><ruby>みず<rt>mizu</rt></ruby></span></button>
         <button class="listen-opt" data-correct="1"><span class="opt-en">coffee</span><span class="opt-jp"><ruby>コーヒー<rt>kōhī</rt></ruby></span></button>
@@ -834,6 +820,7 @@
     <div class="listen-q">
       <div class="q-en"><strong>2.</strong> Does Yuki eat rice?</div>
       <div class="q-jp"><ruby>ゆき<rt>Yuki</rt></ruby>さんは<ruby>ごはん<rt>gohan</rt></ruby>を<ruby>たべます<rt>tabemasu</rt></ruby>か？</div>
+      <audio controls preload="metadata" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/lesson-5-1.mp3" style="width:100%; max-width:360px; margin:8px 0; display:block;">Your browser does not support audio.</audio>
       <div class="listen-opts">
         <button class="listen-opt" data-correct="1"><span class="opt-en">Yes</span><span class="opt-jp"><ruby>はい<rt>hai</rt></ruby>、<ruby>たべます<rt>tabemasu</rt></ruby></span></button>
         <button class="listen-opt"><span class="opt-en">No</span><span class="opt-jp"><ruby>いいえ<rt>iie</rt></ruby>、<ruby>たべません<rt>tabemasen</rt></ruby></span></button>
@@ -843,6 +830,7 @@
     <div class="listen-q">
       <div class="q-en"><strong>3.</strong> What does Yuki do at night?</div>
       <div class="q-jp"><ruby>よる<rt>yoru</rt></ruby>、<ruby>ゆき<rt>Yuki</rt></ruby>さんはなにをしますか？</div>
+      <audio controls preload="metadata" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/lesson-5-2.mp3" style="width:100%; max-width:360px; margin:8px 0; display:block;">Your browser does not support audio.</audio>
       <div class="listen-opts">
         <button class="listen-opt"><span class="opt-en">watches TV</span><span class="opt-jp"><ruby>テレビ<rt>terebi</rt></ruby>を<ruby>みます<rt>mimasu</rt></ruby></span></button>
         <button class="listen-opt" data-correct="1"><span class="opt-en">reads a book</span><span class="opt-jp"><ruby>ほん<rt>hon</rt></ruby>を<ruby>よみます<rt>yomimasu</rt></ruby></span></button>
@@ -851,7 +839,8 @@
 
     <div class="listen-q">
       <div class="q-en"><strong>4.</strong> What does Yuki listen to before bed?</div>
-      <div class="q-jp"><ruby>ねるまえ<rt>neru mae</rt></ruby>に<ruby>ゆき<rt>Yuki</rt></ruby>さんはなにを<ruby>ききます<rt>kikimasu</rt></ruby>か？</div>
+      <div class="q-jp"><ruby>ねるまえ<rt>neru mae</rt></ruby>に<ruby>ゆき<rt>Yuki</rt></ruby>さんはなにを<ruby>ききます<rt>kikimasu</rt></ruby>か？ <span style="color:#999; font-size:13px">(ねるまえに = before bed)</span></div>
+      <audio controls preload="metadata" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/lesson-5-3.mp3" style="width:100%; max-width:360px; margin:8px 0; display:block;">Your browser does not support audio.</audio>
       <div class="listen-opts">
         <button class="listen-opt" data-correct="1"><span class="opt-en">music</span><span class="opt-jp"><ruby>おんがく<rt>ongaku</rt></ruby></span></button>
         <button class="listen-opt"><span class="opt-en">the news</span><span class="opt-jp"><ruby>ニュース<rt>nyūsu</rt></ruby></span></button>
@@ -861,45 +850,10 @@
     <div class="listen-q">
       <div class="q-en"><strong>5.</strong> Does Yuki watch TV?</div>
       <div class="q-jp"><ruby>ゆき<rt>Yuki</rt></ruby>さんは<ruby>テレビ<rt>terebi</rt></ruby>を<ruby>みます<rt>mimasu</rt></ruby>か？</div>
+      <audio controls preload="metadata" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/lesson-5-4.mp3" style="width:100%; max-width:360px; margin:8px 0; display:block;">Your browser does not support audio.</audio>
       <div class="listen-opts">
         <button class="listen-opt"><span class="opt-en">Yes</span><span class="opt-jp"><ruby>はい<rt>hai</rt></ruby>、<ruby>みます<rt>mimasu</rt></ruby></span></button>
         <button class="listen-opt" data-correct="1"><span class="opt-en">No</span><span class="opt-jp"><ruby>いいえ<rt>iie</rt></ruby>、<ruby>みません<rt>mimasen</rt></ruby></span></button>
-      </div>
-    </div>
-  </div>
-
-  <hr class="separator">
-
-  <div class="section">
-    <div class="tg">
-      <div class="tg-en">"All done? Click to see the full script and read along!"</div>
-      <div class="tg-jp">「ぜんぶできたら、ボタンをおしてスクリプトをみてみましょう！」</div>
-    </div>
-    <button class="transcript-btn" onclick="toggleTranscript(this)">&#9654; SHOW FULL TRANSCRIPT &nbsp; <span style="font-size:12px; color:#888">(スクリプトをみる)</span></button>
-    <div class="transcript-reveal" id="transcript1">
-      <div class="pair">
-        <div class="jp"><ruby>こんにちは<rt>konnichiwa</rt></ruby>、<ruby>ゆき<rt>Yuki</rt></ruby><ruby>です<rt>desu</rt></ruby>。</div>
-        <div class="en">Hi, I'm Yuki.</div>
-      </div>
-      <div class="pair">
-        <div class="jp"><ruby>まいあさ<rt>mai asa</rt></ruby><ruby>コーヒー<rt>kōhī</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>のみます<rt>nomimasu</rt></ruby>。</div>
-        <div class="en">Every morning I drink coffee.</div>
-      </div>
-      <div class="pair">
-        <div class="jp"><ruby>ごはん<rt>gohan</rt></ruby><ruby>も<rt>mo</rt></ruby><ruby>たべます<rt>tabemasu</rt></ruby>。</div>
-        <div class="en">I also eat rice.</div>
-      </div>
-      <div class="pair">
-        <div class="jp"><ruby>でも<rt>demo</rt></ruby>、<ruby>テレビ<rt>terebi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>みません<rt>mimasen</rt></ruby>。</div>
-        <div class="en">But I don't watch TV.</div>
-      </div>
-      <div class="pair">
-        <div class="jp"><ruby>よる<rt>yoru</rt></ruby>、<ruby>うち<rt>uchi</rt></ruby><ruby>で<rt>de</rt></ruby><ruby>ほん<rt>hon</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>よみます<rt>yomimasu</rt></ruby>。</div>
-        <div class="en">At night, I read books at home.</div>
-      </div>
-      <div class="pair">
-        <div class="jp"><ruby>そして<rt>soshite</rt></ruby>、<ruby>ねるまえ<rt>neru mae</rt></ruby><ruby>に<rt>ni</rt></ruby><ruby>おんがく<rt>ongaku</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>ききます<rt>kikimasu</rt></ruby>。</div>
-        <div class="en">And before bed, I listen to music.</div>
       </div>
     </div>
   </div>
@@ -933,7 +887,7 @@
       </div>
     </div>
     <div class="help-box">
-      <ruby>コーヒー<rt>kōhī</rt></ruby>(coffee)
+      <ruby>コーヒー<rt>kōhī</rt></ruby>(coffee) &nbsp; <ruby>のみ<rt>nomi</rt></ruby>〜(drink)
     </div>
   </div>
 
@@ -962,7 +916,7 @@
       </div>
     </div>
     <div class="help-box">
-      <ruby>ほん<rt>hon</rt></ruby>(book) &nbsp; <ruby>はい<rt>hai</rt></ruby>(yes)
+      <ruby>ほん<rt>hon</rt></ruby>(book) &nbsp; <ruby>よみ<rt>yomi</rt></ruby>〜(read) &nbsp; <ruby>はい<rt>hai</rt></ruby>(yes)
     </div>
   </div>
 
@@ -991,7 +945,7 @@
       </div>
     </div>
     <div class="help-box">
-      <ruby>えいが<rt>eiga</rt></ruby>(movie)
+      <ruby>えいが<rt>eiga</rt></ruby>(movie) &nbsp; <ruby>み<rt>mi</rt></ruby>〜(watch)
     </div>
   </div>
 
@@ -1045,7 +999,7 @@
     <div class="turn">
       <div class="spk">YUKI:</div>
       <div class="pair">
-        <div class="jp"><ruby>アレックス<rt>Arekkusu</rt></ruby>さん、<ruby>なに<rt>nani</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>のみます<rt>nomimasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
+        <div class="jp"><ruby>アレックス<rt>Arekkusu</rt></ruby><ruby>さん<rt>san</rt></ruby>、<ruby>なに<rt>nani</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>のみます<rt>nomimasu</rt></ruby><ruby>か<rt>ka</rt></ruby>？</div>
         <div class="en">Alex, what will you drink?</div>
       </div>
     </div>
@@ -1121,7 +1075,7 @@
     <div class="turn">
       <div class="spk">ALEX (you):</div>
       <div class="pair">
-        <div class="jp"><ruby>わたし<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>コーヒー<rt>kōhī</rt></ruby><ruby>を<rt>wo</rt></ruby><input type="text" class="blank-input" style="min-width:140px">。</div>
+        <div class="jp"><ruby>わたし<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>コーヒー<rt>kōhī</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>のみ<rt>nomi</rt></ruby><input type="text" class="blank-input" style="min-width:100px">。</div>
         <div class="en">I'll drink coffee.</div>
       </div>
     </div>
@@ -1137,7 +1091,7 @@
     <div class="turn">
       <div class="spk">ALEX (you):</div>
       <div class="pair">
-        <div class="jp"><ruby>はい<rt>hai</rt></ruby>、<ruby>いい<rt>ii</rt></ruby><ruby>です<rt>desu</rt></ruby>ね！<ruby>ゆき<rt>Yuki</rt></ruby>さんは<ruby>なに<rt>nani</rt></ruby><ruby>を<rt>wo</rt></ruby><input type="text" class="blank-input" style="min-width:140px">？</div>
+        <div class="jp"><ruby>はい<rt>hai</rt></ruby>、<ruby>いい<rt>ii</rt></ruby><ruby>です<rt>desu</rt></ruby>ね！<ruby>ゆき<rt>Yuki</rt></ruby>さんは<ruby>なに<rt>nani</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>たべ<rt>tabe</rt></ruby><input type="text" class="blank-input" style="min-width:100px">？</div>
         <div class="en">Yes, sounds good! Yuki, what will you eat?</div>
       </div>
     </div>
@@ -1203,7 +1157,8 @@
     <div class="help-box" style="margin-left:0; max-width:520px;">
       <strong>WORDS</strong><br>
       <ruby>コーヒー<rt>kōhī</rt></ruby>(coffee) &nbsp; <ruby>みず<rt>mizu</rt></ruby>(water)<br>
-      <ruby>おちゃ<rt>ocha</rt></ruby>(tea) &nbsp; <ruby>ぎゅうにゅう<rt>gyūnyū</rt></ruby>(milk)
+      <ruby>おちゃ<rt>ocha</rt></ruby>(tea) &nbsp; <ruby>ぎゅうにゅう<rt>gyūnyū</rt></ruby>(milk)<br>
+      <ruby>のみ<rt>nomi</rt></ruby>〜(drink)
     </div>
   </div>
 
@@ -1242,7 +1197,8 @@
     <div class="help-box" style="margin-left:0; max-width:520px;">
       <strong>WORDS</strong><br>
       <ruby>テレビ<rt>terebi</rt></ruby>(TV) &nbsp; <ruby>えいが<rt>eiga</rt></ruby>(movie) &nbsp; <ruby>ほん<rt>hon</rt></ruby>(book)<br>
-      <ruby>まんが<rt>manga</rt></ruby>(comic) &nbsp; <ruby>ニュース<rt>nyūsu</rt></ruby>(news)
+      <ruby>まんが<rt>manga</rt></ruby>(comic) &nbsp; <ruby>ニュース<rt>nyūsu</rt></ruby>(news)<br>
+      <ruby>み<rt>mi</rt></ruby>〜(watch) &nbsp; <ruby>よみ<rt>yomi</rt></ruby>〜(read)
     </div>
   </div>
 
@@ -1281,7 +1237,8 @@
     <div class="help-box" style="margin-left:0; max-width:520px;">
       <strong>WORDS</strong><br>
       <ruby>ごはん<rt>gohan</rt></ruby>(rice) &nbsp; <ruby>パン<rt>pan</rt></ruby>(bread) &nbsp; <ruby>にく<rt>niku</rt></ruby>(meat)<br>
-      <ruby>さかな<rt>sakana</rt></ruby>(fish) &nbsp; <ruby>やさい<rt>yasai</rt></ruby>(vegetables)
+      <ruby>さかな<rt>sakana</rt></ruby>(fish) &nbsp; <ruby>やさい<rt>yasai</rt></ruby>(vegetables)<br>
+      <ruby>たべ<rt>tabe</rt></ruby>〜(eat) &nbsp; <ruby>のみ<rt>nomi</rt></ruby>〜(drink)
     </div>
   </div>
 </div>
@@ -1304,21 +1261,21 @@
       <span class="check">&nbsp;</span>
       <strong>MISSION 1:</strong> Ask what the tutor watches / reads / listens to
       <div style="color:#888; font-size:15px; margin-left:50px; margin-top:4px">(<ruby>なに<rt>nani</rt></ruby>を 〜<ruby>ますか<rt>masu ka</rt></ruby>？)</div>
-      <div style="color:#555; font-size:15px; margin-left:50px; margin-top:6px">&#9656; 「<ruby>チューター<rt>chūtā</rt></ruby>が <ruby>なに<rt>nani</rt></ruby>を <ruby>みる<rt>miru</rt></ruby>・<ruby>よむ<rt>yomu</rt></ruby>・<ruby>きく<rt>kiku</rt></ruby> か、<ruby>きいて<rt>kiite</rt></ruby>ね。」</div>
+      <div style="color:#555; font-size:15px; margin-left:50px; margin-top:6px">&#9656; 「『<ruby>なに<rt>nani</rt></ruby>を <ruby>みますか<rt>mimasu ka</rt></ruby>？／<ruby>よみますか<rt>yomimasu ka</rt></ruby>？／<ruby>ききますか<rt>kikimasu ka</rt></ruby>？』と <ruby>しつもん<rt>shitsumon</rt></ruby>してね。」 <span style="color:#999; font-size:13px">(しつもん = ask)</span></div>
     </div>
 
     <div class="check-item" style="font-size:18px; margin:20px 0">
       <span class="check">&nbsp;</span>
       <strong>MISSION 2:</strong> Invite the tutor to do something together!
       <div style="color:#888; font-size:15px; margin-left:50px; margin-top:4px">(〜<ruby>を<rt>wo</rt></ruby> 〜<ruby>ませんか<rt>masen ka</rt></ruby>？)</div>
-      <div style="color:#555; font-size:15px; margin-left:50px; margin-top:6px">&#9656; 「<ruby>いっしょ<rt>issho</rt></ruby>に <ruby>なに<rt>nani</rt></ruby>か <ruby>しませんか<rt>shimasen ka</rt></ruby>？と <ruby>チューター<rt>chūtā</rt></ruby>を <ruby>さそって<rt>sasotte</rt></ruby>ね！」</div>
+      <div style="color:#555; font-size:15px; margin-left:50px; margin-top:6px">&#9656; 「『〇〇<ruby>を<rt>wo</rt></ruby> 〇〇<ruby>ませんか<rt>masen ka</rt></ruby>？』と <ruby>さそって<rt>sasotte</rt></ruby>ね！」 <span style="color:#999; font-size:13px">(さそう = invite)</span></div>
     </div>
 
     <div class="check-item" style="font-size:18px; margin:20px 0">
       <span class="check">&nbsp;</span>
       <strong>MISSION 3:</strong> Say one thing you DON'T do
       <div style="color:#888; font-size:15px; margin-left:50px; margin-top:4px">(〜<ruby>を<rt>wo</rt></ruby> 〜<ruby>ません<rt>masen</rt></ruby>)</div>
-      <div style="color:#555; font-size:15px; margin-left:50px; margin-top:6px">&#9656; 「<ruby>じぶん<rt>jibun</rt></ruby>が <ruby>しない<rt>shinai</rt></ruby>ことを ひとつ <ruby>いって<rt>itte</rt></ruby>ね。」</div>
+      <div style="color:#555; font-size:15px; margin-left:50px; margin-top:6px">&#9656; 「『〇〇<ruby>を<rt>wo</rt></ruby> 〇〇<ruby>ません<rt>masen</rt></ruby>。』と <ruby>いって<rt>itte</rt></ruby>ね。」 <span style="color:#999; font-size:13px">(いう = say)</span></div>
     </div>
   </div>
 
@@ -1376,7 +1333,7 @@
     <div class="turn">
       <div class="spk">YOU:</div>
       <div class="pair">
-        <div class="jp"><ruby>わたし<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>すし<rt>sushi</rt></ruby><ruby>を<rt>wo</rt></ruby><input type="text" class="blank-input" style="min-width:120px">。</div>
+        <div class="jp"><ruby>わたし<rt>watashi</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>すし<rt>sushi</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>たべ<rt>tabe</rt></ruby><input type="text" class="blank-input" style="min-width:80px">。</div>
         <div class="en">I'll have sushi.</div>
       </div>
     </div>
@@ -1392,7 +1349,7 @@
     <div class="turn">
       <div class="spk">YOU:</div>
       <div class="pair">
-        <div class="jp"><ruby>おちゃ<rt>ocha</rt></ruby><ruby>を<rt>wo</rt></ruby><input type="text" class="blank-input" style="min-width:120px">。</div>
+        <div class="jp"><ruby>おちゃ<rt>ocha</rt></ruby><ruby>を<rt>wo</rt></ruby><ruby>のみ<rt>nomi</rt></ruby><input type="text" class="blank-input" style="min-width:80px">。</div>
         <div class="en">I'll have green tea.</div>
       </div>
     </div>
@@ -1408,7 +1365,7 @@
     <div class="turn">
       <div class="spk">YOU:</div>
       <div class="pair">
-        <div class="jp"><ruby>いいえ<rt>iie</rt></ruby>、<ruby>パン<rt>pan</rt></ruby><ruby>は<rt>wa</rt></ruby><input type="text" class="blank-input" style="min-width:120px">。</div>
+        <div class="jp"><ruby>いいえ<rt>iie</rt></ruby>、<ruby>パン<rt>pan</rt></ruby><ruby>は<rt>wa</rt></ruby><ruby>たべ<rt>tabe</rt></ruby><input type="text" class="blank-input" style="min-width:80px">。</div>
         <div class="en">No, I won't eat bread.</div>
       </div>
     </div>
@@ -1423,38 +1380,58 @@
   </div>
 </div>
 
-<!-- PAGE 14: BONUS — TRANSLATE (NO HINTS) -->
+<!-- PAGE 14: BONUS — TRANSLATE -->
 <div class="page" id="p14">
-  <h1>BONUS: TRANSLATE &mdash; NO HINTS!</h1>
+  <h1>BONUS: TRANSLATE</h1>
   <h2><span class="en" style="font-size:14px">(Skip if you don't have time!)</span></h2>
 
   <div class="tg">
-    <div class="tg-en">"Translate these — no hints!"</div>
-    <div class="tg-jp">「ヒントなしでにほんごにしてみましょう！」</div>
+    <div class="tg-en">"Try it on your own first! Tap a hint if you get stuck."</div>
+    <div class="tg-jp">「じぶんで にほんごにして みましょう！わからなかったら ヒントを みてね。」</div>
   </div>
 
   <div class="section">
     <p><strong>1.</strong> I eat rice.</p>
+    <details class="hint-reveal">
+      <summary>Show hints</summary>
+      <div class="hint-content"><ruby>ごはん<rt>gohan</rt></ruby>(rice) &nbsp;·&nbsp; <ruby>たべます<rt>tabemasu</rt></ruby>(eat)</div>
+    </details>
     <input type="text" class="blank-input-full">
   </div>
 
   <div class="section">
     <p><strong>2.</strong> I drink coffee.</p>
+    <details class="hint-reveal">
+      <summary>Show hints</summary>
+      <div class="hint-content"><ruby>コーヒー<rt>kōhī</rt></ruby>(coffee) &nbsp;·&nbsp; <ruby>のみます<rt>nomimasu</rt></ruby>(drink)</div>
+    </details>
     <input type="text" class="blank-input-full">
   </div>
 
   <div class="section">
     <p><strong>3.</strong> Do you read books?</p>
+    <details class="hint-reveal">
+      <summary>Show hints</summary>
+      <div class="hint-content"><ruby>ほん<rt>hon</rt></ruby>(book) &nbsp;·&nbsp; <ruby>よみます<rt>yomimasu</rt></ruby>(read)</div>
+    </details>
     <input type="text" class="blank-input-full">
   </div>
 
   <div class="section">
     <p><strong>4.</strong> I don't watch TV.</p>
+    <details class="hint-reveal">
+      <summary>Show hints</summary>
+      <div class="hint-content"><ruby>テレビ<rt>terebi</rt></ruby>(TV) &nbsp;·&nbsp; <ruby>みます<rt>mimasu</rt></ruby>(watch)</div>
+    </details>
     <input type="text" class="blank-input-full">
   </div>
 
   <div class="section">
     <p><strong>5.</strong> Shall we listen to music?</p>
+    <details class="hint-reveal">
+      <summary>Show hints</summary>
+      <div class="hint-content"><ruby>おんがく<rt>ongaku</rt></ruby>(music) &nbsp;·&nbsp; <ruby>ききます<rt>kikimasu</rt></ruby>(listen)</div>
+    </details>
     <input type="text" class="blank-input-full">
   </div>
 </div>
@@ -1867,7 +1844,7 @@ function syncReorder(itemId) {
 }
 
 // =============================================
-// LISTENING: MC answers + transcript reveal
+// LISTENING: MC answers
 // =============================================
 document.addEventListener('click', function(e) {
   var opt = e.target.closest('.listen-opt');
@@ -1882,13 +1859,6 @@ document.addEventListener('click', function(e) {
     setTimeout(function() { opt.classList.remove('wrong'); }, 600);
   }
 });
-
-function toggleTranscript(btn) {
-  var target = document.getElementById('transcript1');
-  if (!target) return;
-  var open = target.classList.toggle('open');
-  btn.innerHTML = (open ? '&#9660;' : '&#9654;') + ' ' + (open ? 'HIDE' : 'SHOW') + ' FULL TRANSCRIPT &nbsp; <span style="font-size:12px; color:#888">(スクリプトを' + (open ? 'とじる' : 'みる') + ')</span>';
-}
 
 const pages = ['p0','p1','p2','p3','p4','p5','p6','p7','p8','p9','p10','p11','p12','p13','p14','p15'];
 let cur = 0;
@@ -2080,7 +2050,6 @@ function resetLessonWidgets(scope) {
     var fb = item.querySelector('.reorder-fb');
     if (fb) { fb.textContent = ''; fb.className = 'reorder-fb'; }
   });
-  root.querySelectorAll('.transcript-reveal.open').forEach(function(t) { t.classList.remove('open'); });
   root.querySelectorAll('.tg.active').forEach(function(t) { t.classList.remove('active'); });
   root.querySelectorAll('.remote-active').forEach(function(i) { i.classList.remove('remote-active'); });
 }
