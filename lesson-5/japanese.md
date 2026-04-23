@@ -8,13 +8,15 @@
 - **Vocab page simplified to a Connect-the-Dots matching activity** (recognition, not production). It mixes L5 new words with a small number of L1/L2 review words so returning students get cumulative reinforcement without fresh cognitive load. Replaces L4's full EN→JP recall table.
 - **Dropped the Today's Character (hiragana/katakana) bonus page** — tested poorly as a class activity; the isolated character drill interrupted lesson flow without reinforcing the target pattern.
 - **NEW: Quick Practice page** — multiple choice (two inline options separated by `/` inside the blank) + word-reorder, modeled on the prestudy interaction style. Acts as low-stress downtime between heavier drill pages. No open production required.
-- **NEW: Listening Activity page** — a short **first-person monologue** delivered via **mp3** (not tutor-read): "Yuki's Daily Routine," ~20 seconds, uses only Pattern A (affirmative) naturally; the question-form isn't forced in since it doesn't fit a self-introduction. Student answers multiple-choice comprehension — each question and each option is bilingual (EN + JP). A "Show Full Transcript" button reveals the complete JP/EN script after students finish the MCs (replaces the second-pass fill-in activity).
+- **NEW: Listening Activity page** — a short **first-person monologue** delivered via **mp3** (not tutor-read): "Yuki's Daily Routine," ~20 seconds, uses only the affirmative slice of Pattern A naturally; question (〜ますか) and invitation (〜ませんか / Pattern B) forms aren't forced in since neither fits a self-introduction monologue. Student answers multiple-choice comprehension — each question and each option is bilingual (EN + JP). A "Show Full Transcript" button reveals the complete JP/EN script after students finish the MCs (replaces the second-pass fill-in activity).
 - Pattern drills and conversation structure carried over from Lesson 4.
 
 **Two focused patterns:**
 
-- Pattern A: `[noun]を [verb]ます。` — affirmative daily action (I drink coffee.)
-- Pattern B: `[noun]を [verb]ますか？` → `はい、〜ます。／ いいえ、〜ません。` — question & negative answer
+- Pattern A: `[noun]を [verb]ます。` — the full 〜ます paradigm in one pattern: affirmative (〜ます), question (〜ますか), negative (〜ません). "I drink coffee." / "Do you drink coffee?" / "I don't drink coffee."
+- Pattern B: `[noun]を [verb]ませんか？` — invitation / suggestion ("Shall we…?" / "Would you like to…?"). Distinct function from Pattern A's negative — same 〜ません ending, but used as a friendly offer, not a denial. Supporting responses `はい、いいですね。` / `すみません、ちょっと…` show up naturally in dialogues and roleplay but are NOT drilled as patterns — students meet them in context, not as production targets.
+
+**Why this split (vs. A=affirmative / B=question+negative):** The old split was really one pattern (〜を 〜ます) with three inflections masquerading as two patterns. 25 min of class needs a real second grammatical move. 〜ませんか adds a new *function* (invitation) without a new particle, so it stays first-timer-friendly while giving the lesson a genuine second beat — and it plugs directly into the cafe roleplay on Page 13.
 
 **Target verbs (5):** たべます, のみます, よみます, みます, ききます
 **Target objects:** ごはん, パン, みず, コーヒー, ほん, テレビ, えいが, おんがく
@@ -47,9 +49,9 @@
 | ---- | --------------------------------- | ----- | --------------------------------------- |
 | 1    | Greeting & Intro                  | 1 min | Hello, let's start                      |
 | 2    | Review: L1 + L2 + L3 + L4         | 2 min | 2 Qs/lesson: fill-in + translate        |
-| 3    | Today's Patterns                  | 2 min | 〜を〜ます / 〜ますか (+ pronunciation cue) |
-| 4    | Pattern Drill A (affirmative)     | 3 min | I eat / drink / read / watch            |
-| 5    | Pattern Drill B (question + neg)  | 3 min | Do you…? Yes/No                         |
+| 3    | Today's Patterns                  | 2 min | 〜を〜ます / 〜ませんか (+ pronunciation cue) |
+| 4    | Pattern Drill A (ます/ますか/ません) | 3 min | I do / Do you / I don't                 |
+| 5    | Pattern Drill B (ませんか invite)   | 3 min | Shall we…? / Would you like…?           |
 | 6    | Vocab Connect (matching)          | 2 min | EN ↔ JP — incl. L1/L2 review words      |
 | 7    | Quick Practice (MC + Reorder)     | 2 min | Low-stress downtime                     |
 | 8    | Listening Activity                | 3 min | mp3 monologue → MC (bilingual) + reveal |
@@ -184,48 +186,56 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  TODAY'S PATTERNS                                                       |
 |  ================                                                       |
 |                                                                         |
-|  1. I DO something  —  [noun]を [verb]ます                               |
+|  PATTERN A — [noun]を [verb]ます  (I do / Do you / I don't)              |
+|                                                                         |
+|     Three endings, one pattern:                                         |
+|       〜ます    → I do it         (positive)                             |
+|       〜ますか  → Do you…?        (question)                             |
+|       〜ません  → I don't          (negative)                            |
 |                                                                         |
 |     • わたしは ごはんを たべます。                                       |
 |       I eat rice.                                                       |
-|                                                                         |
-|     • わたしは コーヒーを のみます。                                     |
-|       I drink coffee.                                                   |
-|                                                                         |
-|                                                                         |
-|  2. Do you…?  —  [noun]を [verb]ますか？                                 |
-|     Answer:    はい、〜ます。／ いいえ、〜ません。                        |
 |                                                                         |
 |     • ほんを よみますか？                                                |
 |       Do you read books?                                                |
 |       → はい、よみます。／ いいえ、よみません。                          |
 |                                                                         |
-|     • テレビを みますか？                                                |
-|       Do you watch TV?                                                  |
-|       → はい、みます。／ いいえ、みません。                              |
+|     • テレビを みません。                                                |
+|       I don't watch TV.                                                 |
+|                                                                         |
+|                                                                         |
+|  PATTERN B — [noun]を [verb]ませんか？  (Shall we…? / Would you like…?)  |
+|                                                                         |
+|     Same 〜ません ending, but it's an INVITATION, not a "no".             |
+|                                                                         |
+|     • コーヒーを のみませんか？                                          |
+|       Shall we drink coffee? / Would you like some coffee?              |
+|                                                                         |
+|     • えいがを みませんか？                                              |
+|       Shall we watch a movie?                                           |
 |                                                                         |
 |                                                                         |
 |     ┌─── REMEMBER ──────────────────────────────────────────┐           |
-|     │  を  → the thing you act on (rice, coffee, book...)    │           |
-|     │  〜ます   → I do it  (positive)                         │           |
-|     │  〜ますか → Do you…?  (question)                        │           |
-|     │  〜ません → I don't   (negative)                        │           |
+|     │  を       → the thing you act on (rice, coffee…)       │           |
+|     │  〜ます   / 〜ますか / 〜ません   = Pattern A            │           |
+|     │  〜ませんか                        = Pattern B (invite) │           |
 |     └────────────────────────────────────────────────────────┘           |
 |                                                                         |
 |                                                                  PAGE 3 |
 +-------------------------------------------------------------------------+
 ```
 
-### PAGE 4 — Pattern Drill A (〜を 〜ます — Affirmative)
+### PAGE 4 — Pattern Drill A (〜を 〜ます / 〜ますか / 〜ません)
 
 ```
 +-------------------------------------------------------------------------+
 |                                                                         |
-|  PATTERN DRILL A: 〜を 〜ます (I DO something)                           |
-|  ────────────────────────────────────────────                           |
+|  PATTERN DRILL A: 〜を 〜ます (I do / Do you…? / I don't)                |
+|  ──────────────────────────────────────────────────────                 |
 |                                                                         |
-|  PATTERN:  [noun]を [verb]ます。                                         |
-|            I [verb] [noun].                                             |
+|  PATTERN:  [noun]を [verb]ます。     I [verb] [noun].                    |
+|            [noun]を [verb]ますか？   Do you [verb] [noun]?               |
+|            [noun]を [verb]ません。   I don't [verb] [noun].              |
 |                                                                         |
 |                                                                         |
 |  ▸ "Let's read together. Copy my pronunciation closely — slow is OK."  |
@@ -234,9 +244,9 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |                                                                         |
 |  1. Read Together:                                                      |
 |     * ごはんを たべます。            I eat rice.                         |
-|     * みずを のみます。              I drink water.                      |
-|     * ほんを よみます。              I read a book.                      |
-|     * テレビを みます。              I watch TV.                         |
+|     * コーヒーを のみますか？        Do you drink coffee?                |
+|     * テレビを みません。            I don't watch TV.                   |
+|     * ほんを よみますか？            Do you read books?                  |
 |     * おんがくを ききます。          I listen to music.                  |
 |                                                                         |
 |                                                                         |
@@ -246,8 +256,8 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  2. Fill in the Blanks:                                                 |
 |     * ごはん（　　　）たべます。           I eat rice.                   |
 |     * みずを（　　　）。                   I drink water.                |
-|     * ほん（　　　）よみます。             I read a book.                |
-|     * （　　　）を みます。                I watch TV.                   |
+|     * ほんを よみ（　　　）？              Do you read books?            |
+|     * テレビを み（　　　）。               I don't watch TV.            |
 |     * おんがくを（　　　）。               I listen to music.            |
 |                                                                         |
 |                                                                         |
@@ -259,15 +269,15 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |       _____________________________________________________             |
 |       (coffee = コーヒー)                                                |
 |                                                                         |
-|     * I eat bread.                                                      |
+|     * Do you eat bread?                                                 |
 |       _____________________________________________________             |
 |       (bread = パン)                                                     |
 |                                                                         |
-|     * I read a book.                                                    |
+|     * I don't read books.                                               |
 |       _____________________________________________________             |
 |       (book = ほん)                                                      |
 |                                                                         |
-|     * I watch a movie.                                                  |
+|     * Do you watch movies?                                              |
 |       _____________________________________________________             |
 |       (movie = えいが)                                                   |
 |                                                                         |
@@ -276,9 +286,9 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |       (music = おんがく)                                                 |
 |                                                                         |
 |                                                                         |
-|  ▸ "Make your own! What do you eat or drink every day?"                 |
+|  ▸ "Make your own! What do you eat, drink, or NOT eat every day?"       |
 |    「じぶんのぶんをつくってみましょう！                                  |
-|     まいにち なにを たべますか？ なにを のみますか？」                  |
+|     まいにち なにを たべますか？ なにを たべませんか？」                |
 |                                                                         |
 |  4. Make Your Own:                                                      |
 |     _____________________________________________________               |
@@ -287,77 +297,69 @@ Travel conversation also appears in prestudy (plain, no highlights).
 +-------------------------------------------------------------------------+
 ```
 
-### PAGE 5 — Pattern Drill B (〜を 〜ますか — Question & Negative)
+### PAGE 5 — Pattern Drill B (〜を 〜ませんか — Invitation)
 
 ```
 +-------------------------------------------------------------------------+
 |                                                                         |
-|  PATTERN DRILL B: 〜ますか？ / 〜ません (DO YOU…? / I DON'T)             |
+|  PATTERN DRILL B: 〜ませんか？ (Shall we…? / Would you like…?)           |
 |  ───────────────────────────────────────────────────                    |
 |                                                                         |
-|  PATTERN:  [noun]を [verb]ますか？                                       |
-|            → はい、〜ます。／ いいえ、〜ません。                          |
+|  PATTERN:  [noun]を [verb]ませんか？    Shall we…? / Would you like…?    |
 |                                                                         |
 |                                                                         |
-|  ▸ "Next pattern. Let's ask and answer together."                       |
-|    「つぎのパターンです。しつもんとこたえ、いっしょにやってみましょう。」|
+|  ▸ "New pattern — it's an invitation. Let's read it together."          |
+|    「あたらしいパターンです。さそうときのことばです。                    |
+|     いっしょによんでみましょう。」                                      |
 |                                                                         |
 |  1. Read Together:                                                      |
-|     * コーヒーを のみますか？          Do you drink coffee?              |
-|       → はい、のみます。                Yes, I do.                       |
-|                                                                         |
-|     * テレビを みますか？              Do you watch TV?                  |
-|       → いいえ、みません。              No, I don't.                      |
-|                                                                         |
-|     * ほんを よみますか？              Do you read books?                |
-|       → はい、よみます。                Yes, I do.                       |
-|                                                                         |
-|     * パンを たべますか？              Do you eat bread?                 |
-|       → いいえ、たべません。            No, I don't.                      |
-|                                                                         |
-|     * おんがくを ききますか？          Do you listen to music?           |
-|       → はい、ききます。                Yes, I do.                       |
+|     * コーヒーを のみませんか？      Shall we drink coffee?              |
+|     * えいがを みませんか？          Shall we watch a movie?             |
+|     * パンを たべませんか？          Would you like some bread?          |
+|     * おんがくを ききませんか？      Shall we listen to music?           |
+|     * ほんを よみませんか？          Shall we read a book?               |
 |                                                                         |
 |                                                                         |
 |  ▸ "Fill in the blank and read the whole thing!"                        |
 |    「くうらんにことばをいれて、ぜんぶよんでみましょう！」                |
 |                                                                         |
 |  2. Fill in the Blanks:                                                 |
-|     * コーヒーを のみ（　　　）？        Do you drink coffee?            |
-|       → はい、のみ（　　　）。            Yes, I do.                      |
-|                                                                         |
-|     * テレビを み（　　　）？            Do you watch TV?                |
-|       → いいえ、み（　　　）。            No, I don't.                     |
-|                                                                         |
-|     * ほん（　　　）よみますか？          Do you read books?             |
-|       → はい、よみます。                                                 |
+|     * コーヒーを のみ（　　　）か？       Shall we drink coffee?         |
+|     * えいがを（　　　）ませんか？        Shall we watch a movie?        |
+|     * ごはんを たべ（　　　）か？         Shall we eat rice?             |
+|     * ほん（　　　）よみませんか？        Shall we read a book?          |
+|     * おんがくを（　　　）ませんか？      Shall we listen to music?      |
 |                                                                         |
 |                                                                         |
-|  ▸ "Translate to Japanese."                                             |
-|    「にほんごにしてみましょう。」                                        |
+|  ▸ "Translate to Japanese — hints are OK."                              |
+|    「にほんごにしてみましょう。ヒントをみてもいいですよ。」              |
 |                                                                         |
 |  3. Translate:                                                          |
-|     * Do you drink water?                                               |
+|     * Shall we drink water?                                             |
 |       _____________________________________________________             |
 |       (water = みず)                                                     |
 |                                                                         |
-|     * Do you eat rice?                                                  |
+|     * Would you like to read a book?                                    |
 |       _____________________________________________________             |
-|       (rice = ごはん)                                                    |
+|       (book = ほん)                                                      |
 |                                                                         |
-|     * No, I don't watch movies.                                         |
+|     * Shall we watch TV?                                                |
+|       _____________________________________________________             |
+|       (TV = テレビ)                                                      |
+|                                                                         |
+|     * Shall we eat bread together?                                      |
+|       _____________________________________________________             |
+|       (bread = パン, together = いっしょに)                              |
+|                                                                         |
+|     * Shall we watch a movie?                                           |
 |       _____________________________________________________             |
 |       (movie = えいが)                                                   |
 |                                                                         |
-|     * Yes, I listen to music.                                           |
-|       _____________________________________________________             |
-|       (music = おんがく)                                                 |
 |                                                                         |
+|  ▸ "Now YOU invite me to do something!"                                 |
+|    「こんどは、あなたがわたしをさそってみてね！」                        |
 |                                                                         |
-|  ▸ "Now you ask ME a question!"                                         |
-|    「こんどは、あなたがわたしにしつもんしてね！」                        |
-|                                                                         |
-|  4. Ask the Tutor:                                                      |
+|  4. Invite the Tutor:                                                   |
 |     _____________________________________________________               |
 |                                                                         |
 |                                                                  PAGE 5 |
@@ -430,11 +432,11 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |                                                                         |
 |     2. みずを（ みます / のみます ）。           I drink water.          |
 |                                                                         |
-|     3. ほんを（ よみます / ききます ）。         I read a book.          |
+|     3. テレビを み（ ます / ません ）。          I don't watch TV.       |
 |                                                                         |
-|     4. テレビ（ を / に ）みます。               I watch TV.             |
+|     4. ほんを よみ（ ます / ますか ）？          Do you read books?      |
 |                                                                         |
-|     5. コーヒーを のみ（ ます / ますか ）？      Do you drink coffee?    |
+|     5. コーヒーを のみ（ ません / ませんか ）？  Shall we drink coffee?  |
 |                                                                         |
 |  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
 |                                                                         |
@@ -451,16 +453,16 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |        [ のみます ] [ コーヒー ] [ を ]                                  |
 |        → _____________________________________                          |
 |                                                                         |
-|     3. I read a book.                                                   |
-|        [ を ] [ よみます ] [ ほん ]                                      |
+|     3. I don't read books.                                              |
+|        [ よみません ] [ を ] [ ほん ]                                    |
 |        → _____________________________________                          |
 |                                                                         |
 |     4. Do you watch TV?                                                 |
 |        [ か ] [ みます ] [ テレビ ] [ を ]                               |
 |        → _____________________________________                          |
 |                                                                         |
-|     5. I don't listen to music.                                         |
-|        [ ききません ] [ おんがく ] [ を ]                                |
+|     5. Shall we listen to music?                                        |
+|        [ か ] [ ききません ] [ おんがく ] [ を ]                         |
 |        → _____________________________________                          |
 |                                                                         |
 |                                                                  PAGE 7 |
@@ -493,11 +495,13 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  │  こんにちは、ゆきです。                                      │          |
 |  │  まいあさ コーヒーを のみます。                              │          |
 |  │  ごはんも たべます。                                         │          |
+|  │  でも、テレビは みません。                                   │          |
 |  │  よる、うちで ほんを よみます。                              │          |
 |  │  そして、ねるまえに おんがくを ききます。                    │          |
 |  │                                                            │          |
 |  │  (Hi, I'm Yuki. Every morning I drink coffee.              │          |
-|  │   I also eat rice. At night, I read books at home.         │          |
+|  │   I also eat rice. But I don't watch TV.                   │          |
+|  │   At night, I read books at home.                          │          |
 |  │   And before bed, I listen to music.)                      │          |
 |  └────────────────────────────────────────────────────────────┘          |
 |                                                                         |
@@ -530,6 +534,12 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |     ねるまえに ゆきさんは なにを ききますか？                             |
 |        a)  music / おんがく                                              |
 |        b)  the news / ニュース                                           |
+|                                                                         |
+|                                                                         |
+|  5. Does Yuki watch TV?                                                 |
+|     ゆきさんは テレビを みますか？                                        |
+|        a)  Yes / はい、みます                                            |
+|        b)  No  / いいえ、みません                                        |
 |                                                                         |
 |                                                                         |
 |  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
@@ -579,7 +589,7 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |            Yes, I read books.                                           |
 |                                                                         |
 |     ┌─────────────────────────────────────────┐                         |
-|     │  ほん(book)                               │                         |
+|     │  ほん(book)  はい(yes)                     │                         |
 |     └─────────────────────────────────────────┘                         |
 |                                                                         |
 |  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
@@ -599,17 +609,17 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |                                                                         |
 |  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
 |                                                                         |
-|  ▸ "Last one! I'll ask — answer in Japanese."                           |
-|    「さいごです！しつもんします、にほんごでこたえてね。」                |
+|  ▸ "Last one! I'll invite you — answer in Japanese."                    |
+|    「さいごです！さそってみます、にほんごでこたえてね。」                |
 |                                                                         |
 |  DIALOGUE 4:                                                            |
-|  Tutor:    おんがくを ききますか？                                        |
-|            Do you listen to music?                                      |
+|  Tutor:    おんがくを ききませんか？                                      |
+|            Shall we listen to music?                                    |
 |  Student:  [_________________________________]                          |
-|            Yes, I listen to music.                                      |
+|            Yes, sounds good.                                            |
 |                                                                         |
 |     ┌─────────────────────────────────────────┐                         |
-|     │  おんがく(music)                           │                         |
+|     │  おんがく(music)  はい(yes)                │                         |
 |     └─────────────────────────────────────────┘                         |
 |                                                                         |
 |                                                                  PAGE 9 |
@@ -639,11 +649,11 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  ALEX:   わたしは コーヒーを のみます。                                    |
 |          I'll drink coffee.                                             |
 |                                                                         |
-|  YUKI:   ごはんは？ パンを たべますか？                                    |
-|          How about food? Do you eat bread?                              |
+|  YUKI:   いっしょに パンを たべませんか？                                  |
+|          Shall we eat bread together?                                   |
 |                                                                         |
-|  ALEX:   はい、パンを たべます。ゆきさんは？                               |
-|          Yes, I'll eat bread. How about you, Yuki?                      |
+|  ALEX:   はい、いいですね！ゆきさんは なにを たべますか？                  |
+|          Yes, sounds good! What will you eat, Yuki?                     |
 |                                                                         |
 |  YUKI:   わたしは ごはんを たべます。みずも のみます。                     |
 |          I'll eat rice. I'll drink water too.                           |
@@ -683,16 +693,17 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  ALEX (you):     わたしは コーヒーを______。                              |
 |                  I'll drink coffee.                                     |
 |                                                                         |
-|  YUKI (tutor):   パンを たべますか？                                     |
-|                  Do you eat bread?                                      |
+|  YUKI (tutor):   いっしょに パンを たべませんか？                         |
+|                  Shall we eat bread together?                           |
 |                                                                         |
-|  ALEX (you):     はい、パンを______。                                    |
-|                  Yes, I'll eat bread.                                   |
+|  ALEX (you):     はい、いいですね！                                       |
+|                  ゆきさんは なにを______？                                |
+|                  Yuki, what will you eat?                               |
 |                                                                         |
 |  YUKI (tutor):   わたしは ごはんを たべます。みずも のみます。            |
 |                  I'll eat rice. I'll drink water too.                   |
 |                                                                         |
-|  ALEX (you):     ______ですね！                                          |
+|  ALEX (you):     いいですね！                                             |
 |                  Sounds good!                                           |
 |                                                                         |
 |                                                                 PAGE 11 |
@@ -792,17 +803,18 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |                                                                         |
 |  やること:                                                                |
 |    ① ともだちに「なにを のみますか？」ときく                              |
-|    ② ともだちに「なにを たべますか？」ときく                              |
+|    ② ともだちを「＿＿を たべませんか？」とさそう                          |
 |    ③ じぶんも ちゅうもんする                                             |
 |  To do:                                                                 |
 |    ① Ask the friend what they'll drink                                  |
-|    ② Ask the friend what they'll eat                                    |
+|    ② Invite the friend: "Shall we eat ＿＿?"                            |
 |    ③ Order something for yourself                                       |
 |                                                                         |
 |  HINTS                                                                  |
 |  ┌──────────────────────────────────────────────────────────┐           |
 |  │  PATTERN                                                  │           |
 |  │  なにを ＿＿ますか？          What will you ＿＿?           │           |
+|  │  ＿＿を ＿＿ませんか？        Shall we ＿＿ ＿＿?           │           |
 |  │  わたしは ＿＿を ＿＿ます。    I'll ＿＿ ＿＿.               │           |
 |  │  WORDS                                                    │           |
 |  │  コーヒー(coffee) みず(water) おちゃ(tea)                  │           |
@@ -837,7 +849,7 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |     └─────────────────────────────────────────────────────┘              |
 |                                                                         |
 |                                                                         |
-|  WAITER:   いらっしゃいませ！なにを ______か？                            |
+|  WAITER:   いらっしゃいませ！なにを たべますか？                          |
 |            Welcome! What will you eat?                                  |
 |                                                                         |
 |  YOU:      わたしは すしを ______。                                      |
@@ -849,7 +861,7 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  YOU:      おちゃを ______。                                             |
 |            I'll have green tea.                                         |
 |                                                                         |
-|  WAITER:   パンも ______か？                                             |
+|  WAITER:   パンも たべますか？                                            |
 |            Will you also eat bread?                                     |
 |                                                                         |
 |  YOU:      いいえ、パンは ______。                                        |
@@ -891,11 +903,7 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |                                                                         |
 |     _____________________________________________________               |
 |                                                                         |
-|  5. Do you listen to music?                                             |
-|                                                                         |
-|     _____________________________________________________               |
-|                                                                         |
-|  6. I eat bread and drink water.                                        |
+|  5. Shall we listen to music?                                           |
 |                                                                         |
 |     _____________________________________________________               |
 |                                                                         |
@@ -919,12 +927,12 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  ┌─────────────────────────────────────────────────────────┐            |
 |  │                                                          │            |
 |  │  ┌──┐                                                    │            |
-|  │  │  │  PATTERN 1: ＿＿を ＿＿ます。                       │            |
-|  │  └──┘              (I do something)                      │            |
+|  │  │  │  PATTERN A: ＿＿を ＿＿ます / ますか / ません        │            |
+|  │  └──┘              (I do / Do you…? / I don't)           │            |
 |  │                                                          │            |
 |  │  ┌──┐                                                    │            |
-|  │  │  │  PATTERN 2: ＿＿を ＿＿ますか？                      │            |
-|  │  └──┘              (Do you…? Yes/No)                      │            |
+|  │  │  │  PATTERN B: ＿＿を ＿＿ませんか？                    │            |
+|  │  └──┘              (Shall we…? / Would you like…?)        │            |
 |  │                                                          │            |
 |  └─────────────────────────────────────────────────────────┘            |
 |                                                                         |
@@ -935,9 +943,10 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |                                                                         |
 |  KEY EXPRESSIONS — もういちどよんでみましょう！                           |
 |  • ごはんを たべます。               — I eat rice.                        |
-|  • コーヒーを のみます。             — I drink coffee.                    |
 |  • ほんを よみますか？               — Do you read books?                 |
 |  • テレビを みません。               — I don't watch TV.                  |
+|  • コーヒーを のみませんか？         — Shall we drink coffee?             |
+|  • えいがを みませんか？             — Shall we watch a movie?            |
 |                                                                         |
 |                                                                 PAGE 16 |
 +-------------------------------------------------------------------------+
