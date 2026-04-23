@@ -789,23 +789,29 @@ Travel conversation also appears in prestudy (plain, no highlights).
 |  ROLEPLAY — WEEKEND PLANS 🎉                                            |
 |                                                                         |
 |  Tutor = ともだち (friend).   Student = complete 3 missions!            |
-|  Tutor opens:  「しゅうまつ、なにを しますか？」                            |
 |                                                                         |
 |  ┌──────────────────────────────────────────────────────────┐           |
 |  │                                                           │           |
 |  │   ☐ MISSION 1:  Ask what the tutor watches / reads /      │           |
-|  │                  listens to         (なにを 〜ますか？)     │           |
+|  │                  listens to        (なにを 〜ますか？)      │           |
+|  │                  ▸ 「わたしに しつもんしてね。」              │           |
 |  │                                                           │           |
 |  │   ☐ MISSION 2:  Invite the tutor to do something          │           |
-|  │                  together!          (〜を 〜ませんか？)     │           |
+|  │                  together!         (〜を 〜ませんか？)      │           |
+|  │                  ▸ 「わたしを さそってね！」                 │           |
 |  │                                                           │           |
 |  │   ☐ MISSION 3:  Say one thing you DON'T do                │           |
-|  │                                      (〜を 〜ません)        │           |
+|  │                                     (〜を 〜ません)         │           |
+|  │                  ▸ 「しないことを ひとつ おしえてね。」        │           |
 |  │                                                           │           |
 |  └──────────────────────────────────────────────────────────┘           |
 |                                                                         |
 |  Words:  えいが(movie)   テレビ(TV)      ほん(book)                      |
 |          おんがく(music)  コーヒー(coffee) ごはん(rice)                   |
+|                                                                         |
+|  SCRIPT                                                                 |
+|  ▸ Tutor opens: "What are you doing this weekend?"                      |
+|    「しゅうまつ、なにを しますか？」                                       |
 |                                                                         |
 |                                                                 PAGE 13 |
 +-------------------------------------------------------------------------+
