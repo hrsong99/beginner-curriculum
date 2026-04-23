@@ -16,7 +16,7 @@
 - Pattern A: `[noun]を [verb]ます。` — the full 〜ます paradigm in one pattern: affirmative (〜ます), question (〜ますか), negative (〜ません). "I drink coffee." / "Do you drink coffee?" / "I don't drink coffee."
 - Pattern B: `[noun]を [verb]ませんか？` — invitation / suggestion ("Shall we…?" / "Would you like to…?"). Distinct function from Pattern A's negative — same 〜ません ending, but used as a friendly offer, not a denial. Supporting responses `はい、いいですね。` / `すみません、ちょっと…` show up naturally in dialogues and roleplay but are NOT drilled as patterns — students meet them in context, not as production targets.
 
-**Why this split (vs. A=affirmative / B=question+negative):** The old split was really one pattern (〜を 〜ます) with three inflections masquerading as two patterns. 25 min of class needs a real second grammatical move. 〜ませんか adds a new *function* (invitation) without a new particle, so it stays first-timer-friendly while giving the lesson a genuine second beat — and it plugs directly into the cafe roleplay on Page 13.
+**Why this split (vs. A=affirmative / B=question+negative):** The old split was really one pattern (〜を 〜ます) with three inflections masquerading as two patterns. 25 min of class needs a real second grammatical move. 〜ませんか adds a new *function* (invitation) without a new particle, so it stays first-timer-friendly while giving the lesson a genuine second beat — and it plugs directly into the weekend-plans roleplay on Page 13.
 
 **Target verbs (5):** たべます, のみます, よみます, みます, ききます
 **Target objects:** ごはん, パン, みず, コーヒー, ほん, テレビ, えいが, おんがく
@@ -59,7 +59,7 @@
 | 10   | Guided Conversation               | 2 min | Cafe scene                              |
 | 11   | Memory Conversation               | 2 min | Fill-in of Page 10                      |
 | 12   | Free Discussion                   | 2 min | 3 rounds                                |
-| 13   | Roleplay                          | 2 min | Order at a cafe                         |
+| 13   | Roleplay                          | 2 min | Weekend plans (3-mission checklist)     |
 | 14   | Travel in Japan                   | 2 min | Restaurant / ordering                   |
 | 15   | BONUS: Translate (no hints)       | 2 min | Skip if short on time                   |
 | 16   | Mission Complete                  | 1 min |                                         |
@@ -786,40 +786,26 @@ Travel conversation also appears in prestudy (plain, no highlights).
 ```
 +-------------------------------------------------------------------------+
 |                                                                         |
-|  ROLEPLAY                                                               |
-|  ────────                                                               |
-|  "At the Cafe"                                                          |
+|  ROLEPLAY — WEEKEND PLANS 🎉                                            |
 |                                                                         |
-|  SCENARIO                                                               |
-|  あなたは カフェに きました。                                             |
-|  メニューを みて、ちゅうもんしましょう！                                   |
-|  You've arrived at a cafe. Look at the menu and order!                  |
+|  Tutor = ともだち (friend).   Student = complete 3 missions!            |
+|  Tutor opens:  「しゅうまつ、なにを しますか？」                            |
 |                                                                         |
-|  GOAL                                                                   |
-|  ともだち（＝チューター）に なにを たべるか、なにを のむか                 |
-|  きいてから、じぶんも ちゅうもんしましょう！                               |
-|  Ask your friend (the tutor) what they'll eat and drink,                |
-|  then order for yourself!                                               |
-|                                                                         |
-|  やること:                                                                |
-|    ① ともだちに「なにを のみますか？」ときく                              |
-|    ② ともだちを「＿＿を たべませんか？」とさそう                          |
-|    ③ じぶんも ちゅうもんする                                             |
-|  To do:                                                                 |
-|    ① Ask the friend what they'll drink                                  |
-|    ② Invite the friend: "Shall we eat ＿＿?"                            |
-|    ③ Order something for yourself                                       |
-|                                                                         |
-|  HINTS                                                                  |
 |  ┌──────────────────────────────────────────────────────────┐           |
-|  │  PATTERN                                                  │           |
-|  │  なにを ＿＿ますか？          What will you ＿＿?           │           |
-|  │  ＿＿を ＿＿ませんか？        Shall we ＿＿ ＿＿?           │           |
-|  │  わたしは ＿＿を ＿＿ます。    I'll ＿＿ ＿＿.               │           |
-|  │  WORDS                                                    │           |
-|  │  コーヒー(coffee) みず(water) おちゃ(tea)                  │           |
-|  │  ごはん(rice) パン(bread) ケーキ(cake)                      │           |
+|  │                                                           │           |
+|  │   ☐ MISSION 1:  Ask what the tutor watches / reads /      │           |
+|  │                  listens to         (なにを 〜ますか？)     │           |
+|  │                                                           │           |
+|  │   ☐ MISSION 2:  Invite the tutor to do something          │           |
+|  │                  together!          (〜を 〜ませんか？)     │           |
+|  │                                                           │           |
+|  │   ☐ MISSION 3:  Say one thing you DON'T do                │           |
+|  │                                      (〜を 〜ません)        │           |
+|  │                                                           │           |
 |  └──────────────────────────────────────────────────────────┘           |
+|                                                                         |
+|  Words:  えいが(movie)   テレビ(TV)      ほん(book)                      |
+|          おんがく(music)  コーヒー(coffee) ごはん(rice)                   |
 |                                                                         |
 |                                                                 PAGE 13 |
 +-------------------------------------------------------------------------+
