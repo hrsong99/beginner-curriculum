@@ -614,7 +614,7 @@
     <p><strong>TODAY'S VERBS</strong></p>
     <div class="match-game"
          data-left='[{"id":"v1","html":"eat"},{"id":"v2","html":"drink"},{"id":"v3","html":"read"},{"id":"v4","html":"watch"},{"id":"v5","html":"listen"}]'
-         data-right='[{"id":"v3","text":"よみます"},{"id":"v1","text":"たべます"},{"id":"v5","text":"ききます"},{"id":"v2","text":"のみます"},{"id":"v4","text":"みます"}]'></div>
+         data-right='[{"id":"v3","text":"<ruby>よみます<rt>yomimasu</rt></ruby>"},{"id":"v1","text":"<ruby>たべます<rt>tabemasu</rt></ruby>"},{"id":"v5","text":"<ruby>ききます<rt>kikimasu</rt></ruby>"},{"id":"v2","text":"<ruby>のみます<rt>nomimasu</rt></ruby>"},{"id":"v4","text":"<ruby>みます<rt>mimasu</rt></ruby>"}]'></div>
   </div>
 
   <hr class="separator">
@@ -623,7 +623,7 @@
     <p><strong>TODAY'S OBJECTS</strong></p>
     <div class="match-game"
          data-left='[{"id":"o1","html":"rice"},{"id":"o2","html":"water"},{"id":"o3","html":"coffee"},{"id":"o4","html":"movie"},{"id":"o5","html":"music"}]'
-         data-right='[{"id":"o3","text":"コーヒー"},{"id":"o1","text":"ごはん"},{"id":"o5","text":"おんがく"},{"id":"o2","text":"みず"},{"id":"o4","text":"えいが"}]'></div>
+         data-right='[{"id":"o3","text":"<ruby>コーヒー<rt>kōhī</rt></ruby>"},{"id":"o1","text":"<ruby>ごはん<rt>gohan</rt></ruby>"},{"id":"o5","text":"<ruby>おんがく<rt>ongaku</rt></ruby>"},{"id":"o2","text":"<ruby>みず<rt>mizu</rt></ruby>"},{"id":"o4","text":"<ruby>えいが<rt>eiga</rt></ruby>"}]'></div>
   </div>
 
   <hr class="separator">
@@ -632,7 +632,7 @@
     <p><strong>REVIEW FROM BEFORE</strong> &nbsp; <span style="color:#888; font-size:14px">(L1 &middot; L2 &middot; L4)</span></p>
     <div class="match-game"
          data-left='[{"id":"r1","html":"student"},{"id":"r2","html":"teacher"},{"id":"r3","html":"book"},{"id":"r4","html":"cat"},{"id":"r5","html":"this"}]'
-         data-right='[{"id":"r4","text":"ねこ"},{"id":"r1","text":"がくせい"},{"id":"r3","text":"ほん"},{"id":"r2","text":"せんせい"},{"id":"r5","text":"これ"}]'></div>
+         data-right='[{"id":"r4","text":"<ruby>ねこ<rt>neko</rt></ruby>"},{"id":"r1","text":"<ruby>がくせい<rt>gakusei</rt></ruby>"},{"id":"r3","text":"<ruby>ほん<rt>hon</rt></ruby>"},{"id":"r2","text":"<ruby>せんせい<rt>sensei</rt></ruby>"},{"id":"r5","text":"<ruby>これ<rt>kore</rt></ruby>"}]'></div>
   </div>
 </div>
 
@@ -1754,6 +1754,21 @@ function pickWord(btn, itemId) {
   fb.textContent = '';
   fb.className = 'reorder-fb';
   if (window.syncSend) syncReorder(itemId);
+
+  // Auto-check once every word in the bank has been used.
+  // If wrong, auto-reset after a short pause so the student can retry.
+  var bank = document.getElementById(itemId + '-bank');
+  var allBtns = bank.querySelectorAll('.word-btn');
+  var usedBtns = bank.querySelectorAll('.word-btn.used');
+  if (allBtns.length > 0 && usedBtns.length === allBtns.length) {
+    checkOrder(itemId);
+    if (item.classList.contains('wrong')) {
+      setTimeout(function() {
+        // Skip auto-reset if the student already started correcting it.
+        if (item.classList.contains('wrong')) resetOrder(itemId);
+      }, 1200);
+    }
+  }
 }
 
 function returnWord(clone, originalBtn) {
@@ -2325,7 +2340,7 @@ loadAnnotations();
       var row = document.createElement('div');
       row.className = 'match-item';
       var label = document.createElement('span');
-      label.textContent = item.text;
+      label.innerHTML = item.text;
       var dot = document.createElement('div');
       dot.className = 'match-dot';
       dot.dataset.side = 'right';
