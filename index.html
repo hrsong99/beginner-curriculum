@@ -10,99 +10,23 @@
   .container { max-width: 720px; margin: 0 auto; padding: 60px 40px; }
   h1 { font-size: 22px; margin-bottom: 8px; letter-spacing: 0.5px; }
   h2 { font-size: 18px; font-weight: normal; margin-bottom: 32px; border-bottom: 1px solid #111; padding-bottom: 12px; }
-  .lesson-group { margin: 32px 0; }
-  .lesson-group h3 { font-size: 17px; margin-bottom: 16px; }
-  .lesson-list { list-style: none; padding: 0; }
-  .lesson-list li { margin: 0; }
-  .lesson-list a { display: block; padding: 14px 18px; font-family: monospace; font-size: 15px; color: #111; text-decoration: none; border: 1px solid #ddd; border-bottom: none; }
-  .lesson-list li:last-child a { border-bottom: 1px solid #ddd; }
-  .lesson-list a:hover { background: #f0f0f0; }
+  .lang-list { list-style: none; padding: 0; }
+  .lang-list li { margin: 0; }
+  .lang-list a { display: block; padding: 14px 18px; font-family: monospace; font-size: 15px; color: #111; text-decoration: none; border: 1px solid #ddd; border-bottom: none; }
+  .lang-list li:last-child a { border-bottom: 1px solid #ddd; }
+  .lang-list a:hover { background: #f0f0f0; }
   .tag { font-size: 11px; color: #999; margin-left: 8px; }
-  .sync-bar { margin-bottom: 28px; padding: 14px 18px; border: 1px solid #ddd; background: #fafafa; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-  .sync-bar label { font-size: 14px; }
-  .sync-bar input { font-family: monospace; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; padding: 6px 10px; width: 180px; }
-  .sync-bar input:focus { border-color: #c33; outline: none; }
-  .sync-bar .sync-status { font-size: 12px; color: #999; }
 </style>
 </head>
 <body>
 <div class="container">
   <h1>Beginner Curriculum</h1>
-  <h2>Lesson Index</h2>
+  <h2>Choose a Language</h2>
 
-  <div class="sync-bar">
-    <label for="roomInput">Room:</label>
-    <input type="text" id="roomInput" placeholder="Enter room name to sync">
-    <span class="sync-status" id="syncStatus">Enter a room name so both devices see the same lesson live</span>
-  </div>
-
-  <div class="lesson-group">
-    <h3>Lesson 1 — はじめまして！ / Nice to Meet You!</h3>
-    <ul class="lesson-list">
-      <li><a href="lesson-1/japanese-prestudy.html">Prestudy: はじめまして！<span class="tag">Japanese</span></a></li>
-      <li><a href="lesson-1/japanese.html">Lesson 1: はじめまして！<span class="tag">Japanese</span></a></li>
-      <li><a href="lesson-1/english.html">Lesson 1: Nice to Meet You!<span class="tag">English</span></a></li>
-    </ul>
-  </div>
-
-  <div class="lesson-group">
-    <h3>Lesson 2 — これはなんですか？</h3>
-    <ul class="lesson-list">
-      <li><a href="lesson-2/japanese-prestudy.html">Prestudy: これはなんですか？<span class="tag">Japanese</span></a></li>
-      <li><a href="lesson-2/japanese.html">Lesson 2: これはなんですか？<span class="tag">Japanese</span></a></li>
-    </ul>
-  </div>
-
-  <div class="lesson-group">
-    <h3>Lesson 3 — どこですか？</h3>
-    <ul class="lesson-list">
-      <li><a href="lesson-3/japanese-prestudy.html">Prestudy: どこですか？<span class="tag">Japanese (EN)</span></a></li>
-      <li><a href="lesson-3/japanese-prestudy-kr.html">Prestudy: どこですか？<span class="tag">Japanese (KR)</span></a></li>
-      <li><a href="lesson-3/japanese.html">Lesson 3: どこですか？<span class="tag">Japanese (EN)</span></a></li>
-      <li><a href="lesson-3/japanese-kr.html">Lesson 3: どこですか？<span class="tag">Japanese (KR)</span></a></li>
-    </ul>
-  </div>
-
-  <div class="lesson-group">
-    <h3>Lesson 4 — あります・います</h3>
-    <ul class="lesson-list">
-      <li><a href="lesson-4/japanese-prestudy.html">Prestudy: あります・います<span class="tag">Japanese (EN)</span></a></li>
-      <li><a href="lesson-4/japanese-prestudy-kr.html">Prestudy: あります・います<span class="tag">Japanese (KR)</span></a></li>
-      <li><a href="lesson-4/japanese.html">Lesson 4: あります・います<span class="tag">Japanese (EN)</span></a></li>
-      <li><a href="lesson-4/japanese-kr.html">Lesson 4: あります・います<span class="tag">Japanese (KR)</span></a></li>
-    </ul>
-  </div>
-
-  <div class="lesson-group">
-    <h3>Lesson 5 — 〜を 〜ます</h3>
-    <ul class="lesson-list">
-      <li><a href="lesson-5/japanese-prestudy.html">Prestudy: 〜を 〜ます<span class="tag">Japanese</span></a></li>
-      <li><a href="lesson-5/japanese.html">Lesson 5: 〜を 〜ます<span class="tag">Japanese</span></a></li>
-    </ul>
-  </div>
+  <ul class="lang-list">
+    <li><a href="japanese-beginner/index.html">Japanese<span class="tag">日本語</span></a></li>
+    <li><a href="korean/index.html">Korean<span class="tag">한국어 — coming soon</span></a></li>
+  </ul>
 </div>
-<script>
-  var roomInput = document.getElementById('roomInput');
-  var syncStatus = document.getElementById('syncStatus');
-  var links = document.querySelectorAll('.lesson-list a');
-
-  // Restore saved room name
-  var saved = localStorage.getItem('sync-room');
-  if (saved) { roomInput.value = saved; updateLinks(); }
-
-  roomInput.addEventListener('input', updateLinks);
-
-  function updateLinks() {
-    var room = roomInput.value.trim();
-    localStorage.setItem('sync-room', room);
-    links.forEach(function(a) {
-      var base = a.getAttribute('href').split('?')[0];
-      a.href = room ? base + '?sync=' + encodeURIComponent(room) : base;
-    });
-    syncStatus.textContent = room
-      ? 'Sync ON — both devices use room "' + room + '"'
-      : 'Enter a room name so both devices see the same lesson live';
-  }
-</script>
 </body>
 </html>
