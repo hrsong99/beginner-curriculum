@@ -1,6 +1,6 @@
 # Korean Curriculum Table of Contents
 
-Simple planning order for the three Korean lesson tracks. Beginner Patterns and Intermediate Expressions generally keep to two teachable concepts per lesson.
+Simple planning order for the three Korean lesson tracks. Beginner Patterns follows the Dekiru Kankokugo 1 pattern order summarized in `0-dekiru-kankokugo/dekiru-kankokugo-1-pattern-map.md`. Beginner Patterns and Intermediate Expressions generally keep to two teachable concepts per lesson.
 
 ## 1. Hangul Teaching
 
@@ -23,20 +23,26 @@ Simple planning order for the three Korean lesson tracks. Beginner Patterns and 
 
 | Lesson | Pattern Goal | Concept 1 | Concept 2 |
 | --- | --- | --- | --- |
-| 1 | I am / this is | `저는 [name]이에요/예요` | `이거/저거는 [noun]이에요/예요` |
-| 2 | Basic descriptions | adjective + `-아요/어요` as fixed chunks | yes/no questions by intonation |
-| 3 | Have / do not have | `[noun]이/가 있어요` | `[noun]이/가 없어요` |
-| 4 | Where things are | `[place]에 있어요` | `어디에 있어요?` |
-| 5 | Like / dislike | object particle `을/를` | `[noun]을/를 좋아해요 / 안 좋아해요` |
-| 6 | Eat / drink | `[food]을/를 먹어요` | `[drink]을/를 마셔요` |
-| 7 | Go / come | `[place]에 가요` | `[place]에 와요` |
-| 8 | Do activities | `[noun]을/를 해요` | `뭐 해요?` |
-| 9 | Want | `[noun]을/를 원해요` or `[verb]고 싶어요` | asking `뭐 하고 싶어요?` |
-| 10 | Can / cannot | `[verb]을/ㄹ 수 있어요` | `[verb]을/ㄹ 수 없어요` |
-| 11 | Past basics | `-았어요/었어요` as high-frequency fixed forms | yesterday / last week time words |
-| 12 | Future basics | `-을/ㄹ 거예요` | tomorrow / later / weekend plans |
-| 13 | Reasons | `왜요?` | `왜냐하면...` with simple reason chunks |
-| 14 | Beginner Review Mission | combine identity, location, likes, actions, time, and plans | short guided conversation |
+| 1 | Identity and topic | `저는 [noun]입니다` / `[noun]입니까?` | topic particle `은/는` |
+| 2 | Not identity | `[noun]이/가 아닙니다` | subject particle `이/가` |
+| 3 | This / that / what | `[noun]이에요/예요` | `[noun]이/가 아니에요` |
+| 4 | Have / do not have | `[noun]이/가 있어요` | `[noun]이/가 없어요` |
+| 5 | Where things are | `[place]에 있어요` | position words + `어디에 있어요?` |
+| 6 | Basic actions | verb/adjective `-ㅂ/습니다` | linking with `-고` |
+| 7 | Negation and ranges | `안 -` / `-지 않습니다` | time/place `부터/에서 ... 까지` |
+| 8 | Dates and prices | Sino-Korean numbers for dates/prices | reaction ending `-네요` |
+| 9 | Everyday polite verbs | verb/adjective `-아/어요` | means/comparison `-(으)로`, `-보다` |
+| 10 | Time and counters | native Korean numbers | time/counter patterns: `시`, `번`, `살`, `명`, `개`, `잔` |
+| 11 | Past basics | `-았어요/었어요` / `-았습니다/었습니다` | past time words: `어제`, `지난주`, `작년` |
+| 12 | Honorific basics | `-(으)세요` / `-(으)십니다` | honorific nouns, verbs, and particles |
+| 13 | Honorific past | `-(으)셨어요` / `-(으)셨습니다` | travel/experience questions |
+| 14 | Confirmation and contrast | `-지요?` / `-죠?` | contrast connector `-지만` |
+| 15 | Want | `[verb]고 싶어요` | third-person desire `[verb]고 싶어 해요` |
+| 16 | Reasons | reason connector `-아/어서` | `으` irregular with `-아/어` |
+| 17 | Permission and conditions | `-아/어도 돼요?` / `-(으)면 안 돼요` | `-(으)면 돼요` / `-(으)면` |
+| 18 | Suggestions and purpose | `-(으)ㄹ까요?` / `-(으)ㅂ시다` | purpose `-(으)러` |
+| 19 | Requests | `-아/어 주시겠어요?` | `-아/어 주세요` + request preface `-ㅂ/습니다만` |
+| 20 | Can / cannot / doing now | `-(으)ㄹ 수 있어요` / `못-`, `-(으)ㄹ 수 없어요` | current progress `-고 있어요` |
 
 ## 3. Intermediate Expressions
 
