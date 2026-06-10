@@ -2,31 +2,18 @@
 
 ## Design Notes
 
-**Start from the desired experience:** A lower-intermediate learner leaves able to *actually make a plan with a Korean person today* — ask when they're free, suggest a specific time, and either lock it in or politely dodge — without thinking about grammar. They walk out with ~5 memorized chunks they can deploy this afternoon over KakaoTalk.
+**Goal:** A lower-intermediate learner can make a simple plan today: ask when someone is free, suggest a time, accept/decline, and close.
 
-**Why the old version was too much:** it taught **12 chunks across 3 expression banks** (propose + confirm + reschedule = *three* situations), **plus a 3-tier register system** (◆ ○ △) that gave three politeness variants of every phrase — effectively tripling the volume. That's the same overload as the four-conjugation pattern draft: too many independent moving parts, and the learner can't feel mastery of any one of them.
+**Approach:** expression-based, not grammar. Learners memorize whole chunks. Practice blanks should be the full pattern, with the needed time word always given as a hint.
 
-**Curriculum type:** situational / expression-based — NOT grammar. Chunks are taught as whole memorized units. We do **not** dissect 혹시 or 괜찮으세요 grammatically; the learner just *uses* them.
+**Core chunks:**
+- `언제 괜찮으세요?` — When works for you?
+- `혹시 [time] 괜찮으세요?` — Is [time] okay, by any chance?
+- `네, 좋아요.` — Sounds good.
+- `죄송한데, 그날은 좀…` — Sorry, that day is a little...
+- `그럼 그때 봬요.` — Then, see you then.
 
-**Two concepts ONLY:**
-
-1. **The asking frame (the anchor — swap ONE slot):**
-   `혹시 [time] 괜찮으세요?` — "Is [time] okay (by any chance)?"
-   The learner fixes the frame and swaps only the **time** in the slot. (Plus the open version `언제 괜찮으세요?` — "When works for you?") This is the exact swap-one-slot move from the pattern lesson — the frame is invariant, the time is the single moving part.
-
-2. **The responses + the close (3 fixed replies):**
-   - Accept → `네, 좋아요.` ("Sounds good.")
-   - Soft decline → `죄송한데, 그날은 좀…` ("Sorry, that day is a little…" — trail off, no excuse needed)
-   - Close → `그럼 그때 봬요.` ("Then, see you then.")
-
-**ONE register only.** Everything is in the safe, polite-professional 해요 level you can use with almost anyone. The ◆ ○ △ tier system is **gone** — register nuance becomes its own future lesson, not a stealth third concept hidden in this one.
-
-**The magic word:** `혹시` ("by any chance"). One word, placed in front, softens almost any request. It's the lesson's highest-ROI takeaway.
-
-**Time-slot vocabulary (the swap set — 8):**
-오늘(today) · 내일(tomorrow) · 주말(weekend) · 이번 주(this week) · 월요일(Monday) · 금요일(Friday) · 점심(lunchtime) · 3시(3 o'clock)
-
-**Deliberately deferred (NOT this lesson):** rescheduling / pushing a meeting back · canceling · the formal ○ and casual △ registers · giving detailed reasons. Each is a clean future lesson on its own.
+**Keep it narrow:** one polite style, one ask pattern, three replies. Defer rescheduling, canceling, register nuance, and detailed reasons.
 
 ## Lesson Flow (11 Pages, ~20 min)
 
@@ -34,10 +21,10 @@
 | ---- | --------------------------------- | ----- | --------------------------------------- |
 | 1    | Greeting & The Goal               | 2 min | "make a real plan today"                |
 | 2    | Today's Expressions               | 2 min | the ask frame + the 3 replies           |
-| 3    | Drill A: The Ask (swap the time)  | 3 min | 혹시 [time] 괜찮으세요?                  |
+| 3    | Drill A: The Ask Pattern         | 3 min | say the full ask with hints             |
 | 4    | Drill B: The 3 Replies            | 3 min | accept / soft-decline / close           |
-| 5    | Vocab Connect: Time Words         | 2 min | the swap set                            |
-| 6    | Quick Practice                    | 2 min | pick the natural response               |
+| 5    | Vocab Connect: Time Words         | 2 min | time-word hints                         |
+| 6    | Quick Practice                    | 2 min | choose replies + say full asks          |
 | 7    | Short Dialogues                   | 2 min | 4 rapid exchanges                       |
 | 8    | Guided Conversation               | 2 min | a full make-a-plan scene                |
 | 9    | Roleplay (3 missions)             | 2 min | learner drives the plan                 |
@@ -82,14 +69,14 @@
 |     them as chunks. Don't pick them apart."                            |
 |    「같이 읽어요. 통째로 외우는 표현이에요. 분석하지 마세요.」            |
 |                                                                         |
-|  CONCEPT 1 — THE ASK  (swap only the time)                             |
+|  CONCEPT 1 — THE ASK PATTERN                                           |
 |  ──────────────────────────────────────────                            |
 |     언제 괜찮으세요?                When works for you?                  |
 |     혹시 [내일] 괜찮으세요?         Is [tomorrow] okay (by any chance)?  |
 |                                                                         |
-|     The frame never changes. You just drop a TIME into the slot:        |
-|        혹시 [ 주말 ] 괜찮으세요?                                         |
-|        혹시 [ 3시 ] 괜찮으세요?                                          |
+|     The frame never changes. Use a time word inside the pattern:        |
+|        혹시 주말 괜찮으세요?        weekend = 주말                       |
+|        혹시 3시 괜찮으세요?         3 o'clock = 3시                      |
 |                                                                         |
 |  CONCEPT 2 — THE 3 REPLIES                                             |
 |  ──────────────────────────                                             |
@@ -107,15 +94,15 @@
 +-------------------------------------------------------------------------+
 ```
 
-### PAGE 3 — Drill A: The Ask (Swap the Time)
+### PAGE 3 — Drill A: The Ask Pattern
 
 ```text
 +-------------------------------------------------------------------------+
 |                                                                         |
-|  DRILL A: 혹시 [time] 괜찮으세요?                                        |
+|  DRILL A: SAY THE WHOLE ASK                                             |
 |  ─────────────────────────────────                                      |
-|  ▸ "Same frame every time. Only the time changes. Read with me."       |
-|    「틀은 똑같아요. 시간만 바뀌어요. 같이 읽어요.」                       |
+|  ▸ "Same pattern every time. The time word is given. Say the whole ask."|
+|    「패턴은 똑같아요. 시간 단어를 보고 전체 문장을 말해요.」              |
 |                                                                         |
 |  1. Read:                                                               |
 |     * 혹시 오늘 괜찮으세요?         Is today okay?                       |
@@ -123,15 +110,18 @@
 |     * 혹시 주말 괜찮으세요?         Is the weekend okay?                 |
 |     * 혹시 3시 괜찮으세요?          Is 3 o'clock okay?                   |
 |                                                                         |
-|  ▸ "Now YOU drop a time into the slot. Say it out loud."               |
-|    「이제 ~씨가 시간을 넣어 보세요. 소리 내어 말해요.」                   |
+|  ▸ "Now make the whole sentence. Use the hint."                        |
+|    「이제 힌트를 보고 전체 문장을 만들어 봐요.」                          |
 |                                                                         |
-|  2. Fill the slot:                                                      |
-|     * 혹시 [__________] 괜찮으세요?   (Monday)                           |
-|     * 혹시 [__________] 괜찮으세요?   (lunchtime)                        |
-|     * 혹시 [__________] 괜찮으세요?   (Friday)                           |
+|  2. Say the whole pattern:                                              |
+|     * [__________________________]   Is Monday okay?                    |
+|       Hint: Monday = 월요일                                             |
+|     * [__________________________]   Is lunchtime okay?                 |
+|       Hint: lunchtime = 점심                                             |
+|     * [__________________________]   Is Friday okay?                    |
+|       Hint: Friday = 금요일                                             |
 |                                                                         |
-|     [ Time words: 월요일(Mon) · 점심(lunch) · 금요일(Fri) ]              |
+|     Pattern: 혹시 [time] 괜찮으세요?                                     |
 |                                                                         |
 |  ▸ "And the open version, when you want THEM to pick:"                 |
 |    「상대가 정하게 할 땐:」                                              |
@@ -159,13 +149,16 @@
 |  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
 |                                                                         |
 |  1. Tutor:   혹시 내일 괜찮으세요?                                       |
-|     You:     [________________]      ← accept, then close               |
+|     You:     [____________________________]                             |
+|              Hint: Sounds good. Then, see you then.                     |
 |                                                                         |
 |  2. Tutor:   혹시 주말 괜찮으세요?                                       |
-|     You:     [________________]      ← that day's tough (soft decline)  |
+|     You:     [____________________________]                             |
+|              Hint: Sorry, that day's a little...                        |
 |                                                                         |
 |  3. Tutor:   언제 괜찮으세요?                                            |
-|     You:     혹시 [____] 괜찮으세요?   ← turn it around, suggest a time   |
+|     You:     [____________________________]                             |
+|              Hint: Is Monday okay? / Monday = 월요일                    |
 |                                                                         |
 |  ▸ "Remember: the decline TRAILS OFF. No long excuse needed."          |
 |    「대답은 '좀…' 하고 흐려요. 긴 변명은 필요 없어요.」                   |
@@ -181,8 +174,8 @@
 |                                                                         |
 |  VOCAB CONNECT: TIME WORDS                                              |
 |  ──────────────────────────                                             |
-|  ▸ "Match English to Korean. These are your slot-fillers — say each    |
-|     one inside the frame: 혹시 ___ 괜찮으세요?"                          |
+|  ▸ "Match English to Korean. These are your time words. Then say each  |
+|     one inside the pattern: 혹시 + time + 괜찮으세요?"                   |
 |    「영어와 한국어를 이어요. 틀에 넣어 말해 봐요.」                       |
 |                                                                         |
 |   ┌──────────────────────┬──────────────────────┐                       |
@@ -221,11 +214,13 @@
 |     3. You both agreed on a time. How do you end it?                   |
 |        a) 그럼 그때 봬요.      b) 언제 괜찮으세요?                       |
 |                                                                         |
-|  B. ADD THE MAGIC WORD — make this softer:                            |
-|        "내일 괜찮으세요?"   →   [______] 내일 괜찮으세요?                |
+|  B. SAY THE SOFTER ASK:                                                |
+|        [____________________________]                                  |
+|        Hint: Is tomorrow okay, by any chance? / tomorrow = 내일         |
 |                                                                         |
-|  C. FILL THE SLOT — say it for "Is Friday okay?"                       |
-|        혹시 [__________] 괜찮으세요?                                     |
+|  C. SAY THE WHOLE ASK:                                                 |
+|        [____________________________]                                  |
+|        Hint: Is Friday okay? / Friday = 금요일                          |
 |                                                                         |
 |                                                                  PAGE 6 |
 +-------------------------------------------------------------------------+
@@ -238,24 +233,28 @@
 |                                                                         |
 |  SHORT DIALOGUES                                                        |
 |  ────────────────                                                       |
-|  ▸ "Let's ping-pong! Fill the blanks naturally."                       |
-|    「주고받아 봐요! 빈칸을 자연스럽게 채워요.」                           |
+|  ▸ "Let's ping-pong! Say your full line naturally."                    |
+|    「주고받아 봐요! 전체 문장을 자연스럽게 말해요.」                      |
 |                                                                         |
 |  DIALOGUE 1:  (you ask, they accept)                                   |
-|  You:     혹시 [________] 괜찮으세요?   (tomorrow)                       |
+|  You:     [____________________________]                               |
+|           Hint: Is tomorrow okay? / tomorrow = 내일                     |
 |  Tutor:   네, 좋아요!                                                    |
 |                                                                         |
 |  DIALOGUE 2:  (they ask, you softly decline)                          |
 |  Tutor:   혹시 주말 괜찮으세요?                                          |
-|  You:     [________________________]   (sorry, that day's tough)        |
+|  You:     [____________________________]                               |
+|           Hint: Sorry, that day's a little...                           |
 |                                                                         |
 |  DIALOGUE 3:  (they leave it open, you suggest)                        |
 |  Tutor:   언제 괜찮으세요?                                               |
-|  You:     혹시 [________] 괜찮으세요?   (3 o'clock)                      |
+|  You:     [____________________________]                               |
+|           Hint: Is 3 o'clock okay? / 3 o'clock = 3시                    |
 |  Tutor:   네, 좋아요.                                                    |
 |                                                                         |
 |  DIALOGUE 4:  (close it out)                                           |
-|  You:     [________________]            (then, see you then)            |
+|  You:     [____________________________]                               |
+|           Hint: Then, see you then.                                     |
 |  Tutor:   네, 그때 봬요!                                                 |
 |                                                                         |
 |                                                                  PAGE 7 |
@@ -312,14 +311,15 @@
 |                                                                         |
 |  MISSIONS:                                                              |
 |  [ ] Ask when I'm free.            (언제 괜찮으세요?)                   |
-|  [ ] Suggest a specific time.      (혹시 ___ 괜찮으세요?)               |
+|  [ ] Suggest a specific time.      (혹시 + time + 괜찮으세요?)         |
 |  [ ] Lock it in and close.         (그럼 그때 봬요.)                    |
 |                                                                         |
 |  ┌─── PULL FROM THESE ──────────────────────────────────────┐          |
-|  │  언제 괜찮으세요?     혹시 ___ 괜찮으세요?                  │          |
+|  │  언제 괜찮으세요?     혹시 + time + 괜찮으세요?              │          |
 |  │  네, 좋아요.          죄송한데, 그날은 좀…                  │          |
 |  │  그럼 그때 봬요.                                          │          |
-|  │  times: 오늘 · 내일 · 주말 · 월요일 · 점심 · 3시           │          |
+|  │  time hints: 오늘=today · 내일=tomorrow · 주말=weekend      │          |
+|  │              월요일=Monday · 점심=lunch · 3시=3 o'clock    │          |
 |  └────────────────────────────────────────────────────────────┘          |
 |                                                                         |
 |  Tutor Start: "우리 언제 한번 만나요!" (Let's meet up sometime!)         |
@@ -335,21 +335,22 @@
 |                                                                         |
 |  REAL LIFE: PLAN IT OVER TEXT                                          |
 |  ─────────────────────────────                                          |
-|  ▸ "Same phrases work in a text. Fill in your side of the chat."       |
-|    「문자에서도 똑같아요. 대화의 빈칸을 채워요.」                         |
+|  ▸ "Same phrases work in a text. Complete your side of the chat."      |
+|    「문자에서도 똑같아요. 내 대답을 완성해요.」                            |
 |                                                                         |
 |   ┌─────────────────────────────────────────────────┐                   |
 |   │  친구:  주말에 시간 있어요?                        │                   |
 |   │         (Free this weekend?)                     │                   |
 |   │                                                  │                   |
-|   │  나:    [____________________________]           │ ← suggest 3시     |
+|   │  나:    [____________________________]           │ ← Is 3 o'clock OK?|
+|   │         Hint: 3 o'clock = 3시                    │                   |
 |   │                                                  │                   |
 |   │  친구:  네, 좋아요!                               │                   |
 |   │                                                  │                   |
-|   │  나:    [____________________________]           │ ← close it        |
+|   │  나:    [____________________________]           │ ← See you then    |
 |   └─────────────────────────────────────────────────┘                   |
 |                                                                         |
-|   [ Helper: 혹시 ___ 괜찮으세요?  ·  그럼 그때 봬요. ]                   |
+|   [ Helper: 혹시 + time + 괜찮으세요?  ·  그럼 그때 봬요. ]              |
 |                                                                         |
 |                                                                 PAGE 10 |
 +-------------------------------------------------------------------------+
@@ -369,7 +370,7 @@
 |  ┌─── MAKE-A-PLAN CHEAT-SHEET ─────────────────────────────┐           |
 |  │                                                          │           |
 |  │  ASK (open)     언제 괜찮으세요?     When works for you?   │           |
-|  │  ASK (specific) 혹시 ___ 괜찮으세요?  Is ___ okay?         │           |
+|  │  ASK (specific) 혹시 + time + 괜찮으세요?  Is time okay?  │           |
 |  │  ACCEPT         네, 좋아요.          Sounds good.          │           |
 |  │  DECLINE        죄송한데, 그날은 좀…  Sorry, that day's…    │           |
 |  │  CLOSE          그럼 그때 봬요.       See you then.         │           |
