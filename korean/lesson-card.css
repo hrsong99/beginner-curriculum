@@ -101,6 +101,10 @@ h1 {
   font-weight: 850;
 }
 
+.hero-topic .english {
+  color: rgba(255,255,255,.68);
+}
+
 .down {
   display: none;
 }
@@ -304,11 +308,45 @@ p {
 }
 
 .hint {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
   color: #6f747c;
   font-size: 14px;
   line-height: 1.45;
   font-weight: 650;
+}
+
+.hint-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  padding: 3px 8px;
+  border: 1px solid #d9dde2;
+  border-radius: 999px;
+  background: #fff;
+  color: #555b63;
+  font-size: 13px;
+  line-height: 1.25;
+  font-weight: 750;
+}
+
+.listen-card {
+  background: #fff;
+}
+
+.listen-line {
+  padding: 15px 0;
+  border-bottom: 1px solid #e7e8ea;
+}
+
+.listen-line:first-child {
+  padding-top: 0;
+}
+
+.listen-line:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
 }
 
 .choice {
