@@ -220,8 +220,7 @@ h1 {
 }
 
 .task-block {
-  padding: 26px 0;
-  border-bottom: 1px solid #e8e8e8;
+  padding: 14px 0;
 }
 
 .task-block:first-child,
@@ -232,7 +231,6 @@ h1 {
 
 .task-block:last-child {
   padding-bottom: 0;
-  border-bottom: 0;
 }
 
 .task-label {
@@ -413,7 +411,7 @@ p {
 
 .answer-label {
   display: block;
-  padding: 8px 13px;
+  padding: 9px 14px;
   border-bottom: 1.5px solid #1c1c1c;
   background: #f5f5f5;
   color: #575753;
@@ -424,22 +422,22 @@ p {
 
 .answer-space {
   display: block;
-  min-height: 64px;
+  min-height: 84px;
   background: #fff;
 }
 
 .answer-fill {
   display: block;
-  padding: 15px 13px 17px;
+  padding: 24px 16px 26px;
   background: #fff;
 }
 
 .answer-box.small .answer-space {
-  min-height: 50px;
+  min-height: 64px;
 }
 
 .answer-box.tall .answer-space {
-  min-height: 88px;
+  min-height: 112px;
 }
 
 .option-line {
