@@ -1,3 +1,20 @@
+/* ============================================================
+   PODO BOLD lesson design system
+   tokens: ink #1C1C1C · lime #B5FD4C · green-500 #6ABE36
+           green-100 #F2FCEC · gray-100 #F5F5F5 · gray-200 #E8E8E8
+           gray-400 #A5A5A5 · gray-500 #757575
+   construction: white cards, 1.5px ink outline, hard offset base;
+   dark pages (hero/transitions) sit on a lime base.
+   NESTING RULE: max two levels of boxes — the page card plus ONE
+   boxed component inside it. Never wrap boxed components (answer
+   boxes, bubbles, pattern cards) in another bordered card; put
+   them directly in the section. When a dialogue turn holds an
+   answer box, the box IS the bubble (see .bubble.me:has below).
+   Previous "Sage" design archived in
+   2-beginner-patterns/design-variants.html (Variant 00).
+   ============================================================ */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
 * {
   box-sizing: border-box;
 }
@@ -8,24 +25,23 @@ html {
 
 body {
   margin: 0;
-  background: #edf1ef;
-  color: #202124;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  background: #f2f2ed;
+  color: #1c1c1c;
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
   line-height: 1.5;
-  overflow-x: hidden;
 }
 
 .phone {
   width: min(100%, 680px);
   margin: 0 auto;
   min-height: 100vh;
-  background: #eef2f0;
-  overflow: hidden;
+  padding-bottom: 30px;
+  background: #f2f2ed;
 }
 
 @media (max-width: 900px) {
   body {
-    background: #eef2f0;
+    background: #f2f2ed;
   }
 
   .phone {
@@ -35,15 +51,18 @@ body {
   }
 }
 
+/* ---------- hero ---------- */
 .hero {
   min-height: 470px;
-  padding: 52px 46px 42px;
+  margin: 20px 20px 0;
+  padding: 48px 42px 40px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   color: #fff;
-  background: #26322f;
-  border-radius: 0 0 28px 28px;
+  background: #1c1c1c;
+  border-radius: 16px;
+  box-shadow: 0 6px 0 #b5fd4c;
 }
 
 .hero.small {
@@ -52,82 +71,91 @@ body {
 
 .eyebrow {
   width: fit-content;
-  margin: 0 0 62px;
-  padding: 7px 11px;
-  border: 1px solid rgba(255,255,255,.22);
+  margin: 0 0 58px;
+  padding: 7px 13px;
+  background: #b5fd4c;
   border-radius: 999px;
-  color: rgba(255,255,255,.82);
-  font-size: 13px;
+  color: #1c1c1c;
+  font-size: 12.5px;
   font-weight: 800;
+  letter-spacing: .05em;
+  text-transform: uppercase;
 }
 
 h1 {
   margin: 0;
-  max-width: 330px;
+  max-width: 360px;
+  color: #fff;
   font-size: 34px;
+  font-weight: 800;
   line-height: 1.14;
-  letter-spacing: 0;
+  letter-spacing: -.01em;
   word-break: keep-all;
 }
 
 .hero-subtitle {
-  margin: 18px 0 0;
-  max-width: 330px;
-  color: rgba(255,255,255,.8);
+  margin: 16px 0 0;
+  max-width: 360px;
+  color: rgba(255,255,255,.72);
   font-size: 16px;
-  font-weight: 650;
+  font-weight: 500;
 }
 
 .hero-topic {
   margin-top: auto;
-  padding-top: 22px;
-  border-top: 1px solid rgba(255,255,255,.18);
+  padding: 18px 20px;
+  background: #b5fd4c;
+  border-radius: 14px;
 }
 
 .hero-topic .label {
   display: block;
-  color: rgba(255,255,255,.62);
-  font-size: 13px;
+  color: rgba(28,28,28,.78);
+  font-size: 12px;
   font-weight: 800;
+  letter-spacing: .06em;
   text-transform: uppercase;
 }
 
 .hero-topic .value {
   display: block;
   margin-top: 7px;
-  color: #fff;
+  color: #1c1c1c;
   font-size: 22px;
   line-height: 1.25;
   font-weight: 850;
 }
 
 .hero-topic .english {
-  color: rgba(255,255,255,.68);
+  color: rgba(28,28,28,.65);
 }
 
 .down {
   display: none;
 }
 
+/* ---------- section pages ---------- */
 .section {
-  margin: 18px 20px 0;
+  margin: 24px 20px 0;
   padding: 44px 38px 46px;
   min-height: 520px;
-  background: #fbfcf8;
-  border: 1px solid #dfe6e2;
-  border-radius: 24px;
+  background: #fff;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 16px;
+  box-shadow: 0 5px 0 #1c1c1c;
 }
 
 .section + .section {
-  margin-top: 18px;
+  margin-top: 24px;
 }
 
 .section-title {
   margin: 0;
-  color: #202124;
+  color: #1c1c1c;
   font-size: 26px;
+  font-weight: 800;
   line-height: 1.18;
-  letter-spacing: 0;
+  letter-spacing: -.01em;
 }
 
 .section-title::before {
@@ -137,23 +165,52 @@ h1 {
   height: 4px;
   margin-bottom: 14px;
   border-radius: 999px;
-  background: #2f7d73;
+  background: #1c1c1c;
 }
 
 .section-subtitle {
-  margin: 8px 0 26px;
-  color: #777b82;
-  font-size: 16px;
-  line-height: 1.35;
-  font-weight: 750;
+  width: fit-content;
+  max-width: 100%;
+  margin: 14px 0 26px;
+  padding: 11px 14px;
+  border-radius: 10px;
+  background: #f5f5f5;
+  color: #45453f;
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 600;
 }
 
+.kicker {
+  display: inline-block;
+  margin: 0 0 16px;
+  padding: 6px 13px;
+  background: #b5fd4c;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 999px;
+  color: #1c1c1c;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.kicker.bonus {
+  background: #fff;
+}
+
+.kicker + .section-title::before {
+  display: none;
+}
+
+/* ---------- cards ---------- */
 .card {
   margin: 24px 0 0;
   padding: 26px;
   background: #fff;
-  border: 1px solid #e1e7e4;
-  border-radius: 16px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 14px;
   box-shadow: none;
   overflow: hidden;
 }
@@ -164,10 +221,12 @@ h1 {
 
 .task-block {
   padding: 26px 0;
-  border-bottom: 1px solid #e1e3e6;
+  border-bottom: 1px solid #e8e8e8;
 }
 
-.task-block:first-child {
+.task-block:first-child,
+.section-subtitle + .task-block,
+.chip-row + .task-block {
   padding-top: 0;
 }
 
@@ -179,28 +238,29 @@ h1 {
 .task-label {
   display: block;
   margin-bottom: 14px;
-  color: #6f747c;
+  color: #757575;
   font-size: 13px;
   line-height: 1;
-  font-weight: 850;
+  font-weight: 800;
+  letter-spacing: .04em;
   text-transform: uppercase;
 }
 
 .activity-title {
   margin: 0;
-  color: #202124;
+  color: #1c1c1c;
   font-size: 21px;
   line-height: 1.25;
-  font-weight: 850;
-  letter-spacing: 0;
+  font-weight: 800;
+  letter-spacing: -.005em;
 }
 
 .activity-subtitle {
   margin: 6px 0 22px;
-  color: #777b82;
+  color: #757575;
   font-size: 15px;
   line-height: 1.38;
-  font-weight: 750;
+  font-weight: 600;
 }
 
 .model-list {
@@ -210,7 +270,7 @@ h1 {
 
 .model-line {
   padding: 0 0 18px;
-  border-bottom: 1px solid #e1e3e6;
+  border-bottom: 1px solid #e8e8e8;
 }
 
 .model-line:last-child {
@@ -221,15 +281,15 @@ h1 {
 .prompt-line {
   display: block;
   margin-bottom: 9px;
-  color: #202124;
+  color: #1c1c1c;
   font-size: 17px;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .plain-card {
   margin: 18px 0 0;
   padding: 18px 0 0;
-  border-top: 1px solid #eceef1;
+  border-top: 1px solid #e8e8e8;
 }
 
 .tip {
@@ -237,10 +297,10 @@ h1 {
   margin: 0 0 13px;
   padding: 5px 8px;
   border-radius: 7px;
-  background: #202124;
-  color: #fff;
+  background: #1c1c1c;
+  color: #b5fd4c;
   font-size: 11px;
-  font-weight: 850;
+  font-weight: 800;
   text-transform: uppercase;
 }
 
@@ -250,12 +310,13 @@ p {
   overflow-wrap: anywhere;
 }
 
+/* ---------- text ---------- */
 .korean {
   display: block;
-  color: #202124;
+  color: #1c1c1c;
   font-size: 22px;
   line-height: 1.38;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0;
   word-break: keep-all;
 }
@@ -267,30 +328,31 @@ p {
 .english {
   display: block;
   margin-top: 5px;
-  color: #7a7e86;
+  color: #757575;
   font-size: 14px;
   line-height: 1.42;
-  font-weight: 600;
+  font-weight: 500;
   overflow-wrap: anywhere;
 }
 
 .translation {
   display: block;
   margin-top: 5px;
-  color: #202124;
+  color: #757575;
   font-size: 14px;
   line-height: 1.42;
-  font-weight: 650;
+  font-weight: 500;
   overflow-wrap: anywhere;
 }
 
 .teacher {
   margin: 0 0 16px;
-  color: #676b73;
+  color: #757575;
   font-size: 15px;
-  font-weight: 650;
+  font-weight: 600;
 }
 
+/* ---------- grids / misc ---------- */
 .grid {
   display: grid;
   gap: 10px;
@@ -306,14 +368,14 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 1px solid #e6e7ea;
+  border: 1px solid #e8e8e8;
   border-radius: 14px;
   background: #fff;
 }
 
 .row {
   padding: 14px 0;
-  border-bottom: 1px solid #e7e8ea;
+  border-bottom: 1px solid #e8e8e8;
   overflow-wrap: anywhere;
 }
 
@@ -330,7 +392,7 @@ p {
   display: block;
   height: 72px;
   margin: 12px 0 10px;
-  border: 1.5px solid #b8bdc5;
+  border: 1.5px solid #1c1c1c;
   border-radius: 12px;
   background: #fff;
 }
@@ -339,49 +401,55 @@ p {
   height: 64px;
 }
 
+/* ---------- answer boxes ---------- */
 .answer-box {
   display: block;
   margin: 14px 0 10px;
-  border: 1.5px solid #b8bdc5;
-  border-radius: 14px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 12px;
   background: #fff;
   overflow: hidden;
 }
 
 .answer-label {
   display: block;
-  min-height: 34px;
-  padding: 8px 12px;
-  border-bottom: 1px solid #e3e6e9;
-  background: #f6f8f7;
-  color: #40464d;
-  font-size: 13px;
+  padding: 8px 13px;
+  border-bottom: 1.5px solid #1c1c1c;
+  background: #f5f5f5;
+  color: #575753;
+  font-size: 12.5px;
   line-height: 1.35;
-  font-weight: 750;
+  font-weight: 700;
 }
 
 .answer-space {
   display: block;
-  min-height: 74px;
+  min-height: 64px;
+  background: #fff;
+}
+
+.answer-fill {
+  display: block;
+  padding: 15px 13px 17px;
   background: #fff;
 }
 
 .answer-box.small .answer-space {
-  min-height: 60px;
+  min-height: 50px;
 }
 
 .answer-box.tall .answer-space {
-  min-height: 96px;
+  min-height: 88px;
 }
 
 .option-line {
   display: block;
   padding: 16px 0;
-  border-bottom: 1px solid #e1e3e6;
-  color: #202124;
+  border-bottom: 1px solid #e8e8e8;
+  color: #1c1c1c;
   font-size: 18px;
   line-height: 1.45;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .option-line:last-child {
@@ -395,27 +463,28 @@ p {
   margin: 0 0 18px;
 }
 
+/* ---------- pattern teaching ---------- */
 .pattern-stack {
   display: grid;
-  gap: 18px;
+  gap: 14px;
 }
 
 .pattern-card {
   padding: 20px 22px;
-  border: 1px solid #e1e4e8;
+  border: 1.5px solid #1c1c1c;
   border-radius: 14px;
   background: #fff;
 }
 
 .pattern-card .korean {
-  font-size: 24px;
+  font-size: 25px;
+  font-weight: 800;
 }
 
 .example-card {
-  margin-top: 12px;
-  padding: 13px 14px;
-  border-radius: 12px;
-  background: #f0f5f4;
+  margin-top: 14px;
+  padding: 13px 0 0;
+  border-top: 1px solid #e8e8e8;
 }
 
 .note-grid {
@@ -424,9 +493,13 @@ p {
   gap: 12px;
 }
 
+.pattern-stack + .note-grid {
+  margin-top: 18px;
+}
+
 .note-box {
   padding: 18px 16px;
-  border: 1px solid #e1e4e8;
+  border: 1.5px solid #1c1c1c;
   border-radius: 14px;
   background: #fff;
 }
@@ -434,52 +507,54 @@ p {
 .note-arrow {
   display: block;
   margin: 8px 0 10px;
-  color: #2f7d73;
+  color: #6abe36;
   font-size: 24px;
   line-height: 1;
-  font-weight: 850;
+  font-weight: 800;
 }
 
 .section-kicker {
   display: block;
   margin-bottom: 12px;
-  color: #2f7d73;
+  color: #6abe36;
   font-size: 13px;
-  font-weight: 850;
+  font-weight: 800;
   text-transform: uppercase;
 }
 
+/* ---------- hints ---------- */
 .hint {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  color: #6f747c;
+  color: #757575;
   font-size: 14px;
   line-height: 1.45;
-  font-weight: 650;
+  font-weight: 600;
 }
 
 .hint-chip {
   display: inline-flex;
   align-items: center;
   min-height: 26px;
-  padding: 3px 8px;
-  border: 1px solid #d9dde2;
+  padding: 3px 10px;
+  border: 1.5px solid #1c1c1c;
   border-radius: 999px;
   background: #fff;
-  color: #555b63;
-  font-size: 13px;
+  color: #1c1c1c;
+  font-size: 12.5px;
   line-height: 1.25;
-  font-weight: 750;
+  font-weight: 700;
 }
 
+/* ---------- listen ---------- */
 .listen-card {
   background: #fff;
 }
 
 .listen-line {
   padding: 15px 0;
-  border-bottom: 1px solid #e7e8ea;
+  border-bottom: 1px solid #e8e8e8;
 }
 
 .listen-line:first-child {
@@ -495,17 +570,22 @@ p {
   display: inline-flex;
   margin: 8px 6px 0 0;
   padding: 12px 14px;
-  border: 1px solid #cfd3d8;
+  border: 1.5px solid #1c1c1c;
   border-radius: 12px;
   background: #fff;
-  color: #202124;
+  color: #1c1c1c;
   font-size: 16px;
-  font-weight: 750;
+  font-weight: 700;
 }
 
+/* ---------- dialogue ---------- */
 .dialogue {
   display: grid;
-  gap: 12px;
+  gap: 14px;
+}
+
+.card + .dialogue {
+  margin-top: 24px;
 }
 
 .turn {
@@ -516,24 +596,54 @@ p {
 }
 
 .speaker {
-  padding-top: 10px;
-  color: #737780;
-  font-size: 13px;
-  font-weight: 850;
+  padding-top: 12px;
+  color: #a5a5a5;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-transform: uppercase;
 }
 
 .bubble {
-  padding: 13px 14px;
-  border: 1px solid #e4e6e9;
-  border-radius: 14px;
+  padding: 14px 16px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 13px;
   background: #fff;
 }
 
 .bubble.me {
-  background: #edf7f5;
-  border-color: #cfe5df;
+  background: #f2fcec;
+  box-shadow: 4px 5px 0 #b5fd4c;
 }
 
+.bubble .answer-box {
+  background: #fff;
+}
+
+/* nesting rule: when a "me" turn holds an answer box, the box IS
+   the bubble — drop the wrapper's chrome so only one box renders */
+.bubble.me:has(> .answer-box) {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+}
+
+.bubble.me:has(> .answer-box) > .answer-box {
+  margin: 0;
+  box-shadow: 4px 5px 0 #b5fd4c;
+}
+
+.bubble.me:has(> .answer-box) .answer-label {
+  background: #f2fcec;
+}
+
+.bubble.me:has(> .answer-box) > .hint {
+  margin-top: 12px;
+}
+
+/* ---------- missions ---------- */
 .mission {
   margin: 0;
   padding-left: 0;
@@ -541,11 +651,11 @@ p {
 }
 
 .mission li {
-  padding: 14px 0;
-  border-bottom: 1px solid #e7e8ea;
-  color: #303236;
+  padding: 14px 0 14px 30px;
+  border-bottom: 1px solid #e8e8e8;
+  color: #1c1c1c;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .mission li:first-child {
@@ -558,16 +668,21 @@ p {
 }
 
 .mission li::before {
-  content: "[ ]";
-  margin-right: 9px;
-  color: #2f7d73;
-  font-weight: 850;
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0 11px 0 -30px;
+  border: 2px solid #1c1c1c;
+  border-radius: 5px;
+  background: #fff;
+  vertical-align: -2px;
 }
 
 .sign {
   padding: 21px 18px;
   text-align: center;
-  border: 1px solid #d7dbe0;
+  border: 1.5px solid #1c1c1c;
   border-radius: 16px;
   background: #fff;
 }
@@ -576,52 +691,62 @@ strong {
   font-weight: 800;
 }
 
+/* ---------- transitions ---------- */
 .transition-page {
   min-height: 520px;
-  margin: 18px 20px 0;
+  margin: 24px 20px 0;
   padding: 44px 38px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #26322f;
+  background: #1c1c1c;
   color: #fff;
-  border-radius: 22px;
+  border-radius: 16px;
+  box-shadow: 0 6px 0 #b5fd4c;
 }
 
 .transition-kicker {
-  display: block;
-  margin-bottom: 14px;
-  color: rgba(255,255,255,.62);
-  font-size: 13px;
-  font-weight: 850;
+  width: fit-content;
+  margin-bottom: 18px;
+  padding: 6px 13px;
+  background: #b5fd4c;
+  border-radius: 999px;
+  color: #1c1c1c;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: .06em;
   text-transform: uppercase;
 }
 
 .transition-title {
   margin: 0;
   color: #fff;
-  font-size: 28px;
+  font-size: 30px;
+  font-weight: 800;
   line-height: 1.18;
-  letter-spacing: 0;
+  letter-spacing: -.01em;
 }
 
 .transition-copy {
   max-width: 420px;
-  margin: 14px 0 0;
-  color: rgba(255,255,255,.76);
+  margin: 12px 0 0;
+  color: rgba(255,255,255,.72);
   font-size: 16px;
-  font-weight: 650;
+  font-weight: 500;
   overflow-wrap: anywhere;
 }
 
+/* ---------- responsive ---------- */
 @media (max-width: 480px) {
   .hero {
     min-height: 450px;
-    padding: 42px 26px 34px;
+    margin: 14px 12px 0;
+    padding: 40px 26px 32px;
   }
 
   .eyebrow {
-    margin-bottom: 58px;
+    margin-bottom: 54px;
   }
 
   h1 {
@@ -629,7 +754,7 @@ strong {
   }
 
   .section {
-    margin: 14px 12px 0;
+    margin: 20px 12px 0;
     padding: 38px 24px 42px;
     min-height: 500px;
   }
@@ -644,10 +769,9 @@ strong {
 
   .transition-page {
     min-height: 500px;
-    margin: 14px 12px 0;
+    margin: 20px 12px 0;
     padding: 38px 24px;
   }
-
 }
 
 @media (min-width: 560px) {
