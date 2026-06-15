@@ -445,7 +445,7 @@ p {
 .answer-space {
   display: block;
   min-height: 84px;
-  background: #f3f4f6;
+  background: #f1f1ef;
 }
 
 .answer-fill {
@@ -475,10 +475,10 @@ p {
   padding: 0 20px;
   margin: 0 4px;
   vertical-align: middle;
-  background: #e9e9e7;
+  background: #f1f1ef;
   border: 1.5px dashed #1c1c1c;
   border-radius: 999px;
-  color: #d6d6d3;
+  color: #e3e3e0;
   font-size: inherit;
   font-weight: 700;
   white-space: nowrap;
