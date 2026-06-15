@@ -104,13 +104,16 @@
     .v6 .turn.other .bubble { border-top-left-radius: 4px; }
     .v6 .turn.me .bubble { border-top-right-radius: 4px; }
 
-    /* ---- Variant 7 · V6 layout, no avatar (for tutor/student scripts) ---- */
+    /* ---- Variant 7 · V6 layout with a default avatar icon (tutor/student) ---- */
     .v7 .turn { display: flex; gap: 10px; align-items: flex-start; margin: 0 0 16px; }
     .v7 .turn:last-child { margin-bottom: 0; }
     .v7 .turn.me { flex-direction: row-reverse; }
-    .v7 .who { display: flex; flex-direction: column; align-items: center; gap: 2px; flex: 0 0 auto; width: 52px; padding-top: 8px; }
-    .v7 .nm { display: flex; flex-direction: column; align-items: center; line-height: 1.18; text-align: center; }
-    .v7 .nm .ko { font-size: 12px; font-weight: 800; color: #1c1c1c; }
+    .v7 .who { display: flex; flex-direction: column; align-items: center; gap: 5px; flex: 0 0 auto; width: 48px; }
+    .v7 .avatar { width: 40px; height: 40px; flex: 0 0 auto; border: none; border-radius: 50%; display: grid; place-items: center; background: #bcbcb9; color: #fff; }
+    .v7 .turn.me .avatar { background: #b3e187; }
+    .v7 .avatar svg { width: 26px; height: 26px; display: block; }
+    .v7 .nm { display: flex; flex-direction: column; align-items: center; line-height: 1.15; text-align: center; }
+    .v7 .nm .ko { font-size: 11.5px; font-weight: 800; color: #1c1c1c; }
     .v7 .nm .ja { font-size: 10px; font-weight: 700; color: #a5a5a5; }
     .v7 .bubble { flex: 1 1 auto; min-width: 0; }
     .v7 .turn.other .bubble { border-top-left-radius: 4px; }
@@ -297,15 +300,15 @@
       <h2 class="section-title">미니 대화 <span class="title-ja">(ミニ会話)</span></h2>
       <div class="v7">
         <div class="turn other">
-          <span class="who"><span class="nm"><span class="ko">선생님</span><span class="ja">先生</span></span></span>
+          <span class="who"><span class="avatar"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="nm"><span class="ko">선생님</span><span class="ja">先生</span></span></span>
           <div class="bubble"><span class="korean">뭘 좋아해요?</span><span class="translation">何が好きですか？</span></div>
         </div>
         <div class="turn me">
-          <span class="who"><span class="nm"><span class="ko">나</span><span class="ja">あなた</span></span></span>
+          <span class="who"><span class="avatar"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="nm"><span class="ko">나</span><span class="ja">あなた</span></span></span>
           <div class="bubble me"><span class="korean">저는 음악을 좋아해요.</span><span class="translation">私は音楽が好きです。</span></div>
         </div>
         <div class="turn other">
-          <span class="who"><span class="nm"><span class="ko">선생님</span><span class="ja">先生</span></span></span>
+          <span class="who"><span class="avatar"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="nm"><span class="ko">선생님</span><span class="ja">先生</span></span></span>
           <div class="bubble"><span class="korean">책도 좋아해요?</span><span class="translation">本も好きですか？</span></div>
         </div>
       </div>
