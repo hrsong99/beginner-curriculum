@@ -62,27 +62,15 @@
     .v3 .turn.me .who { text-align: right; margin: 0 4px 5px 0; }
     .v3 .turn.me .bubble { box-shadow: 4px 5px 0 #b5fd4c; }
 
-    /* ---- Variant 4 · soft chat (avatar + name above, L/R aligned) ---- */
-    .v4 .turn { margin: 0 0 22px; }
+    /* ---- Variant 4 · our bubble, chat-style L/R + one sharp corner ---- */
+    .v4 .turn { display: flex; flex-direction: column; margin: 0 0 16px; }
     .v4 .turn:last-child { margin-bottom: 0; }
-    .v4 .who { display: flex; align-items: center; gap: 8px; margin: 0 0 8px; }
-    .v4 .turn.me .who { justify-content: flex-end; }
-    .v4 .turn.other .who { justify-content: flex-start; }
-    .v4 .av {
-      width: 32px; height: 32px; flex: 0 0 auto;
-      border-radius: 50%; display: grid; place-items: center;
-      font-size: 14px; font-weight: 800; color: #fff;
-    }
-    .v4 .turn.other .av { background: #1c1c1c; }
-    .v4 .turn.me .av { background: #8b5cf6; }
-    .v4 .name { font-size: 12.5px; font-weight: 700; color: #9a9a9a; white-space: nowrap; }
-    .v4 .bub { padding: 15px 17px; border-radius: 18px; }
-    .v4 .bub .korean { display: block; font-size: 21px; line-height: 1.4; font-weight: 700; color: #1c1c1c; word-break: keep-all; }
-    .v4 .bub .ja { display: block; margin-top: 6px; font-size: 12.5px; line-height: 1.4; font-weight: 600; color: #9a9a9a; }
-    .v4 .turn.other .bub { margin-right: 34px; background: #f0f0ee; border-top-left-radius: 6px; }
-    .v4 .turn.me .bub { margin-left: 34px; background: #fff; box-shadow: 0 2px 12px rgba(0,0,0,.07); border-top-right-radius: 6px; }
-    .v4 .turn.me .bub .korean { text-align: right; }
-    .v4 .turn.me .bub .ja { text-align: right; }
+    .v4 .turn.other { align-items: flex-start; }
+    .v4 .turn.me { align-items: flex-end; }
+    .v4 .who { margin: 0 6px 6px; font-size: 12px; font-weight: 800; letter-spacing: .03em; color: #a5a5a5; }
+    .v4 .bubble { max-width: 88%; }
+    .v4 .turn.other .bubble { border-top-left-radius: 4px; }
+    .v4 .turn.me .bubble { border-top-right-radius: 4px; }
   </style>
 </head>
 <body>
@@ -173,24 +161,24 @@
 
   <!-- ===== Variant 4 ===== -->
   <div class="lab">
-    <h3>Variant 4 · 부드러운 채팅 (아바타 + 이름, 좌우 정렬)</h3>
-    <p>Soft modern chat: round initial avatar with the name above each bubble, partner on the left, you on the right. No hard borders.</p>
+    <h3>Variant 4 · 우리 말풍선 + 좌우 정렬 (한 모서리만 살짝 각지게)</h3>
+    <p>Same bubble we already use, but partner-left / you-right with one slightly sharper corner so it reads as a chat box.</p>
   </div>
   <div class="page">
     <div class="section">
       <h2 class="section-title">대화를 읽어요 <span class="title-ja">(会話を読もう)</span></h2>
       <div class="v4">
         <div class="turn other">
-          <div class="who"><span class="av">유</span><span class="name">유나 · ユナ</span></div>
-          <div class="bub"><span class="korean">하루카 씨, 뭘 좋아해요?</span><span class="ja">ハルカさん、何が好きですか？</span></div>
+          <span class="who">유나 · ユナ</span>
+          <div class="bubble"><span class="korean">하루카 씨, 뭘 좋아해요?</span><span class="translation">ハルカさん、何が好きですか？</span></div>
         </div>
         <div class="turn me">
-          <div class="who"><span class="name">하루카 · ハルカ</span><span class="av">하</span></div>
-          <div class="bub"><span class="korean">저는 영화를 좋아해요. 유나 씨는 뭘 좋아해요?</span><span class="ja">私は映画が好きです。ユナさんは何が好きですか？</span></div>
+          <span class="who">하루카 · ハルカ</span>
+          <div class="bubble me"><span class="korean">저는 영화를 좋아해요. 유나 씨는 뭘 좋아해요?</span><span class="translation">私は映画が好きです。ユナさんは何が好きですか？</span></div>
         </div>
         <div class="turn other">
-          <div class="who"><span class="av">유</span><span class="name">유나 · ユナ</span></div>
-          <div class="bub"><span class="korean">저는 음악을 좋아해요. 하루카 씨, 책도 좋아해요?</span><span class="ja">私は音楽が好きです。ハルカさん、本も好きですか？</span></div>
+          <span class="who">유나 · ユナ</span>
+          <div class="bubble"><span class="korean">저는 음악을 좋아해요. 하루카 씨, 책도 좋아해요?</span><span class="translation">私は音楽が好きです。ハルカさん、本も好きですか？</span></div>
         </div>
       </div>
     </div>
