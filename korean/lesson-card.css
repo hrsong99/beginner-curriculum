@@ -445,7 +445,7 @@ p {
 .answer-space {
   display: block;
   min-height: 84px;
-  background: #f1f1ef;
+  background: #f8f8f7;
 }
 
 .answer-fill {
@@ -475,10 +475,10 @@ p {
   padding: 0 20px;
   margin: 0 4px;
   vertical-align: middle;
-  background: #f1f1ef;
+  background: #f8f8f7;
   border: 1.5px dashed #1c1c1c;
   border-radius: 999px;
-  color: #e3e3e0;
+  color: #ededeb;
   font-size: inherit;
   font-weight: 700;
   white-space: nowrap;
@@ -743,7 +743,12 @@ p {
 }
 
 .bubble.me:has(> .answer-box) .answer-label {
-  background: #f2fcec;
+  background: #e7f8d8;
+}
+
+/* in green "me" boxes, the write-in area follows the green convention */
+.bubble.me .answer-space {
+  background: #f3fcea;
 }
 
 .bubble.me:has(> .answer-box) > .hint {
@@ -1006,9 +1011,28 @@ strong {
   gap: 22px;
 }
 
-/* sentence rows: choices sit inline inside the sentence */
+/* sentence rows: Japanese header on top, the choice sentence below */
 .choose-row.sentence {
-  padding: 16px 20px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.choose-row.sentence > .translation {
+  margin: 0;
+  padding: 9px 14px;
+  background: #f5f5f5;
+  border-bottom: 1.5px solid #1c1c1c;
+  color: #575753;
+  font-size: 12.5px;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+.choose-row.sentence > .choose-sentence {
+  padding: 14px 20px;
 }
 
 .choose-sentence {
