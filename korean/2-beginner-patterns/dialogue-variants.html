@@ -67,7 +67,7 @@
     .v4 .turn:last-child { margin-bottom: 0; }
     .v4 .turn.other { align-items: flex-start; }
     .v4 .turn.me { align-items: flex-end; }
-    .v4 .who { display: inline-flex; align-items: center; gap: 9px; margin: 0 4px 3px; }
+    .v4 .who { display: inline-flex; flex-direction: row; width: auto; align-items: center; gap: 9px; margin: 0 4px 3px; }
     .v4 .turn.me .who { flex-direction: row-reverse; }
     .v4 .avatar { width: 38px; height: 38px; flex: 0 0 auto; border: none; border-radius: 50%; object-fit: cover; background: #eee; }
     .v4 .nm { display: flex; flex-direction: column; line-height: 1.18; }
@@ -118,6 +118,18 @@
     .v7 .bubble { flex: 1 1 auto; min-width: 0; }
     .v7 .turn.other .bubble { border-top-left-radius: 4px; }
     .v7 .turn.me .bubble { border-top-right-radius: 4px; }
+
+    /* ---- Variant 8 · no avatar, bigger name, L/R split ---- */
+    .v8 .turn { display: flex; flex-direction: column; margin: 0 0 16px; }
+    .v8 .turn:last-child { margin-bottom: 0; }
+    .v8 .turn.other { align-items: flex-start; }
+    .v8 .turn.me { align-items: flex-end; }
+    .v8 .who { display: flex; flex-direction: row; width: auto; align-items: baseline; gap: 7px; margin: 0 6px 7px; }
+    .v8 .who .ko { font-size: 16px; font-weight: 800; color: #1c1c1c; }
+    .v8 .who .ja { font-size: 12px; font-weight: 700; color: #a5a5a5; }
+    .v8 .bubble { max-width: 88%; }
+    .v8 .turn.other .bubble { border-top-left-radius: 4px; }
+    .v8 .turn.me .bubble { border-top-right-radius: 4px; }
   </style>
 </head>
 <body>
@@ -310,6 +322,31 @@
         <div class="turn other">
           <span class="who"><span class="avatar"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="nm"><span class="ko">선생님</span><span class="ja">先生</span></span></span>
           <div class="bubble"><span class="korean">책도 좋아해요?</span><span class="translation">本も好きですか？</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Variant 8 ===== -->
+  <div class="lab">
+    <h3>Variant 8 · 아바타 없음 · 큰 이름 · 좌우 분할</h3>
+    <p>No avatars; larger name above each bubble; left/right split kept (partner-left, you-right).</p>
+  </div>
+  <div class="page">
+    <div class="section">
+      <h2 class="section-title">대화를 읽어요 <span class="title-ja">(会話を読もう)</span></h2>
+      <div class="v8">
+        <div class="turn other">
+          <span class="who"><span class="ko">하나</span><span class="ja">ハナ</span></span>
+          <div class="bubble"><span class="korean">하루카 씨, 뭘 좋아해요?</span><span class="translation">ハルカさん、何が好きですか？</span></div>
+        </div>
+        <div class="turn me">
+          <span class="who"><span class="ko">하루카</span><span class="ja">ハルカ</span></span>
+          <div class="bubble me"><span class="korean">저는 영화를 좋아해요. 하나 씨는 뭘 좋아해요?</span><span class="translation">私は映画が好きです。ハナさんは何が好きですか？</span></div>
+        </div>
+        <div class="turn other">
+          <span class="who"><span class="ko">하나</span><span class="ja">ハナ</span></span>
+          <div class="bubble"><span class="korean">저는 음악을 좋아해요. 하루카 씨, 책도 좋아해요?</span><span class="translation">私は音楽が好きです。ハルカさん、本も好きですか？</span></div>
         </div>
       </div>
     </div>
