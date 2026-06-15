@@ -53,9 +53,9 @@ body {
 
 /* ---------- hero ---------- */
 .hero {
-  min-height: 470px;
+  min-height: 560px;
   margin: 20px 20px 0;
-  padding: 48px 42px 40px;
+  padding: 48px 42px 44px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -71,7 +71,7 @@ body {
 
 .eyebrow {
   width: fit-content;
-  margin: 0 0 58px;
+  margin: 0 0 44px;
   padding: 7px 13px;
   background: #b5fd4c;
   border-radius: 999px;
@@ -94,11 +94,17 @@ h1 {
 }
 
 .hero-subtitle {
-  margin: 16px 0 0;
+  margin: 22px 0 0;
   max-width: 360px;
   color: rgba(255,255,255,.72);
   font-size: 16px;
+  line-height: 1.6;
   font-weight: 500;
+}
+
+h1 .title-ja {
+  display: block;
+  margin-top: 10px;
 }
 
 .hero-topic {
@@ -158,6 +164,21 @@ h1 {
   letter-spacing: -.01em;
 }
 
+/* Japanese gloss kept in parentheses after a Korean title — lighter
+   and thinner so the Korean reads as the primary title */
+.title-ja {
+  font-size: 0.6em;
+  font-weight: 500;
+  color: #a5a5a5;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+h1 .title-ja,
+.transition-title .title-ja {
+  color: rgba(255, 255, 255, .55);
+}
+
 /* the instruction box carries the lime pill design (the per-section
    kicker pills were retired in its favor): target-language
    instruction on top, learner-language translation below */
@@ -203,7 +224,7 @@ h1 {
 }
 
 .task-block {
-  padding: 14px 0;
+  padding: 9px 0;
 }
 
 .task-block:first-child,
@@ -385,7 +406,7 @@ p {
 /* ---------- answer boxes ---------- */
 .answer-box {
   display: block;
-  margin: 14px 0 10px;
+  margin: 10px 0 6px;
   border: 1.5px solid #1c1c1c;
   border-radius: 12px;
   background: #fff;
@@ -411,7 +432,7 @@ p {
 
 .answer-fill {
   display: block;
-  padding: 24px 16px 26px;
+  padding: 18px 16px 20px;
   background: #fff;
 }
 
@@ -423,26 +444,26 @@ p {
   min-height: 112px;
 }
 
-/* inline blank: an empty chip socket — a word-chip goes here.
-   width tiers by expected answer: default = particle/syllable,
-   .wide = word/ending (이에요), .xl = phrase or clause */
+/* inline blank: a dashed pill that auto-sizes to its answer. The
+   answer text lives inside but is rendered the same color as the
+   fill, so it's invisible while still driving the pill's width.
+   (temporarily tinted slightly off-bg so it's visible during review) */
 .slot {
-  display: inline-block;
-  width: 3.4em;
-  height: 1.55em;
-  margin: 0 3px;
-  vertical-align: -0.42em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2em;
+  height: 42px;
+  padding: 0 20px;
+  margin: 0 4px;
+  vertical-align: middle;
   background: #e9e9e7;
   border: 1.5px dashed #1c1c1c;
   border-radius: 999px;
-}
-
-.slot.wide {
-  width: 5.2em;
-}
-
-.slot.xl {
-  width: 7.5em;
+  color: #d6d6d3;
+  font-size: inherit;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 .option-line {
@@ -484,10 +505,22 @@ p {
   font-weight: 800;
 }
 
+/* examples sit a step below the pattern: muted box, smaller text */
 .example-card {
-  margin-top: 14px;
-  padding: 13px 0 0;
-  border-top: 1px solid #e8e8e8;
+  margin-top: 16px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #f5f5f3;
+}
+
+.example-card .korean {
+  font-size: 17px;
+  font-weight: 600;
+  color: #575753;
+}
+
+.example-card .translation {
+  font-size: 13px;
 }
 
 .note-grid {
@@ -593,18 +626,43 @@ p {
 
 .turn {
   display: grid;
-  grid-template-columns: 48px minmax(0, 1fr);
+  grid-template-columns: 64px minmax(0, 1fr);
   gap: 10px;
   align-items: start;
 }
 
 .speaker {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
   padding-top: 12px;
   color: #a5a5a5;
   font-size: 12px;
   font-weight: 800;
   letter-spacing: .04em;
   text-transform: uppercase;
+}
+
+/* conversation speaker: hangul name with katakana beneath it */
+.sp-ko {
+  color: #1c1c1c;
+  font-size: 15.5px;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.sp-ja {
+  color: #a5a5a5;
+  font-size: 11.5px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+/* a hint sitting inside a dialogue bubble */
+.bubble .hint {
+  margin-top: 10px;
 }
 
 .bubble {
@@ -668,6 +726,30 @@ p {
 .mission li:last-child {
   padding-bottom: 0;
   border-bottom: 0;
+}
+
+/* roleplay mission: KO instruction, JA below, hint words underneath */
+.mission-task .ja {
+  display: block;
+  margin-top: 3px;
+  color: #757575;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.mission li .hint {
+  margin-top: 9px;
+}
+
+/* free-talk round labels need breathing room after a card/dialogue */
+.card + .section-kicker,
+.dialogue + .section-kicker {
+  margin-top: 28px;
+}
+
+/* native tip: the dropped particle */
+.example-card s {
+  color: #b0b0b0;
 }
 
 .mission li::before {
@@ -775,6 +857,120 @@ strong {
     margin: 20px 12px 0;
     padding: 38px 24px;
   }
+}
+
+/* ---------- review pattern callout ---------- */
+.review-pattern {
+  margin: 0 0 18px;
+  padding: 16px 18px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 14px;
+  background: #f2fcec;
+}
+
+.review-pattern .korean {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+/* ---------- visible (un-pilled) rule examples ---------- */
+.note-examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 20px;
+  margin-top: 12px;
+}
+
+.note-examples .korean {
+  font-size: 21px;
+  font-weight: 700;
+  color: #757575;
+}
+
+.note-examples .korean strong {
+  color: #1c1c1c;
+}
+
+/* ---------- choose-an-option activity ---------- */
+.choose-list {
+  display: grid;
+  gap: 10px;
+}
+
+.choose-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 22px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.choose-word {
+  flex-shrink: 0;
+  font-size: 23px;
+  font-weight: 800;
+  color: #1c1c1c;
+}
+
+/* word/option rows: the word and the "을 / 를" pills sit together,
+   centered as one group; the slash divides the two options */
+.choose-row:not(.sentence) {
+  justify-content: center;
+  gap: 18px;
+}
+
+.choose-opts {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+/* sentence rows: choices sit inline inside the sentence */
+.choose-row.sentence {
+  padding: 16px 20px;
+}
+
+.choose-sentence {
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.9;
+  color: #1c1c1c;
+}
+
+/* each choice sits in a dashed pill (same language as the fill-in
+   blanks), with a slash dividing the two options */
+.opt {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3.4em;
+  padding: 9px 16px;
+  border: 1.5px dashed #1c1c1c;
+  border-radius: 999px;
+  background: #f1f1ef;
+  color: #1c1c1c;
+  font-size: 23px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.choose-sentence .opt {
+  min-width: 2.6em;
+  padding: 5px 13px;
+  font-size: 19px;
+  vertical-align: middle;
+}
+
+.sep {
+  color: #b0b0b0;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.choose-sentence .sep {
+  margin: 0 4px;
 }
 
 @media (min-width: 560px) {
