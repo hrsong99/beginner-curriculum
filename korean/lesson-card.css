@@ -270,14 +270,30 @@ h1 .title-ja,
   gap: 18px;
 }
 
+/* reading lines: Japanese gloss as a header box on top, Korean below
+   — matching the dialogue bubbles and answer cards */
 .model-line {
-  padding: 0 0 18px;
-  border-bottom: 1px solid #e8e8e8;
+  display: flex;
+  flex-direction: column;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
-.model-line:last-child {
-  padding-bottom: 0;
-  border-bottom: 0;
+.model-line > .translation {
+  order: -1;
+  margin: 0;
+  padding: 9px 14px;
+  background: #f5f5f5;
+  border-bottom: 1.5px solid #1c1c1c;
+  color: #575753;
+  font-size: 12.5px;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+.model-line > .korean {
+  padding: 14px 16px;
 }
 
 .prompt-line {
@@ -424,10 +440,12 @@ p {
   font-weight: 700;
 }
 
+/* open write-in areas carry a very light grey so they read as
+   "fill the whole thing here" (fill-in sentences keep white) */
 .answer-space {
   display: block;
   min-height: 84px;
-  background: #fff;
+  background: #f3f4f6;
 }
 
 .answer-fill {
@@ -586,20 +604,48 @@ p {
 /* ---------- listen ---------- */
 .listen-card {
   background: #fff;
+  padding: 0;
+  overflow: hidden;
 }
 
 .listen-line {
-  padding: 15px 0;
-  border-bottom: 1px solid #e8e8e8;
-}
-
-.listen-line:first-child {
-  padding-top: 0;
-}
-
-.listen-line:last-child {
-  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
   border-bottom: 0;
+}
+
+.listen-line > .translation {
+  order: -1;
+  margin: 0;
+  padding: 9px 14px;
+  background: #f5f5f5;
+  border-bottom: 1.5px solid #1c1c1c;
+  color: #575753;
+  font-size: 12.5px;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+.listen-line > .korean {
+  padding: 14px 16px;
+}
+
+/* teaching cards: Japanese meaning sits above the Korean too, but as
+   a light label so the Korean stays the visual hero (tip examples are
+   excluded so their "full → casual" arrow order is preserved) */
+.pattern-card,
+.pattern-card > .example-card,
+.review-pattern {
+  display: flex;
+  flex-direction: column;
+}
+
+.pattern-card > .translation,
+.pattern-card > .example-card > .translation,
+.review-pattern > .translation {
+  order: -1;
+  margin: 0 0 6px;
 }
 
 .choice {
