@@ -544,7 +544,7 @@
       <p class="section-subtitle"><span class="ko">좋아하는 것에 대해 자유롭게 이야기해 보세요.</span><span class="ja">好きなものについて、自由に話してみましょう。</span></p>
       <div class="dialogue">
         <div class="turn"><span class="speaker"><span class="sp-ko">선생님</span><span class="sp-ja">先生</span></span><div class="bubble"><span class="korean">뭘 좋아해요?</span><span class="translation">何が好きですか？</span></div></div>
-        <div class="turn"><span class="speaker"><span class="sp-ko">나</span><span class="sp-ja">あなた</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label">自分の好きなものを言おう。</span><span class="answer-space"></span></div><span class="hint"><span class="hint-chip">映画:영화</span><span class="hint-chip">音楽:음악</span><span class="hint-chip">コーヒー:커피</span><span class="hint-chip">本:책</span><span class="hint-chip">パン:빵</span><span class="hint-chip">テレビ:티비</span></span></div></div>
+        <div class="turn"><span class="speaker"><span class="sp-ko">나</span><span class="sp-ja">あなた</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label">〜が好きです。（自分の好きなもの）</span><span class="answer-space"></span></div><span class="hint"><span class="hint-chip">映画:영화</span><span class="hint-chip">音楽:음악</span><span class="hint-chip">コーヒー:커피</span><span class="hint-chip">本:책</span><span class="hint-chip">パン:빵</span><span class="hint-chip">テレビ:티비</span></span></div></div>
         <div class="turn"><span class="speaker"><span class="sp-ko">나</span><span class="sp-ja">あなた</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label">何が好きですか？（先生にも聞いてみよう）</span><span class="answer-space">뭘 좋아해요?</span></div></div></div>
         <div class="turn"><span class="speaker"><span class="sp-ko">선생님</span><span class="sp-ja">先生</span></span><div class="bubble"><span class="translation">（先生が自由に答えます）</span></div></div>
       </div>
@@ -556,7 +556,7 @@
       <p class="section-subtitle"><span class="ko">좋아하지 않는 것에 대해 자유롭게 이야기해 보세요.</span><span class="ja">好きじゃないものについて、自由に話してみましょう。</span></p>
       <div class="dialogue">
         <div class="turn"><span class="speaker"><span class="sp-ko">선생님</span><span class="sp-ja">先生</span></span><div class="bubble"><span class="korean">뭘 안 좋아해요?</span><span class="translation">何が好きじゃないですか？</span></div></div>
-        <div class="turn"><span class="speaker"><span class="sp-ko">나</span><span class="sp-ja">あなた</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label">好きじゃないものを言おう。</span><span class="answer-space"></span></div><span class="hint"><span class="hint-chip">映画:영화</span><span class="hint-chip">音楽:음악</span><span class="hint-chip">コーヒー:커피</span><span class="hint-chip">本:책</span><span class="hint-chip">パン:빵</span><span class="hint-chip">テレビ:티비</span></span></div></div>
+        <div class="turn"><span class="speaker"><span class="sp-ko">나</span><span class="sp-ja">あなた</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label">〜が好きじゃないです。（自分の好きじゃないもの）</span><span class="answer-space"></span></div><span class="hint"><span class="hint-chip">映画:영화</span><span class="hint-chip">音楽:음악</span><span class="hint-chip">コーヒー:커피</span><span class="hint-chip">本:책</span><span class="hint-chip">パン:빵</span><span class="hint-chip">テレビ:티비</span></span></div></div>
         <div class="turn"><span class="speaker"><span class="sp-ko">나</span><span class="sp-ja">あなた</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label">何が好きじゃないですか？（先生にも聞いてみよう）</span><span class="answer-space">뭘 안 좋아해요?</span></div></div></div>
         <div class="turn"><span class="speaker"><span class="sp-ko">선생님</span><span class="sp-ja">先生</span></span><div class="bubble"><span class="translation">（先生が自由に答えます）</span></div></div>
       </div>
@@ -565,19 +565,15 @@
     <!-- 21. Roleplay -->
     <div class="section">
       <h2 class="section-title">롤플레이 <span class="title-ja">(ロールプレイ)</span></h2>
-      <p class="section-subtitle"><span class="ko">카페에서 새 친구를 만났어요. 친구의 인사로 대화를 시작해, 미션을 모두 해 보세요.</span><span class="ja">カフェで新しい友達に会いました。友達のあいさつから会話を始めて、ミッションを全部やってみましょう。</span></p>
-      <div class="card listen-card">
-        <div class="listen-line">
-          <span class="korean">안녕하세요! 만나서 반가워요.</span>
-          <span class="translation">こんにちは！会えてうれしいです。（友達）</span>
-        </div>
+      <p class="section-subtitle"><span class="ko">카페에서 새 친구를 만났어요. 친구가 먼저 인사해요.</span><span class="ja">カフェで新しい友達に会いました。友達が先にあいさつします。</span></p>
+      <span class="section-kicker">대화 시작 · スタート</span>
+      <div class="dialogue">
+        <div class="turn"><span class="speaker"><span class="sp-ko">친구</span><span class="sp-ja">友達</span></span><div class="bubble"><span class="korean">안녕하세요! 만나서 반가워요.</span><span class="translation">こんにちは！会えてうれしいです。</span></div></div>
+        <div class="turn"><span class="speaker"><span class="sp-ko">나</span><span class="sp-ja">あなた</span></span><div class="bubble me"><span class="korean">안녕하세요! 만나서 반가워요.</span><span class="translation">こんにちは！会えてうれしいです。（あいさつを返そう）</span></div></div>
       </div>
+      <span class="section-kicker">미션 · ミッション</span>
       <div class="card">
         <ul class="mission">
-          <li>
-            <span class="mission-task"><span class="ko">인사하세요.</span><span class="ja">あいさつをしよう。</span></span>
-            <span class="hint"><span class="hint-chip">안녕하세요!</span></span>
-          </li>
           <li>
             <span class="mission-task"><span class="ko">뭘 좋아하는지 물어보세요.</span><span class="ja">何が好きか聞いてみよう。</span></span>
             <span class="hint"><span class="hint-chip">뭘 좋아해요?</span></span>
