@@ -31,24 +31,14 @@ body {
   line-height: 1.5;
 }
 
+/* mobile-first: the lesson lives in a phone-width column everywhere,
+   and simply fills the screen on real phones narrower than the cap */
 .phone {
-  width: min(100%, 680px);
+  width: min(100%, 430px);
   margin: 0 auto;
   min-height: 100vh;
   padding-bottom: 30px;
   background: #f2f2ed;
-}
-
-@media (max-width: 900px) {
-  body {
-    background: #f2f2ed;
-  }
-
-  .phone {
-    width: 100%;
-    max-width: none;
-    margin: 0 auto;
-  }
 }
 
 /* ---------- hero ---------- */

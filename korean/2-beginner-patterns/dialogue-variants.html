@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <title>Dialogue layout iterations (mobile)</title>
+  <link rel="stylesheet" href="../lesson-card.css">
+  <style>
+    body { background: #e9e9e3; }
+
+    .lab {
+      width: min(100%, 430px);
+      margin: 28px auto 10px;
+      padding: 0 20px;
+    }
+    .lab h3 { margin: 0; font-size: 17px; font-weight: 800; color: #1c1c1c; }
+    .lab p { margin: 5px 0 0; font-size: 13px; font-weight: 600; color: #757575; }
+
+    /* each variant renders inside a phone-width card page */
+    .page {
+      width: min(100%, 430px);
+      margin: 0 auto;
+    }
+    .page > .section { margin-top: 14px; }
+
+    /* shared avatar look */
+    .avatar {
+      flex: 0 0 auto;
+      display: grid;
+      place-items: center;
+      border: 1.5px solid #1c1c1c;
+      border-radius: 50%;
+      background: #fff;
+      font-size: 18px;
+      line-height: 1;
+    }
+    .me .avatar { background: #b5fd4c; }
+
+    /* ---- Variant 1 · name on its own line, full-width bubble ---- */
+    .v1 .turn { display: block; margin: 0 0 16px; }
+    .v1 .turn:last-child { margin-bottom: 0; }
+    .v1 .who { display: flex; align-items: baseline; gap: 6px; margin: 0 0 7px 4px; }
+    .v1 .who .ko { font-size: 13px; font-weight: 800; color: #1c1c1c; }
+    .v1 .who .ja { font-size: 11px; font-weight: 700; color: #a5a5a5; }
+
+    /* ---- Variant 2 · avatar + name header row above bubble ---- */
+    .v2 .turn { display: block; margin: 0 0 20px; }
+    .v2 .turn:last-child { margin-bottom: 0; }
+    .v2 .head { display: flex; align-items: center; gap: 9px; margin: 0 0 9px 2px; }
+    .v2 .avatar { width: 34px; height: 34px; box-shadow: 2px 2px 0 #1c1c1c; }
+    .v2 .who .ko { font-size: 14px; font-weight: 800; color: #1c1c1c; }
+    .v2 .who .ja { font-size: 11px; font-weight: 700; color: #a5a5a5; margin-left: 6px; }
+
+    /* ---- Variant 3 · chat-app: side avatar, name above bubble ---- */
+    .v3 .turn { display: flex; gap: 9px; align-items: flex-start; margin: 0 0 16px; }
+    .v3 .turn:last-child { margin-bottom: 0; }
+    .v3 .turn.me { flex-direction: row-reverse; }
+    .v3 .avatar { width: 38px; height: 38px; margin-top: 19px; }
+    .v3 .col { flex: 1 1 auto; min-width: 0; }
+    .v3 .who { display: block; margin: 0 0 5px 4px; font-size: 12px; font-weight: 800; color: #a5a5a5; }
+    .v3 .turn.me .who { text-align: right; margin: 0 4px 5px 0; }
+    .v3 .turn.me .bubble { box-shadow: 4px 5px 0 #b5fd4c; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Variant 1 ===== -->
+  <div class="lab">
+    <h3>Variant 1 · 이름은 윗줄, 말풍선은 가로 전체</h3>
+    <p>Name on its own line above a full-width bubble. No side column — the script gets the full width.</p>
+  </div>
+  <div class="page">
+    <div class="section">
+      <h2 class="section-title">대화를 읽어요 <span class="title-ja">(会話を読もう)</span></h2>
+      <div class="dialogue v1">
+        <div class="turn">
+          <span class="who"><span class="ko">유나</span><span class="ja">ユナ</span></span>
+          <div class="bubble"><span class="korean">하루카 씨, 뭘 좋아해요?</span><span class="translation">ハルカさん、何が好きですか？</span></div>
+        </div>
+        <div class="turn me">
+          <span class="who"><span class="ko">하루카</span><span class="ja">ハルカ</span></span>
+          <div class="bubble me"><span class="korean">저는 영화를 좋아해요. 유나 씨는 뭘 좋아해요?</span><span class="translation">私は映画が好きです。ユナさんは何が好きですか？</span></div>
+        </div>
+        <div class="turn">
+          <span class="who"><span class="ko">유나</span><span class="ja">ユナ</span></span>
+          <div class="bubble"><span class="korean">저는 음악을 좋아해요. 하루카 씨, 책도 좋아해요?</span><span class="translation">私は音楽が好きです。ハルカさん、本も好きですか？</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Variant 2 ===== -->
+  <div class="lab">
+    <h3>Variant 2 · 아바타 + 이름 헤더</h3>
+    <p>A circular avatar and the name sit in a header row above each full-width bubble.</p>
+  </div>
+  <div class="page">
+    <div class="section">
+      <h2 class="section-title">대화를 읽어요 <span class="title-ja">(会話を読もう)</span></h2>
+      <div class="dialogue v2">
+        <div class="turn">
+          <div class="head"><span class="avatar">🙋‍♀️</span><span class="who"><span class="ko">유나</span><span class="ja">ユナ</span></span></div>
+          <div class="bubble"><span class="korean">하루카 씨, 뭘 좋아해요?</span><span class="translation">ハルカさん、何が好きですか？</span></div>
+        </div>
+        <div class="turn me">
+          <div class="head"><span class="avatar">🧑</span><span class="who"><span class="ko">하루카</span><span class="ja">ハルカ</span></span></div>
+          <div class="bubble me"><span class="korean">저는 영화를 좋아해요. 유나 씨는 뭘 좋아해요?</span><span class="translation">私は映画が好きです。ユナさんは何が好きですか？</span></div>
+        </div>
+        <div class="turn">
+          <div class="head"><span class="avatar">🙋‍♀️</span><span class="who"><span class="ko">유나</span><span class="ja">ユナ</span></span></div>
+          <div class="bubble"><span class="korean">저는 음악을 좋아해요. 하루카 씨, 책도 좋아해요?</span><span class="translation">私は音楽が好きです。ハルカさん、本も好きですか？</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Variant 3 ===== -->
+  <div class="lab">
+    <h3>Variant 3 · 채팅 앱 스타일 (좌우 아바타)</h3>
+    <p>Chat-app style: avatar on the side (mine on the right), name above the bubble, bubble takes the rest of the width.</p>
+  </div>
+  <div class="page">
+    <div class="section">
+      <h2 class="section-title">대화를 읽어요 <span class="title-ja">(会話を読もう)</span></h2>
+      <div class="dialogue v3">
+        <div class="turn">
+          <span class="avatar">🙋‍♀️</span>
+          <div class="col">
+            <span class="who">유나 · ユナ</span>
+            <div class="bubble"><span class="korean">하루카 씨, 뭘 좋아해요?</span><span class="translation">ハルカさん、何が好きですか？</span></div>
+          </div>
+        </div>
+        <div class="turn me">
+          <span class="avatar">🧑</span>
+          <div class="col">
+            <span class="who">하루카 · ハルカ</span>
+            <div class="bubble me"><span class="korean">저는 영화를 좋아해요. 유나 씨는 뭘 좋아해요?</span><span class="translation">私は映画が好きです。ユナさんは何が好きですか？</span></div>
+          </div>
+        </div>
+        <div class="turn">
+          <span class="avatar">🙋‍♀️</span>
+          <div class="col">
+            <span class="who">유나 · ユナ</span>
+            <div class="bubble"><span class="korean">저는 음악을 좋아해요. 하루카 씨, 책도 좋아해요?</span><span class="translation">私は音楽が好きです。ハルカさん、本も好きですか？</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="height:40px"></div>
+</body>
+</html>
