@@ -103,6 +103,18 @@
     .v6 .bubble { flex: 1 1 auto; min-width: 0; }
     .v6 .turn.other .bubble { border-top-left-radius: 4px; }
     .v6 .turn.me .bubble { border-top-right-radius: 4px; }
+
+    /* ---- Variant 7 · V6 layout, no avatar (for tutor/student scripts) ---- */
+    .v7 .turn { display: flex; gap: 10px; align-items: flex-start; margin: 0 0 16px; }
+    .v7 .turn:last-child { margin-bottom: 0; }
+    .v7 .turn.me { flex-direction: row-reverse; }
+    .v7 .who { display: flex; flex-direction: column; align-items: center; gap: 2px; flex: 0 0 auto; width: 52px; padding-top: 8px; }
+    .v7 .nm { display: flex; flex-direction: column; align-items: center; line-height: 1.18; text-align: center; }
+    .v7 .nm .ko { font-size: 12px; font-weight: 800; color: #1c1c1c; }
+    .v7 .nm .ja { font-size: 10px; font-weight: 700; color: #a5a5a5; }
+    .v7 .bubble { flex: 1 1 auto; min-width: 0; }
+    .v7 .turn.other .bubble { border-top-left-radius: 4px; }
+    .v7 .turn.me .bubble { border-top-right-radius: 4px; }
   </style>
 </head>
 <body>
@@ -270,6 +282,31 @@
         <div class="turn other">
           <span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="nm"><span class="ko">하나</span><span class="ja">ハナ</span></span></span>
           <div class="bubble"><span class="korean">저는 음악을 좋아해요. 하루카 씨, 책도 좋아해요?</span><span class="translation">私は音楽が好きです。ハルカさん、本も好きですか？</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Variant 7 ===== -->
+  <div class="lab">
+    <h3>Variant 7 · 아바타 없음 (튜터/학생 스크립트용)</h3>
+    <p>Variant 6's layout but without avatars — just the name beside the bubble. For tutor/student script pages (선생님 / 나).</p>
+  </div>
+  <div class="page">
+    <div class="section">
+      <h2 class="section-title">미니 대화 <span class="title-ja">(ミニ会話)</span></h2>
+      <div class="v7">
+        <div class="turn other">
+          <span class="who"><span class="nm"><span class="ko">선생님</span><span class="ja">先生</span></span></span>
+          <div class="bubble"><span class="korean">뭘 좋아해요?</span><span class="translation">何が好きですか？</span></div>
+        </div>
+        <div class="turn me">
+          <span class="who"><span class="nm"><span class="ko">나</span><span class="ja">あなた</span></span></span>
+          <div class="bubble me"><span class="korean">저는 음악을 좋아해요.</span><span class="translation">私は音楽が好きです。</span></div>
+        </div>
+        <div class="turn other">
+          <span class="who"><span class="nm"><span class="ko">선생님</span><span class="ja">先生</span></span></span>
+          <div class="bubble"><span class="korean">책도 좋아해요?</span><span class="translation">本も好きですか？</span></div>
         </div>
       </div>
     </div>
