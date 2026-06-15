@@ -441,11 +441,18 @@ p {
 }
 
 /* open write-in areas carry a very light grey so they read as
-   "fill the whole thing here" (fill-in sentences keep white) */
+   "fill the whole thing here" (fill-in sentences keep white). Any
+   answer placed inside is rendered barely-visible, like the pills. */
 .answer-space {
   display: block;
   min-height: 84px;
+  padding: 13px 16px;
   background: #f8f8f7;
+  color: #e7e7e4;
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 700;
+  word-break: keep-all;
 }
 
 .answer-fill {
@@ -746,9 +753,16 @@ p {
   background: #e7f8d8;
 }
 
-/* in green "me" boxes, the write-in area follows the green convention */
+/* section 3 "me" boxes are green: their write-in areas and pills follow
+   the green convention (a touch lighter than the green header) */
 .bubble.me .answer-space {
-  background: #f3fcea;
+  background: #f6fdf0;
+  color: #e3f1d5;
+}
+
+.bubble.me .slot {
+  background: #f6fdf0;
+  color: #e3f1d5;
 }
 
 .bubble.me:has(> .answer-box) > .hint {
