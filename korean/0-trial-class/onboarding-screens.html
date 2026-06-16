@@ -104,23 +104,36 @@ body{
 .ws-meta{display:flex; gap:18px; justify-content:center; font-size:12px; font-weight:700; color:var(--gray500); margin-bottom:18px;}
 .ws-meta span{display:flex; align-items:flex-end; gap:6px;}
 
-.ws-gap{background:var(--g100); border:1.5px solid var(--ink); border-radius:14px; padding:16px; display:flex; align-items:center; gap:10px;}
-.ws-gap .cell{flex:1; text-align:center; display:flex; flex-direction:column; gap:8px; align-items:center;}
-.ws-gap .k{font-size:11px; font-weight:800; letter-spacing:.04em; color:var(--gray500); text-transform:uppercase;}
-.ws-gap .lvbox{font-size:16px; font-weight:800; display:flex; align-items:flex-end; gap:3px;}
-.ws-gap .arrow{font-size:22px; font-weight:800; color:var(--green);}
+/* 현재/목표 레벨 — 하나씩 체크 */
+.ws-levels{background:var(--g100); border:1.5px solid var(--ink); border-radius:14px; padding:13px 14px; display:flex; flex-direction:column; gap:11px;}
+.lvpick{display:flex; align-items:center; gap:10px;}
+.lvpick .lab{font-size:13px; font-weight:800; width:78px; flex:none;}
+.chips{display:flex; gap:7px;}
+.nchip{position:relative; cursor:pointer; line-height:0;}
+.nchip input{position:absolute; inset:0; opacity:0; margin:0; cursor:pointer;}
+.nchip span{display:grid; place-items:center; width:34px; height:34px; border-radius:9px; border:1.6px solid var(--ink); background:#fff; font-size:14px; font-weight:800;}
+.nchip input:checked + span{background:var(--lime);}
 
-.ws-eta{margin-top:14px; background:var(--ink); border-radius:14px; padding:16px; display:flex; align-items:center; justify-content:center; gap:8px 16px; flex-wrap:wrap; color:#fff;}
-.ws-eta .k{font-size:12px; font-weight:800; color:rgba(255,255,255,.7);}
-.ws-eta .line{display:flex; align-items:flex-end; gap:5px; font-size:14px; font-weight:800;}
-.ws-eta .blank{color:var(--lime); border-bottom-color:var(--lime);}
+/* 유일한 직접 기입란 — 목표까지의 시간 (눈에 띄게) */
+.ws-time{margin-top:13px; background:var(--ink); border-radius:14px; padding:14px 16px; color:#fff; display:flex; align-items:center; justify-content:center; gap:8px 16px; flex-wrap:wrap;}
+.ws-time .k{font-size:13px; font-weight:800; color:var(--lime);}
+.ws-time .line{display:flex; align-items:center; gap:5px; font-size:15px; font-weight:800;}
+.write{width:54px; text-align:center; font-family:inherit; font-size:21px; font-weight:800; color:#1c1c1c; background:var(--lime); border:none; border-radius:7px; padding:3px 2px;}
+.write::placeholder{color:rgba(28,28,28,.4); font-size:14px;}
+.write:focus{outline:2px solid #fff;}
 
-.ws-row{margin-top:14px; display:flex; align-items:flex-end; gap:8px; font-size:14px; font-weight:800;}
-
-.ws-label{margin:20px 4px 11px; font-size:13.5px; font-weight:800;}
-.ws-curr{display:flex; flex-direction:column; gap:12px;}
-.ws-curr .cr{display:flex; align-items:flex-end; gap:11px;}
-.ws-curr .no{flex:none; width:22px; height:22px; border-radius:999px; background:var(--lime); display:grid; place-items:center; font-size:12px; font-weight:800;}
+/* 추천 커리큘럼 — 코스 체크 */
+.ws-label{margin:18px 4px 10px; font-size:13.5px; font-weight:800;}
+.ws-label small{font-weight:600; color:var(--gray500); font-size:11.5px; margin-left:6px;}
+.ws-curr2{display:flex; flex-direction:column; gap:9px;}
+.cgroup{display:flex; align-items:center; gap:7px; flex-wrap:wrap;}
+.cgroup .gl{font-size:11px; font-weight:800; color:var(--gray500); width:30px; flex:none;}
+.ccheck{display:flex; align-items:center; gap:7px; border:1.4px solid var(--ink); border-radius:9px; padding:6px 10px; cursor:pointer;}
+.ccheck .t{font-size:13px; font-weight:800;}
+.ccheck .t small{font-weight:600; color:var(--gray500); font-size:10px; margin-left:4px;}
+.cbox{width:16px; height:16px; flex:none; border:1.7px solid var(--ink); border-radius:4px; appearance:none; -webkit-appearance:none; background:#fff; cursor:pointer; position:relative;}
+.cbox:checked{background:var(--lime);}
+.cbox:checked::after{content:"✓"; position:absolute; inset:0; display:grid; place-items:center; font-size:12px; font-weight:900; color:var(--ink);}
 
 .ws-cta{margin-top:20px; background:var(--lime); border:1.5px solid var(--ink); border-radius:14px; padding:15px; text-align:center; box-shadow:0 4px 0 var(--ink);}
 .ws-cta .t{font-size:17px; font-weight:800;}
@@ -146,15 +159,15 @@ body{
 <body>
 <div class="flow">
   <div class="flow-head">
-    <h1>体験レッスン オンボーディング — 日本向け 韓国語 1:1</h1>
-    <p>「なぜ学ぶか」を聞き、レッスン中に先生が静かにレベルを診断し、最後に “目標まであと何ヶ月か” を本人の言葉で返す。① → ④ が一本の線でつながる流れです。</p>
+    <h1>체험 레슨 온보딩 — 일본 시장용 한국어 1:1</h1>
+    <p>'왜 배우는지'를 묻고 → 수업 중 선생님이 자연스럽게 레벨을 진단하고 → 마지막에 '목표까지 몇 개월'을 학생의 동기에 맞춰 제시합니다. ① → ④ 가 하나의 흐름으로 이어집니다. (① ② ③ 은 학생용 화면이라 일본어가 메인, ④ 워크시트는 선생님용이라 한국어)</p>
   </div>
 
   <div class="rail">
 
     <!-- ============ STAGE 1 · WHY ============ -->
     <div class="stage">
-      <div class="stage-cap"><span class="num">1</span><span class="t">WHY ・ 目的</span><span class="s">既存の「目的」画面を韓国向けに差し替え</span></div>
+      <div class="stage-cap"><span class="num">1</span><span class="t">WHY · 학습 목적</span><span class="s">기존 '목적' 화면을 한국어 학습용으로 교체 · 학생용</span></div>
       <div class="screen">
         <div class="bar"><i class="on"></i><i></i><i></i><i></i></div>
         <p class="q-ko">한국어를 왜 배우고 싶어요?</p>
@@ -176,7 +189,7 @@ body{
 
     <!-- ============ STAGE 2 · WHERE TO ============ -->
     <div class="stage">
-      <div class="stage-cap"><span class="num">2</span><span class="t">WHERE TO ・ 目標レベル</span><span class="s">新規 — 到達点をマイルストーンで聞く</span></div>
+      <div class="stage-cap"><span class="num">2</span><span class="t">WHERE TO · 목표 레벨</span><span class="s">신규 — 회화로 바로 판단되는 5단계 · 학생용</span></div>
       <div class="screen">
         <div class="bar"><i class="on"></i><i class="on"></i><i></i><i></i></div>
         <p class="q-ko">무엇을 이루고 싶어요?</p>
@@ -196,7 +209,7 @@ body{
 
     <!-- ============ STAGE 3 · PACE ============ -->
     <div class="stage">
-      <div class="stage-cap"><span class="num">3</span><span class="t">PACE ・ 学習ペース</span><span class="s">新規 — “所要時間” の計算に使う</span></div>
+      <div class="stage-cap"><span class="num">3</span><span class="t">PACE · 학습 페이스</span><span class="s">신규 — 주당 수업 횟수 · 학생용</span></div>
       <div class="screen">
         <div class="bar"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
         <p class="q-ko">일주일에 몇 번 수업할 수 있어요?</p>
@@ -216,48 +229,63 @@ body{
 
     <!-- ============ STAGE 4 · THE PLAN (記入式ワークシート) ============ -->
     <div class="stage wsheet">
-      <div class="stage-cap"><span class="num">4</span><span class="t">THE PLAN ・ ロードマップ記入用</span><span class="s">先生が空欄に記入 → 🖨 で印刷 / PDF保存して受講者へ</span></div>
+      <div class="stage-cap"><span class="num">4</span><span class="t">THE PLAN · 로드맵 작성</span><span class="s">선생님이 체크·기입 → 🖨 인쇄/PDF로 학생에게</span></div>
       <div class="screen">
         <div class="bar"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
-        <div class="ws-eyebrow">나만의 로드맵 · あなたのロードマップ</div>
+        <div class="ws-eyebrow">나만의 학습 로드맵</div>
 
         <div class="ws-meta">
-          <span>受講者 <input class="blank w110"></span>
-          <span>担当 <input class="blank w70"></span>
+          <span>학생 <input class="blank w110"></span>
+          <span>날짜 <input class="blank w90"></span>
         </div>
 
-        <!-- now -> goal : tutor writes the level numbers -->
-        <div class="ws-gap">
-          <div class="cell"><span class="k">いまのレベル</span><span class="lvbox">Lv.<input class="blank big"></span></div>
-          <span class="arrow">→</span>
-          <div class="cell"><span class="k">目標レベル</span><span class="lvbox">Lv.<input class="blank big"></span></div>
+        <!-- 현재 / 목표 레벨 : 하나씩 체크 -->
+        <div class="ws-levels">
+          <div class="lvpick"><span class="lab">현재 레벨</span><div class="chips">
+            <label class="nchip"><input type="checkbox"><span>1</span></label>
+            <label class="nchip"><input type="checkbox"><span>2</span></label>
+            <label class="nchip"><input type="checkbox"><span>3</span></label>
+            <label class="nchip"><input type="checkbox"><span>4</span></label>
+            <label class="nchip"><input type="checkbox"><span>5</span></label>
+          </div></div>
+          <div class="lvpick"><span class="lab">목표 레벨</span><div class="chips">
+            <label class="nchip"><input type="checkbox"><span>1</span></label>
+            <label class="nchip"><input type="checkbox"><span>2</span></label>
+            <label class="nchip"><input type="checkbox"><span>3</span></label>
+            <label class="nchip"><input type="checkbox"><span>4</span></label>
+            <label class="nchip"><input type="checkbox"><span>5</span></label>
+          </div></div>
         </div>
 
-        <!-- time to goal : tutor writes the numbers -->
-        <div class="ws-eta">
-          <span class="k">目標まで</span>
-          <span class="line">約<input class="blank w50">ヶ月</span>
-          <span class="line">週<input class="blank w34">レッスン</span>
-          <span class="line">全<input class="blank w50">レッスン</span>
+        <!-- 유일한 기입란 : 목표까지의 시간 -->
+        <div class="ws-time">
+          <span class="k">✍ 목표까지</span>
+          <span class="line">약<input class="write" placeholder="3">개월</span>
+          <span class="line">총<input class="write" placeholder="40">회</span>
         </div>
-        <div class="ws-row">🎯 いつまでに <input class="blank grow"></div>
 
-        <!-- recommended curriculum : tutor writes course names in order -->
-        <div class="ws-label">おすすめカリキュラム（受ける順）</div>
-        <div class="ws-curr">
-          <div class="cr"><span class="no">1</span><input class="blank grow"></div>
-          <div class="cr"><span class="no">2</span><input class="blank grow"></div>
-          <div class="cr"><span class="no">3</span><input class="blank grow"></div>
-          <div class="cr"><span class="no">4</span><input class="blank grow"></div>
+        <!-- 추천 커리큘럼 : 코스 체크 -->
+        <div class="ws-label">추천 커리큘럼 <small>들을 코스에 ✓</small></div>
+        <div class="ws-curr2">
+          <div class="cgroup"><span class="gl">기초</span>
+            <label class="ccheck"><input type="checkbox" class="cbox"><span class="t">한글 <small>읽기</small></span></label>
+            <label class="ccheck"><input type="checkbox" class="cbox"><span class="t">기초 패턴 <small>문법</small></span></label>
+          </div>
+          <div class="cgroup"><span class="gl">관심</span>
+            <label class="ccheck"><input type="checkbox" class="cbox"><span class="t">드라마</span></label>
+            <label class="ccheck"><input type="checkbox" class="cbox"><span class="t">케이팝</span></label>
+            <label class="ccheck"><input type="checkbox" class="cbox"><span class="t">여행</span></label>
+            <label class="ccheck"><input type="checkbox" class="cbox"><span class="t">반말 수다</span></label>
+          </div>
         </div>
 
         <!-- CTA -->
         <div class="ws-cta">
-          <div class="t">이 다음 레슨, 같이 시작해요</div>
-          <div class="s">この続きを 1:1 で · 開始日 <input class="blank w90"></div>
+          <div class="t">이 수업, 같이 이어가요</div>
+          <div class="s">오늘 배운 그다음부터 · 시작일 <input class="blank w90"></div>
         </div>
 
-        <button class="ws-print" onclick="window.print()">🖨 印刷 / PDF保存</button>
+        <button class="ws-print" onclick="window.print()">🖨 인쇄 / PDF 저장</button>
         <div class="foot">Welcome to PODO</div>
       </div>
     </div>
