@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google" content="notranslate">
+<title>한국어 커리큘럼 — Full Curriculum</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<style>
+  @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+  :root {
+    --ink: #1c1c1c;
+    --lime: #b5fd4c;
+    --green: #6abe36;
+    --green-100: #f2fcec;
+    --gray-100: #f5f5f5;
+    --gray-200: #e8e8e8;
+    --gray-400: #a5a5a5;
+    --gray-500: #757575;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: #fafafa;
+    color: var(--ink);
+    font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Apple SD Gothic Neo", "Noto Sans JP", "Noto Sans KR", sans-serif;
+    line-height: 1.5;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 20px 80px; }
+
+  /* ---------- hero ---------- */
+  .hero {
+    margin: 24px 0 0;
+    padding: 46px 40px 40px;
+    color: #fff;
+    background: var(--ink);
+    border-radius: 18px;
+    box-shadow: 0 7px 0 var(--lime);
+  }
+  .back {
+    display: inline-block;
+    margin-bottom: 26px;
+    color: rgba(255,255,255,.6);
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: .02em;
+  }
+  .back:hover { color: var(--lime); }
+  .eyebrow {
+    display: inline-block;
+    margin: 0 0 22px;
+    padding: 7px 13px;
+    background: var(--lime);
+    border-radius: 999px;
+    color: var(--ink);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+  }
+  .hero h1 {
+    margin: 0;
+    font-size: 34px;
+    font-weight: 850;
+    line-height: 1.15;
+    letter-spacing: -.01em;
+    word-break: keep-all;
+  }
+  .hero h1 .ja { display: block; margin-top: 10px; font-size: .52em; font-weight: 500; color: rgba(255,255,255,.55); }
+  .hero p.lead {
+    max-width: 560px;
+    margin: 20px 0 0;
+    color: rgba(255,255,255,.74);
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 500;
+  }
+
+  /* ---------- goal banner ---------- */
+  .goal {
+    margin-top: 30px;
+    padding: 22px 24px;
+    background: var(--lime);
+    border-radius: 14px;
+  }
+  .goal .glabel { display: block; color: rgba(28,28,28,.7); font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+  .goal .gbig { display: block; margin-top: 8px; color: var(--ink); font-size: 21px; font-weight: 850; line-height: 1.3; word-break: keep-all; }
+  .goal .gmath { display: block; margin-top: 10px; color: rgba(28,28,28,.72); font-size: 14px; font-weight: 700; }
+
+  /* ---------- stat row ---------- */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 18px; }
+  .stat { padding: 18px 16px; background: #fff; border: 1.5px solid var(--ink); border-radius: 14px; box-shadow: 0 4px 0 var(--ink); }
+  .stat .num { display: block; font-size: 28px; font-weight: 850; line-height: 1; }
+  .stat .lbl { display: block; margin-top: 8px; font-size: 12.5px; font-weight: 700; color: var(--gray-500); }
+  .stat.ongoing .num { color: var(--green); }
+  @media (max-width: 640px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+
+  /* ---------- stage ---------- */
+  .stage { margin-top: 40px; }
+  .stage-head {
+    display: flex; align-items: flex-start; gap: 16px;
+    padding: 22px 24px;
+    background: #fff;
+    border: 1.5px solid var(--ink);
+    border-radius: 16px 16px 0 0;
+    border-bottom: none;
+  }
+  .stage-no {
+    flex: 0 0 auto;
+    display: grid; place-items: center;
+    width: 46px; height: 46px;
+    background: var(--ink); color: var(--lime);
+    border-radius: 12px;
+    font-size: 20px; font-weight: 850;
+  }
+  .stage.ongoing .stage-no { background: var(--green); color: #fff; }
+  .stage-meta { flex: 1 1 auto; min-width: 0; }
+  .stage-meta h2 { margin: 0; font-size: 22px; font-weight: 850; line-height: 1.2; letter-spacing: -.01em; word-break: keep-all; }
+  .stage-meta h2 .ja { font-size: .62em; font-weight: 500; color: var(--gray-400); margin-left: 4px; }
+  .stage-meta .desc { margin: 6px 0 0; font-size: 14px; color: var(--gray-500); font-weight: 500; line-height: 1.45; }
+  .stage-count {
+    flex: 0 0 auto;
+    padding: 6px 12px;
+    background: var(--green-100);
+    border: 1.5px solid var(--green);
+    border-radius: 999px;
+    color: #3f7a1c;
+    font-size: 12.5px; font-weight: 800; white-space: nowrap;
+  }
+  .stage.ongoing .stage-count { background: var(--green); border-color: var(--green); color: #fff; }
+
+  .stage-body {
+    padding: 8px 24px 26px;
+    background: #fff;
+    border: 1.5px solid var(--ink);
+    border-top: none;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 5px 0 var(--ink);
+  }
+
+  /* ---------- unit ---------- */
+  .unit { padding-top: 24px; }
+  .unit-title {
+    margin: 0 0 4px;
+    font-size: 16px; font-weight: 800; letter-spacing: -.005em; word-break: keep-all;
+  }
+  .unit-sub { margin: 0 0 14px; font-size: 13px; color: var(--gray-500); font-weight: 500; font-style: italic; }
+
+  /* ---------- lesson rows ---------- */
+  .lessons { list-style: none; margin: 0; padding: 0; }
+  .lesson {
+    display: flex; gap: 14px; align-items: baseline;
+    padding: 11px 0;
+    border-bottom: 1px solid var(--gray-200);
+  }
+  .lesson:last-child { border-bottom: none; }
+  .lesson .ln { flex: 0 0 auto; width: 26px; color: var(--gray-400); font-size: 13px; font-weight: 800; text-align: right; }
+  .lesson .lbody { flex: 1 1 auto; min-width: 0; }
+  .lesson .lt { font-size: 15px; font-weight: 700; line-height: 1.35; word-break: keep-all; }
+  .lesson .lt .ja { color: var(--gray-500); font-weight: 500; font-size: 13px; }
+  .pats { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 7px; }
+  .pat {
+    display: inline-flex; align-items: center;
+    padding: 3px 9px;
+    border: 1.5px solid var(--ink);
+    border-radius: 999px;
+    background: #fff;
+    font-size: 12px; font-weight: 700; line-height: 1.25; color: var(--ink);
+  }
+  .outcome { margin-top: 6px; font-size: 13px; color: var(--gray-500); font-weight: 500; }
+
+  .review-note {
+    margin: 12px 0 0;
+    padding: 9px 14px;
+    background: var(--gray-100);
+    border-radius: 10px;
+    font-size: 12.5px; font-weight: 700; color: var(--gray-500);
+  }
+
+  /* ---------- collapsible course ---------- */
+  details.course {
+    margin-top: 14px;
+    border: 1.5px solid var(--ink);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+  }
+  details.course[open] { box-shadow: 0 3px 0 var(--gray-200); }
+  details.course > summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex; align-items: center; gap: 12px;
+    padding: 14px 16px;
+    font-weight: 800; font-size: 15px;
+  }
+  details.course > summary::-webkit-details-marker { display: none; }
+  details.course > summary::before {
+    content: "+"; flex: 0 0 auto;
+    display: grid; place-items: center;
+    width: 22px; height: 22px;
+    background: var(--ink); color: var(--lime);
+    border-radius: 7px; font-size: 16px; font-weight: 800; line-height: 1;
+  }
+  details.course[open] > summary::before { content: "−"; }
+  details.course > summary .cspan { flex: 1 1 auto; word-break: keep-all; }
+  details.course > summary .cct {
+    flex: 0 0 auto; font-size: 12px; font-weight: 700; color: var(--gray-500);
+  }
+  details.course > summary .cja { display: block; font-size: 12px; font-weight: 500; color: var(--gray-400); margin-top: 2px; }
+  .course-body { padding: 4px 18px 16px; border-top: 1px solid var(--gray-200); }
+
+  /* ---------- curriculum group header (stage 3 curricula) ---------- */
+  .cgroup { margin-top: 22px; }
+  .cgroup:first-child { margin-top: 6px; }
+  .cgroup > .cg-title {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 17px; font-weight: 850; word-break: keep-all;
+  }
+  .cgroup > .cg-title .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--lime); border: 1.5px solid var(--ink); flex: 0 0 auto; }
+  .cgroup > .cg-sub { margin: 4px 0 0; font-size: 13px; color: var(--gray-500); font-style: italic; }
+
+  .footer-note {
+    margin-top: 36px; padding: 24px 26px;
+    background: var(--ink); color: rgba(255,255,255,.78);
+    border-radius: 16px;
+    font-size: 14.5px; line-height: 1.6; font-weight: 500;
+  }
+  .footer-note strong { color: var(--lime); font-weight: 800; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HERO -->
+  <header class="hero">
+    <a class="back" href="index.html">← 한국어 홈</a>
+    <span class="eyebrow">런칭 커리큘럼 · Full Curriculum</span>
+    <h1>한국어 전체 커리큘럼<span class="ja">韓国語カリキュラム — 文字から自由会話まで</span></h1>
+    <p class="lead">日本語話者を「ハングルを一度も見たことがない」状態から、自分の意見を韓国語で自由に話せるところまで。4つのステージで一本につなぎます。</p>
+
+    <div class="goal">
+      <span class="glabel">Launch Goal</span>
+      <span class="gbig">パターン学習120レッスンでローンチ — そこから自由会話を無限に追加</span>
+      <span class="gmath">初級パターン 約50 ＋ 中級パターン で 120 まで ／ ＋ 한글 11（基礎）＋ 프리토킹 ∞（継続追加）</span>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><span class="num">11</span><span class="lbl">한글 Reading<br>基礎レッスン</span></div>
+      <div class="stat"><span class="num">53</span><span class="lbl">Beginner Patterns<br>初級パターン</span></div>
+      <div class="stat"><span class="num">160</span><span class="lbl">Intermediate<br>中級・実戦</span></div>
+      <div class="stat ongoing"><span class="num">∞</span><span class="lbl">Freetalking<br>継続追加</span></div>
+    </div>
+  </header>
+
+  <!-- STAGE 1 · HANGUL -->
+  <section class="stage">
+    <div class="stage-head">
+      <div class="stage-no">1</div>
+      <div class="stage-meta">
+        <h2>한글 읽기 <span class="ja">Hangul Reading</span></h2>
+        <p class="desc">どんな韓国語の音節も声に出して読めるように。1レッスンにつき新しい要素は1つだけ。</p>
+      </div>
+      <span class="stage-count">11 レッスン</span>
+    </div>
+    <div class="stage-body">
+
+      <div class="unit">
+        <h3 class="unit-title">Part 1 · 자음 — The Consonants</h3>
+        <ul class="lessons">
+          <li class="lesson"><span class="ln">1</span><div class="lbody"><div class="lt">ブロックと最初の音 <span class="ja">block rule · ㅏㅓㅗㅜㅡㅣ · ㄴ ㅁ · 무음 ㅇ</span></div><div class="outcome">나 · 너 · 나무 · 누나 · 어머니 · 오이</div></div></li>
+          <li class="lesson"><span class="ln">2</span><div class="lbody"><div class="lt">基本の6子音 <span class="ja">ㄱ ㄷ ㄹ · ㅂ ㅅ ㅈ（시＝「シ」）</span></div><div class="outcome">고기 · 다리 · 바다 · 사자 · 주스 · 모자</div></div></li>
+          <li class="lesson"><span class="ln">3</span><div class="lbody"><div class="lt">復習＆スピード <span class="ja">新出文字なし — 混合読み・ディクテーション</span></div><div class="outcome">가구 · 거리 · 부모 · 도시 — 止まらず読む</div></div></li>
+          <li class="lesson"><span class="ln">4</span><div class="lbody"><div class="lt">線を足す＝息を足す <span class="ja">ㅎ + 激音 ㅋ ㅌ ㅍ ㅊ</span></div><div class="outcome">하마 · 코 · 토마토 · 포도 · 커피</div></div></li>
+          <li class="lesson"><span class="ln">5</span><div class="lbody"><div class="lt">重ねる＝強くなる <span class="ja">濃音 ㄲ ㄸ ㅃ ㅆ ㅉ</span></div><div class="outcome">토끼 · 아빠 · 코끼리 · 싸다</div></div></li>
+        </ul>
+      </div>
+
+      <div class="unit">
+        <h3 class="unit-title">Part 2 · 모음 — More Vowels</h3>
+        <ul class="lessons">
+          <li class="lesson"><span class="ln">6</span><div class="lbody"><div class="lt">y母音とe母音 <span class="ja">ㅑ ㅕ ㅛ ㅠ · ㅐ ㅔ</span></div><div class="outcome">우유 · 여자 · 야구 · 개 · 시계</div></div></li>
+          <li class="lesson"><span class="ln">7</span><div class="lbody"><div class="lt">合成（w-）母音 <span class="ja">ㅘ ㅝ ㅚ ㅟ ㅙ ㅞ ㅢ</span></div><div class="outcome">사과 · 가위 · 의자 · 회사 · 뭐</div></div></li>
+        </ul>
+      </div>
+
+      <div class="unit">
+        <h3 class="unit-title">Part 3 · 받침 — The Bottom Slot</h3>
+        <ul class="lessons">
+          <li class="lesson"><span class="ln">8</span><div class="lbody"><div class="lt">パッチム I — 鼻音終わり <span class="ja">ㅇ ㄴ ㅁ</span></div><div class="outcome">강 · 산 · 밤 · 문 · 사람 · 사랑</div></div></li>
+          <li class="lesson"><span class="ln">9</span><div class="lbody"><div class="lt">パッチム II — 閉鎖音＆ㄹ <span class="ja">ㄱ ㄷ ㅂ · ㄹ · 7つの終声</span></div><div class="outcome">책 · 밥 · 발 · 한국 · 김밥</div></div></li>
+          <li class="lesson"><span class="ln">10</span><div class="lbody"><div class="lt">ネイティブのように読む <span class="ja">연음（リエゾン）· ㅎ弱化 · 同化</span></div><div class="outcome">한국어 · 음악 · 좋아요 — 音のまま読む</div></div></li>
+          <li class="lesson"><span class="ln">11</span><div class="lbody"><div class="lt">総仕上げ — 何でも読める <span class="ja">新出文字なし — 看板・メニュー・名前</span></div><div class="outcome">街の看板すべてを解読して読める</div></div></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STAGE 2 · BEGINNER PATTERNS -->
+  <section class="stage">
+    <div class="stage-head">
+      <div class="stage-no">2</div>
+      <div class="stage-meta">
+        <h2>초급 패턴 <span class="ja">Beginner Patterns</span></h2>
+        <p class="desc">文法の背骨。1レッスン＝2パターン。コピュラから反말まで、低負荷→高負荷で積み上げる。</p>
+      </div>
+      <span class="stage-count">53 レッスン · 106 パターン</span>
+    </div>
+    <div class="stage-body">
+
+      <div class="unit">
+        <h3 class="unit-title">Unit 1 · 첫 문장 — Naming Things</h3>
+        <p class="unit-sub">コピュラと存在 — 「〜だ／〜じゃない／〜がある」。</p>
+        <ul class="lessons">
+          <li class="lesson"><span class="ln">1</span><div class="lbody"><div class="lt">저는 일본 사람입니다 — 自己紹介</div><div class="pats"><span class="pat">N입니다 / 입니까?</span><span class="pat">은/는</span></div></div></li>
+          <li class="lesson"><span class="ln">2</span><div class="lbody"><div class="lt">학생이 아닙니다 — 〜ではない</div><div class="pats"><span class="pat">N이/가 아닙니다</span><span class="pat">이/가</span></div></div></li>
+          <li class="lesson"><span class="ln">3</span><div class="lbody"><div class="lt">이건 뭐예요? — これ／それ／何</div><div class="pats"><span class="pat">N이에요/예요</span><span class="pat">이/가 아니에요</span></div></div></li>
+          <li class="lesson"><span class="ln">4</span><div class="lbody"><div class="lt">이 사람, 저도 — 指示と「〜も」</div><div class="pats"><span class="pat">이/그/저 + N</span><span class="pat">도</span></div></div></li>
+          <li class="lesson"><span class="ln">5</span><div class="lbody"><div class="lt">시간이 있어요 — ある／ない</div><div class="pats"><span class="pat">있어요 / 없어요</span><span class="pat">만</span></div></div></li>
+          <li class="lesson"><span class="ln">6</span><div class="lbody"><div class="lt">어디에 있어요? — 場所</div><div class="pats"><span class="pat">장소에 있어요</span><span class="pat">위·아래·옆·앞·뒤</span></div></div></li>
+        </ul>
+        <p class="review-note">▸ 복습 1 — 입니다 vs 이에요 · 은/는 vs 이/가 · 도 / 만 · 있어요/없어요</p>
+      </div>
+
+      <div class="unit">
+        <h3 class="unit-title">Unit 2 · 행동 — Doing Things</h3>
+        <p class="unit-sub">動詞、両方の丁寧形、不規則活用、行動を運ぶ助詞。</p>
+        <ul class="lessons">
+          <li class="lesson"><span class="ln">7</span><div class="lbody"><div class="lt">한국어를 공부합니다 — 格式体動詞</div><div class="pats"><span class="pat">-ㅂ/습니다</span><span class="pat">을/를</span></div></div></li>
+          <li class="lesson"><span class="ln">8</span><div class="lbody"><div class="lt">매일 운동해요 — 丁寧体動詞</div><div class="pats"><span class="pat">-아/어요</span><span class="pat">에</span></div></div></li>
+          <li class="lesson"><span class="ln">9</span><div class="lbody"><div class="lt">바빠요, 몰라요 — ㅡ・르 不規則</div><div class="pats"><span class="pat">으 不規則</span><span class="pat">르 不規則</span></div></div></li>
+          <li class="lesson"><span class="ln">10</span><div class="lbody"><div class="lt">들어요, 추워요 — ㄷ・ㅂ 不規則</div><div class="pats"><span class="pat">ㄷ 不規則</span><span class="pat">ㅂ 不規則</span></div></div></li>
+          <li class="lesson"><span class="ln">11</span><div class="lbody"><div class="lt">먹고 가요 — 連結と場所</div><div class="pats"><span class="pat">-고</span><span class="pat">에서</span></div></div></li>
+          <li class="lesson"><span class="ln">12</span><div class="lbody"><div class="lt">안 마셔요, 못 해요 — 否定と不可能</div><div class="pats"><span class="pat">안 / -지 않다</span><span class="pat">못 / -지 못하다</span></div></div></li>
+          <li class="lesson"><span class="ln">13</span><div class="lbody"><div class="lt">친구하고, 엄마한테 — と／に／から</div><div class="pats"><span class="pat">하고 · 와/과 · (이)랑</span><span class="pat">한테 · 에게</span></div></div></li>
+        </ul>
+        <p class="review-note">▸ 복습 2 — -ㅂ/습니다 vs -아/어요 · 4つの不規則 · 에 / 에서 / 한테</p>
+      </div>
+
+      <div class="unit">
+        <h3 class="unit-title">Unit 3 · 숫자와 시간 — Numbers & Time</h3>
+        <p class="unit-sub">2つの数体系、助数詞、時刻、範囲、最初の比較。</p>
+        <ul class="lessons">
+          <li class="lesson"><span class="ln">14</span><div class="lbody"><div class="lt">몇 월 며칠이에요? — 日付と値段</div><div class="pats"><span class="pat">漢数詞（월·일）</span><span class="pat">얼마 + 원</span></div></div></li>
+          <li class="lesson"><span class="ln">15</span><div class="lbody"><div class="lt">사과 세 개 주세요 — 数える</div><div class="pats"><span class="pat">固有数詞 + 助数詞</span><span class="pat">명 / 사람</span></div></div></li>
+          <li class="lesson"><span class="ln">16</span><div class="lbody"><div class="lt">지금 몇 시예요? — 時刻</div><div class="pats"><span class="pat">시·분</span><span class="pat">부터 ~ 까지</span></div></div></li>
+          <li class="lesson"><span class="ln">17</span><div class="lbody"><div class="lt">집에서 회사까지 — 距離と手段</div><div class="pats"><span class="pat">에서 ~ 까지</span><span class="pat">(으)로</span></div></div></li>
+          <li class="lesson"><span class="ln">18</span><div class="lbody"><div class="lt">진짜 싸네요! — 反応と比較</div><div class="pats"><span class="pat">-네요</span><span class="pat">보다 / 제일·가장</span></div></div></li>
+        </ul>
+        <p class="review-note">▸ 복습 3 — 漢数詞 vs 固有数詞 · 助数詞 · 부터/까지 · 보다</p>
+      </div>
+
+      <div class="unit">
+        <h3 class="unit-title">Unit 4 · 지난 일 — The Past</h3>
+        <p class="unit-sub">過去形、時間表現、理由と対比の接続。</p>
+        <ul class="lessons">
+          <li class="lesson"><span class="ln">19</span><div class="lbody"><div class="lt">어제 친구를 만났어요 — 過去</div><div class="pats"><span class="pat">-았/었어요</span><span class="pat">이었어요 / 였어요</span></div></div></li>
+          <li class="lesson"><span class="ln">20</span><div class="lbody"><div class="lt">작년에, 어제 — 時間表現</div><div class="pats"><span class="pat">時間名詞 + 에</span><span class="pat">어제·오늘·내일（에なし）</span></div></div></li>
+          <li class="lesson"><span class="ln">21</span><div class="lbody"><div class="lt">아파서 못 갔어요 — 〜なので</div><div class="pats"><span class="pat">-아/어서</span><span class="pat">그래서 · 그러니까</span></div></div></li>
+          <li class="lesson"><span class="ln">22</span><div class="lbody"><div class="lt">어렵지만 재미있어요 — でも／そして</div><div class="pats"><span class="pat">-지만</span><span class="pat">그런데 · 그리고</span></div></div></li>
+        </ul>
+        <p class="review-note">▸ 복습 4 — 現在 vs 過去 · 이었어요/였어요 · -아/어서 vs 그래서 · -지만</p>
+      </div>
+
+      <div class="unit">
+        <h3 class="unit-title">Unit 5 · 높임말 — Speaking Respectfully</h3>
+        <p class="unit-sub">尊敬語、特殊動詞、他者のためにする謙譲形。</p>
+        <ul class="lessons">
+          <li class="lesson"><span class="ln">23</span><div class="lbody"><div class="lt">사장님은 회의를 하세요 — 尊敬現在</div><div class="pats"><span class="pat">-(으)세요</span><span class="pat">께서</span></div></div></li>
+          <li class="lesson"><span class="ln">24</span><div class="lbody"><div class="lt">할머니는 방에 계세요 — 特殊尊敬動詞</div><div class="pats"><span class="pat">계시다 · 드시다 · 주무시다</span><span class="pat">께 + 드리다</span></div></div></li>
+          <li class="lesson"><span class="ln">25</span><div class="lbody"><div class="lt">어디 다녀오셨어요? — 尊敬過去</div><div class="pats"><span class="pat">-(으)셨어요</span><span class="pat">성함·연세·되세요</span></div></div></li>
+          <li class="lesson"><span class="ln">26</span><div class="lbody"><div class="lt">제가 들어 드릴게요 — してあげる／授受</div><div class="pats"><span class="pat">-아/어 드리다</span><span class="pat">주다 / 받다</span></div></div></li>
+        </ul>
+        <p class="review-note">▸ 복습 5 — 平叙 vs 尊敬 · 께서 / 께 · 特殊動詞 · 드리다</p>
+      </div>
+
+      <div class="unit">
+        <h3 class="unit-title">Unit 6 · 마음과 의도 — Wants, Plans & Ability</h3>
+        <p class="unit-sub">したいこと、するつもり、できること、許されること。</p>
+        <ul class="lessons">
+          <li class="lesson"><span class="ln">27</span><div class="lbody"><div class="lt">떡볶이 먹고 싶어요 — 願望</div><div class="pats"><span class="pat">-고 싶어요</span><span class="pat">-고 싶어 해요</span></div></div></li>
+          <li class="lesson"><span class="ln">28</span><div class="lbody"><div class="lt">내일 만날 거예요 — 未来と約束</div><div class="pats"><span class="pat">-(으)ㄹ 거예요</span><span class="pat">-(으)ㄹ게요</span></div></div></li>
+          <li class="lesson"><span class="ln">29</span><div class="lbody"><div class="lt">먹을 수 있어요 — 能力と進行</div><div class="pats"><span class="pat">-(으)ㄹ 수 있어요</span><span class="pat">-고 있어요</span></div></div></li>
+          <li class="lesson"><span class="ln">30</span><div class="lbody"><div class="lt">문이 열려 있어요 — 状態と試み</div><div class="pats"><span class="pat">-아/어 있다</span><span class="pat">-아/어 보다</span></div></div></li>
+          <li class="lesson"><span class="ln">31</span><div class="lbody"><div class="lt">가 본 적 있어요? — 経験</div><div class="pats"><span class="pat">-(으)ㄴ 적 있다</span><span class="pat">-아/어 봤어요</span></div></div></li>
+          <li class="lesson"><span class="ln">32</span><div class="lbody"><div class="lt">앉아도 돼요? — 許可と禁止</div><div class="pats"><span class="pat">-아/어도 돼요?</span><span class="pat">-(으)면 안 돼요 / -지 마세요</span></div></div></li>
+          <li class="lesson"><span class="ln">33</span><div class="lbody"><div class="lt">내일까지 끝내야 돼요 — 義務と条件</div><div class="pats"><span class="pat">-아/어야 돼요</span><span class="pat">-(으)면</span></div></div></li>
+        </ul>
+        <p class="review-note">▸ 복습 6 — -고 싶다 · -(으)ㄹ 거예요 vs -(으)ㄹ게요 · -(으)ㄹ 수 있다 · -아/어도 돼요</p>
+      </div>
+
+      <div class="unit">
+        <h3 class="unit-title">Unit 7 · 문장 잇기 — Joining Ideas</h3>
+        <p class="unit-sub">提案、依頼、より深い「〜だから」、節が名詞を修飾する形。</p>
+        <ul class="lessons">
+          <li class="lesson"><span class="ln">34</span><div class="lbody"><div class="lt">같이 갈까요? — 提案と目的</div><div class="pats"><span class="pat">-(으)ㄹ까요?</span><span class="pat">-(으)러</span></div></div></li>
+          <li class="lesson"><span class="ln">35</span><div class="lbody"><div class="lt">배우려고 해요 — 意図と決定</div><div class="pats"><span class="pat">-(으)려고 하다</span><span class="pat">-기로 하다</span></div></div></li>
+          <li class="lesson"><span class="ln">36</span><div class="lbody"><div class="lt">좀 찍어 주시겠어요? — 依頼</div><div class="pats"><span class="pat">-아/어 주세요</span><span class="pat">-아/어 주시겠어요?</span></div></div></li>
+          <li class="lesson"><span class="ln">37</span><div class="lbody"><div class="lt">비 때문에 못 갔어요 — 理由（深化）</div><div class="pats"><span class="pat">-(으)니까</span><span class="pat">때문에 / -기 때문에</span></div></div></li>
+          <li class="lesson"><span class="ln">38</span><div class="lbody"><div class="lt">봤는데 재미있었어요 — 背景と婉曲</div><div class="pats"><span class="pat">-는데</span><span class="pat">-(으)ㄴ/는데요</span></div></div></li>
+          <li class="lesson"><span class="ln">39</span><div class="lbody"><div class="lt">제가 좋아하는 노래 — 名詞修飾</div><div class="pats"><span class="pat">-(으)ㄴ N（過去）</span><span class="pat">-는 N（現在）</span></div></div></li>
+          <li class="lesson"><span class="ln">40</span><div class="lbody"><div class="lt">갈 때 선물을 사요 — 未来修飾と「とき」</div><div class="pats"><span class="pat">-(으)ㄹ N（未来）</span><span class="pat">-(으)ㄹ 때</span></div></div></li>
+        </ul>
+        <p class="review-note">▸ 복습 7 — -(으)ㄹ까요 vs -(으)러 · -(으)니까 vs 때문에 · -는데 · 3つの修飾形 + -(으)ㄹ 때</p>
+      </div>
+
+      <div class="unit">
+        <h3 class="unit-title">Unit 8 · 더 자연스럽게 — Sounding Natural</h3>
+        <p class="unit-sub">順序、同時、状態変化、会話を流す推量と反応。</p>
+        <ul class="lessons">
+          <li class="lesson"><span class="ln">41</span><div class="lbody"><div class="lt">먹은 후에 산책해요 — 前と後</div><div class="pats"><span class="pat">-기 전에</span><span class="pat">-(으)ㄴ 후에 / -고 나서</span></div></div></li>
+          <li class="lesson"><span class="ln">42</span><div class="lbody"><div class="lt">들으면서 공부해요 — 〜しながら／切替</div><div class="pats"><span class="pat">-(으)면서</span><span class="pat">-다가</span></div></div></li>
+          <li class="lesson"><span class="ln">43</span><div class="lbody"><div class="lt">따뜻해졌어요 — 〜になる</div><div class="pats"><span class="pat">-아/어지다</span><span class="pat">-게 되다</span></div></div></li>
+          <li class="lesson"><span class="ln">44</span><div class="lbody"><div class="lt">맛있는 것 같아요 — 推量</div><div class="pats"><span class="pat">-(으)ㄹ 것 같다</span><span class="pat">-(으)ㄴ/는 것 같다</span></div></div></li>
+          <li class="lesson"><span class="ln">45</span><div class="lbody"><div class="lt">피곤해 보여요 — 見える／副詞</div><div class="pats"><span class="pat">-아/어 보이다</span><span class="pat">-게</span></div></div></li>
+          <li class="lesson"><span class="ln">46</span><div class="lbody"><div class="lt">재미있죠? — 確認と「ね」</div><div class="pats"><span class="pat">-죠? / -지요?</span><span class="pat">-잖아요</span></div></div></li>
+        </ul>
+        <p class="review-note">▸ 복습 8 — -기 전에 / 후에 · -(으)면서 vs -다가 · -아/어지다 vs -게 되다 · 〜것 같다</p>
+      </div>
+
+      <div class="unit">
+        <h3 class="unit-title">Unit 9 · 진짜 대화 — Real Conversation</h3>
+        <p class="unit-sub">中級への橋渡し — 引用・ネイティブの軟化表現、そして반말へ。</p>
+        <ul class="lessons">
+          <li class="lesson"><span class="ln">47</span><div class="lbody"><div class="lt">봤거든요, 맛있더라고요 — 説明と回想</div><div class="pats"><span class="pat">-거든요</span><span class="pat">-더라고요</span></div></div></li>
+          <li class="lesson"><span class="ln">48</span><div class="lbody"><div class="lt">온다고 했어요 — 間接話法 ①</div><div class="pats"><span class="pat">-다고 하다</span><span class="pat">-(이)라고 하다</span></div></div></li>
+          <li class="lesson"><span class="ln">49</span><div class="lbody"><div class="lt">오라고 했어 — 間接話法 ②</div><div class="pats"><span class="pat">-냐고 / -자고 하다</span><span class="pat">-(으)라고 하다</span></div></div></li>
+          <li class="lesson"><span class="ln">50</span><div class="lbody"><div class="lt">너 지금 뭐 해? — 반말 ① 基本</div><div class="pats"><span class="pat">-아/어</span><span class="pat">이야 / 야</span></div></div></li>
+          <li class="lesson"><span class="ln">51</span><div class="lbody"><div class="lt">어제 영화 봤어 — 반말 ② 過去・未来</div><div class="pats"><span class="pat">-았/었어</span><span class="pat">-(으)ㄹ 거야</span></div></div></li>
+          <li class="lesson"><span class="ln">52</span><div class="lbody"><div class="lt">같이 가자 — 반말 ③ 勧誘・命令</div><div class="pats"><span class="pat">-자</span><span class="pat">-아/어(라) · -지 마</span></div></div></li>
+          <li class="lesson"><span class="ln">53</span><div class="lbody"><div class="lt">내가 할게 — 반말 ④ 意志・申し出</div><div class="pats"><span class="pat">-(으)ㄹ게</span><span class="pat">-(으)ㄹ래?</span></div></div></li>
+        </ul>
+        <p class="review-note">▸ 복습 9 — -거든요 / -더라고요 · 間接話法セット · 반말 全4文型</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STAGE 3 · INTERMEDIATE -->
+  <section class="stage">
+    <div class="stage-head">
+      <div class="stage-no">3</div>
+      <div class="stage-meta">
+        <h2>중급 표현 <span class="ja">Intermediate Expressions</span></h2>
+        <p class="desc">パターンを「実戦」で。ドラマ・K-POP・旅行・반말 — 学習者を惹きつける題材から中級パターンを抽出。<strong>ここで120パターンの目標を超えていく。</strong></p>
+      </div>
+      <span class="stage-count">4 領域 · 16 コース · 160 レッスン</span>
+    </div>
+    <div class="stage-body">
+
+      <!-- 드라마 -->
+      <div class="cgroup">
+        <div class="cg-title"><span class="dot"></span>드라마 — Drama</div>
+        <p class="cg-sub">K-ドラマ風のオリジナル台詞から、場面の裏にある会話パターンを抽出。</p>
+        <details class="course">
+          <summary><span class="cspan">설렘 &amp; 고백 <span class="cja">ときめき＆告白</span></span><span class="cct">10 レッスン</span></summary>
+          <div class="course-body"><ul class="lessons">
+            <li class="lesson"><span class="ln">1</span><div class="lbody"><div class="lt">첫 만남</div><div class="pats"><span class="pat">~ㄴ 적 있다</span><span class="pat">~아/어도 돼요?</span></div></div></li>
+            <li class="lesson"><span class="ln">2</span><div class="lbody"><div class="lt">자꾸 생각나</div><div class="pats"><span class="pat">자꾸 ~</span><span class="pat">~느라</span></div></div></li>
+            <li class="lesson"><span class="ln">3</span><div class="lbody"><div class="lt">밀당</div><div class="pats"><span class="pat">~(으)면</span><span class="pat">~지 마</span></div></div></li>
+            <li class="lesson"><span class="ln">4</span><div class="lbody"><div class="lt">첫 데이트</div><div class="pats"><span class="pat">~아/어 보인다</span><span class="pat">~ㄹ까?</span></div></div></li>
+            <li class="lesson"><span class="ln">5</span><div class="lbody"><div class="lt">설렘</div><div class="pats"><span class="pat">~만 보면</span><span class="pat">~는 줄 모르다</span></div></div></li>
+            <li class="lesson"><span class="ln">6</span><div class="lbody"><div class="lt">질투</div><div class="pats"><span class="pat">자주 ~?</span><span class="pat">~잖아</span></div></div></li>
+            <li class="lesson"><span class="ln">7</span><div class="lbody"><div class="lt">용기</div><div class="pats"><span class="pat">~ㄹ 말 있다</span><span class="pat">~지 말고</span></div></div></li>
+            <li class="lesson"><span class="ln">8</span><div class="lbody"><div class="lt">고백</div><div class="pats"><span class="pat">~ㄹ래?</span><span class="pat">~ㄹ게</span></div></div></li>
+            <li class="lesson"><span class="ln">9</span><div class="lbody"><div class="lt">흔들림</div><div class="pats"><span class="pat">~(으)면 안 되다</span><span class="pat">~았/었나 봐</span></div></div></li>
+            <li class="lesson"><span class="ln">10</span><div class="lbody"><div class="lt">확신</div><div class="pats"><span class="pat">~밖에 안 ~</span><span class="pat">~ㄴ 것 같아</span></div></div></li>
+          </ul></div>
+        </details>
+        <details class="course">
+          <summary><span class="cspan">갈등 &amp; 화해 <span class="cja">対立＆仲直り</span></span><span class="cct">10 レッスン</span></summary>
+          <div class="course-body"><ul class="lessons">
+            <li class="lesson"><span class="ln">1</span><div class="lbody"><div class="lt">다툼</div><div class="pats"><span class="pat">~기 싫다</span><span class="pat">맨날 ~</span></div></div></li>
+            <li class="lesson"><span class="ln">2</span><div class="lbody"><div class="lt">서운함</div><div class="pats"><span class="pat">어떻게 ~ㄹ 수 있어?</span><span class="pat">~아/어서</span></div></div></li>
+            <li class="lesson"><span class="ln">3</span><div class="lbody"><div class="lt">냉전</div><div class="pats"><span class="pat">며칠째 ~</span><span class="pat">~ㄹ 거야?</span></div></div></li>
+            <li class="lesson"><span class="ln">4</span><div class="lbody"><div class="lt">추궁</div><div class="pats"><span class="pat">~아/어 봐</span><span class="pat">~지?</span></div></div></li>
+            <li class="lesson"><span class="ln">5</span><div class="lbody"><div class="lt">오해</div><div class="pats"><span class="pat">~ㄴ 게 아니야</span><span class="pat">~아/어 줄래?</span></div></div></li>
+            <li class="lesson"><span class="ln">6</span><div class="lbody"><div class="lt">폭발</div><div class="pats"><span class="pat">더는 못 ~</span><span class="pat">~ㄹ 거면</span></div></div></li>
+            <li class="lesson"><span class="ln">7</span><div class="lbody"><div class="lt">사과</div><div class="pats"><span class="pat">다시는 ~ㄹ게</span><span class="pat">~(으)면 안 돼?</span></div></div></li>
+            <li class="lesson"><span class="ln">8</span><div class="lbody"><div class="lt">진심</div><div class="pats"><span class="pat">~고 싶었어</span><span class="pat">~ㄹ걸</span></div></div></li>
+            <li class="lesson"><span class="ln">9</span><div class="lbody"><div class="lt">화해</div><div class="pats"><span class="pat">~자</span><span class="pat">~(으)니까</span></div></div></li>
+            <li class="lesson"><span class="ln">10</span><div class="lbody"><div class="lt">이별</div><div class="pats"><span class="pat">~는 게 좋겠어</span><span class="pat">~아/어야 돼</span></div></div></li>
+          </ul></div>
+        </details>
+        <details class="course">
+          <summary><span class="cspan">가족 &amp; 일상 <span class="cja">家族＆日常</span></span><span class="cct">10 レッスン</span></summary>
+          <div class="course-body"><ul class="lessons">
+            <li class="lesson"><span class="ln">1</span><div class="lbody"><div class="lt">잔소리</div><div class="pats"><span class="pat">또 ~?</span><span class="pat">~라고 했지?</span></div></div></li>
+            <li class="lesson"><span class="ln">2</span><div class="lbody"><div class="lt">걱정</div><div class="pats"><span class="pat">~아/어 보이다</span><span class="pat">~고 다니다</span></div></div></li>
+            <li class="lesson"><span class="ln">3</span><div class="lbody"><div class="lt">심부름</div><div class="pats"><span class="pat">~는 김에</span><span class="pat">~다 주다</span></div></div></li>
+            <li class="lesson"><span class="ln">4</span><div class="lbody"><div class="lt">투정</div><div class="pats"><span class="pat">~단 말이야</span><span class="pat">~는 거야?</span></div></div></li>
+            <li class="lesson"><span class="ln">5</span><div class="lbody"><div class="lt">핀잔</div><div class="pats"><span class="pat">~지 말랬잖아</span><span class="pat">~지 그랬어</span></div></div></li>
+            <li class="lesson"><span class="ln">6</span><div class="lbody"><div class="lt">위로</div><div class="pats"><span class="pat">~지 마</span><span class="pat">~ㄹ 테니까</span></div></div></li>
+            <li class="lesson"><span class="ln">7</span><div class="lbody"><div class="lt">응원</div><div class="pats"><span class="pat">~고 있다</span><span class="pat">~(으)면</span></div></div></li>
+            <li class="lesson"><span class="ln">8</span><div class="lbody"><div class="lt">식사</div><div class="pats"><span class="pat">~기 전에</span><span class="pat">~고 싶으면</span></div></div></li>
+            <li class="lesson"><span class="ln">9</span><div class="lbody"><div class="lt">화해</div><div class="pats"><span class="pat">~았/었지?</span><span class="pat">그만 ~자</span></div></div></li>
+            <li class="lesson"><span class="ln">10</span><div class="lbody"><div class="lt">효도</div><div class="pats"><span class="pat">~ㄴ 거 알지?</span><span class="pat">~ㄹ게</span></div></div></li>
+          </ul></div>
+        </details>
+        <details class="course">
+          <summary><span class="cspan">긴장 &amp; 명대사 <span class="cja">緊張＆名台詞</span></span><span class="cct">10 レッスン</span></summary>
+          <div class="course-body"><ul class="lessons">
+            <li class="lesson"><span class="ln">1</span><div class="lbody"><div class="lt">경고</div><div class="pats"><span class="pat">~(으)면</span><span class="pat">~아/어 보여?</span></div></div></li>
+            <li class="lesson"><span class="ln">2</span><div class="lbody"><div class="lt">협박</div><div class="pats"><span class="pat">~는 거야?</span><span class="pat">~게 만들다</span></div></div></li>
+            <li class="lesson"><span class="ln">3</span><div class="lbody"><div class="lt">기싸움</div><div class="pats"><span class="pat">~도 아니다</span><span class="pat">~ㄴ지 알다</span></div></div></li>
+            <li class="lesson"><span class="ln">4</span><div class="lbody"><div class="lt">거래</div><div class="pats"><span class="pat">~는 게 좋을걸</span><span class="pat">~한테 달렸다</span></div></div></li>
+            <li class="lesson"><span class="ln">5</span><div class="lbody"><div class="lt">배신</div><div class="pats"><span class="pat">~ㄹ 줄 몰랐다</span><span class="pat">속담</span></div></div></li>
+            <li class="lesson"><span class="ln">6</span><div class="lbody"><div class="lt">위기</div><div class="pats"><span class="pat">~ㄹ 때가 아니다</span><span class="pat">이러다 ~겠어</span></div></div></li>
+            <li class="lesson"><span class="ln">7</span><div class="lbody"><div class="lt">결심</div><div class="pats"><span class="pat">절대 안 ~</span><span class="pat">~아/어 보다</span></div></div></li>
+            <li class="lesson"><span class="ln">8</span><div class="lbody"><div class="lt">폭로</div><div class="pats"><span class="pat">~고 있었다</span><span class="pat">~ㄹ 필요 없다</span></div></div></li>
+            <li class="lesson"><span class="ln">9</span><div class="lbody"><div class="lt">후회</div><div class="pats"><span class="pat">~지 말았어야 했다</span><span class="pat">~아/어도 소용없다</span></div></div></li>
+            <li class="lesson"><span class="ln">10</span><div class="lbody"><div class="lt">명대사</div><div class="pats"><span class="pat">~(으)면 ~는 거야</span><span class="pat">~ㄹ 수 있을까?</span></div></div></li>
+          </ul></div>
+        </details>
+      </div>
+
+      <!-- 케이팝 -->
+      <div class="cgroup">
+        <div class="cg-title"><span class="dot"></span>케이팝 — K-Pop</div>
+        <p class="cg-sub">推しとファン活について語る — 文法の梯子に、ファンが実際に使うスラングとレジスターを重ねる。</p>
+        <details class="course">
+          <summary><span class="cspan">케이팝 토크 <span class="cja">K-POPトーク</span></span><span class="cct">10 レッスン</span></summary>
+          <div class="course-body"><ul class="lessons">
+            <li class="lesson"><span class="ln">1</span><div class="lbody"><div class="lt">최애 소개</div><div class="pats"><span class="pat">A는 B예요</span><span class="pat">혹시 ~?</span></div></div></li>
+            <li class="lesson"><span class="ln">2</span><div class="lbody"><div class="lt">그룹 소개</div><div class="pats"><span class="pat">~명이에요</span><span class="pat">A가 B예요</span></div></div></li>
+            <li class="lesson"><span class="ln">3</span><div class="lbody"><div class="lt">입덕 계기</div><div class="pats"><span class="pat">~고 (나서)</span><span class="pat">~ㄹ 수가 없다</span></div></div></li>
+            <li class="lesson"><span class="ln">4</span><div class="lbody"><div class="lt">왜 좋아</div><div class="pats"><span class="pat">제일 ~</span><span class="pat">~도 …~고 ~도</span></div></div></li>
+            <li class="lesson"><span class="ln">5</span><div class="lbody"><div class="lt">묘사</div><div class="pats"><span class="pat">~지 않아요?</span><span class="pat">N이/가 + 형용사</span></div></div></li>
+            <li class="lesson"><span class="ln">6</span><div class="lbody"><div class="lt">물어보기</div><div class="pats"><span class="pat">누구예요?</span><span class="pat">무슨 + N</span></div></div></li>
+            <li class="lesson"><span class="ln">7</span><div class="lbody"><div class="lt">취향</div><div class="pats"><span class="pat">~보다 더</span><span class="pat">~ 취향이에요</span></div></div></li>
+            <li class="lesson"><span class="ln">8</span><div class="lbody"><div class="lt">영업</div><div class="pats"><span class="pat">~아/어 보세요</span><span class="pat">~ㄹ 거예요</span></div></div></li>
+            <li class="lesson"><span class="ln">9</span><div class="lbody"><div class="lt">덕질 경험</div><div class="pats"><span class="pat">~았/었어요</span><span class="pat">~도</span></div></div></li>
+            <li class="lesson"><span class="ln">10</span><div class="lbody"><div class="lt">바람</div><div class="pats"><span class="pat">~고 싶어요</span><span class="pat">~(으)면 좋겠어요</span></div></div></li>
+          </ul></div>
+        </details>
+        <details class="course">
+          <summary><span class="cspan">무대 &amp; 감상 <span class="cja">ステージ＆感想</span></span><span class="cct">10 レッスン</span></summary>
+          <div class="course-body"><ul class="lessons">
+            <li class="lesson"><span class="ln">1</span><div class="lbody"><div class="lt">첫 감상</div><div class="pats"><span class="pat">~아/어 봤어?</span><span class="pat">~부터</span></div></div></li>
+            <li class="lesson"><span class="ln">2</span><div class="lbody"><div class="lt">노래 평가</div><div class="pats"><span class="pat">~게 되다</span><span class="pat">중독성 있다</span></div></div></li>
+            <li class="lesson"><span class="ln">3</span><div class="lbody"><div class="lt">무대</div><div class="pats"><span class="pat">장난 아니다</span><span class="pat">~ㄴ데</span></div></div></li>
+            <li class="lesson"><span class="ln">4</span><div class="lbody"><div class="lt">안무</div><div class="pats"><span class="pat">소름 돋다</span><span class="pat">~아/어 보여</span></div></div></li>
+            <li class="lesson"><span class="ln">5</span><div class="lbody"><div class="lt">비주얼</div><div class="pats"><span class="pat">~더라</span><span class="pat">~ 어울리다</span></div></div></li>
+            <li class="lesson"><span class="ln">6</span><div class="lbody"><div class="lt">컴백 반응</div><div class="pats"><span class="pat">완전 ~</span><span class="pat">N 미쳤어</span></div></div></li>
+            <li class="lesson"><span class="ln">7</span><div class="lbody"><div class="lt">비교</div><div class="pats"><span class="pat">~보다 훨씬</span><span class="pat">~ㄴ 것 같아</span></div></div></li>
+            <li class="lesson"><span class="ln">8</span><div class="lbody"><div class="lt">기대</div><div class="pats"><span class="pat">~려나</span><span class="pat">~ㄴ다는 소식</span></div></div></li>
+            <li class="lesson"><span class="ln">9</span><div class="lbody"><div class="lt">추천 평</div><div class="pats"><span class="pat">띵곡</span><span class="pat">~아/어 봐</span></div></div></li>
+            <li class="lesson"><span class="ln">10</span><div class="lbody"><div class="lt">종합 감상</div><div class="pats"><span class="pat">하나도 없다</span><span class="pat">~ㄹ수록</span></div></div></li>
+          </ul></div>
+        </details>
+        <details class="course">
+          <summary><span class="cspan">케이팝 팬 라이프 <span class="cja">ファンライフ</span></span><span class="cct">10 レッスン</span></summary>
+          <div class="course-body"><ul class="lessons">
+            <li class="lesson"><span class="ln">1</span><div class="lbody"><div class="lt">티켓팅</div><div class="pats"><span class="pat">~에 성공하다</span><span class="pat">~아/어서</span></div></div></li>
+            <li class="lesson"><span class="ln">2</span><div class="lbody"><div class="lt">스밍</div><div class="pats"><span class="pat">~아/어야지</span><span class="pat">~려면</span></div></div></li>
+            <li class="lesson"><span class="ln">3</span><div class="lbody"><div class="lt">콘서트 준비</div><div class="pats"><span class="pat">~았/었어?</span><span class="pat">~아/어야 돼</span></div></div></li>
+            <li class="lesson"><span class="ln">4</span><div class="lbody"><div class="lt">콘서트</div><div class="pats"><span class="pat">~자</span><span class="pat">~지 마</span></div></div></li>
+            <li class="lesson"><span class="ln">5</span><div class="lbody"><div class="lt">굿즈</div><div class="pats"><span class="pat">~(이)라</span><span class="pat">~기 전에</span></div></div></li>
+            <li class="lesson"><span class="ln">6</span><div class="lbody"><div class="lt">생일 카페</div><div class="pats"><span class="pat">~기로 했다</span><span class="pat">~려고</span></div></div></li>
+            <li class="lesson"><span class="ln">7</span><div class="lbody"><div class="lt">최애 자랑</div><div class="pats"><span class="pat">잘나가다</span><span class="pat">~게 되다</span></div></div></li>
+            <li class="lesson"><span class="ln">8</span><div class="lbody"><div class="lt">덕메</div><div class="pats"><span class="pat">~도</span><span class="pat">~(으)니까</span></div></div></li>
+            <li class="lesson"><span class="ln">9</span><div class="lbody"><div class="lt">현생 vs 덕질</div><div class="pats"><span class="pat">~ 때문에</span><span class="pat">못 ~겠다</span></div></div></li>
+            <li class="lesson"><span class="ln">10</span><div class="lbody"><div class="lt">영업 멘트</div><div class="pats"><span class="pat">일단 ~부터</span><span class="pat">~기만 하면</span></div></div></li>
+          </ul></div>
+        </details>
+        <details class="course">
+          <summary><span class="cspan">온라인 팬덤 <span class="cja">オンラインファンダム</span></span><span class="cct">10 レッスン</span></summary>
+          <div class="course-body"><ul class="lessons">
+            <li class="lesson"><span class="ln">1</span><div class="lbody"><div class="lt">맞팔</div><div class="pats"><span class="pat">~ㄹ래?</span><span class="pat">~아/어서</span></div></div></li>
+            <li class="lesson"><span class="ln">2</span><div class="lbody"><div class="lt">실트</div><div class="pats"><span class="pat">1위야</span><span class="pat">~길래</span></div></div></li>
+            <li class="lesson"><span class="ln">3</span><div class="lbody"><div class="lt">댓글</div><div class="pats"><span class="pat">~더라</span><span class="pat">~는 게 낫다</span></div></div></li>
+            <li class="lesson"><span class="ln">4</span><div class="lbody"><div class="lt">떡밥</div><div class="pats"><span class="pat">~았/었어?</span><span class="pat">~자마자</span></div></div></li>
+            <li class="lesson"><span class="ln">5</span><div class="lbody"><div class="lt">짤 &amp; 움짤</div><div class="pats"><span class="pat">~아/어서</span><span class="pat">~아/어도 돼?</span></div></div></li>
+            <li class="lesson"><span class="ln">6</span><div class="lbody"><div class="lt">스포</div><div class="pats"><span class="pat">~기 전에</span><span class="pat">~지 마</span></div></div></li>
+            <li class="lesson"><span class="ln">7</span><div class="lbody"><div class="lt">입덕 인증</div><div class="pats"><span class="pat">~는 중이야</span><span class="pat">~ㄹ 줄 알았다</span></div></div></li>
+            <li class="lesson"><span class="ln">8</span><div class="lbody"><div class="lt">굿즈 거래</div><div class="pats"><span class="pat">~ 가능해요?</span><span class="pat">얼마예요?</span></div></div></li>
+            <li class="lesson"><span class="ln">9</span><div class="lbody"><div class="lt">온라인 반응</div><div class="pats"><span class="pat">~는 듯</span><span class="pat">취향저격</span></div></div></li>
+            <li class="lesson"><span class="ln">10</span><div class="lbody"><div class="lt">디엠 &amp; 카톡</div><div class="pats"><span class="pat">ㅇㅇ / ㅋㅋ</span><span class="pat">ㄹㅇ / 인정</span></div></div></li>
+          </ul></div>
+        </details>
+      </div>
+
+      <!-- 여행 -->
+      <div class="cgroup">
+        <div class="cg-title"><span class="dot"></span>여행 — Travel</div>
+        <p class="cg-sub">韓国旅行を場面ごとに乗り切る — 窓口や街角のリアルな会話からパターンを抽出。</p>
+        <details class="course">
+          <summary><span class="cspan">길 &amp; 교통 <span class="cja">道案内＆交通</span></span><span class="cct">10 レッスン</span></summary>
+          <div class="course-body"><ul class="lessons">
+            <li class="lesson"><span class="ln">1</span><div class="lbody"><div class="lt">길 묻기</div><div class="pats"><span class="pat">~이/가 어디예요?</span><span class="pat">~ㄹ 수 있어요?</span></div></div></li>
+            <li class="lesson"><span class="ln">2</span><div class="lbody"><div class="lt">방향</div><div class="pats"><span class="pat">~(으)면 돼요?</span><span class="pat">~아/어서</span></div></div></li>
+            <li class="lesson"><span class="ln">3</span><div class="lbody"><div class="lt">거리</div><div class="pats"><span class="pat">얼마나 ~?</span><span class="pat">~ㄹ 만하다</span></div></div></li>
+            <li class="lesson"><span class="ln">4</span><div class="lbody"><div class="lt">지하철</div><div class="pats"><span class="pat">~아/어야 돼요?</span><span class="pat">어디서 ~?</span></div></div></li>
+            <li class="lesson"><span class="ln">5</span><div class="lbody"><div class="lt">버스</div><div class="pats"><span class="pat">~ 가요?</span><span class="pat">~ㄹ 때</span></div></div></li>
+            <li class="lesson"><span class="ln">6</span><div class="lbody"><div class="lt">택시</div><div class="pats"><span class="pat">~까지 가 주세요</span><span class="pat">여기서 ~</span></div></div></li>
+            <li class="lesson"><span class="ln">7</span><div class="lbody"><div class="lt">길 잃음</div><div class="pats"><span class="pat">~ㄴ 것 같아요</span><span class="pat">어떻게 가요?</span></div></div></li>
+            <li class="lesson"><span class="ln">8</span><div class="lbody"><div class="lt">시간 묻기</div><div class="pats"><span class="pat">몇 시예요?</span><span class="pat">~(으)면 어떡하죠?</span></div></div></li>
+            <li class="lesson"><span class="ln">9</span><div class="lbody"><div class="lt">교통카드</div><div class="pats"><span class="pat">~려고요</span><span class="pat">~ 같은 거 있어요?</span></div></div></li>
+            <li class="lesson"><span class="ln">10</span><div class="lbody"><div class="lt">도움 요청</div><div class="pats"><span class="pat">~아/어도 될까요?</span><span class="pat">~아/어 주실 수 있어요?</span></div></div></li>
+          </ul></div>
+        </details>
+        <details class="course">
+          <summary><span class="cspan">먹고 마시기 <span class="cja">食事＆カフェ</span></span><span class="cct">10 レッスン</span></summary>
+          <div class="course-body"><ul class="lessons">
+            <li class="lesson"><span class="ln">1</span><div class="lbody"><div class="lt">자리 잡기</div><div class="pats"><span class="pat">~ㄴ데</span><span class="pat">~아/어도 돼요?</span></div></div></li>
+            <li class="lesson"><span class="ln">2</span><div class="lbody"><div class="lt">주문하기</div><div class="pats"><span class="pat">~ 주세요</span><span class="pat">~(으)로 할게요</span></div></div></li>
+            <li class="lesson"><span class="ln">3</span><div class="lbody"><div class="lt">메뉴 묻기</div><div class="pats"><span class="pat">뭐가 제일 ~?</span><span class="pat">~아/어요?</span></div></div></li>
+            <li class="lesson"><span class="ln">4</span><div class="lbody"><div class="lt">추가 요청</div><div class="pats"><span class="pat">~게 해 주세요</span><span class="pat">~아/어 주세요</span></div></div></li>
+            <li class="lesson"><span class="ln">5</span><div class="lbody"><div class="lt">카페</div><div class="pats"><span class="pat">~ 잔 주세요</span><span class="pat">~ 되나요?</span></div></div></li>
+            <li class="lesson"><span class="ln">6</span><div class="lbody"><div class="lt">요청사항</div><div class="pats"><span class="pat">~아/어 주실 수 있어요?</span><span class="pat">~ 돼요?</span></div></div></li>
+            <li class="lesson"><span class="ln">7</span><div class="lbody"><div class="lt">맛 평가</div><div class="pats"><span class="pat">~다</span><span class="pat">생각보다 ~</span></div></div></li>
+            <li class="lesson"><span class="ln">8</span><div class="lbody"><div class="lt">문제</div><div class="pats"><span class="pat">~ㄴ 게 ~</span><span class="pat">~ㄴ데요</span></div></div></li>
+            <li class="lesson"><span class="ln">9</span><div class="lbody"><div class="lt">계산</div><div class="pats"><span class="pat">어디서 ~?</span><span class="pat">~ㄹ 수 있어요?</span></div></div></li>
+            <li class="lesson"><span class="ln">10</span><div class="lbody"><div class="lt">마무리</div><div class="pats"><span class="pat">잘 먹었습니다</span><span class="pat">~네요</span></div></div></li>
+          </ul></div>
+        </details>
+        <details class="course">
+          <summary><span class="cspan">쇼핑 &amp; 계산 <span class="cja">買い物＆会計</span></span><span class="cct">10 レッスン</span></summary>
+          <div class="course-body"><ul class="lessons">
+            <li class="lesson"><span class="ln">1</span><div class="lbody"><div class="lt">둘러보기</div><div class="pats"><span class="pat">~ㄹ게요</span><span class="pat">~아/어도 돼요?</span></div></div></li>
+            <li class="lesson"><span class="ln">2</span><div class="lbody"><div class="lt">찾기</div><div class="pats"><span class="pat">~ 있어요?</span><span class="pat">~ㄹ 수 있어요?</span></div></div></li>
+            <li class="lesson"><span class="ln">3</span><div class="lbody"><div class="lt">입어 보기</div><div class="pats"><span class="pat">~아/어 봐도 돼요?</span><span class="pat">어디예요?</span></div></div></li>
+            <li class="lesson"><span class="ln">4</span><div class="lbody"><div class="lt">가격 묻기</div><div class="pats"><span class="pat">얼마예요?</span><span class="pat">~는 거예요?</span></div></div></li>
+            <li class="lesson"><span class="ln">5</span><div class="lbody"><div class="lt">흥정</div><div class="pats"><span class="pat">~(으)면 안 돼요?</span><span class="pat">~(으)면</span></div></div></li>
+            <li class="lesson"><span class="ln">6</span><div class="lbody"><div class="lt">고민</div><div class="pats"><span class="pat">~아/어 볼게요</span><span class="pat">뭐가 더 ~?</span></div></div></li>
+            <li class="lesson"><span class="ln">7</span><div class="lbody"><div class="lt">결제</div><div class="pats"><span class="pat">~(으)로 ~ㄹ게요</span><span class="pat">~ 되나요?</span></div></div></li>
+            <li class="lesson"><span class="ln">8</span><div class="lbody"><div class="lt">영수증 &amp; 포장</div><div class="pats"><span class="pat">~ 주세요</span><span class="pat">~ 돼요?</span></div></div></li>
+            <li class="lesson"><span class="ln">9</span><div class="lbody"><div class="lt">교환 &amp; 환불</div><div class="pats"><span class="pat">~ 가능해요?</span><span class="pat">~ㄹ 수 있어요?</span></div></div></li>
+            <li class="lesson"><span class="ln">10</span><div class="lbody"><div class="lt">면세 &amp; 택스리펀</div><div class="pats"><span class="pat">~도 ~?</span><span class="pat">어떻게 받아요?</span></div></div></li>
+          </ul></div>
+        </details>
+        <details class="course">
+          <summary><span class="cspan">숙소 &amp; 문제 해결 <span class="cja">宿泊＆トラブル</span></span><span class="cct">10 レッスン</span></summary>
+          <div class="course-body"><ul class="lessons">
+            <li class="lesson"><span class="ln">1</span><div class="lbody"><div class="lt">체크인</div><div class="pats"><span class="pat">~(으)려고 하는데요</span><span class="pat">~(으)로 했어요</span></div></div></li>
+            <li class="lesson"><span class="ln">2</span><div class="lbody"><div class="lt">요청</div><div class="pats"><span class="pat">~아/어 주실 수 있어요?</span><span class="pat">~이/가 뭐예요?</span></div></div></li>
+            <li class="lesson"><span class="ln">3</span><div class="lbody"><div class="lt">시설 묻기</div><div class="pats"><span class="pat">몇 시부터예요?</span><span class="pat">~ㄹ 수 있을까요?</span></div></div></li>
+            <li class="lesson"><span class="ln">4</span><div class="lbody"><div class="lt">객실 문제</div><div class="pats"><span class="pat">~이/가 안 돼요</span><span class="pat">~ㄹ 수 있을까요?</span></div></div></li>
+            <li class="lesson"><span class="ln">5</span><div class="lbody"><div class="lt">소음 &amp; 불편</div><div class="pats"><span class="pat">~ㄴ데요</span><span class="pat">~고 싶어요</span></div></div></li>
+            <li class="lesson"><span class="ln">6</span><div class="lbody"><div class="lt">체크아웃</div><div class="pats"><span class="pat">~려고요</span><span class="pat">~아/어도 돼요?</span></div></div></li>
+            <li class="lesson"><span class="ln">7</span><div class="lbody"><div class="lt">물건 잃음</div><div class="pats"><span class="pat">~ㄴ 것 같아요</span><span class="pat">~ 있어요?</span></div></div></li>
+            <li class="lesson"><span class="ln">8</span><div class="lbody"><div class="lt">아플 때</div><div class="pats"><span class="pat">어디 있어요?</span><span class="pat">~아/어서요</span></div></div></li>
+            <li class="lesson"><span class="ln">9</span><div class="lbody"><div class="lt">긴급 상황</div><div class="pats"><span class="pat">~아/어 주세요</span><span class="pat">어떻게 ~아/어야 돼요?</span></div></div></li>
+            <li class="lesson"><span class="ln">10</span><div class="lbody"><div class="lt">부탁 &amp; 감사</div><div class="pats"><span class="pat">덕분에 ~</span><span class="pat">~ㄹ게요</span></div></div></li>
+          </ul></div>
+        </details>
+      </div>
+
+      <!-- 반말 수다 -->
+      <div class="cgroup">
+        <div class="cg-title"><span class="dot"></span>반말 수다 — Casual Chat (Banmal)</div>
+        <p class="cg-sub">親しい友だちが実際に使うタメ口 — 요を外すところからスラング・カカオトークまで。</p>
+        <details class="course">
+          <summary><span class="cspan">반말 기초 <span class="cja">タメ口の基礎</span></span><span class="cct">10 レッスン</span></summary>
+          <div class="course-body"><ul class="lessons">
+            <li class="lesson"><span class="ln">1</span><div class="lbody"><div class="lt">요 떼기</div><div class="pats"><span class="pat">~아/어 (요 떼기)</span><span class="pat">~았/었어?</span></div></div></li>
+            <li class="lesson"><span class="ln">2</span><div class="lbody"><div class="lt">예요 → 야/이야</div><div class="pats"><span class="pat">~야/이야</span><span class="pat">~야</span></div></div></li>
+            <li class="lesson"><span class="ln">3</span><div class="lbody"><div class="lt">응 / 아니</div><div class="pats"><span class="pat">응 / 어</span><span class="pat">아니</span></div></div></li>
+            <li class="lesson"><span class="ln">4</span><div class="lbody"><div class="lt">이름 부르기</div><div class="pats"><span class="pat">이름+아/야</span><span class="pat">야 / 너</span></div></div></li>
+            <li class="lesson"><span class="ln">5</span><div class="lbody"><div class="lt">질문하기</div><div class="pats"><span class="pat">뭐 해?</span><span class="pat">누구 거야?</span></div></div></li>
+            <li class="lesson"><span class="ln">6</span><div class="lbody"><div class="lt">권유</div><div class="pats"><span class="pat">~ㄹ래?</span><span class="pat">~자</span></div></div></li>
+            <li class="lesson"><span class="ln">7</span><div class="lbody"><div class="lt">부탁</div><div class="pats"><span class="pat">~아/어 줘</span><span class="pat">~아/어 봐</span></div></div></li>
+            <li class="lesson"><span class="ln">8</span><div class="lbody"><div class="lt">미래</div><div class="pats"><span class="pat">~ㄹ게</span><span class="pat">~ㄹ 거야</span></div></div></li>
+            <li class="lesson"><span class="ln">9</span><div class="lbody"><div class="lt">부정</div><div class="pats"><span class="pat">안 ~</span><span class="pat">못 ~</span></div></div></li>
+            <li class="lesson"><span class="ln">10</span><div class="lbody"><div class="lt">의무 &amp; 제안</div><div class="pats"><span class="pat">~아/어야 돼</span><span class="pat">~ㄹ까?</span></div></div></li>
+          </ul></div>
+        </details>
+        <details class="course">
+          <summary><span class="cspan">수다 &amp; 안부 <span class="cja">おしゃべり＆近況</span></span><span class="cct">10 レッスン</span></summary>
+          <div class="course-body"><ul class="lessons">
+            <li class="lesson"><span class="ln">1</span><div class="lbody"><div class="lt">안부</div><div class="pats"><span class="pat">오랜만이다</span><span class="pat">어떻게 지내?</span></div></div></li>
+            <li class="lesson"><span class="ln">2</span><div class="lbody"><div class="lt">근황</div><div class="pats"><span class="pat">~고 지내다</span><span class="pat">별일 없지?</span></div></div></li>
+            <li class="lesson"><span class="ln">3</span><div class="lbody"><div class="lt">약속 잡기</div><div class="pats"><span class="pat">~ㄹ까?</span><span class="pat">~ㄹ래?</span></div></div></li>
+            <li class="lesson"><span class="ln">4</span><div class="lbody"><div class="lt">약속 조율</div><div class="pats"><span class="pat">~ㄴ데, ~ 어때?</span><span class="pat">~(으)면</span></div></div></li>
+            <li class="lesson"><span class="ln">5</span><div class="lbody"><div class="lt">수다</div><div class="pats"><span class="pat">~는지 알아?</span><span class="pat">어떻게 됐어?</span></div></div></li>
+            <li class="lesson"><span class="ln">6</span><div class="lbody"><div class="lt">불평</div><div class="pats"><span class="pat">~고 싶다</span><span class="pat">~아/어 죽겠어</span></div></div></li>
+            <li class="lesson"><span class="ln">7</span><div class="lbody"><div class="lt">고민 상담</div><div class="pats"><span class="pat">~ 있어</span><span class="pat">~ㄹ 것 같아</span></div></div></li>
+            <li class="lesson"><span class="ln">8</span><div class="lbody"><div class="lt">부탁</div><div class="pats"><span class="pat">~아/어 줄래?</span><span class="pat">~아/어 줄 수 있어?</span></div></div></li>
+            <li class="lesson"><span class="ln">9</span><div class="lbody"><div class="lt">자랑</div><div class="pats"><span class="pat">~았/었다?</span><span class="pat">~지 뭐야</span></div></div></li>
+            <li class="lesson"><span class="ln">10</span><div class="lbody"><div class="lt">헤어질 때</div><div class="pats"><span class="pat">~아/어야겠다</span><span class="pat">또 보자</span></div></div></li>
+          </ul></div>
+        </details>
+        <details class="course">
+          <summary><span class="cspan">리액션 &amp; 맞장구 <span class="cja">リアクション＆相槌</span></span><span class="cct">10 レッスン</span></summary>
+          <div class="course-body"><ul class="lessons">
+            <li class="lesson"><span class="ln">1</span><div class="lbody"><div class="lt">놀람</div><div class="pats"><span class="pat">헐</span><span class="pat">말도 안 돼</span></div></div></li>
+            <li class="lesson"><span class="ln">2</span><div class="lbody"><div class="lt">공감</div><div class="pats"><span class="pat">내 말이</span><span class="pat">완전 공감</span></div></div></li>
+            <li class="lesson"><span class="ln">3</span><div class="lbody"><div class="lt">위로 리액션</div><div class="pats"><span class="pat">~았/었겠다</span><span class="pat">~겠다</span></div></div></li>
+            <li class="lesson"><span class="ln">4</span><div class="lbody"><div class="lt">감탄</div><div class="pats"><span class="pat">어떻게 ~?</span><span class="pat">~다 (감탄)</span></div></div></li>
+            <li class="lesson"><span class="ln">5</span><div class="lbody"><div class="lt">맞장구</div><div class="pats"><span class="pat">~는데?</span><span class="pat">뭐래?</span></div></div></li>
+            <li class="lesson"><span class="ln">6</span><div class="lbody"><div class="lt">놀리기</div><div class="pats"><span class="pat">또 ~네</span><span class="pat">못 말리다</span></div></div></li>
+            <li class="lesson"><span class="ln">7</span><div class="lbody"><div class="lt">빈정 &amp; 장난</div><div class="pats"><span class="pat">잘한다 (반어)</span><span class="pat">어이없다</span></div></div></li>
+            <li class="lesson"><span class="ln">8</span><div class="lbody"><div class="lt">부드러운 반박</div><div class="pats"><span class="pat">~ㄴ 것 같은데</span><span class="pat">~지 (반박)</span></div></div></li>
+            <li class="lesson"><span class="ln">9</span><div class="lbody"><div class="lt">강조 리액션</div><div class="pats"><span class="pat">완전 ~</span><span class="pat">너무 ~</span></div></div></li>
+            <li class="lesson"><span class="ln">10</span><div class="lbody"><div class="lt">추임새</div><div class="pats"><span class="pat">그저 그래</span><span class="pat">뭐랄까</span></div></div></li>
+          </ul></div>
+        </details>
+        <details class="course">
+          <summary><span class="cspan">슬랭 &amp; 카톡 <span class="cja">スラング＆カカオトーク</span></span><span class="cct">10 レッスン</span></summary>
+          <div class="course-body"><ul class="lessons">
+            <li class="lesson"><span class="ln">1</span><div class="lbody"><div class="lt">재미 슬랭</div><div class="pats"><span class="pat">꿀잼</span><span class="pat">핵노잼</span></div></div></li>
+            <li class="lesson"><span class="ln">2</span><div class="lbody"><div class="lt">칭찬 슬랭</div><div class="pats"><span class="pat">짱</span><span class="pat">쩐다</span></div></div></li>
+            <li class="lesson"><span class="ln">3</span><div class="lbody"><div class="lt">감정 슬랭</div><div class="pats"><span class="pat">개~</span><span class="pat">현타 오다</span></div></div></li>
+            <li class="lesson"><span class="ln">4</span><div class="lbody"><div class="lt">사람 표현</div><div class="pats"><span class="pat">인싸 / 아싸</span><span class="pat">츤데레</span></div></div></li>
+            <li class="lesson"><span class="ln">5</span><div class="lbody"><div class="lt">상황 슬랭</div><div class="pats"><span class="pat">갑분싸</span><span class="pat">멘붕</span></div></div></li>
+            <li class="lesson"><span class="ln">6</span><div class="lbody"><div class="lt">줄임말</div><div class="pats"><span class="pat">별다줄</span><span class="pat">만반잘부</span></div></div></li>
+            <li class="lesson"><span class="ln">7</span><div class="lbody"><div class="lt">카톡 기본</div><div class="pats"><span class="pat">ㅇㅇ / ㄴㄴ</span><span class="pat">ㄹㅇ</span></div></div></li>
+            <li class="lesson"><span class="ln">8</span><div class="lbody"><div class="lt">카톡 리액션</div><div class="pats"><span class="pat">ㅋㅋ</span><span class="pat">ㅠㅠ</span></div></div></li>
+            <li class="lesson"><span class="ln">9</span><div class="lbody"><div class="lt">카톡 약속</div><div class="pats"><span class="pat">ㄱㄱ</span><span class="pat">ㅇㅋ</span></div></div></li>
+            <li class="lesson"><span class="ln">10</span><div class="lbody"><div class="lt">답장 표현</div><div class="pats"><span class="pat">ㅈㅅ</span><span class="pat">실화냐?</span></div></div></li>
+          </ul></div>
+        </details>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STAGE 4 · ADVANCED FREETALKING -->
+  <section class="stage ongoing">
+    <div class="stage-head">
+      <div class="stage-no">4</div>
+      <div class="stage-meta">
+        <h2>고급 프리토킹 <span class="ja">Advanced Freetalking</span></h2>
+        <p class="desc">新しい文法はなし — ただ「話したくなるテーマ」を。各テーマは1セッション完結。<strong>終わりのないトラック — トピックを継続追加していく。</strong></p>
+      </div>
+      <span class="stage-count">5 テーマ · 30 トピック · 継続追加 ∞</span>
+    </div>
+    <div class="stage-body">
+
+      <div class="cgroup">
+        <div class="cg-title"><span class="dot"></span>가치관 &amp; 인생 — Values &amp; Life</div>
+        <p class="cg-sub">どう生きたいか — その人らしさが出る問い。</p>
+        <details class="course">
+          <summary><span class="cspan">6 トピック <span class="cja">成功・お金と時間・後悔・バケットリスト・ワラベル・歳をとること</span></span><span class="cct">セッション</span></summary>
+          <div class="course-body"><ul class="lessons">
+            <li class="lesson"><span class="ln">1</span><div class="lbody"><div class="lt">성공이란? <span class="ja">私にとっての成功とは</span></div></div></li>
+            <li class="lesson"><span class="ln">2</span><div class="lbody"><div class="lt">돈 vs 시간 <span class="ja">どちらか一つだけなら</span></div></div></li>
+            <li class="lesson"><span class="ln">3</span><div class="lbody"><div class="lt">후회 없는 삶 <span class="ja">戻れるなら変えたい選択</span></div></div></li>
+            <li class="lesson"><span class="ln">4</span><div class="lbody"><div class="lt">버킷리스트 <span class="ja">死ぬ前にやりたいこと</span></div></div></li>
+            <li class="lesson"><span class="ln">5</span><div class="lbody"><div class="lt">일과 삶의 균형 <span class="ja">ワークライフバランスは可能か</span></div></div></li>
+            <li class="lesson"><span class="ln">6</span><div class="lbody"><div class="lt">나이 든다는 것 <span class="ja">歳をとるとは何か</span></div></div></li>
+          </ul></div>
+        </details>
+      </div>
+
+      <div class="cgroup">
+        <div class="cg-title"><span class="dot"></span>사회 &amp; 이슈 — Society &amp; Issues</div>
+        <p class="cg-sub">ライトな討論 — 立場を選んで主張する。</p>
+        <details class="course">
+          <summary><span class="cspan">6 トピック <span class="cja">SNS・AIと仕事・環境・在宅勤務・結婚・教育競争</span></span><span class="cct">セッション</span></summary>
+          <div class="course-body"><ul class="lessons">
+            <li class="lesson"><span class="ln">1</span><div class="lbody"><div class="lt">SNS의 빛과 그림자 <span class="ja">繋がった？孤独になった？</span></div></div></li>
+            <li class="lesson"><span class="ln">2</span><div class="lbody"><div class="lt">AI와 일자리 <span class="ja">消える仕事・残る仕事</span></div></div></li>
+            <li class="lesson"><span class="ln">3</span><div class="lbody"><div class="lt">환경 vs 편리함 <span class="ja">不便を受け入れられるか</span></div></div></li>
+            <li class="lesson"><span class="ln">4</span><div class="lbody"><div class="lt">재택 vs 출근 <span class="ja">どこで働くと捗るか</span></div></div></li>
+            <li class="lesson"><span class="ln">5</span><div class="lbody"><div class="lt">결혼은 필수일까? <span class="ja">非婚という選択</span></div></div></li>
+            <li class="lesson"><span class="ln">6</span><div class="lbody"><div class="lt">교육 경쟁 <span class="ja">塾はどこまでが適切か</span></div></div></li>
+          </ul></div>
+        </details>
+      </div>
+
+      <div class="cgroup">
+        <div class="cg-title"><span class="dot"></span>문화 &amp; 취향 — Culture &amp; Taste</div>
+        <p class="cg-sub">楽しいレーン — 何が好きで、なぜ好きか。</p>
+        <details class="course">
+          <summary><span class="cspan">6 トピック <span class="cja">人生の映画・K-コンテンツ・旅行スタイル・食の好み・プレイリスト・趣味</span></span><span class="cct">セッション</span></summary>
+          <div class="course-body"><ul class="lessons">
+            <li class="lesson"><span class="ln">1</span><div class="lbody"><div class="lt">인생 영화 <span class="ja">何度観てもいい作品</span></div></div></li>
+            <li class="lesson"><span class="ln">2</span><div class="lbody"><div class="lt">K-콘텐츠의 매력 <span class="ja">なぜ世界が夢中になったか</span></div></div></li>
+            <li class="lesson"><span class="ln">3</span><div class="lbody"><div class="lt">여행 스타일 <span class="ja">計画派 vs 即興派</span></div></div></li>
+            <li class="lesson"><span class="ln">4</span><div class="lbody"><div class="lt">음식 취향 <span class="ja">絶対無理／ないと困る</span></div></div></li>
+            <li class="lesson"><span class="ln">5</span><div class="lbody"><div class="lt">나의 플레이리스트 <span class="ja">無限リピート中の曲</span></div></div></li>
+            <li class="lesson"><span class="ln">6</span><div class="lbody"><div class="lt">취미 부심 <span class="ja">人は知らない趣味の魅力</span></div></div></li>
+          </ul></div>
+        </details>
+      </div>
+
+      <div class="cgroup">
+        <div class="cg-title"><span class="dot"></span>관계 &amp; 감정 — Relationships &amp; Feelings</div>
+        <p class="cg-sub">パーソナルなレーン — 友だち、家族、その間の感情。</p>
+        <details class="course">
+          <summary><span class="cspan">6 トピック <span class="cja">本当の友だち・第一印象・MBTI・家族との距離・喧嘩と仲直り・一人 vs 一緒</span></span><span class="cct">セッション</span></summary>
+          <div class="course-body"><ul class="lessons">
+            <li class="lesson"><span class="ln">1</span><div class="lbody"><div class="lt">진짜 친구란? <span class="ja">友だちの条件</span></div></div></li>
+            <li class="lesson"><span class="ln">2</span><div class="lbody"><div class="lt">첫인상 vs 끝인상 <span class="ja">人を判断する方法</span></div></div></li>
+            <li class="lesson"><span class="ln">3</span><div class="lbody"><div class="lt">MBTI, 믿어? <span class="ja">性格タイプ、どこまで本気</span></div></div></li>
+            <li class="lesson"><span class="ln">4</span><div class="lbody"><div class="lt">가족과의 거리 <span class="ja">近いほど難しい間柄</span></div></div></li>
+            <li class="lesson"><span class="ln">5</span><div class="lbody"><div class="lt">싸우고 화해하는 법 <span class="ja">自分なりのやり方</span></div></div></li>
+            <li class="lesson"><span class="ln">6</span><div class="lbody"><div class="lt">혼자 vs 같이 <span class="ja">一人ご飯・映画・旅</span></div></div></li>
+          </ul></div>
+        </details>
+      </div>
+
+      <div class="cgroup">
+        <div class="cg-title"><span class="dot"></span>미래 &amp; 상상 — Future &amp; Imagination</div>
+        <p class="cg-sub">「もしも」のレーン — みんなが話したくなる仮定。</p>
+        <details class="course">
+          <summary><span class="cspan">6 トピック <span class="cja">宝くじ・タイムマシン・無人島・超能力・10年後の私・一日だけ他人</span></span><span class="cct">セッション</span></summary>
+          <div class="course-body"><ul class="lessons">
+            <li class="lesson"><span class="ln">1</span><div class="lbody"><div class="lt">로또 1등에 당첨된다면 <span class="ja">まず何をする</span></div></div></li>
+            <li class="lesson"><span class="ln">2</span><div class="lbody"><div class="lt">타임머신이 있다면 <span class="ja">過去へ？未来へ？</span></div></div></li>
+            <li class="lesson"><span class="ln">3</span><div class="lbody"><div class="lt">무인도에 세 가지 <span class="ja">三つだけ持っていくなら</span></div></div></li>
+            <li class="lesson"><span class="ln">4</span><div class="lbody"><div class="lt">초능력 하나 <span class="ja">どんな能力が欲しい</span></div></div></li>
+            <li class="lesson"><span class="ln">5</span><div class="lbody"><div class="lt">10년 후의 나 <span class="ja">どこで何をしている</span></div></div></li>
+            <li class="lesson"><span class="ln">6</span><div class="lbody"><div class="lt">하루만 다른 사람이 된다면 <span class="ja">誰の人生を生きてみる</span></div></div></li>
+          </ul></div>
+        </details>
+      </div>
+
+    </div>
+  </section>
+
+  <p class="footer-note">
+    한글 11 · 초급 패턴 53（106 パターン）で <strong>120パターンの土台</strong>を固め、中급 표현 160レッスンで実戦に広げ、고급 프리토킹で会話を<strong>無限に</strong>育てていく。<br>
+    出典：各トラックの <code>table-of-contents.md</code>（1-hangul-teaching · 2-beginner-patterns · 3-intermediate-expressions · 4-advanced-freetalking）。
+  </p>
+
+</div>
+</body>
+</html>
