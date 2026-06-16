@@ -4,3 +4,4 @@ node_modules/
 
 # Local source PDFs for Dekiru Kankokugo materials.
 korean/**/dekiru-kankokugo/*.pdf
+/korean/0-textbooks-references/temo/테모-회화
