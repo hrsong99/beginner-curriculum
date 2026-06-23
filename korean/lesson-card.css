@@ -209,8 +209,49 @@ h1 .title-ja,
   overflow: hidden;
 }
 
+/* worksheet: a plain (borderless) wrapper so the write-in blanks sit
+   directly in the section — never a box inside a box */
 .worksheet {
-  padding: 28px;
+  margin-top: 24px;
+}
+
+/* ---------- big letter teaching blocks ---------- */
+/* when the lesson teaches the letters themselves, each letter is the
+   hero: one full-width block (big glyph + a short sound hint), stacked
+   one per row. the .letter-row wrapper has no border, so the only boxes
+   are the section card + each letter block — two levels, never nested. */
+.letter-row {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.letter-card {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 16px 26px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.letter-card > .korean {
+  flex: 0 0 1.5em;
+  font-size: 50px;
+  line-height: 1;
+  font-weight: 800;
+  text-align: center;
+}
+
+.letter-card > .english,
+.letter-card > .translation {
+  flex: 1 1 auto;
+  margin: 0;
+  color: #575753;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 600;
 }
 
 .task-block {
