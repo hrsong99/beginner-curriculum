@@ -1,288 +1,300 @@
-# Beginner → Intermediate Pattern Curriculum — Table of Contents
+# 초급 → 중급 문법 패턴 커리큘럼 — 목차
 
-The grammar **spine** of the Korean course — the patterns every learner needs before the content-driven situational tracks make sense. Sequenced low load → high, modeled on the order of *できる韓国語 初級1* (`0-textbooks-references/dekiru-kankokugo/dekiru-kankokugo-1-pattern-map.md`), then extended well past the textbook to bridge into the **Intermediate Expressions** track — through irregular conjugations, the full connector set, reported speech, and 반말.
+한국어 과정의 **핵심 문법 뼈대(Grammar spine)** — 학습자가 내용 중심의 상황별 회화 트랙을 이해하기 전에 반드시 알아야 할 패턴들입니다. 인지 부하가 낮은 것에서 높은 것 순으로 배열되었으며, *できる韓国語 初級1* (`0-textbooks-references/dekiru-kankokugo/dekiru-kankokugo-1-pattern-map.md`)의 순서를 모델로 삼았습니다. 교재의 범위를 넘어 **중급 표현** 트랙으로 자연스럽게 이어질 수 있도록 불규칙 활용, 접속사 전체, 간접 화법, 반말까지 확장했습니다.
 
-Each lesson teaches **two patterns**. Every pattern is introduced by one natural line that *uses* it — the line is the hook, the pattern is the takeaway. Patterns build strictly on earlier ones, so a line late in the book only ever contains words and endings already taught.
+각 과에서는 **두 개의 패턴**을 가르칩니다. 모든 패턴은 실제 사용되는 자연스러운 문장 하나로 도입됩니다. 이 문장이 주의를 끄는 훅(hook) 역할을 하고, 패턴이 실제 학습 내용이 됩니다. 철저하게 이전에 배운 내용을 바탕으로 구성되므로, 후반부에 등장하는 문장도 항상 이미 배운 단어와 어미만으로 이루어집니다.
 
-> One idea per page, **2 lines + their patterns per lesson**, practiced receptive → productive. Audience: **Japanese learners** — support text in Japanese, no English. Where a pattern reappears in the situational tracks (drama, K-pop, travel…), it is taught *here* first.
+> 한 페이지에 하나의 핵심, **1과당 2개의 문장과 패턴**, 이해(Receptive)에서 발화(Productive) 순으로 연습. 대상: **일본인 학습자** — 설명은 일본어로 제공 (영어 없음). 드라마, K-pop, 여행 등 상황별 트랙에 등장하는 패턴은 무조건 *이 커리큘럼에서* 먼저 학습합니다.
 
-**9 units · 53 lessons · 106 patterns.** A review checkpoint closes each unit. Lessons 1–48 carry the learner through full polite-speech grammar; the final unit steps into 반말 so the situational tracks have a foundation to stand on.
-
----
-
-## Unit 1 · 첫 문장 — Naming Things · 6 lessons
-*The copula and existence — saying what something is, isn't, and whether it's there.*
-
-**1. 저는 일본 사람입니다 — Introductions**
-- 저는 일본 사람입니다. — `N입니다 / 입니까?` (formal "is / is it?")
-- 다나카 씨는 학생입니까? — `은/는` (topic particle "は")
-
-**2. 학생이 아닙니다 — What it isn't**
-- 저는 중국 사람이 아닙니다. — `N이/가 아닙니다` (is not)
-- 저 사람이 선생님입니다. — `이/가` (subject particle "が")
-
-**3. 이건 뭐예요? — This / that / what**
-- 이건 뭐예요? — `N이에요/예요` (casual-polite "is", question by intonation)
-- 그건 제 우산이 아니에요. — `이/가 아니에요` (casual-polite "is not")
-
-**4. 이 사람, 저도 — Pointing & "also"**
-- 이 사람은 제 친구예요. — `이/그/저 + N` (this / that / that-over-there)
-- 저도 학생이에요. — `도` (also, too "も")
-
-**5. 시간이 있어요 — Have / don't have**
-- 내일 시간이 있어요? — `있어요 / 없어요` (there is / isn't)
-- 저는 천 원만 있어요. — `만` (only "だけ")
-
-**6. 어디에 있어요? — Where it is**
-- 고양이가 어디에 있어요? — `장소에 있어요` (is at a place)
-- 책상 위에 있어요. — position nouns 위·아래·옆·앞·뒤·안·밖
-
-*▸ 복습 1: 입니다 vs 이에요 · 은/는 vs 이/가 · 도 / 만 · 있어요/없어요.*
+**9개 단원 · 56과 · 112개 패턴.** 각 단원의 마지막에는 복습 체크포인트가 있습니다. 1~50과에서는 존댓말(높임말) 문법 전체를 다루며, 마지막 단원에서는 상황별 트랙의 토대가 될 수 있도록 반말과 간접 화법으로 넘어갑니다.
 
 ---
 
-## Unit 2 · 행동 — Doing Things · 7 lessons
-*Verbs, both polite endings, the irregular conjugations they trigger, and the particles that carry an action.*
+## Unit 1 · 첫 문장 — 명칭과 존재 · 6과
+*서술어와 존재 — 무엇인지, 무엇이 아닌지, 그리고 어디에 있는지 말하기.*
 
-**7. 한국어를 공부합니다 — Formal-polite verbs**
-- 저는 매일 한국어를 공부합니다. — `-ㅂ/습니다 / -ㅂ/습니까?` (formal verb ending)
-- 저는 김치를 좋아합니다. — `을/를` (object particle "を")
+**1. 저는 일본 사람입니다 — 자기소개**
+- 저는 일본 사람입니다. — `N입니다 / 입니까?` (격식체 서술어)
+- 다나카 씨는 학생입니까? — `은/는` (주제 보조사 "は")
 
-**8. 매일 운동해요 — Casual-polite verbs**
-- 저는 매일 운동해요. — `-아/어요` (casual-polite verb ending)
-- 내일 학교에 가요. — `에` (destination & point in time "に")
+**2. 학생이 아닙니다 — 부정하기**
+- 저는 중국 사람이 아닙니다. — `N이/가 아닙니다` (명사 부정형)
+- 저 사람이 선생님입니다. — `이/가` (주격 조사 "が")
 
-**9. 바빠요, 몰라요 — The ㅡ and 르 verbs**
-- 요즘 너무 바빠요. — `으` irregular (ㅡ drops: 바쁘다 → 바빠요, 쓰다 → 써요)
-- 저는 그 사람을 잘 몰라요. — `르` irregular (모르다 → 몰라요, 빠르다 → 빨라요)
+**3. 이 사람, 저 사람 — 이것과 저것**
+- 이 사람은 제 친구예요. — `N이에요/예요` (비격식체 서술어)
+- 저 사람은 학생이에요. — `이/그/저 + N` (지시 관형사)
 
-**10. 들어요, 추워요 — The ㄷ and ㅂ verbs**
-- 음악을 자주 들어요. — `ㄷ` irregular (듣다 → 들어요, 걷다 → 걸어요)
-- 겨울은 너무 추워요. — `ㅂ` irregular (춥다 → 추워요, 덥다 → 더워요)
+**4. 이건 뭐예요? — 의문사**
+- 이건 뭐예요? — `뭐 / 누구 / 어디` (의문 대명사)
+- 언제 한국에 가요? — `언제 / 어떻게 / 왜` (의문 부사)
 
-**11. 먹고 가요 — Linking & where you do it**
-- 아침을 먹고 회사에 가요. — `-고` (and then, linking actions)
-- 저는 카페에서 일해요. — `에서` (place of an action "で")
+**5. 저도 학생이에요 — 첨가와 한정**
+- 저도 학생이에요. — `도` (첨가 보조사 "も")
+- 저는 천 원만 있어요. — `만` (한정 보조사 "だけ")
 
-**12. 안 마셔요, 못 해요 — Not doing & can't**
-- 저는 술을 안 마셔요. — `안 ~ / -지 않다` (don't)
-- 저는 운전을 못 해요. — `못 ~ / -지 못하다` (can't)
+**6. 어디에 있어요? — 위치 말하기**
+- 고양이가 어디에 있어요? — `장소에 있어요` (존재. 참고: 존재 vs 소유의 '있다' 구분)
+- 책상 위에 있어요. — 위치 명사 (위·아래·옆·앞·뒤·안·밖)
 
-**13. 친구하고, 엄마한테 — With / to / from**
-- 친구하고 같이 영화를 봐요. — `하고 · 와/과 · (이)랑` (and / with)
-- 엄마한테 매일 전화해요. — `한테 · 한테서 · 에게` (to / from a person)
-
-*▸ 복습 2: -ㅂ/습니다 vs -아/어요 · the four irregular families · 에 / 에서 / 한테. (ㄹ-stem verbs drop ㄹ — 살다→삽니다·사세요; ㅅ·ㅎ irregulars recur later.)*
+*▸ 복습 1: 입니다 vs 이에요 · 은/는 vs 이/가 · 도 vs 만 · 의문사 · 있어요/없어요.*
 
 ---
 
-## Unit 3 · 숫자와 시간 — Numbers & Time · 5 lessons
-*The two number systems, counters, telling time, ranges, and your first comparison.*
+## Unit 2 · 행동 — 동작과 상태 · 10과
+*동사 vs 형용사, 두 가지 존댓말 어미, 불규칙 활용, 핵심 조사.*
 
-**14. 몇 월 며칠이에요? — Dates & prices**
-- 오늘은 몇 월 며칠이에요? — Sino-Korean numbers (날짜: 월·일)
-- 이거 얼마예요? 삼천 원이에요. — `얼마` + 원 (prices)
+**7. 한국어를 공부합니다 — 격식체 동사**
+- 저는 매일 한국어를 공부합니다. — `-ㅂ/습니다 / -ㅂ/습니까?` (격식체 동사 어미)
+- 저는 김치를 좋아합니다. — `을/를` (목적격 조사 "を")
 
-**15. 사과 세 개 주세요 — Counting things**
-- 사과 세 개 주세요. — native-Korean numbers + counters (개·잔·마리)
-- 우리 가족은 네 명이에요. — counter 명 / 사람
+**8. 매일 운동해요 — 비격식체 동사 (핵심 활용 체계)**
+- 저는 매일 운동해요. — `-아/어요` (모음 축약 규칙: 가요, 와요, 마셔요, 해요 등)
+- *(참고: 아/어요 형태 변화의 기계적 연습에만 집중하는 과)*
 
-**16. 지금 몇 시예요? — Telling time**
-- 지금 몇 시예요? 두 시 반이에요. — 시·분 (native + Sino mix)
-- 아홉 시부터 여섯 시까지 일해요. — `부터 ~ 까지` (time range)
+**9. 어디에 가요? — 목적지와 '으' 불규칙**
+- 내일 학교에 가요. — `에` (목적지 및 시간 "에 / に")
+- 요즘 너무 바빠요. — `'으' 불규칙` (ㅡ 탈락: 바쁘다 → 바빠요, 쓰다 → 써요)
 
-**17. 집에서 회사까지 — Distance & means**
-- 집에서 회사까지 멀어요? — `에서 ~ 까지` (place range)
-- 저는 버스로 가요. — `(으)로` (by means of "で")
+**10. 싸요, 안 추워요 — 형용사와 'ㅂ' 불규칙**
+- 이 사과는 싸요. — 동사 vs 형용사 구분 (참고: 상태 '좋다' vs 행동 '좋아하다')
+- 겨울은 너무 추워요. — `'ㅂ' 불규칙` (주로 형용사: 춥다 → 추워요, 맵다 → 매워요)
 
-**18. 진짜 싸네요! — Reacting & comparing**
-- 와, 진짜 싸네요! — `-네요` (surprise / agreement "ですね")
-- 저는 커피보다 차를 더 좋아해요. — `보다` / `제일·가장` (more / most)
+**11. 안 마셔요, 못 해요 — 짧은 부정문**
+- 저는 술을 안 마셔요. — `안 ~` (단순 부정 / 의지 부정)
+- 저는 운전을 못 해요. — `못 ~` (능력 부정 / 불가능)
 
-*▸ 복습 3: Sino vs native numbers · counters · 부터/까지 · 보다.*
+**12. 가지 않아요 — 긴 부정문**
+- 주말에는 회사에 가지 않아요. — `-지 않다` (격식 부정형)
+- 시간이 없어서 하지 못해요. — `-지 못하다` (격식 불가능형)
 
----
+**13. 먹고 가요 — 동작의 연결과 장소**
+- 아침을 먹고 회사에 가요. — `-고` (동작의 나열 및 연결)
+- 저는 카페에서 일해요. — `에서` (동작이 일어나는 장소 "에서 / で")
 
-## Unit 4 · 지난 일 — The Past · 4 lessons
-*Past tense, time words, and the connectors that explain and contrast.*
+**14. 들어요, 나아요 — 'ㄷ' 및 'ㅅ' 불규칙**
+- 음악을 자주 들어요. — `'ㄷ' 불규칙` (듣다 → 들어요, 걷다 → 걸어요)
+- 감기가 다 나았어요. — `'ㅅ' 불규칙` (낫다 → 나아요, 짓다 → 지어요)
 
-**19. 어제 친구를 만났어요 — The past**
-- 어제 친구를 만났어요. — `-았/었어요` (past tense)
-- 저는 옛날에 가수였어요. — `이었어요 / 였어요` (noun, past)
+**15. 살아요, 빨라요 — 'ㄹ' 어간 및 '르' 불규칙**
+- 저는 서울에 살아요. — `'ㄹ' 어간` (ㅅ/ㅂ/ㄴ 앞에서 ㄹ 탈락: 살다 → 삽니다)
+- 기차가 버스보다 빨라요. — `'르' 불규칙` (빠르다 → 빨라요, 모르다 → 몰라요)
 
-**20. 작년에, 어제 — Time words**
-- 저는 작년에 한국에 갔어요. — time nouns + `에` (작년·지난주·주말)
-- 어제 도서관에서 공부했어요. — 어제·오늘·내일 take *no* 에
+**16. 친구하고, 엄마한테 — 동반 및 대상**
+- 친구하고 같이 영화를 봐요. — `하고 · 와/과 · (이)랑` (동반 "と")
+- 엄마한테 매일 전화해요. — `한테 · 에게` (대상 "에게 / に")
 
-**21. 아파서 못 갔어요 — Because / so**
-- 배가 아파서 병원에 갔어요. — `-아/어서` (because, cause → result)
-- 그래서 오늘은 집에 있어요. — 그래서 · 그러니까 (so — connectors)
-
-**22. 어렵지만 재미있어요 — But / and**
-- 한국어는 어렵지만 재미있어요. — `-지만` (but, even though)
-- 그런데 한자는 안 써요. — 그런데 · 그리고 (connectors)
-
-*▸ 복습 4: present vs past · 이었어요/였어요 · -아/어서 vs 그래서 · -지만.*
+*▸ 복습 2: 동사 vs 형용사 · -ㅂ/습니다 vs -아/어요 · 짧은 부정문 vs 긴 부정문 · 불규칙 활용 (ㅡ,ㅂ,ㄷ,ㅅ,르,ㄹ) · 에 vs 에서.*
 
 ---
 
-## Unit 5 · 높임말 — Speaking Respectfully · 4 lessons
-*Honorifics for talking up, the special verbs, and the humble forms for doing things for others.*
+## Unit 3 · 숫자와 시간 — 수사 및 비교 · 5과
+*두 가지 숫자 체계, 단위 명사, 시간 말하기, 범위, 비교 표현.*
 
-**23. 사장님은 회의를 하세요 — Honorific present**
-- 사장님은 지금 회의를 하세요. — `-(으)세요` (honorific present)
-- 할아버지께서 신문을 읽으세요. — `께서` (honorific subject particle)
+**17. 몇 월 며칠이에요? — 날짜와 가격**
+- 오늘은 몇 월 며칠이에요? — 한자어 숫자 (날짜: 월·일)
+- 이거 얼마예요? 삼천 원이에요. — `얼마` + 원 (가격)
 
-**24. 할머니는 방에 계세요 — Special honorific verbs**
-- 할머니는 방에 계세요. — 계시다 · 드시다 · 주무시다 (special verbs)
-- 부모님께 선물을 드려요. — `께` (to, honorific) + 드리다
+**18. 사과 세 개 주세요 — 사물 세기**
+- 사과 세 개 주세요. — 고유어 숫자 + 단위 명사 (개·잔·마리)
+- 우리 가족은 네 명이에요. — 인원 단위 명사 (명 / 사람)
 
-**25. 어디 다녀오셨어요? — The respectful past**
-- 어제 어디 다녀오셨어요? — `-(으)셨어요` (honorific past)
-- 성함이 어떻게 되세요? — honorific set phrases (성함·연세·되세요)
+**19. 지금 몇 시예요? — 시간 말하기**
+- 지금 몇 시예요? 두 시 반이에요. — 시·분 (고유어 + 한자어 혼합)
+- 아홉 시부터 여섯 시까지 일해요. — `부터 ~ 까지` (시간의 범위)
 
-**26. 제가 들어 드릴게요 — Doing for / giving**
-- 무거우시죠? 제가 들어 드릴게요. — `-아/어 드리다` (do for, humble)
-- 친구가 저한테 선물을 줬어요. — 주다 / 받다 (give / receive)
+**20. 집에서 회사까지 — 거리, 수단 및 방향**
+- 집에서 회사까지 멀어요? — `에서 ~ 까지` (장소의 범위)
+- 저는 버스로 가요. / 오른쪽으로 가세요. — `(으)로` (수단 "で" / 방향 "へ")
 
-*▸ 복습 5: plain vs honorific · 께서 / 께 · special verbs · 드리다.*
+**21. 커피보다 차가 좋아요 — 비교하기**
+- 저는 커피보다 차를 더 좋아해요. — `보다` (비교의 기준)
+- 한국어 공부가 제일 재미있어요. — `제일 · 가장` (최상급)
 
----
-
-## Unit 6 · 마음과 의도 — Wants, Plans & Ability · 7 lessons
-*What you want, what you'll do, what you can do, and what you're allowed to do.*
-
-**27. 떡볶이 먹고 싶어요 — Wanting**
-- 저는 떡볶이를 먹고 싶어요. — `-고 싶어요` (I want to)
-- 동생도 한국에 가고 싶어 해요. — `-고 싶어 해요` (someone else wants to)
-
-**28. 내일 만날 거예요 — Future & promise**
-- 주말에 친구를 만날 거예요. — `-(으)ㄹ 거예요` (will / plan to)
-- 이따가 다시 전화할게요. — `-(으)ㄹ게요` (I'll ~, a promise)
-
-**29. 먹을 수 있어요 — Ability & in-progress**
-- 저는 매운 거 먹을 수 있어요. — `-(으)ㄹ 수 있어요 / 없어요` (can / can't)
-- 지금 밥 먹고 있어요. — `-고 있어요` (-ing, in progress)
-
-**30. 문이 열려 있어요 — State & trying**
-- 문이 열려 있어요. — `-아/어 있다` (resultant state)
-- 이 김치 한번 먹어 보세요. — `-아/어 보다` (try ~ing)
-
-**31. 가 본 적 있어요? — Experience**
-- 한국에 가 본 적 있어요? — `-(으)ㄴ 적 있다` (have ever ~)
-- 저는 번지점프 해 봤어요. — `-아/어 봤어요` (have tried ~)
-
-**32. 앉아도 돼요? — Permission & prohibition**
-- 여기 앉아도 돼요? — `-아/어도 돼요?` (may I?)
-- 여기서 사진 찍으면 안 돼요. / 찍지 마세요. — `-(으)면 안 돼요 / -지 마세요`
-
-**33. 내일까지 끝내야 돼요 — Must & if**
-- 내일까지 끝내야 돼요. — `-아/어야 돼요` (have to)
-- 시간이 있으면 같이 가요. — `-(으)면` (if / when)
-
-*▸ 복습 6: -고 싶다 · -(으)ㄹ 거예요 vs -(으)ㄹ게요 · -(으)ㄹ 수 있다 · -아/어도 돼요 vs -(으)면 안 돼요.*
+*▸ 복습 3: 한자어 vs 고유어 숫자 · 단위 명사 · 부터/까지 vs 에서/까지 · (으)로 · 보다.*
 
 ---
 
-## Unit 7 · 문장 잇기 — Joining Ideas · 7 lessons
-*Suggestions, requests, deeper "because," and the modifiers that let one clause describe a noun.*
+## Unit 4 · 지난 일 — 과거 시제와 접속사 · 4과
+*과거 시제, 시간 명사, 이유와 대조를 나타내는 접속사.*
 
-**34. 같이 갈까요? — Suggesting & purpose**
-- 우리 같이 점심 먹을까요? — `-(으)ㄹ까요?` (shall we?)
-- 같이 밥 먹으러 가요. — `-(으)러` (in order to, before a motion verb)
+**22. 어제 만났어요 — 과거 시제**
+- 어제 친구를 만났어요. — `-았/었어요` (동사/형용사 과거형)
+- 저는 옛날에 가수였어요. — `이었어요 / 였어요` (명사 과거형)
 
-**35. 배우려고 해요 — Intention & decision**
-- 한국어를 배우려고 해요. — `-(으)려고 하다` (intend to)
-- 매일 운동하기로 했어요. — `-기로 하다` (decide to)
+**23. 작년에, 어제 — 시간 명사**
+- 저는 작년에 한국에 갔어요. — 시간 명사 + `에` (작년·지난주·주말 등)
+- 어제 도서관에서 공부했어요. — 어제·오늘·내일 ('에'를 결합하지 않는 명사)
 
-**36. 좀 찍어 주시겠어요? — Requests**
-- 천천히 말해 주세요. — `-아/어 주세요` (please do ~)
-- 사진 좀 찍어 주시겠어요? — `-아/어 주시겠어요?` (could you ~?)
+**24. 아파서 못 갔어요 — 이유 및 순차적 행동**
+- 배가 아파서 병원에 갔어요. — `-아/어서` (원인 → 결과. 참고: '사서 먹다'처럼 순차적 행동을 나타내기도 함)
+- 그래서 오늘은 집에 있어요. — `그래서 · 그러니까` (이유 접속사)
 
-**37. 비 때문에 못 갔어요 — Because (deeper)**
-- 늦었으니까 택시 타요. — `-(으)니까` (because → suggestion / command)
-- 비 때문에 못 갔어요. — `때문에 / -기 때문에` (because of)
+**25. 어렵지만 재미있어요 — 대조 및 추가**
+- 한국어는 어렵지만 재미있어요. — `-지만` (대조)
+- 그런데 한자는 안 써요. — `그런데 · 그리고` (대조 및 나열 접속사)
 
-**38. 봤는데 재미있었어요 — Background & softening**
-- 어제 영화 봤는데 진짜 재미있었어요. — `-는데` (background setup / soft "but")
-- 저, 좀 추운데요… — `-(으)ㄴ/는데요` (soft, trailing sentence ender)
-
-**39. 제가 좋아하는 노래 — Describing nouns**
-- 어제 만든 음식이에요. — `-(으)ㄴ N` (past modifier: a thing that was done)
-- 제가 자주 듣는 노래예요. — `-는 N` (present modifier: a thing one does)
-
-**40. 갈 때 선물을 사요 — Future modifier & "when"**
-- 내일 먹을 음식을 샀어요. — `-(으)ㄹ N` (future modifier: a thing to do)
-- 한국에 갈 때 선물을 사요. — `-(으)ㄹ 때` (when ~)
-
-*▸ 복습 7: -(으)ㄹ까요 vs -(으)러 · -(으)니까 vs 때문에 · -는데 · the three modifiers + -(으)ㄹ 때.*
+*▸ 복습 4: 현재 vs 과거 · 이었어요/였어요 · -아/어서 vs 그래서 · -지만.*
 
 ---
 
-## Unit 8 · 더 자연스럽게 — Sounding Natural · 6 lessons
-*Sequence, simultaneity, change of state, and the guesses and reactions that make speech flow.*
+## Unit 5 · 마음과 의도 — 희망, 능력, 허락 · 7과
+*원하는 것, 할 계획인 것, 할 수 있는 것, 허락된 것 말하기.*
 
-**41. 먹은 후에 산책해요 — Before & after**
-- 자기 전에 양치해요. — `-기 전에` (before ~ing)
-- 밥을 먹은 후에 / 먹고 나서 산책해요. — `-(으)ㄴ 후에 / -고 나서` (after ~ing)
+**26. 떡볶이 먹고 싶어요 — 희망**
+- 저는 떡볶이를 먹고 싶어요. — `-고 싶어요` (1인칭 주어의 희망)
+- 동생도 한국에 가고 싶어 해요. — `-고 싶어 해요` (3인칭 주어의 희망)
 
-**42. 들으면서 공부해요 — While & switching**
-- 음악을 들으면서 공부해요. — `-(으)면서` (while, doing both)
-- 공부하다가 잠들었어요. — `-다가` (mid-action switch)
+**27. 내일 만날 거예요 — 미래와 약속**
+- 주말에 친구를 만날 거예요. — `-(으)ㄹ 거예요` (미래 / 단순 계획)
+- 이따가 다시 전화할게요. — `-(으)ㄹ게요` (말하는 이의 약속 / 의지)
 
-**43. 따뜻해졌어요 — Becoming**
-- 날씨가 많이 따뜻해졌어요. — `-아/어지다` (become ~, adjective)
-- 드라마를 보면서 한국어를 좋아하게 됐어요. — `-게 되다` (come to / end up)
+**28. 갈 수 있어요, 가야 돼요 — 능력과 의무**
+- 저는 매운 거 먹을 수 있어요. — `-(으)ㄹ 수 있어요 / 없어요` (가능 / 불가능)
+- 내일까지 끝내야 돼요. — `-아/어야 돼요` (의무 / 필요)
 
-**44. 맛있는 것 같아요 — Guessing**
-- 곧 비가 올 것 같아요. — `-(으)ㄹ 것 같다` (will probably / seems it will)
-- 저 집 음식이 맛있는 것 같아요. — `-(으)ㄴ/는 것 같다` (seems, present / past)
+**29. 먹고 있어요, 열려 있어요 — 진행 vs 상태**
+- 지금 밥 먹고 있어요. — `-고 있어요` (동작의 진행)
+- 문이 열려 있어요. — `-아/어 있다` (결과적 상태의 지속)
 
-**45. 피곤해 보여요 — Looks & adverbs**
-- 좀 피곤해 보여요. — `-아/어 보이다` (looks ~)
-- 맛있게 드세요. — `-게` (adverbial: turns an adjective into "~ly")
+**30. 먹어 봤어요, 간 적 있어요 — 시도와 경험**
+- 이 김치 한번 먹어 보세요. — `-아/어 보다` (시도 "해 보다")
+- 한국에 가 본 적 있어요? — `-(으)ㄴ 적 있다` (경험)
 
-**46. 재미있죠? — Confirming & "you know"**
-- 한국어 재미있죠? — `-죠? / -지요?` (right? / isn't it?)
-- 제가 어제 말했잖아요. — `-잖아요` (you know, as I said)
+**31. 앉아도 돼요? — 허락과 금지**
+- 여기 앉아도 돼요? — `-아/어도 돼요?` (허락 구하기)
+- 여기서 사진 찍으면 안 돼요. — `-(으)면 안 돼요` (행동 금지)
 
-*▸ 복습 8: -기 전에 / 후에 · -(으)면서 vs -다가 · -아/어지다 vs -게 되다 · -ㄹ 것 같다 vs -는 것 같다.*
+**32. 시간이 있으면 — 가정과 요청**
+- 시간이 있으면 같이 가요. — `-(으)면` (가정 / 조건)
+- 오늘은 바쁘니까 전화하지 마세요. — `-지 마세요` (부정 명령)
 
----
-
-## Unit 9 · 진짜 대화 — Real Conversation · 7 lessons
-*The intermediate bridge: reported speech, the native-speaker softeners, and a full step into 반말 — the register every situational course is written in.*
-
-**47. 봤거든요, 맛있더라고요 — Explaining & recalling**
-- 저 그 영화 벌써 봤거든요. — `-거든요` (you see — giving background/reason)
-- 그 집 진짜 맛있더라고요. — `-더라고요` (I found that ~, from experience)
-
-**48. 온다고 했어요 — Reported speech ①**
-- 친구가 내일 온다고 했어요. — `-다고 하다` (says/said that — statement)
-- 여기가 유명한 곳이라고 해요. — `-(이)라고 하다` (quoting a noun)
-
-**49. 오라고 했어 — Reported speech ②**
-- 어디 가냐고 물어봤어요. — `-냐고 하다 / -자고 하다` (asked / suggested that)
-- 엄마가 일찍 오라고 했어. — `-(으)라고 하다` (told someone to ~)
-
-**50. 너 지금 뭐 해? — 반말 ① basics**
-- 나 지금 집에 가. — `-아/어` (banmal statement & question)
-- 이거 네 거야? — `이야 / 야` (banmal copula)
-
-**51. 어제 영화 봤어 — 반말 ② past & future**
-- 어제 영화 봤어. — `-았/었어` (banmal past)
-- 내일 같이 갈 거야. — `-(으)ㄹ 거야` (banmal future)
-
-**52. 같이 가자 — 반말 ③ let's & commands**
-- 우리 같이 가자. — `-자` (let's ~)
-- 빨리 와! / 울지 마. — `-아/어(라) · -지 마` (do / don't, casual)
-
-**53. 내가 할게 — 반말 ④ will & offers**
-- 이건 내가 할게. — `-(으)ㄹ게` (I'll ~, casual promise)
-- 우리 영화 볼래? — `-(으)ㄹ래?` (wanna ~?, casual offer / intention)
-
-*▸ 복습 9: -거든요 / -더라고요 · the reported-speech set · 반말 across all four sentence types.*
+*▸ 복습 5: -고 싶다 · -(으)ㄹ 거예요 vs -(으)ㄹ게요 · -(으)ㄹ 수 있다 vs -아/어야 되다 · -고 있다 vs -아/어 있다 · 허락 vs 금지.*
 
 ---
 
-**After Unit 9:** the learner controls the full beginner-to-lower-intermediate pattern set — copula through reported speech, every common irregular, plain through honorific, and formal-polite through 반말. This is the grammar every **Intermediate Expressions** course (드라마 한국어, 케이팝 토크, 여행 한국어, 친구와 수다…) assumes its lines are built from. Ready to move from *patterns in isolation* to *patterns in the wild*.
+## Unit 6 · 높임말 — 정중하게 말하기 · 4과
+*주체 높임, 특수 동사, 다른 사람을 위한 겸양(수수) 표현.*
+
+**33. 앉으세요 / 하세요 — 명령과 존칭 서술**
+- 여기 앉으세요. — `-(으)세요` (참고: 정중한 명령형 vs 주체 높임 서술형의 구분)
+- 할아버지께서 신문을 읽으세요. — `께서` (주격 조사 높임)
+
+**34. 할머니는 방에 계세요 — 특수 높임 동사**
+- 할머니는 방에 계세요. — `계시다 · 드시다 · 주무시다` (특수 동사)
+- 부모님께 선물을 드려요. — `께` (대상 높임) + `드리다`
+
+**35. 어디 다녀오셨어요? — 과거 존칭**
+- 어제 어디 다녀오셨어요? — `-(으)셨어요` (과거 존칭)
+- 성함이 어떻게 되세요? — 존칭 관용 표현 (성함·연세·되세요)
+
+**36. 제가 들어 드릴게요 — 수수 표현**
+- 무거우시죠? 제가 들어 드릴게요. — `-아/어 드리다` (겸양의 동작 제공)
+- 친구가 저한테 선물을 줬어요. — `주다 / 받다` (수수 동사)
+
+*▸ 복습 6: 명령 vs 존칭의 -(으)세요 · 께서 / 께 · 특수 동사 · 드리다.*
+
+---
+
+## Unit 7 · 문장 잇기 — 관형어와 연결 어미 · 7과
+*제안, 심화된 이유 표현, 명사를 수식하는 관형사형 어미.*
+
+**37. 같이 갈까요? — 제안과 목적**
+- 우리 같이 점심 먹을까요? — `-(으)ㄹ까요?` (제안. 참고: 3인칭 주어일 경우 '추측'의 의미)
+- 같이 밥 먹으러 가요. — `-(으)러` (이동 동사 앞의 목적)
+
+**38. 배우려고 해요 — 의도와 결정**
+- 한국어를 배우려고 해요. — `-(으)려고 하다` (의도)
+- 매일 운동하기로 했어요. — `-기로 하다` (결정 / 다짐)
+
+**39. 비 때문에 못 갔어요 — 심화 이유 표현**
+- 늦었으니까 택시 타요. — `-(으)니까` (이유 → 제안/명령. -아/어서와 제약 비교)
+- 비 때문에 못 갔어요. — `때문에 / -기 때문에` (명사 및 동사 뒤의 원인)
+
+**40. 봤는데 재미있었어요 — 배경 설정**
+- 어제 영화 봤는데 진짜 재미있었어요. — `-는데` (배경 설명 / 부드러운 대조)
+- 저, 좀 추운데요… — `-(으)ㄴ/는데요` (부드러운 종결 어미 / 여운 남기기)
+
+**41. 좀 찍어 주시겠어요? — 정중한 요청**
+- 천천히 말해 주세요. — `-아/어 주세요` (부탁)
+- 사진 좀 찍어 주시겠어요? — `-아/어 주시겠어요?` (보다 정중한 요청)
+
+**42. 예쁜 옷, 먹는 사람 — 현재 관형어 (형용사 vs 동사)**
+- 저기 예쁜 옷을 샀어요. — `-(으)ㄴ N` (**형용사** 현재 수식)
+- 제가 자주 먹는 음식이에요. — `-는 N` (**동사** 현재 수식)
+
+**43. 먹은 음식, 먹을 음식 — 과거 및 미래 관형어**
+- 어제 먹은 음식이에요. — `-(으)ㄴ N` (**동사** 과거 수식)
+- 내일 먹을 음식을 샀어요. — `-(으)ㄹ N / -(으)ㄹ 때` (미래 수식 / ~할 때)
+
+*▸ 복습 7: -(으)ㄹ까요 vs -(으)러 · -(으)니까 vs 아/어서 vs 때문에 · -는데 · 동사 vs 형용사 수식(관형어)의 차이.*
+
+---
+
+## Unit 8 · 더 자연스럽게 — 추측과 변화 · 6과
+*순서, 동시 동작, 상태 변화, 추측, 대화의 윤활유 역할을 하는 종결 어미.*
+
+**44. 먹은 후에 산책해요 — 전과 후**
+- 자기 전에 양치해요. — `-기 전에` (동작 이전)
+- 밥을 먹은 후에 산책해요. — `-(으)ㄴ 후에 / -고 나서` (동작 이후)
+
+**45. 들으면서 공부해요 — 동시 동작과 전환**
+- 음악을 들으면서 공부해요. — `-(으)면서` (두 가지 동작 동시 진행)
+- 공부하다가 잠들었어요. — `-다가` (도중의 동작 전환)
+
+**46. 따뜻해졌어요 — 상태 변화와 부사화**
+- 날씨가 많이 따뜻해졌어요. — `-아/어지다` (상태의 변화, 형용사 뒤)
+- 맛있게 드세요. — `-게` (부사화: 형용사를 동작의 방식으로 만듦)
+
+**47. 맛있는 것 같아요 — 추측 (논리 vs 시각)**
+- 저 집 음식이 맛있는 것 같아요. — `-(으)ㄴ/는 것 같다` (상황이나 논리에 기반한 추측)
+- 좀 피곤해 보여요. — `-아/어 보이다` (시각적 겉모습에 기반한 추측)
+
+**48. 재미있죠? — 확인과 강조**
+- 한국어 재미있죠? — `-죠? / -지요?` (확인 / 동의 구하기)
+- 제가 어제 말했잖아요. — `-잖아요` (상대방도 알고 있는 사실 강조)
+
+**49. 진짜 싸네요! — 감탄과 결과**
+- 와, 진짜 싸네요! — `-네요` (새롭게 알게 된 사실에 대한 감탄 "ですね")
+- 한국어를 좋아하게 됐어요. — `-게 되다` (어떤 상태나 결과에 이름)
+
+*▸ 복습 8: -기 전에 / 후에 · -(으)면서 vs -다가 · -아/어지다 vs -게 · 것 같다 vs 보이다.*
+
+---
+
+## Unit 9 · 진짜 대화 — 반말과 간접 화법 · 7과
+*중급으로 가는 징검다리: 반말 기초와 간접 화법 구조의 이해.*
+
+**50. 봤거든요, 맛있더라고요 — 이유 설명과 경험 회상**
+- 저 그 영화 벌써 봤거든요. — `-거든요` (상대방이 모르는 이유나 배경 설명)
+- 그 집 진짜 맛있더라고요. — `-더라고요` (직접 경험하여 새롭게 안 사실 회상)
+
+**51. 너 지금 뭐 해? — 반말 ① 기초**
+- 나 지금 집에 가. — `-아/어` (반말 평서문 및 의문문 기본형)
+- 이거 네 거야? — `이야 / 야` (명사 반말 서술형)
+
+**52. 어제 영화 봤어 — 반말 ② 과거와 미래**
+- 어제 영화 봤어. — `-았/었어` (반말 과거)
+- 내일 같이 갈 거야. — `-(으)ㄹ 거야` (반말 미래)
+
+**53. 같이 가자 — 반말 ③ 청유와 명령**
+- 우리 같이 가자. — `-자` (반말 청유형)
+- 빨리 와! / 울지 마. — `-아/어(라) · -지 마` (반말 명령 및 부정 명령)
+
+**54. 온다고 했어요 — 간접 화법 ① 평서문**
+- 친구가 내일 온다고 했어요. — `-다고 하다` (평서문 인용)
+- 여기가 유명한 곳이라고 해요. — `-(이)라고 하다` (명사 평서문 인용)
+
+**55. 오라고 했어 — 간접 화법 ② 명령과 청유**
+- 엄마가 일찍 오라고 했어. — `-(으)라고 하다` (명령문 인용)
+- 친구가 밥 같이 먹자고 해요. — `-자고 하다` (청유문 인용)
+
+**56. 어디 가냐고 했어요 — 간접 화법 ③ 의문과 의지**
+- 어디 가냐고 물어봤어요. — `-냐고 하다` (의문문 인용)
+- 우리 영화 볼래? — `-(으)ㄹ래(요)?` (가벼운 의향 묻기 / 제안)
+
+*▸ 복습 9: -거든요 / -더라고요 · 반말 규칙 기초 · 간접 화법의 4가지 주요 형태.*
+
+---
+
+**Unit 9 이후:** 학습자는 기초 평서문부터 간접 화법, 주요 불규칙 활용, 존댓말에서 반말에 이르기까지 초급에서 중급 초반에 해당하는 문법 패턴 전체를 습득하게 됩니다. 이 문법적 뼈대는 드라마 한국어, K-pop 토크, 여행 한국어 등 **중급 표현 (Intermediate Expressions)** 코스의 단단한 기반이 됩니다. 이제 *독립된 패턴* 학습에서 벗어나, *실제 상황 속 패턴*을 자유롭게 익힐 준비가 되었습니다.
