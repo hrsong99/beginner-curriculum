@@ -14,6 +14,7 @@
     --green: #6abe36;
     --green-text: #3f7a1c;
     --green-100: #f2fcec;
+    --green-200: #d8ecc6;
     --gray-100: #f5f5f5;
     --gray-200: #e8e8e8;
     --gray-400: #a5a5a5;
@@ -95,8 +96,9 @@
   /* inline code + the grammar patterns read like chips */
   .doc code {
     padding: 2px 7px;
-    background: var(--ink);
-    color: var(--lime);
+    background: var(--green-100);
+    color: var(--green-text);
+    border: 1px solid var(--green-200);
     border-radius: 6px;
     font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
     font-size: .86em;
@@ -105,19 +107,20 @@
   .doc pre {
     margin: 0 0 16px;
     padding: 18px 20px;
-    background: var(--ink);
+    background: var(--gray-100);
+    border: 1px solid var(--gray-200);
     border-radius: 12px;
     overflow-x: auto;
   }
-  .doc pre code { padding: 0; background: none; color: #eaeaea; font-size: 13px; font-weight: 500; }
+  .doc pre code { padding: 0; background: none; border: 0; color: #333; font-size: 13px; font-weight: 500; }
 
   /* tables — the heart of these TOC docs */
   .doc table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: 14.5px; }
   .doc thead th {
-    background: var(--ink); color: #fff;
+    background: var(--green-text); color: #fff;
     text-align: left; font-weight: 800;
     padding: 11px 14px;
-    border: 1.5px solid var(--ink);
+    border: 1.5px solid var(--green-text);
     word-break: keep-all;
   }
   .doc tbody td {
