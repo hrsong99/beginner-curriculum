@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="google" content="notranslate">
-<title>한국어 — Korean Curriculum</title>
+<title>한국어 커리큘럼</title>
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <style>
   @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
@@ -13,214 +12,185 @@
     --ink: #1c1c1c;
     --lime: #b5fd4c;
     --green: #6abe36;
+    --green-text: #3f7a1c;
     --green-100: #f2fcec;
     --gray-100: #f5f5f5;
     --gray-200: #e8e8e8;
     --gray-400: #a5a5a5;
     --gray-500: #757575;
+    --gray-700: #3f3f3f;
+    --line: #e7e7e7;
+    --line-soft: #f0f0f0;
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
     margin: 0;
-    background: #fafafa;
-    color: var(--ink);
-    font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Apple SD Gothic Neo", "Noto Sans JP", "Noto Sans KR", sans-serif;
-    line-height: 1.5;
-  }
-  .wrap { max-width: 820px; margin: 0 auto; padding: 0 20px 80px; }
-
-  /* hero */
-  .hero {
-    margin: 24px 0 0;
-    padding: 46px 40px 42px;
-    color: #fff;
-    background: var(--ink);
-    border-radius: 18px;
-    box-shadow: 0 7px 0 var(--lime);
-  }
-  .back { display: inline-block; margin-bottom: 26px; color: rgba(255,255,255,.6); font-size: 13px; font-weight: 700; text-decoration: none; }
-  .back:hover { color: var(--lime); }
-  .eyebrow { display: inline-block; margin: 0 0 22px; padding: 7px 13px; background: var(--lime); border-radius: 999px; color: var(--ink); font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
-  .hero h1 { margin: 0; font-size: 36px; font-weight: 850; line-height: 1.12; letter-spacing: -.01em; }
-  .hero h1 .ja { display: block; margin-top: 10px; font-size: .46em; font-weight: 500; color: rgba(255,255,255,.55); }
-  .hero p.lead { max-width: 540px; margin: 20px 0 0; color: rgba(255,255,255,.74); font-size: 16px; line-height: 1.6; font-weight: 500; }
-
-  /* primary CTA */
-  .cta {
-    display: flex; align-items: center; gap: 18px;
-    margin: 18px 0 0;
-    padding: 24px 26px;
-    background: var(--lime);
-    border: 1.5px solid var(--ink);
-    border-radius: 16px;
-    box-shadow: 0 5px 0 var(--ink);
-    text-decoration: none; color: var(--ink);
-    transition: transform .08s ease, box-shadow .08s ease;
-  }
-  .cta:hover { transform: translateY(-2px); box-shadow: 0 7px 0 var(--ink); }
-  .cta .icon { flex: 0 0 auto; display: grid; place-items: center; width: 52px; height: 52px; background: var(--ink); color: var(--lime); border-radius: 13px; font-size: 26px; }
-  .cta .ctext { flex: 1 1 auto; }
-  .cta .ctext b { display: block; font-size: 19px; font-weight: 850; }
-  .cta .ctext span { display: block; margin-top: 3px; font-size: 13.5px; font-weight: 600; color: rgba(28,28,28,.7); }
-  .cta .arr { flex: 0 0 auto; font-size: 24px; font-weight: 850; }
-
-  /* section heads */
-  h2.sec { margin: 44px 0 4px; font-size: 14px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--gray-500); }
-  p.sec-sub { margin: 0 0 16px; font-size: 14px; color: var(--gray-500); font-weight: 500; }
-
-  /* track cards */
-  .tracks { display: grid; gap: 14px; }
-  .track {
-    padding: 22px 24px;
     background: #fff;
-    border: 1.5px solid var(--ink);
-    border-radius: 16px;
-    box-shadow: 0 4px 0 var(--ink);
+    color: var(--ink);
+    font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
   }
-  .track.ongoing { border-style: dashed; box-shadow: 0 4px 0 var(--green); }
-  .track-top { display: flex; align-items: flex-start; gap: 14px; }
-  .track-no { flex: 0 0 auto; display: grid; place-items: center; width: 40px; height: 40px; background: var(--ink); color: var(--lime); border-radius: 11px; font-size: 18px; font-weight: 850; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 64px 28px 110px; }
+  @media (max-width: 600px) { .wrap { padding: 44px 20px 80px; } }
+
+  a { color: var(--green-text); text-decoration: none; }
+
+  /* ---------- header (matches TOC h1) ---------- */
+  .topback { display: inline-block; margin-bottom: 24px; color: var(--gray-400); font-size: 12.5px; font-weight: 600; }
+  .topback:hover { color: var(--green-text); }
+  .kicker { display: block; color: var(--green-text); font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+  h1 { margin: 12px 0 18px; padding-bottom: 16px; font-size: 32px; font-weight: 850; line-height: 1.2; letter-spacing: -.02em; border-bottom: 3px solid var(--ink); word-break: keep-all; }
+  .lead { max-width: 58ch; margin: 0; color: var(--gray-700); font-size: 16px; line-height: 1.7; font-weight: 400; }
+
+  /* ---------- primary callout to full curriculum ---------- */
+  .full {
+    display: flex; align-items: center; gap: 14px;
+    margin-top: 26px; padding: 18px 22px;
+    background: var(--green-100); border-left: 4px solid var(--green); border-radius: 0 10px 10px 0;
+    color: var(--ink);
+  }
+  .full:hover { background: #eafadf; }
+  .full .full-body { flex: 1 1 auto; min-width: 0; }
+  .full .full-t { display: block; font-size: 16px; font-weight: 800; }
+  .full .full-d { display: block; margin-top: 2px; color: #3a5e26; font-size: 13px; font-weight: 600; }
+  .full .full-arr { flex: 0 0 auto; color: var(--green-text); font-size: 20px; font-weight: 800; }
+
+  /* ---------- section heading ---------- */
+  .section-label {
+    margin: 52px 0 0; padding-bottom: 7px;
+    display: inline-block;
+    color: var(--ink); font-size: 18px; font-weight: 850; letter-spacing: -.01em;
+    border-bottom: 3px solid var(--green);
+  }
+  .section-note { margin: 12px 0 0; color: var(--gray-500); font-size: 13.5px; }
+
+  /* ---------- track rows ---------- */
+  .tracks { margin-top: 10px; }
+  .track { padding: 20px 0; border-bottom: 1px solid var(--line); }
+  .track-head { display: flex; align-items: center; gap: 12px; }
+  .track-no { flex: 0 0 auto; display: grid; place-items: center; width: 26px; height: 26px; background: var(--ink); color: var(--lime); border-radius: 7px; font-size: 14px; font-weight: 850; }
   .track.ongoing .track-no { background: var(--green); color: #fff; }
-  .track-meta { flex: 1 1 auto; min-width: 0; }
-  .track-meta h3 { margin: 0; font-size: 19px; font-weight: 850; line-height: 1.2; word-break: keep-all; }
-  .track-meta h3 .ja { font-size: .62em; font-weight: 500; color: var(--gray-400); margin-left: 5px; }
-  .track-meta .cnt { margin: 4px 0 0; font-size: 13px; font-weight: 700; color: var(--green); }
-  .track p.d { margin: 14px 0 0; font-size: 14px; line-height: 1.5; color: var(--gray-500); font-weight: 500; }
-  .links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
-  .links a {
-    display: inline-flex; align-items: center; gap: 6px;
-    padding: 8px 14px;
-    border: 1.5px solid var(--ink);
-    border-radius: 999px;
-    background: #fff; color: var(--ink);
-    font-size: 13px; font-weight: 700; text-decoration: none;
-    transition: background .08s ease;
-  }
-  .links a:hover { background: var(--green-100); }
-  .links a.solid { background: var(--ink); color: #fff; }
-  .links a.solid:hover { background: #333; }
-  .links a.muted { border-color: var(--gray-200); color: var(--gray-500); }
-  .links a.muted:hover { background: var(--gray-100); }
-  .links a.disabled { border-style: dashed; border-color: var(--gray-200); color: var(--gray-400); pointer-events: none; }
+  .track-title { flex: 1 1 auto; min-width: 0; font-size: 17px; font-weight: 800; word-break: keep-all; }
+  .track-title .en { margin-left: 7px; color: var(--gray-400); font-size: 12.5px; font-weight: 500; }
+  .track-count { flex: 0 0 auto; padding: 4px 11px; background: var(--green-100); color: var(--green-text); border-radius: 999px; font-size: 12px; font-weight: 800; white-space: nowrap; }
+  .track.ongoing .track-count { background: var(--green); color: #fff; }
+  .track-desc { margin: 9px 0 0 38px; color: var(--gray-700); font-size: 14px; line-height: 1.55; word-break: keep-all; }
+  .track-links { margin: 12px 0 0 38px; display: flex; flex-wrap: wrap; gap: 10px; }
+  .track-links a { padding: 7px 14px; border: 1.5px solid var(--ink); border-radius: 999px; font-size: 13px; font-weight: 700; color: var(--ink); }
+  .track-links a:hover { background: var(--ink); color: #fff; }
+  .track-links a.ghost { border-color: var(--gray-200); color: var(--gray-500); }
+  .track-links a.ghost:hover { background: var(--gray-100); color: var(--ink); border-color: var(--gray-200); }
+  .track-links a.disabled { border-style: dashed; border-color: var(--gray-200); color: var(--gray-400); pointer-events: none; }
 
-  /* small util grid */
-  .util { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  @media (max-width: 600px) { .util { grid-template-columns: 1fr; } }
-  .util a {
-    display: block; padding: 18px 20px;
-    background: #fff; border: 1.5px solid var(--ink); border-radius: 14px;
-    text-decoration: none; color: var(--ink);
-    transition: transform .08s ease;
-  }
-  .util a:hover { transform: translateY(-2px); }
-  .util a b { display: block; font-size: 15.5px; font-weight: 800; }
-  .util a span { display: block; margin-top: 3px; font-size: 13px; color: var(--gray-500); font-weight: 500; }
+  /* ---------- trial rows ---------- */
+  .rows { margin-top: 10px; }
+  .row { display: flex; align-items: center; gap: 12px; padding: 16px 0; border-bottom: 1px solid var(--line); color: var(--ink); }
+  .row:hover .row-t { color: var(--green-text); }
+  .row-t { font-size: 15px; font-weight: 700; }
+  .row-d { color: var(--gray-500); font-size: 13px; }
+  .row-arr { margin-left: auto; color: var(--gray-400); font-size: 16px; }
 
-  /* docs list */
-  .docs { list-style: none; margin: 0; padding: 0; border: 1.5px solid var(--gray-200); border-radius: 14px; overflow: hidden; background: #fff; }
-  .docs li { border-bottom: 1px solid var(--gray-200); }
-  .docs li:last-child { border-bottom: none; }
-  .docs a { display: flex; align-items: center; gap: 10px; padding: 14px 18px; text-decoration: none; color: var(--ink); font-size: 14px; font-weight: 600; }
-  .docs a:hover { background: var(--gray-100); }
-  .docs a .tag { margin-left: auto; font-size: 11px; font-weight: 700; color: var(--gray-400); }
-
-  footer.f { margin-top: 48px; padding-top: 22px; border-top: 1px solid var(--gray-200); font-size: 13px; color: var(--gray-400); }
+  footer { margin-top: 56px; padding-top: 20px; border-top: 2px solid var(--ink); color: var(--gray-500); font-size: 12.5px; }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <header class="hero">
-    <a class="back" href="../index.html">← Beginner Curriculum</a>
-    <span class="eyebrow">PODO · 한국어 커리큘럼</span>
-    <h1>한국어 커리큘럼<span class="ja">일본어 학습자를 위한 한국어 — 문자부터 자유 회화까지</span></h1>
-    <p class="lead">한글을 처음 보는 상태에서 자기 생각을 한국어로 자유롭게 말하는 단계까지. 아래 링크에서 모든 교재에 접근할 수 있습니다.</p>
+  <a class="topback" href="../index.html">← Beginner Curriculum</a>
+
+  <header>
+    <span class="kicker">PODO · 한국어 커리큘럼</span>
+    <h1>한국어 커리큘럼</h1>
+    <p class="lead">한글을 처음 보는 상태에서 자기 생각을 한국어로 자유롭게 말하는 단계까지. 아래에서 모든 교재에 접근할 수 있습니다.</p>
   </header>
 
-  <a class="cta" href="curriculum.html">
-    <span class="icon">🗺️</span>
-    <span class="ctext"><b>전체 커리큘럼 보기</b><span>4개 스테이지 · 전체 레슨 목록 — 런칭 커리큘럼 전체 설계도</span></span>
-    <span class="arr">→</span>
+  <a class="full" href="curriculum.html">
+    <span class="full-body">
+      <span class="full-t">전체 커리큘럼 보기</span>
+      <span class="full-d">4개 스테이지 · 전체 레슨 목록</span>
+    </span>
+    <span class="full-arr">→</span>
   </a>
 
   <!-- TRACKS -->
-  <h2 class="sec">학습 트랙 · Learning Tracks</h2>
-  <p class="sec-sub">각 트랙의 샘플 레슨과 목차(table of contents).</p>
+  <div class="section-label">학습 트랙</div>
+  <p class="section-note">각 트랙의 샘플 레슨과 목차.</p>
 
   <div class="tracks">
 
     <div class="track">
-      <div class="track-top">
-        <div class="track-no">1</div>
-        <div class="track-meta">
-          <h3>한글 읽기 <span class="ja">Hangul Reading</span></h3>
-          <p class="cnt">11 레슨 · 기초</p>
-        </div>
+      <div class="track-head">
+        <span class="track-no">1</span>
+        <span class="track-title">한글 읽기 <span class="en">Hangul Reading</span></span>
+        <span class="track-count">11 레슨 · 기초</span>
       </div>
-      <p class="d">어떤 한국어 음절이든 소리 내어 읽을 수 있게. 한 레슨에 새 요소는 하나만.</p>
-      <div class="links">
-        <a class="solid" href="1-hangul-teaching/sample-lesson.html">샘플 레슨 →</a>
-        <a class="muted" href="viewer.html?doc=1-hangul-teaching/table-of-contents.md">목차 보기</a>
+      <p class="track-desc">어떤 한국어 음절이든 소리 내어 읽을 수 있게. 한 레슨에 새 요소는 하나만.</p>
+      <div class="track-links">
+        <a href="1-hangul-teaching/sample-lesson.html">샘플 레슨 →</a>
+        <a class="ghost" href="viewer.html?doc=1-hangul-teaching/table-of-contents.md">목차 보기</a>
       </div>
     </div>
 
     <div class="track">
-      <div class="track-top">
-        <div class="track-no">2</div>
-        <div class="track-meta">
-          <h3>초급 패턴 <span class="ja">Beginner Patterns</span></h3>
-          <p class="cnt">53 레슨 · 106 패턴</p>
-        </div>
+      <div class="track-head">
+        <span class="track-no">2</span>
+        <span class="track-title">초급 패턴 <span class="en">Beginner Patterns</span></span>
+        <span class="track-count">53 레슨 · 106 패턴</span>
       </div>
-      <p class="d">문법의 척추. 1레슨＝2패턴. 서술격부터 반말까지 저부하→고부하로 쌓는다.</p>
-      <div class="links">
-        <a class="solid" href="2-beginner-patterns/sample-lesson.html">샘플 레슨 →</a>
-        <a class="muted" href="viewer.html?doc=2-beginner-patterns/table-of-contents.md">목차 보기</a>
+      <p class="track-desc">문법의 척추. 1레슨＝2패턴. 서술격부터 반말까지 저부하→고부하로 쌓는다.</p>
+      <div class="track-links">
+        <a href="2-beginner-patterns/sample-lesson.html">샘플 레슨 →</a>
+        <a class="ghost" href="viewer.html?doc=2-beginner-patterns/table-of-contents.md">목차 보기</a>
       </div>
     </div>
 
     <div class="track">
-      <div class="track-top">
-        <div class="track-no">3</div>
-        <div class="track-meta">
-          <h3>중급 표현 <span class="ja">Intermediate Expressions</span></h3>
-          <p class="cnt">4 영역 · 16 코스 · 160 레슨</p>
-        </div>
+      <div class="track-head">
+        <span class="track-no">3</span>
+        <span class="track-title">중급 표현 <span class="en">Intermediate Expressions</span></span>
+        <span class="track-count">4 영역 · 16 코스 · 160 레슨</span>
       </div>
-      <p class="d">드라마·K-POP·여행·반말 — 흥미 있는 소재에서 중급 패턴을 실전으로 추출.</p>
-      <div class="links">
-        <a class="solid" href="3-intermediate-expressions/sample-lesson.html">샘플 레슨 →</a>
-        <a class="muted" href="viewer.html?doc=3-intermediate-expressions/table-of-contents.md">목차 보기</a>
+      <p class="track-desc">드라마·K-POP·여행·반말 — 흥미 있는 소재에서 중급 패턴을 실전으로 추출.</p>
+      <div class="track-links">
+        <a href="3-intermediate-expressions/sample-lesson.html">샘플 레슨 →</a>
+        <a class="ghost" href="viewer.html?doc=3-intermediate-expressions/table-of-contents.md">목차 보기</a>
       </div>
     </div>
 
     <div class="track ongoing">
-      <div class="track-top">
-        <div class="track-no">4</div>
-        <div class="track-meta">
-          <h3>고급 프리토킹 <span class="ja">Advanced Freetalking</span></h3>
-          <p class="cnt">5 테마 · 30 주제 · 계속 추가 ∞</p>
-        </div>
+      <div class="track-head">
+        <span class="track-no">4</span>
+        <span class="track-title">고급 프리토킹 <span class="en">Advanced Freetalking</span></span>
+        <span class="track-count">5 테마 · 30 주제 · 계속 추가 ∞</span>
       </div>
-      <p class="d">새 문법은 없음 — 말하고 싶어지는 주제만. 끝이 없는 트랙으로, 주제를 계속 추가해 나간다.</p>
-      <div class="links">
+      <p class="track-desc">새 문법은 없음 — 말하고 싶어지는 주제만. 끝이 없는 트랙으로, 주제를 계속 추가해 나간다.</p>
+      <div class="track-links">
         <a class="disabled">샘플 준비 중</a>
-        <a class="muted" href="viewer.html?doc=4-advanced-freetalking/table-of-contents.md">목차 보기</a>
+        <a class="ghost" href="viewer.html?doc=4-advanced-freetalking/table-of-contents.md">목차 보기</a>
       </div>
     </div>
 
   </div>
 
-  <!-- TRIAL / ONBOARDING -->
-  <h2 class="sec">체험 · Trial Class</h2>
-  <p class="sec-sub">무료 체험 레슨의 온보딩 화면과 로드맵.</p>
-  <div class="util">
-    <a href="0-trial-class/onboarding-screens.html"><b>온보딩 화면</b><span>체험 클래스 도입 플로우</span></a>
-    <a href="0-trial-class/roadmap-worksheet.html"><b>로드맵 워크시트</b><span>학습 전체 그림 그리기</span></a>
+  <!-- TRIAL -->
+  <div class="section-label">체험</div>
+  <p class="section-note">무료 체험 레슨의 온보딩 화면과 로드맵.</p>
+  <div class="rows">
+    <a class="row" href="0-trial-class/onboarding-screens.html">
+      <span class="row-t">온보딩 화면</span>
+      <span class="row-d">체험 클래스 도입 플로우</span>
+      <span class="row-arr">→</span>
+    </a>
+    <a class="row" href="0-trial-class/roadmap-worksheet.html">
+      <span class="row-t">로드맵 워크시트</span>
+      <span class="row-d">학습 전체 그림 그리기</span>
+      <span class="row-arr">→</span>
+    </a>
   </div>
 
-  <footer class="f">PODO · 한국어 커리큘럼 — 일본어 학습자를 위한 한국어 코스.</footer>
+  <footer>PODO · 한국어 커리큘럼 — 일본어 학습자를 위한 한국어 코스</footer>
 
 </div>
 </body>
