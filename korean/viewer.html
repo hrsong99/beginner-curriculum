@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>문서 — 한국어 커리큘럼</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<style>
+  @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+  :root {
+    --ink: #1c1c1c;
+    --lime: #b5fd4c;
+    --green: #6abe36;
+    --green-100: #f2fcec;
+    --gray-100: #f5f5f5;
+    --gray-200: #e8e8e8;
+    --gray-400: #a5a5a5;
+    --gray-500: #757575;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: #fafafa;
+    color: var(--ink);
+    font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    line-height: 1.5;
+  }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 0 20px 80px; }
+
+  /* top bar */
+  .bar {
+    display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+    margin: 24px 0 0;
+    padding: 16px 22px;
+    background: var(--ink);
+    border-radius: 14px;
+    box-shadow: 0 5px 0 var(--lime);
+  }
+  .bar a.back { color: rgba(255,255,255,.7); font-size: 13px; font-weight: 700; text-decoration: none; }
+  .bar a.back:hover { color: var(--lime); }
+  .bar .pathchip {
+    margin-left: auto;
+    padding: 5px 12px;
+    background: rgba(255,255,255,.08);
+    border-radius: 999px;
+    color: rgba(255,255,255,.6);
+    font-size: 12px; font-weight: 600;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    word-break: break-all;
+  }
+
+  /* document card */
+  .doc {
+    margin-top: 18px;
+    padding: 44px 48px 56px;
+    background: #fff;
+    border: 1.5px solid var(--ink);
+    border-radius: 18px;
+    box-shadow: 0 6px 0 var(--ink);
+  }
+  @media (max-width: 600px) { .doc { padding: 28px 22px 36px; } }
+
+  /* ---------- markdown typography ---------- */
+  .doc > :first-child { margin-top: 0; }
+  .doc h1, .doc h2, .doc h3, .doc h4 { line-height: 1.2; font-weight: 850; letter-spacing: -.01em; word-break: keep-all; }
+  .doc h1 { font-size: 30px; margin: 0 0 18px; padding-bottom: 16px; border-bottom: 3px solid var(--ink); }
+  .doc h2 { font-size: 22px; margin: 40px 0 14px; }
+  .doc h3 { font-size: 17px; margin: 28px 0 10px; }
+  .doc h4 { font-size: 15px; margin: 22px 0 8px; color: var(--gray-500); }
+  .doc p { margin: 0 0 14px; font-size: 15.5px; }
+  .doc strong { font-weight: 800; }
+  .doc a { color: var(--green); font-weight: 700; text-decoration: none; border-bottom: 1.5px solid var(--green-100); }
+  .doc a:hover { border-bottom-color: var(--green); }
+
+  .doc ul, .doc ol { margin: 0 0 16px; padding-left: 22px; }
+  .doc li { margin: 5px 0; font-size: 15.5px; }
+  .doc li::marker { color: var(--green); font-weight: 800; }
+
+  .doc hr { margin: 32px 0; border: none; border-top: 1.5px solid var(--gray-200); }
+
+  .doc blockquote {
+    margin: 18px 0;
+    padding: 14px 20px;
+    background: var(--green-100);
+    border-left: 4px solid var(--green);
+    border-radius: 0 10px 10px 0;
+  }
+  .doc blockquote p { margin: 0; color: #2f5e16; font-weight: 600; }
+
+  /* inline code + the grammar patterns read like chips */
+  .doc code {
+    padding: 2px 7px;
+    background: var(--ink);
+    color: var(--lime);
+    border-radius: 6px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: .86em;
+    font-weight: 600;
+  }
+  .doc pre {
+    margin: 0 0 16px;
+    padding: 18px 20px;
+    background: var(--ink);
+    border-radius: 12px;
+    overflow-x: auto;
+  }
+  .doc pre code { padding: 0; background: none; color: #eaeaea; font-size: 13px; font-weight: 500; }
+
+  /* tables — the heart of these TOC docs */
+  .doc table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: 14.5px; }
+  .doc thead th {
+    background: var(--ink); color: #fff;
+    text-align: left; font-weight: 800;
+    padding: 11px 14px;
+    border: 1.5px solid var(--ink);
+    word-break: keep-all;
+  }
+  .doc tbody td {
+    padding: 11px 14px;
+    border: 1.5px solid var(--gray-200);
+    vertical-align: top;
+    word-break: keep-all;
+  }
+  .doc tbody tr:nth-child(even) { background: var(--gray-100); }
+  .doc tbody td code { font-size: .82em; }
+
+  /* states */
+  .status { margin-top: 18px; padding: 40px; text-align: center; color: var(--gray-500); font-size: 15px; font-weight: 600; }
+  .status.err { color: #b3261e; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="bar">
+    <a class="back" href="index.html">← 한국어 홈</a>
+    <span class="pathchip" id="pathchip"></span>
+  </div>
+
+  <div class="status" id="status">불러오는 중…</div>
+  <article class="doc" id="doc" style="display:none"></article>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
+<script>
+  (function () {
+    var statusEl = document.getElementById('status');
+    var docEl = document.getElementById('doc');
+    var chipEl = document.getElementById('pathchip');
+
+    function fail(msg) {
+      statusEl.className = 'status err';
+      statusEl.textContent = msg;
+      statusEl.style.display = '';
+      docEl.style.display = 'none';
+    }
+
+    // read & validate ?doc= — relative .md paths on this site only
+    var doc = new URLSearchParams(location.search).get('doc') || '';
+    if (!doc) { fail('표시할 문서가 지정되지 않았습니다. (?doc=… 누락)'); return; }
+    if (/^https?:|^\/\/|\.\./.test(doc) || !/\.md$/i.test(doc)) {
+      fail('잘못된 문서 경로입니다: ' + doc); return;
+    }
+    chipEl.textContent = doc;
+
+    fetch(doc)
+      .then(function (r) {
+        if (!r.ok) throw new Error(r.status === 404 ? '문서를 찾을 수 없습니다 (404).' : '불러오기 실패 (' + r.status + ').');
+        return r.text();
+      })
+      .then(function (md) {
+        docEl.innerHTML = marked.parse(md, { gfm: true, breaks: false });
+        // set page title from the first heading
+        var h1 = docEl.querySelector('h1, h2');
+        if (h1) document.title = h1.textContent.trim() + ' — 한국어 커리큘럼';
+        statusEl.style.display = 'none';
+        docEl.style.display = '';
+      })
+      .catch(function (e) { fail(e.message || '문서를 불러오지 못했습니다.'); });
+  })();
+</script>
+</body>
+</html>
