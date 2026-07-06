@@ -1,0 +1,557 @@
+/* ============================================================
+   PODO trial-lesson additions — loaded AFTER ../lesson-card.css
+   Adds: lime brand pages (cover / act dividers / closing),
+   greeting chat with katakana reading (yomi), needs-analysis
+   option rows, and the consultation/roadmap worksheet bits
+   (ported from onboarding-screens.html, restyled to Podo Bold).
+   ============================================================ */
+
+/* ---------- brand pages (cover · divider · closing) ---------- */
+.brand-page {
+  min-height: 640px;
+  margin: 24px 20px 0;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #b5fd4c;
+  border-radius: 16px;
+  box-shadow: 0 6px 0 #1c1c1c;
+}
+
+.phone > .brand-page:first-child {
+  margin-top: 20px;
+}
+
+.brand-page.divider {
+  min-height: 420px;
+}
+
+.podo-badge {
+  display: inline-flex;
+  align-items: center;
+  background: #1c1c1c;
+  border-radius: 999px;
+  padding: 6px 6px 6px 20px;
+}
+
+.podo-badge .logo {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: .02em;
+  padding-right: 14px;
+}
+
+.podo-badge .tag {
+  background: #fff;
+  border-radius: 999px;
+  padding: 7px 15px;
+  color: #1c1c1c;
+  font-size: 13.5px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.brand-kicker {
+  margin: 26px 0 0;
+  color: rgba(28,28,28,.55);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.brand-title {
+  margin: 8px 0 0;
+  color: #1c1c1c;
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1.12;
+  letter-spacing: -.02em;
+  word-break: keep-all;
+}
+
+.brand-page.divider .brand-title {
+  font-size: 33px;
+}
+
+.brand-title .small {
+  display: block;
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  color: rgba(28,28,28,.55);
+  letter-spacing: 0;
+}
+
+.brand-sub {
+  max-width: 320px;
+  margin: 16px 0 0;
+  color: rgba(28,28,28,.66);
+  font-size: 15px;
+  line-height: 1.55;
+  font-weight: 700;
+  word-break: keep-all;
+}
+
+/* closing page */
+.end-head {
+  margin: 0;
+  color: #1c1c1c;
+  font-size: 21px;
+  font-weight: 900;
+}
+
+.end-card {
+  width: 100%;
+  margin-top: 20px;
+  padding: 16px 20px 36px;
+  background: #fff;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 18px;
+  text-align: left;
+}
+
+.end-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #ececea;
+  color: #1c1c1c;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.end-check {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #b5fd4c;
+  color: #1c1c1c;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.end-title {
+  margin: 36px 0 0;
+  text-align: center;
+  color: #1c1c1c;
+  font-size: 29px;
+  font-weight: 900;
+  line-height: 1.28;
+  letter-spacing: -.01em;
+  word-break: keep-all;
+}
+
+.end-title .hl {
+  color: #6abe36;
+}
+
+.end-copy {
+  margin: 16px 0 0;
+  text-align: center;
+  color: #575753;
+  font-size: 14.5px;
+  line-height: 1.6;
+  font-weight: 600;
+  word-break: keep-all;
+}
+
+/* ---------- greeting chat with reading (yomi) ---------- */
+/* bubble layout: katakana reading on top (green, spaced),
+   Korean main line, learner-language gloss below in gray */
+.yomi {
+  display: block;
+  margin-bottom: 3px;
+  color: #57a021;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: .26em;
+  line-height: 1.5;
+}
+
+.bubble.intro {
+  display: block;
+  padding: 14px 16px;
+  overflow: visible;
+}
+
+.bubble.intro > .korean {
+  padding: 0;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.bubble.me.intro {
+  background: #f2fcec;
+}
+
+.bubble.intro > .gloss {
+  display: block;
+  margin-top: 6px;
+  color: #a5a5a5;
+  font-size: 12.5px;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+/* blue nudge under a learner bubble: "reply to the tutor!" */
+.reply-cue {
+  display: block;
+  margin-top: 10px;
+  text-align: right;
+  color: #3b82f6;
+  font-size: 12.5px;
+  font-weight: 700;
+}
+
+/* ---------- needs-analysis option rows ---------- */
+.opt-list {
+  display: grid;
+  gap: 11px;
+}
+
+.opt-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 13px;
+  background: #fff;
+}
+
+.opt-row .emo {
+  flex: none;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.opt-row .opt-body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.opt-row .opt-main {
+  display: block;
+  color: #1c1c1c;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.opt-row .opt-sub {
+  display: block;
+  margin-top: 2px;
+  color: #757575;
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.opt-row .lv-badge {
+  flex: none;
+  min-width: 48px;
+  padding: 10px 0;
+  text-align: center;
+  background: #1c1c1c;
+  color: #b5fd4c;
+  border-radius: 11px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* ---------- consultation worksheet ---------- */
+.ws-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.ws-row:first-child {
+  padding-top: 0;
+}
+
+.ws-row:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.ws-row .lab {
+  flex: none;
+  width: 88px;
+  color: #1c1c1c;
+  font-size: 13.5px;
+  font-weight: 800;
+}
+
+.chips {
+  display: flex;
+  gap: 7px;
+}
+
+.nchip {
+  position: relative;
+  line-height: 0;
+  cursor: pointer;
+}
+
+.nchip input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.nchip span {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 10px;
+  background: #fff;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.nchip input:checked + span {
+  background: #b5fd4c;
+}
+
+/* course checkboxes */
+.cgroup-label {
+  display: block;
+  margin: 20px 0 0;
+  color: #757575;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.cgroup-label:first-child,
+.section-subtitle + .cgroup-label {
+  margin-top: 0;
+}
+
+.cgroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.ccheck {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 13px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.ccheck .t {
+  color: #1c1c1c;
+  font-size: 13.5px;
+  font-weight: 800;
+}
+
+.ccheck .t small {
+  margin-left: 3px;
+  color: #757575;
+  font-size: 10.5px;
+  font-weight: 600;
+}
+
+.cbox {
+  appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+  flex: none;
+  width: 17px;
+  height: 17px;
+  margin: 0;
+  border: 1.7px solid #1c1c1c;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.cbox:checked {
+  background: #b5fd4c;
+}
+
+.cbox:checked::after {
+  content: "✓";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #1c1c1c;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+/* the one big write-in: months / per-week / total sessions */
+.plan-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px 18px;
+  margin-top: 22px;
+  padding: 16px 18px;
+  background: #1c1c1c;
+  border-radius: 14px;
+  color: #fff;
+}
+
+.plan-banner .k {
+  color: #b5fd4c;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.plan-banner .line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.write {
+  width: 56px;
+  padding: 4px 2px;
+  border: none;
+  border-radius: 8px;
+  background: #b5fd4c;
+  color: #1c1c1c;
+  text-align: center;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.write::placeholder {
+  color: rgba(28,28,28,.35);
+  font-size: 14px;
+}
+
+.write:focus {
+  outline: 2px solid #fff;
+}
+
+/* inline underline blank (name / date / start date) */
+.blank-line {
+  width: 110px;
+  padding: 2px 4px;
+  border: none;
+  border-bottom: 1.6px solid #1c1c1c;
+  background: transparent;
+  color: #1c1c1c;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.blank-line:focus {
+  outline: none;
+  background: #f2fcec;
+}
+
+/* CTA */
+.cta-box {
+  margin-top: 22px;
+  padding: 16px;
+  background: #b5fd4c;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 4px 0 #1c1c1c;
+}
+
+.cta-box .t {
+  color: #1c1c1c;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.cta-box .s {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 8px;
+  color: rgba(28,28,28,.66);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* ---------- freetalk question ladder ---------- */
+.ladder {
+  display: grid;
+  gap: 12px;
+}
+
+.ladder-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 13px;
+  background: #fff;
+}
+
+.ladder-item .lv {
+  flex: none;
+  margin-top: 2px;
+  padding: 4px 10px;
+  border: 1.5px solid #6abe36;
+  border-radius: 999px;
+  background: #f2fcec;
+  color: #3f7a1c;
+  font-size: 11.5px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.ladder-item .lv.hot {
+  border-color: #1c1c1c;
+  background: #1c1c1c;
+  color: #b5fd4c;
+}
+
+.ladder-item .korean {
+  font-size: 17px;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 480px) {
+  .brand-page {
+    margin: 20px 12px 0;
+    padding: 36px 22px;
+  }
+
+  .brand-title {
+    font-size: 38px;
+  }
+
+  .brand-page.divider .brand-title {
+    font-size: 29px;
+  }
+}
