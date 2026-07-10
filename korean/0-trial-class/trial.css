@@ -26,7 +26,24 @@
 }
 
 .brand-page.divider {
-  min-height: 420px;
+  min-height: 580px;
+}
+
+/* mascot on act dividers — white sticker so the lime body reads on the lime page */
+.brand-mascot {
+  width: 164px;
+  height: 164px;
+  object-fit: contain;
+  padding: 16px;
+  background: #fff;
+  border: 2px solid #1c1c1c;
+  border-radius: 26px;
+  box-sizing: border-box;
+}
+
+/* every trial page card stays taller than it is wide (no square pages on mobile) */
+.section {
+  min-height: 580px;
 }
 
 .podo-badge {
@@ -84,6 +101,16 @@
   font-size: 15px;
   font-weight: 700;
   color: rgba(28,28,28,.55);
+  letter-spacing: 0;
+}
+
+/* japanese step name under a big korean divider title */
+.brand-title .ja {
+  display: block;
+  margin-top: 10px;
+  font-size: 17px;
+  font-weight: 800;
+  color: rgba(28,28,28,.6);
   letter-spacing: 0;
 }
 
