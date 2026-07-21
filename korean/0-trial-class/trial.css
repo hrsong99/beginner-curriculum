@@ -605,33 +605,6 @@
   --v-ink: #bf1b5c;
 }
 
-/* ---------- colour legend ---------- */
-.legend {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 18px;
-}
-
-.legend-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 5px 12px;
-  border: 1.5px solid #1c1c1c;
-  border-radius: 999px;
-  background: #fff;
-  font-size: 12px;
-  font-weight: 800;
-}
-
-.legend-chip i {
-  width: 13px;
-  height: 13px;
-  border: 1.2px solid rgba(28,28,28,.3);
-  border-radius: 4px;
-}
-
 /* ---------- anatomy block: the glyph sitting in its two seats ---------- */
 .anat {
   display: flex;
@@ -646,15 +619,15 @@
   position: relative;
   flex: none;
   margin: 0 auto;
-  width: 138px;
-  height: 138px;
+  width: 162px;
+  height: 162px;
   border: 1.5px solid #1c1c1c;
   border-radius: 14px;
   background: #fff;
   overflow: hidden;
 }
 
-.blk.sm { width: 116px; height: 116px; }
+.blk.sm { width: 150px; height: 150px; }
 
 .blk .zone {
   position: absolute;
@@ -677,12 +650,12 @@
   display: grid;
   place-items: center;
   color: #1c1c1c;
-  font-size: 78px;
+  font-size: 92px;
   font-weight: 800;
   line-height: 1;
 }
 
-.blk.sm .glyph { font-size: 64px; }
+.blk.sm .glyph { font-size: 86px; }
 
 .anat .eq {
   color: #1c1c1c;
@@ -692,7 +665,7 @@
 
 .anat .kana {
   color: #1c1c1c;
-  font-size: 54px;
+  font-size: 62px;
   font-weight: 900;
   line-height: 1;
   text-align: center;
@@ -745,12 +718,12 @@
 .build .tile {
   display: grid;
   place-items: center;
-  width: 80px;
-  height: 80px;
+  width: 96px;
+  height: 96px;
   border: 1.5px solid #1c1c1c;
-  border-radius: 13px;
+  border-radius: 14px;
   background: #fff;
-  font-size: 42px;
+  font-size: 50px;
   font-weight: 800;
   line-height: 1;
 }
@@ -810,41 +783,44 @@
 .combo span {
   display: grid;
   place-items: center;
-  height: 46px;
+  height: 64px;
   border: 1.5px solid #1c1c1c;
-  border-radius: 9px;
+  border-radius: 10px;
   background: #fff;
-  font-size: 21px;
+  font-size: 27px;
   font-weight: 800;
   line-height: 1;
 }
 
 .combo .corner { border: none; background: transparent; }
 
-/* ---------- read drills ---------- */
+/* ---------- read drills ----------
+   the letters ARE the activity, so they fill the page: a 3-wide grid of
+   big tiles rather than a thin row of chips floating in white space */
 .read-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 9px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
   margin-top: 24px;
 }
 
 .read-chip {
   display: grid;
   place-items: center;
-  min-width: 64px;
-  height: 64px;
-  padding: 0 8px;
+  height: 148px;
   border: 1.5px solid #1c1c1c;
-  border-radius: 12px;
+  border-radius: 14px;
   background: #fff;
-  font-size: 31px;
+  font-size: 76px;
   font-weight: 800;
   line-height: 1;
 }
 
-.read-chip.word { min-width: 0; padding: 0 14px; font-size: 27px; }
+/* whole words need width, not height */
+.read-grid.words .read-chip {
+  height: 112px;
+  font-size: 34px;
+}
 
 /* ---------- words broken into syllables ---------- */
 .wordset {
@@ -927,11 +903,11 @@
 .make-row .jamo {
   display: grid;
   place-items: center;
-  width: 48px;
-  height: 48px;
+  width: 58px;
+  height: 58px;
   border: 1.5px solid #1c1c1c;
-  border-radius: 10px;
-  font-size: 24px;
+  border-radius: 11px;
+  font-size: 29px;
   font-weight: 800;
   line-height: 1;
 }
@@ -939,8 +915,8 @@
 .blank-blk {
   position: relative;
   flex: none;
-  width: 76px;
-  height: 76px;
+  width: 96px;
+  height: 96px;
   border: 1.8px dashed #1c1c1c;
   border-radius: 12px;
   background: #fff;
@@ -1036,8 +1012,8 @@
 .known-row {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 13px 16px;
+  gap: 16px;
+  padding: 20px 18px;
   border: 1.5px solid #1c1c1c;
   border-radius: 13px;
   background: #fff;
@@ -1045,9 +1021,9 @@
 
 .known-row .k {
   flex: none;
-  width: 92px;
+  width: 108px;
   color: #1c1c1c;
-  font-size: 21px;
+  font-size: 25px;
   font-weight: 800;
   line-height: 1.25;
 }
@@ -1071,7 +1047,7 @@
 /* ---------- payoff counter ---------- */
 .payoff {
   margin-top: 24px;
-  padding: 24px 20px;
+  padding: 34px 20px;
   border: 1.5px solid #1c1c1c;
   border-radius: 16px;
   background: #b5fd4c;
@@ -1089,7 +1065,7 @@
   display: block;
   margin: 6px 0 2px;
   color: #1c1c1c;
-  font-size: 64px;
+  font-size: 84px;
   font-weight: 900;
   line-height: 1.05;
   letter-spacing: -.03em;
@@ -1134,6 +1110,32 @@
   font-weight: 800;
 }
 
+/* Concept pages carry one small diagram, so the leftover space is split
+   above and below it rather than dumped at the foot of the card — the
+   activity sits in the optical centre where the eye lands. */
+.section:has(> .anat),
+.section:has(> .build),
+.section:has(> .blk-row),
+.section:has(> .combo),
+.section:has(> .payoff) {
+  display: flex;
+  flex-direction: column;
+}
+
+/* free space opens ABOVE the diagram and BELOW whatever closes the page,
+   so a diagram and its caption/chip stay welded together as one group */
+.section > .anat,
+.section > .build,
+.section > .blk-row,
+.section > .combo,
+.section > .payoff { margin-top: auto; }
+
+.section:has(> .anat) > :last-child,
+.section:has(> .build) > :last-child,
+.section:has(> .blk-row) > :last-child,
+.section:has(> .combo) > :last-child,
+.section:has(> .payoff) > :last-child { margin-bottom: auto; }
+
 /* a hint chip sitting under a component needs air (hard shadows below) */
 .section > .hint { margin-top: 16px; }
 
@@ -1160,11 +1162,11 @@
     font-size: 29px;
   }
 
-  .combo span { height: 42px; font-size: 19px; }
-  .read-chip { min-width: 58px; height: 58px; font-size: 28px; }
+  .combo span { height: 58px; font-size: 24px; }
+  .read-chip { height: 128px; font-size: 66px; }
   .anat { gap: 12px; }
-  .blk { width: 124px; height: 124px; }
-  .blk .glyph { font-size: 70px; }
-  .anat .kana { font-size: 46px; }
+  .blk { width: 146px; height: 146px; }
+  .blk .glyph { font-size: 84px; }
+  .anat .kana { font-size: 54px; }
   .letter-card > .kana-eq { font-size: 24px; }
 }
