@@ -585,6 +585,566 @@
   font-size: 17px;
 }
 
+/* ============================================================
+   HANGUL TEACHING KIT (trial-1)
+   ------------------------------------------------------------
+   One idea runs through every page: a syllable is not a picture,
+   it is a BOX with two seats. 子音 = amber seat, 母音 = rose seat.
+   The same two colours mark the letter cards, the read drills,
+   the words and the write-in guides, so the learner stops seeing
+   a squiggle and starts seeing structure.
+
+   TRAINING WHEELS: tints are teaching aids, so they are switched
+   OFF (.plain) on the find / dictation drills — the learner has
+   to see the parts without help there.
+   ============================================================ */
+:root {
+  --c-bg: #ffeeb8;   /* 子音 seat */
+  --c-ink: #96690d;
+  --v-bg: #ffd7e5;   /* 母音 seat */
+  --v-ink: #bf1b5c;
+}
+
+/* ---------- colour legend ---------- */
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.legend-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 12px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 999px;
+  background: #fff;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.legend-chip i {
+  width: 13px;
+  height: 13px;
+  border: 1.2px solid rgba(28,28,28,.3);
+  border-radius: 4px;
+}
+
+/* ---------- anatomy block: the glyph sitting in its two seats ---------- */
+.anat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.blk {
+  display: block;   /* spans are inline: without this the box collapses */
+  position: relative;
+  flex: none;
+  margin: 0 auto;
+  width: 138px;
+  height: 138px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 14px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.blk.sm { width: 116px; height: 116px; }
+
+.blk .zone {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  padding: 5px 2px;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.blk.lr .zone.c { inset: 0 54% 0 0; align-items: flex-end; background: var(--c-bg); color: var(--c-ink); }
+.blk.lr .zone.v { inset: 0 0 0 46%; align-items: flex-end; background: var(--v-bg); color: var(--v-ink); }
+.blk.tb .zone.c { inset: 0 0 50% 0; align-items: flex-start; background: var(--c-bg); color: var(--c-ink); }
+.blk.tb .zone.v { inset: 50% 0 0 0; align-items: flex-end; background: var(--v-bg); color: var(--v-ink); }
+
+.blk .glyph {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #1c1c1c;
+  font-size: 78px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.blk.sm .glyph { font-size: 64px; }
+
+.anat .eq {
+  color: #1c1c1c;
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.anat .kana {
+  color: #1c1c1c;
+  font-size: 54px;
+  font-weight: 900;
+  line-height: 1;
+  text-align: center;
+}
+
+.anat .kana small {
+  display: block;
+  margin-top: 8px;
+  color: #757575;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: .06em;
+}
+
+/* the parts named underneath the block */
+.parts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.part {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 11px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.part b { font-size: 21px; line-height: 1; }
+.part em { color: #575753; font-size: 12px; font-style: normal; font-weight: 700; }
+
+/* ---------- build strip: ㅇ + ㅏ → 아 ---------- */
+.build {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.build .b { text-align: center; }
+
+.build .tile {
+  display: grid;
+  place-items: center;
+  width: 80px;
+  height: 80px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 13px;
+  background: #fff;
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.build .tile.res { box-shadow: 0 4px 0 #1c1c1c; }
+
+.build .b small {
+  display: block;
+  margin-top: 7px;
+  color: #757575;
+  font-size: 11.5px;
+  font-weight: 700;
+}
+
+.build .op {
+  align-self: center;
+  padding-bottom: 20px;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+/* ---------- placement blocks side by side ---------- */
+.blk-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.blk-item { text-align: center; }
+
+.blk-item .cap {
+  display: block;
+  margin-top: 11px;
+  color: #1c1c1c;
+  font-size: 13.5px;
+  font-weight: 800;
+}
+
+.blk-item .cap small {
+  display: block;
+  margin-top: 3px;
+  color: #757575;
+  font-size: 11.5px;
+  font-weight: 700;
+}
+
+/* ---------- combination table (payoff: 2 × 6 = 12 blocks) ---------- */
+.combo {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 5px;
+  margin-top: 24px;
+}
+
+.combo span {
+  display: grid;
+  place-items: center;
+  height: 46px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 9px;
+  background: #fff;
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.combo .corner { border: none; background: transparent; }
+
+/* ---------- read drills ---------- */
+.read-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 24px;
+}
+
+.read-chip {
+  display: grid;
+  place-items: center;
+  min-width: 64px;
+  height: 64px;
+  padding: 0 8px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 12px;
+  background: #fff;
+  font-size: 31px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.read-chip.word { min-width: 0; padding: 0 14px; font-size: 27px; }
+
+/* ---------- words broken into syllables ---------- */
+.wordset {
+  display: grid;
+  gap: 11px;
+  margin-top: 24px;
+}
+
+.word-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 13px 16px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 13px;
+  background: #fff;
+}
+
+.word-card .syls {
+  display: flex;
+  flex: none;
+  gap: 5px;
+}
+
+.word-card .syl {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 9px;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.word-card .body { min-width: 0; }
+
+.word-card .yomi-line {
+  display: block;
+  color: #57a021;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.word-card .mean {
+  display: block;
+  margin-top: 3px;
+  color: #575753;
+  font-size: 14.5px;
+  font-weight: 700;
+}
+
+/* ---------- write-in guides: the dashed seat tells you WHERE ---------- */
+.make-list,
+.trace-list,
+.dict-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.make-row,
+.trace-row,
+.dict-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.make-row .src {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 7px;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.make-row .jamo {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 10px;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.blank-blk {
+  position: relative;
+  flex: none;
+  width: 76px;
+  height: 76px;
+  border: 1.8px dashed #1c1c1c;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.blank-blk.lr::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  bottom: 9px;
+  left: 46%;
+  border-left: 1.5px dashed #d2d2d2;
+}
+
+.blank-blk.tb::before {
+  content: "";
+  position: absolute;
+  left: 9px;
+  right: 9px;
+  top: 50%;
+  border-top: 1.5px dashed #d2d2d2;
+}
+
+.trace-row .model {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 76px;
+  height: 76px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 12px;
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* the faint character to trace over */
+.trace-row .ghost {
+  display: grid;
+  place-items: center;
+  flex: 1 1 auto;
+  height: 76px;
+  border: 1.8px dashed #1c1c1c;
+  border-radius: 12px;
+  background: #fff;
+  color: #e6e6e6;
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.dict-row .no {
+  flex: none;
+  width: 26px;
+  color: #757575;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+/* ---------- the unreadable-sentence hook ---------- */
+.hook-quote {
+  margin-top: 24px;
+  padding: 26px 20px;
+  border-radius: 14px;
+  background: #1c1c1c;
+  text-align: center;
+}
+
+.hook-quote .q {
+  display: block;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 1.35;
+  word-break: keep-all;
+}
+
+.hook-quote .m {
+  display: block;
+  margin-top: 12px;
+  color: rgba(255,255,255,.6);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ---------- "you already know some Korean" rows ---------- */
+.known {
+  display: grid;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.known-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 16px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 13px;
+  background: #fff;
+}
+
+.known-row .k {
+  flex: none;
+  width: 92px;
+  color: #1c1c1c;
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.known-row .j {
+  color: #575753;
+  font-size: 14.5px;
+  font-weight: 700;
+  line-height: 1.35;
+  word-break: keep-all;
+}
+
+.known-row .j small {
+  display: block;
+  margin-top: 2px;
+  color: #a5a5a5;
+  font-size: 11.5px;
+  font-weight: 700;
+}
+
+/* ---------- payoff counter ---------- */
+.payoff {
+  margin-top: 24px;
+  padding: 24px 20px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 16px;
+  background: #b5fd4c;
+  box-shadow: 0 4px 0 #1c1c1c;
+  text-align: center;
+}
+
+.payoff .eqline {
+  color: #1c1c1c;
+  font-size: 15.5px;
+  font-weight: 800;
+}
+
+.payoff .big {
+  display: block;
+  margin: 6px 0 2px;
+  color: #1c1c1c;
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -.03em;
+}
+
+.payoff .cap {
+  display: block;
+  color: rgba(28,28,28,.7);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* letter cards: the glyph sits in its coloured seat(s) */
+.letter-card > .korean.seat-lr,
+.letter-card > .korean.seat-tb,
+.letter-card > .korean.seat-v,
+.letter-card > .korean.seat-c {
+  flex: 0 0 78px;
+  height: 78px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  font-size: 46px;
+}
+
+/* the kana anchor, big enough to read as an equal partner */
+.letter-card > .kana-eq {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #1c1c1c;
+  font-size: 27px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.letter-card > .kana-eq i {
+  color: #a5a5a5;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+/* a hint chip sitting under a component needs air (hard shadows below) */
+.section > .hint { margin-top: 16px; }
+
+/* The two seat fills, reused by every component above. Declared last
+   and doubled (.seat-lr.seat-lr) so they always win over a component's
+   own white background — the colour code must never be overridden. */
+.seat-lr.seat-lr { background: linear-gradient(90deg, var(--c-bg) 0 46%, var(--v-bg) 46%); }
+.seat-tb.seat-tb { background: linear-gradient(180deg, var(--c-bg) 0 50%, var(--v-bg) 50%); }
+.seat-v.seat-v   { background: var(--v-bg); }
+.seat-c.seat-c   { background: var(--c-bg); }
+
 /* ---------- responsive ---------- */
 @media (max-width: 480px) {
   .brand-page {
@@ -599,4 +1159,12 @@
   .brand-page.divider .brand-title {
     font-size: 29px;
   }
+
+  .combo span { height: 42px; font-size: 19px; }
+  .read-chip { min-width: 58px; height: 58px; font-size: 28px; }
+  .anat { gap: 12px; }
+  .blk { width: 124px; height: 124px; }
+  .blk .glyph { font-size: 70px; }
+  .anat .kana { font-size: 46px; }
+  .letter-card > .kana-eq { font-size: 24px; }
 }

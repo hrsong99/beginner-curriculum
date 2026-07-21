@@ -90,25 +90,54 @@
       <p class="brand-sub">ここから25分。終わるころには、本物の韓国語の単語が読めます。約束します！</p>
     </div>
 
-    <!-- promise -->
+    <!-- hook: name the "I can't read anything" feeling, then promise -->
     <div class="section">
-      <h2 class="section-title">오늘의 약속 <span class="title-ja">(今日のやくそく)</span></h2>
-      <p class="section-subtitle"><span class="ko">오늘이 끝날 때쯤엔 진짜 한국어를 읽을 수 있어요. 약속해요!</span><span class="ja">今日が終わるころには、本物の韓国語が読めます。約束します！</span></p>
+      <span class="section-kicker">ポイント</span>
+      <h2 class="section-title">못 읽어도 괜찮아요 <span class="title-ja">(読めなくて大丈夫)</span></h2>
+      <p class="section-subtitle"><span class="ko">지금은 한 글자도 못 읽어도 괜찮아요. 법칙만 알면 돼요.</span><span class="ja">今は1文字も読めなくて大丈夫。法則さえ分かれば読めます。</span></p>
+      <div class="hook-quote">
+        <span class="q">사랑은 돈으로 살 수 없다.</span>
+        <span class="m">愛はお金では買えない。</span>
+      </div>
+      <div class="hint" style="margin-top:16px;"><span class="hint-chip">記号に見える → 全員そうです</span></div>
       <div class="card">
         <span class="tip">いいニュース</span>
-        <div class="row">ハングルは<strong>アルファベット</strong>。小さなパーツを組み合わせるだけ。</div>
-        <div class="row">今日使うのはたった<strong>8パーツ</strong>。暗記も例外もなし。</div>
+        <div class="row">ハングルは記号ではなく<strong>アルファベット</strong>。パーツを組み合わせるだけ。</div>
+        <div class="row">今日つかうのはたった<strong>8パーツ</strong>。暗記も例外もなし。</div>
+        <div class="row">25分後、あなたは <strong>나무・어머니・오이</strong> を自分で読めます。</div>
       </div>
     </div>
 
-    <!-- the block idea -->
+    <!-- motivation: you already know some Korean -->
+    <div class="section">
+      <span class="section-kicker">ポイント</span>
+      <h2 class="section-title">이미 알고 있어요 <span class="title-ja">(もう知っている韓国語)</span></h2>
+      <p class="section-subtitle"><span class="ko">사실 한국어를 이미 알고 있어요. 소리만 못 읽었을 뿐이에요.</span><span class="ja">実はもう韓国語を知っています。音を文字にできなかっただけ。</span></p>
+      <div class="known">
+        <div class="known-row"><span class="k">김치</span><span class="j">キムチ<small>そのまま韓国語</small></span></div>
+        <div class="known-row"><span class="k">불고기</span><span class="j">プルコギ<small>そのまま韓国語</small></span></div>
+        <div class="known-row"><span class="k">고속도로</span><span class="j">コソクトロ ＝ 高速道路<small>漢字由来の言葉は音までそっくり</small></span></div>
+      </div>
+      <div class="hint"><span class="hint-chip">語順・助詞も日本語とほぼ同じ</span><span class="hint-chip">単語の約7割が漢字由来</span></div>
+    </div>
+
+    <!-- the block idea: a syllable is a box with two seats -->
     <div class="section">
       <span class="section-kicker">ポイント</span>
       <h2 class="section-title">글자 블록 <span class="title-ja">(文字ブロック)</span></h2>
-      <p class="section-subtitle"><span class="ko">자음이 먼저, 모음이 나중. 둘이 모여서 하나의 소리가 돼요.</span><span class="ja">子音が先、母音があと。2つで1つの音になります。</span></p>
-      <div class="pattern-card">
-        <span class="translation">子音 ＋ 母音 ＝ 1つの音</span>
-        <span class="korean xl">ㄴ ＋ ㅏ → 나</span>
+      <p class="section-subtitle"><span class="ko">한 글자는 상자예요. 자리는 두 개, 자음 자리와 모음 자리.</span><span class="ja">1文字は「箱」。席は2つ、子音の席と母音の席です。</span></p>
+      <div class="anat">
+        <span class="blk lr"><span class="zone c">子音</span><span class="zone v">母音</span><span class="glyph">나</span></span>
+        <span class="eq">＝</span>
+        <span class="kana">ナ<small>na</small></span>
+      </div>
+      <div class="parts">
+        <span class="part seat-c"><b>ㄴ</b><em>n の音</em></span>
+        <span class="part seat-v"><b>ㅏ</b><em>a の音</em></span>
+      </div>
+      <div class="legend">
+        <span class="legend-chip"><i class="seat-c"></i>子音の席</span>
+        <span class="legend-chip"><i class="seat-v"></i>母音の席</span>
       </div>
     </div>
 
@@ -124,9 +153,9 @@
       <h2 class="section-title">모음 ① <span class="title-ja">(母音 3つ)</span></h2>
       <p class="section-subtitle"><span class="ko">제 입 모양을 따라서, 소리 내어 읽어 보세요.</span><span class="ja">私の口の形をまねして、声に出して読んでみましょう。</span></p>
       <div class="letter-row">
-        <div class="letter-card"><span class="korean">아</span><span class="english">「ア」口を大きく</span></div>
-        <div class="letter-card"><span class="korean">어</span><span class="english">「オ」口を大きく開けて</span></div>
-        <div class="letter-card"><span class="korean">이</span><span class="english">「イ」そのまま</span></div>
+        <div class="letter-card"><span class="korean seat-lr">아</span><span class="kana-eq"><i>＝</i>ア</span><span class="english">口を大きく</span></div>
+        <div class="letter-card"><span class="korean seat-lr">어</span><span class="kana-eq"><i>＝</i>オ</span><span class="english">口を大きく開けて</span></div>
+        <div class="letter-card"><span class="korean seat-lr">이</span><span class="kana-eq"><i>＝</i>イ</span><span class="english">そのまま</span></div>
       </div>
     </div>
 
@@ -135,28 +164,41 @@
       <h2 class="section-title">모음 ② <span class="title-ja">(母音 のこり3つ)</span></h2>
       <p class="section-subtitle"><span class="ko">나머지 3개도 소리 내어 읽어 보세요.</span><span class="ja">のこりの3つも、声に出して読んでみましょう。</span></p>
       <div class="letter-row">
-        <div class="letter-card"><span class="korean">오</span><span class="english">「オ」くちびるを丸く</span></div>
-        <div class="letter-card"><span class="korean">우</span><span class="english">「ウ」くちびるを丸く</span></div>
-        <div class="letter-card"><span class="korean">으</span><span class="english">「ウ」くちびるを横に</span></div>
+        <div class="letter-card"><span class="korean seat-tb">오</span><span class="kana-eq"><i>＝</i>オ</span><span class="english">くちびるを丸く</span></div>
+        <div class="letter-card"><span class="korean seat-tb">우</span><span class="kana-eq"><i>＝</i>ウ</span><span class="english">くちびるを丸く</span></div>
+        <div class="letter-card"><span class="korean seat-tb">으</span><span class="kana-eq"><i>＝</i>ウ</span><span class="english">くちびるを横に</span></div>
       </div>
     </div>
 
+    <!-- the payoff of colouring the seats from the start: the amber seat
+         was always ㅇ, and it never made a sound -->
     <div class="section">
       <span class="section-kicker">ポイント</span>
       <h2 class="section-title">소리 없는 ㅇ <span class="title-ja">(音のない ㅇ)</span></h2>
-      <p class="section-subtitle"><span class="ko">눈치챘어요? 모음 앞의 ㅇ은 소리가 없어요. 그냥 의자일 뿐이에요.</span><span class="ja">気づきましたか？母音の前の「ㅇ」は音を出さない、ただの「いす」です。</span></p>
-      <div class="letter-row">
-        <div class="letter-card"><span class="korean">ㅇ</span><span class="english">音はゼロ。母音を乗せる「いす」だけ。</span></div>
+      <p class="section-subtitle"><span class="ko">눈치챘어요? 노란 자리엔 계속 ㅇ이 있었어요. 그런데 소리가 없어요.</span><span class="ja">気づきましたか？黄色い席にはずっと「ㅇ」がいました。でも音はゼロ。</span></p>
+      <div class="build">
+        <span class="b"><span class="tile seat-c">ㅇ</span><small>音ゼロ</small></span>
+        <span class="op">＋</span>
+        <span class="b"><span class="tile seat-v">ㅏ</span><small>a</small></span>
+        <span class="op">→</span>
+        <span class="b"><span class="tile seat-lr res">아</span><small>ア</small></span>
       </div>
+      <div class="hint"><span class="hint-chip">母音はひとりで立てない。だから「いす」が要る</span></div>
     </div>
 
     <div class="section">
       <span class="section-kicker">ポイント</span>
       <h2 class="section-title">모음 자리 <span class="title-ja">(母音の場所)</span></h2>
-      <p class="section-subtitle"><span class="ko">세로로 긴 모음은 오른쪽 옆에, 가로로 긴 모음은 아래에 들어가요. 이게 다예요.</span><span class="ja">縦長の母音は右どなり、横長の母音は下に入ります。これだけ。</span></p>
-      <div class="letter-row">
-        <div class="letter-card"><span class="korean">아</span><span class="english">세로 모음は右どなり →</span></div>
-        <div class="letter-card"><span class="korean">오</span><span class="english">가로 모음は下に ↓</span></div>
+      <p class="section-subtitle"><span class="ko">세로로 긴 모음은 오른쪽, 가로로 긴 모음은 아래. 이게 다예요.</span><span class="ja">たて長の母音は右、よこ長の母音は下。ルールはこれだけ。</span></p>
+      <div class="blk-row">
+        <span class="blk-item">
+          <span class="blk sm lr"><span class="zone c">子音</span><span class="zone v">母音</span><span class="glyph">아</span></span>
+          <span class="cap">ㅏ ㅓ ㅣ<small>たて長 → 右どなり →</small></span>
+        </span>
+        <span class="blk-item">
+          <span class="blk sm tb"><span class="zone c">子音</span><span class="zone v">母音</span><span class="glyph">오</span></span>
+          <span class="cap">ㅗ ㅜ ㅡ<small>よこ長 → 下に ↓</small></span>
+        </span>
       </div>
     </div>
 
@@ -164,8 +206,13 @@
       <span class="section-kicker">よむ</span>
       <h2 class="section-title">모음 읽기 <span class="title-ja">(母音を読もう)</span></h2>
       <p class="section-subtitle"><span class="ko">여섯 개를 소리 내어 읽어 보세요. 순서는 섞여 있어요.</span><span class="ja">6つを声に出して読んでみましょう。順番はシャッフルしています。</span></p>
-      <div class="card">
-        <span class="korean xl">오　이　아　으　어　우</span>
+      <div class="read-grid">
+        <span class="read-chip seat-tb">오</span>
+        <span class="read-chip seat-lr">이</span>
+        <span class="read-chip seat-lr">아</span>
+        <span class="read-chip seat-tb">으</span>
+        <span class="read-chip seat-lr">어</span>
+        <span class="read-chip seat-tb">우</span>
       </div>
     </div>
 
@@ -181,12 +228,12 @@
       <h2 class="section-title">자음 ㄴ <span class="title-ja">(子音 ㄴ)</span></h2>
       <p class="section-subtitle"><span class="ko">ㄴ은 n 소리예요. ㄴ은 그대로 두고, 모음만 바꿔서 읽어 보세요.</span><span class="ja">「ㄴ」は n の音。ㄴはそのまま、母音だけ入れかえて読んでみましょう。</span></p>
       <div class="letter-row">
-        <div class="letter-card"><span class="korean">나</span><span class="english">ナ</span></div>
-        <div class="letter-card"><span class="korean">너</span><span class="english">ノ（口を開けて）</span></div>
-        <div class="letter-card"><span class="korean">노</span><span class="english">ノ</span></div>
-        <div class="letter-card"><span class="korean">누</span><span class="english">ヌ</span></div>
-        <div class="letter-card"><span class="korean">느</span><span class="english">ウに近い「ヌ」</span></div>
-        <div class="letter-card"><span class="korean">니</span><span class="english">ニ</span></div>
+        <div class="letter-card"><span class="korean seat-lr">나</span><span class="kana-eq"><i>＝</i>ナ</span><span class="english">口を大きく</span></div>
+        <div class="letter-card"><span class="korean seat-lr">너</span><span class="kana-eq"><i>＝</i>ノ</span><span class="english">口を開けて</span></div>
+        <div class="letter-card"><span class="korean seat-tb">노</span><span class="kana-eq"><i>＝</i>ノ</span><span class="english">くちびるを丸く</span></div>
+        <div class="letter-card"><span class="korean seat-tb">누</span><span class="kana-eq"><i>＝</i>ヌ</span><span class="english">くちびるを丸く</span></div>
+        <div class="letter-card"><span class="korean seat-tb">느</span><span class="kana-eq"><i>＝</i>ヌ</span><span class="english">くちびるを横に</span></div>
+        <div class="letter-card"><span class="korean seat-lr">니</span><span class="kana-eq"><i>＝</i>ニ</span><span class="english">そのまま</span></div>
       </div>
     </div>
 
@@ -194,8 +241,13 @@
       <span class="section-kicker">よむ</span>
       <h2 class="section-title">ㄴ 읽기 <span class="title-ja">(ㄴ を読もう)</span></h2>
       <p class="section-subtitle"><span class="ko">소리 내어, 멈추지 말고 읽어 보세요.</span><span class="ja">声に出して、止まらずに読んでみましょう。</span></p>
-      <div class="card">
-        <span class="korean xl">누　나　니　노　너　느</span>
+      <div class="read-grid">
+        <span class="read-chip seat-tb">누</span>
+        <span class="read-chip seat-lr">나</span>
+        <span class="read-chip seat-lr">니</span>
+        <span class="read-chip seat-tb">노</span>
+        <span class="read-chip seat-lr">너</span>
+        <span class="read-chip seat-tb">느</span>
       </div>
     </div>
 
@@ -204,42 +256,69 @@
       <h2 class="section-title">자음 ㅁ <span class="title-ja">(子音 ㅁ)</span></h2>
       <p class="section-subtitle"><span class="ko">ㅁ은 m 소리예요. 같은 방법으로, 모음만 바꿔서 읽어 보세요.</span><span class="ja">「ㅁ」は m の音。同じやり方で、母音だけ入れかえて読んでみましょう。</span></p>
       <div class="letter-row">
-        <div class="letter-card"><span class="korean">마</span><span class="english">マ</span></div>
-        <div class="letter-card"><span class="korean">머</span><span class="english">モ（口を開けて）</span></div>
-        <div class="letter-card"><span class="korean">모</span><span class="english">モ</span></div>
-        <div class="letter-card"><span class="korean">무</span><span class="english">ム</span></div>
-        <div class="letter-card"><span class="korean">므</span><span class="english">ウに近い「ム」</span></div>
-        <div class="letter-card"><span class="korean">미</span><span class="english">ミ</span></div>
+        <div class="letter-card"><span class="korean seat-lr">마</span><span class="kana-eq"><i>＝</i>マ</span><span class="english">口を大きく</span></div>
+        <div class="letter-card"><span class="korean seat-lr">머</span><span class="kana-eq"><i>＝</i>モ</span><span class="english">口を開けて</span></div>
+        <div class="letter-card"><span class="korean seat-tb">모</span><span class="kana-eq"><i>＝</i>モ</span><span class="english">くちびるを丸く</span></div>
+        <div class="letter-card"><span class="korean seat-tb">무</span><span class="kana-eq"><i>＝</i>ム</span><span class="english">くちびるを丸く</span></div>
+        <div class="letter-card"><span class="korean seat-tb">므</span><span class="kana-eq"><i>＝</i>ム</span><span class="english">くちびるを横に</span></div>
+        <div class="letter-card"><span class="korean seat-lr">미</span><span class="kana-eq"><i>＝</i>ミ</span><span class="english">そのまま</span></div>
       </div>
+    </div>
+
+    <!-- payoff: 2 consonants × 6 vowels, all of it readable at a glance -->
+    <div class="section">
+      <span class="section-kicker">よむ</span>
+      <h2 class="section-title">조합표 <span class="title-ja">(組み合わせ表)</span></h2>
+      <p class="section-subtitle"><span class="ko">자음 2개 × 모음 6개 = 12글자. 한 줄씩 소리 내어 읽어 보세요.</span><span class="ja">子音2つ × 母音6つ ＝ 12文字。1行ずつ声に出して読んでみましょう。</span></p>
+      <div class="combo">
+        <span class="corner"></span>
+        <span class="seat-v">ㅏ</span><span class="seat-v">ㅓ</span><span class="seat-v">ㅗ</span><span class="seat-v">ㅜ</span><span class="seat-v">ㅡ</span><span class="seat-v">ㅣ</span>
+        <span class="seat-c">ㄴ</span>
+        <span>나</span><span>너</span><span>노</span><span>누</span><span>느</span><span>니</span>
+        <span class="seat-c">ㅁ</span>
+        <span>마</span><span>머</span><span>모</span><span>무</span><span>므</span><span>미</span>
+      </div>
+      <div class="hint"><span class="hint-chip">おぼえたのは8パーツ。作れた文字は12コ</span></div>
     </div>
 
     <div class="section">
       <span class="section-kicker">よむ</span>
       <h2 class="section-title">섞어 읽기 <span class="title-ja">(まぜて読もう)</span></h2>
       <p class="section-subtitle"><span class="ko">ㄴ과 ㅁ을 섞었어요. 한 블록씩 읽어 보세요.</span><span class="ja">ㄴ と ㅁ をまぜました。1ブロックずつ読んでみましょう。</span></p>
-      <div class="card">
-        <span class="korean xl">미　너　무　나　모　느</span>
+      <div class="read-grid">
+        <span class="read-chip seat-lr">미</span>
+        <span class="read-chip seat-lr">너</span>
+        <span class="read-chip seat-tb">무</span>
+        <span class="read-chip seat-lr">나</span>
+        <span class="read-chip seat-tb">모</span>
+        <span class="read-chip seat-tb">느</span>
       </div>
     </div>
 
+    <!-- training wheels off: no colour here, the learner finds the part -->
     <div class="section">
       <span class="section-kicker">さがす</span>
       <h2 class="section-title">모음 찾기 <span class="title-ja">(母音さがし)</span></h2>
-      <p class="section-subtitle"><span class="ko">ㅏ가 들어간 블록에 동그라미를 쳐 주세요.</span><span class="ja">「ㅏ」が入っているブロックに丸をつけてください。</span></p>
-      <div class="card">
-        <span class="korean xl">나　머　마　노　미　나</span>
+      <p class="section-subtitle"><span class="ko">이번엔 색이 없어요. ㅏ가 들어간 블록에 동그라미를 쳐 주세요.</span><span class="ja">今度は色なし。「ㅏ」が入っているブロックに丸をつけてください。</span></p>
+      <div class="read-grid">
+        <span class="read-chip">나</span>
+        <span class="read-chip">머</span>
+        <span class="read-chip">마</span>
+        <span class="read-chip">노</span>
+        <span class="read-chip">미</span>
+        <span class="read-chip">나</span>
       </div>
     </div>
 
     <div class="section">
       <span class="section-kicker">かく</span>
       <h2 class="section-title">따라 쓰기 <span class="title-ja">(なぞって書こう)</span></h2>
-      <p class="section-subtitle"><span class="ko">왼쪽 글씨본을 보고, 똑같은 블록을 써 보세요.</span><span class="ja">左のお手本を見て、同じブロックを書いてみましょう。</span></p>
-      <div class="worksheet">
-        <div class="task-block"><span class="korean">나</span><span class="blank small"></span></div>
-        <div class="task-block"><span class="korean">노</span><span class="blank small"></span></div>
-        <div class="task-block"><span class="korean">마</span><span class="blank small"></span></div>
-        <div class="task-block"><span class="korean">모</span><span class="blank small"></span></div>
+      <p class="section-subtitle"><span class="ko">글씨본을 보고, 옆의 흐린 글자를 따라 써 보세요.</span><span class="ja">お手本を見て、となりのうすい文字をなぞって書いてみましょう。</span></p>
+      <div class="trace-list">
+        <div class="trace-row"><span class="model seat-lr">나</span><span class="ghost">나</span></div>
+        <div class="trace-row"><span class="model seat-tb">노</span><span class="ghost">노</span></div>
+        <div class="trace-row"><span class="model seat-lr">마</span><span class="ghost">마</span></div>
+        <div class="trace-row"><span class="model seat-tb">모</span><span class="ghost">모</span></div>
       </div>
     </div>
 
@@ -254,12 +333,27 @@
       <span class="section-kicker">よむ</span>
       <h2 class="section-title">단어 읽기 <span class="title-ja">(単語を読もう)</span></h2>
       <p class="section-subtitle"><span class="ko">전부 아는 글자로 되어 있어요. 하나씩 읽어 보세요.</span><span class="ja">全部、知っている文字でできています。1つずつ読んでみましょう。</span></p>
-      <div class="model-list">
-        <div class="model-line"><span class="translation">わたし</span><span class="korean">나</span></div>
-        <div class="model-line"><span class="translation">あなた</span><span class="korean">너</span></div>
-        <div class="model-line"><span class="translation">きゅうり</span><span class="korean">오이</span></div>
-        <div class="model-line"><span class="translation">木</span><span class="korean">나무</span></div>
-        <div class="model-line"><span class="translation">お母さん</span><span class="korean">어머니</span></div>
+      <div class="wordset">
+        <div class="word-card">
+          <span class="syls"><span class="syl seat-lr">나</span></span>
+          <span class="body"><span class="yomi-line">ナ</span><span class="mean">わたし</span></span>
+        </div>
+        <div class="word-card">
+          <span class="syls"><span class="syl seat-lr">너</span></span>
+          <span class="body"><span class="yomi-line">ノ</span><span class="mean">あなた</span></span>
+        </div>
+        <div class="word-card">
+          <span class="syls"><span class="syl seat-tb">오</span><span class="syl seat-lr">이</span></span>
+          <span class="body"><span class="yomi-line">オ イ</span><span class="mean">きゅうり</span></span>
+        </div>
+        <div class="word-card">
+          <span class="syls"><span class="syl seat-lr">나</span><span class="syl seat-tb">무</span></span>
+          <span class="body"><span class="yomi-line">ナ ム</span><span class="mean">木</span></span>
+        </div>
+        <div class="word-card">
+          <span class="syls"><span class="syl seat-lr">어</span><span class="syl seat-lr">머</span><span class="syl seat-lr">니</span></span>
+          <span class="body"><span class="yomi-line">オ モ ニ</span><span class="mean">お母さん</span></span>
+        </div>
       </div>
     </div>
 
@@ -282,24 +376,24 @@
     <div class="section">
       <span class="section-kicker">つくる</span>
       <h2 class="section-title">블록 만들기 <span class="title-ja">(ブロックを作ろう)</span></h2>
-      <p class="section-subtitle"><span class="ko">자리 규칙 기억나죠? 자음과 모음을 조합해서 써 보세요.</span><span class="ja">場所のルール、おぼえていますか？子音と母音を組み立てて書いてみましょう。</span></p>
-      <div class="worksheet">
-        <div class="task-block"><span class="korean">ㄴ ＋ ㅗ ＝</span><span class="blank small"></span></div>
-        <div class="task-block"><span class="korean">ㅁ ＋ ㅏ ＝</span><span class="blank small"></span></div>
-        <div class="task-block"><span class="korean">ㅁ ＋ ㅣ ＝</span><span class="blank small"></span></div>
+      <p class="section-subtitle"><span class="ko">점선이 자리를 알려 줘요. 자음과 모음을 자리에 맞게 써 보세요.</span><span class="ja">点線が「席」を教えてくれます。子音と母音を正しい場所に書いてみましょう。</span></p>
+      <div class="make-list">
+        <div class="make-row"><span class="src"><span class="jamo seat-c">ㄴ</span>＋<span class="jamo seat-v">ㅗ</span>＝</span><span class="blank-blk tb"></span></div>
+        <div class="make-row"><span class="src"><span class="jamo seat-c">ㅁ</span>＋<span class="jamo seat-v">ㅏ</span>＝</span><span class="blank-blk lr"></span></div>
+        <div class="make-row"><span class="src"><span class="jamo seat-c">ㅁ</span>＋<span class="jamo seat-v">ㅣ</span>＝</span><span class="blank-blk lr"></span></div>
       </div>
     </div>
 
     <div class="section">
       <span class="section-kicker">かく</span>
       <h2 class="section-title">받아쓰기 <span class="title-ja">(聞いて書こう)</span></h2>
-      <p class="section-subtitle"><span class="ko">제가 말하는 블록을, 들리는 대로 써 보세요.</span><span class="ja">私が言うブロックを、聞こえたとおりに書いてみましょう。</span></p>
-      <div class="worksheet">
-        <div class="task-block"><span class="task-label">①</span><span class="blank small"></span></div>
-        <div class="task-block"><span class="task-label">②</span><span class="blank small"></span></div>
-        <div class="task-block"><span class="task-label">③</span><span class="blank small"></span></div>
-        <span class="hint"><span class="hint-chip">先生：무 · 너 · 마 の順で言う</span></span>
+      <p class="section-subtitle"><span class="ko">이번엔 자리 힌트도 없어요. 들리는 대로 써 보세요.</span><span class="ja">今度は場所のヒントもなし。聞こえたとおりに書いてみましょう。</span></p>
+      <div class="dict-list">
+        <div class="dict-row"><span class="no">①</span><span class="blank-blk"></span></div>
+        <div class="dict-row"><span class="no">②</span><span class="blank-blk"></span></div>
+        <div class="dict-row"><span class="no">③</span><span class="blank-blk"></span></div>
       </div>
+      <div class="hint"><span class="hint-chip">先生：무 · 너 · 마 の順で言う</span></div>
     </div>
 
     <div class="section">
@@ -311,6 +405,19 @@
         <div class="sign"><span class="korean xl">나무</span><span class="english">ポスターの言葉</span></div>
         <div class="sign"><span class="korean xl">오이</span><span class="english">市場のラベル</span></div>
       </div>
+    </div>
+
+    <!-- the number that sells the next lesson -->
+    <div class="section">
+      <span class="section-kicker">チェック</span>
+      <h2 class="section-title">오늘의 결과 <span class="title-ja">(今日の成果)</span></h2>
+      <p class="section-subtitle"><span class="ko">25분 전엔 하나도 못 읽었죠? 지금은 이만큼 읽을 수 있어요.</span><span class="ja">25分前は1文字も読めませんでしたよね？今はこれだけ読めます。</span></p>
+      <div class="payoff">
+        <span class="eqline">母音 6 ＋ 子音 ㄴ ㅁ ＋ いす ㅇ</span>
+        <span class="big">18</span>
+        <span class="cap">今日読めるようになった文字の数</span>
+      </div>
+      <div class="hint"><span class="hint-chip">次の6子音で、読める文字は100を超えます</span></div>
     </div>
 
     <!-- ============ STEP 4 · PLAN ============ -->
@@ -383,10 +490,10 @@
       <div class="card">
         <ul class="mission">
           <li>韓国語であいさつして、名前が言えた。</li>
-          <li>ブロック＝子音＋母音 のルールがわかった。</li>
+          <li>1文字＝箱。子音の席と母音の席がある。</li>
           <li>母音6つ ㅏ ㅓ ㅗ ㅜ ㅡ ㅣ ＋ 音のないいす ㅇ。</li>
-          <li>縦長の母音は右、横長の母音は下。</li>
-          <li>子音 ㄴ・ㅁ が読める。</li>
+          <li>たて長の母音は右、よこ長の母音は下。</li>
+          <li>子音 ㄴ・ㅁ ＋ 母音6つ ＝ 12文字を読んだ。</li>
           <li>本物の単語 나무・어머니・오이 を自分の力で読んで、書いた。</li>
         </ul>
       </div>
@@ -484,14 +591,34 @@
       "さがす": "찾기",
       "きく": "듣기",
       "つくる": "만들기",
-      "(今日のやくそく)": "(오늘의 약속)",
-      "今日が終わるころには、本物の韓国語が読めます。約束します！": "오늘이 끝날 때쯤엔 진짜 한국어를 읽을 수 있어요. 약속해요!",
+      "チェック": "체크",
+
+      // ---- 못 읽어도 괜찮아요 (훅) ----
+      "(読めなくて大丈夫)": "(못 읽어도 괜찮아요)",
+      "今は1文字も読めなくて大丈夫。法則さえ分かれば読めます。": "지금은 한 글자도 못 읽어도 괜찮아요. 법칙만 알면 돼요.",
+      "愛はお金では買えない。": "사랑은 돈으로 살 수 없다.",
+      "記号に見える → 全員そうです": "기호처럼 보인다 → 다들 그래요",
       "いいニュース": "좋은 소식",
-      "ハングルはアルファベット。小さなパーツを組み合わせるだけ。": "한글은 알파벳. 작은 부품을 조합할 뿐이에요.",
-      "今日使うのはたった8パーツ。暗記も例外もなし。": "오늘 쓰는 건 딱 8개 부품. 암기도 예외도 없어요.",
+      "ハングルは記号ではなくアルファベット。パーツを組み合わせるだけ。": "한글은 기호가 아니라 알파벳. 부품을 조합할 뿐이에요.",
+      "今日つかうのはたった8パーツ。暗記も例外もなし。": "오늘 쓰는 건 딱 8개 부품. 암기도 예외도 없어요.",
+      "25分後、あなたは 나무・어머니・오이 を自分で読めます。": "25분 뒤엔 나무·어머니·오이를 스스로 읽게 돼요.",
+
+      // ---- 이미 알고 있어요 ----
+      "(もう知っている韓国語)": "(이미 알고 있어요)",
+      "実はもう韓国語を知っています。音を文字にできなかっただけ。": "사실 한국어를 이미 알고 있어요. 소리만 못 읽었을 뿐이에요.",
+      "キムチ": "김치", "プルコギ": "불고기",
+      "コソクトロ ＝ 高速道路": "고속도로 (한자어)",
+      "そのまま韓国語": "그대로 한국어",
+      "漢字由来の言葉は音までそっくり": "한자어는 발음까지 비슷해요",
+      "語順・助詞も日本語とほぼ同じ": "어순·조사도 일본어와 거의 같아요",
+      "単語の約7割が漢字由来": "단어의 약 70%가 한자어",
+
+      // ---- 글자 블록 ----
       "(文字ブロック)": "(글자 블록)",
-      "子音が先、母音があと。2つで1つの音になります。": "자음이 먼저, 모음이 나중. 둘이 모여서 하나의 소리가 돼요.",
-      "子音 ＋ 母音 ＝ 1つの音": "자음 + 모음 = 한 소리",
+      "1文字は「箱」。席は2つ、子音の席と母音の席です。": "한 글자는 상자예요. 자리는 두 개, 자음 자리와 모음 자리.",
+      "子音": "자음", "母音": "모음",
+      "n の音": "n 소리", "a の音": "a 소리",
+      "子音の席": "자음 자리", "母音の席": "모음 자리",
 
       "パート 1": "파트 1", "パート 2": "파트 2", "パート 3": "파트 3",
       "(母音)": "(모음)", "(子音)": "(자음)", "(単語)": "(단어)",
@@ -503,36 +630,38 @@
       "私の口の形をまねして、声に出して読んでみましょう。": "제 입 모양을 따라서, 소리 내어 읽어 보세요.",
       "(母音 のこり3つ)": "(모음 나머지 3개)",
       "のこりの3つも、声に出して読んでみましょう。": "나머지 3개도 소리 내어 읽어 보세요.",
-      "「ア」口を大きく": "「아」 입을 크게",
-      "「オ」口を大きく開けて": "「어」 입을 크게 벌리고",
-      "「イ」そのまま": "「이」 그대로",
-      "「オ」くちびるを丸く": "「오」 입술을 동그랗게",
-      "「ウ」くちびるを丸く": "「우」 입술을 동그랗게",
-      "「ウ」くちびるを横に": "「으」 입술을 옆으로",
+      "口を大きく": "입을 크게",
+      "口を大きく開けて": "입을 크게 벌리고",
+      "そのまま": "그대로",
+      "くちびるを丸く": "입술을 동그랗게",
+      "くちびるを横に": "입술을 옆으로",
+      "口を開けて": "입을 벌리고",
       "(音のない ㅇ)": "(소리 없는 ㅇ)",
-      "気づきましたか？母音の前の「ㅇ」は音を出さない、ただの「いす」です。": "눈치챘어요? 모음 앞의 ㅇ은 소리가 없어요. 그냥 의자일 뿐이에요.",
-      "音はゼロ。母音を乗せる「いす」だけ。": "소리는 0. 모음을 얹는 '의자'일 뿐.",
+      "気づきましたか？黄色い席にはずっと「ㅇ」がいました。でも音はゼロ。": "눈치챘어요? 노란 자리엔 계속 ㅇ이 있었어요. 그런데 소리가 없어요.",
+      "音ゼロ": "소리 0",
+      "母音はひとりで立てない。だから「いす」が要る": "모음은 혼자 못 서요. 그래서 '의자'가 필요해요",
       "(母音の場所)": "(모음 자리)",
-      "縦長の母音は右どなり、横長の母音は下に入ります。これだけ。": "세로로 긴 모음은 오른쪽 옆에, 가로로 긴 모음은 아래에 들어가요. 이게 다예요.",
-      "세로 모음は右どなり →": "세로 모음은 오른쪽 옆 →",
-      "가로 모음は下に ↓": "가로 모음은 아래 ↓",
+      "たて長の母音は右、よこ長の母音は下。ルールはこれだけ。": "세로로 긴 모음은 오른쪽, 가로로 긴 모음은 아래. 이게 다예요.",
+      "たて長 → 右どなり →": "세로 모음 → 오른쪽 옆 →",
+      "よこ長 → 下に ↓": "가로 모음 → 아래 ↓",
       "(母音を読もう)": "(모음 읽기)",
       "6つを声に出して読んでみましょう。順番はシャッフルしています。": "여섯 개를 소리 내어 읽어 보세요. 순서는 섞여 있어요.",
 
       "(子音 ㄴ)": "(자음 ㄴ)",
       "「ㄴ」は n の音。ㄴはそのまま、母音だけ入れかえて読んでみましょう。": "ㄴ은 n 소리예요. ㄴ은 그대로 두고, 모음만 바꿔서 읽어 보세요.",
-      "ナ": "나", "ノ（口を開けて）": "너", "ノ": "노", "ヌ": "누", "ウに近い「ヌ」": "느", "ニ": "니",
       "(ㄴ を読もう)": "(ㄴ 읽기)",
       "声に出して、止まらずに読んでみましょう。": "소리 내어, 멈추지 말고 읽어 보세요.",
       "(子音 ㅁ)": "(자음 ㅁ)",
       "「ㅁ」は m の音。同じやり方で、母音だけ入れかえて読んでみましょう。": "ㅁ은 m 소리예요. 같은 방법으로, 모음만 바꿔서 읽어 보세요.",
-      "マ": "마", "モ（口を開けて）": "머", "モ": "모", "ム": "무", "ウに近い「ム」": "므", "ミ": "미",
+      "(組み合わせ表)": "(조합표)",
+      "子音2つ × 母音6つ ＝ 12文字。1行ずつ声に出して読んでみましょう。": "자음 2개 × 모음 6개 = 12글자. 한 줄씩 소리 내어 읽어 보세요.",
+      "おぼえたのは8パーツ。作れた文字は12コ": "외운 건 8개 부품. 만든 글자는 12개",
       "(まぜて読もう)": "(섞어 읽기)",
       "ㄴ と ㅁ をまぜました。1ブロックずつ読んでみましょう。": "ㄴ과 ㅁ을 섞었어요. 한 블록씩 읽어 보세요.",
       "(母音さがし)": "(모음 찾기)",
-      "「ㅏ」が入っているブロックに丸をつけてください。": "ㅏ가 들어간 블록에 동그라미를 쳐 주세요.",
+      "今度は色なし。「ㅏ」が入っているブロックに丸をつけてください。": "이번엔 색이 없어요. ㅏ가 들어간 블록에 동그라미를 쳐 주세요.",
       "(なぞって書こう)": "(따라 쓰기)",
-      "左のお手本を見て、同じブロックを書いてみましょう。": "왼쪽 글씨본을 보고, 똑같은 블록을 써 보세요.",
+      "お手本を見て、となりのうすい文字をなぞって書いてみましょう。": "글씨본을 보고, 옆의 흐린 글자를 따라 써 보세요.",
 
       "(単語を読もう)": "(단어 읽기)",
       "全部、知っている文字でできています。1つずつ読んでみましょう。": "전부 아는 글자로 되어 있어요. 하나씩 읽어 보세요.",
@@ -542,15 +671,20 @@
       "先生：나무 と言う": "튜터: 나무 라고 말한다",
       "先生：어머니 と言う": "튜터: 어머니 라고 말한다",
       "(ブロックを作ろう)": "(블록 만들기)",
-      "場所のルール、おぼえていますか？子音と母音を組み立てて書いてみましょう。": "자리 규칙 기억나죠? 자음과 모음을 조합해서 써 보세요.",
+      "点線が「席」を教えてくれます。子音と母音を正しい場所に書いてみましょう。": "점선이 자리를 알려 줘요. 자음과 모음을 자리에 맞게 써 보세요.",
       "(聞いて書こう)": "(받아쓰기)",
-      "私が言うブロックを、聞こえたとおりに書いてみましょう。": "제가 말하는 블록을, 들리는 대로 써 보세요.",
+      "今度は場所のヒントもなし。聞こえたとおりに書いてみましょう。": "이번엔 자리 힌트도 없어요. 들리는 대로 써 보세요.",
       "先生：무 · 너 · 마 の順で言う": "튜터: 무 · 너 · 마 순서로 말한다",
       "(看板を読もう)": "(간판 읽기)",
       "韓国にいると想像してみてください。看板を声に出して読んでみましょう！": "한국에 있다고 상상해 보세요. 간판을 소리 내어 읽어 봐요!",
       "家族写真の名前": "가족사진 속 이름",
       "ポスターの言葉": "포스터의 단어",
       "市場のラベル": "시장 라벨",
+      "(今日の成果)": "(오늘의 결과)",
+      "25分前は1文字も読めませんでしたよね？今はこれだけ読めます。": "25분 전엔 하나도 못 읽었죠? 지금은 이만큼 읽을 수 있어요.",
+      "母音 6 ＋ 子音 ㄴ ㅁ ＋ いす ㅇ": "모음 6 + 자음 ㄴ ㅁ + 의자 ㅇ",
+      "今日読めるようになった文字の数": "오늘 읽을 수 있게 된 글자 수",
+      "次の6子音で、読める文字は100を超えます": "다음 자음 6개면 읽을 수 있는 글자가 100개를 넘어요",
 
       // ---- 플랜 ----
       "(レベル診断)": "(레벨 진단)",
@@ -567,10 +701,10 @@
       "(今日できたこと)": "(오늘 해낸 것)",
       "今日できるようになったことをチェックしてみましょう！": "오늘 할 수 있게 된 걸 체크해 보세요!",
       "韓国語であいさつして、名前が言えた。": "한국어로 인사하고 이름을 말했다.",
-      "ブロック＝子音＋母音 のルールがわかった。": "블록 = 자음+모음 규칙을 이해했다.",
+      "1文字＝箱。子音の席と母音の席がある。": "한 글자 = 상자. 자음 자리와 모음 자리가 있다.",
       "母音6つ ㅏ ㅓ ㅗ ㅜ ㅡ ㅣ ＋ 音のないいす ㅇ。": "모음 6개 ㅏ ㅓ ㅗ ㅜ ㅡ ㅣ + 소리 없는 의자 ㅇ.",
-      "縦長の母音は右、横長の母音は下。": "세로 모음은 오른쪽, 가로 모음은 아래.",
-      "子音 ㄴ・ㅁ が読める。": "자음 ㄴ·ㅁ을 읽을 수 있다.",
+      "たて長の母音は右、よこ長の母音は下。": "세로 모음은 오른쪽, 가로 모음은 아래.",
+      "子音 ㄴ・ㅁ ＋ 母音6つ ＝ 12文字を読んだ。": "자음 ㄴ·ㅁ + 모음 6개 = 12글자를 읽었다.",
       "本物の単語 나무・어머니・오이 を自分の力で読んで、書いた。": "진짜 단어 나무·어머니·오이를 내 힘으로 읽고 썼다.",
       "次は子音を6つ（ㄱ ㄷ ㄹ ㅂ ㅅ ㅈ）。고기（肉）・바다（海）・아버지（お父さん）が読めるようになります。": "다음엔 자음 6개(ㄱ ㄷ ㄹ ㅂ ㅅ ㅈ). 고기, 바다, 아버지도 읽을 수 있게 돼요!",
 
