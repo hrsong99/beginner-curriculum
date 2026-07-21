@@ -2,6 +2,7 @@
 node_modules/
 .DS_Store
 
-# Local source PDFs for Dekiru Kankokugo materials.
+# Local source PDFs for textbook references (kept out of git).
 korean/**/dekiru-kankokugo/*.pdf
+korean/**/sejong-hangugeo-ipmun/*.pdf
 /korean/textbooks-references/temo/테모-회화
