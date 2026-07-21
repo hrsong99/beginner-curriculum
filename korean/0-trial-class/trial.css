@@ -1091,11 +1091,10 @@
   font-size: 46px;
 }
 
-/* The kana anchor, big enough to read as an equal partner. Fixed width
-   so it forms a column: cards whose letter needs no mouth hint (아, 이 —
-   a Japanese speaker already says them right) still line up with the
-   ones that do. A hint appears ONLY to separate two letters that share
-   a katakana (어/오, 우/으), and names the actual difference. */
+/* The kana anchor, big enough to read as an equal partner, in a fixed
+   column so every card lines up. A mouth hint used to sit to its right,
+   but only some letters need one, so that column was empty on half the
+   cards — that contrast now has its own comparison page. */
 .letter-card > .kana-eq {
   flex: none;
   min-width: 72px;
@@ -1115,10 +1114,90 @@
   font-weight: 800;
 }
 
-/* the mouth hint must fit one line — a wrapped orphan reads as an error */
-.letter-card > .english {
-  font-size: 14px;
-  line-height: 1.35;
+/* The sound column: the letters that spell the block, in their seat
+   colours. Present on every card, so the row never goes ragged — and it
+   does what kana cannot: ナ does not come apart, n ＋ a does. */
+.letter-card > .sound {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.letter-card > .sound i {
+  display: grid;
+  place-items: center;
+  min-width: 34px;
+  padding: 5px 8px;
+  border-radius: 9px;
+  color: #1c1c1c;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.letter-card > .sound b {
+  color: #a5a5a5;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* ---------- same-kana pairs, compared side by side ---------- */
+.pair-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.pair-row {
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+  padding: 16px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 14px;
+  background: #fff;
+}
+
+/* the shared katakana, stated once for the pair */
+.pair-kana {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 52px;
+  border-radius: 11px;
+  background: #1c1c1c;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.pair-side {
+  flex: 1 1 0;
+  min-width: 0;
+  text-align: center;
+}
+
+.pair-side .g {
+  display: grid;
+  place-items: center;
+  height: 74px;
+  border-radius: 12px;
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.pair-side small {
+  display: block;
+  margin-top: 8px;
+  color: #575753;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.3;
+  word-break: keep-all;
 }
 
 /* Concept pages carry one small diagram, so the leftover space is split
