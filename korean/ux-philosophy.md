@@ -10,11 +10,14 @@ The guiding principles behind every page of the Korean curriculum.
 
 ## Page anatomy
 - **Korean-first title**, with a light, thin Japanese gloss in parentheses.
+- **The title is a label, not speech** — a noun phrase, never a question or a full sentence. If there's a question to ask, it belongs in the green box.
 - **One green instruction box** per page — the exact line the tutor reads aloud (see *Scripts*).
 - **One boxed component** holds the activity (max two levels of nesting); it fills the page.
 
 ## Scripts & language
 - The green box is the tutor's **word-for-word spoken script** — natural, simple, *spoken* Korean (해 주세요 / 볼까요), not textbook phrasing, no grammar jargon (e.g. avoid 조사).
+- **Written in first person.** The tutor is the one speaking: 제가 / 私が, never 선생님이 / 先生が.
+- **Both lines say the same sentence.** In the green box the Japanese is a direct translation of the Korean, not extra teaching content. When they drift apart, expand the Korean up to the Japanese — don't trim the Japanese down.
 - **Japanese is always secondary support** — title parentheses, a header label above an answer area, or small gloss text — never competing with the Korean.
 - Translations sit **as a header box on top** of the answer/content, consistently.
 
