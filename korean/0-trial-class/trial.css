@@ -874,108 +874,6 @@
   font-weight: 700;
 }
 
-/* ---------- write-in guides: the dashed seat tells you WHERE ---------- */
-.make-list,
-.trace-list,
-.dict-list {
-  display: grid;
-  gap: 12px;
-  margin-top: 24px;
-}
-
-.make-row,
-.trace-row,
-.dict-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.make-row .src {
-  display: flex;
-  flex: none;
-  align-items: center;
-  gap: 7px;
-  font-size: 15px;
-  font-weight: 800;
-}
-
-.make-row .jamo {
-  display: grid;
-  place-items: center;
-  width: 58px;
-  height: 58px;
-  border: 1.5px solid #1c1c1c;
-  border-radius: 11px;
-  font-size: 29px;
-  font-weight: 800;
-  line-height: 1;
-}
-
-.blank-blk {
-  position: relative;
-  flex: none;
-  width: 96px;
-  height: 96px;
-  border: 1.8px dashed #1c1c1c;
-  border-radius: 12px;
-  background: #fff;
-}
-
-.blank-blk.lr::before {
-  content: "";
-  position: absolute;
-  top: 9px;
-  bottom: 9px;
-  left: 46%;
-  border-left: 1.5px dashed #d2d2d2;
-}
-
-.blank-blk.tb::before {
-  content: "";
-  position: absolute;
-  left: 9px;
-  right: 9px;
-  top: 50%;
-  border-top: 1.5px dashed #d2d2d2;
-}
-
-.trace-row .model {
-  display: grid;
-  place-items: center;
-  flex: none;
-  width: 76px;
-  height: 76px;
-  border: 1.5px solid #1c1c1c;
-  border-radius: 12px;
-  font-size: 44px;
-  font-weight: 800;
-  line-height: 1;
-}
-
-/* the faint character to trace over */
-.trace-row .ghost {
-  display: grid;
-  place-items: center;
-  flex: 1 1 auto;
-  height: 76px;
-  border: 1.8px dashed #1c1c1c;
-  border-radius: 12px;
-  background: #fff;
-  color: #e6e6e6;
-  font-size: 44px;
-  font-weight: 800;
-  line-height: 1;
-}
-
-.dict-row .no {
-  flex: none;
-  width: 26px;
-  color: #757575;
-  font-size: 15px;
-  font-weight: 800;
-}
-
 /* ---------- the unreadable-sentence hook ---------- */
 .hook-quote {
   margin-top: 24px;
@@ -1083,12 +981,12 @@
 .letter-card > .korean.seat-tb,
 .letter-card > .korean.seat-v,
 .letter-card > .korean.seat-c {
-  flex: 0 0 78px;
-  height: 78px;
+  flex: 0 0 74px;
+  height: 74px;
   display: grid;
   place-items: center;
   border-radius: 12px;
-  font-size: 46px;
+  font-size: 44px;
 }
 
 /* The kana anchor, big enough to read as an equal partner, in a fixed
@@ -1097,7 +995,7 @@
    cards — that contrast now has its own comparison page. */
 .letter-card > .kana-eq {
   flex: none;
-  min-width: 72px;
+  min-width: 56px;
   display: flex;
   align-items: center;
   gap: 9px;
@@ -1127,8 +1025,8 @@
 .letter-card > .sound i {
   display: grid;
   place-items: center;
-  min-width: 34px;
-  padding: 5px 8px;
+  min-width: 30px;
+  padding: 5px 7px;
   border-radius: 9px;
   color: #1c1c1c;
   font-size: 15px;
@@ -1141,6 +1039,27 @@
   color: #a5a5a5;
   font-size: 13px;
   font-weight: 800;
+}
+
+/* ---------- mouth photos (Sejong 한국어 입문, 학습1/학습5) ----------
+   The lesson is audio-only, so the learner can never watch the tutor's
+   mouth. These photos put that information back into the page: front
+   view for the lip shape, side view for rounding and protrusion. */
+.letter-card > .mouth {
+  flex: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 11px;
+  border: 1.5px solid #1c1c1c;
+  object-fit: cover;
+  background: #fff;
+}
+
+/* the letter cards run four uniform slots once a mouth photo joins:
+   glyph · kana · sound · mouth — so the columns are retuned to fit */
+.letter-card {
+  gap: 14px;
+  padding: 15px 20px;
 }
 
 /* ---------- same-kana pairs, compared side by side ---------- */
@@ -1188,6 +1107,22 @@
   font-size: 44px;
   font-weight: 800;
   line-height: 1;
+}
+
+/* front then side: the side view is what shows rounding and protrusion */
+.pair-side .shots {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 8px;
+}
+
+.pair-side .shots img {
+  width: 56px;
+  height: 56px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 9px;
+  object-fit: cover;
 }
 
 .pair-side small {
@@ -1260,3 +1195,199 @@
   .anat .kana { font-size: 54px; }
   .letter-card > .kana-eq { font-size: 24px; }
 }
+
+/* ============================================================
+   TAP ACTIVITIES (no whiteboard)
+   ------------------------------------------------------------
+   Every task is answered by tapping. Two components carry all of
+   them, so the learner learns one interaction and reuses it:
+     .tap-grid  — choose the tile(s) (find / listen-and-pick)
+     .builder   — assemble a syllable from a jamo keypad, which is
+                  what "write the character" becomes without a pen
+   ============================================================ */
+
+/* ---------- tap to choose ---------- */
+.tap-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.tap-grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+.tap-tile {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 118px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 14px;
+  background: #fff;
+  color: #1c1c1c;
+  font-family: inherit;
+  font-size: 54px;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform .09s, background .12s, box-shadow .12s;
+}
+
+.tap-grid.words .tap-tile { height: 112px; font-size: 32px; }
+
+.tap-tile:active { transform: scale(.96); }
+
+/* answered: right fills lime, wrong greys back out — the mark is a
+   corner badge so the letter itself is never covered */
+.tap-tile.right {
+  background: #b5fd4c;
+  box-shadow: 0 4px 0 #1c1c1c;
+}
+
+.tap-tile.wrong {
+  background: #f5f5f5;
+  color: #a5a5a5;
+  border-style: dashed;
+}
+
+.tap-tile::after {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.tap-tile.right::after { content: "✓"; color: #3f7a1c; }
+.tap-tile.wrong::after { content: "✕"; color: #c0c0c0; }
+
+/* ---------- build a syllable from the keypad ---------- */
+.builder { margin-top: 24px; }
+
+.build-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.build-task {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.build-task .ask {
+  color: #575753;
+  font-size: 15px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+/* the slot the keypad is currently filling */
+.build-slot {
+  position: relative;
+  width: 74px;
+  height: 74px;
+  border: 1.8px dashed #1c1c1c;
+  border-radius: 12px;
+  background: #fff;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.build-slot.active {
+  border-style: solid;
+  box-shadow: 0 0 0 4px rgba(181,253,76,.55);
+}
+
+.build-slot.done { border-style: solid; }
+
+.build-slot .zone {
+  position: absolute;
+  border-radius: 9px;
+}
+
+.build-slot.lr .zone.c { inset: 4px 54% 4px 4px; }
+.build-slot.lr .zone.v { inset: 4px 4px 4px 46%; }
+.build-slot.tb .zone.c { inset: 4px 4px 50% 4px; }
+.build-slot.tb .zone.v { inset: 50% 4px 4px 4px; }
+
+.build-slot .glyph {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.build-slot .ok {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  display: none;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 50%;
+  background: #b5fd4c;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.build-slot.done .ok { display: grid; }
+
+/* the tasks stack prompt over slot so three fit across a phone */
+.build-task {
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* the keypad: only the 8 parts this lesson has taught, in seat colours,
+   so the learner can never build a letter they have not met */
+.keys-label {
+  margin: 16px 0 8px;
+  color: #757575;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: .04em;
+}
+
+.keys {
+  display: grid;
+  gap: 7px;
+}
+
+.keys.c3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.keys.v6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+
+.key {
+  display: grid;
+  place-items: center;
+  height: 48px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 10px;
+  background: #fff;
+  color: #1c1c1c;
+  font-family: inherit;
+  font-size: 23px;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform .09s, box-shadow .12s;
+}
+
+.key:active { transform: scale(.92); }
+.key.on { box-shadow: 0 0 0 3px rgba(28,28,28,.3); }
+
+/* a wrong pair shakes rather than scolding */
+@keyframes miss { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-5px)} 75%{transform:translateX(5px)} }
+.build-slot.miss { animation: miss .3s; border-color: #d9534f; }
