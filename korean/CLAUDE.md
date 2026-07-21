@@ -17,6 +17,9 @@ you are about to make conflicts with it, say so and ask — don't quietly deviat
   Sound anchors are kana, not English words.
 - **The green `.section-subtitle` box is the tutor's spoken script** (`.ko` = the line read
   aloud, `.ja` = its Japanese translation). Natural spoken Korean, no grammar jargon.
+- **Lessons are audio-only.** The learner hears the tutor but never sees them, so no
+  instruction may depend on watching the tutor (口の形をまねして, gestures, "look at me").
+  Model sounds by saying them — 제가 먼저 읽을게요. 잘 듣고 따라 읽어 보세요.
 - **Max two levels of boxes:** the page card plus ONE boxed component inside it. Never wrap
   bordered components in another bordered card.
 - Every lesson page needs `<meta name="google" content="notranslate">` or Chrome auto-translate

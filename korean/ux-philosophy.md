@@ -17,6 +17,7 @@ The guiding principles behind every page of the Korean curriculum.
 ## Scripts & language
 - The green box is the tutor's **word-for-word spoken script** — natural, simple, *spoken* Korean (해 주세요 / 볼까요), not textbook phrasing, no grammar jargon (e.g. avoid 조사).
 - **Written in first person.** The tutor is the one speaking: 제가 / 私が, never 선생님이 / 先生が.
+- **Lessons are audio-only — the learner never sees the tutor.** Nothing may depend on watching them: no 제 입 모양을 보고 / 口の形をまねして, no gestures, no "look at me". Model a sound by *saying* it: 제가 먼저 읽을게요. 잘 듣고 따라 읽어 보세요. (Pointing at the lesson page is fine — the learner has it. Describing the learner's *own* mouth is fine and matters more here: 입술을 동그랗게.)
 - **Both lines say the same sentence.** In the green box the Japanese is a direct translation of the Korean, not extra teaching content. When they drift apart, expand the Korean up to the Japanese — don't trim the Japanese down.
 - **Japanese is always secondary support** — title parentheses, a header label above an answer area, or small gloss text — never competing with the Korean.
 - Translations sit **as a header box on top** of the answer/content, consistently.
