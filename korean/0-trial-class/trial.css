@@ -191,51 +191,60 @@
 }
 
 /* ---------- greeting chat with reading (yomi) ---------- */
-/* bubble layout: katakana reading on top (green, spaced),
-   Korean main line, learner-language gloss below in gray */
-.yomi {
-  display: block;
-  margin-bottom: 3px;
-  color: #57a021;
-  font-size: 11.5px;
-  font-weight: 700;
-  letter-spacing: .26em;
-  line-height: 1.5;
-}
-
-.bubble.intro {
-  display: block;
-  padding: 14px 16px;
-  overflow: visible;
-}
-
+/* same bubble language as the roleplay cards: the learner-language
+   translation sits in a header strip on top, Korean below — plus the
+   katakana reading tucked under the Korean line, in green */
 .bubble.intro > .korean {
-  padding: 0;
+  padding: 13px 16px 0;
   font-size: 20px;
   font-weight: 800;
 }
 
-.bubble.me.intro {
-  background: #f2fcec;
-}
-
-.bubble.intro > .gloss {
+.bubble.intro > .yomi {
   display: block;
-  margin-top: 6px;
-  color: #a5a5a5;
-  font-size: 12.5px;
-  line-height: 1.4;
-  font-weight: 600;
-}
-
-/* blue nudge under a learner bubble: "reply to the tutor!" */
-.reply-cue {
-  display: block;
-  margin-top: 10px;
-  text-align: right;
-  color: #3b82f6;
-  font-size: 12.5px;
+  padding: 5px 16px 13px;
+  color: #57a021;
+  font-size: 11.5px;
   font-weight: 700;
+  letter-spacing: .22em;
+  line-height: 1.5;
+}
+
+.bubble.me.intro {
+  background: #fff;
+}
+
+/* speaker column: avatar with the name underneath */
+.who {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 48px;
+}
+
+.who-name {
+  color: #575753;
+  font-size: 10.5px;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
+  word-break: keep-all;
+}
+
+/* blue nudge folded into the foot of the learner's bubble:
+   "reply to the tutor!" — the instruction sits with the line to say */
+.bubble.intro > .cue {
+  display: block;
+  padding: 8px 16px;
+  border-top: 1.5px dashed #cfd8e6;
+  background: #f4f8ff;
+  color: #3b82f6;
+  font-size: 11.5px;
+  font-weight: 700;
+  line-height: 1.35;
+  word-break: keep-all;
 }
 
 /* ---------- needs-analysis option rows ---------- */
@@ -292,6 +301,15 @@
   border-radius: 11px;
   font-size: 13px;
   font-weight: 800;
+}
+
+/* numbered variant: a bare numeral, sized up so it reads at a glance */
+.opt-row .lv-badge.num {
+  min-width: 38px;
+  padding: 4px 0;
+  font-size: 24px;
+  line-height: 1.3;
+  font-weight: 900;
 }
 
 /* ---------- consultation worksheet ---------- */
