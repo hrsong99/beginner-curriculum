@@ -22,6 +22,11 @@ The guiding principles behind every page of the Korean curriculum.
 - **Japanese is always secondary support** — title parentheses, a header label above an answer area, or small gloss text — never competing with the Korean.
 - Translations sit **as a header box on top** of the answer/content, consistently.
 
+## Input
+- **Every activity is answered by tapping or typing — there is no whiteboard and no pen.** Anything that asks the learner to circle, trace, or write by hand has to be re-shaped, not just re-worded: circling becomes tapping tiles, tracing and dictation become assembling the character from an on-screen keypad holding *only the parts already taught*.
+- **Answering gives immediate, quiet feedback** — right fills lime with a ✓, wrong greys out with a ✕, and a second tap undoes it. The tutor still leads; the page just stops the learner guessing silently.
+- **Reuse one interaction across the deck.** A learner should meet two or three input patterns in a lesson, not a new one per page.
+
 ## Scaffolding rules
 - **Every slot in a repeated row is filled, or it isn't a slot.** If a column is only sometimes relevant, it doesn't belong in the row — the ragged holes read as broken. Give the column something true for every item, and move the sometimes-relevant thing to its own page.
 - **A hint earns its place only by disambiguating**, and a contrast is taught by comparison, not by a footnote on each item. Letters that collapse to the same katakana (어/오 → オ, 우/으 → ウ) get one side-by-side page; letters with no confusable twin get nothing — 이＝イ needs no instruction, and 「そのまま」 is a label that says *ignore me*.
