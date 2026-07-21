@@ -23,6 +23,7 @@ The guiding principles behind every page of the Korean curriculum.
 - Translations sit **as a header box on top** of the answer/content, consistently.
 
 ## Scaffolding rules
+- **A hint earns its place only by disambiguating.** A pronunciation hint exists to separate two items the learner would otherwise confuse — for Japanese learners, letters that collapse to the same katakana (어/오 → オ, 우/으 → ウ). No two hints on a page may read the same, and a letter with no confusable twin gets no hint: 이＝イ needs no instruction, and 「そのまま」 is a label that says *ignore me*.
 - **Hint chips list vocabulary only** (JP:KO) — never particles or verb endings.
 - **Blanks target only the pattern** being practiced (the particle, the ending).
 - **Scaffold every non-target word** so the learner produces only the new piece.
