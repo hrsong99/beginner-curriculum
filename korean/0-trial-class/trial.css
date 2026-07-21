@@ -1091,9 +1091,14 @@
   font-size: 46px;
 }
 
-/* the kana anchor, big enough to read as an equal partner */
+/* The kana anchor, big enough to read as an equal partner. Fixed width
+   so it forms a column: cards whose letter needs no mouth hint (아, 이 —
+   a Japanese speaker already says them right) still line up with the
+   ones that do. A hint appears ONLY to separate two letters that share
+   a katakana (어/오, 우/으), and names the actual difference. */
 .letter-card > .kana-eq {
   flex: none;
+  min-width: 72px;
   display: flex;
   align-items: center;
   gap: 9px;
@@ -1108,6 +1113,12 @@
   font-size: 19px;
   font-style: normal;
   font-weight: 800;
+}
+
+/* the mouth hint must fit one line — a wrapped orphan reads as an error */
+.letter-card > .english {
+  font-size: 14px;
+  line-height: 1.35;
 }
 
 /* Concept pages carry one small diagram, so the leftover space is split
