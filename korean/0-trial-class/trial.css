@@ -516,61 +516,6 @@
   outline: 2px solid #fff;
 }
 
-/* inline underline blank (name / date / start date) */
-.blank-line {
-  width: 110px;
-  padding: 2px 4px;
-  border: none;
-  border-bottom: 1.6px solid #1c1c1c;
-  background: transparent;
-  color: #1c1c1c;
-  font-family: inherit;
-  font-size: 15px;
-  font-weight: 800;
-}
-
-.blank-line:focus {
-  outline: none;
-  background: #f2fcec;
-}
-
-/* CTA */
-.cta-box {
-  margin-top: 22px;
-  padding: 16px;
-  background: #b5fd4c;
-  border: 1.5px solid #1c1c1c;
-  border-radius: 14px;
-  text-align: center;
-  box-shadow: 0 4px 0 #1c1c1c;
-}
-
-.cta-box .t {
-  color: #1c1c1c;
-  font-size: 17px;
-  font-weight: 800;
-}
-
-.cta-box .cta-sign {
-  display: flex;
-  gap: 12px;
-  margin-top: 14px;
-}
-
-.cta-box .cta-sign .blank-line { flex: 1 1 0; width: auto; min-width: 0; }
-
-.cta-box .s {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 6px;
-  margin-top: 8px;
-  color: rgba(28,28,28,.66);
-  font-size: 13px;
-  font-weight: 700;
-}
-
 /* ---------- freetalk question ladder ---------- */
 .ladder {
   display: grid;
@@ -1664,16 +1609,27 @@ button.opt-row:active { transform: scale(.99); }
 
 .sk-course { height: 50px; }
 
-.rep-hintline {
-  margin: 14px 0 0;
-  color: #757575;
-  font-size: 13px;
-  font-weight: 700;
+/* the skeleton's companion: names the missing answer AND goes there */
+.rep-jump {
+  display: block;
+  margin-top: 14px;
+  padding: 13px 14px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 12px;
+  background: #b5fd4c;
+  box-shadow: 0 4px 0 #1c1c1c;
+  color: #1c1c1c;
   text-align: center;
-  word-break: keep-all;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.rep.ready ~ .rep-hintline, .rep-hintline.hide { display: none; }
+.rep-jump:active { transform: translateY(2px); box-shadow: 0 2px 0 #1c1c1c; }
+.rep-jump .rj-t { display: block; font-size: 14px; font-weight: 900; word-break: keep-all; }
+.rep-jump .rj-s { display: block; margin-top: 3px; font-size: 11.5px; font-weight: 700; opacity: .62; }
+.rep-jump .rj-s::after { content: " ↑"; }
+
+.rep.ready ~ .rep-jump, .rep-jump.hide { display: none; }
 
 .rep { display: none; }
 .rep.ready { display: block; }
@@ -1739,7 +1695,6 @@ button.opt-row:active { transform: scale(.99); }
 
 .rep .cgroup-label { margin-top: 20px; }
 
-.rep .cta-box { margin-top: 20px; }
 
 .rep-courses {
   display: grid;
@@ -1755,6 +1710,9 @@ button.opt-row:active { transform: scale(.99); }
   border: 1.5px solid #1c1c1c;
   border-radius: 12px;
   background: #fff;
+  color: #1c1c1c;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .rc .rcn {
@@ -1769,8 +1727,11 @@ button.opt-row:active { transform: scale(.99); }
   font-weight: 900;
 }
 
-.rc .rct { flex: 1 1 auto; font-size: 14px; font-weight: 800; }
-.rc .rcs { flex: none; color: #757575; font-size: 11.5px; font-weight: 700; }
+.rc .rcb { flex: 1 1 auto; min-width: 0; }
+.rc .rct { display: block; font-size: 14px; font-weight: 800; }
+.rc .rcs { display: block; margin-top: 2px; color: #757575; font-size: 11.5px; font-weight: 700; }
+.rc::after { content: "→"; flex: none; color: #a5a5a5; font-size: 14px; font-weight: 900; }
+.rc:active { transform: translateY(2px); }
 
 .rep-why {
   margin: 14px 0 0;

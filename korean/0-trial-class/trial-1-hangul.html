@@ -63,7 +63,7 @@
       </div>
     </div>
 
-    <div class="section">
+    <div class="section" id="p-goal">
       <span class="section-kicker">えらぶ</span>
       <h2 class="section-title">목표 <span class="title-ja">(ゴール)</span></h2>
       <p class="section-subtitle"><span class="ko">한국어로 뭐를 하고 싶어요? 하나만 골라 주세요.</span><span class="ja">韓国語で何がしたいですか？1つだけ選んでください。</span></p>
@@ -79,7 +79,7 @@
       </div>
     </div>
 
-    <div class="section">
+    <div class="section" id="p-pace">
       <span class="section-kicker">えらぶ</span>
       <h2 class="section-title">학습 페이스 <span class="title-ja">(学習ペース)</span></h2>
       <p class="section-subtitle"><span class="ko">일주일에 수업을 몇 번 받고 싶어요?</span><span class="ja">1週間に何回、レッスンを受けたいですか？</span></p>
@@ -509,7 +509,7 @@
         <div class="sk sk-course"></div>
         <div class="sk sk-course"></div>
       </div>
-      <p class="rep-hintline">목표와 페이스를 고르면 여기에 플랜이 나와요.</p>
+      <a class="rep-jump" href="#p-goal"><span class="rj-t">—</span><span class="rj-s">눌러서 고르러 가기</span></a>
 
       <div class="rep">
         <div class="rep-head">
@@ -566,43 +566,8 @@
         <span class="cgroup-label">추천 코스</span>
         <div class="rep-courses"></div>
         <p class="rep-why"></p>
-        <div class="cta-box">
-          <span class="t">이 수업, 같이 이어가요!</span>
-          <span class="s">오늘 배운 그다음부터</span>
-          <span class="cta-sign"><input class="blank-line" placeholder="이름"><input class="blank-line" placeholder="시작일"></span>
-        </div>
       </div>
-      <div class="tutor-note">목표·페이스를 안 고르셨으면 여기서 같이 골라도 돼요.</div>
-    </div>
-
-    <!-- ============ STEP 5 · INFO & SALES ============
-         Built from the PODO KOREAN sales deck. These are reference pages
-         the tutor jumps to from the nav above when the learner asks —
-         they are not part of the lesson's linear flow. -->
-    <div class="brand-page divider" id="p-info">
-      <h2 class="brand-title">포도 안내</h2>
-      <p class="brand-sub">궁금한 부분을 튜터가 열어서 설명해 드려요.</p>
-      <div class="jump">
-        <a class="jbtn" href="#p-about">수업 안내</a>
-        <a class="jbtn" href="#p-curri">커리큘럼</a>
-        <a class="jbtn" href="#p-price">수강료</a>
-        <a class="jbtn" href="#p-price-all">전체 요금표</a>
-        <a class="jbtn" href="#p-faq1">FAQ ①</a>
-        <a class="jbtn" href="#p-faq2">FAQ ②</a>
-      </div>
-    </div>
-
-    <div class="section" id="p-about">
-      <span class="section-kicker">안내</span>
-      <h2 class="section-title">포도 수업</h2>
-      <p class="section-subtitle"><span class="ko">포도 수업이 어떤 수업인지 한눈에 보여 드릴게요.</span></p>
-      <div class="usp">
-        <div class="uspc"><span class="n">100%</span><span class="t">한국인 튜터</span><span class="s">일본에서 한국어를 가르친 베테랑만 채용해요</span></div>
-        <div class="uspc"><span class="n">25분</span><span class="t">매일 1회</span><span class="s">하루 한 번, 월 최대 30회까지 들어요</span></div>
-        <div class="uspc"><span class="n">전 레벨</span><span class="t">왕초보~고급</span><span class="s">한글부터 자유로운 회화까지</span></div>
-        <div class="uspc"><span class="n">연중무휴</span><span class="t">평일도 주말도</span><span class="s">예약·취소는 1시간 전까지</span></div>
-      </div>
-      <div class="hint"><span class="hint-chip">태블릿·PC로 수강할 수 있어요</span></div>
+      <div class="tutor-note">추천 코스를 누르면 그 단계 설명으로 넘어가요.</div>
     </div>
 
     <!-- ---- CURRICULUM: what they are actually buying.
@@ -783,6 +748,36 @@
       <div class="tutor-note">쿠폰은 수업 뒤 LINE으로 다시 보내 드린다고 안내해 주세요.</div>
     </div>
 
+    <!-- ============ STEP 5 · INFO & SALES ============
+         Built from the PODO KOREAN sales deck. These are reference pages
+         the tutor jumps to from the nav above when the learner asks —
+         they are not part of the lesson's linear flow. -->
+    <div class="brand-page divider" id="p-info">
+      <h2 class="brand-title">포도 안내</h2>
+      <p class="brand-sub">궁금한 부분을 튜터가 열어서 설명해 드려요.</p>
+      <div class="jump">
+        <a class="jbtn" href="#p-about">수업 안내</a>
+        <a class="jbtn" href="#p-curri">커리큘럼</a>
+        <a class="jbtn" href="#p-price">수강료</a>
+        <a class="jbtn" href="#p-price-all">전체 요금표</a>
+        <a class="jbtn" href="#p-faq1">FAQ ①</a>
+        <a class="jbtn" href="#p-faq2">FAQ ②</a>
+      </div>
+    </div>
+
+    <div class="section" id="p-about">
+      <span class="section-kicker">안내</span>
+      <h2 class="section-title">포도 수업</h2>
+      <p class="section-subtitle"><span class="ko">포도 수업이 어떤 수업인지 한눈에 보여 드릴게요.</span></p>
+      <div class="usp">
+        <div class="uspc"><span class="n">100%</span><span class="t">한국인 튜터</span><span class="s">일본에서 한국어를 가르친 베테랑만 채용해요</span></div>
+        <div class="uspc"><span class="n">25분</span><span class="t">매일 1회</span><span class="s">하루 한 번, 월 최대 30회까지 들어요</span></div>
+        <div class="uspc"><span class="n">전 레벨</span><span class="t">왕초보~고급</span><span class="s">한글부터 자유로운 회화까지</span></div>
+        <div class="uspc"><span class="n">연중무휴</span><span class="t">평일도 주말도</span><span class="s">예약·취소는 1시간 전까지</span></div>
+      </div>
+      <div class="hint"><span class="hint-chip">태블릿·PC로 수강할 수 있어요</span></div>
+    </div>
+
     <!-- only reached from the link above — most learners never need it -->
     <div class="section" id="p-price-all">
       <span class="section-kicker">안내</span>
@@ -864,13 +859,17 @@
     // the tutor's level call -> lessons already effectively covered
     var DONE = { "1": 0, "2": 11, "3": 25, "4": 45, "5": 70 };
     var LEVEL_T = { "1": "처음", "2": "한글을 읽어요", "3": "간단한 문장", "4": "일상 회화", "5": "자기 생각" };
+    // Names, stage numbers and anchors all match the 커리큘럼 page below,
+    // so a recommended course can be pointed at and explained without
+    // the learner having to work out that they are the same thing.
+    // short: the graph band under the axis, which is only ~96px wide.
     var COURSE = {
-      hangul: ["한글 읽기", "11레슨"],
-      core:   ["핵심 패턴 초급", "56과 (Part 1)"],
-      travel: ["여행 한국어", "40레슨"],
-      drama:  ["드라마 한국어", "40레슨"],
-      banmal: ["반말 수다", "40레슨"],
-      free:   ["프리토킹", "30주제"]
+      hangul: { t: "한글 읽기",        s: "11레슨",   short: "한글 읽기",  stage: 1 },
+      core:   { t: "핵심 패턴",        s: "초급 56과", short: "핵심 패턴",  stage: 2 },
+      travel: { t: "상황별 · 여행",     s: "40레슨",   short: "여행",      stage: 3 },
+      drama:  { t: "상황별 · 드라마",   s: "40레슨",   short: "드라마",    stage: 3 },
+      banmal: { t: "상황별 · 반말 수다", s: "40레슨",   short: "반말 수다",  stage: 3 },
+      free:   { t: "프리토킹",         s: "30주제",   short: "프리토킹",   stage: 4 }
     };
     // why -> a closing line that ties the plan back to their own reason
     var WHY = {
@@ -919,16 +918,26 @@
 
     function render() {
       var g = GOALS[pick.goal], pace = pick.pace, lv = pick.level || "1";
-      var hint = document.querySelector(".rep-hintline");
+      // While the report is a skeleton, say which answer is missing and
+      // take the tutor straight there — the old caption only restated
+      // the problem and left them to scroll back and find it.
+      var jump = document.querySelector(".rep-jump");
       if (!g || !pace) {
         rep.classList.remove("ready");
         empty.classList.remove("hide");
-        if (hint) hint.classList.remove("hide");
+        if (jump) {
+          jump.classList.remove("hide");
+          var missing = !g
+            ? { href: "#p-goal", t: "목표를 아직 안 골랐어요" }
+            : { href: "#p-pace", t: "학습 페이스를 아직 안 골랐어요" };
+          jump.href = missing.href;
+          jump.querySelector(".rj-t").textContent = missing.t;
+        }
         return;
       }
       rep.classList.add("ready");
       empty.classList.add("hide");
-      if (hint) hint.classList.add("hide");
+      if (jump) jump.classList.add("hide");
 
       var per = pace === "5" ? 5 : Number(pace);
       var need = Math.max(6, g.n - DONE[lv]);
@@ -962,22 +971,23 @@
       if (courses.length === 1) {
         c1.setAttribute("width", "0"); c1t.textContent = "";
         c2.setAttribute("x", "20"); c2.setAttribute("width", "306"); c2t.setAttribute("x", "173");
-        c2t.textContent = COURSE[courses[0]][0];
+        c2t.textContent = COURSE[courses[0]].short;
       } else {
-        c1.setAttribute("width", "96"); c1t.textContent = COURSE[courses[0]][0];
+        c1.setAttribute("width", "96"); c1t.textContent = COURSE[courses[0]].short;
         c2.setAttribute("x", "120"); c2.setAttribute("width", "206"); c2t.setAttribute("x", "223");
-        c2t.textContent = COURSE[courses[1]][0];
+        c2t.textContent = COURSE[courses[1]].short;
       }
 
       var list = $(".rep-courses");
       list.innerHTML = "";
       courses.forEach(function (k, i) {
         var c = COURSE[k];
-        var row = document.createElement("div");
+        var row = document.createElement("a");
         row.className = "rc";
+        row.href = "#c-" + c.stage;               // jump to that stage's explanation
         row.innerHTML = '<span class="rcn">' + (i + 1) + '</span>' +
-                        '<span class="rct">' + c[0] + '</span>' +
-                        '<span class="rcs">' + c[1] + '</span>';
+                        '<span class="rcb"><span class="rct">' + c.t + '</span>' +
+                        '<span class="rcs">' + c.stage + '단계 · ' + c.s + '</span></span>';
         list.appendChild(row);
       });
 
