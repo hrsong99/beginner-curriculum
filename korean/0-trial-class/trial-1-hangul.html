@@ -24,6 +24,7 @@
 
     <!-- ============ STEP 1 · GREETING ============ -->
     <div class="section">
+      <span class="section-kicker">はなす</span>
       <h2 class="section-title">첫인사 <span class="title-ja">(はじめまして！)</span></h2>
       <p class="section-subtitle"><span class="ko">저랑 가볍게 인사해 볼까요?</span><span class="ja">私と軽くあいさつしてみましょうか？</span></p>
       <div class="dialogue">
@@ -48,6 +49,7 @@
     </div>
 
     <div class="section">
+      <span class="section-kicker">えらぶ</span>
       <h2 class="section-title">학습 동기 <span class="title-ja">(学ぶきっかけ)</span></h2>
       <p class="section-subtitle"><span class="ko">왜 한국어를 배우고 싶어요? 여러 개 골라도 돼요.</span><span class="ja">どうして韓国語を学びたいですか？いくつ選んでも大丈夫です。</span></p>
       <div class="opt-list" data-group="why" data-pick="multi">
@@ -62,6 +64,7 @@
     </div>
 
     <div class="section">
+      <span class="section-kicker">えらぶ</span>
       <h2 class="section-title">목표 <span class="title-ja">(ゴール)</span></h2>
       <p class="section-subtitle"><span class="ko">한국어로 뭐를 하고 싶어요? 하나만 골라 주세요.</span><span class="ja">韓国語で何がしたいですか？1つだけ選んでください。</span></p>
       <div class="opt-list" data-group="goal" data-pick="single">
@@ -77,6 +80,7 @@
     </div>
 
     <div class="section">
+      <span class="section-kicker">えらぶ</span>
       <h2 class="section-title">학습 페이스 <span class="title-ja">(学習ペース)</span></h2>
       <p class="section-subtitle"><span class="ko">일주일에 수업을 몇 번 받고 싶어요?</span><span class="ja">1週間に何回、レッスンを受けたいですか？</span></p>
       <div class="opt-list" data-group="pace" data-pick="single">
@@ -471,6 +475,7 @@
 
     <!-- level check: the one thing only the tutor can judge -->
     <div class="section" id="p-level">
+      <span class="section-kicker">チェック</span>
       <h2 class="section-title">레벨 체크 <span class="title-ja">(レベル診断)</span></h2>
       <p class="section-subtitle"><span class="ko">오늘 수업을 보고, 제가 지금 레벨을 체크할게요.</span><span class="ja">今日のレッスンを見て、私が今のレベルをチェックします。</span></p>
       <div class="lvpick" data-group="level">
@@ -552,25 +557,25 @@
 
     <!-- roadmap: the same plan as a signable worksheet -->
     <div class="section" id="p-roadmap">
+      <span class="section-kicker">きめる</span>
       <h2 class="section-title">나만의 로드맵 <span class="title-ja">(あなたのロードマップ)</span></h2>
       <p class="section-subtitle"><span class="ko">시작일만 정하면, 오늘 배운 그다음부터 이어서 가요.</span><span class="ja">開始日を決めれば、今日の続きから始められます。</span></p>
       <div class="plan-banner">
-        <span class="k">✍ 목표까지</span>
-        <span class="line">약 <input class="write rm-mon" placeholder="3">개월</span>
-        <span class="line">주 <input class="write rm-pace" placeholder="2">회</span>
-        <span class="line">총 <input class="write rm-tot" placeholder="24">회</span>
-      </div>
-      <div class="card">
-        <div class="ws-row"><span class="lab">이름 · 날짜</span><span><input class="blank-line" placeholder="名前"> <input class="blank-line" style="width:90px;" placeholder="日付"></span></div>
+        <span class="k">✍ 목표까지<small>目標まで</small></span>
+        <span class="line">약 <input class="write rm-mon" placeholder="3"><small>か月</small></span>
+        <span class="line">주 <input class="write rm-pace" placeholder="2"><small>回/週</small></span>
+        <span class="line">총 <input class="write rm-tot" placeholder="24"><small>レッスン</small></span>
       </div>
       <div class="cta-box">
         <span class="t">이 수업, 같이 이어가요!</span>
-        <span class="s">今日ならった続きから · 시작일 <input class="blank-line" style="width:90px;" placeholder="開始日"></span>
+        <span class="s">今日ならった続きから</span>
+        <span class="cta-sign"><input class="blank-line" placeholder="お名前"><input class="blank-line" placeholder="開始日"></span>
       </div>
     </div>
 
     <!-- mission complete -->
     <div class="section">
+      <span class="section-kicker">チェック</span>
       <h2 class="section-title">오늘의 미션 완료 <span class="title-ja">(今日できたこと)</span></h2>
       <p class="section-subtitle"><span class="ko">오늘 할 수 있게 된 걸 체크해 보세요!</span><span class="ja">今日できるようになったことをチェックしてみましょう！</span></p>
       <div class="card">
@@ -665,10 +670,6 @@
         </div>
         <div class="right"><span class="d3">D-3</span><span>3日で終了</span></div>
       </div>
-      <div class="card">
-        <div class="row"><span class="translation">🎫 チューター指名券 — 同じ先生を続けたいときに追加できます</span></div>
-        <div class="row"><span class="translation">🌏 ダブルパック — 韓国語と英語、どちらも受けられる受講券</span></div>
-      </div>
       <div class="tutor-note">쿠폰은 수업 뒤 LINE으로 다시 보내 드린다고 안내해 주세요.</div>
     </div>
 
@@ -693,6 +694,7 @@
         <div class="qa"><span class="q">お休みはできる？</span><span class="a">3か月プランは7日間ホールドできます。1か月プランはホールドなしです。</span></div>
         <div class="qa"><span class="q">支払いはクレジットカード？</span><span class="a">はい。海外発行のカードもそのまま使えます。</span></div>
         <div class="qa"><span class="q">受講中に聞きたいことがあったら？</span><span class="a">LINEのPODOチャンネルへどうぞ。平日10時〜19時にお返事します。</span></div>
+        <div class="qa"><span class="q">ダブルパックって何？</span><span class="a">韓国語と英語を自由に選んで受けられる受講券です。1日1レッスンまでです。</span></div>
       </div>
     </div>
 
@@ -807,11 +809,15 @@
       $(".x2").textContent = mo + "か月";
       $(".lg1").textContent = "週" + (pace === "5" ? "5回" : pace + "回");
 
-      // the two curriculum bands under the axis, sized by their share
-      var courses = g.c.slice(0, 3);
-      var first = COURSE[courses[0]], rest = COURSE[courses[1]];
-      rep.querySelector(".cur1t").textContent = first[1];
-      rep.querySelector(".cur2t").textContent = rest[1];
+      // never recommend a course the learner has already passed
+      var courses = g.c.filter(function (k) {
+        if (k === "hangul") return Number(lv) < 2;
+        if (k === "core") return Number(lv) < 5;
+        return true;
+      });
+      if (!courses.length) courses = [g.c[g.c.length - 1]];
+      rep.querySelector(".cur1t").textContent = COURSE[courses[0]][1];
+      rep.querySelector(".cur2t").textContent = COURSE[courses[courses.length - 1]][1];
 
       var list = $(".rep-courses");
       list.innerHTML = "";
@@ -1136,6 +1142,48 @@
       "子音 ㄴ・ㅁ ＋ 母音6つ ＝ 12文字を読んだ。": "자음 ㄴ·ㅁ + 모음 6개 = 12글자를 읽었다.",
       "本物の単語 나무・어머니・오이 を自分の力で読んで、組み立てた。": "진짜 단어 나무·어머니·오이를 내 힘으로 읽고 만들었다.",
       "次は子音を6つ（ㄱ ㄷ ㄹ ㅂ ㅅ ㅈ）。고기（肉）・바다（海）・아버지（お父さん）が読めるようになります。": "다음엔 자음 6개(ㄱ ㄷ ㄹ ㅂ ㅅ ㅈ). 고기, 바다, 아버지도 읽을 수 있게 돼요!",
+
+      // ---- 안내 · 세일즈 페이지 ----
+      "ハングルを今日はじめた": "한글을 오늘 시작했다",
+      "ハングルは読める": "한글은 읽을 수 있다",
+      "かんたんな文が少し言える": "간단한 문장을 조금 말할 수 있다",
+      "日常会話がある程度できる": "일상 회화가 어느 정도 된다",
+      "自分の考えを話せる": "자기 생각을 말할 수 있다",
+      "韓国人チューター": "한국인 튜터",
+      "日本で韓国語を教えたベテランのみ採用": "일본에서 한국어를 가르친 베테랑만 채용",
+      "毎日1回": "매일 1회",
+      "1日1レッスン、月に最大30回": "하루 1레슨, 월 최대 30회",
+      "超入門〜上級": "왕초보~고급",
+      "ハングルから自由な会話まで": "한글부터 자유로운 회화까지",
+      "平日も週末も": "평일도 주말도",
+      "予約・キャンセルは1時間前まで": "예약·취소는 1시간 전까지",
+      "1か月プラン": "1개월 플랜",
+      "まず続けられるか試したい方に": "우선 계속할 수 있을지 시험해 보고 싶은 분께",
+      "毎日1回・25分": "매일 1회 · 25분",
+      "月に最大30レッスン": "월 최대 30레슨",
+      "ホールドはなし": "홀딩 없음",
+      "3か月プラン": "3개월 플랜",
+      "目標まで一気に進めたい方に": "목표까지 한 번에 가고 싶은 분께",
+      "7日間のホールドが可能": "7일간 홀딩 가능",
+      "総額がいちばんお得": "총액이 가장 저렴",
+      "韓国語がまったく分からなくても大丈夫？": "한국어를 전혀 몰라도 괜찮나요?",
+      "大丈夫です。今日のようなハングルの入門から始められます。": "괜찮아요. 오늘 같은 한글 입문부터 시작할 수 있어요.",
+      "先生は韓国人？": "선생님은 한국인인가요?",
+      "はい。日本で韓国語を教えた経験のあるベテランだけを採用しています。": "네. 일본에서 한국어를 가르친 경험이 있는 베테랑만 채용해요.",
+      "予約とキャンセルは？": "예약과 취소는요?",
+      "どちらもレッスンの1時間前までにお願いします。": "둘 다 레슨 1시간 전까지 해 주세요.",
+      "受け放題って毎日？": "무제한이면 매일인가요?",
+      "1日1回、毎日受けられます。毎日予約すると月に最大30回です。": "하루 1회, 매일 들을 수 있어요. 매일 예약하면 월 최대 30회예요.",
+      "先生は固定？": "선생님은 고정인가요?",
+      "毎日のレッスンなのでランダムです。チューター指名券を追加すると固定できます。": "매일 하는 수업이라 랜덤이에요. 튜터 지정권을 추가하면 고정할 수 있어요.",
+      "お休みはできる？": "쉴 수 있나요?",
+      "3か月プランは7日間ホールドできます。1か月プランはホールドなしです。": "3개월 플랜은 7일 홀딩할 수 있어요. 1개월 플랜은 홀딩이 없어요.",
+      "支払いはクレジットカード？": "결제는 신용카드인가요?",
+      "はい。海外発行のカードもそのまま使えます。": "네. 해외 발급 카드도 그대로 쓸 수 있어요.",
+      "受講中に聞きたいことがあったら？": "수강 중에 물어보고 싶은 게 있으면요?",
+      "LINEのPODOチャンネルへどうぞ。平日10時〜19時にお返事します。": "LINE 포도 채널로 문의해 주세요. 평일 10시~19시에 답변드려요.",
+      "ダブルパックって何？": "더블팩이 뭔가요?",
+      "韓国語と英語を自由に選んで受けられる受講券です。1日1レッスンまでです。": "한국어와 영어를 자유롭게 골라 들을 수 있는 수강권이에요. 하루 1레슨까지예요.",
 
       // ---- 마무리 ----
       "おつかれさまでした！👏": "수고하셨어요! 👏",

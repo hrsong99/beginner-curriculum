@@ -32,7 +32,7 @@ The guiding principles behind every page of the Korean curriculum.
 - **Tutor notes are written in Korean.** The tutor reads Korean; a beginner learner cannot, so the language itself is a second lock on the answers.
 - **A tutor note sits directly under the script it belongs to** — that is where the tutor looks after reading the line aloud. Placement costs the learner nothing: the note is `display:none` for them and collapses without leaving a gap.
 - **A note is one short instruction, and never repeats an answer the page already shows.** Teaching mode marks correct tiles and ghosts answers into blanks, so the note points at them (표시된 쪽을 하나씩 읽어 주세요) rather than restating them. If the marks alone make the action obvious, the page needs no note at all. No "for teachers" tag either — the dark box already says whose it is.
-- **Everything tutor-only lives behind the 선생님 모드 switch on the cover, and the switch is off by default.** Student view is what the page loads as, and nothing is persisted — reload returns to it. Answers reveal in the same barely-there way as `.slot`: a ghost of the answer inside the blank, never a loud key.
+- **Everything tutor-only lives behind the 티칭 모드 switch on the cover, and the switch is off by default.** Student view is what the page loads as, and nothing is persisted — reload returns to it. Answers reveal in the same barely-there way as `.slot`: a ghost of the answer inside the blank, never a loud key.
 
 ## Scaffolding rules
 - **Every slot in a repeated row is filled, or it isn't a slot.** If a column is only sometimes relevant, it doesn't belong in the row — the ragged holes read as broken. Give the column something true for every item, and move the sometimes-relevant thing to its own page.

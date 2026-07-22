@@ -467,6 +467,23 @@
   color: #b5fd4c;
   font-size: 13px;
   font-weight: 800;
+  text-align: center;
+}
+
+.plan-banner .k small {
+  display: block;
+  margin-top: 2px;
+  color: rgba(255,255,255,.5);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.plan-banner .line small {
+  display: inline;
+  margin: 0;
+  color: rgba(255,255,255,.72);
+  font-size: 12.5px;
+  font-weight: 800;
 }
 
 .plan-banner .line {
@@ -533,6 +550,14 @@
   font-size: 17px;
   font-weight: 800;
 }
+
+.cta-box .cta-sign {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.cta-box .cta-sign .blank-line { flex: 1 1 0; width: auto; min-width: 0; }
 
 .cta-box .s {
   display: flex;
@@ -1142,7 +1167,12 @@
 .section:has(> .build),
 .section:has(> .blk-row),
 .section:has(> .combo),
-.section:has(> .payoff) {
+.section:has(> .payoff),
+.section:has(> .usp),
+.section:has(> .pricecard),
+.section:has(> .plans),
+.section:has(> .coupon),
+.section:has(> .rep-empty) {
   display: flex;
   flex-direction: column;
 }
@@ -1153,13 +1183,23 @@
 .section > .build,
 .section > .blk-row,
 .section > .combo,
-.section > .payoff { margin-top: auto; }
+.section > .payoff,
+.section > .usp,
+.section > .pricecard,
+.section > .plans,
+.section > .coupon,
+.section > .rep-empty { margin-top: auto; }
 
 .section:has(> .anat) > :last-child,
 .section:has(> .build) > :last-child,
 .section:has(> .blk-row) > :last-child,
 .section:has(> .combo) > :last-child,
-.section:has(> .payoff) > :last-child { margin-bottom: auto; }
+.section:has(> .payoff) > :last-child,
+.section:has(> .usp) > :last-child,
+.section:has(> .pricecard) > :last-child,
+.section:has(> .plans) > :last-child,
+.section:has(> .coupon) > :last-child,
+.section:has(> .rep-empty) > :last-child { margin-bottom: auto; }
 
 /* a hint chip sitting under a component needs air (hard shadows below) */
 .section > .hint { margin-top: 16px; }
@@ -1234,7 +1274,7 @@
   transition: transform .09s, background .12s, box-shadow .12s;
 }
 
-.tap-grid.words .tap-tile { height: 112px; font-size: 32px; }
+.tap-grid.words .tap-tile { height: 136px; font-size: 34px; }
 
 .tap-tile:active { transform: scale(.96); }
 
