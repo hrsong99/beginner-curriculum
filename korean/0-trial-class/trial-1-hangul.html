@@ -470,7 +470,7 @@
     <div class="brand-page divider">
       <img class="brand-mascot" src="podo-character.png" alt="">
       <h2 class="brand-title">앞으로의 플랜<span class="ja">これからのプラン</span></h2>
-      <p class="brand-sub">今日のようすと目標に合わせて、先生があなたのロードマップを作ります。</p>
+      <p class="brand-sub">今日のようすと目標に合わせて、先生があなただけのプランを作ります。</p>
     </div>
 
     <!-- level check: the one thing only the tutor can judge -->
@@ -494,7 +494,22 @@
       <h2 class="section-title">나만의 리포트 <span class="title-ja">(あなただけのリポート)</span></h2>
       <p class="section-subtitle"><span class="ko">골라 주신 목표와 페이스로, 언제쯤 도착하는지 그려 봤어요.</span><span class="ja">選んでもらった目標とペースで、いつごろ到達するか描いてみました。</span></p>
 
-      <div class="rep-empty">目標と学習ペースを選ぶと、ここにプランが出ます。</div>
+      <div class="rep-empty" aria-hidden="true">
+        <div class="sk sk-head"></div>
+        <div class="sk sk-plot">
+          <svg viewBox="0 0 300 120" preserveAspectRatio="none">
+            <path d="M12 104 C 60 100, 150 88, 210 60 C 250 42, 275 26, 288 16" fill="none"
+                  stroke="#e4e4e2" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="12" cy="104" r="5" fill="#e4e4e2"/>
+            <circle cx="210" cy="60" r="5" fill="#e4e4e2"/>
+            <circle cx="288" cy="16" r="6" fill="#dedede"/>
+          </svg>
+        </div>
+        <div class="sk sk-facts"><i></i><i></i><i></i></div>
+        <div class="sk sk-course"></div>
+        <div class="sk sk-course"></div>
+      </div>
+      <p class="rep-hintline">目標と学習ペースを選ぶと、ここにプランが出ます。</p>
 
       <div class="rep">
         <div class="rep-head">
@@ -551,26 +566,13 @@
         <span class="cgroup-label">おすすめコース</span>
         <div class="rep-courses"></div>
         <p class="rep-why"></p>
+        <div class="cta-box">
+          <span class="t">이 수업, 같이 이어가요!</span>
+          <span class="s">今日ならった続きから</span>
+          <span class="cta-sign"><input class="blank-line" placeholder="お名前"><input class="blank-line" placeholder="開始日"></span>
+        </div>
       </div>
       <div class="tutor-note">목표·페이스를 안 고르셨으면 여기서 같이 골라도 돼요.</div>
-    </div>
-
-    <!-- roadmap: the same plan as a signable worksheet -->
-    <div class="section" id="p-roadmap">
-      <span class="section-kicker">きめる</span>
-      <h2 class="section-title">나만의 로드맵 <span class="title-ja">(あなたのロードマップ)</span></h2>
-      <p class="section-subtitle"><span class="ko">시작일만 정하면, 오늘 배운 그다음부터 이어서 가요.</span><span class="ja">開始日を決めれば、今日の続きから始められます。</span></p>
-      <div class="plan-banner">
-        <span class="k">✍ 목표까지<small>目標まで</small></span>
-        <span class="line">약 <input class="write rm-mon" placeholder="3"><small>か月</small></span>
-        <span class="line">주 <input class="write rm-pace" placeholder="2"><small>回/週</small></span>
-        <span class="line">총 <input class="write rm-tot" placeholder="24"><small>レッスン</small></span>
-      </div>
-      <div class="cta-box">
-        <span class="t">이 수업, 같이 이어가요!</span>
-        <span class="s">今日ならった続きから</span>
-        <span class="cta-sign"><input class="blank-line" placeholder="お名前"><input class="blank-line" placeholder="開始日"></span>
-      </div>
     </div>
 
     <!-- mission complete -->
@@ -789,8 +791,16 @@
 
     function render() {
       var g = GOALS[pick.goal], pace = pick.pace, lv = pick.level || "1";
-      if (!g || !pace) { rep.classList.remove("ready"); empty.classList.remove("hide"); return; }
-      rep.classList.add("ready"); empty.classList.add("hide");
+      var hint = document.querySelector(".rep-hintline");
+      if (!g || !pace) {
+        rep.classList.remove("ready");
+        empty.classList.remove("hide");
+        if (hint) hint.classList.remove("hide");
+        return;
+      }
+      rep.classList.add("ready");
+      empty.classList.add("hide");
+      if (hint) hint.classList.add("hide");
 
       var per = pace === "5" ? 5 : Number(pace);
       var need = Math.max(6, g.n - DONE[lv]);
@@ -816,8 +826,20 @@
         return true;
       });
       if (!courses.length) courses = [g.c[g.c.length - 1]];
-      rep.querySelector(".cur1t").textContent = COURSE[courses[0]][1];
-      rep.querySelector(".cur2t").textContent = COURSE[courses[courses.length - 1]][1];
+      // the bands under the axis: the first course is the short opening
+      // stretch, the second is the bulk of the time. With only one course
+      // left, it takes the whole axis rather than being named twice.
+      var c1 = rep.querySelector(".cur1"), c1t = rep.querySelector(".cur1t");
+      var c2 = rep.querySelector(".cur2"), c2t = rep.querySelector(".cur2t");
+      if (courses.length === 1) {
+        c1.setAttribute("width", "0"); c1t.textContent = "";
+        c2.setAttribute("x", "20"); c2.setAttribute("width", "306"); c2t.setAttribute("x", "173");
+        c2t.textContent = COURSE[courses[0]][1];
+      } else {
+        c1.setAttribute("width", "96"); c1t.textContent = COURSE[courses[0]][1];
+        c2.setAttribute("x", "120"); c2.setAttribute("width", "206"); c2t.setAttribute("x", "223");
+        c2t.textContent = COURSE[courses[1]][1];
+      }
 
       var list = $(".rep-courses");
       list.innerHTML = "";
@@ -833,10 +855,6 @@
 
       var why = pick.why && pick.why.length ? pick.why[0] : "other";
       $(".rep-why").textContent = WHY[why] || WHY.other;
-
-      // the roadmap worksheet fills itself in from the same numbers
-      var mon = document.querySelector(".rm-mon"), pc = document.querySelector(".rm-pace"), tot = document.querySelector(".rm-tot");
-      if (mon) { mon.value = mo; pc.value = per; tot.value = need; }
     }
 
     render();
@@ -968,7 +986,7 @@
       "これからのプラン": "앞으로의 플랜",
       "あなたのことを教えてください。答えに合わせて、最後のプランが変わります。": "당신에 대해 알려 주세요. 대답에 따라 마지막 플랜이 달라져요.",
       "ここから25分。終わるころには、本物の韓国語の単語が読めます。約束します！": "지금부터 25분. 끝날 때쯤엔 진짜 한국어 단어를 읽을 수 있어요. 약속해요!",
-      "今日のようすと目標に合わせて、先生があなたのロードマップを作ります。": "오늘 모습과 목표에 맞춰 튜터가 로드맵을 만들어 드려요.",
+      "今日のようすと目標に合わせて、先生があなただけのプランを作ります。": "오늘 모습과 목표에 맞춰 튜터가 맞춤 플랜을 만들어 드려요.",
 
       // ---- 첫인사 ----
       "(はじめまして！)": "(처음 뵙겠습니다!)",
@@ -1124,7 +1142,6 @@
       // ---- 플랜 ----
       "(レベル診断)": "(레벨 진단)",
       "今日のレッスンをもとに、私が今のレベルをチェックします。目標は、さっき選んでもらったものです。": "오늘 수업을 바탕으로, 제가 지금 레벨을 체크할게요. 목표는 아까 골라 주신 거예요.",
-      "(あなたのロードマップ)": "(나만의 로드맵)",
       "おすすめコースにチェックして、目標までの期間を私と一緒に決めましょう。": "추천 코스에 체크하고, 목표까지의 기간을 저와 같이 정해요.",
       "추천 커리큘럼 · おすすめコース": "おすすめコース = 추천 코스",
       "그다음 · そのあと（興味で選ぶ）": "そのあと（興味で選ぶ） = 그다음 (흥미로 고르기)",
@@ -1144,6 +1161,17 @@
       "次は子音を6つ（ㄱ ㄷ ㄹ ㅂ ㅅ ㅈ）。고기（肉）・바다（海）・아버지（お父さん）が読めるようになります。": "다음엔 자음 6개(ㄱ ㄷ ㄹ ㅂ ㅅ ㅈ). 고기, 바다, 아버지도 읽을 수 있게 돼요!",
 
       // ---- 안내 · 세일즈 페이지 ----
+      "今日のレッスンを見て、私が今のレベルをチェックします。": "오늘 수업을 보고, 제가 지금 레벨을 체크할게요.",
+      "選んでもらった目標とペースで、いつごろ到達するか描いてみました。": "골라 주신 목표와 페이스로, 언제쯤 도착하는지 그려 봤어요.",
+      "気になるところを、先生がひらいて説明します。": "궁금한 부분을 튜터가 열어서 설명해 드려요.",
+      "PODOのレッスンがどんなものか、ひと目でご紹介します。": "포도 수업이 어떤 수업인지 한눈에 보여 드릴게요.",
+      "初月は半額です。2か月目から通常価格で自動決済になります。": "첫 달은 반값이에요. 둘째 달부터 정상가로 자동 결제돼요.",
+      "1か月で軽く始めることも、3か月でじっくり進めることもできます。": "한 달로 가볍게 시작할 수도 있고, 세 달로 길게 잡을 수도 있어요.",
+      "今日、体験レッスンを受けた方だけの特典です。": "오늘 체험을 받으신 분께만 드리는 혜택이에요.",
+      "レッスンについて、よく聞かれることをまとめました。": "수업에 대해 많이 물어보시는 것들이에요.",
+      "お支払いと受講券についての質問です。": "결제랑 수강권에 대한 질문들이에요.",
+      "今日のようすと目標に合わせて、先生があなただけのプランを作ります。": "오늘 모습과 목표에 맞춰 튜터가 맞춤 플랜을 만들어 드려요.",
+      "目標と学習ペースを選ぶと、ここにプランが出ます。": "목표와 페이스를 고르면 여기에 플랜이 나와요.",
       "ハングルを今日はじめた": "한글을 오늘 시작했다",
       "ハングルは読める": "한글은 읽을 수 있다",
       "かんたんな文が少し言える": "간단한 문장을 조금 말할 수 있다",

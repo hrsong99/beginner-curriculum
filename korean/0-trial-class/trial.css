@@ -1171,8 +1171,7 @@
 .section:has(> .usp),
 .section:has(> .pricecard),
 .section:has(> .plans),
-.section:has(> .coupon),
-.section:has(> .rep-empty) {
+.section:has(> .coupon) {
   display: flex;
   flex-direction: column;
 }
@@ -1187,8 +1186,7 @@
 .section > .usp,
 .section > .pricecard,
 .section > .plans,
-.section > .coupon,
-.section > .rep-empty { margin-top: auto; }
+.section > .coupon { margin-top: auto; }
 
 .section:has(> .anat) > :last-child,
 .section:has(> .build) > :last-child,
@@ -1198,8 +1196,7 @@
 .section:has(> .usp) > :last-child,
 .section:has(> .pricecard) > :last-child,
 .section:has(> .plans) > :last-child,
-.section:has(> .coupon) > :last-child,
-.section:has(> .rep-empty) > :last-child { margin-bottom: auto; }
+.section:has(> .coupon) > :last-child { margin-bottom: auto; }
 
 /* a hint chip sitting under a component needs air (hard shadows below) */
 .section > .hint { margin-top: 16px; }
@@ -1634,18 +1631,50 @@ button.opt-row:active { transform: scale(.99); }
 .lvrow.on .lvs { color: rgba(28,28,28,.62); }
 
 /* ---------- the report ---------- */
+/* Skeleton preview: the report's own shape in grey, so the page reads as
+   "your plan lands here" rather than as an empty card. */
 .rep-empty {
+  display: grid;
+  gap: 12px;
   margin-top: 24px;
-  padding: 26px 20px;
-  border: 1.5px dashed #1c1c1c;
+}
+
+.sk {
+  border: 1.5px solid #ececea;
   border-radius: 14px;
-  background: #fff;
+  background: #fafafa;
+}
+
+.sk-head { height: 62px; border-color: #e4e4e2; background: #f0f0ee; }
+
+.sk-plot { height: 152px; padding: 12px 8px; }
+.sk-plot svg { display: block; width: 100%; height: 100%; }
+
+.sk-facts { display: grid; gap: 0; padding: 4px 16px; }
+
+.sk-facts i {
+  height: 13px;
+  margin: 13px 0;
+  border-radius: 999px;
+  background: #ededeb;
+}
+
+.sk-facts i:nth-child(1) { width: 62%; }
+.sk-facts i:nth-child(2) { width: 48%; }
+.sk-facts i:nth-child(3) { width: 55%; }
+
+.sk-course { height: 50px; }
+
+.rep-hintline {
+  margin: 14px 0 0;
   color: #757575;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   text-align: center;
   word-break: keep-all;
 }
+
+.rep.ready ~ .rep-hintline, .rep-hintline.hide { display: none; }
 
 .rep { display: none; }
 .rep.ready { display: block; }
@@ -1710,6 +1739,8 @@ button.opt-row:active { transform: scale(.99); }
 .rf .v { flex: none; color: #1c1c1c; font-size: 14.5px; font-weight: 800; }
 
 .rep .cgroup-label { margin-top: 20px; }
+
+.rep .cta-box { margin-top: 20px; }
 
 .rep-courses {
   display: grid;
