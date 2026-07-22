@@ -27,6 +27,11 @@ The guiding principles behind every page of the Korean curriculum.
 - **Answering gives immediate, quiet feedback** — right fills lime with a ✓, wrong greys out with a ✕, and a second tap undoes it. The tutor still leads; the page just stops the learner guessing silently.
 - **Reuse one interaction across the deck.** A learner should meet two or three input patterns in a lesson, not a new one per page.
 
+## Teaching mode
+- **Two script channels, told apart at a glance.** The green box is what the tutor *says* to the learner. Anything the tutor needs but the learner must not see — read order, pacing, answers — goes in a dark `.tutor-note` box instead. Never mix the two.
+- **Tutor notes are written in Korean.** The tutor reads Korean; a beginner learner cannot, so the language itself is a second lock on the answers.
+- **Everything tutor-only lives behind the 선생님 모드 switch on the cover, and the switch is off by default.** Student view is what the page loads as, and nothing is persisted — reload returns to it. Answers reveal in the same barely-there way as `.slot`: a ghost of the answer inside the blank, never a loud key.
+
 ## Scaffolding rules
 - **Every slot in a repeated row is filled, or it isn't a slot.** If a column is only sometimes relevant, it doesn't belong in the row — the ragged holes read as broken. Give the column something true for every item, and move the sometimes-relevant thing to its own page.
 - **A hint earns its place only by disambiguating**, and a contrast is taught by comparison, not by a footnote on each item. Letters that collapse to the same katakana (어/오 → オ, 우/으 → ウ) get one side-by-side page; letters with no confusable twin get nothing — 이＝イ needs no instruction, and 「そのまま」 is a label that says *ignore me*.
