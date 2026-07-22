@@ -20,6 +20,11 @@
         <span class="sw"><i></i></span>
         <span class="lbl">티칭 모드</span>
       </label>
+      <label class="mode-toggle view">
+        <input type="checkbox" id="paged-mode">
+        <span class="sw"><i></i></span>
+        <span class="lbl">한 장씩</span>
+      </label>
     </div>
 
     <!-- ============ STEP 1 · GREETING ============ -->
@@ -765,7 +770,7 @@
       </div>
     </div>
 
-    <div class="section" id="p-about">
+    <div class="section" id="p-about" data-flow="ref">
       <span class="section-kicker">안내</span>
       <h2 class="section-title">포도 수업</h2>
       <p class="section-subtitle"><span class="ko">포도 수업이 어떤 수업인지 한눈에 보여 드릴게요.</span></p>
@@ -779,7 +784,7 @@
     </div>
 
     <!-- only reached from the link above — most learners never need it -->
-    <div class="section" id="p-price-all">
+    <div class="section" id="p-price-all" data-flow="ref">
       <span class="section-kicker">안내</span>
       <h2 class="section-title">전체 요금표</h2>
       <p class="section-subtitle"><span class="ko">레슨권 전체예요. 표시된 금액은 한 달에 내는 돈이에요.</span></p>
@@ -798,7 +803,7 @@
       <div class="tutor-note">먼저 보여 드리지 말고, 물어보실 때만 열어 주세요.</div>
     </div>
 
-    <div class="section" id="p-faq1">
+    <div class="section" id="p-faq1" data-flow="ref">
       <span class="section-kicker">FAQ</span>
       <h2 class="section-title">자주 묻는 질문 ①</h2>
       <p class="section-subtitle"><span class="ko">수업에 대해 많이 물어보시는 것들이에요.</span></p>
@@ -810,7 +815,7 @@
       </div>
     </div>
 
-    <div class="section" id="p-faq2">
+    <div class="section" id="p-faq2" data-flow="ref">
       <span class="section-kicker">FAQ</span>
       <h2 class="section-title">자주 묻는 질문 ②</h2>
       <p class="section-subtitle"><span class="ko">결제랑 수강권에 대한 질문들이에요.</span></p>
@@ -1351,5 +1356,180 @@
     document.addEventListener("scroll", () => { tip.style.opacity = 0; }, true);
   })();
   </script>
+
+  <!-- ================================================================
+       PAGER · 한 장씩 넘겨 보는 모드
+       The deck is 43 flat siblings under .phone, so paging is just
+       "show one, hide the rest" — no restructuring. Off by default:
+       scrolling stays the ground truth (printing, Cmd+F, scanning
+       ahead all rely on it), and this is the presentation layer.
+       ================================================================ -->
+  <nav class="pager" hidden>
+    <button class="pg-btn pg-prev" type="button" aria-label="이전 페이지">←</button>
+    <div class="pg-mid">
+      <div class="pg-bar"></div>
+      <span class="pg-label"><b class="pg-act">—</b><span class="pg-n">—</span></span>
+    </div>
+    <button class="pg-btn pg-next" type="button" aria-label="다음 페이지">→</button>
+    <button class="pg-btn pg-teach" type="button" aria-label="티칭 모드">T</button>
+    <button class="pg-btn pg-exit" type="button" aria-label="스크롤 모드로">⤢</button>
+  </nav>
+
+  <!-- ================================================================
+       PAGER · one page at a time, with acts as the progress unit
+       ================================================================ -->
+  <script>
+  (function () {
+    var phone = document.querySelector(".phone");
+    var bar   = document.querySelector(".pager");
+    var sw    = document.getElementById("paged-mode");
+    if (!phone || !bar || !sw) return;
+
+    var pages = [].slice.call(phone.children);
+    // Reference pages (수업 안내 · 전체 요금표 · FAQ) hang off the 포도 안내
+    // index. They are reachable by link and by Back, but Next never walks
+    // into them — otherwise the deck's spine would run through material
+    // most learners never need.
+    var flow = pages.filter(function (p) { return p.dataset.flow !== "ref"; });
+
+    // Acts come from the divider pages that already exist, so the progress
+    // bar has 5 segments instead of 43 ticks.
+    var acts = [], cur = null;
+    flow.forEach(function (p, i) {
+      var isDiv = p.classList.contains("divider");
+      if (!cur || isDiv) {
+        var t = p.querySelector(".brand-title");
+        cur = { name: t ? (t.firstChild.textContent || "").trim() : "체험 레슨", from: i, to: i };
+        acts.push(cur);
+      }
+      cur.to = i;
+    });
+
+    var at = 0;                                    // index into `pages`
+    var prevBtn = bar.querySelector(".pg-prev");
+    var nextBtn = bar.querySelector(".pg-next");
+    var barEl   = bar.querySelector(".pg-bar");
+    var actEl   = bar.querySelector(".pg-act");
+    var nEl     = bar.querySelector(".pg-n");
+
+    acts.forEach(function () { barEl.appendChild(document.createElement("i")); });
+
+    // `into` is an element inside the page to land on (the curriculum
+    // stages). Layout is flushed first — the page has only just left
+    // display:none, so measuring before that reads stale geometry.
+    function show(i, into) {
+      at = Math.max(0, Math.min(pages.length - 1, i));
+      pages.forEach(function (p, k) { p.classList.toggle("pg-on", k === at); });
+      paint();
+      void pages[at].offsetHeight;        // flush layout: the page just left display:none
+      if (into && into !== pages[at]) into.scrollIntoView({ block: "start" });
+      else window.scrollTo(0, 0);
+    }
+
+    function paint() {
+      var page = pages[at];
+      var f = flow.indexOf(page);
+      prevBtn.disabled = at <= 0;
+      // Next stops at the end of the flow; from a reference page it returns
+      // to the index rather than dead-ending.
+      nextBtn.disabled = f >= 0 && f === flow.length - 1;
+
+      if (f < 0) {                                 // a reference page
+        actEl.textContent = "포도 안내";
+        nEl.textContent = "참고 페이지";
+        nEl.classList.add("ref");
+      } else {
+        var a = 0;
+        acts.forEach(function (x, k) { if (f >= x.from) a = k; });
+        actEl.textContent = acts[a].name;
+        nEl.textContent = (f - acts[a].from + 1) + " / " + (acts[a].to - acts[a].from + 1);
+        nEl.classList.remove("ref");
+      }
+
+      [].forEach.call(barEl.children, function (seg, k) {
+        var a = acts[k], pct;
+        if (f < 0) pct = f;                        // unused on ref pages
+        if (f < 0 || f < a.from) pct = 0;
+        else if (f > a.to) pct = 100;
+        else pct = ((f - a.from + 1) / (a.to - a.from + 1)) * 100;
+        seg.style.setProperty("--f", pct + "%");
+      });
+    }
+
+    function step(d) {
+      var f = flow.indexOf(pages[at]);
+      if (f < 0) {                                 // leaving a reference page
+        var idx = pages.indexOf(document.getElementById("p-info"));
+        show(idx < 0 ? 0 : idx);
+        return;
+      }
+      var t = flow[f + d];
+      if (t) show(pages.indexOf(t));
+    }
+
+    prevBtn.addEventListener("click", function () { step(-1); });
+    nextBtn.addEventListener("click", function () { step(1); });
+    bar.querySelector(".pg-exit").addEventListener("click", function () { sw.checked = false; apply(); });
+
+    // The 티칭 모드 switch lives on the cover, which a tutor on page 30 can
+    // no longer see — so the bar carries its own handle on the same state.
+    var teach = document.getElementById("teaching-mode");
+    var teachBtn = bar.querySelector(".pg-teach");
+    if (teach && teachBtn) {
+      teachBtn.addEventListener("click", function () {
+        teach.checked = !teach.checked;
+        teach.dispatchEvent(new Event("change"));
+        teachBtn.classList.toggle("on", teach.checked);
+      });
+      teach.addEventListener("change", function () { teachBtn.classList.toggle("on", teach.checked); });
+    }
+
+    /* ---- in-page anchors have to switch page first ----
+       #c-1..#c-4 sit INSIDE #p-curri, so "go to stage 2" means show the
+       curriculum page and then scroll to the stage within it. */
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest && e.target.closest('a[href^="#"]');
+      if (!a || !phone.classList.contains("paged")) return;
+      var target = document.getElementById(a.getAttribute("href").slice(1));
+      if (!target) return;
+      e.preventDefault();
+      var page = target.closest(".phone > *") || target;
+      while (page && page.parentNode !== phone) page = page.parentNode;
+      if (!page) return;
+      show(pages.indexOf(page), target);
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (!phone.classList.contains("paged")) return;
+      if (e.key === "ArrowRight") step(1);
+      if (e.key === "ArrowLeft") step(-1);
+    });
+
+    function apply() {
+      var on = sw.checked;
+      if (!on) {
+        phone.classList.remove("paged");
+        document.body.classList.remove("paged");
+        bar.hidden = true;
+        var keep = pages[at];
+        pages.forEach(function (p) { p.classList.remove("pg-on"); });
+        if (keep) keep.scrollIntoView({ block: "start" });
+        return;
+      }
+      // Which page is on screen has to be measured BEFORE .paged lands —
+      // once the siblings are display:none every offsetTop reads 0 and the
+      // "last page whose top is above the fold" is always the last page.
+      var top = window.scrollY + 80, best = 0;
+      pages.forEach(function (p, k) { if (p.offsetTop <= top) best = k; });
+      phone.classList.add("paged");
+      document.body.classList.add("paged");
+      bar.hidden = false;
+      show(best);
+    }
+
+    sw.addEventListener("change", apply);
+  })();
+  </script>
+
 </body>
 </html>
