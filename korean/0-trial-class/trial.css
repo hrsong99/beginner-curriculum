@@ -1944,3 +1944,37 @@ button.opt-row:active { transform: scale(.99); }
 .qa .q { display: block; font-size: 14px; font-weight: 800; line-height: 1.4; word-break: keep-all; }
 .qa .q::before { content: "Q. "; color: #6abe36; font-weight: 900; }
 .qa .a { display: block; margin-top: 7px; color: #575753; font-size: 13px; font-weight: 600; line-height: 1.5; word-break: keep-all; }
+
+/* ============================================================
+   LINE BREAKING
+   ------------------------------------------------------------
+   word-break:keep-all keeps Korean words whole, and several
+   components inherit it. Japanese has no spaces, so under
+   keep-all a JP sentence can only break at 。 — it then runs
+   the full width and rams the card edge. Every Japanese-bearing
+   element opts back out to normal breaking.
+   (The plan and sales pages are Korean, so they keep keep-all.)
+   ============================================================ */
+.title-ja,
+.section-subtitle .ja,
+.brand-title .ja,
+.bubble.intro > .cue,
+.who-name,
+.transition-copy,
+.known-row .j,
+.pair-side small,
+.blk-item .cap small,
+.letter-card > .english,
+.model-line > .translation,
+.word-card .mean,
+.sign .english,
+.uspc .s,
+.card .row,
+.mission li,
+.end-title,
+.end-copy,
+.hint-chip,
+.brand-page:not(#p-info) .brand-sub {
+  word-break: normal;
+  line-break: normal;
+}
