@@ -1171,9 +1171,8 @@
 .section:has(> .combo),
 .section:has(> .payoff),
 .section:has(> .usp),
-.section:has(> .pricecard),
-.section:has(> .plans),
-.section:has(> .coupon) {
+.section:has(> .offer),
+.section:has(> .ptable) {
   display: flex;
   flex-direction: column;
 }
@@ -1186,9 +1185,8 @@
 .section > .combo,
 .section > .payoff,
 .section > .usp,
-.section > .pricecard,
-.section > .plans,
-.section > .coupon { margin-top: auto; }
+.section > .offer,
+.section > .ptable { margin-top: auto; }
 
 .section:has(> .anat) > :last-child,
 .section:has(> .build) > :last-child,
@@ -1196,9 +1194,8 @@
 .section:has(> .combo) > :last-child,
 .section:has(> .payoff) > :last-child,
 .section:has(> .usp) > :last-child,
-.section:has(> .pricecard) > :last-child,
-.section:has(> .plans) > :last-child,
-.section:has(> .coupon) > :last-child { margin-bottom: auto; }
+.section:has(> .offer) > :last-child,
+.section:has(> .ptable) > :last-child { margin-bottom: auto; }
 
 /* a hint chip sitting under a component needs air (hard shadows below) */
 .section > .hint { margin-top: 16px; }
@@ -1829,109 +1826,179 @@ button.opt-row:active { transform: scale(.99); }
 .uspc .t { display: block; margin-top: 5px; font-size: 13.5px; font-weight: 800; }
 .uspc .s { display: block; margin-top: 4px; color: #757575; font-size: 11.5px; font-weight: 600; line-height: 1.4; word-break: keep-all; }
 
-/* price card, matching the app's package page grammar */
-.pricecard {
-  margin-top: 24px;
+/* ------------------------------------------------------------
+   THE OFFER — one plan, then the discounts walked down to it.
+   Built as a receipt on purpose: the learner watches the number
+   fall instead of comparing three cards and guessing.
+   ------------------------------------------------------------ */
+.offer {
+  margin-top: 22px;
   border: 1.5px solid #1c1c1c;
   border-radius: 14px;
   background: #fff;
+  box-shadow: 0 5px 0 #1c1c1c;
   overflow: hidden;
 }
 
-.pricecard .ph {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 11px 16px;
+.offer-h {
+  position: relative;
+  padding: 15px 16px 14px;
   border-bottom: 1.5px solid #1c1c1c;
-  background: #f5f5f5;
-  font-size: 13.5px;
-  font-weight: 800;
+  background: #b5fd4c;
 }
 
-.pricecard .off {
-  margin-left: auto;
+.obadge {
+  display: inline-block;
+  margin-bottom: 7px;
   padding: 3px 10px;
   border-radius: 999px;
   background: #1c1c1c;
   color: #b5fd4c;
-  font-size: 11px;
+  font-size: 10.5px;
   font-weight: 900;
 }
 
-.pricecard .pb { padding: 14px 16px 15px; }
-.pricecard s { display: block; color: #a5a5a5; font-size: 13px; font-weight: 700; }
-.pricecard .big { display: flex; align-items: baseline; gap: 6px; margin-top: 2px; }
-.pricecard .big b { font-size: 30px; font-weight: 900; letter-spacing: -.02em; }
-.pricecard .big span { color: #757575; font-size: 12.5px; font-weight: 700; }
-.pricecard .pnote { margin-top: 6px; color: #757575; font-size: 12px; font-weight: 700; }
-.pricecard .pf { padding: 10px 16px; border-top: 1px solid #e8e8e8; color: #757575; font-size: 12px; font-weight: 700; }
-.pricecard .pf b { color: #1c1c1c; font-weight: 900; }
+.offer-h .ot { display: block; font-size: 19px; font-weight: 900; letter-spacing: -.01em; }
+.offer-h .os { display: block; margin-top: 3px; color: rgba(28,28,28,.62); font-size: 12px; font-weight: 700; }
 
-.plans { display: grid; gap: 12px; margin-top: 24px; }
+.calc { padding: 6px 16px 4px; }
 
-.planc {
-  position: relative;
-  padding: 16px;
-  border: 1.5px solid #1c1c1c;
-  border-radius: 14px;
+.cl {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ececea;
+  font-size: 13.5px;
+  font-weight: 700;
+}
+
+.cl span { flex: 1 1 auto; min-width: 0; display: flex; align-items: center; gap: 6px; }
+.cl b { flex: none; font-size: 15px; font-weight: 800; }
+
+.cl em {
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: #f2fcec;
+  color: #6abe36;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.cl .d3 {
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: #1c1c1c;
+  color: #b5fd4c;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.cl.cut b { color: #6abe36; }
+
+.cl.total {
+  align-items: center;
+  padding: 13px 0 14px;
+  border-bottom: 0;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.cl.total b { font-size: 30px; font-weight: 900; letter-spacing: -.02em; }
+
+.offer-f {
+  padding: 11px 16px;
+  border-top: 1.5px solid #1c1c1c;
+  background: #f5f5f5;
+  color: #575753;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.offer-f b { color: #1c1c1c; font-weight: 900; }
+
+/* the next decision, not a competing one — shown after they're in */
+.upsell {
+  margin-top: 14px;
+  padding: 14px 16px 15px;
+  border-radius: 13px;
+  background: #f5f5f5;
+}
+
+.upsell .ut { display: block; font-size: 13.5px; font-weight: 900; }
+
+.urow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 8px;
+  padding: 9px 12px;
+  border-radius: 10px;
   background: #fff;
 }
 
-.planc.best { background: #f2fcec; box-shadow: 0 4px 0 #1c1c1c; }
+.urow.best { background: #f2fcec; box-shadow: inset 0 0 0 1.5px #6abe36; }
+.urow .ul { flex: none; width: 48px; font-size: 12.5px; font-weight: 800; }
+.urow .uv { font-size: 16px; font-weight: 900; }
+.urow .uv small { margin-left: 2px; color: #757575; font-size: 11px; font-weight: 700; }
+.urow .usave { margin-left: auto; color: #6abe36; font-size: 11.5px; font-weight: 900; }
 
-.pbadge {
-  position: absolute;
-  top: -10px;
-  right: 14px;
-  padding: 3px 11px;
+.unote { margin: 9px 0 0; color: #757575; font-size: 11.5px; font-weight: 700; }
+
+.morelink {
+  display: block;
+  margin-top: 14px;
+  padding: 12px;
+  border: 1.5px dashed #b0b0ac;
+  border-radius: 11px;
+  color: #757575;
+  font-size: 12.5px;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+}
+
+.morelink::after { content: " →"; }
+
+/* ---------- the full table, only if they ask ---------- */
+.ptable {
+  width: 100%;
+  margin-top: 22px;
   border: 1.5px solid #1c1c1c;
-  border-radius: 999px;
-  background: #b5fd4c;
-  font-size: 11px;
+  border-radius: 13px;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  font-size: 12.5px;
+}
+
+.ptable th, .ptable td { padding: 10px 8px; text-align: center; }
+
+.ptable thead th {
+  border-bottom: 1.5px solid #1c1c1c;
+  background: #1c1c1c;
+  color: #fff;
+  font-size: 11.5px;
+  font-weight: 800;
+}
+
+.ptable tbody td { border-bottom: 1px solid #ececea; font-weight: 800; }
+.ptable tbody tr:last-child td { border-bottom: 0; }
+.ptable tbody tr.grp td { border-top: 1.5px solid #1c1c1c; }
+.ptable tbody tr.grp:first-child td { border-top: 0; }
+
+.ptable td[rowspan] {
+  background: #f5f5f5;
+  font-size: 13px;
   font-weight: 900;
 }
 
-.planc .pt { display: block; font-size: 17px; font-weight: 900; }
-.planc .pd { display: block; margin-top: 3px; color: #757575; font-size: 12.5px; font-weight: 700; }
+.ptable td[rowspan] small { display: block; margin-top: 3px; color: #757575; font-size: 10.5px; font-weight: 700; }
+.ptable td.hi { background: #f2fcec; color: #1c1c1c; }
 
-.plist { margin: 11px 0 0; padding: 0; list-style: none; display: grid; gap: 6px; }
-.plist li { position: relative; padding-left: 18px; font-size: 13px; font-weight: 700; line-height: 1.4; }
-.plist li::before { content: "✓"; position: absolute; left: 0; color: #6abe36; font-weight: 900; }
-
-/* coupon ticket, punched like a real one */
-.coupon {
-  position: relative;
-  display: flex;
-  margin-top: 24px;
-  border-radius: 14px;
-  background: #1c1c1c;
-  color: #fff;
-  overflow: hidden;
-}
-
-.coupon .left { flex: 1 1 auto; min-width: 0; padding: 15px 16px; }
-.coupon .left small { color: #b5fd4c; font-size: 11px; font-weight: 800; letter-spacing: .03em; }
-.coupon .left b { display: block; margin-top: 3px; font-size: 19px; font-weight: 900; }
-.coupon .left em { display: block; margin-top: 5px; color: #a5a5a5; font-size: 11.5px; font-style: normal; font-weight: 700; }
-
-.coupon .right {
-  flex: none;
-  width: 84px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-  padding: 8px;
-  border-left: 2px dashed rgba(255,255,255,.25);
-}
-
-.coupon .right .d3 { padding: 3px 11px; border-radius: 999px; background: #b5fd4c; color: #1c1c1c; font-size: 12px; font-weight: 900; }
-.coupon .right span { color: #a5a5a5; font-size: 10px; font-weight: 700; }
-.coupon::before, .coupon::after { content: ""; position: absolute; right: 76px; width: 14px; height: 14px; border-radius: 50%; background: #fff; }
-.coupon::before { top: -7px; }
-.coupon::after { bottom: -7px; }
+.pt-note { margin: 12px 0 0; color: #757575; font-size: 11.5px; font-weight: 700; line-height: 1.5; }
 
 /* FAQ */
 .faq { display: grid; gap: 11px; margin-top: 24px; }
@@ -2188,20 +2255,6 @@ button.opt-row:active { transform: scale(.99); }
   text-align: center;
 }
 
-/* real things they can read once the stage is done */
-.reads { display: flex; flex-wrap: wrap; justify-content: center; gap: 7px; margin-top: 13px; }
-
-.reads span {
-  padding: 6px 12px;
-  border: 1.5px solid #1c1c1c;
-  border-radius: 999px;
-  background: #fff;
-  font-size: 13.5px;
-  font-weight: 800;
-}
-
-.reads span small { margin-left: 5px; color: #757575; font-size: 11px; font-weight: 700; }
-
 /* ---------- stage 2 · one pattern, many sentences ---------- */
 .sent { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; }
 
@@ -2303,16 +2356,9 @@ button.opt-row:active { transform: scale(.99); }
   background: #f5f5f5;
 }
 
-.wd img { grid-row: span 2; width: 44px; height: 44px; }
+.wd img { width: 44px; height: 44px; }
 .wd-h { display: flex; align-items: baseline; gap: 8px; font-size: 15px; font-weight: 900; }
 .wd-h small { margin-left: auto; color: #757575; font-size: 11px; font-weight: 700; }
-
-.wd-c {
-  color: #575753;
-  font-size: 11.5px;
-  font-weight: 700;
-  line-height: 1.45;
-}
 
 .wd-l {
   grid-column: 1 / -1;
