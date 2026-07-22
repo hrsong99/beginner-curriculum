@@ -1392,8 +1392,8 @@
     // most learners never need.
     var flow = pages.filter(function (p) { return p.dataset.flow !== "ref"; });
 
-    // Acts come from the divider pages that already exist, so the progress
-    // bar has 5 segments instead of 43 ticks.
+    // Acts come from the divider pages that already exist. They only name
+    // where you are — progress itself is measured across the whole deck.
     var acts = [], cur = null;
     flow.forEach(function (p, i) {
       var isDiv = p.classList.contains("divider");
@@ -1412,7 +1412,7 @@
     var actEl   = bar.querySelector(".pg-act");
     var nEl     = bar.querySelector(".pg-n");
 
-    acts.forEach(function () { barEl.appendChild(document.createElement("i")); });
+    barEl.appendChild(document.createElement("i"));   // one bar for the whole deck
 
     // `into` is an element inside the page to land on (the curriculum
     // stages). Layout is flushed first — the page has only just left
@@ -1441,19 +1441,14 @@
       } else {
         var a = 0;
         acts.forEach(function (x, k) { if (f >= x.from) a = k; });
-        actEl.textContent = acts[a].name;
-        nEl.textContent = (f - acts[a].from + 1) + " / " + (acts[a].to - acts[a].from + 1);
+        actEl.textContent = acts[a].name;          // the act only labels where you are
+        nEl.textContent = (f + 1) + " / " + flow.length;
         nEl.classList.remove("ref");
       }
 
-      [].forEach.call(barEl.children, function (seg, k) {
-        var a = acts[k], pct;
-        if (f < 0) pct = f;                        // unused on ref pages
-        if (f < 0 || f < a.from) pct = 0;
-        else if (f > a.to) pct = 100;
-        else pct = ((f - a.from + 1) / (a.to - a.from + 1)) * 100;
-        seg.style.setProperty("--f", pct + "%");
-      });
+      // one bar across the whole deck, so the number and the fill agree
+      var pct = f < 0 ? 0 : ((f + 1) / flow.length) * 100;
+      barEl.firstChild.style.setProperty("--f", pct + "%");
     }
 
     function step(d) {

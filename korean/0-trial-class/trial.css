@@ -2492,8 +2492,8 @@ body.paged { padding-bottom: 84px; }   /* the bar must not cover the last line *
 
 .pg-mid { flex: 1 1 auto; min-width: 0; display: grid; gap: 5px; }
 
-/* one segment per act, so 43 pages don't turn into 43 ticks */
-.pg-bar { display: flex; gap: 3px; }
+/* one bar across the whole deck */
+.pg-bar { display: flex; }
 
 .pg-bar i {
   position: relative;
