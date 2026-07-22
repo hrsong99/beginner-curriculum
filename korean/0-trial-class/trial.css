@@ -1978,3 +1978,152 @@ button.opt-row:active { transform: scale(.99); }
   word-break: normal;
   line-break: normal;
 }
+
+/* ============================================================
+   CURRICULUM PAGES
+   ============================================================ */
+.cmap {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 24px;
+  padding: 10px 6px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 14px;
+  background: #fff;
+}
+
+/* ---------- a single track, explained ---------- */
+.trk {
+  margin-top: 14px;
+  padding: 16px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.trk-head { display: flex; align-items: baseline; gap: 12px; }
+
+.trk-n {
+  flex: none;
+  color: #1c1c1c;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -.03em;
+}
+
+.trk-t { font-size: 16px; font-weight: 900; }
+.trk-t small { margin-left: 5px; color: #757575; font-size: 11.5px; font-weight: 700; }
+
+.trk-flow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.trk-flow span {
+  padding: 5px 12px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 999px;
+  background: #f2fcec;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.trk-flow i { color: #a5a5a5; font-style: normal; font-weight: 900; }
+
+.trk-p {
+  margin: 11px 0 0;
+  color: #575753;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/* a real line from the course, with the pattern it hands over */
+.ex {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 9px;
+  padding: 10px 13px;
+  border-radius: 11px;
+  background: #f5f5f5;
+}
+
+.ex-k { flex: 1 1 auto; font-size: 14px; font-weight: 800; }
+
+.ex-p {
+  flex: none;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #1c1c1c;
+  color: #b5fd4c;
+  font-size: 11.5px;
+  font-weight: 800;
+}
+
+/* ---------- the four worlds ---------- */
+.worlds { display: grid; gap: 11px; margin-top: 24px; }
+
+.wd {
+  padding: 14px 16px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 13px;
+  background: #fff;
+}
+
+.wd-h {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.wd-e { font-size: 18px; line-height: 1; }
+.wd-h small { margin-left: auto; color: #757575; font-size: 11.5px; font-weight: 700; }
+
+.wd-c {
+  display: block;
+  margin-top: 7px;
+  color: #575753;
+  font-size: 12.5px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/* ---------- freetalking themes ---------- */
+.themes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.th {
+  padding: 14px 17px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 999px;
+  background: #fff;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.th.more { background: #b5fd4c; box-shadow: 0 3px 0 #1c1c1c; }
+
+.free-note {
+  margin: 18px 0 0;
+  color: #575753;
+  font-size: 13.5px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.section:has(> .cmap),
+.section:has(> .themes) { display: flex; flex-direction: column; }
+.section > .cmap, .section > .themes { margin-top: auto; }
+.section:has(> .cmap) > :last-child,
+.section:has(> .themes) > :last-child { margin-bottom: auto; }
