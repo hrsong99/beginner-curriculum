@@ -2442,7 +2442,7 @@ button.opt-row:active { transform: scale(.99); }
 .phone.paged > .section.pg-on:has(> .offer),
 .phone.paged > .section.pg-on:has(> .ptable) { display: flex; }
 
-body.paged { padding-bottom: 84px; }   /* the bar must not cover the last line */
+body { padding-bottom: 84px; }         /* the bar must not cover the last line */
 
 /* a page on its own should fill the screen rather than leave a dead band
    above the bar — the :has() centring rules then have room to work */
@@ -2465,8 +2465,6 @@ body.paged { padding-bottom: 84px; }   /* the bar must not cover the last line *
   background: #fff;
   box-shadow: 0 4px 0 #1c1c1c;
 }
-
-.pager[hidden] { display: none; }
 
 .pg-btn {
   flex: none;
@@ -2535,4 +2533,5 @@ body.paged { padding-bottom: 84px; }   /* the bar must not cover the last line *
 }
 
 .pg-teach, .pg-exit { width: 32px; height: 32px; background: #fff; font-size: 13px; font-weight: 900; }
+.phone.paged ~ .pager .pg-exit { background: #1c1c1c; color: #b5fd4c; }
 .pg-teach.on { background: #1c1c1c; color: #b5fd4c; }

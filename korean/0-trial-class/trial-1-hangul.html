@@ -1364,7 +1364,7 @@
        scrolling stays the ground truth (printing, Cmd+F, scanning
        ahead all rely on it), and this is the presentation layer.
        ================================================================ -->
-  <nav class="pager" hidden>
+  <nav class="pager">
     <button class="pg-btn pg-prev" type="button" aria-label="이전 페이지">←</button>
     <div class="pg-mid">
       <div class="pg-bar"></div>
@@ -1372,11 +1372,11 @@
     </div>
     <button class="pg-btn pg-next" type="button" aria-label="다음 페이지">→</button>
     <button class="pg-btn pg-teach" type="button" aria-label="티칭 모드">T</button>
-    <button class="pg-btn pg-exit" type="button" aria-label="스크롤 모드로">⤢</button>
+    <button class="pg-btn pg-exit" type="button" aria-label="보기 모드 바꾸기">⤢</button>
   </nav>
 
   <!-- ================================================================
-       PAGER · one page at a time, with acts as the progress unit
+       PAGER · back / next / progress, in both modes
        ================================================================ -->
   <script>
   (function () {
@@ -1414,24 +1414,29 @@
 
     barEl.appendChild(document.createElement("i"));   // one bar for the whole deck
 
+    function paged() { return phone.classList.contains("paged"); }
+
     // `into` is an element inside the page to land on (the curriculum
-    // stages). Layout is flushed first — the page has only just left
-    // display:none, so measuring before that reads stale geometry.
-    function show(i, into) {
+    // stages). Layout is flushed first — in paged mode the page has only
+    // just left display:none, so measuring before that reads stale geometry.
+    function goTo(i, into) {
       at = Math.max(0, Math.min(pages.length - 1, i));
-      pages.forEach(function (p, k) { p.classList.toggle("pg-on", k === at); });
-      paint();
-      void pages[at].offsetHeight;        // flush layout: the page just left display:none
-      if (into && into !== pages[at]) into.scrollIntoView({ block: "start" });
-      else window.scrollTo(0, 0);
+      if (paged()) {
+        pages.forEach(function (p, k) { p.classList.toggle("pg-on", k === at); });
+        paint();
+        void pages[at].offsetHeight;
+        if (into && into !== pages[at]) into.scrollIntoView({ block: "start" });
+        else window.scrollTo(0, 0);
+      } else {
+        (into || pages[at]).scrollIntoView({ block: "start" });
+        paint();
+      }
     }
 
     function paint() {
       var page = pages[at];
       var f = flow.indexOf(page);
       prevBtn.disabled = at <= 0;
-      // Next stops at the end of the flow; from a reference page it returns
-      // to the index rather than dead-ending.
       nextBtn.disabled = f >= 0 && f === flow.length - 1;
 
       if (f < 0) {                                 // a reference page
@@ -1455,47 +1460,43 @@
       var f = flow.indexOf(pages[at]);
       if (f < 0) {                                 // leaving a reference page
         var idx = pages.indexOf(document.getElementById("p-info"));
-        show(idx < 0 ? 0 : idx);
+        goTo(idx < 0 ? 0 : idx);
         return;
       }
       var t = flow[f + d];
-      if (t) show(pages.indexOf(t));
+      if (t) goTo(pages.indexOf(t));
     }
 
     prevBtn.addEventListener("click", function () { step(-1); });
     nextBtn.addEventListener("click", function () { step(1); });
-    bar.querySelector(".pg-exit").addEventListener("click", function () { sw.checked = false; apply(); });
 
-    // The 티칭 모드 switch lives on the cover, which a tutor on page 30 can
-    // no longer see — so the bar carries its own handle on the same state.
-    var teach = document.getElementById("teaching-mode");
-    var teachBtn = bar.querySelector(".pg-teach");
-    if (teach && teachBtn) {
-      teachBtn.addEventListener("click", function () {
-        teach.checked = !teach.checked;
-        teach.dispatchEvent(new Event("change"));
-        teachBtn.classList.toggle("on", teach.checked);
-      });
-      teach.addEventListener("change", function () { teachBtn.classList.toggle("on", teach.checked); });
+    /* ---- which page is on screen, while scrolling ---- */
+    function sync() {
+      if (paged()) return;
+      var top = window.scrollY + 80, best = 0;
+      pages.forEach(function (p, k) { if (p.offsetTop <= top) best = k; });
+      if (best !== at) { at = best; paint(); }
     }
+    window.addEventListener("scroll", sync, { passive: true });
+    window.addEventListener("resize", sync);
 
     /* ---- in-page anchors have to switch page first ----
        #c-1..#c-4 sit INSIDE #p-curri, so "go to stage 2" means show the
        curriculum page and then scroll to the stage within it. */
     document.addEventListener("click", function (e) {
       var a = e.target.closest && e.target.closest('a[href^="#"]');
-      if (!a || !phone.classList.contains("paged")) return;
+      if (!a || !paged()) return;
       var target = document.getElementById(a.getAttribute("href").slice(1));
       if (!target) return;
       e.preventDefault();
-      var page = target.closest(".phone > *") || target;
+      var page = target;
       while (page && page.parentNode !== phone) page = page.parentNode;
       if (!page) return;
-      show(pages.indexOf(page), target);
+      goTo(pages.indexOf(page), target);
     });
 
     document.addEventListener("keydown", function (e) {
-      if (!phone.classList.contains("paged")) return;
+      if (e.target.matches && e.target.matches("input, textarea")) return;
       if (e.key === "ArrowRight") step(1);
       if (e.key === "ArrowLeft") step(-1);
     });
@@ -1503,12 +1504,12 @@
     function apply() {
       var on = sw.checked;
       if (!on) {
+        var keep = pages[at];
         phone.classList.remove("paged");
         document.body.classList.remove("paged");
-        bar.hidden = true;
-        var keep = pages[at];
         pages.forEach(function (p) { p.classList.remove("pg-on"); });
         if (keep) keep.scrollIntoView({ block: "start" });
+        paint();
         return;
       }
       // Which page is on screen has to be measured BEFORE .paged lands —
@@ -1518,11 +1519,29 @@
       pages.forEach(function (p, k) { if (p.offsetTop <= top) best = k; });
       phone.classList.add("paged");
       document.body.classList.add("paged");
-      bar.hidden = false;
-      show(best);
+      goTo(best);
     }
 
     sw.addEventListener("change", apply);
+    bar.querySelector(".pg-exit").addEventListener("click", function () {
+      sw.checked = !sw.checked;
+      apply();
+    });
+
+    // The 티칭 모드 switch lives on the cover, which a tutor deep in the
+    // deck can no longer see — so the bar carries its own handle on the
+    // same state.
+    var teach = document.getElementById("teaching-mode");
+    var teachBtn = bar.querySelector(".pg-teach");
+    if (teach && teachBtn) {
+      teachBtn.addEventListener("click", function () {
+        teach.checked = !teach.checked;
+        teach.dispatchEvent(new Event("change"));
+      });
+      teach.addEventListener("change", function () { teachBtn.classList.toggle("on", teach.checked); });
+    }
+
+    paint();
   })();
   </script>
 
