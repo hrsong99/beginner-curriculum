@@ -83,3 +83,29 @@ video we don't deliver.
   finer than a 3px stroke at that scale disappears.
 - **Check before shipping:** view at 480px width, not full size. Most illustration detail
   that looks good at 1024px turns to mush in the card.
+
+---
+
+## What actually shipped (July 2026)
+
+The four thin curriculum pages were merged into one long `#p-curri`. Art in use:
+
+| File | Where | Note |
+| --- | --- | --- |
+| `p-curri.png` | hero at the top of the page | as prompted |
+| `w-drama / w-kpop / w-travel / w-talk .png` | the four world rows | **sliced** from `p-world.png` (each 512px quadrant → 256px) |
+| `p-free.png` | stage 4 | as prompted |
+| `p-about.png` | unused so far | candidate for `#p-about` |
+
+**Not used — `p-spine-hangul.png`:** the generator dropped the amber/rose seat colours and
+returned a black-and-white puzzle icon, so it no longer matched the lesson the learner had
+just done. The stage-1 visual is built in HTML instead (`.lt` / `.sq`), which is strictly
+better here — it reuses the real seat variables, so it can never drift from the lesson.
+
+**Not used — `p-spine-patterns.png`:** the staircase sells "it builds up", but stage 2 needed
+to show *how a pattern works*, not that it gets harder. The live `.sent` / `.swaps` demo
+(swap one word, keep the frame) does that; a picture can't.
+
+**Lesson for future prompts:** anything whose job is to explain a *mechanic* should be built
+in HTML, where it stays in sync with the design tokens. Reserve generated art for mood and
+for objects (icons, scenes) that carry no teaching load.

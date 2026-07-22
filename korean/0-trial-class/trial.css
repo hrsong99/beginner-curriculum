@@ -628,6 +628,8 @@
   --c-ink: #96690d;
   --v-bg: #ffd7e5;   /* 母音 seat */
   --v-ink: #bf1b5c;
+  --b-bg: #cfe3ff;   /* 받침 seat — never taught in the trial, only previewed
+                        on the curriculum page as "this is what comes later" */
 }
 
 /* ---------- anatomy block: the glyph sitting in its two seats ---------- */
@@ -1980,66 +1982,251 @@ button.opt-row:active { transform: scale(.99); }
 }
 
 /* ============================================================
-   CURRICULUM PAGES
+   CURRICULUM PAGE
+   ------------------------------------------------------------
+   One long page instead of four thin ones. The learner reads it
+   bottom-up in the order they will actually study: 한글 first,
+   then patterns, then the worlds, then freetalking. Every stage
+   answers the same three questions in the same order —
+   what it is, what it looks like, what you can do after it.
    ============================================================ */
-.cmap {
+.cur-hero {
   display: block;
   width: 100%;
+  max-width: 250px;
   height: auto;
-  margin-top: 24px;
-  padding: 10px 6px;
-  border: 1.5px solid #1c1c1c;
-  border-radius: 14px;
-  background: #fff;
+  margin: 20px auto 0;
 }
 
-/* ---------- a single track, explained ---------- */
-.trk {
-  margin-top: 14px;
-  padding: 16px;
-  border: 1.5px solid #1c1c1c;
-  border-radius: 14px;
-  background: #fff;
-}
-
-.trk-head { display: flex; align-items: baseline; gap: 12px; }
-
-.trk-n {
-  flex: none;
-  color: #1c1c1c;
-  font-size: 30px;
-  font-weight: 900;
-  line-height: 1;
-  letter-spacing: -.03em;
-}
-
-.trk-t { font-size: 16px; font-weight: 900; }
-.trk-t small { margin-left: 5px; color: #757575; font-size: 11.5px; font-weight: 700; }
-
-.trk-flow {
-  display: flex;
-  align-items: center;
+/* the four stages as a jump rail, so the tutor can open one directly */
+.rail {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 8px;
-  margin-top: 12px;
+  margin-top: 18px;
 }
 
-.trk-flow span {
-  padding: 5px 12px;
+.rl {
+  display: grid;
+  justify-items: center;
+  gap: 6px;
+  padding: 11px 4px;
   border: 1.5px solid #1c1c1c;
-  border-radius: 999px;
-  background: #f2fcec;
-  font-size: 13px;
-  font-weight: 800;
+  border-radius: 12px;
+  background: #fff;
+  color: #1c1c1c;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.trk-flow i { color: #a5a5a5; font-style: normal; font-weight: 900; }
+.rl:active { transform: translateY(2px); }
 
-.trk-p {
-  margin: 11px 0 0;
+.rl-n {
+  display: grid;
+  place-items: center;
+  width: 21px;
+  height: 21px;
+  border-radius: 999px;
+  background: #1c1c1c;
+  color: #fff;
+  font-size: 11.5px;
+  font-weight: 900;
+}
+
+.rl-t { font-size: 12px; font-weight: 800; }
+
+/* ---------- one stage ---------- */
+.stg {
+  margin-top: 14px;
+  padding: 17px 15px 19px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 14px;
+  background: #fff;
+  scroll-margin-top: 14px;
+}
+
+.stg-h { display: flex; align-items: center; gap: 10px; }
+
+.stg-n {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 27px;
+  height: 27px;
+  border-radius: 999px;
+  background: #1c1c1c;
+  color: #fff;
+  font-size: 13.5px;
+  font-weight: 900;
+}
+
+.stg-t { font-size: 18px; font-weight: 900; letter-spacing: -.01em; }
+
+.stg-c {
+  margin-left: auto;
+  flex: none;
+  color: #757575;
+  font-size: 11.5px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.stg-p {
+  margin: 10px 0 0;
   color: #575753;
   font-size: 13px;
   font-weight: 700;
-  line-height: 1.5;
+  line-height: 1.55;
+}
+
+/* the demo area — background only, so a stage stays ONE box deep */
+.stg-viz {
+  margin-top: 13px;
+  padding: 15px 12px;
+  border-radius: 12px;
+  background: #f5f5f5;
+}
+
+.viz-cap {
+  margin: 11px 0 0;
+  color: #757575;
+  font-size: 11.5px;
+  font-weight: 700;
+  line-height: 1.45;
+  text-align: center;
+}
+
+/* what you can do at the end of the stage */
+.stg-goal {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 13px;
+  padding: 11px 13px;
+  border-radius: 11px;
+  background: #f2fcec;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.stg-goal::before { content: "→"; flex: none; color: #6abe36; font-weight: 900; }
+
+/* the lime thread that shows the stages are one road, not four products */
+.stg-link {
+  display: block;
+  width: 4px;
+  height: 18px;
+  margin: 0 auto;
+  border-radius: 999px;
+  background: #b5fd4c;
+}
+
+/* ---------- stage 1 · letters snapping into blocks ---------- */
+.crow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+.crow + .crow { margin-top: 11px; }
+.crow i { color: #a5a5a5; font-size: 15px; font-style: normal; font-weight: 900; }
+
+.lt {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 42px;
+  height: 42px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 10px;
+  background: #fff;
+  font-size: 23px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.lt.c { background: var(--c-bg); }
+.lt.v { background: var(--v-bg); }
+.lt.b { background: var(--b-bg); }
+
+/* the assembled syllable, seats showing through */
+.sq {
+  position: relative;
+  flex: none;
+  width: 52px;
+  height: 52px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 10px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.sq em { position: absolute; }
+.sq.lr em.zc { inset: 0 54% 0 0; background: var(--c-bg); }
+.sq.lr em.zv { inset: 0 0 0 46%; background: var(--v-bg); }
+.sq.b3 em.zc { inset: 0 54% 32% 0; background: var(--c-bg); }
+.sq.b3 em.zv { inset: 0 0 32% 46%; background: var(--v-bg); }
+.sq.b3 em.zb { inset: 68% 0 0 0; background: var(--b-bg); }
+
+.sq b {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.ck {
+  flex: none;
+  min-width: 34px;
+  color: #757575;
+  font-size: 13px;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* real things they can read once the stage is done */
+.reads { display: flex; flex-wrap: wrap; justify-content: center; gap: 7px; margin-top: 13px; }
+
+.reads span {
+  padding: 6px 12px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 999px;
+  background: #fff;
+  font-size: 13.5px;
+  font-weight: 800;
+}
+
+.reads span small { margin-left: 5px; color: #757575; font-size: 11px; font-weight: 700; }
+
+/* ---------- stage 2 · one pattern, many sentences ---------- */
+.sent { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; }
+
+.wrd {
+  padding: 7px 11px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 10px;
+  background: #fff;
+  font-size: 14.5px;
+  font-weight: 800;
+}
+
+.wrd.hole { background: #b5fd4c; }
+.wrd.pat { background: #1c1c1c; color: #b5fd4c; }
+
+.swaps { display: flex; flex-wrap: wrap; justify-content: center; gap: 7px; margin-top: 10px; }
+
+.swaps span {
+  padding: 5px 11px;
+  border: 1.5px dashed #b0b0ac;
+  border-radius: 10px;
+  background: #fff;
+  font-size: 13px;
+  font-weight: 800;
 }
 
 /* a real line from the course, with the pattern it hands over */
@@ -2053,77 +2240,77 @@ button.opt-row:active { transform: scale(.99); }
   background: #f5f5f5;
 }
 
-.ex-k { flex: 1 1 auto; font-size: 14px; font-weight: 800; }
-
-.ex-p {
+.ex-lv {
   flex: none;
-  padding: 3px 10px;
-  border-radius: 999px;
-  background: #1c1c1c;
-  color: #b5fd4c;
-  font-size: 11.5px;
+  width: 34px;
+  color: #757575;
+  font-size: 11px;
   font-weight: 800;
 }
 
-/* ---------- the four worlds ---------- */
-.worlds { display: grid; gap: 11px; margin-top: 24px; }
+.ex-k { flex: 1 1 auto; min-width: 0; font-size: 13.5px; font-weight: 800; }
+
+.ex-p {
+  flex: none;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: #1c1c1c;
+  color: #b5fd4c;
+  font-size: 11px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+/* ---------- stage 3 · the four worlds ---------- */
+.worlds { display: grid; gap: 10px; margin-top: 13px; }
 
 .wd {
-  padding: 14px 16px;
-  border: 1.5px solid #1c1c1c;
-  border-radius: 13px;
-  background: #fff;
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  align-items: center;
+  gap: 4px 12px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #f5f5f5;
 }
 
-.wd-h {
-  display: flex;
-  align-items: baseline;
-  gap: 9px;
-  font-size: 16px;
-  font-weight: 900;
-}
-
-.wd-e { font-size: 18px; line-height: 1; }
-.wd-h small { margin-left: auto; color: #757575; font-size: 11.5px; font-weight: 700; }
+.wd img { grid-row: span 2; width: 44px; height: 44px; }
+.wd-h { display: flex; align-items: baseline; gap: 8px; font-size: 15px; font-weight: 900; }
+.wd-h small { margin-left: auto; color: #757575; font-size: 11px; font-weight: 700; }
 
 .wd-c {
-  display: block;
-  margin-top: 7px;
   color: #575753;
-  font-size: 12.5px;
+  font-size: 11.5px;
   font-weight: 700;
-  line-height: 1.5;
+  line-height: 1.45;
 }
 
-/* ---------- freetalking themes ---------- */
-.themes {
+.wd-l {
+  grid-column: 1 / -1;
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 24px;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 11px;
+  border-radius: 9px;
+  background: #fff;
+  font-size: 13px;
+  font-weight: 800;
 }
+
+.wd-l small { margin-left: auto; flex: none; color: #757575; font-size: 10.5px; font-weight: 700; }
+
+/* ---------- stage 4 · freetalking ---------- */
+.free-art { display: block; width: 108px; height: auto; margin: 0 auto; }
+
+.themes { display: flex; flex-wrap: wrap; justify-content: center; gap: 7px; margin-top: 13px; }
 
 .th {
-  padding: 14px 17px;
+  padding: 7px 13px;
   border: 1.5px solid #1c1c1c;
   border-radius: 999px;
   background: #fff;
-  font-size: 14px;
+  font-size: 12.5px;
   font-weight: 800;
 }
 
 .th.more { background: #b5fd4c; box-shadow: 0 3px 0 #1c1c1c; }
-
-.free-note {
-  margin: 18px 0 0;
-  color: #575753;
-  font-size: 13.5px;
-  font-weight: 700;
-  line-height: 1.5;
-}
-
-.section:has(> .cmap),
-.section:has(> .themes) { display: flex; flex-direction: column; }
-.section > .cmap, .section > .themes { margin-top: auto; }
-.section:has(> .cmap) > :last-child,
-.section:has(> .themes) > :last-child { margin-bottom: auto; }

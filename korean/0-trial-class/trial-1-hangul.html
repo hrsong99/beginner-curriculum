@@ -606,107 +606,129 @@
       <div class="hint"><span class="hint-chip">태블릿·PC로 수강할 수 있어요</span></div>
     </div>
 
-    <!-- ---- CURRICULUM: what they are actually buying ---- -->
+    <!-- ---- CURRICULUM: what they are actually buying.
+         One long page on purpose. The four stages were four thin
+         pages before, and none of them showed what a lesson looks
+         like — the learner saw a menu, not a course. ---- -->
     <div class="section" id="p-curri">
       <span class="section-kicker">안내</span>
-      <h2 class="section-title">커리큘럼 지도</h2>
-      <p class="section-subtitle"><span class="ko">포도 한국어는 네 단계예요. 지금 어디 있고 어디로 가는지 한눈에 보여요.</span></p>
-      <svg class="cmap" viewBox="0 0 340 400" role="img" aria-label="커리큘럼 4단계 지도">
-        <defs>
-          <!-- userSpaceOnUse: the path is perfectly vertical, so an
-               objectBoundingBox gradient would have zero width and vanish -->
-          <linearGradient id="cpath" gradientUnits="userSpaceOnUse" x1="34" y1="360" x2="34" y2="40">
-            <stop offset="0" stop-color="#6ABE36"/><stop offset="1" stop-color="#B5FD4C"/>
-          </linearGradient>
-        </defs>
-        <path d="M34 360 L34 40" fill="none" stroke="url(#cpath)" stroke-width="5" stroke-linecap="round"/>
+      <h2 class="section-title">커리큘럼</h2>
+      <p class="section-subtitle"><span class="ko">한글부터 자유로운 수다까지, 네 단계로 이어져요. 하나씩 보여 드릴게요.</span></p>
 
-        <circle cx="34" cy="360" r="14" fill="#1C1C1C"/>
-        <text x="34" y="365" font-size="13" font-weight="800" fill="#fff" text-anchor="middle">1</text>
-        <text x="64" y="354" font-size="16" font-weight="800" fill="#1C1C1C">한글 읽기</text>
-        <text x="64" y="372" font-size="11.5" font-weight="700" fill="#757575">11레슨 · 간판과 메뉴가 읽혀요</text>
+      <img class="cur-hero" src="art/p-curri.png" alt="네 단계로 이어지는 학습 길">
 
-        <circle cx="34" cy="253" r="14" fill="#1C1C1C"/>
-        <text x="34" y="258" font-size="13" font-weight="800" fill="#fff" text-anchor="middle">2</text>
-        <text x="64" y="247" font-size="16" font-weight="800" fill="#1C1C1C">핵심 패턴</text>
-        <text x="64" y="265" font-size="11.5" font-weight="700" fill="#757575">112과 · 문장을 스스로 만들어요</text>
+      <div class="rail">
+        <a class="rl" href="#c-1"><span class="rl-n">1</span><span class="rl-t">한글</span></a>
+        <a class="rl" href="#c-2"><span class="rl-n">2</span><span class="rl-t">패턴</span></a>
+        <a class="rl" href="#c-3"><span class="rl-n">3</span><span class="rl-t">상황별</span></a>
+        <a class="rl" href="#c-4"><span class="rl-n">4</span><span class="rl-t">프리토킹</span></a>
+      </div>
 
-        <circle cx="34" cy="146" r="14" fill="#1C1C1C"/>
-        <text x="34" y="151" font-size="13" font-weight="800" fill="#fff" text-anchor="middle">3</text>
-        <text x="64" y="140" font-size="16" font-weight="800" fill="#1C1C1C">상황별 한국어</text>
-        <text x="64" y="158" font-size="11.5" font-weight="700" fill="#757575">160레슨 · 좋아하는 세계에서 써요</text>
+      <!-- STAGE 1 -->
+      <div class="stg" id="c-1">
+        <div class="stg-h"><span class="stg-n">1</span><span class="stg-t">한글 읽기</span><span class="stg-c">11레슨</span></div>
+        <p class="stg-p">오늘 해 본 게 바로 이거예요. 자음과 모음이 한 칸에 모여서 한 글자가 돼요. 11레슨이면 모든 글자를 소리 내어 읽어요.</p>
+        <div class="stg-viz">
+          <div class="crow">
+            <span class="lt c">ㄴ</span><i>+</i><span class="lt v">ㅏ</span><i>=</i>
+            <span class="sq lr"><em class="zc"></em><em class="zv"></em><b>나</b></span>
+            <span class="ck">ナ</span>
+          </div>
+          <div class="crow">
+            <span class="sq lr"><em class="zc"></em><em class="zv"></em><b>나</b></span><i>+</i>
+            <span class="lt b">ㅁ</span><i>=</i>
+            <span class="sq b3"><em class="zc"></em><em class="zv"></em><em class="zb"></em><b>남</b></span>
+            <span class="ck">ナム</span>
+          </div>
+          <p class="viz-cap">모음 → 자음 → 받침. 새 자리가 하나씩만 늘어나요.</p>
+        </div>
+        <div class="reads">
+          <span>카페<small>カフェ</small></span>
+          <span>김밥<small>キンパ</small></span>
+          <span>화장실<small>トイレ</small></span>
+        </div>
+        <div class="stg-goal">간판·메뉴·아이돌 이름이 그냥 읽혀요.</div>
+      </div>
 
-        <circle cx="34" cy="40" r="19" fill="#B5FD4C" stroke="#1C1C1C" stroke-width="2.5"/>
-        <text x="34" y="46" font-size="14" font-weight="900" fill="#1C1C1C" text-anchor="middle">4</text>
-        <text x="64" y="34" font-size="16" font-weight="800" fill="#1C1C1C">프리토킹</text>
-        <text x="64" y="52" font-size="11.5" font-weight="700" fill="#757575">30주제 · 하고 싶은 이야기를 해요</text>
-      </svg>
+      <span class="stg-link"></span>
+
+      <!-- STAGE 2 -->
+      <div class="stg" id="c-2">
+        <div class="stg-h"><span class="stg-n">2</span><span class="stg-t">핵심 패턴</span><span class="stg-c">112과 · 224패턴</span></div>
+        <p class="stg-p">문장을 통째로 외우지 않아요. 틀을 하나 배우면 단어만 바꿔서 문장이 계속 늘어나요. 1과에 딱 2패턴씩만 나가요.</p>
+        <div class="stg-viz">
+          <div class="sent">
+            <span class="wrd">저는</span><span class="wrd hole">일본 사람</span><span class="wrd pat">입니다</span>
+          </div>
+          <div class="swaps"><span>학생</span><span>회사원</span><span>다나카</span></div>
+          <p class="viz-cap">틀은 그대로, 초록 자리만 바꿔요. 패턴 하나가 문장 여러 개예요.</p>
+        </div>
+        <div class="ex"><span class="ex-lv">1과</span><span class="ex-k">저는 일본 사람입니다.</span><span class="ex-p">N입니다</span></div>
+        <div class="ex"><span class="ex-lv">26과</span><span class="ex-k">떡볶이를 먹고 싶어요.</span><span class="ex-p">-고 싶어요</span></div>
+        <div class="ex"><span class="ex-lv">69과</span><span class="ex-k">건강을 위해 운동해요.</span><span class="ex-p">-기 위해서</span></div>
+        <div class="stg-goal">초급 56과 → 고급 56과. 하고 싶은 말을 스스로 만들어요.</div>
+      </div>
+
+      <span class="stg-link"></span>
+
+      <!-- STAGE 3 -->
+      <div class="stg" id="c-3">
+        <div class="stg-h"><span class="stg-n">3</span><span class="stg-t">상황별 한국어</span><span class="stg-c">4세계 · 160레슨</span></div>
+        <p class="stg-p">여기부터는 취향이에요. 좋아하는 세계를 골라서, 그 안에서 진짜로 쓰는 대사로 배워요.</p>
+        <div class="worlds">
+          <div class="wd">
+            <img src="art/w-drama.png" alt="">
+            <span class="wd-h">드라마<small>40레슨</small></span>
+            <span class="wd-c">설렘 &amp; 고백 · 갈등 &amp; 화해 · 가족 &amp; 일상 · 경계 &amp; 갈등</span>
+            <span class="wd-l">우리 어디서 본 적 있지 않아요?<small>~ㄴ 적 있다</small></span>
+          </div>
+          <div class="wd">
+            <img src="art/w-kpop.png" alt="">
+            <span class="wd-h">케이팝<small>40레슨</small></span>
+            <span class="wd-c">케이팝 토크 · 무대 &amp; 감상 · 팬 라이프 · 온라인 팬덤</span>
+            <span class="wd-l">제 최애는 민지예요.<small>A는 B예요</small></span>
+          </div>
+          <div class="wd">
+            <img src="art/w-travel.png" alt="">
+            <span class="wd-h">여행<small>40레슨</small></span>
+            <span class="wd-c">길 &amp; 교통 · 식당 &amp; 카페 · 쇼핑 &amp; 결제 · 숙소 &amp; 문제 해결</span>
+            <span class="wd-l">혹시 명동역이 어딘지 아세요?<small>~는지 알다</small></span>
+          </div>
+          <div class="wd">
+            <img src="art/w-talk.png" alt="">
+            <span class="wd-h">반말 수다<small>40레슨</small></span>
+            <span class="wd-c">반말 기초 · 수다 &amp; 감정 · 리액션 &amp; 뉘앙스 · 슬랭 &amp; 카톡</span>
+            <span class="wd-l">너 지금 어디 가는 거야?<small>~는 거야?</small></span>
+          </div>
+        </div>
+        <div class="stg-goal">좋아하는 세계의 대사를 알아듣고, 그대로 써요.</div>
+        <div class="tutor-note">관심 있다고 하신 세계를 먼저 짚어 주세요.</div>
+      </div>
+
+      <span class="stg-link"></span>
+
+      <!-- STAGE 4 -->
+      <div class="stg" id="c-4">
+        <div class="stg-h"><span class="stg-n">4</span><span class="stg-t">프리토킹</span><span class="stg-c">5테마 · 30주제</span></div>
+        <p class="stg-p">새 문법은 없어요. 배운 걸 꺼내 쓰는 시간이에요. 주제는 계속 늘어나서, 여기는 끝이 없어요.</p>
+        <div class="stg-viz">
+          <img class="free-art" src="art/p-free.png" alt="">
+          <div class="themes">
+            <span class="th">가치관 &amp; 인생</span>
+            <span class="th">사회 &amp; 이슈</span>
+            <span class="th">문화 &amp; 취향</span>
+            <span class="th">관계 &amp; 감정</span>
+            <span class="th">미래 &amp; 상상</span>
+            <span class="th more">계속 늘어나요 +</span>
+          </div>
+          <p class="viz-cap">한 주제가 한 수업. “돈 vs 시간, 하나만 고른다면?” 같은 질문으로 시작해요.</p>
+        </div>
+        <div class="stg-goal">문법이 아니라 생각을 말해요. 여기서부터가 진짜 회화예요.</div>
+      </div>
+
       <div class="tutor-note">1·2번은 모두 같이 가고, 3번부터는 취향대로 골라요.</div>
     </div>
 
-    <div class="section" id="p-spine">
-      <span class="section-kicker">안내</span>
-      <h2 class="section-title">한글과 핵심 패턴</h2>
-      <p class="section-subtitle"><span class="ko">이 두 개가 뼈대예요. 여기만 지나면 나머지는 골라 담기만 하면 돼요.</span></p>
-      <div class="trk">
-        <div class="trk-head"><span class="trk-n">11</span><span class="trk-t">한글 읽기<small>레슨</small></span></div>
-        <div class="trk-flow"><span>자음</span><i>→</i><span>모음</span><i>→</i><span>받침</span></div>
-        <p class="trk-p">한 레슨에 새로운 건 하나만. 마지막엔 진짜 간판과 메뉴를 읽어요.</p>
-      </div>
-      <div class="trk">
-        <div class="trk-head"><span class="trk-n">112</span><span class="trk-t">핵심 패턴<small>과 · 224패턴 · 19단원</small></span></div>
-        <p class="trk-p">1과에 딱 2패턴. 이미 배운 단어로만 새 문장을 만들어서, 계단이 끊기지 않아요.</p>
-        <div class="trk-flow"><span>초급 56과</span><i>→</i><span>고급 56과</span></div>
-        <div class="ex">
-          <span class="ex-k">저는 일본 사람입니다.</span>
-          <span class="ex-p">N입니다</span>
-        </div>
-        <div class="ex">
-          <span class="ex-k">떡볶이 먹고 싶어요.</span>
-          <span class="ex-p">~고 싶다</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="section" id="p-world">
-      <span class="section-kicker">안내</span>
-      <h2 class="section-title">상황별 한국어</h2>
-      <p class="section-subtitle"><span class="ko">여기부터는 취향이에요. 좋아하는 세계를 골라서 그 안의 진짜 대사로 배워요.</span></p>
-      <div class="worlds">
-        <div class="wd">
-          <span class="wd-h"><span class="wd-e">🎬</span>드라마<small>40레슨</small></span>
-          <span class="wd-c">설렘 &amp; 고백 · 갈등 &amp; 화해 · 가족 &amp; 일상 · 경계 &amp; 갈등</span>
-        </div>
-        <div class="wd">
-          <span class="wd-h"><span class="wd-e">🎤</span>케이팝<small>40레슨</small></span>
-          <span class="wd-c">케이팝 토크 · 무대 &amp; 감상 · 팬 라이프 · 온라인 팬덤</span>
-        </div>
-        <div class="wd">
-          <span class="wd-h"><span class="wd-e">✈️</span>여행<small>40레슨</small></span>
-          <span class="wd-c">길 &amp; 교통 · 식당 &amp; 카페 · 쇼핑 &amp; 결제 · 숙소 &amp; 문제 해결</span>
-        </div>
-        <div class="wd">
-          <span class="wd-h"><span class="wd-e">💬</span>반말 수다<small>40레슨</small></span>
-          <span class="wd-c">반말 기초 · 수다 &amp; 감정 · 리액션 &amp; 뉘앙스 · 슬랭 &amp; 카톡</span>
-        </div>
-      </div>
-      <div class="tutor-note">관심 있다고 한 세계를 먼저 펼쳐서 보여 주세요.</div>
-    </div>
-
-    <div class="section" id="p-free">
-      <span class="section-kicker">안내</span>
-      <h2 class="section-title">프리토킹</h2>
-      <p class="section-subtitle"><span class="ko">여기는 끝이 없어요. 새 문법 없이, 하고 싶은 이야기만 계속 나와요.</span></p>
-      <div class="themes">
-        <span class="th">가치관 &amp; 인생</span>
-        <span class="th">사회 &amp; 이슈</span>
-        <span class="th">문화 &amp; 취향</span>
-        <span class="th">관계 &amp; 감정</span>
-        <span class="th">미래 &amp; 상상</span>
-        <span class="th more">주제는 계속 늘어나요 +</span>
-      </div>
-      <p class="free-note">패턴 코스에는 끝이 있지만, 프리토킹에는 없어요.</p>
-    </div>
 
     <div class="section" id="p-price">
       <span class="section-kicker">안내</span>
@@ -824,9 +846,9 @@
     var COURSE = {
       hangul: ["한글 읽기", "11레슨"],
       core:   ["핵심 패턴 초급", "56과 (Part 1)"],
-      travel: ["여행 한국어", "16레슨"],
+      travel: ["여행 한국어", "40레슨"],
       drama:  ["드라마 한국어", "40레슨"],
-      banmal: ["반말 수다", "10레슨"],
+      banmal: ["반말 수다", "40레슨"],
       free:   ["프리토킹", "30주제"]
     };
     // why -> a closing line that ties the plan back to their own reason
