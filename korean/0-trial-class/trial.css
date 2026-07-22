@@ -2496,12 +2496,12 @@ body { padding-bottom: 84px; }         /* the bar must not cover the last line *
   align-items: baseline;
   gap: 6px;
   justify-content: center;
-  font-size: 11px;
+  font-size: 13.5px;
   font-weight: 700;
   line-height: 1.2;
 }
 
-.pg-label .pg-act { font-size: 11.5px; font-weight: 900; }
+.pg-label .pg-act { font-size: 14.5px; font-weight: 900; }
 .pg-label .pg-n { color: #757575; }
 
 /* a page opened from the 포도 안내 index is off the Next chain, so say so */
