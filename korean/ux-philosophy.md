@@ -30,6 +30,7 @@ The guiding principles behind every page of the Korean curriculum.
 ## Teaching mode
 - **Two script channels, told apart at a glance.** The green box is what the tutor *says* to the learner. Anything the tutor needs but the learner must not see — read order, pacing, answers — goes in a dark `.tutor-note` box instead. Never mix the two.
 - **Tutor notes are written in Korean.** The tutor reads Korean; a beginner learner cannot, so the language itself is a second lock on the answers.
+- **A tutor note sits directly under the script it belongs to, and says as little as possible** — a two-character tag for the verb (읽기 / 정답) and then the content, e.g. `읽기  노 · 모 · 느`. No "for teachers" label: the dark box already says whose it is. Placement costs nothing, because the note is `display:none` for the learner and collapses without leaving a gap.
 - **Everything tutor-only lives behind the 선생님 모드 switch on the cover, and the switch is off by default.** Student view is what the page loads as, and nothing is persisted — reload returns to it. Answers reveal in the same barely-there way as `.slot`: a ghost of the answer inside the blank, never a loud key.
 
 ## Scaffolding rules
