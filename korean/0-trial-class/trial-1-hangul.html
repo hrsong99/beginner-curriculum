@@ -1367,7 +1367,6 @@
   <nav class="pager">
     <button class="pg-btn pg-prev" type="button" aria-label="이전 페이지">←</button>
     <div class="pg-mid">
-      <div class="pg-bar"></div>
       <span class="pg-label"><b class="pg-act">—</b><span class="pg-n">—</span></span>
     </div>
     <button class="pg-btn pg-next" type="button" aria-label="다음 페이지">→</button>
@@ -1409,11 +1408,8 @@
     var at = 0;                                    // index into `pages`
     var prevBtn = bar.querySelector(".pg-prev");
     var nextBtn = bar.querySelector(".pg-next");
-    var barEl   = bar.querySelector(".pg-bar");
     var actEl   = bar.querySelector(".pg-act");
     var nEl     = bar.querySelector(".pg-n");
-
-    barEl.appendChild(document.createElement("i"));   // one bar for the whole deck
 
     function paged() { return phone.classList.contains("paged"); }
 
@@ -1451,10 +1447,6 @@
         nEl.textContent = (f + 1) + " / " + flow.length;
         nEl.classList.remove("ref");
       }
-
-      // one bar across the whole deck, so the number and the fill agree
-      var pct = f < 0 ? 0 : ((f + 1) / flow.length) * 100;
-      barEl.firstChild.style.setProperty("--f", pct + "%");
     }
 
     function step(d) {

@@ -2489,28 +2489,7 @@ body { padding-bottom: 84px; }         /* the bar must not cover the last line *
 .pg-btn:disabled { background: #f0f0ee; border-color: #d8d8d4; color: #b4b4b0; cursor: default; }
 .pg-btn:disabled:active { transform: none; }
 
-.pg-mid { flex: 1 1 auto; min-width: 0; display: grid; gap: 5px; }
-
-/* one bar across the whole deck */
-.pg-bar { display: flex; }
-
-.pg-bar i {
-  position: relative;
-  flex: 1 1 0;
-  height: 4px;
-  border-radius: 999px;
-  background: #ececea;
-  overflow: hidden;
-}
-
-.pg-bar i::after {
-  content: "";
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: var(--f, 0%);
-  border-radius: 999px;
-  background: #6abe36;
-}
+.pg-mid { flex: 1 1 auto; min-width: 0; }
 
 .pg-label {
   display: flex;
