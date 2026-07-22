@@ -1461,18 +1461,26 @@ body.teaching .tap-tile[data-ok]:not(.right):not(.wrong)::before {
   border-radius: 10px;
 }
 
-/* ---------- the switch, on the cover only ---------- */
+/* ---------- the switch, tucked into the cover's corner ----------
+   Deliberately quiet: a learner should not notice it, and should have
+   no reason to try it. It only asserts itself once it is on, so the
+   tutor can see at a glance that answers are showing. */
+.phone > .brand-page:first-child { position: relative; }
+
 .mode-toggle {
+  position: absolute;
+  top: 14px;
+  right: 14px;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  margin-top: 30px;
-  padding: 8px 16px 8px 9px;
-  border: 1.5px solid #1c1c1c;
+  gap: 6px;
+  padding: 5px 9px 5px 6px;
+  border: 1.2px solid rgba(28,28,28,.22);
   border-radius: 999px;
-  background: #fff;
+  background: transparent;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
+  transition: background .15s, border-color .15s;
 }
 
 .mode-toggle input {
@@ -1485,37 +1493,39 @@ body.teaching .tap-tile[data-ok]:not(.right):not(.wrong)::before {
 .mode-toggle .sw {
   position: relative;
   flex: none;
-  width: 38px;
-  height: 22px;
-  border: 1.5px solid #1c1c1c;
+  width: 26px;
+  height: 15px;
+  border: 1.2px solid rgba(28,28,28,.3);
   border-radius: 999px;
-  background: #e4e4e0;
-  transition: background .15s;
+  background: transparent;
+  transition: background .15s, border-color .15s;
 }
 
 .mode-toggle .sw i {
   position: absolute;
   top: 2px;
   left: 2px;
-  width: 15px;
-  height: 15px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
-  background: #1c1c1c;
-  transition: transform .15s;
+  background: rgba(28,28,28,.35);
+  transition: transform .15s, background .15s;
 }
-
-.mode-toggle input:checked + .sw { background: #b5fd4c; }
-.mode-toggle input:checked + .sw i { transform: translateX(16px); }
 
 .mode-toggle .lbl {
-  color: #1c1c1c;
-  font-size: 13px;
+  color: rgba(28,28,28,.42);
+  font-size: 10.5px;
   font-weight: 800;
+  letter-spacing: .01em;
 }
 
-.mode-caption {
-  margin: 10px 0 0;
-  color: rgba(28,28,28,.6);
-  font-size: 12px;
-  font-weight: 700;
+/* on: no longer shy, so the tutor cannot leave it on by accident */
+.mode-toggle input:checked ~ .lbl { color: #1c1c1c; }
+.mode-toggle:has(input:checked) {
+  background: #1c1c1c;
+  border-color: #1c1c1c;
 }
+.mode-toggle:has(input:checked) .lbl { color: #b5fd4c; }
+.mode-toggle input:checked + .sw { background: #b5fd4c; border-color: #b5fd4c; }
+.mode-toggle input:checked + .sw i { transform: translateX(11px); background: #1c1c1c; }
+
