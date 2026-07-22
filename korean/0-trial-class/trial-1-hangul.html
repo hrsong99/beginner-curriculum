@@ -21,7 +21,7 @@
         <span class="lbl">티칭 모드</span>
       </label>
       <label class="mode-toggle view">
-        <input type="checkbox" id="paged-mode">
+        <input type="checkbox" id="paged-mode" checked>
         <span class="sw"><i></i></span>
         <span class="lbl">한 장씩</span>
       </label>
@@ -1376,7 +1376,8 @@
   </nav>
 
   <!-- ================================================================
-       PAGER · back / next / progress, in both modes
+       PAGER · back / next / progress, in both modes.
+       Page view is the default; scrolling stays one tap away.
        ================================================================ -->
   <script>
   (function () {
@@ -1541,7 +1542,11 @@
       teach.addEventListener("change", function () { teachBtn.classList.toggle("on", teach.checked); });
     }
 
-    paint();
+    // Page view is the default. Set it explicitly rather than trusting the
+    // markup: Chrome restores checkbox state across a reload, so a tutor who
+    // switched to scrolling would come back to scrolling on refresh.
+    sw.checked = true;
+    apply();
   })();
   </script>
 

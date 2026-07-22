@@ -2416,13 +2416,14 @@ button.opt-row:active { transform: scale(.99); }
 }
 
 /* ============================================================
-   PAGED MODE
+   PAGED MODE  (the default)
    ------------------------------------------------------------
    The deck is a flat list of pages under .phone, so "one at a
    time" costs nothing structurally: hide the siblings, show one.
-   Scroll mode stays the default and the fallback — printing,
+   Scrolling is one tap away and remains the fallback — printing,
    Cmd+F and scanning ahead all depend on it, so this never
-   becomes the only way to read the deck.
+   becomes the only way to read the deck. @media print always
+   expands the whole deck regardless of mode.
    ============================================================ */
 .mode-toggle.view { top: 46px; }
 
