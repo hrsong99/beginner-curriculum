@@ -1518,3 +1518,358 @@ body.teaching .tap-tile[data-ok]:not(.right):not(.wrong)::before {
 .mode-toggle input:checked + .sw { background: #b5fd4c; border-color: #b5fd4c; }
 .mode-toggle input:checked + .sw i { transform: translateX(11px); background: #1c1c1c; }
 
+
+/* ============================================================
+   CONSULTATION · the deck remembers the answers
+   ------------------------------------------------------------
+   The needs-analysis rows are real answers now, and the report
+   page reads them back: goal + pace + the tutor's level call
+   become an expected duration, a curve and a course list.
+   ============================================================ */
+.opt-list {
+  display: grid;
+  gap: 11px;
+}
+
+button.opt-row {
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform .09s, background .12s, box-shadow .12s;
+}
+
+button.opt-row:active { transform: scale(.99); }
+
+.opt-row.on {
+  background: #b5fd4c;
+  box-shadow: 0 4px 0 #1c1c1c;
+}
+
+.opt-row.on .opt-sub { color: rgba(28,28,28,.62); }
+.opt-row.on .lv-badge { background: #1c1c1c; color: #b5fd4c; }
+
+/* ---------- level check ---------- */
+.lvpick {
+  display: grid;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.lvrow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 13px 16px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 13px;
+  background: #fff;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: background .12s, box-shadow .12s;
+}
+
+.lvrow.on { background: #b5fd4c; box-shadow: 0 4px 0 #1c1c1c; }
+
+.lvrow .lvn {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #1c1c1c;
+  color: #b5fd4c;
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.lvrow.on .lvn { background: #fff; color: #1c1c1c; }
+.lvrow .lvt { display: block; font-size: 15px; font-weight: 800; }
+.lvrow .lvs { display: block; margin-top: 2px; color: #757575; font-size: 12px; font-weight: 600; }
+.lvrow.on .lvs { color: rgba(28,28,28,.62); }
+
+/* ---------- the report ---------- */
+.rep-empty {
+  margin-top: 24px;
+  padding: 26px 20px;
+  border: 1.5px dashed #1c1c1c;
+  border-radius: 14px;
+  background: #fff;
+  color: #757575;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  word-break: keep-all;
+}
+
+.rep { display: none; }
+.rep.ready { display: block; }
+.rep.ready + .rep-empty, .rep-empty.hide { display: none; }
+
+.rep-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+  padding: 14px 16px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 14px;
+  background: #1c1c1c;
+}
+
+.rep-goal {
+  flex: 1 1 auto;
+  min-width: 0;
+  color: #fff;
+  font-size: 14.5px;
+  font-weight: 800;
+  line-height: 1.35;
+  word-break: keep-all;
+}
+
+.rep-eta { flex: none; text-align: right; }
+.rep-eta b { display: block; color: #b5fd4c; font-size: 25px; font-weight: 900; line-height: 1; }
+.rep-eta small { display: block; margin-top: 3px; color: rgba(255,255,255,.55); font-size: 10.5px; font-weight: 700; }
+
+.rep-plot {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 16px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 14px;
+  background: #fff;
+  padding: 8px 4px 4px;
+}
+
+.rep-facts {
+  display: grid;
+  gap: 0;
+  margin-top: 16px;
+  padding: 4px 16px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.rf {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.rf:last-child { border-bottom: 0; }
+.rf .k { flex: 1 1 auto; color: #757575; font-size: 13px; font-weight: 700; }
+.rf .v { flex: none; color: #1c1c1c; font-size: 14.5px; font-weight: 800; }
+
+.rep .cgroup-label { margin-top: 20px; }
+
+.rep-courses {
+  display: grid;
+  gap: 9px;
+  margin-top: 10px;
+}
+
+.rc {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 12px 14px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.rc .rcn {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  background: #b5fd4c;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.rc .rct { flex: 1 1 auto; font-size: 14px; font-weight: 800; }
+.rc .rcs { flex: none; color: #757575; font-size: 11.5px; font-weight: 700; }
+
+.rep-why {
+  margin: 14px 0 0;
+  color: #575753;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+  word-break: keep-all;
+}
+
+/* ============================================================
+   INFO & SALES pages (from the PODO KOREAN deck)
+   ============================================================ */
+.jump {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+  width: 100%;
+  margin-top: 26px;
+}
+
+.jbtn {
+  display: grid;
+  place-items: center;
+  padding: 13px 8px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 12px;
+  background: #fff;
+  color: #1c1c1c;
+  font-size: 13.5px;
+  font-weight: 800;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.jbtn:active { transform: translateY(2px); }
+
+.usp {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 11px;
+  margin-top: 24px;
+}
+
+.uspc {
+  padding: 16px 14px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 13px;
+  background: #fff;
+}
+
+.uspc .n { display: block; color: #1c1c1c; font-size: 21px; font-weight: 900; line-height: 1.1; }
+.uspc .t { display: block; margin-top: 5px; font-size: 13.5px; font-weight: 800; }
+.uspc .s { display: block; margin-top: 4px; color: #757575; font-size: 11.5px; font-weight: 600; line-height: 1.4; word-break: keep-all; }
+
+/* price card, matching the app's package page grammar */
+.pricecard {
+  margin-top: 24px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 14px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.pricecard .ph {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 16px;
+  border-bottom: 1.5px solid #1c1c1c;
+  background: #f5f5f5;
+  font-size: 13.5px;
+  font-weight: 800;
+}
+
+.pricecard .off {
+  margin-left: auto;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #1c1c1c;
+  color: #b5fd4c;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.pricecard .pb { padding: 14px 16px 15px; }
+.pricecard s { display: block; color: #a5a5a5; font-size: 13px; font-weight: 700; }
+.pricecard .big { display: flex; align-items: baseline; gap: 6px; margin-top: 2px; }
+.pricecard .big b { font-size: 30px; font-weight: 900; letter-spacing: -.02em; }
+.pricecard .big span { color: #757575; font-size: 12.5px; font-weight: 700; }
+.pricecard .pnote { margin-top: 6px; color: #757575; font-size: 12px; font-weight: 700; }
+.pricecard .pf { padding: 10px 16px; border-top: 1px solid #e8e8e8; color: #757575; font-size: 12px; font-weight: 700; }
+.pricecard .pf b { color: #1c1c1c; font-weight: 900; }
+
+.plans { display: grid; gap: 12px; margin-top: 24px; }
+
+.planc {
+  position: relative;
+  padding: 16px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.planc.best { background: #f2fcec; box-shadow: 0 4px 0 #1c1c1c; }
+
+.pbadge {
+  position: absolute;
+  top: -10px;
+  right: 14px;
+  padding: 3px 11px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 999px;
+  background: #b5fd4c;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.planc .pt { display: block; font-size: 17px; font-weight: 900; }
+.planc .pd { display: block; margin-top: 3px; color: #757575; font-size: 12.5px; font-weight: 700; }
+
+.plist { margin: 11px 0 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.plist li { position: relative; padding-left: 18px; font-size: 13px; font-weight: 700; line-height: 1.4; }
+.plist li::before { content: "✓"; position: absolute; left: 0; color: #6abe36; font-weight: 900; }
+
+/* coupon ticket, punched like a real one */
+.coupon {
+  position: relative;
+  display: flex;
+  margin-top: 24px;
+  border-radius: 14px;
+  background: #1c1c1c;
+  color: #fff;
+  overflow: hidden;
+}
+
+.coupon .left { flex: 1 1 auto; min-width: 0; padding: 15px 16px; }
+.coupon .left small { color: #b5fd4c; font-size: 11px; font-weight: 800; letter-spacing: .03em; }
+.coupon .left b { display: block; margin-top: 3px; font-size: 19px; font-weight: 900; }
+.coupon .left em { display: block; margin-top: 5px; color: #a5a5a5; font-size: 11.5px; font-style: normal; font-weight: 700; }
+
+.coupon .right {
+  flex: none;
+  width: 84px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px;
+  border-left: 2px dashed rgba(255,255,255,.25);
+}
+
+.coupon .right .d3 { padding: 3px 11px; border-radius: 999px; background: #b5fd4c; color: #1c1c1c; font-size: 12px; font-weight: 900; }
+.coupon .right span { color: #a5a5a5; font-size: 10px; font-weight: 700; }
+.coupon::before, .coupon::after { content: ""; position: absolute; right: 76px; width: 14px; height: 14px; border-radius: 50%; background: #fff; }
+.coupon::before { top: -7px; }
+.coupon::after { bottom: -7px; }
+
+/* FAQ */
+.faq { display: grid; gap: 11px; margin-top: 24px; }
+
+.qa {
+  padding: 14px 16px;
+  border: 1.5px solid #1c1c1c;
+  border-radius: 13px;
+  background: #fff;
+}
+
+.qa .q { display: block; font-size: 14px; font-weight: 800; line-height: 1.4; word-break: keep-all; }
+.qa .q::before { content: "Q. "; color: #6abe36; font-weight: 900; }
+.qa .a { display: block; margin-top: 7px; color: #575753; font-size: 13px; font-weight: 600; line-height: 1.5; word-break: keep-all; }
