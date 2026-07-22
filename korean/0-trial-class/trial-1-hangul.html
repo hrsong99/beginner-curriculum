@@ -15,6 +15,12 @@
     <div class="brand-page">
       <span class="podo-badge"><span class="logo">PODO</span><span class="tag">体験レッスン</span></span>
       <h1 class="brand-title">超入門</h1>
+      <label class="mode-toggle">
+        <input type="checkbox" id="teaching-mode">
+        <span class="sw"><i></i></span>
+        <span class="lbl">선생님 모드</span>
+      </label>
+      <p class="mode-caption">정답과 진행 메모가 보여요</p>
     </div>
 
     <!-- ============ STEP 1 · GREETING ============ -->
@@ -183,6 +189,7 @@
           <span class="pair-side"><span class="g seat-tb">으</span><span class="shots"><img src="mouth/eu-front.jpg" alt="" width="56" height="56"><img src="mouth/eu-side.jpg" alt="" width="56" height="56"></span><small>くちびるを横に</small></span>
         </div>
       </div>
+      <div class="tutor-note"><span class="t-label">선생님용</span><span class="t-body">두 개를 이어서 읽어 주세요. 그다음 하나만 읽고 어느 쪽인지 맞혀 보게 하면 좋아요.</span></div>
     </div>
 
     <!-- the payoff of colouring the seats from the start: the amber seat
@@ -293,6 +300,7 @@
         <span class="seat-c">ㅁ</span>
         <span>마</span><span>머</span><span>모</span><span>무</span><span>므</span><span>미</span>
       </div>
+      <div class="tutor-note"><span class="t-label">선생님용</span><span class="t-body">한 줄씩 선생님이 먼저 읽고, 학습자가 따라 읽게 해 주세요. ㄴ 줄 → ㅁ 줄 순서로요.</span></div>
     </div>
 
     <div class="section">
@@ -322,6 +330,7 @@
         <button class="tap-tile">미</button>
         <button class="tap-tile" data-ok="1">나</button>
       </div>
+      <div class="tutor-note"><span class="t-label">선생님용</span><span class="t-body">정답은 <b>나 · 마 · 나</b> 세 개예요. 다 누르면 소리 내어 읽게 해 주세요.</span></div>
     </div>
 
     <div class="section">
@@ -333,7 +342,7 @@
         <button class="tap-tile">머</button><button class="tap-tile" data-ok="1">모</button>
         <button class="tap-tile" data-ok="1">느</button><button class="tap-tile">니</button>
       </div>
-      <div class="hint"><span class="hint-chip">先生：노 · 모 · 느 と読む</span></div>
+      <div class="tutor-note"><span class="t-label">선생님용</span><span class="t-body"><b>노 · 모 · 느</b> 순서로, 하나씩 두 번 읽어 주세요. 정답은 왼쪽 · 오른쪽 · 왼쪽이에요.</span></div>
     </div>
 
     <!-- Part 3 · words -->
@@ -379,7 +388,7 @@
         <button class="tap-tile">너무</button><button class="tap-tile" data-ok="1">나무</button><button class="tap-tile">누나</button>
         <button class="tap-tile" data-ok="1">어머니</button><button class="tap-tile">아머니</button><button class="tap-tile">오모니</button>
       </div>
-      <div class="hint"><span class="hint-chip">先生：나무 → 어머니 の順で言う</span></div>
+      <div class="tutor-note"><span class="t-label">선생님용</span><span class="t-body"><b>나무 → 어머니</b> 순서로 천천히 두 번씩 말해 주세요.</span></div>
     </div>
 
     <div class="section">
@@ -407,7 +416,7 @@
     </div>
 
     <div class="section">
-      <span class="section-kicker">かく</span>
+      <span class="section-kicker">つくる</span>
       <h2 class="section-title">듣고 만들기 <span class="title-ja">(聞いて組み立てよう)</span></h2>
       <p class="section-subtitle"><span class="ko">이번엔 힌트가 없어요. 제가 말하는 글자를 만들어 보세요.</span><span class="ja">今度はヒントなし。私が言う文字を組み立ててみましょう。</span></p>
       <div class="builder" data-answers="무,너,마">
@@ -428,7 +437,7 @@
           <button class="key seat-v" data-v="ㅣ">ㅣ</button>
         </div>
       </div>
-      <div class="hint"><span class="hint-chip">先生：무 · 너 · 마 の順で言う</span></div>
+      <div class="tutor-note"><span class="t-label">선생님용</span><span class="t-body"><b>무 · 너 · 마</b> 순서로 말해 주세요. 다 만들 때까지 기다려 주세요.</span></div>
     </div>
 
     <div class="section">
@@ -556,6 +565,18 @@
        ================================================================ -->
   <script>
   (function () {
+    /* ---------- (0) teaching mode ----------
+       Off by default: reloading the page always returns to what the
+       learner should see. Nothing is persisted, so a deck opened on any
+       device starts clean. */
+    var mode = document.getElementById("teaching-mode");
+    if (mode) {
+      mode.checked = false;
+      mode.addEventListener("change", function () {
+        document.body.classList.toggle("teaching", mode.checked);
+      });
+    }
+
     /* ---------- (1) tap to choose ---------- */
     document.querySelectorAll(".tap-tile").forEach(function (t) {
       t.addEventListener("click", function () {
@@ -582,6 +603,7 @@
       var keys = [].slice.call(b.querySelectorAll(".key"));
       var active = 0;
       var pick = { c: null, v: null };
+      slots.forEach(function (s, i) { s.setAttribute("data-a", answers[i] || ""); });
 
       function draw() {
         slots.forEach(function (s, i) {
@@ -793,17 +815,14 @@
       "全部、知っている文字でできています。1つずつ読んでみましょう。": "전부 아는 글자로 되어 있어요. 하나씩 읽어 보세요.",
       "わたし": "나 (저)", "あなた": "너", "きゅうり": "오이", "お姉さん（男性から）": "누나 (남자가 부르는 누나)", "お母さん": "어머니",
       "(聞いてさがそう)": "(단어 찾기)",
-      "先生：나무 → 어머니 の順で言う": "튜터: 나무 → 어머니 순서로 말한다",
       "(聞いて選ぼう)": "(듣고 고르기)",
       "2つのうち1つだけ読みます。よく聞いて、正しいほうをタップしてください。": "둘 중에 하나만 읽을게요. 잘 듣고 맞는 쪽을 눌러 보세요.",
-      "先生：노 · 모 · 느 と読む": "튜터: 노 · 모 · 느 라고 읽는다",
       "今度は色なし。「ㅏ」が入っているブロックを全部タップしてください。": "이번엔 색이 없어요. ㅏ가 들어간 블록을 모두 눌러 보세요.",
       "私が言う単語をタップしてください。": "제가 말하는 단어를 눌러 보세요.",
       "下の子音と母音をタップして、文字を組み立ててみましょう。": "밑에서 자음과 모음을 눌러서, 글자를 만들어 보세요.",
       "今度はヒントなし。私が言う文字を組み立ててみましょう。": "이번엔 힌트가 없어요. 제가 말하는 글자를 만들어 보세요.",
       "(ブロックを作ろう)": "(블록 만들기)",
       "(聞いて組み立てよう)": "(듣고 만들기)",
-      "先生：무 · 너 · 마 の順で言う": "튜터: 무 · 너 · 마 순서로 말한다",
       "(看板を読もう)": "(간판 읽기)",
       "韓国にいると想像してみてください。看板を声に出して読んでみましょう！": "한국에 있다고 상상해 보세요. 간판을 소리 내어 읽어 봐요!",
       "家族写真の名前": "가족사진 속 이름",
