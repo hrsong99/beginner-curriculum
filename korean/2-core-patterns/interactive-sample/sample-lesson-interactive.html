@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google" content="notranslate">
+  <meta name="podo:lesson-id" content="core-patterns-2">
+  <meta name="podo:content-version" content="2026-07-23">
   <title>好きなものを言おう - 을/를 좋아해요 (インタラクティブ)</title>
   <link rel="stylesheet" href="../../lesson-card.css">
   <style>
@@ -201,13 +203,111 @@
       25% { transform: translateX(-3px); }
       75% { transform: translateX(3px); }
     }
+
+    /* ---------- paging ----------
+       One page at a time by default, with a scrolling mode kept as an
+       escape hatch — Cmd+F and scanning ahead depend on it, so paging
+       never becomes the only way to read the deck. Print always expands. */
+    .phone.paged > * { display: none; }
+    .phone.paged > .pg-on { display: flex; }
+    .phone.paged > .section.pg-on { display: block; }
+
+    /* a lone page should fill the screen rather than leave a dead band
+       above the bar */
+    .phone.paged > .pg-on { min-height: calc(100vh - 118px); }
+    @supports (height: 100dvh) {
+      .phone.paged > .pg-on { min-height: calc(100dvh - 118px); }
+    }
+
+    body { padding-bottom: 84px; }   /* the bar must not cover the last line */
+
+    .pager {
+      position: fixed;
+      left: 50%;
+      bottom: 14px;
+      z-index: 60;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: min(calc(100% - 32px), 448px);
+      padding: 8px;
+      border: 1.5px solid #1c1c1c;
+      border-radius: 999px;
+      background: #fff;
+      box-shadow: 0 4px 0 #1c1c1c;
+    }
+
+    .pg-btn {
+      flex: none;
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border: 1.5px solid #1c1c1c;
+      border-radius: 50%;
+      background: #b5fd4c;
+      color: #1c1c1c;
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 900;
+      line-height: 1;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .pg-btn:active { transform: translateY(2px); }
+    .pg-btn:disabled { background: #f0f0ee; border-color: #d8d8d4; color: #b4b4b0; cursor: default; }
+    .pg-btn:disabled:active { transform: none; }
+
+    .pg-mid { flex: 1 1 auto; min-width: 0; }
+
+    .pg-label {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      justify-content: center;
+      font-size: 13.5px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .pg-label .pg-act { font-size: 14.5px; font-weight: 900; }
+    .pg-label .pg-n { color: #757575; }
+
+    .pg-teach, .pg-exit { width: 32px; height: 32px; background: #fff; font-size: 13px; font-weight: 900; }
+    .phone.paged ~ .pager .pg-exit { background: #1c1c1c; color: #b5fd4c; }
+    .pg-teach.on { background: #1c1c1c; color: #b5fd4c; }
+
+    @media print {
+      .pager { display: none; }
+      .phone.paged > * { display: block; }
+    }
+
+    /* The peers are on different builds of the lesson — the protocol refuses
+       to apply state across a content-version mismatch, so say so out loud. */
+    .sync-version-mismatch .pager::after {
+      content: "버전 불일치";
+      position: absolute;
+      left: 50%;
+      top: -26px;
+      transform: translateX(-50%);
+      padding: 3px 10px;
+      border: 1.5px solid #1c1c1c;
+      border-radius: 999px;
+      background: #fdf1f1;
+      color: #d64545;
+      font-size: 11px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
   </style>
 </head>
 <body>
   <div class="phone">
 
     <!-- 1. Hero -->
-    <div class="hero">
+    <div class="hero" data-page-id="hero">
       <p class="eyebrow">初級パターンレッスン</p>
       <h1>좋아하는 것을 말해요 <span class="title-ja">(好きなものを言おう)</span></h1>
       <div class="hero-topic">
@@ -218,7 +318,7 @@
     </div>
 
     <!-- 2. Review -->
-    <div class="section">
+    <div class="section" data-page-id="review">
       <h2 class="section-title">복습 <span class="title-ja">(前回のおさらい)</span></h2>
       <p class="section-subtitle"><span class="ko">빈칸을 채워 주세요. 마지막은 한국어로 말해 볼까요?</span><span class="ja">空欄をうめましょう。最後は韓国語で言ってみましょう。</span></p>
       <div class="task-block">
@@ -253,14 +353,14 @@
     </div>
 
     <!-- 4. Transition: Part 1 -->
-    <div class="transition-page">
+    <div class="transition-page" data-page-id="part1-intro">
       <span class="transition-kicker">パート 1</span>
       <h2 class="transition-title">~을/를 좋아해요</h2>
       <p class="transition-copy">〜が好きです / 〜が好きじゃないです</p>
     </div>
 
     <!-- 5. Teach pattern 1 -->
-    <div class="section">
+    <div class="section" data-page-id="p1-teach">
       <h2 class="section-title">패턴 1 <span class="title-ja">(パターン 1)</span></h2>
       <p class="section-subtitle"><span class="ko">같이 읽어 볼까요?</span><span class="ja">一緒に読んでみましょう。</span></p>
       <div class="pattern-stack">
@@ -284,7 +384,7 @@
     </div>
 
     <!-- 6. Particle rule -->
-    <div class="section">
+    <div class="section" data-page-id="p1-particle-rule">
       <h2 class="section-title">을과 를, 어느 쪽? <span class="title-ja">(을 と 를、どっち？)</span></h2>
       <p class="section-subtitle"><span class="ko">단어의 끝을 봐 주세요.</span><span class="ja">単語の終わりを見てください。</span></p>
       <div class="note-grid">
@@ -312,7 +412,7 @@
     </div>
 
     <!-- P1 · Reading -->
-    <div class="section">
+    <div class="section" data-page-id="p1-read">
       <h2 class="section-title">같이 읽어요 <span class="title-ja">(一緒に読もう)</span></h2>
       <p class="section-subtitle"><span class="ko">소리 내서 읽어 주세요.</span><span class="ja">声に出して読んでください。</span></p>
       <div class="model-list">
@@ -324,7 +424,7 @@
     </div>
 
     <!-- P1 · Choose the option -->
-    <div class="section">
+    <div class="section" data-page-id="p1-choose">
       <h2 class="section-title">을과 를 고르기 <span class="title-ja">(単語を仕分けよう)</span></h2>
       <p class="section-subtitle"><span class="ko">을, 를 중에서 골라 주세요.</span><span class="ja">「을」か「를」を選んでください。</span></p>
       <div class="choose-list">
@@ -348,7 +448,7 @@
     </div>
 
     <!-- P1 · Reorder the words -->
-    <div class="section">
+    <div class="section" data-page-id="p1-reorder">
       <h2 class="section-title">문장 만들기 <span class="title-ja">(文を組み立てよう)</span></h2>
       <p class="section-subtitle"><span class="ko">순서대로 놓고 말해 주세요.</span><span class="ja">順番に並べて言ってみましょう。</span></p>
       <div class="task-block">
@@ -390,7 +490,7 @@
     </div>
 
     <!-- P1 · Fill the blank -->
-    <div class="section">
+    <div class="section" data-page-id="p1-fill">
       <h2 class="section-title">빈칸을 채워요 <span class="title-ja">(空欄をうめよう)</span></h2>
       <p class="section-subtitle"><span class="ko">빈칸을 채워 주세요.</span><span class="ja">空欄をうめてください。</span></p>
       <div class="task-block">
@@ -420,7 +520,7 @@
     </div>
 
     <!-- P1 · Translate -->
-    <div class="section">
+    <div class="section" data-page-id="p1-translate">
       <h2 class="section-title">한국어로 바꿔요 <span class="title-ja">(韓国語にしよう)</span></h2>
       <p class="section-subtitle"><span class="ko">한국어로 바꿔 주세요.</span><span class="ja">韓国語にしてみましょう。</span></p>
       <div class="task-block">
@@ -462,7 +562,7 @@
     </div>
 
     <!-- P1 · Write your own statement -->
-    <div class="section">
+    <div class="section" data-page-id="p1-write">
       <h2 class="section-title">스스로 문장 쓰기 <span class="title-ja">(自分で文を作ろう)</span></h2>
       <p class="section-subtitle"><span class="ko">이번엔 혼자 써 볼까요?</span><span class="ja">今度は自分で書いてみましょう。</span></p>
       <div class="task-block">
@@ -473,14 +573,14 @@
     </div>
 
     <!-- 11. Transition: Part 2 -->
-    <div class="transition-page">
+    <div class="transition-page" data-page-id="part2-intro">
       <span class="transition-kicker">パート 2</span>
       <h2 class="transition-title">~을/를 좋아해요?</h2>
       <p class="transition-copy">〜が好きですか？ / 何が好きですか？</p>
     </div>
 
     <!-- 12. Teach pattern 2 -->
-    <div class="section">
+    <div class="section" data-page-id="p2-teach">
       <h2 class="section-title">패턴 2 <span class="title-ja">(パターン 2)</span></h2>
       <p class="section-subtitle"><span class="ko">끝만 올리면 질문이에요!</span><span class="ja">文末を上げるだけ！</span></p>
       <div class="pattern-stack">
@@ -516,7 +616,7 @@
     </div>
 
     <!-- P2 · Reading -->
-    <div class="section">
+    <div class="section" data-page-id="p2-read">
       <h2 class="section-title">질문을 읽어요 <span class="title-ja">(質問を読もう)</span></h2>
       <p class="section-subtitle"><span class="ko">끝을 올려서 읽어 주세요.</span><span class="ja">文末を上げて読んでください。</span></p>
       <div class="model-list">
@@ -528,7 +628,7 @@
     </div>
 
     <!-- P2 · Turn it into a question -->
-    <div class="section">
+    <div class="section" data-page-id="p2-question-form">
       <h2 class="section-title">질문으로 바꿔요 <span class="title-ja">(質問にしてみよう)</span></h2>
       <p class="section-subtitle"><span class="ko">질문으로 바꿔서 물어봐 주세요.</span><span class="ja">質問に変えて聞いてみましょう。</span></p>
       <div class="model-list">
@@ -540,7 +640,7 @@
     </div>
 
     <!-- P2 · Choose the option -->
-    <div class="section">
+    <div class="section" data-page-id="p2-choose">
       <h2 class="section-title">알맞은 말 고르기 <span class="title-ja">(正しい言葉を選ぼう)</span></h2>
       <p class="section-subtitle"><span class="ko">맞는 말을 골라 주세요.</span><span class="ja">正しい言葉を選んでください。</span></p>
       <div class="choose-list">
@@ -564,7 +664,7 @@
     </div>
 
     <!-- P2 · Reorder the words -->
-    <div class="section">
+    <div class="section" data-page-id="p2-reorder">
       <h2 class="section-title">문장 만들기 <span class="title-ja">(文を組み立てよう)</span></h2>
       <p class="section-subtitle"><span class="ko">순서대로 놓고 말해 주세요.</span><span class="ja">順番に並べて言ってみましょう。</span></p>
       <div class="task-block">
@@ -603,7 +703,7 @@
     </div>
 
     <!-- P2 · Fill the blank -->
-    <div class="section">
+    <div class="section" data-page-id="p2-fill">
       <h2 class="section-title">질문을 완성해요 <span class="title-ja">(質問を完成させよう)</span></h2>
       <p class="section-subtitle"><span class="ko">빈칸을 채워 주세요.</span><span class="ja">空欄をうめてください。</span></p>
       <div class="task-block">
@@ -633,7 +733,7 @@
     </div>
 
     <!-- P2 · Translate -->
-    <div class="section">
+    <div class="section" data-page-id="p2-translate">
       <h2 class="section-title">한국어로 바꿔요 <span class="title-ja">(韓国語にしよう)</span></h2>
       <p class="section-subtitle"><span class="ko">한국어로 바꿔 주세요.</span><span class="ja">韓国語にしてみましょう。</span></p>
       <div class="task-block">
@@ -675,7 +775,7 @@
     </div>
 
     <!-- P2 · Write your own question -->
-    <div class="section">
+    <div class="section" data-page-id="p2-write">
       <h2 class="section-title">스스로 질문 쓰기 <span class="title-ja">(自分で質問を作ろう)</span></h2>
       <p class="section-subtitle"><span class="ko">이번엔 혼자 질문을 만들어 볼까요?</span><span class="ja">今度は自分で質問を作ってみましょう。</span></p>
       <div class="task-block">
@@ -686,14 +786,14 @@
     </div>
 
     <!-- 18. Transition: Part 3 -->
-    <div class="transition-page">
+    <div class="transition-page" data-page-id="part3-intro">
       <span class="transition-kicker">パート 3</span>
       <h2 class="transition-title">이제 말해 봐요!</h2>
       <p class="transition-copy">さあ、会話の時間！習った2つのパターンを実際に使ってみましょう。</p>
     </div>
 
     <!-- 19. Model conversation -->
-    <div class="section">
+    <div class="section" data-page-id="model-conversation">
       <h2 class="section-title">대화를 읽어요 <span class="title-ja">(会話を読もう)</span></h2>
       <p class="section-subtitle"><span class="ko">하루카가 되어서 읽어 주세요.</span><span class="ja">ハルカになって読んでください。</span></p>
       <div class="dialogue">
@@ -707,7 +807,7 @@
     </div>
 
     <!-- 19b. Complete the conversation -->
-    <div class="section">
+    <div class="section" data-page-id="complete-conversation">
       <h2 class="section-title">대화를 채워요 <span class="title-ja">(会話をうめよう)</span></h2>
       <p class="section-subtitle"><span class="ko">하루카가 되어 빈칸을 채워 주세요.</span><span class="ja">ハルカになって空欄をうめてください。</span></p>
       <div class="dialogue">
@@ -721,7 +821,7 @@
     </div>
 
     <!-- 20. Short dialogues -->
-    <div class="section">
+    <div class="section" data-page-id="short-dialogues">
       <h2 class="section-title">미니 대화 <span class="title-ja">(ミニ会話)</span></h2>
       <p class="section-subtitle"><span class="ko">빈칸을 말해 주세요.</span><span class="ja">空欄のセリフを言ってみましょう。</span></p>
       <div class="dialogue">
@@ -737,7 +837,7 @@
     </div>
 
     <!-- 20b. Free discussion · likes -->
-    <div class="section">
+    <div class="section" data-page-id="free-talk-likes">
       <h2 class="section-title">자유 대화 1 <span class="title-ja">(フリートーク ①)</span></h2>
       <p class="section-subtitle"><span class="ko">좋아하는 것을 이야기해 볼까요?</span><span class="ja">好きなものを話してみましょう。</span></p>
       <div class="dialogue">
@@ -749,7 +849,7 @@
     </div>
 
     <!-- 20c. Free discussion · dislikes -->
-    <div class="section">
+    <div class="section" data-page-id="free-talk-dislikes">
       <h2 class="section-title">자유 대화 2 <span class="title-ja">(フリートーク ②)</span></h2>
       <p class="section-subtitle"><span class="ko">안 좋아하는 것을 이야기해 볼까요?</span><span class="ja">好きじゃないものを話してみましょう。</span></p>
       <div class="dialogue">
@@ -761,7 +861,7 @@
     </div>
 
     <!-- 21. Roleplay -->
-    <div class="section">
+    <div class="section" data-page-id="roleplay">
       <h2 class="section-title">롤플레이 <span class="title-ja">(ロールプレイ)</span></h2>
       <p class="section-subtitle"><span class="ko">카페에서 새 친구를 만났어요. 친구가 먼저 인사해요.</span><span class="ja">カフェで新しい友達に会いました。友達が先にあいさつします。</span></p>
       <span class="section-kicker">대화 시작 · スタート</span>
@@ -789,7 +889,7 @@
     </div>
 
     <!-- 22. Bonus scene -->
-    <div class="section">
+    <div class="section" data-page-id="bonus-scene">
       <h2 class="section-title">한국 여행 <span class="title-ja">(韓国旅行)</span></h2>
       <p class="section-subtitle"><span class="ko">보너스! 친구랑 뭐 먹을지 정해요. 빈칸을 말해 주세요.</span><span class="ja">ボーナス！友達と何を食べるか決めます。空欄のセリフを言ってください。</span></p>
       <div class="card worksheet">
@@ -810,7 +910,7 @@
     </div>
 
     <!-- 22b. Native tip -->
-    <div class="section">
+    <div class="section" data-page-id="native-tip">
       <h2 class="section-title">원어민 팁 <span class="title-ja">(ネイティブのひとこと)</span></h2>
       <p class="section-subtitle"><span class="ko">실제 대화에서는 이렇게 말하기도 해요.</span><span class="ja">実際の会話では、こんなふうにも言います。</span></p>
       <div class="card">
@@ -829,7 +929,7 @@
     </div>
 
     <!-- 23. Mission complete -->
-    <div class="section">
+    <div class="section" data-page-id="mission-complete">
       <h2 class="section-title">미션 완료 <span class="title-ja">(ミッション完了)</span></h2>
       <p class="section-subtitle"><span class="ko">할 수 있는 걸 체크해 주세요.</span><span class="ja">できることをチェックしてください。</span></p>
       <div class="card">
@@ -846,10 +946,387 @@
 
   </div>
 
+  <nav class="pager" data-sync="shared" data-sync-id="deck-page">
+    <button class="pg-btn pg-prev" type="button" aria-label="이전 페이지">←</button>
+    <span class="pg-mid">
+      <span class="pg-label"><b class="pg-act">—</b><span class="pg-n">—</span></span>
+    </span>
+    <button class="pg-btn pg-next" type="button" aria-label="다음 페이지">→</button>
+    <button class="pg-btn pg-teach" type="button" aria-label="정답 보기">T</button>
+    <button class="pg-btn pg-exit" type="button" aria-label="보기 모드 바꾸기">⤢</button>
+  </nav>
+
   <script>
+    /* ==========================================================
+       Interactive lesson runtime.
+
+       Three layers in one closure:
+         1. sync   — podo.lesson-sync v3 (see p2p-interaction-protocol-ko.html)
+         2. lesson — the activities themselves
+         3. deck   — paging, so the two peers read the same page
+
+       The protocol is transport-agnostic: this file serialises every shared
+       action into the documented envelope and applies incoming ones, but never
+       opens a channel. The host app wires it up:
+
+           PodoLessonSync.configure({ senderId: 'peer-a' });
+           PodoLessonSync.onOutbound(msg => channel.send(JSON.stringify(msg)));
+           channel.onmessage = e => PodoLessonSync.receive(JSON.parse(e.data));
+       ========================================================== */
     (function () {
+      'use strict';
+
+      /* ==========================================================
+         1. SYNC LAYER
+         ========================================================== */
+
+      const PROTOCOL = 'podo.lesson-sync';
+      const VERSION = 3;
+      const MAX_TEXT = 2000;            // §8 per-target text ceiling
+      const SEND_THROTTLE = 60;         // §4 typing coalesces at 50~100ms
+      const INBOUND_BUDGET = 120;       // §8 messages per second before we drop
+
+      const metaOf = n => (document.querySelector('meta[name="' + n + '"]') || {}).content || '';
+      const LESSON_ID = metaOf('podo:lesson-id');
+      const CONTENT_VERSION = metaOf('podo:content-version');
+
+      // Ids are kebab-case by rule (§1.2). Enforcing the shape here doubles as
+      // the selector-injection guard §8 asks for — nothing else reaches querySelector.
+      const ID_RE = /^[a-z0-9][a-z0-9-]*$/;
+
+      let senderId = 'peer-' + Math.random().toString(36).slice(2, 8);
+      let sequence = 0;
+      let logicalTime = 0;
+      let applyingRemote = false;       // §5 echo-loop guard
+
+      const lastSeq = new Map();        // senderId  -> highest sequence seen
+      const version = new Map();        // targetId  -> {logicalTime, senderId}
+      const listeners = [];
+      const pending = new Map();        // targetId  -> throttle timer
+      let composing = false;            // IME: hold sends until compositionend
+      let inboundWindow = 0;
+      let inboundCount = 0;
+
+      let deck = null;                  // set by layer 3, used by set-page
+
+      function emit(msg) {
+        listeners.forEach(fn => {
+          try { fn(msg); } catch (err) { console.error('[sync] outbound listener failed', err); }
+        });
+      }
+
+      function send(targetId, action, payload) {
+        if (applyingRemote) return null;             // never echo what we just applied
+        logicalTime += 1;
+        version.set(targetId, { logicalTime: logicalTime, senderId: senderId });
+        const msg = {
+          protocol: PROTOCOL,
+          version: VERSION,
+          type: 'interaction',
+          lessonId: LESSON_ID,
+          contentVersion: CONTENT_VERSION,
+          senderId: senderId,
+          sequence: ++sequence,
+          logicalTime: logicalTime,
+          targetId: targetId,
+          action: action,
+          payload: payload
+        };
+        emit(msg);
+        return msg;
+      }
+
+      // Text is noisy, so coalesce keystrokes; a commit (blur/Enter) jumps the
+      // queue and goes out immediately (§4).
+      function sendValue(targetId, value, commit) {
+        if (applyingRemote) return;
+        if (composing && !commit) return;
+        const timer = pending.get(targetId);
+        if (timer) { clearTimeout(timer); pending.delete(targetId); }
+        if (commit) {
+          send(targetId, 'set-value', { value: value, committed: true });
+          return;
+        }
+        pending.set(targetId, setTimeout(function () {
+          pending.delete(targetId);
+          send(targetId, 'set-value', { value: value, committed: false });
+        }, SEND_THROTTLE));
+      }
+
+      /* ---- target resolution (§5 receive, step 3) ---- */
+
+      function sharedTarget(id) {
+        if (typeof id !== 'string' || !ID_RE.test(id)) return null;
+        const hits = document.querySelectorAll('[data-sync="shared"][data-sync-id="' + id + '"]');
+        return hits.length === 1 ? hits[0] : null;   // ambiguous ids are refused, not guessed
+      }
+
+      function kindOf(el) {
+        if (!el) return null;
+        if (el.matches('input, textarea')) return 'text';
+        if (el.classList.contains('choose-row')) return 'choice';
+        if (el.classList.contains('build-zone')) return 'order';
+        if (el.classList.contains('pager')) return 'page';
+        if (el.matches('.mission li')) return 'checked';
+        return null;
+      }
+
+      const ACTION_FOR = {
+        text: 'set-value',
+        choice: 'select-option',
+        order: 'set-order',
+        checked: 'set-checked',
+        page: 'set-page'
+      };
+
+      /* ---- conflict resolution (§6): last writer wins on (logicalTime, senderId) ---- */
+
+      function isNewer(targetId, lt, sid) {
+        const prev = version.get(targetId);
+        if (!prev) return true;
+        if (lt !== prev.logicalTime) return lt > prev.logicalTime;
+        return sid > prev.senderId;                  // tie -> string compare, both peers agree
+      }
+
+      /* ---- reading current state, for state-snapshot (§6) ---- */
+
+      function readState(el, kind) {
+        if (kind === 'text') return { value: el.value, committed: true };
+        if (kind === 'choice') {
+          const picked = el.querySelector('.opt.correct');
+          return picked ? { optionId: picked.dataset.optionId } : null;
+        }
+        if (kind === 'order') {
+          return { itemIds: Array.prototype.map.call(el.children, c => c.dataset.itemId).filter(Boolean) };
+        }
+        if (kind === 'checked') return { checked: el.classList.contains('checked') };
+        if (kind === 'page') {
+          return deck ? { pageId: deck.currentPageId(), pageIndex: deck.currentIndex() } : null;
+        }
+        return null;
+      }
+
+      /* ---- applying a remote change (§5, §8) ----
+         Every branch validates before it touches the DOM, assigns through
+         .value / .textContent / classList only, and re-runs the local grader
+         instead of trusting any UI state off the wire. */
+
+      function applyRemote(el, kind, action, payload) {
+        if (action !== ACTION_FOR[kind]) return false;
+        if (!payload || typeof payload !== 'object') return false;
+
+        if (kind === 'text') {
+          if (typeof payload.value !== 'string' || payload.value.length > MAX_TEXT) return false;
+          el.value = payload.value;
+          lesson.gradeInput(el, payload.committed === true);
+          return true;
+        }
+
+        if (kind === 'choice') {
+          const opt = Array.prototype.find.call(
+            el.querySelectorAll('.opt'), o => o.dataset.optionId === payload.optionId);
+          if (!opt) return false;                    // optionId must be declared in this group
+          lesson.applyChoice(el, opt);
+          return true;
+        }
+
+        if (kind === 'order') {
+          if (!Array.isArray(payload.itemIds)) return false;
+          return lesson.applyOrder(el, payload.itemIds);
+        }
+
+        if (kind === 'checked') {
+          if (typeof payload.checked !== 'boolean') return false;
+          el.classList.toggle('checked', payload.checked);
+          return true;
+        }
+
+        if (kind === 'page') {
+          if (typeof payload.pageId !== 'string' || !ID_RE.test(payload.pageId)) return false;
+          return deck ? deck.goToPageId(payload.pageId) : false;
+        }
+
+        return false;
+      }
+
+      function snapshot() {
+        const entries = [];
+        document.querySelectorAll('[data-sync="shared"][data-sync-id]').forEach(el => {
+          const id = el.dataset.syncId;
+          const kind = kindOf(el);
+          if (!kind || !ID_RE.test(id)) return;
+          const state = readState(el, kind);
+          if (!state) return;
+          const v = version.get(id) || { logicalTime: 0, senderId: senderId };
+          entries.push({ targetId: id, action: ACTION_FOR[kind], payload: state, version: v });
+        });
+        return entries;
+      }
+
+      function envelope(type, extra) {
+        logicalTime += 1;
+        const msg = {
+          protocol: PROTOCOL,
+          version: VERSION,
+          type: type,
+          lessonId: LESSON_ID,
+          contentVersion: CONTENT_VERSION,
+          senderId: senderId,
+          sequence: ++sequence,
+          logicalTime: logicalTime
+        };
+        return Object.assign(msg, extra || {});
+      }
+
+      /* ---- inbound (§5) ---- */
+
+      function receive(msg) {
+        if (!msg || msg.protocol !== PROTOCOL || msg.version !== VERSION) return false;
+        if (msg.lessonId !== LESSON_ID || msg.contentVersion !== CONTENT_VERSION) {
+          document.body.classList.add('sync-version-mismatch');   // §6: flag, never apply
+          return false;
+        }
+        if (typeof msg.senderId !== 'string' || msg.senderId === senderId) return false;
+
+        const now = Math.floor(Date.now() / 1000);
+        if (now !== inboundWindow) { inboundWindow = now; inboundCount = 0; }
+        if (++inboundCount > INBOUND_BUDGET) return false;         // §8 flood guard
+
+        if (typeof msg.sequence === 'number') {
+          const seen = lastSeq.get(msg.senderId);
+          if (seen !== undefined && msg.sequence <= seen) return false;  // dupe / reordered
+          lastSeq.set(msg.senderId, msg.sequence);
+        }
+        if (typeof msg.logicalTime === 'number') {
+          logicalTime = Math.max(logicalTime, msg.logicalTime);   // Lamport merge
+        }
+
+        if (msg.type === 'snapshot-request') {
+          emit(envelope('state-snapshot', { entries: snapshot() }));
+          return true;
+        }
+
+        if (msg.type === 'state-snapshot') {
+          if (!Array.isArray(msg.entries)) return false;
+          msg.entries.forEach(entry => applyEntry(entry, entry.version || {
+            logicalTime: msg.logicalTime, senderId: msg.senderId
+          }));
+          return true;
+        }
+
+        if (msg.type !== 'interaction') return false;
+        return applyEntry(msg, { logicalTime: msg.logicalTime, senderId: msg.senderId });
+      }
+
+      function applyEntry(entry, v) {
+        const el = sharedTarget(entry.targetId);
+        if (!el) return false;
+        const kind = kindOf(el);
+        if (!kind) return false;
+        if (!isNewer(entry.targetId, v.logicalTime, v.senderId)) return false;
+
+        applyingRemote = true;
+        let ok = false;
+        try {
+          ok = applyRemote(el, kind, entry.action, entry.payload);
+        } catch (err) {
+          console.error('[sync] failed to apply', entry, err);
+        } finally {
+          applyingRemote = false;
+        }
+        if (ok) version.set(entry.targetId, { logicalTime: v.logicalTime, senderId: v.senderId });
+        return ok;
+      }
+
+      window.PodoLessonSync = {
+        protocol: PROTOCOL,
+        version: VERSION,
+        lessonId: LESSON_ID,
+        contentVersion: CONTENT_VERSION,
+        configure: function (opts) {
+          if (opts && typeof opts.senderId === 'string') senderId = opts.senderId;
+          return this;
+        },
+        onOutbound: function (fn) { if (typeof fn === 'function') listeners.push(fn); return this; },
+        receive: receive,
+        requestSnapshot: function () { emit(envelope('snapshot-request')); },
+        snapshot: snapshot,
+        get senderId() { return senderId; },
+        isApplyingRemote: function () { return applyingRemote; }
+      };
+
+      /* ==========================================================
+         2. LESSON LAYER — the activities
+         ========================================================== */
+
       // ignore spaces + punctuation when grading, so "빵을 좋아해요?" == "빵을좋아해요"
-      const norm = s => (s || '').replace(/[\s ?？.。!！,、·~〜]/g, '');
+      const norm = s => (s || '').replace(/[\s ?？.。!！,、·~〜]/g, '');
+
+      const reorder = new WeakMap();   // build zone -> {pool, answer, chips}
+
+      const lesson = {
+        // Grading is derived UI (§7): always recomputed locally, never transmitted.
+        gradeInput: function (input, commit) {
+          if (input.classList.contains('correct')) return;
+          if (norm(input.value) === norm(input.dataset.answer) && input.value.trim()) {
+            input.classList.remove('wrong');
+            input.classList.add('correct');
+            input.readOnly = true;
+            const space = input.closest('.answer-space');
+            if (space) space.classList.add('correct');
+          } else if (commit && input.value.trim()) {
+            input.classList.add('wrong');
+            setTimeout(() => input.classList.remove('wrong'), 700);
+          }
+        },
+
+        applyChoice: function (row, opt) {
+          if (row.dataset.done) return;
+          const opts = Array.prototype.slice.call(row.querySelectorAll('.opt'));
+          if (opt.hasAttribute('data-correct')) {
+            row.dataset.done = '1';
+            opt.classList.add('correct');
+            opts.forEach(o => { if (o !== opt) o.classList.add('dim'); });
+          } else {
+            opt.classList.add('wrong');
+            setTimeout(() => opt.classList.remove('wrong'), 700);
+          }
+        },
+
+        // A partial order is a legitimate state — chips land one at a time — so a
+        // subset is accepted. Duplicates and undeclared ids reject the whole change (§8).
+        applyOrder: function (zone, itemIds) {
+          const block = reorder.get(zone);
+          if (!block) return false;
+          const known = new Map(block.chips.map(c => [c.dataset.itemId, c]));
+          const seen = new Set();
+          for (let i = 0; i < itemIds.length; i++) {
+            const id = itemIds[i];
+            if (typeof id !== 'string' || !known.has(id) || seen.has(id)) return false;
+            seen.add(id);
+          }
+          if (zone.classList.contains('correct')) return false;   // already settled
+          itemIds.forEach(id => zone.appendChild(known.get(id)));
+          block.chips.forEach(chip => {
+            if (!seen.has(chip.dataset.itemId)) block.pool.appendChild(chip);
+          });
+          lesson.settleOrder(zone);
+          return true;
+        },
+
+        settleOrder: function (zone) {
+          const block = reorder.get(zone);
+          if (!block) return;
+          zone.classList.remove('wrong');
+          if (block.pool.children.length) return;
+          const built = Array.prototype.map.call(zone.children, c => c.textContent.trim()).join(' ');
+          zone.classList.add(norm(built) === norm(block.answer) ? 'correct' : 'wrong');
+        },
+
+        orderOf: function (zone) {
+          return Array.prototype.map.call(zone.children, c => c.dataset.itemId).filter(Boolean);
+        }
+      };
 
       // tutor-facing answer caption, shown by the per-section reveal button
       function attachReveal(refEl, answer) {
@@ -869,20 +1346,19 @@
         source.removeAttribute('data-sync-id');
       }
 
+      const sharedId = el => (el.dataset.sync === 'shared' ? el.dataset.syncId : null);
+
       function wireInput(input) {
+        const id = sharedId(input);
         const grade = commit => {
-          if (input.classList.contains('correct')) return;
-          if (norm(input.value) === norm(input.dataset.answer) && input.value.trim()) {
-            input.classList.remove('wrong');
-            input.classList.add('correct');
-            input.readOnly = true;
-            const space = input.closest('.answer-space');
-            if (space) space.classList.add('correct');
-          } else if (commit && input.value.trim()) {
-            input.classList.add('wrong');
-            setTimeout(() => input.classList.remove('wrong'), 700);
-          }
+          lesson.gradeInput(input, commit);
+          if (id) sendValue(id, input.value, commit);
         };
+        input.addEventListener('compositionstart', () => { composing = true; });
+        input.addEventListener('compositionend', () => {
+          composing = false;
+          if (id) sendValue(id, input.value, false);   // flush what the IME committed
+        });
         input.addEventListener('input', () => grade(false));
         input.addEventListener('blur', () => grade(true));
         input.addEventListener('keydown', e => {
@@ -909,7 +1385,7 @@
 
       // ---- reorder blocks: tap chips into the sentence, tap to take back ----
       document.querySelectorAll('.task-block').forEach(block => {
-        const chips = Array.from(block.querySelectorAll(':scope > .choice'));
+        const chips = Array.prototype.slice.call(block.querySelectorAll(':scope > .choice'));
         if (!chips.length) return;
         const zone = block.querySelector('.answer-space');
         const answer = zone.textContent.trim();
@@ -918,16 +1394,16 @@
         const pool = document.createElement('div');
         pool.className = 'chip-pool';
         block.appendChild(pool);
+        reorder.set(zone, { pool: pool, answer: answer, chips: chips });
+        const id = sharedId(zone);
         chips.forEach(chip => {
           pool.appendChild(chip);
           chip.addEventListener('click', () => {
             if (zone.classList.contains('correct')) return;
             zone.classList.remove('wrong');
             (chip.parentElement === pool ? zone : pool).appendChild(chip);
-            if (!pool.children.length) {
-              const built = Array.from(zone.children).map(c => c.textContent.trim()).join(' ');
-              zone.classList.add(norm(built) === norm(answer) ? 'correct' : 'wrong');
-            }
+            lesson.settleOrder(zone);
+            if (id) send(id, 'set-order', { itemIds: lesson.orderOf(zone) });
           });
         });
         attachReveal(zone, answer);
@@ -955,27 +1431,24 @@
           ta.className = 'free-input';
           ta.rows = 2;
           ta.spellcheck = false;
+          ta.maxLength = MAX_TEXT;
           transferSyncMetadata(space, ta);
           space.appendChild(ta);
+          wireInput(ta);
         }
       });
 
       // ---- multiple choice: tap 을/를 etc. ----
       document.querySelectorAll('.choose-row').forEach(row => {
-        const opts = Array.from(row.querySelectorAll('.opt'));
+        const opts = Array.prototype.slice.call(row.querySelectorAll('.opt'));
         if (!opts.length) return;
+        const id = sharedId(row);
         opts.forEach(opt => {
           opt.setAttribute('role', 'button');
           opt.addEventListener('click', () => {
             if (row.dataset.done) return;
-            if (opt.hasAttribute('data-correct')) {
-              row.dataset.done = '1';
-              opt.classList.add('correct');
-              opts.forEach(o => { if (o !== opt) o.classList.add('dim'); });
-            } else {
-              opt.classList.add('wrong');
-              setTimeout(() => opt.classList.remove('wrong'), 700);
-            }
+            lesson.applyChoice(row, opt);
+            if (id) send(id, 'select-option', { optionId: opt.dataset.optionId });
           });
         });
         const right = row.querySelector('.opt[data-correct]');
@@ -983,14 +1456,21 @@
       });
 
       // ---- mission checklists ----
+      // These stay local by rule (§7): the closing checklist is each learner's
+      // own self-assessment. The set-checked path above still exists for any
+      // deck that marks a shared 공동 미션.
       document.querySelectorAll('.mission li').forEach(li => {
+        const id = sharedId(li);
         li.addEventListener('click', e => {
           if (e.target.closest('.hint')) return;
           li.classList.toggle('checked');
+          if (id) send(id, 'set-checked', { checked: li.classList.contains('checked') });
         });
       });
 
       // ---- per-section answer reveal button ----
+      // Local: the answer key is tutor-facing, and pushing it would hand the
+      // learner every answer on the page.
       document.querySelectorAll('.section').forEach(section => {
         if (!section.querySelector('.answer-reveal')) return;
         const btn = document.createElement('button');
@@ -1004,6 +1484,169 @@
         });
         section.appendChild(btn);
       });
+
+      /* ==========================================================
+         3. DECK LAYER — paging
+         Page turns are shared (§4 set-page): in a 1:1 lesson the two
+         windows have to be on the same page or nothing else lines up.
+         View mode and answer reveal stay local.
+         ========================================================== */
+      (function () {
+        const phone = document.querySelector('.phone');
+        const bar = document.querySelector('.pager');
+        if (!phone || !bar) return;
+
+        const pages = Array.prototype.slice.call(phone.children);
+        const syncId = bar.dataset.sync === 'shared' ? bar.dataset.syncId : null;
+
+        // Acts come from the transition pages that already exist; they only
+        // name where you are, progress is counted across the whole deck.
+        const acts = [];
+        let cur = null;
+        pages.forEach((p, i) => {
+          const isDiv = p.classList.contains('transition-page');
+          if (!cur || isDiv) {
+            const k = p.querySelector('.transition-kicker');
+            cur = { name: k ? k.textContent.trim() : '레슨', from: i, to: i };
+            acts.push(cur);
+          }
+          cur.to = i;
+        });
+
+        let at = 0;
+        const prevBtn = bar.querySelector('.pg-prev');
+        const nextBtn = bar.querySelector('.pg-next');
+        const actEl = bar.querySelector('.pg-act');
+        const nEl = bar.querySelector('.pg-n');
+        const teachBtn = bar.querySelector('.pg-teach');
+        const exitBtn = bar.querySelector('.pg-exit');
+
+        const paged = () => phone.classList.contains('paged');
+
+        function paint() {
+          prevBtn.disabled = at <= 0;
+          nextBtn.disabled = at >= pages.length - 1;
+          let a = 0;
+          acts.forEach((x, k) => { if (at >= x.from) a = k; });
+          actEl.textContent = acts.length ? acts[a].name : '레슨';
+          nEl.textContent = (at + 1) + ' / ' + pages.length;
+          if (teachBtn) {
+            const page = pages[at];
+            const has = !!page.querySelector('.reveal-btn');
+            teachBtn.disabled = !has;
+            teachBtn.classList.toggle('on', has && page.classList.contains('show-answers'));
+          }
+        }
+
+        // Layout is flushed before scrolling: in paged mode the page has only
+        // just left display:none, so measuring earlier reads stale geometry.
+        function show(i) {
+          at = Math.max(0, Math.min(pages.length - 1, i));
+          if (paged()) {
+            pages.forEach((p, k) => p.classList.toggle('pg-on', k === at));
+            paint();
+            void pages[at].offsetHeight;
+            window.scrollTo(0, 0);
+          } else {
+            pages[at].scrollIntoView({ block: 'start' });
+            paint();
+          }
+        }
+
+        function goTo(i) {
+          if (i === at) return;
+          show(i);
+          if (syncId) send(syncId, 'set-page', { pageId: pages[at].dataset.pageId, pageIndex: at });
+        }
+
+        prevBtn.addEventListener('click', () => goTo(at - 1));
+        nextBtn.addEventListener('click', () => goTo(at + 1));
+
+        document.addEventListener('keydown', e => {
+          if (e.target.matches && e.target.matches('input, textarea')) return;
+          if (e.key === 'ArrowRight') goTo(at + 1);
+          if (e.key === 'ArrowLeft') goTo(at - 1);
+        });
+
+        // ---- which page is on screen, while scrolling ----
+        // Switching view mode scrolls the deck itself, and that scroll must not
+        // read back as the reader turning a page: it settles a hair short of the
+        // page top, reports the page before, and would push that to the peer.
+        // The sheet sets scroll-behavior: smooth, so the animation outlives any
+        // fixed window — wait for the scrolling to actually stop instead.
+        let settling = false;
+        let settleTimer = null;
+
+        function settle() {
+          settling = true;
+          clearTimeout(settleTimer);
+          settleTimer = setTimeout(function () { settling = false; }, 180);
+        }
+
+        function onScroll() {
+          if (paged()) return;
+          if (settling) { settle(); return; }      // still our own scroll — keep waiting
+          const top = window.scrollY + 80;
+          let best = 0;
+          pages.forEach((p, k) => { if (p.offsetTop <= top) best = k; });
+          if (best === at) return;
+          at = best;
+          paint();
+          // Scrolling is a page turn too — otherwise the peers silently drift
+          // apart the moment someone switches to the scrolling view.
+          if (syncId) send(syncId, 'set-page', { pageId: pages[at].dataset.pageId, pageIndex: at });
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onScroll);
+
+        // ---- view mode: local (§7, a personal reading preference) ----
+        function setPaged(on) {
+          if (!on) {
+            const keep = pages[at];
+            phone.classList.remove('paged');
+            document.body.classList.remove('paged');
+            pages.forEach(p => p.classList.remove('pg-on'));
+            settle();                            // ignore the scroll we are about to cause
+            if (keep) keep.scrollIntoView({ block: 'start' });
+            paint();
+            return;
+          }
+          // Measure BEFORE .paged lands — once the siblings are display:none
+          // every offsetTop reads 0 and "last page above the fold" is always last.
+          const top = window.scrollY + 80;
+          let best = 0;
+          pages.forEach((p, k) => { if (p.offsetTop <= top) best = k; });
+          phone.classList.add('paged');
+          document.body.classList.add('paged');
+          show(best);
+        }
+
+        exitBtn.addEventListener('click', () => setPaged(!paged()));
+
+        // T reveals the current page's answer key — tutor-facing, so local.
+        if (teachBtn) {
+          teachBtn.addEventListener('click', () => {
+            const btn = pages[at].querySelector('.reveal-btn');
+            if (btn) { btn.click(); paint(); }
+          });
+        }
+
+        deck = {
+          currentPageId: () => pages[at].dataset.pageId || null,
+          currentIndex: () => at,
+          goToPageId: function (id) {
+            const i = pages.findIndex(p => p.dataset.pageId === id);
+            if (i < 0) return false;
+            show(i);
+            return true;
+          }
+        };
+
+        // Page view is the default. Set it explicitly rather than trusting the
+        // markup: Chrome restores state across reloads, so a tutor who switched
+        // to scrolling would come back to scrolling on refresh.
+        setPaged(true);
+      })();
     })();
   </script>
 </body>
