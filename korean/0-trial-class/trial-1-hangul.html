@@ -270,13 +270,13 @@
       <span class="section-kicker">さがす</span>
       <h2 class="section-title">모음 찾기 <span class="title-ja">(母音さがし)</span></h2>
       <p class="section-subtitle"><span class="ko">이번엔 색이 없어요. ㅏ가 들어간 블록을 모두 눌러 보세요.</span><span class="ja">今度は色なし。「ㅏ」が入っているブロックを全部タップしてください。</span></p>
-      <div class="tap-grid" data-sync="shared" data-sync-id="tiles-find-the-vowel">
-        <button class="tap-tile" data-ok="1" data-option-id="나">나</button>
-        <button class="tap-tile" data-option-id="머">머</button>
-        <button class="tap-tile" data-ok="1" data-option-id="마">마</button>
-        <button class="tap-tile" data-option-id="노">노</button>
-        <button class="tap-tile" data-option-id="미">미</button>
-        <button class="tap-tile" data-ok="1" data-option-id="나-2">나</button>
+      <div class="tap-grid" data-sync-id="tiles-find-the-vowel" data-sync-kind="selection" data-sync-state="right wrong">
+        <button class="tap-tile" data-ok="1" data-sync-option="나">나</button>
+        <button class="tap-tile" data-sync-option="머">머</button>
+        <button class="tap-tile" data-ok="1" data-sync-option="마">마</button>
+        <button class="tap-tile" data-sync-option="노">노</button>
+        <button class="tap-tile" data-sync-option="미">미</button>
+        <button class="tap-tile" data-ok="1" data-sync-option="나-2">나</button>
       </div>
     </div>
 
@@ -285,10 +285,10 @@
       <h2 class="section-title">듣고 고르기 <span class="title-ja">(聞いて選ぼう)</span></h2>
       <p class="section-subtitle"><span class="ko">둘 중에 하나만 읽을게요. 잘 듣고 맞는 쪽을 눌러 보세요.</span><span class="ja">2つのうち1つだけ読みます。よく聞いて、正しいほうをタップしてください。</span></p>
       <div class="tutor-note">표시된 쪽을 하나씩 읽어 주세요.</div>
-      <div class="tap-grid two" data-sync="shared" data-sync-id="tiles-listen-and-choose">
-        <button class="tap-tile" data-ok="1" data-option-id="노">노</button><button class="tap-tile" data-option-id="누">누</button>
-        <button class="tap-tile" data-option-id="머">머</button><button class="tap-tile" data-ok="1" data-option-id="모">모</button>
-        <button class="tap-tile" data-ok="1" data-option-id="느">느</button><button class="tap-tile" data-option-id="니">니</button>
+      <div class="tap-grid two" data-sync-id="tiles-listen-and-choose" data-sync-kind="selection" data-sync-state="right wrong">
+        <button class="tap-tile" data-ok="1" data-sync-option="노">노</button><button class="tap-tile" data-sync-option="누">누</button>
+        <button class="tap-tile" data-sync-option="머">머</button><button class="tap-tile" data-ok="1" data-sync-option="모">모</button>
+        <button class="tap-tile" data-ok="1" data-sync-option="느">느</button><button class="tap-tile" data-sync-option="니">니</button>
       </div>
     </div>
 
@@ -332,9 +332,9 @@
       <h2 class="section-title">단어 찾기 <span class="title-ja">(聞いてさがそう)</span></h2>
       <p class="section-subtitle"><span class="ko">제가 말하는 단어를 눌러 보세요.</span><span class="ja">私が言う単語をタップしてください。</span></p>
       <div class="tutor-note">표시된 단어를 순서대로 읽어 주세요.</div>
-      <div class="tap-grid words" data-sync="shared" data-sync-id="tiles-find-the-word">
-        <button class="tap-tile" data-option-id="너무">너무</button><button class="tap-tile" data-ok="1" data-option-id="나무">나무</button><button class="tap-tile" data-option-id="누나">누나</button>
-        <button class="tap-tile" data-ok="1" data-option-id="어머니">어머니</button><button class="tap-tile" data-option-id="아머니">아머니</button><button class="tap-tile" data-option-id="오모니">오모니</button>
+      <div class="tap-grid words" data-sync-id="tiles-find-the-word" data-sync-kind="selection" data-sync-state="right wrong">
+        <button class="tap-tile" data-sync-option="너무">너무</button><button class="tap-tile" data-ok="1" data-sync-option="나무">나무</button><button class="tap-tile" data-sync-option="누나">누나</button>
+        <button class="tap-tile" data-ok="1" data-sync-option="어머니">어머니</button><button class="tap-tile" data-sync-option="아머니">아머니</button><button class="tap-tile" data-sync-option="오모니">오모니</button>
       </div>
     </div>
 
@@ -342,7 +342,7 @@
       <span class="section-kicker">つくる</span>
       <h2 class="section-title">블록 만들기 <span class="title-ja">(ブロックを作ろう)</span></h2>
       <p class="section-subtitle"><span class="ko">밑에서 자음과 모음을 눌러서, 글자를 만들어 보세요.</span><span class="ja">下の子音と母音をタップして、文字を組み立ててみましょう。</span></p>
-      <div class="builder" data-sync="shared" data-sync-id="builder-build-the-block" data-answers="노,마,미">
+      <div class="builder" data-sync-id="builder-build-the-block" data-sync-kind="builder" data-answers="노,마,미">
         <div class="build-row"><span class="build-task"><span class="ask">ㄴ ＋ ㅗ</span><span class="build-slot"><span class="zone c"></span><span class="zone v"></span><span class="glyph"></span><span class="ok">✓</span></span></span><span class="build-task"><span class="ask">ㅁ ＋ ㅏ</span><span class="build-slot"><span class="zone c"></span><span class="zone v"></span><span class="glyph"></span><span class="ok">✓</span></span></span><span class="build-task"><span class="ask">ㅁ ＋ ㅣ</span><span class="build-slot"><span class="zone c"></span><span class="zone v"></span><span class="glyph"></span><span class="ok">✓</span></span></span></div>
         <div class="keys-label">子音</div>
         <div class="keys c3">
@@ -367,7 +367,7 @@
       <h2 class="section-title">듣고 만들기 <span class="title-ja">(聞いて組み立てよう)</span></h2>
       <p class="section-subtitle"><span class="ko">이번엔 힌트가 없어요. 제가 말하는 글자를 만들어 보세요.</span><span class="ja">今度はヒントなし。私が言う文字を組み立ててみましょう。</span></p>
       <div class="tutor-note">연한 글자를 순서대로 읽어 주세요.</div>
-      <div class="builder" data-sync="shared" data-sync-id="builder-listen-and-build" data-answers="무,너,마">
+      <div class="builder" data-sync-id="builder-listen-and-build" data-sync-kind="builder" data-answers="무,너,마">
         <div class="build-row"><span class="build-task"><span class="ask">①</span><span class="build-slot"><span class="zone c"></span><span class="zone v"></span><span class="glyph"></span><span class="ok">✓</span></span></span><span class="build-task"><span class="ask">②</span><span class="build-slot"><span class="zone c"></span><span class="zone v"></span><span class="glyph"></span><span class="ok">✓</span></span></span><span class="build-task"><span class="ask">③</span><span class="build-slot"><span class="zone c"></span><span class="zone v"></span><span class="glyph"></span><span class="ok">✓</span></span></span></div>
         <div class="keys-label">子音</div>
         <div class="keys c3">
@@ -431,251 +431,40 @@
            가로 모음이면 위아래로 자리를 바꿔 보여 준다.
        ================================================================ -->
   <!-- ================================================================
-       P2P SYNC · podo.lesson-sync v3
-       See 2-core-patterns/interactive-sample/p2p-interaction-protocol-ko.html.
+       SYNC · 레몬보드의 data-sync 계약에 맞춘다
+       https://github.com/re-speak/lemonboard  (apps/web/src/views/meet/lib/html-sync)
 
-       Everything the two people do together is shared: which page they are
-       on, which tiles are tapped, and what is built on the keypad. Teaching
-       mode is the one deliberate exception — the tutor toggles it and the
-       learner must not see it (§7).
+       전송(스냅샷·늦은 입장·에코 차단·수렴)은 전부 보드가 한다. 이 문서는
+       "무엇이 공유되는지"만 선언한다.
 
-       Each activity registers its own kind below, so this block stays
-       generic: it owns the envelope, validation, ordering and conflicts,
-       and never knows what a "tile" is.
+         - .tap-grid  → data-sync-kind="selection"  (기본 제공)
+                        고른 집합만 오간다. 정/오답은 각자 data-ok 로 계산한다.
+         - .builder   → lessonSync.register("builder")
+         - .pager     → lessonSync.register("page")
+                        둘 다 상태가 클로저에 있어 DOM 만으로는 읽을 수 없다.
 
-       Transport is the host app's job:
-         PodoLessonSync.configure({ senderId: 'peer-a' });
-         PodoLessonSync.onOutbound(m => channel.send(JSON.stringify(m)));
-         channel.onmessage = e => PodoLessonSync.receive(JSON.parse(e.data));
-         PodoLessonSync.requestSnapshot();
+       teaching 모드는 공유하지 않는다 — 튜터가 답을 여는 스위치라서,
+       보내면 학습자에게 정답을 그대로 넘기는 셈이 된다.
+
+       레몬보드 밖(로컬에서 파일을 직접 열 때)에서는 lessonSync 가 없으므로
+       아무것도 하지 않는 스텁으로 대체해, 덱 자체는 그대로 동작하게 둔다.
        ================================================================ -->
   <script>
-  (function () {
-    var PROTOCOL = "podo.lesson-sync";
-    var VERSION = 3;
-    var INBOUND_BUDGET = 120;                  // §8 messages per second before we drop
-
-    function metaOf(n) {
-      var el = document.querySelector('meta[name="' + n + '"]');
-      return el ? el.content : "";
-    }
-    var LESSON_ID = metaOf("podo:lesson-id");
-    var CONTENT_VERSION = metaOf("podo:content-version");
-
-    // Ids are kebab-case by rule (§1.2). Enforcing the shape doubles as the
-    // selector-injection guard §8 asks for — nothing else reaches querySelector.
-    var ID_RE = /^[a-z0-9][a-z0-9-]*$/;
-
-    var senderId = "peer-" + Math.random().toString(36).slice(2, 8);
-    var sequence = 0;
-    var logicalTime = 0;
-    var applyingRemote = false;                // §5 echo-loop guard
-    var lastSeq = {};                          // senderId -> highest sequence seen
-    var version = {};                          // targetId -> {logicalTime, senderId}
-    var listeners = [];
-    var kinds = [];                            // registered activity types
-    var inboundWindow = 0;
-    var inboundCount = 0;
-
-    function emit(msg) {
-      listeners.forEach(function (fn) {
-        try { fn(msg); } catch (err) { console.error("[sync] outbound listener failed", err); }
-      });
-    }
-
-    function envelope(type, extra) {
-      logicalTime += 1;
-      var msg = {
-        protocol: PROTOCOL,
-        version: VERSION,
-        type: type,
-        lessonId: LESSON_ID,
-        contentVersion: CONTENT_VERSION,
-        senderId: senderId,
-        sequence: ++sequence,
-        logicalTime: logicalTime
-      };
-      if (extra) Object.keys(extra).forEach(function (k) { msg[k] = extra[k]; });
-      return msg;
-    }
-
-    function send(targetId, action, payload) {
-      if (applyingRemote) return null;         // never echo what we just applied
-      var msg = envelope("interaction", { targetId: targetId, action: action, payload: payload });
-      version[targetId] = { logicalTime: msg.logicalTime, senderId: senderId };
-      emit(msg);
-      return msg;
-    }
-
-    // Send whatever this element's registered kind currently reads as.
-    function push(el) {
-      if (applyingRemote || !el) return null;
-      var id = el.getAttribute("data-sync-id");
-      var k = kindOf(el);
-      if (!k || el.getAttribute("data-sync") !== "shared" || !id) return null;
-      var state = k.read(el);
-      return state ? send(id, k.action, state) : null;
-    }
-
-    function sharedTarget(id) {
-      if (typeof id !== "string" || !ID_RE.test(id)) return null;
-      var hits = document.querySelectorAll('[data-sync="shared"][data-sync-id="' + id + '"]');
-      return hits.length === 1 ? hits[0] : null;   // ambiguous ids are refused, not guessed
-    }
-
-    function kindOf(el) {
-      for (var i = 0; i < kinds.length; i++) {
-        if (el && kinds[i].match(el)) return kinds[i];
-      }
-      return null;
-    }
-
-    // §6 last writer wins on (logicalTime, senderId)
-    function isNewer(targetId, lt, sid) {
-      var prev = version[targetId];
-      if (!prev) return true;
-      if (lt !== prev.logicalTime) return lt > prev.logicalTime;
-      return sid > prev.senderId;              // tie -> string compare, both peers agree
-    }
-
-    function snapshot() {
-      var entries = [];
-      document.querySelectorAll('[data-sync="shared"][data-sync-id]').forEach(function (el) {
-        var id = el.getAttribute("data-sync-id");
-        var k = kindOf(el);
-        if (!k || !ID_RE.test(id)) return;
-        var state = k.read(el);
-        if (!state) return;
-        entries.push({
-          targetId: id,
-          action: k.action,
-          payload: state,
-          version: version[id] || { logicalTime: 0, senderId: senderId }
-        });
-      });
-      return entries;
-    }
-
-    function applyEntry(entry, v) {
-      var el = sharedTarget(entry.targetId);
-      if (!el) return false;
-      var k = kindOf(el);
-      if (!k || entry.action !== k.action) return false;
-      if (!entry.payload || typeof entry.payload !== "object") return false;
-      if (!isNewer(entry.targetId, v.logicalTime, v.senderId)) return false;
-
-      applyingRemote = true;
-      var ok = false;
-      try {
-        ok = k.apply(el, entry.payload) === true;
-      } catch (err) {
-        console.error("[sync] failed to apply", entry, err);
-      } finally {
-        applyingRemote = false;
-      }
-      if (ok) version[entry.targetId] = { logicalTime: v.logicalTime, senderId: v.senderId };
-      return ok;
-    }
-
-    function receive(msg) {
-      if (!msg || msg.protocol !== PROTOCOL || msg.version !== VERSION) return false;
-      if (msg.lessonId !== LESSON_ID || msg.contentVersion !== CONTENT_VERSION) {
-        document.body.classList.add("sync-version-mismatch");   // §6: flag, never apply
-        return false;
-      }
-      if (typeof msg.senderId !== "string" || msg.senderId === senderId) return false;
-
-      var now = Math.floor(Date.now() / 1000);
-      if (now !== inboundWindow) { inboundWindow = now; inboundCount = 0; }
-      if (++inboundCount > INBOUND_BUDGET) return false;        // §8 flood guard
-
-      if (typeof msg.sequence === "number") {
-        var seen = lastSeq[msg.senderId];
-        if (seen !== undefined && msg.sequence <= seen) return false;   // dupe / reordered
-        lastSeq[msg.senderId] = msg.sequence;
-      }
-      if (typeof msg.logicalTime === "number") {
-        logicalTime = Math.max(logicalTime, msg.logicalTime);  // Lamport merge
-      }
-
-      if (msg.type === "snapshot-request") {
-        emit(envelope("state-snapshot", { entries: snapshot() }));
-        return true;
-      }
-      if (msg.type === "state-snapshot") {
-        if (!Array.isArray(msg.entries)) return false;
-        msg.entries.forEach(function (entry) {
-          applyEntry(entry, entry.version || { logicalTime: msg.logicalTime, senderId: msg.senderId });
-        });
-        return true;
-      }
-      if (msg.type !== "interaction") return false;
-      return applyEntry(msg, { logicalTime: msg.logicalTime, senderId: msg.senderId });
-    }
-
-    window.PodoLessonSync = {
-      protocol: PROTOCOL,
-      version: VERSION,
-      lessonId: LESSON_ID,
-      contentVersion: CONTENT_VERSION,
-      // An activity type declares how to recognise, read and apply itself.
-      registerKind: function (spec) { kinds.push(spec); return this; },
-      configure: function (opts) {
-        if (opts && typeof opts.senderId === "string") senderId = opts.senderId;
-        return this;
-      },
-      onOutbound: function (fn) { if (typeof fn === "function") listeners.push(fn); return this; },
-      receive: receive,
-      requestSnapshot: function () { emit(envelope("snapshot-request")); },
-      snapshot: snapshot,
-      send: send,
-      push: push,
-      isApplyingRemote: function () { return applyingRemote; },
-      get senderId() { return senderId; }
+    window.lessonSync = window.lessonSync || {
+      kinds: {},
+      register: function (name, handlers) { this.kinds[name] = handlers; return this; },
+      push: function () {}
     };
-  })();
   </script>
 
   <script>
   (function () {
-    var sync = window.PodoLessonSync;
+    var sync = window.lessonSync;
 
     /* ---------- (1) tap to choose ----------
-       Shared as a set of tapped tiles (§4 set-selection). right/wrong is
-       derived from data-ok, so each side computes it locally (§1.4) and
-       only the choice itself travels. */
-    sync.registerKind({
-      action: "set-selection",
-      match: function (el) { return el.classList.contains("tap-grid"); },
-      read: function (grid) {
-        return {
-          optionIds: [].slice.call(grid.querySelectorAll(".tap-tile.right, .tap-tile.wrong"))
-                       .map(function (t) { return t.getAttribute("data-option-id"); })
-                       .filter(Boolean)
-        };
-      },
-      apply: function (grid, payload) {
-        if (!Array.isArray(payload.optionIds)) return false;
-        var tiles = [].slice.call(grid.querySelectorAll(".tap-tile"));
-        var byId = {};
-        tiles.forEach(function (t) { byId[t.getAttribute("data-option-id")] = t; });
-        var seen = {};
-        for (var i = 0; i < payload.optionIds.length; i++) {
-          var id = payload.optionIds[i];
-          // undeclared or repeated ids reject the whole change (§8)
-          if (typeof id !== "string" || !byId[id] || seen[id]) return false;
-          seen[id] = 1;
-        }
-        tiles.forEach(function (t) {
-          t.classList.remove("right", "wrong");
-          if (seen[t.getAttribute("data-option-id")]) {
-            t.classList.add(t.hasAttribute("data-ok") ? "right" : "wrong");
-          }
-        });
-        return true;
-      }
-    });
-
+       data-sync-kind="selection" 이라 등록할 것이 없다. 보드는 활성 클래스를
+       가진 [data-sync-option] 의 집합만 실어 나르고, 아래 토글이 양쪽에서
+       똑같이 돌아 right/wrong 을 각자 만든다 — 정답이 전파되지 않는다. */
     document.querySelectorAll(".tap-grid").forEach(function (grid) {
       grid.querySelectorAll(".tap-tile").forEach(function (t) {
         t.addEventListener("click", function () {
@@ -684,7 +473,6 @@
           } else {
             t.classList.add(t.hasAttribute("data-ok") ? "right" : "wrong");
           }
-          sync.push(grid);
         });
       });
     });
@@ -698,14 +486,13 @@
       return String.fromCharCode(0xac00 + (CHO.indexOf(c) * 21 + JUNG.indexOf(v)) * 28);
     }
 
-    /* Shared as the builder's meaning (§4 set-build): which target syllables
-       are finished, which one is being worked on, and the half-made pick.
-       A slot is named by the syllable it asks for, never by its position. */
-    sync.registerKind({
-      action: "set-build",
-      match: function (el) { return el.classList.contains("builder"); },
+    /* 조립기의 상태는 DOM 이 아니라 클로저에 있다(고른 자음/모음, 작업 중인 칸).
+       그래서 보드의 기본 kind 로는 읽을 수 없고, 이 문서가 read/apply 를 들고 온다.
+       공유되는 것은 "끝낸 글자 / 지금 칸 / 반쯤 고른 것" 이라는 의미이고,
+       칸은 위치가 아니라 그 칸이 요구하는 글자로 지칭한다. */
+    sync.register("builder", {
       read: function (b) { return b.__sync ? b.__sync.read() : null; },
-      apply: function (b, payload) { return b.__sync ? b.__sync.apply(payload) : false; }
+      apply: function (b, state) { if (b.__sync) b.__sync.apply(state); }
     });
 
     document.querySelectorAll(".builder").forEach(function (b) {
@@ -1074,7 +861,7 @@
        scrolling stays the ground truth (printing, Cmd+F, scanning
        ahead all rely on it), and this is the presentation layer.
        ================================================================ -->
-  <nav class="pager" data-sync="shared" data-sync-id="deck-page">
+  <nav class="pager" data-sync-id="deck-page" data-sync-kind="page">
     <button class="pg-btn pg-prev" type="button" aria-label="이전 페이지">←</button>
     <div class="pg-mid">
       <span class="pg-label"><b class="pg-act">—</b><span class="pg-n">—</span></span>
@@ -1087,7 +874,7 @@
   <!-- ================================================================
        PAGER · back / next / progress, in both modes.
        Page view is the default; scrolling stays one tap away.
-       Page turns are shared (§4 set-page); view mode and teaching mode
+       Page turns are shared (kind "page"); view mode and teaching mode
        stay local.
        ================================================================ -->
   <script>
@@ -1095,7 +882,7 @@
     var phone = document.querySelector(".phone");
     var bar   = document.querySelector(".pager");
     if (!phone || !bar) return;
-    var sync = window.PodoLessonSync;
+    var sync = window.lessonSync;
 
     var pages = [].slice.call(phone.children);
 
@@ -1155,25 +942,27 @@
       if (e.key === "ArrowLeft") goTo(at - 1);
     });
 
-    /* ---- page turns are shared (§4 set-page) ---- */
-    sync.registerKind({
-      action: "set-page",
-      match: function (el) { return el.classList.contains("pager"); },
+    /* ---- 페이지 넘김도 이 문서가 정의한다 ----
+       보드에는 "페이지" 개념이 없다. 넘긴 결과(어느 페이지인지)를 공유할 뿐,
+       버튼 클릭을 재생하지는 않는다 — 그래야 늦게 들어오거나 새로고침한 쪽도
+       한 번에 같은 페이지로 따라온다. 칸은 순서가 아니라 data-page-id 로 지칭해,
+       페이지를 추가해도 이전에 공유된 위치가 어긋나지 않는다. */
+    sync.register("page", {
       read: function () {
-        return { pageId: pages[at].getAttribute("data-page-id"), pageIndex: at };
+        return { pageId: pages[at].getAttribute("data-page-id") };
       },
-      apply: function (el, payload) {
-        if (typeof payload.pageId !== "string") return false;
+      apply: function (el, state) {
+        if (!state || typeof state.pageId !== "string") return;
         for (var i = 0; i < pages.length; i++) {
-          if (pages[i].getAttribute("data-page-id") === payload.pageId) { show(i); return true; }
+          if (pages[i].getAttribute("data-page-id") === state.pageId) { show(i); return; }
         }
-        return false;                              // a page this deck does not have
+        // 이 덱에 없는 페이지면 그대로 둔다
       }
     });
 
     /* ---- teaching mode is the one thing that stays on this screen ----
        The tutor flips it to reveal answers; sending it would hand the
-       learner the whole key. Local by rule (§7). */
+       learner the whole key. 공유하지 않는 유일한 상태다. */
     if (teachBtn) {
       teachBtn.addEventListener("click", function () {
         teachBtn.classList.toggle("on", document.body.classList.toggle("teaching"));
