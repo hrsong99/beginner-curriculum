@@ -1151,3 +1151,21 @@ strong {
 /* note boxes always stack vertically — the lesson lives in a phone-width
    column everywhere, so a 2-up grid only ever looks cramped. one idea
    reads top-to-bottom, roomy and instantly scannable. */
+
+/* ---------- shared spotlight (interactive/spotlight.js) ----------
+   The tutor's "look here" pointer, mirrored to the learner. A ring that
+   reads on every page background — white cards, lime brand pages, dark
+   transition pages. Only the visual lives here; the sync is in the script. */
+.is-spot {
+  border-radius: 10px;
+  outline: 3px solid #ff2d55;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px rgba(255, 45, 85, .20);
+  animation: spotPulse 1.15s ease-in-out infinite;
+}
+@keyframes spotPulse {
+  0%, 100% { box-shadow: 0 0 0 6px rgba(255, 45, 85, .20); }
+  50%      { box-shadow: 0 0 0 11px rgba(255, 45, 85, .08); }
+}
+[data-spot] { cursor: pointer; }
+@media (prefers-reduced-motion: reduce) { .is-spot { animation: none; } }
