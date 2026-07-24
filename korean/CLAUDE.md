@@ -1,6 +1,6 @@
 # Working in `korean/`
 
-**Read [`ux-philosophy.md`](./ux-philosophy.md) before touching anything in this folder — every
+**Read [`ux-philosophy.md`](./shared/ux-philosophy.md) before touching anything in this folder — every
 time, including small edits.** It is the contract for every lesson page: one activity per page,
 instant clarity, minimal everything, Korean-first titles, one green tutor-script box, one boxed
 component that *fills* the page, receptive → productive.
@@ -10,8 +10,8 @@ you are about to make conflicts with it, say so and ask — don't quietly deviat
 
 ## Also true of this folder
 
-- **Shared design system:** `lesson-card.css` ("Podo Bold"). Per-track additions go in that
-  track's own stylesheet, loaded after it (e.g. `0-trial-class/trial.css`). Reuse the existing
+- **Shared design system:** `shared/lesson-card.css` ("Podo Bold"). Per-track additions go in that
+  track's own stylesheet, loaded after it (e.g. `trial/trial.css`). Reuse the existing
   component vocabulary before inventing a new one — consistency over novelty.
 - **Audience is Japanese speakers learning Korean.** All support text is Japanese; no English.
   Sound anchors are kana, not English words.
@@ -44,8 +44,17 @@ Two rules that catch most mistakes: an element is shared **only** if it has a `d
 `correct`/`wrong` locally. Note that this does *not* hide the answer key: both people load the
 same document, so anything in the markup is already on the learner's screen.
 
-## Tracks
+## Layout
 
-`0-trial-class` (sales trial decks) · `1-hangul` · `2-core-patterns` · `3-contextual-korean` ·
-`4-freetalking` · `?-pronunciation-class` · `textbooks-references` (source scans) ·
-`interactive` (sync contract, reference lesson, packager)
+- **`tracks/`** — the learner-facing curriculum, in learning order: `1-hangul` · `2-core-patterns` ·
+  `3-contextual-korean` · `4-freetalking` (pronunciation joins as `5-pronunciation` once it has content).
+  Each track holds `table-of-contents.md`, its lesson HTML (`sample-lesson.html` is the canonical
+  sample), and an `_archive/` for retired drafts and experiments.
+- **`trial/`** — sales trial decks (`trial-1..4`, `onboarding-screens.html`) plus `trial.css`,
+  shared `assets/` (art, mouth, characters), and `_experiments/` for variations and capture files.
+  Not a learning track.
+- **`shared/`** — `lesson-card.css` (the design system) and `ux-philosophy.md` (the contract).
+- **`interactive/`** — the `data-sync` contract, reference lesson, and lemonboard packager.
+- **`references/`** — source textbook scans (internal reference only).
+- `index.html` / `viewer.html` at the root are the navigation; `CLAUDE.md` / `AGENTS.md` stay at
+  the root so they auto-load.
