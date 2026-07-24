@@ -2450,6 +2450,22 @@ body { padding-bottom: 84px; }         /* the bar must not cover the last line *
 .phone.paged > .pg-on { min-height: calc(100vh - 118px); }
 @supports (height: 100dvh) { .phone.paged > .pg-on { min-height: calc(100dvh - 118px); } }
 
+/* Paged mode fills the screen with the single active page, which already
+   reserves room for the bar (the -118px above). The scroll-mode chrome that
+   lives OUTSIDE that page — the .phone 100vh floor and the body's bottom
+   padding — would otherwise stack on top of a full-height page and force a
+   scroll even on a short one. Drop both while paged. */
+.phone.paged { min-height: 0; }
+body.paged { padding-bottom: 0; }
+
+/* The bar floats over the bottom of the screen. On a short page that is just
+   empty card, so nothing to clear; on a page tall enough to scroll, the last
+   line has to stop above it. Put that clearance INSIDE the scrollable page
+   (only .section pages ever grow tall — brand/transition pages stay short),
+   so it travels with the scroll instead of stacking onto every page the way
+   the body padding did. */
+.phone.paged > .section.pg-on { padding-bottom: 88px; }
+
 .pager {
   position: fixed;
   left: 50%;
