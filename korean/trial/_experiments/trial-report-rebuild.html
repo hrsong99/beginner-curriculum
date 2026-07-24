@@ -54,6 +54,12 @@
   .plv-line { margin: 20px 0 0; font-size: 21px; font-weight: 800; color: #1c1c1c; line-height: 1.4; word-break: keep-all; }
   .plv-line .q { color: #6abe36; }
 
+  /* ---------- radar overview (지금 채움 vs 목표 외곽), no card ---------- */
+  .rad-legend { display: flex; justify-content: center; gap: 24px; margin: 4px 0 0; }
+  .rad-legend span { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; color: #1c1c1c; }
+  .rad-legend i { width: 14px; height: 14px; border-radius: 5px; }
+  .rad { display: block; width: 100%; height: auto; margin: -2px auto 6px; }
+
   /* ---------- per-aspect level track: 지금 ● → 목표 ◆ + 개선법 ---------- */
   .trk { padding: 22px 0; border-top: 1px solid #efefec; }
   .trk:first-child { border-top: 0; padding-top: 8px; }
@@ -121,6 +127,12 @@
       <span class="section-kicker">레벨 구성</span>
       <h2 class="section-title">항목별로, 지금 → 목표</h2>
       <p class="rv-sub">각 항목에서 지금 어디쯤인지, 어디까지 가는지 그려 봤어요.</p>
+
+      <div class="rad-legend">
+        <span><i style="background:#6abe36"></i>지금 레벨</span>
+        <span><i style="background:#1c1c1c"></i>목표 레벨</span>
+      </div>
+      <svg id="radar" class="rad" viewBox="-26 -20 252 246" role="img" aria-label="항목별 지금·목표 레이더"></svg>
 
       <div class="trk">
         <div class="trk-name">발음</div>
@@ -258,6 +270,31 @@
   </div>
 
   <script>
+  /* radar overview — 지금(초록 채움) vs 목표(검정 외곽). Values 0–1 per axis. */
+  (function () {
+    var AX   = ["정확성", "어휘", "유창성", "발음", "듣기"];
+    var NOW  = [0.40, 0.22, 0.18, 0.46, 0.26];
+    var GOAL = [0.86, 0.80, 0.82, 0.84, 0.90];
+    var cx = 100, cy = 100, R = 82, N = 5, NS = "http://www.w3.org/2000/svg";
+    var svg = document.getElementById("radar");
+    if (!svg) return;
+    function P(i, f) { var a = (-90 + i * (360 / N)) * Math.PI / 180; return [cx + Math.cos(a) * R * f, cy + Math.sin(a) * R * f]; }
+    function poly(p) { return p.map(function (q) { return q[0].toFixed(1) + "," + q[1].toFixed(1); }).join(" "); }
+    function el(t, a) { var e = document.createElementNS(NS, t); for (var k in a) e.setAttribute(k, a[k]); return e; }
+    [0.25, 0.5, 0.75, 1].forEach(function (f) { var p = []; for (var i = 0; i < N; i++) p.push(P(i, f)); svg.appendChild(el("polygon", { points: poly(p), fill: "none", stroke: "#ececea", "stroke-width": "1" })); });
+    for (var i = 0; i < N; i++) {
+      var e = P(i, 1); svg.appendChild(el("line", { x1: cx, y1: cy, x2: e[0], y2: e[1], stroke: "#ececea", "stroke-width": "1" }));
+      var lp = P(i, 1.18), t = el("text", { x: lp[0].toFixed(1), y: (lp[1] + 4).toFixed(1), "font-size": "12", "font-weight": "700", fill: "#1c1c1c", "text-anchor": lp[0] > cx + 4 ? "start" : (lp[0] < cx - 4 ? "end" : "middle") });
+      t.textContent = AX[i]; svg.appendChild(t);
+    }
+    var gp = []; for (var i = 0; i < N; i++) gp.push(P(i, GOAL[i]));
+    svg.appendChild(el("polygon", { points: poly(gp), fill: "rgba(28,28,28,.04)", stroke: "#1c1c1c", "stroke-width": "2.5", "stroke-linejoin": "round" }));
+    for (var i = 0; i < N; i++) { var d = P(i, GOAL[i]); svg.appendChild(el("circle", { cx: d[0].toFixed(1), cy: d[1].toFixed(1), r: "3.2", fill: "#1c1c1c", stroke: "#fff", "stroke-width": "1.5" })); }
+    var np = []; for (var i = 0; i < N; i++) np.push(P(i, NOW[i]));
+    svg.appendChild(el("polygon", { points: poly(np), fill: "rgba(106,190,54,.30)", stroke: "#6abe36", "stroke-width": "3", "stroke-linejoin": "round" }));
+    for (var i = 0; i < N; i++) { var d = P(i, NOW[i]); svg.appendChild(el("circle", { cx: d[0].toFixed(1), cy: d[1].toFixed(1), r: "3.4", fill: "#6abe36", stroke: "#fff", "stroke-width": "1.5" })); }
+  })();
+
   /* graduation date = today + monthsToGoal */
   (function () {
     var monthsToGoal = 8;
