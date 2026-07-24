@@ -522,6 +522,30 @@ p {
   white-space: nowrap;
 }
 
+/* the input twin of .slot — a blank someone types into. Inferred as the
+   "value" sync kind, so a data-sync-id is all it takes to mirror it live. */
+.slot-input {
+  display: inline-flex;
+  min-width: 2.5em;
+  max-width: 9em;
+  height: 34px;
+  padding: 0 14px;
+  margin: 0 4px;
+  vertical-align: middle;
+  background: #f8f8f7;
+  border: 1.5px dashed #1c1c1c;
+  border-radius: 999px;
+  color: #1c1c1c;
+  font: inherit;
+  font-weight: 700;
+  text-align: center;
+  field-sizing: content;
+  -webkit-appearance: none;
+}
+.slot-input::placeholder { color: #b4b4b0; font-weight: 700; }
+.slot-input:focus { outline: none; border-style: solid; background: #fff; }
+.bubble.me .slot-input { background: #f6fdf0; }
+
 .option-line {
   display: block;
   padding: 16px 0;
