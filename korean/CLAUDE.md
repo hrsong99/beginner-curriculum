@@ -27,7 +27,25 @@ you are about to make conflicts with it, say so and ask — don't quietly deviat
 - **Verify visually.** These are visual documents; render them in a browser at 480px width and
   look at the screenshots before claiming a change works.
 
+## Interactive lessons
+
+Anything the learner taps, types, or drags — and anything that has to stay in step with the
+tutor's screen — goes through lemonboard's `data-sync` contract.
+
+**Before adding any interaction, read
+[`interactive/interaction-protocol.md`](./interactive/interaction-protocol.md).** Getting it
+wrong fails silently: the activity works on your screen and never reaches the other person.
+Copy from [`interactive/sample-lesson-interactive.html`](./interactive/sample-lesson-interactive.html)
+rather than inventing markup, and see
+[`interactive/packaging.md`](./interactive/packaging.md) for turning a deck into an uploadable zip.
+
+Two rules that catch most mistakes: an element is shared **only** if it has a `data-sync-id`
+(no id = private), and verdicts are never shared — send the choice and let each side derive
+`correct`/`wrong` locally. Note that this does *not* hide the answer key: both people load the
+same document, so anything in the markup is already on the learner's screen.
+
 ## Tracks
 
 `0-trial-class` (sales trial decks) · `1-hangul` · `2-core-patterns` · `3-contextual-korean` ·
-`4-freetalking` · `?-pronunciation-class` · `textbooks-references` (source scans)
+`4-freetalking` · `?-pronunciation-class` · `textbooks-references` (source scans) ·
+`interactive` (sync contract, reference lesson, packager)

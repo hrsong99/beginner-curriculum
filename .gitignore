@@ -6,3 +6,10 @@ node_modules/
 korean/**/dekiru-kankokugo/*.pdf
 korean/**/sejong-hangugeo-ipmun/*.pdf
 /korean/textbooks-references/temo/테모-회화
+
+# Build output: the zip is the deliverable and already contains these.
+# The loose html/css/images are unpacked copies, for local viewing only.
+korean/**/lemonboard-build/*.png
+korean/**/lemonboard-build/*.jpg
+korean/**/lemonboard-build/lesson.html
+korean/**/lemonboard-build/lesson.css
