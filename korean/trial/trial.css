@@ -2531,3 +2531,12 @@ body.paged { padding-bottom: 0; }
 .pg-teach, .pg-exit { width: 32px; height: 32px; background: #fff; font-size: 13px; font-weight: 900; }
 .phone.paged ~ .pager .pg-exit { background: #1c1c1c; color: #b5fd4c; }
 .pg-teach.on { background: #1c1c1c; color: #b5fd4c; }
+
+/* ============================================================
+   Frameless page cards — no black outline/offset-shadow around
+   the page itself. Inner components keep their borders; only the
+   OUTER page frame is dropped, so pages float on the background.
+   ============================================================ */
+.section        { border-color: transparent; box-shadow: none; }
+.brand-page     { box-shadow: none; }
+.transition-page { box-shadow: none; }
