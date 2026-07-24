@@ -21,7 +21,6 @@
 
     <!-- ============ STEP 1 · GREETING ============ -->
     <div class="section" data-page-id="greeting">
-      <span class="section-kicker">はなす</span>
       <h2 class="section-title">첫인사 <span class="title-ja">(はじめまして！)</span></h2>
       <p class="section-subtitle"><span class="ko">저랑 가볍게 인사해 볼까요?</span><span class="ja">私と軽くあいさつしてみましょうか？</span></p>
       <div class="dialogue">
@@ -29,8 +28,8 @@
         <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me intro"><span class="translation">こんにちは！</span><span class="korean">안녕하세요!</span><span class="yomi">アンニョンハセヨ！</span><span class="cue">先生のことばに、返事してみましょう！</span></div></div>
       </div>
       <div class="dialogue" style="margin-top:18px;">
-        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">先生</span></span><div class="bubble intro"><span class="translation">私はユナです。お名前は何ですか？</span><span class="korean">저는 유나예요. 이름이 뭐예요?</span><span class="yomi">チョヌン ユナエヨ。イルミ ムォエヨ？</span></div></div>
-        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me intro"><span class="translation">私は ＿(名前)＿ です。</span><span class="korean">저는 <span class="slot">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>예요.</span><span class="yomi">チョヌン ＿＿＿ エヨ</span><span class="cue">自分の名前を入れて、言ってみましょう！</span></div></div>
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">先生</span></span><div class="bubble intro"><span class="translation">私は（名前）です。お名前は何ですか？</span><span class="korean">저는 <input class="slot-input" data-sync-id="greeting-tutor-name" placeholder="이름" aria-label="선생님 이름" autocomplete="off">예요. 이름이 뭐예요?</span><span class="yomi">チョヌン ＿＿＿ エヨ。イルミ ムォエヨ？</span></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me intro"><span class="translation">私は ＿(名前)＿ です。</span><span class="korean">저는 <input class="slot-input" data-sync-id="greeting-student-name" placeholder="이름" aria-label="학생 이름" autocomplete="off">예요.</span><span class="yomi">チョヌン ＿＿＿ エヨ</span><span class="cue">이름을 넣어 말해 볼까요? (お名前を入れて言ってみましょう)</span></div></div>
       </div>
       <div class="dialogue" style="margin-top:18px;">
         <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">先生</span></span><div class="bubble intro"><span class="translation">今日のレッスン、始めますね。よろしくお願いします！</span><span class="korean">오늘 수업 시작할게요. 잘 부탁해요!</span><span class="yomi">オヌル スオプ シジャカルケヨ。チャル プタケヨ！</span></div></div>
@@ -44,26 +43,21 @@
       <p class="brand-sub">ここから25分。終わるころには、本物の韓国語の単語が読めます。約束します！</p>
     </div>
 
-    <!-- hook: name the "I can't read anything" feeling, then promise -->
-    <div class="section" data-page-id="hangul-first-look">
-      <span class="section-kicker">ポイント</span>
-      <h2 class="section-title">한글 첫인상 <span class="title-ja">(ハングルの第一印象)</span></h2>
-      <p class="section-subtitle"><span class="ko">지금은 한 글자도 못 읽어도 괜찮아요. 법칙만 알면 읽을 수 있어요.</span><span class="ja">今は1文字も読めなくて大丈夫。法則さえ分かれば読めます。</span></p>
-      <div class="hook-quote">
-        <span class="q">사랑은 돈으로 살 수 없다.</span>
-        <span class="m">愛はお金では買えない。</span>
-      </div>
-      <div class="card">
-        <span class="tip">いいニュース</span>
-        <div class="row">ハングルは記号ではなく<strong>アルファベット</strong>。パーツを組み合わせるだけ。</div>
-        <div class="row">今日つかうのはたった<strong>8パーツ</strong>。暗記も例外もなし。</div>
-        <div class="row">25分後、あなたは <strong>나무・어머니・오이</strong> を自分で読めます。</div>
+    <!-- the goal, stated plainly: the three real words you'll read by the end.
+         a dark page, so it uses the same transition-page shell as the act dividers -->
+    <div class="transition-page" data-page-id="lesson-goal">
+      <span class="transition-kicker">목표</span>
+      <h2 class="transition-title">오늘의 목표 <span class="title-ja">(今日のゴール)</span></h2>
+      <p class="section-subtitle"><span class="ko">오늘 수업이 끝나면, 이 세 단어를 스스로 읽을 수 있어요.</span><span class="ja">今日の授業が終わると、この3つの単語を自分で読めるようになります。</span></p>
+      <div class="known">
+        <div class="known-row"><span class="k">나무</span><span class="j">木<small>ナム</small></span></div>
+        <div class="known-row"><span class="k">어머니</span><span class="j">お母さん<small>オモニ</small></span></div>
+        <div class="known-row"><span class="k">오이</span><span class="j">きゅうり<small>オイ</small></span></div>
       </div>
     </div>
 
     <!-- motivation: you already know some Korean -->
     <div class="section" data-page-id="words-you-know">
-      <span class="section-kicker">ポイント</span>
       <h2 class="section-title">이미 아는 단어 <span class="title-ja">(もう知っている単語)</span></h2>
       <p class="section-subtitle"><span class="ko">사실 한국어 단어, 이미 꽤 알고 있어요. 그 소리를 글자로 못 읽었을 뿐이에요.</span><span class="ja">実は韓国語の単語、もうけっこう知っています。その音を文字で読めなかっただけです。</span></p>
       <div class="known">
@@ -76,7 +70,6 @@
 
     <!-- the block idea: a syllable is a box with two seats -->
     <div class="section" data-page-id="letter-block">
-      <span class="section-kicker">ポイント</span>
       <h2 class="section-title">글자 블록 <span class="title-ja">(文字ブロック)</span></h2>
       <p class="section-subtitle"><span class="ko">한 글자는 상자예요. 자리는 두 개, 자음 자리와 모음 자리.</span><span class="ja">1文字は「箱」。席は2つ、子音の席と母音の席です。</span></p>
       <div class="anat">
@@ -98,7 +91,6 @@
     </div>
 
     <div class="section" data-page-id="vowels-1">
-      <span class="section-kicker">ならう</span>
       <h2 class="section-title">모음 ① <span class="title-ja">(母音 3つ)</span></h2>
       <p class="section-subtitle"><span class="ko">제가 먼저 읽을게요. 잘 듣고 따라 읽어 보세요.</span><span class="ja">私が先に読みます。よく聞いて、まねして読んでみましょう。</span></p>
       <div class="letter-row">
@@ -109,7 +101,6 @@
     </div>
 
     <div class="section" data-page-id="vowels-2">
-      <span class="section-kicker">ならう</span>
       <h2 class="section-title">모음 ② <span class="title-ja">(母音 のこり3つ)</span></h2>
       <p class="section-subtitle"><span class="ko">나머지 3개도 소리 내어 읽어 보세요.</span><span class="ja">のこりの3つも、声に出して読んでみましょう。</span></p>
       <div class="letter-row">
@@ -122,7 +113,6 @@
     <!-- katakana has 5 vowels, Korean has 6 here: two pairs collapse onto
          one kana. That contrast is a comparison, not a per-card footnote. -->
     <div class="section" data-page-id="vowel-pairs">
-      <span class="section-kicker">ポイント</span>
       <h2 class="section-title">헷갈리는 짝 <span class="title-ja">(まちがえやすいペア)</span></h2>
       <p class="section-subtitle"><span class="ko">가타카나는 같지만 소리는 달라요. 제 발음을 잘 듣고 따라 해 보세요.</span><span class="ja">カタカナは同じでも、音は違います。私の発音をよく聞いて、まねしてみましょう。</span></p>
       <div class="tutor-note">두 개를 이어서 읽어 주세요.</div>
@@ -143,7 +133,6 @@
     <!-- the payoff of colouring the seats from the start: the amber seat
          was always ㅇ, and it never made a sound -->
     <div class="section" data-page-id="silent-ieung">
-      <span class="section-kicker">ポイント</span>
       <h2 class="section-title">소리 없는 ㅇ <span class="title-ja">(音のない ㅇ)</span></h2>
       <p class="section-subtitle"><span class="ko">눈치챘어요? 노란 자리엔 계속 ㅇ이 있었어요. 그런데 소리가 없어요.</span><span class="ja">気づきましたか？黄色い席にはずっと「ㅇ」がいました。でも音はゼロ。</span></p>
       <div class="build">
@@ -157,7 +146,6 @@
     </div>
 
     <div class="section" data-page-id="vowel-position">
-      <span class="section-kicker">ポイント</span>
       <h2 class="section-title">모음 자리 <span class="title-ja">(母音の場所)</span></h2>
       <p class="section-subtitle"><span class="ko">세로로 긴 모음은 오른쪽, 가로로 긴 모음은 아래. 이게 다예요.</span><span class="ja">たて長の母音は右、よこ長の母音は下。ルールはこれだけ。</span></p>
       <div class="blk-row">
@@ -173,7 +161,6 @@
     </div>
 
     <div class="section" data-page-id="vowel-reading">
-      <span class="section-kicker">よむ</span>
       <h2 class="section-title">모음 읽기 <span class="title-ja">(母音を読もう)</span></h2>
       <p class="section-subtitle"><span class="ko">여섯 개를 소리 내어 읽어 보세요. 순서는 섞여 있어요.</span><span class="ja">6つを声に出して読んでみましょう。順番はシャッフルしています。</span></p>
       <div class="read-grid">
@@ -194,7 +181,6 @@
     </div>
 
     <div class="section" data-page-id="consonant-n">
-      <span class="section-kicker">ならう</span>
       <h2 class="section-title">자음 ㄴ <span class="title-ja">(子音 ㄴ)</span></h2>
       <p class="section-subtitle"><span class="ko">ㄴ은 n 소리예요. ㄴ은 그대로 두고, 모음만 바꿔서 읽어 보세요.</span><span class="ja">「ㄴ」は n の音。ㄴはそのまま、母音だけ入れかえて読んでみましょう。</span></p>
       <div class="letter-row">
@@ -208,7 +194,6 @@
     </div>
 
     <div class="section" data-page-id="consonant-n-reading">
-      <span class="section-kicker">よむ</span>
       <h2 class="section-title">ㄴ 읽기 <span class="title-ja">(ㄴ を読もう)</span></h2>
       <p class="section-subtitle"><span class="ko">소리 내어, 멈추지 말고 읽어 보세요.</span><span class="ja">声に出して、止まらずに読んでみましょう。</span></p>
       <div class="read-grid">
@@ -222,7 +207,6 @@
     </div>
 
     <div class="section" data-page-id="consonant-m">
-      <span class="section-kicker">ならう</span>
       <h2 class="section-title">자음 ㅁ <span class="title-ja">(子音 ㅁ)</span></h2>
       <p class="section-subtitle"><span class="ko">ㅁ은 m 소리예요. 같은 방법으로, 모음만 바꿔서 읽어 보세요.</span><span class="ja">「ㅁ」は m の音。同じやり方で、母音だけ入れかえて読んでみましょう。</span></p>
       <div class="letter-row">
@@ -237,7 +221,6 @@
 
     <!-- payoff: 2 consonants × 6 vowels, all of it readable at a glance -->
     <div class="section" data-page-id="combo-table">
-      <span class="section-kicker">よむ</span>
       <h2 class="section-title">조합표 <span class="title-ja">(組み合わせ表)</span></h2>
       <p class="section-subtitle"><span class="ko">외운 건 여덟 개인데, 글자는 열두 개가 됐어요. 한 줄씩 읽어 볼까요?</span><span class="ja">おぼえたのは8パーツ。なのに12文字になりました。1行ずつ読んでみましょう。</span></p>
       <div class="tutor-note">한 줄씩 먼저 읽고, 따라 읽게 해 주세요.</div>
@@ -252,7 +235,6 @@
     </div>
 
     <div class="section" data-page-id="mixed-reading">
-      <span class="section-kicker">よむ</span>
       <h2 class="section-title">섞어 읽기 <span class="title-ja">(まぜて読もう)</span></h2>
       <p class="section-subtitle"><span class="ko">ㄴ과 ㅁ을 섞었어요. 한 블록씩 읽어 보세요.</span><span class="ja">ㄴ と ㅁ をまぜました。1ブロックずつ読んでみましょう。</span></p>
       <div class="read-grid">
@@ -267,7 +249,6 @@
 
     <!-- training wheels off: no colour here, the learner finds the part -->
     <div class="section" data-page-id="find-the-vowel">
-      <span class="section-kicker">さがす</span>
       <h2 class="section-title">모음 찾기 <span class="title-ja">(母音さがし)</span></h2>
       <p class="section-subtitle"><span class="ko">이번엔 색이 없어요. ㅏ가 들어간 블록을 모두 눌러 보세요.</span><span class="ja">今度は色なし。「ㅏ」が入っているブロックを全部タップしてください。</span></p>
       <div class="tap-grid" data-sync-id="tiles-find-the-vowel" data-sync-kind="selection" data-sync-state="right wrong">
@@ -281,7 +262,6 @@
     </div>
 
     <div class="section" data-page-id="listen-and-choose">
-      <span class="section-kicker">きく</span>
       <h2 class="section-title">듣고 고르기 <span class="title-ja">(聞いて選ぼう)</span></h2>
       <p class="section-subtitle"><span class="ko">둘 중에 하나만 읽을게요. 잘 듣고 맞는 쪽을 눌러 보세요.</span><span class="ja">2つのうち1つだけ読みます。よく聞いて、正しいほうをタップしてください。</span></p>
       <div class="tutor-note">표시된 쪽을 하나씩 읽어 주세요.</div>
@@ -300,7 +280,6 @@
     </div>
 
     <div class="section" data-page-id="word-reading">
-      <span class="section-kicker">よむ</span>
       <h2 class="section-title">단어 읽기 <span class="title-ja">(単語を読もう)</span></h2>
       <p class="section-subtitle"><span class="ko">전부 아는 글자로 되어 있어요. 하나씩 읽어 보세요.</span><span class="ja">全部、知っている文字でできています。1つずつ読んでみましょう。</span></p>
       <div class="wordset">
@@ -328,7 +307,6 @@
     </div>
 
     <div class="section" data-page-id="find-the-word">
-      <span class="section-kicker">きく</span>
       <h2 class="section-title">단어 찾기 <span class="title-ja">(聞いてさがそう)</span></h2>
       <p class="section-subtitle"><span class="ko">제가 말하는 단어를 눌러 보세요.</span><span class="ja">私が言う単語をタップしてください。</span></p>
       <div class="tutor-note">표시된 단어를 순서대로 읽어 주세요.</div>
@@ -339,7 +317,6 @@
     </div>
 
     <div class="section" data-page-id="build-the-block">
-      <span class="section-kicker">つくる</span>
       <h2 class="section-title">블록 만들기 <span class="title-ja">(ブロックを作ろう)</span></h2>
       <p class="section-subtitle"><span class="ko">밑에서 자음과 모음을 눌러서, 글자를 만들어 보세요.</span><span class="ja">下の子音と母音をタップして、文字を組み立ててみましょう。</span></p>
       <div class="builder" data-sync-id="builder-build-the-block" data-sync-kind="builder" data-answers="노,마,미">
@@ -363,7 +340,6 @@
     </div>
 
     <div class="section" data-page-id="listen-and-build">
-      <span class="section-kicker">つくる</span>
       <h2 class="section-title">듣고 만들기 <span class="title-ja">(聞いて組み立てよう)</span></h2>
       <p class="section-subtitle"><span class="ko">이번엔 힌트가 없어요. 제가 말하는 글자를 만들어 보세요.</span><span class="ja">今度はヒントなし。私が言う文字を組み立ててみましょう。</span></p>
       <div class="tutor-note">연한 글자를 순서대로 읽어 주세요.</div>
@@ -388,7 +364,6 @@
     </div>
 
     <div class="section" data-page-id="sign-reading">
-      <span class="section-kicker">よむ</span>
       <h2 class="section-title">간판 읽기 <span class="title-ja">(看板を読もう)</span></h2>
       <p class="section-subtitle"><span class="ko">한국에 있다고 상상해 보세요. 간판을 소리 내어 읽어 봐요!</span><span class="ja">韓国にいると想像してみてください。看板を声に出して読んでみましょう！</span></p>
       <div class="grid">
@@ -400,7 +375,6 @@
 
     <!-- the number that sells the next lesson -->
     <div class="section" data-page-id="todays-result">
-      <span class="section-kicker">チェック</span>
       <h2 class="section-title">오늘의 결과 <span class="title-ja">(今日の成果)</span></h2>
       <p class="section-subtitle"><span class="ko">25분 전엔 하나도 못 읽었죠? 지금은 이만큼 읽을 수 있어요.</span><span class="ja">25分前は1文字も読めませんでしたよね？今はこれだけ読めます。</span></p>
       <div class="payoff">
@@ -635,13 +609,13 @@
       "私": "나",
       "アンニョンハセヨ！ マンナソ パンガウォヨ": "발음: 안녕하세요! 만나서 반가워요",
       "アンニョンハセヨ！": "발음: 안녕하세요!",
-      "チョヌン ユナエヨ。イルミ ムォエヨ？": "발음: 저는 유나예요. 이름이 뭐예요?",
+      "チョヌン ＿＿＿ エヨ。イルミ ムォエヨ？": "발음: 저는 ___예요. 이름이 뭐예요?",
       "チョヌン ＿＿＿ エヨ": "발음: 저는 ___예요",
       "オヌル スオプ シジャカルケヨ。チャル プタケヨ！": "발음: 오늘 수업 시작할게요. 잘 부탁해요!",
       "ネ！ チャル プタケヨ！": "발음: 네! 잘 부탁해요!",
       "こんにちは！会えてうれしいです。": "안녕하세요! 만나서 반가워요.",
       "こんにちは！": "안녕하세요!",
-      "私はユナです。お名前は何ですか？": "저는 유나예요. 이름이 뭐예요?",
+      "私は（名前）です。お名前は何ですか？": "저는 ___예요. 이름이 뭐예요?",
       "私は ＿(名前)＿ です。": "저는 __(이름)__예요.",
       "今日のレッスン、始めますね。よろしくお願いします！": "오늘 수업 시작할게요. 잘 부탁드립니다!",
       "はい！よろしくお願いします！": "네! 잘 부탁드립니다!",
@@ -691,14 +665,11 @@
       "つくる": "만들기",
       "チェック": "체크",
 
-      // ---- 못 읽어도 괜찮아요 (훅) ----
-      "(ハングルの第一印象)": "(한글 첫인상)",
-      "今は1文字も読めなくて大丈夫。法則さえ分かれば読めます。": "지금은 한 글자도 못 읽어도 괜찮아요. 법칙만 알면 읽을 수 있어요.",
-      "愛はお金では買えない。": "사랑은 돈으로 살 수 없다.",
-      "いいニュース": "좋은 소식",
-      "ハングルは記号ではなくアルファベット。パーツを組み合わせるだけ。": "한글은 기호가 아니라 알파벳. 부품을 조합할 뿐이에요.",
-      "今日つかうのはたった8パーツ。暗記も例外もなし。": "오늘 쓰는 건 딱 8개 부품. 암기도 예외도 없어요.",
-      "25分後、あなたは 나무・어머니・오이 を自分で読めます。": "25분 뒤엔 나무·어머니·오이를 스스로 읽게 돼요.",
+      // ---- 오늘의 목표 ----
+      "(今日のゴール)": "(오늘의 목표)",
+      "今日の授業が終わると、この3つの単語を自分で読めるようになります。": "오늘 수업이 끝나면, 이 세 단어를 스스로 읽을 수 있어요.",
+      "木": "나무",
+      "ナム": "발음: 나무", "オモニ": "발음: 어머니", "オイ": "발음: 오이",
 
       // ---- 이미 알고 있어요 ----
       "(もう知っている単語)": "(이미 아는 단어)",
@@ -976,6 +947,9 @@
     show(0);
   })();
   </script>
+
+  <!-- SPOTLIGHT · 손가락 포인터 (그리기 대신 "여기 보세요"). 공유 스크립트. -->
+  <script src="../../interactive/spotlight.js"></script>
 
 </body>
 </html>

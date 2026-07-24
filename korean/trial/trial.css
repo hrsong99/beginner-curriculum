@@ -2450,6 +2450,22 @@ body { padding-bottom: 84px; }         /* the bar must not cover the last line *
 .phone.paged > .pg-on { min-height: calc(100vh - 118px); }
 @supports (height: 100dvh) { .phone.paged > .pg-on { min-height: calc(100dvh - 118px); } }
 
+/* Paged mode fills the screen with the single active page, which already
+   reserves room for the bar (the -118px above). The scroll-mode chrome that
+   lives OUTSIDE that page — the .phone 100vh floor and the body's bottom
+   padding — would otherwise stack on top of a full-height page and force a
+   scroll even on a short one. Drop both while paged. */
+.phone.paged { min-height: 0; }
+body.paged { padding-bottom: 0; }
+
+/* The bar floats over the bottom of the screen. On a short page that is just
+   empty card, so nothing to clear; on a page tall enough to scroll, the last
+   line has to stop above it. Put that clearance INSIDE the scrollable page
+   (only .section pages ever grow tall — brand/transition pages stay short),
+   so it travels with the scroll instead of stacking onto every page the way
+   the body padding did. */
+.phone.paged > .section.pg-on { padding-bottom: 88px; }
+
 .pager {
   position: fixed;
   left: 50%;
@@ -2515,3 +2531,12 @@ body { padding-bottom: 84px; }         /* the bar must not cover the last line *
 .pg-teach, .pg-exit { width: 32px; height: 32px; background: #fff; font-size: 13px; font-weight: 900; }
 .phone.paged ~ .pager .pg-exit { background: #1c1c1c; color: #b5fd4c; }
 .pg-teach.on { background: #1c1c1c; color: #b5fd4c; }
+
+/* ============================================================
+   Frameless page cards — no black outline/offset-shadow around
+   the page itself. Inner components keep their borders; only the
+   OUTER page frame is dropped, so pages float on the background.
+   ============================================================ */
+.section        { border-color: transparent; box-shadow: none; }
+.brand-page     { box-shadow: none; }
+.transition-page { box-shadow: none; }
