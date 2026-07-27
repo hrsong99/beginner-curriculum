@@ -1648,9 +1648,8 @@ button.opt-row:active { transform: scale(.99); }
   background: #fafafa;
 }
 
-.sk-head { height: 62px; border-color: #e4e4e2; background: #f0f0ee; }
-
-.sk-plot { height: 152px; padding: 12px 8px; }
+/* 그래프 자리는 테두리 없이 — 실제 그래프도 테두리가 없다 */
+.sk-plot { height: 152px; padding: 12px 8px; border: 0; background: none; }
 .sk-plot svg { display: block; width: 100%; height: 100%; }
 
 .sk-facts { display: grid; gap: 0; padding: 4px 16px; }
@@ -1665,6 +1664,7 @@ button.opt-row:active { transform: scale(.99); }
 .sk-facts i:nth-child(1) { width: 62%; }
 .sk-facts i:nth-child(2) { width: 48%; }
 .sk-facts i:nth-child(3) { width: 55%; }
+.sk-facts i:nth-child(4) { width: 44%; }
 
 .sk-course { height: 50px; }
 
@@ -1694,40 +1694,13 @@ button.opt-row:active { transform: scale(.99); }
 .rep.ready { display: block; }
 .rep.ready + .rep-empty, .rep-empty.hide { display: none; }
 
-.rep-head {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 24px;
-  padding: 14px 16px;
-  border: 1.5px solid #1c1c1c;
-  border-radius: 14px;
-  background: #1c1c1c;
-}
-
-.rep-goal {
-  flex: 1 1 auto;
-  min-width: 0;
-  color: #fff;
-  font-size: 14.5px;
-  font-weight: 800;
-  line-height: 1.35;
-  word-break: keep-all;
-}
-
-.rep-eta { flex: none; text-align: right; }
-.rep-eta b { display: block; color: #b5fd4c; font-size: 25px; font-weight: 900; line-height: 1; }
-.rep-eta small { display: block; margin-top: 3px; color: rgba(255,255,255,.55); font-size: 10.5px; font-weight: 700; }
-
+/* 레이더(.rad)와 같은 취급 — 테두리 없이 폭을 다 쓴다. 카드에 넣으면
+   박스 안의 박스가 되고, 안쪽 여백만큼 선이 쪼그라든다. */
 .rep-plot {
   display: block;
   width: 100%;
   height: auto;
-  margin-top: 16px;
-  border: 1.5px solid #1c1c1c;
-  border-radius: 14px;
-  background: #fff;
-  padding: 8px 4px 4px;
+  margin: -2px auto 2px;
 }
 
 .rep-facts {
