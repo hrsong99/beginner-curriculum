@@ -3,10 +3,15 @@
 How a lesson HTML file becomes something the 교재 admin can upload.
 
 ```sh
-python3 interactive/build_lemonboard.py <deck>.html --out <deck-dir>/lemonboard-build
+python3 interactive/build_lemonboard.py <deck>.html --out <deck-dir>/lemonboard-build/<deck>
 ```
 
 That produces `lesson.html`, `lesson.css`, every image, and a `.zip` of all three.
+
+**One output folder per deck.** `lesson.html` and `lesson.css` are fixed names, so two
+decks built into the same `--out` overwrite each other's preview and pile their images
+into one directory (the zips survive; nothing else does). Give each deck its own folder
+named after it — `lemonboard-build/trial-1-hangul-short/`, `…/trial-2-patterns-short/`.
 Upload the zip in grape admin → 교재 등록/수정 → **html로 생성하기**, into the 수업용 and/or
 예습용 slot. The same zip works in both.
 
