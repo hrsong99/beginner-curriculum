@@ -60,22 +60,23 @@
   .rad-legend i { width: 14px; height: 14px; border-radius: 5px; }
   .rad { display: block; width: 100%; height: auto; margin: -2px auto 6px; }
 
-  /* ---------- per-aspect level track: 지금 ● → 목표 ◆ + 개선법 ---------- */
+  /* ---------- per-aspect track (지금 ● → 목표 ◯) + 3 lines ---------- */
   .trk { padding: 22px 0; border-top: 1px solid #efefec; }
-  .trk:first-child { border-top: 0; padding-top: 8px; }
   .trk-name { font-size: 15px; font-weight: 800; color: #1c1c1c; }
-  .trk-bar { position: relative; height: 10px; margin: 30px 0 36px; }
-  .trk-rail { position: absolute; inset: 0; border-radius: 999px; background: #edece8; }
-  .trk-span { position: absolute; top: 0; bottom: 0; border-radius: 999px; background: #d6f2ac; }
-  .trk-done { position: absolute; top: 0; bottom: 0; left: 0; border-radius: 999px; background: #6abe36; }
-  .trk-mk { position: absolute; top: 50%; width: 15px; height: 15px; border-radius: 50%; transform: translate(-50%, -50%); border: 3px solid #fff; }
-  .trk-mk.now { background: #6abe36; box-shadow: 0 0 0 1.5px #6abe36; }
-  .trk-mk.goal { background: #1c1c1c; box-shadow: 0 0 0 1.5px #1c1c1c; }
-  .trk-lab { position: absolute; top: calc(100% + 9px); transform: translateX(-50%); font-size: 11px; font-weight: 800; white-space: nowrap; }
-  .trk-lab.now { color: #4a7a2a; }
-  .trk-lab.goal { color: #1c1c1c; }
-  .trk-tip { margin: 0; font-size: 13px; font-weight: 500; color: #6f6f6a; line-height: 1.6; word-break: keep-all; }
-  .trk-tip b { font-weight: 700; color: #3d3d39; }
+  .trk-bar { position: relative; height: 7px; margin: 18px 0 20px; }
+  .trk-rail { position: absolute; inset: 0; border-radius: 999px; background: #eeede9; }
+  .trk-span { position: absolute; top: 0; bottom: 0; border-radius: 999px; background: #d0ec9e; }
+  .trk-done { position: absolute; top: 0; bottom: 0; left: 0; border-radius: 999px; background: #7cc63f; }
+  .trk-mk { position: absolute; top: 50%; width: 13px; height: 13px; border-radius: 50%; transform: translate(-50%, -50%); }
+  .trk-mk.now { background: #6abe36; border: 2.5px solid #fff; box-shadow: 0 0 0 1px #bfe197; }
+  .trk-mk.goal { background: #fff; border: 3px solid #1c1c1c; }
+  .trk-ln { display: flex; gap: 10px; align-items: baseline; padding: 4px 0; font-size: 13px; line-height: 1.5; word-break: keep-all; }
+  .trk-ln .lb { flex: none; width: 32px; font-size: 11px; font-weight: 800; }
+  .trk-ln .tx { flex: 1 1 auto; font-weight: 500; color: #5a5a56; }
+  .trk-ln.now .lb { color: #4a7a2a; }
+  .trk-ln.goal .lb { color: #1c1c1c; }
+  .trk-ln.rec .lb { color: #6abe36; }
+  .trk-ln.rec .tx { color: #3d3d39; font-weight: 600; }
 
   /* ---------- graduation date ---------- */
   .grad { display: flex; align-items: center; gap: 14px; padding: 18px 20px; border: 1.5px solid #1c1c1c; border-radius: 16px; background: #b5fd4c; box-shadow: 0 5px 0 #1c1c1c; }
@@ -125,8 +126,8 @@
     <!-- ============ ② RADAR — current level breakdown ============ -->
     <div class="section">
       <span class="section-kicker">레벨 구성</span>
-      <h2 class="section-title">항목별로, 지금 → 목표</h2>
-      <p class="rv-sub">각 항목에서 지금 어디쯤인지, 어디까지 가는지 그려 봤어요.</p>
+      <h2 class="section-title">항목별 진단</h2>
+      <p class="rv-sub">지금 어디쯤이고, 어디까지 가는지 항목별로 봤어요.</p>
 
       <div class="rad-legend">
         <span><i style="background:#6abe36"></i>지금 레벨</span>
@@ -142,10 +143,10 @@
           <div class="trk-done" style="width:34%"></div>
           <span class="trk-mk now" style="left:34%"></span>
           <span class="trk-mk goal" style="left:85%"></span>
-          <span class="trk-lab now" style="left:34%">지금</span>
-          <span class="trk-lab goal" style="left:85%">목표</span>
         </div>
-        <p class="trk-tip">원어민 발음을 반복해서 듣고 똑같이 따라 해요. 수업마다 튜터가 그 자리에서 잡아 주면 더 빨리 자리 잡아요.</p>
+        <div class="trk-ln now"><span class="lb">지금</span><span class="tx">모음·자음 소리를 하나씩 따라 내요</span></div>
+        <div class="trk-ln goal"><span class="lb">목표</span><span class="tx">드라마 대사도 자연스럽게 발음해요</span></div>
+        <div class="trk-ln rec"><span class="lb">추천</span><span class="tx">원어민 발음을 반복해 듣고 그대로 따라 하기</span></div>
       </div>
 
       <div class="trk">
@@ -156,10 +157,10 @@
           <div class="trk-done" style="width:28%"></div>
           <span class="trk-mk now" style="left:28%"></span>
           <span class="trk-mk goal" style="left:82%"></span>
-          <span class="trk-lab now" style="left:28%">지금</span>
-          <span class="trk-lab goal" style="left:82%">목표</span>
         </div>
-        <p class="trk-tip">한 번에 패턴 하나씩, 직접 문장을 만들어 말해요. 그 자리에서 고쳐 받으면 문법이 정확해져요.</p>
+        <div class="trk-ln now"><span class="lb">지금</span><span class="tx">글자 자리(자음+모음)를 맞춰요</span></div>
+        <div class="trk-ln goal"><span class="lb">목표</span><span class="tx">문법에 맞는 문장을 정확히 말해요</span></div>
+        <div class="trk-ln rec"><span class="lb">추천</span><span class="tx">한 번에 패턴 하나씩, 만들어 말하고 바로 교정받기</span></div>
       </div>
 
       <div class="trk">
@@ -170,10 +171,10 @@
           <div class="trk-done" style="width:20%"></div>
           <span class="trk-mk now" style="left:20%"></span>
           <span class="trk-mk goal" style="left:80%"></span>
-          <span class="trk-lab now" style="left:20%">지금</span>
-          <span class="trk-lab goal" style="left:80%">목표</span>
         </div>
-        <p class="trk-tip">상황별로 자주 쓰는 단어부터 익혀요. 배운 단어를 수업에서 바로 써 보면 오래 남아요.</p>
+        <div class="trk-ln now"><span class="lb">지금</span><span class="tx">아는 단어가 아직 손에 꼽아요</span></div>
+        <div class="trk-ln goal"><span class="lb">목표</span><span class="tx">상황마다 필요한 단어가 바로 나와요</span></div>
+        <div class="trk-ln rec"><span class="lb">추천</span><span class="tx">상황별 표현을 익히고 수업에서 바로 써 보기</span></div>
       </div>
 
       <div class="trk">
@@ -184,10 +185,10 @@
           <div class="trk-done" style="width:16%"></div>
           <span class="trk-mk now" style="left:16%"></span>
           <span class="trk-mk goal" style="left:80%"></span>
-          <span class="trk-lab now" style="left:16%">지금</span>
-          <span class="trk-lab goal" style="left:80%">목표</span>
         </div>
-        <p class="trk-tip">짧아도 매일 소리 내어 말해요. 주제를 정해 생각을 바로 말하는 연습이 유창성을 키워요.</p>
+        <div class="trk-ln now"><span class="lb">지금</span><span class="tx">아직 문장을 만들기 전이에요</span></div>
+        <div class="trk-ln goal"><span class="lb">목표</span><span class="tx">막힘 없이 이어서 말해요</span></div>
+        <div class="trk-ln rec"><span class="lb">추천</span><span class="tx">짧아도 매일, 주제를 정해 생각을 바로 말하기</span></div>
       </div>
 
       <div class="trk">
@@ -198,10 +199,10 @@
           <div class="trk-done" style="width:24%"></div>
           <span class="trk-mk now" style="left:24%"></span>
           <span class="trk-mk goal" style="left:88%"></span>
-          <span class="trk-lab now" style="left:24%">지금</span>
-          <span class="trk-lab goal" style="left:88%">목표</span>
         </div>
-        <p class="trk-tip">천천히에서 실제 속도로 조금씩 넓혀요. 원어민과 자주 대화하며 진짜 속도에 귀를 익혀요.</p>
+        <div class="trk-ln now"><span class="lb">지금</span><span class="tx">닮은 소리(어·오, 우·으)는 아직 헷갈려요</span></div>
+        <div class="trk-ln goal"><span class="lb">목표</span><span class="tx">자막 없이 대사를 알아들어요</span></div>
+        <div class="trk-ln rec"><span class="lb">추천</span><span class="tx">천천히 → 실제 속도로, 원어민과 자주 대화하기</span></div>
       </div>
     </div>
 
@@ -281,18 +282,18 @@
     function P(i, f) { var a = (-90 + i * (360 / N)) * Math.PI / 180; return [cx + Math.cos(a) * R * f, cy + Math.sin(a) * R * f]; }
     function poly(p) { return p.map(function (q) { return q[0].toFixed(1) + "," + q[1].toFixed(1); }).join(" "); }
     function el(t, a) { var e = document.createElementNS(NS, t); for (var k in a) e.setAttribute(k, a[k]); return e; }
-    [0.25, 0.5, 0.75, 1].forEach(function (f) { var p = []; for (var i = 0; i < N; i++) p.push(P(i, f)); svg.appendChild(el("polygon", { points: poly(p), fill: "none", stroke: "#ececea", "stroke-width": "1" })); });
+    [0.25, 0.5, 0.75, 1].forEach(function (f) { var p = []; for (var i = 0; i < N; i++) p.push(P(i, f)); svg.appendChild(el("polygon", { points: poly(p), fill: "none", stroke: "#f0efec", "stroke-width": "1" })); });
     for (var i = 0; i < N; i++) {
-      var e = P(i, 1); svg.appendChild(el("line", { x1: cx, y1: cy, x2: e[0], y2: e[1], stroke: "#ececea", "stroke-width": "1" }));
-      var lp = P(i, 1.18), t = el("text", { x: lp[0].toFixed(1), y: (lp[1] + 4).toFixed(1), "font-size": "12", "font-weight": "700", fill: "#1c1c1c", "text-anchor": lp[0] > cx + 4 ? "start" : (lp[0] < cx - 4 ? "end" : "middle") });
+      var e = P(i, 1); svg.appendChild(el("line", { x1: cx, y1: cy, x2: e[0], y2: e[1], stroke: "#f0efec", "stroke-width": "1" }));
+      var lp = P(i, 1.18), t = el("text", { x: lp[0].toFixed(1), y: (lp[1] + 4).toFixed(1), "font-size": "11.5", "font-weight": "600", fill: "#6a6a66", "text-anchor": lp[0] > cx + 4 ? "start" : (lp[0] < cx - 4 ? "end" : "middle") });
       t.textContent = AX[i]; svg.appendChild(t);
     }
     var gp = []; for (var i = 0; i < N; i++) gp.push(P(i, GOAL[i]));
-    svg.appendChild(el("polygon", { points: poly(gp), fill: "rgba(28,28,28,.04)", stroke: "#1c1c1c", "stroke-width": "2.5", "stroke-linejoin": "round" }));
-    for (var i = 0; i < N; i++) { var d = P(i, GOAL[i]); svg.appendChild(el("circle", { cx: d[0].toFixed(1), cy: d[1].toFixed(1), r: "3.2", fill: "#1c1c1c", stroke: "#fff", "stroke-width": "1.5" })); }
+    svg.appendChild(el("polygon", { points: poly(gp), fill: "rgba(28,28,28,.03)", stroke: "#1c1c1c", "stroke-width": "1.5", "stroke-linejoin": "round" }));
+    for (var i = 0; i < N; i++) { var d = P(i, GOAL[i]); svg.appendChild(el("circle", { cx: d[0].toFixed(1), cy: d[1].toFixed(1), r: "2.4", fill: "#1c1c1c", stroke: "#fff", "stroke-width": "1" })); }
     var np = []; for (var i = 0; i < N; i++) np.push(P(i, NOW[i]));
-    svg.appendChild(el("polygon", { points: poly(np), fill: "rgba(106,190,54,.30)", stroke: "#6abe36", "stroke-width": "3", "stroke-linejoin": "round" }));
-    for (var i = 0; i < N; i++) { var d = P(i, NOW[i]); svg.appendChild(el("circle", { cx: d[0].toFixed(1), cy: d[1].toFixed(1), r: "3.4", fill: "#6abe36", stroke: "#fff", "stroke-width": "1.5" })); }
+    svg.appendChild(el("polygon", { points: poly(np), fill: "rgba(106,190,54,.20)", stroke: "#6abe36", "stroke-width": "1.75", "stroke-linejoin": "round" }));
+    for (var i = 0; i < N; i++) { var d = P(i, NOW[i]); svg.appendChild(el("circle", { cx: d[0].toFixed(1), cy: d[1].toFixed(1), r: "2.6", fill: "#6abe36", stroke: "#fff", "stroke-width": "1" })); }
   })();
 
   /* graduation date = today + monthsToGoal */
