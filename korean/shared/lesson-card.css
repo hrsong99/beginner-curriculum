@@ -1220,11 +1220,17 @@ strong {
   /* Ink, not paint: the stamp lands over the activity, so it stays translucent
      enough to read the tiles through. Declared as a property because the
      keyframes have to fade in to exactly this value, not to 1. */
-  --stamp-ink: .6;
+  --stamp-ink: .8;
+
+  /* Off dead-centre, up and to the right — enough to feel hand-placed rather
+     than pasted, not enough to leave the activity. Doubled in the inset below
+     because margin:auto splits whatever free space is left. */
+  --stamp-nudge-x: 40px;
+  --stamp-nudge-y: 40px;
 
   display: block;
   position: fixed;
-  inset: 0;
+  inset: 0 0 calc(var(--stamp-nudge-y) * 2) calc(var(--stamp-nudge-x) * 2);
   z-index: 50;
   margin: auto;             /* centred on the phone column, which is itself centred */
   width: min(66vw, 300px);
