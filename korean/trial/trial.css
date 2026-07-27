@@ -2721,6 +2721,18 @@ body.paged { padding-bottom: 0; }
 .opt.wrong { border-color: #d9534f; background: #fdf1f1; color: #d9534f; animation: miss .3s; }
 .opt.dim { opacity: .35; }
 
+/* ---------- which part of the Japanese line the blank asks for ----------
+   The header strip carries the whole sentence, but the blank is usually only
+   a piece of it — a particle, an ending, one clause. A highlighter swipe
+   under that piece (the same one the 안내 page uses on patterns) says "this
+   is the part you say in Korean", without adding a second line of text.
+   No mark means the whole line is the answer. */
+.answer-label .target {
+  background: linear-gradient(transparent 52%, #b5fd4c 52%);
+  color: #1c1c1c;
+  font-weight: 800;
+}
+
 /* ---------- self-check list ---------- */
 .mission li {
   cursor: pointer;
