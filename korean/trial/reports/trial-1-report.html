@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <meta name="podo:lesson-id" content="trial-1-report">
+  <meta name="podo:content-version" content="2026-07-27">
+  <title>ニーズ把握 ＆ 맞춤 리포트 — PODO 韓国語</title>
+  <link rel="stylesheet" href="../../shared/lesson-card.css">
+  <link rel="stylesheet" href="../trial.css">
+  <style>
+  /* ================================================================
+     NEEDS + REPORT · trial-1 에서 잘라낸 상담 파트
+     앞쪽(니즈 3장 + 레벨 체크)은 trial-1-hangul.html 그대로. 뒤쪽 리포트
+     3장은 _experiments/trial-report-rebuild.html v5 의 설계를 적용했다.
+
+     리포트는 학습자가 직접 읽는 화면이라 단일 언어다 — 초록 튜터 스크립트
+     박스도, 일본어 병기도 없다(지금은 한국어, 실제 출시는 일본어).
+     흐름: ① 지금 레벨 → ② 항목별 진단 → ③ 도착 예측.
+
+     클래스 이름에 lvc- 접두사를 쓴 이유: trial.css 가 .opt-row .lv-badge 를
+     이미 쓰고 있어서, 목표 선택지의 번호 배지와 충돌하지 않게 갈라 둔다.
+     ================================================================ */
+
+  /* 리포트 페이지는 튜터 스크립트 대신 담담한 부제를 쓴다 */
+  .rv-sub { margin: 8px 0 24px; font-size: 14px; font-weight: 500; color: #8a8a85; line-height: 1.55; word-break: keep-all; }
+  /* trial.css 가 700 으로 세워 둔 본문을 낮춘다 — 굵기는 제목·수치에만 */
+  .rep-page .rep-why { font-weight: 500; color: #6f6f6a; }
+  .rep-page .rf .k { font-weight: 500; }
+
+  /* ---------- ① 지금 레벨 — 초록 카드가 곧 한 페이지 ----------
+     헤더(키커·제목·부제) 없이 카드가 페이지를 통째로 채운다.
+     읽는 순서: 마스코트+레벨 → 눈금(어디쯤) → 문단(무엇을) →
+     체크 3줄(오늘 뭘 보고) → TOPIK(공인 기준). */
+     카드가 페이지 높이까지 늘어나야 하는데, .section 에 display:flex 를 주면
+     페이저의 `.phone.paged > * { display: none }` 과 특이도가 같아서 이 페이지가
+     모든 장에 남는다. 그래서 display 는 건드리지 않고, min-height:inherit 으로
+     초록 블록만 페이지 높이를 물려받게 한다. */
+  .section.s-lv { padding: 0; overflow: hidden; border: 0; }
+  .phone.paged > .section.s-lv.pg-on { padding: 0; }   /* 페이저용 하단 88px 여백 제거 */
+  .section.s-lv > .lvc { min-height: inherit; }
+  .lvc { background: #f2fce0; border-radius: 15px; padding: 32px 26px; }
+  .lvc-top { display: flex; align-items: center; gap: 18px; }
+  .lvc-top img { flex: none; width: 100px; height: auto; }
+  .lvc-badge { display: inline-block; padding: 5px 13px; border-radius: 999px; background: #1c1c1c; color: #b5fd4c; font-size: 13px; font-weight: 900; letter-spacing: .01em; }
+  .lvc-line { margin: 9px 0 0; font-size: 19px; font-weight: 900; color: #1c1c1c; line-height: 1.35; word-break: keep-all; }
+  .lvc-line b { color: #4f9a1e; font-weight: 900; }
+
+  /* 레벨 눈금 — 총 10단계 중 지금 자리.
+     한 칸 = 한 레벨이라 단계 수가 세어지고, 칸·숫자 모두 flex:1 이라
+     간격이 저절로 균등해진다. */
+  .lad { margin: 22px 0 0; }
+  .lad-segs { display: flex; gap: 3px; }
+  .lad-segs span { flex: 1 1 0; height: 8px; border-radius: 3px; background: #ddeec2; }
+  .lad-segs span.on { background: #6abe36; }
+  .lad-nums { display: flex; gap: 3px; margin-top: 9px; }
+  .lad-nums span { flex: 1 1 0; text-align: center; font-size: 10.5px; font-weight: 700; color: #a8bd8c; }
+  .lad-nums span.on { font-size: 11.5px; font-weight: 900; color: #1c1c1c; }
+
+  .lvc-panel { margin: 16px 0 0; padding: 17px 18px 15px; border-radius: 14px; background: #fff; }
+  .lvc-diag { margin: 0; font-size: 14px; font-weight: 500; line-height: 1.72; color: #55554f; word-break: keep-all; }
+  .lvc-diag b { font-weight: 800; color: #1c1c1c; }
+
+  /* 오늘 수업 근거 3줄 (✓ 된 것 · · 아직인 것) */
+  .lvc-ev { margin: 15px 0 0; padding: 0; list-style: none; }
+  .lvc-ev li { display: flex; gap: 9px; align-items: flex-start; padding: 4px 0; font-size: 13px; font-weight: 600; line-height: 1.5; color: #55554f; word-break: keep-all; }
+  .lvc-ev i { flex: none; width: 17px; height: 17px; margin-top: 1px; border-radius: 50%; display: grid; place-items: center; font-size: 10px; font-style: normal; font-weight: 900; color: #fff; background: #6abe36; }
+  .lvc-ev li.miss i { background: #dcdbd6; color: #6f6f6a; }
+
+  /* 공인 시험 기준 — 급수를 숫자로 못박는다 */
+  .lvc-cert { display: flex; align-items: baseline; gap: 9px; margin-top: 15px; padding-top: 14px; border-top: 1px solid #f0efeb; }
+  .lvc-cert i { flex: none; align-self: center; padding: 4px 10px; border-radius: 999px; background: #1c1c1c; color: #fff; font-size: 11px; font-weight: 900; font-style: normal; letter-spacing: .02em; }
+  .lvc-cert b { font-size: 15px; font-weight: 900; color: #1c1c1c; }
+  .lvc-cert span { font-size: 12.5px; font-weight: 600; color: #8a8a85; word-break: keep-all; }
+
+  /* ---------- ② 레이더 (지금 채움 vs 목표 외곽) ---------- */
+  .rad-legend { display: flex; justify-content: center; gap: 24px; margin: 4px 0 0; }
+  .rad-legend span { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; color: #1c1c1c; }
+  .rad-legend i { width: 14px; height: 14px; border-radius: 5px; }
+  .rad { display: block; width: 100%; height: auto; margin: -2px auto 6px; }
+
+  /* ---------- 항목별 트랙 (현재 ● → 목표 ◯, 목표색 구간) ---------- */
+  .trk { padding: 24px 0; border-top: 1px solid #efefec; }
+  .trk-name { font-size: 15px; font-weight: 800; color: #1c1c1c; }
+  .trk-bar { position: relative; height: 7px; margin: 34px 0 38px; }
+  .trk-rail { position: absolute; inset: 0; border-radius: 999px; background: #ecebe7; }
+  .trk-done { position: absolute; top: 0; bottom: 0; left: 0; border-radius: 999px; background: #7cc63f; }
+  .trk-span { position: absolute; top: 0; bottom: 0; border-radius: 999px; background: #1c1c1c; }
+  .trk-mk { position: absolute; top: 50%; width: 14px; height: 14px; border-radius: 50%; transform: translate(-50%, -50%); z-index: 2; }
+  .trk-mk.now { background: #6abe36; border: 3px solid #fff; box-shadow: 0 0 0 1px #6abe36; }
+  .trk-mk.goal { background: #fff; border: 3px solid #1c1c1c; }
+  .trk-cap { position: absolute; bottom: calc(100% + 9px); transform: translateX(-50%); font-size: 11px; font-weight: 800; white-space: nowrap; }
+  .trk-cap.now { color: #4a7a2a; }
+  .trk-cap.goal { color: #1c1c1c; }
+  .trk-lvl { position: absolute; top: calc(100% + 10px); transform: translateX(-50%); font-size: 13px; font-weight: 900; white-space: nowrap; }
+  .trk-lvl.now { color: #4a7a2a; }
+  .trk-lvl.goal { color: #1c1c1c; }
+  .trk-ln { display: flex; gap: 11px; align-items: baseline; padding: 5px 0; font-size: 13px; line-height: 1.5; word-break: keep-all; }
+  .trk-ln .lb { flex: none; width: 34px; font-size: 11.5px; font-weight: 900; }
+  .trk-ln .tx { flex: 1 1 auto; font-weight: 500; color: #5a5a56; }
+  .trk-ln.now .lb { color: #4a7a2a; }
+  .trk-ln.goal .lb { color: #1c1c1c; }
+  .trk-hint { display: flex; gap: 10px; align-items: flex-start; margin-top: 16px; padding: 12px 14px; border-radius: 10px; background: #f3f7ea; border: 1px solid #e6efd4; }
+  .trk-hint .ic { flex: none; font-size: 15px; line-height: 1.45; }
+  .trk-hint .t { font-size: 12.5px; font-weight: 500; color: #4d5a3a; line-height: 1.55; word-break: keep-all; }
+  .trk-hint .t b { color: #3d6b1e; font-weight: 800; margin-right: 5px; }
+
+  /* ---------- ③ 도착 날짜 ---------- */
+  .grad { display: flex; align-items: center; gap: 14px; padding: 18px 20px; border: 1.5px solid #1c1c1c; border-radius: 16px; background: #b5fd4c; box-shadow: 0 5px 0 #1c1c1c; }
+  .grad .cal { flex: none; width: 52px; height: 52px; border-radius: 12px; background: #1c1c1c; color: #b5fd4c; display: grid; place-items: center; font-size: 24px; }
+  .grad .k { font-size: 12.5px; font-weight: 800; color: #3d6b1e; }
+  .grad .v { display: block; margin-top: 2px; font-size: 23px; font-weight: 900; color: #1c1c1c; line-height: 1.1; }
+  .grad .v small { font-size: 13px; font-weight: 800; color: #3d6b1e; }
+  /* 목표·페이스가 아직 안 골라졌으면 날짜를 못 낸다 */
+  .rep-page .grad { display: none; }
+  .rep-page.ready .grad { display: flex; }
+  </style>
+</head>
+<body>
+  <div class="phone">
+    <!-- ============ STEP 2 · NEEDS ============ -->
+    <div class="brand-page divider" data-page-id="needs-intro">
+      <img class="brand-mascot" src="../assets/podo-character.png" alt="">
+      <h2 class="brand-title">니즈 파악<span class="ja">ニーズ把握</span></h2>
+      <p class="brand-sub">あなたのことを教えてください。答えに合わせて、最後のプランが変わります。</p>
+    </div>
+
+    <div class="section" data-page-id="needs-why">
+      <span class="section-kicker">えらぶ</span>
+      <h2 class="section-title">학습 동기 <span class="title-ja">(学ぶきっかけ)</span></h2>
+      <p class="section-subtitle"><span class="ko">왜 한국어를 배우고 싶어요? 여러 개 골라도 돼요.</span><span class="ja">どうして韓国語を学びたいですか？いくつ選んでも大丈夫です。</span></p>
+      <div class="opt-list" data-group="why" data-pick="multi" data-sync-id="needs-why" data-sync-kind="selection" data-sync-state="on">
+        <button class="opt-row" data-val="kpop" data-sync-option="kpop"><span class="emo">🎬</span><span class="opt-body"><span class="opt-main">K-POP・ドラマ</span><span class="opt-sub">케이팝·드라마</span></span></button>
+        <button class="opt-row" data-val="travel" data-sync-option="travel"><span class="emo">✈️</span><span class="opt-body"><span class="opt-main">韓国旅行</span><span class="opt-sub">한국 여행</span></span></button>
+        <button class="opt-row" data-val="friend" data-sync-option="friend"><span class="emo">💬</span><span class="opt-body"><span class="opt-main">韓国人の友だち・恋人</span><span class="opt-sub">한국인 친구·연인</span></span></button>
+        <button class="opt-row" data-val="work" data-sync-option="work"><span class="emo">💼</span><span class="opt-body"><span class="opt-main">仕事・転職</span><span class="opt-sub">일·이직</span></span></button>
+        <button class="opt-row" data-val="topik" data-sync-option="topik"><span class="emo">📖</span><span class="opt-body"><span class="opt-main">TOPIK・資格</span><span class="opt-sub">TOPIK·자격증</span></span></button>
+        <button class="opt-row" data-val="self" data-sync-option="self"><span class="emo">🌱</span><span class="opt-body"><span class="opt-main">自己啓発</span><span class="opt-sub">자기계발</span></span></button>
+        <button class="opt-row" data-val="other" data-sync-option="other"><span class="emo">✏️</span><span class="opt-body"><span class="opt-main">その他（先生に教えてください）</span><span class="opt-sub">기타</span></span></button>
+      </div>
+    </div>
+
+    <div class="section" id="p-goal" data-page-id="needs-goal">
+      <span class="section-kicker">えらぶ</span>
+      <h2 class="section-title">목표 <span class="title-ja">(ゴール)</span></h2>
+      <p class="section-subtitle"><span class="ko">한국어로 뭐를 하고 싶어요? 하나만 골라 주세요.</span><span class="ja">韓国語で何がしたいですか？1つだけ選んでください。</span></p>
+      <div class="opt-list" data-group="goal" data-pick="single" data-sync-id="needs-goal" data-sync-kind="selection" data-sync-state="on">
+        <button class="opt-row" data-val="1" data-sync-option="1"><span class="lv-badge num">1</span><span class="opt-body"><span class="opt-main">あいさつができるようになりたい</span><span class="opt-sub">인사할 수 있으면 좋겠어요</span></span></button>
+        <button class="opt-row" data-val="2" data-sync-option="2"><span class="lv-badge num">2</span><span class="opt-body"><span class="opt-main">自己紹介ができるようになりたい</span><span class="opt-sub">자기소개할 수 있으면 좋겠어요</span></span></button>
+        <button class="opt-row" data-val="3" data-sync-option="3"><span class="lv-badge num">3</span><span class="opt-body"><span class="opt-main">カフェやお店で注文できるようになりたい</span><span class="opt-sub">카페·가게에서 주문할 수 있으면 좋겠어요</span></span></button>
+        <button class="opt-row" data-val="4" data-sync-option="4"><span class="lv-badge num">4</span><span class="opt-body"><span class="opt-main">旅行でひとりでも困らないようになりたい</span><span class="opt-sub">여행에서 혼자서도 괜찮으면 좋겠어요</span></span></button>
+        <button class="opt-row" data-val="5" data-sync-option="5"><span class="lv-badge num">5</span><span class="opt-body"><span class="opt-main">歌やドラマが字幕なしで分かるようになりたい</span><span class="opt-sub">노래·드라마를 자막 없이 알아들으면 좋겠어요</span></span></button>
+        <button class="opt-row" data-val="6" data-sync-option="6"><span class="lv-badge num">6</span><span class="opt-body"><span class="opt-main">友だちと雑談できるようになりたい</span><span class="opt-sub">친구와 수다 떨 수 있으면 좋겠어요</span></span></button>
+        <button class="opt-row" data-val="7" data-sync-option="7"><span class="lv-badge num">7</span><span class="opt-body"><span class="opt-main">自分の意見や理由を話せるようになりたい</span><span class="opt-sub">내 의견과 이유를 말할 수 있으면 좋겠어요</span></span></button>
+        <button class="opt-row" data-val="8" data-sync-option="8"><span class="lv-badge num">8</span><span class="opt-body"><span class="opt-main">仕事で韓国語を使えるようになりたい</span><span class="opt-sub">일할 때 한국어를 쓸 수 있으면 좋겠어요</span></span></button>
+      </div>
+    </div>
+
+    <div class="section" id="p-pace" data-page-id="needs-pace">
+      <span class="section-kicker">えらぶ</span>
+      <h2 class="section-title">학습 페이스 <span class="title-ja">(学習ペース)</span></h2>
+      <p class="section-subtitle"><span class="ko">일주일에 수업을 몇 번 받고 싶어요?</span><span class="ja">1週間に何回、レッスンを受けたいですか？</span></p>
+      <div class="opt-list" data-group="pace" data-pick="single" data-sync-id="needs-pace" data-sync-kind="selection" data-sync-state="on">
+        <button class="opt-row" data-val="1" data-sync-option="1"><span class="emo">🐢</span><span class="opt-body"><span class="opt-main">주 1회 <span class="title-ja">／週1</span></span><span class="opt-sub">まずは無理なく</span></span></button>
+        <button class="opt-row" data-val="2" data-sync-option="2"><span class="emo">🚶</span><span class="opt-body"><span class="opt-main">주 2회 <span class="title-ja">／週2</span></span><span class="opt-sub">こつこつ</span></span></button>
+        <button class="opt-row" data-val="3" data-sync-option="3"><span class="emo">🏃</span><span class="opt-body"><span class="opt-main">주 3회 <span class="title-ja">／週3</span></span><span class="opt-sub">しっかり</span></span></button>
+        <button class="opt-row" data-val="4" data-sync-option="4"><span class="emo">⚡</span><span class="opt-body"><span class="opt-main">주 4회 <span class="title-ja">／週4</span></span><span class="opt-sub">ぐんぐん</span></span></button>
+        <button class="opt-row" data-val="5" data-sync-option="5"><span class="emo">🚀</span><span class="opt-body"><span class="opt-main">주 5회+ <span class="title-ja">／週5以上</span></span><span class="opt-sub">最短で</span></span></button>
+      </div>
+    </div>
+
+    <!-- ============ REPORT ============ -->
+    <div class="brand-page divider" data-page-id="report-intro">
+      <img class="brand-mascot" src="../assets/podo-character.png" alt="">
+      <h2 class="brand-title">맞춤 리포트<span class="ja">カスタムレポート</span></h2>
+      <p class="brand-sub">今日のレッスンと、選んでもらった答えから作ったレポートです。</p>
+    </div>
+    <!-- level check: the one thing only the tutor can judge -->
+    <div class="section" id="p-level" data-page-id="plan-level">
+      <span class="section-kicker">체크</span>
+      <h2 class="section-title">레벨 체크</h2>
+      <p class="section-subtitle"><span class="ko">오늘 수업을 보고, 제가 지금 레벨을 체크할게요.</span></p>
+      <div class="lvpick" data-group="level" data-sync-id="plan-level" data-sync-kind="selection" data-sync-state="on">
+        <button class="lvrow" data-val="1" data-sync-option="1"><span class="lvn">1</span><span class="lvb"><span class="lvt">한글을 오늘 처음 시작했어요</span></span></button>
+        <button class="lvrow" data-val="2" data-sync-option="2"><span class="lvn">2</span><span class="lvb"><span class="lvt">한글은 읽을 수 있어요</span></span></button>
+        <button class="lvrow" data-val="3" data-sync-option="3"><span class="lvn">3</span><span class="lvb"><span class="lvt">간단한 문장을 조금 말해요</span></span></button>
+        <button class="lvrow" data-val="4" data-sync-option="4"><span class="lvn">4</span><span class="lvb"><span class="lvt">일상 회화가 어느 정도 돼요</span></span></button>
+        <button class="lvrow" data-val="5" data-sync-option="5"><span class="lvn">5</span><span class="lvb"><span class="lvt">자기 생각을 말할 수 있어요</span></span></button>
+      </div>
+      <div class="tutor-note">오늘 수업만 보고 정해도 괜찮아요. 대부분 1이에요.</div>
+    </div>
+
+    <!-- ① 지금 레벨 · 초록 카드가 곧 이 페이지. 내용은 레벨 체크에 따라 다시 그려진다 -->
+    <div class="section s-lv" data-page-id="report-level">
+      <div class="lvc">
+        <div class="lvc-top">
+          <img class="lvc-mascot" src="../assets/mascot-newborn.svg" alt="">
+          <div>
+            <span class="lvc-badge">Lv.1 · 첫걸음</span>
+            <p class="lvc-line">한글을 <b>하나씩 읽어요</b></p>
+          </div>
+        </div>
+
+        <div class="lad">
+          <div class="lad-segs">
+            <span class="on"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="lad-nums">
+            <span class="on">Lv.1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+          </div>
+        </div>
+
+        <div class="lvc-panel">
+          <p class="lvc-diag">자음과 모음은 <b>하나씩 소리 낼 수 있어요.</b> 아직 글자를 붙여 읽는 건 느리고, 어·오처럼 닮은 소리는 섞여 나와요. 지금은 소리를 손에 익히는 단계예요.</p>
+          <ul class="lvc-ev"></ul>
+          <div class="lvc-cert"><i>TOPIK</i><b>1급</b><span>준비 단계 · 아직 응시 전</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ② 항목별 진단 · 레이더 + 다섯 트랙
+         주의: 이 페이지의 수치와 문장은 Lv.1 → 목표 Lv.4 케이스로 손으로 쓴
+         것이다. 레벨·목표가 달라져도 지금은 바뀌지 않는다 — 레벨별 문안이
+         정해지면 ① 처럼 테이블로 빼야 한다. -->
+    <div class="section rep-page" data-page-id="report-aspects">
+      <span class="section-kicker">레벨 구성</span>
+      <h2 class="section-title">항목별 진단</h2>
+      <p class="rv-sub">지금 어디쯤이고, 어디까지 가는지 항목별로 봤어요.</p>
+
+      <div class="rad-legend">
+        <span><i style="background:#6abe36"></i>지금 레벨</span>
+        <span><i style="background:#1c1c1c"></i>목표 레벨</span>
+      </div>
+      <svg id="radar" class="rad" viewBox="-26 -20 252 246" role="img" aria-label="항목별 지금·목표 레이더"></svg>
+
+      <div class="trk">
+        <div class="trk-name">발음</div>
+        <div class="trk-bar">
+          <div class="trk-rail"></div>
+          <div class="trk-done" style="width:34%"></div>
+          <div class="trk-span" style="left:34%;right:15%"></div>
+          <span class="trk-mk now" style="left:34%"></span>
+          <span class="trk-mk goal" style="left:85%"></span>
+          <span class="trk-cap now" style="left:34%">현재</span>
+          <span class="trk-cap goal" style="left:85%">목표</span>
+          <span class="trk-lvl now" style="left:34%">Lv.1</span>
+          <span class="trk-lvl goal" style="left:85%">Lv.4</span>
+        </div>
+        <div class="trk-ln now"><span class="lb">Lv.1</span><span class="tx">모음·자음 소리를 하나씩 따라 내요</span></div>
+        <div class="trk-ln goal"><span class="lb">Lv.4</span><span class="tx">드라마 대사도 자연스럽게 발음해요</span></div>
+        <div class="trk-hint"><span class="ic">💡</span><span class="t"><b>추천</b>원어민 발음을 반복해 듣고 그대로 따라 하기</span></div>
+      </div>
+
+      <div class="trk">
+        <div class="trk-name">정확성</div>
+        <div class="trk-bar">
+          <div class="trk-rail"></div>
+          <div class="trk-done" style="width:28%"></div>
+          <div class="trk-span" style="left:28%;right:18%"></div>
+          <span class="trk-mk now" style="left:28%"></span>
+          <span class="trk-mk goal" style="left:82%"></span>
+          <span class="trk-cap now" style="left:28%">현재</span>
+          <span class="trk-cap goal" style="left:82%">목표</span>
+          <span class="trk-lvl now" style="left:28%">Lv.1</span>
+          <span class="trk-lvl goal" style="left:82%">Lv.4</span>
+        </div>
+        <div class="trk-ln now"><span class="lb">Lv.1</span><span class="tx">글자 자리(자음+모음)를 맞춰요</span></div>
+        <div class="trk-ln goal"><span class="lb">Lv.4</span><span class="tx">문법에 맞는 문장을 정확히 말해요</span></div>
+        <div class="trk-hint"><span class="ic">💡</span><span class="t"><b>추천</b>한 번에 패턴 하나씩, 만들어 말하고 바로 교정받기</span></div>
+      </div>
+
+      <div class="trk">
+        <div class="trk-name">어휘</div>
+        <div class="trk-bar">
+          <div class="trk-rail"></div>
+          <div class="trk-done" style="width:20%"></div>
+          <div class="trk-span" style="left:20%;right:20%"></div>
+          <span class="trk-mk now" style="left:20%"></span>
+          <span class="trk-mk goal" style="left:80%"></span>
+          <span class="trk-cap now" style="left:20%">현재</span>
+          <span class="trk-cap goal" style="left:80%">목표</span>
+          <span class="trk-lvl now" style="left:20%">Lv.1</span>
+          <span class="trk-lvl goal" style="left:80%">Lv.4</span>
+        </div>
+        <div class="trk-ln now"><span class="lb">Lv.1</span><span class="tx">아는 단어가 아직 손에 꼽아요</span></div>
+        <div class="trk-ln goal"><span class="lb">Lv.4</span><span class="tx">상황마다 필요한 단어가 바로 나와요</span></div>
+        <div class="trk-hint"><span class="ic">💡</span><span class="t"><b>추천</b>상황별 표현을 익히고 수업에서 바로 써 보기</span></div>
+      </div>
+
+      <div class="trk">
+        <div class="trk-name">유창성</div>
+        <div class="trk-bar">
+          <div class="trk-rail"></div>
+          <div class="trk-done" style="width:16%"></div>
+          <div class="trk-span" style="left:16%;right:20%"></div>
+          <span class="trk-mk now" style="left:16%"></span>
+          <span class="trk-mk goal" style="left:80%"></span>
+          <span class="trk-cap now" style="left:16%">현재</span>
+          <span class="trk-cap goal" style="left:80%">목표</span>
+          <span class="trk-lvl now" style="left:16%">Lv.1</span>
+          <span class="trk-lvl goal" style="left:80%">Lv.4</span>
+        </div>
+        <div class="trk-ln now"><span class="lb">Lv.1</span><span class="tx">아직 문장을 만들기 전이에요</span></div>
+        <div class="trk-ln goal"><span class="lb">Lv.4</span><span class="tx">막힘 없이 이어서 말해요</span></div>
+        <div class="trk-hint"><span class="ic">💡</span><span class="t"><b>추천</b>짧아도 매일, 주제를 정해 생각을 바로 말하기</span></div>
+      </div>
+
+      <div class="trk">
+        <div class="trk-name">듣기</div>
+        <div class="trk-bar">
+          <div class="trk-rail"></div>
+          <div class="trk-done" style="width:24%"></div>
+          <div class="trk-span" style="left:24%;right:12%"></div>
+          <span class="trk-mk now" style="left:24%"></span>
+          <span class="trk-mk goal" style="left:88%"></span>
+          <span class="trk-cap now" style="left:24%">현재</span>
+          <span class="trk-cap goal" style="left:88%">목표</span>
+          <span class="trk-lvl now" style="left:24%">Lv.1</span>
+          <span class="trk-lvl goal" style="left:88%">Lv.4</span>
+        </div>
+        <div class="trk-ln now"><span class="lb">Lv.1</span><span class="tx">닮은 소리(어·오, 우·으)는 아직 헷갈려요</span></div>
+        <div class="trk-ln goal"><span class="lb">Lv.4</span><span class="tx">자막 없이 대사를 알아들어요</span></div>
+        <div class="trk-hint"><span class="ic">💡</span><span class="t"><b>추천</b>천천히 → 실제 속도로, 원어민과 자주 대화하기</span></div>
+      </div>
+    </div>
+
+    <!-- ③ 도착 예측 · 목표·페이스·레벨에서 파생. 답이 덜 골라졌으면 스켈레톤 -->
+    <div class="section rep-page" id="p-report" data-page-id="report-arrival">
+      <span class="section-kicker">도착 예측</span>
+      <h2 class="section-title">여기서 저기까지, 이렇게</h2>
+      <p class="rv-sub">골라 주신 목표와 페이스로, 언제쯤 도착하는지 그려 봤어요.</p>
+
+      <div class="grad">
+        <span class="cal">📅</span>
+        <span>
+          <span class="k">이 페이스면, 목표에 도착하는 날</span>
+          <span class="v grad-date">—</span>
+        </span>
+      </div>
+
+      <div class="rep-empty" aria-hidden="true">
+        <div class="sk sk-head"></div>
+        <div class="sk sk-plot">
+          <svg viewBox="0 0 300 120" preserveAspectRatio="none">
+            <path d="M12 104 C 60 100, 150 88, 210 60 C 250 42, 275 26, 288 16" fill="none"
+                  stroke="#e4e4e2" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="12" cy="104" r="5" fill="#e4e4e2"/>
+            <circle cx="210" cy="60" r="5" fill="#e4e4e2"/>
+            <circle cx="288" cy="16" r="6" fill="#dedede"/>
+          </svg>
+        </div>
+        <div class="sk sk-facts"><i></i><i></i><i></i></div>
+        <div class="sk sk-course"></div>
+        <div class="sk sk-course"></div>
+      </div>
+      <a class="rep-jump" href="#p-goal"><span class="rj-t">—</span><span class="rj-s">눌러서 고르러 가기</span></a>
+
+      <div class="rep" style="margin-top:16px">
+        <div class="rep-head">
+          <span class="rep-goal">—</span>
+          <span class="rep-eta"><b>—</b><small>목표까지</small></span>
+        </div>
+
+        <svg class="rep-plot" viewBox="0 0 340 210" role="img" aria-label="학습 견통 그래프">
+          <defs>
+            <linearGradient id="repline" x1="0" y1="1" x2="1" y2="0">
+              <stop offset="0" stop-color="#6ABE36"/><stop offset="1" stop-color="#9BEB26"/>
+            </linearGradient>
+            <linearGradient id="reparea" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#6ABE36" stop-opacity=".18"/>
+              <stop offset="1" stop-color="#6ABE36" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <line x1="16" y1="34" x2="326" y2="34" stroke="#F0F0F0"/>
+          <line x1="16" y1="86" x2="326" y2="86" stroke="#F0F0F0"/>
+          <line x1="16" y1="138" x2="326" y2="138" stroke="#F0F0F0"/>
+          <path d="M20 160 C 60 157, 120 146, 170 126 C 226 104, 280 66, 326 34" fill="none"
+                stroke="url(#repline)" stroke-width="3" stroke-linecap="round"/>
+          <path d="M20 160 C 60 157, 120 146, 170 126 C 226 104, 280 66, 326 34 L326 160 Z" fill="url(#reparea)"/>
+          <path class="rep-slow" d="M20 160 C 110 158, 230 152, 326 144" fill="none"
+                stroke="#C9C9C9" stroke-width="1.75" stroke-dasharray="4 4" stroke-linecap="round"/>
+          <line x1="16" y1="160" x2="326" y2="160" stroke="#E1E1E1"/>
+          <circle cx="20" cy="160" r="4.5" fill="#1C1C1C" stroke="#fff" stroke-width="2"/>
+          <circle cx="170" cy="126" r="4.5" fill="#6ABE36" stroke="#fff" stroke-width="2"/>
+          <circle cx="326" cy="34" r="10" fill="#B5FD4C" opacity=".35"/>
+          <circle cx="326" cy="34" r="4.5" fill="#6ABE36" stroke="#fff" stroke-width="2"/>
+          <text class="m1" x="162" y="121" font-size="9.5" fill="#457B23" font-weight="700" text-anchor="end"
+                paint-order="stroke" stroke="#fff" stroke-width="3" stroke-linejoin="round">—</text>
+          <text class="m2" x="318" y="29" font-size="10" fill="#457B23" font-weight="800" text-anchor="end"
+                paint-order="stroke" stroke="#fff" stroke-width="3" stroke-linejoin="round">—</text>
+          <text class="x0" x="20" y="176" font-size="9" fill="#757575" text-anchor="middle">오늘</text>
+          <text class="x1" x="170" y="176" font-size="9" fill="#757575" text-anchor="middle">—</text>
+          <text class="x2" x="326" y="176" font-size="9" fill="#757575" text-anchor="end">—</text>
+          <line x1="196" y1="16" x2="210" y2="16" stroke="#6ABE36" stroke-width="2.5" stroke-linecap="round"/>
+          <text class="lg1" x="214" y="19" font-size="9" fill="#757575">—</text>
+          <line x1="258" y1="16" x2="272" y2="16" stroke="#A5A5A5" stroke-width="2" stroke-dasharray="4 3" stroke-linecap="round"/>
+          <text x="276" y="19" font-size="9" fill="#757575">주 1회</text>
+          <rect class="cur1" x="20" y="186" width="96" height="20" rx="6" fill="#F5F5F5" stroke="#E8E8E8"/>
+          <text class="cur1t" x="68" y="200" font-size="9" fill="#575757" font-weight="700" text-anchor="middle">—</text>
+          <rect class="cur2" x="120" y="186" width="206" height="20" rx="6" fill="#F5F5F5" stroke="#E8E8E8"/>
+          <text class="cur2t" x="223" y="200" font-size="9" fill="#575757" font-weight="700" text-anchor="middle">—</text>
+        </svg>
+
+        <div class="rep-facts">
+          <div class="rf"><span class="k">지금 레벨</span><span class="v rep-lv">—</span></div>
+          <div class="rf"><span class="k">학습 페이스</span><span class="v rep-pace">—</span></div>
+          <div class="rf"><span class="k">필요한 레슨</span><span class="v rep-count">—</span></div>
+        </div>
+
+        <span class="cgroup-label">추천 코스</span>
+        <div class="rep-courses"></div>
+        <p class="rep-why"></p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ================================================================
+       PAGER · 한 장씩 넘겨 보는 모드
+       The deck is 43 flat siblings under .phone, so paging is just
+       "show one, hide the rest" — no restructuring. Off by default:
+       scrolling stays the ground truth (printing, Cmd+F, scanning
+       ahead all rely on it), and this is the presentation layer.
+       ================================================================ -->
+  <nav class="pager" data-sync-id="deck-page" data-sync-kind="page">
+    <button class="pg-btn pg-prev" type="button" aria-label="이전 페이지">←</button>
+    <div class="pg-mid">
+      <span class="pg-label"><b class="pg-act">—</b><span class="pg-n">—</span></span>
+    </div>
+    <button class="pg-btn pg-next" type="button" aria-label="다음 페이지">→</button>
+    <button class="pg-btn pg-teach" type="button" aria-label="티칭 모드">T</button>
+  </nav>
+
+
+  <!-- ================================================================
+       SYNC · 레몬보드의 data-sync 계약에 맞춘다
+       https://github.com/re-speak/lemonboard  (apps/web/src/views/meet/lib/html-sync)
+
+       전송(스냅샷·늦은 입장·에코 차단·수렴)은 전부 보드가 한다. 이 문서는
+       "무엇이 공유되는지"만 선언한다.
+
+         - .tap-grid  → data-sync-kind="selection"  (기본 제공)
+                        고른 집합만 오간다. 정/오답은 각자 data-ok 로 계산한다.
+         - .builder   → lessonSync.register("builder")
+         - .pager     → lessonSync.register("page")
+                        둘 다 상태가 클로저에 있어 DOM 만으로는 읽을 수 없다.
+
+       teaching 모드는 공유하지 않는다 — 튜터가 답을 여는 스위치라서,
+       보내면 학습자에게 정답을 그대로 넘기는 셈이 된다.
+
+       레몬보드 밖(로컬에서 파일을 직접 열 때)에서는 lessonSync 가 없으므로
+       아무것도 하지 않는 스텁으로 대체해, 덱 자체는 그대로 동작하게 둔다.
+       ================================================================ -->
+  <script>
+    window.lessonSync = window.lessonSync || {
+      kinds: {},
+      register: function (name, handlers) { this.kinds[name] = handlers; return this; },
+      push: function () {}
+    };
+  </script>
+
+  <!-- ================================================================
+       CONSULTATION · 상담 답변 → 개인 리포트
+       니즈(why·goal·pace)와 튜터가 체크한 레벨(level)은 data-sync-kind="selection"
+       으로 보드가 동기화한다. 리포트는 파생 상태라 전송하지 않고, 양쪽이 각자
+       같은 입력으로 다시 그린다(정오답을 각자 계산하는 것과 같은 원리).
+       원격 선택이 도착하면 보드가 옵션을 합성 클릭 → 아래 핸들러가 돌아 render()
+       가 다시 호출되므로, 이 스크립트 자체에는 sync 코드가 없다.
+       레슨 수는 korean/ 커리큘럼 실제 분량 기준.
+       ================================================================ -->
+  <script>
+  (function () {
+    // goal -> how many lessons it takes from absolute zero, what the two
+    // milestones on the way are, and which courses get recommended
+    var GOALS = {
+      "1": { t: "인사할 수 있게 되기",              n: 20,  m: ["글자를 읽어요", "인사할 수 있어요"],       c: ["hangul", "core"] },
+      "2": { t: "자기소개할 수 있게 되기",           n: 30,  m: ["글자를 읽어요", "자기소개해요"],         c: ["hangul", "core"] },
+      "3": { t: "카페·가게에서 주문하기",            n: 45,  m: ["간단한 문장을 읽어요", "주문할 수 있어요"], c: ["hangul", "core", "travel"] },
+      "4": { t: "여행에서 혼자서도 괜찮기",          n: 67,  m: ["간판이 읽혀요", "가게에서 말해요"],       c: ["hangul", "core", "travel"] },
+      "5": { t: "노래·드라마를 자막 없이 알아듣기",   n: 100, m: ["일상 회화의 토대", "알아들어요"],         c: ["hangul", "core", "drama"] },
+      "6": { t: "친구와 수다 떨기",                 n: 90,  m: ["일상 회화의 토대", "반말로 말해요"],       c: ["hangul", "core", "banmal"] },
+      "7": { t: "내 의견과 이유를 말하기",           n: 110, m: ["일상 회화의 토대", "이유를 말해요"],       c: ["hangul", "core", "free"] },
+      "8": { t: "일할 때 한국어 쓰기",              n: 130, m: ["일상 회화의 토대", "일에서 써요"],         c: ["hangul", "core", "free"] }
+    };
+    // the tutor's level call -> lessons already effectively covered
+    var DONE = { "1": 0, "2": 11, "3": 25, "4": 45, "5": 70 };
+    var LEVEL_T = { "1": "처음", "2": "한글을 읽어요", "3": "간단한 문장", "4": "일상 회화", "5": "자기 생각" };
+
+    /* ---- ① 지금 레벨 카드의 문안 ----
+       TODO(콘텐츠): 아래 문장·근거 3줄은 레벨 체크 5단계에 맞춰 임시로 쓴
+       것이다. 실제 문안은 콘텐츠 팀 확정본으로 갈아끼워야 한다. 눈금은 10칸
+       인데 레벨 체크는 5개뿐이라, 6~10 은 아직 아무도 가리키지 않는다. */
+    var LV = {
+      "1": { name: "첫걸음", mascot: "mascot-newborn.svg",
+             line: '한글을 <b>하나씩 읽어요</b>',
+             diag: '자음과 모음은 <b>하나씩 소리 낼 수 있어요.</b> 아직 글자를 붙여 읽는 건 느리고, 어·오처럼 닮은 소리는 섞여 나와요. 지금은 소리를 손에 익히는 단계예요.',
+             cert: ["1급", "준비 단계 · 아직 응시 전"],
+             ev: [[1, "아 · 이 · 우 모음 소리를 정확히 냈어요"],
+                  [1, "‘안녕하세요’를 통째로 따라 말했어요"],
+                  [0, "어 / 오는 아직 같은 소리로 나왔어요"]] },
+      "2": { name: "글자 떼기", mascot: "mascot-newborn.svg",
+             line: '한글을 <b>막힘 없이 읽어요</b>',
+             diag: '받침이 있는 글자까지 <b>소리 내어 읽을 수 있어요.</b> 다만 아는 단어가 아직 적어서, 읽어도 뜻이 바로 붙지는 않아요. 지금은 읽기를 말하기로 옮기기 직전이에요.',
+             cert: ["1급", "문턱 · 어휘가 붙으면 사정권"],
+             ev: [[1, "받침이 있는 글자도 읽어냈어요"],
+                  [1, "아는 단어를 몇 개 짚어냈어요"],
+                  [0, "읽은 문장의 뜻은 아직 바로 안 떠올라요"]] },
+      "3": { name: "문장 시작", mascot: "mascot-grad.svg",
+             line: '짧은 문장을 <b>만들어 말해요</b>',
+             diag: '배운 패턴으로 <b>짧은 문장을 스스로 만들어요.</b> 아직 조사와 말끝이 자주 흔들리고, 문장이 한 번에 하나씩 나와요. 지금은 문장을 늘려 붙이는 단계예요.',
+             cert: ["2급", "사정권 · 조금만 더"],
+             ev: [[1, "‘~예요’로 자기소개를 했어요"],
+                  [1, "아는 단어로 문장을 만들었어요"],
+                  [0, "조사(은/는, 이/가)는 아직 섞여요"]] },
+      "4": { name: "일상 회화", mascot: "mascot-grad.svg",
+             line: '익숙한 주제로 <b>대화를 이어가요</b>',
+             diag: '익숙한 주제라면 <b>주고받는 대화가 이어져요.</b> 낯선 화제로 넘어가면 말이 끊기고, 문법도 실제로 말할 때는 자주 흔들려요. 지금은 화제의 폭을 넓히는 단계예요.',
+             cert: ["3급", "사정권"],
+             ev: [[1, "하루 일과를 이어서 말했어요"],
+                  [1, "되묻기로 대화를 이어갔어요"],
+                  [0, "낯선 주제에서는 말이 끊겼어요"]] },
+      "5": { name: "내 생각", mascot: "mascot-grad.svg",
+             line: '이유를 붙여 <b>내 의견을 말해요</b>',
+             diag: '자기 생각에 <b>이유를 붙여 말할 수 있어요.</b> 아직 표현의 폭이 좁아 같은 말이 반복되고, 긴 이야기는 앞뒤가 느슨해져요. 지금은 표현을 다듬는 단계예요.',
+             cert: ["4급", "사정권"],
+             ev: [[1, "의견에 이유를 붙여 말했어요"],
+                  [1, "문장을 이어 붙여 길게 말했어요"],
+                  [0, "비슷한 표현이 반복돼요"]] }
+    };
+    var LADDER_STEPS = 10;   // 전체 레벨 수. 레벨 체크는 아직 1~5 만 준다.
+
+    // Names, stage numbers and anchors all match the 커리큘럼 page in the
+    // full trial deck, so a recommended course can be pointed at and
+    // explained without the learner having to work out that they are the
+    // same thing. short: the graph band under the axis, only ~96px wide.
+    var COURSE = {
+      hangul: { t: "한글 읽기",        s: "11레슨",   short: "한글 읽기",  stage: 1 },
+      core:   { t: "핵심 패턴",        s: "초급 56과", short: "핵심 패턴",  stage: 2 },
+      travel: { t: "상황별 · 여행",     s: "40레슨",   short: "여행",      stage: 3 },
+      drama:  { t: "상황별 · 드라마",   s: "40레슨",   short: "드라마",    stage: 3 },
+      banmal: { t: "상황별 · 반말 수다", s: "40레슨",   short: "반말 수다",  stage: 3 },
+      free:   { t: "프리토킹",         s: "30주제",   short: "프리토킹",   stage: 4 }
+    };
+    // why -> a closing line that ties the plan back to their own reason
+    var WHY = {
+      kpop:   "K-POP·드라마를 자막 없이 즐기는 데까지, 이 순서가 가장 빨라요.",
+      travel: "여행 전에 맞추려고 읽는 힘과 가게에서 쓰는 표현을 먼저 넣었어요.",
+      friend: "한국인 친구·연인과 이야기하려면 반말까지가 사정권이에요.",
+      work:   "일에서 쓰려면 문법 토대가 필요해서 패턴을 두껍게 잡았어요.",
+      topik:  "TOPIK의 토대가 되는 문법부터 차례대로 쌓는 순서예요.",
+      self:   "무리 없이 이어갈 수 있게, 조금씩 쌓이는 순서로 짰어요.",
+      other:  "오늘 들은 희망에 맞춰 순서를 짰어요."
+    };
+
+    var pick = { why: [], goal: null, pace: null, level: null };
+
+    /* ---- the answer groups remember what was chosen ---- */
+    document.querySelectorAll("[data-group]").forEach(function (group) {
+      var key = group.getAttribute("data-group");
+      var multi = group.getAttribute("data-pick") === "multi";
+      group.querySelectorAll("button[data-val]").forEach(function (b) {
+        b.addEventListener("click", function () {
+          var v = b.getAttribute("data-val");
+          if (multi) {
+            b.classList.toggle("on");
+            pick[key] = [].slice.call(group.querySelectorAll("button.on"))
+                          .map(function (x) { return x.getAttribute("data-val"); });
+          } else {
+            var was = b.classList.contains("on");
+            group.querySelectorAll("button").forEach(function (x) { x.classList.remove("on"); });
+            if (!was) b.classList.add("on");
+            pick[key] = was ? null : v;
+          }
+          render();
+        });
+      });
+    });
+
+    /* ---- ① 지금 레벨 카드 ----
+       레벨을 아직 안 골랐으면 Lv.1 로 둔다 — 레벨 체크 페이지의 튜터 노트가
+       "대부분 1이에요" 라고 말하는 그 기본값이다. */
+    var card = document.querySelector(".s-lv");
+
+    function renderLevel(lv) {
+      if (!card) return;
+      var d = LV[lv] || LV["1"];
+      var n = Number(lv);
+      card.querySelector(".lvc-mascot").src = "../assets/" + d.mascot;
+      card.querySelector(".lvc-badge").textContent = "Lv." + lv + " · " + d.name;
+      card.querySelector(".lvc-line").innerHTML = d.line;
+      card.querySelector(".lvc-diag").innerHTML = d.diag;
+      card.querySelector(".lvc-cert b").textContent = d.cert[0];
+      card.querySelector(".lvc-cert span").textContent = d.cert[1];
+
+      var segs = card.querySelector(".lad-segs"), nums = card.querySelector(".lad-nums");
+      segs.innerHTML = ""; nums.innerHTML = "";
+      for (var i = 1; i <= LADDER_STEPS; i++) {
+        var s = document.createElement("span");
+        if (i <= n) s.className = "on";
+        segs.appendChild(s);
+        var t = document.createElement("span");
+        if (i === n) { t.className = "on"; t.textContent = "Lv." + i; }
+        else t.textContent = String(i);
+        nums.appendChild(t);
+      }
+
+      var ul = card.querySelector(".lvc-ev");
+      ul.innerHTML = "";
+      d.ev.forEach(function (row) {
+        var li = document.createElement("li");
+        if (!row[0]) li.className = "miss";
+        li.innerHTML = '<i>' + (row[0] ? "✓" : "·") + '</i>' + row[1];
+        ul.appendChild(li);
+      });
+    }
+
+    /* ---- ③ 도착 예측 ---- */
+    var page = document.querySelector("#p-report");
+    var rep = document.querySelector(".rep");
+    var empty = document.querySelector(".rep-empty");
+    var $ = function (sel) { return rep.querySelector(sel); };
+
+    function months(lessons, perWeek) {
+      return Math.max(1, Math.round(lessons / (perWeek * 4.3)));
+    }
+
+    function gradDate(mo) {
+      var d = new Date();
+      d.setMonth(d.getMonth() + mo);
+      return d.getFullYear() + "년 " + (d.getMonth() + 1) + "월<small>쯤</small>";
+    }
+
+    function render() {
+      renderLevel(pick.level || "1");
+      if (!rep) return;
+
+      var g = GOALS[pick.goal], pace = pick.pace, lv = pick.level || "1";
+      // While the report is a skeleton, say which answer is missing and
+      // take the tutor straight there — the old caption only restated
+      // the problem and left them to scroll back and find it.
+      var jump = document.querySelector(".rep-jump");
+      if (!g || !pace) {
+        rep.classList.remove("ready");
+        page.classList.remove("ready");
+        empty.classList.remove("hide");
+        if (jump) {
+          jump.classList.remove("hide");
+          var missing = !g
+            ? { href: "#p-goal", t: "목표를 아직 안 골랐어요" }
+            : { href: "#p-pace", t: "학습 페이스를 아직 안 골랐어요" };
+          jump.href = missing.href;
+          jump.querySelector(".rj-t").textContent = missing.t;
+        }
+        return;
+      }
+      rep.classList.add("ready");
+      page.classList.add("ready");
+      empty.classList.add("hide");
+      if (jump) jump.classList.add("hide");
+
+      var per = pace === "5" ? 5 : Number(pace);
+      var need = Math.max(6, g.n - DONE[lv]);
+      var mo = months(need, per);
+      var half = Math.max(1, Math.round(mo / 2));
+
+      document.querySelector(".grad-date").innerHTML = gradDate(mo);
+
+      $(".rep-goal").textContent = g.t;
+      $(".rep-eta b").textContent = "약 " + mo + "개월";
+      $(".rep-lv").textContent = "Lv." + lv + " " + LEVEL_T[lv];
+      $(".rep-pace").textContent = "주 " + (pace === "5" ? "5회 이상" : pace + "회");
+      $(".rep-count").textContent = "약 " + need + "레슨";
+
+      $(".m1").textContent = g.m[0];
+      $(".m2").textContent = g.m[1];
+      $(".x1").textContent = half + "개월";
+      $(".x2").textContent = mo + "개월";
+      $(".lg1").textContent = "주 " + (pace === "5" ? "5회" : pace + "회");
+
+      // never recommend a course the learner has already passed
+      var courses = g.c.filter(function (k) {
+        if (k === "hangul") return Number(lv) < 2;
+        if (k === "core") return Number(lv) < 5;
+        return true;
+      });
+      if (!courses.length) courses = [g.c[g.c.length - 1]];
+      // the bands under the axis: the first course is the short opening
+      // stretch, the second is the bulk of the time. With only one course
+      // left, it takes the whole axis rather than being named twice.
+      var c1 = rep.querySelector(".cur1"), c1t = rep.querySelector(".cur1t");
+      var c2 = rep.querySelector(".cur2"), c2t = rep.querySelector(".cur2t");
+      if (courses.length === 1) {
+        c1.setAttribute("width", "0"); c1t.textContent = "";
+        c2.setAttribute("x", "20"); c2.setAttribute("width", "306"); c2t.setAttribute("x", "173");
+        c2t.textContent = COURSE[courses[0]].short;
+      } else {
+        c1.setAttribute("width", "96"); c1t.textContent = COURSE[courses[0]].short;
+        c2.setAttribute("x", "120"); c2.setAttribute("width", "206"); c2t.setAttribute("x", "223");
+        c2t.textContent = COURSE[courses[1]].short;
+      }
+
+      // 커리큘럼 페이지는 이 파일에 없다. 전체 덱에서는 #c-1..4 로 뛰던
+      // 자리라, 여기서는 링크 없이 목록으로만 보여 준다.
+      var list = $(".rep-courses");
+      list.innerHTML = "";
+      courses.forEach(function (k, i) {
+        var c = COURSE[k];
+        var row = document.createElement("a");
+        row.className = "rc";
+        row.innerHTML = '<span class="rcn">' + (i + 1) + '</span>' +
+                        '<span class="rcb"><span class="rct">' + c.t + '</span>' +
+                        '<span class="rcs">' + c.stage + '단계 · ' + c.s + '</span></span>';
+        list.appendChild(row);
+      });
+
+      var why = pick.why && pick.why.length ? pick.why[0] : "other";
+      $(".rep-why").textContent = WHY[why] || WHY.other;
+    }
+
+    render();
+  })();
+  </script>
+
+  <!-- ================================================================
+       RADAR · ② 항목별 진단의 오각형. 지금(초록 채움) vs 목표(검정 외곽).
+       값은 아래 트랙 마크업과 같은 Lv.1 케이스 손입력이다.
+       ================================================================ -->
+  <script>
+  (function () {
+    var AX   = ["정확성", "어휘", "유창성", "발음", "듣기"];
+    var NOW  = [0.40, 0.22, 0.18, 0.46, 0.26];
+    var GOAL = [0.86, 0.80, 0.82, 0.84, 0.90];
+    var cx = 100, cy = 100, R = 82, N = 5, NS = "http://www.w3.org/2000/svg";
+    var svg = document.getElementById("radar");
+    if (!svg) return;
+    function P(i, f) { var a = (-90 + i * (360 / N)) * Math.PI / 180; return [cx + Math.cos(a) * R * f, cy + Math.sin(a) * R * f]; }
+    function poly(p) { return p.map(function (q) { return q[0].toFixed(1) + "," + q[1].toFixed(1); }).join(" "); }
+    function el(t, a) { var e = document.createElementNS(NS, t); for (var k in a) e.setAttribute(k, a[k]); return e; }
+    [0.25, 0.5, 0.75, 1].forEach(function (f) { var p = []; for (var i = 0; i < N; i++) p.push(P(i, f)); svg.appendChild(el("polygon", { points: poly(p), fill: "none", stroke: "#f0efec", "stroke-width": "1" })); });
+    for (var i = 0; i < N; i++) {
+      var e = P(i, 1); svg.appendChild(el("line", { x1: cx, y1: cy, x2: e[0], y2: e[1], stroke: "#f0efec", "stroke-width": "1" }));
+      var lp = P(i, 1.18), t = el("text", { x: lp[0].toFixed(1), y: (lp[1] + 4).toFixed(1), "font-size": "11.5", "font-weight": "600", fill: "#6a6a66", "text-anchor": lp[0] > cx + 4 ? "start" : (lp[0] < cx - 4 ? "end" : "middle") });
+      t.textContent = AX[i]; svg.appendChild(t);
+    }
+    var gp = []; for (var i = 0; i < N; i++) gp.push(P(i, GOAL[i]));
+    svg.appendChild(el("polygon", { points: poly(gp), fill: "rgba(28,28,28,.03)", stroke: "#1c1c1c", "stroke-width": "1.5", "stroke-linejoin": "round" }));
+    for (var i = 0; i < N; i++) { var d = P(i, GOAL[i]); svg.appendChild(el("circle", { cx: d[0].toFixed(1), cy: d[1].toFixed(1), r: "2.4", fill: "#1c1c1c", stroke: "#fff", "stroke-width": "1" })); }
+    var np = []; for (var i = 0; i < N; i++) np.push(P(i, NOW[i]));
+    svg.appendChild(el("polygon", { points: poly(np), fill: "rgba(106,190,54,.20)", stroke: "#6abe36", "stroke-width": "1.75", "stroke-linejoin": "round" }));
+    for (var i = 0; i < N; i++) { var d = P(i, NOW[i]); svg.appendChild(el("circle", { cx: d[0].toFixed(1), cy: d[1].toFixed(1), r: "2.6", fill: "#6abe36", stroke: "#fff", "stroke-width": "1" })); }
+  })();
+  </script>
+
+  <!-- ================================================================
+       PAGER · back / next / progress, in both modes.
+       Page view is the default; scrolling stays one tap away.
+       Page turns are shared (kind "page"); view mode and teaching mode
+       stay local.
+       ================================================================ -->
+  <script>
+  (function () {
+    var phone = document.querySelector(".phone");
+    var bar   = document.querySelector(".pager");
+    if (!phone || !bar) return;
+    var sync = window.lessonSync;
+
+    var pages = [].slice.call(phone.children);
+    // Reference pages (수업 안내 · 전체 요금표 · FAQ) hang off the 포도 안내
+    // index. Next never walks into them — the deck's spine would otherwise
+    // run through material most learners never need — but a link or Back
+    // still reaches them.
+    var flow = pages.filter(function (p) { return p.dataset.flow !== "ref"; });
+
+    // Acts come from the divider pages that already exist. They only name
+    // where you are — progress itself is measured across the whole flow.
+    var acts = [], cur = null;
+    flow.forEach(function (p, i) {
+      var isDiv = p.classList.contains("divider");
+      if (!cur || isDiv) {
+        var t = p.querySelector(".brand-title");
+        cur = { name: t ? (t.firstChild.textContent || "").trim() : "체험 레슨", from: i, to: i };
+        acts.push(cur);
+      }
+      cur.to = i;
+    });
+
+    var at = 0;                                    // index into `pages`
+    var prevBtn  = bar.querySelector(".pg-prev");
+    var nextBtn  = bar.querySelector(".pg-next");
+    var actEl    = bar.querySelector(".pg-act");
+    var nEl      = bar.querySelector(".pg-n");
+    var teachBtn = bar.querySelector(".pg-teach");
+
+    function paint() {
+      var f = flow.indexOf(pages[at]);
+      prevBtn.disabled = at <= 0;
+      nextBtn.disabled = f >= 0 && f === flow.length - 1;
+      if (f < 0) {                                 // a reference page
+        actEl.textContent = "포도 안내";
+        nEl.textContent = "참고 페이지";
+      } else {
+        var a = 0;
+        acts.forEach(function (x, k) { if (f >= x.from) a = k; });
+        actEl.textContent = acts[a].name;          // the act only labels where you are
+        nEl.textContent = (f + 1) + " / " + flow.length;
+      }
+    }
+
+    // `into` is an element inside the page to land on (curriculum stages,
+    // survey questions). Layout is flushed first — the page has only just
+    // left display:none, so measuring before that reads stale geometry.
+    function show(i, into) {
+      at = Math.max(0, Math.min(pages.length - 1, i));
+      pages.forEach(function (p, k) { p.classList.toggle("pg-on", k === at); });
+      paint();
+      void pages[at].offsetHeight;
+      if (into && into !== pages[at]) into.scrollIntoView({ block: "start" });
+      else window.scrollTo(0, 0);
+    }
+
+    // show() moves the page silently; goTo() is a turn someone made, so it
+    // is the one that tells the other side.
+    function goTo(i, into) {
+      if (i < 0 || i > pages.length - 1) return;
+      if (i === at && !into) return;
+      show(i, into);
+      sync.push(bar);
+    }
+
+    // Next/Prev walk the flow, skipping reference pages. Stepping off a
+    // reference page returns to the 포도 안내 index it hangs from.
+    function step(d) {
+      var f = flow.indexOf(pages[at]);
+      if (f < 0) {
+        var info = document.getElementById("p-info");
+        goTo(info ? pages.indexOf(info) : 0);
+        return;
+      }
+      var t = flow[f + d];
+      if (t) goTo(pages.indexOf(t));
+    }
+
+    prevBtn.addEventListener("click", function () { step(-1); });
+    nextBtn.addEventListener("click", function () { step(1); });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.target.matches && e.target.matches("input, textarea")) return;
+      if (e.key === "ArrowRight") step(1);
+      if (e.key === "ArrowLeft") step(-1);
+    });
+
+    // In-page anchors (#c-2 inside 커리큘럼, #p-goal from the report, the
+    // 포도 안내 jump nav) have to switch page first, then scroll to the
+    // target within it.
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest && e.target.closest('a[href^="#"]');
+      if (!a) return;
+      var target = document.getElementById(a.getAttribute("href").slice(1));
+      if (!target) return;
+      e.preventDefault();
+      var page = target;
+      while (page && page.parentNode !== phone) page = page.parentNode;
+      if (page) goTo(pages.indexOf(page), target);
+    });
+
+    /* ---- page turns are shared (kind "page") ----
+       보드에는 "페이지" 개념이 없다. 넘긴 결과(어느 페이지인지)만 공유하고
+       버튼 클릭은 재생하지 않는다 — 그래야 늦게 들어오거나 새로고침한 쪽도
+       한 번에 같은 페이지로 따라온다. 칸은 순서가 아니라 data-page-id 로
+       지칭해, 페이지를 더해도 이전에 공유된 위치가 어긋나지 않는다. */
+    sync.register("page", {
+      read: function () {
+        return { pageId: pages[at].getAttribute("data-page-id") };
+      },
+      apply: function (el, state) {
+        if (!state || typeof state.pageId !== "string") return;
+        for (var i = 0; i < pages.length; i++) {
+          if (pages[i].getAttribute("data-page-id") === state.pageId) { show(i); return; }
+        }
+        // 이 덱에 없는 페이지면 그대로 둔다
+      }
+    });
+
+    /* ---- teaching mode stays on this screen ----
+       The tutor flips it to reveal answers; sending it would hand the
+       learner the whole key. 공유하지 않는 유일한 상태다. */
+    if (teachBtn) {
+      teachBtn.addEventListener("click", function () {
+        teachBtn.classList.toggle("on", document.body.classList.toggle("teaching"));
+      });
+    }
+
+    // One page at a time is the only mode for now — the scrolling view is
+    // hidden rather than removed, so it can come back without a rewrite.
+    phone.classList.add("paged");
+    document.body.classList.add("paged");
+    show(0);
+  })();
+  </script>
+
+  <!-- SPOTLIGHT · 손가락 포인터 (그리기 대신 "여기 보세요"). 공유 스크립트. -->
+  <script src="../../interactive/spotlight.js"></script>
+
+</body>
+</html>
