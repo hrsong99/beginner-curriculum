@@ -1217,25 +1217,31 @@ strong {
    in — and .phone is itself centred in the viewport, so the two coincide.
    z-index stays under the pager's 60 so the bar is never covered. */
 .phone:has(> .pg-on.stamped) ~ .stamp-art {
+  /* Ink, not paint: the stamp lands over the activity, so it stays translucent
+     enough to read the tiles through. Declared as a property because the
+     keyframes have to fade in to exactly this value, not to 1. */
+  --stamp-ink: .6;
+
   display: block;
   position: fixed;
   inset: 0;
   z-index: 50;
-  margin: auto;
+  margin: auto;             /* centred on the phone column, which is itself centred */
   width: min(66vw, 300px);
   height: auto;
+  opacity: var(--stamp-ink);
   pointer-events: none;     /* praise must never eat a tap on the activity */
-  animation: stampPress .2s cubic-bezier(.3, .85, .2, 1) both;
+  animation: stampPress .13s cubic-bezier(.1, .75, .2, 1) both;
 }
 
-/* A stamp is pressed straight down, so the tilt is constant — rotating during
-   the descent read like a screw going in. What sells it is the impact: fast
-   fall, overshoot into a squash, one tight recoil, done. */
+/* A stamp does not bounce: it comes straight down, hits, and stops dead. So
+   the tilt is constant (rotating during the descent read like a screw going
+   in) and nothing overshoots the resting state — the snap comes from the
+   timing function, which spends most of its 130ms in the last few pixels. */
 @keyframes stampPress {
-  0%   { opacity: 0; transform: scale(1.75) rotate(-7deg); }
-  50%  { opacity: 1; transform: scale(.93) rotate(-7deg); }
-  74%  { transform: scale(1.035) rotate(-7deg); }
-  100% { opacity: 1; transform: scale(1) rotate(-7deg); }
+  from { opacity: 0; transform: scale(1.5) rotate(-7deg); }
+  55%  { opacity: var(--stamp-ink); }
+  to   { opacity: var(--stamp-ink); transform: scale(1) rotate(-7deg); }
 }
 
 /* The button wears a small copy of the stamp, and only the tutor sees it.
@@ -1243,14 +1249,24 @@ strong {
    .pg-btn { display: grid } — an unscoped .pg-stamp ties on specificity and
    loses on order, which would show the learner a button they cannot use. */
 .pager .pg-stamp { display: none; }
-/* 32px to sit level with .pg-teach beside it, not the 38px .pg-btn default */
+/* The art is already a bordered circle, so the button adds no ring of its own —
+   a ring inside a ring is the box-in-a-box the system rules out, and it left
+   the faces rendering at 21px as an unreadable smudge. The stamp IS the button:
+   34px, no border, no fill. */
 body.teaching .pager .pg-stamp {
   display: grid;
-  width: 32px;
-  height: 32px;
-  background: #fff;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: none;
+  background: none;
+  box-shadow: none;
 }
-body.teaching .pager .pg-stamp > .stamp-art { display: block; width: 21px; height: auto; }
+body.teaching .pager .pg-stamp > .stamp-art { display: block; width: 34px; height: auto; }
+
+/* Five items crowd the pill's rounded end — the last one sat 1px inside the
+   flat edge, where the 999px radius has already curved away. */
+body.teaching .pager { padding-right: 15px; }
 
 @media (prefers-reduced-motion: reduce) {
   .phone:has(> .pg-on.stamped) ~ .stamp-art { animation: none; transform: rotate(-7deg); }
