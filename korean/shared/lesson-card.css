@@ -186,8 +186,12 @@ h1 .title-ja,
   font-weight: 700;
 }
 
+/* The tutor reads this line aloud, so it may only break at spaces — the
+   default breaks Hangul between syllables (읽을/게요) and the orphan makes
+   the reader stumble. Korean-only: Japanese has no spaces to break at. */
 .section-subtitle .ko {
   display: block;
+  word-break: keep-all;
 }
 
 .section-subtitle .ja {
