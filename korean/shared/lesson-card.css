@@ -1197,3 +1197,61 @@ strong {
 }
 [data-spot] { cursor: pointer; }
 @media (prefers-reduced-motion: reduce) { .is-spot { animation: none; } }
+
+/* ---------- 참! 잘했어요 stamp ----------
+   The tutor's praise stamp, mirrored to the learner. Only the visual lives
+   here; who may stamp and what is shared is in interactive/stamp.js. */
+
+/* Hidden by default wherever it sits — the lone overlay, and the copy inside
+   the pager button until teaching mode turns that one on. */
+.stamp-art { display: none; }
+
+/* ONE overlay, a sibling of .phone rather than a child of a page. Appending it
+   to the page would make the img :last-child, and the track sheet hands that
+   child a margin-bottom: auto to centre the component pages — the stamp would
+   silently absorb it and break their layout. :has() reads the class off
+   whichever page is showing instead, so page DOM is never touched.
+
+   Fixed, not absolute: paged pages are variously block, flex, or flex-via-
+   :has() and vary in height, so the viewport is the one stable box to centre
+   in — and .phone is itself centred in the viewport, so the two coincide.
+   z-index stays under the pager's 60 so the bar is never covered. */
+.phone:has(> .pg-on.stamped) ~ .stamp-art {
+  display: block;
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  margin: auto;
+  width: min(66vw, 300px);
+  height: auto;
+  pointer-events: none;     /* praise must never eat a tap on the activity */
+  animation: stampPress .2s cubic-bezier(.3, .85, .2, 1) both;
+}
+
+/* A stamp is pressed straight down, so the tilt is constant — rotating during
+   the descent read like a screw going in. What sells it is the impact: fast
+   fall, overshoot into a squash, one tight recoil, done. */
+@keyframes stampPress {
+  0%   { opacity: 0; transform: scale(1.75) rotate(-7deg); }
+  50%  { opacity: 1; transform: scale(.93) rotate(-7deg); }
+  74%  { transform: scale(1.035) rotate(-7deg); }
+  100% { opacity: 1; transform: scale(1) rotate(-7deg); }
+}
+
+/* The button wears a small copy of the stamp, and only the tutor sees it.
+   Scoped to .pager because the track sheet loads after this one and sets
+   .pg-btn { display: grid } — an unscoped .pg-stamp ties on specificity and
+   loses on order, which would show the learner a button they cannot use. */
+.pager .pg-stamp { display: none; }
+/* 32px to sit level with .pg-teach beside it, not the 38px .pg-btn default */
+body.teaching .pager .pg-stamp {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  background: #fff;
+}
+body.teaching .pager .pg-stamp > .stamp-art { display: block; width: 21px; height: auto; }
+
+@media (prefers-reduced-motion: reduce) {
+  .phone:has(> .pg-on.stamped) ~ .stamp-art { animation: none; transform: rotate(-7deg); }
+}
