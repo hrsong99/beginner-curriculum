@@ -188,8 +188,12 @@ h1 .title-ja,
   font-weight: 700;
 }
 
+/* The tutor reads this line aloud, so it may only break at spaces — the
+   default breaks Hangul between syllables (읽을/게요) and the orphan makes
+   the reader stumble. Korean-only: Japanese has no spaces to break at. */
 .section-subtitle .ko {
   display: block;
+  word-break: keep-all;
 }
 
 .section-subtitle .ja {
@@ -1376,9 +1380,10 @@ strong {
   word-break: keep-all;
 }
 
-.end-title .hl {
-  color: #6abe36;
-}
+/* No accent on the closing title. Green type is neither the brand lime nor
+   readable ink, and a lime highlight is the colour of the page showing round
+   the card, so it punches a hole in it. The line is large and bold already —
+   emphasising half of it adds nothing. */
 
 .end-copy {
   margin: 16px 0 0;
@@ -2114,6 +2119,19 @@ strong {
   font-weight: 700;
 }
 
+/* sentences, not words: a whole sentence cannot live in the 108px word
+   column, so the row stacks instead of running two columns */
+.known.lines .known-row {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.known.lines .known-row .k {
+  width: auto;
+  font-size: 22px;
+}
+
 /* ---------- payoff counter ---------- */
 .payoff {
   margin-top: 24px;
@@ -2397,6 +2415,37 @@ strong {
 
 .tap-grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
+/* Listen-and-pick is not one six-way choice, it is three two-way ones. Laid
+   out as a plain grid the learner reads all six as a single question and the
+   drill looks far harder than it is, so each question gets its own numbered
+   band. The band is filled, never bordered — the tiles inside already carry
+   a border, and a bordered wrapper would box them twice. */
+.tap-grid.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.tap-row {
+  display: grid;
+  grid-template-columns: 30px 1fr 1fr;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px 10px 2px;
+  border-radius: 18px;
+  background: #f5f5f5;
+}
+
+.tap-n {
+  font-size: 17px;
+  font-weight: 800;
+  color: #a5a5a5;
+  text-align: center;
+}
+
+.tap-grid.rows .tap-tile { height: 100px; font-size: 48px; }
+
 .tap-tile {
   position: relative;
   display: grid;
@@ -2549,6 +2598,13 @@ strong {
 .keys.c3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .keys.v6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
 
+/* one taught consonant so far. The key keeps the width it has in .c3 and sits
+   centred, so a single option doesn't read as two keys that failed to load. */
+.keys.c1 {
+  grid-template-columns: minmax(0, calc((100% - 14px) / 3));
+  justify-content: center;
+}
+
 .key {
   display: grid;
   place-items: center;
@@ -2592,11 +2648,18 @@ strong {
    so it collapses completely and leaves no gap behind. */
 body.teaching .tutor-note {
   display: block;
-  margin: 14px 0 0;
+  /* The bottom margin collapses against whatever follows, so components that
+     bring their own top margin (.tap-grid, .builder) are unaffected, while a
+     .dialogue — which has none — stops colliding with the bar. */
+  margin: 14px 0 18px;
   padding: 8px 12px 8px 9px;
   border-left: 3px solid #b5fd4c;
   border-radius: 5px 10px 10px 5px;
   background: #1c1c1c;
+  /* hugs its text like the green script box above it, rather than running
+     full-bleed and out-weighting the line it belongs to */
+  width: fit-content;
+  max-width: 100%;
 }
 
 body.teaching .section-subtitle + .tutor-note { margin-top: -14px; }
@@ -3740,3 +3803,155 @@ body.paged { padding-bottom: 0; }
 .section        { border-color: transparent; box-shadow: none; }
 .brand-page     { box-shadow: none; }
 .transition-page { box-shadow: none; }
+
+
+/* ============================================================
+   PATTERN ACTIVITIES  (문장 활동)
+   ------------------------------------------------------------
+   The hangul deck answers everything with .tap-grid / .builder.
+   A pattern deck needs three more, and they are the three the
+   interactive core lesson already ships — so the markup, the
+   class names and the states are taken from
+   interactive/sample-lesson-interactive.html rather than invented:
+
+     .slot / .answer-space  → typed blanks     (kind "value")
+     .choose-row .opt       → tap one of two   (kind "selection")
+     .choice → .build-zone  → order the words  (kind "order")
+
+   Feedback stays quiet and immediate, the way a tap-tile's does:
+   right fills lime, wrong greys back out, and the tutor still leads.
+   ============================================================ */
+
+/* ---------- typed blanks ---------- */
+.slot-input.correct {
+  border-style: solid;
+  background: #b5fd4c;
+}
+
+.slot-input.wrong {
+  border-color: #d9534f;
+  background: #fdf1f1;
+  color: #d9534f;
+  animation: miss .3s;               /* the builder's shake, reused */
+}
+
+/* a write-in area becomes a real field and keeps the tinted
+   "fill the whole thing here" box it already had */
+.answer-space.as-input {
+  padding: 0;
+  color: #1c1c1c;
+}
+
+.answer-space.as-input .space-input,
+.answer-space.as-input .free-input {
+  display: block;
+  width: 100%;
+  min-height: inherit;
+  padding: 13px 16px;
+  border: 0;
+  background: transparent;
+  color: #1c1c1c;
+  font: inherit;
+  font-family: inherit;
+  font-weight: 700;
+  resize: none;
+  -webkit-appearance: none;
+}
+
+.answer-space.as-input .space-input:focus,
+.answer-space.as-input .free-input:focus { outline: none; }
+.answer-space.as-input:focus-within { background: #fff; }
+
+.answer-space.as-input .space-input::placeholder,
+.answer-space.as-input .free-input::placeholder { color: #d8d8d4; font-weight: 700; }
+
+.answer-space.as-input.correct,
+.bubble.me .answer-space.as-input.correct { background: #e9fbcf; }
+
+/* ---------- order the words ---------- */
+/* the answer area turns into the tray the chips land in; the pool
+   underneath holds the ones not placed yet */
+.build-zone {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 14px;
+  color: #1c1c1c;
+}
+
+.build-zone .choice,
+.chip-pool .choice { margin: 0; }
+
+.build-zone.correct,
+.bubble.me .build-zone.correct { background: #e9fbcf; }
+
+.build-zone.wrong {
+  background: #fdf1f1;
+  box-shadow: inset 0 0 0 1.5px #d9534f;
+}
+
+.chip-pool {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 20px;
+  margin-top: 10px;
+}
+
+.choice {
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.choice:active { transform: translateY(1px); }
+
+/* ---------- tap one of two ---------- */
+.opt {
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.opt.correct { border-style: solid; background: #b5fd4c; }
+
+/* a wrong pick greys back out and STAYS greyed — `chosen` is the class
+   that travels, so the look has to survive as long as the choice does
+   (a 700ms flash is invisible to the other screen) */
+.opt.chosen:not(.correct) { background: #f5f5f5; color: #a5a5a5; }
+.opt.wrong { border-color: #d9534f; background: #fdf1f1; color: #d9534f; animation: miss .3s; }
+.opt.dim { opacity: .35; }
+
+/* ---------- self-check list ---------- */
+.mission li {
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.mission li.checked::before {
+  content: "✓";
+  background: #b5fd4c;
+  color: #1c1c1c;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 13px;
+  text-align: center;
+}
+
+/* ---------- teaching mode ----------
+   Same rule as the letter deck: the answer is present for the tutor and
+   never loud. Typed blanks take the answer as their placeholder (set in
+   the deck's script — CSS cannot reach inside an input); these two have
+   nowhere to put one, so they get a ghost of their own. */
+body.teaching .opt[data-correct]:not(.chosen) { box-shadow: 0 0 0 2.5px #e6e6e4; }
+
+body.teaching .build-zone:not(:has(> *))::after {
+  content: attr(data-a);
+  color: #ddddd9;
+  font-size: 17px;
+  font-weight: 700;
+}
