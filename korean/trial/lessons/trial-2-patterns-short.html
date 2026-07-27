@@ -1115,5 +1115,15 @@
   <!-- SPOTLIGHT · 손가락 포인터 (그리기 대신 "여기 보세요"). 공유 스크립트. -->
   <script src="../../interactive/spotlight.js"></script>
 
+  <!-- STAMP · 참! 잘했어요. stamp.js 가 이 그림을 페이지마다, 그리고 페이저
+       버튼 안에 복제한다. 경로를 쓰는 곳이 여기 하나뿐인 게 중요하다:
+       패키저는 마크업에 적힌 이미지 경로만 번들·평탄화하므로, JS 로 경로를
+       만들면 로컬에서만 되고 보드(S3)에서 404 가 난다. .phone 밖에 두는 것도
+       중요하다 — 페이저는 .phone 의 자식을 페이지로 세기 때문에, 안에 넣으면
+       빈 페이지가 하나 생긴다. (이 주석에 경로 표기를 그대로 쓰면 패키저가
+       주석까지 훑어 없는 파일을 찾으므로, 말로만 적는다.) -->
+  <img class="stamp-art" src="../assets/well-done.svg" alt="">
+  <script src="../../interactive/stamp.js"></script>
+
 </body>
 </html>
