@@ -1220,20 +1220,33 @@ strong {
   /* Ink, not paint: the stamp lands over the activity, so it stays translucent
      enough to read the tiles through. Declared as a property because the
      keyframes have to fade in to exactly this value, not to 1. */
-  --stamp-ink: .8;
+  --stamp-ink: .9;
 
   /* Off dead-centre, up and to the right — enough to feel hand-placed rather
-     than pasted, not enough to leave the activity. Doubled in the inset below
-     because margin:auto splits whatever free space is left. */
+     than pasted, not enough to leave the activity. Both are doubled in the
+     inset below, because margin:auto splits whatever free space is left.
+
+     The vertical one needs a correction first: the pager reserves 118px at the
+     bottom of the viewport, so the CARD's centre already sits ~47px above the
+     viewport's. Centring on the viewport therefore reads as dead-centre on the
+     card, which is why a 40px nudge was invisible. The 94px term (118 minus
+     the card's 24px top margin) cancels that out, so --stamp-nudge-y is
+     measured from the card's centre, where the eye judges it. */
   --stamp-nudge-x: 40px;
-  --stamp-nudge-y: 40px;
+  /* Spend the nudge only where there is room for it. The title-plus-script
+     header is a fixed ~190px whatever the window height, so on a short viewport
+     the card has no slack to lift a big stamp clear of the script box — below
+     ~820px the nudge relaxes back to card-centred, and on the shortest windows
+     it goes a touch negative rather than ride up into the script. */
+  --stamp-nudge-y: clamp(-14px, (100vh - 820px) / 2, 46px);
 
   display: block;
   position: fixed;
-  inset: 0 0 calc(var(--stamp-nudge-y) * 2) calc(var(--stamp-nudge-x) * 2);
+  inset: 0 0 calc(94px + var(--stamp-nudge-y) * 2) calc(var(--stamp-nudge-x) * 2);
   z-index: 50;
   margin: auto;             /* centred on the phone column, which is itself centred */
-  width: min(66vw, 300px);
+  /* 30vh caps it on short windows for the same reason */
+  width: min(66vw, 300px, 30vh);
   height: auto;
   opacity: var(--stamp-ink);
   pointer-events: none;     /* praise must never eat a tap on the activity */
