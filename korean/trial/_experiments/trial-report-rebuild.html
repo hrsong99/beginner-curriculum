@@ -34,25 +34,49 @@
   .rv-page .rep-why { font-weight: 500; color: #6f6f6a; }
   .rv-page .rf .k { font-weight: 500; }
 
-  /* external cert anchor (TOPIK) on the level cards */
-  .plv-cert { margin: 16px auto 0; display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px 7px 8px; border-radius: 999px; background: #f2f2ef; font-size: 12.5px; font-weight: 800; color: #6a6a66; }
-  .plv-cert i { display: inline-block; padding: 3px 9px; border-radius: 999px; background: #1c1c1c; color: #fff; font-size: 11px; font-weight: 900; font-style: normal; letter-spacing: .02em; }
-  .plv.goal .plv-cert i { background: #6abe36; }
-
   .rv-intro { margin: 24px 20px 0; padding: 18px 20px; border-radius: 14px; background: #1c1c1c; color: #fff; }
   .rv-intro h1 { margin: 0; font-size: 15px; font-weight: 900; }
   .rv-intro p { margin: 7px 0 0; font-size: 12px; font-weight: 600; line-height: 1.5; color: rgba(255,255,255,.6); word-break: keep-all; }
 
-  /* ---------- level identity card ---------- */
-  .plv { text-align: center; }
-  .plv-flag { display: inline-block; margin: 0 0 14px; padding: 6px 16px; border-radius: 999px; background: #6abe36; color: #fff; font-size: 12.5px; font-weight: 900; letter-spacing: .02em; }
-  .plv-arch { background: #eafcd0; border-radius: 150px 150px 22px 22px; padding: 30px 20px 40px; }
-  .plv.goal .plv-arch { background: #dcf7ac; }
-  .plv-arch img { display: block; width: 150px; height: auto; margin: 0 auto; }
-  .plv-badge { position: relative; z-index: 1; margin: -28px auto 0; display: inline-block; padding: 10px 26px; background: #1c1c1c; border: 2px solid #1c1c1c; border-radius: 999px; font-size: 22px; font-weight: 900; color: #b5fd4c; box-shadow: 0 4px 0 #1c1c1c; letter-spacing: .01em; }
-  .plv.goal .plv-badge { background: #6abe36; color: #fff; }
-  .plv-line { margin: 20px 0 0; font-size: 21px; font-weight: 800; color: #1c1c1c; line-height: 1.4; word-break: keep-all; }
-  .plv-line .q { color: #6abe36; }
+  /* ---------- ① 지금 레벨 — 초록 카드가 곧 한 페이지 ----------
+     헤더(키커·제목·부제) 없이 카드 자체가 페이지 상단을 좌우 끝까지 채운다.
+     읽는 순서: 마스코트+레벨 → 눈금(어디쯤) → 문단(무엇을) →
+     체크 3줄(오늘 뭘 보고) → TOPIK(공인 기준). */
+  .rv-page { padding-top: 0; }
+  .rv-page .section.s-lv { padding: 0; margin: 0 -24px; }
+  .rv-page .section.s-lv + .section { border-top: 0; }
+  .lv { background: #f2fce0; border-radius: 22px 22px 0 0; padding: 34px 24px 30px; }
+  .lv-top { display: flex; align-items: center; gap: 18px; }
+  .lv-top img { flex: none; width: 100px; height: auto; }
+  .lv-badge { display: inline-block; padding: 5px 13px; border-radius: 999px; background: #1c1c1c; color: #b5fd4c; font-size: 13px; font-weight: 900; letter-spacing: .01em; }
+  .lv-line { margin: 9px 0 0; font-size: 19px; font-weight: 900; color: #1c1c1c; line-height: 1.35; word-break: keep-all; }
+  .lv-line b { color: #4f9a1e; font-weight: 900; }
+
+  /* 레벨 눈금 — Lv.1→Lv.5 중 지금 자리 */
+  .lad { margin: 20px 2px 0; }
+  .lad-rail { position: relative; height: 8px; border-radius: 999px; background: #ddeec2; }
+  .lad-fill { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 999px; background: #6abe36; }
+  .lad-ticks { display: flex; margin-top: 9px; }
+  .lad-ticks span { flex: 1 1 0; font-size: 11px; font-weight: 700; color: #a8bd8c; text-align: center; }
+  .lad-ticks span:first-child { text-align: left; }
+  .lad-ticks span:last-child { text-align: right; }
+  .lad-ticks .on { color: #1c1c1c; font-weight: 900; }
+
+  .lv-panel { margin: 16px 0 0; padding: 17px 18px 15px; border-radius: 14px; background: #fff; }
+  .lv-diag { margin: 0; font-size: 14px; font-weight: 500; line-height: 1.72; color: #55554f; word-break: keep-all; }
+  .lv-diag b { font-weight: 800; color: #1c1c1c; }
+
+  /* 오늘 수업 근거 3줄 (✓ 된 것 · · 아직인 것) */
+  .ev { margin: 15px 0 0; padding: 0; list-style: none; }
+  .ev li { display: flex; gap: 9px; align-items: flex-start; padding: 4px 0; font-size: 13px; font-weight: 600; line-height: 1.5; color: #55554f; word-break: keep-all; }
+  .ev i { flex: none; width: 17px; height: 17px; margin-top: 1px; border-radius: 50%; display: grid; place-items: center; font-size: 10px; font-style: normal; font-weight: 900; color: #fff; background: #6abe36; }
+  .ev li.miss i { background: #dcdbd6; color: #6f6f6a; }
+
+  /* 공인 시험 기준 — 급수를 숫자로 못박는다 */
+  .lv-cert { display: flex; align-items: baseline; gap: 9px; margin-top: 15px; padding-top: 14px; border-top: 1px solid #f0efeb; }
+  .lv-cert i { flex: none; align-self: center; padding: 4px 10px; border-radius: 999px; background: #1c1c1c; color: #fff; font-size: 11px; font-weight: 900; font-style: normal; letter-spacing: .02em; }
+  .lv-cert b { font-size: 15px; font-weight: 900; color: #1c1c1c; }
+  .lv-cert span { font-size: 12.5px; font-weight: 600; color: #8a8a85; word-break: keep-all; }
 
   /* ---------- radar overview (지금 채움 vs 목표 외곽), no card ---------- */
   .rad-legend { display: flex; justify-content: center; gap: 24px; margin: 4px 0 0; }
@@ -60,23 +84,31 @@
   .rad-legend i { width: 14px; height: 14px; border-radius: 5px; }
   .rad { display: block; width: 100%; height: auto; margin: -2px auto 6px; }
 
-  /* ---------- per-aspect track (지금 ● → 목표 ◯) + 3 lines ---------- */
-  .trk { padding: 22px 0; border-top: 1px solid #efefec; }
+  /* ---------- per-aspect track (현재 ● → 목표 ◯, 목표색 구간) ---------- */
+  .trk { padding: 24px 0; border-top: 1px solid #efefec; }
   .trk-name { font-size: 15px; font-weight: 800; color: #1c1c1c; }
-  .trk-bar { position: relative; height: 7px; margin: 18px 0 20px; }
-  .trk-rail { position: absolute; inset: 0; border-radius: 999px; background: #eeede9; }
-  .trk-span { position: absolute; top: 0; bottom: 0; border-radius: 999px; background: #d0ec9e; }
+  .trk-bar { position: relative; height: 7px; margin: 34px 0 38px; }
+  .trk-rail { position: absolute; inset: 0; border-radius: 999px; background: #ecebe7; }
   .trk-done { position: absolute; top: 0; bottom: 0; left: 0; border-radius: 999px; background: #7cc63f; }
-  .trk-mk { position: absolute; top: 50%; width: 13px; height: 13px; border-radius: 50%; transform: translate(-50%, -50%); }
-  .trk-mk.now { background: #6abe36; border: 2.5px solid #fff; box-shadow: 0 0 0 1px #bfe197; }
+  .trk-span { position: absolute; top: 0; bottom: 0; border-radius: 999px; background: #1c1c1c; }
+  .trk-mk { position: absolute; top: 50%; width: 14px; height: 14px; border-radius: 50%; transform: translate(-50%, -50%); z-index: 2; }
+  .trk-mk.now { background: #6abe36; border: 3px solid #fff; box-shadow: 0 0 0 1px #6abe36; }
   .trk-mk.goal { background: #fff; border: 3px solid #1c1c1c; }
-  .trk-ln { display: flex; gap: 10px; align-items: baseline; padding: 4px 0; font-size: 13px; line-height: 1.5; word-break: keep-all; }
-  .trk-ln .lb { flex: none; width: 32px; font-size: 11px; font-weight: 800; }
+  .trk-cap { position: absolute; bottom: calc(100% + 9px); transform: translateX(-50%); font-size: 11px; font-weight: 800; white-space: nowrap; }
+  .trk-cap.now { color: #4a7a2a; }
+  .trk-cap.goal { color: #1c1c1c; }
+  .trk-lvl { position: absolute; top: calc(100% + 10px); transform: translateX(-50%); font-size: 13px; font-weight: 900; white-space: nowrap; }
+  .trk-lvl.now { color: #4a7a2a; }
+  .trk-lvl.goal { color: #1c1c1c; }
+  .trk-ln { display: flex; gap: 11px; align-items: baseline; padding: 5px 0; font-size: 13px; line-height: 1.5; word-break: keep-all; }
+  .trk-ln .lb { flex: none; width: 34px; font-size: 11.5px; font-weight: 900; }
   .trk-ln .tx { flex: 1 1 auto; font-weight: 500; color: #5a5a56; }
   .trk-ln.now .lb { color: #4a7a2a; }
   .trk-ln.goal .lb { color: #1c1c1c; }
-  .trk-ln.rec .lb { color: #6abe36; }
-  .trk-ln.rec .tx { color: #3d3d39; font-weight: 600; }
+  .trk-hint { display: flex; gap: 10px; align-items: flex-start; margin-top: 16px; padding: 12px 14px; border-radius: 10px; background: #f3f7ea; border: 1px solid #e6efd4; }
+  .trk-hint .ic { flex: none; font-size: 15px; line-height: 1.45; }
+  .trk-hint .t { font-size: 12.5px; font-weight: 500; color: #4d5a3a; line-height: 1.55; word-break: keep-all; }
+  .trk-hint .t b { color: #3d6b1e; font-weight: 800; margin-right: 5px; }
 
   /* ---------- graduation date ---------- */
   .grad { display: flex; align-items: center; gap: 14px; padding: 18px 20px; border: 1.5px solid #1c1c1c; border-radius: 16px; background: #b5fd4c; box-shadow: 0 5px 0 #1c1c1c; }
@@ -103,23 +135,39 @@
   <div class="rv-stage">
 
     <div class="rv-intro">
-      <h1>맞춤 리포트 · 재설계안 v4</h1>
+      <h1>맞춤 리포트 · 재설계안 v5</h1>
       <p>단일 언어(지금은 한국어, 실제는 일본어). 흐름: 현재 레벨 → 항목별 지금·목표(+채우는 법) → 도착 그래프. 동기 K-POP·드라마 · 목표 노래·드라마 자막 없이 · 주 3회 · Lv.1 처음.</p>
     </div>
 
     <div class="rv-page">
 
-    <!-- ============ ① CURRENT LEVEL ============ -->
-    <div class="section">
-      <span class="section-kicker">지금 나</span>
-      <h2 class="section-title">{{이름}}님의 지금 레벨</h2>
-      <p class="rv-sub">오늘 수업을 보니, 지금은 딱 이 레벨이에요.</p>
+    <!-- ============ ① CURRENT LEVEL — 초록 카드가 곧 이 페이지 ============ -->
+    <div class="section s-lv">
+      <div class="lv">
+        <div class="lv-top">
+          <img src="../assets/mascot-newborn.svg" alt="">
+          <div>
+            <span class="lv-badge">Lv.1 · 첫걸음</span>
+            <p class="lv-line">한글을 <b>하나씩 읽어요</b></p>
+          </div>
+        </div>
 
-      <div class="plv">
-        <div class="plv-arch"><img src="../assets/mascot-newborn.svg" alt=""></div>
-        <div class="plv-badge">Lv.1</div>
-        <p class="plv-line">한글을 <span class="q">하나씩 읽어요</span></p>
-        <span class="plv-cert"><i>TOPIK</i>1급 준비 단계</span>
+        <div class="lad">
+          <div class="lad-rail"><span class="lad-fill" style="width:11%"></span></div>
+          <div class="lad-ticks"><span class="on">Lv.1</span><span>Lv.2</span><span>Lv.3</span><span>Lv.4</span><span>Lv.5</span></div>
+        </div>
+
+        <div class="lv-panel">
+          <p class="lv-diag">자음과 모음은 <b>하나씩 소리 낼 수 있어요.</b> 아직 글자를 붙여 읽는 건 느리고, 어·오처럼 닮은 소리는 섞여 나와요. 지금은 소리를 손에 익히는 단계예요.</p>
+
+          <ul class="ev">
+            <li><i>✓</i>아 · 이 · 우 모음 소리를 정확히 냈어요</li>
+            <li><i>✓</i>‘안녕하세요’를 통째로 따라 말했어요</li>
+            <li class="miss"><i>·</i>어 / 오는 아직 같은 소리로 나왔어요</li>
+          </ul>
+
+          <div class="lv-cert"><i>TOPIK</i><b>1급</b><span>준비 단계 · 아직 응시 전</span></div>
+        </div>
       </div>
     </div>
 
@@ -139,70 +187,90 @@
         <div class="trk-name">발음</div>
         <div class="trk-bar">
           <div class="trk-rail"></div>
-          <div class="trk-span" style="left:34%;right:15%"></div>
           <div class="trk-done" style="width:34%"></div>
+          <div class="trk-span" style="left:34%;right:15%"></div>
           <span class="trk-mk now" style="left:34%"></span>
           <span class="trk-mk goal" style="left:85%"></span>
+          <span class="trk-cap now" style="left:34%">현재</span>
+          <span class="trk-cap goal" style="left:85%">목표</span>
+          <span class="trk-lvl now" style="left:34%">Lv.1</span>
+          <span class="trk-lvl goal" style="left:85%">Lv.4</span>
         </div>
-        <div class="trk-ln now"><span class="lb">지금</span><span class="tx">모음·자음 소리를 하나씩 따라 내요</span></div>
-        <div class="trk-ln goal"><span class="lb">목표</span><span class="tx">드라마 대사도 자연스럽게 발음해요</span></div>
-        <div class="trk-ln rec"><span class="lb">추천</span><span class="tx">원어민 발음을 반복해 듣고 그대로 따라 하기</span></div>
+        <div class="trk-ln now"><span class="lb">Lv.1</span><span class="tx">모음·자음 소리를 하나씩 따라 내요</span></div>
+        <div class="trk-ln goal"><span class="lb">Lv.4</span><span class="tx">드라마 대사도 자연스럽게 발음해요</span></div>
+        <div class="trk-hint"><span class="ic">💡</span><span class="t"><b>추천</b>원어민 발음을 반복해 듣고 그대로 따라 하기</span></div>
       </div>
 
       <div class="trk">
         <div class="trk-name">정확성</div>
         <div class="trk-bar">
           <div class="trk-rail"></div>
-          <div class="trk-span" style="left:28%;right:18%"></div>
           <div class="trk-done" style="width:28%"></div>
+          <div class="trk-span" style="left:28%;right:18%"></div>
           <span class="trk-mk now" style="left:28%"></span>
           <span class="trk-mk goal" style="left:82%"></span>
+          <span class="trk-cap now" style="left:28%">현재</span>
+          <span class="trk-cap goal" style="left:82%">목표</span>
+          <span class="trk-lvl now" style="left:28%">Lv.1</span>
+          <span class="trk-lvl goal" style="left:82%">Lv.4</span>
         </div>
-        <div class="trk-ln now"><span class="lb">지금</span><span class="tx">글자 자리(자음+모음)를 맞춰요</span></div>
-        <div class="trk-ln goal"><span class="lb">목표</span><span class="tx">문법에 맞는 문장을 정확히 말해요</span></div>
-        <div class="trk-ln rec"><span class="lb">추천</span><span class="tx">한 번에 패턴 하나씩, 만들어 말하고 바로 교정받기</span></div>
+        <div class="trk-ln now"><span class="lb">Lv.1</span><span class="tx">글자 자리(자음+모음)를 맞춰요</span></div>
+        <div class="trk-ln goal"><span class="lb">Lv.4</span><span class="tx">문법에 맞는 문장을 정확히 말해요</span></div>
+        <div class="trk-hint"><span class="ic">💡</span><span class="t"><b>추천</b>한 번에 패턴 하나씩, 만들어 말하고 바로 교정받기</span></div>
       </div>
 
       <div class="trk">
         <div class="trk-name">어휘</div>
         <div class="trk-bar">
           <div class="trk-rail"></div>
-          <div class="trk-span" style="left:20%;right:20%"></div>
           <div class="trk-done" style="width:20%"></div>
+          <div class="trk-span" style="left:20%;right:20%"></div>
           <span class="trk-mk now" style="left:20%"></span>
           <span class="trk-mk goal" style="left:80%"></span>
+          <span class="trk-cap now" style="left:20%">현재</span>
+          <span class="trk-cap goal" style="left:80%">목표</span>
+          <span class="trk-lvl now" style="left:20%">Lv.1</span>
+          <span class="trk-lvl goal" style="left:80%">Lv.4</span>
         </div>
-        <div class="trk-ln now"><span class="lb">지금</span><span class="tx">아는 단어가 아직 손에 꼽아요</span></div>
-        <div class="trk-ln goal"><span class="lb">목표</span><span class="tx">상황마다 필요한 단어가 바로 나와요</span></div>
-        <div class="trk-ln rec"><span class="lb">추천</span><span class="tx">상황별 표현을 익히고 수업에서 바로 써 보기</span></div>
+        <div class="trk-ln now"><span class="lb">Lv.1</span><span class="tx">아는 단어가 아직 손에 꼽아요</span></div>
+        <div class="trk-ln goal"><span class="lb">Lv.4</span><span class="tx">상황마다 필요한 단어가 바로 나와요</span></div>
+        <div class="trk-hint"><span class="ic">💡</span><span class="t"><b>추천</b>상황별 표현을 익히고 수업에서 바로 써 보기</span></div>
       </div>
 
       <div class="trk">
         <div class="trk-name">유창성</div>
         <div class="trk-bar">
           <div class="trk-rail"></div>
-          <div class="trk-span" style="left:16%;right:20%"></div>
           <div class="trk-done" style="width:16%"></div>
+          <div class="trk-span" style="left:16%;right:20%"></div>
           <span class="trk-mk now" style="left:16%"></span>
           <span class="trk-mk goal" style="left:80%"></span>
+          <span class="trk-cap now" style="left:16%">현재</span>
+          <span class="trk-cap goal" style="left:80%">목표</span>
+          <span class="trk-lvl now" style="left:16%">Lv.1</span>
+          <span class="trk-lvl goal" style="left:80%">Lv.4</span>
         </div>
-        <div class="trk-ln now"><span class="lb">지금</span><span class="tx">아직 문장을 만들기 전이에요</span></div>
-        <div class="trk-ln goal"><span class="lb">목표</span><span class="tx">막힘 없이 이어서 말해요</span></div>
-        <div class="trk-ln rec"><span class="lb">추천</span><span class="tx">짧아도 매일, 주제를 정해 생각을 바로 말하기</span></div>
+        <div class="trk-ln now"><span class="lb">Lv.1</span><span class="tx">아직 문장을 만들기 전이에요</span></div>
+        <div class="trk-ln goal"><span class="lb">Lv.4</span><span class="tx">막힘 없이 이어서 말해요</span></div>
+        <div class="trk-hint"><span class="ic">💡</span><span class="t"><b>추천</b>짧아도 매일, 주제를 정해 생각을 바로 말하기</span></div>
       </div>
 
       <div class="trk">
         <div class="trk-name">듣기</div>
         <div class="trk-bar">
           <div class="trk-rail"></div>
-          <div class="trk-span" style="left:24%;right:12%"></div>
           <div class="trk-done" style="width:24%"></div>
+          <div class="trk-span" style="left:24%;right:12%"></div>
           <span class="trk-mk now" style="left:24%"></span>
           <span class="trk-mk goal" style="left:88%"></span>
+          <span class="trk-cap now" style="left:24%">현재</span>
+          <span class="trk-cap goal" style="left:88%">목표</span>
+          <span class="trk-lvl now" style="left:24%">Lv.1</span>
+          <span class="trk-lvl goal" style="left:88%">Lv.4</span>
         </div>
-        <div class="trk-ln now"><span class="lb">지금</span><span class="tx">닮은 소리(어·오, 우·으)는 아직 헷갈려요</span></div>
-        <div class="trk-ln goal"><span class="lb">목표</span><span class="tx">자막 없이 대사를 알아들어요</span></div>
-        <div class="trk-ln rec"><span class="lb">추천</span><span class="tx">천천히 → 실제 속도로, 원어민과 자주 대화하기</span></div>
+        <div class="trk-ln now"><span class="lb">Lv.1</span><span class="tx">닮은 소리(어·오, 우·으)는 아직 헷갈려요</span></div>
+        <div class="trk-ln goal"><span class="lb">Lv.4</span><span class="tx">자막 없이 대사를 알아들어요</span></div>
+        <div class="trk-hint"><span class="ic">💡</span><span class="t"><b>추천</b>천천히 → 실제 속도로, 원어민과 자주 대화하기</span></div>
       </div>
     </div>
 

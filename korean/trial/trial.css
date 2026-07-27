@@ -1197,6 +1197,37 @@
 
 .tap-grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
+/* Listen-and-pick is not one six-way choice, it is three two-way ones. Laid
+   out as a plain grid the learner reads all six as a single question and the
+   drill looks far harder than it is, so each question gets its own numbered
+   band. The band is filled, never bordered — the tiles inside already carry
+   a border, and a bordered wrapper would box them twice. */
+.tap-grid.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.tap-row {
+  display: grid;
+  grid-template-columns: 30px 1fr 1fr;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px 10px 2px;
+  border-radius: 18px;
+  background: #f5f5f5;
+}
+
+.tap-n {
+  font-size: 17px;
+  font-weight: 800;
+  color: #a5a5a5;
+  text-align: center;
+}
+
+.tap-grid.rows .tap-tile { height: 100px; font-size: 48px; }
+
 .tap-tile {
   position: relative;
   display: grid;
