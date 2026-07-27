@@ -26,6 +26,7 @@ The guiding principles behind every page of the Korean curriculum.
 - **Every activity is answered by tapping or typing — there is no whiteboard and no pen.** Anything that asks the learner to circle, trace, or write by hand has to be re-shaped, not just re-worded: circling becomes tapping tiles, tracing and dictation become assembling the character from an on-screen keypad holding *only the parts already taught*.
 - **Answering gives immediate, quiet feedback** — right fills lime with a ✓, wrong greys out with a ✕, and a second tap undoes it. The tutor still leads; the page just stops the learner guessing silently.
 - **Reuse one interaction across the deck.** A learner should meet two or three input patterns in a lesson, not a new one per page.
+- **Several questions must look like several questions.** Six tiles in one grid read as a single six-way choice; the same six as three numbered rows read as three easy pairs. Group them visually — the activity is otherwise harder than it was designed to be, and the learner blames themselves rather than the layout.
 
 ## Teaching mode
 - **Two script channels, told apart at a glance.** The green box is what the tutor *says* to the learner. Anything the tutor needs but the learner must not see — read order, pacing, answers — goes in a dark `.tutor-note` box instead. Never mix the two.
@@ -44,9 +45,12 @@ The guiding principles behind every page of the Korean curriculum.
 - **Answer keys are present but barely visible** (for review); hideable for production.
 - **Write-the-whole-thing inputs are tinted** as a "fill here" cue; short blanks reuse one dashed-pill style, sized to the answer.
 
-## Difficulty arc (within each pattern)
-- **Read → Choose the right one → Reorder the words → Fill the blank → Translate → Write from scratch.**
-- **Default 4 items** per activity (fewer for review, one for free-writing).
+## Difficulty arc & cadence
+- **Drill each block before teaching the next.** A teaching page is followed by its own drills, never by another teaching page. The learner should never be carrying more than three or four untested items at once. Batching the drills at the end of an act is what makes a lesson *feel* too fast even when nothing in it was too hard — the problem is rarely the difficulty of a page, it's how much went untested before practice arrived.
+- **A group is drilled alone before it meets another.** 모음 ① is taught and drilled to completion before 모음 ② begins; the two share an activity only after each has been drilled by itself, and after the page that names what they have in common. Mix them earlier and the learner is tested on two things at once with no way to tell which one they got wrong.
+- **Decoding arc (letters, syllables): Listen and pick → Read aloud → Build from the parts.** Hearing which one it was asks less than saying it, and saying it asks less than assembling it from a keypad. Listening leads even though reading looks more elementary — and it is the only rung that checks whether a sound the learner cannot yet distinguish (어/오) actually landed.
+- **Sentence arc (patterns): Read → Choose the right one → Reorder the words → Fill the blank → Translate → Write from scratch.**
+- **Default 4 items** per activity (fewer for review, one for free-writing). A decoding drill instead matches the block it drills — three new letters, three items.
 - **3-part lesson shape:** Teach → Practice → Converse / Roleplay.
 
 ## Dialogue & characters
