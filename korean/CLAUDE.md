@@ -50,9 +50,10 @@ same document, so anything in the markup is already on the learner's screen.
   `3-contextual-korean` · `4-freetalking` (pronunciation joins as `5-pronunciation` once it has content).
   Each track holds `table-of-contents.md`, its lesson HTML (`sample-lesson.html` is the canonical
   sample), and an `_archive/` for retired drafts and experiments.
-- **`trial/`** — sales trial decks (`trial-1..4`, `onboarding-screens.html`) plus `trial.css`,
+- **`trial/`** — sales trial material, not a learning track. `full-trials/` holds the four complete
+  decks (`trial-1..4`), `lessons/` holds the standalone lesson decks cut from them
+  (`trial-1-hangul-short.html`), and `onboarding-screens.html` sits at the top. Plus `trial.css`,
   shared `assets/` (art, mouth, characters), and `_experiments/` for variations and capture files.
-  Not a learning track.
 - **`shared/`** — `lesson-card.css` (the design system) and `ux-philosophy.md` (the contract).
 - **`interactive/`** — the `data-sync` contract, reference lesson, and lemonboard packager.
 - **`references/`** — source textbook scans (internal reference only).
