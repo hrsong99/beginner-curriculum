@@ -52,15 +52,16 @@
   .lv-line { margin: 9px 0 0; font-size: 19px; font-weight: 900; color: #1c1c1c; line-height: 1.35; word-break: keep-all; }
   .lv-line b { color: #4f9a1e; font-weight: 900; }
 
-  /* 레벨 눈금 — Lv.1→Lv.5 중 지금 자리 */
-  .lad { margin: 20px 2px 0; }
-  .lad-rail { position: relative; height: 8px; border-radius: 999px; background: #ddeec2; }
-  .lad-fill { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 999px; background: #6abe36; }
-  .lad-ticks { display: flex; margin-top: 9px; }
-  .lad-ticks span { flex: 1 1 0; font-size: 11px; font-weight: 700; color: #a8bd8c; text-align: center; }
-  .lad-ticks span:first-child { text-align: left; }
-  .lad-ticks span:last-child { text-align: right; }
-  .lad-ticks .on { color: #1c1c1c; font-weight: 900; }
+  /* 레벨 눈금 — 총 10단계 중 지금 자리.
+     한 칸 = 한 레벨이라 단계 수가 세어지고, 칸·숫자 모두 flex:1 이라
+     간격이 저절로 균등해진다(끝만 붙는 예전 방식 대신). */
+  .lad { margin: 22px 0 0; }
+  .lad-segs { display: flex; gap: 3px; }
+  .lad-segs span { flex: 1 1 0; height: 8px; border-radius: 3px; background: #ddeec2; }
+  .lad-segs span.on { background: #6abe36; }
+  .lad-nums { display: flex; gap: 3px; margin-top: 9px; }
+  .lad-nums span { flex: 1 1 0; text-align: center; font-size: 10.5px; font-weight: 700; color: #a8bd8c; }
+  .lad-nums span.on { font-size: 11.5px; font-weight: 900; color: #1c1c1c; }
 
   .lv-panel { margin: 16px 0 0; padding: 17px 18px 15px; border-radius: 14px; background: #fff; }
   .lv-diag { margin: 0; font-size: 14px; font-weight: 500; line-height: 1.72; color: #55554f; word-break: keep-all; }
@@ -153,8 +154,12 @@
         </div>
 
         <div class="lad">
-          <div class="lad-rail"><span class="lad-fill" style="width:11%"></span></div>
-          <div class="lad-ticks"><span class="on">Lv.1</span><span>Lv.2</span><span>Lv.3</span><span>Lv.4</span><span>Lv.5</span></div>
+          <div class="lad-segs">
+            <span class="on"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="lad-nums">
+            <span class="on">Lv.1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+          </div>
         </div>
 
         <div class="lv-panel">
