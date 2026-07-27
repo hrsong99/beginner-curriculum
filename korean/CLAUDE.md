@@ -52,8 +52,8 @@ same document, so anything in the markup is already on the learner's screen.
   sample), and an `_archive/` for retired drafts and experiments.
 - **`trial/`** — sales trial material, not a learning track. `full-trials/` holds the four complete
   decks (`trial-1..4`), `lessons/` holds the standalone lesson decks cut from them
-  (`trial-1-hangul-short.html`, `trial-2-patterns-short*.html`), and
-  `onboarding-screens.html` sits at the top. Plus `trial.css`,
+  (`trial-1-hangul-short.html`, `trial-2-patterns-short.html`, plus its own `_archive/`
+  for retired ones), and `onboarding-screens.html` sits at the top. Plus `trial.css`,
   shared `assets/` (art, mouth, characters), and `_experiments/` for variations and capture files.
 - **`shared/`** — `lesson-card.css` (the design system) and `ux-philosophy.md` (the contract).
 - **`interactive/`** — the `data-sync` contract, reference lesson, and lemonboard packager.
