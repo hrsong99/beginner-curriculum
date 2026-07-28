@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Beginner Curriculum</title>
+<title>Japanese Beginner Curriculum</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: monospace; background: #fff; color: #111; }
@@ -23,11 +23,24 @@
   .sync-bar input { font-family: monospace; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; padding: 6px 10px; width: 180px; }
   .sync-bar input:focus { border-color: #c33; outline: none; }
   .sync-bar .sync-status { font-size: 12px; color: #999; }
+  .topback { display: inline-block; margin-bottom: 20px; font-family: monospace; font-size: 13px; color: #999; text-decoration: none; }
+  .topback:hover { color: #111; }
+  .section { margin-top: 52px; }
+  .section > h2 { margin-bottom: 10px; }
+  .section-note { font-size: 13px; color: #888; margin-bottom: 24px; line-height: 1.6; }
+  .doc-list { list-style: none; padding: 0; }
+  .doc-list li { margin: 0; }
+  .doc-list a { display: block; padding: 12px 18px; font-family: monospace; font-size: 14px; color: #111; text-decoration: none; border: 1px solid #ddd; border-bottom: none; }
+  .doc-list li:last-child a { border-bottom: 1px solid #ddd; }
+  .doc-list a:hover { background: #f0f0f0; }
+  .doc-list .tag { color: #999; }
 </style>
 </head>
 <body>
 <div class="container">
-  <h1>Beginner Curriculum</h1>
+  <a class="topback" href="../index.html">← Beginner Curriculum</a>
+
+  <h1>Japanese Beginner Curriculum</h1>
   <h2>Lesson Index</h2>
 
   <div class="sync-bar">
@@ -70,6 +83,7 @@
       <li><a href="lesson-4/japanese-prestudy-kr.html">Prestudy: あります・います<span class="tag">Japanese (KR)</span></a></li>
       <li><a href="lesson-4/japanese.html">Lesson 4: あります・います<span class="tag">Japanese (EN)</span></a></li>
       <li><a href="lesson-4/japanese-kr.html">Lesson 4: あります・います<span class="tag">Japanese (KR)</span></a></li>
+      <li><a href="lesson-4/japanese-lighter.html">Lesson 4: あります・います<span class="tag">Lighter class version</span></a></li>
     </ul>
   </div>
 
@@ -78,6 +92,63 @@
     <ul class="lesson-list">
       <li><a href="lesson-5/japanese-prestudy.html">Prestudy: 〜を 〜ます<span class="tag">Japanese</span></a></li>
       <li><a href="lesson-5/japanese.html">Lesson 5: 〜を 〜ます<span class="tag">Japanese</span></a></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Lesson Scripts (Markdown)</h2>
+    <p class="section-note">The written source each lesson deck was built from — read these when editing content rather than layout.</p>
+    <ul class="doc-list">
+      <li><a href="viewer.html?doc=lesson-1/japanese.md">Lesson 1 script<span class="tag"> — はじめまして！ (Japanese)</span></a></li>
+      <li><a href="viewer.html?doc=lesson-1/english.md">Lesson 1 script<span class="tag"> — Nice to Meet You! (English)</span></a></li>
+      <li><a href="viewer.html?doc=lesson-2/japanese.md">Lesson 2 script<span class="tag"> — これはなんですか？</span></a></li>
+      <li><a href="viewer.html?doc=lesson-3/japanese.md">Lesson 3 script<span class="tag"> — どこですか？ (EN)</span></a></li>
+      <li><a href="viewer.html?doc=lesson-3/japanese-kr.md">Lesson 3 script<span class="tag"> — どこですか？ (KR)</span></a></li>
+      <li><a href="viewer.html?doc=lesson-4/japanese.md">Lesson 4 script<span class="tag"> — あります・います</span></a></li>
+      <li><a href="viewer.html?doc=lesson-4/japanese-lighter.md">Lesson 4 script<span class="tag"> — lighter class version</span></a></li>
+      <li><a href="viewer.html?doc=lesson-5/japanese.md">Lesson 5 script<span class="tag"> — 〜を 〜ます</span></a></li>
+      <li><a href="viewer.html?doc=lesson-5/page-13-roleplay-alternatives.md">Lesson 5 · page 13 roleplay<span class="tag"> — alternative designs</span></a></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Table of Contents Drafts</h2>
+    <p class="section-note">Competing curriculum orderings written before the lessons — kept for comparison.</p>
+    <ul class="doc-list">
+      <li><a href="viewer.html?doc=table-of-contents/jp_beginner_toc_ver_codex_modified.md">Pattern Stack<span class="tag"> — codex, modified (current)</span></a></li>
+      <li><a href="viewer.html?doc=table-of-contents/jp_beginner_toc_ver_codex.md">Pattern Stack<span class="tag"> — codex, original</span></a></li>
+      <li><a href="viewer.html?doc=table-of-contents/jp_beginner_toc_chatgpt.md">Pattern-First curriculum<span class="tag"> — chatgpt</span></a></li>
+      <li><a href="viewer.html?doc=table-of-contents/jp_beginner_toc_ver_a.md">TOC version A</a></li>
+      <li><a href="viewer.html?doc=table-of-contents/jp_beginner_toc_ver_b.md">TOC version B</a></li>
+      <li><a href="viewer.html?doc=table-of-contents/podolingo_toc.md">Podolingo TOC<span class="tag"> — app-side curriculum</span></a></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Lesson Format Variations</h2>
+    <p class="section-note">The five formats trialled for Lesson 1 before settling on the hybrid. Variation D also exists as a rendered page.</p>
+    <ul class="doc-list">
+      <li><a href="variations/japanese/Variation-D-Japanese.html">Variation D — はじめまして<span class="tag">rendered page</span></a></li>
+      <li><a href="viewer.html?doc=variations/english/Variation-A-Pattern-Drill-Core.md">Variation A<span class="tag"> — Pattern-Drill Core</span></a></li>
+      <li><a href="viewer.html?doc=variations/english/Variation-B-CLT-Communicative.md">Variation B<span class="tag"> — CLT Communicative</span></a></li>
+      <li><a href="viewer.html?doc=variations/english/Variation-C-Comfort-First-Guided.md">Variation C<span class="tag"> — Comfort-First Guided</span></a></li>
+      <li><a href="viewer.html?doc=variations/english/Variation-D-Full-Hybrid.md">Variation D<span class="tag"> — Full Hybrid</span></a></li>
+      <li><a href="viewer.html?doc=variations/japanese/Variation-D-Full-Hybrid-Japanese.md">Variation D<span class="tag"> — Full Hybrid, Japanese</span></a></li>
+      <li><a href="viewer.html?doc=variations/english/English-Lesson.md">Variation E<span class="tag"> — Simplified Hybrid (the one adopted)</span></a></li>
+      <li><a href="viewer.html?doc=variations/japanese/japanese-lesson-01-self-introduction.md">Early draft 1<span class="tag"> — self introduction</span></a></li>
+      <li><a href="viewer.html?doc=variations/japanese/japanese-lesson-02-this-that.md">Early draft 2<span class="tag"> — this / that</span></a></li>
+      <li><a href="viewer.html?doc=variations/japanese/japanese-lesson-03-likes-dislikes.md">Early draft 3<span class="tag"> — likes / dislikes</span></a></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Notes &amp; Build References</h2>
+    <p class="section-note">Design brief, teacher feedback, and the stripped pages used while building the deck template.</p>
+    <ul class="doc-list">
+      <li><a href="viewer.html?doc=curriculum_design_notes.md">Curriculum design notes<span class="tag"> — working brief</span></a></li>
+      <li><a href="viewer.html?doc=Beginner%20Lesson%20Plan.md">Beginner lesson plan<span class="tag"> — Andrew's plan</span></a></li>
+      <li><a href="lesson-3/style-reference.html">Style reference<span class="tag">Japanese text with romaji</span></a></li>
+      <li><a href="dev-prototype/prototype.html">Deck prototype<span class="tag">Lesson 4, stripped</span></a></li>
     </ul>
   </div>
 </div>
