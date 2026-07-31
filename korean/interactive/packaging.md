@@ -83,3 +83,19 @@ If you hit one, use the supported spelling rather than working around it.
 | [`sample-lesson-interactive.html`](./sample-lesson-interactive.html) | reference lesson using every kind |
 | `build_lemonboard.py` | this packager; works on any deck in the repo |
 | `lemonboard-build/` | generated output for the sample |
+
+Four shared add-ons drop into any deck with one `<script src>` line each. They register
+their own kind, so none of them needs a lemonboard change; each is symmetric (either
+person can use it) except where noted, and each falls back to doing nothing when the file
+is opened outside the board. Their styling lives in `shared/lesson-card.css`.
+
+| Script | What it adds |
+|---|---|
+| `spotlight.js` | tap a block to ring it on both screens — "look here", one at a time |
+| `highlight.js` | drag over text to leave a marker stroke on both screens; tap a stroke to erase it |
+| `tutor-notes.js` | one free-typing note per page — invisible until the tutor writes in it, then read-only for the learner |
+| `stamp.js` | the 참! 잘했어요 praise stamp |
+
+Load order matters in two places: `tutor-notes.js` must come after the pager (which counts
+`.phone` children as pages), and `highlight.js` after the ja→ko tooltip script (which reads
+text nodes at load).
