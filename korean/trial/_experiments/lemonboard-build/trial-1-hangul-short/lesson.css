@@ -1200,6 +1200,98 @@ strong {
 [data-spot] { cursor: pointer; }
 @media (prefers-reduced-motion: reduce) { .is-spot { animation: none; } }
 
+/* ---------- shared highlighter (interactive/highlight.js) ----------
+   A marker stroke over the text, mirrored to the other screen. Persistent —
+   it stays until someone taps it off — so it reads as ink, not as a pointer:
+   no pulse, no outline, nothing competing with the spotlight ring above.
+   Only the visual lives here; the sync is in the script. */
+mark.hl {
+  background: #c9ff70;         /* the brand lime, on the white cards it usually lands on */
+  color: inherit;
+  padding: 0 1px;
+  border-radius: 3px;
+  cursor: pointer;
+  /* a stroke that wraps across lines keeps its rounded ends on every line
+     rather than one box stretched behind the whole run */
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
+}
+
+/* The marker has to read on all three surfaces the deck is built from, and one
+   colour cannot: lime on lime disappears, and the green script box is exactly
+   where a tutor marks a word most often. So the lime surfaces take a warm
+   stroke instead — the contrast is in the temperature, and the ink stays black.
+   (Amber over the white cards inside a brand page is harmless.) */
+.section-subtitle mark.hl,
+.brand-page mark.hl { background: #ffd166; }
+
+/* the dark transition pages carry reversed text, so a bright fill would swallow
+   it — there the stroke dims to a band the white text sits on top of */
+.transition-page mark.hl { background: rgba(181, 253, 76, .32); }
+
+/* ---------- shared tutor notes (interactive/tutor-notes.js) ----------
+   One free-typing box per page, sitting under the green script. Empty it is
+   invisible to everyone; the tutor sees it in teaching mode to write into,
+   and the moment it holds anything both screens show it.
+
+   :placeholder-shown is what makes that free — it tracks the live value, so a
+   note arriving from the other side surfaces with no event and no script. The
+   box must be display:none rather than merely transparent: pages are flex
+   columns with gaps, and only a non-rendered element leaves no gap behind.
+
+   A plain grey box, deliberately. It is scratch paper the tutor writes on
+   mid-lesson, not a component of the lesson — giving it the ink outline and
+   offset shadow the real components wear made it compete with them for
+   attention on every page it appeared. It recedes instead. */
+.note-input {
+  display: none;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 14px 0 0;
+  padding: 8px 11px;
+  border: 1px solid #e2e2de;
+  border-radius: 8px;
+  background: #f5f5f3;
+  color: #3d3d3d;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 500;
+  line-height: 1.5;
+  resize: none;
+}
+
+/* Grows with what is typed — and, unlike a JS autosizer, also grows for a note
+   that arrived from the other side (a value set by script fires no input
+   event). Only then does it collapse to a single line while empty; without the
+   support the box keeps its two authored rows and scrolls, which is a smaller
+   failure than a one-line box that silently clips a long note.
+
+   min-width holds it full-bleed: with content sizing the box would otherwise
+   shrink-wrap its text on the pages that lay out as blocks. The flex pages hide
+   that — a stretched flex item is full width already — so it would have shown
+   up on only some of the deck. */
+@supports (field-sizing: content) {
+  .note-input { field-sizing: content; min-height: 0; min-width: 100%; }
+}
+
+body.teaching .note-input,
+.note-input:not(:placeholder-shown) { display: block; }
+
+/* empty and only the tutor can see it: quieter still, so an unused box on
+   every page never reads as content the learner is missing */
+body.teaching .note-input:placeholder-shown {
+  border-style: dashed;
+  background: #fafafa;
+}
+
+.note-input::placeholder { color: #a8a8a4; font-weight: 500; }
+.note-input:focus { border-color: #b4b4b0; outline: none; background: #fff; }
+
+/* the learner gets it as a read-only note, so drop the text cursor */
+.note-input[readonly] { cursor: default; }
+
+@media print { .note-input:not(:placeholder-shown) { display: block; } }
+
 /* ---------- 참! 잘했어요 stamp ----------
    The tutor's praise stamp, mirrored to the learner. Only the visual lives
    here; who may stamp and what is shared is in interactive/stamp.js. */
@@ -2444,14 +2536,19 @@ body.teaching .pager { padding-right: 15px; }
 .section > .offer,
 .section > .ptable { margin-top: auto; }
 
-.section:has(> .anat) > :last-child,
-.section:has(> .build) > :last-child,
-.section:has(> .blk-row) > :last-child,
-.section:has(> .combo) > :last-child,
-.section:has(> .payoff) > :last-child,
-.section:has(> .usp) > :last-child,
-.section:has(> .offer) > :last-child,
-.section:has(> .ptable) > :last-child { margin-bottom: auto; }
+/* :not(.note-input) — a page's tutor note is normally slotted under the green
+   script, but a page with no script takes it at the end, and a bare :last-child
+   would hand the spacer to the note instead of to the block that closes the
+   page (which stops the page filling the screen). display:none does not exempt
+   it: :last-child is structural. */
+.section:has(> .anat) > :last-child:not(.note-input),
+.section:has(> .build) > :last-child:not(.note-input),
+.section:has(> .blk-row) > :last-child:not(.note-input),
+.section:has(> .combo) > :last-child:not(.note-input),
+.section:has(> .payoff) > :last-child:not(.note-input),
+.section:has(> .usp) > :last-child:not(.note-input),
+.section:has(> .offer) > :last-child:not(.note-input),
+.section:has(> .ptable) > :last-child:not(.note-input) { margin-bottom: auto; }
 
 /* a hint chip sitting under a component needs air (hard shadows below) */
 .section > .hint { margin-top: 16px; }
@@ -2945,9 +3042,8 @@ button.opt-row:active { transform: scale(.99); }
   background: #fafafa;
 }
 
-.sk-head { height: 62px; border-color: #e4e4e2; background: #f0f0ee; }
-
-.sk-plot { height: 152px; padding: 12px 8px; }
+/* 그래프 자리는 테두리 없이 — 실제 그래프도 테두리가 없다 */
+.sk-plot { height: 152px; padding: 12px 8px; border: 0; background: none; }
 .sk-plot svg { display: block; width: 100%; height: 100%; }
 
 .sk-facts { display: grid; gap: 0; padding: 4px 16px; }
@@ -2962,6 +3058,7 @@ button.opt-row:active { transform: scale(.99); }
 .sk-facts i:nth-child(1) { width: 62%; }
 .sk-facts i:nth-child(2) { width: 48%; }
 .sk-facts i:nth-child(3) { width: 55%; }
+.sk-facts i:nth-child(4) { width: 44%; }
 
 .sk-course { height: 50px; }
 
@@ -2991,40 +3088,13 @@ button.opt-row:active { transform: scale(.99); }
 .rep.ready { display: block; }
 .rep.ready + .rep-empty, .rep-empty.hide { display: none; }
 
-.rep-head {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 24px;
-  padding: 14px 16px;
-  border: 1.5px solid #1c1c1c;
-  border-radius: 14px;
-  background: #1c1c1c;
-}
-
-.rep-goal {
-  flex: 1 1 auto;
-  min-width: 0;
-  color: #fff;
-  font-size: 14.5px;
-  font-weight: 800;
-  line-height: 1.35;
-  word-break: keep-all;
-}
-
-.rep-eta { flex: none; text-align: right; }
-.rep-eta b { display: block; color: #b5fd4c; font-size: 25px; font-weight: 900; line-height: 1; }
-.rep-eta small { display: block; margin-top: 3px; color: rgba(255,255,255,.55); font-size: 10.5px; font-weight: 700; }
-
+/* 레이더(.rad)와 같은 취급 — 테두리 없이 폭을 다 쓴다. 카드에 넣으면
+   박스 안의 박스가 되고, 안쪽 여백만큼 선이 쪼그라든다. */
 .rep-plot {
   display: block;
   width: 100%;
   height: auto;
-  margin-top: 16px;
-  border: 1.5px solid #1c1c1c;
-  border-radius: 14px;
-  background: #fff;
-  padding: 8px 4px 4px;
+  margin: -2px auto 2px;
 }
 
 .rep-facts {
