@@ -1147,14 +1147,19 @@
 .section > .offer,
 .section > .ptable { margin-top: auto; }
 
-.section:has(> .anat) > :last-child,
-.section:has(> .build) > :last-child,
-.section:has(> .blk-row) > :last-child,
-.section:has(> .combo) > :last-child,
-.section:has(> .payoff) > :last-child,
-.section:has(> .usp) > :last-child,
-.section:has(> .offer) > :last-child,
-.section:has(> .ptable) > :last-child { margin-bottom: auto; }
+/* :not(.note-input) — a page's tutor note is normally slotted under the green
+   script, but a page with no script takes it at the end, and a bare :last-child
+   would hand the spacer to the note instead of to the block that closes the
+   page (which stops the page filling the screen). display:none does not exempt
+   it: :last-child is structural. */
+.section:has(> .anat) > :last-child:not(.note-input),
+.section:has(> .build) > :last-child:not(.note-input),
+.section:has(> .blk-row) > :last-child:not(.note-input),
+.section:has(> .combo) > :last-child:not(.note-input),
+.section:has(> .payoff) > :last-child:not(.note-input),
+.section:has(> .usp) > :last-child:not(.note-input),
+.section:has(> .offer) > :last-child:not(.note-input),
+.section:has(> .ptable) > :last-child:not(.note-input) { margin-bottom: auto; }
 
 /* a hint chip sitting under a component needs air (hard shadows below) */
 .section > .hint { margin-top: 16px; }

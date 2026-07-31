@@ -1198,6 +1198,98 @@ strong {
 [data-spot] { cursor: pointer; }
 @media (prefers-reduced-motion: reduce) { .is-spot { animation: none; } }
 
+/* ---------- shared highlighter (interactive/highlight.js) ----------
+   A marker stroke over the text, mirrored to the other screen. Persistent —
+   it stays until someone taps it off — so it reads as ink, not as a pointer:
+   no pulse, no outline, nothing competing with the spotlight ring above.
+   Only the visual lives here; the sync is in the script. */
+mark.hl {
+  background: #c9ff70;         /* the brand lime, on the white cards it usually lands on */
+  color: inherit;
+  padding: 0 1px;
+  border-radius: 3px;
+  cursor: pointer;
+  /* a stroke that wraps across lines keeps its rounded ends on every line
+     rather than one box stretched behind the whole run */
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
+}
+
+/* The marker has to read on all three surfaces the deck is built from, and one
+   colour cannot: lime on lime disappears, and the green script box is exactly
+   where a tutor marks a word most often. So the lime surfaces take a warm
+   stroke instead — the contrast is in the temperature, and the ink stays black.
+   (Amber over the white cards inside a brand page is harmless.) */
+.section-subtitle mark.hl,
+.brand-page mark.hl { background: #ffd166; }
+
+/* the dark transition pages carry reversed text, so a bright fill would swallow
+   it — there the stroke dims to a band the white text sits on top of */
+.transition-page mark.hl { background: rgba(181, 253, 76, .32); }
+
+/* ---------- shared tutor notes (interactive/tutor-notes.js) ----------
+   One free-typing box per page, sitting under the green script. Empty it is
+   invisible to everyone; the tutor sees it in teaching mode to write into,
+   and the moment it holds anything both screens show it.
+
+   :placeholder-shown is what makes that free — it tracks the live value, so a
+   note arriving from the other side surfaces with no event and no script. The
+   box must be display:none rather than merely transparent: pages are flex
+   columns with gaps, and only a non-rendered element leaves no gap behind.
+
+   A plain grey box, deliberately. It is scratch paper the tutor writes on
+   mid-lesson, not a component of the lesson — giving it the ink outline and
+   offset shadow the real components wear made it compete with them for
+   attention on every page it appeared. It recedes instead. */
+.note-input {
+  display: none;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 14px 0 0;
+  padding: 8px 11px;
+  border: 1px solid #e2e2de;
+  border-radius: 8px;
+  background: #f5f5f3;
+  color: #3d3d3d;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 500;
+  line-height: 1.5;
+  resize: none;
+}
+
+/* Grows with what is typed — and, unlike a JS autosizer, also grows for a note
+   that arrived from the other side (a value set by script fires no input
+   event). Only then does it collapse to a single line while empty; without the
+   support the box keeps its two authored rows and scrolls, which is a smaller
+   failure than a one-line box that silently clips a long note.
+
+   min-width holds it full-bleed: with content sizing the box would otherwise
+   shrink-wrap its text on the pages that lay out as blocks. The flex pages hide
+   that — a stretched flex item is full width already — so it would have shown
+   up on only some of the deck. */
+@supports (field-sizing: content) {
+  .note-input { field-sizing: content; min-height: 0; min-width: 100%; }
+}
+
+body.teaching .note-input,
+.note-input:not(:placeholder-shown) { display: block; }
+
+/* empty and only the tutor can see it: quieter still, so an unused box on
+   every page never reads as content the learner is missing */
+body.teaching .note-input:placeholder-shown {
+  border-style: dashed;
+  background: #fafafa;
+}
+
+.note-input::placeholder { color: #a8a8a4; font-weight: 500; }
+.note-input:focus { border-color: #b4b4b0; outline: none; background: #fff; }
+
+/* the learner gets it as a read-only note, so drop the text cursor */
+.note-input[readonly] { cursor: default; }
+
+@media print { .note-input:not(:placeholder-shown) { display: block; } }
+
 /* ---------- 참! 잘했어요 stamp ----------
    The tutor's praise stamp, mirrored to the learner. Only the visual lives
    here; who may stamp and what is shared is in interactive/stamp.js. */
