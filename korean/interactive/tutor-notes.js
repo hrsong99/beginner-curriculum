@@ -19,7 +19,7 @@
    원격에서 도착한 메모도 이벤트 하나 없이 그대로 떠오른다. 티칭 모드는
    공유하지 않는 상태라(페이저 참고) 튜터는 빈 칸까지, 학생은 채워진 것만 본다.
 
-   자리: 초록 스크립트 박스(.section-subtitle) 바로 아래 — 튜터가 대사를 읽고
+   자리: 파란 스크립트 박스(.section-subtitle) 바로 아래 — 튜터가 대사를 읽고
    다음으로 눈이 가는 곳이고, .tutor-note 가 이미 쓰는 자리다. 그 페이지에
    .tutor-note 가 있으면 그 아래로 내려간다. 둘 다 없는 표지·전환 페이지에서만
    맨 뒤에 붙인다 — .section 의 마지막 자식이 되는 일이 없어야 한다.
@@ -56,7 +56,7 @@
     box.setAttribute("rows", "2");
     box.setAttribute("autocomplete", "off");
 
-    // 초록 스크립트 → (있으면) 튜터 노트 → 메모. 없으면 페이지 끝.
+    // 파란 스크립트 → (있으면) 튜터 노트 → 메모. 없으면 페이지 끝.
     var anchor = page.querySelector(":scope > .tutor-note")
               || page.querySelector(":scope > .section-subtitle");
     if (anchor) anchor.insertAdjacentElement("afterend", box);

@@ -1279,12 +1279,10 @@ mark.hl {
           box-decoration-break: clone;
 }
 
-/* The marker has to read on all three surfaces the deck is built from, and one
-   colour cannot: lime on lime disappears, and the green script box is exactly
-   where a tutor marks a word most often. So the lime surfaces take a warm
-   stroke instead — the contrast is in the temperature, and the ink stays black.
-   (Amber over the white cards inside a brand page is harmless.) */
-.section-subtitle mark.hl,
+/* Lime on lime disappears, so the one remaining lime surface — the brand page —
+   takes a warm stroke instead: the contrast is in the temperature, and the ink
+   stays black. (Amber over the white cards inside a brand page is harmless.)
+   The script box needs no override; it is blue-100 now, and lime reads on it. */
 .brand-page mark.hl { background: #ffd166; }
 
 /* the dark transition pages carry reversed text, so a bright fill would swallow
@@ -1292,7 +1290,7 @@ mark.hl {
 .transition-page mark.hl { background: rgba(181, 253, 76, .32); }
 
 /* ---------- shared tutor notes (interactive/tutor-notes.js) ----------
-   One free-typing box per page, sitting under the green script. Empty it is
+   One free-typing box per page, sitting under the blue script. Empty it is
    invisible to everyone; the tutor sees it in teaching mode to write into,
    and the moment it holds anything both screens show it.
 
@@ -1302,9 +1300,9 @@ mark.hl {
    columns with gaps, and only a non-rendered element leaves no gap behind.
 
    A plain grey box, deliberately. It is scratch paper the tutor writes on
-   mid-lesson, not a component of the lesson — giving it the ink outline and
-   offset shadow the real components wear made it compete with them for
-   attention on every page it appeared. It recedes instead. */
+   mid-lesson, not a component of the lesson — dressing it like the real
+   components made it compete with them for attention on every page it
+   appeared. It recedes instead. */
 .note-input {
   display: none;
   box-sizing: border-box;
