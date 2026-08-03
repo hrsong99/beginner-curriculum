@@ -2,6 +2,8 @@
 
 This is an **author-only index** for [`Core English Speaking Patterns`](../tracks/1-core-patterns/table-of-contents.md). Grammar tags verify coverage and prerequisites; they are not learner-facing lesson titles or patterns.
 
+**Provenance:** the map was backfilled from the communicative patterns; it was not copied from an official CEFR grammar list. CEFR is language-neutral and non-prescriptive. Use the EAQUALS/British Council Core Inventory as the primary English-specific coverage baseline and the Cambridge English Grammar Profile as a granular corpus-informed cross-check. See [`curriculum-source-hierarchy.md`](./curriculum-source-hierarchy.md) for the source roles, decision rule, current limitations, and required row-level audit.
+
 Context codes: **E1** Getting Around Town · **E2** Food, Shopping & Home · **T1** Airport & Border · **T2** Hotel & Travel Problems · **S1** Meeting People & Making Plans · **S2** Feelings, Advice & Conflict · **W1** Workplace Basics · **W2** Meetings & Professional Problems.
 
 | Lesson | Communicative function | Internal grammar / form tags | Band | Depends on | Main recycling |
@@ -82,3 +84,5 @@ Context codes: **E1** Getting Around Town · **E2** Food, Shopping & Home · **T
 ## Author audit rule
 
 A grammar feature is “covered” only when the learner uses it to complete the lesson can-do. Mentioning a form in an explanation or optional expression does not count. If a contextual lesson requires a row not yet taught, move that lesson, simplify its frame, or change the prerequisite; do not preview the grammar invisibly.
+
+Before changing a row's band, check the corresponding Core Inventory item and the particular English Grammar Profile use. If they disagree, keep the more conservative productive band or document why the lesson treats the form as a bounded lexical preview.

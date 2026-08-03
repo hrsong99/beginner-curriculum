@@ -28,7 +28,7 @@ Every taught lesson has exactly two primary patterns. Each must retain a stable,
 6. **Combine:** complete one realistic exchange using both.
 7. **Retrieve:** close the model and say the exchange again.
 
-Grammar has not been removed. Detailed grammar stays backstage, while a lesson may show the smallest grammar-support point needed to control its two patterns. See [`teaching-philosophy.md`](./reference/teaching-philosophy.md) for the full approach, [`grammar-coverage-map.md`](./reference/grammar-coverage-map.md) for sequencing and coverage, [`lesson-template.md`](./shared/lesson-template.md) for authoring, and [`curriculum-rationale.md`](./reference/curriculum-rationale.md) for research decisions.
+Grammar has not been removed. Detailed grammar stays backstage, while a lesson may show the smallest grammar-support point needed to control its two patterns. See [`teaching-philosophy.md`](./reference/teaching-philosophy.md) for the full approach, [`curriculum-source-hierarchy.md`](./reference/curriculum-source-hierarchy.md) for the authority and provenance of scope decisions, [`grammar-coverage-map.md`](./reference/grammar-coverage-map.md) for sequencing and coverage, [`lesson-template.md`](./shared/lesson-template.md) for authoring, and [`curriculum-rationale.md`](./reference/curriculum-rationale.md) for research decisions.
 
 ## Level promise
 

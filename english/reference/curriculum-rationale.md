@@ -48,9 +48,13 @@ Sources:
 
 Learners see literal frames such as `Have you ever ___?`, while authors use [`grammar-coverage-map.md`](./grammar-coverage-map.md) to verify sequencing. The English Grammar Profile maps more than 1,200 learner-attested grammar uses to CEFR levels and is useful for checking timing. It is not a deterministic acquisition order; later quantitative research has found only limited agreement when level assignment is tested through frequency alone. The sequence therefore balances learner evidence, functional usefulness, cognitive load, and prerequisite relationships.
 
+CEFR itself is language-neutral and does not publish an official English grammar list. For English-specific scope, the curriculum now uses the EAQUALS/British Council **Core Inventory for General English** as its primary practical baseline, then triangulates individual form-and-meaning decisions against the corpus-based English Grammar Profile. The exact authority and decision hierarchy are documented in [`curriculum-source-hierarchy.md`](./curriculum-source-hierarchy.md).
+
 Sources:
 
 - [Cambridge — Introducing the English Grammar Profile](https://www.cambridge.org/elt/blog/2015/11/11/introducing-english-grammar-profile-1-building-profile/)
+- [Council of Europe — language-specific Reference Level Descriptions](https://www.coe.int/en/web/common-european-framework-reference-languages/reference-level-descriptions)
+- [EAQUALS/British Council — Core Inventory for General English](https://www.eaquals.org/resources/the-core-inventory-for-general-english/)
 - [Cambridge — Using the English Grammar Profile for curriculum design](https://www.cambridge.org/elt/blog/2017/03/09/iatefl-talk-english-grammar-profile/)
 - [Verratti-Souto, Sagirov & Chen (2025) — quantitative verification of EGP assignments](https://www.cambridge.org/core/journals/annual-review-of-applied-linguistics/article/nlppowered-quantitative-verification-of-the-english-grammar-profiles-structurelevel-assignment/8323F1AD466EF982EA47DEFBB0D740D5)
 
