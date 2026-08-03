@@ -4,7 +4,7 @@
 
 This is the open-ended track. It introduces no grammar syllabus of its own. Each session selects **two conversation moves** from Core and Contextual English and uses them repeatedly around one interesting question.
 
-> Structure: hook → quick position → Move A → follow-up ladder → Move B → changed/stronger position. Recommended from Core Lesson 31; the tutor simplifies the model without simplifying the idea.
+> Structure: hook → quick position → Move A → follow-up ladder → Move B → changed/stronger position. Recommended from Core Lesson 37; the tutor simplifies the model without simplifying the idea.
 
 **4 themes · 24 launch topics · growing.** The frames shown are the default pair; tutors may substitute previously learned equivalents.
 
@@ -126,4 +126,3 @@ This is the open-ended track. It introduces no grammar syllabus of its own. Each
 6. **Return:** Has your answer changed since the start?
 
 New topics should earn their place by creating genuine curiosity, not by providing a thin excuse to drill a grammar label.
-
