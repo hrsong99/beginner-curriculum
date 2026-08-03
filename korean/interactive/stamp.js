@@ -80,7 +80,9 @@
   btn.className = "pg-btn pg-stamp";
   btn.setAttribute("aria-label", "참 잘했어요 도장");
   btn.appendChild(art.cloneNode(true));
-  bar.appendChild(btn);
+  // 티칭 버튼 왼쪽에 둔다 — 오른쪽 끝은 "다음"의 자리다. DOM 순서 자체를
+  // 맞춰서 넣으므로(CSS order 가 아니라), 탭 순서도 보이는 순서와 같다.
+  bar.insertBefore(btn, bar.querySelector(".pg-teach") || bar.querySelector(".pg-next"));
 
   btn.addEventListener("click", function () {
     // 버튼은 티칭 모드에서만 보이지만, 상태로도 한 번 더 막는다.
