@@ -2,20 +2,59 @@
 
 /* ===== lesson-card.css ===== */
 /* ============================================================
-   PODO BOLD lesson design system
-   tokens: ink #1C1C1C · lime #B5FD4C · green-500 #6ABE36
-           green-100 #F2FCEC · gray-100 #F5F5F5 · gray-200 #E8E8E8
-           gray-400 #A5A5A5 · gray-500 #757575
-   construction: white cards, 1.5px ink outline, hard offset base;
-   dark pages (hero/transitions) sit on a lime base.
+   PODO lesson design system
+   ------------------------------------------------------------
+   CONSTRUCTION: white cards on a 1px gray-200 outline. Weight is
+   carried by type and by fills, not by outlines — a page of eight
+   ink-outlined rows reads as eight boxes before it reads as eight
+   choices.
+
+   COLOUR CARRIES ONE MEANING EACH, and this is the rule that keeps
+   the deck legible — breaking it is how a page stops being
+   scannable:
+     · green-500 / green-100  →  STATE. chosen, correct, active.
+       The only pair that ever means "this one".
+     · blue-100               →  the tutor's spoken script, and
+       nothing else. If it is blue, the tutor is saying it aloud.
+     · lime                   →  BRAND CHROME only. brand pages,
+       kickers, the pager. Never state — lime on one row out of
+       seven reads as the screen flashing, not as a choice.
+     · gray-200               →  every ordinary outline.
+     · the seat colours (cream = consonant, pink = vowel) are
+       pedagogy and outrank all of the above wherever they appear.
+
    NESTING RULE: max two levels of boxes — the page card plus ONE
    boxed component inside it. Never wrap boxed components (answer
    boxes, bubbles, pattern cards) in another bordered card; put
    them directly in the section. When a dialogue turn holds an
    answer box, the box IS the bubble (see .bubble.me:has below).
-   Previous "Sage" design archived in
-   2-beginner-patterns/design-variants.html (Variant 00).
+
+   Dark pages need no separate system: the components on them were
+   never dark, they are light cards on a dark ground, and the
+   outline lives on the card rather than on the page.
+
+   Previous "Podo Bold" (1.5px ink outline, hard offset shadow,
+   lime state) is what this replaced; "Sage" before that is archived
+   in 2-beginner-patterns/design-variants.html (Variant 00).
    ============================================================ */
+
+:root {
+  --ink:       #1c1c1c;
+  --lime:      #b5fd4c;   /* brand chrome only — never state */
+  --green-500: #6abe36;   /* state: the outline on a chosen/correct thing */
+  --green-100: #f2fcec;   /* state: its fill */
+  --blue-100:  #f2f5ff;   /* the tutor's spoken script */
+  --blue-200:  #e4e8f2;   /* the tutor-only note attached to that script */
+  --blue-ink:  #4f5568;   /* its text — dark enough to read, never black */
+  --gray-50:   #fafafa;   /* grouping surfaces that tiles sit ON */
+  --gray-100:  #f5f5f5;
+  --gray-200:  #e8e8e8;   /* every ordinary outline */
+  --gray-400:  #a5a5a5;
+  --gray-500:  #757575;
+
+  --line:      1px solid var(--gray-200);
+  --line-on:   1.5px solid var(--green-500);
+}
 
 * {
   box-sizing: border-box;
@@ -54,7 +93,7 @@ body {
   color: #fff;
   background: #1c1c1c;
   border-radius: 16px;
-  box-shadow: 0 6px 0 #b5fd4c;
+  box-shadow: 0 6px 0 var(--lime);
 }
 
 .hero.small {
@@ -65,7 +104,7 @@ body {
   width: fit-content;
   margin: 0 0 44px;
   padding: 7px 13px;
-  background: #b5fd4c;
+  background: var(--lime);
   border-radius: 999px;
   color: #1c1c1c;
   font-size: 12.5px;
@@ -102,7 +141,7 @@ h1 .title-ja {
 .hero-topic {
   margin-top: auto;
   padding: 18px 20px;
-  background: #b5fd4c;
+  background: var(--lime);
   border-radius: 14px;
 }
 
@@ -138,9 +177,9 @@ h1 .title-ja {
   padding: 36px 30px 40px;
   min-height: 440px;
   background: #fff;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 16px;
-  box-shadow: 0 5px 0 #1c1c1c;
+  box-shadow: 0 5px 0 var(--ink);
 }
 
 .section + .section {
@@ -161,7 +200,7 @@ h1 .title-ja {
 .title-ja {
   font-size: 0.6em;
   font-weight: 500;
-  color: #a5a5a5;
+  color: var(--gray-400);
   letter-spacing: 0;
   white-space: nowrap;
 }
@@ -171,20 +210,23 @@ h1 .title-ja,
   color: rgba(255, 255, 255, .55);
 }
 
-/* the instruction box carries the lime pill design (the per-section
-   kicker pills were retired in its favor): target-language
-   instruction on top, learner-language translation below */
+/* THE TUTOR'S SPOKEN SCRIPT. blue-100 means exactly one thing in this
+   system — the tutor is saying this out loud — so nothing else may take
+   this fill. Full-bleed rather than fit-content: a tinted box with no
+   outline needs its edges to line up with the components under it, or it
+   reads as a stray highlight rather than as the page's instruction.
+   Korean on top, its Japanese translation under it at half strength. */
 .section-subtitle {
-  width: fit-content;
+  width: auto;
   max-width: 100%;
   margin: 16px 0 26px;
   padding: 12px 16px;
-  border: 1.5px solid #1c1c1c;
+  border: 0;
   border-radius: 12px;
-  background: #b5fd4c;
-  color: #1c1c1c;
-  font-size: 15px;
-  line-height: 1.45;
+  background: var(--blue-100);
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.5;
   font-weight: 700;
 }
 
@@ -199,9 +241,28 @@ h1 .title-ja,
 .section-subtitle .ja {
   display: block;
   margin-top: 3px;
-  color: rgba(28,28,28,.66);
-  font-size: 12.5px;
-  font-weight: 600;
+  color: rgba(28,28,28,.5);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* ---- one sentence per line, its translation directly under it ----
+   Built at load by interactive/script-lines.js, and only when the Korean and
+   Japanese split into the same number of sentences. A run-on script gave the
+   tutor no way to see which sentence they were on, and gave the learner no way
+   to tell which Japanese belonged to which Korean. The gap between pairs is
+   what does the work — bigger than the gap inside a pair, so each Korean line
+   reads as owning the grey line beneath it. */
+.section-subtitle.lined .sline {
+  display: block;
+}
+
+.section-subtitle.lined .sline + .sline {
+  margin-top: 10px;
+}
+
+.section-subtitle.lined .ja {
+  margin-top: 1px;
 }
 
 /* ---------- cards ---------- */
@@ -209,7 +270,7 @@ h1 .title-ja,
   margin: 24px 0 0;
   padding: 26px;
   background: #fff;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 14px;
   box-shadow: none;
   overflow: hidden;
@@ -237,7 +298,7 @@ h1 .title-ja,
   align-items: center;
   gap: 22px;
   padding: 16px 26px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 14px;
   background: #fff;
 }
@@ -277,7 +338,7 @@ h1 .title-ja,
 .task-label {
   display: block;
   margin-bottom: 14px;
-  color: #757575;
+  color: var(--gray-500);
   font-size: 13px;
   line-height: 1;
   font-weight: 800;
@@ -296,7 +357,7 @@ h1 .title-ja,
 
 .activity-subtitle {
   margin: 6px 0 22px;
-  color: #757575;
+  color: var(--gray-500);
   font-size: 15px;
   line-height: 1.38;
   font-weight: 600;
@@ -312,7 +373,7 @@ h1 .title-ja,
 .model-line {
   display: flex;
   flex-direction: column;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 12px;
   overflow: hidden;
 }
@@ -321,8 +382,8 @@ h1 .title-ja,
   order: -1;
   margin: 0;
   padding: 9px 14px;
-  background: #f5f5f5;
-  border-bottom: 1.5px solid #1c1c1c;
+  background: var(--gray-100);
+  border-bottom: 1px solid var(--gray-200);
   color: #575753;
   font-size: 12.5px;
   line-height: 1.35;
@@ -344,7 +405,7 @@ h1 .title-ja,
 .plain-card {
   margin: 18px 0 0;
   padding: 18px 0 0;
-  border-top: 1px solid #e8e8e8;
+  border-top: 1px solid var(--gray-200);
 }
 
 .tip {
@@ -353,7 +414,7 @@ h1 .title-ja,
   padding: 5px 8px;
   border-radius: 7px;
   background: #1c1c1c;
-  color: #b5fd4c;
+  color: var(--lime);
   font-size: 11px;
   font-weight: 800;
   text-transform: uppercase;
@@ -383,7 +444,7 @@ p {
 .english {
   display: block;
   margin-top: 5px;
-  color: #757575;
+  color: var(--gray-500);
   font-size: 14px;
   line-height: 1.42;
   font-weight: 500;
@@ -393,7 +454,7 @@ p {
 .translation {
   display: block;
   margin-top: 5px;
-  color: #757575;
+  color: var(--gray-500);
   font-size: 14px;
   line-height: 1.42;
   font-weight: 500;
@@ -402,7 +463,7 @@ p {
 
 .teacher {
   margin: 0 0 16px;
-  color: #757575;
+  color: var(--gray-500);
   font-size: 15px;
   font-weight: 600;
 }
@@ -423,14 +484,14 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 1px solid #e8e8e8;
+  border: 1px solid var(--gray-200);
   border-radius: 14px;
   background: #fff;
 }
 
 .row {
   padding: 14px 0;
-  border-bottom: 1px solid #e8e8e8;
+  border-bottom: 1px solid var(--gray-200);
   overflow-wrap: anywhere;
 }
 
@@ -447,7 +508,7 @@ p {
   display: block;
   height: 72px;
   margin: 12px 0 10px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 12px;
   background: #fff;
 }
@@ -460,7 +521,7 @@ p {
 .answer-box {
   display: block;
   margin: 10px 0 6px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 12px;
   background: #fff;
   overflow: hidden;
@@ -469,8 +530,8 @@ p {
 .answer-label {
   display: block;
   padding: 9px 14px;
-  border-bottom: 1.5px solid #1c1c1c;
-  background: #f5f5f5;
+  border-bottom: 1px solid var(--gray-200);
+  background: var(--gray-100);
   color: #575753;
   font-size: 12.5px;
   line-height: 1.35;
@@ -520,7 +581,7 @@ p {
   margin: 0 4px;
   vertical-align: middle;
   background: #f8f8f7;
-  border: 1.5px dashed #1c1c1c;
+  border: 1.5px dashed var(--gray-200);
   border-radius: 999px;
   color: #ededeb;
   font-size: inherit;
@@ -539,7 +600,7 @@ p {
   margin: 0 4px;
   vertical-align: middle;
   background: #f8f8f7;
-  border: 1.5px dashed #1c1c1c;
+  border: 1.5px dashed var(--gray-200);
   border-radius: 999px;
   color: #1c1c1c;
   font: inherit;
@@ -555,7 +616,7 @@ p {
 .option-line {
   display: block;
   padding: 16px 0;
-  border-bottom: 1px solid #e8e8e8;
+  border-bottom: 1px solid var(--gray-200);
   color: #1c1c1c;
   font-size: 18px;
   line-height: 1.45;
@@ -581,7 +642,7 @@ p {
 
 .pattern-card {
   padding: 20px 22px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 14px;
   background: #fff;
 }
@@ -621,7 +682,7 @@ p {
 
 .note-box {
   padding: 18px 16px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 14px;
   background: #fff;
 }
@@ -629,7 +690,7 @@ p {
 .note-arrow {
   display: block;
   margin: 8px 0 10px;
-  color: #6abe36;
+  color: var(--green-500);
   font-size: 20px;
   line-height: 1;
   font-weight: 800;
@@ -638,7 +699,7 @@ p {
 .section-kicker {
   display: block;
   margin-bottom: 12px;
-  color: #6abe36;
+  color: var(--green-500);
   font-size: 13px;
   font-weight: 800;
   text-transform: uppercase;
@@ -649,7 +710,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  color: #757575;
+  color: var(--gray-500);
   font-size: 14px;
   line-height: 1.45;
   font-weight: 600;
@@ -660,7 +721,7 @@ p {
   align-items: center;
   min-height: 26px;
   padding: 3px 10px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 999px;
   background: #fff;
   color: #1c1c1c;
@@ -687,8 +748,8 @@ p {
   order: -1;
   margin: 0;
   padding: 9px 14px;
-  background: #f5f5f5;
-  border-bottom: 1.5px solid #1c1c1c;
+  background: var(--gray-100);
+  border-bottom: 1px solid var(--gray-200);
   color: #575753;
   font-size: 12.5px;
   line-height: 1.35;
@@ -720,7 +781,7 @@ p {
   display: inline-flex;
   margin: 8px 6px 0 0;
   padding: 12px 14px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 12px;
   background: #fff;
   color: #1c1c1c;
@@ -767,7 +828,7 @@ p {
 }
 
 .sp-ja {
-  color: #a5a5a5;
+  color: var(--gray-400);
   font-size: 11.5px;
   line-height: 1.2;
   font-weight: 700;
@@ -822,14 +883,17 @@ p {
 
 .bubble {
   padding: 14px 16px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 13px;
   background: #fff;
 }
 
+/* "you" in a dialogue. The green-100 tint alone carries it — deliberately
+   without the green-500 outline, which is reserved for state (chosen /
+   correct). A speaker is not a choice. */
 .bubble.me {
-  background: #f2fcec;
-  box-shadow: 4px 5px 0 #b5fd4c;
+  background: var(--green-100);
+  box-shadow: none;
 }
 
 .bubble .answer-box {
@@ -848,7 +912,7 @@ p {
 
 .bubble.me:has(> .answer-box) > .answer-box {
   margin: 0;
-  box-shadow: 4px 5px 0 #b5fd4c;
+  box-shadow: none;
 }
 
 .bubble.me:has(> .answer-box) .answer-label {
@@ -884,8 +948,8 @@ p {
   order: -1;
   margin: 0;
   padding: 9px 14px;
-  background: #f5f5f5;
-  border-bottom: 1.5px solid #1c1c1c;
+  background: var(--gray-100);
+  border-bottom: 1px solid var(--gray-200);
   color: #575753;
   font-size: 12.5px;
   line-height: 1.35;
@@ -901,7 +965,7 @@ p {
 }
 
 .bubble.me:has(> .korean) > .translation {
-  background: #f2fcec;
+  background: var(--green-100);
 }
 
 /* ---------- missions ---------- */
@@ -913,7 +977,7 @@ p {
 
 .mission li {
   padding: 14px 0 14px 30px;
-  border-bottom: 1px solid #e8e8e8;
+  border-bottom: 1px solid var(--gray-200);
   color: #1c1c1c;
   font-size: 16px;
   font-weight: 600;
@@ -932,7 +996,7 @@ p {
 .mission-task .ja {
   display: block;
   margin-top: 3px;
-  color: #757575;
+  color: var(--gray-500);
   font-size: 13px;
   font-weight: 600;
 }
@@ -958,7 +1022,7 @@ p {
   width: 15px;
   height: 15px;
   margin: 0 11px 0 -30px;
-  border: 2px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 5px;
   background: #fff;
   vertical-align: -2px;
@@ -967,7 +1031,7 @@ p {
 .sign {
   padding: 21px 18px;
   text-align: center;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 16px;
   background: #fff;
 }
@@ -987,14 +1051,14 @@ strong {
   background: #1c1c1c;
   color: #fff;
   border-radius: 16px;
-  box-shadow: 0 6px 0 #b5fd4c;
+  box-shadow: 0 6px 0 var(--lime);
 }
 
 .transition-kicker {
   width: fit-content;
   margin-bottom: 18px;
   padding: 6px 13px;
-  background: #b5fd4c;
+  background: var(--lime);
   border-radius: 999px;
   color: #1c1c1c;
   font-size: 12px;
@@ -1070,7 +1134,7 @@ strong {
 .note-examples .korean {
   font-size: 18px;
   font-weight: 700;
-  color: #757575;
+  color: var(--gray-500);
 }
 
 .note-examples .korean strong {
@@ -1088,7 +1152,7 @@ strong {
   align-items: center;
   gap: 14px;
   padding: 16px 22px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 12px;
   background: #fff;
 }
@@ -1125,8 +1189,8 @@ strong {
 .choose-row.sentence > .translation {
   margin: 0;
   padding: 9px 14px;
-  background: #f5f5f5;
-  border-bottom: 1.5px solid #1c1c1c;
+  background: var(--gray-100);
+  border-bottom: 1px solid var(--gray-200);
   color: #575753;
   font-size: 12.5px;
   line-height: 1.35;
@@ -1152,9 +1216,9 @@ strong {
   justify-content: center;
   min-width: 3.4em;
   padding: 9px 16px;
-  border: 1.5px dashed #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 999px;
-  background: #f1f1ef;
+  background: #fff;
   color: #1c1c1c;
   font-size: 21px;
   font-weight: 800;
@@ -1199,6 +1263,137 @@ strong {
 }
 [data-spot] { cursor: pointer; }
 @media (prefers-reduced-motion: reduce) { .is-spot { animation: none; } }
+
+/* ---------- shared highlighter (interactive/highlight.js) ----------
+   A marker stroke over the text, mirrored to the other screen. Persistent —
+   it stays until someone taps it off — so it reads as ink, not as a pointer:
+   no pulse, no outline, nothing competing with the spotlight ring above.
+   Only the visual lives here; the sync is in the script. */
+mark.hl {
+  background: #c9ff70;         /* the brand lime, on the white cards it usually lands on */
+  color: inherit;
+  padding: 0 1px;
+  border-radius: 3px;
+  cursor: pointer;
+  /* a stroke that wraps across lines keeps its rounded ends on every line
+     rather than one box stretched behind the whole run */
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
+}
+
+/* The marker has to read on all three surfaces the deck is built from, and one
+   colour cannot: lime on lime disappears, and the green script box is exactly
+   where a tutor marks a word most often. So the lime surfaces take a warm
+   stroke instead — the contrast is in the temperature, and the ink stays black.
+   (Amber over the white cards inside a brand page is harmless.) */
+.section-subtitle mark.hl,
+.brand-page mark.hl { background: #ffd166; }
+
+/* the dark transition pages carry reversed text, so a bright fill would swallow
+   it — there the stroke dims to a band the white text sits on top of */
+.transition-page mark.hl { background: rgba(181, 253, 76, .32); }
+
+/* ---------- shared tutor notes (interactive/tutor-notes.js) ----------
+   One free-typing box per page, sitting under the green script. Empty it is
+   invisible to everyone; the tutor sees it in teaching mode to write into,
+   and the moment it holds anything both screens show it.
+
+   :placeholder-shown is what makes that free — it tracks the live value, so a
+   note arriving from the other side surfaces with no event and no script. The
+   box must be display:none rather than merely transparent: pages are flex
+   columns with gaps, and only a non-rendered element leaves no gap behind.
+
+   A plain grey box, deliberately. It is scratch paper the tutor writes on
+   mid-lesson, not a component of the lesson — giving it the ink outline and
+   offset shadow the real components wear made it compete with them for
+   attention on every page it appeared. It recedes instead. */
+.note-input {
+  display: none;
+  box-sizing: border-box;
+  width: 100%;
+  /* The bottom margin is real: the box is injected between two components that
+     know nothing about it, and several of them (.sign-list, .known, .letter-row)
+     bring no top margin of their own — with a 0 bottom the memo collided with
+     whatever followed it. The TOP is tightened by the adjacency rules below,
+     because the memo belongs to the instruction above it. */
+  margin: 8px 0 18px;
+  /* room on the left for the pencil */
+  padding: 8px 11px 8px 30px;
+  /* Dashed, always — not only while empty. Dashed already means "written here,
+     not printed here" everywhere else in the system (.slot, .build-slot), and
+     it is the one texture no lesson component wears, so the memo reads as
+     hand-written at a glance without needing a colour of its own. */
+  border: 1.5px dashed var(--gray-200);
+  border-radius: 8px;
+  /* Grey on grey. It is an aside written during the lesson, not lesson
+     material, so it should read as quieter than everything around it — on
+     white with near-black text it looked like an empty form field and pulled
+     rank over the card it belongs to. The dashed edge and the pencil are what
+     make it unmistakable; the colour is what keeps it quiet. */
+  background-color: var(--gray-50);
+  /* A pencil, inlined as a data URI so the packager has no file to bundle and
+     nothing can 404 from S3. Sits top-left so it stays put as the box grows. */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a5a5a5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 20h9'/%3E%3Cpath d='M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 9px 10px;
+  background-size: 13px 13px;
+  color: var(--gray-500);
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 500;
+  line-height: 1.5;
+  resize: none;
+}
+
+/* Grows with what is typed — and, unlike a JS autosizer, also grows for a note
+   that arrived from the other side (a value set by script fires no input
+   event). Only then does it collapse to a single line while empty; without the
+   support the box keeps its two authored rows and scrolls, which is a smaller
+   failure than a one-line box that silently clips a long note.
+
+   min-width holds it full-bleed: with content sizing the box would otherwise
+   shrink-wrap its text on the pages that lay out as blocks. The flex pages hide
+   that — a stretched flex item is full width already — so it would have shown
+   up on only some of the deck. */
+@supports (field-sizing: content) {
+  .note-input { field-sizing: content; min-height: 0; min-width: 100%; }
+}
+
+body.teaching .note-input,
+.note-input:not(:placeholder-shown) { display: block; }
+
+/* The memo is a note ON the instruction above it, so it sits with that block
+   rather than floating between it and the activity.
+
+   Two selectors, because a hidden tutor-note still occupies the sibling chain:
+   display:none removes its box, not its place, so in student view the memo is
+   the script box's grand-sibling rather than its neighbour and the first
+   selector never matches. Without the second one the gap was right only while
+   teaching mode was on. (The merged case is tightened in the track sheet,
+   which loads after this one and wins on specificity.) */
+.section-subtitle:has(+ .note-input),
+.section-subtitle:has(+ .tutor-note + .note-input) { margin-bottom: 8px; }
+
+/* empty and only the tutor can see it: quieter still, so an unused box on
+   every page never reads as content the learner is missing */
+/* Empty, only the tutor can see it — and an unused box appears on every page,
+   so it drops back to the page ground rather than sitting on a tint. */
+body.teaching .note-input:placeholder-shown { background-color: transparent; }
+
+.note-input::placeholder { color: var(--gray-400); font-weight: 500; }
+
+/* typing is the one moment it should feel like a live field */
+.note-input:focus {
+  border-color: var(--gray-400);
+  outline: none;
+  background-color: #fff;
+  color: var(--ink);
+}
+
+/* the learner gets it as a read-only note, so drop the text cursor */
+.note-input[readonly] { cursor: default; }
+
+@media print { .note-input:not(:placeholder-shown) { display: block; } }
 
 /* ---------- 참! 잘했어요 stamp ----------
    The tutor's praise stamp, mirrored to the learner. Only the visual lives
@@ -1269,12 +1464,16 @@ strong {
    Scoped to .pager because the track sheet loads after this one and sets
    .pg-btn { display: grid } — an unscoped .pg-stamp ties on specificity and
    loses on order, which would show the learner a button they cannot use. */
-.pager .pg-stamp { display: none; }
+/* The slot is ALWAYS in the layout — hidden, not removed. Toggling display
+   here added a sixth item to the bar the moment teaching mode came on, and
+   every other button slid sideways under the tutor's finger. Reserving the
+   space costs the learner one invisible 34px gap and keeps the bar still. */
+.pager .pg-stamp { visibility: hidden; pointer-events: none; }
 /* The art is already a bordered circle, so the button adds no ring of its own —
    a ring inside a ring is the box-in-a-box the system rules out, and it left
    the faces rendering at 21px as an unreadable smudge. The stamp IS the button:
    34px, no border, no fill. */
-body.teaching .pager .pg-stamp {
+.pager .pg-stamp {
   display: grid;
   width: 34px;
   height: 34px;
@@ -1283,11 +1482,13 @@ body.teaching .pager .pg-stamp {
   background: none;
   box-shadow: none;
 }
-body.teaching .pager .pg-stamp > .stamp-art { display: block; width: 34px; height: auto; }
+body.teaching .pager .pg-stamp { visibility: visible; pointer-events: auto; }
+.pager .pg-stamp > .stamp-art { display: block; width: 34px; height: auto; }
 
 /* Five items crowd the pill's rounded end — the last one sat 1px inside the
-   flat edge, where the 999px radius has already curved away. */
-body.teaching .pager { padding-right: 15px; }
+   flat edge, where the 999px radius has already curved away. Unconditional,
+   because the stamp now holds its slot in both modes. */
+.pager { padding-right: 15px; }
 
 @media (prefers-reduced-motion: reduce) {
   .phone:has(> .pg-on.stamped) ~ .stamp-art { animation: none; transform: rotate(-7deg); }
@@ -1313,9 +1514,9 @@ body.teaching .pager { padding-right: 15px; }
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: #b5fd4c;
+  background: var(--lime);
   border-radius: 16px;
-  box-shadow: 0 6px 0 #1c1c1c;
+  box-shadow: 0 6px 0 var(--ink);
 }
 
 .phone > .brand-page:first-child {
@@ -1333,7 +1534,7 @@ body.teaching .pager { padding-right: 15px; }
   object-fit: contain;
   padding: 16px;
   background: #fff;
-  border: 2px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 26px;
   box-sizing: border-box;
 }
@@ -1434,7 +1635,7 @@ body.teaching .pager { padding-right: 15px; }
   margin-top: 20px;
   padding: 16px 20px 36px;
   background: #fff;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 18px;
   text-align: left;
 }
@@ -1456,7 +1657,7 @@ body.teaching .pager { padding-right: 15px; }
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  background: #b5fd4c;
+  background: var(--lime);
   color: #1c1c1c;
   font-size: 14px;
   font-weight: 900;
@@ -1536,9 +1737,9 @@ body.teaching .pager { padding-right: 15px; }
 .bubble.intro > .cue {
   display: block;
   padding: 8px 16px;
-  border-top: 1.5px dashed #cfd8e6;
-  background: #f4f8ff;
-  color: #3b82f6;
+  border-top: 1px solid var(--gray-200);
+  background: var(--gray-50);
+  color: var(--gray-500);
   font-size: 11.5px;
   font-weight: 700;
   line-height: 1.35;
@@ -1556,7 +1757,7 @@ body.teaching .pager { padding-right: 15px; }
   align-items: center;
   gap: 14px;
   padding: 14px 16px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 13px;
   background: #fff;
 }
@@ -1583,7 +1784,7 @@ body.teaching .pager { padding-right: 15px; }
 .opt-row .opt-sub {
   display: block;
   margin-top: 2px;
-  color: #757575;
+  color: var(--gray-500);
   font-size: 12.5px;
   font-weight: 600;
   line-height: 1.35;
@@ -1594,8 +1795,8 @@ body.teaching .pager { padding-right: 15px; }
   min-width: 48px;
   padding: 10px 0;
   text-align: center;
-  background: #1c1c1c;
-  color: #b5fd4c;
+  background: var(--gray-100);
+  color: var(--ink);
   border-radius: 11px;
   font-size: 13px;
   font-weight: 800;
@@ -1616,7 +1817,7 @@ body.teaching .pager { padding-right: 15px; }
   align-items: center;
   gap: 12px;
   padding: 14px 0;
-  border-bottom: 1px solid #e8e8e8;
+  border-bottom: 1px solid var(--gray-200);
 }
 
 .ws-row:first-child {
@@ -1660,7 +1861,7 @@ body.teaching .pager { padding-right: 15px; }
   place-items: center;
   width: 36px;
   height: 36px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 10px;
   background: #fff;
   font-size: 14px;
@@ -1668,14 +1869,15 @@ body.teaching .pager { padding-right: 15px; }
 }
 
 .nchip input:checked + span {
-  background: #b5fd4c;
+  background: var(--green-100);
+  border-color: var(--green-500);
 }
 
 /* course checkboxes */
 .cgroup-label {
   display: block;
   margin: 20px 0 0;
-  color: #757575;
+  color: var(--gray-500);
   font-size: 12px;
   font-weight: 800;
   letter-spacing: .04em;
@@ -1699,7 +1901,7 @@ body.teaching .pager { padding-right: 15px; }
   align-items: center;
   gap: 8px;
   padding: 9px 13px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 10px;
   background: #fff;
   cursor: pointer;
@@ -1713,7 +1915,7 @@ body.teaching .pager { padding-right: 15px; }
 
 .ccheck .t small {
   margin-left: 3px;
-  color: #757575;
+  color: var(--gray-500);
   font-size: 10.5px;
   font-weight: 600;
 }
@@ -1726,14 +1928,15 @@ body.teaching .pager { padding-right: 15px; }
   width: 17px;
   height: 17px;
   margin: 0;
-  border: 1.7px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 4px;
   background: #fff;
   cursor: pointer;
 }
 
 .cbox:checked {
-  background: #b5fd4c;
+  background: var(--green-100);
+  border-color: var(--green-500);
 }
 
 .cbox:checked::after {
@@ -1762,7 +1965,7 @@ body.teaching .pager { padding-right: 15px; }
 }
 
 .plan-banner .k {
-  color: #b5fd4c;
+  color: var(--lime);
   font-size: 13px;
   font-weight: 800;
   text-align: center;
@@ -1795,9 +1998,9 @@ body.teaching .pager { padding-right: 15px; }
 .write {
   width: 56px;
   padding: 4px 2px;
-  border: none;
+  border: 1.5px dashed var(--gray-200);
   border-radius: 8px;
-  background: #b5fd4c;
+  background: var(--gray-100);
   color: #1c1c1c;
   text-align: center;
   font-family: inherit;
@@ -1825,7 +2028,7 @@ body.teaching .pager { padding-right: 15px; }
   align-items: flex-start;
   gap: 12px;
   padding: 14px 16px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 13px;
   background: #fff;
 }
@@ -1834,9 +2037,9 @@ body.teaching .pager { padding-right: 15px; }
   flex: none;
   margin-top: 2px;
   padding: 4px 10px;
-  border: 1.5px solid #6abe36;
+  border: 1.5px solid var(--green-500);
   border-radius: 999px;
-  background: #f2fcec;
+  background: var(--green-100);
   color: #3f7a1c;
   font-size: 11.5px;
   font-weight: 800;
@@ -1844,9 +2047,9 @@ body.teaching .pager { padding-right: 15px; }
 }
 
 .ladder-item .lv.hot {
-  border-color: #1c1c1c;
-  background: #1c1c1c;
-  color: #b5fd4c;
+  border-color: var(--green-500);
+  background: var(--green-100);
+  color: var(--green-500);
 }
 
 .ladder-item .korean {
@@ -1891,7 +2094,7 @@ body.teaching .pager { padding-right: 15px; }
   margin: 0 auto;
   width: 162px;
   height: 162px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 14px;
   background: #fff;
   overflow: hidden;
@@ -1944,7 +2147,7 @@ body.teaching .pager { padding-right: 15px; }
 .anat .kana small {
   display: block;
   margin-top: 8px;
-  color: #757575;
+  color: var(--gray-500);
   font-size: 11.5px;
   font-weight: 700;
   letter-spacing: .06em;
@@ -1964,7 +2167,7 @@ body.teaching .pager { padding-right: 15px; }
   align-items: center;
   gap: 8px;
   padding: 7px 14px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 11px;
   font-size: 13px;
   font-weight: 800;
@@ -1990,7 +2193,7 @@ body.teaching .pager { padding-right: 15px; }
   place-items: center;
   width: 96px;
   height: 96px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 14px;
   background: #fff;
   font-size: 50px;
@@ -1998,12 +2201,12 @@ body.teaching .pager { padding-right: 15px; }
   line-height: 1;
 }
 
-.build .tile.res { box-shadow: 0 4px 0 #1c1c1c; }
+.build .tile.res { box-shadow: none; border-color: var(--green-500); }
 
 .build .b small {
   display: block;
   margin-top: 7px;
-  color: #757575;
+  color: var(--gray-500);
   font-size: 11.5px;
   font-weight: 700;
 }
@@ -2037,7 +2240,7 @@ body.teaching .pager { padding-right: 15px; }
 .blk-item .cap small {
   display: block;
   margin-top: 3px;
-  color: #757575;
+  color: var(--gray-500);
   font-size: 11.5px;
   font-weight: 700;
 }
@@ -2054,7 +2257,7 @@ body.teaching .pager { padding-right: 15px; }
   display: grid;
   place-items: center;
   height: 64px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 10px;
   background: #fff;
   font-size: 27px;
@@ -2078,7 +2281,7 @@ body.teaching .pager { padding-right: 15px; }
   display: grid;
   place-items: center;
   height: 148px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 14px;
   background: #fff;
   font-size: 76px;
@@ -2104,7 +2307,7 @@ body.teaching .pager { padding-right: 15px; }
   align-items: center;
   gap: 15px;
   padding: 13px 16px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 13px;
   background: #fff;
 }
@@ -2182,7 +2385,7 @@ body.teaching .pager { padding-right: 15px; }
   align-items: center;
   gap: 16px;
   padding: 20px 18px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 13px;
   background: #fff;
 }
@@ -2207,7 +2410,7 @@ body.teaching .pager { padding-right: 15px; }
 .known-row .j small {
   display: block;
   margin-top: 2px;
-  color: #a5a5a5;
+  color: var(--gray-400);
   font-size: 11.5px;
   font-weight: 700;
 }
@@ -2229,10 +2432,10 @@ body.teaching .pager { padding-right: 15px; }
 .payoff {
   margin-top: 24px;
   padding: 34px 20px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 16px;
-  background: #b5fd4c;
-  box-shadow: 0 4px 0 #1c1c1c;
+  background: var(--lime);
+  box-shadow: none;
   text-align: center;
 }
 
@@ -2289,7 +2492,7 @@ body.teaching .pager { padding-right: 15px; }
 }
 
 .letter-card > .kana-eq i {
-  color: #a5a5a5;
+  color: var(--gray-400);
   font-size: 19px;
   font-style: normal;
   font-weight: 800;
@@ -2319,7 +2522,7 @@ body.teaching .pager { padding-right: 15px; }
 }
 
 .letter-card > .sound b {
-  color: #a5a5a5;
+  color: var(--gray-400);
   font-size: 13px;
   font-weight: 800;
 }
@@ -2333,7 +2536,7 @@ body.teaching .pager { padding-right: 15px; }
   width: 60px;
   height: 60px;
   border-radius: 11px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   object-fit: cover;
   background: #fff;
 }
@@ -2357,7 +2560,7 @@ body.teaching .pager { padding-right: 15px; }
   align-items: stretch;
   gap: 12px;
   padding: 16px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 14px;
   background: #fff;
 }
@@ -2403,7 +2606,7 @@ body.teaching .pager { padding-right: 15px; }
 .pair-side .shots img {
   width: 56px;
   height: 56px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 9px;
   object-fit: cover;
 }
@@ -2444,14 +2647,19 @@ body.teaching .pager { padding-right: 15px; }
 .section > .offer,
 .section > .ptable { margin-top: auto; }
 
-.section:has(> .anat) > :last-child,
-.section:has(> .build) > :last-child,
-.section:has(> .blk-row) > :last-child,
-.section:has(> .combo) > :last-child,
-.section:has(> .payoff) > :last-child,
-.section:has(> .usp) > :last-child,
-.section:has(> .offer) > :last-child,
-.section:has(> .ptable) > :last-child { margin-bottom: auto; }
+/* :not(.note-input) — a page's tutor note is normally slotted under the green
+   script, but a page with no script takes it at the end, and a bare :last-child
+   would hand the spacer to the note instead of to the block that closes the
+   page (which stops the page filling the screen). display:none does not exempt
+   it: :last-child is structural. */
+.section:has(> .anat) > :last-child:not(.note-input),
+.section:has(> .build) > :last-child:not(.note-input),
+.section:has(> .blk-row) > :last-child:not(.note-input),
+.section:has(> .combo) > :last-child:not(.note-input),
+.section:has(> .payoff) > :last-child:not(.note-input),
+.section:has(> .usp) > :last-child:not(.note-input),
+.section:has(> .offer) > :last-child:not(.note-input),
+.section:has(> .ptable) > :last-child:not(.note-input) { margin-bottom: auto; }
 
 /* a hint chip sitting under a component needs air (hard shadows below) */
 .section > .hint { margin-top: 16px; }
@@ -2527,13 +2735,16 @@ body.teaching .pager { padding-right: 15px; }
   gap: 12px;
   padding: 10px 12px 10px 2px;
   border-radius: 18px;
-  background: #f5f5f5;
+  /* the grouping surface has to be lighter than any tile that can sit on it,
+     or an answered-wrong tile sinks into its own row and stops reading as a
+     tile at all */
+  background: var(--gray-50);
 }
 
 .tap-n {
   font-size: 17px;
   font-weight: 800;
-  color: #a5a5a5;
+  color: var(--gray-400);
   text-align: center;
 }
 
@@ -2544,7 +2755,7 @@ body.teaching .pager { padding-right: 15px; }
   display: grid;
   place-items: center;
   height: 118px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 14px;
   background: #fff;
   color: #1c1c1c;
@@ -2561,29 +2772,49 @@ body.teaching .pager { padding-right: 15px; }
 
 .tap-tile:active { transform: scale(.96); }
 
-/* answered: right fills lime, wrong greys back out — the mark is a
-   corner badge so the letter itself is never covered */
+/* ANSWERED. Right and wrong have to be told apart in about a second by
+   someone who has known the alphabet for ten minutes, and once both states
+   are pale tints, "lighter green vs lighter grey" is not enough on its own.
+   So they differ on two independent channels rather than on brightness:
+
+     right → has colour   (green-100 fill, green-500 outline, solid badge)
+             and keeps the glyph at full ink strength
+     wrong → has none     (grey fill, grey outline) and the glyph recedes
+
+   The badge is the one saturated thing on the page, and it sits in the
+   corner so the letter itself is never covered.
+
+   Wrong is deliberately NOT dashed any more: dashed grey now means
+   "write here" everywhere else in the system (.slot, .slot-input,
+   .build-slot), and a wrong answer is not an empty field. */
 .tap-tile.right {
-  background: #b5fd4c;
-  box-shadow: 0 4px 0 #1c1c1c;
+  background: var(--green-100);
+  border: 1.5px solid var(--green-500);
+  box-shadow: none;
 }
 
 .tap-tile.wrong {
-  background: #f5f5f5;
-  color: #a5a5a5;
-  border-style: dashed;
+  background: var(--gray-100);
+  border: 1px solid var(--gray-200);
+  color: var(--gray-400);
 }
 
 .tap-tile::after {
   position: absolute;
   top: 6px;
   right: 8px;
-  font-size: 15px;
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 12px;
   font-weight: 900;
+  line-height: 1;
 }
 
-.tap-tile.right::after { content: "✓"; color: #3f7a1c; }
-.tap-tile.wrong::after { content: "✕"; color: #c0c0c0; }
+.tap-tile.right::after { content: "✓"; background: var(--green-500); color: #fff; }
+.tap-tile.wrong::after { content: "✕"; background: var(--gray-200); color: var(--gray-500); }
 
 /* ---------- build a syllable from the keypad ---------- */
 .builder { margin-top: 24px; }
@@ -2616,7 +2847,7 @@ body.teaching .pager { padding-right: 15px; }
   position: relative;
   width: 74px;
   height: 74px;
-  border: 1.8px dashed #1c1c1c;
+  border: 1.5px dashed var(--gray-200);
   border-radius: 12px;
   background: #fff;
   cursor: pointer;
@@ -2658,9 +2889,10 @@ body.teaching .pager { padding-right: 15px; }
   width: 24px;
   height: 24px;
   place-items: center;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 50%;
-  background: #b5fd4c;
+  background: var(--green-100);
+  border-color: var(--green-500);
   font-size: 13px;
   font-weight: 900;
 }
@@ -2677,7 +2909,7 @@ body.teaching .pager { padding-right: 15px; }
    so the learner can never build a letter they have not met */
 .keys-label {
   margin: 16px 0 8px;
-  color: #757575;
+  color: var(--gray-500);
   font-size: 11.5px;
   font-weight: 800;
   letter-spacing: .04em;
@@ -2702,7 +2934,7 @@ body.teaching .pager { padding-right: 15px; }
   display: grid;
   place-items: center;
   height: 48px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 10px;
   background: #fff;
   color: #1c1c1c;
@@ -2739,28 +2971,92 @@ body.teaching .pager { padding-right: 15px; }
 /* Sits directly under the green script it belongs to — the tutor reads
    the line, then sees what to do next. In student view it is display:none,
    so it collapses completely and leaves no gap behind. */
+/* An ink chip — the only component-scale ink fill in the system, and that is
+   the point: it is a hard visual stop that says "do not read this one aloud".
+   A light box would be quieter but risks being read out mid-lesson, which is
+   the one failure this component exists to prevent.
+   What it drops is bulk, not darkness: the lime edge and the asymmetric radius
+   were bold-system vocabulary, and at the old size it out-weighed the blue
+   script it is subordinate to. The tutor reads the blue line, THEN glances
+   here, so it has to sit below it in the hierarchy — hence a chip, hugging its
+   own text, rather than a slab. */
 body.teaching .tutor-note {
-  display: block;
-  /* The bottom margin collapses against whatever follows, so components that
-     bring their own top margin (.tap-grid, .builder) are unaffected, while a
-     .dialogue — which has none — stops colliding with the bar. */
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  /* Both margins are real — several components that follow bring no top
+     margin, and a .dialogue would otherwise collide with it. */
   margin: 14px 0 18px;
-  padding: 8px 12px 8px 9px;
-  border-left: 3px solid #b5fd4c;
-  border-radius: 5px 10px 10px 5px;
-  background: #1c1c1c;
-  /* hugs its text like the green script box above it, rather than running
-     full-bleed and out-weighting the line it belongs to */
+  padding: 8px 13px;
+  border-radius: 10px;
+  background: var(--blue-200);
   width: fit-content;
   max-width: 100%;
 }
 
-body.teaching .section-subtitle + .tutor-note { margin-top: -14px; }
+/* The badge is what makes softening safe. Ink used to carry the whole "do not
+   read this one aloud" load by brute contrast; against blue-100 that was an
+   ~86-point lightness slam, and the merged card looked torn in half. Say it in
+   words instead, and the fill only has to be a *step* rather than a shock —
+   blue-200 is the same family as the script it hangs off, one shade down, so
+   the two bands read as one card with a private second half.
+   Korean, like every tutor-facing string: the tutor reads it, a beginner
+   learner cannot, which is the second lock. Set from CSS so all 48 notes in
+   the decks get it without touching any markup. */
+/* A memo written against this instruction belongs WITH it — the merged
+   block's 26px would otherwise leave the memo stranded between the script and
+   the activity. Lives here rather than in the shared sheet because the merged
+   rule above ties it on specificity and this sheet loads last. */
+body.teaching .tutor-note:has(+ .note-input),
+body.teaching .section-subtitle + .tutor-note:has(+ .note-input) { margin-bottom: 8px; }
+
+.tutor-note::before {
+  content: "튜터만";
+  flex: none;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: rgba(28, 28, 28, .09);
+  color: var(--blue-ink);
+  font-size: 10.5px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+/* ---- MERGED WITH THE SCRIPT IT BELONGS TO ----
+   One card, two bands: the tutor reads the blue line, then their eye drops
+   straight into the ink footer without crossing a gap. Two separate floating
+   boxes for what is really one instruction made the page read as clutter.
+
+   Merging is only safe BECAUSE the footer stays ink. A shared blue box would
+   have put a do-not-say-this line inside the surface that means "say this out
+   loud" — the ink band is what keeps the two channels apart once the gap is
+   gone.
+
+   Student view is untouched: the whole rule is behind body.teaching, so the
+   script box keeps its own radius and bottom margin, and the note is
+   display:none with nothing left behind. Where a tutor note does NOT follow a
+   script box (17 of the 48 in the decks) neither rule matches and it keeps the
+   standalone chip above. */
+body.teaching .section-subtitle:has(+ .tutor-note) {
+  margin-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+body.teaching .section-subtitle + .tutor-note {
+  width: auto;
+  max-width: none;
+  margin: 0 0 26px;
+  padding: 9px 16px 10px;
+  /* the fold between "say this out loud" and "this one is yours" */
+  border-top: 1px dashed #ccd3e4;
+  border-radius: 0 0 12px 12px;
+}
 
 .tutor-note {
-  color: #fff;
-  font-size: 13.5px;
-  font-weight: 600;   /* reversed text: light enough to read as prose, heavy enough on dark */
+  color: var(--blue-ink);
+  font-size: 12.5px;
+  font-weight: 600;
   line-height: 1.45;
   word-break: keep-all;
 }
@@ -2851,8 +3147,8 @@ body.teaching .tap-tile[data-ok]:not(.right):not(.wrong)::before {
   background: #1c1c1c;
   border-color: #1c1c1c;
 }
-.mode-toggle:has(input:checked) .lbl { color: #b5fd4c; }
-.mode-toggle input:checked + .sw { background: #b5fd4c; border-color: #b5fd4c; }
+.mode-toggle:has(input:checked) .lbl { color: var(--lime); }
+.mode-toggle input:checked + .sw { background: var(--green-500); border-color: var(--green-500); }
 .mode-toggle input:checked + .sw i { transform: translateX(11px); background: #1c1c1c; }
 
 
@@ -2880,12 +3176,13 @@ button.opt-row {
 button.opt-row:active { transform: scale(.99); }
 
 .opt-row.on {
-  background: #b5fd4c;
-  box-shadow: 0 4px 0 #1c1c1c;
+  background: var(--green-100);
+  border: 1.5px solid var(--green-500);
+  box-shadow: none;
 }
 
-.opt-row.on .opt-sub { color: rgba(28,28,28,.62); }
-.opt-row.on .lv-badge { background: #1c1c1c; color: #b5fd4c; }
+.opt-row.on .opt-sub { color: var(--gray-500); }
+.opt-row.on .lv-badge { background: var(--green-500); color: #fff; }
 
 /* ---------- level check ---------- */
 .lvpick {
@@ -2900,7 +3197,7 @@ button.opt-row:active { transform: scale(.99); }
   gap: 14px;
   width: 100%;
   padding: 13px 16px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 13px;
   background: #fff;
   font-family: inherit;
@@ -2910,7 +3207,7 @@ button.opt-row:active { transform: scale(.99); }
   transition: background .12s, box-shadow .12s;
 }
 
-.lvrow.on { background: #b5fd4c; box-shadow: 0 4px 0 #1c1c1c; }
+.lvrow.on { background: var(--green-100); border: 1.5px solid var(--green-500); box-shadow: none; }
 
 .lvrow .lvn {
   flex: none;
@@ -2919,16 +3216,16 @@ button.opt-row:active { transform: scale(.99); }
   width: 36px;
   height: 36px;
   border-radius: 10px;
-  background: #1c1c1c;
-  color: #b5fd4c;
+  background: var(--gray-100);
+  color: var(--ink);
   font-size: 17px;
   font-weight: 900;
 }
 
-.lvrow.on .lvn { background: #fff; color: #1c1c1c; }
+.lvrow.on .lvn { background: var(--green-500); color: #fff; }
 .lvrow .lvt { display: block; font-size: 15px; font-weight: 800; }
-.lvrow .lvs { display: block; margin-top: 2px; color: #757575; font-size: 12px; font-weight: 600; }
-.lvrow.on .lvs { color: rgba(28,28,28,.62); }
+.lvrow .lvs { display: block; margin-top: 2px; color: var(--gray-500); font-size: 12px; font-weight: 600; }
+.lvrow.on .lvs { color: var(--gray-500); }
 
 /* ---------- the report ---------- */
 /* Skeleton preview: the report's own shape in grey, so the page reads as
@@ -2942,12 +3239,11 @@ button.opt-row:active { transform: scale(.99); }
 .sk {
   border: 1.5px solid #ececea;
   border-radius: 14px;
-  background: #fafafa;
+  background: var(--gray-50);
 }
 
-.sk-head { height: 62px; border-color: #e4e4e2; background: #f0f0ee; }
-
-.sk-plot { height: 152px; padding: 12px 8px; }
+/* 그래프 자리는 테두리 없이 — 실제 그래프도 테두리가 없다 */
+.sk-plot { height: 152px; padding: 12px 8px; border: 0; background: none; }
 .sk-plot svg { display: block; width: 100%; height: 100%; }
 
 .sk-facts { display: grid; gap: 0; padding: 4px 16px; }
@@ -2962,6 +3258,7 @@ button.opt-row:active { transform: scale(.99); }
 .sk-facts i:nth-child(1) { width: 62%; }
 .sk-facts i:nth-child(2) { width: 48%; }
 .sk-facts i:nth-child(3) { width: 55%; }
+.sk-facts i:nth-child(4) { width: 44%; }
 
 .sk-course { height: 50px; }
 
@@ -2970,17 +3267,17 @@ button.opt-row:active { transform: scale(.99); }
   display: block;
   margin-top: 14px;
   padding: 13px 14px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 12px;
-  background: #b5fd4c;
-  box-shadow: 0 4px 0 #1c1c1c;
+  background: var(--lime);
+  box-shadow: 0 4px 0 var(--ink);
   color: #1c1c1c;
   text-align: center;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
 }
 
-.rep-jump:active { transform: translateY(2px); box-shadow: 0 2px 0 #1c1c1c; }
+.rep-jump:active { transform: translateY(2px); box-shadow: 0 2px 0 var(--ink); }
 .rep-jump .rj-t { display: block; font-size: 14px; font-weight: 900; word-break: keep-all; }
 .rep-jump .rj-s { display: block; margin-top: 3px; font-size: 11.5px; font-weight: 700; opacity: .62; }
 .rep-jump .rj-s::after { content: " ↑"; }
@@ -2991,40 +3288,13 @@ button.opt-row:active { transform: scale(.99); }
 .rep.ready { display: block; }
 .rep.ready + .rep-empty, .rep-empty.hide { display: none; }
 
-.rep-head {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 24px;
-  padding: 14px 16px;
-  border: 1.5px solid #1c1c1c;
-  border-radius: 14px;
-  background: #1c1c1c;
-}
-
-.rep-goal {
-  flex: 1 1 auto;
-  min-width: 0;
-  color: #fff;
-  font-size: 14.5px;
-  font-weight: 800;
-  line-height: 1.35;
-  word-break: keep-all;
-}
-
-.rep-eta { flex: none; text-align: right; }
-.rep-eta b { display: block; color: #b5fd4c; font-size: 25px; font-weight: 900; line-height: 1; }
-.rep-eta small { display: block; margin-top: 3px; color: rgba(255,255,255,.55); font-size: 10.5px; font-weight: 700; }
-
+/* 레이더(.rad)와 같은 취급 — 테두리 없이 폭을 다 쓴다. 카드에 넣으면
+   박스 안의 박스가 되고, 안쪽 여백만큼 선이 쪼그라든다. */
 .rep-plot {
   display: block;
   width: 100%;
   height: auto;
-  margin-top: 16px;
-  border: 1.5px solid #1c1c1c;
-  border-radius: 14px;
-  background: #fff;
-  padding: 8px 4px 4px;
+  margin: -2px auto 2px;
 }
 
 .rep-facts {
@@ -3032,7 +3302,7 @@ button.opt-row:active { transform: scale(.99); }
   gap: 0;
   margin-top: 16px;
   padding: 4px 16px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 14px;
   background: #fff;
 }
@@ -3042,11 +3312,11 @@ button.opt-row:active { transform: scale(.99); }
   align-items: center;
   gap: 12px;
   padding: 11px 0;
-  border-bottom: 1px solid #e8e8e8;
+  border-bottom: 1px solid var(--gray-200);
 }
 
 .rf:last-child { border-bottom: 0; }
-.rf .k { flex: 1 1 auto; color: #757575; font-size: 13px; font-weight: 700; }
+.rf .k { flex: 1 1 auto; color: var(--gray-500); font-size: 13px; font-weight: 700; }
 .rf .v { flex: none; color: #1c1c1c; font-size: 14.5px; font-weight: 800; }
 
 .rep .cgroup-label { margin-top: 20px; }
@@ -3063,7 +3333,7 @@ button.opt-row:active { transform: scale(.99); }
   align-items: center;
   gap: 11px;
   padding: 12px 14px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 12px;
   background: #fff;
   color: #1c1c1c;
@@ -3078,15 +3348,15 @@ button.opt-row:active { transform: scale(.99); }
   width: 26px;
   height: 26px;
   border-radius: 8px;
-  background: #b5fd4c;
+  background: var(--lime);
   font-size: 12px;
   font-weight: 900;
 }
 
 .rc .rcb { flex: 1 1 auto; min-width: 0; }
 .rc .rct { display: block; font-size: 14px; font-weight: 800; }
-.rc .rcs { display: block; margin-top: 2px; color: #757575; font-size: 11.5px; font-weight: 700; }
-.rc::after { content: "→"; flex: none; color: #a5a5a5; font-size: 14px; font-weight: 900; }
+.rc .rcs { display: block; margin-top: 2px; color: var(--gray-500); font-size: 11.5px; font-weight: 700; }
+.rc::after { content: "→"; flex: none; color: var(--gray-400); font-size: 14px; font-weight: 900; }
 .rc:active { transform: translateY(2px); }
 
 .rep-why {
@@ -3113,7 +3383,7 @@ button.opt-row:active { transform: scale(.99); }
   display: grid;
   place-items: center;
   padding: 13px 8px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 12px;
   background: #fff;
   color: #1c1c1c;
@@ -3134,14 +3404,14 @@ button.opt-row:active { transform: scale(.99); }
 
 .uspc {
   padding: 16px 14px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 13px;
   background: #fff;
 }
 
 .uspc .n { display: block; color: #1c1c1c; font-size: 21px; font-weight: 900; line-height: 1.1; }
 .uspc .t { display: block; margin-top: 5px; font-size: 13.5px; font-weight: 800; }
-.uspc .s { display: block; margin-top: 4px; color: #757575; font-size: 11.5px; font-weight: 600; line-height: 1.4; word-break: keep-all; }
+.uspc .s { display: block; margin-top: 4px; color: var(--gray-500); font-size: 11.5px; font-weight: 600; line-height: 1.4; word-break: keep-all; }
 
 /* ------------------------------------------------------------
    THE OFFER — one plan, then the discounts walked down to it.
@@ -3150,18 +3420,18 @@ button.opt-row:active { transform: scale(.99); }
    ------------------------------------------------------------ */
 .offer {
   margin-top: 22px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 14px;
   background: #fff;
-  box-shadow: 0 5px 0 #1c1c1c;
+  box-shadow: 0 5px 0 var(--ink);
   overflow: hidden;
 }
 
 .offer-h {
   position: relative;
   padding: 15px 16px 14px;
-  border-bottom: 1.5px solid #1c1c1c;
-  background: #b5fd4c;
+  border-bottom: 1px solid var(--gray-200);
+  background: var(--lime);
 }
 
 .obadge {
@@ -3170,7 +3440,7 @@ button.opt-row:active { transform: scale(.99); }
   padding: 3px 10px;
   border-radius: 999px;
   background: #1c1c1c;
-  color: #b5fd4c;
+  color: var(--lime);
   font-size: 10.5px;
   font-weight: 900;
 }
@@ -3196,8 +3466,8 @@ button.opt-row:active { transform: scale(.99); }
 .cl em {
   padding: 2px 7px;
   border-radius: 999px;
-  background: #f2fcec;
-  color: #6abe36;
+  background: var(--green-100);
+  color: var(--green-500);
   font-size: 11px;
   font-style: normal;
   font-weight: 900;
@@ -3207,13 +3477,13 @@ button.opt-row:active { transform: scale(.99); }
   padding: 2px 7px;
   border-radius: 999px;
   background: #1c1c1c;
-  color: #b5fd4c;
+  color: var(--lime);
   font-size: 10px;
   font-style: normal;
   font-weight: 900;
 }
 
-.cl.cut b { color: #6abe36; }
+.cl.cut b { color: var(--green-500); }
 
 .cl.total {
   align-items: center;
@@ -3227,8 +3497,8 @@ button.opt-row:active { transform: scale(.99); }
 
 .offer-f {
   padding: 11px 16px;
-  border-top: 1.5px solid #1c1c1c;
-  background: #f5f5f5;
+  border-top: 1px solid var(--gray-200);
+  background: var(--gray-100);
   color: #575753;
   font-size: 12px;
   font-weight: 700;
@@ -3241,7 +3511,7 @@ button.opt-row:active { transform: scale(.99); }
   margin-top: 14px;
   padding: 14px 16px 15px;
   border-radius: 13px;
-  background: #f5f5f5;
+  background: var(--gray-100);
 }
 
 .upsell .ut { display: block; font-size: 13.5px; font-weight: 900; }
@@ -3256,13 +3526,13 @@ button.opt-row:active { transform: scale(.99); }
   background: #fff;
 }
 
-.urow.best { background: #f2fcec; box-shadow: inset 0 0 0 1.5px #6abe36; }
+.urow.best { background: var(--green-100); box-shadow: inset 0 0 0 1.5px var(--green-500); }
 .urow .ul { flex: none; width: 48px; font-size: 12.5px; font-weight: 800; }
 .urow .uv { font-size: 16px; font-weight: 900; }
-.urow .uv small { margin-left: 2px; color: #757575; font-size: 11px; font-weight: 700; }
-.urow .usave { margin-left: auto; color: #6abe36; font-size: 11.5px; font-weight: 900; }
+.urow .uv small { margin-left: 2px; color: var(--gray-500); font-size: 11px; font-weight: 700; }
+.urow .usave { margin-left: auto; color: var(--green-500); font-size: 11.5px; font-weight: 900; }
 
-.unote { margin: 9px 0 0; color: #757575; font-size: 11.5px; font-weight: 700; }
+.unote { margin: 9px 0 0; color: var(--gray-500); font-size: 11.5px; font-weight: 700; }
 
 .morelink {
   display: block;
@@ -3270,7 +3540,7 @@ button.opt-row:active { transform: scale(.99); }
   padding: 12px;
   border: 1.5px dashed #b0b0ac;
   border-radius: 11px;
-  color: #757575;
+  color: var(--gray-500);
   font-size: 12.5px;
   font-weight: 800;
   text-align: center;
@@ -3283,7 +3553,7 @@ button.opt-row:active { transform: scale(.99); }
 .ptable {
   width: 100%;
   margin-top: 22px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 13px;
   border-collapse: separate;
   border-spacing: 0;
@@ -3294,7 +3564,7 @@ button.opt-row:active { transform: scale(.99); }
 .ptable th, .ptable td { padding: 10px 8px; text-align: center; }
 
 .ptable thead th {
-  border-bottom: 1.5px solid #1c1c1c;
+  border-bottom: 1px solid var(--gray-200);
   background: #1c1c1c;
   color: #fff;
   font-size: 11.5px;
@@ -3303,32 +3573,32 @@ button.opt-row:active { transform: scale(.99); }
 
 .ptable tbody td { border-bottom: 1px solid #ececea; font-weight: 800; }
 .ptable tbody tr:last-child td { border-bottom: 0; }
-.ptable tbody tr.grp td { border-top: 1.5px solid #1c1c1c; }
+.ptable tbody tr.grp td { border-top: 1px solid var(--gray-200); }
 .ptable tbody tr.grp:first-child td { border-top: 0; }
 
 .ptable td[rowspan] {
-  background: #f5f5f5;
+  background: var(--gray-100);
   font-size: 13px;
   font-weight: 900;
 }
 
-.ptable td[rowspan] small { display: block; margin-top: 3px; color: #757575; font-size: 10.5px; font-weight: 700; }
-.ptable td.hi { background: #f2fcec; color: #1c1c1c; }
+.ptable td[rowspan] small { display: block; margin-top: 3px; color: var(--gray-500); font-size: 10.5px; font-weight: 700; }
+.ptable td.hi { background: var(--green-100); color: #1c1c1c; }
 
-.pt-note { margin: 12px 0 0; color: #757575; font-size: 11.5px; font-weight: 700; line-height: 1.5; }
+.pt-note { margin: 12px 0 0; color: var(--gray-500); font-size: 11.5px; font-weight: 700; line-height: 1.5; }
 
 /* FAQ */
 .faq { display: grid; gap: 11px; margin-top: 24px; }
 
 .qa {
   padding: 14px 16px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 13px;
   background: #fff;
 }
 
 .qa .q { display: block; font-size: 14px; font-weight: 800; line-height: 1.4; word-break: keep-all; }
-.qa .q::before { content: "Q. "; color: #6abe36; font-weight: 900; }
+.qa .q::before { content: "Q. "; color: var(--green-500); font-weight: 900; }
 .qa .a { display: block; margin-top: 7px; color: #575753; font-size: 13px; font-weight: 600; line-height: 1.5; word-break: keep-all; }
 
 /* ============================================================
@@ -3394,7 +3664,7 @@ button.opt-row:active { transform: scale(.99); }
   justify-items: center;
   gap: 6px;
   padding: 11px 4px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 12px;
   background: #fff;
   color: #1c1c1c;
@@ -3422,7 +3692,7 @@ button.opt-row:active { transform: scale(.99); }
 .stg {
   margin-top: 14px;
   padding: 17px 15px 19px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 14px;
   background: #fff;
   scroll-margin-top: 14px;
@@ -3448,7 +3718,7 @@ button.opt-row:active { transform: scale(.99); }
 .stg-c {
   margin-left: auto;
   flex: none;
-  color: #757575;
+  color: var(--gray-500);
   font-size: 11.5px;
   font-weight: 800;
   white-space: nowrap;
@@ -3467,12 +3737,12 @@ button.opt-row:active { transform: scale(.99); }
   margin-top: 13px;
   padding: 15px 12px;
   border-radius: 12px;
-  background: #f5f5f5;
+  background: var(--gray-100);
 }
 
 .viz-cap {
   margin: 11px 0 0;
-  color: #757575;
+  color: var(--gray-500);
   font-size: 11.5px;
   font-weight: 700;
   line-height: 1.45;
@@ -3487,13 +3757,13 @@ button.opt-row:active { transform: scale(.99); }
   margin-top: 13px;
   padding: 11px 13px;
   border-radius: 11px;
-  background: #f2fcec;
+  background: var(--green-100);
   font-size: 13px;
   font-weight: 800;
   line-height: 1.45;
 }
 
-.stg-goal::before { content: "→"; flex: none; color: #6abe36; font-weight: 900; }
+.stg-goal::before { content: "→"; flex: none; color: var(--green-500); font-weight: 900; }
 
 /* the lime thread that shows the stages are one road, not four products */
 .stg-link {
@@ -3502,7 +3772,7 @@ button.opt-row:active { transform: scale(.99); }
   height: 18px;
   margin: 0 auto;
   border-radius: 999px;
-  background: #b5fd4c;
+  background: var(--lime);
 }
 
 /* ---------- stage 1 · letters snapping into blocks ---------- */
@@ -3514,7 +3784,7 @@ button.opt-row:active { transform: scale(.99); }
 }
 
 .crow + .crow { margin-top: 11px; }
-.crow i { color: #a5a5a5; font-size: 15px; font-style: normal; font-weight: 900; }
+.crow i { color: var(--gray-400); font-size: 15px; font-style: normal; font-weight: 900; }
 
 .lt {
   display: grid;
@@ -3522,7 +3792,7 @@ button.opt-row:active { transform: scale(.99); }
   flex: none;
   width: 42px;
   height: 42px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 10px;
   background: #fff;
   font-size: 23px;
@@ -3540,7 +3810,7 @@ button.opt-row:active { transform: scale(.99); }
   flex: none;
   width: 52px;
   height: 52px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 10px;
   background: #fff;
   overflow: hidden;
@@ -3566,7 +3836,7 @@ button.opt-row:active { transform: scale(.99); }
 .ck {
   flex: none;
   min-width: 34px;
-  color: #757575;
+  color: var(--gray-500);
   font-size: 13px;
   font-weight: 800;
   text-align: center;
@@ -3577,15 +3847,15 @@ button.opt-row:active { transform: scale(.99); }
 
 .wrd {
   padding: 7px 11px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 10px;
   background: #fff;
   font-size: 14.5px;
   font-weight: 800;
 }
 
-.wrd.hole { border-style: dashed; background: #b5fd4c; letter-spacing: -.06em; }
-.wrd.pat { background: #1c1c1c; color: #b5fd4c; }
+.wrd.hole { border-style: dashed; background: var(--green-100); border-color: var(--green-500); letter-spacing: -.06em; }
+.wrd.pat { background: #1c1c1c; color: var(--lime); }
 
 /* the whole point of the stage: ONE frame, and the sentences fall out of it */
 .pf-tag {
@@ -3595,23 +3865,23 @@ button.opt-row:active { transform: scale(.99); }
   padding: 3px 11px;
   border-radius: 999px;
   background: #1c1c1c;
-  color: #b5fd4c;
+  color: var(--lime);
   font-size: 11px;
   font-weight: 900;
 }
 
-.pf-tag.out { margin-top: 9px; background: #6abe36; color: #fff; }
+.pf-tag.out { margin-top: 9px; background: var(--green-500); color: #fff; }
 
 .pf-arrow {
   display: block;
   margin-top: 10px;
-  color: #757575;
+  color: var(--gray-500);
   font-size: 11.5px;
   font-weight: 800;
   text-align: center;
 }
 
-.pf-arrow::before { content: "↓"; display: block; color: #6abe36; font-size: 15px; font-weight: 900; }
+.pf-arrow::before { content: "↓"; display: block; color: var(--green-500); font-size: 15px; font-weight: 900; }
 
 .pat-out { display: grid; gap: 6px; }
 
@@ -3625,8 +3895,8 @@ button.opt-row:active { transform: scale(.99); }
 }
 
 /* highlighter, not a chip — a padded chip fakes a space into 학생입니다 */
-.po b { background: linear-gradient(transparent 48%, #b5fd4c 48%); font-weight: 900; }
-.po.more { background: none; color: #757575; font-size: 12px; font-weight: 700; }
+.po b { background: linear-gradient(transparent 48%, var(--lime) 48%); font-weight: 900; }
+.po.more { background: none; color: var(--gray-500); font-size: 12px; font-weight: 700; }
 
 /* a real line from the course, with the pattern it hands over */
 .ex {
@@ -3636,13 +3906,13 @@ button.opt-row:active { transform: scale(.99); }
   margin-top: 9px;
   padding: 10px 13px;
   border-radius: 11px;
-  background: #f5f5f5;
+  background: var(--gray-100);
 }
 
 .ex-lv {
   flex: none;
   width: 34px;
-  color: #757575;
+  color: var(--gray-500);
   font-size: 11px;
   font-weight: 800;
 }
@@ -3654,7 +3924,7 @@ button.opt-row:active { transform: scale(.99); }
   padding: 3px 9px;
   border-radius: 999px;
   background: #1c1c1c;
-  color: #b5fd4c;
+  color: var(--lime);
   font-size: 11px;
   font-weight: 800;
   white-space: nowrap;
@@ -3670,12 +3940,12 @@ button.opt-row:active { transform: scale(.99); }
   gap: 4px 12px;
   padding: 12px 14px;
   border-radius: 12px;
-  background: #f5f5f5;
+  background: var(--gray-100);
 }
 
 .wd img { width: 44px; height: 44px; }
 .wd-h { display: flex; align-items: baseline; gap: 8px; font-size: 15px; font-weight: 900; }
-.wd-h small { margin-left: auto; color: #757575; font-size: 11px; font-weight: 700; }
+.wd-h small { margin-left: auto; color: var(--gray-500); font-size: 11px; font-weight: 700; }
 
 .wd-l {
   grid-column: 1 / -1;
@@ -3689,7 +3959,7 @@ button.opt-row:active { transform: scale(.99); }
   font-weight: 800;
 }
 
-.wd-l small { margin-left: auto; flex: none; color: #757575; font-size: 10.5px; font-weight: 700; }
+.wd-l small { margin-left: auto; flex: none; color: var(--gray-500); font-size: 10.5px; font-weight: 700; }
 
 /* ---------- stage 4 · freetalking ---------- */
 .free-hero { display: flex; align-items: center; gap: 14px; }
@@ -3705,7 +3975,7 @@ button.opt-row:active { transform: scale(.99); }
 .free-hero p small {
   display: block;
   margin-top: 6px;
-  color: #757575;
+  color: var(--gray-500);
   font-size: 11.5px;
   font-weight: 700;
 }
@@ -3725,7 +3995,7 @@ button.opt-row:active { transform: scale(.99); }
   gap: 7px;
   padding: 11px 5px 10px;
   border-radius: 11px;
-  background: #f5f5f5;
+  background: var(--gray-100);
   font-size: 11.5px;
   font-weight: 800;
   line-height: 1.35;
@@ -3743,11 +4013,11 @@ button.opt-row:active { transform: scale(.99); }
   stroke-linejoin: round;
 }
 
-.tg svg .fill { fill: #b5fd4c; }
+.tg svg .fill { fill: var(--lime); }
 
 .tg.more {
   align-content: center;
-  background: #b5fd4c;
+  background: var(--lime);
   color: #1c1c1c;
 }
 
@@ -3756,7 +4026,7 @@ button.opt-row:active { transform: scale(.99); }
   margin-top: 10px;
   padding: 13px 15px;
   border-radius: 12px;
-  background: #f2fcec;
+  background: var(--green-100);
   font-size: 15px;
   font-weight: 900;
   line-height: 1.4;
@@ -3766,7 +4036,7 @@ button.opt-row:active { transform: scale(.99); }
 .qcard small {
   display: block;
   margin-bottom: 6px;
-  color: #6abe36;
+  color: var(--green-500);
   font-size: 11px;
   font-weight: 800;
 }
@@ -3833,10 +4103,14 @@ body.paged { padding-bottom: 0; }
   gap: 8px;
   width: min(calc(100% - 32px), 448px);
   padding: 8px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 999px;
   background: #fff;
-  box-shadow: 0 4px 0 #1c1c1c;
+  /* The one blurred shadow in the system, and the only element that earns it:
+     the bar genuinely floats above the page, and a hard offset that reads as
+     construction on a card reads as a smear on something detached. Everything
+     that sits IN the page keeps flat edges. */
+  box-shadow: 0 6px 18px rgba(28, 28, 28, .10);
 }
 
 .pg-btn {
@@ -3845,20 +4119,26 @@ body.paged { padding-bottom: 0; }
   place-items: center;
   width: 38px;
   height: 38px;
-  border: 1.5px solid #1c1c1c;
+  border: 1px solid var(--gray-200);
   border-radius: 50%;
-  background: #b5fd4c;
-  color: #1c1c1c;
+  background: #fff;
+  color: var(--ink);
   font-family: inherit;
   font-size: 16px;
-  font-weight: 900;
+  font-weight: 800;
   line-height: 1;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
 
 .pg-btn:active { transform: translateY(2px); }
-.pg-btn:disabled { background: #f0f0ee; border-color: #d8d8d4; color: #b4b4b0; cursor: default; }
+.pg-next { background: var(--lime); border-color: var(--lime); }   /* the only primary action */
+.pg-btn:disabled { background: var(--gray-100); border-color: var(--gray-200); color: var(--gray-400); cursor: default; }
+.pg-next:disabled { background: var(--gray-100); border-color: var(--gray-200); }
+
+/* the browser's own focus ring landed as a stray blue circle on a page with no
+   other blue except the tutor's script — give it the system's own ring */
+.pg-btn:focus-visible { outline: 2px solid var(--green-500); outline-offset: 2px; }
 .pg-btn:disabled:active { transform: none; }
 
 .pg-mid { flex: 1 1 auto; min-width: 0; }
@@ -3873,11 +4153,11 @@ body.paged { padding-bottom: 0; }
   line-height: 1.2;
 }
 
-.pg-label .pg-act { font-size: 14.5px; font-weight: 900; }
-.pg-label .pg-n { color: #757575; }
+.pg-label .pg-act { font-size: 14.5px; font-weight: 800; }
+.pg-label .pg-n { color: var(--gray-500); }
 
 /* a page opened from the 포도 안내 index is off the Next chain, so say so */
-.pg-label .pg-n.ref { color: #6abe36; font-weight: 800; }
+.pg-label .pg-n.ref { color: var(--green-500); font-weight: 800; }
 
 @media print {
   .pager { display: none; }
@@ -3885,8 +4165,8 @@ body.paged { padding-bottom: 0; }
 }
 
 .pg-teach, .pg-exit { width: 32px; height: 32px; background: #fff; font-size: 13px; font-weight: 900; }
-.phone.paged ~ .pager .pg-exit { background: #1c1c1c; color: #b5fd4c; }
-.pg-teach.on { background: #1c1c1c; color: #b5fd4c; }
+.phone.paged ~ .pager .pg-exit { background: var(--ink); border-color: var(--ink); color: #fff; }
+.pg-teach.on { background: var(--green-500); border-color: var(--green-500); color: #fff; }
 
 /* ============================================================
    Frameless page cards — no black outline/offset-shadow around
@@ -3918,7 +4198,8 @@ body.paged { padding-bottom: 0; }
 /* ---------- typed blanks ---------- */
 .slot-input.correct {
   border-style: solid;
-  background: #b5fd4c;
+  background: var(--green-100);
+  border-color: var(--green-500);
 }
 
 .slot-input.wrong {
@@ -4009,12 +4290,12 @@ body.paged { padding-bottom: 0; }
   -webkit-tap-highlight-color: transparent;
 }
 
-.opt.correct { border-style: solid; background: #b5fd4c; }
+.opt.correct { border-style: solid; background: var(--green-100); border-color: var(--green-500); }
 
 /* a wrong pick greys back out and STAYS greyed — `chosen` is the class
    that travels, so the look has to survive as long as the choice does
    (a 700ms flash is invisible to the other screen) */
-.opt.chosen:not(.correct) { background: #f5f5f5; color: #a5a5a5; }
+.opt.chosen:not(.correct) { background: var(--gray-100); color: var(--gray-400); }
 .opt.wrong { border-color: #d9534f; background: #fdf1f1; color: #d9534f; animation: miss .3s; }
 .opt.dim { opacity: .35; }
 
@@ -4025,7 +4306,7 @@ body.paged { padding-bottom: 0; }
    is the part you say in Korean", without adding a second line of text.
    No mark means the whole line is the answer. */
 .answer-label .target {
-  background: linear-gradient(transparent 52%, #b5fd4c 52%);
+  background: linear-gradient(transparent 52%, var(--lime) 52%);
   color: #1c1c1c;
   font-weight: 800;
 }
@@ -4039,7 +4320,8 @@ body.paged { padding-bottom: 0; }
 
 .mission li.checked::before {
   content: "✓";
-  background: #b5fd4c;
+  background: var(--green-100);
+  border-color: var(--green-500);
   color: #1c1c1c;
   font-size: 11px;
   font-weight: 800;

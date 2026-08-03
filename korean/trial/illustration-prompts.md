@@ -1,8 +1,13 @@
 # Illustration prompts — trial deck curriculum pages
 
 The curriculum pages currently use inline SVG (route map, cards). If we want real
-illustrations, these prompts are written to land in the **Podo Bold** style so the art
-drops straight into the deck without a redesign.
+illustrations, these prompts are written to match the existing art (mascot, mouth
+diagrams, the praise stamp) so a new piece drops straight into the deck.
+
+**The art keeps its bold outlines even though the page chrome no longer has any.** That is
+deliberate, not a leftover: illustration is a separate layer from UI, sticker-like art reads
+well on quiet cards, and softening it would orphan every asset already drawn. Do not "update"
+these prompts to match `lesson-card.css`.
 
 ## Style block — prepend to every prompt
 

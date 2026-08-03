@@ -2,7 +2,7 @@
 
 **Read [`ux-philosophy.md`](./shared/ux-philosophy.md) before touching anything in this folder — every
 time, including small edits.** It is the contract for every lesson page: one activity per page,
-instant clarity, minimal everything, Korean-first titles, one green tutor-script box, one boxed
+instant clarity, minimal everything, Korean-first titles, one blue tutor-script box, one boxed
 component that *fills* the page, receptive → productive.
 
 Do not design a page, add a component, or write copy here until you have read it. If a change
@@ -10,12 +10,18 @@ you are about to make conflicts with it, say so and ask — don't quietly deviat
 
 ## Also true of this folder
 
-- **Shared design system:** `shared/lesson-card.css` ("Podo Bold"). Per-track additions go in that
-  track's own stylesheet, loaded after it (e.g. `trial/trial.css`). Reuse the existing
+- **Shared design system:** `shared/lesson-card.css`. White cards on a 1px grey outline; the
+  palette lives in `:root` there — **use the tokens, never the hex**. Per-track additions go in
+  that track's own stylesheet, loaded after it (e.g. `trial/trial.css`). Reuse the existing
   component vocabulary before inventing a new one — consistency over novelty.
+- **Every colour means one thing.** `green-500`/`green-100` = state (chosen, correct, active).
+  `blue-100` = the tutor's spoken script. `lime` = brand chrome only, never state.
+  `gray-200` = ordinary outlines. Dashed grey = "write here". The cream/pink seat colours are
+  pedagogy and outrank everything. Adding a second meaning to any of these is the single
+  easiest way to make a page unreadable — see the table in `ux-philosophy.md`.
 - **Audience is Japanese speakers learning Korean.** All support text is Japanese; no English.
   Sound anchors are kana, not English words.
-- **The green `.section-subtitle` box is the tutor's spoken script** (`.ko` = the line read
+- **The blue `.section-subtitle` box is the tutor's spoken script** (`.ko` = the line read
   aloud, `.ja` = its Japanese translation). Natural spoken Korean, no grammar jargon.
 - **Lessons are audio-only.** The learner hears the tutor but never sees them, so no
   instruction may depend on watching the tutor (口の形をまねして, gestures, "look at me").
