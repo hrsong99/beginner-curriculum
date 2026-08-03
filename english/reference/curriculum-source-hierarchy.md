@@ -2,6 +2,8 @@
 
 **Status:** source-of-truth policy for curriculum authors
 
+For the proposed evidence-first workflow—and an explicit list of what has **not** yet been done—see [`proposed-authoritative-build-method.md`](./proposed-authoritative-build-method.md).
+
 ## Short answer
 
 This curriculum did **not** begin with a grammar list and turn each grammar item into a lesson. It began with communicative needs, reusable speaking frames, and the two-pattern lesson architecture. The grammar coverage map was created afterward as a backstage audit: it names the forms already required by the patterns, checks for gaps and premature jumps, and makes level assumptions visible.
