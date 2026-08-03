@@ -1,15 +1,15 @@
 # Core English Speaking Patterns — Table of Contents
 
-**72 lessons · 144 speaking patterns · Pre-A1 → B1.** This is the main English sequence. Learners do not study a grammar label and then search for a use; they borrow two complete frames, change the slots, and use both in one small conversation.
+**72 lessons · 144 speaking patterns · Pre-A1 → B1+.** This is the main English sequence. Learners do not study a grammar label and then search for a use; they borrow two complete frames, change the slots, and use both in one small conversation.
 
-> **One lesson = one can-do + two literal speaking frames.** Grammar remains in the author-only [`grammar-coverage-map.md`](../../reference/grammar-coverage-map.md). A learner-facing pattern must contain words someone can actually say, not a formula such as “subject + base verb.”
+> **One lesson = one can-do + two retrievable speaking frames.** Detailed grammar remains in the author-only [`grammar-coverage-map.md`](../../reference/grammar-coverage-map.md); a lesson may add one short learner-facing grammar note when it helps control the frames. Fixed chunks may appear as supporting expressions, but do not count as one of the two patterns. See the full [`teaching-philosophy.md`](../../reference/teaching-philosophy.md).
 
 | Stage | Lessons | Working level | Learner outcome |
 | --- | ---: | --- | --- |
 | First exchanges | 1–24 | Pre-A1 → A1 | exchange basic information and complete simple transactions |
 | Everyday independence | 25–42 | A1 → A2 | tell short stories, make plans, explain rules, and compare options |
-| Connected conversation | 43–60 | A2 → early B1 | discuss experience, connect reasons, and manage polite interaction |
-| Independent use | 61–72 | B1 | imagine, infer, clarify, report, and negotiate familiar problems |
+| Connected conversation | 43–60 | A2 → B1 | discuss experience, connect reasons, and manage polite interaction |
+| Independent use | 61–72 | B1 → B1+ | imagine, infer, clarify, report, and negotiate familiar problems |
 
 ---
 
@@ -17,21 +17,24 @@
 
 **1. Hi, I’m Mina — exchange names**
 
-*Can-do: introduce yourself and learn another person’s name.*
+*Can-do: introduce yourself in two natural ways and learn another person’s name.*
 - “Hi, I’m Mina.” — `Hi, I'm ___.`
-- “What’s your name?” — `What's your name?`
+- “You can call me Mina.” — `You can call me ___.`
+- *Supporting expression:* `What's your name?`
 
 **2. I’m from Seoul — exchange origins**
 
-*Can-do: say where you are from and ask someone else.*
+*Can-do: say where you are from, add where you live now, and ask someone else.*
 - “I’m from Seoul.” — `I'm from ___.`
-- “Where are you from?” — `Where are you from?`
+- “I live in Busan now.” — `I live in ___ now.`
+- *Supporting expression:* `Where are you from?`
 
 **3. I’m a designer — exchange roles**
 
-*Can-do: say what you do and ask about another person’s role.*
+*Can-do: say your role and the field or place where you work.*
 - “I’m a designer.” — `I'm a ___.`
-- “What do you do?” — `What do you do?`
+- “I work in technology.” — `I work in ___.`
+- *Supporting expression:* `What do you do?`
 
 **4. This is my friend — introduce someone else**
 
@@ -43,7 +46,7 @@
 
 *Can-do: identify who an object belongs to.*
 - “Is this your bag?” — `Is this your ___?`
-- “Yes, it’s mine.” — `Yes, it's mine.`
+- “Yes, this bag is mine.” — `Yes, this ___ is mine.`
 
 **6. Is there a café nearby? — find what exists**
 
@@ -57,9 +60,10 @@
 
 **7. I start work at nine — share a routine**
 
-*Can-do: state one regular action and invite another person to share theirs.*
+*Can-do: state one regular action and respond with a similar routine.*
 - “I start work at nine.” — `I ___ at ___.`
-- “How about you?” — `How about you?`
+- “I usually start at eight, too.” — `I usually ___ at ___, too.`
+- *Supporting expression:* `How about you?`
 
 **8. What time do you get up? — ask about routine times**
 
@@ -87,18 +91,18 @@
 
 **12. I usually drive, but today I’m walking — contrast now and usual**
 
-*Can-do: explain how today differs from your normal routine.*
-- “What are you doing today?” — `What are you doing today?`
+*Can-do: say what is happening today and explain how it differs from your normal routine.*
+- “Today, I’m working from home.” — `Today, I'm ___ing.`
 - “I usually drive, but today I’m walking.” — `I usually ___, but today I'm ___ing.`
 
 *▸ Checkpoint 2: compare a normal weekday with today and ask three follow-up questions.*
 
-## Unit 3 · Handle quantity, time, and movement · 6 lessons
+## Unit 3 · Handle everyday errands and arrangements · 6 lessons
 
-**13. How much is this? — ask and state a price**
+**13. How much is the blue shirt? — ask and confirm a price**
 
 *Can-do: check a price and confirm what you heard.*
-- “How much is this?” — `How much is this?`
+- “How much is the blue shirt?” — `How much is the ___?`
 - “Did you say twenty or thirty?” — `Did you say ___ or ___?`
 
 **14. Do we have any milk? — check availability**
@@ -117,7 +121,8 @@
 
 *Can-do: request a numbered or measured amount.*
 - “Two cups of coffee, please.” — `___ cups of ___, please.`
-- “Anything else?” — `Anything else?`
+- “And a sandwich, please.” — `And ___, please.`
+- *Supporting expression:* `Anything else?`
 
 **17. Are you free on Friday? — arrange a time**
 
@@ -137,9 +142,10 @@
 
 **19. I want to see the city — state a goal**
 
-*Can-do: say what you want to do and ask about another person’s goal.*
+*Can-do: say what you want and do not want to do, then ask about another person’s goal.*
 - “I want to see the city.” — `I want to ___.`
-- “What do you want to do?” — `What do you want to do?`
+- “I don’t want to stay inside.” — `I don't want to ___.`
+- *Supporting expression:* `What do you want to do?`
 
 **20. I’d like the chicken — order and choose**
 
@@ -157,19 +163,22 @@
 
 *Can-do: make and answer a practical request.*
 - “Could you help me with this?” — `Could you help me with ___?`
-- “Sure. What do you need?” — `Sure. What do you need?`
+- “Sure, I can help with the boxes.” — `Sure, I can help with ___.`
+- *Supporting expression:* `What do you need?`
 
 **23. Can I try this on? — ask permission**
 
 *Can-do: ask whether an action is allowed and respond.*
 - “Can I try this on?” — `Can I ___?`
-- “Yes, go ahead.” — `Yes, go ahead.`
+- “Yes, you can try it here.” — `Yes, you can ___ here.`
+- *Supporting expression:* `Go ahead.`
 
 **24. Sorry, I didn’t catch that — repair communication**
 
 *Can-do: ask for slower speech or clarification.*
-- “Sorry, I didn’t catch that.” — `Sorry, I didn't catch that.`
-- “Could you say that again more slowly?” — `Could you say that again more slowly?`
+- “Could you say the address again?” — `Could you say ___ again?`
+- “Could you speak more slowly?” — `Could you speak more ___?`
+- *Supporting expression:* `Sorry, I didn't catch that.`
 
 *▸ Checkpoint 4: complete a purchase, ask permission, request help, and repair one misunderstanding.*
 
@@ -184,7 +193,7 @@
 **26. We watched a movie — report a completed action**
 
 *Can-do: state one completed event and add when it happened.*
-- “We watched a movie last night.” — `We ___ed ___ last night.`
+- “We watched a movie last night.” — `We watched ___ last night.`
 - “What did you do?” — `What did you do ___?`
 
 **27. We went out for dinner — use common past actions**
@@ -197,7 +206,7 @@
 
 *Can-do: ask whether something happened and give a negative answer.*
 - “Did you have fun?” — `Did you ___?`
-- “I didn’t stay late, but I called a friend.” — `I didn't ___, but I ___ed.`
+- “I didn’t stay late, but I called a friend.” — `I didn't ___, but I called ___.`
 
 **29. First we ate, then we walked — sequence events**
 
@@ -311,7 +320,7 @@
 
 *Can-do: move from general experience to one specific occasion.*
 - “Have you been to Spain?” — `Have you been to ___?`
-- “Yes, I went there last year.” — `Yes, I went there [finished time].`
+- “Yes, I went there last year.” — `Yes, I went there ___.`
 
 **46. I’ve lived here for five years — state duration**
 
@@ -373,7 +382,7 @@
 
 *▸ Checkpoint 9: explain a decision, add a contrast, make a conditional plan, and identify an unknown person or object.*
 
-## Unit 10 · Manage polite and reported interaction · 6 lessons
+## Unit 10 · Manage careful requests and information · 6 lessons
 
 **55. Would you mind helping me? — grade a request**
 
@@ -385,7 +394,8 @@
 
 *Can-do: request permission and respond without ambiguity.*
 - “Do you mind if I sit here?” — `Do you mind if I ___?`
-- “Not at all. Go ahead.” — `Not at all. Go ahead.`
+- “No, I don’t mind if you sit here.” — `No, I don't mind if you ___.`
+- *Supporting expression:* `Not at all. Go ahead.`
 
 **57. Do you know where it is? — ask indirectly**
 
@@ -453,7 +463,7 @@
 
 *▸ Checkpoint 11: discuss a hypothetical choice, a present wish, a likely explanation, and a past regret.*
 
-## Unit 12 · Handle independent and workplace conversations · 6 lessons
+## Unit 12 · Bridge into independent and workplace conversations · 6 lessons
 
 **67. I had my phone repaired — arrange a service**
 
@@ -497,4 +507,4 @@
 
 ## Scope boundary
 
-The main spine ends at independent B1 use. Dense idiom sets, literary devices, legal language, advanced inversion, and specialist professional rhetoric belong in later elective tracks rather than this core.
+The main spine reaches independent B1 use and ends with a short B1+ bridge. Dense idiom sets, literary devices, legal language, advanced inversion, and specialist professional rhetoric belong in later elective tracks rather than this core.

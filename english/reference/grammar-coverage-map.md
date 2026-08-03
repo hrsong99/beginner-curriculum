@@ -6,30 +6,30 @@ Context codes: **E1** Getting Around Town · **E2** Food, Shopping & Home · **T
 
 | Lesson | Communicative function | Internal grammar / form tags | Band | Depends on | Main recycling |
 | ---: | --- | --- | --- | --- | --- |
-| 1 | exchange names | subject pronoun `I`; `be`; contraction `I'm` | Pre-A1 | — | S1 |
-| 2 | exchange origins | `be from`; `where`; `you` | Pre-A1 | 1 | S1, T1 |
-| 3 | exchange roles | `a/an`; noun complement; present-simple `do` question | Pre-A1 | 1 | W1 |
+| 1 | introduce yourself and exchange names | subject pronoun `I`; `be`; contraction `I'm`; `call + object complement` | Pre-A1 | — | S1 |
+| 2 | exchange origins and current location | `be from`; present-simple `live`; `where` support question | Pre-A1 | 1 | S1, T1 |
+| 3 | exchange roles and fields | `a/an`; noun complement; present-simple `work in`; `do` support question | Pre-A1 | 1 | W1 |
 | 4 | introduce another person | `this is`; possessive adjective; `he/she`; `be from` | Pre-A1 | 1–2 | S1, W1 |
 | 5 | check ownership | `your`; possessive pronouns; `be` yes/no question | A1 | 1, 4 | E2, T2 |
 | 6 | ask about existence and place | `there is`; `is there`; place prepositions | A1 | 1 | E1, T2 |
-| 7 | state a routine | present simple; time expression; conversational `How about...?` | A1 | 1 | S1, W1 |
+| 7 | state and reciprocate a routine | present simple; time expression; frequency adverb; conversational `How about...?` | A1 | 1 | S1, W1 |
 | 8 | ask routine time | `what time`; `do` question; frequency adverb | A1 | 7 | E1, W1 |
 | 9 | negate and substitute a routine | `don't`; base verb; `instead` | A1 | 7 | E1, W1 |
 | 10 | discuss a third person’s routine | `does`; third-person `-s` | A1 | 4, 7 | S1, W1 |
 | 11 | discuss frequency | `how often`; frequency expressions | A1 | 7–8 | S1, S2 |
 | 12 | contrast routine and current action | present simple vs present continuous; `but` | A1 | 7–11 | E1, W1 |
-| 13 | ask and confirm price | `how much`; demonstratives; past repair question `Did you say...?` | A1 | 5 | E2 |
+| 13 | ask and confirm price | `how much + noun`; lexical repair frame `Did you say...?` | A1 | 3, 5 | E2 |
 | 14 | check availability | `some/any`; plural and non-count nouns; present negative | A1 | 7, 9 | E2, T2 |
 | 15 | ask quantity | `how many/how much`; count/non-count nouns | A1 | 14 | E2 |
-| 16 | order measured amounts | numbers; containers/partitives; ellipsis `Anything else?` | A1 | 13–15 | E2 |
+| 16 | order measured amounts | numbers; containers/partitives; additive `and`; support expression `Anything else?` | A1 | 13–15 | E2 |
 | 17 | arrange an appointment | `be free`; `on/at`; `let's` | A1 | 6–8 | S1, W1 |
 | 18 | ask route and duration | imperatives; `get to`; `it takes`; place/time phrases | A1 | 6, 8 | E1, T1 |
-| 19 | state and ask about wants | `want to`; present-simple wh-question | A1 | 7–8 | S1, T1 |
+| 19 | state, negate, and ask about wants | `want to`; `don't want to`; support wh-question | A1 | 7–9 | S1, T1 |
 | 20 | order and choose politely | `would like`; `will` for immediate choice; `one` substitution | A1 | 13, 16, 19 | E2, T1 |
 | 21 | exchange abilities | modal `can/can't`; contrast `but` | A1 | 9 | S1, T1 |
-| 22 | request action and respond | modal `could`; object pronoun; request sequence | A1 | 21 | all contextual courses |
-| 23 | ask permission | `can I`; short permission/refusal responses | A1 | 21 | E2, T1, T2 |
-| 24 | repair communication | past lexical chunk; comparative adverb `more slowly` | A1 | 22 | all contextual courses |
+| 22 | request action and respond | modal `could`; `can` response; object pronoun; request sequence | A1 | 21 | all contextual courses |
+| 23 | ask and grant permission | `can I`; `you can`; short support responses | A1 | 21 | E2, T1, T2 |
+| 24 | repair communication | `could you say/speak`; comparative adverb; past support chunk | A1 | 22 | all contextual courses |
 | 25 | describe a past state | `was/were`; `there was/were`; past time | A2 | 1, 6 | S1, S2 |
 | 26 | report regular past action | regular `-ed`; `what did`; finished time | A2 | 7–8, 25 | S1, S2 |
 | 27 | report frequent irregular actions | `went/had/bought/came`; sequencing `then` | A2 | 26 | T1, T2, S1 |
@@ -47,7 +47,7 @@ Context codes: **E1** Getting Around Town · **E2** Food, Shopping & Home · **T
 | 39 | express excess and sufficiency | `too + adjective`; adjective + `enough` | A2 | 37–38 | E2, T2 |
 | 40 | compare two options | comparative `-er/more/less`; `than`; contrast | A2 | 37–39 | E1, E2 |
 | 41 | choose from a group | superlative; `prefer A to B` | A2 | 40 | E1, E2, W2 |
-| 42 | separate reaction and cause | participial adjectives `-ed/-ing`; sense verbs | A2 | 37–38, 49 preview | S2 |
+| 42 | separate reaction and cause | participial adjectives `-ed/-ing`; sense verbs; simple `because` clause | A2 | 37–38 | S2 |
 | 43 | ask about experience | present perfect; `ever/never`; participle | A2 | 25–28 | S1, T1 |
 | 44 | report recent result | present perfect; `yet/just` | A2 | 43 | T1, W1 |
 | 45 | distinguish experience and finished time | present perfect vs past simple | A2 | 26–28, 43 | T1, S1 |
@@ -61,7 +61,7 @@ Context codes: **E1** Getting Around Town · **E2** Food, Shopping & Home · **T
 | 53 | identify person or thing | defining relative clauses `who/that` | A2 | 4–6 | E2, T2, W1 |
 | 54 | explain purpose and method | infinitive of purpose; `the best way to...is to...` | A2 | 19, 41 | E1, T1, W1 |
 | 55 | grade a request | `could`; `would you mind + -ing` | B1 | 22 | T2, W1, W2 |
-| 56 | request permission carefully | `do you mind if`; pragmatic response polarity | B1 | 23, 55 | T1, T2, W1 |
+| 56 | request permission carefully | `do you mind if`; repeated action slot; pragmatic response polarity | B1 | 23, 55 | T1, T2, W1 |
 | 57 | ask indirectly | embedded wh-clause; statement word order | B1 | 8, 22, 55 | T1, T2, W2 |
 | 58 | troubleshoot | `won't` for malfunction; `have you tried + -ing` | B1 | 33, 43 | E2, T2, W1 |
 | 59 | foreground process/result | present and past passive | B1 | 25, 44 | T1, T2, W1 |
@@ -69,15 +69,15 @@ Context codes: **E1** Getting Around Town · **E2** Food, Shopping & Home · **T
 | 61 | imagine an unreal present | second conditional; `would` | B1 | 31, 51 | S2, Freetalking |
 | 62 | express present wish | `wish + past`; `wish + could` | B1 | 21, 61 | S2, Freetalking |
 | 63 | infer present state | deduction `must/might be` | B1 | 34, 37 | T2, S2 |
-| 64 | express past regret | `should/shouldn't have + participle` | B1 | 35, 43 | S2, T2 |
-| 65 | infer a past event | `might/must have + participle` | B1 | 43, 63–64 | T2, S2 |
-| 66 | order earlier past events | past perfect; `already`; `by the time` | B1 | 25–30, 44 | T2, S2 |
-| 67 | arrange or report a service | causative `have/get + object + participle` | B1 | 22, 59 | E2, T2 |
-| 68 | discuss timetable and future progress | scheduled present simple; future continuous | B1 | 8, 32–33 | T1, W1 |
-| 69 | disagree constructively | concession chunks; `however`; clause linking | B1 | 50 | S2, W2, Freetalking |
-| 70 | clarify and summarize | `mean by`; fused relative `what`; reporting frame | B1 | 53, 57, 60 | W2, Freetalking |
-| 71 | report progress and risk | `on track to`; `by`; noun clause with `that` | B1 | 33, 48–49 | W1, W2 |
-| 72 | negotiate a solution | past distancing `I was wondering`; embedded request; bounded offer | B1 | 55, 57, 69–71 | T2, W2 |
+| 64 | express past regret | `should/shouldn't have + participle` | B1+ | 35, 43 | S2, T2 |
+| 65 | infer a past event | `might/must have + participle` | B1+ | 43, 63–64 | T2, S2 |
+| 66 | order earlier past events | past perfect; `already`; `by the time` | B1+ | 25–30, 44 | T2, S2 |
+| 67 | arrange or report a service | causative `have/get + object + participle` | B1+ | 22, 59 | E2, T2 |
+| 68 | discuss timetable and future progress | scheduled present simple; future continuous | B1+ | 8, 32–33 | T1, W1 |
+| 69 | disagree constructively | concession chunks; `however`; clause linking | B1+ | 50 | S2, W2, Freetalking |
+| 70 | clarify and summarize | `mean by`; fused relative `what`; reporting frame | B1+ | 53, 57, 60 | W2, Freetalking |
+| 71 | report progress and risk | `on track to`; `by`; noun clause with `that` | B1+ | 33, 48–49 | W1, W2 |
+| 72 | negotiate a solution | past distancing `I was wondering`; embedded request; bounded offer | B1+ | 55, 57, 69–71 | T2, W2 |
 
 ## Author audit rule
 

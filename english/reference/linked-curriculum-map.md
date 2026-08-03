@@ -19,7 +19,7 @@ The new curriculum uses the source as a coverage checklist, not as a lesson-by-l
 
 ## Pairing rules used
 
-- **Question + answer:** `Where are you from?` pairs with `I'm from...`.
+- **Question + answer:** `Can you...?` pairs with `I can..., but I can't...`.
 - **Action + limit:** `You have to...` pairs with `You don't have to...`.
 - **Plan + response:** `Would you like to...?` pairs with `I'd love to, but...`.
 - **Problem + repair:** `It won't turn on` pairs with `Have you tried ...-ing?`.
@@ -30,4 +30,4 @@ Pairs were rejected when they merely shared a grammar label but did not belong i
 
 ## Scope boundary
 
-The main curriculum ends around independent B1 use. Source topics such as complex inversion, legal subjunctive, advanced rhetoric, literary devices, dense idiom sets, and future perfect continuous are not forced into the beginner-to-independent spine. They are candidates for a later B2/C1 extension after learner demand and product scope are confirmed.
+The main curriculum reaches independent B1 use and ends with a short B1+ bridge. Source topics such as complex inversion, legal subjunctive, advanced rhetoric, literary devices, dense idiom sets, and future perfect continuous are not forced into this spine. They are candidates for a later B2/C1 extension after learner demand and product scope are confirmed.

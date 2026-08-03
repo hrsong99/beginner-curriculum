@@ -1,16 +1,28 @@
 # Contextual English — Table of Contents
 
-**48 lessons · 96 trainable patterns.** This track turns Core language into successful action in four high-value domains: everyday life, travel, relationships, and work.
+**48 lessons · 96 trainable patterns.** This track reuses and deliberately extends Core language in four high-value domains: everyday life, travel, relationships, and work.
 
-> **Two-pattern rule:** every lesson contains two model lines that belong in the same exchange. One or two fixed expressions may support the scene, but do not become extra teaching targets. Context creates the need; the learner extracts the frames and reuses them with new details.
+> **Two-pattern rule:** every lesson contains two model lines that belong in the same exchange. One or two fixed expressions and one brief grammar-support note may support the scene, but do not become extra teaching targets. Context creates the need; the learner extracts the frames and reuses them with new details. See the full [`teaching-philosophy.md`](../../reference/teaching-philosophy.md).
 
-Each course names Core prerequisites by lesson. Tutors may preview a fixed phrase for immediate survival, but they should not explain or drill untaught grammar as a hidden third lesson.
+Each course names Core prerequisites by lesson. The courses are grouped by situation for easy selection; they are **not** eight linear difficulty sequences. Follow the staged pathway below when assigning them as a curriculum. Tutors may preview a fixed phrase for immediate survival, but they should not explain or drill untaught grammar as a hidden third lesson.
+
+### Staged pathway across the courses
+
+| Learner has completed | Contextual lessons now available |
+| --- | --- |
+| Core 18 | Getting Around 1–2 and 4 · Meeting People 2 and 4 · Workplace 1 |
+| Core 24 | Food/Shopping 1–3 and 5 · Airport 1 and 4 · Hotel 6 · Workplace 4 |
+| Core 42 | Getting Around 3 and 5–6 · Food/Shopping 4 · Meeting People 1, 3, and 6 |
+| Core 60 | Airport 2–6 · Hotel 1–4 · Meeting People 5 · Feelings 1–2 and 4 · Workplace 2–3 and 5–6 · Meetings 1–2 and 5 |
+| Core 72 | Food/Shopping 6 · Hotel 5 · Feelings 3 and 5–6 · Meetings 3–4 and 6 |
+
+Within a band, choose by learner need. A lesson may reuse a Core frame exactly or make one bounded contextual expansion; its prerequisite marks the language needed to control that expansion.
 
 ---
 
 # Everyday English
 
-## Course 1 · Getting Around Town [A1] · 6 lessons
+## Course 1 · Getting Around Town [A1–A2] · 6 lessons
 
 **Prerequisites by lesson:** 1–2 and 4 → Core 18 · 3 → Core 40 · 5 → Core 35 · 6 → Core 33
 
@@ -36,15 +48,15 @@ Each course names Core prerequisites by lesson. Tutors may preview a fixed phras
 
 **5. Fix a route mistake**
 - “I think I got on the wrong bus.” — `I think I got on the wrong ___.`
-- “Where should I get off?” — `Where should I get off?`
-- *Expressions:* `wrong direction` · `go back`
+- “Should I get off at Central?” — `Should I get off at ___?`
+- *Expressions:* `Where should I get off?` · `wrong direction`
 
 **6. Meet at the right place**
 - “I’m waiting outside Exit Two.” — `I'm waiting outside ___.`
 - “I’ll be there in about ten minutes.” — `I'll be there in about ___ minutes.`
 - *Expressions:* `running late` · `see you soon`
 
-## Course 2 · Food, Shopping & Home [A1–A2] · 6 lessons
+## Course 2 · Food, Shopping & Home [A1–B1+] · 6 lessons
 
 **Prerequisites by lesson:** 1–3 → Core 24 · 4 → Core 39 · 5 → Core 22 · 6 → Core 67
 
@@ -59,9 +71,9 @@ Each course names Core prerequisites by lesson. Tutors may preview a fixed phras
 - *Expressions:* `for here` · `to go`
 
 **3. Ask about a menu**
-- “What do you recommend?” — `What do you recommend?`
+- “Do you recommend the chicken?” — `Do you recommend the ___?`
 - “Does this contain any nuts?” — `Does this contain any ___?`
-- *Expressions:* `house special` · `allergic to`
+- *Expressions:* `What do you recommend?` · `allergic to`
 
 **4. Change or return something**
 - “This shirt is too small for me.” — `This ___ is too ___ for me.`
@@ -70,19 +82,19 @@ Each course names Core prerequisites by lesson. Tutors may preview a fixed phras
 
 **5. Report a home problem**
 - “The heater isn’t working.” — `The ___ isn't working.`
-- “Could you send someone to look at it?” — `Could you send someone to look at it?`
+- “Could you send someone to check the heater?” — `Could you send someone to check the ___?`
 - *Expressions:* `as soon as possible` · `maintenance`
 
 **6. Arrange a service**
 - “I need to get my phone repaired.” — `I need to get my ___ repaired.`
-- “When will it be ready?” — `When will it be ready?`
-- *Expressions:* `service fee` · `pick it up`
+- “Will it be ready by Friday?” — `Will it be ready by ___?`
+- *Expressions:* `When will it be ready?` · `service fee`
 
 ---
 
 # Travel English
 
-## Course 3 · Airport & Border [A2] · 6 lessons
+## Course 3 · Airport & Border [A1–B1] · 6 lessons
 
 **Prerequisites by lesson:** 1 → Core 22 · 2 → Core 59 · 3 → Core 57 · 4 → Core 20 · 5 → Core 44 · 6 → Core 51
 
@@ -116,7 +128,7 @@ Each course names Core prerequisites by lesson. Tutors may preview a fixed phras
 - “If you hurry, you’ll make it.” — `If you ___, you'll ___.`
 - *Expressions:* `connecting flight` · `final call`
 
-## Course 4 · Hotel & Travel Problems [A2–B1] · 6 lessons
+## Course 4 · Hotel & Travel Problems [A2–B1+] · 6 lessons
 
 **Prerequisites by lesson:** 1 → Core 57 · 2 → Core 55 · 3 → Core 58 · 4 → Core 55 · 5 → Core 65 · 6 → Core 22
 
@@ -142,36 +154,36 @@ Each course names Core prerequisites by lesson. Tutors may preview a fixed phras
 
 **5. Ask about a lost item**
 - “I may have left my wallet in the lobby.” — `I may have left my ___ in ___.`
-- “Has anything been turned in?” — `Has anything been turned in?`
-- *Expressions:* `lost and found` · `describe the item`
+- “Has anyone turned in a wallet?” — `Has anyone turned in a ___?`
+- *Expressions:* `Has anything been turned in?` · `lost and found`
 
 **6. Check out and store bags**
 - “Could I leave my bags here until three?” — `Could I leave my ___ here until ___?`
-- “I’d like to check out, please.” — `I'd like to check out, please.`
-- *Expressions:* `late checkout` · `luggage tag`
+- “I’d like to check out before noon.” — `I'd like to check out before ___.`
+- *Expressions:* `I'd like to check out, please.` · `late checkout`
 
 ---
 
 # Social English
 
-## Course 5 · Meeting People & Making Plans [A1–A2] · 6 lessons
+## Course 5 · Meeting People & Making Plans [A1–B1] · 6 lessons
 
 **Prerequisites by lesson:** 1 → Core 27 · 2 → Core 8 · 3 → Core 20 · 4 → Core 17 · 5 → Core 50 · 6 → Core 35
 
 **1. Start a conversation**
 - “How do you know Maya?” — `How do you know ___?`
-- “We worked together at my last job.” — `We ___ed together at ___.`
+- “We worked together at my last job.” — `We worked together at ___.`
 - *Expressions:* `by the way` · `small world`
 
 **2. Find common interests**
-- “What do you do for fun?” — `What do you do for fun?`
+- “Do you ever go hiking for fun?” — `Do you ever ___ for fun?`
 - “I’m really into live music.” — `I'm really into ___.`
-- *Expressions:* `me too` · `what kind of...?`
+- *Expressions:* `What do you do for fun?` · `what kind of...?`
 
 **3. Invite someone**
 - “Would you like to get coffee sometime?” — `Would you like to ___ sometime?`
-- “I’d love to.” — `I'd love to.`
-- *Expressions:* `sounds good` · `sometime`
+- “I’d love to get coffee with you.” — `I'd love to ___ with you.`
+- *Expressions:* `I'd love to.` · `sounds good`
 
 **4. Choose a time**
 - “How about Saturday afternoon?” — `How about ___?`
@@ -188,14 +200,14 @@ Each course names Core prerequisites by lesson. Tutors may preview a fixed phras
 - “We should do this again.” — `We should ___ again.`
 - *Expressions:* `thanks for coming` · `get home safely`
 
-## Course 6 · Feelings, Advice & Conflict [A2–B1] · 6 lessons
+## Course 6 · Feelings, Advice & Conflict [A2–B1+] · 6 lessons
 
 **Prerequisites by lesson:** 1 → Core 46 · 2 → Core 49 · 3 → Core 61 · 4 → Core 60 · 5 → Core 64 · 6 → Core 69
 
 **1. Catch up with a friend**
-- “How have you been?” — `How have you been?`
+- “How have you been since the move?” — `How have you been since ___?`
 - “I’ve been pretty busy lately.” — `I've been pretty ___ lately.`
-- *Expressions:* `long time no see` · `what's new?`
+- *Expressions:* `How have you been?` · `long time no see`
 
 **2. Share a feeling and its cause**
 - “I’m nervous about the interview.” — `I'm ___ about ___.`
@@ -203,14 +215,14 @@ Each course names Core prerequisites by lesson. Tutors may preview a fixed phras
 - *Expressions:* `mixed feelings` · `stressed out`
 
 **3. Ask for and give advice**
-- “What would you do if you were me?” — `What would you do if you were me?`
+- “What would you do about the job offer?” — `What would you do about ___?`
 - “If I were you, I’d talk to her.” — `If I were you, I'd ___.`
-- *Expressions:* `sleep on it` · `trust your gut`
+- *Expressions:* `What would you do if you were me?` · `sleep on it`
 
 **4. Clear up a misunderstanding**
-- “That’s not what I meant.” — `That's not what I meant.`
+- “What I meant was that I needed more time.” — `What I meant was that ___.`
 - “I thought you said you were leaving.” — `I thought you said ___.`
-- *Expressions:* `get the wrong idea` · `let me explain`
+- *Expressions:* `That's not what I meant.` · `let me explain`
 
 **5. Apologize and respond**
 - “I’m sorry. I shouldn’t have interrupted you.” — `I'm sorry. I shouldn't have ___.`
@@ -226,7 +238,7 @@ Each course names Core prerequisites by lesson. Tutors may preview a fixed phras
 
 # Work English
 
-## Course 7 · Workplace Basics [A2] · 6 lessons
+## Course 7 · Workplace Basics [A1–B1] · 6 lessons
 
 **Prerequisites by lesson:** 1 → Core 10 · 2 → Core 44 · 3 → Core 55 · 4 → Core 22 · 5 → Core 30 · 6 → Core 59
 
@@ -260,7 +272,7 @@ Each course names Core prerequisites by lesson. Tutors may preview a fixed phras
 - “We should be finished by Friday.” — `We should be finished by ___.`
 - *Expressions:* `on track` · `running behind`
 
-## Course 8 · Meetings & Professional Problems [B1] · 6 lessons
+## Course 8 · Meetings & Professional Problems [B1–B1+] · 6 lessons
 
 **Prerequisites by lesson:** 1–2 → Core 54 · 3 → Core 69 · 4 → Core 70 · 5 → Core 50 · 6 → Core 70
 

@@ -54,9 +54,11 @@ Sources:
 - [Cambridge — Using the English Grammar Profile for curriculum design](https://www.cambridge.org/elt/blog/2017/03/09/iatefl-talk-english-grammar-profile/)
 - [Verratti-Souto, Sagirov & Chen (2025) — quantitative verification of EGP assignments](https://www.cambridge.org/core/journals/annual-review-of-applied-linguistics/article/nlppowered-quantitative-verification-of-the-english-grammar-profiles-structurelevel-assignment/8323F1AD466EF982EA47DEFBB0D740D5)
 
-### 3. Patterns are chunks, not renamed grammar rules
+### 3. Patterns are level-sensitive chunks, not renamed grammar rules
 
-Fluent speakers retrieve many multi-word units as chunks. A learner-facing pattern must retain literal words and one or two changeable slots: `I'd like ___`, `Do you mind if I ___?`, or `It depends on ___`. Labels such as “modal + subject + verb” belong only in author metadata. Contextual lessons add one or two collocations beyond their two main frames.
+Fluent speakers retrieve many multi-word units as chunks. A learner-facing pattern must retain a stable, retrievable scaffold: `I'd like ___`, `Do you mind if I ___?`, or `It depends on ___`. A slot may hold a word, phrase, action, or clause; its openness increases with learner readiness. Labels such as “modal + subject + verb” belong in author metadata, while a brief learner-facing grammar note may support control of the two patterns. Fixed expressions remain valuable supporting chunks, but do not count as one of the two changeable patterns.
+
+See [`teaching-philosophy.md`](./teaching-philosophy.md) for the operational definition, level-sensitive slot guidance, lesson hierarchy, and pattern audit test.
 
 Sources:
 
