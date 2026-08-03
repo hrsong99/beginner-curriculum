@@ -45,8 +45,14 @@
     var box = document.createElement("textarea");
     box.className = "note-input";
     box.setAttribute("data-sync-id", "note-" + id);
-    box.setAttribute("placeholder", "메모");     // :placeholder-shown 이 이걸 본다
-    box.setAttribute("aria-label", "수업 메모");
+    /* 이 칸이 무엇인지 설명하는 건 이 문구뿐이다. "메모" 만 적혀 있으면
+       튜터 혼자 보는 개인 메모로 읽히는데, 실제로는 한 글자만 써도 학생
+       화면에 그대로 뜬다. "전하다" 가 방향을 이미 말해 주므로 "학생에게도
+       보여요" 같은 설명을 따로 붙이지 않아도 된다. 어미는 덱의 튜터 노트가
+       쓰는 해요체(…적어 주세요)에 맞춘다.
+       (:placeholder-shown 이 이 문구를 본다. 지우면 칸이 사라진다.) */
+    box.setAttribute("placeholder", "학생에게 전하고 싶은 말을 자유롭게 적어 주세요");
+    box.setAttribute("aria-label", "학생에게 전하는 말");
     box.setAttribute("rows", "2");
     box.setAttribute("autocomplete", "off");
 
