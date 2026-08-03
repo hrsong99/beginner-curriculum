@@ -1281,12 +1281,10 @@ mark.hl {
           box-decoration-break: clone;
 }
 
-/* The marker has to read on all three surfaces the deck is built from, and one
-   colour cannot: lime on lime disappears, and the green script box is exactly
-   where a tutor marks a word most often. So the lime surfaces take a warm
-   stroke instead — the contrast is in the temperature, and the ink stays black.
-   (Amber over the white cards inside a brand page is harmless.) */
-.section-subtitle mark.hl,
+/* Lime on lime disappears, so the one remaining lime surface — the brand page —
+   takes a warm stroke instead: the contrast is in the temperature, and the ink
+   stays black. (Amber over the white cards inside a brand page is harmless.)
+   The script box needs no override; it is blue-100 now, and lime reads on it. */
 .brand-page mark.hl { background: #ffd166; }
 
 /* the dark transition pages carry reversed text, so a bright fill would swallow
@@ -1294,7 +1292,7 @@ mark.hl {
 .transition-page mark.hl { background: rgba(181, 253, 76, .32); }
 
 /* ---------- shared tutor notes (interactive/tutor-notes.js) ----------
-   One free-typing box per page, sitting under the green script. Empty it is
+   One free-typing box per page, sitting under the blue script. Empty it is
    invisible to everyone; the tutor sees it in teaching mode to write into,
    and the moment it holds anything both screens show it.
 
@@ -1304,9 +1302,9 @@ mark.hl {
    columns with gaps, and only a non-rendered element leaves no gap behind.
 
    A plain grey box, deliberately. It is scratch paper the tutor writes on
-   mid-lesson, not a component of the lesson — giving it the ink outline and
-   offset shadow the real components wear made it compete with them for
-   attention on every page it appeared. It recedes instead. */
+   mid-lesson, not a component of the lesson — dressing it like the real
+   components made it compete with them for attention on every page it
+   appeared. It recedes instead. */
 .note-input {
   display: none;
   box-sizing: border-box;
@@ -1501,7 +1499,8 @@ body.teaching .pager .pg-stamp { visibility: visible; pointer-events: auto; }
    Adds: lime brand pages (cover / act dividers / closing),
    greeting chat with katakana reading (yomi), needs-analysis
    option rows, and the consultation/roadmap worksheet bits
-   (ported from onboarding-screens.html, restyled to Podo Bold).
+   (ported from onboarding-screens.html, restyled to the shared
+   lesson-card system).
    ============================================================ */
 
 /* ---------- brand pages (cover · divider · closing) ---------- */
@@ -2957,29 +2956,24 @@ body.teaching .pager .pg-stamp { visibility: visible; pointer-events: auto; }
 /* ============================================================
    TEACHING MODE  (선생님 모드)
    ------------------------------------------------------------
-   The green box is what the tutor SAYS to the learner. The dark
-   box below is what the tutor DOES — read order, answers, pacing
-   — and the learner must never see it, so none of it exists in
-   the page until the switch on the cover is turned on. Student
-   view is the default, and reloading returns to it.
+   The blue-100 band is what the tutor SAYS to the learner. The
+   blue-200 band fused under it is what the tutor DOES — read
+   order, answers, pacing — and the learner must never see it, so
+   none of it exists in the page until the switch on the cover is
+   turned on. Student view is the default, and reloading returns to it.
 
    Notes are written in Korean: the tutor reads Korean, and a
    Japanese beginner cannot, which is a second lock on the answers.
    ============================================================ */
 .tutor-note { display: none; }
 
-/* Sits directly under the green script it belongs to — the tutor reads
+/* Sits directly under the blue script it belongs to — the tutor reads
    the line, then sees what to do next. In student view it is display:none,
    so it collapses completely and leaves no gap behind. */
-/* An ink chip — the only component-scale ink fill in the system, and that is
-   the point: it is a hard visual stop that says "do not read this one aloud".
-   A light box would be quieter but risks being read out mid-lesson, which is
-   the one failure this component exists to prevent.
-   What it drops is bulk, not darkness: the lime edge and the asymmetric radius
-   were bold-system vocabulary, and at the old size it out-weighed the blue
-   script it is subordinate to. The tutor reads the blue line, THEN glances
-   here, so it has to sit below it in the hierarchy — hence a chip, hugging its
-   own text, rather than a slab. */
+/* A blue-200 chip. The tutor reads the blue line, THEN glances here, so it has
+   to sit below the script in the hierarchy — hence a chip, hugging its own
+   text, rather than a slab. What says "do not read this one aloud" is the
+   튜터만 badge below, not the fill; see the note on it. */
 body.teaching .tutor-note {
   display: flex;
   align-items: baseline;
@@ -3024,13 +3018,13 @@ body.teaching .section-subtitle + .tutor-note:has(+ .note-input) { margin-bottom
 
 /* ---- MERGED WITH THE SCRIPT IT BELONGS TO ----
    One card, two bands: the tutor reads the blue line, then their eye drops
-   straight into the ink footer without crossing a gap. Two separate floating
+   straight into the footer without crossing a gap. Two separate floating
    boxes for what is really one instruction made the page read as clutter.
 
-   Merging is only safe BECAUSE the footer stays ink. A shared blue box would
-   have put a do-not-say-this line inside the surface that means "say this out
-   loud" — the ink band is what keeps the two channels apart once the gap is
-   gone.
+   Merging is only safe BECAUSE the two bands stay told apart — blue-200 a step
+   down from blue-100, a dashed fold between them, and the 튜터만 badge saying
+   it in words. One undifferentiated blue box would have put a do-not-say-this
+   line inside the surface that means "say this out loud".
 
    Student view is untouched: the whole rule is behind body.teaching, so the
    script box keeps its own radius and bottom margin, and the note is
