@@ -966,8 +966,26 @@
     style.textContent = "[data-ko]{cursor:help;}";
     document.head.appendChild(style);
 
+    /* 화면에 한국어가 이미 짝으로 붙어 있는 자리에는 툴팁을 달지 않는다.
+       짝은 디자인이 정한 것이라(스크립트의 .ja 위에는 .ko, 말풍선의 번역
+       위에는 한국어 원문), 목록도 디자인을 따라 적는다 — 구조로 추정하면
+       중첩된 한글을 놓치고 번역이 아닌 캡션을 번역으로 오인한다. */
+    const PAIRED = [
+      ".ja",                                     // KO/JA 짝의 일본어 쪽 전부
+      ".title-ja",
+      ".translation", ".answer-label", ".answer-box", ".yomi",
+      ".known-row .j",
+      ".word-card .mean",
+      ".letter-card .kana-eq",
+      ".opt-row .opt-main",
+      ".who", ".who-name",
+      ".zone", ".yomi", ".yomi-line",
+      ".transition-kicker", ".brand-title", ".podo-badge .tag"
+    ].join(",");
+
     document.querySelectorAll("body *").forEach(el => {
       if (el === tip) return;
+      if (el.matches(PAIRED)) return;             // 한국어가 이미 옆에 있다
       let own = "";
       el.childNodes.forEach(n => { if (n.nodeType === 3) own += n.textContent; });
       const val = D[norm(own)] || D[norm(el.textContent)];

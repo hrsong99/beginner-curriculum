@@ -926,9 +926,34 @@
     style.textContent = "[data-ko]{cursor:help;}";
     document.head.appendChild(style);
 
+    /* 화면에 한국어가 이미 짝으로 붙어 있는 자리에는 툴팁을 달지 않는다.
+       이 덱에서 일본어와 한국어는 대부분 컴포넌트 단위로 짝을 이룬다 —
+       초록(파랑) 스크립트의 .ja 위에는 .ko 가, 말풍선의 번역 위에는 한국어
+       원문이, 단어 카드의 뜻 옆에는 글자가 이미 있다. 그런 자리까지 툴팁을
+       달면 이미 보이는 것을 한 번 더 덮어 쓸 뿐이라 방해가 된다.
+
+       "옆에 한글이 있나"를 DOM 으로 추정하지 않고 목록으로 못박는 이유:
+       구조로 판단하면 중첩된 한글을 놓치고(.word-card .mean), 번역이 아닌
+       캡션을 번역으로 오인한다(.sign .english 는 어머니의 뜻이 아니라 그
+       간판이 어디에 있는지를 말한다). 짝은 디자인이 정한 것이라, 목록도
+       디자인을 따라 적는다. */
+    const PAIRED = [
+      ".ja",                                     // KO/JA 짝의 일본어 쪽 전부                    // 바로 위 .ko 가 원문
+      ".title-ja",                                // 앞의 한국어 제목을 옮긴 것
+      ".translation", ".answer-label", ".answer-box", ".yomi",    // 말풍선 안에 한국어가 있다
+      ".known-row .j",                            // 옆칸 .k 가 한국어
+      ".word-card .mean",                         // 카드 안에 글자가 있다
+      ".letter-card .kana-eq",                    // 글자 옆의 가나 대응
+      ".opt-row .opt-main",                       // 아래 .opt-sub 가 한국어
+      ".who", ".who-name",                        // 先生 / 私
+      ".zone", ".yomi", ".yomi-line",             // 자리 이름과 발음 표기
+      ".transition-kicker", ".brand-title", ".podo-badge .tag"
+    ].join(",");
+
     // 일본어 요소에 data-ko 부착 (전체 텍스트 또는 자기 텍스트 노드 기준)
     document.querySelectorAll("body *").forEach(el => {
       if (el === tip) return;
+      if (el.matches(PAIRED)) return;             // 한국어가 이미 옆에 있다
       let own = "";
       el.childNodes.forEach(n => { if (n.nodeType === 3) own += n.textContent; });
       const val = D[norm(own)] || D[norm(el.textContent)];
