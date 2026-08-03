@@ -15,7 +15,7 @@ The Korean tracks establish several strong constraints worth preserving:
 - expressions/collocations kept subordinate to the two main patterns;
 - open-ended free talking after learners have enough language to sustain it.
 
-English needs a different foundation. Hangul decoding is replaced by a pronunciation-and-listening track that treats sounds, stress, rhythm, reductions, and repair as learnable systems.
+English begins immediately with Core speaking patterns. Sound support is attached only to the frames that need it; it is not a separate curriculum or a prerequisite for speaking.
 
 ## What the linked Podolingo document contributed
 
@@ -27,7 +27,7 @@ The supplied Google Doc, **“Podolingo Curriculum (extended)” → “English 
 4. workplace and professional communication;
 5. nuance, rhetoric, idioms, and connected speech.
 
-This curriculum retains that real-world arc, especially its coverage of communication repair, transactions, stories, relationships, travel problems, workplace interaction, and nuance. It does not copy the document’s one-target lesson structure. Items were regrouped into paired moves and split among the core, contextual, pronunciation, and free-talking tracks.
+This curriculum retains that real-world arc, especially its coverage of communication repair, transactions, stories, relationships, travel problems, workplace interaction, and nuance. It does not copy the document’s one-target lesson structure. Items were regrouped into paired moves and split among Core Patterns, Contextual English, and Freetalking.
 
 See [`linked-curriculum-map.md`](./linked-curriculum-map.md) for the transformation map.
 
@@ -44,9 +44,9 @@ Sources:
 - [Council of Europe — transparency and coherence](https://www.coe.int/en/web/common-european-framework-reference-languages/transparency-and-coherence)
 - [Cambridge English — what learners can do at CEFR levels](https://www.cambridgeenglish.org/learning-english/parents-and-children/how-to-support-your-child/what-are-the-different-levels-of-learning-a-language/)
 
-### 2. Grammar order is evidence-informed, not treated as a universal law
+### 2. Grammar stays backstage
 
-The English Grammar Profile maps more than 1,200 learner-attested grammar uses to CEFR levels. It is a useful check on timing, especially for separating early forms from later uses of the same form. It is not a deterministic acquisition order; later quantitative research has found only limited agreement when level assignment is tested through frequency alone. The sequence here therefore balances learner evidence, functional usefulness, cognitive load, and prerequisite relationships.
+Learners see literal frames such as `Have you ever ___?`, while authors use [`grammar-coverage-map.md`](./grammar-coverage-map.md) to verify sequencing. The English Grammar Profile maps more than 1,200 learner-attested grammar uses to CEFR levels and is useful for checking timing. It is not a deterministic acquisition order; later quantitative research has found only limited agreement when level assignment is tested through frequency alone. The sequence therefore balances learner evidence, functional usefulness, cognitive load, and prerequisite relationships.
 
 Sources:
 
@@ -54,9 +54,9 @@ Sources:
 - [Cambridge — Using the English Grammar Profile for curriculum design](https://www.cambridge.org/elt/blog/2017/03/09/iatefl-talk-english-grammar-profile/)
 - [Verratti-Souto, Sagirov & Chen (2025) — quantitative verification of EGP assignments](https://www.cambridge.org/core/journals/annual-review-of-applied-linguistics/article/nlppowered-quantitative-verification-of-the-english-grammar-profiles-structurelevel-assignment/8323F1AD466EF982EA47DEFBB0D740D5)
 
-### 3. Patterns include chunks, not only abstract grammar
+### 3. Patterns are chunks, not renamed grammar rules
 
-Fluent speakers retrieve many multi-word units as chunks. The two-pattern model therefore allows frames such as `I'd like to...`, `Do you mind if...?`, and `It depends on...` to be taught as usable wholes before every grammatical detail is analyzed. Contextual lessons add only one or two collocations beyond their two main frames.
+Fluent speakers retrieve many multi-word units as chunks. A learner-facing pattern must retain literal words and one or two changeable slots: `I'd like ___`, `Do you mind if I ___?`, or `It depends on ___`. Labels such as “modal + subject + verb” belong only in author metadata. Contextual lessons add one or two collocations beyond their two main frames.
 
 Sources:
 
@@ -73,9 +73,9 @@ Sources:
 - [Nation (2007) — The Four Strands, institutional open-access record](https://openaccess.wgtn.ac.nz/articles/journal_contribution/The_four_strands/12552167)
 - [Victoria University of Wellington — Paul Nation publications](https://www.wgtn.ac.nz/lals/resources/paul-nations-resources/paul-nations-publications/publications)
 
-### 5. Pronunciation aims at comfortable intelligibility
+### 5. Sound support is embedded and optional
 
-Accent strength, comprehensibility, and intelligibility are related but distinct. The course does not promise a native accent. It prioritizes features that help a listener recover the message: word and sentence stress, consonant endings, high-value sound contrasts, chunking, linking, reductions, and repair. Connected-speech features are taught early for listening as well as later production.
+Accent strength, comprehensibility, and intelligibility are related but distinct. The course does not promise a native accent or maintain a pronunciation syllabus. Authors may attach one short cue when stress, an ending, linking, or a contraction materially helps the listener recover that lesson’s two frames.
 
 Sources:
 
