@@ -5,6 +5,8 @@ node_modules/
 # Local source PDFs for textbook references (kept out of git).
 korean/**/dekiru-kankokugo/*.pdf
 korean/**/sejong-hangugeo-ipmun/*.pdf
+korean/**/sejong-hangugeo-hoehwa/**/*.pdf
+korean/**/sejong-hakdang-silyong-hangugeo/**/*.pdf
 /korean/references/temo/테모-회화
 
 # Build output: the zip is the deliverable and already contains these.
