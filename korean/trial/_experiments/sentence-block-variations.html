@@ -23,9 +23,21 @@
     .page-head h1 { margin: 0 0 6px; font-size: 21px; font-weight: 900; }
     .page-head p { margin: 0; max-width: 800px; color: #575753; font-size: 13.5px; font-weight: 600; line-height: 1.6; }
 
-    /* the current build, kept alive here for comparison */
+    /* The "현재" column reproduces the frame+bank build. Those styles are not
+       in trial.css yet — that work is still uncommitted while this page is
+       being judged — so they live here and this file stands on its own. */
     .sa-t.swap-old { border-style: dashed; border-color: var(--gray-400); background: var(--gray-50); }
     .sa-t.swap-old b { color: var(--gray-400); letter-spacing: .1em; }
+    .sa-plus { align-self: center; color: var(--gray-400); font-size: 19px; font-weight: 900; }
+    .sent-anat + .bank-drop { margin: 14px 0 10px; }
+    .bank-drop { display: block; color: var(--gray-400); font-size: 17px; font-weight: 900; text-align: center; line-height: 1; }
+    .bank { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 7px; }
+    .bank-card {
+      display: grid; place-items: center; gap: 2px; padding: 12px 4px 9px;
+      border: 1px solid var(--gray-200); border-radius: 11px; background: #fff;
+    }
+    .bank-card b { font-size: 18px; font-weight: 800; line-height: 1.1; }
+    .bank-card small { color: var(--gray-500); font-size: 10.5px; font-weight: 700; }
 
     /* ============================================================
        SHARED · every variation below obeys two rules the current
