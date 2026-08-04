@@ -2188,21 +2188,25 @@ button.opt-row:active { transform: scale(.99); }
   word-break: keep-all;
 }
 
+/* 표시는 글자에 딱 붙어야 한다. 좌우 여백을 주면 낱말 안에서 고친 한 글자가
+   낱말 밖으로 떨어져 나와, 「선택해요」 가 「선택 해 요」 세 덩어리로 읽힌다. */
 .fb-diff del {
   text-decoration: line-through;
   text-decoration-thickness: 2px;
   color: #d9534f;
   background: #fdf1f1;
-  border-radius: 4px;
-  padding: 1px 3px;
+  border-radius: 3px;
+  padding: 1px 0;
+  box-shadow: 0 0 0 1px #fdf1f1;
 }
 
 .fb-diff ins {
   text-decoration: none;
   color: #3f7a1c;
   background: var(--green-100);
-  border-radius: 4px;
-  padding: 1px 3px;
+  border-radius: 3px;
+  padding: 1px 0;
+  box-shadow: 0 0 0 1px var(--green-100);
 }
 
 /* ---------- level check ---------- */
