@@ -1244,7 +1244,7 @@
   --topic-mid: #c6b4f5;   /* the same colour as a highlighter swipe, which
                              needs more body than a fill behind dark text */
   --topic-ink: #5a3ec8;
-  --ending-bg:  #ffe2cc;   /* 입니다 / 입니까? — the polite ending */
+  --ending-bg:  #ffe2cc;   /* 이에요 / 예요 — the sentence ending */
   --ending-mid: #ffbe92;
   --ending-ink: #b2591c;
 }
@@ -1344,6 +1344,55 @@
    The card says which pattern the page is about before a word is read. */
 .sent-hero.topic { border-color: #d9cdf7; background: #faf8ff; }
 
+/* ---------- the same frame, filled a second and third way ----------
+   A pattern is a frame with a slot, and the page used to say so in chips
+   nobody reads out ("名前・仕事・国、どれにもつく"). Showing the frame filled
+   three ways says it without words, and gives the tutor three things to
+   read instead of one.
+
+   They sit in a grey tray FUSED to the underside of the card — the same
+   move the script box makes with its tutor note. Loose centred lines under
+   a card read as leftovers; a tray says "same thing, quieter", and each
+   sentence gets its own white seat so two examples read as two, not as a
+   four-line paragraph. Fills, not outlines: a bordered row inside a
+   bordered tray inside the page card would be three frames deep. */
+.sent-hero:has(+ .sent-more) {
+  border-radius: 16px 16px 0 0;
+}
+
+.sent-more {
+  display: grid;
+  gap: 8px;
+  padding: 14px;
+  border: 1px solid var(--gray-200);
+  border-top: none;
+  border-radius: 0 0 16px 16px;
+  background: var(--gray-50);
+  text-align: center;
+}
+
+.sent-more > div {
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.sent-more .korean {
+  display: block;
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.25;
+  word-break: keep-all;
+}
+
+.sent-more .translation {
+  display: block;
+  margin-top: 4px;
+  color: var(--gray-500);
+  font-size: 13px;
+  font-weight: 700;
+}
+
 /* ---------- intonation: the ending drawn, not written ----------
    ↘ and ↗ were characters inside the Korean string, which is the one
    place they cannot be read — they sat at the same size as the text
@@ -1355,7 +1404,7 @@
 }
 
 .pi-card {
-  padding: 18px 18px 14px;
+  padding: 22px 20px 18px;
   border: 1px solid var(--gray-200);
   border-radius: 14px;
   background: #fff;
@@ -1363,7 +1412,7 @@
 
 .pi-card .korean {
   display: block;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 800;
   line-height: 1.2;
 }
@@ -1371,8 +1420,8 @@
 .pi-curve {
   display: block;
   width: 100%;
-  height: 46px;
-  margin: 10px 0 8px;
+  height: 56px;
+  margin: 12px 0 10px;
   overflow: visible;
   color: var(--ending-ink);
 }
@@ -1389,9 +1438,9 @@
 .pi-card .translation {
   display: block;
   color: #575753;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
-  line-height: 1.4;
+  line-height: 1.45;
 }
 
 /* ---------- 받침: the thing that decides 은 or 는 ----------
@@ -1403,15 +1452,26 @@
   margin-top: 24px;
 }
 
+/* The box is an equation read left to right — syllable → the form it takes —
+   with the label and the examples as captions under it. The earlier version
+   put the rule in a column of four small texts beside the glyph, so the one
+   thing the page exists to say (floor ⇒ 이에요) was the same size as its own
+   footnotes. */
 .bt-box {
   display: grid;
-  grid-template-columns: 92px minmax(0, 1fr);
-  align-items: center;
-  gap: 16px;
-  padding: 16px;
+  justify-items: center;
+  gap: 15px;
+  padding: 22px 16px 20px;
   border: 1px solid var(--gray-200);
   border-radius: 14px;
   background: #fff;
+  text-align: center;
+}
+
+.bt-eq {
+  display: flex;
+  align-items: center;
+  gap: 18px;
 }
 
 .bt-syl {
@@ -1419,10 +1479,11 @@
   isolation: isolate;   /* keeps the floor's z-index:-1 inside this box */
   display: grid;
   place-items: center;
-  height: 92px;
-  border-radius: 12px;
+  width: 108px;
+  height: 108px;
+  border-radius: 14px;
   background: var(--gray-50);
-  font-size: 50px;
+  font-size: 62px;
   font-weight: 800;
   line-height: 1;
 }
@@ -1440,49 +1501,74 @@
 .bt-syl.on::after { background: var(--topic-bg); }
 .bt-syl.off::after { border: 1.5px dashed var(--gray-400); }
 
-.bt-body { min-width: 0; }
+.bt-arrow {
+  color: var(--gray-400);
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+/* the right-hand side of the equation: the form the learner will actually
+   say. It is the biggest coloured thing on the page, which is correct —
+   it is the answer the rule produces. */
+.bt-out {
+  padding: 8px 18px;
+  border-radius: 12px;
+  background: var(--topic-bg);
+  color: var(--topic-ink);
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 1.1;
+  white-space: nowrap;   /* 이에요 breaking across two lines is not a pill */
+}
 
 .bt-head {
   display: block;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 800;
 }
 
 .bt-head small {
   display: block;
-  margin-top: 3px;
+  margin-top: 4px;
   color: var(--gray-500);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
 }
 
-.bt-out {
-  display: block;
-  margin: 9px 0 8px;
-  font-size: 15px;
-  font-weight: 800;
-  color: var(--gray-400);
-}
-
-.bt-out b {
-  margin-left: 4px;
-  padding: 2px 9px;
-  border-radius: 7px;
-  background: var(--topic-bg);
-  color: var(--topic-ink);
-  font-size: 20px;
-  font-weight: 900;
-}
-
+/* the examples are the rule already applied, so each one gets its own seat
+   instead of running together into a line of small text with dots in it */
 .bt-ex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.bt-ex > span {
+  padding: 9px 14px;
+  border-radius: 10px;
+  background: var(--gray-50);
   color: #575753;
-  font-size: 14.5px;
-  font-weight: 700;
-  line-height: 1.5;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.2;
   word-break: keep-all;
 }
 
 .bt-ex b { color: var(--topic-ink); font-weight: 900; }
+
+/* The same 받침 rule decides 이에요/예요 one part earlier, so the page reuses
+   this component in the ending's colour. The floor is what picks the form —
+   whichever form the part is about — so the seat takes that part's hue and
+   the learner sees one rule taught twice, not two rules.
+
+   The modifier is NOT called .ending: that class is the inline mark for the
+   ending itself (an orange fill), and on a container it paints the whole
+   component orange and adds a box inside the box. */
+.batchim.ending-rule .bt-syl.on::after { background: var(--ending-bg); }
+.batchim.ending-rule .bt-out { background: var(--ending-bg); color: var(--ending-ink); }
+.batchim.ending-rule .bt-ex b { color: var(--ending-ink); }
 
 /* ---------- 漢字 bridge: the equivalence IS the point ---------- */
 .bridge {
@@ -1505,27 +1591,27 @@
 
 .br-cn {
   color: var(--gray-500);
-  font-size: 27px;
+  font-size: 33px;
   font-weight: 800;
   line-height: 1.1;
 }
 
 /* the arrow is the claim the page is making, so it is not a faint tick */
-.br-eq { color: var(--ink); font-size: 20px; font-weight: 900; line-height: 1; }
+.br-eq { color: var(--ink); font-size: 22px; font-weight: 900; line-height: 1; }
 
 .br-ko {
-  font-size: 27px;
+  font-size: 33px;
   font-weight: 800;
   line-height: 1.1;
 }
 
 .br-ko small {
   display: block;
-  margin-top: 4px;
+  margin-top: 5px;
   color: #57a021;
-  font-size: 11.5px;
+  font-size: 13px;
   font-weight: 800;
-  letter-spacing: .1em;
+  letter-spacing: .08em;
 }
 
 /* ---------- the 16, shown as the multiplication it is ----------
@@ -1601,16 +1687,14 @@
   text-align: center;
 }
 
-/* .payoff takes margin-top:auto from the registry so it floats to the optical
-   centre. Here it closes the panel instead, so the free space belongs above
-   the panel and the two stay welded. */
-.section > .combi { margin-top: auto; }
+/* the table and the number it produces are one group, welded */
 .combi + .payoff { margin-top: 24px; }
 
 @media (max-width: 480px) {
-  .bt-box { grid-template-columns: 80px minmax(0, 1fr); gap: 13px; }
-  .bt-syl { height: 80px; font-size: 44px; }
-  .br-cn, .br-ko { font-size: 24px; }
+  /* the box is one centred column at every width — only the type steps down */
+  .bt-syl { width: 94px; height: 94px; font-size: 54px; }
+  .bt-out { padding: 7px 15px; font-size: 30px; }
+  .bt-ex { font-size: 16px; }
   .combi-nouns span { font-size: 12px; }
 }
 
