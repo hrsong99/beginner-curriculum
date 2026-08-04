@@ -13,6 +13,45 @@
        side by side at real deck width so they can be compared.
        ============================================================ */
     body { background: #f0f0ee; }
+
+    /* The "현재" columns below show what shipped BEFORE these proposals were
+       adopted. Both components have since been replaced in trial.css, so their
+       styles live here now — otherwise the comparison renders as a ruin. */
+
+    /* ---- the sentence-anatomy component, retired from trial.css when the
+       hero card replaced it. Kept here so the "현재" columns still show what
+       was actually rejected instead of collapsing into unstyled spans. ---- */
+    .sent-anat { display: flex; align-items: flex-start; justify-content: center; gap: 10px; margin-top: 24px; }
+    .sa-grp { display: flex; flex: 0 1 auto; gap: 5px; justify-content: center; }
+    .sa-t {
+      display: grid; place-items: center; gap: 3px; padding: 15px 10px 11px; min-width: 62px;
+      border: 1px solid var(--gray-200); border-radius: 12px; background: #fff;
+    }
+    .sa-t b { font-size: 25px; font-weight: 800; line-height: 1; }
+    .sa-t small { color: var(--gray-500); font-size: 11.5px; font-weight: 700; line-height: 1; }
+    .sa-t.topic { border-color: transparent; background: var(--topic-bg); }
+    .sa-t.topic b { color: var(--topic-ink); }
+    .sa-t.topic small { color: var(--topic-ink); opacity: .72; }
+    .sa-t.ending { border-color: transparent; background: var(--ending-bg); }
+    .sa-t.ending b { color: var(--ending-ink); }
+    .sa-t.ending small { color: var(--ending-ink); opacity: .72; }
+
+    .sa-cap {
+      display: block; flex: 0 0 100%; margin-top: 7px;
+      color: var(--gray-500); font-size: 11.5px; font-weight: 800; text-align: center;
+    }
+    .col .sa-grp { flex-wrap: wrap; }
+    .tally { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 5px; margin-top: 24px; }
+    .tally .ty-h {
+      padding: 7px 0; border-radius: 8px; background: var(--ending-bg);
+      color: var(--ending-ink); font-size: 13px; font-weight: 900; text-align: center;
+    }
+    .tally + .payoff { margin-top: 24px; }
+    .tally span:not(.ty-h) {
+      padding: 9px 4px; border: 1px solid var(--gray-200); border-radius: 9px;
+      background: #fff; font-size: 13.5px; font-weight: 800; line-height: 1.2;
+      text-align: center; word-break: keep-all;
+    }
     .rail { display: flex; gap: 22px; align-items: flex-start; padding: 26px 26px 60px; overflow-x: auto; }
     .col { flex: none; width: 480px; }
     .col > .phone { min-height: 0; padding-bottom: 0; border-radius: 18px; overflow: hidden; }
@@ -31,12 +70,12 @@
        the page sells leverage (one frame × N words) instead of
        dissecting one finished sentence.
        ============================================================ */
-    .sa-t.slot-tile {
+    .sa-t.swap {
       border-style: dashed;
       border-color: var(--gray-400);
       background: var(--gray-50);
     }
-    .sa-t.slot-tile b { color: var(--gray-400); letter-spacing: .1em; }
+    .sa-t.swap b { color: var(--gray-400); letter-spacing: .1em; }
 
     /* the ＋ that welds the two groups — the gap alone never said why */
     .sa-plus {
@@ -210,7 +249,7 @@
           </span>
           <span class="sa-plus">＋</span>
           <span class="sa-grp">
-            <span class="sa-t slot-tile"><b>◯◯</b><small>入れかえる</small></span>
+            <span class="sa-t swap"><b>◯◯</b><small>入れかえる</small></span>
             <span class="sa-t ending"><b>입니다</b><small>です</small></span>
             <span class="sa-cap">言いたいこと ＋ ていねいな終わり</span>
           </span>
@@ -241,7 +280,7 @@
           </span>
           <span class="sa-plus">＋</span>
           <span class="sa-grp">
-            <span class="sa-t slot-tile"><b>◯◯</b><small>入れかえる</small></span>
+            <span class="sa-t swap"><b>◯◯</b><small>入れかえる</small></span>
             <span class="sa-t ending"><b>입니다</b><small>です</small></span>
             <span class="sa-cap">言いたいこと ＋ ていねいな終わり</span>
           </span>

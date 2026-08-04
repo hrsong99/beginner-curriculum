@@ -26,6 +26,25 @@
     /* The "현재" column reproduces the frame+bank build. Those styles are not
        in trial.css yet — that work is still uncommitted while this page is
        being judged — so they live here and this file stands on its own. */
+
+    /* ---- the sentence-anatomy component, retired from trial.css when the
+       hero card replaced it. Kept here so the "현재" columns still show what
+       was actually rejected instead of collapsing into unstyled spans. ---- */
+    .sent-anat { display: flex; align-items: flex-start; justify-content: center; gap: 10px; margin-top: 24px; }
+    .sa-grp { display: flex; flex: 0 1 auto; gap: 5px; justify-content: center; }
+    .sa-t {
+      display: grid; place-items: center; gap: 3px; padding: 15px 10px 11px; min-width: 62px;
+      border: 1px solid var(--gray-200); border-radius: 12px; background: #fff;
+    }
+    .sa-t b { font-size: 25px; font-weight: 800; line-height: 1; }
+    .sa-t small { color: var(--gray-500); font-size: 11.5px; font-weight: 700; line-height: 1; }
+    .sa-t.topic { border-color: transparent; background: var(--topic-bg); }
+    .sa-t.topic b { color: var(--topic-ink); }
+    .sa-t.topic small { color: var(--topic-ink); opacity: .72; }
+    .sa-t.ending { border-color: transparent; background: var(--ending-bg); }
+    .sa-t.ending b { color: var(--ending-ink); }
+    .sa-t.ending small { color: var(--ending-ink); opacity: .72; }
+
     .sa-t.swap-old { border-style: dashed; border-color: var(--gray-400); background: var(--gray-50); }
     .sa-t.swap-old b { color: var(--gray-400); letter-spacing: .1em; }
     .sa-plus { align-self: center; color: var(--gray-400); font-size: 19px; font-weight: 900; }

@@ -1142,7 +1142,7 @@
 .section:has(> .usp),
 .section:has(> .offer),
 .section:has(> .ptable),
-.section:has(> .sent-anat),
+.section:has(> .sent-hero),
 .section:has(> .pitch),
 .section:has(> .batchim) {
   display: flex;
@@ -1159,7 +1159,7 @@
 .section > .usp,
 .section > .offer,
 .section > .ptable,
-.section > .sent-anat,
+.section > .sent-hero,
 .section > .pitch,
 .section > .batchim { margin-top: auto; }
 
@@ -1176,7 +1176,7 @@
 .section:has(> .usp) > :last-child:not(.note-input),
 .section:has(> .offer) > :last-child:not(.note-input),
 .section:has(> .ptable) > :last-child:not(.note-input),
-.section:has(> .sent-anat) > :last-child:not(.note-input),
+.section:has(> .sent-hero) > :last-child:not(.note-input),
 .section:has(> .pitch) > :last-child:not(.note-input),
 .section:has(> .batchim) > :last-child:not(.note-input) { margin-bottom: auto; }
 
@@ -1297,72 +1297,55 @@
 .answer-label .target.topic  { background: linear-gradient(transparent 52%, var(--topic-mid) 52%); }
 .answer-label .target.ending { background: linear-gradient(transparent 52%, var(--ending-mid) 52%); }
 
-/* ---------- sentence anatomy: two blocks, four tiles ----------
-   The same diagram runs twice in the deck. On the 입니다 page only
-   the ending is lit; on the 은/는 page the marker lights up too —
-   the picture the learner already read, with one more piece in it. */
-.sent-anat {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 10px;
+/* ---------- the pattern, as one finished sentence ----------
+   The page shows the sentence whole, in a card tinted with the colour
+   of the piece it is teaching, and lets that piece carry the accent.
+   No reading line over the Korean: this deck's learners have already
+   done hangul, and kana over every word is the crutch the hangul
+   track exists to remove (ux-philosophy → "Romanize the parts"). */
+.sent-hero {
   margin-top: 24px;
-}
-
-.sa-grp {
-  display: flex;
-  flex: 0 1 auto;
-  flex-wrap: wrap;
-  gap: 5px;
-  justify-content: center;
-}
-
-.sa-t {
-  display: grid;
-  place-items: center;
-  gap: 3px;
-  padding: 15px 10px 11px;
-  min-width: 62px;
-  border: 1px solid var(--gray-200);
-  border-radius: 12px;
-  background: #fff;
-}
-
-.sa-t b {
-  font-size: 25px;
-  font-weight: 800;
-  line-height: 1;
-}
-
-.sa-t small {
-  color: var(--gray-500);
-  font-size: 11.5px;
-  font-weight: 700;
-  line-height: 1;
-}
-
-/* a lit tile carries its colour on the whole box — at this size the
-   inline highlighter is too small to read as a part */
-.sa-t.topic { border-color: transparent; background: var(--topic-bg); }
-.sa-t.topic b { color: var(--topic-ink); }
-.sa-t.topic small { color: var(--topic-ink); opacity: .72; }
-.sa-t.ending { border-color: transparent; background: var(--ending-bg); }
-.sa-t.ending b { color: var(--ending-ink); }
-.sa-t.ending small { color: var(--ending-ink); opacity: .72; }
-
-.sa-cap {
-  display: block;
-  flex: 0 0 100%;
-  margin-top: 7px;
-  color: var(--gray-500);
-  font-size: 11.5px;
-  font-weight: 800;
+  padding: 26px 20px 22px;
+  border: 1px solid #f3cfb2;
+  border-radius: 16px;
+  background: #fff8f3;
   text-align: center;
 }
 
-/* the diagram takes the page's free space above it (see the :has() registry);
-   the rule card underneath is welded to it, so it needs its own air */
-.sent-anat + .pattern-stack { margin-top: 20px; }
+.sent-hero .korean {
+  display: block;
+  font-size: 29px;
+  font-weight: 800;
+  line-height: 1.25;
+  word-break: keep-all;
+}
+
+/* the taught piece takes the accent as ink, not as a chip — inside a
+   tinted card a second fill reads as a separate object sitting on top.
+   Both lines are marked, so the Japanese still points at the Korean. */
+.sent-hero .ending,
+.sent-hero .topic {
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  background: none;
+  opacity: 1;
+}
+
+.sent-hero .ending { color: var(--ending-ink); }
+.sent-hero .topic  { color: var(--topic-ink); }
+
+.sent-hero .translation {
+  display: block;
+  margin-top: 14px;
+  color: var(--gray-500);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* part 2 teaches the marker, so its card is tinted the marker's colour.
+   The card says which pattern the page is about before a word is read. */
+.sent-hero.topic { border-color: #d9cdf7; background: #faf8ff; }
 
 /* ---------- intonation: the ending drawn, not written ----------
    ↘ and ↗ were characters inside the Korean string, which is the one
@@ -1548,53 +1531,90 @@
   letter-spacing: .1em;
 }
 
-/* ---------- the 16, actually shown ----------
-   The deck claimed 16 sentences and never put them on screen. The
-   hangul deck earns its 18 with the 조합표 one page earlier; this is
-   that table for nouns. */
-.tally {
+/* ---------- the 16, shown as the multiplication it is ----------
+   Writing out all sixteen sentences put the noun on the page sixteen
+   times and still never showed the multiplication being claimed. The
+   reference (p.124) does it with two banks and one ＋: pick from the
+   left, pick from the right. Eight nouns, two endings, and the number
+   underneath is something you can check by eye. */
+.combi { margin-top: 24px; }
+
+.combi-head,
+.combi-body {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 5px;
-  margin-top: 24px;
+  grid-template-columns: minmax(0, 1fr) 34px minmax(0, 1fr);
+  align-items: center;
+  gap: 6px;
 }
 
-/* the ending is named once per column, not tinted onto all sixteen cells —
-   what varies down the column is the noun, so that is what stays black */
-.tally .ty-h {
+.combi-head { margin-bottom: 10px; }
+
+.combi-tag {
   padding: 7px 0;
-  border-radius: 8px;
-  background: var(--ending-bg);
-  color: var(--ending-ink);
-  font-size: 13px;
+  border-radius: 9px;
+  font-size: 12.5px;
   font-weight: 900;
   text-align: center;
 }
 
-/* .payoff takes margin-top:auto from the registry so it floats to the optical
-   centre. Here it closes the table instead, so the free space belongs above
-   the table and the two stay welded. */
-.tally + .payoff { margin-top: 24px; }
+.combi-tag.n { background: var(--gray-100); color: #575753; }
+.combi-tag.e { background: var(--ending-bg); color: var(--ending-ink); }
 
-.tally span:not(.ty-h) {
-  padding: 9px 4px;
+.combi-plus {
+  color: var(--gray-400);
+  font-size: 20px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.combi-nouns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5px;
+}
+
+.combi-nouns span {
+  padding: 8px 3px;
   border: 1px solid var(--gray-200);
   border-radius: 9px;
   background: #fff;
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 800;
-  line-height: 1.2;
   text-align: center;
   word-break: keep-all;
 }
 
+.combi-ends { display: grid; gap: 5px; }
+
+.combi-ends span {
+  padding: 15px 3px;
+  border-radius: 10px;
+  background: var(--ending-bg);
+  color: var(--ending-ink);
+  font-size: 16px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.combi-eq {
+  margin: 12px 0 0;
+  color: var(--gray-500);
+  font-size: 12.5px;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* .payoff takes margin-top:auto from the registry so it floats to the optical
+   centre. Here it closes the panel instead, so the free space belongs above
+   the panel and the two stay welded. */
+.section > .combi { margin-top: auto; }
+.combi + .payoff { margin-top: 24px; }
+
 @media (max-width: 480px) {
-  .sa-t { min-width: 56px; padding: 13px 8px 10px; }
-  .sa-t b { font-size: 22px; }
   .bt-box { grid-template-columns: 80px minmax(0, 1fr); gap: 13px; }
   .bt-syl { height: 80px; font-size: 44px; }
   .br-cn, .br-ko { font-size: 24px; }
-  .tally span:not(.ty-h) { font-size: 12.5px; }
+  .combi-nouns span { font-size: 12px; }
 }
 
 /* ============================================================
@@ -2084,13 +2104,110 @@ button.opt-row:active { transform: scale(.99); }
    다른 그림이 나오고, 옆 장의 PODO 아트와 나란히 놓으면 혼자만 튄다. */
 .opt-row .r-ico { flex: none; width: 32px; height: 32px; object-fit: contain; }
 
-/* ---------- 두 개짜리 선택 ----------
-   고를 것이 둘뿐인 장에서는 한 줄짜리 카드가 화면을 못 채우고, 무엇이
-   다른지도 이름만으로는 안 보인다. 그래서 카드가 자기를 설명한다 —
-   고르면 무슨 일이 일어나는지 세 줄. 상자는 늘지 않는다: 구분선 하나로
-   나누고, 점선이 아니라 실선이다(점선 회색은 "여기 쓰세요" 하나뿐). */
-.opt-row.tall { align-items: flex-start; padding: 17px 17px 16px; }
-.opt-row.tall .opt-main { font-size: 16.5px; }
+/* ============================================================
+   두 개짜리 선택 · 카드가 곧 화면이다
+   ------------------------------------------------------------
+   고를 것이 둘뿐인 장에서 한 줄짜리 카드는 화면을 못 채운다. 위쪽에
+   작게 얹혀 있으면 "설명 두 줄" 로 읽히고, 눌러야 하는 물건이라는 게
+   전달되지 않는다. 그래서 두 장이 남는 높이를 반씩 나눠 갖고, 카드마다
+   자기를 설명한다 — 무슨 성격인지(칩), 고르면 무슨 일이 일어나는지(세 줄),
+   그리고 지금 골라져 있는지(오른쪽 위 동그라미).
+
+   동그라미가 하는 일이 크다. 카드 전체가 초록으로 물드는 것만으로는
+   "고를 수 있다" 를 미리 말해 주지 못한다 — 비어 있는 동그라미는 누르기
+   전에도 보이기 때문에, 그 자리가 선택지라는 걸 먼저 알린다.
+   ============================================================ */
+/* 클래스 하나짜리 이름인 게 중요하다: :has() 는 인자 중 가장 특정한 것의
+   특정도를 그대로 가져오므로, .opt-list.fill 로 쓰면 페이지를 숨기는 규칙
+   (.phone.paged > *)을 이겨서 고르기 장이 다음 장에도 계속 보인다. */
+.section:has(> .picks) {
+  display: flex;
+  flex-direction: column;
+}
+
+.section > .picks {
+  flex: 1 1 auto;
+  grid-auto-rows: 1fr;                  /* 두 장이 남은 높이를 반씩 */
+  gap: 13px;
+}
+
+.opt-row.pick {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  padding: 16px 18px 18px;
+  border-radius: 16px;
+}
+
+.opt-row.pick .opt-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 14px;
+}
+
+/* 성격표 — 초록이 아니다. 초록은 이 시스템에서 "골랐다" 하나만 뜻하므로,
+   고르기 전부터 초록인 칩은 이미 골라진 것처럼 보인다. */
+.opt-tag {
+  padding: 5px 11px 6px;
+  border-radius: 999px;
+  background: #1c1c1c;
+  color: #fff;
+  font-size: 11.5px;
+  font-weight: 800;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.opt-radio {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border: 2px solid var(--gray-200);
+  border-radius: 50%;
+  background: #fff;
+  color: transparent;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1;
+  transition: background .12s, border-color .12s;
+}
+
+.opt-row.on .opt-radio {
+  border-color: var(--green-500);
+  background: var(--green-500);
+  color: #fff;
+}
+
+.opt-row.pick .r-ico {
+  width: 42px;
+  height: 42px;
+  margin-bottom: 10px;
+}
+
+.opt-row.pick .opt-main {
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.3;
+  word-break: keep-all;
+}
+
+.opt-row.pick .opt-sub {
+  margin-top: 4px;
+  font-size: 13.5px;
+}
+
+.opt-row.pick .opt-note {
+  width: 100%;
+  margin-top: auto;                     /* 목록은 카드 바닥에 붙는다 */
+  padding-top: 14px;
+}
+
+.opt-row.pick .opt-note li { font-size: 13.5px; }
 
 .opt-note {
   display: grid;
@@ -2116,6 +2233,93 @@ button.opt-row:active { transform: scale(.99); }
 .opt-note li::before { content: "·"; font-weight: 800; }
 .opt-row.on .opt-note li { color: var(--gray-500); }
 
+/* ============================================================
+   예습 지문 · 한 문장이 한 줄
+   ------------------------------------------------------------
+   지문은 예습에서 이미 읽고 온 것이라, 수업에서는 참고 자료다.
+   그래서 문단이 아니라 문장 단위로 끊어 둔다 — 궁금한 문장을 짚어
+   말하려면 "세 번째 문단의 뒷부분" 이 아니라 그 줄 하나를 누를 수
+   있어야 한다. 번역은 눌러야 나온다: 옆에 늘 붙어 있으면 눈이
+   한국어를 건너뛰고 일본어만 읽는다.
+
+   테두리는 주지 않는다. 줄마다 상자를 치면 글이 아니라 목록으로
+   읽히고, 읽어 오는 물건이라는 성격이 사라진다.
+   ============================================================ */
+.sents {
+  display: grid;
+  gap: 2px;
+  margin-top: 24px;
+}
+
+/* flex 인 이유: <button> 은 자식들을 익명 상자에 담아 가운데로 몰아넣는다.
+   닫혀 있을 때는 자식이 하나뿐이라 티가 안 나다가, 번역이 열려 두 줄이 되는
+   순간 좁은 쪽이 가운데로 밀린다 — 누를 때마다 글이 옆으로 움직이던 이유다. */
+.sent {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  padding: 9px 12px 10px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: background .12s;
+}
+
+.sent .s-ko {
+  display: block;
+  color: #1c1c1c;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.62;
+  word-break: keep-all;
+}
+
+/* 「訳」 는 이 줄을 누르면 뜻이 나온다는 표시다. 열리면 할 일을 다 했으므로
+   사라진다 — 남아 있으면 닫는 버튼처럼 보인다. */
+.sent .s-ko::after {
+  content: "訳";
+  margin-left: 7px;
+  padding: 1px 5px 2px;
+  border: 1px solid var(--gray-200);
+  border-radius: 5px;
+  color: var(--gray-400);
+  font-size: 10.5px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.sent .s-ja {
+  display: none;
+  margin-top: 7px;
+  color: var(--gray-500);
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
+.sent.open { background: var(--gray-100); }
+.sent.open .s-ja { display: block; }
+.sent.open .s-ko::after { display: none; }
+
+/* ============================================================
+   피드백 블록 · 프리토킹이 파는 한 장면
+   ------------------------------------------------------------
+   말한 문장 → 고친 문장 → 달라진 곳. 한 질문에 여러 번 고칠 수 있으니
+   블록이 여러 개 쌓인다. 다음 블록은 앞 블록을 쓰기 시작하면 저절로
+   나타난다 — 버튼을 누르게 하면 그 "눌렀다" 는 사실까지 두 화면이
+   맞춰야 하는데, 칸이 찼는지 여부는 이미 양쪽이 아는 값이다.
+
+   회색 라벨 띠를 걷어냈다. 빈 칸 세 개가 회색 덩어리로 쌓여 있으면
+   카드가 폼처럼 보이고, 정작 중요한 세 번째 줄(달라진 곳)이 묻힌다.
+   지금은 흰 카드에 작은 캡션과 실선 하나뿐이고, 색은 고친 쪽과
+   달라진 곳에만 들어간다.
+   ============================================================ */
 /* ============================================================
    피드백 카드 · 프리토킹이 파는 한 장면
    ------------------------------------------------------------
@@ -3093,9 +3297,11 @@ button.opt-row:active { transform: scale(.99); }
 .phone.paged > .section.pg-on:has(> .usp),
 .phone.paged > .section.pg-on:has(> .offer),
 .phone.paged > .section.pg-on:has(> .ptable),
-.phone.paged > .section.pg-on:has(> .sent-anat),
+.phone.paged > .section.pg-on:has(> .sent-hero),
 .phone.paged > .section.pg-on:has(> .pitch),
-.phone.paged > .section.pg-on:has(> .batchim) { display: flex; }
+.phone.paged > .section.pg-on:has(> .batchim),
+.phone.paged > .section.pg-on:has(> .picks),
+.phone.paged > .section.pg-on:has(> .fb) { display: flex; }
 
 body { padding-bottom: 84px; }         /* the bar must not cover the last line */
 
