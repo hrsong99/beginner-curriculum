@@ -484,12 +484,12 @@
       <h2 class="section-title">대화 읽기 <span class="title-ja">(会話を読もう)</span></h2>
       <p class="section-subtitle"><span class="ko">제가 하나 쪽을 읽을게요. 하루카가 되어서 읽어 보세요.</span><span class="ja">私がハナのほうを読みます。ハルカになって読んでみましょう。</span></p>
       <div class="dialogue">
-        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">안녕하세요! 저는 하나입니다.</span><span class="translation">こんにちは！私はハナです。</span></div></div>
-        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><span class="korean">안녕하세요! 저는 하루카입니다.</span><span class="translation">こんにちは！私はハルカです。</span></div></div>
-        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">하루카 씨는 일본 사람입니까?</span><span class="translation">ハルカさんは日本人ですか？</span></div></div>
-        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><span class="korean">네, 저는 일본 사람입니다.</span><span class="translation">はい、私は日本人です。</span></div></div>
-        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><span class="korean">하나 씨는 학생입니까?</span><span class="translation">ハナさんは学生ですか？</span></div></div>
-        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">네, 저는 학생입니다.</span><span class="translation">はい、私は学生です。</span></div></div>
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">안녕하세요! 저<span class="tp">는</span> 하나<span class="en">입니다</span>.</span><span class="translation">こんにちは！私はハナです。</span></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><span class="korean">안녕하세요! 저<span class="tp">는</span> 하루카<span class="en">입니다</span>.</span><span class="translation">こんにちは！私はハルカです。</span></div></div>
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">하루카 씨<span class="tp">는</span> 일본 사람<span class="en">입니까</span>?</span><span class="translation">ハルカさんは日本人ですか？</span></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><span class="korean">네, 저<span class="tp">는</span> 일본 사람<span class="en">입니다</span>.</span><span class="translation">はい、私は日本人です。</span></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><span class="korean">하나 씨<span class="tp">는</span> 학생<span class="en">입니까</span>?</span><span class="translation">ハナさんは学生ですか？</span></div></div>
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">네, 저<span class="tp">는</span> 학생<span class="en">입니다</span>.</span><span class="translation">はい、私は学生です。</span></div></div>
       </div>
     </div>
 
@@ -558,6 +558,19 @@
     <div class="section" data-page-id="todays-result">
       <h2 class="section-title">오늘의 결과 <span class="title-ja">(今日の成果)</span></h2>
       <p class="section-subtitle"><span class="ko">25분 전엔 한 문장도 못 만들었죠? 지금은 이만큼 말할 수 있어요.</span><span class="ja">25分前は1つの文も作れませんでしたよね？今はこれだけ言えます。</span></p>
+      <!-- the deck claimed 16 and never put them on screen. the hangul deck
+           earns its 18 with 조합표 one page earlier; this is that table. -->
+      <div class="tally">
+        <span class="ty-h">＋ 입니다</span><span class="ty-h">＋ 입니까?</span>
+        <span>학생입니다</span><span>학생입니까?</span>
+        <span>회사원입니다</span><span>회사원입니까?</span>
+        <span>의사입니다</span><span>의사입니까?</span>
+        <span>가수입니다</span><span>가수입니까?</span>
+        <span>일본 사람입니다</span><span>일본 사람입니까?</span>
+        <span>한국 사람입니다</span><span>한국 사람입니까?</span>
+        <span>친구입니다</span><span>친구입니까?</span>
+        <span>선생님입니다</span><span>선생님입니까?</span>
+      </div>
       <div class="payoff">
         <span class="eqline">名詞 8 ＋ 입니다 ＋ 입니까?</span>
         <span class="big">16</span>
@@ -1008,6 +1021,8 @@
       ".title-ja",
       ".translation", ".answer-label", ".answer-box",
       ".known-row .j",
+      ".br-cn", ".br-ko small",                  // 漢字 → 한글 다리: 한국어가 바로 옆 칸에 있다
+      ".sa-t", ".sa-t small", ".sa-cap",         // 문장 블록: 타일마다 한국어와 일본어가 붙어 있다
       ".word-card .mean",
       ".letter-card .kana-eq",
       ".opt-row .opt-main",
