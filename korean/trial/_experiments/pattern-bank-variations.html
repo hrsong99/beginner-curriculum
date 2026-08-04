@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <title>패턴 뱅크 시안 — trial-2 · PODO</title>
+  <link rel="stylesheet" href="../../shared/lesson-card.css">
+  <link rel="stylesheet" href="../trial.css">
+  <style>
+    /* ============================================================
+       MOCKUP CHROME — not part of the deck. Lays the variants out
+       side by side at real deck width so they can be compared.
+       ============================================================ */
+    body { background: #f0f0ee; }
+    .rail { display: flex; gap: 22px; align-items: flex-start; padding: 26px 26px 60px; overflow-x: auto; }
+    .col { flex: none; width: 480px; }
+    .col > .phone { min-height: 0; padding-bottom: 0; border-radius: 18px; overflow: hidden; }
+    .lbl { margin: 0 0 10px; font-size: 13px; font-weight: 900; letter-spacing: .02em; }
+    .lbl small { display: block; margin-top: 3px; color: #757575; font-size: 11.5px; font-weight: 700; letter-spacing: 0; }
+    .lbl.now { color: #a5a5a5; }
+    .page-head { padding: 26px 26px 0; }
+    .page-head h1 { margin: 0 0 6px; font-size: 21px; font-weight: 900; }
+    .page-head p { margin: 0; max-width: 760px; color: #575753; font-size: 13.5px; font-weight: 600; line-height: 1.6; }
+    .page-head p + p { margin-top: 8px; }
+    .page-head code { padding: 1px 5px; border-radius: 5px; background: #e4e4e0; font-size: 12.5px; }
+
+    /* ============================================================
+       PROPOSED · the word bank  (ref p.30 — frame + "Let's try")
+       The frame keeps a visible hole and the bank sits under it, so
+       the page sells leverage (one frame × N words) instead of
+       dissecting one finished sentence.
+       ============================================================ */
+    .sa-t.slot-tile {
+      border-style: dashed;
+      border-color: var(--gray-400);
+      background: var(--gray-50);
+    }
+    .sa-t.slot-tile b { color: var(--gray-400); letter-spacing: .1em; }
+
+    /* the ＋ that welds the two groups — the gap alone never said why */
+    .sa-plus {
+      align-self: center;
+      margin-top: -18px;
+      color: var(--gray-400);
+      font-size: 19px;
+      font-weight: 900;
+    }
+
+    .bank-arrow {
+      display: block;
+      margin: 18px 0 10px;
+      color: var(--gray-500);
+      font-size: 12px;
+      font-weight: 800;
+      text-align: center;
+    }
+    .bank-arrow::before { content: "↓"; display: block; margin-bottom: 2px; font-size: 16px; }
+
+    /* the three-layer cell from ref p.32, minus the kana line — trial-2
+       learners have already done hangul, so a reading on every word is
+       the crutch NOTES.md warns against */
+    .bank {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 7px;
+    }
+
+    .bank-card {
+      display: grid;
+      place-items: center;
+      gap: 2px;
+      padding: 12px 4px 9px;
+      border: 1px solid var(--gray-200);
+      border-radius: 11px;
+      background: #fff;
+    }
+
+    .bank-card b { font-size: 18px; font-weight: 800; line-height: 1.1; }
+    .bank-card small { color: var(--gray-500); font-size: 10.5px; font-weight: 700; }
+
+    .bank + .pattern-stack, .bank + .hint { margin-top: 20px; }
+
+    /* ============================================================
+       PROPOSED · the combination panel  (ref p.124)
+       Two banks and a ＋, not sixteen finished sentences. The noun
+       is written 8 times instead of 16 and the multiplication is
+       the thing you can see.
+       ============================================================ */
+    .combi { margin-top: 24px; }
+
+    .combi-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 34px minmax(0, 1fr);
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+
+    .combi-tag {
+      padding: 7px 0;
+      border-radius: 9px;
+      font-size: 12.5px;
+      font-weight: 900;
+      text-align: center;
+    }
+
+    .combi-tag.n { background: var(--gray-100); color: #575753; }
+    .combi-tag.e { background: var(--ending-bg); color: var(--ending-ink); }
+    .combi-plus { color: var(--gray-400); font-size: 20px; font-weight: 900; text-align: center; }
+
+    .combi-body {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 34px minmax(0, 1fr);
+      align-items: center;
+      gap: 6px;
+    }
+
+    .combi-nouns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 5px; }
+
+    .combi-nouns span {
+      padding: 8px 3px;
+      border: 1px solid var(--gray-200);
+      border-radius: 9px;
+      background: #fff;
+      font-size: 13px;
+      font-weight: 800;
+      text-align: center;
+      word-break: keep-all;
+    }
+
+    .combi-ends { display: grid; gap: 5px; }
+
+    .combi-ends span {
+      padding: 15px 3px;
+      border-radius: 10px;
+      background: var(--ending-bg);
+      color: var(--ending-ink);
+      font-size: 16px;
+      font-weight: 900;
+      text-align: center;
+    }
+
+    .combi-eq {
+      margin-top: 12px;
+      color: var(--gray-500);
+      font-size: 12.5px;
+      font-weight: 800;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-head">
+  <h1>패턴 뱅크 시안 — 제안 2 · 3</h1>
+  <p><b>제안 2 — 오늘의 패턴에 단어 뱅크.</b> 지금 페이지는 완성된 문장 하나를 네 조각으로 자른다.
+     레퍼런스(<code>k-village-esther-bunny</code> p.30)는 반대로 한다 — 구멍이 뚫린 틀을 먼저 보여 주고
+     그 아래에 넣어 볼 단어를 깔아 둔다. 페이지가 파는 것이 "문법 설명"이 아니라 "틀 하나 × 단어 여러 개"가 된다.</p>
+  <p><b>제안 3 — 오늘의 결과를 조합판으로.</b> 지금은 완성 문장 16개를 그대로 적어 명사가 16번 나온다.
+     p.124는 두 개의 뱅크와 ＋ 하나로 같은 말을 하고, 곱셈이 눈에 보인다.</p>
+  <p>왼쪽이 현재 배포본, 오른쪽이 제안이다. 스크롤해서 나란히 비교할 것.</p>
+</div>
+
+<div class="rail">
+
+  <!-- ============ 제안 2 · BEFORE ============ -->
+  <div class="col">
+    <p class="lbl now">제안 2 — 현재<small>완성된 문장 하나를 해부한다</small></p>
+    <div class="phone">
+      <div class="section">
+        <h2 class="section-title">오늘의 패턴 <span class="title-ja">(今日のパターン)</span></h2>
+        <p class="section-subtitle"><span class="ko">제가 먼저 읽을게요. 잘 듣고 따라 읽어 보세요.</span><span class="ja">私が先に読みます。よく聞いて、まねして読んでみましょう。</span></p>
+        <div class="sent-anat">
+          <span class="sa-grp">
+            <span class="sa-t"><b>저는</b><small>私は</small></span>
+            <span class="sa-cap">だれの話か</span>
+          </span>
+          <span class="sa-grp">
+            <span class="sa-t"><b>학생</b><small>学生</small></span>
+            <span class="sa-t ending"><b>입니다</b><small>です</small></span>
+            <span class="sa-cap">言いたいこと ＋ ていねいな終わり</span>
+          </span>
+        </div>
+        <div class="pattern-stack">
+          <div class="pattern-card">
+            <span class="korean">N<span class="ending">입니다</span>.</span>
+            <span class="translation">N<span class="ending">です</span>。（かたい、ていねいな言い方）</span>
+            <div class="example-card">
+              <span class="korean">저는 학생<span class="ending">입니다</span>.</span>
+              <span class="translation">私は学生<span class="ending">です</span>。</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 제안 2 · A안 ============ -->
+  <div class="col">
+    <p class="lbl">제안 2 · A안 — 틀 + 뱅크<small>구멍을 남기고, 넣을 단어를 아래에 깐다 (p.30)</small></p>
+    <div class="phone">
+      <div class="section">
+        <h2 class="section-title">오늘의 패턴 <span class="title-ja">(今日のパターン)</span></h2>
+        <p class="section-subtitle"><span class="ko">제가 먼저 읽을게요. 잘 듣고 따라 읽어 보세요.</span><span class="ja">私が先に読みます。よく聞いて、まねして読んでみましょう。</span></p>
+        <div class="sent-anat">
+          <span class="sa-grp">
+            <span class="sa-t"><b>저는</b><small>私は</small></span>
+            <span class="sa-cap">だれの話か</span>
+          </span>
+          <span class="sa-plus">＋</span>
+          <span class="sa-grp">
+            <span class="sa-t slot-tile"><b>◯◯</b><small>入れかえる</small></span>
+            <span class="sa-t ending"><b>입니다</b><small>です</small></span>
+            <span class="sa-cap">言いたいこと ＋ ていねいな終わり</span>
+          </span>
+        </div>
+        <span class="bank-arrow">この ◯◯ に入れてみよう</span>
+        <div class="bank">
+          <span class="bank-card"><b>학생</b><small>学生</small></span>
+          <span class="bank-card"><b>회사원</b><small>会社員</small></span>
+          <span class="bank-card"><b>의사</b><small>医者</small></span>
+          <span class="bank-card"><b>가수</b><small>歌手</small></span>
+        </div>
+        <div class="hint"><span class="hint-chip">입니다 は「イムニダ」と読む</span><span class="hint-chip">どんな単語にもそのままつく</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 제안 2 · B안 ============ -->
+  <div class="col">
+    <p class="lbl">제안 2 · B안 — 틀 + 뱅크 + 규칙 카드<small>A안에 지금의 예문 카드를 남긴 형태</small></p>
+    <div class="phone">
+      <div class="section">
+        <h2 class="section-title">오늘의 패턴 <span class="title-ja">(今日のパターン)</span></h2>
+        <p class="section-subtitle"><span class="ko">제가 먼저 읽을게요. 잘 듣고 따라 읽어 보세요.</span><span class="ja">私が先に読みます。よく聞いて、まねして読んでみましょう。</span></p>
+        <div class="sent-anat">
+          <span class="sa-grp">
+            <span class="sa-t"><b>저는</b><small>私は</small></span>
+            <span class="sa-cap">だれの話か</span>
+          </span>
+          <span class="sa-plus">＋</span>
+          <span class="sa-grp">
+            <span class="sa-t slot-tile"><b>◯◯</b><small>入れかえる</small></span>
+            <span class="sa-t ending"><b>입니다</b><small>です</small></span>
+            <span class="sa-cap">言いたいこと ＋ ていねいな終わり</span>
+          </span>
+        </div>
+        <span class="bank-arrow">この ◯◯ に入れてみよう</span>
+        <div class="bank">
+          <span class="bank-card"><b>학생</b><small>学生</small></span>
+          <span class="bank-card"><b>회사원</b><small>会社員</small></span>
+          <span class="bank-card"><b>의사</b><small>医者</small></span>
+          <span class="bank-card"><b>가수</b><small>歌手</small></span>
+        </div>
+        <div class="pattern-stack">
+          <div class="pattern-card">
+            <span class="korean">N<span class="ending">입니다</span>.</span>
+            <span class="translation">N<span class="ending">です</span>。（かたい、ていねいな言い方）</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ============ 제안 3 · BEFORE ============ -->
+  <div class="col">
+    <p class="lbl now">제안 3 — 현재<small>완성 문장 16줄. 명사가 16번 나온다</small></p>
+    <div class="phone">
+      <div class="section">
+        <h2 class="section-title">오늘의 결과 <span class="title-ja">(今日の成果)</span></h2>
+        <p class="section-subtitle"><span class="ko">25분 전엔 한 문장도 못 만들었죠? 지금은 이만큼 말할 수 있어요.</span><span class="ja">25分前は1つの文も作れませんでしたよね？今はこれだけ言えます。</span></p>
+        <div class="tally">
+          <span class="ty-h">＋ 입니다</span><span class="ty-h">＋ 입니까?</span>
+          <span>학생입니다</span><span>학생입니까?</span>
+          <span>회사원입니다</span><span>회사원입니까?</span>
+          <span>의사입니다</span><span>의사입니까?</span>
+          <span>가수입니다</span><span>가수입니까?</span>
+          <span>일본 사람입니다</span><span>일본 사람입니까?</span>
+          <span>한국 사람입니다</span><span>한국 사람입니까?</span>
+          <span>친구입니다</span><span>친구입니까?</span>
+          <span>선생님입니다</span><span>선생님입니까?</span>
+        </div>
+        <div class="payoff">
+          <span class="eqline">名詞 8 ＋ 입니다 ＋ 입니까?</span>
+          <span class="big">16</span>
+          <span class="cap">今日言えるようになった文の数</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 제안 3 · A안 ============ -->
+  <div class="col">
+    <p class="lbl">제안 3 · A안 — 조합판<small>두 뱅크와 ＋ 하나. 곱셈이 보인다 (p.124)</small></p>
+    <div class="phone">
+      <div class="section">
+        <h2 class="section-title">오늘의 결과 <span class="title-ja">(今日の成果)</span></h2>
+        <p class="section-subtitle"><span class="ko">25분 전엔 한 문장도 못 만들었죠? 지금은 이만큼 말할 수 있어요.</span><span class="ja">25分前は1つの文も作れませんでしたよね？今はこれだけ言えます。</span></p>
+        <div class="combi">
+          <div class="combi-head">
+            <span class="combi-tag n">名詞 8</span>
+            <span></span><!-- the ＋ belongs between the banks, not twice -->
+            <span class="combi-tag e">終わり 2</span>
+          </div>
+          <div class="combi-body">
+            <div class="combi-nouns">
+              <span>학생</span><span>회사원</span>
+              <span>의사</span><span>가수</span>
+              <span>일본 사람</span><span>한국 사람</span>
+              <span>친구</span><span>선생님</span>
+            </div>
+            <span class="combi-plus">＋</span>
+            <div class="combi-ends">
+              <span>입니다</span>
+              <span>입니까?</span>
+            </div>
+          </div>
+          <p class="combi-eq">8 × 2</p>
+        </div>
+        <div class="payoff">
+          <span class="eqline">名詞 8 ＋ 입니다 ＋ 입니까?</span>
+          <span class="big">16</span>
+          <span class="cap">今日言えるようになった文の数</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
