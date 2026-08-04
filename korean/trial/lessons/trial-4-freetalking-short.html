@@ -78,28 +78,28 @@
       <!-- 그림은 리포트의 두 축(유창성·정확성)에서 그대로 가져온다 — 오늘 고른
            쪽이 수업 뒤 리포트에서 같은 그림으로 다시 나온다. -->
       <div class="opt-list picks" data-pick="single" data-sync-id="style-pick" data-sync-kind="selection" data-sync-state="on">
-        <button class="opt-row pick" data-sync-option="free">
+        <button class="opt-row pick talk" data-sync-option="free">
           <span class="opt-head">
             <span class="opt-tag">말하기 중심</span>
             <span class="opt-radio" aria-hidden="true">✓</span>
           </span>
           <img class="r-ico" src="../assets/report-icons/flu.svg" alt="">
-          <span class="opt-main">자유롭게 많이 말할래요</span>
-          <span class="opt-sub">많이 말하는 게 오늘의 목표</span>
+          <span class="opt-main">たくさん話したい</span>
+          <span class="opt-sub">今日のゴールは「話す量」</span>
           <ul class="opt-note">
             <li>말하는 중간에 끊지 않아요</li>
             <li>질문으로 이야기를 계속 넓혀요</li>
             <li>고칠 건 마지막에 모아서</li>
           </ul>
         </button>
-        <button class="opt-row pick" data-sync-option="fix">
+        <button class="opt-row pick edit" data-sync-option="fix">
           <span class="opt-head">
             <span class="opt-tag">교정 중심</span>
             <span class="opt-radio" aria-hidden="true">✓</span>
           </span>
           <img class="r-ico" src="../assets/report-icons/acc.svg" alt="">
-          <span class="opt-main">정확하게 고쳐 받을래요</span>
-          <span class="opt-sub">정확하게 말하는 게 오늘의 목표</span>
+          <span class="opt-main">正しく直してほしい</span>
+          <span class="opt-sub">今日のゴールは「正確さ」</span>
           <ul class="opt-note">
             <li>말한 문장을 그 자리에서 받아 적어요</li>
             <li>문법과 말투를 그때그때 고쳐요</li>
@@ -117,411 +117,459 @@
     </div>
 
     <div class="section" data-page-id="warm-1">
-      <h2 class="section-title">몸풀기 ①</h2>
-      <p class="section-subtitle"><span class="ko">복권으로 1억이 당첨되면, 제일 먼저 뭘 하고 싶어요?</span></p>
+      <h2 class="section-title">오늘의 질문</h2>
+      <p class="section-subtitle ask"><span class="q-n">몸풀기 1</span><span class="ko">복권으로 1억이 당첨되면, 제일 먼저 뭘 하고 싶어요?</span><span class="ja">宝くじで1億が当たったら、まず何をしたいですか？</span></p>
       <div class="tutor-note">가볍게 받아 주세요. 학생이 말한 문장을 위 칸에 그대로 적습니다.</div>
       <div class="fb">
         <div class="fb-block">
-          <div class="fb-row">
-            <span class="fb-cap"><i class="n">1</i>학생 문장</span>
+          <div class="fb-row orig">
+            <span class="fb-cap">학생 문장</span>
+            <p class="fb-diff"></p>
             <textarea class="fb-in said" data-sync-id="warm1-said-1" rows="1" spellcheck="false"></textarea>
           </div>
           <div class="fb-row fix">
             <span class="fb-cap">교정</span>
             <textarea class="fb-in fixed" data-sync-id="warm1-fixed-1" rows="1" spellcheck="false"></textarea>
           </div>
-          <div class="fb-row out">
-            <span class="fb-cap">바뀐 부분</span>
-            <p class="fb-diff"></p>
-          </div>
         </div>
         <div class="fb-block">
-          <div class="fb-row">
-            <span class="fb-cap"><i class="n">2</i>학생 문장</span>
+          <div class="fb-row orig">
+            <span class="fb-cap">학생 문장</span>
+            <p class="fb-diff"></p>
             <textarea class="fb-in said" data-sync-id="warm1-said-2" rows="1" spellcheck="false"></textarea>
           </div>
           <div class="fb-row fix">
             <span class="fb-cap">교정</span>
             <textarea class="fb-in fixed" data-sync-id="warm1-fixed-2" rows="1" spellcheck="false"></textarea>
           </div>
-          <div class="fb-row out">
-            <span class="fb-cap">바뀐 부분</span>
-            <p class="fb-diff"></p>
-          </div>
         </div>
         <div class="fb-block">
-          <div class="fb-row">
-            <span class="fb-cap"><i class="n">3</i>학생 문장</span>
+          <div class="fb-row orig">
+            <span class="fb-cap">학생 문장</span>
+            <p class="fb-diff"></p>
             <textarea class="fb-in said" data-sync-id="warm1-said-3" rows="1" spellcheck="false"></textarea>
           </div>
           <div class="fb-row fix">
             <span class="fb-cap">교정</span>
             <textarea class="fb-in fixed" data-sync-id="warm1-fixed-3" rows="1" spellcheck="false"></textarea>
           </div>
-          <div class="fb-row out">
-            <span class="fb-cap">바뀐 부분</span>
-            <p class="fb-diff"></p>
+        </div>
+        <div class="fb-block note">
+          <div class="fb-row">
+            <span class="fb-cap">노트</span>
+            <textarea class="fb-in memo" data-sync-id="warm1-note-1" rows="1" spellcheck="false"></textarea>
+          </div>
+        </div>
+        <div class="fb-block note">
+          <div class="fb-row">
+            <span class="fb-cap">노트</span>
+            <textarea class="fb-in memo" data-sync-id="warm1-note-2" rows="1" spellcheck="false"></textarea>
           </div>
         </div>
       </div>
-      <button class="fb-add" type="button">＋ 교정 추가</button>
+      <div class="fb-adds">
+        <button class="fb-add" data-add="fix" type="button">＋ 교정</button>
+        <button class="fb-add" data-add="note" type="button">＋ 노트</button>
+      </div>
     </div>
 
     <div class="section" data-page-id="warm-2">
-      <h2 class="section-title">몸풀기 ②</h2>
-      <p class="section-subtitle"><span class="ko">나한테 '완벽한 하루'는 어떤 하루예요?</span></p>
+      <h2 class="section-title">오늘의 질문</h2>
+      <p class="section-subtitle ask"><span class="q-n">몸풀기 2</span><span class="ko">나한테 '완벽한 하루'는 어떤 하루예요?</span><span class="ja">あなたにとって「完璧な一日」とは、どんな一日ですか？</span></p>
       <div class="tutor-note">아침부터 밤까지 순서대로 물어보면 문장이 길어져요.</div>
       <div class="fb">
         <div class="fb-block">
-          <div class="fb-row">
-            <span class="fb-cap"><i class="n">1</i>학생 문장</span>
+          <div class="fb-row orig">
+            <span class="fb-cap">학생 문장</span>
+            <p class="fb-diff"></p>
             <textarea class="fb-in said" data-sync-id="warm2-said-1" rows="1" spellcheck="false"></textarea>
           </div>
           <div class="fb-row fix">
             <span class="fb-cap">교정</span>
             <textarea class="fb-in fixed" data-sync-id="warm2-fixed-1" rows="1" spellcheck="false"></textarea>
           </div>
-          <div class="fb-row out">
-            <span class="fb-cap">바뀐 부분</span>
-            <p class="fb-diff"></p>
-          </div>
         </div>
         <div class="fb-block">
-          <div class="fb-row">
-            <span class="fb-cap"><i class="n">2</i>학생 문장</span>
+          <div class="fb-row orig">
+            <span class="fb-cap">학생 문장</span>
+            <p class="fb-diff"></p>
             <textarea class="fb-in said" data-sync-id="warm2-said-2" rows="1" spellcheck="false"></textarea>
           </div>
           <div class="fb-row fix">
             <span class="fb-cap">교정</span>
             <textarea class="fb-in fixed" data-sync-id="warm2-fixed-2" rows="1" spellcheck="false"></textarea>
           </div>
-          <div class="fb-row out">
-            <span class="fb-cap">바뀐 부분</span>
-            <p class="fb-diff"></p>
-          </div>
         </div>
         <div class="fb-block">
-          <div class="fb-row">
-            <span class="fb-cap"><i class="n">3</i>학생 문장</span>
+          <div class="fb-row orig">
+            <span class="fb-cap">학생 문장</span>
+            <p class="fb-diff"></p>
             <textarea class="fb-in said" data-sync-id="warm2-said-3" rows="1" spellcheck="false"></textarea>
           </div>
           <div class="fb-row fix">
             <span class="fb-cap">교정</span>
             <textarea class="fb-in fixed" data-sync-id="warm2-fixed-3" rows="1" spellcheck="false"></textarea>
           </div>
-          <div class="fb-row out">
-            <span class="fb-cap">바뀐 부분</span>
-            <p class="fb-diff"></p>
+        </div>
+        <div class="fb-block note">
+          <div class="fb-row">
+            <span class="fb-cap">노트</span>
+            <textarea class="fb-in memo" data-sync-id="warm2-note-1" rows="1" spellcheck="false"></textarea>
+          </div>
+        </div>
+        <div class="fb-block note">
+          <div class="fb-row">
+            <span class="fb-cap">노트</span>
+            <textarea class="fb-in memo" data-sync-id="warm2-note-2" rows="1" spellcheck="false"></textarea>
           </div>
         </div>
       </div>
-      <button class="fb-add" type="button">＋ 교정 추가</button>
+      <div class="fb-adds">
+        <button class="fb-add" data-add="fix" type="button">＋ 교정</button>
+        <button class="fb-add" data-add="note" type="button">＋ 노트</button>
+      </div>
     </div>
 
     <div class="section" data-page-id="q1">
-      <h2 class="section-title">질문 ①</h2>
-      <p class="section-subtitle"><span class="ko">돈이 많은 인생과 시간이 많은 인생, 어느 쪽을 고를래요? 이유도 알려 주세요.</span></p>
+      <h2 class="section-title">오늘의 질문</h2>
+      <p class="section-subtitle ask"><span class="q-n">질문 1</span><span class="ko">돈이 많은 인생과 시간이 많은 인생, 어느 쪽을 고를래요? 이유도 알려 주세요.</span><span class="ja">お金が多い人生と時間が多い人生、どちらを選びますか？ 理由も教えてください。</span></p>
       <div class="tutor-note">오늘의 메인 질문이에요. 이유가 나올 때까지 기다려 주세요.</div>
       <div class="fb">
         <div class="fb-block">
-          <div class="fb-row">
-            <span class="fb-cap"><i class="n">1</i>학생 문장</span>
+          <div class="fb-row orig">
+            <span class="fb-cap">학생 문장</span>
+            <p class="fb-diff"></p>
             <textarea class="fb-in said" data-sync-id="q1-said-1" rows="1" spellcheck="false"></textarea>
           </div>
           <div class="fb-row fix">
             <span class="fb-cap">교정</span>
             <textarea class="fb-in fixed" data-sync-id="q1-fixed-1" rows="1" spellcheck="false"></textarea>
           </div>
-          <div class="fb-row out">
-            <span class="fb-cap">바뀐 부분</span>
-            <p class="fb-diff"></p>
-          </div>
         </div>
         <div class="fb-block">
-          <div class="fb-row">
-            <span class="fb-cap"><i class="n">2</i>학생 문장</span>
+          <div class="fb-row orig">
+            <span class="fb-cap">학생 문장</span>
+            <p class="fb-diff"></p>
             <textarea class="fb-in said" data-sync-id="q1-said-2" rows="1" spellcheck="false"></textarea>
           </div>
           <div class="fb-row fix">
             <span class="fb-cap">교정</span>
             <textarea class="fb-in fixed" data-sync-id="q1-fixed-2" rows="1" spellcheck="false"></textarea>
           </div>
-          <div class="fb-row out">
-            <span class="fb-cap">바뀐 부분</span>
-            <p class="fb-diff"></p>
-          </div>
         </div>
         <div class="fb-block">
-          <div class="fb-row">
-            <span class="fb-cap"><i class="n">3</i>학생 문장</span>
+          <div class="fb-row orig">
+            <span class="fb-cap">학생 문장</span>
+            <p class="fb-diff"></p>
             <textarea class="fb-in said" data-sync-id="q1-said-3" rows="1" spellcheck="false"></textarea>
           </div>
           <div class="fb-row fix">
             <span class="fb-cap">교정</span>
             <textarea class="fb-in fixed" data-sync-id="q1-fixed-3" rows="1" spellcheck="false"></textarea>
           </div>
-          <div class="fb-row out">
-            <span class="fb-cap">바뀐 부분</span>
-            <p class="fb-diff"></p>
+        </div>
+        <div class="fb-block note">
+          <div class="fb-row">
+            <span class="fb-cap">노트</span>
+            <textarea class="fb-in memo" data-sync-id="q1-note-1" rows="1" spellcheck="false"></textarea>
+          </div>
+        </div>
+        <div class="fb-block note">
+          <div class="fb-row">
+            <span class="fb-cap">노트</span>
+            <textarea class="fb-in memo" data-sync-id="q1-note-2" rows="1" spellcheck="false"></textarea>
           </div>
         </div>
       </div>
-      <button class="fb-add" type="button">＋ 교정 추가</button>
+      <div class="fb-adds">
+        <button class="fb-add" data-add="fix" type="button">＋ 교정</button>
+        <button class="fb-add" data-add="note" type="button">＋ 노트</button>
+      </div>
     </div>
 
     <div class="section" data-page-id="q2">
-      <h2 class="section-title">질문 ②</h2>
-      <p class="section-subtitle"><span class="ko">요즘 사회에서 일과 생활의 균형을 지키기가 왜 어려울까요?</span></p>
+      <h2 class="section-title">오늘의 질문</h2>
+      <p class="section-subtitle ask"><span class="q-n">질문 2</span><span class="ko">요즘 사회에서 일과 생활의 균형을 지키기가 왜 어려울까요?</span><span class="ja">今の社会で、仕事と生活のバランスを保つのはなぜ難しいと思いますか？</span></p>
       <div class="tutor-note">대답이 짧으면 ‘그럼 주변 사람들은요?’로 넓혀 주세요.</div>
       <div class="fb">
         <div class="fb-block">
-          <div class="fb-row">
-            <span class="fb-cap"><i class="n">1</i>학생 문장</span>
+          <div class="fb-row orig">
+            <span class="fb-cap">학생 문장</span>
+            <p class="fb-diff"></p>
             <textarea class="fb-in said" data-sync-id="q2-said-1" rows="1" spellcheck="false"></textarea>
           </div>
           <div class="fb-row fix">
             <span class="fb-cap">교정</span>
             <textarea class="fb-in fixed" data-sync-id="q2-fixed-1" rows="1" spellcheck="false"></textarea>
           </div>
-          <div class="fb-row out">
-            <span class="fb-cap">바뀐 부분</span>
-            <p class="fb-diff"></p>
-          </div>
         </div>
         <div class="fb-block">
-          <div class="fb-row">
-            <span class="fb-cap"><i class="n">2</i>학생 문장</span>
+          <div class="fb-row orig">
+            <span class="fb-cap">학생 문장</span>
+            <p class="fb-diff"></p>
             <textarea class="fb-in said" data-sync-id="q2-said-2" rows="1" spellcheck="false"></textarea>
           </div>
           <div class="fb-row fix">
             <span class="fb-cap">교정</span>
             <textarea class="fb-in fixed" data-sync-id="q2-fixed-2" rows="1" spellcheck="false"></textarea>
           </div>
-          <div class="fb-row out">
-            <span class="fb-cap">바뀐 부분</span>
-            <p class="fb-diff"></p>
-          </div>
         </div>
         <div class="fb-block">
-          <div class="fb-row">
-            <span class="fb-cap"><i class="n">3</i>학생 문장</span>
+          <div class="fb-row orig">
+            <span class="fb-cap">학생 문장</span>
+            <p class="fb-diff"></p>
             <textarea class="fb-in said" data-sync-id="q2-said-3" rows="1" spellcheck="false"></textarea>
           </div>
           <div class="fb-row fix">
             <span class="fb-cap">교정</span>
             <textarea class="fb-in fixed" data-sync-id="q2-fixed-3" rows="1" spellcheck="false"></textarea>
           </div>
-          <div class="fb-row out">
-            <span class="fb-cap">바뀐 부분</span>
-            <p class="fb-diff"></p>
+        </div>
+        <div class="fb-block note">
+          <div class="fb-row">
+            <span class="fb-cap">노트</span>
+            <textarea class="fb-in memo" data-sync-id="q2-note-1" rows="1" spellcheck="false"></textarea>
+          </div>
+        </div>
+        <div class="fb-block note">
+          <div class="fb-row">
+            <span class="fb-cap">노트</span>
+            <textarea class="fb-in memo" data-sync-id="q2-note-2" rows="1" spellcheck="false"></textarea>
           </div>
         </div>
       </div>
-      <button class="fb-add" type="button">＋ 교정 추가</button>
+      <div class="fb-adds">
+        <button class="fb-add" data-add="fix" type="button">＋ 교정</button>
+        <button class="fb-add" data-add="note" type="button">＋ 노트</button>
+      </div>
     </div>
 
     <div class="section" data-page-id="q3">
-      <h2 class="section-title">질문 ③</h2>
-      <p class="section-subtitle"><span class="ko">물질적인 풍요 말고, 인생을 충실하게 만드는 데 뭐가 필요할까요?</span></p>
+      <h2 class="section-title">오늘의 질문</h2>
+      <p class="section-subtitle ask"><span class="q-n">질문 3</span><span class="ko">물질적인 풍요 말고, 인생을 충실하게 만드는 데 뭐가 필요할까요?</span><span class="ja">物質的な豊かさ以外に、人生を充実させるには何が必要だと思いますか？</span></p>
       <div class="tutor-note">추상적인 답이 나오면 ‘예를 들면요?’로 한 번 더 밀어 주세요.</div>
       <div class="fb">
         <div class="fb-block">
-          <div class="fb-row">
-            <span class="fb-cap"><i class="n">1</i>학생 문장</span>
+          <div class="fb-row orig">
+            <span class="fb-cap">학생 문장</span>
+            <p class="fb-diff"></p>
             <textarea class="fb-in said" data-sync-id="q3-said-1" rows="1" spellcheck="false"></textarea>
           </div>
           <div class="fb-row fix">
             <span class="fb-cap">교정</span>
             <textarea class="fb-in fixed" data-sync-id="q3-fixed-1" rows="1" spellcheck="false"></textarea>
           </div>
-          <div class="fb-row out">
-            <span class="fb-cap">바뀐 부분</span>
-            <p class="fb-diff"></p>
-          </div>
         </div>
         <div class="fb-block">
-          <div class="fb-row">
-            <span class="fb-cap"><i class="n">2</i>학생 문장</span>
+          <div class="fb-row orig">
+            <span class="fb-cap">학생 문장</span>
+            <p class="fb-diff"></p>
             <textarea class="fb-in said" data-sync-id="q3-said-2" rows="1" spellcheck="false"></textarea>
           </div>
           <div class="fb-row fix">
             <span class="fb-cap">교정</span>
             <textarea class="fb-in fixed" data-sync-id="q3-fixed-2" rows="1" spellcheck="false"></textarea>
           </div>
-          <div class="fb-row out">
-            <span class="fb-cap">바뀐 부분</span>
-            <p class="fb-diff"></p>
-          </div>
         </div>
         <div class="fb-block">
-          <div class="fb-row">
-            <span class="fb-cap"><i class="n">3</i>학생 문장</span>
+          <div class="fb-row orig">
+            <span class="fb-cap">학생 문장</span>
+            <p class="fb-diff"></p>
             <textarea class="fb-in said" data-sync-id="q3-said-3" rows="1" spellcheck="false"></textarea>
           </div>
           <div class="fb-row fix">
             <span class="fb-cap">교정</span>
             <textarea class="fb-in fixed" data-sync-id="q3-fixed-3" rows="1" spellcheck="false"></textarea>
           </div>
-          <div class="fb-row out">
-            <span class="fb-cap">바뀐 부분</span>
-            <p class="fb-diff"></p>
+        </div>
+        <div class="fb-block note">
+          <div class="fb-row">
+            <span class="fb-cap">노트</span>
+            <textarea class="fb-in memo" data-sync-id="q3-note-1" rows="1" spellcheck="false"></textarea>
+          </div>
+        </div>
+        <div class="fb-block note">
+          <div class="fb-row">
+            <span class="fb-cap">노트</span>
+            <textarea class="fb-in memo" data-sync-id="q3-note-2" rows="1" spellcheck="false"></textarea>
           </div>
         </div>
       </div>
-      <button class="fb-add" type="button">＋ 교정 추가</button>
+      <div class="fb-adds">
+        <button class="fb-add" data-add="fix" type="button">＋ 교정</button>
+        <button class="fb-add" data-add="note" type="button">＋ 노트</button>
+      </div>
     </div>
 
     <div class="section" data-page-id="q4">
-      <h2 class="section-title">질문 ④</h2>
-      <p class="section-subtitle"><span class="ko">행복에 대한 생각이 어릴 때랑 지금이랑 달라졌어요? 어떻게 달라졌어요?</span></p>
+      <h2 class="section-title">오늘의 질문</h2>
+      <p class="section-subtitle ask"><span class="q-n">질문 4</span><span class="ko">행복에 대한 생각이 어릴 때랑 지금이랑 달라졌어요? 어떻게 달라졌어요?</span><span class="ja">幸福についての考えは、子どものころと今とで変わりましたか？ どう変わりましたか？</span></p>
       <div class="tutor-note">과거형이 많이 나오는 질문이에요. 시제를 특히 잘 봐 주세요.</div>
       <div class="fb">
         <div class="fb-block">
-          <div class="fb-row">
-            <span class="fb-cap"><i class="n">1</i>학생 문장</span>
+          <div class="fb-row orig">
+            <span class="fb-cap">학생 문장</span>
+            <p class="fb-diff"></p>
             <textarea class="fb-in said" data-sync-id="q4-said-1" rows="1" spellcheck="false"></textarea>
           </div>
           <div class="fb-row fix">
             <span class="fb-cap">교정</span>
             <textarea class="fb-in fixed" data-sync-id="q4-fixed-1" rows="1" spellcheck="false"></textarea>
           </div>
-          <div class="fb-row out">
-            <span class="fb-cap">바뀐 부분</span>
-            <p class="fb-diff"></p>
-          </div>
         </div>
         <div class="fb-block">
-          <div class="fb-row">
-            <span class="fb-cap"><i class="n">2</i>학생 문장</span>
+          <div class="fb-row orig">
+            <span class="fb-cap">학생 문장</span>
+            <p class="fb-diff"></p>
             <textarea class="fb-in said" data-sync-id="q4-said-2" rows="1" spellcheck="false"></textarea>
           </div>
           <div class="fb-row fix">
             <span class="fb-cap">교정</span>
             <textarea class="fb-in fixed" data-sync-id="q4-fixed-2" rows="1" spellcheck="false"></textarea>
           </div>
-          <div class="fb-row out">
-            <span class="fb-cap">바뀐 부분</span>
-            <p class="fb-diff"></p>
-          </div>
         </div>
         <div class="fb-block">
-          <div class="fb-row">
-            <span class="fb-cap"><i class="n">3</i>학생 문장</span>
+          <div class="fb-row orig">
+            <span class="fb-cap">학생 문장</span>
+            <p class="fb-diff"></p>
             <textarea class="fb-in said" data-sync-id="q4-said-3" rows="1" spellcheck="false"></textarea>
           </div>
           <div class="fb-row fix">
             <span class="fb-cap">교정</span>
             <textarea class="fb-in fixed" data-sync-id="q4-fixed-3" rows="1" spellcheck="false"></textarea>
           </div>
-          <div class="fb-row out">
-            <span class="fb-cap">바뀐 부분</span>
-            <p class="fb-diff"></p>
+        </div>
+        <div class="fb-block note">
+          <div class="fb-row">
+            <span class="fb-cap">노트</span>
+            <textarea class="fb-in memo" data-sync-id="q4-note-1" rows="1" spellcheck="false"></textarea>
+          </div>
+        </div>
+        <div class="fb-block note">
+          <div class="fb-row">
+            <span class="fb-cap">노트</span>
+            <textarea class="fb-in memo" data-sync-id="q4-note-2" rows="1" spellcheck="false"></textarea>
           </div>
         </div>
       </div>
-      <button class="fb-add" type="button">＋ 교정 추가</button>
+      <div class="fb-adds">
+        <button class="fb-add" data-add="fix" type="button">＋ 교정</button>
+        <button class="fb-add" data-add="note" type="button">＋ 노트</button>
+      </div>
     </div>
 
     <div class="section" data-page-id="q5">
-      <h2 class="section-title">질문 ⑤</h2>
-      <p class="section-subtitle"><span class="ko">사회가 개인의 다양한 삶의 방식을 존중하려면 뭐가 필요할까요?</span></p>
+      <h2 class="section-title">오늘의 질문</h2>
+      <p class="section-subtitle ask"><span class="q-n">질문 5</span><span class="ko">사회가 개인의 다양한 삶의 방식을 존중하려면 뭐가 필요할까요?</span><span class="ja">社会が個人の多様な生き方を尊重するには、何が必要だと思いますか？</span></p>
       <div class="tutor-note">제일 어려운 질문이에요. 문장이 막히면 먼저 일본어로 듣고, 같이 한국어로 옮겨 주세요.</div>
       <div class="fb">
         <div class="fb-block">
-          <div class="fb-row">
-            <span class="fb-cap"><i class="n">1</i>학생 문장</span>
+          <div class="fb-row orig">
+            <span class="fb-cap">학생 문장</span>
+            <p class="fb-diff"></p>
             <textarea class="fb-in said" data-sync-id="q5-said-1" rows="1" spellcheck="false"></textarea>
           </div>
           <div class="fb-row fix">
             <span class="fb-cap">교정</span>
             <textarea class="fb-in fixed" data-sync-id="q5-fixed-1" rows="1" spellcheck="false"></textarea>
           </div>
-          <div class="fb-row out">
-            <span class="fb-cap">바뀐 부분</span>
-            <p class="fb-diff"></p>
-          </div>
         </div>
         <div class="fb-block">
-          <div class="fb-row">
-            <span class="fb-cap"><i class="n">2</i>학생 문장</span>
+          <div class="fb-row orig">
+            <span class="fb-cap">학생 문장</span>
+            <p class="fb-diff"></p>
             <textarea class="fb-in said" data-sync-id="q5-said-2" rows="1" spellcheck="false"></textarea>
           </div>
           <div class="fb-row fix">
             <span class="fb-cap">교정</span>
             <textarea class="fb-in fixed" data-sync-id="q5-fixed-2" rows="1" spellcheck="false"></textarea>
           </div>
-          <div class="fb-row out">
-            <span class="fb-cap">바뀐 부분</span>
-            <p class="fb-diff"></p>
-          </div>
         </div>
         <div class="fb-block">
-          <div class="fb-row">
-            <span class="fb-cap"><i class="n">3</i>학생 문장</span>
+          <div class="fb-row orig">
+            <span class="fb-cap">학생 문장</span>
+            <p class="fb-diff"></p>
             <textarea class="fb-in said" data-sync-id="q5-said-3" rows="1" spellcheck="false"></textarea>
           </div>
           <div class="fb-row fix">
             <span class="fb-cap">교정</span>
             <textarea class="fb-in fixed" data-sync-id="q5-fixed-3" rows="1" spellcheck="false"></textarea>
           </div>
-          <div class="fb-row out">
-            <span class="fb-cap">바뀐 부분</span>
-            <p class="fb-diff"></p>
+        </div>
+        <div class="fb-block note">
+          <div class="fb-row">
+            <span class="fb-cap">노트</span>
+            <textarea class="fb-in memo" data-sync-id="q5-note-1" rows="1" spellcheck="false"></textarea>
+          </div>
+        </div>
+        <div class="fb-block note">
+          <div class="fb-row">
+            <span class="fb-cap">노트</span>
+            <textarea class="fb-in memo" data-sync-id="q5-note-2" rows="1" spellcheck="false"></textarea>
           </div>
         </div>
       </div>
-      <button class="fb-add" type="button">＋ 교정 추가</button>
+      <div class="fb-adds">
+        <button class="fb-add" data-add="fix" type="button">＋ 교정</button>
+        <button class="fb-add" data-add="note" type="button">＋ 노트</button>
+      </div>
     </div>
 
     <div class="section" data-page-id="q6">
-      <h2 class="section-title">질문 ⑥</h2>
-      <p class="section-subtitle"><span class="ko">앞으로 어떻게 살고 싶어요? 그걸 위해서 지금 하고 있는 게 있어요?</span></p>
+      <h2 class="section-title">오늘의 질문</h2>
+      <p class="section-subtitle ask"><span class="q-n">질문 6</span><span class="ko">앞으로 어떻게 살고 싶어요? 그걸 위해서 지금 하고 있는 게 있어요?</span><span class="ja">これからどう生きたいですか？ そのために今していることはありますか？</span></p>
       <div class="tutor-note">마지막 질문이에요. 오늘 고친 표현을 한 번 더 써 보게 해 주세요.</div>
       <div class="fb">
         <div class="fb-block">
-          <div class="fb-row">
-            <span class="fb-cap"><i class="n">1</i>학생 문장</span>
+          <div class="fb-row orig">
+            <span class="fb-cap">학생 문장</span>
+            <p class="fb-diff"></p>
             <textarea class="fb-in said" data-sync-id="q6-said-1" rows="1" spellcheck="false"></textarea>
           </div>
           <div class="fb-row fix">
             <span class="fb-cap">교정</span>
             <textarea class="fb-in fixed" data-sync-id="q6-fixed-1" rows="1" spellcheck="false"></textarea>
           </div>
-          <div class="fb-row out">
-            <span class="fb-cap">바뀐 부분</span>
-            <p class="fb-diff"></p>
-          </div>
         </div>
         <div class="fb-block">
-          <div class="fb-row">
-            <span class="fb-cap"><i class="n">2</i>학생 문장</span>
+          <div class="fb-row orig">
+            <span class="fb-cap">학생 문장</span>
+            <p class="fb-diff"></p>
             <textarea class="fb-in said" data-sync-id="q6-said-2" rows="1" spellcheck="false"></textarea>
           </div>
           <div class="fb-row fix">
             <span class="fb-cap">교정</span>
             <textarea class="fb-in fixed" data-sync-id="q6-fixed-2" rows="1" spellcheck="false"></textarea>
           </div>
-          <div class="fb-row out">
-            <span class="fb-cap">바뀐 부분</span>
-            <p class="fb-diff"></p>
-          </div>
         </div>
         <div class="fb-block">
-          <div class="fb-row">
-            <span class="fb-cap"><i class="n">3</i>학생 문장</span>
+          <div class="fb-row orig">
+            <span class="fb-cap">학생 문장</span>
+            <p class="fb-diff"></p>
             <textarea class="fb-in said" data-sync-id="q6-said-3" rows="1" spellcheck="false"></textarea>
           </div>
           <div class="fb-row fix">
             <span class="fb-cap">교정</span>
             <textarea class="fb-in fixed" data-sync-id="q6-fixed-3" rows="1" spellcheck="false"></textarea>
           </div>
-          <div class="fb-row out">
-            <span class="fb-cap">바뀐 부분</span>
-            <p class="fb-diff"></p>
+        </div>
+        <div class="fb-block note">
+          <div class="fb-row">
+            <span class="fb-cap">노트</span>
+            <textarea class="fb-in memo" data-sync-id="q6-note-1" rows="1" spellcheck="false"></textarea>
+          </div>
+        </div>
+        <div class="fb-block note">
+          <div class="fb-row">
+            <span class="fb-cap">노트</span>
+            <textarea class="fb-in memo" data-sync-id="q6-note-2" rows="1" spellcheck="false"></textarea>
           </div>
         </div>
       </div>
-      <button class="fb-add" type="button">＋ 교정 추가</button>
+      <div class="fb-adds">
+        <button class="fb-add" data-add="fix" type="button">＋ 교정</button>
+        <button class="fb-add" data-add="note" type="button">＋ 노트</button>
+      </div>
     </div>
 
     <!-- ============ FEEDBACK ============ -->
@@ -535,33 +583,6 @@
           <span class="answer-space" data-sync-id="tutor-feedback"></span>
         </div>
       </div>
-    </div>
-
-    <!-- the number that sells the next lesson -->
-    <div class="section" data-page-id="todays-result">
-      <h2 class="section-title">오늘의 결과</h2>
-      <p class="section-subtitle"><span class="ko">오늘 한 건 딱 하나예요. 계속 이야기한 것.</span></p>
-      <div class="payoff">
-        <span class="eqline">내 말로 대답한 질문</span>
-        <span class="big">8</span>
-        <span class="cap">고친 문장은 전부 남아 있어요</span>
-      </div>
-      <div class="hint"><span class="hint-chip">고친 문장은 수업 뒤에 리포트로 보내 드려요</span></div>
-    </div>
-
-    <!-- the track never ends — that is the offer, so it gets its own page -->
-    <div class="section" data-page-id="next-topic">
-      <h2 class="section-title">다음 주제</h2>
-      <p class="section-subtitle"><span class="ko">다음엔 어떤 이야기를 해 볼까요? 마음에 드는 걸 골라 주세요.</span></p>
-      <div class="tutor-note">고른 테마를 기억해 뒀다가 다음 수업 첫 주제로 잡아 주세요.</div>
-      <div class="opt-list" data-pick="multi" data-sync-id="next-topic-pick" data-sync-kind="selection" data-sync-state="on">
-        <button class="opt-row" data-sync-option="values"><span class="emo">🧭</span><span class="opt-body"><span class="opt-main">가치관·인생</span><span class="opt-sub">후회 없는 삶 · 버킷리스트</span></span></button>
-        <button class="opt-row" data-sync-option="society"><span class="emo">📰</span><span class="opt-body"><span class="opt-main">사회·이슈</span><span class="opt-sub">AI와 일자리 · 재택 vs 출근</span></span></button>
-        <button class="opt-row" data-sync-option="culture"><span class="emo">🎬</span><span class="opt-body"><span class="opt-main">문화·취향</span><span class="opt-sub">인생 영화 · K-콘텐츠의 매력</span></span></button>
-        <button class="opt-row" data-sync-option="people"><span class="emo">💬</span><span class="opt-body"><span class="opt-main">관계·감정</span><span class="opt-sub">진짜 친구란 · MBTI 믿어?</span></span></button>
-        <button class="opt-row" data-sync-option="future"><span class="emo">🔮</span><span class="opt-body"><span class="opt-main">미래·상상</span><span class="opt-sub">로또에 당첨된다면 · 10년 후의 나</span></span></button>
-      </div>
-      <div class="hint"><span class="hint-chip">주제는 매달 늘어나요 — 지금 30개</span></div>
     </div>
 
     <div class="brand-page end" data-page-id="closing">
@@ -703,23 +724,52 @@
       return html + (run ? tag(t, run) : "");
     }
 
+    // 두 글자열이 얼마나 겹치는가 (0~1). 낱말 수가 안 맞는 자리를 글자까지
+    // 쪼갤지 판단하는 데만 쓴다.
+    function sim(a, b) {
+      if (!a.length || !b.length) return 0;
+      var same = 0;
+      diff(a.split(""), b.split("")).forEach(function (o) {
+        if (o.t === "=") same += o.v.length;
+      });
+      return (2 * same) / (a.length + b.length);
+    }
+
+    var AKIN = 0.45;         // 이 정도 겹치면 "같은 말을 고친 것" 으로 본다
+
     function render(a, b) {
-      var ops = diff(a, b), html = [], k = 0, t, run, ins, j, i;
+      var ops = diff(a, b), html = [], k = 0, t, run, ins, j, i, A, B;
       while (k < ops.length) {
         t = ops[k].t;
         run = [];
         while (k < ops.length && ops[k].t === t) run.push(ops[k++].v);
 
-        // 지운 낱말 뒤에 바로 넣은 낱말이 오고, 개수까지 같으면 한 낱말씩
-        // 짝지어 글자 단위로 쪼갠다. 개수가 다르면 짝이 어긋나므로 —
-        // 낱말이 통째로 빠지거나 새로 들어온 것이므로 — 그대로 둔다.
         if (t === "-" && k < ops.length && ops[k].t === "+") {
           ins = [];
           j = k;
           while (j < ops.length && ops[j].t === "+") ins.push(ops[j++].v);
+
+          // 낱말 수가 같으면 한 낱말씩 짝지어 글자 단위로 쪼갠다.
           if (run.length === ins.length) {
             for (i = 0; i < run.length; i++)
               html.push(join(diff(run[i].split(""), ins[i].split(""))));
+            k = j;
+            continue;
+          }
+
+          /* 수가 달라도, 두 덩어리가 서로 닮았으면 같이 쪼갠다. 한 낱말이 두
+             낱말로 늘어나는 교정(없어요 → 없는것 같아요)이 흔한데, 낱말 수만
+             보고 물러나면 문장 끝이 통째로 지워졌다 다시 쓰인 것처럼 보여서
+             정작 무엇을 고쳤는지가 사라진다.
+
+             닮았을 때만 쪼개는 게 중요하다. 아무 상관 없는 두 덩어리를
+             (별로 → 그렇게) 글자로 쪼개면 우연히 겹친 글자를 붙잡아 알록달록
+             흩어진 자국만 남는다. 그래서 겹치는 정도를 먼저 재고, 절반쯤
+             겹칠 때만 들어간다. */
+          A = run.join(" ");
+          B = ins.join(" ");
+          if (sim(A, B) >= AKIN) {
+            html.push(join(diff(A.split(""), B.split(""))));
             k = j;
             continue;
           }
@@ -733,18 +783,49 @@
     // 칸은 내용만큼만 높다. 고정 높이를 주면 한 줄짜리 교정에도 빈 칸이
     // 세 줄씩 깔려서, 카드가 폼처럼 보인다.
     function fit(el) {
+      // 숨어 있는 칸은 scrollHeight 가 0 이다. 그대로 재면 높이를 0 으로 박아
+      // 두게 되고, 나중에 그 칸을 다시 열었을 때 한 줄짜리로 눌려 나온다.
+      if (!el.offsetParent) return;
       el.style.height = "auto";
       el.style.height = el.scrollHeight + "px";
     }
 
     var groups = [];
     document.querySelectorAll(".fb").forEach(function (fb) {
-      var add = fb.nextElementSibling;
-      if (add && !add.classList.contains("fb-add")) add = null;
-      var blocks = [].slice.call(fb.querySelectorAll(".fb-block")).map(function (block) {
+      var bar     = fb.nextElementSibling;
+      if (bar && !bar.classList.contains("fb-adds")) bar = null;
+      var addFix  = bar && bar.querySelector('[data-add="fix"]');
+      var addNote = bar && bar.querySelector('[data-add="note"]');
+
+      /* 노트는 교정이 아니다 — 고칠 문장이 없어도 튜터가 짚고 싶은 것(표현 하나,
+         발음 하나, 다음에 해 볼 것)이 생긴다. 칸이 하나뿐이라 차이도 그리지
+         않는다. 열리고 닫히는 규칙만 교정 블록과 같다. */
+      var notes = [].slice.call(fb.querySelectorAll(".fb-block.note")).map(function (block) {
+        var memo = block.querySelector(".memo");
+        memo.addEventListener("input", function () { fit(memo); });
+        return {
+          el: block,
+          paint: function () { fit(memo); return !!memo.value.trim(); }
+        };
+      });
+
+      var blocks = [].slice.call(fb.querySelectorAll(".fb-block:not(.note)")).map(function (block) {
         var said  = block.querySelector(".said");
         var fixed = block.querySelector(".fixed");
         var out   = block.querySelector(".fb-diff");
+
+        /* 바뀐 자리는 학생 문장 칸 "안" 에 그려진다. 칸이 하나 줄어드는 것보다
+           중요한 건, 고친 결과가 원래 문장 위에 얹혀 보인다는 것이다.
+           튜터가 받아 적은 문장을 다시 손봐야 할 때가 있으므로, 그 자리를
+           누르면 입력칸으로 돌아온다. */
+        out.addEventListener("click", function () {
+          block.classList.add("editing");
+          fit(said);                       // 방금 보이게 됐으니 이제서야 잴 수 있다
+          said.focus();
+        });
+        said.addEventListener("blur", function () {
+          block.classList.remove("editing");
+        });
         var last  = null;
 
         function paint() {
@@ -785,27 +866,47 @@
          공유되는 값(칸의 글자)에서 그대로 나오기 때문이다. 그래서 튜터가
          ＋ 를 눌러 연 빈 블록은 학습자 화면에 나타나지 않고(보여 줄 것이
          없다), 거기에 한 글자라도 적는 순간 나타난다. */
-      var shown = 1;
+      var shown = { fix: 1, note: 0 };
 
-      function grow() {
-        var filled = blocks.map(function (b) { return b.paint(); });
-        var need = 1;
+      // 한 줄에 한 종류. 글이 들어 있으면 어느 화면에서나 열리고, 비어 있는
+      // 칸은 연 사람 화면에만 있다 — 보여 줄 것이 없는 칸이라 그렇다.
+      function open(list, kind) {
+        var filled = list.map(function (b) { return b.paint(); });
+        var need = 0;
         filled.forEach(function (v, i) { if (v) need = i + 1; });
-        var open = Math.max(shown, need);
-        blocks.forEach(function (b, i) {
-          b.el.classList.toggle("hide", i >= open);
+        var n = Math.max(shown[kind], need);
+        list.forEach(function (b, i) {
+          b.el.classList.toggle("hide", i >= n);
           b.el.classList.toggle("empty", !filled[i]);
         });
-        if (add) add.classList.toggle("hide", open >= blocks.length);
+        return n;
       }
 
-      if (add) add.addEventListener("click", function () {
-        if (shown < blocks.length) shown++;
-        grow();
-        // 방금 연 칸으로 커서를 옮긴다 — 튜터는 이미 다음 문장을 듣고 있다
-        var open = [].slice.call(fb.querySelectorAll(".fb-block:not(.hide)")).pop();
-        if (open) open.querySelector(".said").focus();
-      });
+      function grow() {
+        var nf = open(blocks, "fix");
+        var nn = open(notes, "note");
+        if (addFix)  addFix.classList.toggle("hide", nf >= blocks.length);
+        if (addNote) addNote.classList.toggle("hide", nn >= notes.length);
+        if (bar) bar.classList.toggle("hide", nf >= blocks.length && nn >= notes.length);
+      }
+
+      function opener(kind, list, field) {
+        return function () {
+          if (shown[kind] < list.length) shown[kind]++;
+          grow();
+          // 방금 연 칸으로 커서를 옮긴다 — 튜터는 이미 다음 문장을 듣고 있다
+          var last = list.filter(function (b) { return !b.el.classList.contains("hide"); }).pop();
+          if (last) last.el.querySelector(field).focus();
+        };
+      }
+
+      if (addFix)  addFix.addEventListener("click", opener("fix", blocks, ".said"));
+      if (addNote) addNote.addEventListener("click", opener("note", notes, ".memo"));
+
+      // 타이핑은 위임으로 받는다 — 어느 블록에서 쳤든 카드 전체를 다시 재서,
+      // 점선이 실선이 되는 것도 다음 블록이 열리는 것도 그 자리에서 일어난다
+      // (400ms 뒤에 따라오는 건 늦다).
+      fb.addEventListener("input", grow);
 
       groups.push(grow);
       grow();
@@ -840,6 +941,10 @@
        일본어는 눌러서 보는 번역이라 여기 두지 않는다. */
     const D = {
       "体験レッスン": "체험레슨",
+      "たくさん話したい": "자유롭게 많이 말할래요",
+      "今日のゴールは「話す量」": "많이 말하는 게 오늘의 목표",
+      "正しく直してほしい": "정확하게 고쳐 받을래요",
+      "今日のゴールは「正確さ」": "정확하게 말하는 게 오늘의 목표",
       "上級 · 25分": "상급 · 25분",
       "「豊かさ」の再定義：お金か、時間か": "'풍요로움'의 재정의: 돈인가, 시간인가",
       "ここから25分。教わるのではなく、話します。あなたの言った文が、その場でもっと自然な韓国語に変わっていきます。": "지금부터 25분. 배우는 게 아니라 말해요. 여러분이 말한 문장이 그 자리에서 더 자연스러운 한국어로 바뀌어 갑니다.",
@@ -873,7 +978,6 @@
       ".translation", ".answer-label", ".answer-box",
       ".s-ja",                                   // 지문 한 문장의 일본어 번역
       ".fb-cap",                                 // 「말한 문장」
-      ".opt-row .opt-sub",
       ".who", ".who-name",
       ".transition-kicker", ".brand-title", ".podo-badge .tag"
     ].join(",");
