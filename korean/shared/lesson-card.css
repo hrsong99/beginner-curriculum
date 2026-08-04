@@ -319,8 +319,12 @@ h1 .title-ja,
   font-weight: 600;
 }
 
+/* The rhythm between repeated items is set here AND by the answer box's own
+   10/6 margins, so 9px a side put 34px between two boxes — on a four-item
+   page that reads as four separate exercises drifting apart rather than one
+   activity. Two-a-side lands the visible gap at ~20px. */
 .task-block {
-  padding: 9px 0;
+  padding: 2px 0;
 }
 
 .task-block:first-child,
@@ -1366,9 +1370,17 @@ body.teaching .note-input,
    the script box's grand-sibling rather than its neighbour and the first
    selector never matches. Without the second one the gap was right only while
    teaching mode was on. (The merged case is tightened in the track sheet,
-   which loads after this one and wins on specificity.) */
-.section-subtitle:has(+ .note-input),
-.section-subtitle:has(+ .tutor-note + .note-input) { margin-bottom: 8px; }
+   which loads after this one and wins on specificity.)
+
+   Only when the memo is actually SHOWN. It is display:none by default, and a
+   hidden box contributes no margin, so tightening the script unconditionally
+   left the activity 8px under the script on every page in student view — the
+   memo's own 18px was paying for a gap it wasn't rendering. Student view is
+   what the deck loads as, so that was the state nobody had measured. */
+body.teaching .section-subtitle:has(+ .note-input),
+body.teaching .section-subtitle:has(+ .tutor-note + .note-input),
+.section-subtitle:has(+ .note-input:not(:placeholder-shown)),
+.section-subtitle:has(+ .tutor-note + .note-input:not(:placeholder-shown)) { margin-bottom: 8px; }
 
 /* empty and only the tutor can see it: quieter still, so an unused box on
    every page never reads as content the learner is missing */
