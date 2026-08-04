@@ -1141,7 +1141,10 @@
 .section:has(> .payoff),
 .section:has(> .usp),
 .section:has(> .offer),
-.section:has(> .ptable) {
+.section:has(> .ptable),
+.section:has(> .sent-anat),
+.section:has(> .pitch),
+.section:has(> .batchim) {
   display: flex;
   flex-direction: column;
 }
@@ -1155,7 +1158,10 @@
 .section > .payoff,
 .section > .usp,
 .section > .offer,
-.section > .ptable { margin-top: auto; }
+.section > .ptable,
+.section > .sent-anat,
+.section > .pitch,
+.section > .batchim { margin-top: auto; }
 
 /* :not(.note-input) — a page's tutor note is normally slotted under the green
    script, but a page with no script takes it at the end, and a bare :last-child
@@ -1169,7 +1175,10 @@
 .section:has(> .payoff) > :last-child:not(.note-input),
 .section:has(> .usp) > :last-child:not(.note-input),
 .section:has(> .offer) > :last-child:not(.note-input),
-.section:has(> .ptable) > :last-child:not(.note-input) { margin-bottom: auto; }
+.section:has(> .ptable) > :last-child:not(.note-input),
+.section:has(> .sent-anat) > :last-child:not(.note-input),
+.section:has(> .pitch) > :last-child:not(.note-input),
+.section:has(> .batchim) > :last-child:not(.note-input) { margin-bottom: auto; }
 
 /* a hint chip sitting under a component needs air (hard shadows below) */
 .section > .hint { margin-top: 16px; }
@@ -1220,23 +1229,28 @@
 
    These are seat colours, not state colours: they are pedagogy
    and they mean one thing each, exactly like 子音/母音 above.
-   Two rules keep them from colliding with green:
+   Three rules keep them honest:
 
-     - they only ever appear where a sentence is being SHOWN
-       (teach pages, model lines, story bubbles), never inside a
-       .choose-row or an answer input, where green owns the page
-     - they tint the glyph, never a padded pill — a chip with
-       side padding fakes a space into 학생입니다
+     - TRAINING WHEELS, same as the .plain drills in the hangul
+       deck: the tint is on where a sentence is SHOWN (teach
+       pages, model lines, the story read-through) and off where
+       one is PRODUCED (대화 채우기, 한국 여행, every blank and
+       every choose row). A learner who still needs the colour to
+       find the ending has not learnt the ending.
+     - so it never lands where green already means something —
+       green owns state, and no cell carries both
+     - it tints the glyph, never a padded pill: a chip with side
+       padding fakes a space into 학생입니다
    ============================================================ */
 :root {
-  --tp-bg:  #e7e0fb;   /* 은/는 — the topic marker */
-  --tp-ink: #5a3ec8;
-  --en-bg:  #ffe2cc;   /* 입니다 / 입니까? — the polite ending */
-  --en-ink: #b2591c;
+  --topic-bg:  #e7e0fb;   /* 은/는 — the topic marker */
+  --topic-ink: #5a3ec8;
+  --ending-bg:  #ffe2cc;   /* 입니다 / 입니까? — the polite ending */
+  --ending-ink: #b2591c;
 }
 
 /* ---------- the two pieces, inline inside a sentence ---------- */
-.tp, .en {
+.topic, .ending {
   padding: 1px 2px;
   margin: 0 -1px;      /* give back what the padding took, so the word stays tight */
   border-radius: 4px;
@@ -1245,8 +1259,8 @@
           box-decoration-break: clone;
 }
 
-.tp { background: var(--tp-bg); color: var(--tp-ink); }
-.en { background: var(--en-bg); color: var(--en-ink); }
+.topic { background: var(--topic-bg); color: var(--topic-ink); }
+.ending { background: var(--ending-bg); color: var(--ending-ink); }
 
 /* ---------- sentence anatomy: two blocks, four tiles ----------
    The same diagram runs twice in the deck. On the 입니다 page only
@@ -1294,12 +1308,12 @@
 
 /* a lit tile carries its colour on the whole box — at this size the
    inline highlighter is too small to read as a part */
-.sa-t.tp { border-color: transparent; background: var(--tp-bg); }
-.sa-t.tp b { color: var(--tp-ink); }
-.sa-t.tp small { color: var(--tp-ink); opacity: .72; }
-.sa-t.en { border-color: transparent; background: var(--en-bg); }
-.sa-t.en b { color: var(--en-ink); }
-.sa-t.en small { color: var(--en-ink); opacity: .72; }
+.sa-t.topic { border-color: transparent; background: var(--topic-bg); }
+.sa-t.topic b { color: var(--topic-ink); }
+.sa-t.topic small { color: var(--topic-ink); opacity: .72; }
+.sa-t.ending { border-color: transparent; background: var(--ending-bg); }
+.sa-t.ending b { color: var(--ending-ink); }
+.sa-t.ending small { color: var(--ending-ink); opacity: .72; }
 
 .sa-cap {
   display: block;
@@ -1310,6 +1324,10 @@
   font-weight: 800;
   text-align: center;
 }
+
+/* the diagram takes the page's free space above it (see the :has() registry);
+   the rule card underneath is welded to it, so it needs its own air */
+.sent-anat + .pattern-stack { margin-top: 20px; }
 
 /* ---------- intonation: the ending drawn, not written ----------
    ↘ and ↗ were characters inside the Korean string, which is the one
@@ -1341,7 +1359,7 @@
   height: 46px;
   margin: 10px 0 8px;
   overflow: visible;
-  color: var(--en-ink);
+  color: var(--ending-ink);
 }
 
 .pi-curve path {
@@ -1404,7 +1422,7 @@
   border-radius: 7px;
 }
 
-.bt-syl.on::after { background: var(--tp-bg); }
+.bt-syl.on::after { background: var(--topic-bg); }
 .bt-syl.off::after { border: 1.5px dashed var(--gray-400); }
 
 .bt-body { min-width: 0; }
@@ -1435,8 +1453,8 @@
   margin-left: 4px;
   padding: 2px 9px;
   border-radius: 7px;
-  background: var(--tp-bg);
-  color: var(--tp-ink);
+  background: var(--topic-bg);
+  color: var(--topic-ink);
   font-size: 20px;
   font-weight: 900;
 }
@@ -1449,7 +1467,7 @@
   word-break: keep-all;
 }
 
-.bt-ex b { color: var(--tp-ink); font-weight: 900; }
+.bt-ex b { color: var(--topic-ink); font-weight: 900; }
 
 /* ---------- 漢字 bridge: the equivalence IS the point ---------- */
 .bridge {
@@ -1477,7 +1495,8 @@
   line-height: 1.1;
 }
 
-.br-eq { color: var(--gray-400); font-size: 15px; font-weight: 800; }
+/* the arrow is the claim the page is making, so it is not a faint tick */
+.br-eq { color: var(--ink); font-size: 20px; font-weight: 900; line-height: 1; }
 
 .br-ko {
   font-size: 27px;
@@ -1510,12 +1529,17 @@
 .tally .ty-h {
   padding: 7px 0;
   border-radius: 8px;
-  background: var(--en-bg);
-  color: var(--en-ink);
+  background: var(--ending-bg);
+  color: var(--ending-ink);
   font-size: 13px;
   font-weight: 900;
   text-align: center;
 }
+
+/* .payoff takes margin-top:auto from the registry so it floats to the optical
+   centre. Here it closes the table instead, so the free space belongs above
+   the table and the two stay welded. */
+.tally + .payoff { margin-top: 24px; }
 
 .tally span:not(.ty-h) {
   padding: 9px 4px;
@@ -2020,6 +2044,82 @@ button.opt-row:active { transform: scale(.99); }
 
 .opt-row.on .opt-sub { color: var(--gray-500); }
 .opt-row.on .lv-badge { background: var(--green-500); color: #fff; }
+
+/* 학습 동기 줄의 그림 — 이모지 자리를 그대로 대신한다. 이모지는 기기마다
+   다른 그림이 나오고, 옆 장의 PODO 아트와 나란히 놓으면 혼자만 튄다. */
+.opt-row .r-ico { flex: none; width: 32px; height: 32px; object-fit: contain; }
+
+/* ---------- 두 개짜리 선택 ----------
+   고를 것이 둘뿐인 장에서는 한 줄짜리 카드가 화면을 못 채우고, 무엇이
+   다른지도 이름만으로는 안 보인다. 그래서 카드가 자기를 설명한다 —
+   고르면 무슨 일이 일어나는지 세 줄. 상자는 늘지 않는다: 구분선 하나로
+   나누고, 점선이 아니라 실선이다(점선 회색은 "여기 쓰세요" 하나뿐). */
+.opt-row.tall { align-items: flex-start; padding: 17px 17px 16px; }
+.opt-row.tall .opt-main { font-size: 16.5px; }
+
+.opt-note {
+  display: grid;
+  gap: 6px;
+  margin: 12px 0 0;
+  padding: 11px 0 0;
+  border-top: 1px solid var(--gray-200);
+  list-style: none;
+}
+
+.opt-row.on .opt-note { border-top-color: var(--green-500); }
+
+.opt-note li {
+  display: grid;
+  grid-template-columns: 11px 1fr;
+  color: #8a8a85;
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1.45;
+  word-break: keep-all;
+}
+
+.opt-note li::before { content: "·"; font-weight: 800; }
+.opt-row.on .opt-note li { color: var(--gray-500); }
+
+/* ============================================================
+   SAID → BETTER · 프리토킹이 파는 한 장면
+   ------------------------------------------------------------
+   말한 문장을 그대로 적고, 바로 아래에 더 자연스러운 문장을 적는다.
+   두 줄이 붙어 있어야 무엇이 달라졌는지 눈으로 대 볼 수 있다 —
+   피드백을 수업 끝에 몰아 주면, 학습자는 자기가 무슨 말을 했는지
+   이미 잊은 뒤다.
+
+   새 컴포넌트가 아니라 .answer-box 두 개다. 칸이 입력·공유·티칭 모드를
+   이미 알고 있어서, 여기서 더할 것은 "아래쪽이 나은 쪽"이라는 표시뿐:
+   초록은 이 시스템에서 맞는 말이라는 뜻이고, 그게 정확히 아래 칸이다.
+   ============================================================ */
+.diff {
+  display: grid;
+  gap: 0;
+  margin-top: 24px;
+}
+
+.diff .answer-box { margin: 0; }
+
+/* 화살표는 두 칸 사이의 관계를 말한다: 위가 아래로 바뀐다 */
+.diff .diff-arrow {
+  display: block;
+  padding: 7px 0 6px;
+  text-align: center;
+  color: var(--gray-400);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.diff .better { border-color: var(--green-500); }
+.diff .better .answer-label {
+  background: var(--green-100);
+  border-bottom-color: var(--green-500);
+  color: #3f7a1c;
+}
+.diff .better .answer-space { background: #f6fdf0; }
+.diff .better .answer-space.as-input:focus-within { background: #fff; }
 
 /* ---------- level check ---------- */
 .lvpick {
@@ -2904,7 +3004,10 @@ button.opt-row:active { transform: scale(.99); }
 .phone.paged > .section.pg-on:has(> .payoff),
 .phone.paged > .section.pg-on:has(> .usp),
 .phone.paged > .section.pg-on:has(> .offer),
-.phone.paged > .section.pg-on:has(> .ptable) { display: flex; }
+.phone.paged > .section.pg-on:has(> .ptable),
+.phone.paged > .section.pg-on:has(> .sent-anat),
+.phone.paged > .section.pg-on:has(> .pitch),
+.phone.paged > .section.pg-on:has(> .batchim) { display: flex; }
 
 body { padding-bottom: 84px; }         /* the bar must not cover the last line */
 
