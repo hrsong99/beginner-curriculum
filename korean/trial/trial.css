@@ -2320,75 +2320,122 @@ button.opt-row:active { transform: scale(.99); }
    지금은 흰 카드에 작은 캡션과 실선 하나뿐이고, 색은 고친 쪽과
    달라진 곳에만 들어간다.
    ============================================================ */
-/* ============================================================
-   피드백 카드 · 프리토킹이 파는 한 장면
-   ------------------------------------------------------------
-   말한 문장 → 고친 문장 → 달라진 곳. 세 칸이 한 카드에 붙어 있다.
-   피드백을 수업 끝에 몰아 주면 학습자는 자기가 무슨 말을 했는지
-   이미 잊은 뒤라, 고친 문장이 남의 문장처럼 읽힌다.
+/* 질문 장에는 카드 하나뿐이라, 남는 높이를 전부 아래에 몰아 두면 화면이
+   비어 보인다. 위아래로 갈라 놓으면 카드가 눈이 닿는 자리에 온다 —
+   이 시트가 다른 한 컴포넌트짜리 장에서 이미 쓰는 방식이다. */
+.section:has(> .fb) {
+  display: flex;
+  flex-direction: column;
+}
 
-   색은 이 시스템의 뜻 그대로다: 초록은 맞는 쪽(고친 문장), 붉은색은
-   .opt.wrong 이 이미 쓰고 있는 "아닌 쪽"이다. 새로 만든 뜻은 없다.
-   상자는 늘지 않는다 — 세 칸은 카드 안의 줄이지, 카드 속 카드가 아니다.
-   ============================================================ */
+.section > .fb { margin-top: auto; }
+.section > .fb-add { margin-bottom: auto; }
+
 .fb {
+  display: grid;
+  gap: 12px;
   margin-top: 24px;
+}
+
+/* 블록을 더 여는 버튼. 점선이 아니다 — 점선 회색은 "여기 쓰세요" 한 가지
+   뜻으로만 쓰고, 이건 쓰는 칸이 아니라 누르는 것이다. */
+.fb-add {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  background: var(--gray-100);
+  color: var(--gray-500);
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 800;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform .09s, background .12s;
+}
+
+.fb-add:active { transform: scale(.995); background: #ececeb; }
+.fb-add.hide { display: none; }
+
+.fb-block {
   border: 1px solid var(--gray-200);
   border-radius: 12px;
   background: #fff;
   overflow: hidden;
 }
 
-.fb-pane + .fb-pane { border-top: 1px solid var(--gray-200); }
+.fb-block.hide { display: none; }
 
-.fb-lab {
+/* 아직 안 쓴 블록은 점선이다 — 이 시스템에서 점선 회색은 "여기 쓰세요" 하나만
+   뜻하고, 비어 있는 교정 칸이 정확히 그것이다. 채워지는 순간 실선이 된다. */
+.fb-block.empty { border-style: dashed; }
+.fb-block.empty .fb-row.fix { background: transparent; }
+.fb-block.empty .fb-row.fix .fb-cap { color: #a8c98e; }
+
+.fb-row { padding: 10px 14px 11px; }
+.fb-row + .fb-row { border-top: 1px solid var(--gray-200); }
+
+.fb-cap {
   display: block;
-  padding: 9px 14px;
-  border-bottom: 1px solid var(--gray-200);
+  margin-bottom: 3px;
+  color: var(--gray-400);
+  font-size: 11.5px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+/* 블록 번호는 캡션 앞에 붙는 작은 숫자다 — 한 질문에서 몇 번째 교정인지 */
+.fb-cap .n {
+  display: inline-block;
+  min-width: 15px;
+  margin-right: 5px;
+  padding: 1px 0;
+  border-radius: 5px;
   background: var(--gray-100);
-  color: #575753;
-  font-size: 12.5px;
-  line-height: 1.35;
-  font-weight: 700;
+  color: var(--gray-500);
+  font-size: 10.5px;
+  font-style: normal;
+  font-weight: 900;
+  text-align: center;
 }
 
 .fb-in {
   display: block;
   width: 100%;
-  min-height: 76px;
-  padding: 13px 16px;
+  min-height: 34px;                     /* 비어 있어도 카드가 납작해 보이지 않게 */
+  padding: 0;
   border: 0;
-  background: #f8f8f7;
+  background: transparent;
   color: #1c1c1c;
   font-family: inherit;
-  font-size: 16px;
+  font-size: 16.5px;
   font-weight: 700;
   line-height: 1.5;
   resize: none;
+  overflow: hidden;                     /* 높이는 내용에 맞춰 스크립트가 늘린다 */
+  word-break: keep-all;
 }
 
-.fb-in:focus { outline: none; background: #fff; }
+.fb-in:focus { outline: none; }
+.fb-in::placeholder { color: #c9c9c4; font-weight: 600; }
 
-/* 고치는 칸이 나은 쪽이다 */
-.fb .fix .fb-lab {
-  background: var(--green-100);
-  border-bottom-color: var(--green-500);
-  color: #3f7a1c;
-}
-.fb .fix .fb-in { background: #f6fdf0; }
-.fb .fix .fb-in:focus { background: #fff; }
+/* 고친 쪽이 나은 쪽이다 — 초록은 이 시스템에서 맞는 말이라는 뜻 */
+.fb-row.fix { background: #f6fdf0; }
+.fb-row.fix .fb-cap { color: #3f7a1c; }
+.fb-row.fix .fb-in::placeholder { color: #b6d99b; }
 
 /* 달라진 곳은 달라졌을 때만 나타난다 — 빈 칸이 미리 자리를 잡고 있으면
-   "여기 뭔가 들어와야 하는데 비었다"로 읽힌다 */
-.fb .out { display: none; }
-.fb.has-diff .out { display: block; }
+   "여기 뭔가 들어와야 하는데 비었다" 로 읽힌다 */
+.fb-row.out { display: none; background: #fbfbfa; }
+.fb-block.has-diff .fb-row.out { display: block; }
 
 .fb-diff {
   margin: 0;
-  padding: 14px 16px;
   font-size: 16.5px;
   font-weight: 700;
-  line-height: 1.7;
+  line-height: 1.75;
   word-break: keep-all;
 }
 
