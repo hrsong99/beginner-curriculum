@@ -1149,36 +1149,33 @@
   flex-direction: column;
 }
 
-/* free space opens ABOVE the diagram and BELOW whatever closes the page,
-   so a diagram and its caption/chip stay welded together as one group */
-.section > .anat,
-.section > .build,
-.section > .blk-row,
-.section > .combo,
-.section > .payoff,
-.section > .usp,
-.section > .offer,
-.section > .ptable,
-.section > .sent-hero,
-.section > .pitch,
-.section > .batchim { margin-top: auto; }
+/* One rhythm under the script box. These four carry their own 24px, which on
+   a block page collapses into the script's 26px but on these flex pages adds
+   to it — so half the deck sat 26px under the script and half sat 50px. The
+   script owns the gap; the component brings none. (Kept conditional on there
+   being a script above: a page without one still needs the margin.) */
+.section:has(> .section-subtitle) > .sent-hero,
+.section:has(> .section-subtitle) > .pitch,
+.section:has(> .section-subtitle) > .batchim,
+.section:has(> .section-subtitle) > .combi,
+.section:has(> .section-subtitle) > .anat,
+.section:has(> .section-subtitle) > .build,
+.section:has(> .section-subtitle) > .blk-row,
+.section:has(> .section-subtitle) > .combo,
+.section:has(> .section-subtitle) > .payoff,
+.section:has(> .section-subtitle) > .usp,
+.section:has(> .section-subtitle) > .offer,
+.section:has(> .section-subtitle) > .ptable { margin-top: 0; }
 
-/* :not(.note-input) — a page's tutor note is normally slotted under the green
-   script, but a page with no script takes it at the end, and a bare :last-child
-   would hand the spacer to the note instead of to the block that closes the
-   page (which stops the page filling the screen). display:none does not exempt
-   it: :last-child is structural. */
-.section:has(> .anat) > :last-child:not(.note-input),
-.section:has(> .build) > :last-child:not(.note-input),
-.section:has(> .blk-row) > :last-child:not(.note-input),
-.section:has(> .combo) > :last-child:not(.note-input),
-.section:has(> .payoff) > :last-child:not(.note-input),
-.section:has(> .usp) > :last-child:not(.note-input),
-.section:has(> .offer) > :last-child:not(.note-input),
-.section:has(> .ptable) > :last-child:not(.note-input),
-.section:has(> .sent-hero) > :last-child:not(.note-input),
-.section:has(> .pitch) > :last-child:not(.note-input),
-.section:has(> .batchim) > :last-child:not(.note-input) { margin-bottom: auto; }
+/* Free space used to open ABOVE the diagram (margin-top:auto here) so the
+   activity landed in the optical centre. It reads as a hole: what the tutor
+   says and what the learner looks at while they say it are one thought, and
+   on a light page half a screen of white between them looks like something
+   failed to load — the emptier the page, the worse it got.
+   Every page now hangs its content a fixed distance under the script and
+   lets the leftover space fall to the foot of the card. Kept as flex
+   columns above: the layout is the same, only the spacers are gone. */
+
 
 /* a hint chip sitting under a component needs air (hard shadows below) */
 .section > .hint { margin-top: 16px; }
