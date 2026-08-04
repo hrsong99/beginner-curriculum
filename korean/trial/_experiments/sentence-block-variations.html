@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <title>문장 블록 시안 — trial-2 오늘의 패턴 · PODO</title>
+  <link rel="stylesheet" href="../../shared/lesson-card.css">
+  <link rel="stylesheet" href="../trial.css">
+  <style>
+    /* ============================================================
+       MOCKUP CHROME — not part of the deck.
+       ============================================================ */
+    body { background: #f0f0ee; }
+    .rail { display: flex; flex-wrap: wrap; gap: 22px; align-items: flex-start; padding: 22px 26px 60px; }
+    .col { flex: none; width: 480px; }
+    .col > .phone { min-height: 0; padding-bottom: 0; border-radius: 18px; overflow: hidden; }
+    .col > .phone > .section { min-height: 0; }
+    .lbl { margin: 0 0 10px; font-size: 13px; font-weight: 900; }
+    .lbl small { display: block; margin-top: 3px; color: #757575; font-size: 11.5px; font-weight: 700; }
+    .lbl.now { color: #a5a5a5; }
+    .page-head { padding: 26px 26px 4px; }
+    .page-head h1 { margin: 0 0 6px; font-size: 21px; font-weight: 900; }
+    .page-head p { margin: 0; max-width: 800px; color: #575753; font-size: 13.5px; font-weight: 600; line-height: 1.6; }
+
+    /* the current build, kept alive here for comparison */
+    .sa-t.swap-old { border-style: dashed; border-color: var(--gray-400); background: var(--gray-50); }
+    .sa-t.swap-old b { color: var(--gray-400); letter-spacing: .1em; }
+
+    /* ============================================================
+       SHARED · every variation below obeys two rules the current
+       page breaks:
+         1. every piece of the sentence is the SAME kind of object —
+            same height, same radius, same border. Colour says which
+            piece it is; it never also changes the shape.
+         2. the assembled sentence is on the page. "You can build
+            things with these" is a claim, and the page should show
+            it rather than imply it with an arrow.
+       ============================================================ */
+    .vx { margin-top: 22px; }
+    .vx-out {
+      margin-top: 14px;
+      padding: 13px 14px;
+      border-radius: 12px;
+      background: var(--gray-50);
+      font-size: 19px;
+      font-weight: 800;
+      text-align: center;
+    }
+    .vx-out small { display: block; margin-top: 4px; color: var(--gray-500); font-size: 11.5px; font-weight: 700; }
+
+    /* ---------- V1 · 조립 스트립 (the hangul deck's build strip) ---------- */
+    .v1 { display: flex; align-items: center; justify-content: center; gap: 7px; }
+    .v1 .t {
+      display: grid;
+      place-items: center;
+      height: 62px;
+      padding: 0 14px;
+      border: 1px solid var(--gray-200);
+      border-radius: 13px;
+      background: #fff;
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 1;
+    }
+    .v1 .t.pick { border-color: transparent; background: var(--gray-100); }
+    .v1 .t.end  { border-color: transparent; background: var(--ending-bg); color: var(--ending-ink); }
+    .v1 .op { color: var(--gray-400); font-size: 16px; font-weight: 900; }
+    .v1-bank { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+    .v1-bank span {
+      padding: 9px 13px;
+      border: 1px solid var(--gray-200);
+      border-radius: 11px;
+      background: #fff;
+      font-size: 15px;
+      font-weight: 800;
+    }
+    .v1-bank span.on { border-color: transparent; background: var(--gray-100); }
+
+    /* ---------- V2 · 레일 (one bar with a cut-out) ---------- */
+    .v2-rail {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      padding: 13px 16px;
+      border-radius: 15px;
+      background: var(--gray-50);
+      font-size: 23px;
+      font-weight: 800;
+    }
+    .v2-rail .fixed { padding: 0 4px; }
+    .v2-rail .fixed.end { color: var(--ending-ink); }
+    /* the slot and the cards are the SAME width — that identity is the whole
+       message, so it is a variable rather than two numbers that drift */
+    .v2-rail, .v2-cards { --card: 99px; }
+    .v2-slot {
+      display: grid;
+      place-items: center;
+      width: var(--card);
+      height: 52px;
+      border-radius: 11px;
+      background: #e4e4e0;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,.13);
+    }
+    .v2-cards { display: grid; grid-template-columns: repeat(4, var(--card)); justify-content: center; gap: 7px; margin-top: 13px; }
+    .v2-cards span {
+      display: grid;
+      place-items: center;
+      height: 52px;
+      border: 1px solid var(--gray-200);
+      border-radius: 11px;
+      background: #fff;
+      box-shadow: 0 2px 0 var(--gray-200);
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    /* ---------- V3 · 퍼즐 (interlocking tabs) ---------- */
+    .v3 { display: flex; align-items: center; justify-content: center; }
+    .v3 .p {
+      position: relative;
+      display: grid;
+      place-items: center;
+      height: 66px;
+      padding: 0 18px;
+      background: #fff;
+      border: 1.5px solid var(--ink);
+      font-size: 21px;
+      font-weight: 800;
+    }
+    .v3 .p:first-child { border-radius: 14px 0 0 14px; }
+    .v3 .p:last-child  { border-radius: 0 14px 14px 0; }
+    .v3 .p + .p { border-left: none; }
+    .v3 .p.mid { background: var(--gray-100); }
+    .v3 .p.end { background: var(--ending-bg); color: var(--ending-ink); }
+    /* the tab: a notch punched out of the left edge of the following piece */
+    .v3 .p + .p::before {
+      content: "";
+      position: absolute;
+      left: -7px; top: 50%;
+      width: 13px; height: 13px;
+      margin-top: -6.5px;
+      border-radius: 50%;
+      background: #fff;
+      border: 1.5px solid var(--ink);
+      clip-path: inset(0 0 0 50%);
+    }
+    .v3-bank { display: flex; justify-content: center; flex-wrap: wrap; gap: 7px; margin-top: 14px; }
+    /* the loose pieces carry the same tab profile, so they visibly belong to
+       the bar above rather than being a separate row of chips */
+    .v3-bank span {
+      position: relative;
+      padding: 10px 16px 10px 20px;
+      border: 1.5px solid var(--ink);
+      border-radius: 12px;
+      background: var(--gray-100);
+      font-size: 16px;
+      font-weight: 800;
+    }
+    .v3-bank span::before {
+      content: "";
+      position: absolute;
+      left: -7px; top: 50%;
+      width: 13px; height: 13px;
+      margin-top: -6.5px;
+      border-radius: 50%;
+      background: #fff;
+      border: 1.5px solid var(--ink);
+      clip-path: inset(0 0 0 50%);
+    }
+
+    /* ---------- V4 · 스택 (one tile, alternates behind it) ---------- */
+    .v4 { display: flex; align-items: center; justify-content: center; gap: 7px; }
+    .v4 .t {
+      display: grid;
+      place-items: center;
+      height: 62px;
+      padding: 0 15px;
+      border: 1px solid var(--gray-200);
+      border-radius: 13px;
+      background: #fff;
+      font-size: 22px;
+      font-weight: 800;
+    }
+    .v4 .t.end { border-color: transparent; background: var(--ending-bg); color: var(--ending-ink); }
+    .v4-stack { position: relative; }
+    .v4-stack .t { position: relative; z-index: 3; background: var(--gray-100); border-color: transparent; }
+    /* white with an outline, not a tint — a translucent blob behind the tile
+       reads as a shadow, and a shadow is not another card */
+    .v4-stack::before, .v4-stack::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border: 1px solid var(--gray-200);
+      border-radius: 13px;
+      background: #fff;
+    }
+    .v4-stack::before { transform: translate(6px, -6px); z-index: 2; }
+    .v4-stack::after  { transform: translate(12px, -12px); z-index: 1; }
+    .v4-list { margin-top: 16px; color: var(--gray-500); font-size: 14px; font-weight: 800; text-align: center; }
+    .v4-list b { color: var(--ink); }
+
+    /* ---------- V5 · 패러다임 (no slot at all — alignment carries it) ---------- */
+    .v5 { display: grid; gap: 6px; }
+    .v5-row {
+      display: grid;
+      grid-template-columns: 62px minmax(0, 1fr) 92px;
+      align-items: center;
+      gap: 4px;
+      padding: 11px 14px;
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      background: #fff;
+      font-size: 20px;
+      font-weight: 800;
+    }
+    .v5-row .f { color: var(--gray-400); }
+    .v5-row .w { text-align: center; }
+    .v5-row .e { color: var(--ending-ink); text-align: right; }
+    .v5-row.head {
+      padding: 6px 14px;
+      border: none;
+      background: none;
+      color: var(--gray-500);
+      font-size: 11px;
+      font-weight: 800;
+    }
+    .v5-row.head .w { color: var(--ink); }
+  </style>
+</head>
+<body>
+
+<div class="page-head">
+  <h1>문장 블록 시안 — 오늘의 패턴</h1>
+  <p>지금 안은 조각마다 생김새가 달라(흰 테두리 / 점선 / 주황 칠) 한 세트로 안 읽히고,
+     조립한 결과 문장이 화면에 없다. 아래 다섯 안은 두 가지를 공통으로 지킨다 —
+     ① 모든 조각은 같은 종류의 물건(높이·모서리·테두리가 같다). 색이 역할을 말하고, 모양은 건드리지 않는다.
+     ② 조립된 문장을 실제로 보여 준다.</p>
+</div>
+
+<div class="rail">
+
+  <!-- ============ 현재 ============ -->
+  <div class="col">
+    <p class="lbl now">현재<small>조각 셋의 생김새가 제각각. 결과 문장이 없다</small></p>
+    <div class="phone"><div class="section">
+      <h2 class="section-title">오늘의 패턴 <span class="title-ja">(今日のパターン)</span></h2>
+      <div class="sent-anat">
+        <span class="sa-grp"><span class="sa-t"><b>저는</b><small>私は</small></span></span>
+        <span class="sa-plus">＋</span>
+        <span class="sa-grp">
+          <span class="sa-t swap-old"><b>◯◯</b><small>入れかえる</small></span>
+          <span class="sa-t ending"><b>입니다</b><small>です</small></span>
+        </span>
+      </div>
+      <span class="bank-drop">↓</span>
+      <div class="bank">
+        <span class="bank-card"><b>학생</b><small>学生</small></span>
+        <span class="bank-card"><b>회사원</b><small>会社員</small></span>
+        <span class="bank-card"><b>의사</b><small>医者</small></span>
+        <span class="bank-card"><b>가수</b><small>歌手</small></span>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- ============ V1 ============ -->
+  <div class="col">
+    <p class="lbl">V1 · 조립 스트립<small>한글 덱의 ㅇ＋ㅏ→아 와 똑같은 문법. 덱 안에서 이미 익힌 그림</small></p>
+    <div class="phone"><div class="section">
+      <h2 class="section-title">오늘의 패턴 <span class="title-ja">(今日のパターン)</span></h2>
+      <div class="vx">
+        <div class="v1">
+          <span class="t">저는</span>
+          <span class="op">＋</span>
+          <span class="t pick">학생</span>
+          <span class="op">＋</span>
+          <span class="t end">입니다</span>
+        </div>
+        <div class="vx-out">저는 학생입니다.<small>私は学生です</small></div>
+        <div class="v1-bank">
+          <span class="on">학생</span><span>회사원</span><span>의사</span><span>가수</span>
+        </div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- ============ V2 ============ -->
+  <div class="col">
+    <p class="lbl">V2 · 레일<small>문장은 하나의 막대, 가운데가 파여 있다. 카드가 홈과 같은 크기라 "맞는다"가 보인다</small></p>
+    <div class="phone"><div class="section">
+      <h2 class="section-title">오늘의 패턴 <span class="title-ja">(今日のパターン)</span></h2>
+      <div class="vx">
+        <div class="v2-rail">
+          <span class="fixed">저는</span>
+          <span class="v2-slot"></span>
+          <span class="fixed end">입니다.</span>
+        </div>
+        <div class="v2-cards">
+          <span>학생</span><span>회사원</span><span>의사</span><span>가수</span>
+        </div>
+        <div class="vx-out">저는 학생입니다.<small>私は学生です</small></div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- ============ V3 ============ -->
+  <div class="col">
+    <p class="lbl">V3 · 퍼즐<small>맞물리는 탭. illustration-prompts 의 p-spine 프롬프트가 이미 그리려던 그림</small></p>
+    <div class="phone"><div class="section">
+      <h2 class="section-title">오늘의 패턴 <span class="title-ja">(今日のパターン)</span></h2>
+      <div class="vx">
+        <div class="v3">
+          <span class="p">저는</span>
+          <span class="p mid">학생</span>
+          <span class="p end">입니다</span>
+        </div>
+        <div class="v3-bank">
+          <span>회사원</span><span>의사</span><span>가수</span>
+        </div>
+        <div class="vx-out">저는 학생입니다.<small>私は学生です</small></div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- ============ V4 ============ -->
+  <div class="col">
+    <p class="lbl">V4 · 스택<small>가운데 조각 뒤에 다른 카드가 겹쳐 있다. 뱅크도 화살표도 없다 — 제일 조용한 안</small></p>
+    <div class="phone"><div class="section">
+      <h2 class="section-title">오늘의 패턴 <span class="title-ja">(今日のパターン)</span></h2>
+      <div class="vx">
+        <div class="v4">
+          <span class="t">저는</span>
+          <span class="v4-stack"><span class="t">학생</span></span>
+          <span class="t end">입니다</span>
+        </div>
+        <p class="v4-list"><b>학생</b> · 회사원 · 의사 · 가수</p>
+        <div class="vx-out">저는 학생입니다.<small>私は学生です</small></div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- ============ V5 ============ -->
+  <div class="col">
+    <p class="lbl">V5 · 패러다임<small>슬롯을 아예 안 만든다. 네 문장을 줄맞춰 쌓으면 고정된 틀이 세로 줄무늬로 보인다</small></p>
+    <div class="phone"><div class="section">
+      <h2 class="section-title">오늘의 패턴 <span class="title-ja">(今日のパターン)</span></h2>
+      <div class="vx">
+        <div class="v5">
+          <div class="v5-row head"><span class="f">그대로</span><span class="w">바꿔요</span><span class="e">그대로</span></div>
+          <div class="v5-row"><span class="f">저는</span><span class="w">학생</span><span class="e">입니다.</span></div>
+          <div class="v5-row"><span class="f">저는</span><span class="w">회사원</span><span class="e">입니다.</span></div>
+          <div class="v5-row"><span class="f">저는</span><span class="w">의사</span><span class="e">입니다.</span></div>
+          <div class="v5-row"><span class="f">저는</span><span class="w">가수</span><span class="e">입니다.</span></div>
+        </div>
+      </div>
+    </div></div>
+  </div>
+
+</div>
+
+</body>
+</html>
