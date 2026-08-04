@@ -239,6 +239,96 @@
       font-weight: 800;
     }
     .v5-row.head .w { color: var(--ink); }
+
+    /* ============================================================
+       V6–V8 · the ます-curriculum language
+       ------------------------------------------------------------
+       A tinted ms-hero card holding the whole sentence with the target
+       piece in orange, a reading over it and the meaning under it,
+       then tagged rows beneath. It maps onto this deck almost for
+       free: 입니다 is already the orange piece.
+       ============================================================ */
+    .ms-hero {
+      margin-top: 20px;
+      padding: 22px 18px 18px;
+      border: 1px solid #f3cfb2;
+      border-radius: 16px;
+      background: #fff8f3;
+      text-align: center;
+    }
+    .ms-ko { margin: 0; font-size: 27px; font-weight: 800; line-height: 1.15; }
+    .ms-ko b { color: var(--ending-ink); font-weight: 800; }
+    .ms-ja { margin: 12px 0 0; color: var(--gray-500); font-size: 13.5px; font-weight: 700; }
+    .ms-hero ruby { ruby-position: over; }
+    .ms-hero rt {
+      color: var(--gray-400);
+      font-size: .36em;
+      font-weight: 700;
+      letter-spacing: .14em;
+      transform: translateY(-2px);
+    }
+    .ms-ko b rt { color: #d9a173; }
+
+    /* the pattern named in the header, the way the reference does it */
+    .ms-name { margin: 4px 0 0; font-size: 15px; font-weight: 800; }
+    .ms-name b { color: var(--ending-ink); }
+    .ms-name i { color: var(--gray-400); font-size: 12.5px; font-style: normal; font-weight: 700; }
+
+    /* ms-tag → heading row */
+    .ms-tagrow { display: flex; align-items: center; gap: 9px; margin: 22px 0 10px; }
+    .ms-tagrow h3 { margin: 0; font-size: 14.5px; font-weight: 900; }
+    .ms-tagrow h3 i { color: var(--gray-400); font-size: 12px; font-style: normal; font-weight: 700; }
+    .ms-tagwrap {
+      display: inline-block;
+      flex: none;
+      padding: 1px;
+      background: var(--gray-400);
+      clip-path: polygon(0 0, calc(100% - 9px) 0, 100% 50%, calc(100% - 9px) 100%, 0 100%);
+    }
+    .ms-tagwrap .ms-tag {
+      display: block;
+      padding: 4px 15px 4px 11px;
+      background: #fff;
+      color: var(--gray-500);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .04em;
+      clip-path: polygon(0 0, calc(100% - 9px) 0, 100% 50%, calc(100% - 9px) 100%, 0 100%);
+    }
+    .ms-tagwrap.hot { background: var(--ending-ink); }
+    .ms-tagwrap.hot .ms-tag { background: var(--ending-ink); color: #fff; }
+
+    /* word chips: bold word, then reading + meaning in grey */
+    .ms-chips { display: flex; flex-wrap: wrap; gap: 7px; }
+    .ms-chip {
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: var(--gray-100);
+      font-size: 15px;
+      font-weight: 800;
+    }
+    .ms-chip i { color: var(--gray-500); font-size: 11.5px; font-style: normal; font-weight: 700; }
+
+    /* V8 · the swappable word as a real chip inside the ms-hero sentence */
+    .ms-hero .ms-plug {
+      display: inline-block;
+      margin: 0 2px;
+      padding: 2px 10px;
+      border: 1px solid #eabf9c;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0 2px 0 #f0d6c0;
+    }
+    .ms-plugbank { display: flex; flex-wrap: wrap; justify-content: center; gap: 7px; margin-top: 13px; }
+    .ms-plugbank span {
+      padding: 8px 14px;
+      border: 1px solid var(--gray-200);
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0 2px 0 var(--gray-200);
+      font-size: 16px;
+      font-weight: 800;
+    }
   </style>
 </head>
 <body>
@@ -365,6 +455,82 @@
           <div class="v5-row"><span class="f">저는</span><span class="w">의사</span><span class="e">입니다.</span></div>
           <div class="v5-row"><span class="f">저는</span><span class="w">가수</span><span class="e">입니다.</span></div>
         </div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- ============ V6 ============ -->
+  <div class="col">
+    <p class="lbl">V6 · 히어로 카드<small>레퍼런스 그대로. 패턴 이름 → 히어로 문장 → 바꿔 쓸 단어</small></p>
+    <div class="phone"><div class="section">
+      <h2 class="section-title">오늘의 패턴 <span class="title-ja">(今日のパターン)</span></h2>
+      <p class="ms-name">N ＋ <b>입니다</b> <i>［N ＋ です］</i></p>
+      <div class="ms-hero">
+        <p class="ms-ko"><ruby>저는<rt>チョヌン</rt></ruby> <ruby>학생<rt>ハクセン</rt></ruby><b><ruby>입니다<rt>イムニダ</rt></ruby></b>.</p>
+        <p class="ms-ja">私は学生です。</p>
+      </div>
+      <div class="ms-tagrow">
+        <span class="ms-tagwrap"><span class="ms-tag">단어</span></span>
+        <h3>바꿔 넣을 수 있어요 <i>(入れかえられます)</i></h3>
+      </div>
+      <div class="ms-chips">
+        <span class="ms-chip">회사원 <i>(会社員)</i></span>
+        <span class="ms-chip">의사 <i>(医者)</i></span>
+        <span class="ms-chip">가수 <i>(歌手)</i></span>
+        <span class="ms-chip">일본 사람 <i>(日本人)</i></span>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- ============ V7 ============ -->
+  <div class="col">
+    <p class="lbl">V7 · 히어로 + 블록<small>완성 문장을 먼저 보여 주고, 그 아래에서 조각으로 뜯어 준다</small></p>
+    <div class="phone"><div class="section">
+      <h2 class="section-title">오늘의 패턴 <span class="title-ja">(今日のパターン)</span></h2>
+      <div class="ms-hero">
+        <p class="ms-ko"><ruby>저는<rt>チョヌン</rt></ruby> <ruby>학생<rt>ハクセン</rt></ruby><b><ruby>입니다<rt>イムニダ</rt></ruby></b>.</p>
+        <p class="ms-ja">私は学生です。</p>
+      </div>
+      <div class="ms-tagrow">
+        <span class="ms-tagwrap"><span class="ms-tag">구조</span></span>
+        <h3>세 조각이에요 <i>(3つのパーツ)</i></h3>
+      </div>
+      <div class="v1">
+        <span class="t">저는</span>
+        <span class="op">＋</span>
+        <span class="t pick">학생</span>
+        <span class="op">＋</span>
+        <span class="t end">입니다</span>
+      </div>
+      <div class="ms-tagrow">
+        <span class="ms-tagwrap"><span class="ms-tag">단어</span></span>
+        <h3>가운데만 바꿔요 <i>(まん中だけ入れかえ)</i></h3>
+      </div>
+      <div class="v1-bank">
+        <span>회사원</span><span>의사</span><span>가수</span><span>일본 사람</span>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- ============ V8 ============ -->
+  <div class="col">
+    <p class="lbl">V8 · 히어로에 끼우는 카드<small>바꿀 자리를 문장 안에 카드로 세워 둔다. 읽기 표기는 뺐다</small></p>
+    <div class="phone"><div class="section">
+      <h2 class="section-title">오늘의 패턴 <span class="title-ja">(今日のパターン)</span></h2>
+      <div class="ms-hero">
+        <p class="ms-ko">저는 <span class="ms-plug">학생</span><b>입니다</b>.</p>
+        <p class="ms-ja">私は学生です。</p>
+        <div class="ms-plugbank">
+          <span>회사원</span><span>의사</span><span>가수</span>
+        </div>
+      </div>
+      <div class="ms-tagrow">
+        <span class="ms-tagwrap hot"><span class="ms-tag">포인트</span></span>
+        <h3>어떤 말에도 그대로 붙어요 <i>(どんな単語にもそのまま)</i></h3>
+      </div>
+      <div class="ms-chips">
+        <span class="ms-chip">입니다 <i>(イムニダ)</i></span>
+        <span class="ms-chip">かたい、ていねいな言い方</span>
       </div>
     </div></div>
   </div>
