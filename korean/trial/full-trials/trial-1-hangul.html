@@ -299,8 +299,31 @@
   .rcourse .big { display: block; margin-top: 4px; font-size: 30px; font-weight: 800; letter-spacing: -.05em; }
   .rcourse .s { display: block; margin-top: 4px; color: var(--gray-400); font-size: 14px; font-weight: 500; line-height: 1.43; }
 
-  /* ---------- ④-A 시작 커리큘럼 · 첫 코스 한 장 ----------
-     아래 「나의 학습 순서」가 전체 목록이고, 여기는 그 첫 칸이다. */
+  /* ---------- ④ 커리큘럼 로드맵 ---------- */
+  /* 왜 여기서 시작하는가 — 진단에서 곧장 끌어온 한 줄 */
+  .rc-why { display: flex; align-items: center; gap: 8px; margin: 0; padding: 12px; border-radius: 12px; background: var(--gray-100); }
+  .rc-why.hide { display: none; }
+  .rc-why img { flex: none; width: 35px; height: 35px; }
+  .rc-why span { color: var(--gray-500); font-size: 14px; font-weight: 500; line-height: 1.43; word-break: keep-all; }
+  .rc-why b { color: var(--ink); font-weight: 800; }
+  .road-card .road { margin-top: 6px; }
+  .road-card .curli { margin-top: 6px; }
+
+  /* 앞뒤 버튼 + 몇 칸인지 */
+  .rc-nav { display: flex; align-items: center; gap: 10px; margin-top: 14px; }
+  .rc-btn {
+    flex: none; padding: 9px 13px; border: 1px solid var(--gray-200); border-radius: 999px;
+    background: #fff; font-family: inherit; font-size: 12.5px; font-weight: 800; color: var(--ink);
+    cursor: pointer; -webkit-tap-highlight-color: transparent;
+  }
+  .rc-btn:disabled { color: #c4c4be; cursor: default; }
+  .rc-btn:not(:disabled):active { transform: translateY(1px); }
+  .rc-dots { flex: 1 1 auto; display: flex; justify-content: center; gap: 5px; }
+  .rc-dots i { width: 6px; height: 6px; border-radius: 50%; background: #d5ddc9; }
+  .rc-dots i.on { width: 18px; border-radius: 3px; background: var(--green-500); }
+
+  /* 코스 카드 · 번호 배지 대신 코스 그림 */
+  .cli-ico { flex: none; width: 37px; height: 37px; }
   .curli { padding: 12px; border-radius: 12px; background: #f2fce0; }
   .rsec.tint .curli { background: #fff; }
   .cli + .cli { margin-top: 12px; }
@@ -697,9 +720,21 @@
     line-height: 1.55; word-break: keep-all;
   }
 
+  /* 전환 안내가 둘(기간 · 언어)이라, 「고객센터에 말씀만」 은 두 상자 중
+     하나에 붙지 않고 페이지 바닥에 한 번만 온다 */
+  .swcall.out { margin-top: 14px; }
+  .switchcard + .switchcard { margin-top: 14px; }
+
   /* 전체 요금표 — 밀고 있는 한 칸만 라임이고, 나머지 한국어 열은 옅게 */
   .ptable td.hi.rec { background: var(--lime); }
   .ptable td.hi.rec::after { content: "추천"; margin-left: 5px; font-size: 10.5px; font-weight: 900; }
+
+  /* .section:has(> .ptable) 규칙은 「표 한 장이 페이지의 전부」 인 화면을 위해
+     표 위로 빈 칸을 몰아 준다(.ptable 에 margin-top:auto). 이 장은 표 뒤에
+     설명이 세 덩이 더 붙는 안내 화면이라, 그 규칙이 배너와 표 사이에 빈 칸만
+     남긴다. Figma 도 위에서부터 쌓아 두었으니 여기서만 되돌린다. */
+  #p-price-all { display: block; }
+  #p-price-all > .ptable { margin-top: 22px; }
 
   /* ---------- 커리큘럼 · v2 에서 늘어난 조각 ----------
      2단계가 2-1(패턴) · 2-2(말투)로 갈라져서, 동그란 번호로는 담기지 않는다 */
@@ -1525,18 +1560,31 @@
         <a class="rep-jump rj-course" href="#p-goal"><span class="rj-b"><span class="rj-t">—</span><span class="rj-s">눌러서 고르러 가기</span></span></a>
       </div>
 
-      <!-- ④-A 시작 커리큘럼 · 첫 코스 한 장 -->
-      <div class="rsec tint">
-        <h3 class="rsec-h">지금 시작하면 좋은 커리큘럼<small>진단 결과에 맞춰 약한 항목부터 공부해요!</small></h3>
-        <div class="curli"></div>
-        <!-- 추천 코스 · 「지금」 에서 목표까지 이어지는 길. 점 하나가 한 코스이고,
-             끝에 붙는 개월 수는 위 슬라이더를 따라 함께 움직인다. -->
+      <!-- ④ 커리큘럼 로드맵 · 코스를 한 칸씩 밟아 본다
+           게이지가 채워지면서 그때 무엇을 하게 되는지가 아래에서 바뀐다.
+           「3개월이면 어디까지요?」 에 말이 아니라 화면으로 답하는 자리라,
+           칸을 넘기는 것 자체가 설명이 된다. 넘긴 칸은 공유된다 — 튜터만
+           앞서 가면 학습자는 다른 이야기를 보고 있게 된다. -->
+      <div class="rsec tint road-card" data-sync-id="plan-roadstep" data-sync-kind="roadstep">
+        <h3 class="rsec-h"><span class="rc-t">지금 레벨에 맞는 수업</span><small class="rc-s">진단 결과에 맞춰 약한 항목부터 공부해요!</small></h3>
+
+        <p class="rc-why"><img src="../assets/report-icons/checklist.svg" alt=""><span></span></p>
+
         <div class="road">
           <span class="road-k">추천 코스</span>
           <svg class="road-svg" viewBox="0 0 269 132" role="img" aria-label="지금부터 목표까지의 코스 길"></svg>
         </div>
-      </div>
 
+        <div class="curli"></div>
+
+        <!-- 앞뒤로만 움직인다. 로드맵은 순서가 전부라, 목록으로 흩어 놓으면
+             「그다음」 이 사라진다. -->
+        <div class="rc-nav">
+          <button class="rc-btn rc-prev" type="button">← 이전</button>
+          <span class="rc-dots"></span>
+          <button class="rc-btn rc-next" type="button">다음 →</button>
+        </div>
+      </div>
     </div>
 
     <!-- ============ 포도 안내 ============
@@ -2009,11 +2057,11 @@
     <div class="section" id="p-switch" data-page-id="plan-switch">
       <span class="section-kicker">안내</span>
       <h2 class="section-title">자유롭게 플랜을 변경하세요.</h2>
-      <p class="section-subtitle sell"><span class="ko">1개월로 시작하시고, 편하실 때 3개월로 바꾸시면 돼요.</span></p>
+      <p class="section-subtitle sell"><span class="ko">수강 개월부터 학습 언어까지, 내 마음대로 변경.</span></p>
 
       <div class="switchcard">
         <div class="top">
-          <span class="t">한 달 써 보고 괜찮으시면, 3개월로</span>
+          <span class="t">수강 기간, 1개월 ↔ 3개월</span>
           <span class="s">미리 신청만 해두시면 다음 결제일에 자동으로 바뀌어요.</span>
         </div>
         <div class="body">
@@ -2033,9 +2081,29 @@
             <div class="sn"><span><b>3개월분 ¥34,200을 한 번에 결제</b>하고, 3개월마다 갱신돼요. 수강권 홀딩 7일 혜택이 함께 있습니다.</span></div>
             <div class="sn"><span><b>3개월 수강 후</b> 1개월권으로 다시 변경도 가능합니다.</span></div>
           </div>
-          <div class="swcall"><span>수강권 변경 문의는 고객센터에 <b>편히 말씀만 주시면</b> 됩니다.</span></div>
         </div>
       </div>
+
+      <!-- 바꿀 수 있는 것이 기간만은 아니다 — 언어도 도중에 늘릴 수 있다는 쪽 -->
+      <div class="switchcard">
+        <div class="top">
+          <span class="t">학습 언어, 한국어 → 더블팩</span>
+          <span class="s">한국어만 듣다가 영어도 함께 수강하고 싶어지면 바꾸실 수 있어요.</span>
+        </div>
+        <div class="body">
+          <div class="swsteps">
+            <div><span class="k">지금</span><span class="v">한국어 레슨</span></div>
+            <i>›</i>
+            <div class="b"><span class="k">변경 후</span><span class="v">더블팩(한국어+영어)</span></div>
+          </div>
+          <div class="swnotes">
+            <div class="sn"><span>한국어 레슨만 듣다가, <b>더블팩 수강권으로 변경하실 수</b> 있어요.</span></div>
+            <div class="sn"><span><b>더블팩</b>은 한국어와 영어를 한 수강권으로 함께 듣는 상품이에요.</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swcall out"><span>수강 기간·학습 언어 변경 모두 고객센터에<br>다음 수강 결제일 7일 전까지, <b>편히 말씀만 주시면</b> 됩니다.</span></div>
 
       <div class="tutor-note">먼저 권하지 말고, 「계속할 것 같다」는 말이 나올 때만 열어 주세요.</div>
     </div>
@@ -2580,6 +2648,9 @@
        ================================================================ -->
   <script>
   (function () {
+    // 로드맵의 칸은 클로저에 있어 DOM 만으로는 읽을 수 없다 — register 로 넘긴다
+    var sync = window.lessonSync;
+
     /* ---------- 10단계 레벨 ----------
        사내 레벨표(CEFR·JLPT 대응)를 한국어 학습으로 옮긴 것이다. 눈금 10칸이
        곧 레벨 1~10 이고, 튜터가 고른 이 값이 리포트 전체의 기준점이 된다.
@@ -2721,22 +2792,22 @@
     // can = 그 코스를 마치면 할 수 있게 되는 말
     // ex  = 그 말을 예문 하나로 푼 것
     var COURSE = {
-      hangul: { t: "한글 읽기",   s: "글자를 소리 내어 읽는 법",
+      hangul: { w: 1, t: "한글 읽기",   s: "글자를 소리 내어 읽는 법",
                 can: "간판이 읽혀요",
                 ex: "카페 · 김밥 · 화장실 — 거리에서 보이는 글자를 소리 내어 읽어요" },
-      core:   { t: "핵심 패턴",   s: "하고 싶은 말을 스스로 만드는 법",
+      core:   { w: 3, t: "핵심 패턴",   s: "하고 싶은 말을 스스로 만드는 법",
                 can: "내 이야기를 말해요",
                 ex: "「저는 일본 사람입니다」처럼, 배운 틀에 내 단어를 넣어 문장을 만들어요" },
-      travel: { t: "상황별 · 여행",   s: "가게에서 · 길에서 진짜 쓰는 말",
+      travel: { w: 2, t: "상황별 · 여행",   s: "가게에서 · 길에서 진짜 쓰는 말",
                 can: "가게에서 말해요",
                 ex: "「혹시 명동역이 어딘지 아세요?」 길을 묻고, 주문하고, 되물어요" },
-      drama:  { t: "상황별 · 드라마", s: "좋아하는 드라마의 진짜 대사",
+      drama:  { w: 2.4, t: "상황별 · 드라마", s: "좋아하는 드라마의 진짜 대사",
                 can: "자막 없이 들려요",
                 ex: "「우리 어디서 본 적 있지 않아요?」 드라마에 나오는 말이 그대로 들려요" },
-      banmal: { t: "상황별 · 반말 수다",   s: "친구에게 쓰는 편한 반말",
+      banmal: { w: 2, t: "상황별 · 반말 수다",   s: "친구에게 쓰는 편한 반말",
                 can: "반말로 수다 떨어요",
                 ex: "「너 지금 어디 가는 거야?」 친구에게 말을 놓고 편하게 이야기해요" },
-      free:   { t: "프리토킹", s: "문법이 아니라 생각을 말하기",
+      free:   { w: 2.4, t: "프리토킹", s: "문법이 아니라 생각을 말하기",
                 can: "이유까지 말해요",
                 ex: "「돈 vs 시간, 하나만 가질 수 있다면?」 생각과 그 이유를 이어서 말해요" }
     };
@@ -3130,26 +3201,35 @@
       // 카드 밖으로 새지 않게 한다.
       bub.style.left = "calc(" + ((per - 1) / 6 * 100) + "% + " + (8 - (per - 1) / 6 * 16) + "px)";
       document.querySelector(".eta").textContent = mo + "개월";
-      drawRoad(mo);
     }
 
-    /* ---- 추천 코스 길 ----
-       「지금」 에서 목표까지 뱀처럼 접힌 길. 점 하나가 코스 하나라 개수가
-       사람마다 다르고, 끝의 개월 수는 슬라이더를 따라 움직인다. 접어 놓는
-       이유는 폭 때문이다 — 한 줄로 펴면 코스가 넷만 돼도 점이 붙어 버린다. */
-    /* ---- 추천 코스 길 ----
-       Figma 의 그림은 코스 개수를 세는 도표가 아니라 「여기서 저기까지」 를
-       보여 주는 삽화다. 그래서 점 일곱 개짜리 뱀 모양이 고정이고, 바뀌는 건
-       끝에 붙는 개월 수뿐이다 — 슬라이더를 움직이면 그 숫자가 따라간다.
-       코스 수에 맞춰 점을 늘렸다 줄였다 하면 추천 코스가 하나뿐인 사람에게는
-       점 두 개짜리 직선이 나와서, 길로도 그림으로도 보이지 않는다. */
-    var road = document.querySelector(".road-svg");
+    /* ---- ④ 커리큘럼 로드맵 ----
+       길은 Figma 의 삽화 그대로 고정된 뱀 모양이고(점 일곱), 그 위를 초록
+       게이지가 채워 올라간다. 칸 하나가 코스 하나다: 0 칸은 「지금」 이라 아직
+       아무것도 안 찼고, 마지막 칸에서 끝까지 찬다.
+       칸의 자리는 코스 길이(w)의 누적이다 — 균등하게 나누면 11레슨짜리 한글
+       읽기가 112과짜리 핵심 패턴과 같은 거리로 보인다. */
+    var roadCard = document.querySelector(".road-card");
+    var road = roadCard && roadCard.querySelector(".road-svg");
+    var roadStep = 0;
+
+    function roadStops() {
+      var g = GOALS[pick.goal];
+      return courseList(g ? g.lv : overall() + 2);
+    }
+    // 코스 k 를 마쳤을 때 전체 여정의 몇 퍼센트인지
+    function roadFrac(k) {
+      var cs = roadStops(), tot = 0, cum = 0, i;
+      for (i = 0; i < cs.length; i++) tot += COURSE[cs[i]].w;
+      for (i = 0; i < k; i++) cum += COURSE[cs[i]].w;
+      return tot ? cum / tot : 0;
+    }
+
     function drawRoad(mo) {
       if (!road) return;
       var NS = "http://www.w3.org/2000/svg";
       // 세 줄, 줄 간격 34, 반지름 17 — 반지름이 간격의 절반이라 두 호가 정확히
-      // 반원이 되어 직선 구간 없이 U 턴이 된다. 간격이 획 두께(16)보다 두 배쯤
-      // 넓어야 가운데가 막힌 덩어리로 보이지 않는다.
+      // 반원이 되어 직선 구간 없이 U 턴이 된다.
       var X0 = 30, X1 = 239, R = 17, Y = [28, 62, 96], MID = (X0 + X1) / 2;
       var d =
         "M" + X0 + " " + Y[0] + "H" + (X1 - R) +
@@ -3160,44 +3240,132 @@
         "A" + R + " " + R + " 0 0 0 " + (X0 + R) + " " + Y[2] +
         "H" + X1;
 
-      var stops = [
-        [X0, Y[0], 1], [MID, Y[0], 0], [X1, Y[0] + R, 0],
-        [MID, Y[1], 0], [X0, Y[1] + R, 0], [MID, Y[2], 0], [X1, Y[2], 1]
-      ];
       var el = function (t, at) { var e = document.createElementNS(NS, t);
         for (var q in at) e.setAttribute(q, at[q]); return e; };
       road.innerHTML = "";
       road.appendChild(el("path", { d: d, fill: "none", stroke: "#e9ece4",
                                     "stroke-width": "16", "stroke-linecap": "round" }));
-      stops.forEach(function (p) {
-        road.appendChild(el("circle", { cx: p[0], cy: p[1], r: p[2] ? 10 : 7.5,
-          fill: "#fff", stroke: p[2] ? "#6abe36" : "#e9ece4", "stroke-width": p[2] ? 4 : 3 }));
+
+      /* 채워지는 부분. pathLength 를 1 로 정규화해 두면 dasharray 를 비율로 쓸
+         수 있어서, 길의 실제 길이를 몰라도 「몇 퍼센트」 로 자를 수 있다. */
+      var frac = roadFrac(roadStep);
+      var fill = el("path", { d: d, fill: "none", stroke: "#6abe36",
+                              "stroke-width": "16", "stroke-linecap": "round",
+                              pathLength: "1", "stroke-dasharray": "1 1",
+                              "stroke-dashoffset": (1 - frac).toFixed(4) });
+      fill.style.transition = "stroke-dashoffset .45s ease";
+      road.appendChild(fill);
+
+      var stops = [[X0, Y[0]], [MID, Y[0]], [X1, Y[0] + R], [MID, Y[1]],
+                   [X0, Y[1] + R], [MID, Y[2]], [X1, Y[2]]];
+      stops.forEach(function (p, i) {
+        var edge = i === 0 || i === stops.length - 1;
+        road.appendChild(el("circle", { cx: p[0], cy: p[1], r: edge ? 10 : 7.5,
+          fill: "#fff", stroke: edge ? "#6abe36" : "#e9ece4", "stroke-width": edge ? 4 : 3 }));
       });
-      var cap = function (x, y, t, anchor, fill) {
+
+      // 지금 서 있는 자리에 표식 하나. 길 위의 좌표는 브라우저에게 물어본다 —
+      // 호가 섞인 경로라 손으로 풀면 반지름을 바꿀 때마다 다시 계산해야 한다.
+      var probe = el("path", { d: d });
+      road.appendChild(probe);
+      var L = probe.getTotalLength();
+      var at = probe.getPointAtLength(L * frac);
+      probe.remove();
+      if (frac > 0.001) {
+        road.appendChild(el("circle", { cx: at.x, cy: at.y, r: 10,
+          fill: "#fff", stroke: "#6abe36", "stroke-width": 4 }));
+      }
+
+      var cap = function (x, y, t, anchor, fill2) {
         var e = el("text", { x: x, y: y, "font-size": "13", "font-weight": "800",
-                             fill: fill, "text-anchor": anchor });
+                             fill: fill2, "text-anchor": anchor });
         e.textContent = t; road.appendChild(e);
       };
-      cap(X0 - 22, Y[0] + 26, "지금", "start", "#1c1c1c");
+      cap(X0 - 22, Y[0] + 26, "지금", "start", "#2b2b2b");
       cap(X1 + 22, Y[2] + 28, mo + "개월", "end", "#6abe36");
     }
 
-    /* ---- ④ 시작 커리큘럼 · 첫 코스 한 장 ----
-       "지금 레벨에서 어디부터" 만 답한다. 전체 목록은 아래 학습 순서에 있다. */
+    /* ---- 로드맵 카드 · 지금 밟고 있는 칸이 무엇인가 ---- */
     var curli = document.querySelector(".curli");
 
+    if (roadCard) {
+      roadCard.querySelector(".rc-prev").addEventListener("click", function () { stepRoad(-1); });
+      roadCard.querySelector(".rc-next").addEventListener("click", function () { stepRoad(1); });
+    }
+    function stepRoad(by) {
+      var n = roadStops().length;
+      var next = Math.max(0, Math.min(n - 1, roadStep + by));
+      if (next === roadStep) return;
+      roadStep = next;
+      render();
+      sync.push(roadCard);
+    }
+    /* 몇 번째 칸인지는 DOM 만 봐서는 알 수 없으니 직접 읽고 쓴다. 코스 이름으로
+       주고받는다 — 칸 번호로 보내면 상대의 추천 코스가 한 줄 다르기만 해도
+       엉뚱한 칸이 열린다. */
+    sync.register("roadstep", {
+      read: function () { return { course: roadStops()[roadStep] || null }; },
+      apply: function (el, state) {
+        if (!state || typeof state.course !== "string") return;
+        var at = roadStops().indexOf(state.course);
+        if (at >= 0 && at !== roadStep) { roadStep = at; render(); }
+      }
+    });
+
     function renderCurriculum() {
-      if (!curli) return;
-      var g = GOALS[pick.goal];
-      var c = COURSE[courseList(g ? g.lv : overall() + 2)[0]];
+      if (!curli || !roadCard) return;
+      var cs = roadStops();
+      if (roadStep > cs.length - 1) roadStep = cs.length - 1;
+      var k = roadStep, c = COURSE[cs[k]], g = GOALS[pick.goal];
+
+      // 총 기간은 위 슬라이더가 정한다. 각 칸의 「N개월차」 는 그 총량을 코스
+      // 길이로 나눈 자리다.
+      var per = perWeek();
+      var need = g ? Math.max(6, DONE[String(g.lv)] - DONE[String(overall())]) : 24;
+      var total = months(need, per);
+      // 첫 칸을 지나면 최소 한 달은 지난 것이다 — 0개월차라는 칸은 없다
+      var startMo = Math.max(k ? 1 : 0, Math.round(total * roadFrac(k)));
+      var endMo = Math.round(total * roadFrac(k + 1));
+
+      roadCard.querySelector(".rc-t").textContent =
+        k === 0 ? "지금 레벨에 맞는 수업" : startMo + "개월차";
+      roadCard.querySelector(".rc-s").textContent =
+        k === 0 ? "진단 결과에 맞춰 약한 항목부터 공부해요!"
+                : c.can + " — 여기까지 오면 이런 이야기를 해요.";
+
+      // 왜 여기서 시작하는가. 가장 처지는 두 항목을 그대로 이유로 쓴다.
+      var order = ranked(), why = roadCard.querySelector(".rc-why span");
+      if (k === 0 && order.length >= 2) {
+        var w2 = order.slice(-2);
+        why.innerHTML = "포도님은 <b>" + w2[0].n + "</b>" + (hasBatchim(w2[0].n) ? "과 " : "와 ") +
+          "<b>" + w2[1].n + "</b>" + (hasBatchim(w2[1].n) ? "이" : "가") +
+          " 아쉬웠어요.<br>그래서 " + c.s + "부터 시작해요.";
+        why.parentNode.classList.remove("hide");
+      } else if (k === 0) {
+        why.parentNode.classList.add("hide");
+      } else {
+        why.innerHTML = "여기까지 " + startMo + "개월, 다음 칸까지 " +
+          Math.max(1, endMo - startMo) + "개월이에요.";
+        why.parentNode.classList.remove("hide");
+      }
+
       curli.innerHTML =
         '<div class="cli">' +
           '<div class="cli-h">' +
-            '<span class="cli-n">1</span>' +
+            '<img class="cli-ico" src="../assets/report-icons/course.svg" alt="">' +
             '<span><b class="cli-t">' + c.t + '</b><span class="cli-s">' + c.s + '</span></span>' +
           '</div>' +
           '<div class="cli-e"><i>✓</i><span><b>' + c.can + '</b><em>' + c.ex + '</em></span></div>' +
         '</div>';
+
+      // 몇 칸 중 몇 번째인지, 그리고 끝에서 더 못 가는지
+      var dots = "";
+      cs.forEach(function (x, i) { dots += '<i' + (i === k ? ' class="on"' : "") + '></i>'; });
+      roadCard.querySelector(".rc-dots").innerHTML = dots;
+      roadCard.querySelector(".rc-prev").disabled = k <= 0;
+      roadCard.querySelector(".rc-next").disabled = k >= cs.length - 1;
+
+      drawRoad(total);
     }
 
     function months(lessons, perWeek) {
