@@ -1244,8 +1244,11 @@
    ============================================================ */
 :root {
   --topic-bg:  #e7e0fb;   /* 은/는 — the topic marker */
+  --topic-mid: #c6b4f5;   /* the same colour as a highlighter swipe, which
+                             needs more body than a fill behind dark text */
   --topic-ink: #5a3ec8;
   --ending-bg:  #ffe2cc;   /* 입니다 / 입니까? — the polite ending */
+  --ending-mid: #ffbe92;
   --ending-ink: #b2591c;
 }
 
@@ -1261,6 +1264,38 @@
 
 .topic { background: var(--topic-bg); color: var(--topic-ink); }
 .ending { background: var(--ending-bg); color: var(--ending-ink); }
+
+/* ---------- the same mark on both lines ----------
+   The reference phrasebook (references/k-village-esther-bunny, p.30) puts
+   the swappable word in an identical box in BOTH the Japanese and the
+   Korean line, so the two lines point at each other and the learner never
+   has to work out which piece corresponds to which. That is the half we
+   were missing: 입니다 was orange and です was not.
+
+   The Japanese stays secondary support — same hue, one step quieter —
+   so it anchors the Korean instead of competing with it. */
+.translation .topic,
+.translation .ending {
+  font-weight: 800;
+  opacity: .92;
+}
+
+/* On a fill page the Japanese header already carries a highlighter swipe
+   meaning "this is the bit you say in Korean". Keep the swipe — it is a
+   different claim from the tint — but give it the colour of the piece it
+   is pointing at, so です does not read as lime here and orange two pages
+   earlier. The chip styling is dropped; only the hue carries over. */
+.answer-label .target.topic,
+.answer-label .target.ending {
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.answer-label .target.topic  { background: linear-gradient(transparent 52%, var(--topic-mid) 52%); }
+.answer-label .target.ending { background: linear-gradient(transparent 52%, var(--ending-mid) 52%); }
 
 /* ---------- sentence anatomy: two blocks, four tiles ----------
    The same diagram runs twice in the deck. On the 입니다 page only
@@ -2082,44 +2117,93 @@ button.opt-row:active { transform: scale(.99); }
 .opt-row.on .opt-note li { color: var(--gray-500); }
 
 /* ============================================================
-   SAID → BETTER · 프리토킹이 파는 한 장면
+   피드백 카드 · 프리토킹이 파는 한 장면
    ------------------------------------------------------------
-   말한 문장을 그대로 적고, 바로 아래에 더 자연스러운 문장을 적는다.
-   두 줄이 붙어 있어야 무엇이 달라졌는지 눈으로 대 볼 수 있다 —
-   피드백을 수업 끝에 몰아 주면, 학습자는 자기가 무슨 말을 했는지
-   이미 잊은 뒤다.
+   말한 문장 → 고친 문장 → 달라진 곳. 세 칸이 한 카드에 붙어 있다.
+   피드백을 수업 끝에 몰아 주면 학습자는 자기가 무슨 말을 했는지
+   이미 잊은 뒤라, 고친 문장이 남의 문장처럼 읽힌다.
 
-   새 컴포넌트가 아니라 .answer-box 두 개다. 칸이 입력·공유·티칭 모드를
-   이미 알고 있어서, 여기서 더할 것은 "아래쪽이 나은 쪽"이라는 표시뿐:
-   초록은 이 시스템에서 맞는 말이라는 뜻이고, 그게 정확히 아래 칸이다.
+   색은 이 시스템의 뜻 그대로다: 초록은 맞는 쪽(고친 문장), 붉은색은
+   .opt.wrong 이 이미 쓰고 있는 "아닌 쪽"이다. 새로 만든 뜻은 없다.
+   상자는 늘지 않는다 — 세 칸은 카드 안의 줄이지, 카드 속 카드가 아니다.
    ============================================================ */
-.diff {
-  display: grid;
-  gap: 0;
+.fb {
   margin-top: 24px;
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  background: #fff;
+  overflow: hidden;
 }
 
-.diff .answer-box { margin: 0; }
+.fb-pane + .fb-pane { border-top: 1px solid var(--gray-200); }
 
-/* 화살표는 두 칸 사이의 관계를 말한다: 위가 아래로 바뀐다 */
-.diff .diff-arrow {
+.fb-lab {
   display: block;
-  padding: 7px 0 6px;
-  text-align: center;
-  color: var(--gray-400);
-  font-size: 15px;
-  font-weight: 800;
-  line-height: 1;
+  padding: 9px 14px;
+  border-bottom: 1px solid var(--gray-200);
+  background: var(--gray-100);
+  color: #575753;
+  font-size: 12.5px;
+  line-height: 1.35;
+  font-weight: 700;
 }
 
-.diff .better { border-color: var(--green-500); }
-.diff .better .answer-label {
+.fb-in {
+  display: block;
+  width: 100%;
+  min-height: 76px;
+  padding: 13px 16px;
+  border: 0;
+  background: #f8f8f7;
+  color: #1c1c1c;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  resize: none;
+}
+
+.fb-in:focus { outline: none; background: #fff; }
+
+/* 고치는 칸이 나은 쪽이다 */
+.fb .fix .fb-lab {
   background: var(--green-100);
   border-bottom-color: var(--green-500);
   color: #3f7a1c;
 }
-.diff .better .answer-space { background: #f6fdf0; }
-.diff .better .answer-space.as-input:focus-within { background: #fff; }
+.fb .fix .fb-in { background: #f6fdf0; }
+.fb .fix .fb-in:focus { background: #fff; }
+
+/* 달라진 곳은 달라졌을 때만 나타난다 — 빈 칸이 미리 자리를 잡고 있으면
+   "여기 뭔가 들어와야 하는데 비었다"로 읽힌다 */
+.fb .out { display: none; }
+.fb.has-diff .out { display: block; }
+
+.fb-diff {
+  margin: 0;
+  padding: 14px 16px;
+  font-size: 16.5px;
+  font-weight: 700;
+  line-height: 1.7;
+  word-break: keep-all;
+}
+
+.fb-diff del {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+  color: #d9534f;
+  background: #fdf1f1;
+  border-radius: 4px;
+  padding: 1px 3px;
+}
+
+.fb-diff ins {
+  text-decoration: none;
+  color: #3f7a1c;
+  background: var(--green-100);
+  border-radius: 4px;
+  padding: 1px 3px;
+}
 
 /* ---------- level check ---------- */
 .lvpick {
