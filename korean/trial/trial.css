@@ -1200,6 +1200,332 @@
 }
 
 /* ============================================================
+   PATTERN DECK · 문장도 상자다 (trial-2)
+   ------------------------------------------------------------
+   The hangul deck draws a syllable as a box with two seats. This
+   deck does the same thing one level up: a sentence is a FRAME
+   with a swappable word in it, and the frame has exactly two
+   pieces — the topic marker and the polite ending.
+
+     은/는      violet   the piece that marks what you're talking about
+     입니다/까  orange   the piece that ends the sentence politely
+     the noun   white    the only thing that changes
+
+   These are seat colours, not state colours: they are pedagogy
+   and they mean one thing each, exactly like 子音/母音 above.
+   Two rules keep them from colliding with green:
+
+     - they only ever appear where a sentence is being SHOWN
+       (teach pages, model lines, story bubbles), never inside a
+       .choose-row or an answer input, where green owns the page
+     - they tint the glyph, never a padded pill — a chip with
+       side padding fakes a space into 학생입니다
+   ============================================================ */
+:root {
+  --tp-bg:  #e7e0fb;   /* 은/는 — the topic marker */
+  --tp-ink: #5a3ec8;
+  --en-bg:  #ffe2cc;   /* 입니다 / 입니까? — the polite ending */
+  --en-ink: #b2591c;
+}
+
+/* ---------- the two pieces, inline inside a sentence ---------- */
+.tp, .en {
+  padding: 1px 2px;
+  margin: 0 -1px;      /* give back what the padding took, so the word stays tight */
+  border-radius: 4px;
+  font-weight: 900;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
+}
+
+.tp { background: var(--tp-bg); color: var(--tp-ink); }
+.en { background: var(--en-bg); color: var(--en-ink); }
+
+/* ---------- sentence anatomy: two blocks, four tiles ----------
+   The same diagram runs twice in the deck. On the 입니다 page only
+   the ending is lit; on the 은/는 page the marker lights up too —
+   the picture the learner already read, with one more piece in it. */
+.sent-anat {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.sa-grp {
+  display: flex;
+  flex: 0 1 auto;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+}
+
+.sa-t {
+  display: grid;
+  place-items: center;
+  gap: 3px;
+  padding: 15px 10px 11px;
+  min-width: 62px;
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.sa-t b {
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.sa-t small {
+  color: var(--gray-500);
+  font-size: 11.5px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* a lit tile carries its colour on the whole box — at this size the
+   inline highlighter is too small to read as a part */
+.sa-t.tp { border-color: transparent; background: var(--tp-bg); }
+.sa-t.tp b { color: var(--tp-ink); }
+.sa-t.tp small { color: var(--tp-ink); opacity: .72; }
+.sa-t.en { border-color: transparent; background: var(--en-bg); }
+.sa-t.en b { color: var(--en-ink); }
+.sa-t.en small { color: var(--en-ink); opacity: .72; }
+
+.sa-cap {
+  display: block;
+  flex: 0 0 100%;
+  margin-top: 7px;
+  color: var(--gray-500);
+  font-size: 11.5px;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* ---------- intonation: the ending drawn, not written ----------
+   ↘ and ↗ were characters inside the Korean string, which is the one
+   place they cannot be read — they sat at the same size as the text
+   they were describing. */
+.pitch {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.pi-card {
+  padding: 18px 18px 14px;
+  border: 1px solid var(--gray-200);
+  border-radius: 14px;
+  background: #fff;
+}
+
+.pi-card .korean {
+  display: block;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.pi-curve {
+  display: block;
+  width: 100%;
+  height: 46px;
+  margin: 10px 0 8px;
+  overflow: visible;
+  color: var(--en-ink);
+}
+
+.pi-curve path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3.5;
+  stroke-linecap: round;
+}
+
+.pi-curve circle { fill: currentColor; }
+
+.pi-card .translation {
+  display: block;
+  color: #575753;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* ---------- 받침: the thing that decides 은 or 는 ----------
+   The rule is about the FLOOR of the last syllable, so the page shows
+   the floor: filled under 생, empty under 저. */
+.batchim {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.bt-box {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid var(--gray-200);
+  border-radius: 14px;
+  background: #fff;
+}
+
+.bt-syl {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 92px;
+  border-radius: 12px;
+  background: var(--gray-50);
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* the floor sits UNDER the glyph, so the glyph is never tinted itself —
+   what is coloured is the seat, exactly as in the hangul deck */
+.bt-syl::after {
+  content: "";
+  position: absolute;
+  inset: 62% 10px 10px;
+  border-radius: 7px;
+}
+
+.bt-syl.on::after { background: var(--tp-bg); }
+.bt-syl.off::after { border: 1.5px dashed var(--gray-400); }
+
+.bt-body { min-width: 0; }
+
+.bt-head {
+  display: block;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.bt-head small {
+  display: block;
+  margin-top: 3px;
+  color: var(--gray-500);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.bt-out {
+  display: block;
+  margin: 9px 0 8px;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--gray-400);
+}
+
+.bt-out b {
+  margin-left: 4px;
+  padding: 2px 9px;
+  border-radius: 7px;
+  background: var(--tp-bg);
+  color: var(--tp-ink);
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.bt-ex {
+  color: #575753;
+  font-size: 14.5px;
+  font-weight: 700;
+  line-height: 1.5;
+  word-break: keep-all;
+}
+
+.bt-ex b { color: var(--tp-ink); font-weight: 900; }
+
+/* ---------- 漢字 bridge: the equivalence IS the point ---------- */
+.bridge {
+  display: grid;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.br-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 26px minmax(0, 1fr);
+  align-items: center;
+  gap: 6px;
+  padding: 16px 14px;
+  border: 1px solid var(--gray-200);
+  border-radius: 13px;
+  background: #fff;
+  text-align: center;
+}
+
+.br-cn {
+  color: var(--gray-500);
+  font-size: 27px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.br-eq { color: var(--gray-400); font-size: 15px; font-weight: 800; }
+
+.br-ko {
+  font-size: 27px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.br-ko small {
+  display: block;
+  margin-top: 4px;
+  color: #57a021;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: .1em;
+}
+
+/* ---------- the 16, actually shown ----------
+   The deck claimed 16 sentences and never put them on screen. The
+   hangul deck earns its 18 with the 조합표 one page earlier; this is
+   that table for nouns. */
+.tally {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5px;
+  margin-top: 24px;
+}
+
+.tally .ty-h {
+  padding: 5px 0;
+  color: var(--gray-500);
+  font-size: 11.5px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.tally span:not(.ty-h) {
+  padding: 9px 4px;
+  border: 1px solid var(--gray-200);
+  border-radius: 9px;
+  background: #fff;
+  font-size: 13.5px;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
+  word-break: keep-all;
+}
+
+@media (max-width: 480px) {
+  .sa-t { min-width: 56px; padding: 13px 8px 10px; }
+  .sa-t b { font-size: 22px; }
+  .bt-box { grid-template-columns: 80px minmax(0, 1fr); gap: 13px; }
+  .bt-syl { height: 80px; font-size: 44px; }
+  .br-cn, .br-ko { font-size: 24px; }
+  .tally span:not(.ty-h) { font-size: 12.5px; }
+}
+
+/* ============================================================
    TAP ACTIVITIES (no whiteboard)
    ------------------------------------------------------------
    Every task is answered by tapping. Two components carry all of

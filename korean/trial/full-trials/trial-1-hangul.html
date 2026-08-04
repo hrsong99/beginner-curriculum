@@ -169,6 +169,7 @@
   .rline { height: 1px; margin: 16px 0; border: 0; background: var(--gray-200); }
 
   /* 근거 줄 — ✓ 원이 붙은 짧은 문장. 카드 안의 유일한 상자다 */
+  .chk.hide { display: none; }
   .chk { margin: 0; padding: 12px; border-radius: 12px; background: #f2fce0; list-style: none; }
   .rsec.tint .chk { background: #fff; }
   .chk li { display: flex; gap: 8px; align-items: flex-start; font-size: 14px; font-weight: 500; line-height: 1.45; word-break: keep-all; }
@@ -201,27 +202,98 @@
      아래 「좋아요」 상자와 색으로 이어진다. */
   .axbars { display: grid; gap: 8px; margin-top: 16px; padding: 0 4px; }
   .axb { display: flex; align-items: center; gap: 8px; }
-  .axb-n { flex: none; width: 48px; font-size: 14px; font-weight: 800; letter-spacing: -.02em; }
-  .axb.up .axb-n { color: #6184ff; }
-  .axb-t { flex: 1 1 auto; height: 12px; border-radius: 999px; background: var(--gray-200); overflow: hidden; }
+  .axb-n { flex: none; width: 52px; font-size: 14px; font-weight: 800; letter-spacing: -.02em; }
+  .axb-t { position: relative; flex: 1 1 auto; height: 12px; border-radius: 999px; background: var(--gray-200); }
   .axb-f { display: block; height: 100%; border-radius: 999px; background: var(--green-500); }
-  .axb.up .axb-f { background: #6184ff; }
+  /* 평균이 선 자리. 막대를 하나 더 그리는 대신 눈금을 세워 두면, 내 것이
+     그 선을 넘었는지 아닌지가 색을 읽지 않아도 보인다. */
+  .axb-avg {
+    position: absolute; top: -2px; width: 2px; height: 16px; margin-left: -1px;
+    border-radius: 1px; background: #6f6f6a;
+  }
 
   .axsum.hide, .axtip.hide { display: none; }
   .axsum { display: flex; gap: 4px; margin-top: 16px; }
-  .axs { flex: 1 1 0; min-width: 0; padding: 10px; border-radius: 12px; background: var(--green-100); }
-  .axs.weak { background: var(--gray-100); }
-  .axs h4 { margin: 0; font-size: 16px; font-weight: 800; letter-spacing: -.02em; }
+  /* 잘하는 쪽/아쉬운 쪽은 초록·회색이 아니라 파랑·분홍이다: 초록은 이 페이지에서
+     이미 「내 값」 이라, 칭찬에까지 쓰면 어느 초록인지 매번 되짚어야 한다. */
+  .axs { flex: 1 1 0; min-width: 0; padding: 12px; border-radius: 12px; background: #dee9f7; }
+  .axs.weak { background: #fae4e5; }
+  .axs h4 { display: flex; align-items: center; gap: 4px; margin: 0; color: #1087ff; font-size: 16px; font-weight: 800; letter-spacing: -.02em; }
+  .axs.weak h4 { color: #fa2a49; }
+  .axs h4 img { width: 20px; height: 20px; }
   .axs ul { margin: 4px 0 0; padding-left: 21px; }
   .axs li { font-size: 14px; font-weight: 500; line-height: 1.45; }
 
-  .axtip { margin-top: 4px; padding: 12px; border-radius: 12px; background: #f2fce0; }
-  .axtip h4 { margin: 0; font-size: 16px; font-weight: 800; letter-spacing: -.02em; }
+  .axtip { margin-top: 6px; padding: 12px; border-radius: 12px; background: var(--green-100); }
+  .axtip h4 { display: flex; align-items: center; gap: 4px; margin: 0; color: var(--green-500); font-size: 16px; font-weight: 800; letter-spacing: -.02em; }
+  .axtip h4 img { width: 24px; height: 24px; }
+  .axtip p b { font-weight: 800; }
   .axtip p { margin: 4px 0 0; font-size: 14px; font-weight: 500; line-height: 1.45; word-break: keep-all; }
 
-  /* ---------- ③-A 원하는 레벨까지 · 한 칸짜리 답 ----------
-     아래 그래프가 같은 답을 길게 푼다. 이 칸은 그 결론만 크게 말한다. */
-  .rcourse.hide { display: none; }
+  /* ---------- ③ 원하는 레벨까지 · 주당 횟수 슬라이더 ---------- */
+  .freq.hide, .tiles.hide { display: none; }
+  .freq { padding: 12px 14px; border-radius: 12px; background: var(--gray-100); }
+  .freq-h { margin: 0; font-size: 16px; font-weight: 800; letter-spacing: -.02em; }
+  .freq-h b { color: var(--green-500); }
+  .freq-h span { color: var(--ink); }
+  .freq-slot { position: relative; margin-top: 4px; padding-top: 24px; }
+  /* 말풍선이 손잡이 위에 붙어 지금 값을 말한다 — 트랙 위에는 숫자를 얹을
+     자리가 없고, 끌면서 눈이 손잡이를 따라가기 때문이다. */
+  .freq-bub {
+    position: absolute; top: 0; transform: translateX(-50%);
+    color: var(--green-500); font-size: 14px; font-weight: 800; white-space: nowrap;
+  }
+  .freq-range {
+    display: block; width: 100%; height: 16px; margin: 0;
+    -webkit-appearance: none; appearance: none; background: none; cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .freq-range::-webkit-slider-runnable-track { height: 12px; border-radius: 999px; background: var(--gray-200); }
+  .freq-range::-moz-range-track { height: 12px; border-radius: 999px; background: var(--gray-200); }
+  .freq-range::-webkit-slider-thumb {
+    -webkit-appearance: none; appearance: none; margin-top: -2px;
+    width: 16px; height: 16px; border: 3px solid var(--green-500); border-radius: 50%; background: #fff;
+  }
+  .freq-range::-moz-range-thumb {
+    width: 16px; height: 16px; border: 3px solid var(--green-500); border-radius: 50%; background: #fff;
+  }
+  .freq-ends { display: flex; justify-content: space-between; margin-top: 6px; }
+  .freq-ends i { font-style: normal; font-size: 12px; font-weight: 500; color: var(--ink); }
+
+  .tiles { display: flex; gap: 8px; margin-top: 8px; }
+  .tile { flex: 1 1 0; min-width: 0; padding: 12px 14px; border-radius: 12px; background: var(--green-100); }
+  .tile-k { display: block; color: var(--green-500); font-size: 16px; font-weight: 800; letter-spacing: -.02em; }
+  .tile-v { display: flex; align-items: center; gap: 11px; margin-top: 4px; }
+  .tile-v img { width: 34px; height: 34px; }
+  .tile-v b { font-size: 22px; font-weight: 800; letter-spacing: -.02em; }
+
+  /* 추천 코스 길 */
+  .road { margin-top: 12px; padding: 12px 14px; border-radius: 12px; background: var(--green-100); }
+  .rsec.tint .road { background: #fff; }
+  .road-k { display: block; color: var(--green-500); font-size: 16px; font-weight: 800; letter-spacing: -.02em; }
+  .road-svg { display: block; width: 100%; height: auto; margin-top: 4px; }
+  /* 「아직 안 골랐어요」 는 비어 있다는 알림이지 이 페이지의 주된 행동이 아니다.
+     trial.css 의 .rep-jump 는 라임 채움 + 먹색 오프셋 그림자라 카드 안에서 가장
+     큰 소리를 내는데, 둘 다 은퇴한 Podo Bold 의 것이고 라임은 브랜드 크롬이지
+     상태가 아니다. 여기서는 자리를 비워 둔 회색 칸으로 되돌린다 — 다른 덱의
+     .rep-jump 는 건드리지 않도록 이 카드 안으로만 한정한다. */
+  .rsec .rep-jump {
+    display: flex; align-items: center; gap: 12px; margin-top: 0;
+    padding: 13px 14px; border: 1px solid var(--gray-200); border-radius: 12px;
+    background: var(--gray-50); box-shadow: none; text-align: left;
+  }
+  .rsec .rep-jump:active { transform: none; box-shadow: none; background: var(--gray-100); }
+  /* 이 규칙이 trial.css 의 .rep-jump.hide 와 특정도가 같고 뒤에 오므로,
+     감추는 쪽도 여기서 다시 말해 주어야 한다 */
+  .rsec .rep-jump.hide { display: none; }
+  .rsec .rep-jump .rj-b { flex: 1 1 auto; min-width: 0; }
+  .rsec .rep-jump .rj-t { font-size: 13.5px; font-weight: 800; color: var(--ink); }
+  .rsec .rep-jump .rj-s { margin-top: 2px; color: var(--gray-500); font-size: 11.5px; font-weight: 600; opacity: 1; }
+  /* 스크롤이 아니라 페이지 넘김이라 화살표도 위가 아니라 앞을 가리킨다 */
+  .rsec .rep-jump .rj-s::after { content: none; }
+  .rsec .rep-jump::after {
+    content: "→"; flex: none; color: var(--gray-400); font-size: 15px; font-weight: 900;
+  }
   .rcourse { padding: 10px 14px; border-radius: 12px; background: var(--green-100); }
   .rcourse .k { display: block; color: var(--green-500); font-size: 16px; font-weight: 800; letter-spacing: -.02em; }
   .rcourse .big { display: block; margin-top: 4px; font-size: 30px; font-weight: 800; letter-spacing: -.05em; }
@@ -277,15 +349,42 @@
   .axq.now { display: block; }
   .axq-h { margin: 0 0 9px; font-size: 14px; font-weight: 900; color: var(--ink); }
   .axq-h small { margin-left: 7px; font-size: 11.5px; font-weight: 700; color: #8a8a85; }
-  .axq-opts { display: grid; gap: 7px; }
-  .axq-opts button {
-    display: block; width: 100%; padding: 10px 13px;
+
+  /* ---------- 보기 한 줄 ----------
+     종합 레벨과 다섯 항목이 같은 컨트롤을 쓴다: 네 칸 막대 + 문장 하나.
+     막대가 있어서 문장을 다 읽기 전에 어느 쪽 끝인지가 먼저 보이고, 맨 아래
+     칸은 하나도 차지 않는다 — 다섯 칸을 네 개의 막대로 세는 방법이다. */
+  .lvpick, .axq-opts { display: grid; gap: 7px; }
+  .rung-row {
+    display: flex; align-items: center; gap: 12px; width: 100%; padding: 11px 13px;
     border: 1px solid var(--gray-200); border-radius: 11px; background: #fff;
-    font-family: inherit; font-size: 12.5px; font-weight: 600; color: #55554f;
+    font-family: inherit; font-size: 13px; font-weight: 600; color: #55554f;
     line-height: 1.45; text-align: left; word-break: keep-all;
     cursor: pointer; -webkit-tap-highlight-color: transparent;
+    transition: background .12s, border-color .12s;
   }
-  .axq-opts button.on { border: 1.5px solid var(--green-500); background: var(--green-100); color: var(--ink); font-weight: 700; }
+  .rung-row.on { border: 1.5px solid var(--green-500); background: var(--green-100); color: var(--ink); font-weight: 700; }
+  .rung-row:active { transform: scale(.995); }
+  .rung { flex: none; display: flex; align-items: flex-end; gap: 3px; height: 20px; }
+  .rung i { width: 4px; border-radius: 2px; background: #e2e2dc; }
+  .rung i:nth-child(1) { height: 7px; }
+  .rung i:nth-child(2) { height: 11px; }
+  .rung i:nth-child(3) { height: 15px; }
+  .rung i:nth-child(4) { height: 20px; }
+  .rung i.on { background: #1c1c1c; }
+  .rung-row.on .rung i.on { background: var(--green-500); }
+  .rung-row.on .rung i { background: rgba(28,28,28,.14); }
+  .rung-row.on .rung i.on { background: var(--green-500); }
+  .rung-t { flex: 1 1 auto; min-width: 0; }
+  /* 「추천」 은 상태가 아니라 제안이라 초록을 쓰지 않는다 — 회색 칩 하나로,
+     고르면 사라진다. */
+  .rung-row.sug { border-color: #d5d5cf; }
+  .rung-row.sug::after {
+    content: "추천"; flex: none; padding: 2px 7px; border-radius: 999px;
+    background: var(--gray-100); color: var(--gray-500); font-size: 10.5px; font-weight: 800;
+  }
+  .rung-row.on::after { content: none; }
+
   .axq-done { display: none; margin: 14px 0 0; font-size: 12px; font-weight: 700; color: #8a8a85; }
   .axsteps.all .axq-done { display: block; }
 
@@ -300,15 +399,18 @@
   .lvcheck-h { display: block; font-size: 14px; font-weight: 900; color: var(--ink); }
   .lvcheck-h small { margin-left: 7px; font-size: 11px; font-weight: 800; color: #8a8a85; }
   .lvcheck-q { margin: 4px 0 0; font-size: 12.5px; font-weight: 700; color: #55554f; }
-  .lvcheck .lvpick { gap: 7px; margin-top: 11px; }
-  /* 번호 배지가 없다 — 고르는 건 등급이 아니라 「오늘 무엇을 했나」 다 */
-  .lvcheck .lvrow { gap: 0; padding: 10px 13px; border-radius: 11px; }
-  .lvcheck .lvrow .lvt { font-size: 13.5px; font-weight: 800; }
-  .lvcheck .lvrow .lvs { display: block; margin-top: 3px; font-size: 11.5px; font-weight: 600; color: #8a8a85; line-height: 1.45; word-break: keep-all; }
-  .lvcheck .lvrow.on .lvs { color: var(--gray-500); }
-
-  /* 항목별 보기도 번호 없이 문장 한 줄이다 */
-  .axq-opts button { align-items: center; }
+  .lvcheck .lvpick { margin-top: 11px; }
+  /* 고른 뒤에는 고른 줄만 남는다. 나머지는 지우지 않고 감추기만 한다 —
+     보드가 원격 선택을 합성 클릭으로 적용하므로 옵션은 DOM 에 있어야 한다. */
+  .lvcheck.folded .rung-row:not(.on) { display: none; }
+  .lvcheck.folded .lvcheck-q { display: none; }
+  .lvcheck-redo {
+    display: none; width: 100%; margin-top: 8px; padding: 8px;
+    border: 1px solid var(--gray-200); border-radius: 10px; background: #fff;
+    font-family: inherit; font-size: 12px; font-weight: 800; color: #6f6f6a;
+    cursor: pointer; -webkit-tap-highlight-color: transparent;
+  }
+  .lvcheck.folded .lvcheck-redo { display: block; }
 
 
   /* ================================================================
@@ -1214,17 +1316,24 @@
              떨어져 있으면 튜터가 리포트에서 눈을 떼야 했다.
              보기는 「수업이 어땠나」 다 — 튜터가 방금 겪은 그대로라, 끝난
              직후라면 고민 없이 한 줄이 짚인다. CEFR·TOPIK 은 여기 없다:
-             튜터는 급수로 학생을 기억하지 않는다. 환산은 리포트가 한다. -->
+             튜터는 급수로 학생을 기억하지 않는다. 환산은 리포트가 한다.
+             다섯 줄은 각각 A1 · A2 · B1 · B2 · C1 의 경계에 서 있다. 가르는
+             기준이 매번 다른 것이 중요하다 — 한국어가 나오기는 하는가(1↔3),
+             익숙한 주제에서 말이 이어지는가(3↔5), 낯선 주제도 이유를 붙여
+             다루는가(5↔7), 원어민 속도를 따라잡는가(7↔9). 그래서 한 줄이
+             「무엇을 말했나」와 「얼마나 매끄러웠나」를 함께 든다.
+             고르고 나면 접힌다: 튜터가 다시 볼 것은 고른 한 줄뿐이다. -->
         <div class="lvcheck">
           <span class="lvcheck-h">레벨 체크 <small>튜터만 보여요</small></span>
           <p class="lvcheck-q">오늘 수업에서 학생이 어땠나요?</p>
           <div class="lvpick" data-group="level" data-pick="single" data-sync-id="plan-level" data-sync-kind="selection" data-sync-state="on">
-            <button class="lvrow" data-val="1" data-sync-option="1"><span class="lvb"><span class="lvt">글자부터 같이 읽었어요</span><span class="lvs">오늘 한글을 처음, 또는 거의 처음 봤어요</span></span></button>
-            <button class="lvrow" data-val="3" data-sync-option="3"><span class="lvb"><span class="lvt">아는 단어로만 답했어요</span><span class="lvs">제가 물으면 단어 한두 개로 대답했어요</span></span></button>
-            <button class="lvrow" data-val="5" data-sync-option="5"><span class="lvb"><span class="lvt">짧은 문장으로 답했어요</span><span class="lvs">익숙한 이야기는 한두 문장으로 말했어요</span></span></button>
-            <button class="lvrow" data-val="7" data-sync-option="7"><span class="lvb"><span class="lvt">제가 되물어도 이어갔어요</span><span class="lvs">자기 말로 설명을 붙여 대화가 이어졌어요</span></span></button>
-            <button class="lvrow" data-val="9" data-sync-option="9"><span class="lvb"><span class="lvt">거의 저처럼 이야기했어요</span><span class="lvs">주제를 바꿔도 편하게 길게 말했어요</span></span></button>
+            <button type="button" class="rung-row" data-val="1" data-sync-option="1"><span class="rung" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="rung-t">인사말과 단어 몇 개뿐, 대부분 일본어로 도와가며 했어요</span></button>
+            <button type="button" class="rung-row" data-val="3" data-sync-option="3"><span class="rung" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></span><span class="rung-t">익숙한 주제로 짧은 문장은 만들지만, 자주 막히고 말끝이 흔들렸어요</span></button>
+            <button type="button" class="rung-row" data-val="5" data-sync-option="5"><span class="rung" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i></span><span class="rung-t">익숙한 주제는 막힘 없이 이어갔지만, 낯선 주제에서는 멈췄어요</span></button>
+            <button type="button" class="rung-row" data-val="7" data-sync-option="7"><span class="rung" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><span class="rung-t">처음 보는 주제에도 이유를 붙여 자기 의견을 말했어요</span></button>
+            <button type="button" class="rung-row" data-val="9" data-sync-option="9"><span class="rung" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="rung-t">제 속도로 복잡한 이야기를 해도 바로 알아듣고 받아쳤어요</span></button>
           </div>
+          <button class="lvcheck-redo" type="button">다시 고르기</button>
         </div>
       </div>
 
@@ -1262,51 +1371,51 @@
         <div class="axq" data-ax="acc">
           <p class="axq-h">정확성<small>문법과 말끝이 어땠나요?</small></p>
           <div class="axq-opts" data-group="ax-acc" data-pick="single" data-sync-id="ax-acc" data-sync-kind="selection" data-sync-state="on">
-            <button type="button" data-val="1" data-sync-option="1" data-say="간단한 단어와 문법으로 기본적인 뜻은 전할 수 있어요">단어만 나열해서, 뜻을 제가 짐작했어요</button>
-            <button type="button" data-val="3" data-sync-option="3" data-say="문장이 길어지면 조사와 말끝이 자주 흔들려요">조사랑 말끝이 자주 틀렸어요</button>
-            <button type="button" data-val="5" data-sync-option="5" data-say="문장이 복잡할 때만 가끔 어순이나 문법이 흔들려요">긴 문장에서만 가끔 틀렸어요</button>
-            <button type="button" data-val="7" data-sync-option="7" data-say="상황에 맞는 단어와 문법을 대체로 정확하게 써요">거의 틀리지 않았어요</button>
-            <button type="button" data-val="9" data-sync-option="9" data-say="단어·문법·어순이 문맥에 맞게 정확해요">틀린 데를 찾기 어려웠어요</button>
+            <button type="button" class="rung-row" data-val="1" data-sync-option="1" data-say="간단한 단어와 문법으로 기본적인 뜻은 전할 수 있어요"><span class="rung" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="rung-t">단어만 나열해서, 뜻을 제가 짐작했어요</span></button>
+            <button type="button" class="rung-row" data-val="3" data-sync-option="3" data-say="문장이 길어지면 조사와 말끝이 자주 흔들려요"><span class="rung" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></span><span class="rung-t">조사랑 말끝이 자주 틀렸어요</span></button>
+            <button type="button" class="rung-row" data-val="5" data-sync-option="5" data-say="문장이 복잡할 때만 가끔 어순이나 문법이 흔들려요"><span class="rung" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i></span><span class="rung-t">긴 문장에서만 가끔 틀렸어요</span></button>
+            <button type="button" class="rung-row" data-val="7" data-sync-option="7" data-say="상황에 맞는 단어와 문법을 대체로 정확하게 써요"><span class="rung" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><span class="rung-t">거의 틀리지 않았어요</span></button>
+            <button type="button" class="rung-row" data-val="9" data-sync-option="9" data-say="단어·문법·어순이 문맥에 맞게 정확해요"><span class="rung" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="rung-t">틀린 데를 찾기 어려웠어요</span></button>
           </div>
         </div>
         <div class="axq" data-ax="voc">
           <p class="axq-h">어휘<small>쓸 수 있는 단어가 얼마나 되던가요?</small></p>
           <div class="axq-opts" data-group="ax-voc" data-pick="single" data-sync-id="ax-voc" data-sync-kind="selection" data-sync-state="on">
-            <button type="button" data-val="1" data-sync-option="1" data-say="아주 단순한 단어로 하고 싶은 말을 전할 수 있어요">쓸 단어가 없어 자주 멈췄어요</button>
-            <button type="button" data-val="3" data-sync-option="3" data-say="하고 싶은 말에 맞는 단어를 두세 개쯤 알고 있어요">쉬운 단어로 겨우 돌려 말했어요</button>
-            <button type="button" data-val="5" data-sync-option="5" data-say="하고 싶은 말에 맞는 단어를 골라 쓸 수 있어요">하려는 말에 맞는 단어를 찾아 썼어요</button>
-            <button type="button" data-val="7" data-sync-option="7" data-say="하고 싶은 말을 여러 가지 단어로 바꿔 표현할 수 있어요">같은 말을 여러 가지로 바꿔 썼어요</button>
-            <button type="button" data-val="9" data-sync-option="9" data-say="상황에 맞는 다양한 단어와 표현을 자유롭게 써요">상황에 딱 맞는 표현까지 골라 썼어요</button>
+            <button type="button" class="rung-row" data-val="1" data-sync-option="1" data-say="아주 단순한 단어로 하고 싶은 말을 전할 수 있어요"><span class="rung" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="rung-t">쓸 단어가 없어 자주 멈췄어요</span></button>
+            <button type="button" class="rung-row" data-val="3" data-sync-option="3" data-say="하고 싶은 말에 맞는 단어를 두세 개쯤 알고 있어요"><span class="rung" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></span><span class="rung-t">쉬운 단어로 겨우 돌려 말했어요</span></button>
+            <button type="button" class="rung-row" data-val="5" data-sync-option="5" data-say="하고 싶은 말에 맞는 단어를 골라 쓸 수 있어요"><span class="rung" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i></span><span class="rung-t">하려는 말에 맞는 단어를 찾아 썼어요</span></button>
+            <button type="button" class="rung-row" data-val="7" data-sync-option="7" data-say="하고 싶은 말을 여러 가지 단어로 바꿔 표현할 수 있어요"><span class="rung" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><span class="rung-t">같은 말을 여러 가지로 바꿔 썼어요</span></button>
+            <button type="button" class="rung-row" data-val="9" data-sync-option="9" data-say="상황에 맞는 다양한 단어와 표현을 자유롭게 써요"><span class="rung" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="rung-t">상황에 딱 맞는 표현까지 골라 썼어요</span></button>
           </div>
         </div>
         <div class="axq" data-ax="flu">
           <p class="axq-h">유창성<small>말이 얼마나 이어졌나요?</small></p>
           <div class="axq-opts" data-group="ax-flu" data-pick="single" data-sync-id="ax-flu" data-sync-kind="selection" data-sync-state="on">
-            <button type="button" data-val="1" data-sync-option="1" data-say="익숙한 주제로 더듬더듬 이야기할 수 있어요">자주 멈추고 다시 시작했어요</button>
-            <button type="button" data-val="3" data-sync-option="3" data-say="익숙한 주제라면 천천히 이야기를 주고받을 수 있어요">말 사이에 쉬는 때가 많았어요</button>
-            <button type="button" data-val="5" data-sync-option="5" data-say="익숙한 주제라면 주저 없이 이야기할 수 있어요">가끔 멈추지만 이어서 말했어요</button>
-            <button type="button" data-val="7" data-sync-option="7" data-say="처음 보는 주제에도 주저 없이 이야기할 수 있어요">거의 안 멈추고 대화를 이어갔어요</button>
-            <button type="button" data-val="9" data-sync-option="9" data-say="어떤 주제든 빠르고 편하게 이야기할 수 있어요">한국인처럼 편하게 말했어요</button>
+            <button type="button" class="rung-row" data-val="1" data-sync-option="1" data-say="익숙한 주제로 더듬더듬 이야기할 수 있어요"><span class="rung" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="rung-t">자주 멈추고 다시 시작했어요</span></button>
+            <button type="button" class="rung-row" data-val="3" data-sync-option="3" data-say="익숙한 주제라면 천천히 이야기를 주고받을 수 있어요"><span class="rung" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></span><span class="rung-t">말 사이에 쉬는 때가 많았어요</span></button>
+            <button type="button" class="rung-row" data-val="5" data-sync-option="5" data-say="익숙한 주제라면 주저 없이 이야기할 수 있어요"><span class="rung" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i></span><span class="rung-t">가끔 멈추지만 이어서 말했어요</span></button>
+            <button type="button" class="rung-row" data-val="7" data-sync-option="7" data-say="처음 보는 주제에도 주저 없이 이야기할 수 있어요"><span class="rung" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><span class="rung-t">거의 안 멈추고 대화를 이어갔어요</span></button>
+            <button type="button" class="rung-row" data-val="9" data-sync-option="9" data-say="어떤 주제든 빠르고 편하게 이야기할 수 있어요"><span class="rung" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="rung-t">한국인처럼 편하게 말했어요</span></button>
           </div>
         </div>
         <div class="axq" data-ax="pron">
           <p class="axq-h">발음<small>학생 말을 알아듣기 어땠나요?</small></p>
           <div class="axq-opts" data-group="ax-pron" data-pick="single" data-sync-id="ax-pron" data-sync-kind="selection" data-sync-state="on">
-            <button type="button" data-val="1" data-sync-option="1" data-say="아는 단어도 신경 써서 말해야 알아들을 수 있어요">발음 때문에 알아듣기 어려웠어요</button>
-            <button type="button" data-val="3" data-sync-option="3" data-say="아는 단어는 말할 수 있지만, 처음 보는 단어는 발음이 어려워요">가끔 알아듣기 어려웠어요</button>
-            <button type="button" data-val="5" data-sync-option="5" data-say="아는 단어는 능숙하고, 처음 보는 단어도 소리 내어 읽을 수 있어요">알아들을 만하고 대체로 또렷했어요</button>
-            <button type="button" data-val="7" data-sync-option="7" data-say="발음이 능숙하고 억양과 리듬도 알맞아요">아주 또렷했어요</button>
-            <button type="button" data-val="9" data-sync-option="9" data-say="발음이 또렷하고 억양과 리듬까지 자연스러워요">한국인처럼 들렸어요</button>
+            <button type="button" class="rung-row" data-val="1" data-sync-option="1" data-say="아는 단어도 신경 써서 말해야 알아들을 수 있어요"><span class="rung" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="rung-t">발음 때문에 알아듣기 어려웠어요</span></button>
+            <button type="button" class="rung-row" data-val="3" data-sync-option="3" data-say="아는 단어는 말할 수 있지만, 처음 보는 단어는 발음이 어려워요"><span class="rung" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></span><span class="rung-t">가끔 알아듣기 어려웠어요</span></button>
+            <button type="button" class="rung-row" data-val="5" data-sync-option="5" data-say="아는 단어는 능숙하고, 처음 보는 단어도 소리 내어 읽을 수 있어요"><span class="rung" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i></span><span class="rung-t">알아들을 만하고 대체로 또렷했어요</span></button>
+            <button type="button" class="rung-row" data-val="7" data-sync-option="7" data-say="발음이 능숙하고 억양과 리듬도 알맞아요"><span class="rung" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><span class="rung-t">아주 또렷했어요</span></button>
+            <button type="button" class="rung-row" data-val="9" data-sync-option="9" data-say="발음이 또렷하고 억양과 리듬까지 자연스러워요"><span class="rung" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="rung-t">한국인처럼 들렸어요</span></button>
           </div>
         </div>
         <div class="axq" data-ax="lis">
           <p class="axq-h">듣기<small>제 말을 알아듣게 하려고 얼마나 늦췄나요?</small></p>
           <div class="axq-opts" data-group="ax-lis" data-pick="single" data-sync-id="ax-lis" data-sync-kind="selection" data-sync-state="on">
-            <button type="button" data-val="1" data-sync-option="1" data-say="천천히 또박또박 말해도 알아듣기 어려워요">제 말을 거의 못 알아들었어요</button>
-            <button type="button" data-val="3" data-sync-option="3" data-say="천천히 또박또박 말하면 알아들을 수 있어요">아주 천천히 말해야 알아들었어요</button>
-            <button type="button" data-val="5" data-sync-option="5" data-say="조금 늦춰 말하면 전체 내용을 알아들을 수 있어요">조금 천천히 말하면 알아들었어요</button>
-            <button type="button" data-val="7" data-sync-option="7" data-say="보통 속도로 말해도 뉘앙스까지 이해할 수 있어요">평소보다 조금만 늦춰도 알아들었어요</button>
-            <button type="button" data-val="9" data-sync-option="9" data-say="한국인 속도로 말해도 뉘앙스까지 정확히 알아들어요">평소 속도로 말해도 알아들었어요</button>
+            <button type="button" class="rung-row" data-val="1" data-sync-option="1" data-say="천천히 또박또박 말해도 알아듣기 어려워요"><span class="rung" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="rung-t">제 말을 거의 못 알아들었어요</span></button>
+            <button type="button" class="rung-row" data-val="3" data-sync-option="3" data-say="천천히 또박또박 말하면 알아들을 수 있어요"><span class="rung" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></span><span class="rung-t">아주 천천히 말해야 알아들었어요</span></button>
+            <button type="button" class="rung-row" data-val="5" data-sync-option="5" data-say="조금 늦춰 말하면 전체 내용을 알아들을 수 있어요"><span class="rung" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i></span><span class="rung-t">조금 천천히 말하면 알아들었어요</span></button>
+            <button type="button" class="rung-row" data-val="7" data-sync-option="7" data-say="보통 속도로 말해도 뉘앙스까지 이해할 수 있어요"><span class="rung" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span><span class="rung-t">평소보다 조금만 늦춰도 알아들었어요</span></button>
+            <button type="button" class="rung-row" data-val="9" data-sync-option="9" data-say="한국인 속도로 말해도 뉘앙스까지 정확히 알아들어요"><span class="rung" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><span class="rung-t">평소 속도로 말해도 알아들었어요</span></button>
           </div>
         </div>
           <p class="axq-done">다섯 항목을 다 봤어요. 위를 눌러 다시 고칠 수 있어요.</p>
@@ -1315,27 +1424,47 @@
         <!-- 다섯 줄 · 좋아요/아쉬운 점 · 추천 모두 renderAspects() 가 그린다 -->
         <div class="axbars"></div>
         <div class="axsum">
-          <div class="axs"><h4>👍🏻 좋아요</h4><ul></ul></div>
-          <div class="axs weak"><h4>✍🏻 아쉬운 점</h4><ul></ul></div>
+          <div class="axs good"><h4><img src="../assets/report-icons/good.svg" alt="">잘하고 있어요!</h4><ul></ul></div>
+          <div class="axs weak"><h4><img src="../assets/report-icons/bad.svg" alt="">아쉬워요!</h4><ul></ul></div>
         </div>
-        <div class="axtip"><h4>💡 추천</h4><p></p></div>
+        <!-- 코멘트 한 문단 · 잘하는 둘과 아쉬운 둘을 한 문장으로 잇고, 그 둘을
+             기르는 방법까지 붙인다. 위 두 상자가 「무엇」 이라면 여기는 「그래서」 다. -->
+        <div class="axtip"><h4><img src="../assets/report-icons/crown.svg" alt="">체험레슨 코멘트</h4><p></p></div>
       </div>
 
-      <!-- ③-A 원하는 레벨까지 · 결론 한 칸 -->
+      <!-- ③ 원하는 레벨까지 · 주당 횟수를 움직이면 기간이 따라 바뀐다.
+           앞의 「학습 페이스」 장이 정한 값으로 시작하지만, 여기서 끌어 보는 게
+           본론이다 — 「주 3회면 5개월, 주 6회면 3개월」 을 손으로 보여 주는 자리라
+           숫자를 말로 설명할 필요가 없다. 슬라이더는 공유된다: 튜터가 끌면
+           학습자 화면의 개월 수도 같이 움직여야 대화가 성립한다. -->
       <div class="rsec">
-        <h3 class="rsec-h">원하는 레벨까지<small>포도님에게 가장 효과적인 코스예요.</small></h3>
-        <div class="rcourse">
-          <span class="k">추천 코스</span>
-          <span class="big">—</span>
-          <span class="s">—</span>
+        <h3 class="rsec-h">원하는 레벨까지<small>주당 횟수를 조절하면 예상 기간을 알려드려요.</small></h3>
+        <div class="freq">
+          <p class="freq-h">일주일에 <b class="freq-n">3</b><span>/7</span></p>
+          <div class="freq-slot">
+            <span class="freq-bub">3회</span>
+            <input class="freq-range" type="range" min="1" max="7" step="1" value="3"
+                   data-sync-id="plan-freq" aria-label="일주일에 몇 번">
+            <span class="freq-ends"><i>천천히</i><i>빠르게</i></span>
+          </div>
         </div>
-        <a class="rep-jump rj-course" href="#p-goal"><span class="rj-t">—</span><span class="rj-s">눌러서 고르러 가기</span></a>
+        <div class="tiles">
+          <div class="tile"><span class="tile-k">목표 달성까지</span><span class="tile-v"><img src="../assets/report-icons/cal.svg" alt=""><b class="eta">—</b></span></div>
+          <div class="tile"><span class="tile-k">1회 레슨</span><span class="tile-v"><img src="../assets/report-icons/clock.svg" alt=""><b>25분</b></span></div>
+        </div>
+        <a class="rep-jump rj-course" href="#p-goal"><span class="rj-b"><span class="rj-t">—</span><span class="rj-s">눌러서 고르러 가기</span></span></a>
       </div>
 
       <!-- ④-A 시작 커리큘럼 · 첫 코스 한 장 -->
       <div class="rsec tint">
-        <h3 class="rsec-h"><span class="cur-lv">Lv.1</span>에서 시작하면 좋은 커리큘럼<small>진단 결과에 맞춰 약한 항목부터 공부해요!</small></h3>
+        <h3 class="rsec-h">지금 시작하면 좋은 커리큘럼<small>진단 결과에 맞춰 약한 항목부터 공부해요!</small></h3>
         <div class="curli"></div>
+        <!-- 추천 코스 · 「지금」 에서 목표까지 이어지는 길. 점 하나가 한 코스이고,
+             끝에 붙는 개월 수는 위 슬라이더를 따라 함께 움직인다. -->
+        <div class="road">
+          <span class="road-k">추천 코스</span>
+          <svg class="road-svg" viewBox="0 0 269 116" role="img" aria-label="지금부터 목표까지의 코스 길"></svg>
+        </div>
       </div>
 
     </div>
@@ -2355,6 +2484,24 @@
         function (b) { return b.getAttribute("data-say"); });
     });
 
+    /* 코멘트에 들어갈 「무엇을 하면 느는가」. HINT 와 따로 두는 이유는 꼴이
+       달라서다 — HINT 는 목록에 놓이는 「…하기」 이고, 이쪽은 문장 가운데에
+       들어가 「…것이 중요해요」 로 닫힌다. */
+    var GROW = {
+      acc: "단어와 문법의 뜻·쓰임을 정확히 알고, 맞는 상황에서 직접 써 보는 것",
+      voc: "많이 읽어 단어를 알고, 그 단어를 대화에서 실제로 써 보는 것",
+      flu: "여러 사람과 자주 주고받으며 말하는 양을 늘리는 것",
+      pron: "원어민의 발음과 억양을 많이 듣고 그대로 따라 해 보는 것",
+      lis: "여러 속도와 억양에 익숙해질 때까지 자주 들어 보는 것"
+    };
+    /* 받침이 있으면 과/이, 없으면 와/가. 항목 이름이 다섯뿐이라 표로 둘 수도
+       있지만, 코멘트가 이름을 조합해 문장을 만들므로 규칙으로 두는 편이 안전하다. */
+    function hasBatchim(word) {
+      var c = word.charCodeAt(word.length - 1) - 0xac00;
+      return c >= 0 && c <= 11171 && c % 28 !== 0;
+    }
+    function josa(word, withT, withoutT) { return word + (hasBatchim(word) ? withT : withoutT); }
+
     var HINT = {
       flu: "다양한 상황에서 소통하는 경험을 늘리기 — 사람과 한국어로 주고받은 양이 그대로 유창성이 돼요.",
       acc: "단어와 문법의 정확한 뜻·쓰임을 이해하고, 맞는 상황에서 직접 써 보며 충분히 연습하기.",
@@ -2443,6 +2590,7 @@
           }
           // 항목 하나를 고르면 「고치는 중」 은 끝난다 — 다음 항목이 열린다
           if (key.indexOf("ax-") === 0) editing = null;
+          if (key === "level") lvEditing = false;
           render();
         });
       });
@@ -2452,17 +2600,24 @@
        종합은 아직 안 골랐으면 1 — 레벨 체크의 "대부분 1이에요" 가 말하는 그
        기본값이다. 항목별은 손대지 않았으면 종합을 그대로 따라간다. */
     function overall() { return clamp(Number(pick.level || 1)); }
-    function areaLv(k) { return clamp(Number(pick["ax-" + k] || pick.level || 1)); }
+    /* 아직 안 고른 항목은 0 이다 — 종합 레벨로 대신 채우지 않는다. 채워 두면
+       레벨을 고르는 순간 오각형이 이미 완성돼 버려서, 튜터가 다섯 항목을
+       고르는 동안 학습자 화면에서는 아무 일도 일어나지 않는다. 종합 레벨은
+       이제 보기 옆의 「추천」 으로만 남는다: 제안이지 값이 아니다. */
+    function areaLv(k) { var v = Number(pick["ax-" + k]); return v ? clamp(v) : 0; }
+    function rated(k) { return !!pick["ax-" + k]; }
+    function allRated() { return AREAS.every(function (a) { return rated(a.k); }); }
     function clamp(n) { return Math.max(1, Math.min(LADDER_STEPS, n || 1)); }
     // 한 칸이 두 레벨을 덮는다: 1–2 → 0, 3–4 → 1 … 9–10 → 4
-    function band(lv) { return Math.ceil(clamp(lv) / 2) - 1; }
+    function band(lv) { return Math.max(0, Math.ceil(clamp(lv) / 2) - 1); }
     // 10칸 사다리 위의 자리. 평균은 2.6 처럼 칸 사이에 서므로 칸 중앙이 아니라
     // 눈금값 그대로 재야 레이더(반지름 = lv/10)와 같은 곳을 가리킨다.
-    function pct(lv) { return clamp(lv) * 10; }
+    function pct(lv) { return lv ? clamp(lv) * 10 : 0; }
     // 항목을 잘하는 순으로. 「좋아요/아쉬운 점」·막대 색·추천이 모두 이 한
     // 줄에서 나오므로, 세 곳이 서로 다른 항목을 가리키는 일이 없다.
     function ranked() {
-      return AREAS.slice().sort(function (a, b) { return areaLv(b.k) - areaLv(a.k); });
+      return AREAS.filter(function (a) { return rated(a.k); })
+                  .sort(function (a, b) { return areaLv(b.k) - areaLv(a.k); });
     }
 
     /* ---- 날짜 ----
@@ -2487,6 +2642,25 @@
         cells[i].querySelector(".d").textContent = (x.getMonth() + 1) + "/" + x.getDate();
         if (i > 0 && i < cells.length - 1) cells[i].querySelector(".w").textContent = DOW[x.getDay()];
       }
+    }
+
+    /* ---- 레벨 체크는 고르고 나면 접힌다 ----
+       고른 뒤에도 다섯 줄이 펼쳐져 있으면, 카드에서 정작 봐야 할 것(레벨과
+       근거)보다 고르는 칸이 더 길다. 접으면 고른 한 줄만 남는다.
+       「다시 고르기」 는 이 화면만의 상태라 공유하지 않는다 — 튜터가 무엇을
+       열어 두었는지는 학습자와 아무 상관이 없다. */
+    var lvEditing = false;
+    var lvcheck = document.querySelector(".lvcheck");
+    if (lvcheck) {
+      lvcheck.querySelector(".lvcheck-redo").addEventListener("click", function () {
+        lvEditing = true;
+        render();
+      });
+    }
+
+    function renderLevelPick() {
+      if (!lvcheck) return;
+      lvcheck.classList.toggle("folded", !!pick.level && !lvEditing);
     }
 
     /* ---- 항목별 체크 · 한 번에 한 항목 ----
@@ -2526,7 +2700,15 @@
       });
 
       steps.querySelectorAll(".axq").forEach(function (q) {
-        q.classList.toggle("now", q.getAttribute("data-ax") === open);
+        var k = q.getAttribute("data-ax");
+        q.classList.toggle("now", k === open);
+        /* 종합 레벨과 같은 칸을 「추천」 으로 짚어 준다. 값을 넣지는 않는다 —
+           튜터가 눌러야 값이 된다. 이미 고른 항목에는 표시하지 않는다:
+           고른 뒤에도 남으면 자기가 고른 것과 제안이 헷갈린다. */
+        q.querySelectorAll(".rung-row").forEach(function (b) {
+          b.classList.toggle("sug",
+            !rated(k) && Number(b.getAttribute("data-val")) === overall());
+        });
       });
       steps.classList.toggle("all", !nextUp && !editing);
     }
@@ -2544,10 +2726,12 @@
       card.querySelector(".topikrow i").textContent = "TOPIK " + d.cert[0];
       card.querySelector(".topikrow span").textContent = d.cert[1];
 
-      /* 근거 두 줄은 항목별 레벨에서 나온다 — 가장 잘 되는 둘. 어디가 아직인지는
-         바로 아래 「아쉬운 점」 이 통째로 맡으므로 여기서 되풀이하지 않는다. */
+      /* 근거는 실제로 체크한 항목에서만 나온다 — 가장 잘 되는 둘. 아직 하나도
+         체크하지 않았으면 근거 칸 자체를 비워 둔다: 없는 근거를 지어내느니
+         레벨과 한 줄 설명만 보이는 편이 낫다. */
       var top2 = ranked().slice(0, 2), ul = card.querySelector(".lv-ev");
       ul.innerHTML = "";
+      ul.classList.toggle("hide", !top2.length);
       top2.forEach(function (a) {
         var li = document.createElement("li");
         li.innerHTML = '<i>✓</i><span>' + a.n + " · " + BAND[a.k][band(areaLv(a.k))] + '</span>';
@@ -2562,24 +2746,26 @@
       growRadar();
       if (!bars) return;
       var order = ranked();
-      var even = areaLv(order[0].k) === areaLv(order[order.length - 1].k);
-      var up = even ? [] : order.slice(0, 2).map(function (a) { return a.k; });
 
       // 다섯 줄은 언제나 같은 순서(정확성→듣기)로 선다. 순위대로 세우면
       // 튜터가 값을 고칠 때마다 줄이 자리를 바꿔, 어디를 보는지 놓친다.
       bars.innerHTML = "";
       AREAS.forEach(function (a) {
         var row = document.createElement("div");
-        row.className = "axb" + (up.indexOf(a.k) >= 0 ? " up" : "");
+        row.className = "axb";
+        // 평균은 두 번째 막대가 아니라 눈금 하나다 — 막대 둘을 겹쳐 놓으면
+        // 어느 쪽이 내 것인지 매번 범례를 봐야 한다.
         row.innerHTML = '<span class="axb-n">' + a.n + '</span>' +
-          '<span class="axb-t"><i class="axb-f" style="width:' + pct(areaLv(a.k)) + '%"></i></span>';
+          '<span class="axb-t"><i class="axb-f" style="width:' + pct(areaLv(a.k)) + '%"></i>' +
+          '<b class="axb-avg" style="left:' + pct(AVG[a.k]) + '%"></b></span>';
         bars.appendChild(row);
       });
 
-      /* 다섯이 모두 같으면 잘하는 것도 아쉬운 것도 없다 — 그런데도 위 둘·아래
-         둘을 뽑으면 배열 순서가 그대로 진단이 되어, 튜터가 손대지 않은 항목을
-         약점이라고 말해 버린다. 차이가 생길 때까지 두 상자를 통째로 접는다. */
-      var flat = areaLv(order[0].k) === areaLv(order[order.length - 1].k);
+      /* 다섯을 다 보기 전에는 잘하는 쪽도 아쉬운 쪽도 말할 수 없고, 다섯이
+         모두 같으면 말할 것이 없다. 둘 중 하나라도 걸리면 두 상자를 접는다 —
+         아직 안 본 항목을 약점이라고 말해 버리는 것이 가장 나쁜 결과다. */
+      var flat = !order.length || !allRated() ||
+                 areaLv(order[0].k) === areaLv(order[order.length - 1].k);
       document.querySelector(".axsum").classList.toggle("hide", flat);
       document.querySelector(".axtip").classList.toggle("hide", flat);
       if (flat) return;
@@ -2590,8 +2776,22 @@
       order.slice(0, 2).forEach(function (a) { good.innerHTML += "<li>" + a.n + "</li>"; });
       order.slice(-2).forEach(function (a) { weak.innerHTML += "<li>" + a.n + "</li>"; });
 
-      // 추천은 가장 처지는 항목 하나만 — 다섯 개를 다 적으면 아무것도 안 고른다
-      document.querySelector(".axtip p").textContent = HINT[order[order.length - 1].k];
+      /* 코멘트는 위 두 상자를 한 문장으로 잇는다: 잘하는 둘을 이름으로 부르고,
+         아쉬운 둘을 기르는 방법을 붙인다. 방법은 가장 처지는 항목의 HINT 다 —
+         둘 다 적으면 문단이 길어지고, 튜터가 읽어 줄 말이 아니게 된다. */
+      var good2 = order.slice(0, 2), weak2 = order.slice(-2);
+      // 이름을 이을 때도 문장을 닫을 때도 앞말의 받침을 따라간다
+      var nm = function (xs) {
+        return xs.map(function (a, i) {
+          var b = "<b>" + a.n + "</b>";
+          return i < xs.length - 1 ? b + (hasBatchim(a.n) ? "과 " : "와 ") : b;
+        }).join("");
+      };
+      var lastOf = function (xs) { return xs[xs.length - 1].n; };
+      document.querySelector(".axtip p").innerHTML =
+        "포도님은 " + nm(good2) + (hasBatchim(lastOf(good2)) ? "이" : "가") + " 좋은 편이에요.<br>" +
+        nm(weak2) + (hasBatchim(lastOf(weak2)) ? "을" : "를") + " 키우려면 " +
+        GROW[order[order.length - 1].k] + "이 중요해요.";
     }
 
     /* 오각형. 지금(초록 채움)은 튜터가 고른 항목별 레벨, 점선 외곽은 체험
@@ -2714,42 +2914,116 @@
       return out.length ? out : [all[all.length - 1]];
     }
 
-    /* ---- ③-A 원하는 레벨까지 · 결론 한 칸 ----
-       아래 그래프가 같은 답을 길게 푼다. 여기서 더 말하면 두 번 읽힌다. */
-    var rcourse = document.querySelector(".rcourse");
+    /* ---- ③ 원하는 레벨까지 ----
+       주당 횟수는 앞의 「학습 페이스」 장에서 한 번 정해지고, 여기 슬라이더가
+       그 값을 이어받아 실제로 굴린다. 둘은 같은 것을 가리키므로 한쪽을 움직이면
+       다른 쪽도 따라간다 — 상담 중에 「그럼 주 6회면요?」 를 손으로 답하는 자리다. */
+    var freq = document.querySelector(".freq-range");
+    if (freq) {
+      freq.addEventListener("input", function () {
+        pick.pace = freq.value;
+        render();
+      });
+    }
+    function perWeek() { return Number((freq && freq.value) || pick.pace || 3); }
+
+    var rcourse = document.querySelector(".freq");
     var rjCourse = document.querySelector(".rj-course");
 
     function renderCourseCard() {
       if (!rcourse) return;
-      var g = GOALS[pick.goal], pace = pick.pace;
-      if (!g || !pace) {
+      var g = GOALS[pick.goal];
+      // 페이스는 슬라이더가 늘 값을 들고 있으므로, 비어 있을 수 있는 건 목표뿐이다
+      if (!g) {
         rcourse.classList.add("hide");
+        document.querySelector(".tiles").classList.add("hide");
         if (rjCourse) {
           rjCourse.classList.remove("hide");
-          var miss = !g ? { href: "#p-goal", t: "목표를 아직 안 골랐어요" }
-                        : { href: "#p-pace", t: "학습 페이스를 아직 안 골랐어요" };
-          rjCourse.href = miss.href;
-          rjCourse.querySelector(".rj-t").textContent = miss.t;
+          rjCourse.href = "#p-goal";
+          rjCourse.querySelector(".rj-t").textContent = "목표를 아직 안 골랐어요";
         }
         return;
       }
       rcourse.classList.remove("hide");
+      document.querySelector(".tiles").classList.remove("hide");
       if (rjCourse) rjCourse.classList.add("hide");
 
-      var per = Number(pace), need = Math.max(6, DONE[String(g.lv)] - DONE[String(overall())]);
-      var mo = months(need, per), low = ranked()[AREAS.length - 1];
-      rcourse.querySelector(".big").textContent = mo + "개월・주 " + per + "회";
-      rcourse.querySelector(".s").innerHTML =
-        "1회 25분・총 " + need + "회<br>" + low.n + " 집중 트랙";
+      var per = perWeek();
+      var need = Math.max(6, DONE[String(g.lv)] - DONE[String(overall())]);
+      var mo = months(need, per);
+      if (freq) freq.value = per;
+      rcourse.querySelector(".freq-n").textContent = per;
+      var bub = rcourse.querySelector(".freq-bub");
+      bub.textContent = per + "회";
+      // 말풍선이 손잡이를 따라간다. 양 끝에서는 손잡이 반지름만큼 안으로 당겨
+      // 카드 밖으로 새지 않게 한다.
+      bub.style.left = "calc(" + ((per - 1) / 6 * 100) + "% + " + (8 - (per - 1) / 6 * 16) + "px)";
+      document.querySelector(".eta").textContent = mo + "개월";
+      drawRoad(mo);
     }
 
-    /* ---- ④-A 시작 커리큘럼 · 첫 코스 한 장 ----
+    /* ---- 추천 코스 길 ----
+       「지금」 에서 목표까지 뱀처럼 접힌 길. 점 하나가 코스 하나라 개수가
+       사람마다 다르고, 끝의 개월 수는 슬라이더를 따라 움직인다. 접어 놓는
+       이유는 폭 때문이다 — 한 줄로 펴면 코스가 넷만 돼도 점이 붙어 버린다. */
+    var road = document.querySelector(".road-svg");
+    function drawRoad(mo) {
+      if (!road) return;
+      var NS = "http://www.w3.org/2000/svg";
+      var g = GOALS[pick.goal];
+      // 점 = 「지금」 + 코스 하나씩. 코스는 한둘에서 넷까지라 점은 둘에서 다섯이다.
+      var n = courseList(g ? g.lv : overall() + 2).length + 1;
+      var W = 269, PAD = 22, ROW = 42;
+      // 넷까지는 한 줄로 편다. 다섯이 되면 두 줄로 접는데, 접는 이유는 폭 하나뿐이라
+      // 그 전에는 접지 않는다 — 두 점을 굳이 꺾어 두면 길이 아니라 도형으로 보인다.
+      var per = n <= 4 ? n : Math.ceil(n / 2);
+      var rows = Math.ceil(n / per);
+      var H = PAD + (rows - 1) * ROW + 26;
+      road.setAttribute("viewBox", "0 0 " + W + " " + H);
+
+      var span = per > 1 ? (W - PAD * 2) / (per - 1) : 0;
+      var pts = [], i, r, col;
+      for (i = 0; i < n; i++) {
+        r = Math.floor(i / per);
+        col = i % per;
+        // 홀수 줄은 되짚어 온다. 칸 수는 줄이 덜 찼어도 per 그대로 센다 —
+        // 남은 개수로 다시 세면 아래 줄이 안쪽으로 밀려서, 꺾이는 자리가
+        // 바로 아래가 아니라 대각선이 된다(길이 아니라 지그재그로 보인다).
+        if (r % 2) col = per - 1 - col;
+        pts.push([PAD + col * span, PAD + r * ROW]);
+      }
+
+      var el = function (t, at) { var e = document.createElementNS(NS, t);
+        for (var q in at) e.setAttribute(q, at[q]); return e; };
+      var d = pts.map(function (p, k) {
+        return (k ? "L" : "M") + p[0].toFixed(1) + " " + p[1].toFixed(1); }).join("");
+      road.innerHTML = "";
+      road.appendChild(el("path", { d: d, fill: "none", stroke: "#e4efd8",
+                                    "stroke-width": "14", "stroke-linecap": "round",
+                                    "stroke-linejoin": "round" }));
+      pts.forEach(function (p, k) {
+        var edge = k === 0 || k === pts.length - 1;
+        road.appendChild(el("circle", { cx: p[0], cy: p[1], r: edge ? 8 : 6,
+          fill: "#fff", stroke: edge ? "#6abe36" : "#d7e7c4", "stroke-width": edge ? 3 : 2.5 }));
+      });
+      // 양 끝 이름표. 가장자리에 선 점은 라벨이 상자 밖으로 새므로 안쪽으로 붙인다.
+      var cap = function (p, t) {
+        var anchor = p[0] < 40 ? "start" : (p[0] > W - 40 ? "end" : "middle");
+        var x = anchor === "start" ? 0 : (anchor === "end" ? W : p[0]);
+        var e = el("text", { x: x, y: p[1] + 24, "font-size": "12", "font-weight": "700",
+                             fill: "#6abe36", "text-anchor": anchor });
+        e.textContent = t; road.appendChild(e);
+      };
+      cap(pts[0], "지금");
+      cap(pts[pts.length - 1], mo + "개월");
+    }
+
+    /* ---- ④ 시작 커리큘럼 · 첫 코스 한 장 ----
        "지금 레벨에서 어디부터" 만 답한다. 전체 목록은 아래 학습 순서에 있다. */
     var curli = document.querySelector(".curli");
 
     function renderCurriculum() {
       if (!curli) return;
-      document.querySelector(".cur-lv").textContent = "Lv." + overall();
       var g = GOALS[pick.goal];
       var c = COURSE[courseList(g ? g.lv : overall() + 2)[0]];
       curli.innerHTML =
@@ -2784,6 +3058,7 @@
 
     function render() {
       renderGoalCards();
+      renderLevelPick();
       renderAxSteps();
       renderLevel();
       renderAspects();

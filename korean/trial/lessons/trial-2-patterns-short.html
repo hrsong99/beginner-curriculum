@@ -61,10 +61,12 @@
     <div class="section" data-page-id="words-you-know">
       <h2 class="section-title">이미 아는 단어 <span class="title-ja">(もう知っている単語)</span></h2>
       <p class="section-subtitle"><span class="ko">사실 오늘 쓸 단어, 이미 알고 있어요. 한자에서 온 말이라 소리가 비슷해요.</span><span class="ja">実は今日使う単語、もう知っています。漢字から来た言葉なので音が似ています。</span></p>
-      <div class="known">
-        <div class="known-row"><span class="k">일본</span><span class="j">日本<small>イルボン</small></span></div>
-        <div class="known-row"><span class="k">학생</span><span class="j">学生<small>ハクセン</small></span></div>
-        <div class="known-row"><span class="k">회사원</span><span class="j">会社員<small>フェサウォン</small></span></div>
+      <!-- the equivalence is the whole hook, so it is the thing drawn:
+           the kanji they own on the left, the Korean it becomes on the right -->
+      <div class="bridge">
+        <div class="br-row"><span class="br-cn">日本</span><span class="br-eq">→</span><span class="br-ko">일본<small>イルボン</small></span></div>
+        <div class="br-row"><span class="br-cn">学生</span><span class="br-eq">→</span><span class="br-ko">학생<small>ハクセン</small></span></div>
+        <div class="br-row"><span class="br-cn">会社員</span><span class="br-eq">→</span><span class="br-ko">회사원<small>フェサウォン</small></span></div>
       </div>
       <div class="hint"><span class="hint-chip">単語の約7割が漢字由来</span><span class="hint-chip">語順も助詞も日本語とほぼ同じ</span></div>
     </div>
@@ -79,16 +81,29 @@
     <div class="section" data-page-id="p1-teach">
       <h2 class="section-title">오늘의 패턴 <span class="title-ja">(今日のパターン)</span></h2>
       <p class="section-subtitle"><span class="ko">제가 먼저 읽을게요. 잘 듣고 따라 읽어 보세요.</span><span class="ja">私が先に読みます。よく聞いて、まねして読んでみましょう。</span></p>
+      <!-- a sentence is a box too. 저는 stays one unlit chunk here — 는 is
+           part 2's job — so the only piece lit is the one being taught. -->
+      <div class="sent-anat">
+        <span class="sa-grp">
+          <span class="sa-t"><b>저는</b><small>私は</small></span>
+          <span class="sa-cap">だれの話か</span>
+        </span>
+        <span class="sa-grp">
+          <span class="sa-t"><b>학생</b><small>学生</small></span>
+          <span class="sa-t en"><b>입니다</b><small>です</small></span>
+          <span class="sa-cap">言いたいこと ＋ ていねいな終わり</span>
+        </span>
+      </div>
       <div class="pattern-stack">
         <div class="pattern-card">
-          <span class="korean">N입니다.</span>
+          <span class="korean">N<span class="en">입니다</span>.</span>
           <span class="translation">Nです。（かたい、ていねいな言い方）</span>
           <div class="example-card">
-            <span class="korean">저는 학생입니다.</span>
+            <span class="korean">저는 학생<span class="en">입니다</span>.</span>
             <span class="translation">私は学生です。</span>
           </div>
           <div class="example-card">
-            <span class="korean">저는 일본 사람입니다.</span>
+            <span class="korean">저는 일본 사람<span class="en">입니다</span>.</span>
             <span class="translation">私は日本人です。</span>
           </div>
         </div>
@@ -101,10 +116,10 @@
       <h2 class="section-title">같이 읽어요 <span class="title-ja">(一緒に読もう)</span></h2>
       <p class="section-subtitle"><span class="ko">이번엔 혼자 읽어 보세요. 네 문장이에요.</span><span class="ja">今度はひとりで読んでみましょう。4つの文です。</span></p>
       <div class="model-list">
-        <div class="model-line"><span class="korean">저는 학생입니다.</span><span class="translation">私は学生です。</span></div>
-        <div class="model-line"><span class="korean">저는 회사원입니다.</span><span class="translation">私は会社員です。</span></div>
-        <div class="model-line"><span class="korean">저는 의사입니다.</span><span class="translation">私は医者です。</span></div>
-        <div class="model-line"><span class="korean">저는 일본 사람입니다.</span><span class="translation">私は日本人です。</span></div>
+        <div class="model-line"><span class="korean">저는 학생<span class="en">입니다</span>.</span><span class="translation">私は学生です。</span></div>
+        <div class="model-line"><span class="korean">저는 회사원<span class="en">입니다</span>.</span><span class="translation">私は会社員です。</span></div>
+        <div class="model-line"><span class="korean">저는 의사<span class="en">입니다</span>.</span><span class="translation">私は医者です。</span></div>
+        <div class="model-line"><span class="korean">저는 일본 사람<span class="en">입니다</span>.</span><span class="translation">私は日本人です。</span></div>
       </div>
     </div>
 
@@ -112,13 +127,18 @@
     <div class="section" data-page-id="p1-question-teach">
       <h2 class="section-title">질문 패턴 <span class="title-ja">(質問のパターン)</span></h2>
       <p class="section-subtitle"><span class="ko">두 개를 이어서 읽을게요. 끝이 어떻게 다른지 들어 보세요.</span><span class="ja">2つを続けて読みます。最後がどう違うか聞いてみてください。</span></p>
-      <div class="pattern-stack">
-        <div class="pattern-card">
-          <span class="korean">학생입니다. ↘</span>
+      <!-- ↘ and ↗ used to sit inside the Korean string at the same size as the
+           text they described, which is the one place they cannot be read.
+           Drawn at full width, the contrast is the page. -->
+      <div class="pitch">
+        <div class="pi-card">
+          <span class="korean">학생<span class="en">입니다</span>.</span>
+          <svg class="pi-curve" viewBox="0 0 300 40" aria-hidden="true"><path d="M6 11 H182 C226 11 248 15 290 33"/><circle cx="290" cy="33" r="5.5"/></svg>
           <span class="translation">学生です。（文の終わりを下げる）</span>
         </div>
-        <div class="pattern-card">
-          <span class="korean">학생입니까? ↗</span>
+        <div class="pi-card">
+          <span class="korean">학생<span class="en">입니까</span>?</span>
+          <svg class="pi-curve" viewBox="0 0 300 40" aria-hidden="true"><path d="M6 29 H182 C226 29 248 25 290 7"/><circle cx="290" cy="7" r="5.5"/></svg>
           <span class="translation">学生ですか？（다 が 까 に変わって、終わりを上げる）</span>
         </div>
       </div>
@@ -128,10 +148,10 @@
       <h2 class="section-title">질문 읽기 <span class="title-ja">(質問を読もう)</span></h2>
       <p class="section-subtitle"><span class="ko">이번엔 혼자 읽어 보세요. 끝을 올려서요.</span><span class="ja">今度はひとりで読んでみましょう。最後を上げて。</span></p>
       <div class="model-list">
-        <div class="model-line"><span class="korean">학생입니까?</span><span class="translation">学生ですか？</span></div>
-        <div class="model-line"><span class="korean">회사원입니까?</span><span class="translation">会社員ですか？</span></div>
-        <div class="model-line"><span class="korean">의사입니까?</span><span class="translation">医者ですか？</span></div>
-        <div class="model-line"><span class="korean">일본 사람입니까?</span><span class="translation">日本人ですか？</span></div>
+        <div class="model-line"><span class="korean">학생<span class="en">입니까</span>?</span><span class="translation">学生ですか？</span></div>
+        <div class="model-line"><span class="korean">회사원<span class="en">입니까</span>?</span><span class="translation">会社員ですか？</span></div>
+        <div class="model-line"><span class="korean">의사<span class="en">입니까</span>?</span><span class="translation">医者ですか？</span></div>
+        <div class="model-line"><span class="korean">일본 사람<span class="en">입니까</span>?</span><span class="translation">日本人ですか？</span></div>
       </div>
     </div>
 
@@ -246,16 +266,30 @@
     <div class="section" data-page-id="p2-teach">
       <h2 class="section-title">오늘의 패턴 <span class="title-ja">(今日のパターン)</span></h2>
       <p class="section-subtitle"><span class="ko">제가 먼저 읽을게요. 잘 듣고 따라 읽어 보세요.</span><span class="ja">私が先に読みます。よく聞いて、まねして読んでみましょう。</span></p>
+      <!-- the same diagram the learner already read on 오늘의 패턴, with the
+           chunk 저는 now split: one more piece of the box lights up -->
+      <div class="sent-anat">
+        <span class="sa-grp">
+          <span class="sa-t"><b>저</b><small>私</small></span>
+          <span class="sa-t tp"><b>는</b><small>は</small></span>
+          <span class="sa-cap">だれの話か</span>
+        </span>
+        <span class="sa-grp">
+          <span class="sa-t"><b>학생</b><small>学生</small></span>
+          <span class="sa-t en"><b>입니다</b><small>です</small></span>
+          <span class="sa-cap">言いたいこと ＋ ていねいな終わり</span>
+        </span>
+      </div>
       <div class="pattern-stack">
         <div class="pattern-card">
-          <span class="korean">N은/는</span>
+          <span class="korean">N<span class="tp">은/는</span></span>
           <span class="translation">〜は（話のテーマ。日本語の「は」と同じ位置）</span>
           <div class="example-card">
-            <span class="korean">저는 일본 사람입니다.</span>
+            <span class="korean">저<span class="tp">는</span> 일본 사람<span class="en">입니다</span>.</span>
             <span class="translation">私は日本人です。</span>
           </div>
           <div class="example-card">
-            <span class="korean">다나카 씨는 학생입니다.</span>
+            <span class="korean">다나카 씨<span class="tp">는</span> 학생<span class="en">입니다</span>.</span>
             <span class="translation">田中さんは学生です。</span>
           </div>
         </div>
@@ -266,10 +300,10 @@
       <h2 class="section-title">같이 읽어요 <span class="title-ja">(一緒に読もう)</span></h2>
       <p class="section-subtitle"><span class="ko">이번엔 혼자 읽어 보세요. 네 문장이에요.</span><span class="ja">今度はひとりで読んでみましょう。4つの文です。</span></p>
       <div class="model-list">
-        <div class="model-line"><span class="korean">저는 회사원입니다.</span><span class="translation">私は会社員です。</span></div>
-        <div class="model-line"><span class="korean">다나카 씨는 학생입니다.</span><span class="translation">田中さんは学生です。</span></div>
-        <div class="model-line"><span class="korean">친구는 가수입니다.</span><span class="translation">友だちは歌手です。</span></div>
-        <div class="model-line"><span class="korean">선생님은 한국 사람입니다.</span><span class="translation">先生は韓国人です。</span></div>
+        <div class="model-line"><span class="korean">저<span class="tp">는</span> 회사원<span class="en">입니다</span>.</span><span class="translation">私は会社員です。</span></div>
+        <div class="model-line"><span class="korean">다나카 씨<span class="tp">는</span> 학생<span class="en">입니다</span>.</span><span class="translation">田中さんは学生です。</span></div>
+        <div class="model-line"><span class="korean">친구<span class="tp">는</span> 가수<span class="en">입니다</span>.</span><span class="translation">友だちは歌手です。</span></div>
+        <div class="model-line"><span class="korean">선생님<span class="tp">은</span> 한국 사람<span class="en">입니다</span>.</span><span class="translation">先生は韓国人です。</span></div>
       </div>
     </div>
 
@@ -277,26 +311,25 @@
     <div class="section" data-page-id="p2-particle-rule">
       <h2 class="section-title">은과 는 <span class="title-ja">(은 と 는、どっち？)</span></h2>
       <p class="section-subtitle"><span class="ko">단어의 마지막 글자를 봐 주세요. 받침이 있으면 은, 없으면 는이에요.</span><span class="ja">単語の最後の文字を見てください。パッチムがあれば은、なければ는です。</span></p>
-      <div class="note-grid">
-        <div class="note-box">
-          <span class="korean">받침 있음</span>
-          <span class="translation">パッチムあり（子音で終わる）</span>
-          <span class="note-arrow">→ 은</span>
-          <div class="note-examples">
-            <span class="korean">학생<strong>은</strong></span>
-            <span class="korean">이름<strong>은</strong></span>
-            <span class="korean">선생님<strong>은</strong></span>
-          </div>
+      <!-- the rule is about the floor of the last syllable, so the page shows
+           the floor: filled under 생, empty under 저. the tint is the same
+           violet as 은/는 — it is the thing that decides which one you get. -->
+      <div class="batchim">
+        <div class="bt-box">
+          <span class="bt-syl on">생</span>
+          <span class="bt-body">
+            <span class="bt-head">받침 있음<small>パッチムあり（子音で終わる）</small></span>
+            <span class="bt-out">→<b>은</b></span>
+            <div class="bt-ex">학생<b>은</b> · 이름<b>은</b> · 선생님<b>은</b></div>
+          </span>
         </div>
-        <div class="note-box">
-          <span class="korean">받침 없음</span>
-          <span class="translation">パッチムなし（母音で終わる）</span>
-          <span class="note-arrow">→ 는</span>
-          <div class="note-examples">
-            <span class="korean">저<strong>는</strong></span>
-            <span class="korean">친구<strong>는</strong></span>
-            <span class="korean">다나카 씨<strong>는</strong></span>
-          </div>
+        <div class="bt-box">
+          <span class="bt-syl off">저</span>
+          <span class="bt-body">
+            <span class="bt-head">받침 없음<small>パッチムなし（母音で終わる）</small></span>
+            <span class="bt-out">→<b>는</b></span>
+            <div class="bt-ex">저<b>는</b> · 친구<b>는</b> · 다나카 씨<b>는</b></div>
+          </span>
         </div>
       </div>
     </div>
