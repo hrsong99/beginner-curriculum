@@ -7,7 +7,7 @@ korean/**/dekiru-kankokugo/*.pdf
 korean/**/sejong-hangugeo-ipmun/*.pdf
 korean/**/sejong-hangugeo-hoehwa/**/*.pdf
 korean/**/sejong-hakdang-silyong-hangugeo/**/*.pdf
-/korean/references/temo/테모-회화
+/korean/references/curricula/temo/테모-회화
 
 # Build output: the zip is the deliverable and already contains these.
 # The loose html/css/images are unpacked copies, for local viewing only.

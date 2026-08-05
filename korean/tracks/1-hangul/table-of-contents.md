@@ -8,7 +8,7 @@ vowel, and at the very end — break up the rhythm and lock in fluency before ea
 Letters stay on simple open syllables (consonant + vowel) until the bottom slot (받침) arrives in
 Part 3.
 
-*Sequenced against 《세종학당 한국어 입문》 (`references/sejong-hangugeo-ipmun`): same order —
+*Sequenced against 《세종학당 한국어 입문》 (`references/curricula/sejong-hangugeo-ipmun`): same order —
 vowels → plain consonants → 격음 → 경음 → y/e-vowels → w-vowels → 받침 → 겹받침 → 연음 — and the
 same habit of inserting a 연습 활용 block after every two units of new material.*
 
