@@ -5,7 +5,7 @@
 전에 이 목록에 이미 있는 것을 먼저 찾아보세요 — 어휘가 하나 늘 때마다 덱 사이의
 일관성이 한 칸씩 줄어듭니다.
 
-설계 원칙은 [`shared/ux-philosophy.md`](../shared/ux-philosophy.md) 에 있습니다.
+설계 원칙은 [`ux-philosophy.md`](../ux-philosophy.md) 에 있습니다.
 이 문서는 **무엇을 쓸 수 있는가**만 적습니다.
 
 ---

@@ -1,6 +1,6 @@
 # Working in `korean/`
 
-**Read [`ux-philosophy.md`](./shared/ux-philosophy.md) before touching anything in this folder — every
+**Read [`ux-philosophy.md`](./ux-philosophy.md) before touching anything in this folder — every
 time, including small edits.** It is the contract for every lesson page: one activity per page,
 instant clarity, minimal everything, Korean-first titles, one blue tutor-script box, one boxed
 component that *fills* the page, receptive → productive.
@@ -78,7 +78,6 @@ same document, so anything in the markup is already on the learner's screen.
   track's sheet) and `js/` (the shared modules). This folder is the publish set — it is what
   gets mirrored to a public repo and served from a CDN, so nothing private may live in it.
   See [`runtime/README.md`](./runtime/README.md).
-- **`shared/`** — `ux-philosophy.md`, the design contract.
 - **`interactive/`** — the `data-sync` contract, the packaging guide, and the lemonboard
   packager (`build_lemonboard.py`). Documentation and tooling only; the code decks load
   lives in `runtime/`.

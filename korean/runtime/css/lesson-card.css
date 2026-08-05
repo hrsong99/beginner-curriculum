@@ -632,7 +632,6 @@ p {
 }
 .slot-input::placeholder { color: #b4b4b0; font-weight: 700; }
 .slot-input:focus { outline: none; border-style: solid; background: #fff; }
-.bubble.me .slot-input { background: #f6fdf0; }
 
 .option-line {
   display: block;

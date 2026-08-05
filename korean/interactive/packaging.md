@@ -84,7 +84,7 @@ If you hit one, use the supported spelling rather than working around it.
 Four shared add-ons drop into any deck with one `<script src>` line each. They register
 their own kind, so none of them needs a lemonboard change; each is symmetric (either
 person can use it) except where noted, and each falls back to doing nothing when the file
-is opened outside the board. Their styling lives in `shared/lesson-card.css`.
+is opened outside the board. Their styling lives in `runtime/css/lesson-card.css`.
 
 | Script | What it adds |
 |---|---|
