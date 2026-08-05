@@ -737,6 +737,24 @@ p {
   font-weight: 600;
 }
 
+/* A hint INSIDE an answer box is that box's own footer band — fused to the
+   bottom edge, on the same quiet grey its header uses. Outside the box it was
+   a second object floating under a first one, and on the free-writing pages
+   the raft of chips outgrew the box it belonged to. Position is the whole
+   API: same .hint, same .hint-chip, put it in the box and it becomes a band.
+   (.answer-box already clips, so the band takes the box's bottom radius.) */
+.answer-box > .hint {
+  margin: 0;
+  padding: 9px 14px;
+  border-top: 1px solid var(--gray-200);
+  background: var(--gray-50);
+}
+
+/* white on grey needs no outline, and one less outline is one less box */
+.answer-box > .hint > .hint-chip {
+  border-color: transparent;
+}
+
 .hint-chip {
   display: inline-flex;
   align-items: center;
