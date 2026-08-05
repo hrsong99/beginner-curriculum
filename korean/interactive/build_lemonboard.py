@@ -18,9 +18,8 @@ Three consequences drive this script:
      and local src="mouth/x.png" is rewritten to src="x.png". Basenames must
      therefore be unique across folders — collisions are a hard error.
 
-Everything ships inside the zip, so a packaged deck needs no CDN and works on
-a locked-down classroom network. (The Pretendard webfont is still an @import
-and remains the one remote dependency.)
+Local files ship inside the zip; absolute URLs are left alone and reported, so a
+deck may pull its stylesheet, scripts or images from a CDN instead.
 
 Usage:
     python3 build_lemonboard.py SOURCE.html --out DIR
@@ -188,7 +187,7 @@ def build(source: pathlib.Path, outdir: pathlib.Path):
     print(f"  bundled    : {len(assets)} image(s) ({n_local} local ref(s) flattened, {n_img - n_local} left remote)")
     print(f"  slot names : grape renames {HTML_NAME}/{CSS_NAME} -> lecture.* or prestudy.*")
     if remote_refs:
-        print(f"  NOTE       : {len(remote_refs)} asset(s) stay on the network — the deck is not fully offline:")
+        print(f"  NOTE       : {len(remote_refs)} reference(s) left remote (not bundled):")
         for ref in sorted(set(remote_refs))[:5]:
             print(f"    {ref}")
     return zip_path

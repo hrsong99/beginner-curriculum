@@ -43,16 +43,13 @@ the same name the link points at.
 is rewritten to `src="a.png"` and `a.png` is added to the zip. **Basenames must be unique
 across folders** — a collision is a hard error rather than a silently overwritten image.
 
-## Offline
+## Remote references
 
-**Local** assets all ship in the zip, so a deck that references only local files needs no CDN.
-Two things can still leave it dependent on the network:
-
-- an `<img src="https://…">` pointing somewhere remote — the packager leaves those alone and
-  prints a `NOTE` listing them, so check that line before assuming a deck is offline-safe
-  (the pattern decks carry 12 such avatars and are *not* offline);
-- the Pretendard webfont, pulled by an `@import` in `lesson-card.css`. On a locked-down
-  network the text falls back to a system font; everything else still renders.
+The packager only bundles **local** files. A `<link>` or `src=` pointing at an absolute URL
+is left exactly as written and listed in the build's `NOTE` line, so a deck can pull its
+stylesheet, its scripts or its images from a CDN without the script fighting it. That is a
+deliberate seam: shared code hosted once is fixed once, instead of being re-packaged into
+every deck that already shipped.
 
 ## The build refuses to ship silent breakage
 
