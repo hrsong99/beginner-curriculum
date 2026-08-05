@@ -594,6 +594,51 @@ p {
   font-weight: 700;
 }
 
+/* ---- .task — the header band is telling you what to DO ----
+   By the third page a learner has learned what this band is: the Japanese of
+   the Korean directly below it. A handful of write-in activities have nothing
+   to translate — the Korean does not exist yet, the learner is about to invent
+   it — so the band carries the instruction instead. Same slot, opposite
+   meaning, and until now nothing on screen said which one you were reading:
+   you started reading 「ある？ない？いつ・どこ？」 as a sentence to say.
+
+   Marked, not recoloured. Every colour in this system already means exactly
+   one thing, and the band's fill is spoken for twice over (grey = the partner's
+   turn, green-100 = yours). So it says it in words, the way the tutor note's
+   튜터만 badge does — and being labelled is what lets the rest of it stay soft.
+   The text also drops a weight, so a glance that skips the badge still lands.
+
+   Two shapes, one badge. On the label itself the whole band is the
+   instruction; as a child it is one instruction line under a real translation
+   — which is what 「何が好きですか？（先生にも聞いてみよう）」 was doing inside a
+   single run of text, with a pair of parentheses as the only warning. */
+.answer-label.task,
+.answer-label > .task {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 6px;
+  font-weight: 600;
+}
+
+.answer-label > .task {
+  margin-top: 5px;
+}
+
+.answer-label.task::before,
+.answer-label > .task::before {
+  content: "やること";
+  flex: none;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: rgba(28, 28, 28, .09);
+  color: inherit;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: .02em;
+  white-space: nowrap;
+}
+
 /* open write-in areas carry a very light grey so they read as
    "fill the whole thing here" (fill-in sentences keep white). Any
    answer placed inside is rendered barely-visible, like the pills. */
