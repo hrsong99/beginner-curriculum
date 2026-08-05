@@ -60,6 +60,11 @@
 
 html {
   scroll-behavior: smooth;
+  /* Pages differ in height, so the vertical scrollbar appears and disappears
+     as you turn them — and each time it does, the centred 480px column jumps
+     sideways by half a scrollbar. Holding the gutter open always costs a strip
+     of background nobody looks at and makes paging silent. */
+  scrollbar-gutter: stable;
 }
 
 body {
