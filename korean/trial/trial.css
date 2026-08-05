@@ -2521,18 +2521,52 @@ button.opt-row:active { transform: scale(.99); }
 .fb-add:active { transform: scale(.995); background: var(--gray-50); }
 .fb-add.hide { display: none; }
 
-/* 버튼 하나만 남으면 그 하나가 줄을 다 쓴다 */
-.fb-adds:has(> .fb-add.hide) { grid-template-columns: 1fr; }
-
-/* 노트는 칸이 하나뿐이라 차이도 없다 — 카드가 한 줄로 끝난다 */
-.fb-block.note .fb-row { background: #fff; }
+/* 한 칸은 교정이거나 노트다. 두 벌을 따로 두면 노트가 늘 교정 아래로
+   밀리므로(＋ 교정을 누르면 적어 둔 노트 위로 끼어든다), 칸은 한 줄로 세우고
+   무엇으로 쓸지만 갈라 놓는다. 노트로 쓰이면 학생 문장·교정 줄이 없고,
+   차이를 그릴 일도 없어서 카드가 한 줄로 끝난다. */
+.fb-block.as-fix .fb-row.nrow { display: none; }
+.fb-block.as-note .fb-row.orig,
+.fb-block.as-note .fb-row.fix { display: none; }
+.fb-block.as-note .fb-row { background: #fff; }
 
 .fb-block {
+  position: relative;
   border: 1px solid var(--gray-200);
   border-radius: 12px;
   background: #fff;
   overflow: hidden;
 }
+
+/* 지우기는 열려 있는 칸이면 늘 있다 — 잘못 연 빈 칸도 닫을 수 있어야 한다.
+   예외는 하나, 마지막 남은 빈 칸이다: 지워도 그 자리는 다시 열려 있어야 해서
+   눌러도 아무 일이 없다. 캡션 알약과 같은 높이, 반대쪽 끝. */
+.fb-del {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: none;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--gray-400);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: background .12s, color .12s;
+}
+
+.fb-block .fb-del { display: grid; }
+.fb-block.nodel .fb-del { display: none; }
+.fb-del:hover { background: var(--gray-100); color: var(--gray-500); }
+.fb-del:active { transform: scale(.94); }
 
 .fb-block.hide { display: none; }
 
