@@ -1784,6 +1784,26 @@ body:not(.no-yomi) .sent-more .yomi + .translation { margin-top: 7px; }
 .bt-syl.on::after { background: var(--topic-bg); }
 .bt-syl.off::after { border: 1.5px dashed var(--gray-400); }
 
+/* ---------- the seat can also sit on the RIGHT ----------
+   Not every rule is decided at the floor. 아도/어도 is decided by the stem's
+   VOWEL, and the page that teaches it drew the same equation with an
+   untouched glyph — so 앉 and 먹 looked identical and the only thing telling
+   them apart was a line of caption text. The learner had to already know
+   where the vowel is to read a page whose job is to point at it.
+
+   So the seat moves to where the deciding part actually is. In every stem
+   that page uses (앉 · 받 · 먹 · 찍) the vowel is the stroke down the right
+   side, above the 받침 — which makes the two rule pages a matched pair:
+   look DOWN for a 받침, look RIGHT for the vowel.
+
+   The floor is deliberately left alone here. It already means 받침 nine
+   pages earlier, and ㅗ-type vowels — which sit under the consonant, right
+   in that band — would land on it and say the wrong thing. */
+.bt-syl.vowel::after {
+  inset: 18% 18% 34% 55%;
+  background: var(--topic-bg);
+}
+
 .bt-arrow {
   color: var(--gray-400);
   font-size: 30px;
@@ -1849,7 +1869,8 @@ body:not(.no-yomi) .sent-more .yomi + .translation { margin-top: 7px; }
    The modifier is NOT called .ending: that class is the inline mark for the
    ending itself (an orange fill), and on a container it paints the whole
    component orange and adds a box inside the box. */
-.batchim.ending-rule .bt-syl.on::after { background: var(--ending-bg); }
+.batchim.ending-rule .bt-syl.on::after,
+.batchim.ending-rule .bt-syl.vowel::after { background: var(--ending-bg); }
 .batchim.ending-rule .bt-out { background: var(--ending-bg); color: var(--ending-ink); }
 .batchim.ending-rule .bt-ex b { color: var(--ending-ink); }
 
