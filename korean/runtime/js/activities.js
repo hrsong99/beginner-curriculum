@@ -116,9 +116,15 @@ window.lessonSync = window.lessonSync || {
     input.autocomplete = "off";
     input.spellcheck = false;
     input.dataset.answer = answer;
-    // 시트의 max-width 는 낱말용이라 한 문장짜리 칸을 잘라 버린다
-    input.style.width = Math.min(13, norm(answer).length * 1.15 + 2.2) + "em";
-    input.style.maxWidth = "none";
+    /* .wide 는 한 줄을 통째로 쓰는 칸이라 폭을 시트가 정한다 — 여기서
+       인라인 폭을 박으면 그 규칙을 이겨 버린다. 그 밖의 칸만 답 길이에
+       맞춘다(시트의 max-width 는 낱말용이라 한 문장짜리 칸을 잘라 낸다). */
+    if (slot.classList.contains("wide")) {
+      input.classList.add("wide");
+    } else {
+      input.style.width = Math.min(13, norm(answer).length * 1.15 + 2.2) + "em";
+      input.style.maxWidth = "none";
+    }
     transferSync(slot, input);
     slot.replaceWith(input);
     wireInput(input);

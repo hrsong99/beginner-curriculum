@@ -633,6 +633,32 @@ p {
 .slot-input::placeholder { color: #b4b4b0; font-weight: 700; }
 .slot-input:focus { outline: none; border-style: solid; background: #fff; }
 
+/* .wide — a blank that swallows a whole clause rather than a word. Sized
+   to its answer it is simply too long to share a line with its lead-in, so
+   it drops below and strands a half-empty line above it, which reads as a
+   broken box rather than a blank. Give it the line instead: flush left,
+   running to the far margin, with only the sentence's closing punctuation
+   riding along beside it. The width is short of 100% by exactly that
+   punctuation, which is also what guarantees the line is its own — no
+   lead-in can fit in the 1.1em left over.
+
+   Author-declared (class .wide on the .slot), not measured: pages are
+   display:none until the pager reaches them, so nothing on this deck can
+   be measured at load. Declare it for a whole activity at once, never line
+   by line — "this one happens to fit" is a judgement that flips the moment
+   a font resolves differently, and then one blank in a set of three is the
+   one hanging below its line. */
+.slot.wide,
+.slot-input.wide {
+  width: calc(100% - 1.1em);
+  min-width: 0;
+  max-width: none;
+  /* the line above is text, so its half-leading already gives ~5px; 10 here
+     lands the visible gap on the box's own bottom padding and the blank sits
+     evenly in its row instead of hanging off the line it follows */
+  margin: 10px 4px 0 0;
+}
+
 .option-line {
   display: block;
   padding: 16px 0;
@@ -914,8 +940,14 @@ p {
   border-top-right-radius: 4px;
 }
 
-/* a hint sitting inside a dialogue bubble */
-.bubble .hint {
+/* a hint sitting loose in a dialogue bubble, under the line it glosses.
+   Direct child only: a hint inside an answer box is that box's footer band
+   and is fused to its bottom edge (see .answer-box > .hint). This used to be
+   a descendant selector, and being the later rule it beat the band's own
+   margin:0 — every hint band in a dialogue floated 10px off the bottom of
+   its box. On a white fill that read as a box with a sagging floor; over the
+   grey of a write-in area it read as the fill running out early. */
+.bubble > .hint {
   margin-top: 10px;
 }
 
@@ -938,9 +970,13 @@ p {
   background: #fff;
 }
 
-/* nesting rule: when a "me" turn holds an answer box, the box IS
-   the bubble — drop the wrapper's chrome so only one box renders */
-.bubble.me:has(> .answer-box) {
+/* nesting rule: when a turn holds an answer box, the box IS the bubble —
+   drop the wrapper's chrome so only one box renders. Either side may hold
+   one: the learner's turns are answer boxes everywhere, and a tutor turn
+   becomes one when the tutor is the one writing (a free answer the learner
+   reads). The header band is what tells the two apart, exactly as the
+   translation strip does on a Korean bubble. */
+.bubble:has(> .answer-box) {
   padding: 0;
   border: 0;
   border-radius: 0;
@@ -948,7 +984,7 @@ p {
   box-shadow: none;
 }
 
-.bubble.me:has(> .answer-box) > .answer-box {
+.bubble:has(> .answer-box) > .answer-box {
   margin: 0;
   box-shadow: none;
 }
@@ -967,7 +1003,7 @@ p {
    else. Tinting them green gave green a second meaning — identity AND
    write-here — on the one component where both were on screen at once. */
 
-.bubble.me:has(> .answer-box) > .hint {
+.bubble:has(> .answer-box) > .hint {
   margin-top: 12px;
 }
 
