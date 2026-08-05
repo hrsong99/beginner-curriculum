@@ -192,25 +192,114 @@
   word-break: keep-all;
 }
 
-/* ---------- greeting chat with reading (yomi) ---------- */
+/* ---------- chat with reading (yomi) ---------- */
 /* same bubble language as the roleplay cards: the learner-language
    translation sits in a header strip on top, Korean below — plus the
-   katakana reading tucked under the Korean line, in green */
+   katakana reading tucked under the Korean line.
+   Every bubble takes it, not just the greeting: the reading is a deck-wide
+   component now (see .yomi in lesson-card.css), so the rule that positions
+   it inside a bubble cannot be scoped to .intro. */
 .bubble.intro > .korean {
   padding: 13px 16px 0;
   font-size: 20px;
   font-weight: 800;
 }
 
-.bubble.intro > .yomi {
-  display: block;
+.bubble:has(> .yomi) > .korean { padding-bottom: 0; }
+
+.bubble > .yomi {
+  margin-top: 0;
   padding: 5px 16px 13px;
-  color: #57a021;
-  font-size: 11.5px;
-  font-weight: 700;
-  letter-spacing: .22em;
-  line-height: 1.5;
+  letter-spacing: .18em;
 }
+
+/* ---------- 발음 표기, per component ----------
+   The reading itself is one component (.yomi in lesson-card.css); what
+   changes here is only where it sits and how big, because a line under a
+   29px hero sentence and a line inside a 13px tile cannot be the same
+   size. Everything below is placement, never a second look.
+
+   Two shapes recur. Inside a card that already pads its Korean, the
+   reading takes over the bottom padding (.model-line, .bubble). Inside a
+   tile the learner taps, the tile becomes a column so the reading sits
+   under the word rather than beside it (.opt, .choice, .bt-out). */
+
+/* cards whose Korean line owns the padding: hand the bottom to the reading */
+.model-line:has(> .yomi) > .korean { padding-bottom: 0; }
+.model-line > .yomi { margin-top: 0; padding: 4px 16px 14px; }
+
+.sent-hero > .yomi { margin-top: 10px; font-size: 13.5px; }
+.sent-more .yomi   { margin-top: 3px; font-size: 11.5px; }
+.pi-card > .yomi   { margin-top: 7px; margin-bottom: 2px; }
+
+.answer-fill .yomi { margin-top: 6px; }
+.example-card .yomi { margin-top: 5px; font-size: 11.5px; }
+
+/* a reading between two paragraphs has to carry both gaps itself — the
+   Japanese line under it sets its own margins to zero */
+.card > .yomi { margin: 7px 0 12px; }
+
+/* tap targets: the word and its reading stack, centred. Only the
+   inline-flex ones need turning — the tiles in a grid or a flex row are
+   blockified already, so a block reading simply falls underneath. */
+.opt:has(> .yomi),
+.choice:has(> .yomi),
+.bt-out:has(> .yomi) {
+  display: inline-flex;   /* .opt sits inside a running sentence — it must
+                             stay inline; .bt-out is a flex item and gets
+                             blockified to flex on its own */
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.opt > .yomi,
+.choice > .yomi {
+  margin-top: 3px;
+  font-size: 10.5px;
+  letter-spacing: .06em;
+}
+
+.choose-word > .yomi { margin-top: 4px; font-size: 11.5px; text-align: center; }
+.choose-sentence > .yomi { margin-top: 8px; }
+
+/* the 받침 diagram: the pill keeps its own ink, one step quieter, so the
+   reading never reads as a second word inside the equation */
+.bt-out > .yomi {
+  margin-top: 2px;
+  color: inherit;
+  opacity: .62;
+  font-size: 12px;
+  letter-spacing: .06em;
+}
+
+.bt-ex > span > .yomi { margin-top: 3px; font-size: 11px; font-weight: 700; }
+
+/* the 8 × 2 table: the tiles are already small, so the reading is the
+   smallest type in the deck — it is there to be decodable, not read across */
+.combi-nouns > span > .yomi,
+.combi-ends > span > .yomi {
+  margin-top: 2px;
+  font-size: 9.5px;
+  letter-spacing: .02em;
+}
+
+.combi-ends > span > .yomi { color: inherit; opacity: .6; }
+
+/* a hint chip is one line by design, so its reading runs inline after the
+   Korean rather than under it — a two-line chip stops being a chip */
+.hint-chip > .yomi {
+  display: inline;
+  margin: 0 0 0 5px;
+  font-size: 11px;
+  letter-spacing: .02em;
+}
+
+/* light type on the dark transition pages and on the lime brand pages */
+.transition-page .yomi { color: rgba(255,255,255,.62); }
+.brand-page .yomi { color: rgba(28,28,28,.55); }
+.brand-title > .yomi { margin-top: 9px; font-size: 15px; letter-spacing: .08em; }
+.transition-title > .yomi { margin-top: 9px; font-size: 14px; letter-spacing: .08em; }
 
 .bubble.me.intro {
   background: #fff;
@@ -920,7 +1009,6 @@
 .known-row .j small {
   display: block;
   margin-top: 2px;
-  color: var(--gray-400);
   font-size: 11.5px;
   font-weight: 700;
 }
@@ -1297,9 +1385,13 @@
 /* ---------- the pattern, as one finished sentence ----------
    The page shows the sentence whole, in a card tinted with the colour
    of the piece it is teaching, and lets that piece carry the accent.
-   No reading line over the Korean: this deck's learners have already
-   done hangul, and kana over every word is the crutch the hangul
-   track exists to remove (ux-philosophy → "Romanize the parts"). */
+   It carries a reading line like everything else in this deck. That used
+   to be a deliberate omission — "the learner has already done hangul, and
+   kana over every word is the crutch the hangul track exists to remove."
+   The trial audience turned out not to be that learner: a 초급 trial is
+   often someone's first hour of Korean, so a page they cannot decode is
+   a page they cannot practise from. The ア switch is what puts the old
+   rule back for the learner it was written for. */
 .sent-hero {
   margin-top: 24px;
   padding: 26px 20px 22px;
@@ -1605,10 +1697,12 @@
   line-height: 1.1;
 }
 
+/* the reading under the Korean here is a .yomi like every other one in the
+   deck, so it takes its colour — it only sits closer and a step larger,
+   because the Korean above it is 33px */
 .br-ko small {
   display: block;
   margin-top: 5px;
-  color: #57a021;
   font-size: 13px;
   font-weight: 800;
   letter-spacing: .08em;
@@ -1656,7 +1750,7 @@
   gap: 5px;
 }
 
-.combi-nouns span {
+.combi-nouns > span {
   padding: 8px 3px;
   border: 1px solid var(--gray-200);
   border-radius: 9px;
@@ -1669,7 +1763,7 @@
 
 .combi-ends { display: grid; gap: 5px; }
 
-.combi-ends span {
+.combi-ends > span {
   padding: 15px 3px;
   border-radius: 10px;
   background: var(--ending-bg);
@@ -1695,7 +1789,7 @@
   .bt-syl { width: 94px; height: 94px; font-size: 54px; }
   .bt-out { padding: 7px 15px; font-size: 30px; }
   .bt-ex { font-size: 16px; }
-  .combi-nouns span { font-size: 12px; }
+  .combi-nouns > span { font-size: 12px; }
 }
 
 /* ============================================================
@@ -3693,9 +3787,16 @@ body.paged { padding-bottom: 0; }
 .pg-scrub:focus-visible { outline: none; }
 .pg-scrub:focus-visible::-webkit-slider-thumb { box-shadow: 0 0 0 3px rgba(28,28,28,.22); }
 
-.pg-teach, .pg-exit { width: 32px; height: 32px; background: #fff; font-size: 13px; font-weight: 900; }
+.pg-teach, .pg-exit, .pg-yomi { width: 32px; height: 32px; background: #fff; font-size: 13px; font-weight: 900; }
 .phone.paged ~ .pager .pg-exit { background: var(--ink); border-color: var(--ink); color: #fff; }
 .pg-teach.on { background: var(--green-500); border-color: var(--green-500); color: #fff; }
+
+/* 발음 표기 switch. Readings are ON when the deck loads — a trial learner
+   may be an hour into Korean — so plain white IS the on state and there is
+   no lit "on" style to add: a button that glows on every page of a 25-page
+   deck reads as an alert. Only turning the readings OFF changes it, and it
+   greys out the way a disabled control does, which is what it now is. */
+.pg-yomi.off { background: var(--gray-100); border-color: var(--gray-200); color: var(--gray-400); }
 
 /* ============================================================
    Frameless page cards — no black outline/offset-shadow around

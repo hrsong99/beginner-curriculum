@@ -38,6 +38,7 @@
     <input class="pg-scrub" type="range" min="0" max="0" step="1" value="0" aria-label="페이지 이동">
     <button class="pg-btn pg-prev" type="button" aria-label="이전 페이지">←</button>
     <div class="pg-mid"><span class="pg-label"><b class="pg-act">—</b><span class="pg-n">—</span></span></div>
+    <button class="pg-btn pg-yomi" type="button" aria-label="발음 표기 켜기·끄기" title="발음 표기">ア</button>   <!-- 발음 표기를 쓰는 덱만 -->
     <button class="pg-btn pg-teach" type="button" aria-label="티칭 모드">T</button>
     <button class="pg-btn pg-next" type="button" aria-label="다음 페이지">→</button>
   </nav>
@@ -233,6 +234,33 @@ closing
 | 오늘의 성과 | `.combi`(명사 은행 × 어미) + `.payoff`(큰 숫자) |
 
 받침 도식을 어미(주황) 색으로 쓰려면 `.batchim.ending-rule` 을 씁니다.
+
+### 발음 표기 (`.yomi`)
+
+한글을 못 읽는 학습자를 전제로 하는 덱(체험 레슨)은 **학습자가 소리 내어 말하는 한국어**
+밑에 가나 읽기를 답니다. 클래스 하나뿐이고, 자리는 그 한국어 **바로 뒤**입니다.
+
+```html
+<span class="korean">저는 학생<span class="ending">이에요</span>.</span>
+<span class="yomi">チョヌン ハクセンイエヨ</span>
+```
+
+- 붙는 곳: `.model-line` · `.sent-hero`/`.sent-more` · `.bubble` · `.pi-card` ·
+  `.bt-out`/`.bt-ex` · `.opt`/`.choice`/`.choose-word` · `.answer-fill` ·
+  `.example-card` · `.combi` 타일 · `.brand-title`/`.transition-title`.
+- **안 붙는 곳**: `.section-title`(옆의 `.title-ja` 가 이미 무슨 장인지 말한다),
+  `.section-subtitle`(튜터가 읽는 줄), `.tutor-note`, `.slot`·`.answer-space`(정답).
+- 힌트 칩 안에서는 줄이 바뀌지 않고 뒤에 붙습니다 —
+  `<span class="hint-chip">学生:학생<span class="yomi">ハクセン</span></span>`.
+- 빈칸이 있는 문장은 보이는 부분만 읽고 빈칸은 `＿＿＿` 로 둡니다 —
+  `チョヌン ハクセン ＿＿＿`.
+- 표기는 **철자가 아니라 소리**입니다: 회사원이에요 → `フェサウォニエヨ`(연음),
+  시작할게요 → `シジャカルケヨ`. 어절 사이는 반각 공백으로 띕니다.
+- 페이저의 **ア** 버튼이 `body.no-yomi` 로 덱 전체를 한 번에 끕니다. 켜진 상태가
+  기본이고, 공유하지 않습니다(티칭 모드와 같은 이유 — 필요한 정도가 사람마다 다릅니다).
+  버튼을 안 넣은 덱에서는 아무 일도 일어나지 않습니다.
+- 채점은 `.yomi` 를 빼고 한국어만 봅니다(`activities.js` 의 `koText`). 새 활동을 만들 때
+  칩·칸의 글자를 읽어야 하면 `textContent` 가 아니라 그 함수를 쓰세요.
 
 ---
 

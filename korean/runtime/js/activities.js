@@ -38,6 +38,19 @@ window.lessonSync = window.lessonSync || {
   // 띄어쓰기·문장부호는 채점에서 무시한다 ("학생이에요?" == "학생이에요")
   function norm(s) { return (s || "").replace(/[\s　?？.。!！,、·~〜…]/g, ""); }
 
+  /* 칩 안에는 한국어 말고 발음 표기(.yomi)도 들어 있다. 채점이 보는 것은
+     한국어뿐이라, 읽는 데 도우라고 붙인 가나가 답에 섞이면 안 된다.
+     (textContent 는 display:none 인 것까지 읽으므로, ア 를 껐다고 통과하는
+     일도 없다 — 켜든 끄든 같은 문자열이어야 한다.) */
+  function koText(el) {
+    var s = "";
+    for (var n = el.firstChild; n; n = n.nextSibling) {
+      if (n.nodeType === 3) s += n.nodeValue;
+      else if (n.nodeType === 1 && !n.classList.contains("yomi")) s += koText(n);
+    }
+    return s;
+  }
+
   var reorder = new WeakMap();         // build zone -> {pool, answer, chips}
 
   /* ---------- (1) typed blanks ---------- */
@@ -144,7 +157,7 @@ window.lessonSync = window.lessonSync || {
     if (block.reset) block.reset.hidden = !zone.children.length;
     if (block.pool.children.length) return;      // 아직 다 놓지 않았다
     var built = Array.prototype.map.call(zone.children, function (c) {
-      return c.textContent.trim();
+      return koText(c).trim();
     }).join(" ");
     zone.classList.add(norm(built) === norm(block.answer) ? "correct" : "wrong");
   }

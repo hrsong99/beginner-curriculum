@@ -11,11 +11,13 @@
               aria-label="페이지 이동">
        <button class="pg-btn pg-prev" type="button" aria-label="이전 페이지">←</button>
        <div class="pg-mid"><span class="pg-label"><b class="pg-act">—</b><span class="pg-n">—</span></span></div>
+       <button class="pg-btn pg-yomi" type="button" aria-label="발음 표기">ア</button>
        <button class="pg-btn pg-teach" type="button" aria-label="티칭 모드">T</button>
        <button class="pg-btn pg-next" type="button" aria-label="다음 페이지">→</button>
      </nav>
 
-   스크러버(.pg-scrub)는 없으면 없는 대로 돌아간다 — 나머지 기능은 그대로다.
+   스크러버(.pg-scrub)와 발음 표기 버튼(.pg-yomi)은 없으면 없는 대로 돌아간다
+   — 나머지 기능은 그대로다.
    페이지마다 data-page-id 를 달아 두는 것이 중요하다: 공유되는 것은 순서가
    아니라 그 id 라서, 나중에 페이지를 끼워 넣어도 상대 화면이 어긋나지 않는다.
 
@@ -154,6 +156,24 @@
       var on = document.body.classList.toggle("teaching");
       teachBtn.classList.toggle("on", on);
       if (window.__revealAnswers) window.__revealAnswers(on);
+    });
+  }
+
+  /* ---- 발음 표기 (ア) — one switch for the whole deck ----
+     한글을 아직 못 읽는 학습자를 전제로, 덱은 발음 표기를 켠 채로 열린다.
+     페이지마다 켜고 끄는 스위치였다면 스물다섯 번 눌러야 하므로, 상태는
+     body 에 한 번만 붙이고 모든 페이지가 그것을 본다.
+     티칭 모드와 같은 이유로 공유하지 않는다: 표기가 필요한 정도는 사람마다
+     다르고, 튜터가 껐다고 학습자 화면에서까지 사라지면 곤란하다.
+     (덱이 이 버튼을 넣지 않았으면 아무 일도 하지 않는다 — 발음 표기가 없는
+     덱에는 끌 것도 없다.) */
+  var yomiBtn = bar.querySelector(".pg-yomi");
+  if (yomiBtn) {
+    yomiBtn.setAttribute("aria-pressed", "true");
+    yomiBtn.addEventListener("click", function () {
+      var off = document.body.classList.toggle("no-yomi");
+      yomiBtn.classList.toggle("off", off);
+      yomiBtn.setAttribute("aria-pressed", String(!off));
     });
   }
 

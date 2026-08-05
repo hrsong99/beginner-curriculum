@@ -384,6 +384,41 @@ h1 .title-ja,
   font-weight: 600;
 }
 
+/* ---------- 발음 표기 · the reading line ----------
+   A katakana reading tucked under the Korean it belongs to. A trial
+   learner is not assumed to read hangul at all, so every Korean the
+   learner is asked to SAY carries one — model lines, pattern cards,
+   dialogue, the tiles they tap. What it never goes under is Korean
+   nobody is asked to read aloud: page titles (the Japanese gloss beside
+   them already says what the page is), the blue script box (the tutor
+   reads that), and tutor notes.
+
+   Grey, not green. The greeting chat could afford a green reading when
+   it was the only one in the deck; with a reading under every line, a
+   coloured one would paint "state" across the whole page — and green
+   means chosen/correct here and nothing else. gray-500 rather than the
+   gray-400 of an ordinary gloss: this is text a learner has to actually
+   read, not a footnote.
+
+   All of them hide together on body.no-yomi — the ア switch in the pager.
+   One switch for the deck, so a learner who stops needing the crutch is
+   done with it everywhere, not page by page. */
+.yomi {
+  display: block;
+  margin-top: 4px;
+  color: var(--gray-500);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  line-height: 1.5;
+  word-break: keep-all;
+}
+
+/* !important because the readings that predate this component are
+   positioned by their own container rules (.bubble > .yomi and friends),
+   which outrank a bare class on the switch. */
+body.no-yomi .yomi { display: none !important; }
+
 .model-list {
   display: grid;
   gap: var(--item-gap);

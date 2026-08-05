@@ -21,6 +21,9 @@ you are about to make conflicts with it, say so and ask — don't quietly deviat
   easiest way to make a page unreadable — see the table in `ux-philosophy.md`.
 - **Audience is Japanese speakers learning Korean.** All support text is Japanese; no English.
   Sound anchors are kana, not English words.
+- **Trial decks carry a kana reading (`.yomi`) under every Korean the learner says**, because a
+  trial learner is not assumed to read hangul; the pager's **ア** button hides them deck-wide.
+  See `AUTHORING.md` § 발음 표기 for where it goes and where it must not.
 - **The blue `.section-subtitle` box is the tutor's spoken script** (`.ko` = the line read
   aloud, `.ja` = its Japanese translation). Natural spoken Korean, no grammar jargon.
 - **Lessons are audio-only.** The learner hears the tutor but never sees them, so no
