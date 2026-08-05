@@ -604,469 +604,164 @@
   </div>
 
 
-  <!-- ================================================================
-       SYNC · 레몬보드의 data-sync 계약에 맞춘다
-       https://github.com/re-speak/lemonboard  (apps/web/src/views/meet/lib/html-sync)
 
-       전송(스냅샷·늦은 입장·에코 차단·수렴)은 전부 보드가 한다. 이 문서는
-       "무엇이 공유되는지"만 선언한다.
+  <!-- ACTIVITIES · 점선 칸 · 고르기 · 문장 만들기. 공유 스크립트.
+       페이저보다 먼저 와야 한다 — 티칭 모드가 여기 만든 유령 답을 쓴다. -->
+  <script src="../../interactive/activities.js"></script>
 
-         - .slot / .answer-space → <input>/<textarea> 로 바뀌고 kind "value"
-                                   (보드가 알아서 추론한다)
-         - .choose-row           → data-sync-kind="selection" (기본 제공)
-                                   고른 쪽만 오간다. 정/오답은 각자 data-correct 로 계산한다.
-         - .mission li           → data-sync-kind="toggle"    (기본 제공)
-         - .build-zone           → lessonSync.register("order")
-         - .pager                → lessonSync.register("page")
-                                   둘 다 상태가 클로저에 있어 DOM 만으로는 읽을 수 없다.
-
-       teaching 모드는 공유하지 않는다 — 튜터가 답을 여는 스위치라서,
-       보내면 학습자에게 정답을 그대로 넘기는 셈이 된다.
-
-       레몬보드 밖(로컬에서 파일을 직접 열 때)에서는 lessonSync 가 없으므로
-       아무것도 하지 않는 스텁으로 대체해, 덱 자체는 그대로 동작하게 둔다.
-       ================================================================ -->
+  <!-- GLOSS · 이 과의 일본어→한국어 사전. 엔진은 공유 스크립트가 들고 있다. -->
   <script>
-    window.lessonSync = window.lessonSync || {
-      kinds: {},
-      register: function (name, handlers) { this.kinds[name] = handlers; return this; },
-      push: function () {}
-    };
+  window.LESSON_GLOSS = {
+    // ---- 커버 / 브랜드 페이지 ----
+    "体験レッスン": "체험레슨",
+    "初級": "초급",
+    "ここから25分。終わるころには、韓国語で自己紹介ができて、相手のことも聞けます。約束します！": "지금부터 25분. 끝날 때쯤엔 한국어로 자기소개를 하고, 상대에 대해서도 물어볼 수 있어요. 약속해요!",
+
+    // ---- 첫인사 ----
+    "(はじめまして！)": "(처음 뵙겠습니다!)",
+    "私と軽くあいさつしてみましょうか？": "저랑 가볍게 인사해 볼까요?",
+    "先生": "튜터",
+    "私": "나",
+    "アンニョンハセヨ！ マンナソ パンガウォヨ": "발음: 안녕하세요! 만나서 반가워요",
+    "アンニョンハセヨ！": "발음: 안녕하세요!",
+    "チョヌン ＿＿＿ (イ)エヨ。イルミ ムォエヨ？": "발음: 저는 ___(이)에요. 이름이 뭐예요?",
+    "チョヌン ＿＿＿ (イ)エヨ": "발음: 저는 ___(이)에요",
+    "オヌル スオプ シジャカルケヨ。チャル プタケヨ！": "발음: 오늘 수업 시작할게요. 잘 부탁해요!",
+    "ネ！ チャル プタケヨ！": "발음: 네! 잘 부탁해요!",
+    "こんにちは！会えてうれしいです。": "안녕하세요! 만나서 반가워요.",
+    "こんにちは！": "안녕하세요!",
+    "私は（名前）です。お名前は何ですか？": "저는 ___(이)에요. 이름이 뭐예요?",
+    "私は ＿(名前)＿ です。": "저는 __(이름)__(이)에요.",
+    "今日のレッスン、始めますね。よろしくお願いします！": "오늘 수업 시작할게요. 잘 부탁드립니다!",
+    "はい！よろしくお願いします！": "네! 잘 부탁드립니다!",
+    "先生のことばに、返事してみましょう！": "튜터의 말에 대답해 보세요!",
+
+    // ---- 오늘의 목표 ----
+    "(今日のゴール)": "(오늘의 목표)",
+    "今日の授業が終わると、こんなふうに自己紹介ができるようになります。": "오늘 수업이 끝나면, 이렇게 자기소개를 할 수 있어요.",
+    "私は田中です": "저는 다나카예요",
+    "田中さんは学生ですか？": "다나카 씨는 학생이에요?",
+    "はい、私は学生です": "네, 저는 학생이에요",
+    "チョヌン タナカエヨ": "발음: 저는 다나카예요",
+    "タナカ シヌン ハクセンイエヨ": "발음: 다나카 씨는 학생이에요",
+    "ネ、チョヌン ハクセンイエヨ": "발음: 네, 저는 학생이에요",
+
+    // ---- 이미 아는 단어 ----
+    "(もう知っている単語)": "(이미 아는 단어)",
+    "実は今日使う単語、もう知っています。韓国語の単語の70%が漢字から来ているんです。語順も助詞も日本語とほぼ同じです。": "사실 오늘 쓸 단어, 이미 알고 있어요. 한국어 단어의 70%가 한자에서 왔거든요. 어순도 조사도 일본어랑 거의 같아요.",
+    "日本": "일본", "学生": "학생", "会社員": "회사원",
+    "イルボン": "발음: 일본", "ハクセン": "발음: 학생", "フェサウォン": "발음: 회사원",
+
+    // ---- 파트 안내 ----
+    "パート 1": "파트 1", "パート 2": "파트 2", "パート 3": "파트 3",
+    "Nです。まずは「私は〜です」が言えるようにします。": "N이에요 / 예요. 먼저 '저는 ~예요'를 말할 수 있게 해요.",
+    "〜は。話のテーマを決める助詞で、日本語と同じ場所に入ります。": "~은/는. 이야기의 주제를 정하는 조사로, 일본어와 같은 자리에 들어가요.",
+    "2つのパターンがそろいました。ここからは本当の自己紹介です。": "패턴 두 개가 다 모였어요. 이제부터는 진짜 자기소개예요.",
+
+    // ---- 파트 1 ----
+    "(今日のパターン)": "(오늘의 패턴)",
+    "名前も、仕事も、国も、こう言います。私が読みます。よく聞いて、まねして読んでみましょう。": "이름도, 직업도, 나라도 이렇게 말해요. 제가 읽을게요. 잘 듣고 따라 읽어 보세요.",
+    "私は田中です。": "저는 다나카예요.",
+    "私は学生です。": "저는 학생이에요.",
+    "私は日本人です。": "저는 일본 사람이에요.",
+    "(一緒に読もう)": "(같이 읽어요)",
+    "今度はひとりで読んでみましょう。4つの文です。": "이번엔 혼자 읽어 보세요. 네 문장이에요.",
+    "私は会社員です。": "저는 회사원이에요.",
+    "私は医者です。": "저는 의사예요.",
+    "(이에요 と 예요、どっち？)": "(이에요와 예요)",
+    "単語の最後の文字を見てください。パッチムがあれば이에요、なければ예요をつけます。": "단어의 마지막 글자를 봐 주세요. 받침이 있으면 이에요, 없으면 예요를 붙여요.",
+    "(質問のパターン)": "(질문 패턴)",
+    "2つを続けて読みます。文字は同じです。最後の音だけ聞いてみてください。": "두 개를 이어서 읽을게요. 글자는 똑같아요. 끝소리만 들어 보세요.",
+    "学生です。（終わりを下げる）": "학생이에요. (문장 끝을 내려요)",
+    "学生ですか？（終わりを上げるだけ）": "학생이에요? (말은 그대로, 끝만 올려요)",
+    "(質問を読もう)": "(질문 읽기)",
+    "今度はひとりで読んでみましょう。最後を上げて。": "이번엔 혼자 읽어 보세요. 끝을 올려서요.",
+    "学生ですか？": "학생이에요?",
+    "会社員ですか？": "회사원이에요?",
+    "医者ですか？": "의사예요?",
+    "歌手ですか？": "가수예요?",
+    "日本人ですか？": "일본 사람이에요?",
+    "(正しい言葉を選ぼう)": "(알맞은 말 고르기)",
+    "単語の最後の文字を見て、正しいほうをタップしてください。": "단어의 마지막 글자를 보고, 맞는 쪽을 눌러 보세요.",
+    "(空欄をうめよう)": "(빈칸을 채워요)",
+    "空欄に入ることばを入れて、文をまるごと声に出して言ってみましょう。": "빈칸에 들어갈 말을 넣어서, 문장을 통째로 소리 내어 말해 보세요.",
+    "私は歌手です。": "저는 가수예요.",
+    "韓国人ですか？": "한국 사람이에요?",
+    "(韓国語にしよう)": "(한국어로 바꿔요)",
+    "日本語を見て、韓国語で言ってみましょう。": "일본어를 보고, 한국어로 말해 보세요.",
+    "(自分の文を作ろう)": "(내 문장 만들기)",
+    "今度は本当に自分の話です。自己紹介を1つの文で言ってみましょう。": "이번엔 진짜 자기 이야기예요. 자기소개를 한 문장으로 말해 보세요.",
+
+    // ---- 파트 2 ----
+    "日本語の「は」と、位置も意味も同じです。私が読みます。よく聞いて、まねして読んでみましょう。": "일본어 'は'하고 자리도 뜻도 같아요. 제가 읽을게요. 잘 듣고 따라 읽어 보세요.",
+    "友だちは歌手です。": "친구는 가수예요.",
+    "先生は韓国人です。": "선생님은 한국 사람이에요.",
+    "田中さんは医者ですか？": "다나카 씨는 의사예요?",
+    "(은 と 는、どっち？)": "(은과 는)",
+    "さっきのパッチムのルール、ここでも同じです。パッチムがあれば은、なければ는です。": "아까 그 받침 규칙, 여기서도 똑같아요. 받침이 있으면 은, 없으면 는이에요.",
+    "パッチムあり（子音で終わる）": "받침 있음 (자음으로 끝남)",
+    "パッチムなし（母音で終わる）": "받침 없음 (모음으로 끝남)",
+    "(은 と 는 を選ぼう)": "(은과 는 고르기)",
+    "「은」と「는」から正しいほうをタップしてください。": "은과 는 중에서 맞는 쪽을 눌러 보세요.",
+    "(文を組み立てよう)": "(문장 만들기)",
+    "単語を順番に並べて、声に出して言ってみましょう。": "단어를 순서대로 놓고, 소리 내어 말해 보세요.",
+    "先生は韓国人ですか？": "선생님은 한국 사람이에요?",
+    "名前は田中です。": "이름은 다나카예요.",
+    "田中さんは会社員ですか？": "다나카 씨는 회사원이에요?",
+    "(自分の質問を作ろう)": "(내 질문 만들기)",
+    "私に聞いてみたい質問を1つ言ってみましょう。": "저한테 하고 싶은 질문을 하나 말해 보세요.",
+
+    // ---- 파트 3 ----
+    "(会話を読もう)": "(대화 읽기)",
+    "ハナ": "하나 (한국 사람)",
+    "ハルカ": "하루카 (일본 사람 · 학습자 역할)",
+    "私がハナのほうを読みます。ハルカになって読んでみましょう。": "제가 하나 쪽을 읽을게요. 하루카가 되어서 읽어 보세요.",
+    "こんにちは！私はハナです。": "안녕하세요! 저는 하나예요.",
+    "こんにちは！私はハルカです。": "안녕하세요! 저는 하루카예요.",
+    "ハルカさんは日本人ですか？": "하루카 씨는 일본 사람이에요?",
+    "はい、私は日本人です。": "네, 저는 일본 사람이에요.",
+    "ハナさんは学生ですか？": "하나 씨는 학생이에요?",
+    "はい、私は学生です。": "네, 저는 학생이에요.",
+    "(会話をうめよう)": "(대화 채우기)",
+    "今度はハルカのセリフが空いています。ハルカになって、文を声に出して言ってみましょう。": "이번엔 하루카 대사가 비어 있어요. 하루카가 되어서 문장을 소리 내어 말해 보세요.",
+    "(フリートーク)": "(자유 대화)",
+    "今度は本当の話です。自己紹介をして、私にも聞いてみてください。": "이번엔 진짜 이야기예요. 자기소개를 하고, 저한테도 물어봐 주세요.",
+    "学生ですか？会社員ですか？": "학생이에요? 회사원이에요?",
+    "私は〜です。（自分のこと）": "저는 ~예요. (자기 이야기)",
+    "先生は韓国人ですか？（先生にも聞いてみましょう）": "선생님은 한국 사람이에요? (튜터에게도 물어보세요)",
+    "（先生が自由に答えます）": "(튜터가 자유롭게 대답해요)",
+
+    // ---- 한국 여행 · 원어민 팁 ----
+    "相手": "상대",
+    "(韓国旅行)": "(한국 여행)",
+    "ボーナス！韓国のゲストハウスで初めて会った人です。空欄のセリフを言ってください。": "보너스! 한국 게스트하우스에서 처음 만난 사람이에요. 빈칸 대사를 말해 주세요.",
+    "こんにちは！私はパク・ジミンです。田中さんは学生ですか？": "안녕하세요! 저는 박지민이에요. 다나카 씨는 학생이에요?",
+    "はい！私は大学生です。": "네! 저는 대학생이에요.",
+    "じゃあ、パク・ジミンさんは会社員ですか？": "그럼 박지민 씨는 회사원이에요?",
+    "はい、私は会社員です。友だちは俳優です！": "네, 저는 회사원이에요. 친구는 배우예요!",
+    "わあ、本当に俳優ですか？": "와, 진짜 배우예요?",
+    "はい！本当に俳優です。": "네! 진짜 배우예요.",
+    "(ネイティブのひとこと)": "(원어민 팁)",
+    "実際の会話では、こんなふうにも言います。私が読んでみますね。": "실제 대화에서는 이렇게 말하기도 해요. 제가 읽어 볼게요.",
+    "ネイティブのコツ": "원어민의 팁",
+    "おたがい分かっている話では「저는」「〜씨는」をよく省略します。": "서로 아는 이야기면 저는, 씨는을 자주 빼요.",
+    "→ 일본 사람이에요.（自己紹介の2文目から）": "자기소개 두 번째 문장부터는 이렇게",
+    "→ 학생이에요?（だれの話か分かっているとき）": "누구 얘기인지 아는 상황이면 이렇게",
+
+    // ---- 마무리 ----
+    "(今日の成果)": "(오늘의 결과)",
+    "25分前は1つの文も作れませんでしたよね？今はこれだけ言えます。次は「아니에요」を習って、「〜ではありません」も言えるようになります。": "25분 전엔 한 문장도 못 만들었죠? 지금은 이만큼 말할 수 있어요. 다음 시간엔 '아니에요'를 배워서, 아닌 것도 말할 수 있어요.",
+    "名詞 8 ＋ (이)에요. ＋ (이)에요?": "명사 8개 + (이)에요. + (이)에요?",
+    "言い方 2": "말하는 방법 2가지",
+    "今日言えるようになった文の数": "오늘 말할 수 있게 된 문장 수",
+    "おつかれさまでした！👏": "수고하셨어요! 👏",
+    "体験レッスンはこれで おわり！": "체험레슨이 모두 끝났어요!",
+    "はじめての韓国語の自己紹介、よくがんばりました！また お会いしましょう ;)": "첫 한국어 자기소개, 정말 잘하셨어요! 또 만나요 ;)"
+  };
+  // 입력칸 placeholder
+  window.LESSON_GLOSS_PLACEHOLDERS = { "名前": "이름" };
   </script>
-
-  <!-- ================================================================
-       PATTERN ACTIVITIES · 화이트보드 없이 손가락만으로 푸는 활동
-       (1) .slot / .answer-space — 점선 칸이 진짜 입력칸이 된다.
-       (2) .choose-row .opt      — 둘 중 하나를 눌러 고른다.
-       (3) .choice → .build-zone — 단어 칩을 순서대로 놓아 문장을 만든다.
-       채점은 언제나 각자 화면에서 다시 계산한다(정답은 오가지 않는다).
-       ================================================================ -->
-  <script>
-  (function () {
-    'use strict';
-
-    var sync = window.lessonSync;
-    var MAX_TEXT = 2000;                 // 붙여넣기 한 번으로 문서가 부풀지 않게
-
-    // 띄어쓰기·문장부호는 채점에서 무시한다 ("학생이에요?" == "학생이에요")
-    function norm(s) { return (s || "").replace(/[\s　?？.。!！,、·~〜]/g, ""); }
-
-    var reorder = new WeakMap();         // build zone -> {pool, answer, chips}
-
-    /* ---------- (1) typed blanks ---------- */
-    function grade(input, commit) {
-      if (input.classList.contains("correct")) return;
-      var space = input.closest(".answer-space");
-      if (norm(input.value) === norm(input.dataset.answer) && input.value.trim()) {
-        input.classList.remove("wrong");
-        input.classList.add("correct");
-        input.readOnly = true;
-        input.placeholder = "";          // 맞힌 칸에는 유령 답을 다시 띄우지 않는다
-        if (space) space.classList.add("correct");
-      } else if (commit && input.value.trim()) {
-        input.classList.add("wrong");
-        setTimeout(function () { input.classList.remove("wrong"); }, 700);
-      }
-    }
-
-    // 여기서는 보내지 않는다. 보드가 input 이벤트를 보고 값을 다시 읽어
-    // 내보낸다(IME 조합 중에는 붙잡아 둔다). 이 함수는 채점만 한다.
-    function wireInput(input) {
-      input.addEventListener("input", function () { grade(input, false); });
-      input.addEventListener("blur", function () { grade(input, true); });
-      input.addEventListener("keydown", function (e) {
-        if (e.key === "Enter") { e.preventDefault(); grade(input, true); }
-      });
-    }
-
-    // data-sync-id 는 살아 있는 요소 하나에만 있어야 한다. 자리를 대신하는
-    // 껍데기가 진짜 입력칸으로 바뀔 때 id 를 넘겨준다.
-    function transferSync(source, target) {
-      if (!source.dataset.syncId) return;
-      target.dataset.syncId = source.dataset.syncId;
-      if (source.dataset.syncKind) target.dataset.syncKind = source.dataset.syncKind;
-      source.removeAttribute("data-sync-id");
-      source.removeAttribute("data-sync-kind");
-    }
-
-    // 점선 알약(.slot) → 타이핑하는 칸. 답 길이에 맞춰 폭을 잡는다.
-    document.querySelectorAll(".slot").forEach(function (slot) {
-      var answer = slot.textContent.trim();
-      if (!answer) return;
-      var input = document.createElement("input");
-      input.type = "text";
-      input.className = "slot-input";
-      input.autocomplete = "off";
-      input.spellcheck = false;
-      input.dataset.answer = answer;
-      // 시트의 max-width 는 낱말용이라 한 문장짜리 칸을 잘라 버린다
-      input.style.width = Math.min(13, norm(answer).length * 1.15 + 2.2) + "em";
-      input.style.maxWidth = "none";
-      transferSync(slot, input);
-      slot.replaceWith(input);
-      wireInput(input);
-    });
-
-    /* ---------- (3) reorder: 칩을 문장 자리에 놓는다 ----------
-       .task-block 안의 .choice 칩이 아래 pool 로 내려가고, 답 자리는
-       칩을 받는 트레이가 된다. 먼저 처리해야 아래 .answer-space 루프가
-       이 트레이를 입력칸으로 바꾸지 않는다. */
-    function settleOrder(zone) {
-      var block = reorder.get(zone);
-      if (!block) return;
-      zone.classList.remove("wrong");
-      if (block.pool.children.length) return;      // 아직 다 놓지 않았다
-      var built = Array.prototype.map.call(zone.children, function (c) {
-        return c.textContent.trim();
-      }).join(" ");
-      zone.classList.add(norm(built) === norm(block.answer) ? "correct" : "wrong");
-    }
-
-    document.querySelectorAll(".task-block").forEach(function (block) {
-      var chips = [].slice.call(block.querySelectorAll(":scope > .choice"));
-      if (!chips.length) return;
-      var zone = block.querySelector(".answer-space");
-      var answer = zone.textContent.trim();
-      zone.textContent = "";
-      zone.classList.add("build-zone");
-      zone.setAttribute("data-a", answer);         // 티칭 모드의 유령 답
-      var pool = document.createElement("div");
-      pool.className = "chip-pool";
-      block.appendChild(pool);
-      reorder.set(zone, { pool: pool, answer: answer, chips: chips });
-      zone.dataset.syncKind = "order";             // 아래에서 register 한다
-      chips.forEach(function (chip) {
-        pool.appendChild(chip);
-        chip.addEventListener("click", function () {
-          if (zone.classList.contains("correct")) return;
-          zone.classList.remove("wrong");
-          (chip.parentElement === pool ? zone : pool).appendChild(chip);
-          settleOrder(zone);
-        });
-      });
-    });
-
-    // 답이 적혀 있으면 채점하는 칸, 비어 있으면 자유롭게 쓰는 칸
-    document.querySelectorAll(".answer-space").forEach(function (space) {
-      if (space.classList.contains("build-zone")) return;
-      var answer = space.textContent.trim();
-      space.textContent = "";
-      space.classList.add("as-input");
-      if (answer) {
-        var input = document.createElement("input");
-        input.type = "text";
-        input.className = "space-input";
-        input.autocomplete = "off";
-        input.spellcheck = false;
-        input.dataset.answer = answer;
-        transferSync(space, input);
-        space.appendChild(input);
-        wireInput(input);
-      } else {
-        var ta = document.createElement("textarea");
-        ta.className = "free-input";
-        ta.rows = 2;
-        ta.spellcheck = false;
-        ta.maxLength = MAX_TEXT;
-        transferSync(space, ta);
-        space.appendChild(ta);
-      }
-    });
-
-    /* ---------- (2) tap one of two ----------
-       공유되는 것은 "고른 쪽"(.chosen) 뿐이다. 맞았는지 틀렸는지는
-       양쪽 화면이 각자 data-correct 로 다시 계산한다. */
-    document.querySelectorAll(".choose-row").forEach(function (row) {
-      var opts = [].slice.call(row.querySelectorAll(".opt"));
-      if (!opts.length) return;
-      opts.forEach(function (opt) {
-        opt.setAttribute("role", "button");
-        opt.addEventListener("click", function () {
-          if (row.dataset.done) return;
-          // 형제의 표시를 먼저 지우는 것이 "하나만 고르기"를 만든다.
-          // 보드는 집합만 볼 뿐이고, 그 규칙은 이 문서에 있다.
-          opts.forEach(function (o) { o.classList.remove("chosen"); });
-          opt.classList.add("chosen");
-          if (opt.hasAttribute("data-correct")) {
-            row.dataset.done = "1";
-            opt.classList.add("correct");
-            opts.forEach(function (o) { if (o !== opt) o.classList.add("dim"); });
-          } else {
-            opt.classList.add("wrong");
-            setTimeout(function () { opt.classList.remove("wrong"); }, 700);
-          }
-        });
-      });
-    });
-
-    /* ---------- mission checklist ---------- */
-    document.querySelectorAll(".mission li").forEach(function (li) {
-      li.addEventListener("click", function (e) {
-        if (e.target.closest(".hint")) return;
-        li.classList.toggle("checked");
-      });
-    });
-
-    /* ---------- 티칭 모드에서 답을 유령으로 띄운다 ----------
-       CSS 는 input 안까지 들어가지 못하므로, 타이핑 칸만 여기서 처리한다.
-       나머지(고르기·문장 만들기)는 시트에 있다. 공유하지 않는다. */
-    window.__revealAnswers = function (on) {
-      document.querySelectorAll("input[data-answer], .free-input").forEach(function (el) {
-        if (el.classList.contains("correct")) return;
-        el.placeholder = on ? (el.dataset.answer || "") : "";
-      });
-    };
-
-    /* ---------- 조립 중인 문장은 DOM 만으로 읽히지 않는다 ----------
-       칩의 "순서"가 상태라서, 이 문서가 read/apply 를 들고 온다. 칸은
-       위치가 아니라 칩의 이름(data-item-id)으로 지칭한다. */
-    sync.register("order", {
-      read: function (zone) {
-        return {
-          itemIds: Array.prototype.map.call(zone.children, function (c) {
-            return c.dataset.itemId;
-          }).filter(Boolean)
-        };
-      },
-      apply: function (zone, state) {
-        if (!state || !Array.isArray(state.itemIds)) return;
-        var block = reorder.get(zone);
-        if (!block || zone.classList.contains("correct")) return;
-        var known = {};
-        block.chips.forEach(function (c) { known[c.dataset.itemId] = c; });
-        var seen = {};
-        for (var i = 0; i < state.itemIds.length; i++) {
-          var id = state.itemIds[i];
-          // 이 활동이 선언한 칩만, 한 번씩만 (§8)
-          if (typeof id !== "string" || !known[id] || seen[id]) return;
-          seen[id] = 1;
-        }
-        state.itemIds.forEach(function (id) { zone.appendChild(known[id]); });
-        block.chips.forEach(function (chip) {
-          if (!seen[chip.dataset.itemId]) block.pool.appendChild(chip);
-        });
-        settleOrder(zone);
-      }
-    });
-  })();
-  </script>
-
-  <!-- ================================================================
-       REVIEW AID · 일본어 호버 툴팁 (한국어 뜻/발음)
-       화면 디자인은 그대로 두고, 일본어 텍스트에 마우스를 올리면
-       한국어 번역(가타카나 발음 표기는 "발음:")을 보여 준다.
-       ================================================================ -->
-  <script>
-  (function () {
-    const D = {
-      // ---- 커버 / 브랜드 페이지 ----
-      "体験レッスン": "체험레슨",
-      "初級": "초급",
-      "ここから25分。終わるころには、韓国語で自己紹介ができて、相手のことも聞けます。約束します！": "지금부터 25분. 끝날 때쯤엔 한국어로 자기소개를 하고, 상대에 대해서도 물어볼 수 있어요. 약속해요!",
-
-      // ---- 첫인사 ----
-      "(はじめまして！)": "(처음 뵙겠습니다!)",
-      "私と軽くあいさつしてみましょうか？": "저랑 가볍게 인사해 볼까요?",
-      "先生": "튜터",
-      "私": "나",
-      "アンニョンハセヨ！ マンナソ パンガウォヨ": "발음: 안녕하세요! 만나서 반가워요",
-      "アンニョンハセヨ！": "발음: 안녕하세요!",
-      "チョヌン ＿＿＿ (イ)エヨ。イルミ ムォエヨ？": "발음: 저는 ___(이)에요. 이름이 뭐예요?",
-      "チョヌン ＿＿＿ (イ)エヨ": "발음: 저는 ___(이)에요",
-      "オヌル スオプ シジャカルケヨ。チャル プタケヨ！": "발음: 오늘 수업 시작할게요. 잘 부탁해요!",
-      "ネ！ チャル プタケヨ！": "발음: 네! 잘 부탁해요!",
-      "こんにちは！会えてうれしいです。": "안녕하세요! 만나서 반가워요.",
-      "こんにちは！": "안녕하세요!",
-      "私は（名前）です。お名前は何ですか？": "저는 ___(이)에요. 이름이 뭐예요?",
-      "私は ＿(名前)＿ です。": "저는 __(이름)__(이)에요.",
-      "今日のレッスン、始めますね。よろしくお願いします！": "오늘 수업 시작할게요. 잘 부탁드립니다!",
-      "はい！よろしくお願いします！": "네! 잘 부탁드립니다!",
-      "先生のことばに、返事してみましょう！": "튜터의 말에 대답해 보세요!",
-
-      // ---- 오늘의 목표 ----
-      "(今日のゴール)": "(오늘의 목표)",
-      "今日の授業が終わると、こんなふうに自己紹介ができるようになります。": "오늘 수업이 끝나면, 이렇게 자기소개를 할 수 있어요.",
-      "私は田中です": "저는 다나카예요",
-      "田中さんは学生ですか？": "다나카 씨는 학생이에요?",
-      "はい、私は学生です": "네, 저는 학생이에요",
-      "チョヌン タナカエヨ": "발음: 저는 다나카예요",
-      "タナカ シヌン ハクセンイエヨ": "발음: 다나카 씨는 학생이에요",
-      "ネ、チョヌン ハクセンイエヨ": "발음: 네, 저는 학생이에요",
-
-      // ---- 이미 아는 단어 ----
-      "(もう知っている単語)": "(이미 아는 단어)",
-      "実は今日使う単語、もう知っています。韓国語の単語の70%が漢字から来ているんです。語順も助詞も日本語とほぼ同じです。": "사실 오늘 쓸 단어, 이미 알고 있어요. 한국어 단어의 70%가 한자에서 왔거든요. 어순도 조사도 일본어랑 거의 같아요.",
-      "日本": "일본", "学生": "학생", "会社員": "회사원",
-      "イルボン": "발음: 일본", "ハクセン": "발음: 학생", "フェサウォン": "발음: 회사원",
-
-      // ---- 파트 안내 ----
-      "パート 1": "파트 1", "パート 2": "파트 2", "パート 3": "파트 3",
-      "Nです。まずは「私は〜です」が言えるようにします。": "N이에요 / 예요. 먼저 '저는 ~예요'를 말할 수 있게 해요.",
-      "〜は。話のテーマを決める助詞で、日本語と同じ場所に入ります。": "~은/는. 이야기의 주제를 정하는 조사로, 일본어와 같은 자리에 들어가요.",
-      "2つのパターンがそろいました。ここからは本当の自己紹介です。": "패턴 두 개가 다 모였어요. 이제부터는 진짜 자기소개예요.",
-
-      // ---- 파트 1 ----
-      "(今日のパターン)": "(오늘의 패턴)",
-      "名前も、仕事も、国も、こう言います。私が読みます。よく聞いて、まねして読んでみましょう。": "이름도, 직업도, 나라도 이렇게 말해요. 제가 읽을게요. 잘 듣고 따라 읽어 보세요.",
-      "私は田中です。": "저는 다나카예요.",
-      "私は学生です。": "저는 학생이에요.",
-      "私は日本人です。": "저는 일본 사람이에요.",
-      "(一緒に読もう)": "(같이 읽어요)",
-      "今度はひとりで読んでみましょう。4つの文です。": "이번엔 혼자 읽어 보세요. 네 문장이에요.",
-      "私は会社員です。": "저는 회사원이에요.",
-      "私は医者です。": "저는 의사예요.",
-      "(이에요 と 예요、どっち？)": "(이에요와 예요)",
-      "単語の最後の文字を見てください。パッチムがあれば이에요、なければ예요をつけます。": "단어의 마지막 글자를 봐 주세요. 받침이 있으면 이에요, 없으면 예요를 붙여요.",
-      "(質問のパターン)": "(질문 패턴)",
-      "2つを続けて読みます。文字は同じです。最後の音だけ聞いてみてください。": "두 개를 이어서 읽을게요. 글자는 똑같아요. 끝소리만 들어 보세요.",
-      "学生です。（終わりを下げる）": "학생이에요. (문장 끝을 내려요)",
-      "学生ですか？（終わりを上げるだけ）": "학생이에요? (말은 그대로, 끝만 올려요)",
-      "(質問を読もう)": "(질문 읽기)",
-      "今度はひとりで読んでみましょう。最後を上げて。": "이번엔 혼자 읽어 보세요. 끝을 올려서요.",
-      "学生ですか？": "학생이에요?",
-      "会社員ですか？": "회사원이에요?",
-      "医者ですか？": "의사예요?",
-      "歌手ですか？": "가수예요?",
-      "日本人ですか？": "일본 사람이에요?",
-      "(正しい言葉を選ぼう)": "(알맞은 말 고르기)",
-      "単語の最後の文字を見て、正しいほうをタップしてください。": "단어의 마지막 글자를 보고, 맞는 쪽을 눌러 보세요.",
-      "(空欄をうめよう)": "(빈칸을 채워요)",
-      "空欄に入ることばを入れて、文をまるごと声に出して言ってみましょう。": "빈칸에 들어갈 말을 넣어서, 문장을 통째로 소리 내어 말해 보세요.",
-      "私は歌手です。": "저는 가수예요.",
-      "韓国人ですか？": "한국 사람이에요?",
-      "(韓国語にしよう)": "(한국어로 바꿔요)",
-      "日本語を見て、韓国語で言ってみましょう。": "일본어를 보고, 한국어로 말해 보세요.",
-      "(自分の文を作ろう)": "(내 문장 만들기)",
-      "今度は本当に自分の話です。自己紹介を1つの文で言ってみましょう。": "이번엔 진짜 자기 이야기예요. 자기소개를 한 문장으로 말해 보세요.",
-
-      // ---- 파트 2 ----
-      "日本語の「は」と、位置も意味も同じです。私が読みます。よく聞いて、まねして読んでみましょう。": "일본어 'は'하고 자리도 뜻도 같아요. 제가 읽을게요. 잘 듣고 따라 읽어 보세요.",
-      "友だちは歌手です。": "친구는 가수예요.",
-      "先生は韓国人です。": "선생님은 한국 사람이에요.",
-      "田中さんは医者ですか？": "다나카 씨는 의사예요?",
-      "(은 と 는、どっち？)": "(은과 는)",
-      "さっきのパッチムのルール、ここでも同じです。パッチムがあれば은、なければ는です。": "아까 그 받침 규칙, 여기서도 똑같아요. 받침이 있으면 은, 없으면 는이에요.",
-      "パッチムあり（子音で終わる）": "받침 있음 (자음으로 끝남)",
-      "パッチムなし（母音で終わる）": "받침 없음 (모음으로 끝남)",
-      "(은 と 는 を選ぼう)": "(은과 는 고르기)",
-      "「은」と「는」から正しいほうをタップしてください。": "은과 는 중에서 맞는 쪽을 눌러 보세요.",
-      "(文を組み立てよう)": "(문장 만들기)",
-      "単語を順番に並べて、声に出して言ってみましょう。": "단어를 순서대로 놓고, 소리 내어 말해 보세요.",
-      "先生は韓国人ですか？": "선생님은 한국 사람이에요?",
-      "名前は田中です。": "이름은 다나카예요.",
-      "田中さんは会社員ですか？": "다나카 씨는 회사원이에요?",
-      "(自分の質問を作ろう)": "(내 질문 만들기)",
-      "私に聞いてみたい質問を1つ言ってみましょう。": "저한테 하고 싶은 질문을 하나 말해 보세요.",
-
-      // ---- 파트 3 ----
-      "(会話を読もう)": "(대화 읽기)",
-      "ハナ": "하나 (한국 사람)",
-      "ハルカ": "하루카 (일본 사람 · 학습자 역할)",
-      "私がハナのほうを読みます。ハルカになって読んでみましょう。": "제가 하나 쪽을 읽을게요. 하루카가 되어서 읽어 보세요.",
-      "こんにちは！私はハナです。": "안녕하세요! 저는 하나예요.",
-      "こんにちは！私はハルカです。": "안녕하세요! 저는 하루카예요.",
-      "ハルカさんは日本人ですか？": "하루카 씨는 일본 사람이에요?",
-      "はい、私は日本人です。": "네, 저는 일본 사람이에요.",
-      "ハナさんは学生ですか？": "하나 씨는 학생이에요?",
-      "はい、私は学生です。": "네, 저는 학생이에요.",
-      "(会話をうめよう)": "(대화 채우기)",
-      "今度はハルカのセリフが空いています。ハルカになって、文を声に出して言ってみましょう。": "이번엔 하루카 대사가 비어 있어요. 하루카가 되어서 문장을 소리 내어 말해 보세요.",
-      "(フリートーク)": "(자유 대화)",
-      "今度は本当の話です。自己紹介をして、私にも聞いてみてください。": "이번엔 진짜 이야기예요. 자기소개를 하고, 저한테도 물어봐 주세요.",
-      "学生ですか？会社員ですか？": "학생이에요? 회사원이에요?",
-      "私は〜です。（自分のこと）": "저는 ~예요. (자기 이야기)",
-      "先生は韓国人ですか？（先生にも聞いてみましょう）": "선생님은 한국 사람이에요? (튜터에게도 물어보세요)",
-      "（先生が自由に答えます）": "(튜터가 자유롭게 대답해요)",
-
-      // ---- 한국 여행 · 원어민 팁 ----
-      "相手": "상대",
-      "(韓国旅行)": "(한국 여행)",
-      "ボーナス！韓国のゲストハウスで初めて会った人です。空欄のセリフを言ってください。": "보너스! 한국 게스트하우스에서 처음 만난 사람이에요. 빈칸 대사를 말해 주세요.",
-      "こんにちは！私はパク・ジミンです。田中さんは学生ですか？": "안녕하세요! 저는 박지민이에요. 다나카 씨는 학생이에요?",
-      "はい！私は大学生です。": "네! 저는 대학생이에요.",
-      "じゃあ、パク・ジミンさんは会社員ですか？": "그럼 박지민 씨는 회사원이에요?",
-      "はい、私は会社員です。友だちは俳優です！": "네, 저는 회사원이에요. 친구는 배우예요!",
-      "わあ、本当に俳優ですか？": "와, 진짜 배우예요?",
-      "はい！本当に俳優です。": "네! 진짜 배우예요.",
-      "(ネイティブのひとこと)": "(원어민 팁)",
-      "実際の会話では、こんなふうにも言います。私が読んでみますね。": "실제 대화에서는 이렇게 말하기도 해요. 제가 읽어 볼게요.",
-      "ネイティブのコツ": "원어민의 팁",
-      "おたがい分かっている話では「저는」「〜씨는」をよく省略します。": "서로 아는 이야기면 저는, 씨는을 자주 빼요.",
-      "→ 일본 사람이에요.（自己紹介の2文目から）": "자기소개 두 번째 문장부터는 이렇게",
-      "→ 학생이에요?（だれの話か分かっているとき）": "누구 얘기인지 아는 상황이면 이렇게",
-
-      // ---- 마무리 ----
-      "(今日の成果)": "(오늘의 결과)",
-      "25分前は1つの文も作れませんでしたよね？今はこれだけ言えます。次は「아니에요」を習って、「〜ではありません」も言えるようになります。": "25분 전엔 한 문장도 못 만들었죠? 지금은 이만큼 말할 수 있어요. 다음 시간엔 '아니에요'를 배워서, 아닌 것도 말할 수 있어요.",
-      "名詞 8 ＋ (이)에요. ＋ (이)에요?": "명사 8개 + (이)에요. + (이)에요?",
-      "言い方 2": "말하는 방법 2가지",
-      "今日言えるようになった文の数": "오늘 말할 수 있게 된 문장 수",
-      "おつかれさまでした！👏": "수고하셨어요! 👏",
-      "体験レッスンはこれで おわり！": "체험레슨이 모두 끝났어요!",
-      "はじめての韓国語の自己紹介、よくがんばりました！また お会いしましょう ;)": "첫 한국어 자기소개, 정말 잘하셨어요! 또 만나요 ;)"
-    };
-    // input placeholder → 한국어
-    const P = { "名前": "이름" };
-
-    const norm = s => (s || "").replace(/[\s　]+/g, " ").trim();
-
-    const tip = document.createElement("div");
-    tip.setAttribute("lang", "ko");
-    tip.style.cssText =
-      "position:fixed;z-index:9999;max-width:300px;padding:8px 12px;" +
-      "background:#1c1c1c;color:#fff;font-size:13px;line-height:1.55;font-weight:600;" +
-      "border:1.5px solid #b5fd4c;border-radius:9px;box-shadow:0 6px 18px rgba(0,0,0,.28);" +
-      "pointer-events:none;opacity:0;transition:opacity .12s;word-break:keep-all;";
-    document.body.appendChild(tip);
-
-    const style = document.createElement("style");
-    style.textContent = "[data-ko]{cursor:help;}";
-    document.head.appendChild(style);
-
-    /* 화면에 한국어가 이미 짝으로 붙어 있는 자리에는 툴팁을 달지 않는다.
-       짝은 디자인이 정한 것이라(스크립트의 .ja 위에는 .ko, 말풍선의 번역
-       위에는 한국어 원문), 목록도 디자인을 따라 적는다 — 구조로 추정하면
-       중첩된 한글을 놓치고 번역이 아닌 캡션을 번역으로 오인한다. */
-    const PAIRED = [
-      ".ja",                                     // KO/JA 짝의 일본어 쪽 전부
-      ".title-ja",
-      ".translation", ".answer-label", ".answer-box",
-      ".known-row .j",
-      ".br-cn", ".br-ko small",                  // 漢字 → 한글 다리: 한국어가 바로 옆 칸에 있다
-      ".word-card .mean",
-      ".letter-card .kana-eq",
-      ".opt-row .opt-main",
-      ".who", ".who-name",
-      ".zone", ".yomi", ".yomi-line",
-      ".transition-kicker", ".brand-title", ".podo-badge .tag"
-    ].join(",");
-
-    document.querySelectorAll("body *").forEach(el => {
-      if (el === tip) return;
-      if (el.matches(PAIRED)) return;             // 한국어가 이미 옆에 있다
-      let own = "";
-      el.childNodes.forEach(n => { if (n.nodeType === 3) own += n.textContent; });
-      const val = D[norm(own)] || D[norm(el.textContent)];
-      if (val) el.setAttribute("data-ko", val);
-      if (el.placeholder && P[el.placeholder]) el.setAttribute("data-ko", P[el.placeholder]);
-    });
-
-    document.addEventListener("mouseover", e => {
-      const t = e.target.closest ? e.target.closest("[data-ko]") : null;
-      if (!t) { tip.style.opacity = 0; return; }
-      tip.textContent = t.getAttribute("data-ko");
-      tip.style.opacity = 1;
-      const r = t.getBoundingClientRect();
-      const tw = tip.offsetWidth, th = tip.offsetHeight;
-      let x = Math.min(Math.max(8, r.left), window.innerWidth - tw - 8);
-      let y = r.top - th - 8;
-      if (y < 8) y = r.bottom + 8;
-      tip.style.left = x + "px";
-      tip.style.top = y + "px";
-    });
-    document.addEventListener("scroll", () => { tip.style.opacity = 0; }, true);
-  })();
-  </script>
+  <script src="../../interactive/gloss.js"></script>
 
   <!-- ================================================================
        PAGER · 한 장씩 넘겨 보는 모드
@@ -1074,6 +769,7 @@
        just "show one, hide the rest" — no restructuring.
        ================================================================ -->
   <nav class="pager" data-sync-id="deck-page" data-sync-kind="page">
+    <input class="pg-scrub" type="range" min="0" max="0" step="1" value="0" aria-label="페이지 이동">
     <button class="pg-btn pg-prev" type="button" aria-label="이전 페이지">←</button>
     <div class="pg-mid">
       <span class="pg-label"><b class="pg-act">—</b><span class="pg-n">—</span></span>
@@ -1082,111 +778,8 @@
       <button class="pg-btn pg-next" type="button" aria-label="다음 페이지">→</button>
 </nav>
 
-  <script>
-  (function () {
-    var phone = document.querySelector(".phone");
-    var bar   = document.querySelector(".pager");
-    if (!phone || !bar) return;
-    var sync = window.lessonSync;
-
-    var pages = [].slice.call(phone.children);
-
-    // Acts come from pages that already exist: the brand divider, and the
-    // part transitions, which name themselves with data-act. The goal page
-    // is a transition page too but starts no act — it belongs to the intro.
-    var acts = [], cur = null;
-    pages.forEach(function (p, i) {
-      if (!cur || p.hasAttribute("data-act") || p.classList.contains("divider")) {
-        var t = p.querySelector(".brand-title");
-        cur = {
-          name: p.getAttribute("data-act")
-             || (t ? (t.firstChild.textContent || "").trim() : "체험 레슨"),
-          from: i, to: i
-        };
-        acts.push(cur);
-      }
-      cur.to = i;
-    });
-
-    var at = 0;
-    var prevBtn  = bar.querySelector(".pg-prev");
-    var nextBtn  = bar.querySelector(".pg-next");
-    var actEl    = bar.querySelector(".pg-act");
-    var nEl      = bar.querySelector(".pg-n");
-    var teachBtn = bar.querySelector(".pg-teach");
-
-    function paint() {
-      prevBtn.disabled = at <= 0;
-      nextBtn.disabled = at >= pages.length - 1;
-      var a = 0;
-      acts.forEach(function (x, k) { if (at >= x.from) a = k; });
-      actEl.textContent = acts[a].name;            // the act only labels where you are
-      nEl.textContent = (at + 1) + " / " + pages.length;
-    }
-
-    // Layout is flushed before scrolling — the page has only just left
-    // display:none, so measuring before that reads stale geometry.
-    function show(i) {
-      at = Math.max(0, Math.min(pages.length - 1, i));
-      pages.forEach(function (p, k) { p.classList.toggle("pg-on", k === at); });
-      paint();
-      void pages[at].offsetHeight;
-      window.scrollTo(0, 0);
-    }
-
-    // show() moves the page silently; goTo() is a turn someone made, so it
-    // is the one that tells the other side.
-    function goTo(i) {
-      if (i === at || i < 0 || i > pages.length - 1) return;
-      show(i);
-      sync.push(bar);
-    }
-
-    prevBtn.addEventListener("click", function () { goTo(at - 1); });
-    nextBtn.addEventListener("click", function () { goTo(at + 1); });
-
-    document.addEventListener("keydown", function (e) {
-      if (e.target.matches && e.target.matches("input, textarea")) return;
-      if (e.key === "ArrowRight") goTo(at + 1);
-      if (e.key === "ArrowLeft") goTo(at - 1);
-    });
-
-    /* ---- 페이지 넘김도 이 문서가 정의한다 ----
-       보드에는 "페이지" 개념이 없다. 넘긴 결과(어느 페이지인지)를 공유할 뿐,
-       버튼 클릭을 재생하지는 않는다 — 그래야 늦게 들어오거나 새로고침한 쪽도
-       한 번에 같은 페이지로 따라온다. 칸은 순서가 아니라 data-page-id 로 지칭해,
-       페이지를 추가해도 이전에 공유된 위치가 어긋나지 않는다. */
-    sync.register("page", {
-      read: function () {
-        return { pageId: pages[at].getAttribute("data-page-id") };
-      },
-      apply: function (el, state) {
-        if (!state || typeof state.pageId !== "string") return;
-        for (var i = 0; i < pages.length; i++) {
-          if (pages[i].getAttribute("data-page-id") === state.pageId) { show(i); return; }
-        }
-        // 이 덱에 없는 페이지면 그대로 둔다
-      }
-    });
-
-    /* ---- teaching mode is the one thing that stays on this screen ----
-       The tutor flips it to reveal answers; sending it would hand the
-       learner the whole key. 공유하지 않는 유일한 상태다. */
-    if (teachBtn) {
-      teachBtn.addEventListener("click", function () {
-        var on = document.body.classList.toggle("teaching");
-        teachBtn.classList.toggle("on", on);
-        if (window.__revealAnswers) window.__revealAnswers(on);
-      });
-    }
-
-    // One page at a time is the only mode for now — the scrolling view is
-    // hidden rather than removed, so it can come back without a rewrite.
-    phone.classList.add("paged");
-    document.body.classList.add("paged");
-    show(0);
-  })();
-  </script>
+  <!-- PAGER · 한 장씩 넘기기 + 스크러버. 공유 스크립트. -->
+  <script src="../../interactive/pager.js"></script>
 
   <!-- SCRIPT LINES · 대사를 문장 단위로 짝지어 세운다. 형광펜보다 먼저 —
        형광펜은 로드 때 글 블록에 번호를 매기므로 DOM 이 먼저 확정돼야 한다. -->

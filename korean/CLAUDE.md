@@ -63,9 +63,16 @@ same document, so anything in the markup is already on the learner's screen.
   `onboarding-screens.html` sits at the top. Plus `trial.css`, shared `assets/`
   (art, mouth, characters), and `_experiments/` for variations and capture files.
 
-  **A deck loads five shared scripts, in this order:** `script-lines` → `spotlight` →
-  `tutor-notes` → `highlight` → `stamp`. The order is load-bearing (see the comments at
-  each tag); a new deck should carry all five unless there is a reason not to.
+  **A deck is markup plus shared scripts — no per-deck CSS or JS.** Load them in this
+  order: `activities` → `pager` → `gloss` → `script-lines` → `spotlight` → `tutor-notes`
+  → `highlight` → `stamp`. The order is load-bearing (see the comments at each tag).
+  A hangul deck adds `hangul-activities`, a freetalk deck adds `freetalk-activities`,
+  both directly after `activities`. The only inline script a deck should carry is its
+  own `window.LESSON_GLOSS` dictionary.
+
+  **Read [`trial/AUTHORING.md`](./trial/AUTHORING.md) before building a new deck.** It is
+  the component vocabulary — page types, every activity's markup, the colour and spacing
+  tokens, and the file skeleton. Reach for an existing component before inventing one.
 - **`shared/`** — `lesson-card.css` (the design system) and `ux-philosophy.md` (the contract).
 - **`interactive/`** — the `data-sync` contract, reference lesson, and lemonboard packager.
 - **`references/`** — source textbook scans (internal reference only).

@@ -3657,6 +3657,42 @@ body.paged { padding-bottom: 0; }
   .phone.paged > * { display: block; }   /* printing always gets the whole deck */
 }
 
+/* ---------- the scrubber, on its own row above the buttons ----------
+   A 25-page deck makes "back to the page before last" four taps of an arrow.
+   Lime on the thumb because lime is the pager's colour — the same fill as
+   다음, so it reads as the same object.
+
+   The row break is made by wrap and nothing else: stamp.js inserts the stamp
+   button before .pg-teach, so wrapping the buttons in a div of their own
+   would delete that slot. The bar takes a squarer radius while it is two
+   rows tall — a stadium shape on a two-row bar bows the corners inward.
+   Without this rule the scrubber's flex-basis:100% has nowhere to go and it
+   squeezes the label into a vertical column of syllables. */
+.pager:has(.pg-scrub) {
+  flex-wrap: wrap;
+  row-gap: 2px;
+  padding: 10px 12px 8px;
+  border-radius: 26px;
+}
+
+.pg-scrub {
+  flex: 1 0 100%; width: 100%; height: 20px; margin: 0;
+  -webkit-appearance: none; appearance: none; background: none;
+  cursor: grab; -webkit-tap-highlight-color: transparent;
+}
+.pg-scrub:active { cursor: grabbing; }
+.pg-scrub::-webkit-slider-runnable-track { height: 6px; border-radius: 999px; background: var(--gray-200); }
+.pg-scrub::-moz-range-track { height: 6px; border-radius: 999px; background: var(--gray-200); }
+.pg-scrub::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none; margin-top: -7px;
+  width: 20px; height: 20px; border: 1.5px solid var(--ink); border-radius: 50%; background: var(--lime);
+}
+.pg-scrub::-moz-range-thumb {
+  width: 20px; height: 20px; border: 1.5px solid var(--ink); border-radius: 50%; background: var(--lime);
+}
+.pg-scrub:focus-visible { outline: none; }
+.pg-scrub:focus-visible::-webkit-slider-thumb { box-shadow: 0 0 0 3px rgba(28,28,28,.22); }
+
 .pg-teach, .pg-exit { width: 32px; height: 32px; background: #fff; font-size: 13px; font-weight: 900; }
 .phone.paged ~ .pager .pg-exit { background: var(--ink); border-color: var(--ink); color: #fff; }
 .pg-teach.on { background: var(--green-500); border-color: var(--green-500); color: #fff; }
