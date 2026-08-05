@@ -255,6 +255,13 @@ body:not(.no-yomi) .sent-more .yomi + .translation { margin-top: 7px; }
 .answer-fill .yomi { margin-top: 6px; }
 .example-card .yomi { margin-top: 5px; font-size: 11.5px; }
 
+/* Each line of a swap owns its own reading — both are sentences the learner
+   is asked to say, so the quiet one gets one too. Neither line hands its
+   padding to the reading, so the card keeps its floor when the switch is
+   off and nothing here has to be conditional. */
+.sw-from > .yomi,
+.sw-to > .yomi { margin-top: 3px; font-size: 11.5px; }
+
 /* a reading between two paragraphs has to carry both gaps itself — the
    Japanese line under it sets its own margins to zero */
 .card > .yomi { margin: 7px 0 12px; }
@@ -1873,6 +1880,85 @@ body:not(.no-yomi) .sent-more .yomi + .translation { margin-top: 7px; }
 .batchim.ending-rule .bt-syl.vowel::after { background: var(--ending-bg); }
 .batchim.ending-rule .bt-out { background: var(--ending-bg); color: var(--ending-ink); }
 .batchim.ending-rule .bt-ex b { color: var(--ending-ink); }
+
+/* ---------- 원어민 팁: the same sentence, the way a native says it ----------
+   Every tip page in the decks teaches a SWAP — 돼요? becomes 될까요?, 저는
+   drops out — and the card they used never drew it. It showed two example
+   boxes each holding only the finished form, so the learner read a result
+   and had to reconstruct the move that produced it. Around them sat a
+   bordered .card inside the page card inside a filled .example-card: three
+   levels where this folder allows two, under a black-and-lime badge that
+   said ネイティブのコツ directly beneath a title already reading
+   ネイティブのひとこと — the loudest object on the page spent on a word the
+   page had just used.
+
+   So the swap becomes the component. One row per sentence, said twice: the
+   ordinary version quiet and the native version in full ink under it, with
+   the piece that changed carrying its own mark (.ending where an ending
+   changed, .topic where a topic dropped — the deck's existing two, so the
+   colour keeps meaning what it already meant). The learner sees the move,
+   not just its result.
+
+   The Japanese rides the same header band as .model-line and the dialogue
+   cards. That band means "the Japanese of the Korean below" everywhere else
+   in the deck, and the old page had put （はじめて会う人に） and a whole
+   second Korean sentence in it. */
+.swap {
+  display: grid;
+  gap: var(--item-gap);
+  margin-top: 24px;
+}
+
+.swap-row {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.swap-row > .translation {
+  order: -1;
+  margin: 0;
+  padding: 9px 14px;
+  background: var(--gray-100);
+  border-bottom: 1px solid var(--gray-200);
+  color: #575753;
+  font-size: 12.5px;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+/* the ordinary version — present, and plainly the one being left behind */
+.sw-from {
+  display: block;
+  padding: 13px 16px 9px;
+  color: var(--gray-400);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+/* ...and the one the learner should walk out saying */
+.sw-to {
+  display: block;
+  padding: 0 16px 14px;
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+/* the turn from one into the other. It is drawn, not written, and it comes
+   from CSS so no deck has to remember to type it. */
+.sw-to::before {
+  content: "↓";
+  display: block;
+  margin-bottom: 5px;
+  color: var(--gray-400);
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1;
+}
 
 /* ---------- 漢字 bridge: the equivalence IS the point ---------- */
 .bridge {

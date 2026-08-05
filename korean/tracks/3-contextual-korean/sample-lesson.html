@@ -75,29 +75,19 @@
          which is the lesson's title wearing a vocabulary badge — nobody says
          it out loud, and it never appeared in the dialogue. -->
     <div class="section" data-page-id="expressions">
-      <h2 class="section-title">오늘의 표현 <span class="title-ja">(今日の表現)</span></h2>
-      <p class="section-subtitle"><span class="ko">장면에 나온 표현이에요. 제가 읽으면 따라 읽어 보세요.</span><span class="ja">シーンに出てきた表現です。私が読んだら、まねして読んでみましょう。</span></p>
-      <div class="pattern-stack">
-        <div class="pattern-card">
-          <span class="korean">혹시</span>
-          
-          <span class="translation">もしかして／あの…（やわらかく切り出す）</span>
-          <div class="example-card">
-            <span class="korean">혹시 시간 있어요?</span>
-            
-            <span class="translation">もしかして、時間ありますか？</span>
-          </div>
-        </div>
-        <div class="pattern-card">
-          <span class="korean">글쎄요</span>
-          
-          <span class="translation">さあ…／うーん…（すぐには答えられないとき）</span>
-          <div class="example-card">
-            <span class="korean">글쎄요, 잘 모르겠는데요.</span>
-            
-            <span class="translation">さあ…よくわからないですけど。</span>
-          </div>
-        </div>
+      <h2 class="section-title">혹시 <span class="title-ja">(もしかして)</span></h2>
+      <p class="section-subtitle"><span class="ko">방금 장면에서 두 번 나왔죠? 질문 앞에 혹시만 붙이면, 처음 보는 사람한테도 조심스럽게 물어볼 수 있어요.</span><span class="ja">さっきのシーンで2回出てきましたね。質問の前に혹시をつけるだけで、はじめて会う人にも遠慮ぎみに聞けます。</span></p>
+      <div class="tutor-note">혹시 없이 한 번, 붙여서 한 번 읽어 주세요. 소리로 차이가 들리게요.</div>
+      <!-- .model-list, not .sent-hero: the hero card is peach, and peach in
+           this deck means the ending being taught. This page teaches no
+           ending. The reading list is also the honest component for what the
+           tutor note asks — three lines to say out loud — and it left-aligns,
+           so 혹시 stands at the true left edge of all three and the column
+           is the whole lesson. -->
+      <div class="model-list">
+        <div class="model-line"><span class="korean"><span class="topic">혹시</span> 시간 있어요?</span><span class="translation"><span class="topic">もしかして</span>、時間ありますか？</span></div>
+        <div class="model-line"><span class="korean"><span class="topic">혹시</span> 저 아세요?</span><span class="translation"><span class="topic">もしかして</span>、私のこと知っていますか？</span></div>
+        <div class="model-line"><span class="korean"><span class="topic">혹시</span> 여기 자주 와요?</span><span class="translation"><span class="topic">もしかして</span>、ここによく来ますか？</span></div>
       </div>
     </div>
 
@@ -352,14 +342,16 @@
       <h2 class="section-title">아도와 어도 <span class="title-ja">(아도 と 어도、どっち？)</span></h2>
       <p class="section-subtitle"><span class="ko">동사에서 다를 떼고, 마지막 모음을 봐 주세요. ㅏ나 ㅗ면 아도, 나머지는 다 어도예요.</span><span class="ja">動詞から「다」を取って、最後の母音を見てください。ㅏかㅗなら아도、それ以外は全部어도です。</span></p>
       <div class="tutor-note">하다는 해도, 보다는 봐도로 줄어든다고 알려 주세요.</div>
-      <!-- the same equation the 받침 page draws, one part earlier — stem on
-           the left, the form it takes on the right. No floor seat here: this
-           rule is decided by the last vowel, not by a 받침, and tinting the
-           floor would say the wrong thing. -->
+      <!-- the same equation the 받침 page draws, stem on the left and the form
+           it takes on the right — but the seat moves. This rule is decided by
+           the last vowel, so the seat sits on the vowel: the stroke down the
+           right side of 앉 and of 먹. Not the floor — nine pages ago the floor
+           meant 받침, and it is also where a ㅗ would sit. The learner reads
+           the two pages as one habit with two places to look. -->
       <div class="batchim ending-rule">
         <div class="bt-box">
           <span class="bt-eq">
-            <span class="bt-syl">앉</span>
+            <span class="bt-syl vowel">앉</span>
             <span class="bt-arrow" aria-hidden="true">→</span>
             <span class="bt-out">아도</span>
           </span>
@@ -368,11 +360,11 @@
         </div>
         <div class="bt-box">
           <span class="bt-eq">
-            <span class="bt-syl">먹</span>
+            <span class="bt-syl vowel">먹</span>
             <span class="bt-arrow" aria-hidden="true">→</span>
             <span class="bt-out">어도</span>
           </span>
-          <span class="bt-head">그 외<small>それ以外の母音</small></span>
+          <span class="bt-head">그 외<small>ㅓ ㅜ ㅡ ㅣ … それ以外の母音</small></span>
           <span class="bt-ex"><span>먹다 → 먹<b>어도</b></span><span>찍다 → 찍<b>어도</b></span></span>
         </div>
       </div>
@@ -590,21 +582,22 @@
     <!-- one idea: how to make the same request softer -->
     <div class="section" data-page-id="native-tip">
       <h2 class="section-title">원어민 팁 <span class="title-ja">(ネイティブのひとこと)</span></h2>
-      <p class="section-subtitle"><span class="ko">조금 더 조심스럽게 물을 때는 이렇게 해요.</span><span class="ja">もう少し遠慮ぎみに聞くときは、こうします。</span></p>
-      <div class="tutor-note">두 문장을 읽어 주고, 끝을 어떻게 올리는지 들려주세요.</div>
-      <div class="card">
-        <span class="tip">ネイティブのコツ</span>
-        <p>끝을 <strong>돼요?</strong> 대신 <strong>될까요?</strong>로 바꾸면 훨씬 조심스러워져요.</p>
-        <p class="teacher">最後を「돼요?」から「될까요?」に変えるだけで、ぐっと遠慮ぎみになります。</p>
-        <div class="example-card">
-          <span class="korean">여기 앉아도 될까요?</span>
-          
-          <span class="translation">（はじめて会う人に）</span>
+      <p class="section-subtitle"><span class="ko">조금 더 조심스럽게 물을 때는 이렇게 해요. 끝을 돼요 대신 될까요로 바꾸면 훨씬 부드러워져요.</span><span class="ja">もう少し遠慮ぎみに聞くときは、こうします。最後を「돼요?」から「될까요?」に変えるだけで、ぐっとやわらかくなります。</span></p>
+      <div class="tutor-note">한 줄씩 위아래로 읽어 주세요. 끝이 어떻게 달라지는지 들리게요.</div>
+      <!-- the rule moved into the script box, where the tutor's spoken line
+           lives. It was being said three times — once in blue, once in a
+           Korean paragraph, once in Japanese under it — and drawn zero
+           times. Now it is said once and drawn twice. -->
+      <div class="swap">
+        <div class="swap-row">
+          <span class="translation">ここに座ってもいいですか？</span>
+          <span class="sw-from">여기 앉아도 <span class="ending">돼요?</span></span>
+          <span class="sw-to">여기 앉아도 <span class="ending">될까요?</span></span>
         </div>
-        <div class="example-card">
-          <span class="korean">혹시 번호 물어봐도 될까요?</span>
-          
-          <span class="translation">（ドキドキするとき）</span>
+        <div class="swap-row">
+          <span class="translation">もしかして、番号を聞いてもいいですか？</span>
+          <span class="sw-from">혹시 번호 물어봐도 <span class="ending">돼요?</span></span>
+          <span class="sw-to">혹시 번호 물어봐도 <span class="ending">될까요?</span></span>
         </div>
       </div>
     </div>
