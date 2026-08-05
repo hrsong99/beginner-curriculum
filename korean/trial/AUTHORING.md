@@ -39,16 +39,10 @@
     <button class="pg-btn pg-next" type="button" aria-label="다음 페이지">→</button>
   </nav>
 
-  <!-- 이 과의 일본어→한국어 사전 (리뷰용 호버 툴팁) -->
-  <script>
-  window.LESSON_GLOSS = { "こんにちは！": "안녕하세요!" };
-  </script>
-
   <img class="stamp-art" src="../assets/well-done.svg" alt="">   <!-- .phone 바깥! -->
 
   <script src="../../interactive/activities.js"></script>
   <script src="../../interactive/pager.js"></script>
-  <script src="../../interactive/gloss.js"></script>
   <script src="../../interactive/script-lines.js"></script>
   <script src="../../interactive/spotlight.js"></script>
   <script src="../../interactive/tutor-notes.js"></script>
@@ -60,7 +54,7 @@
 
 **로드 순서는 지켜야 합니다.** `activities` → `pager`(티칭 모드가 activities 가 만든
 유령 답을 부른다) → `script-lines` → `tutor-notes`(페이지를 다 센 뒤에 칸을 끼운다) →
-`highlight`(gloss 가 붙인 data-ko 뒤에 `<mark>` 를 넣는다) → `stamp`.
+`highlight`(글자에 긋는 형광펜 — 마크업이 다 선 뒤에 `<mark>` 를 끼운다) → `stamp`.
 
 과의 성격에 따라 `activities.js` 바로 뒤에 한 줄을 더합니다:
 
@@ -92,8 +86,7 @@ closing
 - 리포트의 레벨 체크·항목별 진단·로드맵 배선은 `interactive/report.js` 입니다.
   풀덱은 `activities.js` 다음에 이 줄을 하나 더 답니다.
 - 감싸는 페이지는 레슨과 무관한 판매 자료라, 새 풀덱을 만들 때는 다른 풀덱에서
-  이 열다섯 장을 그대로 복사해 오면 됩니다. 사전(`LESSON_GLOSS`)에도 그 페이지들의
-  항목을 같이 옮깁니다.
+  이 열다섯 장을 그대로 복사해 오면 됩니다.
 
 ---
 

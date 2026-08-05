@@ -64,11 +64,12 @@ same document, so anything in the markup is already on the learner's screen.
   (art, mouth, characters), and `_experiments/` for variations and capture files.
 
   **A deck is markup plus shared scripts — no per-deck CSS or JS.** Load them in this
-  order: `activities` → `pager` → `gloss` → `script-lines` → `spotlight` → `tutor-notes`
+  order: `activities` → `pager` → `script-lines` → `spotlight` → `tutor-notes`
   → `highlight` → `stamp`. The order is load-bearing (see the comments at each tag).
   A hangul deck adds `hangul-activities`, a freetalk deck adds `freetalk-activities`,
-  both directly after `activities`. The only inline script a deck should carry is its
-  own `window.LESSON_GLOSS` dictionary.
+  both directly after `activities`. A deck ships **no inline script and no inline CSS**
+  of its own — if you are writing either, the thing you need probably belongs in a
+  shared module or in `trial.css`.
 
   **Read [`trial/AUTHORING.md`](./trial/AUTHORING.md) before building a new deck.** It is
   the component vocabulary — page types, every activity's markup, the colour and spacing
