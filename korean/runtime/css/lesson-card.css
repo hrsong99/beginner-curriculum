@@ -660,6 +660,33 @@ p {
   background: #fff;
 }
 
+/* A dialogue blank is sized to its answer like every other blank, so a long
+   one wraps below its lead-in rather than being given the line outright. What
+   it needs there is room: at the normal 1.45 the 34px pill clears the text
+   above it by 3px and reads as stuck to it. Row spacing is line-height's job —
+   a margin on the pill would work on the wrapped rows and shove the rows where
+   it *does* fit off their own baseline, since the same element is doing both.
+   2.2 lands the wrapped gap at 14px.
+
+   Leading is split above and below the line, so the taller line would also
+   push the first row down off the box's top padding; the padding here gives
+   back exactly that half-leading. Net effect on a row that doesn't wrap is
+   nothing but a 4px tightening at the top — which is the point: the first row
+   now sits 19px below the border whether it wrapped or not, where the pill's
+   height used to make the two disagree.
+
+   Scoped to .dialogue because only 대화 채우기 puts a clause-length blank
+   after a clause-length lead-in. The 빈칸 채우기 drills are short lead-ins in
+   .task-block and want the tight default. */
+.dialogue .answer-fill .korean {
+  line-height: 2.2;
+}
+
+.dialogue .answer-fill {
+  padding-top: 10px;
+  padding-bottom: 19px;
+}
+
 .answer-box.small .answer-space {
   min-height: 64px;
 }
@@ -712,32 +739,6 @@ p {
 }
 .slot-input::placeholder { color: #b4b4b0; font-weight: 700; }
 .slot-input:focus { outline: none; border-style: solid; background: #fff; }
-
-/* .wide — a blank that swallows a whole clause rather than a word. Sized
-   to its answer it is simply too long to share a line with its lead-in, so
-   it drops below and strands a half-empty line above it, which reads as a
-   broken box rather than a blank. Give it the line instead: flush left,
-   running to the far margin, with only the sentence's closing punctuation
-   riding along beside it. The width is short of 100% by exactly that
-   punctuation, which is also what guarantees the line is its own — no
-   lead-in can fit in the 1.1em left over.
-
-   Author-declared (class .wide on the .slot), not measured: pages are
-   display:none until the pager reaches them, so nothing on this deck can
-   be measured at load. Declare it for a whole activity at once, never line
-   by line — "this one happens to fit" is a judgement that flips the moment
-   a font resolves differently, and then one blank in a set of three is the
-   one hanging below its line. */
-.slot.wide,
-.slot-input.wide {
-  width: calc(100% - 1.1em);
-  min-width: 0;
-  max-width: none;
-  /* the line above is text, so its half-leading already gives ~5px; 10 here
-     lands the visible gap on the box's own bottom padding and the blank sits
-     evenly in its row instead of hanging off the line it follows */
-  margin: 10px 4px 0 0;
-}
 
 .option-line {
   display: block;

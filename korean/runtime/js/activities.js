@@ -119,6 +119,36 @@ window.lessonSync = window.lessonSync || {
     source.removeAttribute("data-sync-kind");
   }
 
+  /* 답을 실제로 그려 보고 그 너비를 잰다. 글자 수 × 상수로 어림하면 한글
+     글자마다 다른 자폭이 뭉개져 30~40px 씩 남아돌고, 그 남는 폭이 한 줄에
+     들어갈 칸을 아랫줄로 밀어낸다.
+     재는 span 은 body 에 붙인다 — 장(.section)은 페이저가 도달하기 전까지
+     display:none 이라 그 안에서는 아무것도 잴 수 없지만, 칸의 computed font
+     는 숨어 있어도 읽히므로 같은 글꼴을 밖에서 재면 된다. */
+  var ruler = document.createElement("span");
+  ruler.style.cssText = "position:absolute;left:-9999px;top:0;visibility:hidden;white-space:pre";
+  document.body.appendChild(ruler);
+
+  var sized = [];
+
+  function sizeToAnswer(input) {
+    var cs = getComputedStyle(input);
+    ruler.style.font = cs.fontStyle + " " + cs.fontWeight + " " + cs.fontSize + " " + cs.fontFamily;
+    ruler.style.letterSpacing = cs.letterSpacing;
+    ruler.textContent = input.dataset.answer;
+    var pad = parseFloat(cs.paddingLeft) + parseFloat(cs.paddingRight);
+    // 10px 은 글자가 테두리에 닿지 않을 만큼의 여유. 답보다 긴 답을 쓰는
+    // 학생은 어차피 이 폭을 넘기므로 여기서 미리 벌어 두지 않는다.
+    input.style.width = Math.ceil(ruler.getBoundingClientRect().width + pad) + 10 + "px";
+  }
+
+  /* Pretendard 는 CDN 웹폰트다. 처음 재는 시점에는 아직 대체 글꼴일 수 있고,
+     그 폭으로 굳으면 글꼴이 바뀐 뒤 칸만 어긋난 채 남는다. 폰트가 정해지면
+     한 번 더 잰다(이미 캐시돼 있으면 같은 값이 나오므로 화면은 그대로다). */
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(function () { sized.forEach(sizeToAnswer); });
+  }
+
   // 점선 알약(.slot) → 타이핑하는 칸. 답 길이에 맞춰 폭을 잡는다.
   document.querySelectorAll(".slot").forEach(function (slot) {
     var answer = slot.textContent.trim();
@@ -129,17 +159,13 @@ window.lessonSync = window.lessonSync || {
     input.autocomplete = "off";
     input.spellcheck = false;
     input.dataset.answer = answer;
-    /* .wide 는 한 줄을 통째로 쓰는 칸이라 폭을 시트가 정한다 — 여기서
-       인라인 폭을 박으면 그 규칙을 이겨 버린다. 그 밖의 칸만 답 길이에
-       맞춘다(시트의 max-width 는 낱말용이라 한 문장짜리 칸을 잘라 낸다). */
-    if (slot.classList.contains("wide")) {
-      input.classList.add("wide");
-    } else {
-      input.style.width = Math.min(13, norm(answer).length * 1.15 + 2.2) + "em";
-      input.style.maxWidth = "none";
-    }
     transferSync(slot, input);
     slot.replaceWith(input);
+    // 시트의 max-width 는 낱말용이라 한 문장짜리 칸을 잘라 낸다.
+    // 폭은 붙인 뒤에 잰다 — 그래야 상속된 글꼴이 잡힌다.
+    input.style.maxWidth = "none";
+    sizeToAnswer(input);
+    sized.push(input);
     wireInput(input);
   });
 
