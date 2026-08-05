@@ -3802,6 +3802,57 @@ body.paged { padding-bottom: 0; }
   margin-top: 10px;
 }
 
+/* ---------- the pieces, inside the box they build in ----------
+   The tray is fused to the answer box's underside on the same quiet grey the
+   hint band uses: the words you are given and the sentence you are given them
+   for are one object. Outside the box they read as loose chips that happened
+   to land under it — and the box's rounded bottom clipped the wrong-answer
+   fill, because the build zone was the last band in a rounded, clipping box. */
+.answer-box > .chip-tray {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 14px;
+  border-top: 1px solid var(--gray-200);
+  background: var(--gray-50);
+}
+
+.chip-tray > .chip-pool {
+  flex: 1 1 auto;
+  min-height: 34px;      /* holds its height once every chip has been placed */
+  margin: 0;
+  align-content: center;
+}
+
+/* Quiet on purpose: it is the way back, not the thing to do. Grey text on the
+   tray's own fill, and it only exists once there is something to undo. */
+.build-reset {
+  flex: none;
+  align-self: center;
+  padding: 7px 12px;
+  border: 1px solid var(--gray-200);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--gray-500);
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.build-reset::before {
+  content: "↺";
+  margin-right: 5px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.build-reset:hover { background: var(--gray-50); color: #1c1c1c; }
+.build-reset:active { transform: translateY(1px); }
+.build-reset[hidden] { display: none; }
+
 .choice {
   cursor: pointer;
   -webkit-user-select: none;

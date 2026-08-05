@@ -102,6 +102,10 @@ window.lessonSync = window.lessonSync || {
     var block = reorder.get(zone);
     if (!block) return;
     zone.classList.remove("wrong");
+    // 한 조각이라도 놓은 순간부터 되돌릴 수 있어야 한다 — 맞았든 틀렸든
+    // 반쯤 놓았든. 다 놓고 나서야 나타나면, 두 번째 칩을 잘못 놓은 사람은
+    // 남은 칩을 마저 놓아 틀린 문장을 완성해야 다시 시작할 수 있다.
+    if (block.reset) block.reset.hidden = !zone.children.length;
     if (block.pool.children.length) return;      // 아직 다 놓지 않았다
     var built = Array.prototype.map.call(zone.children, function (c) {
       return c.textContent.trim();
@@ -117,10 +121,25 @@ window.lessonSync = window.lessonSync || {
     zone.textContent = "";
     zone.classList.add("build-zone");
     zone.setAttribute("data-a", answer);         // 티칭 모드의 유령 답
+
+    /* 조각과 그것으로 짓는 문장은 한 물건이라, 트레이는 답 칸 밖이 아니라
+       答 상자 안에 붙는다 — 힌트 띠와 같은 자리, 같은 회색. 칸이 상자의
+       가운데 띠가 되면서 오답의 붉은 칠이 상자의 둥근 모서리에 잘리던 것도
+       같이 사라진다: 이제 위아래가 모두 각진 이웃이다. */
+    var tray = document.createElement("div");
+    tray.className = "chip-tray";
     var pool = document.createElement("div");
     pool.className = "chip-pool";
-    block.appendChild(pool);
-    reorder.set(zone, { pool: pool, answer: answer, chips: chips });
+    var reset = document.createElement("button");
+    reset.type = "button";
+    reset.className = "build-reset";
+    reset.textContent = "やり直す";
+    reset.hidden = true;
+    tray.appendChild(pool);
+    tray.appendChild(reset);
+    (zone.parentElement || block).appendChild(tray);
+
+    reorder.set(zone, { pool: pool, answer: answer, chips: chips, reset: reset });
     zone.dataset.syncKind = "order";             // 아래에서 register 한다
     chips.forEach(function (chip) {
       pool.appendChild(chip);
@@ -130,6 +149,14 @@ window.lessonSync = window.lessonSync || {
         (chip.parentElement === pool ? zone : pool).appendChild(chip);
         settleOrder(zone);
       });
+    });
+
+    // 맞힌 뒤에도 눌린다 — 다시 해 보는 것을 막을 이유가 없다.
+    // 칩을 원래 순서대로 되돌리므로 처음 화면과 똑같은 상태가 된다.
+    reset.addEventListener("click", function () {
+      chips.forEach(function (c) { pool.appendChild(c); });
+      zone.classList.remove("correct", "wrong");
+      reset.hidden = true;
     });
   });
 
