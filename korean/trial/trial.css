@@ -1399,7 +1399,7 @@
    they were describing. */
 .pitch {
   display: grid;
-  gap: 12px;
+  gap: var(--item-gap);
   margin-top: 24px;
 }
 
@@ -1448,7 +1448,7 @@
    the floor: filled under 생, empty under 저. */
 .batchim {
   display: grid;
-  gap: 12px;
+  gap: var(--item-gap);
   margin-top: 24px;
 }
 
@@ -1573,7 +1573,7 @@
 /* ---------- 漢字 bridge: the equivalence IS the point ---------- */
 .bridge {
   display: grid;
-  gap: 10px;
+  gap: var(--item-gap);
   margin-top: 24px;
 }
 
@@ -2478,8 +2478,8 @@ button.opt-row:active { transform: scale(.99); }
    대신 두 덩어리를 키운다. 교정이 여러 개면 아래로 넘치는 게 낫다. */
 .fb {
   display: grid;
-  gap: 12px;
-  margin-top: 30px;
+  gap: var(--item-gap);
+  margin-top: 26px;      /* the deck's one script→activity distance */
 }
 
 /* 블록을 더 여는 버튼 둘. 회색 판을 깔면 카드만큼 무거워져서, 정작 읽어야 할

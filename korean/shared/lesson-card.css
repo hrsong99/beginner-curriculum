@@ -51,6 +51,15 @@
   --gray-500:  #757575;
 
   --line:      1px solid var(--gray-200);
+
+  /* The gap between repeated items in one activity — four answer boxes, four
+     model lines, four choose rows, the turns of a dialogue. Every list used to
+     pick its own number (10, 12, 14, 18, 20), which is invisible on any single
+     page and obvious the moment a learner pages through: the same four-item
+     activity breathes differently on every screen. One token, one rhythm.
+     Spacing INSIDE a single component (a tray's seats, a bubble's lines) is
+     that component's own business and stays tighter. */
+  --item-gap:  16px;
   --line-on:   1.5px solid var(--green-500);
 }
 
@@ -324,12 +333,17 @@ h1 .title-ja,
   font-weight: 600;
 }
 
-/* The rhythm between repeated items is set here AND by the answer box's own
-   10/6 margins, so 9px a side put 34px between two boxes — on a four-item
-   page that reads as four separate exercises drifting apart rather than one
-   activity. Two-a-side lands the visible gap at ~20px. */
+/* One owner for the rhythm. Padding here USED to stack on top of the answer
+   box's own 10/6 margins (9px a side gave 34px between two boxes); now the
+   block carries the whole gap as a margin, which collapses with the child's
+   own margins instead of adding to them, so the visible gap is exactly
+   --item-gap — the same as every other list in the deck. */
 .task-block {
-  padding: 2px 0;
+  padding: 0;
+}
+
+.task-block + .task-block {
+  margin-top: var(--item-gap);
 }
 
 .task-block:first-child,
@@ -372,7 +386,7 @@ h1 .title-ja,
 
 .model-list {
   display: grid;
-  gap: 18px;
+  gap: var(--item-gap);
 }
 
 /* reading lines: Japanese gloss as a header box on top, Korean below
@@ -799,7 +813,7 @@ p {
 /* ---------- dialogue ---------- */
 .dialogue {
   display: grid;
-  gap: 14px;
+  gap: var(--item-gap);
 }
 
 .card + .dialogue {
@@ -1151,7 +1165,7 @@ strong {
 /* ---------- choose-an-option activity ---------- */
 .choose-list {
   display: grid;
-  gap: 10px;
+  gap: var(--item-gap);
 }
 
 .choose-row {
