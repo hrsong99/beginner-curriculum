@@ -1964,16 +1964,13 @@ body:not(.no-yomi) .sent-more .yomi + .translation { margin-top: 7px; }
   text-align: center;
 }
 
-.combi-eq {
-  margin: 12px 0 0;
-  color: var(--gray-500);
-  font-size: 12.5px;
-  font-weight: 800;
-  text-align: center;
-}
-
-/* the table and the number it produces are one group, welded */
-.combi + .payoff { margin-top: 24px; }
+/* The number and the table that produces it are one group, welded — the number
+   on top, the table under it as the receipt. Written at the same weight as the
+   rhythm rule above (which zeroes both) and after it, or the gap collapses and
+   the green box sits on the head row. An 8 × 2 line used to close the table;
+   it said the multiplication twice, since the banks are countable by eye and
+   the box now leads with the answer. */
+.section > .payoff + .combi { margin-top: 24px; }
 
 @media (max-width: 480px) {
   /* the box is one centred column at every width — only the type steps down */
