@@ -954,21 +954,19 @@ p {
   box-shadow: none;
 }
 
+/* The header band is what says "this turn is yours", exactly as the
+   translation strip does on a Korean bubble — so it takes the same token.
+   It used to be a hand-picked #e7f8d8: a yellower, 5-points-darker green
+   sitting one bubble away from the real one, which read as two greens for
+   one meaning. Header/body separation is carried by the rule line under
+   it, not by the fill, so matching the token costs nothing. */
 .bubble.me:has(> .answer-box) .answer-label {
-  background: #e7f8d8;
+  background: var(--green-100);
 }
 
-/* section 3 "me" boxes are green: their write-in areas and pills follow
-   the green convention (a touch lighter than the green header) */
-.bubble.me .answer-space {
-  background: #f6fdf0;
-  color: #e3f1d5;
-}
-
-.bubble.me .slot {
-  background: #f6fdf0;
-  color: #e3f1d5;
-}
+/* Write-in areas keep the neutral "fill here" grey they use everywhere
+   else. Tinting them green gave green a second meaning — identity AND
+   write-here — on the one component where both were on screen at once. */
 
 .bubble.me:has(> .answer-box) > .hint {
   margin-top: 12px;

@@ -10,9 +10,9 @@ you are about to make conflicts with it, say so and ask — don't quietly deviat
 
 ## Also true of this folder
 
-- **Shared design system:** `shared/lesson-card.css`. White cards on a 1px grey outline; the
+- **Shared design system:** `runtime/css/lesson-card.css`. White cards on a 1px grey outline; the
   palette lives in `:root` there — **use the tokens, never the hex**. Per-track additions go in
-  that track's own stylesheet, loaded after it (e.g. `trial/trial.css`). Reuse the existing
+  that track's own stylesheet, loaded after it (e.g. `runtime/css/trial.css`). Reuse the existing
   component vocabulary before inventing a new one — consistency over novelty.
 - **Every colour means one thing.** `green-500`/`green-100` = state (chosen, correct, active).
   `blue-100` = the tutor's spoken script. `lime` = brand chrome only, never state.
@@ -74,11 +74,14 @@ same document, so anything in the markup is already on the learner's screen.
   **Read [`trial/AUTHORING.md`](./trial/AUTHORING.md) before building a new deck.** It is
   the component vocabulary — page types, every activity's markup, the colour and spacing
   tokens, and the file skeleton. Reach for an existing component before inventing one.
-- **`shared/`** — `lesson-card.css` (the design system) and `ux-philosophy.md` (the contract).
-- **`interactive/`** — the shared runtime every deck loads (`activities` · `pager` · the
-  activity modules · `highlight` · `spotlight` · `stamp` · `tutor-notes` · `script-lines`),
-  plus the `data-sync` contract and the lemonboard packager. A deck cannot run without it,
-  and the packager bundles these files into the upload zip.
+- **`runtime/`** — everything a deck loads at run time: `css/` (the design system plus each
+  track's sheet) and `js/` (the shared modules). This folder is the publish set — it is what
+  gets mirrored to a public repo and served from a CDN, so nothing private may live in it.
+  See [`runtime/README.md`](./runtime/README.md).
+- **`shared/`** — `ux-philosophy.md`, the design contract.
+- **`interactive/`** — the `data-sync` contract, the packaging guide, and the lemonboard
+  packager (`build_lemonboard.py`). Documentation and tooling only; the code decks load
+  lives in `runtime/`.
 - **`references/`** — source textbook scans (internal reference only).
 - `index.html` / `viewer.html` at the root are the navigation; `CLAUDE.md` / `AGENTS.md` stay at
   the root so they auto-load.

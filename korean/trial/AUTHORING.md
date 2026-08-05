@@ -22,8 +22,8 @@
   <meta name="podo:lesson-id" content="trial-2-selfintro">
   <meta name="podo:content-version" content="2026-08-05">
   <title>…</title>
-  <link rel="stylesheet" href="../../shared/lesson-card.css">
-  <link rel="stylesheet" href="../trial.css">
+  <link rel="stylesheet" href="../runtime/css/lesson-card.css">
+  <link rel="stylesheet" href="../runtime/css/trial.css">
 </head>
 <body>
   <div class="phone">
@@ -41,13 +41,13 @@
 
   <img class="stamp-art" src="../assets/well-done.svg" alt="">   <!-- .phone 바깥! -->
 
-  <script src="../../interactive/activities.js"></script>
-  <script src="../../interactive/pager.js"></script>
-  <script src="../../interactive/script-lines.js"></script>
-  <script src="../../interactive/spotlight.js"></script>
-  <script src="../../interactive/tutor-notes.js"></script>
-  <script src="../../interactive/highlight.js"></script>
-  <script src="../../interactive/stamp.js"></script>
+  <script src="../runtime/js/activities.js"></script>
+  <script src="../runtime/js/pager.js"></script>
+  <script src="../runtime/js/script-lines.js"></script>
+  <script src="../runtime/js/spotlight.js"></script>
+  <script src="../runtime/js/tutor-notes.js"></script>
+  <script src="../runtime/js/highlight.js"></script>
+  <script src="../runtime/js/stamp.js"></script>
 </body>
 </html>
 ```
@@ -60,8 +60,8 @@
 
 | 과 | 추가 |
 | --- | --- |
-| 한글(자모·음절) | `interactive/hangul-activities.js` |
-| 자유 대화(피드백·고르기) | `interactive/freetalk-activities.js` |
+| 한글(자모·음절) | `runtime/js/hangul-activities.js` |
+| 자유 대화(피드백·고르기) | `runtime/js/freetalk-activities.js` |
 | 문장 패턴 | 없음 — `activities.js` 만으로 충분 |
 
 ---
@@ -82,8 +82,8 @@ cover · greeting
 closing
 ```
 
-- 감싸는 페이지의 CSS 는 `trial.css` 의 「FULL TRIAL」 절에 있습니다.
-- 리포트의 레벨 체크·항목별 진단·로드맵 배선은 `interactive/report.js` 입니다.
+- 감싸는 페이지의 CSS 는 `runtime/css/trial.css` 의 「FULL TRIAL」 절에 있습니다.
+- 리포트의 레벨 체크·항목별 진단·로드맵 배선은 `runtime/js/report.js` 입니다.
   풀덱은 `activities.js` 다음에 이 줄을 하나 더 답니다.
 - 감싸는 페이지는 레슨과 무관한 판매 자료라, 새 풀덱을 만들 때는 다른 풀덱에서
   이 열다섯 장을 그대로 복사해 오면 됩니다.
@@ -231,6 +231,7 @@ closing
 
 간격은 토큰 하나가 정합니다: **`--item-gap`(16px)** — 한 활동 안에서 반복되는
 항목 사이의 거리. 스크립트 상자와 활동 사이는 26px 로 모든 페이지가 같습니다.
+새 컴포넌트의 CSS 는 `runtime/css/` 안에서 삽니다 — 덱 안에 `<style>` 을 두지 않습니다.
 컴포넌트를 새로 만들 때 `gap` 을 직접 적지 말고 `var(--item-gap)` 을 쓰세요.
 
 ---

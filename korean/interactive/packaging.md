@@ -31,7 +31,7 @@ under `lemonboard-html/{교재ID}/`, **flattening every entry into that one pref
 
 Three things follow, and the build script handles all three:
 
-**One CSS, not two.** Decks load `lesson-card.css` plus the track's own sheet. They are
+**One CSS, not two.** Decks load `runtime/css/lesson-card.css` plus the track's own sheet. They are
 concatenated *in link order* so the cascade is unchanged, and any `@import` is hoisted to
 line 1 where CSS requires it.
 

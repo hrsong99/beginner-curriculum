@@ -82,4 +82,4 @@ The guiding principles behind every page of the Korean curriculum.
   the page. Do not invert anything for them.
 - **Mobile-first** — a phone-width column everywhere.
 - **Consistency over novelty** — one component vocabulary reused on every page.
-- Tokens live in `:root` in `shared/lesson-card.css`. Use the variables, not the hex.
+- Tokens live in `:root` in `runtime/css/lesson-card.css`. Use the variables, not the hex.
