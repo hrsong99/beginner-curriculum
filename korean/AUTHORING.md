@@ -38,7 +38,6 @@
     <input class="pg-scrub" type="range" min="0" max="0" step="1" value="0" aria-label="페이지 이동">
     <button class="pg-btn pg-prev" type="button" aria-label="이전 페이지">←</button>
     <div class="pg-mid"><span class="pg-label"><b class="pg-act">—</b><span class="pg-n">—</span></span></div>
-    <button class="pg-btn pg-yomi" type="button" aria-label="발음 표기 켜기·끄기" title="발음 표기">ア</button>   <!-- 발음 표기를 쓰는 덱만 -->
     <button class="pg-btn pg-teach" type="button" aria-label="티칭 모드">T</button>
     <button class="pg-btn pg-next" type="button" aria-label="다음 페이지">→</button>
   </nav>
@@ -52,6 +51,7 @@
   <script src="../../runtime/js/tutor-notes.js"></script>
   <script src="../../runtime/js/highlight.js"></script>
   <script src="../../runtime/js/stamp.js"></script>
+  <script src="../../runtime/js/yomi.js"></script>          <!-- 발음 표기를 쓰는 덱만 -->
 </body>
 </html>
 ```
@@ -246,8 +246,14 @@ closing
 
 ### 발음 표기 (`.yomi`)
 
-한글을 못 읽는 학습자를 전제로 하는 덱(체험 레슨)은 **학습자가 소리 내어 말하는 한국어**
-밑에 가나 읽기를 답니다. 클래스 하나뿐이고, 자리는 그 한국어 **바로 뒤**입니다.
+**발음 표기는 초중급까지입니다.** 가나 읽기는 한글을 아직 못 읽는 사람을 위한 받침대라,
+**왕초급 · 초급 · 초중급** 덱에만 답니다. **중급부터는 달지 않습니다** — 거기서부터 한글 읽기는
+학습자가 이미 가진 기술이고, 덱이 대신 읽어 주면 그 연습을 빼앗습니다. 덱의 레벨은 파일 안
+`<meta name="podo:level">` 에 적혀 있으니, 읽기를 달기 전에 그것부터 확인하세요
+(레벨 표는 [`CLAUDE.md`](./CLAUDE.md) 에 있습니다).
+
+레벨이 맞는 덱에서는 **학습자가 소리 내어 말하는 한국어** 밑에 가나 읽기를 답니다.
+클래스 하나뿐이고, 자리는 그 한국어 **바로 뒤**입니다.
 
 ```html
 <span class="korean">저는 학생<span class="ending">이에요</span>.</span>
@@ -255,21 +261,38 @@ closing
 ```
 
 - 붙는 곳: `.model-line` · `.sent-hero`/`.sent-more` · `.bubble` · `.pi-card` ·
-  `.bt-out`/`.bt-ex` · `.opt`/`.choice`/`.choose-word` · `.answer-fill` ·
+  `.bt-out`/`.bt-ex` · `.choice`/`.choose-word` · `.answer-fill` ·
   `.example-card` · `.combi` 타일 · `.brand-title`/`.transition-title`.
 - **안 붙는 곳**: `.section-title`(옆의 `.title-ja` 가 이미 무슨 장인지 말한다),
   `.section-subtitle`(튜터가 읽는 줄), `.tutor-note`, `.slot`·`.answer-space`(정답).
+- **둘 중 하나를 고르는 알약(`.opt`)에는 넣지 않습니다.** 거기 들어가는 것은 그 장이
+  방금 가르친 패턴뿐이라(이에요/예요, 은/는) 고를 때쯤엔 도움이 아니라 2em 짜리
+  과녁 안의 두 번째 줄이 되고, 네 줄이면 한눈에 보던 것이 문단이 됩니다. 옆의 **낱말**
+  (`.choose-word`)은 그대로 답니다. 칩 배열(`.choice`)은 넓어서 둘 다 들어갑니다.
 - 힌트 칩 안에서는 줄이 바뀌지 않고 뒤에 붙습니다 —
   `<span class="hint-chip">学生:학생<span class="yomi">ハクセン</span></span>`.
 - 빈칸이 있는 문장은 보이는 부분만 읽고 빈칸은 `＿＿＿` 로 둡니다 —
   `チョヌン ハクセン ＿＿＿`.
 - 표기는 **철자가 아니라 소리**입니다: 회사원이에요 → `フェサウォニエヨ`(연음),
   시작할게요 → `シジャカルケヨ`. 어절 사이는 반각 공백으로 띕니다.
-- 페이저의 **ア** 버튼이 `body.no-yomi` 로 덱 전체를 한 번에 끕니다. 켜진 상태가
-  기본이고, 공유하지 않습니다(티칭 모드와 같은 이유 — 필요한 정도가 사람마다 다릅니다).
-  버튼을 안 넣은 덱에서는 아무 일도 일어나지 않습니다.
+- 스위치는 `runtime/js/yomi.js` 가 **읽기가 있는 페이지마다** 하나씩 놓습니다
+  (마크업에 쓸 것은 없습니다 — `<script src>` 한 줄이면 됩니다). 이름은
+  「よみがな」, 학습자의 말입니다: 페이저 안의 기호였을 때는 덱의 장치로 읽혀서
+  자기가 끌 수 있는 줄 몰랐습니다.
+- 자리는 **제목과 같은 줄**입니다. `.section-title` 을 `.page-head` 로 감싸고 그
+  오른쪽 끝에 붙이므로, 제목이 길어지면 스위치 앞에서 줄이 바뀔 뿐 밑으로 파고들지
+  않습니다(모서리에 띄우는 방식은 언젠가 긴 제목에 깔립니다). 맞출 제목이 없는
+  표지·전환 페이지에서만 `.corner` 로 오른쪽 위 모서리에 띄웁니다.
+- 상태는 `body.no-yomi` 하나라 한 장에서 끄면 전부 꺼지고, **티칭 모드와 달리
+  공유합니다**(`data-sync-kind="yomi"`). 읽기를 끄는 것은 답을 여는 일이 아니라
+  수업의 합의라서, 튜터가 껐는데 학습자 화면이 그대로면 그 말이 성립하지 않습니다.
 - 채점은 `.yomi` 를 빼고 한국어만 봅니다(`activities.js` 의 `koText`). 새 활동을 만들 때
   칩·칸의 글자를 읽어야 하면 `textContent` 가 아니라 그 함수를 쓰세요.
+- **읽기에 자리를 내주는 규칙은 반드시 `body:not(.no-yomi)` 로 묶습니다.** `:has()` 와
+  `+` 는 구조를 보는 선택자라 스위치가 읽기를 숨겨도 계속 맞고, 그러면 카드가 바닥
+  여백을 잃습니다(`.model-line`·`.bubble` 의 `padding-bottom: 0` 이 그랬습니다).
+  끈 상태는 읽기를 넣기 전의 화면과 **픽셀 단위로 같아야** 합니다 — 두 상태를 모두
+  렌더해서 확인하세요.
 
 ---
 

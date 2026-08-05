@@ -21,9 +21,24 @@ you are about to make conflicts with it, say so and ask — don't quietly deviat
   easiest way to make a page unreadable — see the table in `ux-philosophy.md`.
 - **Audience is Japanese speakers learning Korean.** All support text is Japanese; no English.
   Sound anchors are kana, not English words.
-- **Trial decks carry a kana reading (`.yomi`) under every Korean the learner says**, because a
-  trial learner is not assumed to read hangul; the pager's **ア** button hides them deck-wide.
-  See `AUTHORING.md` § 발음 표기 for where it goes and where it must not.
+- **Pronunciation stops at 초중급. This is a level rule, not a per-deck taste.**
+  A kana reading (`.yomi`) under the Korean is a decoding crutch, so it belongs only where the
+  learner may not yet decode hangul — **왕초급 · 초급 · 초중급 and no further**. From 중급 up,
+  reading hangul is a skill the learner already has and the deck must not do it for them.
+  Every deck declares its own level in `<meta name="podo:level">`; check it before adding a
+  reading to anything.
+
+  | Trial deck | Level | Readings |
+  |---|---|---|
+  | `trial-1-hangul` | 왕초급 | yes |
+  | `trial-2-patterns` | 초급 | yes — the reference implementation |
+  | `trial-3-contextual` | 중급 | **no** |
+  | `trial-4-freetalking` | 고급 | **no** |
+
+  Where readings do apply, `runtime/js/yomi.js` puts a named **よみがな** switch on the title
+  line of every page that has them; it hides them deck-wide and the state is shared with the
+  other screen. See `AUTHORING.md` § 발음 표기 for where a reading goes and where it must not
+  (never inside a two-way `.opt` pill).
 - **The blue `.section-subtitle` box is the tutor's spoken script** (`.ko` = the line read
   aloud, `.ja` = its Japanese translation). Natural spoken Korean, no grammar jargon.
 - **Lessons are audio-only.** The learner hears the tutor but never sees them, so no
@@ -66,8 +81,6 @@ same document, so anything in the markup is already on the learner's screen.
   as `trial/lessons/`, and the shared art still comes from `../../trial/assets/`. When a trial
   lesson changes, re-cut its sample rather than editing both by hand. The first surviving page
   needs its own `data-act` — the act name used to come from the cover's `.brand-title`.
-- **`trial/`** — sales trial material, not a learning track. `full-trials/` holds the four complete
-  decks (`trial-1..4`), `lessons/` holds the standalone lesson decks cut from them
 - **`trial/`** — sales trial material, not a learning track. `full-trials/` holds the four complete
   decks (`trial-1..4`), `lessons/` holds the standalone lesson decks cut from them
   (`trial-1-hangul-short.html`, `trial-2-patterns-short.html`, `trial-3-contextual-short.html`,

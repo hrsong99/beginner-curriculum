@@ -199,13 +199,21 @@
    Every bubble takes it, not just the greeting: the reading is a deck-wide
    component now (see .yomi in lesson-card.css), so the rule that positions
    it inside a bubble cannot be scoped to .intro. */
+/* This kept a bottom padding of 0 from the days when a greeting bubble ALWAYS
+   carried a reading. Now the switch can take it away, and a floorless bubble
+   is what is left — so the floor lives here and the rule below lifts it only
+   while a reading is actually there to stand on it. */
 .bubble.intro > .korean {
-  padding: 13px 16px 0;
+  padding: 13px 16px;
   font-size: 20px;
   font-weight: 800;
 }
 
-.bubble:has(> .yomi) > .korean { padding-bottom: 0; }
+/* When a reading is present it takes over the card's bottom padding — but
+   `:has()` and `+` are structural, so they keep matching after the switch
+   hides the reading, and the card loses its floor. Every rule that HANDS
+   space to a reading is therefore conditional on the reading being shown. */
+body:not(.no-yomi) .bubble:has(> .yomi) > .korean { padding-bottom: 0; }
 
 .bubble > .yomi {
   margin-top: 0;
@@ -225,12 +233,24 @@
    under the word rather than beside it (.opt, .choice, .bt-out). */
 
 /* cards whose Korean line owns the padding: hand the bottom to the reading */
-.model-line:has(> .yomi) > .korean { padding-bottom: 0; }
+body:not(.no-yomi) .model-line:has(> .yomi) > .korean { padding-bottom: 0; }
 .model-line > .yomi { margin-top: 0; padding: 4px 16px 14px; }
 
-.sent-hero > .yomi { margin-top: 10px; font-size: 13.5px; }
-.sent-more .yomi   { margin-top: 3px; font-size: 11.5px; }
-.pi-card > .yomi   { margin-top: 7px; margin-bottom: 2px; }
+/* A sentence and its reading are ONE thing; the translation is the second
+   thing. Given equal gaps the card read as three sibling lines and the
+   Korean stopped leading, so the reading tucks up under it and the break
+   goes below the pair. */
+.sent-hero > .yomi { margin-top: 7px; font-size: 13px; letter-spacing: .12em; }
+body:not(.no-yomi) .sent-hero > .yomi + .translation { margin-top: 18px; }
+
+.sent-more .yomi { margin-top: 3px; font-size: 11.5px; }
+body:not(.no-yomi) .sent-more .yomi + .translation { margin-top: 7px; }
+
+.pi-card > .yomi { margin-top: 7px; margin-bottom: 2px; }
+
+/* 오늘의 목표: the reading belongs to the Korean line above it, not to the
+   Japanese below — same order as everywhere else in the deck */
+.known.lines .known-row > .yomi { margin-top: 0; }
 
 .answer-fill .yomi { margin-top: 6px; }
 .example-card .yomi { margin-top: 5px; font-size: 11.5px; }
@@ -241,19 +261,24 @@
 
 /* tap targets: the word and its reading stack, centred. Only the
    inline-flex ones need turning — the tiles in a grid or a flex row are
-   blockified already, so a block reading simply falls underneath. */
-.opt:has(> .yomi),
+   blockified already, so a block reading simply falls underneath.
+
+   `.opt` is NOT in this list, and that is a content rule, not a layout one:
+   the two-way pills only ever hold the pattern the page just taught
+   (이에요/예요, 은/는), so by the time a learner is choosing between them
+   the reading is not help — it is a second line of type inside a 2-em
+   target, and four rows of it turn a glance into a paragraph. The word
+   beside the pills keeps its reading; the thing being chosen doesn't need
+   one. Reorder chips (.choice) are wide enough to hold both. */
 .choice:has(> .yomi),
 .bt-out:has(> .yomi) {
-  display: inline-flex;   /* .opt sits inside a running sentence — it must
-                             stay inline; .bt-out is a flex item and gets
-                             blockified to flex on its own */
+  display: inline-flex;   /* both sit in a running line or a flex row and must
+                             not blockify into a full-width column */
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
-.opt > .yomi,
 .choice > .yomi {
   margin-top: 3px;
   font-size: 10.5px;
@@ -286,6 +311,158 @@
 
 .combi-ends > span > .yomi { color: inherit; opacity: .6; }
 
+/* The 목표 / 다음 화 pages are white cards standing on a dark ground, so the
+   dark-page reading colour above would put white text on a white card. The
+   reading inside a .known-row takes the ordinary quiet ink instead. */
+.transition-page .known-row .yomi { color: var(--gray-400); }
+
+/* ---------- 등장인물 (제N화 타이틀 카드) ----------
+   A contextual lesson is sold as a scene, and a scene has a cast. The title
+   card names who is in it and, more importantly, which one the learner is —
+   without that line the dialogue that follows reads as two example sentences
+   with faces on them.
+
+   No new page type: the dark transition page was already shaped like a title
+   card. This is the only thing added to it, and it borrows .avatar from the
+   dialogue so a character looks the same here as they do three pages later. */
+.scene-cast {
+  display: grid;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.cast-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cast-row .avatar { width: 34px; height: 34px; }
+.cast-row .avatar.icon { background: #b3e187; }
+.cast-row .avatar.icon svg { width: 21px; height: 21px; }
+
+.cast-who {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.cast-who small {
+  display: block;
+  margin-top: 1px;
+  color: rgba(255,255,255,.62);
+  font-size: 11.5px;
+  font-weight: 700;
+}
+
+/* ---------- よみがな switch (runtime/js/yomi.js) ----------
+   Top-right of every page that has readings on it. It used to be an ア button
+   in the pager, wedged between ← T →, where it read as deck machinery — the
+   learner never guessed it was theirs. On the card, named in their own
+   language, it is obviously a thing they may turn off.
+
+   No meaning-bearing colour: the track is ink, not green and not lime. This
+   is a view preference sitting on twenty-five pages, and green (state) or
+   lime (brand) on all of them would drain the one thing each colour says.
+   A switch shape carries "on/off" by itself. */
+.yomi-sw {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 7px;
+  padding: 4px 7px 4px 10px;
+  border: 1px solid var(--gray-200);
+  border-radius: 999px;
+  background: #fff;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* On a learning page the switch rides the title's own line. Putting it in the
+   flow rather than over it is what makes that safe at any title length: the
+   title is the flexible half, so a long one wraps inside its own box instead
+   of sliding under the switch — which is the failure the earlier floating
+   version was always one title away from. */
+.page-head {
+  display: flex;
+  /* flex-start, not center: at the deck's 480px column every title is one line
+     and the two are identical, but on a real phone the Japanese gloss drops to
+     a second line — and the switch has to stay on the Korean title's line
+     rather than float to the middle of a two-line block. */
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.page-head > .section-title { flex: 1 1 auto; min-width: 0; }
+
+/* Cover and transition pages centre their content, so there is no title line
+   to ride — those keep the corner. */
+.phone > .brand-page:has(> .yomi-sw.corner),
+.phone > .transition-page:has(> .yomi-sw.corner) { position: relative; }
+
+.yomi-sw.corner {
+  position: absolute;
+  top: 11px;
+  right: 13px;
+  z-index: 2;
+}
+
+.yomi-sw-t {
+  color: var(--gray-500);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .02em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* the track: ink when readings are on, grey when off, with the knob sliding */
+.yomi-sw-k {
+  position: relative;
+  width: 26px;
+  height: 15px;
+  border-radius: 999px;
+  background: var(--ink);
+  transition: background .14s ease;
+}
+
+.yomi-sw-k::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 13px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #fff;
+  transition: left .14s ease;
+}
+
+.yomi-sw.off .yomi-sw-k { background: var(--gray-200); }
+.yomi-sw.off .yomi-sw-k::after { left: 2px; }
+.yomi-sw.off .yomi-sw-t { color: var(--gray-400); }
+
+.yomi-sw:focus-visible { outline: 2px solid var(--green-500); outline-offset: 2px; }
+
+/* dark transition pages: the chip is the light card, same as every other
+   component that lands on them */
+.transition-page > .yomi-sw {
+  border-color: rgba(255,255,255,.22);
+  background: rgba(255,255,255,.1);
+}
+.transition-page > .yomi-sw .yomi-sw-t { color: rgba(255,255,255,.72); }
+.transition-page > .yomi-sw .yomi-sw-k { background: #fff; }
+.transition-page > .yomi-sw .yomi-sw-k::after { background: #1c1c1c; }
+.transition-page > .yomi-sw.off .yomi-sw-k { background: rgba(255,255,255,.28); }
+
+/* lime brand pages: white chip on lime, ink track — no border needed, the
+   fill already separates it from the ground */
+.brand-page > .yomi-sw { border-color: rgba(28,28,28,.12); }
+
+@media print { .yomi-sw { display: none; } }
+
 /* a hint chip is one line by design, so its reading runs inline after the
    Korean rather than under it — a two-line chip stops being a chip */
 .hint-chip > .yomi {
@@ -295,11 +472,25 @@
   letter-spacing: .02em;
 }
 
-/* light type on the dark transition pages and on the lime brand pages */
-.transition-page .yomi { color: rgba(255,255,255,.62); }
-.brand-page .yomi { color: rgba(28,28,28,.55); }
-.brand-title > .yomi { margin-top: 9px; font-size: 15px; letter-spacing: .08em; }
-.transition-title > .yomi { margin-top: 9px; font-size: 14px; letter-spacing: .08em; }
+/* The reading under a page's own big title takes that page's ink — and ONLY
+   the title's. Scoping this to `.transition-page .yomi` painted every reading
+   on the page white, including the ones inside the white 오늘의 목표 cards,
+   where they vanished: the components on a dark page were never dark, they
+   are light cards on a dark ground (ux-philosophy → "Dark pages need no
+   separate system"). The child combinator is what keeps that true. */
+.brand-page > .brand-title > .yomi {
+  margin-top: 9px;
+  color: rgba(28,28,28,.55);
+  font-size: 15px;
+  letter-spacing: .08em;
+}
+
+.transition-page > .transition-title > .yomi {
+  margin-top: 9px;
+  color: rgba(255,255,255,.62);
+  font-size: 14px;
+  letter-spacing: .08em;
+}
 
 .bubble.me.intro {
   background: #fff;
@@ -3787,16 +3978,9 @@ body.paged { padding-bottom: 0; }
 .pg-scrub:focus-visible { outline: none; }
 .pg-scrub:focus-visible::-webkit-slider-thumb { box-shadow: 0 0 0 3px rgba(28,28,28,.22); }
 
-.pg-teach, .pg-exit, .pg-yomi { width: 32px; height: 32px; background: #fff; font-size: 13px; font-weight: 900; }
+.pg-teach, .pg-exit { width: 32px; height: 32px; background: #fff; font-size: 13px; font-weight: 900; }
 .phone.paged ~ .pager .pg-exit { background: var(--ink); border-color: var(--ink); color: #fff; }
 .pg-teach.on { background: var(--green-500); border-color: var(--green-500); color: #fff; }
-
-/* 발음 표기 switch. Readings are ON when the deck loads — a trial learner
-   may be an hour into Korean — so plain white IS the on state and there is
-   no lit "on" style to add: a button that glows on every page of a 25-page
-   deck reads as an alert. Only turning the readings OFF changes it, and it
-   greys out the way a disabled control does, which is what it now is. */
-.pg-yomi.off { background: var(--gray-100); border-color: var(--gray-200); color: var(--gray-400); }
 
 /* ============================================================
    Frameless page cards — no black outline/offset-shadow around
