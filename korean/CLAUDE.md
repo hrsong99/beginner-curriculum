@@ -41,8 +41,8 @@ tutor's screen — goes through lemonboard's `data-sync` contract.
 **Before adding any interaction, read
 [`interactive/interaction-protocol.md`](./interactive/interaction-protocol.md).** Getting it
 wrong fails silently: the activity works on your screen and never reaches the other person.
-Copy from [`interactive/sample-lesson-interactive.html`](./interactive/sample-lesson-interactive.html)
-rather than inventing markup, and see
+Copy the markup from [`trial/AUTHORING.md`](./trial/AUTHORING.md) or from a live deck in
+`trial/lessons/` rather than inventing it, and see
 [`interactive/packaging.md`](./interactive/packaging.md) for turning a deck into an uploadable zip.
 
 Two rules that catch most mistakes: an element is shared **only** if it has a `data-sync-id`
@@ -75,7 +75,10 @@ same document, so anything in the markup is already on the learner's screen.
   the component vocabulary — page types, every activity's markup, the colour and spacing
   tokens, and the file skeleton. Reach for an existing component before inventing one.
 - **`shared/`** — `lesson-card.css` (the design system) and `ux-philosophy.md` (the contract).
-- **`interactive/`** — the `data-sync` contract, reference lesson, and lemonboard packager.
+- **`interactive/`** — the shared runtime every deck loads (`activities` · `pager` · the
+  activity modules · `highlight` · `spotlight` · `stamp` · `tutor-notes` · `script-lines`),
+  plus the `data-sync` contract and the lemonboard packager. A deck cannot run without it,
+  and the packager bundles these files into the upload zip.
 - **`references/`** — source textbook scans (internal reference only).
 - `index.html` / `viewer.html` at the root are the navigation; `CLAUDE.md` / `AGENTS.md` stay at
   the root so they auto-load.

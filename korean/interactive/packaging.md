@@ -3,7 +3,7 @@
 How a lesson HTML file becomes something the 교재 admin can upload.
 
 ```sh
-python3 interactive/build_lemonboard.py <deck>.html --out <deck-dir>/lemonboard-build/<deck>
+python3 interactive/build_lemonboard.py <deck>.html --out trial/lemonboard-build/<deck>
 ```
 
 That produces `lesson.html`, `lesson.css`, every image, and a `.zip` of all three.
@@ -11,7 +11,9 @@ That produces `lesson.html`, `lesson.css`, every image, and a `.zip` of all thre
 **One output folder per deck.** `lesson.html` and `lesson.css` are fixed names, so two
 decks built into the same `--out` overwrite each other's preview and pile their images
 into one directory (the zips survive; nothing else does). Give each deck its own folder
-named after it — `lemonboard-build/trial-1-hangul-short/`, `…/trial-2-patterns-short/`.
+named after it — `trial/lemonboard-build/trial-1-hangul-short/`, `…/trial-2-patterns-short/`.
+That folder is git-ignored on purpose: a committed zip goes stale the moment a shared
+module changes, and the whole point of the shared modules is that they change.
 Upload the zip in grape admin → 교재 등록/수정 → **html로 생성하기**, into the 수업용 and/or
 예습용 slot. The same zip works in both.
 
@@ -48,7 +50,7 @@ Two things can still leave it dependent on the network:
 
 - an `<img src="https://…">` pointing somewhere remote — the packager leaves those alone and
   prints a `NOTE` listing them, so check that line before assuming a deck is offline-safe
-  (the reference `sample-lesson-interactive.html` has 12 such avatars and is *not* offline);
+  (the pattern decks carry 12 such avatars and are *not* offline);
 - the Pretendard webfont, pulled by an `@import` in `lesson-card.css`. On a locked-down
   network the text falls back to a system font; everything else still renders.
 
@@ -80,9 +82,7 @@ If you hit one, use the supported spelling rather than working around it.
 | File | What it is |
 |---|---|
 | [`interaction-protocol.md`](./interaction-protocol.md) | the `data-sync` contract — read before adding interactions |
-| [`sample-lesson-interactive.html`](./sample-lesson-interactive.html) | reference lesson using every kind |
 | `build_lemonboard.py` | this packager; works on any deck in the repo |
-| `lemonboard-build/` | generated output for the sample |
 
 Four shared add-ons drop into any deck with one `<script src>` line each. They register
 their own kind, so none of them needs a lemonboard change; each is symmetric (either

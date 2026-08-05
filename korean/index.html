@@ -233,9 +233,9 @@
   <div class="section-label">인터랙티브</div>
   <p class="section-note">lemonboard 에 올리는 클릭·스탬프형 레슨과, 그 규격 문서.</p>
   <div class="rows">
-    <a class="row" href="interactive/sample-lesson-interactive.html">
-      <span class="row-t">인터랙티브 샘플 레슨</span>
-      <span class="row-d">을/를 좋아해요 — 스포트라이트 · 스탬프 동작 포함</span>
+    <a class="row" href="viewer.html?doc=trial/AUTHORING.md">
+      <span class="row-t">덱 만드는 법</span>
+      <span class="row-d">컴포넌트 목록과 파일 뼈대 — 새 과는 여기서 조립한다</span>
       <span class="row-arr">→</span>
     </a>
     <a class="row" href="viewer.html?doc=interactive/interaction-protocol.md">
@@ -250,12 +250,9 @@
     </a>
   </div>
 
-  <p class="section-note" style="margin-top:18px">빌드 결과물 (lemonboard 업로드용 zip)</p>
-  <div class="track-links" style="margin-left:0">
-    <a class="ghost" href="interactive/lemonboard-build/sample-lesson-interactive.zip">샘플 레슨 · 을/를 좋아해요</a>
-    <a class="ghost" href="trial/_experiments/lemonboard-build/trial-1-hangul-short/trial-1-hangul-short.zip">미니 레슨 · 超入門</a>
-    <a class="ghost" href="trial/_experiments/lemonboard-build/trial-2-patterns-short/trial-2-patterns-short.zip">미니 레슨 · 初級</a>
-  </div>
+  <p class="section-note" style="margin-top:18px">업로드용 zip 은 올리기 직전에 만든다 — 미리 만들어 두면
+    공유 스크립트가 바뀐 줄 모르고 옛 덱을 올리게 된다.<br>
+    <code>python3 interactive/build_lemonboard.py &lt;덱&gt;.html --out trial/lemonboard-build/&lt;덱&gt;</code></p>
 
   <!-- REFERENCE -->
   <div class="section-label">레퍼런스 · 제작 자료</div>

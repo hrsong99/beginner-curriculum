@@ -7,7 +7,8 @@ How a lesson page shares state between the tutor and the learner on
 > fails silently: the activity looks fine on your screen and simply never reaches the
 > other person.
 
-**Reference implementation:** [`sample-lesson-interactive.html`](./sample-lesson-interactive.html).
+**Reference implementation:** the shared modules in this folder — `activities.js` wires every
+activity a deck can hold, and any deck in `trial/lessons/` is a live example.
 Copy from it rather than inventing markup.
 
 ---

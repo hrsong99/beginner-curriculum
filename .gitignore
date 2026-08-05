@@ -15,3 +15,8 @@ korean/**/lemonboard-build/*.png
 korean/**/lemonboard-build/*.jpg
 korean/**/lemonboard-build/lesson.html
 korean/**/lemonboard-build/lesson.css
+
+# lemonboard upload zips are build output — regenerate with
+#   python3 korean/interactive/build_lemonboard.py <deck>.html --out korean/trial/lemonboard-build/<deck>
+# Committing them means shipping a deck that silently goes stale.
+korean/trial/lemonboard-build/
