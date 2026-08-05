@@ -2003,9 +2003,14 @@ body.teaching .tutor-note {
 /* A memo written against this instruction belongs WITH it — the merged
    block's 26px would otherwise leave the memo stranded between the script and
    the activity. Lives here rather than in the shared sheet because the merged
-   rule above ties it on specificity and this sheet loads last. */
+   rule above ties it on specificity and this sheet loads last.
+
+   Zero, not 8: the memo brings its own 8px top margin. Whatever sits above it
+   contributes nothing, so the memo hangs at the same distance whether it
+   follows a script box, a tutor note, or a script box on a flex page — where
+   margins do not collapse and two 8s become 16. */
 body.teaching .tutor-note:has(+ .note-input),
-body.teaching .section-subtitle + .tutor-note:has(+ .note-input) { margin-bottom: 8px; }
+body.teaching .section-subtitle + .tutor-note:has(+ .note-input) { margin-bottom: 0; }
 
 .tutor-note::before {
   content: "튜터만";

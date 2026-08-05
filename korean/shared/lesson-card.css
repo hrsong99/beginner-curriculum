@@ -1348,12 +1348,14 @@ mark.hl {
   display: none;
   box-sizing: border-box;
   width: 100%;
-  /* The bottom margin is real: the box is injected between two components that
-     know nothing about it, and several of them (.sign-list, .known, .letter-row)
-     bring no top margin of their own — with a 0 bottom the memo collided with
-     whatever followed it. The TOP is tightened by the adjacency rules below,
-     because the memo belongs to the instruction above it. */
-  margin: 8px 0 18px;
+  /* The memo owns both of its gaps, so neither depends on what it happens to
+     be sitting between. TOP 8px: it belongs to the instruction above it, and
+     the rules below zero that instruction's bottom margin so this is the whole
+     distance. BOTTOM 26px: the same gap the script box leaves, so the activity
+     sits where it sits in student view and turning teaching mode on does not
+     shuffle the page. (Several components — .sign-list, .known, .letter-row —
+     bring no top margin at all, so a 0 here would let them collide.) */
+  margin: 8px 0 26px;
   /* room on the left for the pencil */
   padding: 8px 11px 8px 30px;
   /* Dashed, always — not only while empty. Dashed already means "written here,
@@ -1413,11 +1415,22 @@ body.teaching .note-input,
    hidden box contributes no margin, so tightening the script unconditionally
    left the activity 8px under the script on every page in student view — the
    memo's own 18px was paying for a gap it wasn't rendering. Student view is
-   what the deck loads as, so that was the state nobody had measured. */
+   what the deck loads as, so that was the state nobody had measured.
+
+   The value is 0, not a small number: THE MEMO OWNS ITS OWN TOP GAP (8px).
+   Two owners meant the gap collapsed to 8px on block pages and added up to
+   16px on flex pages — the same memo sitting at two distances depending on
+   which component the page happened to hold.
+
+   The tutor-note case is deliberately NOT here. When a note follows the
+   script the two are welded into one card (see the track sheet), and this
+   selector outranks that weld on specificity — which is what prised the
+   튜터만 band off the script. Outside teaching mode the note is display:none,
+   so the script and the memo are neighbours again and the third selector
+   applies; body:not(.teaching) keeps it from firing where the weld lives. */
 body.teaching .section-subtitle:has(+ .note-input),
-body.teaching .section-subtitle:has(+ .tutor-note + .note-input),
 .section-subtitle:has(+ .note-input:not(:placeholder-shown)),
-.section-subtitle:has(+ .tutor-note + .note-input:not(:placeholder-shown)) { margin-bottom: 8px; }
+body:not(.teaching) .section-subtitle:has(+ .tutor-note + .note-input:not(:placeholder-shown)) { margin-bottom: 0; }
 
 /* empty and only the tutor can see it: quieter still, so an unused box on
    every page never reads as content the learner is missing */
