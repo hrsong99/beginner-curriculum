@@ -727,8 +727,12 @@
   /* .section:has(> .ptable) 규칙은 「표 한 장이 페이지의 전부」 인 화면을 위해
      표 위로 빈 칸을 몰아 준다(.ptable 에 margin-top:auto). 이 장은 표 뒤에
      설명이 세 덩이 더 붙는 안내 화면이라, 그 규칙이 배너와 표 사이에 빈 칸만
-     남긴다. Figma 도 위에서부터 쌓아 두었으니 여기서만 되돌린다. */
-  #p-price-all { display: block; }
+     남긴다. Figma 도 위에서부터 쌓아 두었으니 여기서만 되돌린다.
+
+     .pg-on 을 함께 걸어 두는 것이 중요하다. id 만으로 쓰면 특정도(1,0,0)가
+     페이지를 감추는 규칙(.phone.paged > *)을 이겨서, 이 장만 페이저가 끌 수
+     없게 된다 — 어느 장을 보든 그 밑에 요금표가 따라붙는다. */
+  .phone.paged > #p-price-all.pg-on { display: block; }
   #p-price-all > .ptable { margin-top: 22px; }
 
   /* ---------- 커리큘럼 · v2 에서 늘어난 조각 ----------
