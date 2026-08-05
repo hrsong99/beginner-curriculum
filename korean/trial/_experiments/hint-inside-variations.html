@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <title>힌트 위치 시안 — 답 칸 안으로 · PODO</title>
+  <link rel="stylesheet" href="../../shared/lesson-card.css">
+  <link rel="stylesheet" href="../trial.css">
+  <style>
+    /* ============================================================
+       MOCKUP CHROME — not part of the deck.
+       ============================================================ */
+    body { background: #f0f0ee; }
+    .rail { display: flex; flex-wrap: wrap; gap: 22px; align-items: flex-start; padding: 22px 26px 60px; }
+    .col { flex: none; width: 480px; }
+    .col > .phone { min-height: 0; padding-bottom: 0; border-radius: 18px; overflow: hidden; }
+    .col > .phone > .section { min-height: 0; }
+    .lbl { margin: 0 0 10px; font-size: 13px; font-weight: 900; }
+    .lbl small { display: block; margin-top: 3px; color: #757575; font-size: 11.5px; font-weight: 700; line-height: 1.5; }
+    .lbl.now { color: #a5a5a5; }
+    .page-head { padding: 26px 26px 4px; }
+    .page-head h1 { margin: 0 0 6px; font-size: 21px; font-weight: 900; }
+    .page-head p { margin: 0 0 8px; max-width: 860px; color: #575753; font-size: 13.5px; font-weight: 600; line-height: 1.6; }
+    .page-head p b { color: #1c1c1c; }
+
+    /* Both loads shown for every variation, because they fail differently:
+       한 개 = 한국어로 바꿔요 (one vocab chip per item),
+       여덟 개 = 내 문장 만들기 (one free box, the whole lesson's nouns). */
+    .load { margin: 0 0 6px; color: #a5a5a5; font-size: 11px; font-weight: 900; letter-spacing: .04em; }
+
+    /* ============================================================
+       VARIATIONS. Each one only moves the hint — the answer box,
+       the label band and the write area are the deck's own.
+       ============================================================ */
+
+    /* ---- A · 라벨 줄 오른쪽 (inside the grey header) ----------------
+       The prompt and the word it needs are one line: read 私は学生です。,
+       and 학생 is right there at the end of the same band. Costs no height
+       at all. Breaks the moment there is more than one or two words. */
+    .vA .answer-label { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .vA .answer-label .lead { flex: 1 1 auto; min-width: 0; }
+    .vA .hint-in {
+      display: flex; flex: 0 1 auto; min-width: 0; gap: 6px; flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .vA .hint-in span {
+      padding: 4px 9px; border-radius: 7px; background: #fff;
+      color: #575753; font-size: 12px; font-weight: 800; white-space: nowrap;
+    }
+
+    /* ---- B · 답 칸 아래 붙는 띠 (fused footer band) ------------------
+       The same move the pattern card makes with its example tray: the
+       hint is inside the box's outline, on its own quieter fill, welded
+       to the bottom. Holds any number of words; adds one band of height. */
+    .vB .answer-box { padding-bottom: 0; overflow: hidden; }
+    .vB .hint-in {
+      display: flex; flex-wrap: wrap; gap: 6px;
+      margin-top: 14px; padding: 10px 14px;
+      border-top: 1px solid var(--gray-200);
+      background: var(--gray-50);
+    }
+    .vB .hint-in span {
+      padding: 5px 10px; border-radius: 8px; background: #fff;
+      color: #575753; font-size: 12.5px; font-weight: 800;
+    }
+
+    /* ---- C · 프롬프트 안에 루비로 (gloss on the word itself) ---------
+       No chip at all: the Korean sits over the Japanese word that needs
+       it, so the learner never has to match a chip to a word. The most
+       integrated, and the only one that cannot carry a word bank. */
+    .vC .answer-label ruby { ruby-position: over; }
+    .vC .answer-label rt {
+      color: #b2591c; font-size: 10.5px; font-weight: 900;
+      letter-spacing: -.01em;
+    }
+
+    /* ---- D · 쓰는 칸 안, 위쪽 선반 (shelf inside the write area) -----
+       The words sit inside the dashed area the learner is about to fill,
+       like tiles laid out on the desk. Strongest "these are your parts"
+       reading; costs the most height and crowds a short answer. */
+    .vD .answer-fill, .vD .answer-space { position: relative; }
+    .vD .hint-in {
+      display: flex; flex-wrap: wrap; gap: 6px;
+      margin: 0 0 12px;
+    }
+    .vD .hint-in span {
+      padding: 5px 10px; border-radius: 8px;
+      border: 1px dashed var(--gray-200); background: #fff;
+      color: #575753; font-size: 12.5px; font-weight: 800;
+    }
+    .vD .as-input { display: block; }
+
+    /* ---- E · 라벨 줄 아래 한 줄 (second line of the header band) -----
+       Same band as the prompt, but its own line: keeps A's "no floating
+       chips" without A's width limit. Words are plain text, not chips —
+       one less object on the page. */
+    .vE .hint-in {
+      display: block; margin-top: 7px;
+      color: #757575; font-size: 12.5px; font-weight: 800; line-height: 1.7;
+    }
+    .vE .hint-in b { color: #1c1c1c; font-weight: 900; }
+    .vE .hint-in i { font-style: normal; color: var(--gray-400); margin: 0 5px; }
+  </style>
+</head>
+<body>
+
+  <div class="page-head">
+    <h1>힌트를 답 칸 안으로 — 5가지</h1>
+    <p>지금은 어휘 힌트가 답 칸 <b>바깥에 떠 있는 알약</b>이라, 페이지에 상자 하나 + 알약 한 무리가 따로 놓입니다.
+       아래 다섯 개는 힌트를 답 칸 <b>안</b>으로 들여놓는 방법입니다. 각 시안을 두 가지 부하로 나란히 놓았습니다 —
+       <b>한 개</b>(한국어로 바꿔요: 항목마다 단어 하나)와 <b>여덟 개</b>(내 문장 만들기: 자유 작문 한 칸에 그 과의 명사 전부).
+       여덟 개 쪽에서 무너지는 시안이 있고, 한 개 쪽에서 과해 보이는 시안이 있습니다.</p>
+  </div>
+
+  <!-- ============================================================
+       현재 (기준선)
+       ============================================================ -->
+  <div class="rail">
+    <div class="col">
+      <p class="lbl now">현재 · 칸 밖에 뜬 알약<small>상자와 알약이 서로 다른 두 물건으로 읽힘</small></p>
+      <p class="load">한 개</p>
+      <div class="phone"><div class="section">
+        <div class="task-block">
+          <div class="answer-box">
+            <span class="answer-label">私は学生です。</span>
+            <span class="answer-space"></span>
+          </div>
+          <span class="hint"><span class="hint-chip">学生:학생</span></span>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="col">
+      <p class="lbl now">현재 · 여덟 개<small>알약 무리가 답 칸보다 커짐</small></p>
+      <p class="load">여덟 개</p>
+      <div class="phone"><div class="section">
+        <div class="task-block">
+          <div class="answer-box tall">
+            <span class="answer-space"></span>
+          </div>
+          <span class="hint"><span class="hint-chip">学生:학생</span><span class="hint-chip">会社員:회사원</span><span class="hint-chip">医者:의사</span><span class="hint-chip">歌手:가수</span><span class="hint-chip">日本人:일본 사람</span><span class="hint-chip">韓国人:한국 사람</span><span class="hint-chip">友だち:친구</span><span class="hint-chip">先生:선생님</span></span>
+        </div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       A · 라벨 줄 오른쪽
+       ============================================================ -->
+  <div class="rail vA">
+    <div class="col">
+      <p class="lbl">A · 라벨 줄 오른쪽<small>프롬프트와 단어가 한 줄. 높이가 전혀 늘지 않음</small></p>
+      <p class="load">한 개</p>
+      <div class="phone"><div class="section">
+        <div class="task-block">
+          <div class="answer-box">
+            <span class="answer-label"><span class="lead">私は学生です。</span><span class="hint-in"><span>学生:학생</span></span></span>
+            <span class="answer-space"></span>
+          </div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="col">
+      <p class="lbl">A · 여덟 개<small>줄이 접히며 라벨 띠가 세 줄로 부풀어 프롬프트를 밀어냄 — 이 부하에서는 못 씀</small></p>
+      <p class="load">여덟 개</p>
+      <div class="phone"><div class="section">
+        <div class="task-block">
+          <div class="answer-box tall">
+            <span class="answer-label"><span class="lead">自己紹介を1つの文で</span><span class="hint-in"><span>学生:학생</span><span>会社員:회사원</span><span>医者:의사</span><span>歌手:가수</span><span>日本人:일본 사람</span><span>韓国人:한국 사람</span><span>友だち:친구</span><span>先生:선생님</span></span></span>
+            <span class="answer-space"></span>
+          </div>
+        </div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       B · 답 칸 아래 붙는 띠
+       ============================================================ -->
+  <div class="rail vB">
+    <div class="col">
+      <p class="lbl">B · 칸 안쪽 아래 띠<small>패턴 카드의 예문 트레이와 같은 어법. 개수에 상관없이 버팀</small></p>
+      <p class="load">한 개</p>
+      <div class="phone"><div class="section">
+        <div class="task-block">
+          <div class="answer-box">
+            <span class="answer-label">私は学生です。</span>
+            <span class="answer-space"></span>
+            <span class="hint-in"><span>学生:학생</span></span>
+          </div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="col">
+      <p class="lbl">B · 여덟 개<small>띠가 두 줄로 늘 뿐, 상자는 하나 그대로</small></p>
+      <p class="load">여덟 개</p>
+      <div class="phone"><div class="section">
+        <div class="task-block">
+          <div class="answer-box tall">
+            <span class="answer-space"></span>
+            <span class="hint-in"><span>学生:학생</span><span>会社員:회사원</span><span>医者:의사</span><span>歌手:가수</span><span>日本人:일본 사람</span><span>韓国人:한국 사람</span><span>友だち:친구</span><span>先生:선생님</span></span>
+          </div>
+        </div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       C · 프롬프트 안에 루비로
+       ============================================================ -->
+  <div class="rail vC">
+    <div class="col">
+      <p class="lbl">C · 단어 위에 루비<small>칩이 아예 없음. 어느 단어의 힌트인지 짝지을 필요가 없음</small></p>
+      <p class="load">한 개</p>
+      <div class="phone"><div class="section">
+        <div class="task-block">
+          <div class="answer-box">
+            <span class="answer-label">私は<ruby>学生<rt>학생</rt></ruby>です。</span>
+            <span class="answer-space"></span>
+          </div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="col">
+      <p class="lbl">C · 여덟 개<small>붙일 프롬프트 문장이 없어 자유 작문 페이지에는 쓸 수 없음 — 두 페이지가 서로 다른 어법을 쓰게 됨</small></p>
+      <p class="load">여덟 개</p>
+      <div class="phone"><div class="section">
+        <div class="task-block">
+          <div class="answer-box tall">
+            <span class="answer-space"></span>
+          </div>
+          <span class="hint"><span class="hint-chip">学生:학생</span><span class="hint-chip">会社員:회사원</span><span class="hint-chip">医者:의사</span><span class="hint-chip">歌手:가수</span><span class="hint-chip">日本人:일본 사람</span><span class="hint-chip">韓国人:한국 사람</span><span class="hint-chip">友だち:친구</span><span class="hint-chip">先生:선생님</span></span>
+        </div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       D · 쓰는 칸 안, 위쪽 선반
+       ============================================================ -->
+  <div class="rail vD">
+    <div class="col">
+      <p class="lbl">D · 쓰는 칸 안 선반<small>"이게 네 재료다"가 가장 강하게 읽힘. 대신 높이를 가장 많이 씀</small></p>
+      <p class="load">한 개</p>
+      <div class="phone"><div class="section">
+        <div class="task-block">
+          <div class="answer-box">
+            <span class="answer-label">私は学生です。</span>
+            <span class="answer-fill">
+              <span class="hint-in"><span>学生:학생</span></span>
+              <span class="answer-space"></span>
+            </span>
+          </div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="col">
+      <p class="lbl">D · 여덟 개<small>자유 작문 칸에서는 가장 자연스러움 — 재료를 펼쳐 놓고 그 밑에 쓰는 모양</small></p>
+      <p class="load">여덟 개</p>
+      <div class="phone"><div class="section">
+        <div class="task-block">
+          <div class="answer-box tall">
+            <span class="answer-fill">
+              <span class="hint-in"><span>学生:학생</span><span>会社員:회사원</span><span>医者:의사</span><span>歌手:가수</span><span>日本人:일본 사람</span><span>韓国人:한국 사람</span><span>友だち:친구</span><span>先生:선생님</span></span>
+              <span class="answer-space"></span>
+            </span>
+          </div>
+        </div>
+      </div></div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       E · 라벨 줄 아래 한 줄
+       ============================================================ -->
+  <div class="rail vE">
+    <div class="col">
+      <p class="lbl">E · 라벨 띠 둘째 줄<small>알약을 아예 없애고 글자만 남김 — 페이지에 물건이 하나 줄어듦</small></p>
+      <p class="load">한 개</p>
+      <div class="phone"><div class="section">
+        <div class="task-block">
+          <div class="answer-box">
+            <span class="answer-label">私は学生です。<span class="hint-in">学生 <b>학생</b></span></span>
+            <span class="answer-space"></span>
+          </div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="col">
+      <p class="lbl">E · 여덟 개<small>단어가 많아지면 한 덩어리 글줄이 되어 훑기 어려움</small></p>
+      <p class="load">여덟 개</p>
+      <div class="phone"><div class="section">
+        <div class="task-block">
+          <div class="answer-box tall">
+            <span class="answer-label">自己紹介を1つの文で<span class="hint-in">学生 <b>학생</b><i>·</i>会社員 <b>회사원</b><i>·</i>医者 <b>의사</b><i>·</i>歌手 <b>가수</b><i>·</i>日本人 <b>일본 사람</b><i>·</i>韓国人 <b>한국 사람</b><i>·</i>友だち <b>친구</b><i>·</i>先生 <b>선생님</b></span></span>
+            <span class="answer-space"></span>
+          </div>
+        </div>
+      </div></div>
+    </div>
+  </div>
+
+</body>
+</html>
