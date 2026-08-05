@@ -59,6 +59,15 @@ same document, so anything in the markup is already on the learner's screen.
   `3-contextual-korean` · `4-freetalking` (pronunciation joins as `5-pronunciation` once it has content).
   Each track holds `table-of-contents.md`, its lesson HTML (`sample-lesson.html` is the canonical
   sample), and an `_archive/` for retired drafts and experiments.
+
+  **Each track's sample is its trial lesson with the sales pages cut** — cover, greeting,
+  trial-intro, todays-result and closing come off, everything pedagogical stays. So the samples
+  are full paged decks, not scrolling documents: same skeleton, same stylesheets, same scripts
+  as `trial/lessons/`, and the shared art still comes from `../../trial/assets/`. When a trial
+  lesson changes, re-cut its sample rather than editing both by hand. The first surviving page
+  needs its own `data-act` — the act name used to come from the cover's `.brand-title`.
+- **`trial/`** — sales trial material, not a learning track. `full-trials/` holds the four complete
+  decks (`trial-1..4`), `lessons/` holds the standalone lesson decks cut from them
 - **`trial/`** — sales trial material, not a learning track. `full-trials/` holds the four complete
   decks (`trial-1..4`), `lessons/` holds the standalone lesson decks cut from them
   (`trial-1-hangul-short.html`, `trial-2-patterns-short.html`, `trial-3-contextual-short.html`,
