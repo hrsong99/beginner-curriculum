@@ -1236,8 +1236,11 @@ strong {
   font-weight: 700;
 }
 
+/* Same 14px inset as the header band above it, so the Japanese prompt and the
+   Korean sentence start on one line down the left edge. At 20px the sentence
+   sat six pixels adrift of its own label. */
 .choose-row.sentence > .choose-sentence {
-  padding: 14px 20px;
+  padding: 12px 14px;
 }
 
 .choose-sentence {
@@ -1264,8 +1267,13 @@ strong {
   line-height: 1.1;
 }
 
+/* The pill carries a border, so with no margin its edge lands against the last
+   glyph of the noun — 학생 and 이에요 read as one crowded word rather than a
+   word and a thing you tap. 4px is a gap, not a space: the option still
+   attaches to the noun more closely than the two options sit to each other. */
 .choose-sentence .opt {
   min-width: 2.6em;
+  margin: 0 4px;
   padding: 5px 13px;
   font-size: 17px;
   vertical-align: middle;
@@ -1278,7 +1286,7 @@ strong {
 }
 
 .choose-sentence .sep {
-  margin: 0 4px;
+  margin: 0 2px;
 }
 
 /* note boxes always stack vertically — the lesson lives in a phone-width
