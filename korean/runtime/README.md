@@ -43,6 +43,6 @@ runtime/
   스크롤바 자리가 실제로 그렇게 한 덱에만 있었습니다.
 - **로드 순서가 있습니다.** `activities` → `pager` → `script-lines` →
   `spotlight` → `tutor-notes` → `highlight` → `stamp`. 이유는 각 파일 머리말에
-  적혀 있고, 덱 뼈대는 [`trial/AUTHORING.md`](../trial/AUTHORING.md) 에 있습니다.
+  적혀 있고, 덱 뼈대는 [`AUTHORING.md`](../AUTHORING.md) 에 있습니다.
 - **CSS 는 두 장이 한 벌입니다.** `lesson-card.css` 다음에 트랙 시트. 패키저가
   링크 순서대로 이어 붙이므로 순서가 곧 캐스케이드입니다.

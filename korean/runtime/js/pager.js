@@ -75,6 +75,7 @@
     pages.forEach(function (p, k) { p.classList.toggle("pg-on", k === at); });
     paint();
     void pages[at].offsetHeight;
+    if (window.__resizeInputs) window.__resizeInputs();   // 이제야 잴 수 있다
     window.scrollTo(0, 0);
   }
 

@@ -41,7 +41,7 @@ tutor's screen — goes through lemonboard's `data-sync` contract.
 **Before adding any interaction, read
 [`interactive/interaction-protocol.md`](./interactive/interaction-protocol.md).** Getting it
 wrong fails silently: the activity works on your screen and never reaches the other person.
-Copy the markup from [`trial/AUTHORING.md`](./trial/AUTHORING.md) or from a live deck in
+Copy the markup from [`AUTHORING.md`](./AUTHORING.md) or from a live deck in
 `trial/lessons/` rather than inventing it, and see
 [`interactive/packaging.md`](./interactive/packaging.md) for turning a deck into an uploadable zip.
 
@@ -71,7 +71,7 @@ same document, so anything in the markup is already on the learner's screen.
   of its own — if you are writing either, the thing you need probably belongs in a
   shared module or in `trial.css`.
 
-  **Read [`trial/AUTHORING.md`](./trial/AUTHORING.md) before building a new deck.** It is
+  **Read [`AUTHORING.md`](./AUTHORING.md) before building a new deck.** It is
   the component vocabulary — page types, every activity's markup, the colour and spacing
   tokens, and the file skeleton. Reach for an existing component before inventing one.
 - **`runtime/`** — everything a deck loads at run time: `css/` (the design system plus each

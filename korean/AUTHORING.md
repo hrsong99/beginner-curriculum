@@ -5,12 +5,15 @@
 전에 이 목록에 이미 있는 것을 먼저 찾아보세요 — 어휘가 하나 늘 때마다 덱 사이의
 일관성이 한 칸씩 줄어듭니다.
 
-설계 원칙은 [`ux-philosophy.md`](../ux-philosophy.md) 에 있습니다.
+설계 원칙은 [`ux-philosophy.md`](./ux-philosophy.md) 에 있습니다.
 이 문서는 **무엇을 쓸 수 있는가**만 적습니다.
 
 ---
 
 ## 1 · 파일 뼈대
+
+경로는 `trial/lessons/deck.html` 처럼 **두 단계 아래**에 있는 덱 기준입니다.
+한 단계(`tracks/2-core-patterns/`)에 두면 `../` 하나를 빼세요.
 
 ```html
 <!DOCTYPE html>
@@ -22,8 +25,8 @@
   <meta name="podo:lesson-id" content="trial-2-selfintro">
   <meta name="podo:content-version" content="2026-08-05">
   <title>…</title>
-  <link rel="stylesheet" href="../runtime/css/lesson-card.css">
-  <link rel="stylesheet" href="../runtime/css/trial.css">
+  <link rel="stylesheet" href="../../runtime/css/lesson-card.css">
+  <link rel="stylesheet" href="../../runtime/css/trial.css">
 </head>
 <body>
   <div class="phone">
@@ -41,13 +44,13 @@
 
   <img class="stamp-art" src="../assets/well-done.svg" alt="">   <!-- .phone 바깥! -->
 
-  <script src="../runtime/js/activities.js"></script>
-  <script src="../runtime/js/pager.js"></script>
-  <script src="../runtime/js/script-lines.js"></script>
-  <script src="../runtime/js/spotlight.js"></script>
-  <script src="../runtime/js/tutor-notes.js"></script>
-  <script src="../runtime/js/highlight.js"></script>
-  <script src="../runtime/js/stamp.js"></script>
+  <script src="../../runtime/js/activities.js"></script>
+  <script src="../../runtime/js/pager.js"></script>
+  <script src="../../runtime/js/script-lines.js"></script>
+  <script src="../../runtime/js/spotlight.js"></script>
+  <script src="../../runtime/js/tutor-notes.js"></script>
+  <script src="../../runtime/js/highlight.js"></script>
+  <script src="../../runtime/js/stamp.js"></script>
 </body>
 </html>
 ```
@@ -241,7 +244,7 @@ closing
 - **`data-sync-id` 가 있는 요소만 공유됩니다.** id 가 없으면 그 칸은 각자의 것입니다.
 - 정답/오답은 절대 공유하지 않습니다 — 고른 값만 보내고 판정은 양쪽이 각자 합니다.
 - 티칭 모드(답 보기)는 공유하지 않습니다.
-- 자세한 계약은 [`interactive/interaction-protocol.md`](../interactive/interaction-protocol.md).
+- 자세한 계약은 [`interactive/interaction-protocol.md`](./interactive/interaction-protocol.md).
 
 ---
 
@@ -250,4 +253,4 @@ closing
 1. 브라우저 480px 폭에서 **전 페이지를 눈으로** 봅니다(시각 문서입니다).
 2. 페이저 스크러버로 끝까지 넘겨 가로 넘침이 없는지 봅니다.
 3. 티칭 모드(T)를 켜서 유령 답과 튜터 메모가 뜨는지 봅니다.
-4. 레몬보드에 올릴 zip 은 [`interactive/packaging.md`](../interactive/packaging.md).
+4. 레몬보드에 올릴 zip 은 [`interactive/packaging.md`](./interactive/packaging.md).

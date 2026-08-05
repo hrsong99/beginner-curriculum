@@ -3761,6 +3761,12 @@ body.paged { padding-bottom: 0; }
   -webkit-appearance: none;
 }
 
+/* 자유 작문 칸의 높이는 스크립트가 내용에 맞춰 잡는다. 스크롤바가 뜨면
+   방금 쓴 줄이 화면 밖으로 밀려나므로, 넘칠 일 자체를 없앤다. */
+.answer-space.as-input .free-input {
+  overflow: hidden;
+}
+
 .answer-space.as-input .space-input:focus,
 .answer-space.as-input .free-input:focus { outline: none; }
 .answer-space.as-input:focus-within { background: #fff; }

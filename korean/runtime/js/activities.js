@@ -66,6 +66,36 @@ window.lessonSync = window.lessonSync || {
     });
   }
 
+  /* 자유 작문 칸은 쓴 만큼 자란다 — 답이 몇 줄이 될지 우리가 미리 알 수 없다.
+     스크롤바가 생기면 학생이 방금 쓴 줄이 화면 밖으로 밀려나고, 튜터 화면에서는
+     더 나쁘다: 학생이 말한 문장 전체가 한눈에 안 들어온다.
+     높이를 재기 전에 auto 로 되돌리는 것이 줄어드는 쪽을 만든다(지운 만큼 다시
+     작아진다). 아래 한계는 시트의 min-height 가 잡으므로 여기서 세지 않는다. */
+  function grow(ta) {
+    if (!ta.offsetParent) return;      // 지금 장이 아니다 — display:none 은 잴 수 없다
+    ta.style.height = "auto";
+    ta.style.height = ta.scrollHeight + "px";
+  }
+
+  // 그래서 장이 바뀔 때 페이저가 이 줄을 부른다. 숨어 있는 동안 상대가 써 넣은
+  // 글도, 화면에 나오는 그 순간 제 높이를 찾는다.
+  window.__resizeInputs = function () {
+    document.querySelectorAll(".free-input").forEach(grow);
+  };
+
+  // 타이핑만이 아니라 보드가 상대의 글을 넣어 줄 때도 자라야 한다. 그쪽은
+  // value 에 바로 쓰고 input 을 쏘지 않으므로, 이 칸의 value 만 가로챈다.
+  function autoGrow(ta) {
+    var desc = Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, "value");
+    Object.defineProperty(ta, "value", {
+      configurable: true,
+      get: function () { return desc.get.call(this); },
+      set: function (v) { desc.set.call(this, v); grow(this); }
+    });
+    ta.addEventListener("input", function () { grow(ta); });
+    grow(ta);
+  }
+
   // data-sync-id 는 살아 있는 요소 하나에만 있어야 한다. 자리를 대신하는
   // 껍데기가 진짜 입력칸으로 바뀔 때 id 를 넘겨준다.
   function transferSync(source, target) {
@@ -184,6 +214,7 @@ window.lessonSync = window.lessonSync || {
       ta.maxLength = MAX_TEXT;
       transferSync(space, ta);
       space.appendChild(ta);
+      autoGrow(ta);
     }
   });
 
