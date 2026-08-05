@@ -72,6 +72,31 @@
 
 ---
 
+## 1-2 · 체험 레슨 풀덱 (`full-trials/`)
+
+풀덱은 **레슨 덱에 앞뒤 열다섯 장을 두른 것**입니다. 레슨은 `lessons/` 의 것을
+그대로 쓰고, 감싸는 페이지는 네 덱이 모두 같은 것을 씁니다.
+
+```
+cover · greeting
+  needs-intro · needs-why · needs-goal · needs-pace          ← 니즈 파악 4장
+  … 레슨 전체(trial-intro … todays-result) …
+  report-intro · report                                       ← 리포트 2장
+  info-intro · info-podo · info-about · plan-curriculum ·
+  info-tutors · plan-price · plan-switch · info-price-all ·
+  info-faq                                                    ← 안내(판매) 9장
+closing
+```
+
+- 감싸는 페이지의 CSS 는 `trial.css` 의 「FULL TRIAL」 절에 있습니다.
+- 리포트의 레벨 체크·항목별 진단·로드맵 배선은 `interactive/report.js` 입니다.
+  풀덱은 `activities.js` 다음에 이 줄을 하나 더 답니다.
+- 감싸는 페이지는 레슨과 무관한 판매 자료라, 새 풀덱을 만들 때는 다른 풀덱에서
+  이 열다섯 장을 그대로 복사해 오면 됩니다. 사전(`LESSON_GLOSS`)에도 그 페이지들의
+  항목을 같이 옮깁니다.
+
+---
+
 ## 2 · 페이지 (`.phone` 의 자식 하나 = 한 장)
 
 모든 페이지에 **`data-page-id`** 를 답니다. 공유되는 것은 순서가 아니라 이 id 라서,
