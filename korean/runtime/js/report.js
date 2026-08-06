@@ -146,6 +146,17 @@
   // 정하고, 길에 무엇을 깔지는 이유가 정한다.
   var WHY_COURSE = { travel: "travel", kpop: "drama", friend: "banmal",
                      self: "travel", work: "free", topik: "free" };
+  /* 마지막 마디에서 계획을 처음 고른 이유로 되묶는 한 줄. 로드맵의 끝은 코스가
+     끝나는 자리가 아니라 「이걸 하려고 배웠지」 로 돌아오는 자리다. */
+  var WHY = {
+    kpop:   "K-POP·드라마를 자막 없이 즐기는 데까지, 이 순서가 가장 빨라요.",
+    travel: "여행 전에 맞추려고 읽는 힘과 가게에서 쓰는 표현을 먼저 넣었어요.",
+    friend: "한국인 친구·연인과 이야기하려면 반말까지가 사정권이에요.",
+    work:   "일에서 쓰려면 문법 토대가 필요해서 패턴을 두껍게 잡았어요.",
+    topik:  "TOPIK의 토대가 되는 문법부터 차례대로 쌓는 순서예요.",
+    self:   "무리 없이 이어갈 수 있게, 조금씩 쌓이는 순서로 짰어요.",
+    other:  "오늘 들은 희망에 맞춰 순서를 짰어요."
+  };
   // the tutor's level call -> lessons already effectively covered.
   var DONE = { "1": 0, "2": 11, "3": 25, "4": 45, "5": 70,
                "6": 90, "7": 110, "8": 130, "9": 150, "10": 170 };
@@ -576,25 +587,19 @@
   var roadCard = document.querySelector(".road-card");
   var road = roadCard && roadCard.querySelector(".road-svg");
   var roadStep = 0;
-  var STEPS = 6;                                    // 점 일곱 = 걸음 여섯
+  /* 걸음은 추천 코스의 수다. 전에는 그림에 박힌 점 일곱이 걸음 수였는데, 그러면
+     코스가 셋인 사람도 일곱 번을 눌러야 하고 그중 넷은 앞 칸과 같은 코스를 다시
+     보여 주는 빈 걸음이었다. 이제 마디 하나가 코스 하나고, 0칸은 「지금」 이다. */
+  var STEPS = 1;
 
   function roadStops() {
     var g = GOALS[pick.goal];
     return courseList(g ? g.lv : overall() + 2);
   }
-  /* 칸 i 에서 하고 있는 코스. 코스 길이(w)의 누적으로 가른다 — 균등하게
-     나누면 11레슨짜리 한글 읽기가 112과짜리 핵심 패턴과 같은 폭을 먹는다.
-     한 코스가 여러 칸에 걸치는 것이 정상이다: 핵심 패턴만 넉 달인 사람도 있다. */
+  // 0칸은 출발선이라 코스가 없다. 그 뒤로는 칸 하나가 코스 하나.
   function courseAt(step) {
-    var cs = roadStops(), tot = 0, cum = 0, i;
-    for (i = 0; i < cs.length; i++) tot += COURSE[cs[i]].w;
-    if (!tot) return cs[cs.length - 1];
-    var f = step / STEPS;
-    for (i = 0; i < cs.length; i++) {
-      cum += COURSE[cs[i]].w / tot;
-      if (f < cum - 1e-9) return cs[i];
-    }
-    return cs[cs.length - 1];
+    var cs = roadStops();
+    return step < 1 ? null : cs[Math.min(step, cs.length) - 1];
   }
 
   /* 길과 점은 Figma 에서 내려받은 좌표 그대로다. 손으로 다시 풀면 모퉁이
@@ -607,27 +612,32 @@
     "28.4745C248.819 38.4878 240.701 46.6052 230.688 46.6052H131.525H34.1004C23.1269 " +
     "46.6052 14.2311 55.501 14.2311 66.4745C14.2311 77.448 23.1269 86.3438 34.1004 " +
     "86.3438H131.525H248.879";
-  var ROAD_DOTS = [[14.06, 10.3438], [127.06, 10.3438], [248.879, 28.4745],
-                   [127.06, 46.6052], [14.1207, 66.4745], [127.06, 86.3438],
-                   [248.879, 86.3438]];
-  var roadEls = null, roadFracs = null, roadShown = 0, roadRaf = null;
+  var roadEls = null, roadFracs = null, roadShown = 0, roadRaf = null, roadKey = "";
 
-  /* 점이 길의 몇 퍼센트 지점인가. 호가 섞인 경로라 손으로 푸는 대신 길을 잘게
-     훑어 가장 가까운 표본을 고른다 — 길 모양을 고쳐도 따라온다. */
-  function measureDots(p) {
-    var L = p.getTotalLength(), N = 600, pts = [], i;
-    for (i = 0; i <= N; i++) pts.push(p.getPointAtLength(L * i / N));
-    return ROAD_DOTS.map(function (d) {
-      var best = 0, bd = Infinity, k;
-      for (k = 0; k <= N; k++) {
-        var dx = pts[k].x - d[0], dy = pts[k].y - d[1], q = dx * dx + dy * dy;
-        if (q < bd) { bd = q; best = k; }
-      }
-      return best / N;
+  /* 마디가 서는 자리 = 코스가 끝나는 자리. 코스 길이(w)의 누적으로 잡는다 —
+     균등하게 나누면 11레슨짜리 한글 읽기가 112과짜리 핵심 패턴과 같은 폭을
+     먹는다. 0 은 「지금」 이고 마지막은 언제나 1(=목표)이다. */
+  function stopFracs(stops) {
+    var tot = 0, cum = 0, out = [0];
+    stops.forEach(function (k) { tot += COURSE[k].w; });
+    stops.forEach(function (k, i) {
+      cum += COURSE[k].w;
+      out.push(i === stops.length - 1 || !tot ? 1 : cum / tot);
     });
+    return out;
   }
 
-  function buildRoad() {
+  /* 라벨이 설 자리. 길은 세 줄이고 줄과 줄 사이 빈 띠가 라벨의 자리인데, 그
+     띠의 한쪽 끝은 굽이가 차지하고 있다 — 오른쪽 굽이는 첫째 띠의 오른쪽을,
+     왼쪽 굽이는 둘째 띠의 왼쪽을 먹는다. 마디가 굽이에 서면 라벨을 그 반대편
+     안쪽으로 밀어 붙인다. 셋째 띠(길 아래)는 끝까지 비어 있다. */
+  function capPlace(x, y) {
+    if (y < 30) return x > 232 ? { x: 232, y: 31, a: "end" } : { x: x, y: 31, a: "middle" };
+    if (y < 70) return x < 31 ? { x: 31, y: 70, a: "start" } : { x: x, y: 70, a: "middle" };
+    return x > 240 ? { x: 254.879, y: 112, a: "end" } : { x: x, y: 112, a: "middle" };
+  }
+
+  function buildRoad(stops) {
     var NS = "http://www.w3.org/2000/svg";
     var el = function (t, at) { var e = document.createElementNS(NS, t);
       for (var q in at) e.setAttribute(q, at[q]); return e; };
@@ -656,42 +666,42 @@
                             "stroke-dashoffset": "1" });
     g.appendChild(fill);
 
-    /* 지금 선 자리의 무른 후광. 점마다 하나씩 두고 켜고 끈다 — 하나를 옮기면
+    /* 마디는 코스 하나씩이다. 자리는 길 위에서 재는 것이 맞다 — 굽이가 섞인
+       경로라 좌표를 손으로 박아 두면 코스가 셋일 때와 넷일 때 자리를 두 벌
+       유지해야 한다. */
+    roadFracs = stopFracs(stops);
+    var L = fill.getTotalLength();
+    var pts = roadFracs.map(function (f) { return fill.getPointAtLength(L * f); });
+
+    /* 지금 선 자리의 무른 후광. 마디마다 하나씩 두고 켜고 끈다 — 하나를 옮기면
        길을 따라가는 게 아니라 허공을 가로질러 날아간다. */
-    var halos = ROAD_DOTS.map(function (d) {
-      var c = el("circle", { "class": "rd-halo", cx: d[0], cy: d[1], r: 13 });
+    var halos = pts.map(function (p) {
+      var c = el("circle", { "class": "rd-halo", cx: p.x, cy: p.y, r: 13 });
       g.appendChild(c); return c;
     });
-    /* 일곱 점이 다 같은 크기면 일곱 다 같은 무게로 읽힌다. 실제로 이름이 붙는
-       자리는 넷뿐이다 — 지금(0)·⅓(2)·⅔(4)·도착(6). 나머지 셋은 줄 한가운데의
-       걸음일 뿐이라 작은 눈금으로 내린다(.minor). 밟고 선 동안에는 어느 쪽이든
-       제 크기로 커진다: 서 있는 자리가 눈금일 수는 없다.
-       크기·색은 전부 trial.css 가 쥔다. 여기서 r 을 한 번 적어 두는 것은 CSS
+    /* 크기·색은 전부 trial.css 가 쥔다. 여기서 r 을 한 번 적어 두는 것은 CSS
        기하 속성을 모르는 브라우저용 바닥값이다. */
-    var dots = ROAD_DOTS.map(function (d, i) {
-      var c = el("circle", { "class": "rd-dot" + (i % 2 ? " minor" : ""),
-                             cx: d[0], cy: d[1], r: 6 });
+    var dots = pts.map(function (p) {
+      var c = el("circle", { "class": "rd-dot", cx: p.x, cy: p.y, r: 6 });
       g.appendChild(c); return c;
     });
 
     /* 라벨은 길 위가 아니라 줄과 줄 사이 빈 띠에 놓는다. 길 위에 얹으면 초록이
        차오를 때마다 글자가 배경을 잃어 테를 둘러 줘야 하고, 그 테가 다시 길을
-       갉아먹는다. 「지금」 과 ⅓ 라벨은 같은 기준선에 서서 한 줄로 읽힌다. */
+       갉아먹는다. */
     var cap = function (cls, x, y, anchor) {
       var e = el("text", { "class": "rd-cap " + cls, x: x, y: y, "text-anchor": anchor });
       g.appendChild(e); return e;
     };
     cap("start", 14.06, 31, "middle").textContent = "지금";
-    roadEls = { fill: fill, dots: dots, halos: halos,
-                // 굽이 점의 바깥 지름이 17 남짓이라, 라벨은 그 가장자리에서 8쯤
-                // 떨어뜨려 둔다 — 「지금」 이 첫 점 아래에서 얻는 여백과 같은 몫이다
-                mo: [cap("wp", 232, 31, "end"),         // ⅓ 지점 = 점 2, 오른쪽 굽이 왼편
-                     cap("wp", 31, 70, "start"),        // ⅔ 지점 = 점 4, 왼쪽 굽이 오른편
-                     // 도착점의 바깥 반지름이 10.5 라 아래 가장자리가 96.8 이다.
-                     // 기준선을 112 로 내려 그 아래로 6 남짓 띄운다 — 108 에서는
-                     // 글자 윗머리가 점에 1 밖에 안 떨어져 붙어 보였다.
-                     cap("dest", 254.879, 112, "end")] };
-    roadFracs = measureDots(fill);
+    // 마디 라벨은 「지금」 을 뺀 나머지, 즉 코스마다 하나씩. 마지막이 목표다.
+    var mo = pts.slice(1).map(function (p, i) {
+      var last = i === pts.length - 2;
+      var q = last ? { x: 254.879, y: 112, a: "end" } : capPlace(p.x, p.y);
+      return cap(last ? "dest" : "wp", q.x, q.y, q.a);
+    });
+    roadEls = { fill: fill, dots: dots, halos: halos, mo: mo };
+    roadKey = stops.join(",");
   }
 
   /* 지금 밟은 점까지 초록이 차오르고, 점은 셋 중 하나가 된다.
@@ -710,10 +720,9 @@
       roadEls.fill.setAttribute("stroke-dashoffset", (1 - f).toFixed(4));
       roadEls.dots.forEach(function (c, i) {
         var here = f >= roadFracs[i] - 1e-4;
-        // 등급(minor·goal)은 자리가 정하는 것이라 상태와 함께 매번 다시 쓴다 —
+        // 등급(goal)은 자리가 정하는 것이라 상태와 함께 매번 다시 쓴다 —
         // class 를 통째로 갈아 끼우므로 여기서 빠뜨리면 첫 칠에 등급이 날아간다
-        c.setAttribute("class", "rd-dot" + (i % 2 ? " minor" : "") +
-          (i === STEPS ? " goal" : "") +
+        c.setAttribute("class", "rd-dot" + (i === STEPS ? " goal" : "") +
           (!here ? "" : i === step ? " now" : " done"));
         roadEls.halos[i].setAttribute("class",
           "rd-halo" + (here && i === step ? " on" : ""));
@@ -732,22 +741,27 @@
     });
   }
 
-  /* 모퉁이 라벨은 ⅓·⅔·끝. 눈금이 카드 제목과 같은 단위를 쓴다 — 제목이
-     「3주차」 인데 길은 「1개월」 을 세고 있으면 같은 자리를 두 잣대로 재는 셈이다.
-     그래도 눈금이 겹치는 계획이 있다(두 달짜리에 ⅓·⅔ 가 둘 다 1개월). 그때는
-     되풀이하지 않고 지운다: 「1개월 · 1개월 · 2개월」 은 눈금이 아니라 실수로
-     읽힌다. 끝 눈금은 언제나 남는다 — 그게 목표다. */
+  /* 마디 라벨은 그 코스를 마치는 때다. 자리가 길이의 누적이므로 시각도 같은
+     누적에서 나온다 — 마디가 ⅓ 지점에 섰으면 기간의 ⅓ 이 지난 것이다.
+     눈금이 카드와 같은 단위를 쓴다: 카드가 「3주차」 인데 길이 「1개월」 을 세고
+     있으면 같은 자리를 두 잣대로 재는 셈이다. 짧은 계획에서는 앞 마디와 같은
+     수로 눌리기도 하는데, 그때는 되풀이하지 않고 지운다 — 「1주 · 1주 · 2주」 는
+     눈금이 아니라 실수로 읽힌다. 끝 눈금은 언제나 남는다: 그게 목표다. */
   function drawRoad(unit, suf, animate) {
     if (!road) return;
-    if (!roadEls) buildRoad();
-    var at = function (i) { return Math.max(1, Math.round(unit * i / STEPS)); };
-    var end = at(STEPS), prev = 0;
-    [2, 4].forEach(function (i, n) {
-      var v = at(i), show = v > prev && v < end;
-      roadEls.mo[n].textContent = show ? v + suf : "";
+    var stops = roadStops();
+    if (!roadEls || roadKey !== stops.join(",")) buildRoad(stops);
+    STEPS = stops.length;
+    if (roadStep > STEPS) roadStep = STEPS;
+    var end = Math.max(1, Math.round(unit)), prev = 0;
+    roadEls.mo.forEach(function (t, i) {
+      var last = i === roadEls.mo.length - 1;
+      if (last) { t.textContent = end + suf; return; }
+      var v = Math.max(1, Math.round(unit * roadFracs[i + 1]));
+      var show = v > prev && v < end;
+      t.textContent = show ? v + suf : "";
       if (show) prev = v;
     });
-    roadEls.mo[2].textContent = end + suf;
     setRoadStep(roadStep, animate);
   }
 
@@ -779,63 +793,68 @@
     }
   });
 
+  /* 코스 커버는 마크업에 적힌 여섯 장 중에서 고른다. 경로를 여기서 지어내면
+     패키저가 못 보고 지나가 보드에서 404 가 난다(마크업의 src 만 번들한다). */
+  function covSrc(key) {
+    var img = document.querySelector('.cov-src [data-cov="' + key + '"]');
+    return img ? img.getAttribute("src") : "";
+  }
+
   function renderCurriculum(animate) {
     if (!curli || !roadCard) return;
+    var stops = roadStops();
+    STEPS = stops.length;
+    if (roadStep > STEPS) roadStep = STEPS;
     var k = roadStep, key = courseAt(k), c = COURSE[key], g = GOALS[pick.goal];
 
-    // 총 기간은 위 슬라이더가 정한다. 칸 i 의 「N개월차」 는 그 총량의 i/6 이다.
+    // 총 기간은 위 슬라이더가 정한다. 마디 i 의 시각은 그 총량의 roadFracs[i] 다.
     var per = perWeek();
     var need = g ? Math.max(6, DONE[String(g.lv)] - DONE[String(overall())]) : 24;
     var total = months(need, per);
-    /* 칸은 여섯인데 기간이 석 달이면 「1개월차」 가 두 번 나온다 — 다음을 눌러도
-       제목이 그대로면 눌리지 않은 것처럼 보인다. 여섯 칸이 서로 다른 눈금을
-       갖도록, 달로 나누어지지 않는 계획은 주로 센다. 길 위의 모퉁이 라벨은
-       Figma 대로 개월을 유지한다: 지도는 성기게, 서 있는 자리는 촘촘하게. */
+    /* 마디가 넷인데 기간이 석 달이면 「1개월차」 가 두 번 나온다 — 다음을 눌러도
+       숫자가 그대로면 눌리지 않은 것처럼 보인다. 마디마다 다른 눈금이 서도록,
+       달로 나누어지지 않는 계획은 주로 센다. */
     var weeks = Math.max(1, Math.round(need / per));
     var unit = total < STEPS ? weeks : total, suf = total < STEPS ? "주" : "개월";
-    var atNo = function (i) { return Math.max(i ? 1 : 0, Math.round(unit * i / STEPS)); };
-    var startAt = atNo(k);
+    // 마디 자리를 알아야 시각을 매기는데, 자리는 길을 세운 뒤라야 나온다
+    if (!roadEls || roadKey !== stops.join(",")) drawRoad(unit, suf, false);
+    var at = function (i) { return Math.max(1, Math.round(unit * (roadFracs[i] || 0))); };
 
-    roadCard.querySelector(".rc-t").textContent =
-      k === 0 ? "지금 레벨에 맞는 수업" : startAt + suf + "차";
-    /* 한 코스를 두 칸 넘게 밟는 일이 흔하다. 그때마다 「여기까지 오면 이런
-       이야기를 해요」 를 되풀이하면 진도가 멈춘 것처럼 읽히니, 코스에 처음
-       들어선 칸에서만 그렇게 말한다. 마지막 칸은 예외다 — 로드맵 전체가
-       노리는 한 줄이라, 거기서 「이어서 공부해요」 로 끝나면 김이 샌다. */
-    var fresh = k === 0 || k === STEPS || courseAt(k - 1) !== key;
-    roadCard.querySelector(".rc-s").textContent =
-      k === 0 ? "진단 결과에 맞춰 약한 항목부터 공부해요!"
-      : fresh ? c.can + " — 여기까지 오면 이런 이야기를 해요."
-              : c.t + (hasBatchim(c.t) ? "을" : "를") + " 이어서 공부해요.";
-
-    // 왜 여기서 시작하는가. 가장 처지는 두 항목을 그대로 이유로 쓴다.
-    var order = ranked(), why = roadCard.querySelector(".rc-why span");
-    if (k === 0 && order.length >= 2) {
-      var w2 = order.slice(-2);
-      why.innerHTML = "포도님은 <b>" + w2[0].n + "</b>" + (hasBatchim(w2[0].n) ? "과 " : "와 ") +
-        "<b>" + w2[1].n + "</b>" + (hasBatchim(w2[1].n) ? "이" : "가") +
-        " 아쉬웠어요.<br>그래서 " + c.s + "부터 시작해요.";
-      why.parentNode.classList.remove("hide");
-    } else if (k === 0) {
-      why.parentNode.classList.add("hide");
-    } else if (k === STEPS) {
-      why.innerHTML = "여기까지 <b>" + startAt + suf + "</b> — 목표한 자리예요.";
-      why.parentNode.classList.remove("hide");
+    /* 0칸은 출발선이다 — 오늘 어디에 서 있고 어디로 가는지 한 장으로 말한다.
+       1칸부터는 코스 한 장씩, 마지막 칸이 목표다. */
+    if (k === 0) {
+      curli.innerHTML =
+        '<div class="cli cli-start">' +
+          '<div class="cli-h">' +
+            '<img class="cli-ico" src="' + covSrc(stops[0]) + '" alt="">' +
+            '<span><b class="cli-t">지금, Lv.' + overall() + '</b>' +
+              '<span class="cli-s">여기서 출발해요</span></span>' +
+          '</div>' +
+          '<div class="cli-e"><i>→</i><span><b>' + (g ? g.t : "목표를 골라 주세요") +
+            '</b><em>' + (g ? "Lv." + g.lv + "까지, 코스 " + STEPS + "개로 가요"
+                            : "목표를 고르면 여기에 가는 길이 그려져요") + '</em></span></div>' +
+        '</div>';
     } else {
-      // 「개월」 은 받침이 있고 「주」 는 없다 — 서술격 조사가 갈린다
-      why.innerHTML = "여기까지 " + startAt + suf + ", 다음 칸까지 " +
-        Math.max(1, atNo(k + 1) - startAt) + suf + (hasBatchim(suf) ? "이에요." : "예요.");
-      why.parentNode.classList.remove("hide");
+      var last = k === STEPS;
+      curli.innerHTML =
+        '<div class="cli' + (last ? " cli-goal" : "") + '">' +
+          '<div class="cli-h">' +
+            '<img class="cli-ico" src="' + covSrc(key) + '" alt="">' +
+            '<span><b class="cli-t">' + c.t +
+              '<span class="cli-no">' + k + " / " + STEPS + '</span></b>' +
+              '<span class="cli-s">' + c.s + '</span></span>' +
+          '</div>' +
+          '<div class="cli-e"><i>✓</i><span><b>' + c.can + '</b><em>' + c.ex + '</em></span></div>' +
+          // 마지막 마디에서만, 맨 처음 고른 것으로 돌아가 닫는다 — 어떤 레벨까지
+          // 가는지(목표)와 무엇을 하려고 배웠는지(이유)를 나란히 놓는다
+          (last && g ? '<div class="cli-goal-b">' +
+              '<span class="cg-k">' + at(k) + suf + " 뒤, 목표 도착</span>" +
+              '<b class="cg-t">' + g.t + '</b>' +
+              '<span class="cg-l">Lv.' + g.lv + '</span>' +
+              (WHY[pick.why[0]] ? '<em class="cg-w">' + WHY[pick.why[0]] + '</em>' : "") +
+            '</div>' : "") +
+        '</div>';
     }
-
-    curli.innerHTML =
-      '<div class="cli">' +
-        '<div class="cli-h">' +
-          '<img class="cli-ico" src="../assets/report-icons/course.svg" alt="">' +
-          '<span><b class="cli-t">' + c.t + '</b><span class="cli-s">' + c.s + '</span></span>' +
-        '</div>' +
-        '<div class="cli-e"><i>✓</i><span><b>' + c.can + '</b><em>' + c.ex + '</em></span></div>' +
-      '</div>';
 
     // 몇 칸 중 몇 번째인지, 그리고 끝에서 더 못 가는지
     var dots = "", i;

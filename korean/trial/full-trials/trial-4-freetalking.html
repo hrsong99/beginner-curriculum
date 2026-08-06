@@ -524,9 +524,19 @@
            칸을 넘기는 것 자체가 설명이 된다. 넘긴 칸은 공유된다 — 튜터만
            앞서 가면 학습자는 다른 이야기를 보고 있게 된다. -->
       <div class="rsec road-card" data-sync-id="plan-roadstep" data-sync-kind="roadstep">
-        <h3 class="rsec-h"><span class="rc-t">지금 레벨에 맞는 수업</span><small class="rc-s">진단 결과에 맞춰 약한 항목부터 공부해요!</small></h3>
+        <h3 class="rsec-h"><span class="rc-t">목표까지 가는 길</span></h3>
 
-        <p class="rc-why"><img src="../assets/report-icons/checklist.svg" alt=""><span></span></p>
+        <!-- 코스 커버 여섯 장 · 마디마다 갈아 끼울 그림을 마크업에 한 번씩 적어
+             둔다. 패키저는 마크업의 src 만 번들·평탄화하므로, JS 가 경로를
+             지어내면 로컬에서만 되고 보드에서 404 가 난다. 여기서 골라 쓴다. -->
+        <div class="cov-src" hidden>
+          <img data-cov="hangul" src="../assets/art/cov/cov-hangul.png" alt="">
+          <img data-cov="core" src="../assets/art/cov/cov-core.png" alt="">
+          <img data-cov="travel" src="../assets/art/cov/cov-travel.png" alt="">
+          <img data-cov="drama" src="../assets/art/cov/cov-drama.png" alt="">
+          <img data-cov="banmal" src="../assets/art/cov/cov-banmal.png" alt="">
+          <img data-cov="free" src="../assets/art/cov/cov-free.png" alt="">
+        </div>
 
         <div class="road">
           <span class="road-k">추천 코스</span>
