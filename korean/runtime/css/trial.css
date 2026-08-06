@@ -1764,6 +1764,29 @@ body:not(.no-yomi) .sent-more .yomi + .translation { margin-top: 7px; }
   gap: 18px;
 }
 
+/* ---------- two shapes, one ending ----------
+   A rule that covers more than one vowel has to show more than one, or the
+   half that never appears reads as a footnote — 「ㅏ · ㅗ」 above a single 앉
+   taught ㅏ and merely mentioned ㅗ. So the stems stack on the left of one
+   arrow and the ending answers both at once, which is also the honest
+   picture: two different-looking syllables, same ending.
+
+   The pair sits side by side and the tiles step down to pay for it. Stacked
+   they cost the box ~100px of height, and with two boxes on the page the
+   second one falls under the fold — on a page whose whole job is comparing
+   them, which is the one thing it cannot afford. Side by side the page is
+   exactly as tall as it was with one stem in each box. */
+.bt-syls {
+  display: flex;
+  gap: 9px;
+}
+
+.bt-syls > .bt-syl {
+  width: 78px;
+  height: 78px;
+  font-size: 45px;
+}
+
 .bt-syl {
   position: relative;
   isolation: isolate;   /* keeps the floor's z-index:-1 inside this box */
@@ -1809,6 +1832,20 @@ body:not(.no-yomi) .sent-more .yomi + .translation { margin-top: 7px; }
 .bt-syl.vowel::after {
   inset: 18% 18% 34% 55%;
   background: var(--topic-bg);
+}
+
+/* ...and a vowel does not always live on the right. ㅗ ㅜ ㅡ ㅛ ㅠ are drawn
+   flat and sit UNDER the consonant, so 놀 stacks ㄴ / ㅗ / ㄹ in three bands
+   and the seat becomes the middle one. Which is the whole reason ㅗ could
+   not simply be named in the caption and left undrawn: the learner would
+   have gone looking down the right side of a syllable that keeps nothing
+   there. The takeaway the two positions teach together is "find the vowel",
+   not "look right".
+
+   Still not the floor — that band is the 받침 (놀's own ㄹ is sitting in
+   it), and it means exactly that nine pages earlier. */
+.bt-syl.vowel.under::after {
+  inset: 41% 16% 34% 16%;
 }
 
 .bt-arrow {
@@ -2082,6 +2119,14 @@ body:not(.no-yomi) .sent-more .yomi + .translation { margin-top: 7px; }
 @media (max-width: 480px) {
   /* the box is one centred column at every width — only the type steps down */
   .bt-syl { width: 94px; height: 94px; font-size: 54px; }
+  /* A pair of stems is the widest thing the equation ever carries — nearly
+     twice a single one — so it is the case that decides this breakpoint.
+     Measured on a 360px column: any bigger and the page scrolls sideways,
+     which on a rule page means the ending walks off the screen. The gaps
+     close with it rather than the tiles paying the whole cost alone. */
+  .bt-syls > .bt-syl { width: 66px; height: 66px; font-size: 38px; }
+  .bt-syls { gap: 8px; }
+  .bt-eq:has(.bt-syls) { gap: 12px; }
   .bt-out { padding: 7px 15px; font-size: 30px; }
   .bt-ex { font-size: 16px; }
   .combi-nouns > span { font-size: 12px; }
