@@ -4657,6 +4657,10 @@ body.teaching .tcon { display: block; margin: 0 0 28px; }
   r: 6; fill: #fff; stroke: #e8eae1; stroke-width: 3.5;
   transition: r .3s ease, fill .3s ease, stroke .3s ease, stroke-width .3s ease;
 }
+/* 코스가 서지 않은 자리는 이름 없는 눈금으로 내린다 — 그림의 점 수는 고정이고
+   코스는 그중 몇 자리에만 서므로, 나머지가 정거장과 같은 무게면 안 된다 */
+.rd-dot.minor { r: 4; stroke-width: 3; }
+.rd-dot.minor.done { r: 2; }
 /* 도착점은 늘 서 있다 — 크기로 목적지라고 말한다 */
 .rd-dot.goal { r: 8.5; stroke: var(--green-500); stroke-width: 4; }
 /* 지나온 마디는 길 안으로 들어가 흰 점 하나만 남긴다. 길 밖으로 나오지 않는 것이

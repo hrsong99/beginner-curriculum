@@ -166,26 +166,38 @@
   // s   = 그 코스가 뭘 하는 곳인지 한 줄
   // can = 그 코스를 마치면 할 수 있게 되는 말
   // ex  = 그 말을 예문 하나로 푼 것
+  /* n = 그 코스의 레슨 수(tracks/ 의 목차 그대로). 핵심 패턴만 n 이 없다 —
+     통째로 떼고 넘어가는 코스가 아니라서, 다음 코스의 입장 바닥까지만 세고
+     나머지 과는 그 뒤로도 계속 함께 간다. courseLen() 이 그때그때 잰다. */
   var COURSE = {
-    hangul: { w: 1, t: "한글 읽기",   s: "글자를 소리 내어 읽는 법",
+    hangul: { n: 14, t: "한글 읽기",   s: "글자를 소리 내어 읽는 법",
               can: "간판이 읽혀요",
               ex: "카페 · 김밥 · 화장실 — 거리에서 보이는 글자를 소리 내어 읽어요" },
-    core:   { w: 3, t: "핵심 패턴",   s: "하고 싶은 말을 스스로 만드는 법",
+    core:   { t: "핵심 패턴",   s: "하고 싶은 말을 스스로 만드는 법",
               can: "내 이야기를 말해요",
               ex: "「저는 일본 사람입니다」처럼, 배운 틀에 내 단어를 넣어 문장을 만들어요" },
-    travel: { w: 2, t: "상황별 · 여행",   s: "가게에서 · 길에서 진짜 쓰는 말",
+    travel: { n: 40, t: "상황별 · 여행",   s: "가게에서 · 길에서 진짜 쓰는 말",
               can: "가게에서 말해요",
               ex: "「혹시 명동역이 어딘지 아세요?」 길을 묻고, 주문하고, 되물어요" },
-    drama:  { w: 2.4, t: "상황별 · 드라마", s: "좋아하는 드라마의 진짜 대사",
+    drama:  { n: 40, t: "상황별 · 드라마", s: "좋아하는 드라마의 진짜 대사",
               can: "자막 없이 들려요",
               ex: "「우리 어디서 본 적 있지 않아요?」 드라마에 나오는 말이 그대로 들려요" },
-    banmal: { w: 2, t: "상황별 · 반말 수다",   s: "친구에게 쓰는 편한 반말",
+    banmal: { n: 20, t: "상황별 · 반말 수다",   s: "친구에게 쓰는 편한 반말",
               can: "반말로 수다 떨어요",
               ex: "「너 지금 어디 가는 거야?」 친구에게 말을 놓고 편하게 이야기해요" },
-    free:   { w: 2.4, t: "프리토킹", s: "문법이 아니라 생각을 말하기",
+    // 프리토킹은 끝이 없다(주제가 매주 는다). 40 은 「한 번에 이만큼 판다」 는
+    // 명목값이지 트랙의 분량이 아니다 — plan-logic.md 에 그렇게 적어 두었다.
+    free:   { n: 40, t: "프리토킹", s: "문법이 아니라 생각을 말하기",
               can: "이유까지 말해요",
               ex: "「돈 vs 시간, 하나만 가질 수 있다면?」 생각과 그 이유를 이어서 말해요" }
   };
+  var CORE_N = 116;                    // 핵심 패턴 전체 과 수
+  /* 상황별 커리큘럼의 입장 바닥 — 핵심 몇 과까지 하면 들어갈 수 있는가.
+     tracks/3-contextual-korean 의 표 그대로다. 문(gate)이 아니라 권고라서,
+     그 위의 문법은 「덩어리」로 통째로 익히고 넘어간다.
+     프리토킹은 트랙이 「이미 초중급 패턴을 쥔 학습자」를 전제하므로 초중급 끝(65). */
+  var ENTRY = { drama: 71, travel: 57, banmal: 45, free: 65 };
+
   var pick = { why: [], goal: null, pace: null, level: null };
 
   /* ---- the answer groups remember what was chosen ---- */
@@ -566,8 +578,7 @@
     if (rjCourse) rjCourse.classList.add("hide");
 
     var per = perWeek();
-    var need = Math.max(6, DONE[String(g.lv)] - DONE[String(overall())]);
-    var mo = months(need, per);
+    var mo = months(planNeed(), per);
     if (freq) freq.value = per;
     rcourse.querySelector(".freq-n").textContent = per;
     var bub = rcourse.querySelector(".freq-bub");
@@ -602,6 +613,30 @@
     return step < 1 ? null : cs[Math.min(step, cs.length) - 1];
   }
 
+  /* 목표까지 남은 레슨 수. 기간도 마디의 시각도 전부 이 하나에서 나온다 —
+     분모가 둘이면 「45과만 하면 되는 반말」이 「71과가 필요한 드라마」보다 늦게
+     갈라지는 것처럼 그려진다(코스 목록이 짧을수록 각 코스의 몫이 커져서다). */
+  function planNeed() {
+    var g = GOALS[pick.goal];
+    return g ? Math.max(6, DONE[String(g.lv)] - DONE[String(overall())]) : 24;
+  }
+  // 지금 레벨이면 핵심 패턴을 몇 과까지 뗀 셈인가 (누적 레슨에서 한글을 뺀다)
+  function coreDone() {
+    return Math.max(0, Math.min(CORE_N, (DONE[String(overall())] || 0) - COURSE.hangul.n));
+  }
+  /* 코스가 로드맵에서 차지하는 길이. 핵심 패턴만 계산해서 낸다 — 116과를
+     통째로 떼고 나서야 다음으로 넘어가는 코스가 아니기 때문이다. 필요한 만큼만
+     밟고 상황별·프리토킹으로 넘어간 뒤, 나머지 과는 그 뒤로도 계속 함께 간다.
+     그래서 여기서 세는 것은 「끝낼 분량」이 아니라 「넘어가기 전까지의 분량」이고,
+     그 값은 다음 코스의 입장 바닥이다. 핵심이 마지막 코스면 목표 레벨까지. */
+  function courseLen(key, stops, i) {
+    if (COURSE[key].n) return COURSE[key].n;
+    var next = stops[i + 1], g = GOALS[pick.goal];
+    var upto = next ? (ENTRY[next] || CORE_N)
+                    : Math.min(CORE_N, Math.max(0, (DONE[String(g ? g.lv : overall() + 2)] || 0) - COURSE.hangul.n));
+    return Math.max(6, upto - coreDone());
+  }
+
   /* 길과 점은 Figma 에서 내려받은 좌표 그대로다. 손으로 다시 풀면 모퉁이
      반지름이 좌우로 다르다는 것(오른쪽 18.13, 왼쪽 19.87)부터 놓친다.
      양 끝만 원본(x=6 … x=248.819)에서 첫 점·끝 점의 한가운데로 당겨 두었다.
@@ -612,17 +647,61 @@
     "28.4745C248.819 38.4878 240.701 46.6052 230.688 46.6052H131.525H34.1004C23.1269 " +
     "46.6052 14.2311 55.501 14.2311 66.4745C14.2311 77.448 23.1269 86.3438 34.1004 " +
     "86.3438H131.525H248.879";
+  /* 그림에 박힌 일곱 자리. 코스가 둘이든 넷이든 길은 언제나 같은 모양이어야
+     하므로 점의 수는 고정이고, 코스는 그중 몇 자리에만 선다 — 나머지는 이름
+     없는 눈금으로 남는다. 좌표는 Figma 원본 그대로. */
+  var ROAD_DOTS = [[14.06, 10.3438], [127.06, 10.3438], [248.879, 28.4745],
+                   [127.06, 46.6052], [14.1207, 66.4745], [127.06, 86.3438],
+                   [248.879, 86.3438]];
+  var LAST_DOT = ROAD_DOTS.length - 1;
   var roadEls = null, roadFracs = null, roadShown = 0, roadRaf = null, roadKey = "";
+  // 일곱 자리의 길 위 비율 / 코스가 선 자리 / 코스가 끝나는 진짜 비율
+  var dotFracs = null, stopAt = null, stopTrue = null;
 
-  /* 마디가 서는 자리 = 코스가 끝나는 자리. 코스 길이(w)의 누적으로 잡는다 —
-     균등하게 나누면 11레슨짜리 한글 읽기가 112과짜리 핵심 패턴과 같은 폭을
-     먹는다. 0 은 「지금」 이고 마지막은 언제나 1(=목표)이다. */
-  function stopFracs(stops) {
-    var tot = 0, cum = 0, out = [0];
-    stops.forEach(function (k) { tot += COURSE[k].w; });
+  /* 점이 길의 몇 퍼센트 지점인가. 호가 섞인 경로라 손으로 푸는 대신 길을 잘게
+     훑어 가장 가까운 표본을 고른다 — 길 모양을 고쳐도 따라온다. */
+  function measureDots(p) {
+    var L = p.getTotalLength(), N = 600, pts = [], i;
+    for (i = 0; i <= N; i++) pts.push(p.getPointAtLength(L * i / N));
+    return ROAD_DOTS.map(function (d) {
+      var best = 0, bd = Infinity, k;
+      for (k = 0; k <= N; k++) {
+        var dx = pts[k].x - d[0], dy = pts[k].y - d[1], q = dx * dx + dy * dy;
+        if (q < bd) { bd = q; best = k; }
+      }
+      return best / N;
+    });
+  }
+
+  /* 코스가 끝나는 자리를 일곱 점 중 하나로 스냅한다. 자리는 코스 길이의 누적
+     비율이고 — 균등하게 나누면 14과짜리 한글 읽기가 116과짜리 핵심 패턴과 같은
+     폭을 먹는다 — 그 비율에 가장 가까운 점을 고른다.
+     뒤에 남은 코스만큼 점을 남겨 둬야 두 코스가 한 점에 겹치지 않는다.
+     마지막 코스는 언제나 끝점이다: 거기가 목표다. */
+  function stopDots(stops) {
+    var lens = stops.map(function (k, i) { return courseLen(k, stops, i); });
+    var need = planNeed();
+    var cum = 0, used = 0, out = [];
+    stopTrue = [];
     stops.forEach(function (k, i) {
-      cum += COURSE[k].w;
-      out.push(i === stops.length - 1 || !tot ? 1 : cum / tot);
+      cum += lens[i];
+      /* 마디의 자리도 시각도 「목표까지 필요한 레슨」을 분모로 잰다. 코스 목록의
+         합이 아니다 — 그러면 뒤에 붙는 코스가 짧을수록 앞 코스의 몫이 부풀어,
+         입장 바닥이 낮은 사람이 더 늦게 갈라지는 것처럼 그려진다.
+         마지막 마디만 1이다: 보이는 코스의 합과 분모 사이의 빈틈이 곧 「핵심
+         패턴은 그 뒤로도 계속 함께 간다」는 뜻이라, 그 자리를 목표가 채운다.
+         눈금의 개월 수는 스냅한 자리가 아니라 이 값에서 나온다 — 점은 그림에
+         맞춰 당겨지지만, 시각까지 당기면 그림의 근사가 계획의 숫자를 흔든다. */
+      var f = Math.min(0.92, need ? cum / need : 1);
+      stopTrue.push(i === stops.length - 1 ? 1 : f);
+      if (i === stops.length - 1) { out.push(LAST_DOT); return; }
+      var best = used + 1, bd = Infinity;
+      var room = LAST_DOT - (stops.length - 1 - i);   // 뒤 코스들 몫을 남긴다
+      for (var d = used + 1; d <= room; d++) {
+        var q = Math.abs(dotFracs[d] - f);
+        if (q < bd) { bd = q; best = d; }
+      }
+      used = best; out.push(best);
     });
     return out;
   }
@@ -666,38 +745,42 @@
                             "stroke-dashoffset": "1" });
     g.appendChild(fill);
 
-    /* 마디는 코스 하나씩이다. 자리는 길 위에서 재는 것이 맞다 — 굽이가 섞인
-       경로라 좌표를 손으로 박아 두면 코스가 셋일 때와 넷일 때 자리를 두 벌
-       유지해야 한다. */
-    roadFracs = stopFracs(stops);
-    var L = fill.getTotalLength();
-    var pts = roadFracs.map(function (f) { return fill.getPointAtLength(L * f); });
+    /* 일곱 점은 언제나 다 그린다 — 코스가 둘이든 넷이든 길의 모양이 같아야
+       한다. 그중 코스가 선 자리만 정거장이고 나머지는 이름 없는 눈금(.minor)이다. */
+    dotFracs = measureDots(fill);
+    stopAt = stopDots(stops);
+    roadFracs = [0].concat(stopAt.map(function (d) { return dotFracs[d]; }));
+    var isStop = {};
+    stopAt.forEach(function (d) { isStop[d] = true; });
+    isStop[0] = true;                                   // 「지금」 도 정거장이다
 
-    /* 지금 선 자리의 무른 후광. 마디마다 하나씩 두고 켜고 끈다 — 하나를 옮기면
+    /* 지금 선 자리의 무른 후광. 점마다 하나씩 두고 켜고 끈다 — 하나를 옮기면
        길을 따라가는 게 아니라 허공을 가로질러 날아간다. */
-    var halos = pts.map(function (p) {
-      var c = el("circle", { "class": "rd-halo", cx: p.x, cy: p.y, r: 13 });
+    var halos = ROAD_DOTS.map(function (d) {
+      var c = el("circle", { "class": "rd-halo", cx: d[0], cy: d[1], r: 13 });
       g.appendChild(c); return c;
     });
     /* 크기·색은 전부 trial.css 가 쥔다. 여기서 r 을 한 번 적어 두는 것은 CSS
        기하 속성을 모르는 브라우저용 바닥값이다. */
-    var dots = pts.map(function (p) {
-      var c = el("circle", { "class": "rd-dot", cx: p.x, cy: p.y, r: 6 });
+    var dots = ROAD_DOTS.map(function (d, i) {
+      var c = el("circle", { "class": "rd-dot" + (isStop[i] ? "" : " minor"),
+                             cx: d[0], cy: d[1], r: 6 });
       g.appendChild(c); return c;
     });
 
     /* 라벨은 길 위가 아니라 줄과 줄 사이 빈 띠에 놓는다. 길 위에 얹으면 초록이
        차오를 때마다 글자가 배경을 잃어 테를 둘러 줘야 하고, 그 테가 다시 길을
-       갉아먹는다. */
+       갉아먹는다. 이름이 붙는 것은 정거장뿐이다. */
     var cap = function (cls, x, y, anchor) {
       var e = el("text", { "class": "rd-cap " + cls, x: x, y: y, "text-anchor": anchor });
       g.appendChild(e); return e;
     };
     cap("start", 14.06, 31, "middle").textContent = "지금";
-    // 마디 라벨은 「지금」 을 뺀 나머지, 즉 코스마다 하나씩. 마지막이 목표다.
-    var mo = pts.slice(1).map(function (p, i) {
-      var last = i === pts.length - 2;
-      var q = last ? { x: 254.879, y: 112, a: "end" } : capPlace(p.x, p.y);
+    // 라벨은 코스마다 하나씩, 그 코스가 선 점 아래에. 마지막이 목표다.
+    var mo = stopAt.map(function (d, i) {
+      var last = i === stopAt.length - 1;
+      var q = last ? { x: 254.879, y: 112, a: "end" }
+                   : capPlace(ROAD_DOTS[d][0], ROAD_DOTS[d][1]);
       return cap(last ? "dest" : "wp", q.x, q.y, q.a);
     });
     roadEls = { fill: fill, dots: dots, halos: halos, mo: mo };
@@ -715,17 +798,24 @@
     /* 점은 걸음이 아니라 차오른 초록을 따른다. 목표 칸을 보고 한 번에 갈아
        끼우면 초록이 아직 기어가는 450ms 동안 초록 점들이 회색 길 위에 떠 있다.
        파도가 지나간 자리부터 하나씩 물드니, 되짚어 갈 때도 그대로 되감긴다. */
+    // 지금 서 있는 걸음이 일곱 자리 중 어디인가 — 0칸은 출발점, 그 뒤는 코스 자리
+    var atDot = step < 1 ? 0 : stopAt[Math.min(step, stopAt.length) - 1];
+    var isStop = { 0: true };
+    stopAt.forEach(function (d) { isStop[d] = true; });
     var paint = function (f) {
       roadShown = f;
       roadEls.fill.setAttribute("stroke-dashoffset", (1 - f).toFixed(4));
       roadEls.dots.forEach(function (c, i) {
-        var here = f >= roadFracs[i] - 1e-4;
-        // 등급(goal)은 자리가 정하는 것이라 상태와 함께 매번 다시 쓴다 —
-        // class 를 통째로 갈아 끼우므로 여기서 빠뜨리면 첫 칠에 등급이 날아간다
-        c.setAttribute("class", "rd-dot" + (i === STEPS ? " goal" : "") +
-          (!here ? "" : i === step ? " now" : " done"));
+        var here = f >= dotFracs[i] - 1e-4;
+        /* 등급(minor·goal)은 자리가 정하는 것이라 상태와 함께 매번 다시 쓴다 —
+           class 를 통째로 갈아 끼우므로 여기서 빠뜨리면 첫 칠에 등급이 날아간다.
+           이름 없는 눈금도 파도가 지나가면 똑같이 자국을 남긴다: 코스가 서지
+           않았을 뿐 지나온 길인 것은 같다. */
+        c.setAttribute("class", "rd-dot" + (isStop[i] ? "" : " minor") +
+          (i === LAST_DOT ? " goal" : "") +
+          (!here ? "" : i === atDot ? " now" : " done"));
         roadEls.halos[i].setAttribute("class",
-          "rd-halo" + (here && i === step ? " on" : ""));
+          "rd-halo" + (here && i === atDot ? " on" : ""));
       });
     };
     /* 숨은 탭에서는 rAF 가 돌지 않는다 — 애니메이션에 점까지 실려 있으니,
@@ -757,7 +847,7 @@
     roadEls.mo.forEach(function (t, i) {
       var last = i === roadEls.mo.length - 1;
       if (last) { t.textContent = end + suf; return; }
-      var v = Math.max(1, Math.round(unit * roadFracs[i + 1]));
+      var v = Math.max(1, Math.round(unit * stopTrue[i]));
       var show = v > prev && v < end;
       t.textContent = show ? v + suf : "";
       if (show) prev = v;
@@ -809,7 +899,7 @@
 
     // 총 기간은 위 슬라이더가 정한다. 마디 i 의 시각은 그 총량의 roadFracs[i] 다.
     var per = perWeek();
-    var need = g ? Math.max(6, DONE[String(g.lv)] - DONE[String(overall())]) : 24;
+    var need = planNeed();
     var total = months(need, per);
     /* 눈금은 언제나 개월이다. 마디보다 짧은 계획은 「주」로 세는 갈래가 있었는데,
        기간의 바닥이 5개월이고 마디는 많아야 넷이라 닿을 수 없는 길이 됐다. */
