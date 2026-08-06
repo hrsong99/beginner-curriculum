@@ -607,10 +607,11 @@
     var g = GOALS[pick.goal];
     return courseList(g ? g.lv : overall() + 2);
   }
-  // 0칸은 출발선이라 코스가 없다. 그 뒤로는 칸 하나가 코스 하나.
+  /* 칸 하나가 코스 하나 — 0칸이 곧 첫 코스다. 마지막 칸만 코스가 없다:
+     거기는 밟는 자리가 아니라 다다른 자리라서, 코스 대신 도착한 레벨을 편다. */
   function courseAt(step) {
     var cs = roadStops();
-    return step < 1 ? null : cs[Math.min(step, cs.length) - 1];
+    return step >= cs.length ? null : cs[step];
   }
 
   /* 목표까지 남은 레슨 수. 기간도 마디의 시각도 전부 이 하나에서 나온다 —
@@ -654,7 +655,7 @@
                    [127.06, 46.6052], [14.1207, 66.4745], [127.06, 86.3438],
                    [248.879, 86.3438]];
   var LAST_DOT = ROAD_DOTS.length - 1;
-  var roadEls = null, roadFracs = null, roadShown = 0, roadRaf = null, roadKey = "";
+  var roadEls = null, roadFracs = null, roadShown = 0, roadRaf = null;
   // 일곱 자리의 길 위 비율 / 코스가 선 자리 / 코스가 끝나는 진짜 비율
   var dotFracs = null, stopAt = null, stopTrue = null;
 
@@ -678,60 +679,32 @@
      폭을 먹는다 — 그 비율에 가장 가까운 점을 고른다.
      뒤에 남은 코스만큼 점을 남겨 둬야 두 코스가 한 점에 겹치지 않는다.
      마지막 코스는 언제나 끝점이다: 거기가 목표다. */
-  function stopDots(stops) {
-    var lens = stops.map(function (k, i) { return courseLen(k, stops, i); });
-    var need = planNeed();
-    var cum = 0, used = 0, out = [];
-    stopTrue = [];
-    stops.forEach(function (k, i) {
-      cum += lens[i];
-      /* 마디의 자리도 시각도 「목표까지 필요한 레슨」을 분모로 잰다. 코스 목록의
-         합이 아니다 — 그러면 뒤에 붙는 코스가 짧을수록 앞 코스의 몫이 부풀어,
-         입장 바닥이 낮은 사람이 더 늦게 갈라지는 것처럼 그려진다.
-         마지막 마디만 1이다: 보이는 코스의 합과 분모 사이의 빈틈이 곧 「핵심
-         패턴은 그 뒤로도 계속 함께 간다」는 뜻이라, 그 자리를 목표가 채운다.
-         눈금의 개월 수는 스냅한 자리가 아니라 이 값에서 나온다 — 점은 그림에
-         맞춰 당겨지지만, 시각까지 당기면 그림의 근사가 계획의 숫자를 흔든다. */
-      var f = Math.min(0.92, need ? cum / need : 1);
-      stopTrue.push(i === stops.length - 1 ? 1 : f);
-      if (i === stops.length - 1) { out.push(LAST_DOT); return; }
-      var best = used + 1, bd = Infinity;
-      var room = LAST_DOT - (stops.length - 1 - i);   // 뒤 코스들 몫을 남긴다
-      for (var d = used + 1; d <= room; d++) {
-        var q = Math.abs(dotFracs[d] - f);
-        if (q < bd) { bd = q; best = d; }
-      }
-      used = best; out.push(best);
-    });
-    return out;
-  }
-
   /* 라벨이 설 자리. 길은 세 줄이고 줄과 줄 사이 빈 띠가 라벨의 자리인데, 그
      띠의 한쪽 끝은 굽이가 차지하고 있다 — 오른쪽 굽이는 첫째 띠의 오른쪽을,
-     왼쪽 굽이는 둘째 띠의 왼쪽을 먹는다. 마디가 굽이에 서면 라벨을 그 반대편
-     안쪽으로 밀어 붙인다. 셋째 띠(길 아래)는 끝까지 비어 있다. */
-  function capPlace(x, y) {
+     왼쪽 굽이는 둘째 띠의 왼쪽을 먹는다. 점이 굽이에 서면 라벨을 그 반대편
+     안쪽으로 밀어 붙인다. 셋째 띠(길 아래)는 끝까지 비어 있다.
+     자리는 점마다 고정이므로 라벨도 점마다 하나씩 미리 세워 두고, 나중에 글자만
+     갈아 끼운다 — 계획이 바뀔 때마다 SVG 를 다시 짓지 않아도 된다. */
+  function capPlace(i) {
+    if (i === 0) return { x: 14.06, y: 31, a: "middle" };          // 지금
+    if (i === LAST_DOT) return { x: 254.879, y: 112, a: "end" };   // 도착
+    var x = ROAD_DOTS[i][0], y = ROAD_DOTS[i][1];
     if (y < 30) return x > 232 ? { x: 232, y: 31, a: "end" } : { x: x, y: 31, a: "middle" };
     if (y < 70) return x < 31 ? { x: 31, y: 70, a: "start" } : { x: x, y: 70, a: "middle" };
-    return x > 240 ? { x: 254.879, y: 112, a: "end" } : { x: x, y: 112, a: "middle" };
+    return { x: x, y: 112, a: "middle" };
   }
 
-  function buildRoad(stops) {
+  /* 뼈대는 한 번만 짓는다 — 길, 일곱 점, 일곱 후광, 일곱 라벨 자리. 어느 점이
+     정거장이고 무엇이 적히는지는 계획이 정하는 것이라 layoutRoad()·drawRoad()
+     가 매번 다시 칠한다. 전에는 이 둘이 한 덩어리라, 코스 목록은 그대로인데
+     목표·레벨만 바뀌면(=마디 자리는 달라지는데) 다시 짓지 않아 옛 자리가 굳었다. */
+  function buildRoad() {
     var NS = "http://www.w3.org/2000/svg";
     var el = function (t, at) { var e = document.createElementNS(NS, t);
       for (var q in at) e.setAttribute(q, at[q]); return e; };
     road.innerHTML = "";
-    /* 그림을 270 폭 한가운데에 세우는 값.
-       맞출 상태는 0칸이다 — 로드맵이 처음 서는 자리이고, 그때만 양 끝이 크기가
-       같은 초록 고리 둘이라 여백이 어긋나면 바로 보인다. 칸을 밟아 갈수록 왼쪽
-       끝은 작은 자국으로 줄고 오른쪽 끝은 도착점이 커지는데, 그때는 양 끝의
-       모양 자체가 달라서 여백 차이가 눈에 걸리지 않는다.
-       0칸의 왼쪽 끝은 첫 점 3.81(반지름 8 + 테 4.5의 절반), 오른쪽 끝은 도착점
-       259.38(반지름 8.5 + 테 4의 절반). 한가운데가 131.6 이니 135 로 옮기려면
-       3.4 다. 후광(반지름 13)까지 넣어도 양쪽에 4.4 이상 남는다.
-       전에는 10 이었다. 라벨이 x=-3 에서 왼쪽으로 삐져나가던 시절의 값인데,
-       라벨을 점 아래로 들여놓은 뒤로는 왼쪽에만 여백이 11 남고 오른쪽은 도착점이
-       1.9 만큼 잘려 나가는 값이 되어 있었다. */
+    /* 그림을 270 폭 한가운데에 세우는 값 — 근거는 아래 첫 점·도착점의 바깥
+       반지름 계산. 자세한 내력은 git 이력에 있다. */
     var g = el("g", { transform: "translate(3.4 0)" });
     road.appendChild(g);
 
@@ -744,15 +717,7 @@
                             pathLength: "1", "stroke-dasharray": "1 1",
                             "stroke-dashoffset": "1" });
     g.appendChild(fill);
-
-    /* 일곱 점은 언제나 다 그린다 — 코스가 둘이든 넷이든 길의 모양이 같아야
-       한다. 그중 코스가 선 자리만 정거장이고 나머지는 이름 없는 눈금(.minor)이다. */
     dotFracs = measureDots(fill);
-    stopAt = stopDots(stops);
-    roadFracs = [0].concat(stopAt.map(function (d) { return dotFracs[d]; }));
-    var isStop = {};
-    stopAt.forEach(function (d) { isStop[d] = true; });
-    isStop[0] = true;                                   // 「지금」 도 정거장이다
 
     /* 지금 선 자리의 무른 후광. 점마다 하나씩 두고 켜고 끈다 — 하나를 옮기면
        길을 따라가는 게 아니라 허공을 가로질러 날아간다. */
@@ -762,29 +727,51 @@
     });
     /* 크기·색은 전부 trial.css 가 쥔다. 여기서 r 을 한 번 적어 두는 것은 CSS
        기하 속성을 모르는 브라우저용 바닥값이다. */
-    var dots = ROAD_DOTS.map(function (d, i) {
-      var c = el("circle", { "class": "rd-dot" + (isStop[i] ? "" : " minor"),
-                             cx: d[0], cy: d[1], r: 6 });
+    var dots = ROAD_DOTS.map(function (d) {
+      var c = el("circle", { "class": "rd-dot", cx: d[0], cy: d[1], r: 6 });
       g.appendChild(c); return c;
     });
-
-    /* 라벨은 길 위가 아니라 줄과 줄 사이 빈 띠에 놓는다. 길 위에 얹으면 초록이
-       차오를 때마다 글자가 배경을 잃어 테를 둘러 줘야 하고, 그 테가 다시 길을
-       갉아먹는다. 이름이 붙는 것은 정거장뿐이다. */
-    var cap = function (cls, x, y, anchor) {
-      var e = el("text", { "class": "rd-cap " + cls, x: x, y: y, "text-anchor": anchor });
+    var caps = ROAD_DOTS.map(function (d, i) {
+      var q = capPlace(i);
+      var e = el("text", { "class": "rd-cap", x: q.x, y: q.y, "text-anchor": q.a });
       g.appendChild(e); return e;
-    };
-    cap("start", 14.06, 31, "middle").textContent = "지금";
-    // 라벨은 코스마다 하나씩, 그 코스가 선 점 아래에. 마지막이 목표다.
-    var mo = stopAt.map(function (d, i) {
-      var last = i === stopAt.length - 1;
-      var q = last ? { x: 254.879, y: 112, a: "end" }
-                   : capPlace(ROAD_DOTS[d][0], ROAD_DOTS[d][1]);
-      return cap(last ? "dest" : "wp", q.x, q.y, q.a);
     });
-    roadEls = { fill: fill, dots: dots, halos: halos, mo: mo };
-    roadKey = stops.join(",");
+    roadEls = { fill: fill, dots: dots, halos: halos, caps: caps };
+  }
+
+  /* 마디를 일곱 자리에 배치한다. 자리는 코스 길이의 누적이고, 분모는 목표까지
+     남은 레슨이다(§plan-logic.md). 그림에 박힌 점 중 가장 가까운 자리로 스냅하되
+     뒤에 남은 마디 수만큼은 남겨 둔다 — 두 마디가 한 점에 겹치면 안 된다.
+     마디 k 는 코스 k 를 「시작하는」 자리다. 끝나는 자리로 잡으면 마지막 코스의
+     마디와 도착이 같은 점에서 겹친다. 첫 코스는 지금 시작하므로 0.
+     stopTrue 는 스냅하기 전의 진짜 비율 — 눈금의 개월 수는 여기서 나온다.
+     점은 그림에 맞춰 당겨지지만, 시각까지 당기면 그림의 근사가 숫자를 흔든다. */
+  function layoutRoad(stops) {
+    var lens = stops.map(function (k, i) { return courseLen(k, stops, i); });
+    var need = planNeed();
+    var nodes = stops.length + 1;        // 코스마다 하나 + 도착 하나
+    var cum = 0, used = -1;
+    stopAt = []; stopTrue = [];
+    stops.forEach(function (k, i) {
+      var f = i === 0 ? 0 : Math.min(0.92, need ? cum / need : 0);
+      stopTrue.push(f);
+      var best = 0;
+      if (i > 0) {
+        var bd = Infinity;
+        var room = LAST_DOT - (nodes - 1 - i);   // 뒤 마디들(도착 포함) 몫
+        best = used + 1;
+        for (var d = used + 1; d <= room; d++) {
+          var q = Math.abs(dotFracs[d] - f);
+          if (q < bd) { bd = q; best = d; }
+        }
+      }
+      used = best; stopAt.push(best);
+      cum += lens[i];
+    });
+    // 도착 — 코스가 아니라 다다른 자리다. 언제나 끝점.
+    stopTrue.push(1);
+    stopAt.push(LAST_DOT);
+    roadFracs = stopAt.map(function (d) { return dotFracs[d]; });
   }
 
   /* 지금 밟은 점까지 초록이 차오르고, 점은 셋 중 하나가 된다.
@@ -799,8 +786,8 @@
        끼우면 초록이 아직 기어가는 450ms 동안 초록 점들이 회색 길 위에 떠 있다.
        파도가 지나간 자리부터 하나씩 물드니, 되짚어 갈 때도 그대로 되감긴다. */
     // 지금 서 있는 걸음이 일곱 자리 중 어디인가 — 0칸은 출발점, 그 뒤는 코스 자리
-    var atDot = step < 1 ? 0 : stopAt[Math.min(step, stopAt.length) - 1];
-    var isStop = { 0: true };
+    var atDot = stopAt[Math.max(0, Math.min(step, stopAt.length - 1))];
+    var isStop = {};
     stopAt.forEach(function (d) { isStop[d] = true; });
     var paint = function (f) {
       roadShown = f;
@@ -840,18 +827,30 @@
   function drawRoad(unit, suf, animate) {
     if (!road) return;
     var stops = roadStops();
-    if (!roadEls || roadKey !== stops.join(",")) buildRoad(stops);
-    STEPS = stops.length;
+    if (!roadEls) buildRoad();
+    layoutRoad(stops);                 // 자리는 매번 다시 잡는다 — 목표·레벨·페이스가 움직인다
+    STEPS = stops.length;              // 마지막 걸음(=도착)의 번호
     if (roadStep > STEPS) roadStep = STEPS;
-    var end = Math.max(1, Math.round(unit)), prev = 0;
-    roadEls.mo.forEach(function (t, i) {
-      var last = i === roadEls.mo.length - 1;
+
+    /* 눈금은 정거장에만 적는다. 0번은 첫 코스를 지금 시작한다는 뜻이라 개월 대신
+       「지금」이고, 마지막은 도착이라 초록으로 한 단 크다. 가운데 눈금이 앞과 같은
+       수로 눌리면 되풀이하지 않고 지운다 — 「5개월 · 5개월」 은 눈금이 아니라
+       실수로 읽힌다. 끝 눈금은 언제나 남는다: 그게 목표다. */
+    var end = Math.max(1, Math.round(unit)), prev = 0, seen = {};
+    stopAt.forEach(function (d, i) {
+      var last = i === stopAt.length - 1;
+      var t = roadEls.caps[d];
+      seen[d] = true;
+      t.setAttribute("class", "rd-cap " + (i === 0 ? "start" : last ? "dest" : "wp"));
+      if (i === 0) { t.textContent = "지금"; return; }
       if (last) { t.textContent = end + suf; return; }
       var v = Math.max(1, Math.round(unit * stopTrue[i]));
       var show = v > prev && v < end;
       t.textContent = show ? v + suf : "";
       if (show) prev = v;
     });
+    roadEls.caps.forEach(function (t, d) { if (!seen[d]) t.textContent = ""; });
+
     setRoadStep(roadStep, animate);
   }
 
@@ -905,42 +904,38 @@
        기간의 바닥이 5개월이고 마디는 많아야 넷이라 닿을 수 없는 길이 됐다. */
     var unit = total, suf = "개월";
     // 마디 자리를 알아야 시각을 매기는데, 자리는 길을 세운 뒤라야 나온다
-    if (!roadEls || roadKey !== stops.join(",")) drawRoad(unit, suf, false);
-    var at = function (i) { return Math.max(1, Math.round(unit * (roadFracs[i] || 0))); };
+    if (!roadEls) drawRoad(unit, suf, false);
 
-    /* 0칸은 출발선이다 — 오늘 어디에 서 있고 어디로 가는지 한 장으로 말한다.
-       1칸부터는 코스 한 장씩, 마지막 칸이 목표다. */
-    if (k === 0) {
+    /* 칸마다 코스 한 장. 마지막 칸만 코스가 아니라 도착이다 — 다다른 레벨과
+       그 레벨이면 무엇을 하는지, 그리고 맨 처음 고른 목표와 이유로 닫는다. */
+    if (k < STEPS) {
       curli.innerHTML =
-        '<div class="cli cli-start">' +
-          '<div class="cli-h">' +
-            '<img class="cli-ico" src="' + covSrc(stops[0]) + '" alt="">' +
-            '<span><b class="cli-t">지금, Lv.' + overall() + '</b>' +
-              '<span class="cli-s">여기서 출발해요</span></span>' +
-          '</div>' +
-          '<div class="cli-e"><i>→</i><span><b>' + (g ? g.t : "목표를 골라 주세요") +
-            '</b><em>' + (g ? "Lv." + g.lv + "까지, 코스 " + STEPS + "개로 가요"
-                            : "목표를 고르면 여기에 가는 길이 그려져요") + '</em></span></div>' +
-        '</div>';
-    } else {
-      var last = k === STEPS;
-      curli.innerHTML =
-        '<div class="cli' + (last ? " cli-goal" : "") + '">' +
+        '<div class="cli">' +
           '<div class="cli-h">' +
             '<img class="cli-ico" src="' + covSrc(key) + '" alt="">' +
             '<span><b class="cli-t">' + c.t +
-              '<span class="cli-no">' + k + " / " + STEPS + '</span></b>' +
+              '<span class="cli-no">' + (k + 1) + " / " + STEPS + '</span></b>' +
               '<span class="cli-s">' + c.s + '</span></span>' +
           '</div>' +
           '<div class="cli-e"><i>✓</i><span><b>' + c.can + '</b><em>' + c.ex + '</em></span></div>' +
-          // 마지막 마디에서만, 맨 처음 고른 것으로 돌아가 닫는다 — 어떤 레벨까지
-          // 가는지(목표)와 무엇을 하려고 배웠는지(이유)를 나란히 놓는다
-          (last && g ? '<div class="cli-goal-b">' +
-              '<span class="cg-k">' + at(k) + suf + " 뒤, 목표 도착</span>" +
+        '</div>';
+    } else {
+      var lv = g ? g.lv : Math.min(LADDER_STEPS, overall() + 2);
+      var d = LV[String(lv)];
+      curli.innerHTML =
+        '<div class="cli cli-arrive">' +
+          '<div class="cli-h">' +
+            '<span class="cli-lv">Lv.' + lv + '</span>' +
+            '<span><b class="cli-t">' + d.line + '</b>' +
+              '<span class="cli-s">TOPIK ' + d.cert[0] + '</span></span>' +
+          '</div>' +
+          (g ? '<div class="cli-goal-b">' +
+              '<span class="cg-k">' + Math.max(1, Math.round(unit)) + suf + " 뒤, 목표 도착</span>" +
               '<b class="cg-t">' + g.t + '</b>' +
-              '<span class="cg-l">Lv.' + g.lv + '</span>' +
               (WHY[pick.why[0]] ? '<em class="cg-w">' + WHY[pick.why[0]] + '</em>' : "") +
-            '</div>' : "") +
+            '</div>'
+            : '<div class="cli-e"><i>→</i><span><b>목표를 아직 안 골랐어요</b>' +
+              '<em>목표를 고르면 여기에 도착 레벨이 나와요</em></span></div>') +
         '</div>';
     }
 
