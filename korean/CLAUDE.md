@@ -84,8 +84,8 @@ same document, so anything in the markup is already on the learner's screen.
 - **`trial/`** — sales trial material, not a learning track. `full-trials/` holds the four complete
   decks (`trial-1..4`), `lessons/` holds the standalone lesson decks cut from them
   (`trial-1-hangul-short.html`, `trial-2-patterns-short.html`, `trial-3-contextual-short.html`,
-  plus its own `_archive/` for retired ones), `reports/` holds the trial report deck, and
-  `onboarding-screens.html` sits at the top. Plus `trial.css`, shared `assets/`
+  plus its own `_archive/` for retired ones), and `reports/` holds the trial report deck.
+  Plus `trial.css`, shared `assets/`
   (art, mouth, characters), and `_experiments/` for variations and capture files.
 
   **A deck is markup plus shared scripts — no per-deck CSS or JS.** Load them in this
