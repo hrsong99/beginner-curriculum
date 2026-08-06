@@ -1775,10 +1775,23 @@ body:not(.no-yomi) .sent-more .yomi + .translation { margin-top: 7px; }
    they cost the box ~100px of height, and with two boxes on the page the
    second one falls under the fold — on a page whose whole job is comparing
    them, which is the one thing it cannot afford. Side by side the page is
-   exactly as tall as it was with one stem in each box. */
+   exactly as tall as it was with one stem in each box.
+
+   Two tiles a hair apart read as one word — 앉 놀 was being read 앉놀 — so
+   the pair takes the `/` the 고르기 rows already use for "one or the other".
+   It carries the separation, which lets the gaps close to almost nothing
+   and buys back most of the width the slash costs. */
 .bt-syls {
   display: flex;
-  gap: 9px;
+  align-items: center;
+  gap: 4px;
+}
+
+/* between two 78px tiles the choose-row's 19px slash vanishes — it has to
+   hold a gap this wide open, so it scales with what it is separating */
+.bt-syls > .sep {
+  font-size: 27px;
+  line-height: 1;
 }
 
 .bt-syls > .bt-syl {
@@ -2124,9 +2137,10 @@ body:not(.no-yomi) .sent-more .yomi + .translation { margin-top: 7px; }
      Measured on a 360px column: any bigger and the page scrolls sideways,
      which on a rule page means the ending walks off the screen. The gaps
      close with it rather than the tiles paying the whole cost alone. */
-  .bt-syls > .bt-syl { width: 66px; height: 66px; font-size: 38px; }
-  .bt-syls { gap: 8px; }
-  .bt-eq:has(.bt-syls) { gap: 12px; }
+  .bt-syls > .bt-syl { width: 62px; height: 62px; font-size: 36px; }
+  .bt-syls { gap: 5px; }
+  .bt-syls > .sep { font-size: 22px; }
+  .bt-eq:has(.bt-syls) { gap: 11px; }
   .bt-out { padding: 7px 15px; font-size: 30px; }
   .bt-ex { font-size: 16px; }
   .combi-nouns > span { font-size: 12px; }
