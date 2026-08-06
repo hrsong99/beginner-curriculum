@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <title>리포트 ④ 코스 카드 · 네 가지 안 — PODO 韓国語</title>
+  <link rel="stylesheet" href="../../runtime/css/lesson-card.css">
+  <link rel="stylesheet" href="../../runtime/css/trial.css">
+  <style>
+  /* ================================================================
+     리포트 「목표까지 가는 길」 · 길 아래 코스 카드를 다시 세운다
+
+     지금 무엇이 약한가
+       · 코스 그림이 37px 이다. 여섯 장 모두 굵은 면으로 그린 삽화인데 그
+         크기에서는 면이 뭉개져 무슨 그림인지 읽히지 않는다 — 아이콘이
+         나빠서가 아니라 아이콘 크기로 쓰고 있어서다.
+       · 카드에서 가장 큰 글자가 코스 이름(14px)이고, 나머지 세 줄이 전부
+         같은 14px 다. 눈이 먼저 붙잡을 자리가 없어서 네 줄을 다 읽어야
+         무슨 코스인지 알게 된다.
+       · 「무엇을 배우나」 가 설명문으로만 있다. 예문은 회색 본문 끝에 묻혀
+         있는데, 사실 그 한 줄이 이 카드에서 가장 잘 팔리는 물건이다.
+
+     그래서 네 안이 각각 무엇을 크게 만드는가
+       ① 코스 포스터   그림을 크게 — 커리큘럼 카탈로그의 표지처럼
+       ② 대사 한 줄     문장을 크게 — 「이 말을 하게 돼요」 가 카드의 전부
+       ③ 미리보기       장면을 크게 — 그 코스의 한 장면을 그대로 보여 준다
+       ④ 코스 목록      전체를 한눈에 — 한 장씩이 아니라 세 줄이 같이 선다
+
+     색은 늘어나지 않는다
+       코스마다 다른 색을 주고 싶은 자리지만, 이 덱에서 green 은 상태고
+       lime 은 브랜드 크롬이다(ux-philosophy.md 의 표). 코스를 구별하는
+       일은 전부 그림이 한다 — 퍼즐·막대·지도·슬레이트·말풍선·고리는
+       88px 에서 서로 확실히 다르다. 판은 여섯 코스 모두 같은 연두다.
+
+     케이스: 지금 Lv.1 · 목표 Lv.5 · K-POP·드라마 · 주 3회
+             → 한글 읽기 → 핵심 패턴 → 상황별·드라마 → 도착(Lv.5)
+     네 안 모두 이전/다음이 실제로 돈다. 길의 초록도 같이 차오른다.
+     ================================================================ */
+
+  body { background: #f4f4f2; }
+  .rv-stage { max-width: 480px; margin: 0 auto; padding: 24px 0 90px; }
+
+  .rv-intro { margin: 0 20px; padding: 18px 20px; border-radius: 14px; background: var(--ink); color: #fff; }
+  .rv-intro h1 { margin: 0; font-size: 15px; font-weight: 900; }
+  .rv-intro p { margin: 8px 0 0; font-size: 12px; font-weight: 600; line-height: 1.55; color: rgba(255,255,255,.62); word-break: keep-all; }
+  .rv-intro b { color: #fff; }
+
+  .vlab { margin: 34px 20px 0; }
+  .vlab b { display: block; font-size: 15px; font-weight: 900; color: var(--ink); }
+  .vlab span { display: block; margin-top: 3px; font-size: 12px; font-weight: 600; color: #8a8a85; line-height: 1.5; word-break: keep-all; }
+
+  /* 리포트 한 장 안에 놓인 것처럼 보이게 하는 흰 바탕 */
+  .cv-frame.cv-frame { min-height: 0; margin: 10px 20px 0; padding: 20px 18px 22px; border-radius: 20px; }
+  .cv-frame .rsec { margin-top: 0; }
+  .cv-frame .rsec-h { margin-bottom: 12px; font-size: 18px; font-weight: 700; line-height: 26px; }
+  .cv-frame .road-k { font-size: 16px; font-weight: 700; line-height: 24px; }
+
+  /* 길 · 라이브 리포트와 같은 좌표. 여기서는 읽기만 하는 배경이라
+     걸음에 따라 초록만 차오른다(라벨은 고정). */
+  .cv-road .rd-fill { transition: stroke-dashoffset .45s ease; }
+
+  /* ================================================================
+     ① 코스 포스터 · 그림이 카드의 얼굴
+        88px 판 위에 그림 하나. 그 아래 이름 → 한 줄 설명 → 예문.
+        예문만 흰 칸으로 떼어 「이 말을 하게 된다」 를 물건처럼 만든다.
+     ================================================================ */
+  .v1 { padding: 14px 14px 16px; border-radius: 14px; background: var(--green-100); }
+  .v1-art {
+    display: grid; place-items: center; height: 116px; border-radius: 12px; background: #fff;
+  }
+  .v1-art img { width: 88px; height: 88px; }
+  .v1-h { display: flex; align-items: baseline; gap: 7px; margin-top: 12px; }
+  .v1-t { font-size: 19px; font-weight: 800; letter-spacing: -.03em; }
+  .v1-meta { font-size: 12px; font-weight: 700; color: var(--green-500); }
+  .v1-s { margin-top: 2px; font-size: 13.5px; font-weight: 500; color: var(--gray-500); letter-spacing: -.02em; }
+  .v1-say {
+    margin-top: 11px; padding: 12px 13px; border-radius: 12px; background: #fff;
+  }
+  .v1-say b { display: block; font-size: 16px; font-weight: 800; line-height: 1.4; letter-spacing: -.03em; word-break: keep-all; }
+  .v1-say em { display: block; margin-top: 4px; font-style: normal; font-size: 12.5px; font-weight: 600; color: var(--gray-400); word-break: keep-all; }
+
+  /* ================================================================
+     ② 대사 한 줄 · 문장이 카드의 얼굴
+        위에 얇은 머리(그림 26px + 코스 이름 + 몇 번째), 그 아래 문장이
+        20px 로 혼자 선다. 맨 아래 초록 칩 한 줄이 「그래서 뭘 할 수
+        있는데」 를 받는다. 카드에 굵은 글자가 하나뿐인 안.
+     ================================================================ */
+  .v2 { padding: 13px 14px 14px; border: 1px solid var(--gray-200); border-radius: 14px; background: #fff; }
+  .v2-h { display: flex; align-items: center; gap: 7px; padding-bottom: 11px; border-bottom: 1px solid var(--gray-200); }
+  .v2-h img { flex: none; width: 26px; height: 26px; }
+  .v2-h b { font-size: 13px; font-weight: 800; letter-spacing: -.02em; }
+  .v2-h span { margin-left: auto; font-size: 11.5px; font-weight: 700; color: var(--gray-400); }
+  .v2-say { margin-top: 13px; font-size: 20px; font-weight: 800; line-height: 1.4; letter-spacing: -.035em; word-break: keep-all; }
+  .v2-say i { font-style: normal; color: var(--green-500); }
+  .v2-s { margin-top: 6px; font-size: 13px; font-weight: 600; color: var(--gray-500); word-break: keep-all; }
+  .v2-can {
+    display: inline-flex; align-items: center; gap: 6px; margin-top: 13px;
+    padding: 7px 12px 7px 9px; border-radius: 999px; background: var(--green-100);
+    font-size: 13px; font-weight: 800; color: #3f7d1c; letter-spacing: -.02em;
+  }
+  .v2-can i {
+    display: grid; place-items: center; width: 17px; height: 17px; border-radius: 50%;
+    background: var(--green-500); color: #fff; font-size: 10px; font-style: normal; font-weight: 900;
+  }
+
+  /* ================================================================
+     ③ 미리보기 · 장면이 카드의 얼굴
+        그 코스에서 실제로 오가는 말을 그대로 한 조각 보여 준다.
+        코스마다 미리보기의 종류가 다르다 — 한글은 대화가 아니라 간판을
+        읽는 일이고, 핵심 패턴은 틀에 단어를 갈아 끼우는 일이다.
+        말이 오가는 코스만 말풍선이 된다.
+     ================================================================ */
+  .v3 { padding: 12px 12px 14px; border: 1px solid var(--gray-200); border-radius: 14px; background: #fff; }
+  .v3-h { display: flex; align-items: center; gap: 8px; }
+  .v3-h img { flex: none; width: 34px; height: 34px; }
+  .v3-h b { display: block; font-size: 14.5px; font-weight: 800; letter-spacing: -.02em; }
+  .v3-h em { display: block; margin-top: 1px; font-style: normal; font-size: 12.5px; font-weight: 600; color: var(--gray-500); }
+  .v3-h span { margin-left: auto; flex: none; font-size: 11.5px; font-weight: 700; color: var(--gray-400); }
+  .v3-body { margin-top: 11px; padding: 12px; border-radius: 12px; background: var(--gray-50); }
+
+  /* 말풍선 두 턴 · 상대는 왼쪽 흰 칸, 학습자는 오른쪽 연두(덱의 규칙 그대로) */
+  .v3-turn { display: flex; }
+  .v3-turn + .v3-turn { margin-top: 7px; }
+  .v3-turn.me { justify-content: flex-end; }
+  .v3-turn p {
+    max-width: 80%; margin: 0; padding: 9px 12px; border-radius: 14px 14px 14px 4px;
+    background: #fff; font-size: 14px; font-weight: 700; line-height: 1.45;
+    letter-spacing: -.02em; word-break: keep-all;
+  }
+  .v3-turn.me p { border-radius: 14px 14px 4px 14px; background: var(--green-100); }
+
+  /* 간판 읽기(한글) · 거리에서 만나는 글자를 그대로 늘어놓는다 */
+  .v3-signs { display: flex; flex-wrap: wrap; gap: 7px; }
+  .v3-signs span {
+    padding: 9px 14px; border: 1px solid var(--gray-200); border-radius: 10px; background: #fff;
+    font-size: 16px; font-weight: 800; letter-spacing: -.02em;
+  }
+
+  /* 틀 갈아 끼우기(핵심 패턴) · 문장 하나와 그 자리에 들어갈 단어들 */
+  .v3-frame { font-size: 16px; font-weight: 800; letter-spacing: -.03em; }
+  .v3-frame u {
+    display: inline-block; min-width: 74px; padding: 1px 8px; border-bottom: 2px solid var(--green-500);
+    color: var(--green-500); text-decoration: none; text-align: center;
+  }
+  .v3-words { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 9px; }
+  .v3-words span {
+    padding: 5px 11px; border-radius: 999px; background: #fff; border: 1px solid var(--gray-200);
+    font-size: 12.5px; font-weight: 700; color: var(--gray-500);
+  }
+  .v3-cap { margin-top: 9px; font-size: 12.5px; font-weight: 600; color: var(--gray-500); word-break: keep-all; }
+
+  /* ================================================================
+     ④ 코스 목록 · 전체가 카드의 얼굴
+        한 장씩 넘기는 대신 코스 셋이 처음부터 같이 선다. 지금 밟은 줄만
+        연두로 켜지고, 나머지는 흰 줄로 대기한다 — 「몇 개나 하는 거예요」
+        에 넘기지 않고 답하는 안. 대신 예문은 켜진 줄에만 붙는다.
+     ================================================================ */
+  .v4-row {
+    display: flex; align-items: flex-start; gap: 11px; padding: 11px;
+    border: 1px solid var(--gray-200); border-radius: 12px; background: #fff;
+  }
+  .v4-row + .v4-row { margin-top: 7px; }
+  .v4-row.on { border-color: var(--green-500); background: var(--green-100); }
+  .v4-th {
+    flex: none; display: grid; place-items: center; width: 52px; height: 52px;
+    border-radius: 10px; background: var(--gray-50);
+  }
+  .v4-row.on .v4-th { background: #fff; }
+  .v4-th img { width: 40px; height: 40px; }
+  .v4-b { flex: 1 1 auto; min-width: 0; }
+  .v4-t { display: flex; align-items: baseline; gap: 6px; }
+  .v4-t b { font-size: 14.5px; font-weight: 800; letter-spacing: -.02em; }
+  .v4-t span { font-size: 11.5px; font-weight: 700; color: var(--gray-400); }
+  .v4-s { margin-top: 1px; font-size: 12.5px; font-weight: 600; color: var(--gray-500); word-break: keep-all; }
+  .v4-say {
+    margin-top: 8px; padding: 9px 11px; border-radius: 10px; background: #fff;
+    font-size: 14px; font-weight: 800; line-height: 1.4; letter-spacing: -.03em; word-break: keep-all;
+  }
+  .v4-say em { display: block; margin-top: 3px; font-style: normal; font-size: 12px; font-weight: 600; color: var(--gray-400); }
+
+  /* ================================================================
+     도착 카드 · 네 안이 공유한다. 여기는 코스가 아니라 다다른 자리라
+     그림이 없다 — 라이브와 같은 모양을 그대로 쓴다.
+     ================================================================ */
+  .arv { padding: 12px; border-radius: 14px; background: var(--green-100); }
+  .arv-h { display: flex; align-items: center; gap: 9px; }
+  .arv-lv {
+    flex: none; display: grid; place-items: center; min-width: 46px; height: 40px; padding: 0 9px;
+    border-radius: 10px; background: var(--green-500); color: #fff; font-size: 16px; font-weight: 900;
+  }
+  .arv-h b { display: block; font-size: 15px; font-weight: 800; letter-spacing: -.02em; }
+  .arv-h em { display: block; margin-top: 1px; font-style: normal; font-size: 12.5px; font-weight: 600; color: var(--gray-500); }
+  .arv-goal { margin-top: 10px; padding: 11px 12px; border-radius: 12px; background: var(--green-500); color: #fff; }
+  .arv-goal span { display: block; font-size: 11.5px; font-weight: 700; opacity: .82; }
+  .arv-goal b { display: inline-block; margin-top: 2px; font-size: 15px; font-weight: 800; letter-spacing: -.02em; word-break: keep-all; }
+  .arv-goal em { display: block; margin-top: 5px; font-style: normal; font-size: 12.5px; font-weight: 500; line-height: 1.45; opacity: .9; word-break: keep-all; }
+  </style>
+</head>
+<body>
+
+<div class="rv-stage">
+
+  <div class="rv-intro">
+    <h1>「목표까지 가는 길」 · 길 아래 코스 카드 네 안</h1>
+    <p>지금 카드는 <b>그림이 37px</b> 이라 무슨 그림인지 안 읽히고, 네 줄이 전부 같은 크기라
+       눈이 먼저 붙잡을 자리가 없습니다. 네 안은 각각 <b>그림 · 문장 · 장면 · 목록</b> 중
+       하나를 카드의 얼굴로 삼습니다. 이전/다음이 실제로 돕니다 —
+       한글 읽기 → 핵심 패턴 → 상황별·드라마 → 도착.</p>
+  </div>
+
+  <!-- ① -->
+  <div class="vlab">
+    <b>① 코스 포스터 — 그림을 크게</b>
+    <span>88px 판 위에 그림 하나. 커리큘럼 카탈로그의 표지처럼 읽히고, 예문은 아래 흰 칸에서 혼자 선다.</span>
+  </div>
+  <div class="section-page cv-frame">
+    <div class="rsec cv-card" data-v="1">
+      <h3 class="rsec-h">목표까지 가는 길</h3>
+      <div class="road cv-road"><span class="road-k">추천 코스</span>
+        <svg class="road-svg" viewBox="0 0 270 118" aria-hidden="true"></svg></div>
+      <div class="cv-slot" style="margin-top:10px"></div>
+      <div class="rc-nav">
+        <button class="rc-btn rc-prev" type="button">← 이전</button>
+        <span class="rc-dots"></span>
+        <button class="rc-btn rc-next" type="button">다음 →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ② -->
+  <div class="vlab">
+    <b>② 대사 한 줄 — 문장을 크게</b>
+    <span>카드에서 굵은 글자는 하나뿐이다. 「이 말을 하게 돼요」 가 20px 로 서고, 그림은 26px 머리로 물러난다.</span>
+  </div>
+  <div class="section-page cv-frame">
+    <div class="rsec cv-card" data-v="2">
+      <h3 class="rsec-h">목표까지 가는 길</h3>
+      <div class="road cv-road"><span class="road-k">추천 코스</span>
+        <svg class="road-svg" viewBox="0 0 270 118" aria-hidden="true"></svg></div>
+      <div class="cv-slot" style="margin-top:10px"></div>
+      <div class="rc-nav">
+        <button class="rc-btn rc-prev" type="button">← 이전</button>
+        <span class="rc-dots"></span>
+        <button class="rc-btn rc-next" type="button">다음 →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ③ -->
+  <div class="vlab">
+    <b>③ 미리보기 — 장면을 크게</b>
+    <span>그 코스에서 오가는 말을 한 조각 그대로 보여 준다. 한글은 간판, 핵심 패턴은 갈아 끼우는 틀, 나머지는 말풍선 두 턴.</span>
+  </div>
+  <div class="section-page cv-frame">
+    <div class="rsec cv-card" data-v="3">
+      <h3 class="rsec-h">목표까지 가는 길</h3>
+      <div class="road cv-road"><span class="road-k">추천 코스</span>
+        <svg class="road-svg" viewBox="0 0 270 118" aria-hidden="true"></svg></div>
+      <div class="cv-slot" style="margin-top:10px"></div>
+      <div class="rc-nav">
+        <button class="rc-btn rc-prev" type="button">← 이전</button>
+        <span class="rc-dots"></span>
+        <button class="rc-btn rc-next" type="button">다음 →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ④ -->
+  <div class="vlab">
+    <b>④ 코스 목록 — 전체를 한눈에</b>
+    <span>한 장씩이 아니라 셋이 같이 선다. 밟은 줄만 켜지고 거기에만 예문이 붙는다. 「몇 개나 해요」 에 넘기지 않고 답하는 안.</span>
+  </div>
+  <div class="section-page cv-frame">
+    <div class="rsec cv-card" data-v="4">
+      <h3 class="rsec-h">목표까지 가는 길</h3>
+      <div class="road cv-road"><span class="road-k">추천 코스</span>
+        <svg class="road-svg" viewBox="0 0 270 118" aria-hidden="true"></svg></div>
+      <div class="cv-slot" style="margin-top:10px"></div>
+      <div class="rc-nav">
+        <button class="rc-btn rc-prev" type="button">← 이전</button>
+        <span class="rc-dots"></span>
+        <button class="rc-btn rc-next" type="button">다음 →</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---- 이 케이스의 코스 셋 ----
+     say  = 그 코스를 마치면 실제로 하게 되는 말 한 줄 (카드의 물건)
+     cap  = 그 말이 무엇인지 받는 짧은 꼬리
+     pv   = ③ 미리보기의 종류와 재료. 코스마다 배우는 일의 모양이 달라서
+            한 틀로 못 담는다 — 한글은 읽는 일, 핵심은 만드는 일, 드라마는
+            주고받는 일이다. */
+  var COURSE = {
+    hangul: {
+      t: "한글 읽기", s: "글자를 소리 내어 읽는 법", n: 14,
+      can: "간판이 읽혀요",
+      say: "카페 · 김밥 · 화장실",
+      cap: "거리에서 보이는 글자를 소리 내어 읽어요",
+      pv: { kind: "signs", items: ["카페", "김밥", "화장실", "편의점"],
+            cap: "거리에서 만나는 글자부터 소리로 바꿉니다" }
+    },
+    core: {
+      t: "핵심 패턴", s: "하고 싶은 말을 스스로 만드는 법", n: 71,
+      can: "내 이야기를 말해요",
+      say: "저는 일본 사람입니다.",
+      cap: "배운 틀에 내 단어를 넣어 문장을 만들어요",
+      pv: { kind: "frame", pre: "저는 ", slot: "일본 사람", post: " 입니다.",
+            words: ["학생", "회사원", "요리사"],
+            cap: "틀은 그대로, 가운데만 내 단어로 바꿉니다" }
+    },
+    drama: {
+      t: "상황별 · 드라마", s: "좋아하는 드라마의 진짜 대사", n: 40,
+      can: "자막 없이 들려요",
+      say: "우리 어디서 본 적 있지 않아요?",
+      cap: "드라마에 나오는 말이 그대로 들려요",
+      pv: { kind: "chat",
+            turns: [["", "우리 어디서 본 적 있지 않아요?"],
+                    ["me", "아… 저 그 카페에서 봤어요."]],
+            cap: "드라마에 나온 대사를 그대로 주고받습니다" }
+    }
+  };
+  var ORDER = ["hangul", "core", "drama"];
+  var GOAL = { lv: 5, t: "익숙한 주제로 대화 이어가기", months: 5,
+               why: "K-POP·드라마를 자막 없이 즐기는 데까지, 이 순서가 가장 빨라요.",
+               line: "익숙한 주제로 대화를 이어가요", cert: "TOPIK 2급" };
+  var STEPS = ORDER.length;                       // 도착까지 하면 걸음은 STEPS+1
+
+  function cov(key) { return "../assets/art/cov/cov-" + key + ".png"; }
+
+  /* ---- 길 · 라이브 리포트의 좌표 그대로(report.js ROAD_D / ROAD_DOTS) ----
+     여기서는 읽기만 하는 배경이라 초록이 차오르는 것까지만 흉내 낸다. */
+  var ROAD_D = "M14.06 10.3438H127.409H230.688C240.701 10.3438 248.819 18.4612 248.819 " +
+    "28.4745C248.819 38.4878 240.701 46.6052 230.688 46.6052H131.525H34.1004C23.1269 " +
+    "46.6052 14.2311 55.501 14.2311 66.4745C14.2311 77.448 23.1269 86.3438 34.1004 " +
+    "86.3438H131.525H248.879";
+  var ROAD_DOTS = [[14.06, 10.3438], [127.06, 10.3438], [248.879, 28.4745],
+                   [127.06, 46.6052], [14.1207, 66.4745], [127.06, 86.3438],
+                   [248.879, 86.3438]];
+  // 걸음 넷(코스 셋 + 도착)이 점 일곱 중 서는 자리
+  var STOP_AT = [0, 2, 4, 6];
+  var STOP_FRAC = [0, 1 / 3, 2 / 3, 1];
+  var NS = "http://www.w3.org/2000/svg";
+
+  function el(name, attrs) {
+    var n = document.createElementNS(NS, name), k;
+    for (k in attrs) if (attrs.hasOwnProperty(k)) n.setAttribute(k, attrs[k]);
+    return n;
+  }
+
+  function buildRoad(svg) {
+    // translate 값·라벨 자리는 report.js buildRoad()/capPlace() 그대로
+    var g = el("g", { transform: "translate(3.4 0)" }), i;
+    var base = { d: ROAD_D, fill: "none", "stroke-width": "12", "stroke-linecap": "round" };
+    g.appendChild(el("path", Object.assign({}, base, { "class": "rd-track" })));
+    var fill = el("path", Object.assign({}, base, {
+      "class": "rd-fill", pathLength: "1", "stroke-dasharray": "1 1", "stroke-dashoffset": "1"
+    }));
+    g.appendChild(fill);
+    var dots = [];
+    for (i = 0; i < ROAD_DOTS.length; i++) {
+      var c = el("circle", { cx: ROAD_DOTS[i][0], cy: ROAD_DOTS[i][1], r: 6, "class": "rd-dot" });
+      g.appendChild(c);
+      dots.push(c);
+    }
+    var caps = [
+      el("text", { x: 14.06, y: 31, "class": "rd-cap start", "text-anchor": "middle" }),
+      el("text", { x: 127.06, y: 70, "class": "rd-cap wp", "text-anchor": "middle" }),
+      el("text", { x: 254.879, y: 112, "class": "rd-cap dest", "text-anchor": "end" })
+    ];
+    caps[0].textContent = "지금";
+    caps[1].textContent = Math.round(GOAL.months / 2) + "개월";
+    caps[2].textContent = GOAL.months + "개월";
+    caps.forEach(function (t) { g.appendChild(t); });
+    svg.appendChild(g);
+    return { fill: fill, dots: dots };
+  }
+
+  function paintRoad(r, step) {
+    r.fill.setAttribute("stroke-dashoffset", (1 - STOP_FRAC[step]).toFixed(4));
+    r.dots.forEach(function (c, i) {
+      var at = STOP_AT.indexOf(i);
+      var cls = ["rd-dot"];
+      if (at < 0) cls.push("minor");
+      if (i === STOP_AT[STEPS]) cls.push("goal");
+      if (at >= 0 && at < step) cls.push("done");
+      else if (at < 0 && i < STOP_AT[step]) cls.push("done");
+      if (i === STOP_AT[step]) cls.push("now");
+      c.setAttribute("class", cls.join(" "));
+    });
+  }
+
+  /* ---- 네 안의 카드 그리기 ---- */
+  function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;"); }
+
+  function arrive() {
+    return '<div class="arv">' +
+        '<div class="arv-h"><span class="arv-lv">Lv.' + GOAL.lv + '</span>' +
+          '<span><b>' + GOAL.line + '</b><em>' + GOAL.cert + '</em></span></div>' +
+        '<div class="arv-goal"><span>' + GOAL.months + '개월 뒤, 목표 도착</span>' +
+          '<b>' + GOAL.t + '</b><em>' + GOAL.why + '</em></div>' +
+      '</div>';
+  }
+
+  var DRAW = {
+    /* ① 코스 포스터 */
+    "1": function (key, k) {
+      var c = COURSE[key];
+      return '<div class="v1">' +
+          '<div class="v1-art"><img src="' + cov(key) + '" alt=""></div>' +
+          '<div class="v1-h"><span class="v1-t">' + c.t + '</span>' +
+            '<span class="v1-meta">' + c.n + '레슨</span></div>' +
+          '<div class="v1-s">' + c.s + '</div>' +
+          '<div class="v1-say"><b>' + esc(c.say) + '</b><em>' + c.cap + '</em></div>' +
+        '</div>';
+    },
+    /* ② 대사 한 줄 */
+    "2": function (key, k) {
+      var c = COURSE[key];
+      return '<div class="v2">' +
+          '<div class="v2-h"><img src="' + cov(key) + '" alt="">' +
+            '<b>' + c.t + '</b><span>' + (k + 1) + " / " + STEPS + '</span></div>' +
+          '<div class="v2-say"><i>“</i>' + esc(c.say) + '<i>”</i></div>' +
+          '<div class="v2-s">' + c.cap + '</div>' +
+          '<div class="v2-can"><i>✓</i>' + c.can + '</div>' +
+        '</div>';
+    },
+    /* ③ 미리보기 */
+    "3": function (key, k) {
+      var c = COURSE[key], p = c.pv, body = "";
+      if (p.kind === "signs") {
+        body = '<div class="v3-signs">' +
+          p.items.map(function (s) { return "<span>" + s + "</span>"; }).join("") + '</div>';
+      } else if (p.kind === "frame") {
+        body = '<div class="v3-frame">' + p.pre + '<u>' + p.slot + '</u>' + p.post + '</div>' +
+          '<div class="v3-words">' +
+          p.words.map(function (s) { return "<span>" + s + "</span>"; }).join("") + '</div>';
+      } else {
+        body = p.turns.map(function (t) {
+          return '<div class="v3-turn ' + t[0] + '"><p>' + esc(t[1]) + "</p></div>";
+        }).join("");
+      }
+      return '<div class="v3">' +
+          '<div class="v3-h"><img src="' + cov(key) + '" alt="">' +
+            '<span><b>' + c.t + '</b><em>' + c.s + '</em></span>' +
+            '<span>' + (k + 1) + " / " + STEPS + '</span></div>' +
+          '<div class="v3-body">' + body + '</div>' +
+          '<div class="v3-cap">' + p.cap + '</div>' +
+        '</div>';
+    },
+    /* ④ 코스 목록 · 셋이 같이 서고 밟은 줄만 켜진다 */
+    "4": function (key, k) {
+      return ORDER.map(function (kk, i) {
+        var c = COURSE[kk], on = i === k;
+        return '<div class="v4-row' + (on ? " on" : "") + '">' +
+            '<span class="v4-th"><img src="' + cov(kk) + '" alt=""></span>' +
+            '<span class="v4-b">' +
+              '<span class="v4-t"><b>' + c.t + '</b><span>' + c.n + '레슨</span></span>' +
+              '<span class="v4-s">' + c.s + '</span>' +
+              (on ? '<span class="v4-say">' + esc(c.say) + '<em>' + c.cap + '</em></span>' : "") +
+            '</span>' +
+          '</div>';
+      }).join("");
+    }
+  };
+
+  /* ---- 배선 ---- */
+  document.querySelectorAll(".cv-card").forEach(function (card) {
+    var v = card.getAttribute("data-v");
+    var slot = card.querySelector(".cv-slot");
+    var road = buildRoad(card.querySelector(".road-svg"));
+    var step = 0;
+
+    function render() {
+      slot.innerHTML = step < STEPS ? DRAW[v](ORDER[step], step) : arrive();
+      var dots = "", i;
+      for (i = 0; i <= STEPS; i++) dots += "<i" + (i === step ? ' class="on"' : "") + "></i>";
+      card.querySelector(".rc-dots").innerHTML = dots;
+      card.querySelector(".rc-prev").disabled = step <= 0;
+      card.querySelector(".rc-next").disabled = step >= STEPS;
+      paintRoad(road, step);
+    }
+    card.querySelector(".rc-prev").addEventListener("click", function () {
+      if (step > 0) { step--; render(); }
+    });
+    card.querySelector(".rc-next").addEventListener("click", function () {
+      if (step < STEPS) { step++; render(); }
+    });
+    render();
+  });
+})();
+</script>
+
+</body>
+</html>

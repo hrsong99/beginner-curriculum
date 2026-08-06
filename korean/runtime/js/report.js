@@ -559,13 +559,15 @@
   var rcourse = document.querySelector(".freq");
   var rjCourse = document.querySelector(".rj-course");
 
+  /* 기간·레슨·페이스 세 칸. 셋이 길과 한 덩어리라, 목표가 없어서 숫자를 못
+     내놓을 때는 덩어리째 감추고 「고르러 가기」 한 줄만 남긴다 — 빈 칸을 남겨
+     두면 붙어 있는 이음매가 어긋나 한 판이 깨져 보인다. */
   function renderCourseCard() {
     if (!rcourse) return;
-    var g = GOALS[pick.goal];
+    var g = GOALS[pick.goal], fuse = document.querySelector(".pm-fuse");
     // 페이스는 슬라이더가 늘 값을 들고 있으므로, 비어 있을 수 있는 건 목표뿐이다
     if (!g) {
-      rcourse.classList.add("hide");
-      document.querySelector(".tiles").classList.add("hide");
+      if (fuse) fuse.classList.add("hide");
       if (rjCourse) {
         rjCourse.classList.remove("hide");
         rjCourse.href = "#p-goal";
@@ -573,21 +575,18 @@
       }
       return;
     }
-    rcourse.classList.remove("hide");
-    document.querySelector(".tiles").classList.remove("hide");
+    if (fuse) fuse.classList.remove("hide");
     if (rjCourse) rjCourse.classList.add("hide");
 
-    var per = perWeek();
-    var mo = months(planNeed(), per);
+    var per = perWeek(), need = planNeed();
     if (freq) freq.value = per;
     rcourse.querySelector(".freq-n").textContent = per;
-    var bub = rcourse.querySelector(".freq-bub");
-    bub.textContent = per + "회";
-    // 말풍선이 손잡이를 따라간다. 양 끝에서는 손잡이 반지름만큼 안으로 당겨
-    // 카드 밖으로 새지 않게 한다.
-    bub.style.left = "calc(" + ((per - 1) / 6 * 100) + "% + " + (8 - (per - 1) / 6 * 16) + "px)";
-    document.querySelector(".eta").textContent = mo + "개월";
+    document.querySelector(".eta").textContent = months(need, per) + "개월";
+    /* 레슨 수는 페이스와 무관하다 — 주 1회든 7회든 배울 분량은 같고 걸리는
+       기간만 달라진다. 슬라이더를 끌 때 이 칸이 안 움직이는 것이 정상이다. */
+    document.querySelector(".need").textContent = need;
   }
+
 
   /* ---- ④ 커리큘럼 로드맵 ----
      길은 Figma 삽화 그대로 고정된 뱀 모양이고 점이 일곱이다. 다음/이전은 그

@@ -1417,13 +1417,53 @@ strong {
   outline-offset: 3px;
   box-shadow: 0 0 0 6px rgba(255, 45, 85, .20);
   animation: spotPulse 1.15s ease-in-out infinite;
+  /* The ring is drawn OUTSIDE the block, in space the next sibling owns — and
+     these decks stack opaque cards edge to edge, so a later sibling paints over
+     the lower half of the ring and it reads as clipped. Lift the lit block for
+     as long as it is lit. `relative` with no offsets moves nothing; the two
+     blocks that are already relative (the batchim syllable tiles) keep their
+     own positioning and just gain the z-index. */
+  position: relative;
+  z-index: 2;
 }
 @keyframes spotPulse {
   0%, 100% { box-shadow: 0 0 0 6px rgba(255, 45, 85, .20); }
   50%      { box-shadow: 0 0 0 11px rgba(255, 45, 85, .08); }
 }
 [data-spot] { cursor: pointer; }
+/* a field keeps its own caret cursor — it is entered, not pointed at */
+input[data-spot], textarea[data-spot] { cursor: auto; }
 @media (prefers-reduced-motion: reduce) { .is-spot { animation: none; } }
+
+/* Some blocks sit flush inside a card that clips its overflow — a header strip
+   at the top of a rounded answer box. An outward ring there gets sliced down to
+   a stray red line along the one free edge, so the script measures for it and
+   turns the ring inward instead: same red, drawn just inside the block's own
+   edge. The glow goes with it — it would be clipped by the same box. */
+.is-spot.is-spot-in {
+  outline-offset: -2.5px;
+  box-shadow: none;
+  animation: none;
+}
+
+/* Stepping into a text box rings the BLOCK that holds it — the question card,
+   the speech bubble, the feedback row — not the box itself. Two reasons, and
+   the script does the walking (see `ringHost`). Every field clears its own
+   outline on :focus because each has its own focus treatment, so a ring drawn
+   on the field came off on the writer's screen: the one screen you actually
+   look at while typing. And a ring squeezed onto a 60px slot only points at the
+   slot, where ringing the block says which question is being answered.
+
+   It takes the same red — this is still "look here", not a second attention
+   colour — but steady rather than pulsing. A throb reads as an alarm, and this
+   one sits under the writer's eyes for as long as the typing lasts; the pulse
+   is for a block you glance at once. */
+.is-spot.is-spot-field {
+  box-shadow: 0 0 0 5px rgba(255, 45, 85, .14);
+  animation: none;
+}
+/* fallback, if a field ever turns up with no block around it to ring */
+input.is-spot, textarea.is-spot { outline-width: 2.5px; outline-offset: 2px; }
 
 /* ---------- shared highlighter (interactive/highlight.js) ----------
    A marker stroke over the text, mirrored to the other screen. Persistent —

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <title>리포트 ② 항목 막대 · 「평균」 표시 변형 — PODO 韓国語</title>
+  <link rel="stylesheet" href="../../runtime/css/lesson-card.css">
+  <link rel="stylesheet" href="../../runtime/css/trial.css">
+  <style>
+  /* ================================================================
+     리포트 ②「항목별 진단」 다섯 줄에서 평균을 어떻게 세울 것인가
+
+     지금(라이브)
+       트랙 위에 2px 세로 눈금 하나. 이게 「포도 수강생 평균」 이라는 걸
+       그림만 보고는 알 수 없다 — 눈금은 눈금이라 「10점 만점의 눈금자」 나
+       「목표선」 으로도 읽히고, 무엇보다 막대와 재질이 달라서(막대는 굵고
+       둥근 덩어리, 눈금은 얇은 선) 둘을 같은 자로 재고 있다는 느낌이 없다.
+       범례의 회색 점과도 생김새가 이어지지 않는다.
+
+     그래서 다섯 안의 공통 원칙
+       ① 평균도 「길이」 로 말한다. 내 막대와 같은 축 위에서 같은 방식으로
+          재고 있다는 게 보여야 비교가 된다(핀 안만 예외 — 대신 손잡이처럼
+          생겨서 「여기가 기준점」 이라고 말한다).
+       ② 내가 평균을 넘었을 때도 평균이 안 보이면 안 된다. 지금 눈금은
+          막대에 먹혀서 안 보인다(초록이 눈금을 덮는다).
+       ③ 회색은 이 페이지에서 이미 「남(=평균)」 이다. 레이더의 점선 회색과
+          범례의 회색 점이 같은 뜻이라, 막대에서도 회색을 유지한다.
+
+     각 안을 두 가지 값으로 두 번 그린다
+       ㉠ 지금 케이스 — 다섯 항목 모두 Lv.2. 라이브 리포트 화면 그대로다.
+       ㉡ 넘었을 때 — 유창성·정확성·듣기가 평균 위. 평균이 막대에 먹히는지
+          여기서 갈린다.
+
+     값은 라이브와 같다. 사다리 10칸, 평균은
+     정확성 3.8 · 어휘 4.4 · 유창성 2.9 · 발음 2.3 · 듣기 3.4.
+     ================================================================ */
+
+  body { background: #f4f4f2; }
+  .rv-stage { max-width: 480px; margin: 0 auto; padding: 24px 0 90px; }
+
+  .rv-intro { margin: 0 20px; padding: 18px 20px; border-radius: 14px; background: var(--ink); color: #fff; }
+  .rv-intro h1 { margin: 0; font-size: 15px; font-weight: 900; }
+  .rv-intro p { margin: 8px 0 0; font-size: 12px; font-weight: 600; line-height: 1.55; color: rgba(255,255,255,.62); word-break: keep-all; }
+  .rv-intro b { color: #fff; }
+  .rv-end { margin-top: 40px; }
+
+  .vlab { margin: 34px 20px 0; }
+  .vlab b { display: block; font-size: 15px; font-weight: 900; color: var(--ink); }
+  .vlab span { display: block; margin-top: 3px; font-size: 12px; font-weight: 600; color: #8a8a85; line-height: 1.5; word-break: keep-all; }
+
+  /* 리포트 한 장 안에 놓인 것처럼 보이게 하는 흰 카드 */
+  .av-card {
+    margin: 10px 20px 0; padding: 18px 16px 20px; border-radius: 20px;
+    background: #fff; border: 1px solid var(--green-500);
+  }
+  .av-card .rsec-h { margin: 0 0 4px; font-size: 18px; font-weight: 700; line-height: 26px; }
+  .av-legend { display: flex; align-items: center; gap: 16px; margin: 0 0 14px 4px; }
+  .av-legend span { display: flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 500; }
+  .av-legend span + span { color: var(--gray-400); }
+  .av-legend i { flex: none; width: 4px; height: 4px; border-radius: 50%; background: var(--green-500); }
+  .av-legend .g { width: 12px; height: 4px; border-radius: 999px; background: #c9c7c0; }
+  .av-legend .gd { width: 14px; height: 0; border-radius: 0; border-top: 2px dashed #b4b4b0; background: none; }
+  .av-legend .gt { width: 2px; height: 12px; border-radius: 1px; background: #6f6f6a; }
+  .av-legend .gp { width: 9px; height: 9px; border-radius: 50%; background: #8b8a84; box-shadow: 0 0 0 2px #fff; }
+
+  .av-case { margin: 0 0 6px 4px; font-size: 11px; font-weight: 800; color: #a9a8a2; letter-spacing: -.01em; }
+  .av-case + .avbars { margin-bottom: 18px; }
+  .avbars:last-child { margin-bottom: 0; }
+
+  /* 공통 골격 — 라이브 .axbars/.axb 와 같은 치수(라벨 52 · 트랙 12 · 줄 간 8) */
+  .avbars { display: grid; gap: 8px; padding: 0 4px; }
+  .avb { display: flex; align-items: center; gap: 8px; }
+  .avb-n { flex: none; width: 52px; font-size: 14px; font-weight: 800; letter-spacing: -.02em; }
+  .avb-t { position: relative; flex: 1 1 auto; height: 12px; border-radius: 999px; background: var(--gray-200); }
+  .avb-f { position: relative; z-index: 2; display: block; height: 100%; border-radius: 999px; background: var(--green-500); }
+
+  /* ── 지금(비교용) ──────────────────────────────────────────────
+     라이브 리포트에 들어가 있는 2px 세로 눈금. 아래 다섯 안과 같은 값으로
+     같이 그려 둔다 — 무엇이 나아졌는지는 옆에 놓아야 보인다. */
+  .v0 .avb-tick {
+    position: absolute; top: -2px; z-index: 3; width: 2px; height: 16px;
+    margin-left: -1px; border-radius: 1px; background: #6f6f6a;
+  }
+
+  /* ── ① 그림자 막대 ─────────────────────────────────────────────
+     평균도 막대다. 내 막대보다 굵게, 옅은 회색으로 뒤에 눕는다.
+     내 초록이 그 위에 얹히니 「같은 자리에서 잰 두 길이」 로 읽히고,
+     초록이 평균을 넘어가도 회색이 위아래로 삐져나와 있어 사라지지 않는다. */
+  .v1 .avbars { gap: 10px; }
+  .v1 .avb-t { height: 20px; background: none; border-radius: 999px; }
+  .v1 .avb-rail { position: absolute; inset: 4px 0; border-radius: 999px; background: var(--gray-200); }
+  .v1 .avb-ghost {
+    position: absolute; top: 0; bottom: 0; left: 0; z-index: 1;
+    border-radius: 999px; background: #d5d2c9;
+  }
+  .v1 .avb-f { position: absolute; top: 4px; bottom: 4px; left: 0; height: auto; }
+
+  /* ── ② 홈 ─────────────────────────────────────────────────────
+     평균 자리에서 트랙을 한 번 끊는다. 선을 얹는 게 아니라 흰 바탕이
+     비치는 홈이라, 초록 위를 지나가도 그대로 보인다. 트랙과 재질이 같아
+     장식이 하나도 늘지 않는 게 이 안의 값이다. */
+  .v2 .avb-notch {
+    position: absolute; top: -3px; z-index: 3; width: 4px; height: 18px;
+    margin-left: -2px; border-radius: 2px; background: #fff;
+  }
+  .v2 .avb-notch::after {
+    content: ""; position: absolute; left: 1px; top: 3px;
+    width: 2px; height: 12px; border-radius: 1px; background: #c4c2bb;
+  }
+
+  /* ── ③ 핀 ─────────────────────────────────────────────────────
+     평균을 「점」 으로 놓는다. 범례의 회색 점이 그대로 트랙 위에 내려온
+     것이라 무엇인지 묻지 않아도 되고, 흰 테가 둘러 있어 초록 위에서도
+     떠 보인다. 다섯 줄에서 점이 오르내리는 모양이 곧 평균의 기울기다. */
+  .v3 .avb-pin {
+    position: absolute; top: 50%; z-index: 3; width: 10px; height: 10px;
+    margin: -5px 0 0 -5px; border-radius: 50%;
+    background: #8b8a84; box-shadow: 0 0 0 2px #fff;
+  }
+  .v3 .avb-cap {
+    position: absolute; bottom: 100%; margin: 0 0 5px -14px; width: 28px;
+    text-align: center; font-size: 10px; font-weight: 700; color: #a9a8a2; letter-spacing: -.02em;
+  }
+  .v3 .avbars { padding-top: 14px; }
+
+  /* ── ④ 점선 윤곽 ──────────────────────────────────────────────
+     바로 위 레이더가 평균을 점선으로 그린다. 같은 말을 같은 재질로
+     하는 안이다 — 평균은 점선 테두리, 내 값은 채운 초록. 두 그림이
+     한 문장이 된다. */
+  .v4 .avb-t { height: 18px; background: none; }
+  .v4 .avb-rail { position: absolute; inset: 3px 0; border-radius: 999px; background: var(--gray-200); }
+  .v4 .avb-ring {
+    position: absolute; inset: 0 auto 0 0; z-index: 3;
+    border: 2px dashed #b4b4b0; border-radius: 999px; background: none;
+  }
+  .v4 .avb-f { position: absolute; top: 3px; bottom: 3px; left: 0; height: auto; }
+
+  /* ── ⑤ 아래 레일 ──────────────────────────────────────────────
+     두 막대를 위아래로 나란히 눕힌다. 길이 비교가 가장 정직하지만
+     줄 높이가 두 배가 되고, 다섯 줄이 열 줄로 보인다. */
+  .v5 .avbars { gap: 14px; }
+  .v5 .avb { align-items: center; }
+  .v5 .avb-pair { flex: 1 1 auto; display: grid; gap: 3px; }
+  .v5 .avb-t { height: 10px; }
+  .v5 .avb-t.mine { background: var(--gray-200); }
+  .v5 .avb-t.avg { height: 6px; background: #ededea; }
+  .v5 .avb-t.avg .avb-f { background: #c4c2bb; }
+  </style>
+</head>
+<body class="notranslate">
+<div class="rv-stage">
+
+  <div class="rv-intro">
+    <h1>「이게 평균이다」 를 세로선 하나로는 못 말한다</h1>
+    <p>지금 막대 위의 얇은 세로선은 <b>재질이 막대와 다르다</b>. 굵고 둥근 덩어리 옆에 선 하나가
+      서 있으면 같은 자로 잰 두 값이 아니라 「막대 + 눈금자」 로 읽히고, 내 초록이 그 선을 지나가면
+      이번엔 <b>막대에 난 금</b>처럼 보인다. 무엇보다 선은 길이가 없어서, 내가 얼마나 뒤에 있는지가
+      한눈에 안 잡힌다. 아래 다섯 안은 전부 <b>평균도 길이로 말하게</b> 한 것이다.
+      각 안을 두 번씩 그렸다 — <b>지금 케이스</b>(다섯 항목 모두 평균 아래)와
+      <b>넘었을 때</b>(정확성·유창성·듣기가 평균 위). 두 번째 줄에서 안들이 갈린다.</p>
+  </div>
+
+  <!-- 안들을 JS 로 찍는다. 다섯 안 × 두 케이스 = 열 벌이라, 손으로 쓰면
+       값 하나 바꿀 때마다 열 군데를 고쳐야 한다. -->
+  <div class="rv-out"></div>
+
+  <div class="rv-intro rv-end">
+    <h1>고른다면 — ① 그림자 막대, 다음이 ③ 핀</h1>
+    <p><b>①</b> 은 평균이 「회색 알약」 이 되어 내 초록을 품는다. 다섯 줄이 전부 회색 안에 들어
+      있으면 아직 평균 아래고, 초록이 회색 밖으로 나오면 넘은 것이다 — 색도 범례도 읽지 않고
+      모양만으로 판정된다. 레이더 아래에 붙어도 조용하다.<br>
+      <b>③</b> 은 회색 점이 범례 그대로라 「이게 평균」 이 가장 빨리 설명되지만, 손잡이처럼 생겨서
+      끌어 보려는 손이 나올 수 있다.<br>
+      <b>④</b> 는 위 레이더의 점선과 한 몸이 되는 게 장점인데, 점선 캡슐 다섯 개가 나란히 서면
+      화면이 조금 시끄럽다. <b>⑤</b> 는 가장 정직하지만 다섯 줄이 열 줄이 되어 카드가 길어지고,
+      <b>②</b> 는 지금 그림에서 가장 적게 바꾸는 안이다(선을 흰 홈으로만 바꾼다).</p>
+  </div>
+
+</div>
+
+<script>
+(function () {
+  var AREAS = [
+    { k: "acc",  n: "정확성" },
+    { k: "voc",  n: "어휘"   },
+    { k: "flu",  n: "유창성" },
+    { k: "pron", n: "발음"   },
+    { k: "lis",  n: "듣기"   }
+  ];
+  var AVG = { acc: 3.8, voc: 4.4, flu: 2.9, pron: 2.3, lis: 3.4 };
+
+  /* 두 케이스. 지금 케이스는 라이브 화면 그대로 다섯 항목 Lv.2 다. */
+  var CASES = [
+    { c: "지금 케이스 · 다섯 항목 모두 Lv.2", v: { acc: 2, voc: 2, flu: 2, pron: 2, lis: 2 } },
+    { c: "넘었을 때 · 정확성 5 · 어휘 3 · 유창성 6 · 발음 2 · 듣기 4", v: { acc: 5, voc: 3, flu: 6, pron: 2, lis: 4 } }
+  ];
+
+  function pct(v) { return Math.max(0, Math.min(10, v)) * 10; }
+
+  /* 안마다 트랙 안에 들어가는 조각만 다르다 */
+  var VARIANTS = [
+    {
+      id: "v0", t: "지금 · 세로 눈금 (비교용)",
+      d: "라이브 리포트에 들어가 있는 그림. 위 케이스에서는 트랙 위의 눈금자처럼 보이고, 아래 케이스처럼 초록이 눈금을 지나가면 막대에 난 금처럼 보인다.",
+      lg: "gt",
+      row: function (a, v) {
+        return '<i class="avb-f" style="width:' + pct(v) + '%"></i>' +
+               '<b class="avb-tick" style="left:' + pct(AVG[a.k]) + '%"></b>';
+      }
+    },
+    {
+      id: "v1", t: "① 그림자 막대",
+      d: "평균이 내 막대 뒤에 조금 더 굵게 눕는다. 초록이 넘어가도 회색 테두리가 위아래로 남아 사라지지 않는다.",
+      lg: "g",
+      row: function (a, v) {
+        return '<span class="avb-rail"></span>' +
+               '<span class="avb-ghost" style="width:' + pct(AVG[a.k]) + '%"></span>' +
+               '<i class="avb-f" style="width:' + pct(v) + '%"></i>';
+      }
+    },
+    {
+      id: "v2", t: "② 홈",
+      d: "평균 자리에서 트랙을 흰 홈으로 한 번 끊는다. 얹은 선이 아니라 파인 자리라 초록 위에서도 그대로 읽힌다.",
+      lg: "g",
+      row: function (a, v) {
+        return '<i class="avb-f" style="width:' + pct(v) + '%"></i>' +
+               '<b class="avb-notch" style="left:' + pct(AVG[a.k]) + '%"></b>';
+      }
+    },
+    {
+      id: "v3", t: "③ 핀",
+      d: "범례의 회색 점이 그대로 트랙 위로 내려온다. 흰 테 덕에 초록 위에서도 떠 보이고, 다섯 점이 그리는 선이 평균의 기울기다.",
+      lg: "gp",
+      cap: true,
+      row: function (a, v, i) {
+        return '<i class="avb-f" style="width:' + pct(v) + '%"></i>' +
+               '<b class="avb-pin" style="left:' + pct(AVG[a.k]) + '%">' +
+               (i === 0 ? '<em class="avb-cap">평균</em>' : '') + '</b>';
+      }
+    },
+    {
+      id: "v4", t: "④ 점선 윤곽",
+      d: "위 레이더가 평균을 점선으로 그린다. 막대도 같은 재질로 말하면 두 그림이 한 문장이 된다.",
+      lg: "gd",
+      row: function (a, v) {
+        return '<span class="avb-rail"></span>' +
+               '<span class="avb-ring" style="width:' + pct(AVG[a.k]) + '%"></span>' +
+               '<i class="avb-f" style="width:' + pct(v) + '%"></i>';
+      }
+    },
+    {
+      id: "v5", t: "⑤ 아래 레일",
+      d: "두 막대를 위아래로 눕혀 길이를 그대로 견준다. 가장 정직하지만 다섯 줄이 열 줄로 보인다.",
+      lg: "g",
+      pair: true
+    }
+  ];
+
+  var LEGEND = {
+    gt: '<span><i></i>내 레벨</span><span><i class="gt"></i>포도 수강생 평균</span>',
+    g:  '<span><i></i>내 레벨</span><span><i class="g"></i>포도 수강생 평균</span>',
+    gd: '<span><i></i>내 레벨</span><span><i class="gd"></i>포도 수강생 평균</span>',
+    gp: '<span><i></i>내 레벨</span><span><i class="gp"></i>포도 수강생 평균</span>'
+  };
+
+  function bars(vr, vals) {
+    var h = '<div class="avbars">';
+    AREAS.forEach(function (a, i) {
+      h += '<div class="avb"><span class="avb-n">' + a.n + '</span>';
+      if (vr.pair) {
+        h += '<span class="avb-pair">' +
+               '<span class="avb-t mine"><i class="avb-f" style="width:' + pct(vals[a.k]) + '%"></i></span>' +
+               '<span class="avb-t avg"><i class="avb-f" style="width:' + pct(AVG[a.k]) + '%"></i></span>' +
+             '</span>';
+      } else {
+        h += '<span class="avb-t">' + vr.row(a, vals[a.k], i) + '</span>';
+      }
+      h += '</div>';
+    });
+    return h + '</div>';
+  }
+
+  var out = document.querySelector(".rv-out"), html = "";
+  VARIANTS.forEach(function (vr) {
+    html += '<div class="vlab"><b>' + vr.t + '</b><span>' + vr.d + '</span></div>' +
+            '<div class="av-card ' + vr.id + '">' +
+              '<h3 class="rsec-h">항목별 진단</h3>' +
+              '<div class="av-legend">' + LEGEND[vr.lg] + '</div>';
+    CASES.forEach(function (c) {
+      html += '<p class="av-case">' + c.c + '</p>' + bars(vr, c.v);
+    });
+    html += '</div>';
+  });
+  out.innerHTML = html;
+})();
+</script>
+</body>
+</html>

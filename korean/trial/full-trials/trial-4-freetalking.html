@@ -495,36 +495,43 @@
         <div class="axtip"><h4><img src="../assets/report-icons/crown.svg" alt="">체험레슨 코멘트</h4><p></p></div>
       </div>
 
-      <!-- ③ 원하는 레벨까지 · 주당 횟수를 움직이면 기간이 따라 바뀐다.
-           앞의 「학습 페이스」 장이 정한 값으로 시작하지만, 여기서 끌어 보는 게
-           본론이다 — 「주 3회면 5개월, 주 6회면 3개월」 을 손으로 보여 주는 자리라
-           숫자를 말로 설명할 필요가 없다. 슬라이더는 공유된다: 튜터가 끌면
-           학습자 화면의 개월 수도 같이 움직여야 대화가 성립한다. -->
-      <div class="rsec">
-        <h3 class="rsec-h">원하는 레벨까지<small>주당 횟수를 조절하면 예상 기간을 알려드려요.</small></h3>
-        <div class="freq">
-          <p class="freq-h">일주일에 <b class="freq-n">3</b><span>/7</span></p>
-          <div class="freq-slot">
-            <span class="freq-bub">3회</span>
-            <input class="freq-range" type="range" min="1" max="7" step="1" value="3"
-                   data-sync-id="plan-freq" aria-label="일주일에 몇 번">
-            <span class="freq-ends"><i>천천히</i><i>빠르게</i></span>
+      <!-- ③ 이대로만 따라오면 돼요 · 기간과 길을 한 덩어리로
+           전에는 「원하는 레벨까지」(개월·페이스)와 「목표까지 가는 길」(로드맵)이
+           카드 두 장이었다. 둘은 같은 계획을 두 번 말하는 것이라 — 슬라이더를
+           끌면 아래 카드의 길이 다시 그려지는데 그 인과가 카드 경계에서 끊겼다.
+           네 칸(개월 · 레슨 · 슬라이더 · 길)이 가로·세로 모두 3 이음매로 붙고
+           바깥 네 귀만 12 로 남아, 한 판에서 잘려 나온 조각으로 읽힌다.
+           코스 카드는 이 덩어리에 속하지 않는다 — 길이 어디까지인지를 말하는
+           칸이 아니라, 지금 선 마디가 무슨 코스인지를 따로 펴는 카드다.
+           원안: trial/_experiments/trial-report-plan-merge-variations.html ① -->
+      <div class="rsec pm-card" data-sync-id="plan-roadstep" data-sync-kind="roadstep">
+        <h3 class="rsec-h">이대로만 따라오면 돼요</h3>
+
+        <div class="pm-fuse">
+          <div class="tiles">
+            <div class="tile">
+              <span class="tile-k">목표 달성까지</span>
+              <span class="tile-v"><img src="../assets/report-icons/cal.svg" alt=""><b class="eta">—</b></span>
+            </div>
+            <div class="tile">
+              <span class="tile-k">예상 레슨</span>
+              <span class="tile-v"><img src="../assets/report-icons/course.svg" alt=""><b>약 <span class="need">—</span>회</b></span>
+            </div>
+          </div>
+
+          <!-- 레일 · 말풍선을 떼고 눈금 일곱을 깔았다. 슬라이더가 길 바로 위에
+               붙어 있어 「이 지도의 손잡이」 로 읽힌다. -->
+          <div class="freq pm-freq pm-rail pm-inline">
+            <p class="freq-h">매주 <b class="freq-n">3</b>회</p>
+            <div class="freq-slot">
+              <span class="pm-ticks"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+              <input class="freq-range" type="range" min="1" max="7" step="1" value="3"
+                     data-sync-id="plan-freq" aria-label="매주 몇 번">
+            </div>
           </div>
         </div>
-        <div class="tiles">
-          <div class="tile"><span class="tile-k">목표 달성까지</span><span class="tile-v"><img src="../assets/report-icons/cal.svg" alt=""><b class="eta">—</b></span></div>
-          <div class="tile"><span class="tile-k">1회 레슨</span><span class="tile-v"><img src="../assets/report-icons/clock.svg" alt=""><b>25분</b></span></div>
-        </div>
-        <a class="rep-jump rj-course" href="#p-goal"><span class="rj-b"><span class="rj-t">—</span><span class="rj-s">눌러서 고르러 가기</span></span></a>
-      </div>
 
-      <!-- ④ 커리큘럼 로드맵 · 코스를 한 칸씩 밟아 본다
-           게이지가 채워지면서 그때 무엇을 하게 되는지가 아래에서 바뀐다.
-           「3개월이면 어디까지요?」 에 말이 아니라 화면으로 답하는 자리라,
-           칸을 넘기는 것 자체가 설명이 된다. 넘긴 칸은 공유된다 — 튜터만
-           앞서 가면 학습자는 다른 이야기를 보고 있게 된다. -->
-      <div class="rsec road-card" data-sync-id="plan-roadstep" data-sync-kind="roadstep">
-        <h3 class="rsec-h"><span class="rc-t">목표까지 가는 길</span></h3>
+        <a class="rep-jump rj-course" href="#p-goal"><span class="rj-b"><span class="rj-t">—</span><span class="rj-s">눌러서 고르러 가기</span></span></a>
 
         <!-- 코스 커버 여섯 장 · 마디마다 갈아 끼울 그림을 마크업에 한 번씩 적어
              둔다. 패키저는 마크업의 src 만 번들·평탄화하므로, JS 가 경로를
@@ -538,22 +545,21 @@
           <img data-cov="free" src="../assets/art/cov/cov-free.png" alt="">
         </div>
 
-        <div class="road">
-          <span class="road-k">추천 코스</span>
-          <!-- Figma 프레임은 262×116.34 지만 끝 점의 테두리와 「N개월」 라벨이 그
-               밖으로 8 남짓 삐져나온다(디자인 파일은 프레임을 자르지 않는다).
-               SVG 는 자르므로 그만큼 넓혀 둔다 — 안 그러면 도착점이 반만 보인다. -->
-          <svg class="road-svg" viewBox="0 0 270 118" role="img" aria-label="지금부터 목표까지의 코스 길"></svg>
-        </div>
+        <div class="road-card pm-road">
+          <div class="road">
+            <span class="road-k">추천 코스</span>
+            <svg class="road-svg" viewBox="0 0 270 118" role="img" aria-label="지금부터 목표까지의 코스 길"></svg>
+          </div>
 
-        <div class="curli"></div>
+          <div class="curli"></div>
 
-        <!-- 앞뒤로만 움직인다. 로드맵은 순서가 전부라, 목록으로 흩어 놓으면
-             「그다음」 이 사라진다. -->
-        <div class="rc-nav">
-          <button class="rc-btn rc-prev" type="button">← 이전</button>
-          <span class="rc-dots"></span>
-          <button class="rc-btn rc-next" type="button">다음 →</button>
+          <!-- 앞뒤로만 움직인다. 로드맵은 순서가 전부라, 목록으로 흩어 놓으면
+               「그다음」 이 사라진다. -->
+          <div class="rc-nav">
+            <button class="rc-btn rc-prev" type="button">← 이전</button>
+            <span class="rc-dots"></span>
+            <button class="rc-btn rc-next" type="button">다음 →</button>
+          </div>
         </div>
       </div>
     </div>
