@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <title>리포트 ② 평균 · 점선을 막대에 딱 겹치기 — PODO 韓国語</title>
+  <link rel="stylesheet" href="../../runtime/css/lesson-card.css">
+  <link rel="stylesheet" href="../../runtime/css/trial.css">
+  <style>
+  /* ================================================================
+     ④ 점선 윤곽 · 「그릇」 이 아니라 「같은 자리」
+
+     앞 장에서는 점선을 초록보다 크게 만들어 감쌌다(그릇). 그러니까 점선이
+     한 겹 더 생겨서 줄이 두꺼워지고, 초록이 그 안에 갇힌 별개의 물건처럼
+     보였다. 여기서는 반대로 간다 —
+
+       점선과 초록과 트랙이 전부 같은 높이 12px, 같은 자리에 겹친다.
+       점선은 트랙 위에 얹힌 한 겹이 아니라, 트랙의 0→평균 구간을
+       그대로 따라 그린 테두리다.
+
+     그러면 평균 아래일 때 그림이 아주 조용해진다: 회색 트랙 위에 초록 알약이
+     눕고, 점선이 그 알약의 위아래 선을 그대로 지나 평균 자리까지 갔다가
+     둥글게 닫힌다. 줄 높이는 라이브와 똑같이 12px 그대로다.
+
+     갈리는 건 초록이 평균을 지날 때 「겹친 자리에서 점선을 어떻게 볼까」 하나다.
+       ① 회색 그대로   — 초록 위로도 같은 회색 점선이 지나간다.
+       ② 흰 점선       — 겹친 구간만 흰 점선으로 바뀐다(초록 위에서 대비 유지).
+       ③ 진한 초록     — 겹친 구간은 진한 초록 점선. 같은 색 안에서만 말한다.
+       ④ 초록이 덮는다 — 겹친 구간의 점선을 지운다. 가장 조용하지만,
+                          많이 넘으면 평균이 어디였는지 사라진다.
+
+     세 케이스로 그린다 — 지금(다 평균 아래) · 조금 넘었을 때 · 많이 넘었을 때.
+     값은 라이브와 같다. 사다리 10칸, 평균은
+     정확성 3.8 · 어휘 4.4 · 유창성 2.9 · 발음 2.3 · 듣기 3.4.
+     ================================================================ */
+
+  body { background: #f4f4f2; }
+  .rv-stage { max-width: 480px; margin: 0 auto; padding: 24px 0 90px; }
+
+  .rv-intro { margin: 0 20px; padding: 18px 20px; border-radius: 14px; background: var(--ink); color: #fff; }
+  .rv-intro h1 { margin: 0; font-size: 15px; font-weight: 900; }
+  .rv-intro p { margin: 8px 0 0; font-size: 12px; font-weight: 600; line-height: 1.55; color: rgba(255,255,255,.62); word-break: keep-all; }
+  .rv-intro b { color: #fff; }
+  .rv-end { margin-top: 40px; }
+
+  .vlab { margin: 34px 20px 0; }
+  .vlab b { display: block; font-size: 15px; font-weight: 900; color: var(--ink); }
+  .vlab span { display: block; margin-top: 3px; font-size: 12px; font-weight: 600; color: #8a8a85; line-height: 1.5; word-break: keep-all; }
+
+  .av-card {
+    margin: 10px 20px 0; padding: 18px 16px 20px; border-radius: 20px;
+    background: #fff; border: 1px solid var(--green-500);
+  }
+  .av-card .rsec-h { margin: 0 0 4px; font-size: 18px; font-weight: 700; line-height: 26px; }
+  .av-legend { display: flex; align-items: center; gap: 16px; margin: 0 0 14px 4px; }
+  .av-legend span { display: flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 500; }
+  .av-legend span + span { color: var(--gray-400); }
+  .av-legend i { flex: none; width: 4px; height: 4px; border-radius: 50%; background: var(--green-500); }
+  .av-legend .gd { width: 14px; height: 0; border-radius: 0; border-top: 2px dashed #b4b4b0; background: none; }
+
+  .av-case { margin: 0 0 6px 4px; font-size: 11px; font-weight: 800; color: #a9a8a2; letter-spacing: -.01em; }
+  .av-case + .avbars { margin-bottom: 18px; }
+  .avbars:last-child { margin-bottom: 0; }
+
+  /* ================================================================
+     공통 골격 — 라이브(.axbars/.axb) 치수 그대로다. 라벨 52 · 트랙 12 ·
+     줄 간 8. 점선이 한 겹 더 얹히지 않으므로 줄 높이가 늘지 않는다.
+     ================================================================ */
+  .avbars { display: grid; gap: 8px; padding: 0 4px; }
+  .avb { display: flex; align-items: center; gap: 8px; }
+  .avb-n { flex: none; width: 52px; font-size: 14px; font-weight: 800; letter-spacing: -.02em; }
+  .avb-t { position: relative; flex: 1 1 auto; height: 12px; border-radius: 999px; background: var(--gray-200); }
+  .avb-f { position: absolute; inset: 0 auto 0 0; z-index: 1; border-radius: 999px; background: var(--green-500); }
+
+  /* 평균 테두리 — 트랙과 완전히 같은 높이. box-sizing: border-box 라
+     2px 테두리가 12px 안쪽에 그려져서, 막대가 두꺼워지지 않는다. */
+  .avb-ring {
+    position: absolute; inset: 0 auto 0 0; z-index: 2; box-sizing: border-box;
+    border: 2px dashed #b4b4b0; border-radius: 999px; background: none;
+  }
+  /* 초록과 겹친 구간만 다시 칠하는 층. 초록 길이만큼 잘라 두고, 그 안에
+     같은 테두리를 한 번 더 그린다 — 두 테두리가 픽셀 단위로 겹친다. */
+  .avb-clip { position: absolute; inset: 0 auto 0 0; z-index: 3; overflow: hidden; }
+  .avb-clip .avb-ring { z-index: 0; }
+
+  .v2 .avb-clip .avb-ring { border-color: rgba(255,255,255,.92); }
+  .v3 .avb-clip .avb-ring { border-color: #4b8f22; }
+  /* ④⑤ 는 점선을 초록 아래로 내린다. 같은 색으로 덧칠하는 것보다 깨끗하다 —
+     덧칠하면 점선의 안티에일리어싱이 초록 위에 실금으로 남는다. */
+  .v4 .avb-ring, .v5 .avb-ring { z-index: 0; }
+  .v4 .avb-clip, .v5 .avb-clip { display: none; }
+
+  /* ⑤ 는 초록에 덮인 자리에 평균이 서 있던 마디만 하나 남긴다 — 위아래
+     점선(= 텍스처)은 지우고 「여기까지가 평균」 이라는 정보만 남는다. */
+  .v5 .avb-cap {
+    position: absolute; top: 0; bottom: 0; z-index: 4; margin-left: -1px;
+    border-left: 2px dashed #3f7d1a;
+  }
+  </style>
+</head>
+<body class="notranslate">
+<div class="rv-stage">
+
+  <div class="rv-intro">
+    <h1>점선을 막대에 딱 겹치기 — 높이도 자리도 같게</h1>
+    <p>앞 장의 점선은 초록을 <b>감싸는 그릇</b>이었다. 그래서 한 겹이 더 생기고 줄이 두꺼워졌다.
+      여기서는 점선·초록·트랙이 <b>모두 같은 12px, 같은 자리</b>에 겹친다 — 점선은 트랙의
+      0→평균 구간을 그대로 따라 그린 테두리다. 줄 높이는 라이브와 똑같다.
+      네 안은 <b>초록이 평균을 지날 때 겹친 자리를 어떻게 볼까</b>만 다르다.
+      세 케이스로 그렸다 — 지금(다 평균 아래) · 조금 넘었을 때 · 많이 넘었을 때.</p>
+  </div>
+
+  <div class="rv-out"></div>
+
+  <div class="rv-intro rv-end">
+    <h1>고른다면 — ⑤ 덮되 마디만, 그다음이 ③</h1>
+    <p>다섯 안 모두 <b>평균 아래 케이스에서는 완전히 같은 그림</b>이다 — 지금 리포트가 딱 그
+      케이스라, 실제로 갈리는 건 학생이 평균을 넘겼을 때뿐이다.<br>
+      <b>⑤</b> 는 겹친 자리에서 위아래 점선(= 텍스처)만 지우고 평균이 서 있던 <b>마디 하나</b>를
+      남긴다. 초록은 매끈한 알약 그대로고, 「여기까지가 평균」 이라는 정보도 남는다.<br>
+      <b>③</b> 은 겹친 구간이 진한 초록 점선이 된다. 가장 얌전하지만 밝은 화면에서는
+      진한 초록과 초록의 차이가 잘 안 보인다.<br>
+      <b>②</b> 흰 점선은 초록 위에서 제일 또렷한 대신, 다섯 줄이 박음질한 것처럼 보인다.
+      <b>①</b> 회색 그대로는 초록에 회색 실밥이 붙은 것 같고,
+      <b>④</b> 는 가장 조용하지만 <b>넘으면 평균이 통째로 사라진다</b> — 많이 넘은 케이스에서
+      점선의 오른쪽 끝조차 안 보여, 평균이 없는 줄과 구별되지 않는다.</p>
+  </div>
+
+</div>
+
+<script>
+(function () {
+  var AREAS = [
+    { k: "acc",  n: "정확성" },
+    { k: "voc",  n: "어휘"   },
+    { k: "flu",  n: "유창성" },
+    { k: "pron", n: "발음"   },
+    { k: "lis",  n: "듣기"   }
+  ];
+  var AVG = { acc: 3.8, voc: 4.4, flu: 2.9, pron: 2.3, lis: 3.4 };
+
+  var CASES = [
+    { c: "지금 케이스 · 다섯 항목 모두 Lv.2", v: { acc: 2, voc: 2, flu: 2, pron: 2, lis: 2 } },
+    { c: "조금 넘었을 때 · 정확성 5 · 어휘 3 · 유창성 6 · 발음 2 · 듣기 4", v: { acc: 5, voc: 3, flu: 6, pron: 2, lis: 4 } },
+    { c: "많이 넘었을 때 · 정확성 9 · 어휘 8 · 유창성 9 · 발음 2 · 듣기 7", v: { acc: 9, voc: 8, flu: 9, pron: 2, lis: 7 } }
+  ];
+
+  function pct(v) { return Math.max(0, Math.min(10, v)) * 10; }
+
+  var VARIANTS = [
+    { id: "v1", t: "① 회색 그대로",
+      d: "겹친 자리에도 같은 회색 점선이 지나간다. 층을 하나도 더 두지 않는 가장 단순한 안." },
+    { id: "v2", t: "② 흰 점선",
+      d: "초록과 겹친 구간만 흰 점선으로 바뀐다. 트랙 위에서는 회색, 초록 위에서는 흰색 — 어디서든 또렷하다." },
+    { id: "v3", t: "③ 진한 초록",
+      d: "겹친 구간은 진한 초록 점선. 초록 안에서 색만 한 단계 내려가 가장 얌전하다." },
+    { id: "v4", t: "④ 초록이 덮는다",
+      d: "겹친 구간의 점선을 지운다. 평균 아래일 때는 가장 깨끗하지만, 많이 넘으면 평균이 어디였는지 사라진다." },
+    { id: "v5", t: "⑤ 덮되, 마디만 남긴다",
+      d: "④ 처럼 덮되 평균이 서 있던 자리에만 점선 마디를 세로로 남긴다. 위아래 점선은 지우고 「여기까지가 평균」 만 남는다." }
+  ];
+
+  /* 한 줄의 층 순서 — 트랙 → 초록 → 회색 점선 → (겹친 구간만 다시 칠한 점선).
+     마지막 층은 초록 길이만큼 잘라 두고, 그 안쪽 점선의 너비를 「평균이
+     초록 길이의 몇 %인가」 로 환산해 넣는다. 두 점선이 같은 자리에 놓인다. */
+  function row(a, v) {
+    var m = pct(v), g = pct(AVG[a.k]);
+    var h = '<i class="avb-f" style="width:' + m + '%"></i>' +
+            '<span class="avb-ring" style="width:' + g + '%"></span>';
+    if (m > 0) {
+      h += '<span class="avb-clip" style="width:' + m + '%">' +
+             '<span class="avb-ring" style="width:' + (g / m * 100) + '%"></span>' +
+           '</span>';
+    }
+    /* ⑤ 전용 — 초록이 평균을 지났을 때만 마디를 세운다. 평균 아래면
+       점선 캡슐의 오른쪽 끝이 이미 그 자리에 있어 마디가 겹으로 선다. */
+    if (m > g) h += '<b class="avb-cap" style="left:' + g + '%"></b>';
+    return h;
+  }
+
+  function bars(vals) {
+    var h = '<div class="avbars">';
+    AREAS.forEach(function (a) {
+      h += '<div class="avb"><span class="avb-n">' + a.n + '</span>' +
+           '<span class="avb-t">' + row(a, vals[a.k]) + '</span></div>';
+    });
+    return h + '</div>';
+  }
+
+  var out = document.querySelector(".rv-out"), html = "";
+  VARIANTS.forEach(function (vr) {
+    html += '<div class="vlab"><b>' + vr.t + '</b><span>' + vr.d + '</span></div>' +
+            '<div class="av-card ' + vr.id + '">' +
+              '<h3 class="rsec-h">항목별 진단</h3>' +
+              '<div class="av-legend"><span><i></i>내 레벨</span>' +
+              '<span><i class="gd"></i>포도 수강생 평균</span></div>';
+    CASES.forEach(function (c) {
+      html += '<p class="av-case">' + c.c + '</p>' + bars(c.v);
+    });
+    html += '</div>';
+  });
+  out.innerHTML = html;
+})();
+</script>
+</body>
+</html>

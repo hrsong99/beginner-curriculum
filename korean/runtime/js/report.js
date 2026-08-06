@@ -161,35 +161,57 @@
   var DONE = { "1": 0, "2": 11, "3": 25, "4": 45, "5": 70,
                "6": 90, "7": 110, "8": 130, "9": 150, "10": 170 };
 
-  // 이름과 순서는 뒤의 「커리큘럼」 장과 같다 — 리포트가 추천한 코스를
-  // 그 장에서 그대로 짚어 설명할 수 있어야 한다.
-  // s   = 그 코스가 뭘 하는 곳인지 한 줄
-  // can = 그 코스를 마치면 할 수 있게 되는 말
-  // ex  = 그 말을 예문 하나로 푼 것
-  /* n = 그 코스의 레슨 수(tracks/ 의 목차 그대로). 핵심 패턴만 n 이 없다 —
+  /* 이름과 순서는 뒤의 「커리큘럼」 장과 같다 — 리포트가 추천한 코스를
+     그 장에서 그대로 짚어 설명할 수 있어야 한다.
+
+     can = 그 코스를 마치면 할 수 있게 되는 일. 카드에서 두 번째로 큰 글자다.
+           「간판이 읽혀요」 처럼 두 마디로 끊으면 짧은 대신 무엇을 읽는다는
+           건지가 빠지므로, 대상까지 넣어 한 문장으로 세운다.
+     art = 그 코스에서 실제로 하는 일 한 장. 설명문 대신 이것이 카드의 가운데를
+           차지한다. 코스가 배우는 일의 모양이 서로 달라 한 틀에 못 담기므로
+           kind 가 셋이다 — han(글자를 조립한다) · pat(틀을 갈아 낀다) ·
+           talk(말을 주고받는다). 그리는 곳은 artHTML().
+
+     n = 그 코스의 레슨 수(tracks/ 의 목차 그대로). 핵심 패턴만 n 이 없다 —
      통째로 떼고 넘어가는 코스가 아니라서, 다음 코스의 입장 바닥까지만 세고
      나머지 과는 그 뒤로도 계속 함께 간다. courseLen() 이 그때그때 잰다. */
   var COURSE = {
-    hangul: { n: 14, t: "한글 읽기",   s: "글자를 소리 내어 읽는 법",
-              can: "간판이 읽혀요",
-              ex: "카페 · 김밥 · 화장실 — 거리에서 보이는 글자를 소리 내어 읽어요" },
-    core:   { t: "핵심 패턴",   s: "하고 싶은 말을 스스로 만드는 법",
-              can: "내 이야기를 말해요",
-              ex: "「저는 일본 사람입니다」처럼, 배운 틀에 내 단어를 넣어 문장을 만들어요" },
-    travel: { n: 40, t: "상황별 · 여행",   s: "가게에서 · 길에서 진짜 쓰는 말",
-              can: "가게에서 말해요",
-              ex: "「혹시 명동역이 어딘지 아세요?」 길을 묻고, 주문하고, 되물어요" },
-    drama:  { n: 40, t: "상황별 · 드라마", s: "좋아하는 드라마의 진짜 대사",
-              can: "자막 없이 들려요",
-              ex: "「우리 어디서 본 적 있지 않아요?」 드라마에 나오는 말이 그대로 들려요" },
-    banmal: { n: 20, t: "상황별 · 반말 수다",   s: "친구에게 쓰는 편한 반말",
-              can: "반말로 수다 떨어요",
-              ex: "「너 지금 어디 가는 거야?」 친구에게 말을 놓고 편하게 이야기해요" },
+    hangul: { n: 14, t: "한글 읽기",
+              can: "거리 간판과 메뉴판을 소리 내어 읽어요",
+              art: { kind: "han",
+                     blocks: [{ c: "ㅋ", v: "ㅏ", s: "카" }, { c: "ㅍ", v: "ㅔ", s: "페" }],
+                     cap: "자음과 모음이 만나 한 글자 — 그래서 「카페」가 읽혀요" } },
+    core:   { t: "핵심 패턴",
+              can: "내 소개와 하루 일을 문장으로 말해요",
+              art: { kind: "pat", pre: "저는", slot: "일본 사람", post: "입니다.",
+                     words: ["학생", "회사원", "요리사"],
+                     cap: "틀은 그대로, 가운데 한 자리만 내 단어로" } },
+    travel: { n: 40, t: "상황별 · 여행",
+              can: "가게에서 주문하고 길을 물어요",
+              art: { kind: "talk",
+                     turns: [["me", "혹시 명동역이 어딘지 아세요?"],
+                             ["", "이쪽으로 쭉 가시면 돼요."]],
+                     cap: "길에서 · 가게에서 진짜 오가는 말을 그대로" } },
+    drama:  { n: 40, t: "상황별 · 드라마",
+              can: "드라마 대사가 자막 없이 들려요",
+              art: { kind: "talk",
+                     turns: [["", "우리 어디서 본 적 있지 않아요?"],
+                             ["me", "아… 저 그 카페에서 봤어요."]],
+                     cap: "드라마에 나온 대사를 그대로 주고받아요" } },
+    banmal: { n: 20, t: "상황별 · 반말 수다",
+              can: "친구에게 말을 놓고 수다 떨어요",
+              art: { kind: "talk",
+                     turns: [["", "너 지금 어디 가는 거야?"],
+                             ["me", "나 편의점. 같이 갈래?"]],
+                     cap: "요를 떼고, 친구에게 하는 말투로" } },
     // 프리토킹은 끝이 없다(주제가 매주 는다). 40 은 「한 번에 이만큼 판다」 는
     // 명목값이지 트랙의 분량이 아니다 — plan-logic.md 에 그렇게 적어 두었다.
-    free:   { n: 40, t: "프리토킹", s: "문법이 아니라 생각을 말하기",
-              can: "이유까지 말해요",
-              ex: "「돈 vs 시간, 하나만 가질 수 있다면?」 생각과 그 이유를 이어서 말해요" }
+    free:   { n: 40, t: "프리토킹",
+              can: "내 생각과 그 이유까지 말해요",
+              art: { kind: "talk",
+                     turns: [["", "돈과 시간, 하나만 가질 수 있다면요?"],
+                             ["me", "저는 시간이요. 돈은 다시 벌 수 있으니까요."]],
+                     cap: "생각 하나에 이유 하나 — 문장을 이어서 말해요" } }
   };
   var CORE_N = 116;                    // 핵심 패턴 전체 과 수
   /* 상황별 커리큘럼의 입장 바닥 — 핵심 몇 과까지 하면 들어갈 수 있는가.
@@ -371,6 +393,19 @@
   /* ---- ② 항목별 진단 · 레이더 + 다섯 줄 ---- */
   var bars = document.querySelector(".axbars");
 
+  /* 초록이 평균을 지났을 때만, 초록에 가려진 점선 캡슐의 「오른쪽 끝」 을 그
+     자리에 남긴다. 곧은 세로선을 세우면 예전 눈금과 같은 모양이라 막대에 난
+     금으로 되읽히므로, 캡슐의 마감을 그대로 쓴다 — 반지름 5 는 막대 높이
+     12px 의 절반에서 테두리 두께를 뺀 값이라, 평균 아래 줄의 둥근 끝과 곡률이
+     같다. 호는 (1,1)→(1,11) 의 반원이고 꼭짓점 x=6 이므로, 왼쪽으로 6px 물려
+     두면 꼭짓점이 평균값 자리에 정확히 선다. */
+  function avgCap(mine, avg) {
+    if (!(mine > avg)) return "";
+    return '<span class="axb-cap" style="left:calc(' + pct(avg) + '% - 6px)">' +
+             '<svg width="8" height="12" viewBox="0 0 8 12" aria-hidden="true">' +
+               '<path d="M1,1 A5,5 0 0 1 1,11"/></svg></span>';
+  }
+
   function renderAspects() {
     growRadar();
     if (!bars) return;
@@ -382,11 +417,14 @@
     AREAS.forEach(function (a) {
       var row = document.createElement("div");
       row.className = "axb";
-      // 평균은 두 번째 막대가 아니라 눈금 하나다 — 막대 둘을 겹쳐 놓으면
-      // 어느 쪽이 내 것인지 매번 범례를 봐야 한다.
+      /* 평균은 두 번째 막대가 아니라, 트랙의 0→평균 구간을 그대로 따라 그린
+         점선 캡슐이다 — 막대와 같은 높이·같은 자리에 겹치므로 줄이 두꺼워지지
+         않고, 그러면서도 평균이 「길이」 로 말해진다. 캡슐은 초록 아래에 깔려
+         덮인 구간을 내주고, 그 대신 avgCap() 이 캡슐의 끝만 남긴다. */
       row.innerHTML = '<span class="axb-n">' + a.n + '</span>' +
-        '<span class="axb-t"><i class="axb-f" style="width:' + pct(areaLv(a.k)) + '%"></i>' +
-        '<b class="axb-avg" style="left:' + pct(AVG[a.k]) + '%"></b></span>';
+        '<span class="axb-t"><b class="axb-avg" style="width:' + pct(AVG[a.k]) + '%"></b>' +
+        '<i class="axb-f" style="width:' + pct(areaLv(a.k)) + '%"></i>' +
+        avgCap(areaLv(a.k), AVG[a.k]) + '</span>';
       bars.appendChild(row);
     });
 
@@ -888,6 +926,60 @@
     return img ? img.getAttribute("src") : "";
   }
 
+  function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;"); }
+
+  /* ---- 코스마다 「그 코스에서 실제로 하는 일」 한 장 ----
+     예문 한 줄로는 코스끼리 구별이 안 됐다 — 셋 다 「이런 말을 해요」 였다.
+     하는 일의 모양이 서로 다르니 그림도 셋이다. 색은 새로 만들지 않는다:
+     자리색은 한글 덱의 것(--c-bg/--v-bg), 갈아 끼우는 자리와 학습자 말풍선은
+     초록 = 「고른 것」 으로, 덱에서 쓰던 뜻 그대로다. */
+  function artHTML(a) {
+    if (a.kind === "han") {
+      return '<div class="sp-han">' + a.blocks.map(function (b) {
+        return '<div class="hbk">' +
+            '<div class="hbk-j"><span class="seat-c">' + b.c + '</span>' +
+              '<span class="seat-v">' + b.v + '</span></div>' +
+            /* 두 자리가 한 글자로 모이는 팔. 좌표는 타일 두 개(34+6+34=74)의 가운데로 모은다 */
+            '<svg class="hbk-arm" viewBox="0 0 74 15" aria-hidden="true">' +
+              '<path d="M17 1 L17 6 Q17 9 21 9 L53 9 Q57 9 57 6 L57 1 M37 9 L37 14"/></svg>' +
+            '<div class="hbk-s seat-lr">' + b.s + '</div>' +
+          '</div>';
+      }).join("") + '</div>';
+    }
+    if (a.kind === "pat") {
+      /* 틀의 앞뒤를 각각 span 으로 세워 줄을 flex 로 만든다 — 줄의 아래 끝이
+         곧 갈아 끼우는 자리의 아래 끝이라, 자리에서 내려오는 줄기가 아래
+         가름대에 정확히 닿는다(테두리를 어림잡아 맞출 필요가 없다).
+
+         가름대는 자리 하나에서 내려와 단어 수만큼 갈라진다. 눈금 자리는
+         단어 칸이 균등 분할이라는 데서 나온다 — n 개면 각 칸의 가운데는
+         (2i+1)/2n 이다. 단어를 하나 더 넣거나 빼도 선이 따라온다.
+
+         가운데 칸에는 눈금을 세우지 않는다. 자리에서 내려온 줄기가 가름대를
+         지나 그대로 그 칸에 닿기 때문이다 — 눈금을 하나 더 세우면 거의 같은
+         자리에 세로줄이 둘 서서, 이어진 선이 아니라 어긋난 선으로 보인다. */
+      var n = a.words.length, half = 50 / n, mid = n % 2 ? (n - 1) / 2 : -1;
+      return '<div class="sp-pat">' +
+          '<div class="pat-line"><span>' + a.pre + '</span>' +
+            '<b class="pat-slot">' + a.slot + '</b>' +
+            '<span>' + a.post + '</span></div>' +
+          '<div class="pat-fan" aria-hidden="true">' +
+            '<i class="pf-bar" style="left:' + half + '%;right:' + half + '%"></i>' +
+            a.words.map(function (w, i) {
+              return i === mid ? ""
+                : '<i class="pf-t" style="left:' + (half * (2 * i + 1)) + '%"></i>';
+            }).join("") +
+          '</div>' +
+          '<div class="pat-words">' +
+            a.words.map(function (w) { return "<span>" + w + "</span>"; }).join("") +
+          '</div>' +
+        '</div>';
+    }
+    return '<div class="sp-talk">' + a.turns.map(function (t) {
+      return '<div class="tk ' + t[0] + '"><p>' + esc(t[1]) + "</p></div>";
+    }).join("") + '</div>';
+  }
+
   function renderCurriculum(animate) {
     if (!curli || !roadCard) return;
     var stops = roadStops();
@@ -908,15 +1000,18 @@
     /* 칸마다 코스 한 장. 마지막 칸만 코스가 아니라 도착이다 — 다다른 레벨과
        그 레벨이면 무엇을 하는지, 그리고 맨 처음 고른 목표와 이유로 닫는다. */
     if (k < STEPS) {
+      /* 읽는 순서는 이름 → 할 수 있게 되는 일 → 그림 → 그림 설명이다.
+         레슨 수는 courseLen() 이 잰다 — 핵심 패턴은 목표에 따라 밟는 분량이
+         달라져서, COURSE.n 을 그대로 쓰면 이 사람의 계획과 어긋난다. */
       curli.innerHTML =
-        '<div class="cli">' +
-          '<div class="cli-h">' +
-            '<img class="cli-ico" src="' + covSrc(key) + '" alt="">' +
-            '<span><b class="cli-t">' + c.t +
-              '<span class="cli-no">' + (k + 1) + " / " + STEPS + '</span></b>' +
-              '<span class="cli-s">' + c.s + '</span></span>' +
-          '</div>' +
-          '<div class="cli-e"><i>✓</i><span><b>' + c.can + '</b><em>' + c.ex + '</em></span></div>' +
+        '<div class="hy"><img class="hy-wm" src="' + covSrc(key) + '" alt="">' +
+          '<div class="hy-h"><b>' + c.t + '</b>' +
+            '<span class="hy-n">' + courseLen(key, stops, k) + '레슨</span>' +
+            '<span class="hy-no">' + (k + 1) + " / " + STEPS + '</span></div>' +
+          '<div class="hy-do">' +
+            '<b class="hy-do-t"><i>✓</i><span>' + c.can + '</span></b></div>' +
+          '<div class="hy-stage">' + artHTML(c.art) + '</div>' +
+          '<div class="hy-cap">' + c.art.cap + '</div>' +
         '</div>';
     } else {
       var lv = g ? g.lv : Math.min(LADDER_STEPS, overall() + 2);
@@ -982,6 +1077,77 @@
     renderCourseCard();
     renderCurriculum();
   }
+
+  /* ================================================================
+     스냅샷 · 이 리포트를 다시 그리는 데 필요한 것만
+     상담이 끝나면 리포트를 백엔드에 남긴다. 여기서 짓는 값이 그대로
+     le_level_test.report_snapshot 에 들어간다 — 규격과 컬럼 대응은
+     trial/report-submit.md, 보내는 일은 report-submit.js 다.
+
+     남기는 것은 **입력뿐이다.** 리포트가 학생에게 보여 주는 것은 거의 전부
+     이 파일이 입력에서 계산해 낸 것이고(레벨 문안·항목 문장·좋아요/아쉬워요·
+     코멘트·기간·코스 순서), 같은 리포트가 앱에서도 열리므로 그쪽도 같은
+     계산을 한다. 결과까지 저장하면 같은 값이 두 곳에 살게 되고, 둘이
+     어긋나는 날 어느 쪽이 맞는지 아무도 모른다.
+
+     그 대신 contentVersion 을 남긴다: 계산의 재료(레벨표·문안·DONE·5개월 바닥)는
+     고쳐지는 것이라, 나중에 다시 그린 리포트가 그날 학생이 본 것과 다를 수 있다.
+     어느 판으로 그린 것인지는 알 수 있어야 한다.
+     ================================================================ */
+  function metaOf(name) {
+    var m = document.querySelector('meta[name="' + name + '"]');
+    return m ? m.getAttribute("content") : null;
+  }
+
+  /* 아직 안 고른 것. 리포트가 반쯤 빈 채로 저장되는 것이 가장 나쁜 결과라
+     — 되살릴 때 무엇이 비었는지 알 수 없다 — 보내는 쪽이 이걸 보고 막는다. */
+  function missing() {
+    var m = [];
+    if (!pick.level) m.push("level");
+    if (!pick.why || !pick.why.length) m.push("why");
+    if (!pick.goal) m.push("goal");
+    AREAS.forEach(function (a) { if (!rated(a.k)) m.push("ax-" + a.k); });
+    return m;
+  }
+
+  function snapshot() {
+    var areas = {};
+    AREAS.forEach(function (a) { areas[a.k] = rated(a.k) ? areaLv(a.k) : null; });
+    return {
+      kind: "podo-korean-trial-report",
+      schemaVersion: 1,
+      capturedAt: new Date().toISOString(),
+      /* 어느 판으로 그린 것인가. 문안과 계산이 이 판에 매여 있다. */
+      deck: {
+        lessonId: metaOf("podo:lesson-id"),
+        contentVersion: metaOf("podo:content-version")
+      },
+      /* 학습자가 고른 것 */
+      answers: {
+        why: (pick.why || []).slice(),
+        goal: pick.goal || null,
+        pace: pick.pace ? Number(pick.pace) : null
+      },
+      /* 튜터가 판정한 것 */
+      assessment: {
+        level: pick.level ? overall() : null,
+        areas: areas
+      },
+      /* 상담 중에 실제로 합의한 페이스. 니즈 장의 pace 에서 시작하지만
+         슬라이더가 진짜 값이라, 둘이 갈릴 수 있어 따로 남긴다. */
+      plan: { perWeek: perWeek() }
+    };
+  }
+
+  /* le_level_test.level_name 칸 하나를 채우려고 연다. 레벨에서 나오는 값이지만
+     표가 이 클로저 안에 있어 백엔드가 스스로 채울 수 없고, 어드민 목록이 읽는
+     칸이라 비워 둘 수도 없다. **리포트를 그리는 데 쓰라고 여는 것이 아니다.** */
+  function levelName() { return pick.level ? LV[String(overall())].name : null; }
+
+  /* 리포트 밖에서 쓸 수 있는 것은 이 셋뿐이다. 레벨표·기간 계산·코스 목록은
+     클로저에 그대로 둔다 — 밖에서 만질 수 있게 열어 두면 계획의 근거가 두 곳이
+     된다. 앱이 리포트를 다시 그릴 때 쓰는 것도 이 파일이어야 한다. */
+  window.podoReport = { snapshot: snapshot, missing: missing, levelName: levelName };
 
   stampDates();
   render();

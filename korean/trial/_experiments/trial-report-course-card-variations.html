@@ -82,19 +82,27 @@
 
   /* ================================================================
      ② 대사 한 줄 · 문장이 카드의 얼굴
-        위에 얇은 머리(그림 26px + 코스 이름 + 몇 번째), 그 아래 문장이
-        20px 로 혼자 선다. 맨 아래 초록 칩 한 줄이 「그래서 뭘 할 수
-        있는데」 를 받는다. 카드에 굵은 글자가 하나뿐인 안.
+        그림은 작아지지 않는다 — 100px 로 커진 채 뒤로 물러나 워터마크가
+        된다(작은 아이콘은 이 안에 하나도 없다). 그 앞에 문장이 20px 로
+        혼자 서고, 맨 아래 초록 칩이 「그래서 뭘 할 수 있는데」 를 받는다.
+        카드에 굵은 글자가 하나뿐인 안.
      ================================================================ */
-  .v2 { padding: 13px 14px 14px; border: 1px solid var(--gray-200); border-radius: 14px; background: #fff; }
-  .v2-h { display: flex; align-items: center; gap: 7px; padding-bottom: 11px; border-bottom: 1px solid var(--gray-200); }
-  .v2-h img { flex: none; width: 26px; height: 26px; }
+  .v2 {
+    position: relative; overflow: hidden; padding: 13px 14px 14px;
+    border: 1px solid var(--gray-200); border-radius: 14px; background: #fff;
+  }
+  .v2-wm {
+    position: absolute; right: -16px; bottom: -14px; width: 112px; height: 112px;
+    opacity: .16; pointer-events: none;
+  }
+  .v2-h { position: relative; display: flex; align-items: center; gap: 7px; padding-bottom: 11px; border-bottom: 1px solid var(--gray-200); }
   .v2-h b { font-size: 13px; font-weight: 800; letter-spacing: -.02em; }
   .v2-h span { margin-left: auto; font-size: 11.5px; font-weight: 700; color: var(--gray-400); }
-  .v2-say { margin-top: 13px; font-size: 20px; font-weight: 800; line-height: 1.4; letter-spacing: -.035em; word-break: keep-all; }
+  .v2-say { position: relative; margin-top: 13px; padding-right: 56px; font-size: 20px; font-weight: 800; line-height: 1.4; letter-spacing: -.035em; word-break: keep-all; }
   .v2-say i { font-style: normal; color: var(--green-500); }
-  .v2-s { margin-top: 6px; font-size: 13px; font-weight: 600; color: var(--gray-500); word-break: keep-all; }
+  .v2-s { position: relative; margin-top: 6px; font-size: 13px; font-weight: 600; color: var(--gray-500); word-break: keep-all; }
   .v2-can {
+    position: relative;
     display: inline-flex; align-items: center; gap: 6px; margin-top: 13px;
     padding: 7px 12px 7px 9px; border-radius: 999px; background: var(--green-100);
     font-size: 13px; font-weight: 800; color: #3f7d1c; letter-spacing: -.02em;
@@ -112,11 +120,16 @@
         말이 오가는 코스만 말풍선이 된다.
      ================================================================ */
   .v3 { padding: 12px 12px 14px; border: 1px solid var(--gray-200); border-radius: 14px; background: #fff; }
-  .v3-h { display: flex; align-items: center; gap: 8px; }
-  .v3-h img { flex: none; width: 34px; height: 34px; }
-  .v3-h b { display: block; font-size: 14.5px; font-weight: 800; letter-spacing: -.02em; }
-  .v3-h em { display: block; margin-top: 1px; font-style: normal; font-size: 12.5px; font-weight: 600; color: var(--gray-500); }
-  .v3-h span { margin-left: auto; flex: none; font-size: 11.5px; font-weight: 700; color: var(--gray-400); }
+  .v3-h { display: flex; align-items: center; gap: 10px; }
+  .v3-th {
+    flex: none; display: grid; place-items: center; width: 50px; height: 50px;
+    border-radius: 12px; background: var(--green-100);
+  }
+  .v3-th img { width: 38px; height: 38px; }
+  .v3-txt { flex: 1 1 auto; min-width: 0; }
+  .v3-h b { display: block; font-size: 15px; font-weight: 800; letter-spacing: -.02em; }
+  .v3-h em { display: block; margin-top: 1px; font-style: normal; font-size: 12.5px; font-weight: 600; color: var(--gray-500); word-break: keep-all; }
+  .v3-no { flex: none; align-self: flex-start; font-size: 11.5px; font-weight: 700; color: var(--gray-400); }
   .v3-body { margin-top: 11px; padding: 12px; border-radius: 12px; background: var(--gray-50); }
 
   /* 말풍선 두 턴 · 상대는 왼쪽 흰 칸, 학습자는 오른쪽 연두(덱의 규칙 그대로) */
@@ -172,9 +185,9 @@
   .v4-t { display: flex; align-items: baseline; gap: 6px; }
   .v4-t b { font-size: 14.5px; font-weight: 800; letter-spacing: -.02em; }
   .v4-t span { font-size: 11.5px; font-weight: 700; color: var(--gray-400); }
-  .v4-s { margin-top: 1px; font-size: 12.5px; font-weight: 600; color: var(--gray-500); word-break: keep-all; }
+  .v4-s { display: block; margin-top: 1px; font-size: 12.5px; font-weight: 600; color: var(--gray-500); word-break: keep-all; }
   .v4-say {
-    margin-top: 8px; padding: 9px 11px; border-radius: 10px; background: #fff;
+    display: block; margin-top: 8px; padding: 9px 11px; border-radius: 10px; background: #fff;
     font-size: 14px; font-weight: 800; line-height: 1.4; letter-spacing: -.03em; word-break: keep-all;
   }
   .v4-say em { display: block; margin-top: 3px; font-style: normal; font-size: 12px; font-weight: 600; color: var(--gray-400); }
@@ -205,8 +218,27 @@
     <h1>「목표까지 가는 길」 · 길 아래 코스 카드 네 안</h1>
     <p>지금 카드는 <b>그림이 37px</b> 이라 무슨 그림인지 안 읽히고, 네 줄이 전부 같은 크기라
        눈이 먼저 붙잡을 자리가 없습니다. 네 안은 각각 <b>그림 · 문장 · 장면 · 목록</b> 중
-       하나를 카드의 얼굴로 삼습니다. 이전/다음이 실제로 돕니다 —
-       한글 읽기 → 핵심 패턴 → 상황별·드라마 → 도착.</p>
+       하나를 카드의 얼굴로 삼습니다. 맨 위 ⓪ 가 <b>지금 그대로</b>라 나란히 놓고 보면 됩니다.
+       다섯 장 모두 이전/다음이 실제로 돕니다 — 한글 읽기 → 핵심 패턴 → 상황별·드라마 → 도착.</p>
+  </div>
+
+  <!-- ⓪ 지금 · 비교 기준. 라이브 리포트의 .curli 마크업 그대로다 -->
+  <div class="vlab">
+    <b>⓪ 지금 (비교용)</b>
+    <span>라이브 리포트의 마크업 그대로. 그림 37px, 네 줄이 전부 14px.</span>
+  </div>
+  <div class="section-page cv-frame">
+    <div class="rsec cv-card" data-v="0">
+      <h3 class="rsec-h">목표까지 가는 길</h3>
+      <div class="road cv-road"><span class="road-k">추천 코스</span>
+        <svg class="road-svg" viewBox="0 0 270 118" aria-hidden="true"></svg></div>
+      <div class="cv-slot" style="margin-top:6px"></div>
+      <div class="rc-nav">
+        <button class="rc-btn rc-prev" type="button">← 이전</button>
+        <span class="rc-dots"></span>
+        <button class="rc-btn rc-next" type="button">다음 →</button>
+      </div>
+    </div>
   </div>
 
   <!-- ① -->
@@ -231,7 +263,7 @@
   <!-- ② -->
   <div class="vlab">
     <b>② 대사 한 줄 — 문장을 크게</b>
-    <span>카드에서 굵은 글자는 하나뿐이다. 「이 말을 하게 돼요」 가 20px 로 서고, 그림은 26px 머리로 물러난다.</span>
+    <span>카드에서 굵은 글자는 하나뿐이다. 「이 말을 하게 돼요」 가 20px 로 서고, 그림은 작아지는 대신 112px 워터마크로 뒤에 눕는다.</span>
   </div>
   <div class="section-page cv-frame">
     <div class="rsec cv-card" data-v="2">
@@ -345,7 +377,7 @@
                    [248.879, 86.3438]];
   // 걸음 넷(코스 셋 + 도착)이 점 일곱 중 서는 자리
   var STOP_AT = [0, 2, 4, 6];
-  var STOP_FRAC = [0, 1 / 3, 2 / 3, 1];
+  var STOP_FRAC = [0, 1 / 3, 2 / 3, 1];   // 길을 재고 나면 진짜 비율로 갈아 낀다
   var NS = "http://www.w3.org/2000/svg";
 
   function el(name, attrs) {
@@ -379,6 +411,19 @@
     caps[2].textContent = GOAL.months + "개월";
     caps.forEach(function (t) { g.appendChild(t); });
     svg.appendChild(g);
+    /* 초록이 점에서 정확히 멈추게 — 호가 섞인 경로라 비율을 손으로 못 푼다.
+       report.js measureDots() 와 같은 방법으로 길을 훑어 가장 가까운 표본을
+       고른다(3분의 1 로 어림하면 두 번째 점 앞에서 초록이 끊긴다). */
+    var L = fill.getTotalLength(), N = 400, pts = [], i2;
+    for (i2 = 0; i2 <= N; i2++) pts.push(fill.getPointAtLength(L * i2 / N));
+    STOP_FRAC = STOP_AT.map(function (d) {
+      var best = 0, bd = Infinity, k2;
+      for (k2 = 0; k2 <= N; k2++) {
+        var q = Math.pow(pts[k2].x - ROAD_DOTS[d][0], 2) + Math.pow(pts[k2].y - ROAD_DOTS[d][1], 2);
+        if (q < bd) { bd = q; best = k2; }
+      }
+      return best / N;
+    });
     return { fill: fill, dots: dots };
   }
 
@@ -409,6 +454,17 @@
   }
 
   var DRAW = {
+    /* ⓪ 지금 · trial.css 의 .curli/.cli-* 를 그대로 쓴다 */
+    "0": function (key, k) {
+      var c = COURSE[key];
+      return '<div class="curli"><div class="cli">' +
+          '<div class="cli-h"><img class="cli-ico" src="' + cov(key) + '" alt="">' +
+            '<span><b class="cli-t">' + c.t +
+              '<span class="cli-no">' + (k + 1) + " / " + STEPS + '</span></b>' +
+              '<span class="cli-s">' + c.s + '</span></span></div>' +
+          '<div class="cli-e"><i>✓</i><span><b>' + c.can + '</b><em>' + c.cap + '</em></span></div>' +
+        '</div></div>';
+    },
     /* ① 코스 포스터 */
     "1": function (key, k) {
       var c = COURSE[key];
@@ -424,7 +480,8 @@
     "2": function (key, k) {
       var c = COURSE[key];
       return '<div class="v2">' +
-          '<div class="v2-h"><img src="' + cov(key) + '" alt="">' +
+          '<img class="v2-wm" src="' + cov(key) + '" alt="">' +
+          '<div class="v2-h">' +
             '<b>' + c.t + '</b><span>' + (k + 1) + " / " + STEPS + '</span></div>' +
           '<div class="v2-say"><i>“</i>' + esc(c.say) + '<i>”</i></div>' +
           '<div class="v2-s">' + c.cap + '</div>' +
@@ -447,9 +504,10 @@
         }).join("");
       }
       return '<div class="v3">' +
-          '<div class="v3-h"><img src="' + cov(key) + '" alt="">' +
-            '<span><b>' + c.t + '</b><em>' + c.s + '</em></span>' +
-            '<span>' + (k + 1) + " / " + STEPS + '</span></div>' +
+          '<div class="v3-h">' +
+            '<span class="v3-th"><img src="' + cov(key) + '" alt=""></span>' +
+            '<span class="v3-txt"><b>' + c.t + '</b><em>' + c.s + '</em></span>' +
+            '<span class="v3-no">' + (k + 1) + " / " + STEPS + '</span></div>' +
           '<div class="v3-body">' + body + '</div>' +
           '<div class="v3-cap">' + p.cap + '</div>' +
         '</div>';

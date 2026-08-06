@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <title>리포트 ④ 코스 카드 · ②+③ 섞기 — PODO 韓国語</title>
+  <link rel="stylesheet" href="../../runtime/css/lesson-card.css">
+  <link rel="stylesheet" href="../../runtime/css/trial.css">
+  <style>
+  /* ================================================================
+     ② 의 널찍한 흰 판 + ③ 의 「배우는 것을 그림으로」 를 한 카드로
+
+     무엇을 가져왔나
+       · ② 에서 — 흰 카드, 1px 회색 테, 작은 아이콘 없음. 코스 그림은
+         줄어드는 대신 120px 로 커진 채 뒤에 눕는다. 카드 안이 비어 있어야
+         가운데 놓인 것이 물건으로 보인다.
+       · ③ 에서 — 코스마다 「그 코스에서 실제로 하는 일」 을 그대로 세운다.
+         설명문 대신 그것 하나가 카드의 가운데를 차지한다.
+
+     세 그림을 다시 그렸다 — 전보다 한 겹씩 더 말이 되게
+       한글    칩 넉 장(카페·김밥…)은 「읽는다」 가 아니라 「단어를 안다」 로
+               읽혔다. 이제 자음 + 모음이 한 글자가 되는 조립을 보여 준다:
+               ㅋ ＋ ㅏ → 카, ㅍ ＋ ㅔ → 페. 아래 줄이 곧 「카페」 다.
+               색은 새로 만들지 않았다 — 한글 덱이 쓰는 자리색 그대로다
+               (크림 = 자음, 분홍 = 모음, 합쳐진 글자는 두 자리가 나뉜 판).
+               리포트와 레슨이 같은 색으로 말해야 첫 수업에서 다시 안 배운다.
+       핵심    밑줄만 그어 두면 무엇이 바뀌는 자리인지 안 보였다. 이제 그
+               자리가 초록 칸(＝고른 자리)이 되고, 거기서 점선이 내려와
+               갈아 끼울 단어 셋에 닿는다. 틀은 검정, 바뀌는 곳만 초록.
+       드라마  말풍선은 그대로 두되 숨을 넓혔다. 학습자 쪽은 연두 채움에
+               테두리 없음 — 덱의 규칙 그대로다(말하는 사람은 선택지가 아니다).
+
+     할 수 있게 되는 일이 이름 바로 밑으로 올라왔다
+       전에는 맨 아래 회색 칩이었다. 읽는 순서상 마지막이라 「덤」 으로 보였는데,
+       코스를 사게 만드는 문장은 사실 이것이다 — 이름이 「무엇을 배우나」 라면
+       이 줄은 「그래서 내가 뭘 하게 되나」 이고, 궁금한 쪽은 언제나 뒤쪽이다.
+       문장도 대상을 넣어 다시 썼다: 「간판이 읽혀요」 → 「거리 간판과 메뉴판을
+       소리 내어 읽어요」. 두 마디로 끊으면 짧은 대신 무엇을 읽는다는 건지가 빠진다.
+
+     세 안이 다른 것 — 그 줄을 얼마나 크게 말하느냐뿐
+       Ⓐ 라벨 + 굵은 줄    작은 초록 라벨 「이 코스를 마치면」 + 16px 먹색 굵은 줄.
+       Ⓑ 연두 띠          같은 문장을 연두 띠 위에 ✓ 와 함께. 면으로 결론을 말한다.
+       Ⓒ 결과가 더 크게    이름을 초록 눈금으로 내리고 결과를 18.5px 로 올린다.
+
+     케이스: 지금 Lv.1 · 목표 Lv.5 · K-POP·드라마 · 주 3회
+             → 한글 읽기 → 핵심 패턴 → 상황별·드라마 → 도착(Lv.5)
+     ================================================================ */
+
+  body { background: #f4f4f2; }
+  .rv-stage { max-width: 480px; margin: 0 auto; padding: 24px 0 90px; }
+
+  .rv-intro { margin: 0 20px; padding: 18px 20px; border-radius: 14px; background: var(--ink); color: #fff; }
+  .rv-intro h1 { margin: 0; font-size: 15px; font-weight: 900; }
+  .rv-intro p { margin: 8px 0 0; font-size: 12px; font-weight: 600; line-height: 1.55; color: rgba(255,255,255,.62); word-break: keep-all; }
+  .rv-intro b { color: #fff; }
+
+  .vlab { margin: 34px 20px 0; }
+  .vlab b { display: block; font-size: 15px; font-weight: 900; color: var(--ink); }
+  .vlab span { display: block; margin-top: 3px; font-size: 12px; font-weight: 600; color: #8a8a85; line-height: 1.5; word-break: keep-all; }
+
+  .cv-frame.cv-frame { min-height: 0; margin: 10px 20px 0; padding: 20px 18px 22px; border-radius: 20px; }
+  .cv-frame .rsec { margin-top: 0; }
+  .cv-frame .rsec-h { margin-bottom: 12px; font-size: 18px; font-weight: 700; line-height: 26px; }
+  .cv-frame .road-k { font-size: 16px; font-weight: 700; line-height: 24px; }
+  .cv-road .rd-fill { transition: stroke-dashoffset .45s ease; }
+
+  /* ================================================================
+     카드 · 세 안이 공유하는 껍데기 (②의 흰 판 + 큰 워터마크)
+     ================================================================ */
+  .hy {
+    position: relative; overflow: hidden;
+    border: 1px solid var(--gray-200); border-radius: 16px; background: #fff;
+  }
+  /* 워터마크 · ② 는 글이 왼쪽에 몰려 있어 오른쪽에 빈 골이 있었지만, 여기는
+     그림이 가운데 서므로 골이 없다. 모서리에 또렷하게 두면 「잘린 클래퍼보드」
+     한 조각으로 읽혀 가운데 물건과 싸운다. 그래서 크게 키우고 더 지워
+     모서리 밖으로 절반쯤 내보낸다 — 물건이 아니라 결로 보이는 크기다. */
+  .hy-wm {
+    position: absolute; right: -54px; bottom: -54px; width: 190px; height: 190px;
+    opacity: .07; pointer-events: none;
+  }
+  /* 머리 · 이름과 눈금만. 그림은 여기 없다 — 뒤에 크게 누워 있다 */
+  .hy-h { position: relative; display: flex; align-items: baseline; gap: 7px; padding: 14px 16px 0; }
+  .hy-h b { font-size: 14.5px; font-weight: 800; letter-spacing: -.02em; }
+  .hy-h .hy-n { font-size: 12px; font-weight: 700; color: var(--green-500); }
+  .hy-h .hy-no { margin-left: auto; font-size: 11.5px; font-weight: 700; color: var(--gray-400); }
+  /* 그림이 서는 자리 · 여백이 이 안의 전부다 */
+  .hy-stage {
+    position: relative; display: grid; place-items: center;
+    min-height: 132px; padding: 26px 16px 22px;
+  }
+  .hy-cap {
+    position: relative; padding: 0 16px 16px; text-align: center;
+    font-size: 12.5px; font-weight: 600; color: var(--gray-500); word-break: keep-all;
+  }
+  /* ----------------------------------------------------------------
+     할 수 있게 되는 일 · 카드에서 두 번째로 큰 글자다
+
+     맨 아래 회색 칩이던 것을 이름 바로 밑으로 올렸다. 그 자리에서는
+     읽는 순서상 마지막이라 「덤」 으로 보였는데, 사실 코스를 사게 만드는
+     문장은 이것이다. 이름이 「무엇을 배우나」 라면 이 줄은 「그래서 내가
+     뭘 하게 되나」 이고, 학습자가 궁금한 쪽은 언제나 뒤쪽이다.
+
+     「이 코스를 마치면」 이라는 라벨을 앞에 세워 둔다 — 이 문장이 지금
+     할 수 있는 일이 아니라 코스를 마친 뒤의 일이라는 것을, 시제로
+     짐작하게 두지 않고 말로 못 박는다.
+     ---------------------------------------------------------------- */
+  .hy-do { position: relative; padding: 9px 16px 0; }
+  .hy-do-k {
+    display: block; font-size: 11.5px; font-weight: 700; color: var(--green-500); letter-spacing: -.02em;
+  }
+  .hy-do-t {
+    display: block; margin-top: 2px; font-size: 16px; font-weight: 800; line-height: 1.35;
+    letter-spacing: -.03em; color: var(--ink); word-break: keep-all;
+  }
+  /* Ⓑ · 같은 문장을 연두 띠에 앉힌다. 카드 안에서 어디가 결론인지
+     글자 굵기가 아니라 면으로 말하는 안. */
+  .hy-b .hy-do { margin: 11px 16px 0; padding: 11px 12px; border-radius: 12px; background: var(--green-100); }
+  .hy-b .hy-do-k { color: #4e9422; }
+  .hy-b .hy-do-t { display: flex; align-items: flex-start; gap: 7px; }
+  .hy-b .hy-do-t i {
+    flex: none; display: grid; place-items: center; width: 18px; height: 18px; margin-top: 1px;
+    border-radius: 50%; background: var(--green-500);
+    color: #fff; font-size: 10px; font-style: normal; font-weight: 900;
+  }
+  .hy-b .hy-stage { padding-top: 22px; }
+  /* Ⓒ · 이름을 눈금으로 내리고 결과를 카드에서 가장 큰 줄로 올린다 */
+  .hy-c .hy-h { padding-bottom: 0; }
+  .hy-c .hy-h b { font-size: 12.5px; font-weight: 800; color: var(--green-500); }
+  .hy-c .hy-h .hy-n { color: var(--gray-400); }
+  .hy-c .hy-do { padding-top: 3px; }
+  .hy-c .hy-do-k { display: none; }
+  .hy-c .hy-do-t { font-size: 18.5px; }
+
+  /* ================================================================
+     그림 ① 한글 · 자음 + 모음 = 한 글자
+     자리색은 한글 덱의 것을 그대로 쓴다(trial.css :root 의 --c-bg/--v-bg,
+     그리고 합쳐진 글자는 .seat-lr — 왼쪽 자음·오른쪽 모음으로 나뉜 판).
+     새 색을 만들면 리포트가 레슨과 다른 말을 하게 된다.
+     ================================================================ */
+  /* 두 덩이 사이는 좁게 — 아래 줄이 「카 페」 가 아니라 「카페」 로 읽혀야 한다 */
+  .sp-han { display: flex; align-items: flex-end; gap: 13px; }
+  .hbk { display: grid; justify-items: center; }
+  .hbk-j { display: flex; gap: 6px; }
+  .hbk-j span {
+    display: grid; place-items: center; width: 34px; height: 34px; border-radius: 9px;
+    font-size: 19px; font-weight: 800; letter-spacing: -.02em;
+  }
+  .hbk-j .seat-c { color: var(--c-ink); }
+  .hbk-j .seat-v { color: var(--v-ink); }
+  .hbk-arm { display: block; width: 74px; height: 15px; margin: 3px 0 2px; }
+  .hbk-arm path { stroke: #cfcfc9; stroke-width: 1.6; stroke-linecap: round; fill: none; }
+  .hbk-s {
+    display: grid; place-items: center; width: 56px; height: 56px; border-radius: 13px;
+    font-size: 31px; font-weight: 800; letter-spacing: -.02em; color: var(--ink);
+  }
+
+  /* ================================================================
+     그림 ② 핵심 패턴 · 틀은 그대로, 한 자리만 갈아 낀다
+     바뀌는 자리에만 초록이 간다 — 초록은 이 덱에서 「고른 것」 이라
+     여기서도 뜻이 같다. 나머지 틀은 먹색이다.
+     ================================================================ */
+  .sp-pat { display: grid; justify-items: center; }
+  .pat-line { font-size: 19px; font-weight: 800; letter-spacing: -.03em; color: var(--ink); white-space: nowrap; }
+  .pat-slot {
+    position: relative; display: inline-block; margin: 0 3px; padding: 2px 11px;
+    border: 1.5px solid var(--green-500); border-radius: 9px; background: var(--green-100);
+    color: #4e9422; font-weight: 800;
+  }
+  /* 자리에서 내려오는 점선 — 아래 단어들이 이 칸으로 들어간다는 말 */
+  .pat-slot::after {
+    content: ""; position: absolute; left: 50%; top: 100%; width: 0; height: 15px;
+    border-left: 1.5px dashed var(--green-500); opacity: .55;
+  }
+  .pat-words { display: flex; gap: 6px; margin-top: 24px; }
+  .pat-words span {
+    padding: 6px 12px; border: 1px solid var(--gray-200); border-radius: 999px; background: #fff;
+    font-size: 13px; font-weight: 700; color: var(--gray-500); letter-spacing: -.02em;
+  }
+
+  /* ================================================================
+     그림 ③ 드라마 · 대사 두 턴. 덱의 말풍선 규칙 그대로 —
+     상대는 왼쪽 흰 칸, 학습자는 오른쪽 연두 채움에 테두리 없음
+     (말하는 사람은 고른 것이 아니므로 초록 테를 두르지 않는다).
+     ================================================================ */
+  .sp-talk { width: 100%; }
+  .tk { display: flex; }
+  .tk + .tk { margin-top: 8px; }
+  .tk.me { justify-content: flex-end; }
+  .tk p {
+    max-width: 84%; margin: 0; padding: 10px 13px;
+    border: 1px solid var(--gray-200); border-radius: 16px 16px 16px 5px; background: #fff;
+    font-size: 14.5px; font-weight: 700; line-height: 1.5; letter-spacing: -.02em;
+    color: var(--ink); word-break: keep-all;
+  }
+  .tk.me p { border-color: transparent; border-radius: 16px 16px 5px 16px; background: var(--green-100); }
+
+  /* ---------- 앞뒤 버튼 ---------- */
+  .rc-nav { margin-top: 14px; }
+
+  /* ---------- 도착 · 세 안이 공유한다(라이브와 같은 모양) ---------- */
+  .arv { padding: 12px; border-radius: 14px; background: var(--green-100); }
+  .arv-h { display: flex; align-items: center; gap: 9px; }
+  .arv-lv {
+    flex: none; display: grid; place-items: center; min-width: 46px; height: 40px; padding: 0 9px;
+    border-radius: 10px; background: var(--green-500); color: #fff; font-size: 16px; font-weight: 900;
+  }
+  .arv-h b { display: block; font-size: 15px; font-weight: 800; letter-spacing: -.02em; }
+  .arv-h em { display: block; margin-top: 1px; font-style: normal; font-size: 12.5px; font-weight: 600; color: var(--gray-500); }
+  .arv-goal { margin-top: 10px; padding: 11px 12px; border-radius: 12px; background: var(--green-500); color: #fff; }
+  .arv-goal span { display: block; font-size: 11.5px; font-weight: 700; opacity: .82; }
+  .arv-goal b { display: inline-block; margin-top: 2px; font-size: 15px; font-weight: 800; letter-spacing: -.02em; word-break: keep-all; }
+  .arv-goal em { display: block; margin-top: 5px; font-style: normal; font-size: 12.5px; font-weight: 500; line-height: 1.45; opacity: .9; word-break: keep-all; }
+  </style>
+</head>
+<body>
+
+<div class="rv-stage">
+
+  <div class="rv-intro">
+    <h1>②+③ 섞기 · 할 수 있게 되는 일을 이름 바로 밑으로</h1>
+    <p>맨 아래 회색 칩이던 <b>「그래서 뭘 하게 되나」</b>를 <b>코스 이름 바로 밑</b>으로 올리고
+       카드에서 두 번째로 큰 글자로 세웠습니다. 문장도 대상까지 넣어 다시 썼어요 —
+       「간판이 읽혀요」 → <b>「거리 간판과 메뉴판을 소리 내어 읽어요」</b>.
+       읽는 순서는 셋 다 <b>이름 → 할 수 있게 되는 일 → 그림 → 그림 설명</b>이고,
+       다른 것은 그 두 번째 줄을 얼마나 크게 말하느냐뿐입니다.</p>
+  </div>
+
+  <div class="vlab">
+    <b>Ⓐ 라벨 + 굵은 줄</b>
+    <span>「이 코스를 마치면」 을 작은 초록 라벨로 앞세우고, 그 아래 16px 먹색 굵은 줄. 면은 쓰지 않는다.</span>
+  </div>
+  <div class="section-page cv-frame">
+    <div class="rsec cv-card" data-v="A">
+      <h3 class="rsec-h">목표까지 가는 길</h3>
+      <div class="road cv-road"><span class="road-k">추천 코스</span>
+        <svg class="road-svg" viewBox="0 0 270 118" aria-hidden="true"></svg></div>
+      <div class="cv-slot" style="margin-top:10px"></div>
+      <div class="rc-nav">
+        <button class="rc-btn rc-prev" type="button">← 이전</button>
+        <span class="rc-dots"></span>
+        <button class="rc-btn rc-next" type="button">다음 →</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="vlab">
+    <b>Ⓑ 연두 띠에 앉히기</b>
+    <span>같은 문장을 연두 띠 위에 ✓ 와 함께 올린다. 어디가 결론인지 글자 굵기가 아니라 면으로 말하는 안.</span>
+  </div>
+  <div class="section-page cv-frame">
+    <div class="rsec cv-card" data-v="B">
+      <h3 class="rsec-h">목표까지 가는 길</h3>
+      <div class="road cv-road"><span class="road-k">추천 코스</span>
+        <svg class="road-svg" viewBox="0 0 270 118" aria-hidden="true"></svg></div>
+      <div class="cv-slot" style="margin-top:10px"></div>
+      <div class="rc-nav">
+        <button class="rc-btn rc-prev" type="button">← 이전</button>
+        <span class="rc-dots"></span>
+        <button class="rc-btn rc-next" type="button">다음 →</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="vlab">
+    <b>Ⓒ 결과가 이름보다 크게</b>
+    <span>코스 이름을 초록 눈금으로 내리고, 할 수 있게 되는 일이 카드에서 가장 큰 줄(18.5px)이 된다.</span>
+  </div>
+  <div class="section-page cv-frame">
+    <div class="rsec cv-card" data-v="C">
+      <h3 class="rsec-h">목표까지 가는 길</h3>
+      <div class="road cv-road"><span class="road-k">추천 코스</span>
+        <svg class="road-svg" viewBox="0 0 270 118" aria-hidden="true"></svg></div>
+      <div class="cv-slot" style="margin-top:10px"></div>
+      <div class="rc-nav">
+        <button class="rc-btn rc-prev" type="button">← 이전</button>
+        <span class="rc-dots"></span>
+        <button class="rc-btn rc-next" type="button">다음 →</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---- 코스마다 「그 코스에서 실제로 하는 일」 한 장 ----
+     art = 그림의 종류. 코스가 배우는 일의 모양이 서로 달라서 한 틀로 못 담는다:
+           한글은 글자를 조립하는 일, 핵심은 틀을 갈아 끼우는 일,
+           상황별은 말을 주고받는 일이다. 채택되면 이 셋이 COURSE 에 붙는다. */
+  /* can = 코스를 마치면 할 수 있게 되는 일. 「간판이 읽혀요」 처럼 두 마디로
+     끊으면 짧은 대신 무엇을 읽는다는 건지가 빠진다 — 자리를 위로 올린 김에
+     대상까지 넣어 한 문장으로 세웠다. 카드에서 두 번째로 큰 글자라 한 줄 반
+     안에는 들어와야 한다. */
+  var COURSE = {
+    hangul: {
+      t: "한글 읽기", n: 14, can: "거리 간판과 메뉴판을 소리 내어 읽어요",
+      art: { kind: "han",
+             blocks: [{ c: "ㅋ", v: "ㅏ", s: "카" }, { c: "ㅍ", v: "ㅔ", s: "페" }],
+             cap: "자음과 모음이 만나 한 글자 — 그래서 「카페」가 읽혀요" }
+    },
+    core: {
+      t: "핵심 패턴", n: 71, can: "내 소개와 하루 일을 문장으로 말해요",
+      art: { kind: "pat", pre: "저는", slot: "일본 사람", post: "입니다.",
+             words: ["학생", "회사원", "요리사"],
+             cap: "틀은 그대로, 가운데 한 자리만 내 단어로" }
+    },
+    drama: {
+      t: "상황별 · 드라마", n: 40, can: "드라마 대사가 자막 없이 들려요",
+      art: { kind: "talk",
+             turns: [["", "우리 어디서 본 적 있지 않아요?"],
+                     ["me", "아… 저 그 카페에서 봤어요."]],
+             cap: "드라마에 나온 대사를 그대로 주고받아요" }
+    }
+  };
+  var ORDER = ["hangul", "core", "drama"];
+  var GOAL = { lv: 5, t: "익숙한 주제로 대화 이어가기", months: 5,
+               why: "K-POP·드라마를 자막 없이 즐기는 데까지, 이 순서가 가장 빨라요.",
+               line: "익숙한 주제로 대화를 이어가요", cert: "TOPIK 2급" };
+  var STEPS = ORDER.length;
+
+  function cov(key) { return "../assets/art/cov/cov-" + key + ".png"; }
+  function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;"); }
+
+  /* ---- 길 · report.js 의 ROAD_D / ROAD_DOTS / capPlace 그대로 ---- */
+  var ROAD_D = "M14.06 10.3438H127.409H230.688C240.701 10.3438 248.819 18.4612 248.819 " +
+    "28.4745C248.819 38.4878 240.701 46.6052 230.688 46.6052H131.525H34.1004C23.1269 " +
+    "46.6052 14.2311 55.501 14.2311 66.4745C14.2311 77.448 23.1269 86.3438 34.1004 " +
+    "86.3438H131.525H248.879";
+  var ROAD_DOTS = [[14.06, 10.3438], [127.06, 10.3438], [248.879, 28.4745],
+                   [127.06, 46.6052], [14.1207, 66.4745], [127.06, 86.3438],
+                   [248.879, 86.3438]];
+  var STOP_AT = [0, 2, 4, 6];
+  var STOP_FRAC = [0, 1 / 3, 2 / 3, 1];   // 길을 재고 나면 진짜 비율로 갈아 낀다
+  var NS = "http://www.w3.org/2000/svg";
+
+  function el(name, attrs) {
+    var n = document.createElementNS(NS, name), k;
+    for (k in attrs) if (attrs.hasOwnProperty(k)) n.setAttribute(k, attrs[k]);
+    return n;
+  }
+
+  function buildRoad(svg) {
+    var g = el("g", { transform: "translate(3.4 0)" }), i;
+    var base = { d: ROAD_D, fill: "none", "stroke-width": "12", "stroke-linecap": "round" };
+    g.appendChild(el("path", Object.assign({}, base, { "class": "rd-track" })));
+    var fill = el("path", Object.assign({}, base, {
+      "class": "rd-fill", pathLength: "1", "stroke-dasharray": "1 1", "stroke-dashoffset": "1"
+    }));
+    g.appendChild(fill);
+    var dots = [];
+    for (i = 0; i < ROAD_DOTS.length; i++) {
+      var c = el("circle", { cx: ROAD_DOTS[i][0], cy: ROAD_DOTS[i][1], r: 6, "class": "rd-dot" });
+      g.appendChild(c);
+      dots.push(c);
+    }
+    var caps = [
+      el("text", { x: 14.06, y: 31, "class": "rd-cap start", "text-anchor": "middle" }),
+      el("text", { x: 127.06, y: 70, "class": "rd-cap wp", "text-anchor": "middle" }),
+      el("text", { x: 254.879, y: 112, "class": "rd-cap dest", "text-anchor": "end" })
+    ];
+    caps[0].textContent = "지금";
+    caps[1].textContent = Math.round(GOAL.months / 2) + "개월";
+    caps[2].textContent = GOAL.months + "개월";
+    caps.forEach(function (t) { g.appendChild(t); });
+    svg.appendChild(g);
+    /* 초록이 점에서 정확히 멈추게 — 호가 섞인 경로라 비율을 손으로 못 푼다.
+       report.js measureDots() 와 같은 방법으로 길을 훑어 표본을 고른다. */
+    var L = fill.getTotalLength(), N = 400, pts = [], i2;
+    for (i2 = 0; i2 <= N; i2++) pts.push(fill.getPointAtLength(L * i2 / N));
+    STOP_FRAC = STOP_AT.map(function (d) {
+      var best = 0, bd = Infinity, k2;
+      for (k2 = 0; k2 <= N; k2++) {
+        var q = Math.pow(pts[k2].x - ROAD_DOTS[d][0], 2) + Math.pow(pts[k2].y - ROAD_DOTS[d][1], 2);
+        if (q < bd) { bd = q; best = k2; }
+      }
+      return best / N;
+    });
+    return { fill: fill, dots: dots };
+  }
+
+  function paintRoad(r, step) {
+    r.fill.setAttribute("stroke-dashoffset", (1 - STOP_FRAC[step]).toFixed(4));
+    r.dots.forEach(function (c, i) {
+      var at = STOP_AT.indexOf(i), cls = ["rd-dot"];
+      if (at < 0) cls.push("minor");
+      if (i === STOP_AT[STEPS]) cls.push("goal");
+      if (at >= 0 && at < step) cls.push("done");
+      else if (at < 0 && i < STOP_AT[step]) cls.push("done");
+      if (i === STOP_AT[step]) cls.push("now");
+      c.setAttribute("class", cls.join(" "));
+    });
+  }
+
+  /* ---- 코스마다 다른 그림 한 장 ---- */
+  function artHTML(a) {
+    if (a.kind === "han") {
+      return '<div class="sp sp-han">' + a.blocks.map(function (b) {
+        return '<div class="hbk">' +
+            '<div class="hbk-j"><span class="seat-c">' + b.c + '</span>' +
+              '<span class="seat-v">' + b.v + '</span></div>' +
+            /* 두 자리가 한 글자로 모이는 팔 — 화살표보다 조용하고, 「합쳐진다」 를
+               한 번에 말한다. 좌표는 타일 두 개(34+6+34=74)의 가운데로 모은다. */
+            '<svg class="hbk-arm" viewBox="0 0 74 15" aria-hidden="true">' +
+              '<path d="M17 1 L17 6 Q17 9 21 9 L53 9 Q57 9 57 6 L57 1 M37 9 L37 14"/></svg>' +
+            '<div class="hbk-s seat-lr">' + b.s + '</div>' +
+          '</div>';
+      }).join("") + '</div>';
+    }
+    if (a.kind === "pat") {
+      return '<div class="sp sp-pat">' +
+          '<div class="pat-line">' + a.pre +
+            '<b class="pat-slot">' + a.slot + '</b>' + a.post + '</div>' +
+          '<div class="pat-words">' +
+            a.words.map(function (w) { return "<span>" + w + "</span>"; }).join("") +
+          '</div>' +
+        '</div>';
+    }
+    return '<div class="sp sp-talk">' + a.turns.map(function (t) {
+      return '<div class="tk ' + t[0] + '"><p>' + esc(t[1]) + "</p></div>";
+    }).join("") + '</div>';
+  }
+
+  function arrive() {
+    return '<div class="arv">' +
+        '<div class="arv-h"><span class="arv-lv">Lv.' + GOAL.lv + '</span>' +
+          '<span><b>' + GOAL.line + '</b><em>' + GOAL.cert + '</em></span></div>' +
+        '<div class="arv-goal"><span>' + GOAL.months + '개월 뒤, 목표 도착</span>' +
+          '<b>' + GOAL.t + '</b><em>' + GOAL.why + '</em></div>' +
+      '</div>';
+  }
+
+  /* 세 안의 뼈대는 같다 — 이름 → 할 수 있게 되는 일 → 그림 → 그림 설명.
+     다른 것은 그 두 번째 줄을 얼마나 크게 말하느냐뿐이다. */
+  function card(key, k, cls, doHTML) {
+    var c = COURSE[key];
+    return '<div class="hy ' + cls + '"><img class="hy-wm" src="' + cov(key) + '" alt="">' +
+        '<div class="hy-h"><b>' + c.t + '</b><span class="hy-n">' + c.n + '레슨</span>' +
+          '<span class="hy-no">' + (k + 1) + " / " + STEPS + '</span></div>' +
+        doHTML(c) +
+        '<div class="hy-stage">' + artHTML(c.art) + '</div>' +
+        '<div class="hy-cap">' + c.art.cap + '</div>' +
+      '</div>';
+  }
+
+  var DRAW = {
+    /* Ⓐ 라벨 + 굵은 줄 */
+    A: function (key, k) {
+      return card(key, k, "", function (c) {
+        return '<div class="hy-do"><span class="hy-do-k">이 코스를 마치면</span>' +
+          '<b class="hy-do-t">' + c.can + '</b></div>';
+      });
+    },
+    /* Ⓑ 같은 줄을 연두 띠 위에 */
+    B: function (key, k) {
+      return card(key, k, "hy-b", function (c) {
+        return '<div class="hy-do"><span class="hy-do-k">이 코스를 마치면</span>' +
+          '<b class="hy-do-t"><i>✓</i><span>' + c.can + '</span></b></div>';
+      });
+    },
+    /* Ⓒ 이름은 눈금으로, 결과가 카드에서 가장 큰 줄 */
+    C: function (key, k) {
+      return card(key, k, "hy-c", function (c) {
+        return '<div class="hy-do"><b class="hy-do-t">' + c.can + '</b></div>';
+      });
+    }
+  };
+
+  document.querySelectorAll(".cv-card").forEach(function (card) {
+    var v = card.getAttribute("data-v");
+    var slot = card.querySelector(".cv-slot");
+    var road = buildRoad(card.querySelector(".road-svg"));
+    var step = 0;
+
+    function render() {
+      slot.innerHTML = step < STEPS ? DRAW[v](ORDER[step], step) : arrive();
+      var dots = "", i;
+      for (i = 0; i <= STEPS; i++) dots += "<i" + (i === step ? ' class="on"' : "") + "></i>";
+      card.querySelector(".rc-dots").innerHTML = dots;
+      card.querySelector(".rc-prev").disabled = step <= 0;
+      card.querySelector(".rc-next").disabled = step >= STEPS;
+      paintRoad(road, step);
+    }
+    card.querySelector(".rc-prev").addEventListener("click", function () {
+      if (step > 0) { step--; render(); }
+    });
+    card.querySelector(".rc-next").addEventListener("click", function () {
+      if (step < STEPS) { step++; render(); }
+    });
+    render();
+  });
+})();
+</script>
+
+</body>
+</html>

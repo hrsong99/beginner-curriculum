@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <title>리포트 ② 평균 · ⑤ 마디를 곡선으로 — PODO 韓国語</title>
+  <link rel="stylesheet" href="../../runtime/css/lesson-card.css">
+  <link rel="stylesheet" href="../../runtime/css/trial.css">
+  <style>
+  /* ================================================================
+     ⑤「덮되 마디만 남긴다」의 마디를 곡선으로
+
+     ⑤ 는 초록이 평균을 지나면 그 자리에 점선 마디를 하나 세웠다. 곧은
+     세로선이었는데, 그게 라이브 리포트의 옛 눈금(2px 세로선)과 같은 모양이라
+     「막대에 난 금」 으로 되읽힐 여지가 있었다.
+
+     여기서는 그 마디를 점선 캡슐의 오른쪽 끝 모양 그대로 가져온다 —
+     초록에 덮이지 않았다면 그 자리에 있었을 둥근 마감. 즉 마디는 새로 만든
+     기호가 아니라, 가려진 캡슐의 끝을 그 자리에 그대로 남겨 둔 것이다.
+
+     네 가지를 나란히 둔다
+       직선   (비교용) — ⑤ 그대로. 곧은 세로 점선.
+       A 반원          — 캡슐 끝 그대로. 반지름 5(막대 높이의 절반), 오른쪽 볼록.
+       B 완만한 호     — 같은 방향으로 살짝만 휜다(볼록 약 2px).
+       C 반원 · 흰색   — A 와 같은 모양, 색만 흰색.
+
+     마디의 꼭짓점(가장 볼록한 지점)이 평균값 자리에 선다. 캡슐이 그려질 때의
+     오른쪽 끝점과 정확히 같은 자리라, 평균 아래 → 위로 값이 바뀌어도 마디가
+     좌우로 튀지 않는다.
+
+     세 케이스로 그린다 — 지금(다 평균 아래) · 조금 넘었을 때 · 많이 넘었을 때.
+     값은 라이브와 같다. 사다리 10칸, 평균은
+     정확성 3.8 · 어휘 4.4 · 유창성 2.9 · 발음 2.3 · 듣기 3.4.
+     ================================================================ */
+
+  body { background: #f4f4f2; }
+  .rv-stage { max-width: 480px; margin: 0 auto; padding: 24px 0 90px; }
+
+  .rv-intro { margin: 0 20px; padding: 18px 20px; border-radius: 14px; background: var(--ink); color: #fff; }
+  .rv-intro h1 { margin: 0; font-size: 15px; font-weight: 900; }
+  .rv-intro p { margin: 8px 0 0; font-size: 12px; font-weight: 600; line-height: 1.55; color: rgba(255,255,255,.62); word-break: keep-all; }
+  .rv-intro b { color: #fff; }
+  .rv-end { margin-top: 40px; }
+
+  .vlab { margin: 34px 20px 0; }
+  .vlab b { display: block; font-size: 15px; font-weight: 900; color: var(--ink); }
+  .vlab span { display: block; margin-top: 3px; font-size: 12px; font-weight: 600; color: #8a8a85; line-height: 1.5; word-break: keep-all; }
+
+  .av-card {
+    margin: 10px 20px 0; padding: 18px 16px 20px; border-radius: 20px;
+    background: #fff; border: 1px solid var(--green-500);
+  }
+  .av-card .rsec-h { margin: 0 0 4px; font-size: 18px; font-weight: 700; line-height: 26px; }
+  .av-legend { display: flex; align-items: center; gap: 16px; margin: 0 0 14px 4px; }
+  .av-legend span { display: flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 500; }
+  .av-legend span + span { color: var(--gray-400); }
+  .av-legend i { flex: none; width: 4px; height: 4px; border-radius: 50%; background: var(--green-500); }
+  .av-legend .gd { width: 14px; height: 0; border-radius: 0; border-top: 2px dashed #b4b4b0; background: none; }
+
+  .av-case { margin: 0 0 6px 4px; font-size: 11px; font-weight: 800; color: #a9a8a2; letter-spacing: -.01em; }
+  .av-case + .avbars { margin-bottom: 18px; }
+  .avbars:last-child { margin-bottom: 0; }
+
+  /* 골격은 라이브(.axbars/.axb) 그대로. 라벨 52 · 트랙 12 · 줄 간 8 */
+  .avbars { display: grid; gap: 8px; padding: 0 4px; }
+  .avb { display: flex; align-items: center; gap: 8px; }
+  .avb-n { flex: none; width: 52px; font-size: 14px; font-weight: 800; letter-spacing: -.02em; }
+  .avb-t { position: relative; flex: 1 1 auto; height: 12px; border-radius: 999px; background: var(--gray-200); }
+
+  /* 평균 캡슐은 초록 아래에 깔린다 — 덮인 구간은 초록이 그대로 이긴다 */
+  .avb-ring {
+    position: absolute; inset: 0 auto 0 0; z-index: 0; box-sizing: border-box;
+    border: 2px dashed #b4b4b0; border-radius: 999px; background: none;
+  }
+  .avb-f { position: absolute; inset: 0 auto 0 0; z-index: 1; border-radius: 999px; background: var(--green-500); }
+
+  /* 초록에 덮인 캡슐의 「끝」 만 그 자리에 남긴다 */
+  .avb-cap { position: absolute; top: 0; z-index: 2; }
+  .avb-cap svg { display: block; overflow: visible; }
+  .avb-cap path { fill: none; stroke: #3f7d1a; stroke-width: 2; stroke-dasharray: 3 3; stroke-linecap: butt; }
+  .vc .avb-cap path { stroke: rgba(255,255,255,.95); }
+
+  /* 직선 비교용 */
+  .v0 .avb-cap { bottom: 0; margin-left: -1px; border-left: 2px dashed #3f7d1a; }
+  </style>
+</head>
+<body class="notranslate">
+<div class="rv-stage">
+
+  <div class="rv-intro">
+    <h1>마디를 곡선으로 — 가려진 캡슐의 끝을 그 자리에 남기기</h1>
+    <p>⑤ 의 곧은 세로선은 라이브의 옛 눈금과 모양이 같아서 「막대에 난 금」 으로 되읽힐 수 있었다.
+      곡선으로 바꾸면 그 마디가 새 기호가 아니라 <b>가려진 점선 캡슐의 오른쪽 끝</b>이 된다 —
+      초록에 덮이지 않았다면 그 자리에 있었을 둥근 마감 그대로다.
+      꼭짓점이 평균값 자리에 서므로 값이 평균 아래 → 위로 넘어가도 마디가 좌우로 튀지 않는다.
+      맨 위는 비교용 직선(⑤ 원본)이다.</p>
+  </div>
+
+  <div class="rv-out"></div>
+
+  <div class="rv-intro rv-end">
+    <h1>고른다면 — A 반원</h1>
+    <p><b>A</b> 는 캡슐 끝을 그대로 옮긴 것이라 설명이 필요 없다. 평균 아래 줄의 둥근 점선
+      마감과 초록에 덮인 줄의 마디가 <b>같은 곡률</b>이라, 다섯 줄이 한 종류의 그림으로 읽힌다.<br>
+      <b>B</b> 는 살짝만 휘어서 곧은 선과 거의 구별되지 않는다 — 곡선으로 바꾼 이유가 흐려진다.<br>
+      <b>C</b> 는 흰색이라 초록 위에서 가장 또렷하지만, 그만큼 눈이 먼저 가서
+      「내 막대」 보다 「평균 마디」 가 앞에 선다. 다섯 줄 중 셋에 흰 마디가 서면 특히 그렇다.</p>
+  </div>
+
+</div>
+
+<script>
+(function () {
+  var AREAS = [
+    { k: "acc",  n: "정확성" },
+    { k: "voc",  n: "어휘"   },
+    { k: "flu",  n: "유창성" },
+    { k: "pron", n: "발음"   },
+    { k: "lis",  n: "듣기"   }
+  ];
+  var AVG = { acc: 3.8, voc: 4.4, flu: 2.9, pron: 2.3, lis: 3.4 };
+
+  var CASES = [
+    { c: "지금 케이스 · 다섯 항목 모두 Lv.2", v: { acc: 2, voc: 2, flu: 2, pron: 2, lis: 2 } },
+    { c: "조금 넘었을 때 · 정확성 5 · 어휘 3 · 유창성 6 · 발음 2 · 듣기 4", v: { acc: 5, voc: 3, flu: 6, pron: 2, lis: 4 } },
+    { c: "많이 넘었을 때 · 정확성 9 · 어휘 8 · 유창성 9 · 발음 2 · 듣기 7", v: { acc: 9, voc: 8, flu: 9, pron: 2, lis: 7 } }
+  ];
+
+  function pct(v) { return Math.max(0, Math.min(10, v)) * 10; }
+
+  /* 마디 하나 = 반지름 r 인 호. (1,1)에서 (1,11)로, 오른쪽으로 볼록.
+     r=5 면 현(10)의 절반과 같아 정확히 반원 — 12px 캡슐의 끝 모양이다.
+     r 을 키우면 같은 방향으로 완만해진다. 볼록한 꼭짓점이 평균 자리에 서도록
+     svg 를 왼쪽으로 물려 둔다. */
+  function cap(r, g) {
+    var bulge = r - Math.sqrt(r * r - 25);      // 꼭짓점이 시작선에서 얼마나 나오나
+    var w = Math.ceil(bulge) + 3;
+    return '<span class="avb-cap" style="left:calc(' + g + '% - ' + (bulge + 1) + 'px)">' +
+             '<svg width="' + w + '" height="12" viewBox="0 0 ' + w + ' 12">' +
+               '<path d="M1,1 A' + r + ',' + r + ' 0 0 1 1,11"/>' +
+             '</svg>' +
+           '</span>';
+  }
+
+  var VARIANTS = [
+    { id: "v0", t: "직선 (비교용 · ⑤ 원본)",
+      d: "곧은 세로 점선. 라이브의 옛 눈금과 같은 모양이라 「막대에 난 금」 으로 되읽힐 여지가 있다." },
+    { id: "va", t: "A · 반원",
+      d: "점선 캡슐의 오른쪽 끝 그대로. 반지름 5 = 막대 높이의 절반이라, 평균 아래 줄의 둥근 마감과 곡률이 같다.", r: 5 },
+    { id: "vb", t: "B · 완만한 호",
+      d: "같은 방향으로 살짝만 휜다(볼록 약 2px). 곧은 선과 반원 사이.", r: 8 },
+    { id: "vc", t: "C · 반원 · 흰색",
+      d: "A 와 같은 모양, 색만 흰색. 초록 위에서 가장 또렷하다.", r: 5 }
+  ];
+
+  function row(vr, a, v) {
+    var m = pct(v), g = pct(AVG[a.k]);
+    var h = '<span class="avb-ring" style="width:' + g + '%"></span>' +
+            '<i class="avb-f" style="width:' + m + '%"></i>';
+    /* 초록이 평균을 지났을 때만 마디를 남긴다. 아직 아래면 캡슐의 끝이
+       이미 그 자리에 보이므로 마디를 겹쳐 그릴 이유가 없다. */
+    if (m > g) {
+      h += vr.r ? cap(vr.r, g)
+                : '<b class="avb-cap" style="left:' + g + '%"></b>';
+    }
+    return h;
+  }
+
+  function bars(vr, vals) {
+    var h = '<div class="avbars">';
+    AREAS.forEach(function (a) {
+      h += '<div class="avb"><span class="avb-n">' + a.n + '</span>' +
+           '<span class="avb-t">' + row(vr, a, vals[a.k]) + '</span></div>';
+    });
+    return h + '</div>';
+  }
+
+  var out = document.querySelector(".rv-out"), html = "";
+  VARIANTS.forEach(function (vr) {
+    html += '<div class="vlab"><b>' + vr.t + '</b><span>' + vr.d + '</span></div>' +
+            '<div class="av-card ' + vr.id + '">' +
+              '<h3 class="rsec-h">항목별 진단</h3>' +
+              '<div class="av-legend"><span><i></i>내 레벨</span>' +
+              '<span><i class="gd"></i>포도 수강생 평균</span></div>';
+    CASES.forEach(function (c) {
+      html += '<p class="av-case">' + c.c + '</p>' + bars(vr, c.v);
+    });
+    html += '</div>';
+  });
+  out.innerHTML = html;
+})();
+</script>
+</body>
+</html>

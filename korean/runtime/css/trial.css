@@ -4572,7 +4572,8 @@ body.teaching .tcon { display: block; margin: 0 0 28px; }
 .rsec .rad-legend { justify-content: flex-start; gap: 16px; margin: 0 0 4px; }
 .rsec .rad-legend span { font-size: 11px; font-weight: 500; }
 .rsec .rad-legend i { width: 4px; height: 4px; border-radius: 50%; background: var(--green-500); }
-.rsec .rad-legend i.avg { border: 0; background: var(--gray-400); border-radius: 50%; }
+/* 평균은 레이더에서도 막대에서도 회색 점선이다 — 범례도 같은 재질로 말한다 */
+.rsec .rad-legend i.avg { width: 14px; height: 0; border: 0; border-top: 2px dashed #b4b4b0; border-radius: 0; background: none; }
 .rsec .rad-legend .avg + * , .rsec .rad-legend span:last-child { color: var(--gray-400); }
 
 /* 항목 다섯 줄. 트랙 하나에 채움 하나 — 잘하는 두 항목만 파랑이라,
@@ -4581,13 +4582,23 @@ body.teaching .tcon { display: block; margin: 0 0 28px; }
 .axb { display: flex; align-items: center; gap: 8px; }
 .axb-n { flex: none; width: 52px; font-size: 14px; font-weight: 800; letter-spacing: -.02em; }
 .axb-t { position: relative; flex: 1 1 auto; height: 12px; border-radius: 999px; background: var(--gray-200); }
-.axb-f { display: block; height: 100%; border-radius: 999px; background: var(--green-500); }
-/* 평균이 선 자리. 막대를 하나 더 그리는 대신 눈금을 세워 두면, 내 것이
-   그 선을 넘었는지 아닌지가 색을 읽지 않아도 보인다. */
+.axb-f { position: relative; z-index: 1; display: block; height: 100%; border-radius: 999px; background: var(--green-500); }
+/* 평균 = 트랙의 0→평균 구간을 그대로 따라 그린 점선 캡슐.
+   세로 눈금 하나를 세우던 자리다. 눈금은 막대와 재질이 달라서 「막대 + 눈금자」
+   로 읽혔고, 초록이 그 선을 지나가면 막대에 난 금처럼 보였다. 점선 캡슐은
+   막대와 같은 12px·같은 자리에 겹치고(box-sizing: border-box 라 2px 테두리가
+   12px 안쪽에 그려져 막대가 두꺼워지지 않는다), 평균도 「길이」 로 말한다. */
 .axb-avg {
-  position: absolute; top: -2px; width: 2px; height: 16px; margin-left: -1px;
-  border-radius: 1px; background: #6f6f6a;
+  position: absolute; inset: 0 auto 0 0; z-index: 0; box-sizing: border-box;
+  border: 2px dashed #b4b4b0; border-radius: 999px; background: none;
 }
+/* 캡슐은 초록 아래에 깔린다 — 덮인 구간은 초록이 매끈하게 이기고, 대신 평균이
+   서 있던 자리에 그 캡슐의 「오른쪽 끝」 만 남긴다. 새 기호가 아니라 가려진
+   마감 그대로라(반지름 5 = 막대 높이의 절반), 평균 아래 줄의 둥근 점선 끝과
+   같은 곡률이다. 호의 꼭짓점이 평균값 자리에 선다. */
+.axb-cap { position: absolute; top: 0; z-index: 2; }
+.axb-cap svg { display: block; overflow: visible; }
+.axb-cap path { fill: none; stroke: #3f7d1a; stroke-width: 2; stroke-dasharray: 3 3; }
 
 .axsum.hide, .axtip.hide { display: none; }
 .axsum { display: flex; gap: 4px; margin-top: 16px; }
@@ -4782,9 +4793,9 @@ body.teaching .tcon { display: block; margin: 0 0 28px; }
 .rc-dots i { width: 6px; height: 6px; border-radius: 50%; background: #d5ddc9; }
 .rc-dots i.on { width: 18px; border-radius: 3px; background: var(--green-500); }
 
-/* 코스 카드 · 번호 배지 대신 코스 그림 */
-.cli-ico { flex: none; width: 37px; height: 37px; }
-.curli { padding: 12px; border-radius: 12px; background: #f2fce0; }
+/* 도착 칸은 연두 판 위에 선다. 이 색은 예전에 .curli(칸 전체)가 깔던 것인데,
+   코스 칸이 흰 카드(.hy)로 바뀌면서 칸이 아니라 도착 카드의 것이 되었다. */
+.cli-arrive { padding: 12px; border-radius: 12px; background: #f2fce0; }
 .cli + .cli { margin-top: 12px; }
 .cli-h { display: flex; align-items: center; gap: 8px; }
 .cli-n {
@@ -4803,12 +4814,6 @@ body.teaching .tcon { display: block; margin: 0 0 28px; }
 }
 .cli-e b { font-size: 14px; font-weight: 800; line-height: 1.43; }
 .cli-e em { display: block; margin-top: 1px; color: var(--gray-400); font-style: normal; font-size: 14px; font-weight: 500; line-height: 1.43; word-break: keep-all; }
-/* 몇 번째 코스인지 · 제목 옆에 붙는 작은 눈금이라 제목을 밀지 않는다 */
-.cli-no {
-  margin-left: 6px; padding: 1px 7px; border-radius: 999px;
-  background: #fff; color: var(--gray-500); font-size: 11px; font-weight: 700;
-  letter-spacing: 0; vertical-align: 1px;
-}
 /* 도착 · 코스가 아니라 다다른 자리라, 커버 그림 대신 레벨 뱃지가 선다 */
 .cli-lv {
   flex: none; display: grid; place-items: center; min-width: 44px; height: 37px;
@@ -4829,6 +4834,141 @@ body.teaching .tcon { display: block; margin: 0 0 28px; }
   background: rgba(255,255,255,.22); font-size: 11.5px; font-weight: 800; vertical-align: 2px;
 }
 .cg-w { display: block; margin-top: 5px; font-style: normal; font-size: 12.5px; font-weight: 500; line-height: 1.45; opacity: .9; word-break: keep-all; }
+
+/* ================================================================
+   코스 칸 · 그 코스에서 실제로 하는 일을 한 장으로
+
+   코스마다 「무엇을 배우나」 를 문장으로 늘어놓던 자리다. 문장이 셋(이름 ·
+   한 줄 설명 · 예문) 쌓이면 어느 것이 결론인지 알 수 없어서, 두 가지를
+   바꿨다.
+
+   ① 할 수 있게 되는 일이 이름 바로 밑으로 올라왔다. 전에는 맨 아래 칩이라
+      읽는 순서상 마지막 = 「덤」 으로 보였는데, 코스를 사게 만드는 문장은
+      사실 이것이다 — 이름이 「무엇을 배우나」 라면 이 줄은 「그래서 내가 뭘
+      하게 되나」 이고, 궁금한 쪽은 언제나 뒤쪽이다. 연두 띠에 ✓ 와 함께
+      앉혀서, 어디가 결론인지를 글자 굵기가 아니라 면으로 말한다.
+   ② 예문 자리에는 글 대신 그림이 선다. 코스가 배우는 일의 모양이 서로
+      달라서 한 틀로 못 담는다 — 한글은 글자를 조립하는 일, 핵심은 틀을
+      갈아 끼우는 일, 나머지는 말을 주고받는 일이다(report.js artHTML()).
+
+   커버 그림은 카드 뒤에 크게 눕는다. 모서리에 또렷하게 두면 「잘린 그림」
+   한 조각으로 읽혀 가운데 물건과 싸우므로, 키우고 지워서 결로 만든다.
+   ================================================================ */
+.hy {
+  position: relative; overflow: hidden;
+  border: 1px solid var(--gray-200); border-radius: 16px; background: #fff;
+}
+.hy-wm {
+  position: absolute; right: -54px; bottom: -54px; width: 190px; height: 190px;
+  opacity: .07; pointer-events: none;
+}
+.hy-h { position: relative; display: flex; align-items: baseline; gap: 7px; padding: 14px 16px 0; }
+.hy-h b { font-size: 14.5px; font-weight: 800; letter-spacing: -.02em; }
+.hy-n { font-size: 12px; font-weight: 700; color: var(--green-500); }
+.hy-no { margin-left: auto; font-size: 11.5px; font-weight: 700; color: var(--gray-400); }
+
+.hy-do { position: relative; margin: 11px 16px 0; padding: 11px 12px; border-radius: 12px; background: var(--green-100); }
+.hy-do-t {
+  display: flex; align-items: flex-start; gap: 7px;
+  font-size: 16px; font-weight: 800; line-height: 1.35; letter-spacing: -.03em;
+  color: var(--ink); word-break: keep-all;
+}
+.hy-do-t i {
+  flex: none; display: grid; place-items: center; width: 18px; height: 18px; margin-top: 1px;
+  border-radius: 50%; background: var(--green-500);
+  color: #fff; font-size: 10px; font-style: normal; font-weight: 900;
+}
+/* 그림이 서는 자리 · 여백이 이 안의 전부다 */
+.hy-stage { position: relative; display: grid; place-items: center; min-height: 132px; padding: 22px 16px; }
+.hy-cap {
+  position: relative; padding: 0 16px 16px; text-align: center;
+  font-size: 12.5px; font-weight: 600; color: var(--gray-500); word-break: keep-all;
+}
+
+/* 그림 ① 한글 · 자음 + 모음 = 한 글자.
+   자리색은 한글 덱의 것을 그대로 쓴다(.seat-c/.seat-v/.seat-lr) — 리포트가
+   레슨과 다른 색으로 말하면 첫 수업에서 그 색을 다시 배워야 한다. */
+.hy .sp-han { display: flex; align-items: flex-end; gap: 13px; }
+.hy .hbk { display: grid; justify-items: center; }
+.hy .hbk-j { display: flex; gap: 6px; }
+.hy .hbk-j span {
+  display: grid; place-items: center; width: 34px; height: 34px; border-radius: 9px;
+  font-size: 19px; font-weight: 800; letter-spacing: -.02em;
+}
+.hy .hbk-j .seat-c { color: var(--c-ink); }
+.hy .hbk-j .seat-v { color: var(--v-ink); }
+/* 두 자리가 한 글자로 모이는 팔 — 화살표보다 조용하고, 「합쳐진다」 를 한 번에 말한다 */
+.hy .hbk-arm { display: block; width: 74px; height: 15px; margin: 3px 0 2px; }
+.hy .hbk-arm path { stroke: #cfcfc9; stroke-width: 1.6; stroke-linecap: round; fill: none; }
+.hy .hbk-s {
+  display: grid; place-items: center; width: 56px; height: 56px; border-radius: 13px;
+  font-size: 31px; font-weight: 800; letter-spacing: -.02em; color: var(--ink);
+}
+
+/* 그림 ② 핵심 패턴 · 틀은 그대로, 한 자리만 갈아 낀다.
+   바뀌는 자리에만 초록이 간다 — 초록은 이 덱에서 「고른 것」 이라 뜻이 같다.
+
+   그림이 말해야 하는 건 「틀 하나 × 단어 여럿」 이다. 전에는 자리에서 점선이
+   한 뼘 내려오다 허공에서 끊기고, 아래 단어는 회색 알약이라 서로 다른 물건으로
+   읽혔다 — 자리는 칸인데 단어는 태그였다. 그래서 둘을 같은 물건으로 맞췄다:
+   같은 모서리(10px)의 같은 칸이고, 초록으로 채워진 하나가 지금 끼워진 것,
+   흰 칸 셋이 갈아 낄 수 있는 것이다(초록 = 고른 것, 이 덱의 뜻 그대로).
+   그리고 점선을 끝까지 잇는다 — 자리에서 내려와 가름대에서 셋으로 갈라져
+   단어마다 내려앉으니, 「이 한 자리에 이 셋 중 하나」 가 선 하나로 읽힌다.
+   참고: references/curricula/k-village-esther-bunny (틀 + 단어 은행). */
+.hy .sp-pat { display: grid; justify-items: center; width: 100%; }
+/* line-height 를 1.15 로 눌러 두면 줄에서 가장 높은 것이 언제나 갈아 끼우는
+   자리다 — 줄의 아래 끝 = 자리의 아래 끝이라, 줄기가 어긋나지 않는다. */
+.hy .pat-line {
+  display: flex; align-items: center; gap: 5px;
+  font-size: 19px; font-weight: 800; line-height: 1.15; letter-spacing: -.03em;
+  color: var(--ink); white-space: nowrap;
+}
+.hy .pat-slot {
+  position: relative; padding: 3px 11px;
+  border: 1.5px solid var(--green-500); border-radius: 10px; background: var(--green-100);
+  color: #4e9422; font-weight: 800;
+}
+/* 자리에서 내려오는 줄기. 12px 아래 가름대를 만나고(.pat-fan 의 margin),
+   거기서 멈추지 않고 12px 더 내려가 가운데 단어 위에 닿는다(.pat-fan 의 높이). */
+.hy .pat-slot::after {
+  content: ""; position: absolute; left: 50%; top: calc(100% + 1.5px); width: 0; height: 24px;
+  border-left: 1.5px dashed var(--green-500); opacity: .55;
+}
+/* 가름대와 눈금 · 자리는 report.js 가 단어 수에서 계산해 인라인으로 얹는다 */
+.hy .pat-fan {
+  position: relative; width: 100%; max-width: 252px; height: 12px; margin-top: 12px;
+  opacity: .55;
+}
+.hy .pf-bar { position: absolute; top: 0; border-top: 1.5px dashed var(--green-500); }
+.hy .pf-t {
+  position: absolute; top: 0; bottom: 0; width: 0;
+  border-left: 1.5px dashed var(--green-500);
+}
+/* 눈금 바로 밑에 서야 해서 균등 분할이다 — 칸 너비가 아니라 자리로 줄을 맞춘다 */
+.hy .pat-words {
+  display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 7px;
+  width: 100%; max-width: 252px;
+}
+.hy .pat-words span {
+  display: grid; place-items: center; padding: 7px 4px;
+  border: 1px solid var(--gray-200); border-radius: 10px; background: #fff;
+  font-size: 13.5px; font-weight: 800; color: var(--ink); letter-spacing: -.02em;
+}
+
+/* 그림 ③ 대사 두 턴 · 덱의 말풍선 규칙 그대로 — 상대는 왼쪽 흰 칸,
+   학습자는 오른쪽 연두 채움에 테두리 없음(말하는 사람은 고른 것이 아니다). */
+.hy .sp-talk { width: 100%; }
+.hy .tk { display: flex; }
+.hy .tk + .tk { margin-top: 8px; }
+.hy .tk.me { justify-content: flex-end; }
+.hy .tk p {
+  max-width: 84%; margin: 0; padding: 10px 13px;
+  border: 1px solid var(--gray-200); border-radius: 16px 16px 16px 5px; background: #fff;
+  font-size: 14.5px; font-weight: 700; line-height: 1.5; letter-spacing: -.02em;
+  color: var(--ink); word-break: keep-all;
+}
+.hy .tk.me p { border-color: transparent; border-radius: 16px 16px 5px 16px; background: var(--green-100); }
 
 
 /* ---------- 항목별 체크 · 레이더 아래, 한 번에 한 항목 ----------
@@ -5496,3 +5636,35 @@ body.teaching .tcon { display: block; margin: 0 0 28px; }
 }
 .cst.goal { background: #f2fce0; }
 .cst.goal .cst-l { background: #fff; }
+
+/* ---------- 리포트 저장 · 리포트가 끝나는 자리, 튜터만 ----------
+   레벨 체크(.lvcheck)와 같은 꼴이다: 먹색 점선이 「학습자 화면에는 없다」는
+   표시고, 누르는 자리가 그 값이 다 모인 자리 바로 뒤에 있다.
+   버튼만 라임을 쓴다 — 이 화면에서 튜터가 실제로 「누르는」 것이 이것 하나라,
+   상태색(초록)이 아니라 브랜드 크롬 쪽이 맞다(.rep-jump 와 같은 자리). */
+.rep-send { display: none; }
+body.teaching .rep-send {
+  display: block; margin-top: 18px; padding: 14px;
+  border: 1.5px dashed var(--ink); border-radius: 14px; background: #fbfbf8;
+}
+.rep-send-h { display: block; font-size: 14px; font-weight: 900; color: var(--ink); }
+.rep-send-h small { margin-left: 7px; font-size: 11px; font-weight: 800; color: #8a8a85; }
+.rs-btn {
+  display: block; width: 100%; margin-top: 11px; padding: 13px;
+  border: 1.5px solid var(--ink); border-radius: 12px; background: var(--lime);
+  font-family: inherit; font-size: 14.5px; font-weight: 900; color: var(--ink);
+  letter-spacing: -.02em; cursor: pointer; -webkit-tap-highlight-color: transparent;
+}
+/* 아직 못 보내는 상태는 「눌러도 안 되는 라임」이 아니라 아예 다른 것으로
+   보여야 한다 — 색만 흐리면 탭이 먹었는지 아닌지를 튜터가 매번 시험한다. */
+.rs-btn:disabled {
+  border-color: var(--gray-200); background: var(--gray-100);
+  color: #b0b0aa; cursor: default;
+}
+.rs-btn:not(:disabled):active { transform: translateY(1px); }
+.rs-msg {
+  margin: 9px 0 0; font-size: 12px; font-weight: 700; color: #6f6f6a;
+  line-height: 1.5; word-break: keep-all;
+}
+.rep-send[data-state="done"] .rs-msg { color: var(--green-500); }
+.rep-send[data-state="error"] .rs-msg { color: #c0392b; }

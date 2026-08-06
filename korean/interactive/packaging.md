@@ -88,7 +88,7 @@ is opened outside the board. Their styling lives in `runtime/css/lesson-card.css
 
 | Script | What it adds |
 |---|---|
-| `spotlight.js` | tap a block to ring it on both screens — "look here", one at a time |
+| `spotlight.js` | tap a block to ring it on both screens — "look here", one at a time. Stepping into a text box rings the block around it, so the other person can see which question is being answered |
 | `highlight.js` | drag over text to leave a marker stroke on both screens; tap a stroke to erase it |
 | `tutor-notes.js` | one free-typing note per page — invisible until the tutor writes in it, then read-only for the learner |
 | `stamp.js` | the 참! 잘했어요 praise stamp |

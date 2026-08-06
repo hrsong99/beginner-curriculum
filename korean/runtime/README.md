@@ -11,6 +11,7 @@ runtime/
          pager.js          페이지 넘김·스크러버·티칭 모드
          hangul-activities.js / freetalk-activities.js / report.js / report-consult.js
                            과 성격별 활동
+         report-submit.js  리포트를 백엔드에 남기는 버튼 (report.js 뒤에 로드)
          highlight.js · spotlight.js · stamp.js · tutor-notes.js · script-lines.js
                            모든 덱이 공통으로 얹는 것들
 ```
