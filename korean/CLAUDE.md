@@ -96,6 +96,13 @@ same document, so anything in the markup is already on the learner's screen.
   of its own — if you are writing either, the thing you need probably belongs in a
   shared module or in `trial.css`.
 
+  **The report's recommendation is a spec, not a guess.** How the trial report gets to
+  「N개월 · 이 코스들」 — the lesson counts it draws on, the level ladder, the duration
+  formula and its **5-month floor** (a sales policy, not a calculation), and how level ×
+  goal × reason pick the courses — lives in [`trial/plan-logic.md`](./trial/plan-logic.md).
+  The code for all of it is `runtime/js/report.js`; when the two disagree, the doc wins.
+  Read it before touching any number in that file.
+
   **Read [`AUTHORING.md`](./AUTHORING.md) before building a new deck.** It is
   the component vocabulary — page types, every activity's markup, the colour and spacing
   tokens, and the file skeleton. Reach for an existing component before inventing one.

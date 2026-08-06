@@ -811,11 +811,9 @@
     var per = perWeek();
     var need = g ? Math.max(6, DONE[String(g.lv)] - DONE[String(overall())]) : 24;
     var total = months(need, per);
-    /* 마디가 넷인데 기간이 석 달이면 「1개월차」 가 두 번 나온다 — 다음을 눌러도
-       숫자가 그대로면 눌리지 않은 것처럼 보인다. 마디마다 다른 눈금이 서도록,
-       달로 나누어지지 않는 계획은 주로 센다. */
-    var weeks = Math.max(1, Math.round(need / per));
-    var unit = total < STEPS ? weeks : total, suf = total < STEPS ? "주" : "개월";
+    /* 눈금은 언제나 개월이다. 마디보다 짧은 계획은 「주」로 세는 갈래가 있었는데,
+       기간의 바닥이 5개월이고 마디는 많아야 넷이라 닿을 수 없는 길이 됐다. */
+    var unit = total, suf = "개월";
     // 마디 자리를 알아야 시각을 매기는데, 자리는 길을 세운 뒤라야 나온다
     if (!roadEls || roadKey !== stops.join(",")) drawRoad(unit, suf, false);
     var at = function (i) { return Math.max(1, Math.round(unit * (roadFracs[i] || 0))); };
@@ -866,8 +864,13 @@
     drawRoad(unit, suf, animate);
   }
 
+  /* 4.3 = 한 달의 주 수(52÷12). 바닥 5개월은 계산 결과가 아니라 영업 정책이다 —
+     가까운 목표에 주 5회 이상이면 산수로는 두 달이 나오지만 그보다 짧은 기간은
+     제안하지 않는다. 식을 「고쳐서」 이 바닥을 없애지 마라: 없애면 정책이 사라진다.
+     근거는 trial/plan-logic.md. */
+  var MIN_MONTHS = 5;
   function months(lessons, perWeek) {
-    return Math.max(1, Math.round(lessons / (perWeek * 4.3)));
+    return Math.max(MIN_MONTHS, Math.round(lessons / (perWeek * 4.3)));
   }
 
   /* ---- 목표 카드 속은 고른 이유만 남긴다 ----
