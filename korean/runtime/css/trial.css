@@ -4648,6 +4648,29 @@ body.teaching .tcon { display: block; margin: 0 0 28px; }
 .road { margin-top: 12px; padding: 12px 14px; border-radius: 12px; background: var(--green-100); }
 .road-k { display: block; color: var(--green-500); font-size: 16px; font-weight: 800; letter-spacing: -.02em; }
 .road-svg { display: block; width: 100%; height: auto; margin-top: 4px; }
+/* 길과 점 · 상태는 전부 여기서 입는다(report.js 는 클래스만 갈아 끼운다).
+   한 걸음이 색과 크기를 함께 바꾸므로 전환을 걸어 두면 「다음」 을 누를 때
+   초록이 차오르는 것과 점이 자라는 것이 같은 박자로 움직인다. */
+.rd-track { stroke: #e8eae1; }
+.rd-fill { stroke: var(--green-500); }
+.rd-dot {
+  r: 6; fill: #fff; stroke: #e8eae1; stroke-width: 3.5;
+  transition: r .3s ease, fill .3s ease, stroke .3s ease, stroke-width .3s ease;
+}
+/* 도착점은 늘 서 있다 — 크기로 목적지라고 말한다 */
+.rd-dot.goal { r: 8.5; stroke: var(--green-500); stroke-width: 4; }
+/* 지나온 점은 길에 녹는다 */
+.rd-dot.done { r: 7; fill: var(--green-500); stroke: var(--green-500); }
+/* 지금 선 자리 */
+.rd-dot.now { r: 8; fill: #fff; stroke: var(--green-500); stroke-width: 4.5; }
+.rd-dot.goal.now { r: 10; stroke-width: 5; }
+.rd-halo { fill: var(--green-500); opacity: 0; transition: opacity .3s ease; }
+.rd-halo.on { opacity: .15; }
+/* 라벨은 길 위에 얹힐 수 있다 — 바탕색 테를 글자 뒤로 깔아 띄운다 */
+.rd-cap {
+  paint-order: stroke fill; stroke: var(--green-100);
+  stroke-width: 3px; stroke-linejoin: round;
+}
 /* 「아직 안 골랐어요」 는 비어 있다는 알림이지 이 페이지의 주된 행동이 아니다.
    trial.css 의 .rep-jump 는 라임 채움 + 먹색 오프셋 그림자라 카드 안에서 가장
    큰 소리를 내는데, 둘 다 은퇴한 Podo Bold 의 것이고 라임은 브랜드 크롬이지

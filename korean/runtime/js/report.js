@@ -600,11 +600,15 @@
   /* 길과 점은 Figma 에서 내려받은 좌표 그대로다. 손으로 다시 풀면 모퉁이
      반지름이 좌우로 다르다는 것(오른쪽 18.13, 왼쪽 19.87)부터 놓친다.
      삽화 원본은 x=10 에 놓여 있고 라벨은 그 바깥까지 나오므로, 길 전체를
-     10 만큼 밀어 두고 좌표계 하나로 라벨까지 함께 잡는다. */
-  var ROAD_D = "M6 10.3438H127.409H230.688C240.701 10.3438 248.819 18.4612 248.819 " +
+     10 만큼 밀어 두고 좌표계 하나로 라벨까지 함께 잡는다.
+     양 끝만 원본(x=6 … x=248.819)에서 첫 점·끝 점의 한가운데로 당겨 두었다.
+     원본은 길이 점 밖으로 8 남짓 더 나가는데, 회색일 때는 안 보이던 그 꼬리가
+     초록이 차오르면 「지금」 왼쪽에 반달로 튀어나온다 — 둥근 마감이 점 밑에
+     정확히 묻히도록 끝을 점 중심에 맞춘다. */
+  var ROAD_D = "M14.06 10.3438H127.409H230.688C240.701 10.3438 248.819 18.4612 248.819 " +
     "28.4745C248.819 38.4878 240.701 46.6052 230.688 46.6052H131.525H34.1004C23.1269 " +
     "46.6052 14.2311 55.501 14.2311 66.4745C14.2311 77.448 23.1269 86.3438 34.1004 " +
-    "86.3438H131.525H248.819";
+    "86.3438H131.525H248.879";
   var ROAD_DOTS = [[14.06, 10.3438], [127.06, 10.3438], [248.879, 28.4745],
                    [127.06, 46.6052], [14.1207, 66.4745], [127.06, 86.3438],
                    [248.879, 86.3438]];
@@ -633,48 +637,71 @@
     var g = el("g", { transform: "translate(10 0)" });
     road.appendChild(g);
 
-    g.appendChild(el("path", { d: ROAD_D, fill: "none", stroke: "#e8eae1",
+    g.appendChild(el("path", { "class": "rd-track", d: ROAD_D, fill: "none",
                                "stroke-width": "12", "stroke-linecap": "round" }));
     /* 채워지는 쪽. pathLength 를 1 로 정규화해 두면 dasharray 를 비율로 쓸 수
        있어서, 길의 실제 길이를 몰라도 「몇 퍼센트」 로 자를 수 있다. */
-    var fill = el("path", { d: ROAD_D, fill: "none", stroke: "#6abe36",
+    var fill = el("path", { "class": "rd-fill", d: ROAD_D, fill: "none",
                             "stroke-width": "12", "stroke-linecap": "round",
                             pathLength: "1", "stroke-dasharray": "1 1",
                             "stroke-dashoffset": "1" });
     g.appendChild(fill);
 
+    /* 지금 선 자리의 무른 후광. 점마다 하나씩 두고 켜고 끈다 — 하나를 옮기면
+       길을 따라가는 게 아니라 허공을 가로질러 날아간다. */
+    var halos = ROAD_DOTS.map(function (d) {
+      var c = el("circle", { "class": "rd-halo", cx: d[0], cy: d[1], r: 13 });
+      g.appendChild(c); return c;
+    });
+    /* 크기·색은 전부 trial.css 가 쥔다(.rd-dot 의 상태 클래스). 여기서 r 을
+       한 번 적어 두는 것은 CSS 기하 속성을 모르는 브라우저용 바닥값이다. */
     var dots = ROAD_DOTS.map(function (d) {
-      var c = el("ellipse", { cx: d[0], cy: d[1], rx: 8.06, ry: 8,
-                              fill: "#fff", stroke: "#e8eae1", "stroke-width": 4 });
+      var c = el("circle", { "class": "rd-dot", cx: d[0], cy: d[1], r: 6 });
       g.appendChild(c); return c;
     });
 
+    /* 모퉁이 라벨(⅓·⅔)은 길과 길 사이 좁은 틈에 놓인다. 길이 회색일 때는
+       읽히지만 초록이 거기까지 차오르면 글자가 길 위에 얹힌다 — 카드 바탕색으로
+       테를 둘러(.rd-cap) 어느 쪽 위에서도 글자가 떠 있게 한다. */
     var cap = function (x, y, size, color) {
-      var e = el("text", { x: x, y: y, "font-size": size, "font-weight": "700",
-                           fill: color, "letter-spacing": "-.02em" });
+      var e = el("text", { "class": "rd-cap", x: x, y: y, "font-size": size,
+                           "font-weight": "700", fill: color, "letter-spacing": "-.02em" });
       g.appendChild(e); return e;
     };
     cap(-3, 31.1, 12, "#2b2b2b").textContent = "지금";
-    roadEls = { fill: fill, dots: dots,
+    roadEls = { fill: fill, dots: dots, halos: halos,
                 mo: [cap(230, 48.1, 9, "#2b2b2b"),      // ⅓ 지점 = 점 2
                      cap(-3, 85.1, 9, "#2b2b2b"),       // ⅔ 지점 = 점 4
                      cap(225.75, 109.5, 14, "#6abe36")] };
     roadFracs = measureDots(fill);
   }
 
-  /* 지금 밟은 점까지 초록이 차오른다. 밟은 점과 도착점만 초록 테두리를 두르는
-     것이 삽화의 문법이라, 길 위에 따로 표식을 얹지 않는다. */
+  /* 지금 밟은 점까지 초록이 차오르고, 점은 셋 중 하나가 된다.
+     지나온 점은 길과 같은 초록으로 채워 길에 녹여 버린다 — 차오른 초록 위에
+     흰 도넛이 남으면 길이 그 자리에서 끊겨 보인다. 지금 선 점만 흰 속에
+     초록 테를 두르고 후광을 켠다. 도착점은 아직 못 갔어도 초록 테를 두른다:
+     지도에 목적지가 찍혀 있어야 길이 어디로 가는지 읽힌다. */
   function setRoadStep(step, animate) {
     var target = roadFracs[step], from = roadShown;
-    roadEls.dots.forEach(function (c, i) {
-      c.setAttribute("stroke", (i === step || i === STEPS) ? "#6abe36" : "#e8eae1");
-    });
     if (roadRaf) { cancelAnimationFrame(roadRaf); roadRaf = null; }
+    /* 점은 걸음이 아니라 차오른 초록을 따른다. 목표 칸을 보고 한 번에 갈아
+       끼우면 초록이 아직 기어가는 450ms 동안 초록 점들이 회색 길 위에 떠 있다.
+       파도가 지나간 자리부터 하나씩 물드니, 되짚어 갈 때도 그대로 되감긴다. */
     var paint = function (f) {
       roadShown = f;
       roadEls.fill.setAttribute("stroke-dashoffset", (1 - f).toFixed(4));
+      roadEls.dots.forEach(function (c, i) {
+        var here = f >= roadFracs[i] - 1e-4;
+        c.setAttribute("class", "rd-dot" + (i === STEPS ? " goal" : "") +
+          (!here ? "" : i === step ? " now" : " done"));
+        roadEls.halos[i].setAttribute("class",
+          "rd-halo" + (here && i === step ? " on" : ""));
+      });
     };
-    if (!animate || still || Math.abs(target - from) < 0.001) { paint(target); return; }
+    /* 숨은 탭에서는 rAF 가 돌지 않는다 — 애니메이션에 점까지 실려 있으니,
+       그대로 두면 길이 중간에 얼어붙은 채 남는다. 못 움직일 때는 건너뛴다. */
+    if (!animate || still || document.hidden ||
+        Math.abs(target - from) < 0.001) { paint(target); return; }
     var t0 = null, DUR = 450;
     roadRaf = requestAnimationFrame(function tick(ts) {
       if (t0 === null) t0 = ts;
