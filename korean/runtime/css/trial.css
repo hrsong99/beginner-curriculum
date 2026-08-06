@@ -4657,20 +4657,24 @@ body.teaching .tcon { display: block; margin: 0 0 28px; }
   r: 6; fill: #fff; stroke: #e8eae1; stroke-width: 3.5;
   transition: r .3s ease, fill .3s ease, stroke .3s ease, stroke-width .3s ease;
 }
+/* 이름 없는 가운데 걸음은 눈금으로 내린다 */
+.rd-dot.minor { r: 4; stroke-width: 3; }
 /* 도착점은 늘 서 있다 — 크기로 목적지라고 말한다 */
 .rd-dot.goal { r: 8.5; stroke: var(--green-500); stroke-width: 4; }
-/* 지나온 점은 길에 녹는다 */
-.rd-dot.done { r: 7; fill: var(--green-500); stroke: var(--green-500); }
-/* 지금 선 자리 */
-.rd-dot.now { r: 8; fill: #fff; stroke: var(--green-500); stroke-width: 4.5; }
+/* 지나온 점은 길에 녹는다. 길의 반지름(선 굵기 12 → 6)과 정확히 같은 원을
+   테 없이 놓는 것이 핵심이다 — 조금이라도 크면 곧은 길에는 물집이 잡히고
+   굽이에서는 곡선이 우그러진다. */
+.rd-dot.done, .rd-dot.minor.done { r: 6; fill: var(--green-500); stroke-width: 0; }
+/* 지금 선 자리 · 눈금이든 정거장이든 밟고 있으면 제 크기로 선다 */
+.rd-dot.now, .rd-dot.minor.now { r: 8; fill: #fff; stroke: var(--green-500); stroke-width: 4.5; }
 .rd-dot.goal.now { r: 10; stroke-width: 5; }
 .rd-halo { fill: var(--green-500); opacity: 0; transition: opacity .3s ease; }
 .rd-halo.on { opacity: .15; }
-/* 라벨은 길 위에 얹힐 수 있다 — 바탕색 테를 글자 뒤로 깔아 띄운다 */
-.rd-cap {
-  paint-order: stroke fill; stroke: var(--green-100);
-  stroke-width: 3px; stroke-linejoin: round;
-}
+/* 라벨 · 지금과 ⅓·⅔ 는 같은 기준선의 한 단, 도착만 한 단 위 */
+.rd-cap { font-weight: 800; letter-spacing: -.02em; }
+.rd-cap.start { font-size: 11px; fill: var(--ink); }
+.rd-cap.wp { font-size: 10px; font-weight: 700; fill: var(--gray-500); }
+.rd-cap.dest { font-size: 14px; fill: var(--green-500); }
 /* 「아직 안 골랐어요」 는 비어 있다는 알림이지 이 페이지의 주된 행동이 아니다.
    trial.css 의 .rep-jump 는 라임 채움 + 먹색 오프셋 그림자라 카드 안에서 가장
    큰 소리를 내는데, 둘 다 은퇴한 Podo Bold 의 것이고 라임은 브랜드 크롬이지

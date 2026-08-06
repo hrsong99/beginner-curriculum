@@ -653,26 +653,32 @@
       var c = el("circle", { "class": "rd-halo", cx: d[0], cy: d[1], r: 13 });
       g.appendChild(c); return c;
     });
-    /* 크기·색은 전부 trial.css 가 쥔다(.rd-dot 의 상태 클래스). 여기서 r 을
-       한 번 적어 두는 것은 CSS 기하 속성을 모르는 브라우저용 바닥값이다. */
-    var dots = ROAD_DOTS.map(function (d) {
-      var c = el("circle", { "class": "rd-dot", cx: d[0], cy: d[1], r: 6 });
+    /* 일곱 점이 다 같은 크기면 일곱 다 같은 무게로 읽힌다. 실제로 이름이 붙는
+       자리는 넷뿐이다 — 지금(0)·⅓(2)·⅔(4)·도착(6). 나머지 셋은 줄 한가운데의
+       걸음일 뿐이라 작은 눈금으로 내린다(.minor). 밟고 선 동안에는 어느 쪽이든
+       제 크기로 커진다: 서 있는 자리가 눈금일 수는 없다.
+       크기·색은 전부 trial.css 가 쥔다. 여기서 r 을 한 번 적어 두는 것은 CSS
+       기하 속성을 모르는 브라우저용 바닥값이다. */
+    var dots = ROAD_DOTS.map(function (d, i) {
+      var c = el("circle", { "class": "rd-dot" + (i % 2 ? " minor" : ""),
+                             cx: d[0], cy: d[1], r: 6 });
       g.appendChild(c); return c;
     });
 
-    /* 모퉁이 라벨(⅓·⅔)은 길과 길 사이 좁은 틈에 놓인다. 길이 회색일 때는
-       읽히지만 초록이 거기까지 차오르면 글자가 길 위에 얹힌다 — 카드 바탕색으로
-       테를 둘러(.rd-cap) 어느 쪽 위에서도 글자가 떠 있게 한다. */
-    var cap = function (x, y, size, color) {
-      var e = el("text", { "class": "rd-cap", x: x, y: y, "font-size": size,
-                           "font-weight": "700", fill: color, "letter-spacing": "-.02em" });
+    /* 라벨은 길 위가 아니라 줄과 줄 사이 빈 띠에 놓는다. 길 위에 얹으면 초록이
+       차오를 때마다 글자가 배경을 잃어 테를 둘러 줘야 하고, 그 테가 다시 길을
+       갉아먹는다. 「지금」 과 ⅓ 라벨은 같은 기준선에 서서 한 줄로 읽힌다. */
+    var cap = function (cls, x, y, anchor) {
+      var e = el("text", { "class": "rd-cap " + cls, x: x, y: y, "text-anchor": anchor });
       g.appendChild(e); return e;
     };
-    cap(-3, 31.1, 12, "#2b2b2b").textContent = "지금";
+    cap("start", 14.06, 31, "middle").textContent = "지금";
     roadEls = { fill: fill, dots: dots, halos: halos,
-                mo: [cap(230, 48.1, 9, "#2b2b2b"),      // ⅓ 지점 = 점 2
-                     cap(-3, 85.1, 9, "#2b2b2b"),       // ⅔ 지점 = 점 4
-                     cap(225.75, 109.5, 14, "#6abe36")] };
+                // 굽이 점의 바깥 지름이 17 남짓이라, 라벨은 그 가장자리에서 8쯤
+                // 떨어뜨려 둔다 — 「지금」 이 첫 점 아래에서 얻는 여백과 같은 몫이다
+                mo: [cap("wp", 232, 31, "end"),         // ⅓ 지점 = 점 2, 오른쪽 굽이 왼편
+                     cap("wp", 31, 70, "start"),        // ⅔ 지점 = 점 4, 왼쪽 굽이 오른편
+                     cap("dest", 254.879, 108, "end")] };
     roadFracs = measureDots(fill);
   }
 
@@ -692,7 +698,10 @@
       roadEls.fill.setAttribute("stroke-dashoffset", (1 - f).toFixed(4));
       roadEls.dots.forEach(function (c, i) {
         var here = f >= roadFracs[i] - 1e-4;
-        c.setAttribute("class", "rd-dot" + (i === STEPS ? " goal" : "") +
+        // 등급(minor·goal)은 자리가 정하는 것이라 상태와 함께 매번 다시 쓴다 —
+        // class 를 통째로 갈아 끼우므로 여기서 빠뜨리면 첫 칠에 등급이 날아간다
+        c.setAttribute("class", "rd-dot" + (i % 2 ? " minor" : "") +
+          (i === STEPS ? " goal" : "") +
           (!here ? "" : i === step ? " now" : " done"));
         roadEls.halos[i].setAttribute("class",
           "rd-halo" + (here && i === step ? " on" : ""));
@@ -711,16 +720,22 @@
     });
   }
 
-  function drawRoad(total, animate) {
+  /* 모퉁이 라벨은 ⅓·⅔·끝. 눈금이 카드 제목과 같은 단위를 쓴다 — 제목이
+     「3주차」 인데 길은 「1개월」 을 세고 있으면 같은 자리를 두 잣대로 재는 셈이다.
+     그래도 눈금이 겹치는 계획이 있다(두 달짜리에 ⅓·⅔ 가 둘 다 1개월). 그때는
+     되풀이하지 않고 지운다: 「1개월 · 1개월 · 2개월」 은 눈금이 아니라 실수로
+     읽힌다. 끝 눈금은 언제나 남는다 — 그게 목표다. */
+  function drawRoad(unit, suf, animate) {
     if (!road) return;
     if (!roadEls) buildRoad();
-    // 모퉁이 라벨은 ⅓·⅔·끝. 짧은 계획에서 셋이 같은 달로 뭉치더라도 순서가
-    // 거꾸로 보이지는 않게 단조롭게만 눌러 준다.
-    var a = Math.max(1, Math.round(total / 3));
-    var b = Math.max(a, Math.round(total * 2 / 3));
-    roadEls.mo[0].textContent = a + "개월";
-    roadEls.mo[1].textContent = b + "개월";
-    roadEls.mo[2].textContent = Math.max(b, total) + "개월";
+    var at = function (i) { return Math.max(1, Math.round(unit * i / STEPS)); };
+    var end = at(STEPS), prev = 0;
+    [2, 4].forEach(function (i, n) {
+      var v = at(i), show = v > prev && v < end;
+      roadEls.mo[n].textContent = show ? v + suf : "";
+      if (show) prev = v;
+    });
+    roadEls.mo[2].textContent = end + suf;
     setRoadStep(roadStep, animate);
   }
 
@@ -817,7 +832,7 @@
     roadCard.querySelector(".rc-prev").disabled = k <= 0;
     roadCard.querySelector(".rc-next").disabled = k >= STEPS;
 
-    drawRoad(total, animate);
+    drawRoad(unit, suf, animate);
   }
 
   function months(lessons, perWeek) {
