@@ -120,7 +120,14 @@
   .chip:hover { background: var(--surface); color: var(--ink); }
   .chip[aria-pressed="true"] { background: var(--ink); color: #fff; }
   .chip .dot { display: inline-block; width: 7px; height: 7px; margin-right: 6px; border-radius: 2px; box-shadow: inset 0 0 0 1px rgba(0,0,0,.1); vertical-align: 1px; }
-  .chip#expand { border-color: var(--line); }
+  /* 이 페이지에서 실제로 누르는 것은 이 둘뿐이라 버튼처럼 보이게 둔다 */
+  .btn { padding: 8px 14px; border: 1px solid var(--line); border-radius: 8px; background: #fff;
+    color: var(--ink-2); font: inherit; font-size: 12.5px; font-weight: 650; cursor: pointer; white-space: nowrap; }
+  .btn:hover { border-color: var(--ink); color: var(--ink); }
+  .btn.on { background: var(--ink); border-color: var(--ink); color: #fff; }
+  .btn.deep { border-color: var(--ac); color: var(--ac); }
+  .btn.deep:hover { background: var(--tint); }
+  .btn.deep.on { background: var(--ac); border-color: var(--ac); color: #fff; }
   .hits { margin-left: auto; color: var(--ink-3); font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums; }
 
   /* ---------- 3단 · 단원 카드 ---------- */
@@ -158,8 +165,7 @@
   /* ---------- 4단 · 과 한 줄 ---------- */
   .lessons { margin-top: 18px; border-top: 1px solid var(--line-soft); }
   .lesson { border-bottom: 1px solid var(--line-soft); }
-  .lesson.hide, .lesson.over { display: none; }
-  .group.all .lesson.over { display: block; }
+  .lesson.hide { display: none; }
   .lrow-btn { display: grid; grid-template-columns: 58px minmax(0,1fr) minmax(0,auto) 14px; align-items: baseline; gap: 16px;
     width: 100%; padding: 13px 2px; border: 0; background: none; font: inherit; text-align: left; cursor: pointer; }
   .lrow-btn:hover .ltitle { color: var(--ac); }
@@ -188,7 +194,7 @@
   .lesson.open .lchips { opacity: 0; }          /* 카드 안에 패턴 이름이 다시 나온다 */
 
   .ldetail { display: none; margin: 0 0 14px 58px; padding: 18px 20px 20px;
-    background: var(--surface); border-radius: 12px; box-shadow: inset 3px 0 0 var(--ac); }
+    background: var(--surface); border-left: 3px solid var(--ac); border-radius: 0 12px 12px 0; }
   .lesson.open .ldetail { display: block; }
   @media (max-width: 760px) { .ldetail { margin-left: 0; padding: 16px; } }
 
@@ -223,10 +229,6 @@
   .allchips span { padding: 5px 11px; background: #fff; border: 1px solid var(--line); border-radius: 8px; color: var(--ink); font-size: 13px; font-weight: 600; }
   .subhead { margin: 16px 0 0; }
 
-  .more { display: block; width: 100%; padding: 13px; border: 0; background: none; color: var(--ink-3); font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer; }
-  .more:hover { color: var(--ac); }
-  .group.all .more .m-open, .more .m-close { display: none; }
-  .group.all .more .m-close { display: inline; }
 
   .empty { margin-top: 40px; color: var(--ink-3); font-size: 13.5px; text-align: center; }
   .empty.hide { display: none; }
@@ -258,7 +260,8 @@
   <div class="controls">
     <div class="crow">
       <input class="search" id="q" type="search" placeholder="과·패턴·표현 검색" autocomplete="off">
-      <button class="chip" id="expand" type="button">모두 펼치기</button>
+      <button class="btn" id="expandUnits" type="button">단원 모두 펼치기</button>
+      <button class="btn deep" id="expandAll" type="button">과까지 모두 펼치기</button>
       <span class="hits" id="hits"></span>
     </div>
     <div class="crow" id="levelbar"></div>
@@ -281,6 +284,11 @@ const T = DATA.track, LEVELS = DATA.levels;
 const DARK = new Set(["중고급", "고급"]);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const lvColor = lv => `var(--lv-${lv})`;
+/** 받침이 있으면 을, 없으면 를. 단위 이름이 트랙마다 달라서(단원·코스·테마·부) 필요하다. */
+const eul = w => {
+  const c = w.charCodeAt(w.length - 1);
+  return w + (c >= 0xAC00 && c <= 0xD7A3 && (c - 0xAC00) % 28 ? "을" : "를");
+};
 
 document.documentElement.style.setProperty("--ac", T.accent);
 document.documentElement.style.setProperty("--tint", T.tint);
@@ -317,7 +325,7 @@ document.getElementById("tabs").innerHTML =
 
 document.getElementById("band").innerHTML =
   `<h2>${T.groups.length}개 ${esc(T.unitWord)} · ${T.total}${esc(T.lessonWord)}</h2>
-   <p>${esc(T.unitWord)}를 눌러 펼치고, 과를 눌러 그 과가 가르치는 것을 봅니다.</p>`;
+   <p>${esc(eul(T.unitWord))} 눌러 펼치고, ${esc(eul(T.lessonWord))} 눌러 그 안을 봅니다.</p>`;
 
 document.getElementById("levelbar").innerHTML =
   `<span class="lbl" style="margin-right:4px">레벨</span>` +
@@ -325,8 +333,6 @@ document.getElementById("levelbar").innerHTML =
     <span class="dot" style="background:${lvColor(lv)}"></span>${lv}</button>`).join("");
 
 /* ---------- 3·4·5단 ---------- */
-const SHOWN = 5;
-
 function chips(l) {
   const p = (l.chips || []).slice(0, 2).map(c =>
     `<span class="pat" title="${esc(c)}">${esc(c.replace(/\s*\(.*$/, "").trim() || c)}</span>`);
@@ -382,11 +388,11 @@ function detail(l) {
   return h || `<p class="scene">이 과의 상세는 목차 원문에 있습니다.</p>`;
 }
 
-function lessonRow(l, i) {
+function lessonRow(l) {
   const c = chips(l);
   const sub = l.sub || (c ? "" : l.can);
   const no = String(l.n).padStart(2, "0");
-  return `<div class="lesson${i >= SHOWN ? " over" : ""}" data-text="${esc([l.title, l.sub, l.can, l.scene, (l.chips||[]).join(" "), (l.notes||[]).map(n=>n.v).join(" ")].join(" ").toLowerCase())}">
+  return `<div class="lesson" data-text="${esc([l.title, l.sub, l.can, l.scene, (l.chips||[]).join(" "), (l.notes||[]).map(n=>n.v).join(" ")].join(" ").toLowerCase())}">
     <button class="lrow-btn" type="button">
       <span class="lno">${esc(T.lessonWord)} ${no}</span>
       <span class="ltitle">${esc(l.title)}${sub ? ` <em>— ${esc(sub)}</em>` : ""}</span>
@@ -411,7 +417,6 @@ function group(g) {
     head += `<p class="gcan"><b class="lbl">끝내면 할 수 있는 것</b>${esc(g.blurb)}</p>`;
   }
 
-  const extra = Math.max(0, g.lessons.length - SHOWN);
   return `<div class="group" data-lv="${esc(g.level || "")}">
     <button class="ghead" type="button">
       <span class="gnum">${esc(g.label)}</span>
@@ -423,7 +428,6 @@ function group(g) {
     <div class="gbody">
       ${head}
       <div class="lessons">${g.lessons.map(lessonRow).join("")}</div>
-      ${extra ? `<button class="more" type="button"><span class="m-open">더 보기 ${extra}</span><span class="m-close">접기</span></button>` : ""}
     </div>
   </div>`;
 }
@@ -448,8 +452,6 @@ addEventListener("scroll", () => $controls.classList.toggle("stuck", scrollY > c
 $groups.addEventListener("click", e => {
   const head = e.target.closest(".ghead");
   if (head) { head.parentElement.classList.toggle("open"); return; }
-  const more = e.target.closest(".more");
-  if (more) { more.closest(".group").classList.toggle("all"); return; }
   const row = e.target.closest(".lrow-btn");
   if (row) { row.parentElement.classList.toggle("open"); }
 });
@@ -473,8 +475,7 @@ function apply() {
     g.classList.toggle("hide", inGroup === 0);
     if (inGroup) shown++;
     hits += inGroup;
-    if (q) g.classList.add("open", "all");
-    else if (!activeLevels.size) g.classList.remove("all");
+    if (q) g.classList.add("open");
   });
   const filtering = q || activeLevels.size;
   $hits.textContent = filtering ? `${hits}${T.lessonWord} · ${shown}${T.unitWord}` : "";
@@ -503,13 +504,19 @@ document.getElementById("levelbar").addEventListener("click", e => {
   apply();
 });
 
-const $expand = document.getElementById("expand");
-$expand.addEventListener("click", () => {
-  const open = $expand.dataset.on !== "1";
-  $expand.dataset.on = open ? "1" : "0";
-  $expand.textContent = open ? "모두 접기" : "모두 펼치기";
-  document.querySelectorAll(".group").forEach(g => g.classList.toggle("open", open));
-});
+const $units = document.getElementById("expandUnits");
+const $all = document.getElementById("expandAll");
+
+function setOpen(units, lessons) {
+  document.querySelectorAll(".group").forEach(g => g.classList.toggle("open", units));
+  document.querySelectorAll(".lesson").forEach(l => l.classList.toggle("open", lessons));
+  $units.classList.toggle("on", units && !lessons);
+  $all.classList.toggle("on", lessons);
+  $units.textContent = units && !lessons ? "단원 모두 접기" : "단원 모두 펼치기";
+  $all.textContent = lessons ? "과까지 모두 접기" : "과까지 모두 펼치기";
+}
+$units.addEventListener("click", () => setOpen(!$units.classList.contains("on"), false));
+$all.addEventListener("click", () => { const on = !$all.classList.contains("on"); setOpen(on, on); });
 
 // 들어오자마자 첫 단원은 열어 둔다 — 이 페이지는 이미 한 트랙으로 좁혀진 자리라,
 // 무엇이 들어 있는지 한 번은 보여 주는 편이 낫다.
