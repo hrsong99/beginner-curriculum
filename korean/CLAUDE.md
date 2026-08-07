@@ -51,16 +51,45 @@ you are about to make conflicts with it, say so and ask — don't quietly deviat
 - **Verify visually.** These are visual documents; render them in a browser at 480px width and
   look at the screenshots before claiming a change works.
 
+## Writing a new lesson
+
+Four inputs, in this order. Read them all — the budget saved by the first two is there to be
+spent on the last one.
+
+1. **`tools/new_lesson.py`** stamps the deck skeleton. The meta block, the stylesheet links and
+   the sixteen script tags whose load order is load-bearing are not yours to retype — the script
+   lifts them off the track's canonical deck so they cannot drift.
+   `python3 korean/tools/new_lesson.py --track 2-core-patterns --lesson 7 --id core-07-… --title "…"`
+2. **`tracks/<track>/toc/lesson-NNN.md`** — what this lesson teaches, what the learner already
+   knows, and what must not be used yet because a later lesson teaches it. This is generated
+   from `table-of-contents.md` by `tools/shard_toc.py`; **never hand-edit a brief**, edit the
+   TOC and re-run. Read the brief, not the 93KB TOC.
+3. **`tracks/<track>/lesson-blueprint.md`** — which pages, in what order, doing what. Plan the
+   arc from here.
+4. **The trial deck the blueprint names** (`trial/lessons/trial-N-*.html`), in full. This is the
+   expensive read and it is the one worth paying for: the blueprint carries structure, but the
+   tutor's spoken voice, the way a wrong answer is made wrong for a reason, and the rhythm of
+   the example sentences live only in the deck itself. A lesson written from the blueprint alone
+   comes out correctly shaped and lifeless.
+
+Regenerate the briefs after any TOC change:
+`python3 korean/tools/shard_toc.py korean/tracks/<track>`
+
 ## Interactive lessons
 
 Anything the learner taps, types, or drags — and anything that has to stay in step with the
 tutor's screen — goes through lemonboard's `data-sync` contract.
 
-**Before adding any interaction, read
-[`interactive/interaction-protocol.md`](./interactive/interaction-protocol.md).** Getting it
-wrong fails silently: the activity works on your screen and never reaches the other person.
-Copy the markup from [`AUTHORING.md`](./AUTHORING.md) or from a live deck in
-`trial/lessons/` rather than inventing it, and see
+**Reuse an existing activity and the contract comes with it** — copy the markup from
+[`AUTHORING.md`](./AUTHORING.md) or from a live deck in `trial/lessons/`, `data-sync`
+attributes and all, and there is nothing further to read. This is the normal case, and it is
+why building a lesson out of the existing component vocabulary is cheaper *and* safer than
+inventing markup.
+
+**Read [`interactive/interaction-protocol.md`](./interactive/interaction-protocol.md) only when
+you are inventing a new interaction type** — a new `data-sync-kind`, a new way of sharing state,
+anything not already in the vocabulary. Getting it wrong there fails silently: the activity
+works on your screen and never reaches the other person. See
 [`interactive/packaging.md`](./interactive/packaging.md) for turning a deck into an uploadable zip.
 
 Two rules that catch most mistakes: an element is shared **only** if it has a `data-sync-id`
@@ -72,21 +101,21 @@ same document, so anything in the markup is already on the learner's screen.
 
 - **`tracks/`** — the learner-facing curriculum, in learning order: `1-hangul` · `2-core-patterns` ·
   `3-contextual-korean` · `4-freetalking` (pronunciation joins as `5-pronunciation` once it has content).
-  Each track holds `table-of-contents.md`, its lesson HTML (`sample-lesson.html` is the canonical
-  sample), and an `_archive/` for retired drafts and experiments.
+  Each track holds `table-of-contents.md`, the generated `toc/` briefs, `lesson-blueprint.md`,
+  and its lesson HTML. Nothing else — retired drafts live outside this folder, see **Archive**.
 
-  **Each track's sample is its trial lesson with the sales pages cut** — cover, greeting,
-  trial-intro, todays-result and closing come off, everything pedagogical stays. So the samples
-  are full paged decks, not scrolling documents: same skeleton, same stylesheets, same scripts
-  as `trial/lessons/`, and the shared art still comes from `../../trial/assets/`. When a trial
-  lesson changes, re-cut its sample rather than editing both by hand. The first surviving page
-  needs its own `data-act` — the act name used to come from the cover's `.brand-title`.
+  **The trial deck is the source of truth, not the sample.** `trial/lessons/trial-N-*.html` is
+  the deck that gets maintained; each track's `sample-lesson.html` is that deck **with the sales
+  pages cut** — cover, greeting, trial-intro, todays-result and closing come off, everything
+  pedagogical stays. So the samples are full paged decks, not scrolling documents: same
+  skeleton, same stylesheets, same scripts, and the shared art still comes from
+  `../../trial/assets/`. When a trial lesson changes, re-cut its sample rather than editing both
+  by hand — and when the two disagree, **the trial deck wins.** The first surviving page needs
+  its own `data-act`; the act name used to come from the cover's `.brand-title`.
 - **`trial/`** — sales trial material, not a learning track. `full-trials/` holds the four complete
   decks (`trial-1..4`), `lessons/` holds the standalone lesson decks cut from them
-  (`trial-1-hangul-short.html`, `trial-2-patterns-short.html`, `trial-3-contextual-short.html`,
-  plus its own `_archive/` for retired ones), and `reports/` holds the trial report deck.
-  Plus `trial.css`, shared `assets/`
-  (art, mouth, characters), and `_experiments/` for variations and capture files.
+  (`trial-1-hangul-short.html`, `trial-2-patterns-short.html`, `trial-3-contextual-short.html`),
+  and `reports/` holds the trial report deck. Plus shared `assets/` (art, mouth, characters).
 
   **A deck is markup plus shared scripts — no per-deck CSS or JS.** Load them in this
   order: `activities` → `pager` → `script-lines` → `spotlight` → `tutor-notes`
@@ -113,6 +142,14 @@ same document, so anything in the markup is already on the learner's screen.
 - **`interactive/`** — the `data-sync` contract, the packaging guide, and the lemonboard
   packager (`build_lemonboard.py`). Documentation and tooling only; the code decks load
   lives in `runtime/`.
+- **`tools/`** — authoring scripts. `shard_toc.py` (TOC → per-lesson briefs) and
+  `new_lesson.py` (deck skeleton). Both derive their output from files that already exist, so
+  neither holds a second copy of anything.
 - **`references/`** — source textbook scans (internal reference only).
+- **Archive — deliberately not here.** Retired drafts, design variations and capture files live in
+  `_archive/` at the *repo* root, under their original paths. They are kept for history and are
+  **not part of the read path**: never cite one as precedent, never copy markup out of one, and
+  don't search them when looking for how something is done. If a grep turns up an `_archive/`
+  hit, the live answer is elsewhere in `korean/`.
 - `index.html` / `viewer.html` at the root are the navigation; `CLAUDE.md` / `AGENTS.md` stay at
   the root so they auto-load.
