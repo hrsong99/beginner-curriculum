@@ -1344,6 +1344,102 @@ body:not(.no-yomi) .sent-more .yomi + .translation { margin-top: 7px; }
   padding: 15px 20px;
 }
 
+/* The same photo, smaller, wherever the learner reads or taps a block.
+   Every block has a vowel in it, so the slot is never ragged — and on a
+   ㄴ/ㅁ block the photo is the vowel's, which is the part the mouth is
+   doing the work of.
+   It gives nothing away: the letter is already printed on the block, so
+   the picture cannot answer a 고르기 row for you — both options carry
+   one, and on a read drill it only says what to do with your lips while
+   you say the letter out loud. One component throughout: same white card,
+   same grey outline, only the size changes. */
+/* The photo takes no outline of its own. It lives inside a block that is
+   already a box, and a second rounded rectangle around it turned it into a
+   sticker pasted onto the block rather than part of it.
+
+   The strip shows ~54% of the source's height, set as a ratio so it holds
+   at whatever width the block ends up: the illustrations are 260x260 and
+   cover scales them to the block's width, so a fixed px height would crop
+   a different amount of face on a narrow screen.
+
+   Why 54% and not less: the six illustrations are NOT registered to a
+   common baseline. Measured, the lips run 0.265-0.692 of the frame in 아
+   and 0.308-0.738 in 어 — a 5% offset between the extremes. A tighter
+   strip pinched 아 against the top and 어 against the bottom; this one
+   clears the worst case on both sides with one number instead of a table
+   of six per-file crops that a seventh vowel would silently fall out of.
+   The real fix is re-registering the source art. */
+.read-item > .mouth,
+.tap-tile > .mouth {
+  border-radius: 9px;
+  object-fit: cover;
+  aspect-ratio: 1.85;
+  /* height:auto is load-bearing — the markup's height="" attribute is a
+     presentational hint on the height property, so without this it wins
+     over aspect-ratio and the strip keeps whatever the tag happens to say. */
+  height: auto;
+}
+
+/* ---- read drill: one block, glyph over mouth ----
+   The photo cannot sit ON the seat fill — the fill is the code for 자음/모음
+   and a picture parked in one half hides the split (a 오 chip is cream over
+   pink; a photo in the pink pushes the glyph up into the cream, so the
+   letter reads as if it belonged to the consonant seat alone). But left to
+   hang under a bordered chip it read as a second, unrelated thing.
+   So the OUTLINE moves out one level: the card is the block, and inside it
+   the seat tile is a fill with no border of its own and the photo sits
+   directly beneath it. Same two-levels-of-boxes rule as .letter-card, which
+   holds a seat-filled glyph and a mouth photo in exactly this way. */
+.read-item {
+  display: grid;
+  justify-items: center;
+  gap: 7px;
+  padding: 9px;
+  border: 1px solid var(--gray-200);
+  border-radius: 16px;
+  background: #fff;
+}
+
+.read-item > .read-chip {
+  width: 100%;
+  height: 110px;
+  border: none;
+  border-radius: 11px;
+  font-size: 66px;
+}
+
+/* Full width, so the photo is the block's second band rather than a small
+   picture floating under a wide tile — two bands of one card. Cropping to a
+   strip also throws away the chin and the neck and leaves the lips, which
+   are the only part the learner is being asked to copy.
+
+   No object-position: the lips sit near the middle of every frame (measured
+   mid-points 0.46-0.52 of the height), so cover's own centre crop is right
+   and nudging the window down only ate into the chin. */
+.read-item > .mouth { width: 100%; }
+
+/* A tap tile is plain white, so the photo goes straight inside the block —
+   cropped to the same lip strip the read block uses, sitting right under
+   the glyph rather than parked at the foot of the tile. */
+/* align-content, not just place-items. The glyph is a bare text node, so it
+   is an ANONYMOUS grid item — its row is auto-sized and the tile's leftover
+   height gets stretched into both rows by default. The gap between the two
+   then reads as ~22px while the photo ends up 6px off the floor: a letter
+   floating over a strip stuck to the bottom edge, which is the opposite of
+   the one-block reading. Centring the pair as a group and letting the rows
+   hug their content puts the air back on the outside where it belongs. */
+.tap-grid.rows .tap-tile:has(> .mouth) {
+  height: 116px;
+  align-content: center;
+  gap: 7px;
+  padding-bottom: 8px;
+}
+
+.tap-tile > .mouth { width: 88px; }
+
+/* a wrong tile recedes as one thing — the glyph fades, so the photo does too */
+.tap-tile.wrong > .mouth { opacity: .4; }
+
 /* ---------- same-kana pairs, compared side by side ---------- */
 .pair-list {
   display: grid;
@@ -1491,6 +1587,7 @@ body:not(.no-yomi) .sent-more .yomi + .translation { margin-top: 7px; }
 
   .combo span { height: 58px; font-size: 24px; }
   .read-chip { height: 128px; font-size: 66px; }
+  .read-item > .read-chip { height: 96px; font-size: 58px; }
   .anat { gap: 12px; }
   .blk { width: 146px; height: 146px; }
   .blk .glyph { font-size: 84px; }
@@ -2512,8 +2609,15 @@ body.teaching .section-subtitle + .tutor-note {
 }
 
 /* answers surface the way .slot does in the pattern lessons: present
-   for the tutor, never loud — a ghost of the answer inside the blank */
-body.teaching .build-slot:not(.done)::after {
+   for the tutor, never loud — a ghost of the answer inside the blank.
+
+   Only while the blank is still blank. The ghost is drawn over the whole
+   slot, so the moment the learner puts a part in it, the answer and their
+   attempt were stacked on the same 74px square and neither could be read —
+   and that square is precisely what the tutor is watching to see what the
+   learner reached for. An occupied slot no longer needs the prompt: they
+   have committed, and the ✓ or the shake answers them next. */
+body.teaching .build-slot:not(.done):has(> .glyph:empty)::after {
   content: attr(data-a);
   position: absolute;
   inset: 0;
@@ -2531,6 +2635,14 @@ body.teaching .tap-tile[data-ok]:not(.right):not(.wrong)::before {
   inset: 7px;
   border: 2px dashed #e2e2e0;
   border-radius: 10px;
+}
+
+/* A tile carrying a mouth photo has something near its floor, and the marker
+   at 7px landed 2px off the band — close enough to read as touching it. It
+   hugs the tile edge instead; the ring still says "this one" either way. */
+body.teaching .tap-tile[data-ok]:has(> .mouth):not(.right):not(.wrong)::before {
+  inset: 5px;
+  border-radius: 11px;
 }
 
 /* ---------- the switch, tucked into the cover's corner ----------

@@ -60,7 +60,9 @@
     ".combi-nouns > span", ".combi-ends > span", ".choose-sentence",
     ".bubble > .korean", ".bubble > .translation",
     // 한글 덱의 글자 부품
-    ".letter-card", ".pair-side", ".pair-kana", ".read-chip", ".blk",
+    // .read-item is the block (card); .read-chip and .mouth are the parts
+    // inside it, reached by the second tap.
+    ".letter-card", ".pair-side", ".pair-kana", ".read-item", ".read-chip", ".blk",
     ".blk-item", ".part", ".kana", ".syl", ".eq", ".build", ".combo > span",
     ".word-card", ".sign", ".payoff", ".mouth", ".brand-mascot",
     // 마무리 — 오늘의 결과와 닫는 장
