@@ -171,46 +171,52 @@
            차지한다. 코스가 배우는 일의 모양이 서로 달라 한 틀에 못 담기므로
            kind 가 셋이다 — han(글자를 조립한다) · pat(틀을 갈아 낀다) ·
            talk(말을 주고받는다). 그리는 곳은 artHTML().
+     ico = ✓ 띠에 서는 그림. 니즈 페이지 「학습 동기」 의 그림을 키로 가리킨다 —
+           새 그림을 만들지 않는 것이 핵심이다. 여행 코스의 얼굴이 「여행」 이라는
+           이유의 얼굴과 같아야, 처음 고른 이유와 지금 보고 있는 코스가 같은
+           물건으로 이어진다. 아직 짝이 없는 코스는 비워 둔다 — 없는 그림을
+           엉뚱한 것으로 메우느니 ✓ 로 남는 편이 낫다(doMark()).
+           새 그림이 필요한 셋은 trial/assets/course-icons-prompt.md 에 적어 두었다.
 
      n = 그 코스의 레슨 수(tracks/ 의 목차 그대로). 핵심 패턴만 n 이 없다 —
      통째로 떼고 넘어가는 코스가 아니라서, 다음 코스의 입장 바닥까지만 세고
      나머지 과는 그 뒤로도 계속 함께 간다. courseLen() 이 그때그때 잰다. */
   var COURSE = {
-    hangul: { n: 14, t: "한글 읽기",
+    hangul: { n: 14, t: "한글 읽기", ico: "hangul",
               can: "거리 간판과 메뉴판을 소리 내어 읽어요",
               art: { kind: "han",
                      blocks: [{ c: "ㅋ", v: "ㅏ", s: "카" }, { c: "ㅍ", v: "ㅔ", s: "페" }],
                      cap: "자음과 모음이 만나 한 글자 — 그래서 「카페」가 읽혀요" } },
-    core:   { t: "핵심 패턴",
+    core:   { t: "핵심 패턴", ico: "core",
               can: "내 소개와 하루 일을 문장으로 말해요",
               art: { kind: "pat", pre: "저는", slot: "일본 사람", post: "입니다.",
                      words: ["학생", "회사원", "요리사"],
                      cap: "틀은 그대로, 가운데 한 자리만 내 단어로" } },
-    travel: { n: 40, t: "상황별 · 여행",
+    travel: { n: 40, t: "상황별 · 여행", ico: "travel",
               can: "가게에서 주문하고 길을 물어요",
-              art: { kind: "talk",
-                     turns: [["me", "혹시 명동역이 어딘지 아세요?"],
-                             ["", "이쪽으로 쭉 가시면 돼요."]],
+              art: { kind: "talk", who: "행인", face: "b",
+                     turns: [["me", "혹시 명동역이 [어딘지 아세요]?"],
+                             ["", "이쪽으로 [쭉 가시면 돼요]."]],
                      cap: "길에서 · 가게에서 진짜 오가는 말을 그대로" } },
-    drama:  { n: 40, t: "상황별 · 드라마",
+    drama:  { n: 40, t: "상황별 · 드라마", ico: "kpop",
               can: "드라마 대사가 자막 없이 들려요",
-              art: { kind: "talk",
-                     turns: [["", "우리 어디서 본 적 있지 않아요?"],
-                             ["me", "아… 저 그 카페에서 봤어요."]],
+              art: { kind: "talk", who: "상대역", face: "a",
+                     turns: [["", "우리 어디서 [본 적 있지 않아요]?"],
+                             ["me", "아… 저 그 카페에서 [봤어요]."]],
                      cap: "드라마에 나온 대사를 그대로 주고받아요" } },
-    banmal: { n: 20, t: "상황별 · 반말 수다",
+    banmal: { n: 20, t: "상황별 · 반말 수다", ico: "friend",
               can: "친구에게 말을 놓고 수다 떨어요",
-              art: { kind: "talk",
-                     turns: [["", "너 지금 어디 가는 거야?"],
-                             ["me", "나 편의점. 같이 갈래?"]],
+              art: { kind: "talk", who: "친구", face: "b",
+                     turns: [["", "너 지금 어디 [가는 거야]?"],
+                             ["me", "나 편의점. 같이 [갈래]?"]],
                      cap: "요를 떼고, 친구에게 하는 말투로" } },
     // 프리토킹은 끝이 없다(주제가 매주 는다). 40 은 「한 번에 이만큼 판다」 는
     // 명목값이지 트랙의 분량이 아니다 — plan-logic.md 에 그렇게 적어 두었다.
-    free:   { n: 40, t: "프리토킹",
+    free:   { n: 40, t: "프리토킹", ico: "free",
               can: "내 생각과 그 이유까지 말해요",
-              art: { kind: "talk",
+              art: { kind: "talk", who: "선생님",
                      turns: [["", "돈과 시간, 하나만 가질 수 있다면요?"],
-                             ["me", "저는 시간이요. 돈은 다시 벌 수 있으니까요."]],
+                             ["me", "저는 시간이요. [돈은 다시 벌 수 있으니까요]."]],
                      cap: "생각 하나에 이유 하나 — 문장을 이어서 말해요" } }
   };
   var CORE_N = 116;                    // 핵심 패턴 전체 과 수
@@ -372,7 +378,7 @@
     var n = overall(), d = LV[String(n)];
     card.querySelector(".lvbig-n b").textContent = "Lv." + n;
     card.querySelector(".lvbig-l").innerHTML = d.line;
-    card.querySelector(".lvbig-img").src = "../assets/levels/lv-" + n + ".png";
+    card.querySelector(".lvbig-img").src = srcOf(".lv-src", "lv", n);
     card.querySelector(".lvbig-img").alt = "Lv." + n + " · " + d.name;
     card.querySelector(".topikrow i").textContent = "TOPIK " + d.cert[0];
     card.querySelector(".topikrow span").textContent = d.cert[1];
@@ -931,14 +937,70 @@
     }
   });
 
-  /* 코스 커버는 마크업에 적힌 여섯 장 중에서 고른다. 경로를 여기서 지어내면
-     패키저가 못 보고 지나가 보드에서 404 가 난다(마크업의 src 만 번들한다). */
-  function covSrc(key) {
-    var img = document.querySelector('.cov-src [data-cov="' + key + '"]');
+  /* 갈아 끼우는 그림은 언제나 마크업에 미리 적어 둔 것 중에서 고른다.
+     경로를 여기서 지어내면 패키저가 못 보고 지나간다 — 패키저는 마크업의
+     src 만 번들·평탄화하므로, 로컬에서는 되고 보드에서 404 가 난다.
+     쓰는 곳: 레벨 그림 열 장(.lv-src)과 코스 아이콘(.ico-src). */
+  function srcOf(box, attr, key) {
+    var img = document.querySelector(box + " [data-" + attr + '="' + key + '"]');
     return img ? img.getAttribute("src") : "";
   }
 
+  /* 「학습 동기」 그림은 니즈 페이지에 이미 한 장씩 서 있다. 리포트는 그것을
+     그대로 가리켜 쓴다 — 복사해 두면 파일이 둘이 되고, 경로를 지어내면
+     패키저가 못 본다. 마크업의 <img> 를 그대로 가리키는 것이 양쪽을 다 푼다. */
+  function whyIcon(key) {
+    var img = key && document.querySelector('[data-group="why"] [data-val="' + key + '"] .r-ico');
+    return img ? img.getAttribute("src") : "";
+  }
+  /* ✓ 띠의 표식. 찾는 순서가 곧 규칙이다 —
+       ① 코스 전용 그림(.ico-src) : 이유 쪽에 짝이 없는 코스(한글·핵심·프리토킹)
+       ② 학습 동기 그림           : 코스가 곧 그 이유인 경우(여행·드라마·반말)
+       ③ ✓                       : 아직 그림이 없을 때
+     ③ 이 남아 있는 것이 정상 상태다. 그림이 없는 코스에 엉뚱한 그림을 붙이면
+     「그림 = 그 코스」 라는 약속이 깨져서, 있는 그림들까지 뜻을 잃는다.
+     ① 을 채우는 법은 trial/assets/course-icons-prompt.md 에 있다. */
+  function doMark(key) {
+    var src = srcOf(".ico-src", "ico", key) || whyIcon(key);
+    return src ? '<img class="hy-do-i" src="' + src + '" alt="">' : '<i>✓</i>';
+  }
+
+  /* 카드의 머리 한 덩어리 — 그림 하나에 두 줄이 매달린다.
+       [그림]  코스 이름 · 레슨 수            n / N
+               할 수 있게 되는 일
+       ───────────────────────────────────────────
+     전에는 이름줄 아래에 연두 띠가 따로 앉아 있었다. 면이 있으니 결론인 건
+     알겠는데, 그 결론이 바로 위 코스의 것이라는 말은 어디에도 없어서 띠가
+     혼자 떠 있었다. 그림을 두 줄 왼쪽에 하나만 세우면 그림이 둘을 함께
+     가리키고, 아래 실선이 거기까지가 머리라고 닫는다 — 면 대신 자리로 말한다.
+     니즈 페이지의 「학습 동기」 줄(그림 + 큰 줄 + 작은 줄)과 같은 꼴이라,
+     리포트가 덱에 이미 있는 말투를 그대로 쓴다. */
+  function headHTML(name, meta, k, mark, line, dim) {
+    return '<div class="hy-head">' + mark +
+        '<div class="hy-hb">' +
+          '<div class="hy-h"><b>' + name + '</b>' +
+            (meta ? '<span class="hy-n">' + meta + '</span>' : "") +
+            '<span class="hy-no">' + (k + 1) + " / " + (STEPS + 1) + '</span></div>' +
+          '<p class="hy-do' + (dim ? " hy-do-e" : "") + '">' + line + '</p>' +
+        '</div>' +
+      '</div>';
+  }
+
   function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;"); }
+
+  /* 대사 안의 [ ] 를 형광펜으로 바꾼다.
+     대사 두 줄을 통째로 내밀면 「한국어 문장이 두 개 있다」 까지만 읽힌다 —
+     그 코스가 파는 것은 문장이 아니라 문장 안의 한 부분이다: 반말 코스는
+     요가 떨어진 말끝, 프리토킹은 뒤에 붙는 이유, 여행은 묻는 틀. 그 부분에만
+     형광펜을 그으면 카드가 「이걸 할 수 있게 된다」 를 손가락으로 짚는다.
+     쓰는 것은 레슨의 형광펜 그대로다(mark.hl · 라임). 튜터가 화면에 긋는 그
+     자국이라 「여기를 보세요」 라는 뜻이 이미 붙어 있고, 새 색을 만들지 않는다.
+     아래 그림 설명(art.cap)이 그 형광펜의 범례 노릇을 한다 — 반말 카드라면
+     「요를 떼고, 친구에게 하는 말투로」 가 그어진 자리를 그대로 설명한다.
+     [ ] 는 이스케이프 뒤에 바꾼다: 대사에 <,& 가 섞여도 안전하다. */
+  function hlText(s) {
+    return esc(s).replace(/\[([^\]]+)\]/g, '<mark class="hl">$1</mark>');
+  }
 
   /* ---- 코스마다 「그 코스에서 실제로 하는 일」 한 장 ----
      예문 한 줄로는 코스끼리 구별이 안 됐다 — 셋 다 「이런 말을 해요」 였다.
@@ -951,9 +1013,11 @@
         return '<div class="hbk">' +
             '<div class="hbk-j"><span class="seat-c">' + b.c + '</span>' +
               '<span class="seat-v">' + b.v + '</span></div>' +
-            /* 두 자리가 한 글자로 모이는 팔. 좌표는 타일 두 개(34+6+34=74)의 가운데로 모은다 */
-            '<svg class="hbk-arm" viewBox="0 0 74 15" aria-hidden="true">' +
-              '<path d="M17 1 L17 6 Q17 9 21 9 L53 9 Q57 9 57 6 L57 1 M37 9 L37 14"/></svg>' +
+            /* 두 자리가 한 글자로 모이는 팔. 좌표는 타일 두 개(47+6+47=100)의 가운데로
+               모은다 — 23.5 와 76.5 가 각 타일의 한가운데, 50 이 둘의 한가운데다.
+               타일 크기는 trial.css 의 .hbk-j span 이 정하므로 함께 움직인다. */
+            '<svg class="hbk-arm" viewBox="0 0 100 19" aria-hidden="true">' +
+              '<path d="M23.5 1 L23.5 8 Q23.5 11 27.5 11 L72.5 11 Q76.5 11 76.5 8 L76.5 1 M50 11 L50 18"/></svg>' +
             '<div class="hbk-s seat-lr">' + b.s + '</div>' +
           '</div>';
       }).join("") + '</div>';
@@ -987,8 +1051,33 @@
           '</div>' +
         '</div>';
     }
+    /* 대사는 레슨의 대화 부품을 그대로 쓴다 — .turn > .who(얼굴 + 이름) + .bubble.
+       리포트에만 있는 말풍선을 따로 만들면 두 줄짜리 글로 보이는데, 레슨에서
+       쓰는 그 꼴을 그대로 세우면 대화 한 장면으로 보인다. 얼굴이 붙는 순간
+       「누가 누구에게」 가 그림으로 서고, 첫 수업에서 만날 화면이기도 하다.
+       말풍선 · 얼굴 · 꼬리 모양은 lesson-card.css 가 이미 정의해 두었고,
+       리포트에서는 크기만 줄여 쓴다(trial.css 의 .hy .turn 아래).
+       상대의 이름은 코스마다 다르다(art.who) — 여행이면 행인, 반말이면 친구다.
+       누구와 하는 말인지가 그 코스가 파는 것의 절반이라, 「상대」 로 뭉뚱그리면
+       코스 넷이 같은 그림이 된다.
+
+       얼굴도 마찬가지다. 사람 아이콘은 「자리가 비어 있다」 는 표시라, 장면 속
+       인물에게 붙이면 행인도 친구도 상대역도 같은 회색 실루엣이 된다. 사람이
+       정해진 자리(행인·상대역·친구)에는 덱이 쓰는 배역 사진을 붙이고(art.face),
+       사람이 아니라 역할인 자리(나·선생님)에만 아이콘을 남긴다. */
+    var ICON = '<span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true">' +
+      '<path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/>' +
+      '</svg></span>';
+    var pic = a.face ? srcOf(".face-src", "face", a.face) : "";
     return '<div class="sp-talk">' + a.turns.map(function (t) {
-      return '<div class="tk ' + t[0] + '"><p>' + esc(t[1]) + "</p></div>";
+      var me = t[0] === "me";
+      var face = (!me && pic) ? '<img class="avatar" src="' + pic + '" alt="">' : ICON;
+      return '<div class="turn ' + (me ? "me" : "other") + '">' +
+          '<span class="who">' + face +
+            '<span class="who-name">' + (me ? "나" : (a.who || "상대")) + '</span></span>' +
+          '<div class="bubble' + (me ? " me" : "") + '">' +
+            '<span class="korean">' + hlText(t[1]) + '</span></div>' +
+        '</div>';
     }).join("") + '</div>';
   }
 
@@ -1016,36 +1105,63 @@
          레슨 수는 courseLen() 이 잰다 — 핵심 패턴은 목표에 따라 밟는 분량이
          달라져서, COURSE.n 을 그대로 쓰면 이 사람의 계획과 어긋난다. */
       curli.innerHTML =
-        '<div class="hy"><img class="hy-wm" src="' + covSrc(key) + '" alt="">' +
-          '<div class="hy-h"><b>' + c.t + '</b>' +
-            '<span class="hy-n">' + courseLen(key, stops, k) + '레슨</span>' +
-            '<span class="hy-no">' + (k + 1) + " / " + STEPS + '</span></div>' +
-          '<div class="hy-do">' +
-            '<b class="hy-do-t"><i>✓</i><span>' + c.can + '</span></b></div>' +
+        '<div class="hy">' +
+          headHTML(c.t, courseLen(key, stops, k) + "레슨", k, doMark(c.ico), c.can, false) +
           '<div class="hy-stage">' + artHTML(c.art) + '</div>' +
           '<div class="hy-cap">' + c.art.cap + '</div>' +
         '</div>';
     } else {
+      /* 도착 칸도 코스 칸과 같은 카드다 — 머리 · 그림 · 설명.
+         전에는 이 칸만 다른 부품(.cli)이라 초록 상자 하나로 끝났고, 앞의 세
+         장보다 짧아서 넘길 때마다 아래 리포트가 밀렸다. 길의 마지막 마디가
+         가장 초라한 카드일 이유가 없다: 여기가 이 계획이 팔려는 자리다.
+
+         칸마다 무엇을 담는지가 코스 카드와 나란히 대응한다 —
+           이름     : 코스 이름 → 「목표 도착」
+           수       : N레슨     → N개월 뒤 (언제 닿는지)
+           머리 둘째줄 : 할 수 있게 되는 일 → 처음 고른 목표 그 문장
+           그림     : 코스에서 하는 일 → 다다른 레벨(레벨 그림 · 한 줄 · TOPIK)
+           설명     : 그림 설명   → 왜 이 순서인지(처음 고른 이유로 닫는다)
+         테두리만 초록이다. 초록은 이 덱에서 「다다른 것」 이라, 마지막 카드에
+         한 겹 두르는 것으로 도착이라고 말한다. */
       var lv = g ? g.lv : Math.min(LADDER_STEPS, overall() + 2);
       var d = LV[String(lv)];
+      /* 목표 전에도 이 칸은 빈 채로 두지 않는다 — 오늘 실력에서 갈 만한 곳을
+         미리 놓아 두고, 목표를 고르면 그 자리가 진짜 도착으로 바뀐다.
+         바로 위 점프 링크가 이미 「목표를 아직 안 골랐어요」 라고 말하므로
+         여기서 같은 문장을 반복하지 않는다. */
+      var why = g ? (WHY[pick.why[0]] || WHY.other)
+                  : "지금은 오늘 실력으로 가 볼 만한 곳을 미리 놓아 뒀어요.";
+      /* 머리의 그림은 처음 고른 「이유」 의 것이다. 길의 마지막 칸이 맨 첫 장의
+         대답으로 닫히는 자리라, 표식도 그 첫 장에서 가져온다. */
       curli.innerHTML =
-        '<div class="cli cli-arrive">' +
-          '<div class="cli-h">' +
-            '<span class="cli-lv">Lv.' + lv + '</span>' +
-            '<span><b class="cli-t">' + d.line + '</b>' +
-              '<span class="cli-s">TOPIK ' + d.cert[0] + '</span></span>' +
-          '</div>' +
-          (g ? '<div class="cli-goal-b">' +
-              '<span class="cg-k">' + Math.max(1, Math.round(unit)) + suf + " 뒤, 목표 도착</span>" +
-              '<b class="cg-t">' + g.t + '</b>' +
-              (WHY[pick.why[0]] ? '<em class="cg-w">' + WHY[pick.why[0]] + '</em>' : "") +
-            '</div>'
-            : '<div class="cli-e"><i>→</i><span><b>목표를 아직 안 골랐어요</b>' +
-              '<em>목표를 고르면 여기에 도착 레벨이 나와요</em></span></div>') +
+        '<div class="hy hy-goal">' +
+          headHTML("목표 도착",
+                   g ? Math.max(1, Math.round(unit)) + suf + " 뒤" : "",
+                   k,
+                   g ? doMark(pick.why[0]) : '<i>?</i>',
+                   g ? g.t : "목표를 고르면 여기가 채워져요",
+                   !g) +
+          /* 도착 그림 · 그림 한 장 아래로 곧게 내려오는 한 줄기.
+             앞의 세 장이 모두 가운데로 모이는 그림이라 이 장만 왼쪽 글 + 오른쪽
+             그림이면 넘길 때 축이 튄다. 그리고 넉 줄(레벨·한 줄·급수·설명)을
+             쌓느라 사이 간격이 저마다 달랐다 — 셋으로 줄이고 리듬을 하나로 맞춘다.
+             TOPIK 의 설명 문장은 뺐다. 급수만 남겨도 파는 데 모자라지 않고,
+             그 자리는 이미 카드 맨 아래 설명이 맡고 있다. */
+          '<div class="hy-stage"><div class="sp-goal">' +
+            '<img class="gl-face" src="' + srcOf(".lv-src", "lv", lv) + '" alt="">' +
+            '<b class="gl-lv">Lv.' + lv + '</b>' +
+            '<p class="gl-line">' + d.line + '</p>' +
+            '<span class="gl-cert">TOPIK ' + d.cert[0] + '</span>' +
+          '</div></div>' +
+          '<div class="hy-cap">' + why + '</div>' +
         '</div>';
     }
 
-    // 몇 칸 중 몇 번째인지, 그리고 끝에서 더 못 가는지
+    /* 몇 칸 중 몇 번째인지, 그리고 끝에서 더 못 가는지.
+       칸은 코스 STEPS 개 + 도착 한 장이라 모두 STEPS+1 이다 — 카드 머리의
+       「n / N」 도 점의 수도 같은 N 을 써야 한다(도착 칸이 「4 / 3」 이 되던
+       자리다). */
     var dots = "", i;
     for (i = 0; i <= STEPS; i++) dots += '<i' + (i === k ? ' class="on"' : "") + '></i>';
     roadCard.querySelector(".rc-dots").innerHTML = dots;

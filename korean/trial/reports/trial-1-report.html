@@ -166,6 +166,21 @@
           </div>
           <img class="lvbig-img" src="../assets/levels/lv-1.png" alt="">
         </div>
+        <!-- 레벨 그림 열 장 · 코스 아이콘(.ico-src)과 같은 이유로 마크업에 한 번씩
+             적어 둔다. 패키저는 마크업의 src 만 번들·평탄화하므로, JS 가 경로를
+             지어내면 로컬에서만 되고 보드에서 404 가 난다. 여기서 골라 쓴다. -->
+        <div class="lv-src" hidden>
+          <img data-lv="1" src="../assets/levels/lv-1.png" alt="">
+          <img data-lv="2" src="../assets/levels/lv-2.png" alt="">
+          <img data-lv="3" src="../assets/levels/lv-3.png" alt="">
+          <img data-lv="4" src="../assets/levels/lv-4.png" alt="">
+          <img data-lv="5" src="../assets/levels/lv-5.png" alt="">
+          <img data-lv="6" src="../assets/levels/lv-6.png" alt="">
+          <img data-lv="7" src="../assets/levels/lv-7.png" alt="">
+          <img data-lv="8" src="../assets/levels/lv-8.png" alt="">
+          <img data-lv="9" src="../assets/levels/lv-9.png" alt="">
+          <img data-lv="10" src="../assets/levels/lv-10.png" alt="">
+        </div>
         <hr class="rline">
         <ul class="chk lv-ev"></ul>
         <p class="topikrow"><i>TOPIK 1급</i><span>—</span></p>
@@ -328,22 +343,39 @@
 
         <a class="rep-jump rj-course" href="#p-goal"><span class="rj-b"><span class="rj-t">—</span><span class="rj-s">눌러서 고르러 가기</span></span></a>
 
-        <!-- 코스 커버 여섯 장 · 마디마다 갈아 끼울 그림을 마크업에 한 번씩 적어
-             둔다. 패키저는 마크업의 src 만 번들·평탄화하므로, JS 가 경로를
-             지어내면 로컬에서만 되고 보드에서 404 가 난다. 여기서 골라 쓴다. -->
-        <div class="cov-src" hidden>
-          <img data-cov="hangul" src="../assets/art/cov/cov-hangul.png" alt="">
-          <img data-cov="core" src="../assets/art/cov/cov-core.png" alt="">
-          <img data-cov="travel" src="../assets/art/cov/cov-travel.png" alt="">
-          <img data-cov="drama" src="../assets/art/cov/cov-drama.png" alt="">
-          <img data-cov="banmal" src="../assets/art/cov/cov-banmal.png" alt="">
-          <img data-cov="free" src="../assets/art/cov/cov-free.png" alt="">
+        <!-- 코스 전용 아이콘 · 카드 머리의 그림.
+             여행·드라마·반말은 니즈 페이지의 「학습 동기」 그림을 그대로 쓰므로
+             여기 없다 — 코스가 곧 그 이유라, 같은 그림이어야 이어진다.
+             짝이 없는 셋만 여기 온다. 그림이 아직 없는 코스는 줄을 지우면 되고,
+             그동안 그 카드는 ✓ 로 남는다(report.js doMark).
+             만드는 법: ../assets/course-icons-prompt.md
+             경로를 JS 에서 지어내지 않는 이유는 .lv-src 와 같다 — 패키저는
+             마크업의 src 만 번들·평탄화한다. -->
+        <div class="ico-src" hidden>
+          <img data-ico="hangul" src="../assets/course-icons/ic-hangul.png" alt="">
+          <img data-ico="core"   src="../assets/course-icons/ic-core.png" alt="">
+          <img data-ico="free"   src="../assets/course-icons/ic-free.png" alt="">
+        </div>
+
+        <!-- 대사 속 상대의 얼굴 · 덱이 쓰는 그 사진 그대로다(하나·하루카는
+             레슨에서 소희처럼 장면 속 인물 아무에게나 붙여 쓰는 배역 사진이다).
+             나와 선생님은 여기 없다 — 그 둘은 사람이 정해진 자리가 아니라
+             역할이라, 레슨과 같이 회색·연두 사람 아이콘으로 둔다.
+             주소가 원격이라 패키저가 번들하지 않고 그대로 둔다(packaging.md
+             「Remote references」). 그래도 마크업에 적는 규칙은 지킨다 —
+             나중에 로컬로 내려도 JS 는 손대지 않는다. -->
+        <div class="face-src" hidden>
+          <img data-face="a" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt="">
+          <img data-face="b" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt="">
         </div>
 
         <div class="road-card pm-road">
           <div class="road">
             <span class="road-k">추천 코스</span>
-            <svg class="road-svg" viewBox="0 0 270 118" role="img" aria-label="지금부터 목표까지의 코스 길"></svg>
+            <!-- viewBox 의 위쪽 여백 4 는 후광 자리다. 첫 줄의 점은 y=10.34 에
+                 있고 후광은 반지름 13 이라 y=-2.66 까지 올라간다 — 0 에서
+                 시작하면 「지금」 의 후광만 위가 잘려 반달로 보인다. -->
+            <svg class="road-svg" viewBox="0 -4 270 122" role="img" aria-label="지금부터 목표까지의 코스 길"></svg>
           </div>
 
           <div class="curli"></div>
