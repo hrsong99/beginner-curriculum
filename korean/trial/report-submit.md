@@ -186,23 +186,29 @@ window.PODO_REPORT_CONTEXT = { studentId: 482913, classId: 77120, studentName: "
 | `class_id` | int | `levelTest.classId` |
 | `student_name` | varchar(100) | `levelTest.studentName` |
 | `language` | varchar(10) NOT NULL | `"KO"` — **새 값**([§6](#6-정해야-할-것)) |
-| `level` | int NOT NULL | `levelTest.level` (1–10) |
+| `level` | int NOT NULL | `reportSnapshot.assessment.level` (1–10) |
 | `level_name` | varchar(50) | `levelTest.levelName` |
 | `url` | text | `null` — 이 리포트는 PDF 를 만들지 않는다 |
 | `report_version` | smallint | 봉투의 `reportVersion` (`2`) |
 | **`report_snapshot`** | **json** | **`reportSnapshot` 통째로. 리포트를 그리는 것은 이 칸이다** |
 | `job` | text | `null` — 이 리포트는 직업을 묻지 않는다 |
-| `reason` | text | `levelTest.reason` 을 join (`"kpop,travel"`) |
+| `reason` | text | `reportSnapshot.answers.why` 를 고른 순서대로 join (`"kpop,travel"`) |
 | `study_method` | text | `null` — 이 리포트는 학습 방법을 묻지 않는다 |
-| `listening` | varchar(255) | `levelTest.listening` — 듣기 레벨을 문자열로 |
-| `fluency` | varchar(255) | `levelTest.fluency` — 유창성 |
-| `pronunciation` | varchar(255) | `levelTest.pronunciation` — 발음 |
+| `listening` | varchar(255) | `reportSnapshot.assessment.areas.lis` — 듣기 레벨을 문자열로 |
+| `fluency` | varchar(255) | `reportSnapshot.assessment.areas.flu` — 유창성 |
+| `pronunciation` | varchar(255) | `reportSnapshot.assessment.areas.pron` — 발음 |
 | `created_at` | timestamp | DB 기본값. 튜터가 누른 시각은 `reportSnapshot.capturedAt` 에 따로 있다 |
 
 **평면 칸과 스냅샷의 역할이 다릅니다.** 평면 칸은 어드민 목록·집계가 JSON 을 열지 않고 읽는
 자리이고(그래서 `level`·`listening` 같은 값이 두 곳에 있습니다), **리포트를 그리는 쪽은 언제나
 `report_snapshot` 을 읽습니다.** 평면 칸을 보고 화면을 그리면 거기 없는 값(동기·목표·페이스·
 정확성·어휘)이 통째로 빠집니다.
+
+**겹치는 값은 서버가 스냅샷에서 꺼내 채웁니다.** 봉투의 `levelTest` 에도 `level`·`listening`·
+`fluency`·`pronunciation`·`reason` 이 같이 오지만 서버는 그것을 쓰지 않습니다. 같은 값이 한 행
+안에서 두 자리에 저장되는 이상, 둘이 어긋날 수 있는 경로를 아예 없애는 편이 낫기 때문입니다.
+덱이 이 다섯을 계속 보내는 것은 규격을 읽는 사람이 평면 칸의 내용을 봉투만 보고 알 수 있게 하기
+위함이고, 저장의 정본은 언제나 스냅샷입니다.
 
 `level_name` 만은 스냅샷에 없는데도 덱이 따로 보냅니다 — 레벨에서 나오는 이름이지만 그 표가
 `report.js` 안에 있어 백엔드가 스스로 채울 수 없고, 어드민 목록이 읽는 칸이라 비워 둘 수도
