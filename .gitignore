@@ -20,3 +20,6 @@ korean/**/lemonboard-build/lesson.css
 #   python3 korean/interactive/build_lemonboard.py <deck>.html --out korean/trial/lemonboard-build/<deck>
 # Committing them means shipping a deck that silently goes stale.
 korean/trial/lemonboard-build/
+
+# Python bytecode from the authoring scripts in korean/tools/.
+__pycache__/

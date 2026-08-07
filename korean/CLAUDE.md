@@ -142,9 +142,9 @@ same document, so anything in the markup is already on the learner's screen.
 - **`interactive/`** — the `data-sync` contract, the packaging guide, and the lemonboard
   packager (`build_lemonboard.py`). Documentation and tooling only; the code decks load
   lives in `runtime/`.
-- **`tools/`** — authoring scripts. `shard_toc.py` (TOC → per-lesson briefs) and
-  `new_lesson.py` (deck skeleton). Both derive their output from files that already exist, so
-  neither holds a second copy of anything.
+- **`tools/`** — authoring scripts. `shard_toc.py` (TOC → per-lesson briefs), `new_lesson.py`
+  (deck skeleton) and `build_catalog.py` (five TOCs → `catalog.html`). All three derive their
+  output from files that already exist, so none holds a second copy of anything.
 - **`references/`** — source textbook scans (internal reference only).
 - **Archive — deliberately not here.** Retired drafts, design variations and capture files live in
   `_archive/` at the *repo* root, under their original paths. They are kept for history and are
@@ -153,3 +153,9 @@ same document, so anything in the markup is already on the learner's screen.
   hit, the live answer is elsewhere in `korean/`.
 - `index.html` / `viewer.html` at the root are the navigation; `CLAUDE.md` / `AGENTS.md` stay at
   the root so they auto-load.
+- **`catalog.html` is generated — never hand-edit it.** It is the visual table of contents for
+  all five tracks (level ladder, per-track stats, every 과 with what it teaches), built from the
+  five `table-of-contents.md` files by `tools/build_catalog.py`. It holds no facts of its own, so
+  a wrong number there is a wrong number in a TOC. After any TOC change re-run
+  `python3 korean/tools/build_catalog.py` alongside `shard_toc.py`; the page layout lives in
+  `tools/catalog_template.html`.
