@@ -592,6 +592,18 @@
       render();
     });
   }
+  /* 이어받는 쪽이 없으면 「이어받는다」 는 말은 주석에만 있는 것이다 — 앞 장에서
+     주 5회를 골라도 슬라이더가 3 에 그대로 서 있었고, perWeek() 는 언제나 값이
+     있는 슬라이더를 먼저 읽으므로 고른 페이스가 계획에 한 번도 닿지 않았다.
+     그래서 그리기 전에 한 번 맞춘다. 값을 코드로 넣는 것은 input 을 일으키지
+     않으므로 되돌아오는 고리는 생기지 않고, 슬라이더를 끌면 그쪽이 pick.pace 를
+     덮으므로 마지막에 만진 것이 이긴다.
+     보드로 건너가는 것은 「앞 장에서 무엇을 골랐나」 하나뿐이다 — 슬라이더 위치는
+     양쪽이 각자 같은 규칙으로 다시 얻는다(interaction-protocol.md 의 「파생된
+     값은 보내지 않는다」). */
+  function syncFreq() {
+    if (freq && pick.pace && Number(freq.value) !== Number(pick.pace)) freq.value = pick.pace;
+  }
   function perWeek() { return Number((freq && freq.value) || pick.pace || 3); }
 
   var rcourse = document.querySelector(".freq");
@@ -1069,6 +1081,7 @@
   }
 
   function render() {
+    syncFreq();
     renderGoalCards();
     renderLevelPick();
     renderAxSteps();
