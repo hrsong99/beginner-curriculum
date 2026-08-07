@@ -12,32 +12,40 @@
 <style>
   @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
+  /* ────────────────────────────────────────────────────────────────────
+     색 예산
+
+     이 페이지에서 채워진 색은 딱 두 군데에만 있다.
+
+       1. 레벨 사다리 — 이 페이지의 유일한 차트. 램프를 쓸 자격이 있는 곳이다.
+       2. 문장 안의 mark — "이 과가 가르치는 조각". 페이지 본문에서 채도가 있는
+          것은 이것뿐이라, 눈이 갈 곳이 하나로 정해진다.
+
+     나머지는 전부 잉크 굵기·회색 단계·머리카락선으로만 구분한다. 칩도, 목표도,
+     체크포인트도 채우지 않는다 — 다 채우면 아무것도 강조되지 않고, 특히 과를
+     여러 개 펼쳤을 때 서로 싸운다.
+
+     살구색을 칩에도 쓰던 판이 있었는데, 한 화면에 스무 개가 깔리자 정작 문장
+     안의 mark 가 묻혔다. 그래서 칩에서는 색을 뺐고, 패턴 이름만 잉크로 남겼다.
+     ──────────────────────────────────────────────────────────────────── */
   :root {
-    --ink: #1c1c1c;
+    --ink: #16181a;
+    --ink-2: #454a4f;      /* 본문 */
+    --ink-3: #7a8085;      /* 보조 */
+    --ink-4: #a8adb2;      /* 라벨·메타 */
+    --line: #e6e8ea;       /* 보통 경계 */
+    --line-soft: #f1f2f3;  /* 목록 안의 구분선 */
+    --surface: #fafbfb;    /* 아주 가끔 쓰는 바닥 */
+
     --lime: #b5fd4c;
     --green: #6abe36;
     --green-text: #3f7a1c;
     --green-100: #f2fcec;
     --green-200: #d8ecc6;
-    --gray-100: #f5f5f5;
-    --gray-200: #e8e8e8;
-    --gray-400: #a5a5a5;
-    --gray-500: #757575;
-    --gray-700: #3f3f3f;
-    --line: #e7e7e7;
-    --line-soft: #f0f0f0;
 
-    /* 살구색 = "이 과가 가르치는 조각". 덱의 --ending-* 와 .sent-hero 에서 그대로 가져왔으므로
-       카탈로그에서 본 색이 레슨에서도 같은 뜻이다. 초록(상태)·라임(브랜드)과 겹치지 않는다.
-       큰 문장의 mark 는 19px/800 이라 3:1 로 충분하지만, 11px 칩은 더 밝은 바탕에 더 진한
-       잉크를 써야 4.5:1 을 넘는다 — 그래서 두 쌍이다. */
-    --pat-bg:       #fff8f3;
-    --pat-line:     #f3cfb2;
-    --pat-mark:     #ffe2cc;
-    --pat-ink:      #b2591c;
-    --pat-chip-bg:  #fff1e6;
-    --pat-chip-line:#f6d9c2;
-    --pat-chip-ink: #8f4514;
+    /* 덱의 --ending-* 그대로. 카탈로그에서 본 살구색이 레슨에서도 같은 뜻이다. */
+    --pat-mark: #ffdfc7;
+    --pat-ink:  #a4501a;
 
     /* 레벨 = 순서가 있는 값이므로 한 색상의 밝기 램프. 색만으로 구분하지 않고 항상 이름을 함께 적는다. */
     --lv-왕초급: #eef8de;
@@ -57,194 +65,213 @@
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
-  .wrap { max-width: 1040px; margin: 0 auto; padding: 56px 28px 120px; }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 64px 28px 140px; }
   @media (max-width: 600px) { .wrap { padding: 40px 18px 80px; } }
-  a { color: var(--green-text); text-decoration: none; }
+  a { color: inherit; text-decoration: none; }
+  :focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; border-radius: 4px; }
+
+  /* 라벨 — 페이지 전체에서 같은 크기·같은 회색. 종류마다 다른 라벨 스타일을 두면
+     라벨끼리 서열이 생기고, 라벨은 서열을 가질 만한 정보가 아니다. */
+  .lbl { color: var(--ink-4); font-size: 10.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 
   /* ---------- header ---------- */
-  .topback { display: inline-block; margin-bottom: 22px; color: var(--gray-400); font-size: 12.5px; font-weight: 600; }
-  .topback:hover { color: var(--green-text); }
-  .kicker { display: block; color: var(--green-text); font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
-  h1 { margin: 12px 0 18px; padding-bottom: 16px; font-size: 34px; font-weight: 850; line-height: 1.2; letter-spacing: -.02em; border-bottom: 3px solid var(--ink); word-break: keep-all; }
-  .lead { max-width: 62ch; margin: 0; color: var(--gray-700); font-size: 15.5px; line-height: 1.75; word-break: keep-all; }
+  .topback { display: inline-block; margin-bottom: 30px; color: var(--ink-4); font-size: 12.5px; font-weight: 600; }
+  .topback:hover { color: var(--ink); }
+  .kicker { display: block; color: var(--ink-4); font-size: 10.5px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+  h1 { margin: 14px 0 0; font-size: 40px; font-weight: 800; line-height: 1.12; letter-spacing: -.035em; word-break: keep-all; }
+  .lead { max-width: 56ch; margin: 18px 0 0; color: var(--ink-2); font-size: 15px; line-height: 1.75; word-break: keep-all; }
+  .lead code { color: var(--ink); font-size: 13.5px; }
 
-  .section-label { margin: 54px 0 0; padding-bottom: 7px; display: inline-block; font-size: 18px; font-weight: 850; letter-spacing: -.01em; border-bottom: 3px solid var(--green); }
-  .section-note { margin: 12px 0 0; max-width: 68ch; color: var(--gray-500); font-size: 13.5px; word-break: keep-all; }
+  .section-label { margin: 64px 0 0; font-size: 13px; font-weight: 700; letter-spacing: .02em; }
+  .section-note { margin: 5px 0 0; max-width: 64ch; color: var(--ink-3); font-size: 13px; line-height: 1.6; word-break: keep-all; }
 
-  /* ---------- stat tiles ---------- */
-  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 26px; }
+  /* ---------- stat row ----------
+     타일 네 개를 색으로 채우면 페이지가 시작부터 시끄럽다. 숫자 자체가 크면
+     충분하므로 바닥을 빼고 얇은 선으로만 나눈다. */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 40px; border-top: 1px solid var(--ink); }
   @media (max-width: 700px) { .stats { grid-template-columns: repeat(2, 1fr); } }
-  .stat { padding: 16px 18px; background: var(--green-100); border-radius: 12px; }
-  .stat b { display: block; font-size: 30px; font-weight: 850; line-height: 1.1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
-  .stat.pat-stat { background: var(--pat-bg); box-shadow: inset 0 0 0 1px var(--pat-line); }
-  .stat.pat-stat span { color: var(--pat-ink); }
-  .stat span { display: block; margin-top: 3px; color: var(--green-text); font-size: 12.5px; font-weight: 700; }
-  .stat i { font-style: normal; font-size: 15px; font-weight: 800; margin-left: 3px; letter-spacing: 0; }
+  .stat { padding: 18px 20px 20px 0; }
+  .stat + .stat { padding-left: 20px; box-shadow: inset 1px 0 0 var(--line); }
+  .stat b { display: block; font-size: 34px; font-weight: 800; line-height: 1; letter-spacing: -.04em; font-variant-numeric: tabular-nums; }
+  .stat i { font-style: normal; font-size: 14px; font-weight: 700; margin-left: 4px; letter-spacing: -.01em; color: var(--ink-3); }
+  .stat span { display: block; margin-top: 9px; color: var(--ink-3); font-size: 12px; line-height: 1.45; word-break: keep-all; }
 
-  /* ---------- level ladder ---------- */
-  .ladder { margin-top: 22px; border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px 14px; overflow-x: auto; }
-  .ladder-grid { min-width: 620px; }
-  .lrow { display: grid; grid-template-columns: 132px 1fr; align-items: center; gap: 14px; }
-  .lrow + .lrow { margin-top: 6px; }
-  .lrow-head { display: flex; align-items: baseline; gap: 6px; font-size: 12.5px; font-weight: 800; justify-content: flex-end; text-align: right; }
-  .lrow-head em { font-style: normal; color: var(--gray-400); font-size: 11px; font-weight: 700; font-variant-numeric: tabular-nums; }
-  .lcols { position: relative; display: grid; grid-template-columns: repeat(6, 1fr); gap: 2px; height: 34px; }
+  /* ---------- level ladder — 이 페이지의 유일한 차트 ---------- */
+  .ladder { margin-top: 20px; overflow-x: auto; }
+  .ladder-grid { min-width: 600px; }
+  .lrow { display: grid; grid-template-columns: 118px 1fr; align-items: center; gap: 16px; }
+  .lrow + .lrow { margin-top: 4px; }
+  .lrow-head { display: flex; align-items: baseline; gap: 6px; font-size: 12.5px; font-weight: 700; justify-content: flex-end; text-align: right; }
+  .lrow-head em { font-style: normal; color: var(--ink-4); font-size: 11px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .lcols { position: relative; display: grid; grid-template-columns: repeat(6, 1fr); gap: 2px; height: 30px; }
   .lcols::before { content: ""; position: absolute; inset: 0; background:
       repeating-linear-gradient(to right, transparent 0, transparent calc(16.666% - 1px), var(--line-soft) calc(16.666% - 1px), var(--line-soft) 16.666%); }
-  .lseg { position: relative; display: grid; place-items: center; border-radius: 5px; font-size: 11px; font-weight: 800; font-variant-numeric: tabular-nums; cursor: default; }
+  .lseg { position: relative; display: grid; place-items: center; border-radius: 4px; font-size: 11px; font-weight: 700; font-variant-numeric: tabular-nums; cursor: default; }
   .lseg.dark { color: #fff; }
-  .lseg:hover { outline: 2px solid var(--ink); outline-offset: 1px; }
-  .lseg.plan { background: repeating-linear-gradient(135deg, var(--gray-100) 0 6px, #fff 6px 12px); border: 1px dashed var(--gray-400); color: var(--gray-500); grid-column: 1 / -1; }
-  .laxis { display: grid; grid-template-columns: repeat(6, 1fr); gap: 2px; margin-top: 8px; }
-  .laxis span { text-align: center; color: var(--gray-500); font-size: 11.5px; font-weight: 700; }
-  .lhead { display: grid; grid-template-columns: 132px 1fr; gap: 14px; margin-bottom: 10px; }
-  .lhead .laxis { margin: 0; }
-  .lfoot { margin: 12px 0 0; color: var(--gray-400); font-size: 11.5px; }
+  .lseg:hover { outline: 1.5px solid var(--ink); outline-offset: 1px; }
+  .lseg.plan { background: repeating-linear-gradient(135deg, var(--surface) 0 6px, #fff 6px 12px); box-shadow: inset 0 0 0 1px var(--line); color: var(--ink-3); grid-column: 1 / -1; font-weight: 600; }
+  .laxis { display: grid; grid-template-columns: repeat(6, 1fr); gap: 2px; }
+  .laxis span { text-align: center; color: var(--ink-4); font-size: 11px; font-weight: 600; }
+  .lhead { display: grid; grid-template-columns: 118px 1fr; gap: 16px; margin-bottom: 9px; }
+  .lfoot { margin: 14px 0 0; color: var(--ink-4); font-size: 11.5px; }
 
   /* ---------- controls ---------- */
-  .controls { position: sticky; top: 0; z-index: 20; margin-top: 30px; padding: 12px 0 10px;
-    background: rgba(255,255,255,.94); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); }
-  .controls.stuck { box-shadow: 0 6px 16px -12px rgba(0,0,0,.35); }
-  .crow { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
-  .crow + .crow { margin-top: 8px; }
-  .search { flex: 1 1 240px; min-width: 200px; padding: 9px 14px; border: 1.5px solid var(--gray-200); border-radius: 999px; font: inherit; font-size: 13.5px; }
-  .search:focus { outline: none; border-color: var(--green); }
-  .chip { padding: 7px 12px; border: 1.5px solid var(--gray-200); border-radius: 999px; background: #fff; color: var(--gray-500); font: inherit; font-size: 12px; font-weight: 700; cursor: pointer; }
-  .chip:hover { border-color: var(--green-200); }
-  .chip[aria-pressed="true"] { background: var(--green-text); border-color: var(--green-text); color: #fff; }
-  .chip .dot { display: inline-block; width: 8px; height: 8px; margin-right: 5px; border: 1px solid rgba(0,0,0,.12); border-radius: 3px; vertical-align: 1px; }
-  .hits { margin-left: auto; color: var(--gray-500); font-size: 12px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .controls { position: sticky; top: 0; z-index: 20; margin-top: 46px; padding: 14px 0 12px;
+    background: rgba(255,255,255,.92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  .controls.stuck { box-shadow: 0 10px 20px -18px rgba(0,0,0,.5); }
+  .crow { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+  .crow + .crow { margin-top: 9px; }
+  .search { flex: 1 1 240px; min-width: 200px; padding: 9px 15px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); font: inherit; font-size: 13.5px; }
+  .search::placeholder { color: var(--ink-4); }
+  .search:focus { outline: none; border-color: var(--ink); background: #fff; }
+  .chip { padding: 6px 11px; border: 1px solid transparent; border-radius: 7px; background: none; color: var(--ink-3); font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; }
+  .chip:hover { background: var(--surface); color: var(--ink); }
+  .chip[aria-pressed="true"] { background: var(--ink); color: #fff; }
+  .chip .dot { display: inline-block; width: 7px; height: 7px; margin-right: 6px; border-radius: 2px; box-shadow: inset 0 0 0 1px rgba(0,0,0,.1); vertical-align: 1px; }
+  .chip#expand { border-color: var(--line); }
+  .hits { margin-left: auto; color: var(--ink-3); font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums; }
 
-  /* ---------- track ---------- */
-  .track { margin-top: 44px; scroll-margin-top: 70px; }
-  .track-card { display: grid; grid-template-columns: 92px 1fr; gap: 20px; padding: 22px; border: 1px solid var(--line); border-radius: 16px; }
-  @media (max-width: 620px) { .track-card { grid-template-columns: 1fr; gap: 14px; } }
-  .glyph { display: grid; place-items: center; width: 92px; height: 92px; border-radius: 16px; background: var(--green-100); color: var(--green-text); font-size: 40px; font-weight: 850; }
-  .track.plan .glyph { background: var(--gray-100); color: var(--gray-400); }
-  .track-h { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; }
-  .track-no { display: grid; place-items: center; width: 24px; height: 24px; background: var(--ink); color: #fff; border-radius: 7px; font-size: 13px; font-weight: 850; }
-  .track-t { font-size: 21px; font-weight: 850; letter-spacing: -.02em; }
-  .track-en { color: var(--gray-400); font-size: 12.5px; font-weight: 600; }
-  .track-desc { margin: 10px 0 0; max-width: 64ch; color: var(--gray-700); font-size: 14px; line-height: 1.65; word-break: keep-all; }
-  .track-note { margin: 8px 0 0; max-width: 64ch; color: var(--gray-400); font-size: 12.5px; line-height: 1.6; word-break: keep-all; }
-  .track-stats { display: flex; flex-wrap: wrap; gap: 18px; margin: 14px 0 0; }
-  .track-stats div b { font-size: 19px; font-weight: 850; font-variant-numeric: tabular-nums; }
-  .track-stats div span { margin-left: 4px; color: var(--gray-500); font-size: 12px; font-weight: 700; }
-  .dist { display: flex; gap: 2px; height: 12px; margin: 14px 0 0; }
-  .dist i { display: grid; place-items: center; border-radius: 3px; font-style: normal; font-size: 9px; font-weight: 800; color: rgba(0,0,0,.5); }
-  .dist i.dark { color: rgba(255,255,255,.85); }
-  .dist-legend { margin: 7px 0 0; color: var(--gray-400); font-size: 11.5px; }
-  .track-links { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 0; }
-  .track-links a { padding: 7px 14px; border: 1.5px solid var(--green-200); border-radius: 999px; background: var(--green-100); font-size: 12.5px; font-weight: 700; }
-  .track-links a:hover { background: var(--green-text); border-color: var(--green-text); color: #fff; }
-  .track-links a.ghost { background: #fff; border-color: var(--gray-200); color: var(--gray-500); }
-  .track-links a.ghost:hover { background: var(--gray-100); color: var(--ink); }
+  /* ---------- track ----------
+     트랙 머리는 카드가 아니라 표제다. 아래의 단원 카드와 형태가 달라야
+     "이것이 상위"라는 것이 테두리 없이도 읽힌다. */
+  .track { margin-top: 76px; scroll-margin-top: 96px; }
+  .track-head { padding-top: 22px; border-top: 2px solid var(--ink); }
+  .track.plan .track-head { border-top-color: var(--line); }
+  .track-h { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; }
+  .track-no { color: var(--ink-4); font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .track-t { font-size: 25px; font-weight: 800; letter-spacing: -.035em; }
+  .track-en { color: var(--ink-4); font-size: 12px; font-weight: 500; letter-spacing: .01em; }
+  .track-body { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 40px; margin-top: 14px; align-items: start; }
+  @media (max-width: 760px) { .track-body { grid-template-columns: 1fr; gap: 22px; } }
+  .track-desc { margin: 0; max-width: 58ch; color: var(--ink-2); font-size: 14.5px; line-height: 1.7; word-break: keep-all; }
+  .track-note { margin: 10px 0 0; max-width: 58ch; color: var(--ink-4); font-size: 12.5px; line-height: 1.65; word-break: keep-all; }
+  .track-links { display: flex; flex-wrap: wrap; gap: 6px; margin: 18px 0 0; }
+  .track-links a { padding: 7px 13px; border: 1px solid var(--line); border-radius: 8px; font-size: 12.5px; font-weight: 600; color: var(--ink-2); }
+  .track-links a:hover { border-color: var(--ink); color: var(--ink); }
+  .track-links a.primary { background: var(--ink); border-color: var(--ink); color: #fff; }
+  .track-links a.primary:hover { background: #000; }
 
-  /* 색은 항상 이름과 함께 읽혀야 한다 — .gmeta 안에서 gray-400 을 물려받으면 초록 위 회색 글자가 된다 */
-  .badge { display: inline-block; padding: 3px 9px; border-radius: 999px; color: var(--ink); font-size: 11.5px; font-weight: 800; white-space: nowrap; }
-  .badge.dark { color: #fff; }
-  .badge.plan { background: var(--gray-100); color: var(--gray-500); border: 1px dashed var(--gray-400); }
-  .badge.open { background: var(--lime); color: var(--ink); }
+  .track-side { padding: 16px 0 0; border-top: 1px solid var(--line); }
+  .track-stats { display: flex; flex-wrap: wrap; gap: 22px; }
+  .track-stats div b { font-size: 21px; font-weight: 800; letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+  .track-stats div span { margin-left: 4px; color: var(--ink-3); font-size: 11.5px; font-weight: 600; }
+  .dist { display: flex; gap: 2px; height: 8px; margin: 16px 0 0; }
+  .dist i { border-radius: 2px; }
+  .dist-legend { display: flex; flex-wrap: wrap; gap: 4px 12px; margin: 10px 0 0; color: var(--ink-3); font-size: 11px; }
+  .dist-legend span { display: inline-flex; align-items: center; gap: 5px; }
+  .dist-legend i { width: 7px; height: 7px; border-radius: 2px; box-shadow: inset 0 0 0 1px rgba(0,0,0,.1); }
+  .dist-legend b { color: var(--ink); font-weight: 700; font-variant-numeric: tabular-nums; }
+
+  /* 레벨 — 알약을 385번 칠하는 대신 점 하나와 이름. 색은 여전히 램프를 따르지만
+     면적이 1/20 이라 목록을 뒤덮지 않는다. */
+  .lv-tag { display: inline-flex; align-items: center; gap: 6px; color: var(--ink-2); font-size: 11.5px; font-weight: 600; white-space: nowrap; }
+  .lv-tag i { width: 8px; height: 8px; border-radius: 2px; box-shadow: inset 0 0 0 1px rgba(0,0,0,.1); }
+  .flag { color: var(--ink-4); font-size: 11px; font-weight: 600; white-space: nowrap; }
+  .flag.open { color: var(--green-text); }
 
   /* ---------- groups ---------- */
-  .groups { margin-top: 14px; }
-  .group { border: 1px solid var(--line); border-radius: 14px; margin-top: 10px; overflow: hidden; transition: border-color .15s, box-shadow .15s; }
-  .group:hover { border-color: var(--green-200); }
-  .group.open { border-color: var(--green-200); box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+  .groups { margin-top: 26px; }
+  .group { border-top: 1px solid var(--line); }
+  .group:last-child { border-bottom: 1px solid var(--line); }
   .group.hide { display: none; }
-  .ghead { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 12px; width: 100%; padding: 15px 18px; border: 0; background: #fff; font: inherit; text-align: left; cursor: pointer; }
-  .ghead:hover { background: var(--green-100); }
-  .group.open .ghead { background: var(--green-100); }
-  .glabel { padding: 4px 10px; background: var(--gray-100); border-radius: 7px; color: var(--gray-700); font-size: 11.5px; font-weight: 800; white-space: nowrap; }
-  .gtitle { min-width: 0; font-size: 15.5px; font-weight: 800; word-break: keep-all; }
-  .gtitle em { display: block; margin-top: 1px; color: var(--gray-500); font-style: normal; font-size: 12.5px; font-weight: 600; }
-  .gmeta { display: flex; align-items: center; gap: 8px; color: var(--gray-400); font-size: 12px; font-weight: 700; white-space: nowrap; }
+  .ghead { display: grid; grid-template-columns: 74px minmax(0, 1fr) auto; align-items: baseline; gap: 16px; width: 100%; padding: 17px 4px; border: 0; background: none; font: inherit; text-align: left; cursor: pointer; }
+  .ghead:hover .gtitle { color: var(--pat-ink); }
+  .glabel { color: var(--ink-4); font-size: 11px; font-weight: 700; letter-spacing: .02em; white-space: nowrap; }
+  .gtitle { min-width: 0; font-size: 16px; font-weight: 750; letter-spacing: -.02em; word-break: keep-all; transition: color .12s; }
+  .gtitle em { display: block; margin-top: 3px; color: var(--ink-3); font-style: normal; font-size: 12.5px; font-weight: 500; letter-spacing: 0; }
+  .gmeta { display: flex; align-items: center; gap: 14px; color: var(--ink-4); font-size: 11.5px; font-weight: 600; white-space: nowrap; }
   .gmeta > * { flex: 0 0 auto; }
-  .caret { display: inline-block; width: 14px; color: var(--gray-400); font-size: 11px; transition: transform .15s; }
-  .group.open .caret { transform: rotate(90deg); }
-  .gbody { display: none; padding: 0 18px 16px; border-top: 1px solid var(--line-soft); }
+  .gcount { font-variant-numeric: tabular-nums; }
+  .caret { display: inline-block; width: 10px; color: var(--ink-4); font-size: 9px; }
+  .caret::before { content: "\25B8"; }
+  .group.open .caret { color: var(--ink); }
+  .group.open .caret::before { content: "\25BE"; }
+  .gbody { display: none; padding: 0 4px 28px; }
   .group.open .gbody { display: block; }
-  .gblurb { margin: 14px 0 0; max-width: 70ch; color: var(--gray-700); font-size: 13px; line-height: 1.65; word-break: keep-all; }
-  .story { margin: 12px 0 0; padding: 12px 14px; background: var(--gray-100); border-radius: 10px; font-size: 12.5px; line-height: 1.65; color: var(--gray-700); word-break: keep-all; }
-  .story b { display: block; margin-bottom: 3px; color: var(--ink); font-size: 13px; }
-  .story .cast { display: block; margin-top: 6px; color: var(--gray-500); font-size: 12px; }
-  .gcan { margin: 12px 0 0; padding-left: 12px; border-left: 3px solid var(--green); color: var(--ink); font-size: 13px; line-height: 1.6; word-break: keep-all; }
-  .gcan b { color: var(--green-text); font-size: 11.5px; font-weight: 800; letter-spacing: .04em; display: block; }
+  .gblurb { margin: 0 0 4px; max-width: 68ch; color: var(--ink-2); font-size: 13.5px; line-height: 1.7; word-break: keep-all; }
+  .story { margin: 0 0 4px; max-width: 68ch; color: var(--ink-2); font-size: 13px; line-height: 1.7; word-break: keep-all; }
+  .story b { color: var(--ink); font-weight: 700; }
+  .story .cast { display: block; margin-top: 5px; color: var(--ink-4); font-size: 12px; }
+  .gcan { margin: 14px 0 0; max-width: 68ch; color: var(--ink); font-size: 13.5px; line-height: 1.65; word-break: keep-all; }
+  .gcan b { display: block; margin-bottom: 3px; }
+
+  /* ---------- 단원이 다루는 것 — 한 줄로 ----------
+     칩 열두 개를 상자에 담으면 그 상자가 단원에서 제일 눈에 띄는 물건이 된다.
+     실제로는 "훑고 지나가는" 정보이므로 한 줄의 글로 흘린다. */
+  .cloud { margin: 14px 0 0; max-width: 78ch; color: var(--ink-3); font-size: 12.5px; line-height: 1.9; word-break: keep-all; }
+  .cloud .lbl { margin-right: 8px; }
+  .cloud b { color: var(--ink-3); font-weight: 600; }
+  .cloud .sep { color: var(--ink-4); margin: 0 7px; }
 
   /* ---------- lesson rows ---------- */
-  .lessons { margin-top: 12px; border-top: 1px solid var(--line-soft); }
+  .lessons { margin-top: 20px; border-top: 1px solid var(--line-soft); }
   .lesson { border-bottom: 1px solid var(--line-soft); }
-  .lesson.hide { display: none; }
-  .lesson.over { display: none; }
+  .lesson.hide, .lesson.over { display: none; }
   .group.all .lesson.over { display: block; }
-  .lrow-btn { display: grid; grid-template-columns: 56px minmax(0, 1fr) minmax(0, 44%) auto 16px; align-items: center; gap: 12px; width: 100%; padding: 12px 6px; border: 0; background: none; font: inherit; text-align: left; cursor: pointer; }
-  .lrow-btn:hover { background: var(--green-100); }
-  .lno { color: var(--gray-400); font-size: 11.5px; font-weight: 800; font-variant-numeric: tabular-nums; letter-spacing: .02em; }
-  .ltitle { min-width: 0; font-size: 14px; font-weight: 700; word-break: keep-all; }
-  .ltitle em { font-style: normal; color: var(--gray-500); font-weight: 500; }
+  .lrow-btn { display: grid; grid-template-columns: 58px minmax(0, 1fr) minmax(0, auto) 14px; align-items: baseline; gap: 16px; width: 100%; padding: 13px 4px; border: 0; background: none; font: inherit; text-align: left; cursor: pointer; }
+  .lrow-btn:hover .ltitle { color: var(--pat-ink); }
+  .lno { color: var(--ink-4); font-size: 11px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .ltitle { min-width: 0; font-size: 14.5px; font-weight: 650; letter-spacing: -.015em; word-break: keep-all; transition: color .12s; }
+  .ltitle em { font-style: normal; color: var(--ink-3); font-weight: 450; letter-spacing: 0; }
   .ltitle mark { background: var(--lime); color: var(--ink); border-radius: 3px; padding: 0 2px; }
-  .lchips { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px; max-width: 100%; }
-  @media (max-width: 760px) { .lchips { display: none; } .lrow-btn { grid-template-columns: 46px minmax(0, 1fr) auto 16px; } }
 
-  /* 패턴 칩 = 이 과에서 배우는 것. 살구색은 덱에서 "가르치는 조각"을 뜻하므로 여기서도 같은 뜻이다. */
-  .pat { max-width: 100%; padding: 2.5px 9px; background: var(--pat-chip-bg); border: 1px solid var(--pat-chip-line); border-radius: 7px; color: var(--pat-chip-ink); font-size: 11.5px; font-weight: 800; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .pat.ref { background: var(--green-100); border-color: var(--green-200); color: var(--green-text); font-weight: 700; }
-  .pat.plainchip { background: #fff; border-color: var(--gray-200); color: var(--gray-700); font-weight: 700; }
+  /* 행에 붙는 패턴 표시는 상자가 아니라 글이다 — 한 화면에 100개가 깔리는 것이라
+     상자로 만들면 그 자체가 배경 무늬가 된다. */
+  .lchips { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0 5px; max-width: 100%; color: var(--ink-3); font-size: 12px; }
+  .lchips .pat { max-width: 26ch; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 500; }
+  .lchips .sep { color: var(--ink-4); }
+  .lchips .pat.ref { color: var(--ink-4); }
+  @media (max-width: 760px) { .lchips { display: none; } .lrow-btn { grid-template-columns: 46px minmax(0, 1fr) 14px; } }
 
-  .lcaret { color: var(--gray-400); font-size: 12px; transition: transform .15s; }
-  .lrow-btn:hover .lcaret { color: var(--pat-ink); }
-  .lesson.open .lcaret { transform: rotate(180deg); color: var(--pat-ink); }
-  .lesson.open { background: #fffdfb; }
-  .lesson.open .lrow-btn { background: none; }
-  .ldetail { display: none; padding: 2px 6px 20px 68px; }
+  .lcaret { color: var(--line); font-size: 9px; transition: color .12s; }
+  .lcaret::before { content: "\25B8"; }
+  .lrow-btn:hover .lcaret { color: var(--ink-3); }
+  .lesson.open .lcaret { color: var(--ink); }
+  .lesson.open .lcaret::before { content: "\25BE"; }
+
+  /* 펼친 내용은 왼쪽 한 줄에 매달린다. 상자가 없으므로 여러 과를 동시에 펼쳐도
+     서로 다투지 않고, 각자 자기 행 밑에 조용히 걸린다. */
+  .ldetail { display: none; margin: 0 0 22px 58px; padding: 4px 0 0 22px; border-left: 1px solid var(--line); }
   .lesson.open .ldetail { display: block; }
-  @media (max-width: 760px) { .ldetail { padding-left: 46px; } }
-  .ldetail .scene { margin: 0 0 12px; color: var(--gray-500); font-size: 12.5px; font-style: italic; word-break: keep-all; }
-  .goal { margin: 0; padding: 11px 14px; background: var(--green-100); border-radius: 10px; font-size: 13.5px; line-height: 1.6; word-break: keep-all; }
-  .goal .words { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 7px; }
-  .goal .words span { padding: 4px 11px; background: #fff; border: 1px solid var(--green-200); border-radius: 8px; font-size: 15px; font-weight: 800; }
-  .goal b { display: block; margin-bottom: 2px; color: var(--green-text); font-size: 11px; font-weight: 800; letter-spacing: .06em; }
+  @media (max-width: 760px) { .ldetail { margin-left: 12px; padding-left: 16px; } }
+  .ldetail .scene b { display: block; margin-bottom: 3px; }
+  .ldetail .scene { margin: 0 0 16px; max-width: 62ch; color: var(--ink-3); font-size: 12.5px; line-height: 1.65; word-break: keep-all; }
+  .goal { margin: 0; max-width: 62ch; color: var(--ink-2); font-size: 13.5px; line-height: 1.7; word-break: keep-all; }
+  .goal b { display: block; margin-bottom: 3px; }
+  .goal .words { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 9px; }
+  .goal .words span { padding: 4px 10px; border: 1px solid var(--line); border-radius: 7px; color: var(--ink); font-size: 14.5px; font-weight: 650; }
 
   /* ---------- 배우는 패턴, 문장 안에서 ----------
-     덱의 .sent-hero 와 같은 말: 살구색 카드에 문장을 통째로 놓고, 가르치는 조각만
-     잉크로 짚는다. 카드 안에서 두 번째 채움은 위에 올라앉은 별개의 물건으로 읽힌다. */
-  .pats { margin: 12px 0 0; display: grid; gap: 8px; }
-  .pats-h { margin: 16px 0 8px; display: flex; align-items: center; gap: 8px; color: var(--pat-ink); font-size: 11px; font-weight: 800; letter-spacing: .06em; }
-  .pats-h b { font-size: 12.5px; font-weight: 850; font-variant-numeric: tabular-nums; }
-  .pats-h::after { content: ""; flex: 1 1 auto; height: 1px; background: var(--pat-line); }
-  .pcard { padding: 14px 16px; background: var(--pat-bg); border: 1px solid var(--pat-line); border-radius: 12px; }
-  .pcard .sent { margin: 0; font-size: 19px; font-weight: 800; line-height: 1.45; letter-spacing: -.01em; word-break: keep-all; }
-  .pcard .sent mark { background: var(--pat-mark); color: var(--pat-ink); padding: 0 2px; border-radius: 4px;
+     페이지 본문에서 채도가 있는 것은 이 mark 하나뿐이다. 카드도 테두리도 없이
+     문장만 놓으면, 살구색 조각이 그 자리에서 유일하게 튄다. */
+  .pats { margin: 20px 0 0; display: grid; gap: 18px; }
+  .pcard .sent { margin: 0; font-size: 21px; font-weight: 700; line-height: 1.5; letter-spacing: -.025em; word-break: keep-all; }
+  .pcard .sent mark { background: var(--pat-mark); color: var(--pat-ink); padding: 1px 3px; margin: 0 -1px; border-radius: 4px; font-weight: 800;
     -webkit-box-decoration-break: clone; box-decoration-break: clone; }
-  .pcard .reply { margin: 7px 0 0; padding-left: 15px; position: relative; color: var(--gray-500); font-size: 13.5px; font-weight: 600; word-break: keep-all; }
-  .pcard .reply::before { content: "↳"; position: absolute; left: 0; color: var(--gray-400); }
-  .pcard .pmeta { margin: 10px 0 0; padding-top: 9px; border-top: 1px dashed var(--pat-line); display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; }
-  .pcard .pname { color: var(--pat-ink); font-size: 13px; font-weight: 800; }
-  .pcard .pgloss { color: var(--gray-500); font-size: 12px; font-weight: 600; word-break: keep-all; }
+  .pcard .reply { margin: 6px 0 0; color: var(--ink-3); font-size: 13.5px; font-weight: 500; word-break: keep-all; }
+  .pcard .reply::before { content: "↳ "; color: var(--ink-4); }
+  .pcard .pmeta { margin: 7px 0 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
+  .pcard .pname { color: var(--pat-ink); font-size: 12.5px; font-weight: 700; }
+  .pcard .pgloss { color: var(--ink-4); font-size: 12px; word-break: keep-all; }
 
-  .ldetail .notes { margin: 12px 0 0; display: grid; gap: 7px; }
-  .ldetail .notes div { display: grid; grid-template-columns: 38px 1fr; gap: 8px; font-size: 12.5px; line-height: 1.6; color: var(--gray-700); word-break: keep-all; }
-  .ldetail .notes b { color: var(--gray-400); font-size: 10.5px; font-weight: 800; letter-spacing: .04em; padding-top: 2px; }
-  .ldetail .allchips { display: flex; flex-wrap: wrap; gap: 5px; margin: 12px 0 0; }
-  .more { display: block; width: 100%; padding: 12px; border: 0; background: none; color: var(--gray-500); font: inherit; font-size: 12.5px; font-weight: 700; cursor: pointer; }
-  .more:hover { color: var(--green-text); background: var(--green-100); }
+  .ldetail .notes { margin: 20px 0 0; display: grid; gap: 8px; max-width: 68ch; }
+  .ldetail .notes div { display: grid; grid-template-columns: 40px 1fr; gap: 10px; font-size: 12.5px; line-height: 1.7; color: var(--ink-2); word-break: keep-all; }
+  .ldetail .notes b { color: var(--ink-4); font-size: 10.5px; font-weight: 700; letter-spacing: .06em; padding-top: 3px; }
+  .ldetail .allchips { display: flex; flex-wrap: wrap; gap: 6px; margin: 9px 0 0; }
+  .ldetail .allchips span { padding: 4px 10px; border: 1px solid var(--line); border-radius: 7px; color: var(--ink-2); font-size: 12px; font-weight: 600; }
+  .subhead { margin: 20px 0 0; }
+
+  .more { display: block; width: 100%; padding: 13px; border: 0; background: none; color: var(--ink-3); font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer; }
+  .more:hover { color: var(--ink); }
   .group.all .more .m-open, .more .m-close { display: none; }
   .group.all .more .m-close { display: inline; }
 
-  /* ---------- 단원이 다루는 것, 열자마자 한눈에 ---------- */
-  .cloud { display: flex; flex-wrap: wrap; align-items: center; gap: 5px; margin: 14px 0 0; padding: 12px 14px; background: var(--gray-100); border-radius: 12px; }
-  .cloud.ispat { background: var(--pat-bg); border: 1px solid var(--pat-line); }
-  .cloud-h { margin-right: 4px; color: var(--gray-500); font-size: 11px; font-weight: 800; letter-spacing: .04em; }
-  .cloud.ispat .cloud-h { color: var(--pat-ink); }
-  .cloud-h b { font-size: 12.5px; font-weight: 850; font-variant-numeric: tabular-nums; }
-  .cloud .pat { background: #fff; }
-
-  .ckpt { margin: 14px 0 0; padding: 12px 14px; background: var(--green-100); border-radius: 10px; color: var(--gray-700); font-size: 12.5px; line-height: 1.6; word-break: keep-all; }
-  .ckpt b { display: block; margin-bottom: 2px; color: var(--green-text); font-size: 11.5px; font-weight: 800; letter-spacing: .04em; }
-  .empty { margin-top: 20px; padding: 22px; border: 1px dashed var(--gray-200); border-radius: 12px; color: var(--gray-500); font-size: 13.5px; text-align: center; }
+  .ckpt { margin: 22px 0 0; max-width: 72ch; color: var(--ink-2); font-size: 12.5px; line-height: 1.7; word-break: keep-all; }
+  .ckpt b { display: block; margin-bottom: 3px; }
+  .empty { margin-top: 40px; color: var(--ink-3); font-size: 13.5px; text-align: center; }
   .empty.hide { display: none; }
-  footer { margin-top: 64px; padding-top: 20px; border-top: 2px solid var(--ink); color: var(--gray-500); font-size: 12.5px; }
-  footer code { background: var(--gray-100); padding: 2px 6px; border-radius: 5px; font-size: 11.5px; }
+  footer { margin-top: 96px; padding-top: 22px; border-top: 1px solid var(--line); color: var(--ink-4); font-size: 12px; line-height: 1.8; }
+  footer code { color: var(--ink-3); font-size: 11.5px; }
 </style>
 </head>
 <body>
@@ -263,7 +290,7 @@
   <div class="stats" id="stats"></div>
 
   <div class="section-label">레벨 사다리</div>
-  <p class="section-note">각 트랙이 어느 레벨 구간을 덮는지, 그 구간에 몇 과가 놓여 있는지. 칸의 숫자는 과 수입니다.</p>
+  <p class="section-note">각 트랙이 어느 레벨 구간을 덮는지, 그 구간에 몇 과가 놓여 있는지.</p>
   <div class="ladder">
     <div class="ladder-grid">
       <div class="lhead"><div></div><div class="laxis" id="ladder-axis"></div></div>
@@ -300,15 +327,17 @@ const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;
 const lvColor = lv => `var(--lv-${lv})`;
 const lvClass = lv => DARK.has(lv) ? " dark" : "";
 
-/* ---------- stat tiles ---------- */
+const lvTag = lv => `<span class="lv-tag"><i style="background:${lvColor(lv)}"></i>${esc(lv)}</span>`;
+
+/* ---------- stat row ---------- */
 {
   const t = DATA.totals;
   document.getElementById("stats").innerHTML = [
-    [t.tracks, "트랙", "학습 트랙 · 한글부터 프리토킹까지"],
+    [t.tracks, "트랙", "한글부터 프리토킹까지"],
     [t.lessons, "과", "레슨 · 주제를 모두 합한 수"],
     [t.units, "단원", "단원 · 코스 · 테마"],
-    [t.patterns, "패턴", "핵심 트랙이 다루는 문법 패턴", "pat-stat"],
-  ].map(([v, u, d, k]) => `<div class="stat ${k || ""}"><b>${v}<i>${u}</i></b><span>${esc(d)}</span></div>`).join("");
+    [t.patterns, "패턴", "핵심 트랙이 다루는 문법 패턴"],
+  ].map(([v, u, d]) => `<div class="stat"><b>${v}<i>${u}</i></b><span>${esc(d)}</span></div>`).join("");
 }
 
 /* ---------- level ladder ---------- */
@@ -335,7 +364,7 @@ const lvClass = lv => DARK.has(lv) ? " dark" : "";
 
 /* ---------- level filter ---------- */
 document.getElementById("levelbar").innerHTML =
-  `<span style="color:var(--gray-400);font-size:12px;font-weight:700">레벨</span>` +
+  `<span class="lbl" style="margin-right:4px">레벨</span>` +
   LEVELS.map(lv => `<button class="chip lv" type="button" data-lv="${lv}" aria-pressed="false">
     <span class="dot" style="background:${lvColor(lv)}"></span>${lv}</button>`).join("");
 
@@ -343,15 +372,11 @@ document.getElementById("levelbar").innerHTML =
 const SHOWN = 5;   // 접었을 때 보여 주는 과의 수
 
 function chips(l) {
-  // 살구색은 "배우는 문법 패턴"만 쓴다. 한글의 새 글자나 발음의 대립쌍은 패턴이 아니다.
-  const kind = (l.pats && l.pats.length) ? "pat" : "pat plainchip";
-  // 긴 칩은 버리지 말고 줄인다 — 버리면 그 행만 "배우는 것"이 비어 보인다
-  const p = (l.chips || []).slice(0, 2).map(c => {
-    const short = c.length > 18 ? c.slice(0, 17) + "…" : c;
-    return `<span class="${kind}" title="${esc(c)}">${esc(short)}</span>`;
-  });
+  // 긴 것은 버리지 말고 줄인다 — 버리면 그 행만 "배우는 것"이 비어 보인다
+  const p = (l.chips || []).slice(0, 2).map(c =>
+    `<span class="pat" title="${esc(c)}">${esc(c.replace(/\s*\(.*$/, "").trim() || c)}</span>`);
   if (l.refs && l.refs.length) p.push(`<span class="pat ref">핵심 ${l.refs[0]}</span>`);
-  return p.join("");
+  return p.join(`<span class="sep">·</span>`);
 }
 
 /** 문장을 그대로 쓰되, 배우는 조각에만 mark 를 씌운다. spans 는 빌드 때 계산된다. */
@@ -368,7 +393,7 @@ function marked(sentence, spans) {
 function patternCards(l) {
   const ps = (l.pats || []).filter(p => p.ex || p.pat);
   if (!ps.length) return "";
-  return `<div class="pats-h">배우는 패턴 <b>${ps.length}</b></div><div class="pats">` + ps.map(p => `
+  return `<div class="pats">` + ps.map(p => `
     <div class="pcard">
       ${p.ex ? `<p class="sent">${marked(p.ex, p.spans)}</p>` : ""}
       ${p.reply ? `<p class="reply">${esc(p.reply)}</p>` : ""}
@@ -381,23 +406,22 @@ function patternCards(l) {
 
 function detail(l) {
   let h = "";
-  if (l.scene) h += `<p class="scene">장면 · ${esc(l.scene)}</p>`;
+  if (l.scene) h += `<p class="scene"><b class="lbl">장면</b>${esc(l.scene)}</p>`;
   if (l.can) {
     const words = l.can.split(" · ").map(w => w.trim()).filter(Boolean);
     const listy = words.length >= 3 && words.every(w => w.length <= 7);
-    h += `<div class="goal"><b>${esc(l.canLabel || "할 수 있다")}</b>` + (listy
+    h += `<div class="goal"><b class="lbl">${esc(l.canLabel || "할 수 있다")}</b>` + (listy
       ? `<div class="words">${words.map(w => `<span>${esc(w)}</span>`).join("")}</div>`
       : esc(l.can)) + `</div>`;
   }
-  if (l.fix) h += `<p class="goal" style="background:var(--gray-100);margin-top:8px"><b style="color:var(--gray-500)">고치는 법</b>${esc(l.fix)}</p>`;
+  if (l.fix) h += `<div class="goal" style="margin-top:12px"><b class="lbl">고치는 법</b>${esc(l.fix)}</div>`;
 
   const cards = patternCards(l);
   h += cards;
-  // 패턴 카드가 없는 트랙(한글·발음·프리토킹)은 칩이 유일한 "배우는 것" 표시다.
-  // 살구색은 문법 패턴 전용이므로 여기서는 중립 칩을 쓴다.
+  // 패턴 카드가 없는 트랙(한글·발음·프리토킹)은 이 목록이 유일한 "배우는 것" 표시다
   if (!cards && l.chips && l.chips.length) {
-    h += `<div class="pats-h">배우는 것</div><div class="allchips" style="margin-top:0">`
-      + l.chips.map(c => `<span class="pat plainchip">${esc(c)}</span>`).join("") + `</div>`;
+    h += `<div class="subhead"><span class="lbl">배우는 것</span>
+      <div class="allchips">${l.chips.map(c => `<span>${esc(c)}</span>`).join("")}</div></div>`;
   }
   if (l.notes && l.notes.length) {
     h += `<div class="notes">` + l.notes.map(n => `<div><b>${esc(n.k)}</b><span>${esc(n.v)}</span></div>`).join("") + `</div>`;
@@ -409,32 +433,29 @@ function lessonRow(l, i, track) {
   const c = chips(l);
   // 칩이 없는 트랙(프리토킹)은 제목 옆에 설명을 이어 붙여야 행이 비어 보이지 않는다
   const sub = l.sub || (c ? "" : l.can);
-  const lv = l.level || "";
-  const badge = lv ? `<span class="badge${lvClass(lv)}" style="background:${lvColor(lv)}">${lv}</span>` : "";
   const no = String(l.n).padStart(2, "0");
+  // 레벨 배지는 행마다 달지 않는다 — 한 단원의 과는 모두 같은 레벨이라
+  // 단원 머리에 한 번 적힌 것을 열 번 되풀이하는 것뿐이고, 색만 늘어난다.
   return `<div class="lesson${i >= SHOWN ? " over" : ""}" data-text="${esc([l.title, l.sub, l.can, l.scene, (l.chips||[]).join(" "), (l.notes||[]).map(n=>n.v).join(" ")].join(" ").toLowerCase())}">
     <button class="lrow-btn" type="button">
       <span class="lno">${esc(track.lessonWord)} ${no}</span>
       <span class="ltitle">${esc(l.title)}${sub ? ` <em>— ${esc(sub)}</em>` : ""}</span>
       <span class="lchips">${c}</span>
-      ${badge}
-      <span class="lcaret">▾</span>
+      <span class="lcaret"></span>
     </button>
     <div class="ldetail">${detail(l)}</div>
   </div>`;
 }
 
 function group(g, track) {
-  const lv = g.levelText || g.level || "";
-  const badge = lv ? `<span class="badge${lvClass(g.level)}" style="background:${lvColor(g.level)}">${esc(lv)}</span>` : "";
   let head = "";
   if (g.work) {
-    head += `<div class="story"><b>《${esc(g.work)}》</b>${esc(g.story)}
-      ${g.cast ? `<span class="cast">등장인물 — ${esc(g.cast)}</span>` : ""}</div>`;
+    head += `<p class="story"><b>《${esc(g.work)}》</b> ${esc(g.story)}
+      ${g.cast ? `<span class="cast">등장인물 — ${esc(g.cast)}</span>` : ""}</p>`;
   }
   if (g.blurb) {
     head += g.work || track.id === "3-contextual-korean"
-      ? `<p class="gcan"><b>끝내면 할 수 있는 것</b>${esc(g.blurb)}</p>`
+      ? `<p class="gcan"><b class="lbl">끝내면 할 수 있는 것</b>${esc(g.blurb)}</p>`
       : `<p class="gblurb">${esc(g.blurb)}</p>`;
   }
 
@@ -442,10 +463,9 @@ function group(g, track) {
   const all = [];
   for (const l of g.lessons) for (const c of (l.chips || [])) if (!all.includes(c)) all.push(c);
   const isPat = g.lessons.some(l => l.pats && l.pats.length);
-  if (all.length) {
-    head += `<div class="cloud${isPat ? " ispat" : ""}">
-      <span class="cloud-h">${isPat ? "이 단원의 패턴" : "이 단원에서 다루는 것"} <b>${all.length}</b></span>
-      ${all.map(c => `<span class="${isPat ? "pat" : "pat plainchip"}">${esc(c)}</span>`).join("")}</div>`;
+  if (all.length && isPat) {
+    head += `<p class="cloud"><span class="lbl">패턴 ${all.length}</span>`
+      + all.map(c => `<b>${esc(c)}</b>`).join(`<span class="sep">·</span>`) + `</p>`;
   }
 
   const extra = Math.max(0, g.lessons.length - SHOWN);
@@ -453,47 +473,46 @@ function group(g, track) {
     <button class="ghead" type="button">
       <span class="glabel">${esc(g.label)}</span>
       <span class="gtitle">${esc(g.title)}${g.subtitle ? `<em>${esc(g.subtitle)}</em>` : ""}</span>
-      <span class="gmeta">${g.form ? `<span class="pat plainchip">${esc(g.form)}</span>` : ""}${g.peak ? `<span class="pat ref">문법 최고점 ${g.peak}과</span>` : ""}
-        ${badge}<span>${g.lessons.length}${esc(track.lessonWord)}</span><span class="caret">▶</span></span>
+      <span class="gmeta">${g.peak ? `<span>핵심 ${g.peak}과까지</span>` : ""}${g.form ? `<span>${esc(g.form)}</span>` : ""}
+        ${g.level ? lvTag(g.levelText || g.level) : ""}
+        <span class="gcount">${g.lessons.length}${esc(track.lessonWord)}</span><span class="caret"></span></span>
     </button>
     <div class="gbody">
       ${head}
       <div class="lessons">${g.lessons.map((l, i) => lessonRow(l, i, track)).join("")}</div>
-      ${extra ? `<button class="more" type="button"><span class="m-open">더 보기 (${extra})</span><span class="m-close">접기</span></button>` : ""}
-      ${g.checkpoint ? `<p class="ckpt"><b>체크포인트</b>${esc(g.checkpoint)}</p>` : ""}
+      ${extra ? `<button class="more" type="button"><span class="m-open">더 보기 ${extra}</span><span class="m-close">접기</span></button>` : ""}
+      ${g.checkpoint ? `<p class="ckpt"><b class="lbl">체크포인트</b>${esc(g.checkpoint)}</p>` : ""}
     </div>
   </div>`;
 }
 
 function trackSection(t) {
-  const span = t.span.length ? `${t.span[0]} — ${t.span[t.span.length - 1]}` : "전 레벨";
-  const status = t.status === "plan" ? `<span class="badge plan">계획 단계</span>`
-    : t.status === "open" ? `<span class="badge open">계속 추가</span>` : "";
-  const dist = LEVELS.filter(lv => t.dist[lv]).map(lv => {
-    const pct = t.dist[lv] / t.total * 100;
-    return `<i class="${DARK.has(lv) ? "dark" : ""}" style="flex:${t.dist[lv]};background:${lvColor(lv)}"
-      title="${lv} ${t.dist[lv]}${esc(t.lessonWord)}">${pct > 9 ? lv : ""}</i>`;
-  }).join("");
+  const status = t.status === "plan" ? `<span class="flag">계획 단계</span>`
+    : t.status === "open" ? `<span class="flag open">계속 추가</span>` : "";
+  const dist = LEVELS.filter(lv => t.dist[lv]).map(lv =>
+    `<i style="flex:${t.dist[lv]};background:${lvColor(lv)}" title="${lv} ${t.dist[lv]}${esc(t.lessonWord)}"></i>`).join("");
+  const legend = LEVELS.filter(lv => t.dist[lv]).map(lv =>
+    `<span><i style="background:${lvColor(lv)}"></i>${lv} <b>${t.dist[lv]}</b></span>`).join("");
 
   return `<section class="track ${t.status}" id="${t.id}">
-    <div class="track-card">
-      <div class="glyph">${esc(t.glyph)}</div>
-      <div>
-        <div class="track-h">
-          <span class="track-no">${t.no}</span>
-          <span class="track-t">${esc(t.ko)}</span>
-          <span class="track-en">${esc(t.en)}</span>
-          ${t.span.length ? `<span class="badge${lvClass(t.span[0])}" style="background:${lvColor(t.span[0])}">${t.span[0]}</span>
-            <span style="color:var(--gray-400);font-size:12px">—</span>
-            <span class="badge${lvClass(t.span[t.span.length-1])}" style="background:${lvColor(t.span[t.span.length-1])}">${t.span[t.span.length-1]}</span>`
-            : `<span class="badge plan">전 레벨</span>`}
-          ${status}
+    <div class="track-head">
+      <div class="track-h">
+        <span class="track-no">${String(t.no).padStart(2, "0")}</span>
+        <span class="track-t">${esc(t.ko)}</span>
+        <span class="track-en">${esc(t.en)}</span>
+        ${status}
+      </div>
+      <div class="track-body">
+        <div>
+          <p class="track-desc">${esc(t.desc)}</p>
+          <p class="track-note">${esc(t.note)}</p>
+          <div class="track-links">${t.links.map(l => `<a class="${l.kind === "ghost" ? "" : "primary"}" href="${esc(l.href)}">${esc(l.t)}</a>`).join("")}</div>
         </div>
-        <p class="track-desc">${esc(t.desc)}</p>
-        <p class="track-note">${esc(t.note)}</p>
-        <div class="track-stats">${t.stats.map(s => `<div><b>${esc(s.v)}</b><span>${esc(s.k)}</span></div>`).join("")}</div>
-        ${dist ? `<div class="dist">${dist}</div><p class="dist-legend">레벨별 ${esc(t.lessonWord)} 분포 · ${esc(span)}</p>` : ""}
-        <div class="track-links">${t.links.map(l => `<a class="${l.kind === "ghost" ? "ghost" : ""}" href="${esc(l.href)}">${esc(l.t)}</a>`).join("")}</div>
+        <div class="track-side">
+          <div class="track-stats">${t.stats.map(s => `<div><b>${esc(s.v)}</b><span>${esc(s.k)}</span></div>`).join("")}</div>
+          ${dist ? `<div class="dist">${dist}</div><div class="dist-legend">${legend}</div>`
+                 : `<div class="dist-legend" style="margin-top:16px"><span>전 레벨 · 특정 레벨에 묶이지 않음</span></div>`}
+        </div>
       </div>
     </div>
     <div class="groups">${t.groups.map(g => group(g, t)).join("")}</div>
@@ -585,11 +604,8 @@ $expand.addEventListener("click", () => {
   document.querySelectorAll(".group").forEach(g => g.classList.toggle("open", open));
 });
 
-// 첫 화면에서는 각 트랙의 첫 단원만 펼쳐 둔다
-DATA.tracks.forEach(t => {
-  const g = document.querySelector(`#${CSS.escape(t.id)} .group`);
-  if (g) g.classList.add("open");
-});
+// 처음에는 전부 접어 둔다 — 이 페이지의 첫 일은 "무엇이 있는지" 보여 주는 것이고,
+// 단원을 미리 펼쳐 두면 그 구조가 본문에 묻힌다.
 </script>
 </body>
 </html>
