@@ -329,7 +329,12 @@ def parse_contextual() -> list[dict]:
                 g["cast"] = plain(m.group(1))
                 continue
             if not q.startswith("**") and not g["lessons"]:
-                g["story"] = (g["story"] + " " + plain(q)).strip()
+                # 줄거리에 섞인 튜터 지시("튜터는 2화 첫머리에서…")는 제작 노트다.
+                # 카탈로그는 이 코스가 어떤 이야기인지만 보여 준다.
+                keep = [t for t in re.split(r"(?<=[.!?])\s+", plain(q))
+                        if t and "튜터" not in t and "체험 레슨" not in t]
+                if keep:
+                    g["story"] = (g["story"] + " " + " ".join(keep)).strip()
             continue
 
         m = re.match(r"^\*\*끝내면 할 수 있는 것:\*\* (.+)$", line)

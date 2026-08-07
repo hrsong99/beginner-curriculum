@@ -152,7 +152,7 @@
   .caret::before { content: "\25B8"; }
   .group.open .caret { color: var(--ac); }
   .group.open .caret::before { content: "\25BE"; }
-  .gbody { display: none; padding: 18px 20px 22px; }
+  .gbody { display: none; padding: 16px 20px 10px; }
   .group.open .gbody { display: block; }
 
   .story { margin: 0; max-width: 70ch; color: var(--ink-2); font-size: 13.5px; line-height: 1.75; word-break: keep-all; }
@@ -163,7 +163,9 @@
   .gcan b { display: block; margin-bottom: 2px; color: var(--ac); }
 
   /* ---------- 4단 · 과 한 줄 ---------- */
-  .lessons { margin-top: 18px; border-top: 1px solid var(--line-soft); }
+  .lessons { margin-top: 16px; border-top: 1px solid var(--line-soft); }
+  /* 머리글이 없는 단원(핵심·한글)에서는 목록이 곧바로 시작한다 */
+  .gbody > .lessons:first-child { margin-top: 0; border-top: 0; }
   .lesson { border-bottom: 1px solid var(--line-soft); }
   .lesson.hide { display: none; }
   .lrow-btn { display: grid; grid-template-columns: 58px minmax(0,1fr) minmax(0,auto) 14px; align-items: baseline; gap: 16px;
@@ -188,27 +190,33 @@
      눌러 버렸다. 펼친 과는 이제 카드 한 장이고 — 제목이 그 카드의 머리, 나머지는
      카드 안의 내용 — 순서가 제목 → 할 수 있는 것 → 예문 → 표현으로 고정된다.
      예문은 흰 자리에 앉혀 제목보다 낮은 단이라는 것을 눈에 보이게 했다. */
-  .lesson.open .lrow-btn { padding-bottom: 8px; }
+  /* 펼친 과는 통째로 한 블록이다 — 머리(번호 + 제목)와 본문이 한 테두리 안에 있다.
+     행 옆에 번호만 남고 내용이 옆의 다른 상자로 빠지면 둘이 남처럼 보인다. */
+  .lesson.open { margin: 12px 0; background: var(--surface);
+    border: 1px solid var(--line); border-left: 3px solid var(--ac); border-radius: 0 12px 12px 0; }
+  .lesson.open .lrow-btn { grid-template-columns: auto minmax(0,1fr) 14px; gap: 12px; padding: 15px 20px 13px; }
+  .lesson.open .lno { color: var(--ac); font-weight: 700; }
   .lesson.open .ltitle { font-size: 17px; font-weight: 800; letter-spacing: -.025em; }
   .lesson.open .ltitle em { font-size: 14px; }
-  .lesson.open .lchips { opacity: 0; }          /* 카드 안에 패턴 이름이 다시 나온다 */
+  .lesson.open .lchips { display: none; }       /* 블록 안에서 패턴 이름이 다시 나온다 */
 
-  .ldetail { display: none; margin: 0 0 14px 58px; padding: 18px 20px 20px;
-    background: var(--surface); border-left: 3px solid var(--ac); border-radius: 0 12px 12px 0; }
+  .ldetail { display: none; padding: 0 20px 18px; }
   .lesson.open .ldetail { display: block; }
-  @media (max-width: 760px) { .ldetail { margin-left: 0; padding: 16px; } }
+  @media (max-width: 760px) { .ldetail { padding: 0 16px 16px; } }
+
+  /* 블록 안의 칸. 세 칸이 같은 생김새라 라벨만 보면 무엇인지 알 수 있다. */
+  .field + .field { margin-top: 15px; padding-top: 15px; border-top: 1px solid var(--line); }
+  .field > .lbl { display: block; margin-bottom: 8px; }
 
   /* 이 과의 약속. 카드에서 제일 먼저 읽혀야 하는 줄이라 본문보다 크고 진하다. */
-  .goal { margin: 0; max-width: 60ch; color: var(--ink); font-size: 15px; font-weight: 600; line-height: 1.65; word-break: keep-all; }
-  .goal b { display: block; margin-bottom: 5px; color: var(--ac); }
-  .goal .words { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 11px; }
-  .goal .words span { padding: 5px 12px; background: #fff; border: 1px solid var(--line); border-radius: 8px; font-size: 16px; font-weight: 700; }
-  .scene { margin: 0 0 12px; max-width: 60ch; color: var(--ink-3); font-size: 13px; line-height: 1.6; word-break: keep-all; }
-  .scene b { display: block; margin-bottom: 3px; }
+  .goal { margin: 0; max-width: 62ch; color: var(--ink); font-size: 15px; font-weight: 600; line-height: 1.65; word-break: keep-all; }
+  .words { display: flex; flex-wrap: wrap; gap: 6px; }
+  .words span { padding: 5px 12px; background: #fff; border: 1px solid var(--line); border-radius: 8px; font-size: 16px; font-weight: 700; }
+  .scene { margin: 0 0 14px; max-width: 62ch; color: var(--ink-3); font-size: 13px; line-height: 1.6; word-break: keep-all; }
 
   /* 페이지에서 채운 색은 트랙색과 이 살구색뿐이고, 트랙색은 3단 위쪽에만 있다.
      그래서 과를 펼쳤을 때 그 안에서 유일하게 칠해진 것이 배우는 조각이 된다. */
-  .pats { margin: 16px 0 0; display: grid; gap: 8px; }
+  .pats { display: grid; gap: 8px; }
   .pcard { padding: 13px 16px; background: #fff; border: 1px solid var(--line); border-radius: 10px; }
   .pcard .sent { margin: 0; font-size: 18.5px; font-weight: 700; line-height: 1.45; letter-spacing: -.025em; word-break: keep-all; }
   .pcard .sent mark { background: var(--pat-mark); color: var(--pat-ink); padding: 1px 3px; margin: 0 -1px; border-radius: 4px; font-weight: 800;
@@ -221,13 +229,10 @@
   .pcard .pgloss { color: var(--ink-4); font-size: 11.5px; word-break: keep-all; }
 
   /* 표현 — 훑을 때 눈에 걸리도록 글줄이 아니라 낱개로 앉힌다 */
-  .said { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px; margin: 16px 0 0; }
-  .said .lbl { margin-right: 4px; }
-  .said span.w { padding: 4px 10px; background: #fff; border: 1px solid var(--line); border-radius: 7px;
+  .said { display: flex; flex-wrap: wrap; gap: 6px; }
+  .said span { padding: 4px 11px; background: #fff; border: 1px solid var(--line); border-radius: 7px;
     color: var(--ink-2); font-size: 12.5px; font-weight: 600; }
-  .allchips { display: flex; flex-wrap: wrap; gap: 6px; margin: 9px 0 0; }
-  .allchips span { padding: 5px 11px; background: #fff; border: 1px solid var(--line); border-radius: 8px; color: var(--ink); font-size: 13px; font-weight: 600; }
-  .subhead { margin: 16px 0 0; }
+  .rule { margin: 11px 0 0; max-width: 66ch; color: var(--ink-2); font-size: 12.5px; line-height: 1.7; word-break: keep-all; }
 
 
   .empty { margin-top: 40px; color: var(--ink-3); font-size: 13.5px; text-align: center; }
@@ -335,7 +340,7 @@ document.getElementById("levelbar").innerHTML =
 /* ---------- 3·4·5단 ---------- */
 function chips(l) {
   const p = (l.chips || []).slice(0, 2).map(c =>
-    `<span class="pat" title="${esc(c)}">${esc(c.replace(/\s*\(.*$/, "").trim() || c)}</span>`);
+    `<span class="pat" title="${esc(c)}">${esc(c.replace(/\s+\(.*$/, "").trim() || c)}</span>`);
   if (l.refs && l.refs.length) p.push(`<span class="pat ref">핵심 ${l.refs[0]}</span>`);
   return p.join(`<span class="sep">·</span>`);
 }
@@ -351,41 +356,55 @@ function marked(sentence, spans) {
   return out + esc(sentence.slice(last));
 }
 
-/** 펼친 과에 남기는 것은 셋뿐이다 — 약속(할 수 있는 것), 예문, 표현.
-    문법 풀이와 제작 메모는 목차 원문에 있고, 여기서는 훑는 것을 방해한다. */
+/** 펼친 과는 라벨 붙은 칸 셋으로 이루어진다 — 무엇을 할 수 있게 되는가,
+    무엇을 배우는가, 그리고 그것을 받쳐 주는 말. 트랙마다 칸의 이름만 달라진다. */
 function detail(l) {
-  let h = "";
-  if (l.scene) h += `<p class="scene"><b class="lbl">장면</b>${esc(l.scene)}</p>`;
+  const fields = [];
+
+  // ① 이 과의 약속
   if (l.can) {
     const words = l.can.split(" · ").map(w => w.trim()).filter(Boolean);
     const listy = words.length >= 3 && words.every(w => w.length <= 7);
-    h += `<div class="goal"><b class="lbl">${esc(l.canLabel || "할 수 있다")}</b>` + (listy
-      ? `<div class="words">${words.map(w => `<span>${esc(w)}</span>`).join("")}</div>` : esc(l.can)) + `</div>`;
+    fields.push([l.canLabel || "할 수 있는 것", listy
+      ? `<div class="words">${words.map(w => `<span>${esc(w)}</span>`).join("")}</div>`
+      : `<p class="goal">${esc(l.can)}</p>`]);
   }
-  if (l.fix) h += `<div class="goal" style="margin-top:14px"><b class="lbl">고치는 법</b>${esc(l.fix)}</div>`;
 
+  // ② 배우는 것 — 패턴이 있으면 예문 안에서 짚어 주고, 없으면 이름만 늘어놓는다
   const ps = (l.pats || []).filter(p => p.ex || p.pat);
   if (ps.length) {
-    h += `<div class="pats">` + ps.map(p => `<div class="pcard">
+    fields.push([`배우는 패턴 ${ps.length}`, `<div class="pats">` + ps.map(p => `<div class="pcard">
       ${p.ex ? `<p class="sent">${marked(p.ex, p.spans)}</p>` : ""}
       ${p.reply ? `<p class="reply">${esc(p.reply)}</p>` : ""}
       <div class="pmeta"><span class="pname">${esc(p.pat)}</span>
-        ${p.gloss ? `<span class="pgloss">${esc(p.gloss)}</span>` : ""}</div></div>`).join("") + `</div>`;
-  } else if (l.chips && l.chips.length) {
-    h += `<div class="subhead"><span class="lbl">배우는 것</span>
-      <div class="allchips">${l.chips.map(c => `<span>${esc(c)}</span>`).join("")}</div></div>`;
+        ${p.gloss ? `<span class="pgloss">${esc(p.gloss)}</span>` : ""}</div></div>`).join("") + `</div>`]);
+  } else if (l.fix) {
+    fields.push(["고치는 법", `<p class="goal">${esc(l.fix)}</p>`]);
+  }
+  if (l.chips && l.chips.length && !ps.length) {
+    fields.push([l.fix ? "최소 대립쌍" : "배우는 것",
+      `<div class="said">${l.chips.map(c => `<span>${esc(c)}</span>`).join("")}</div>`]);
   }
 
+  // ③ 받쳐 주는 말 — 통째로 외워 쓰는 표현과, 딱 한 줄짜리 규칙
   const said = (l.notes || []).find(n => n.k === "표현");
-  if (said) {
+  const rule = (l.notes || []).find(n => n.k === "문법");
+  if (said || rule) {
     // 트랙마다 구분자가 다르다: 핵심은 ·, 상황별은 쉼표. 쉼표로도 나누되 · 로 갈린
     // 뒤에는 건드리지 않는다 — "아, 그래요?" 처럼 쉼표를 품은 한 덩어리가 있다.
-    let ws = said.v.split(/\s*·\s*/).filter(Boolean);
-    if (ws.length === 1) ws = ws[0].split(/\s*,\s*/).filter(Boolean);
-    h += `<div class="said"><span class="lbl">표현</span>`
-      + ws.map(w => `<span class="w">${esc(w)}</span>`).join("") + `</div>`;
+    let ws = [];
+    if (said) {
+      ws = said.v.split(/\s*·\s*/).filter(Boolean);
+      if (ws.length === 1) ws = ws[0].split(/\s*,\s*/).filter(Boolean);
+    }
+    fields.push([said && rule ? "표현과 규칙" : said ? "표현" : "규칙",
+      (ws.length ? `<div class="said">${ws.map(w => `<span>${esc(w)}</span>`).join("")}</div>` : "")
+      + (rule ? `<p class="rule">${esc(rule.v)}</p>` : "")]);
   }
-  return h || `<p class="scene">이 과의 상세는 목차 원문에 있습니다.</p>`;
+
+  if (!fields.length) return `<p class="scene">이 과의 상세는 목차 원문에 있습니다.</p>`;
+  return (l.scene ? `<p class="scene">${esc(l.scene)}</p>` : "")
+    + fields.map(([lbl, body]) => `<div class="field"><span class="lbl">${esc(lbl)}</span>${body}</div>`).join("");
 }
 
 function lessonRow(l) {
