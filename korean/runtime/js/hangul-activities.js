@@ -54,7 +54,21 @@
     var keys = [].slice.call(b.querySelectorAll(".key"));
     var active = 0;
     var pick = { c: null, v: null };
+    var missed = null;              // slot holding a wrong pair, waiting to clear
     slots.forEach(function (s, i) { s.setAttribute("data-a", answers[i] || ""); });
+
+    /* A wrong pair empties its slot again — see check(). Either the timer
+       gets here or the learner's next tap does, whichever comes first: half
+       a second in, a tap means "let me try again", and editing one letter of
+       a guess that has already been marked wrong is not a thing to support. */
+    function clearMiss() {
+      var s = missed;
+      missed = null;
+      if (!s || slots[active] !== s || s.classList.contains("done")) return false;
+      pick = { c: null, v: null };
+      draw();
+      return true;
+    }
 
     function draw() {
       slots.forEach(function (s, i) {
@@ -85,8 +99,18 @@
         active = next;                                   // -1 once every slot is built
         draw();
       } else {
+        /* Wrong pair: shake, then put the slot back to empty on its own.
+           The shake used to be the whole answer, so the wrong letter stayed
+           in the slot with both keys still lit — the learner's next tap
+           edited a guess that had already been marked wrong, and nothing on
+           screen said the attempt was over. 800ms is long enough to read
+           what they built and short enough to just try again. */
+        missed = s;
         s.classList.add("miss");
         setTimeout(function () { s.classList.remove("miss"); }, 320);
+        setTimeout(function () {
+          if (missed === s && clearMiss()) sync.push(b);
+        }, 800);
       }
     }
 
@@ -117,6 +141,7 @@
       },
       apply: function (p) {
         if (!Array.isArray(p.done)) return false;
+        missed = null;              // the other screen's state wins over a pending clear
         // every value has to be one this builder actually declares (§8)
         var seen = {};
         for (var i = 0; i < p.done.length; i++) {
@@ -140,6 +165,7 @@
 
     keys.forEach(function (k) {
       k.addEventListener("click", function () {
+        clearMiss();
         if (k.dataset.c) pick.c = pick.c === k.dataset.c ? null : k.dataset.c;
         else pick.v = pick.v === k.dataset.v ? null : k.dataset.v;
         draw();
@@ -150,6 +176,7 @@
 
     slots.forEach(function (s, i) {
       s.addEventListener("click", function () {          // tap a slot to redo it
+        missed = null;
         active = i;
         clearSlot(s);
         pick = { c: null, v: null };
