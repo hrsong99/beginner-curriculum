@@ -68,6 +68,10 @@ If you hit one, use the supported spelling rather than working around it.
   The script refuses to build if an asset uses one.
 - **A local `@import` is not bundled** and the build fails rather than emitting a 404. Inline
   the file into one of the linked stylesheets instead.
+- **HTML comments are scanned too.** The rewrites work on raw text, so an `<img src="…">`
+  written inside a `<!-- -->` as an example still counts as a reference — and the build stops
+  with "referenced images not on disk" if that example points at a file you haven't made yet.
+  Put sample markup in a `.md` next to the asset instead of in the deck.
 - **Re-run the build after any edit.** The zip is a snapshot; editing the source deck does
   not change an already-uploaded 교재.
 - **HTML format skips the PDF pipeline entirely.** No page images and no lemonboard room
