@@ -153,9 +153,17 @@ same document, so anything in the markup is already on the learner's screen.
   hit, the live answer is elsewhere in `korean/`.
 - `index.html` / `viewer.html` at the root are the navigation; `CLAUDE.md` / `AGENTS.md` stay at
   the root so they auto-load.
-- **`catalog.html` is generated — never hand-edit it.** It is the visual table of contents for
-  all five tracks (level ladder, per-track stats, every 과 with what it teaches), built from the
-  five `table-of-contents.md` files by `tools/build_catalog.py`. It holds no facts of its own, so
-  a wrong number there is a wrong number in a TOC. After any TOC change re-run
-  `python3 korean/tools/build_catalog.py` alongside `shard_toc.py`; the page layout lives in
-  `tools/catalog_template.html`.
+- **`catalog.html` + `catalog/` are generated — never hand-edit them.** `catalog.html` is the
+  gateway (hero, five track cards, level ladder); `catalog/<track>.html` is that track's full
+  contents — every 과, what it teaches, and the pattern marked inside its own example sentence.
+  All six pages are built from the five `table-of-contents.md` files by `tools/build_catalog.py`,
+  out of `tools/gateway_template.html` and `tools/track_template.html`. They hold no facts of
+  their own, so a wrong number there is a wrong number in a TOC. Re-run
+  `python3 korean/tools/build_catalog.py` after any TOC change, alongside `shard_toc.py`.
+
+  **The colour rules are the point, not decoration.** Each track owns one accent, validated as a
+  categorical palette (`dataviz` skill's `validate_palette.js`), and that accent appears only in
+  the top three levels of the hierarchy — track title, band heading, unit chip. Below that
+  everything is ink and hairlines, because the one saturated thing inside an open 과 has to be
+  the peach `mark` on the taught pattern (`--pat-mark`/`--pat-ink`, lifted from the decks'
+  `--ending-*`). Paint the fourth level too and that mark stops reading.

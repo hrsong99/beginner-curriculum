@@ -17,7 +17,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent          # korean/
 TRACKS = ROOT / "tracks"
-OUT = ROOT / "catalog.html"
+OUT = ROOT / "catalog.html"                            # 관문
+OUT_DIR = ROOT / "catalog"                             # 트랙별 상세
 
 LEVELS = ["왕초급", "초급", "초중급", "중급", "중고급", "고급"]
 
@@ -480,7 +481,7 @@ def build() -> dict:
     tracks = [
         {
             "id": "1-hangul", "no": 1, "ko": "한글 읽기", "en": "Hangul Reading",
-            "glyph": "가", "status": "live",
+            "glyph": "가", "status": "live", "accent": "#4f7d10", "tint": "#f2f7e8",
             "unitWord": "부", "lessonWord": "레슨",
             "desc": "한글을 한 번도 본 적 없는 상태에서 어떤 한국어 음절이든 소리 내어 읽는 데까지. "
                     "한 과에 새 요소는 하나만 얹고, 80%는 복습으로 채웁니다.",
@@ -494,7 +495,7 @@ def build() -> dict:
         },
         {
             "id": "2-core-patterns", "no": 2, "ko": "핵심 문법 패턴", "en": "Core Patterns",
-            "glyph": "文", "status": "live",
+            "glyph": "文", "status": "live", "accent": "#2b5fd9", "tint": "#eef2fd",
             "unitWord": "단원", "lessonWord": "과",
             "desc": "커리큘럼의 척추. 1과 = 할 수 있는 것 1개 + 패턴 2개. "
                     "명사 문장에서 시작해 피동·사동, 그리고 고급 어미까지 23개 단원으로 쌓아 올립니다.",
@@ -509,7 +510,7 @@ def build() -> dict:
         },
         {
             "id": "3-contextual-korean", "no": 3, "ko": "상황별 한국어", "en": "Contextual Korean",
-            "glyph": "劇", "status": "live",
+            "glyph": "劇", "status": "live", "accent": "#c22a5f", "tint": "#fdeff3",
             "unitWord": "코스", "lessonWord": "레슨",
             "desc": "한국어를 배우러 오는 사람은 없습니다 — 드라마를 자막 없이 보고 싶어서 옵니다. "
                     "네 커리큘럼의 14개 코스는 각각 등장인물과 이야기가 있는 한 편의 작품입니다.",
@@ -523,7 +524,7 @@ def build() -> dict:
         },
         {
             "id": "4-freetalking", "no": 4, "ko": "고급 프리토킹", "en": "Advanced Freetalking",
-            "glyph": "話", "status": "open",
+            "glyph": "話", "status": "open", "accent": "#0080a8", "tint": "#e9f6fa",
             "unitWord": "테마", "lessonWord": "주제",
             "desc": "새로 외울 문법은 없습니다. 말이 나오는 주제와, 그 주제를 40분 굴리는 질문 사다리만 있습니다. "
                     "끝이 없는 트랙이라 주제는 매주 늘어납니다.",
@@ -537,7 +538,7 @@ def build() -> dict:
         },
         {
             "id": "5-pronunciation", "no": 5, "ko": "발음 교정", "en": "Pronunciation",
-            "glyph": "音", "status": "plan",
+            "glyph": "音", "status": "plan", "accent": "#69737d", "tint": "#f4f5f7",
             "unitWord": "부", "lessonWord": "레슨",
             "desc": "일본어 화자의 한국어를 어색하게 만드는 지점만 골라 고칩니다. 일반적인 발음 강의가 아니라, "
                     "일본어에 한 칸뿐인 자리에 한국어가 두세 칸을 두는 곳의 목록입니다.",
@@ -567,13 +568,29 @@ def build() -> dict:
     return {"levels": LEVELS, "tracks": tracks, "totals": totals}
 
 
+def render(template: str, data: dict, out: Path) -> None:
+    tpl = (Path(__file__).parent / template).read_text(encoding="utf-8")
+    out.write_text(tpl.replace("/*__DATA__*/null",
+                               json.dumps(data, ensure_ascii=False, separators=(",", ":"))),
+                   encoding="utf-8")
+
+
 def main() -> None:
     data = build()
-    tpl = (Path(__file__).parent / "catalog_template.html").read_text(encoding="utf-8")
-    html = tpl.replace("/*__DATA__*/null", json.dumps(data, ensure_ascii=False, separators=(",", ":")))
-    OUT.write_text(html, encoding="utf-8")
+    OUT_DIR.mkdir(exist_ok=True)
 
-    print(f"→ {OUT.relative_to(ROOT.parent)}")
+    # 관문에는 트랙의 겉면만 싣는다 — 과 목록은 각자의 페이지가 들고 있다
+    nav = [{"id": t["id"], "no": t["no"], "ko": t["ko"], "accent": t["accent"],
+            "total": t["total"], "lessonWord": t["lessonWord"]} for t in data["tracks"]]
+    summary = [{k: v for k, v in t.items() if k != "groups"} for t in data["tracks"]]
+    render("gateway_template.html",
+           {"levels": data["levels"], "totals": data["totals"], "tracks": summary}, OUT)
+
+    for t in data["tracks"]:
+        render("track_template.html", {"levels": data["levels"], "track": t, "nav": nav},
+               OUT_DIR / f"{t['id']}.html")
+
+    print(f"→ {OUT.relative_to(ROOT.parent)}  +  {OUT_DIR.relative_to(ROOT.parent)}/*.html")
     for t in data["tracks"]:
         print(f"   {t['no']}. {t['ko']:<10} {t['total']:>4} {t['lessonWord']} · "
               f"{len(t['groups'])} {t['unitWord']} · {' '.join(t['span']) or '전 레벨'}")
