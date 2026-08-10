@@ -138,4 +138,19 @@ Each of these cost a rewrite. They are not style preferences.
 2. Nothing from the brief's `아직 아님` appears in learner-produced Korean.
 3. Render at 480px and look at it. These are visual documents; a page that reads fine as
    markup can be unusable as a page.
+4. **Check every page for clipping, not just for looking right.** The pager floats over the
+   bottom ~60px, so a page taller than the window loses its last element with no scrollbar and
+   no error. Opening the deck and paging through will not show it — the clipped part is simply
+   not there. Measure it:
+
+   ```js
+   [...document.querySelectorAll('.phone > [data-page-id]')]
+     .filter(p => { const d = p.style.display; p.style.display = '';
+                    const h = p.scrollHeight; p.style.display = d;
+                    return h > innerHeight - 60; })
+     .map(p => p.dataset.pageId)
+   ```
+
+   A goal page carries **three or four rows, not six** — six overflowed and hid the last word
+   while the tutor line still promised it.
 4. Append whatever you spent — scene, payoff word, new noun — to this file.
