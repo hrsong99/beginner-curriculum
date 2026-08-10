@@ -2608,6 +2608,50 @@ body.teaching .section-subtitle + .tutor-note {
   word-break: keep-all;
 }
 
+/* ---- 이어서 물어볼 것 ----
+   자유 대화 장에서 튜터가 하는 일의 대부분은 다음 질문을 고르는 것이다.
+   장에 인쇄된 질문은 하나뿐이고, 대답이 세 마디에서 끝나면 그다음 3분은
+   튜터가 그 자리에서 지어내야 한다 — 그래서 여기 노트는 "무엇을 하라"
+   한 줄에서 끝나지 않고, 바로 읽을 수 있는 파생 질문 두셋을 함께 든다.
+
+   노트 안에 머무는 것이 요점이다. 파생 질문이 블루-200 밖으로 나가면
+   학생 화면에 다섯 개의 질문이 한꺼번에 뜨고, 한 장 한 질문이 무너진다.
+
+   .tn-body 로 한 번 감싸는 이유: 노트는 [튜터만 배지][내용] 가로 flex 라,
+   설명 줄과 목록을 그냥 넣으면 배지 옆에 나란히 세 칸으로 선다. */
+.tn-body { min-width: 0; }
+
+.tn-cap {
+  display: block;
+  margin-top: 9px;
+  opacity: .7;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.tn-more {
+  margin: 4px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* 설명 줄보다 한 단계 굵다 — 이 줄들만 소리 내어 읽는 것이라, 눈이
+   먼저 걸려야 하는 쪽이 여기다. */
+.tn-more li {
+  position: relative;
+  padding-left: 12px;
+  font-weight: 700;
+}
+
+.tn-more li + li { margin-top: 3px; }
+
+.tn-more li::before {
+  content: "·";
+  position: absolute;
+  left: 2px;
+  font-weight: 900;
+}
+
 /* answers surface the way .slot does in the pattern lessons: present
    for the tutor, never loud — a ghost of the answer inside the blank.
 
