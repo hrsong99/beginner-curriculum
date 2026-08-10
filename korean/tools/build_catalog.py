@@ -507,9 +507,15 @@ def build() -> dict:
             "note": "해요체를 먼저 세우고 격식체는 24과에서 대응표로, 반말(43–45)과 높임말(46–48)로 정중함의 양끝을 채웁니다.",
             "stats": [("과", sum(len(g["lessons"]) for g in core)), ("단원", len(core)),
                       ("패턴", core_patterns)],
+            # 완성 덱은 이제 코스 밑에 산다 — tools/plan_courses.py 가 트랙을
+            # 코스로 끊은 뒤로 경로가 courses/<코스>/lessons/<슬러그>/lesson.html 이다.
             "links": [("샘플 레슨", "tracks/2-core-patterns/sample-lesson.html", "primary"),
-                      ("7과 · 완성 덱", "tracks/2-core-patterns/lesson-007.html", "ghost"),
-                      ("8과 · 완성 덱", "tracks/2-core-patterns/lesson-008.html", "ghost"),
+                      ("7과 · 완성 덱",
+                       "tracks/2-core-patterns/courses/core-beginner-1/lessons/07-daily-routine/lesson.html",
+                       "ghost"),
+                      ("8과 · 완성 덱",
+                       "tracks/2-core-patterns/courses/core-beginner-1/lessons/08-place-particles/lesson.html",
+                       "ghost"),
                       ("목차 원문", "viewer.html?doc=tracks/2-core-patterns/table-of-contents.md", "ghost")],
             "groups": core,
         },
