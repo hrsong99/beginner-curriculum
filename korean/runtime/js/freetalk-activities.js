@@ -395,11 +395,38 @@
     groups.forEach(function (grow) { grow(); });
   }, 400);
 
-  /* ---------- 예습 지문 · 눌러서 뜻 보기 ----------
+  /* ---------- 예습 지문 · 눌러서 뜻과 낱말 보기 ----------
      공유되는 것은 "어느 문장이 열려 있는가"(.open) 뿐이다. 튜터가 짚은
-     문장이 학습자 화면에서도 같이 열린다. */
-  document.querySelectorAll(".sents .sent").forEach(function (b) {
-    b.addEventListener("click", function () { b.classList.toggle("open"); });
+     문장이 학습자 화면에서도 같이 열린다.
+
+     한 번에 한 줄만 연다. 이유가 둘이다. 여러 줄을 펼쳐 두면 번역이 줄
+     사이사이에 끼어 지문이 다시 문단으로 뭉개지고 — 무엇보다 열린 줄이
+     "지금 보는 줄" 이라는 뜻을 잃는다. 포인터의 빨간 링이 열린 줄에 그대로
+     얹히므로(spotlight.js 의 POINTS), 열린 줄은 언제나 하나여야 한다.
+     보드 계약대로 단일 선택은 여기 핸들러의 몫이다: 같은 줄을 다시 누르면
+     닫혀야 늦게 들어온 화면도 같은 상태로 수렴한다. */
+  document.querySelectorAll(".sents").forEach(function (group) {
+    var lines = [].slice.call(group.querySelectorAll(".sent"));
+    lines.forEach(function (b) {
+      b.addEventListener("click", function (e) {
+        /* 열린 칸 안(번역·낱말)을 누른 것은 닫으라는 뜻이 아니다.
+           거기서는 튜터가 낱말 하나를 짚거나(spotlight) 글자에 형광펜을
+           긋는 중이고, 그때마다 카드가 접히면 짚을 수가 없다. 닫는 것은
+           문장 줄이나 꺾쇠를 다시 누르는 것 — 연 자리에서 닫는다. */
+        if (e.target.closest(".s-open")) return;
+        var was = b.classList.contains("open");
+        lines.forEach(function (x) { x.classList.remove("open"); });
+        b.classList.toggle("open", !was);
+      });
+      /* <button> 이 아니라 <div role="button"> 이다 — 버튼이면 그 안의 글이
+         형광펜과 포인터 양쪽에서 "위젯 안" 으로 걸러진다(highlight.js 의
+         MARKABLE 주석). 대신 버튼이 공짜로 주던 키보드 조작을 여기서 돌려준다. */
+      b.addEventListener("keydown", function (e) {
+        if (e.key !== "Enter" && e.key !== " ") return;
+        e.preventDefault();
+        b.click();
+      });
+    });
   });
 
 })();

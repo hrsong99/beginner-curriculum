@@ -2944,7 +2944,7 @@ button.opt-row:active { transform: scale(.99); }
 .opt-row.on .opt-note li { color: var(--gray-500); }
 
 /* ============================================================
-   예습 지문 · 한 문장이 한 줄
+   예습 지문 · 한 문장이 한 줄, 누르면 열린다
    ------------------------------------------------------------
    지문은 예습에서 이미 읽고 온 것이라, 수업에서는 참고 자료다.
    그래서 문단이 아니라 문장 단위로 끊어 둔다 — 궁금한 문장을 짚어
@@ -2952,36 +2952,51 @@ button.opt-row:active { transform: scale(.99); }
    있어야 한다. 번역은 눌러야 나온다: 옆에 늘 붙어 있으면 눈이
    한국어를 건너뛰고 일본어만 읽는다.
 
-   테두리는 주지 않는다. 줄마다 상자를 치면 글이 아니라 목록으로
-   읽히고, 읽어 오는 물건이라는 성격이 사라진다.
+   회색 판을 걷어 냈다. 판은 지문을 한 덩어리의 종이로 묶어 주지만,
+   그 대가로 일곱 줄이 판의 무늬가 되어 눌러 볼 것으로 보이지 않는다.
+   이 장에서 줄이 하는 일은 읽히는 것이 아니라 눌리는 것이므로, 묶는
+   것보다 누를 수 있어 보이는 쪽이 먼저다.
 
-   「訳」 같은 표시도 붙이지 않는다. 한 줄만 눌러 보면 바로 아는 일이고,
-   일곱 줄마다 붙은 표시는 지문을 읽는 동안 내내 눈에 걸린다.
+   그렇다고 줄마다 선을 긋고 단추를 얹으면 반대쪽으로 넘어간다. 실선
+   여섯에 동그란 꺾쇠 일곱이면 잉크가 지문보다 많아지고, 읽어 오는
+   물건이 설정 화면처럼 보인다. 눌린다는 말은 한 번만 하면 된다:
+   줄 사이는 선이 아니라 공기로 벌리고, 표시는 테 없는 작은 꺾쇠
+   하나로 줄인다. 나머지는 손가락이 닿을 때 — 그때 그 줄에만 옅은
+   바탕이 깔린다. 쉬고 있을 때의 잉크가 적을수록 지문으로 읽힌다.
+
+   여는 것은 번역만이 아니다. 그 줄의 어려운 낱말이 같이 나온다 —
+   막히는 자리는 문장이 아니라 낱말이고, 낱말은 그 줄 안에 있을 때
+   찾을 필요가 없다. 장 밑에 단어장을 따로 두면 줄과 목록 사이를
+   눈이 오간다.
+
+   한 번에 한 줄만 열린다(freetalk-activities.js). 그래서 열린 줄이 곧
+   "지금 보는 줄" 이고, 포인터의 빨간 링이 그 줄에 그대로 얹힌다 —
+   여는 손과 짚는 손이 같다(spotlight.js 의 POINTS).
    ============================================================ */
-/* 지문은 한 덩어리의 종이다. 흰 바탕에 흰 줄을 얹으면 어디까지가 지문인지
-   보이지 않아서, 회색 판 위에 줄을 놓는다 — 이 시트가 타일을 얹을 때 쓰는
-   바로 그 바탕이다. 열린 줄만 흰색으로 떠오른다. */
 .sents {
   display: grid;
   grid-template-columns: minmax(0, 1fr);   /* 자동 최소폭이 판을 넓히지 못하게 */
   gap: 0;
-  margin-top: 24px;
-  padding: 6px;
-  border-radius: 14px;
-  background: var(--gray-50);
+  margin-top: 20px;
 }
 
 /* flex 인 이유: <button> 은 자식들을 익명 상자에 담아 가운데로 몰아넣는다.
    닫혀 있을 때는 자식이 하나뿐이라 티가 안 나다가, 번역이 열려 두 줄이 되는
-   순간 좁은 쪽이 가운데로 밀린다 — 누를 때마다 글이 옆으로 움직이던 이유다. */
-.sent {
+   순간 좁은 쪽이 가운데로 밀린다 — 누를 때마다 글이 옆으로 움직이던 이유다.
+
+   .sents 로 한정하는 것이 중요하다. 이 시트 아래쪽(안내 페이지의 「핵심 패턴」
+   도식)에 같은 이름의 .sent 가 하나 더 있다 — 낱말 칩을 가로로 세우는 줄이다.
+   맨 .sent 로 쓰면 여기의 flex-direction: column 이 그 줄까지 잡아서, 칩 셋이
+   세로로 쌓인 채 나온다. 뒤에 오는 규칙이 display 만 다시 잡으므로 방향은
+   끝까지 안 돌아온다. */
+.sents .sent {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   width: 100%;
-  padding: 9px 12px 10px;
+  padding: 11px 13px 12px;
   border: 0;
-  border-radius: 10px;
+  border-radius: 14px;
   background: transparent;
   font-family: inherit;
   text-align: left;
@@ -2990,8 +3005,27 @@ button.opt-row:active { transform: scale(.99); }
   transition: background .12s;
 }
 
-.sent .s-ko {
-  display: block;
+/* 줄과 줄은 선이 아니라 공기로 갈린다. 문장이 두세 줄이라 이 정도 사이는
+   벌어져 보이고, 여섯 개의 실선은 안 그려도 된다. */
+.sents .sent + .sent { margin-top: 6px; }
+
+/* 손이 닿는 줄에만 바탕이 깔린다. 쉬고 있을 때는 아무 잉크도 안 쓰면서
+   「이건 눌린다」 를 말하는 자리다. 눌린 순간에도 같이 뜨므로 마우스가
+   없는 화면에서도 한 번은 보인다. */
+@media (hover: hover) {
+  .sents .sent:hover { background: var(--gray-50); }
+}
+.sents .sent:active { background: var(--gray-50); }
+
+.s-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.s-ko {
+  flex: 1 1 auto;
+  min-width: 0;
   color: #1c1c1c;
   font-size: 17px;
   font-weight: 700;
@@ -2999,33 +3033,97 @@ button.opt-row:active { transform: scale(.99); }
   word-break: keep-all;
 }
 
-/* 일본어는 띄어쓰기가 없다. keep-all 을 그대로 두면 한 문장이 통째로 한 낱말이
-   되어 줄을 못 바꾸고, 그 최소폭이 줄 카드를 판 밖으로 밀어낸다 — 번역을 여는
-   순간 그 줄만 오른쪽으로 삐져나오던 이유다. 일본어는 어디서든 끊는다. */
-.sent .s-ja {
-  display: none;
-  word-break: normal;
-  overflow-wrap: anywhere;
-  margin-top: 7px;
-  color: var(--gray-500);
-  font-size: 13.5px;
-  font-weight: 600;
-  line-height: 1.6;
-  word-break: keep-all;
+/* 「눌러서 연다」 고 말하는 꺾쇠. 테를 두르지 않는다 — 동그란 바탕을 주면
+   일곱 개의 단추가 되고, 단추는 지문 옆에서 지문보다 무겁다. 획 두 개면
+   같은 말을 하고, 한 번 읽히고 나면 배경으로 물러난다.
+   「訳」 같은 글자 표시는 여전히 안 붙인다: 일곱 줄마다 붙은 낱말은 읽는
+   내내 눈에 걸리지만, 같은 자리에 같은 크기로 선 도형은 안 그렇다.
+   열린 줄에서만 초록이 된다 — 초록은 이 덱에서 「고른 것」이라는 뜻이고,
+   지금 보고 있는 줄이 정확히 그것이다. */
+.s-mark {
+  position: relative;
+  flex: none;
+  width: 12px;
+  height: 12px;
+  margin-top: 8px;
+  transition: transform .16s;
 }
 
-.sent:focus { outline: none; }
+.s-mark::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: 0;
+  width: 7px;
+  height: 7px;
+  border-right: 1.5px solid var(--gray-400);
+  border-bottom: 1.5px solid var(--gray-400);
+  transform: rotate(45deg);
+  transition: border-color .12s;
+}
 
-.sent:focus-visible {
+.sents .sent.open .s-mark { transform: rotate(180deg); }
+.sents .sent.open .s-mark::before { border-color: var(--green-500); }
+
+/* 열린 줄은 흰 종이 위로 떠오른다. 테두리를 outline 이 아니라 inset 그림자로
+   그리는 이유가 하나 있다 — 포인터의 빨간 링이 outline 을 쓰는데, 여기서
+   outline 을 잡으면 더 좁은 선택자가 이겨서 빨간 링이 회색으로 바뀐다. */
+.sents .sent.open,
+.sents .sent.open:hover {
+  background: #fff;
+  box-shadow: inset 0 0 0 1px var(--gray-200), 0 3px 10px rgba(28, 28, 28, .07);
+}
+
+.sents .sent:focus { outline: none; }
+
+.sents .sent:focus-visible {
   outline: 2px solid var(--green-500);
   outline-offset: -2px;
 }
 
-.sent.open {
-  background: #fff;
-  box-shadow: 0 1px 2px rgba(28, 28, 28, .06);
+.s-open { display: none; }
+.sents .sent.open .s-open { display: block; }
+
+/* 일본어는 띄어쓰기가 없다. keep-all 을 그대로 두면 한 문장이 통째로 한 낱말이
+   되어 줄을 못 바꾸고, 그 최소폭이 줄 카드를 판 밖으로 밀어낸다 — 번역을 여는
+   순간 그 줄만 오른쪽으로 삐져나오던 이유다. 일본어는 어디서든 끊는다. */
+.s-ja {
+  display: block;
+  margin-top: 11px;
+  color: var(--gray-500);
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.6;
+  word-break: normal;
+  overflow-wrap: anywhere;
 }
-.sent.open .s-ja { display: block; }
+
+/* 그 줄의 단어장. 알약을 씌우지 않는다 — 열린 줄이 이미 이 장의 유일한
+   상자라, 그 안에 또 상자를 깔면 세 겹이 된다. 실선 하나로 번역과 가른다. */
+.s-words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  margin-top: 12px;
+  padding-top: 11px;
+  border-top: var(--line);
+}
+
+.s-w {
+  color: var(--gray-500);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+  word-break: keep-all;
+}
+
+.s-w b {
+  margin-right: 5px;
+  color: var(--ink);
+  font-size: 13.5px;
+  font-weight: 800;
+  letter-spacing: -.02em;
+}
 
 /* ============================================================
    질문 카드 · 그 장의 주인공
