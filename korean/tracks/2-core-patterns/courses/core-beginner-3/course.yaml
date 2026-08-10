@@ -15,9 +15,9 @@ spec:
   difficulty: BEGINNER
 
   title:
-    ko: 핵심 문법 패턴 · 초급 3
-    en: Core grammar patterns · Beginner 3
-    ja: コア文法パターン · 初級 3
+    ko: 핵심 문법 패턴 · 초급 · 3
+    en: Core grammar patterns · Beginner · 3
+    ja: コア文法パターン · 初級 · 3
 
   description:
     ko: Unit 5–6 · 더 붙이기 · 어제 뭐 했어요?

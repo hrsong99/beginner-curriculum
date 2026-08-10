@@ -144,9 +144,9 @@ def _one_table_course(path: pathlib.Path, *, slug, level, title, note,
 def parse_hangul(track: pathlib.Path) -> list[dict]:
     return _one_table_course(
         track / "table-of-contents.md",
-        slug="hangul-reading",
+        slug="",
         level="왕초급",
-        title={"ko": "한글 떼기", "en": "Hangul reading", "ja": "ハングル入門"},
+        title={},   # one course in the track — plan_courses.compose() names it
         note="자음 · 모음 · 받침을 거쳐 간판을 읽기까지.",
         columns=2, can_do_col=1, pattern_col=0)   # 새로 배우는 것 | 읽을 수 있는 것
 
@@ -154,10 +154,9 @@ def parse_hangul(track: pathlib.Path) -> list[dict]:
 def parse_pronunciation(track: pathlib.Path) -> list[dict]:
     return _one_table_course(
         track / "table-of-contents.md",
-        slug="pronunciation-repair",
+        slug="",
         level="초급",
-        title={"ko": "발음 교정", "en": "Pronunciation repair",
-               "ja": "発音の矯正"},
+        title={},   # one course in the track — plan_courses.compose() names it
         note="일본어 습관이 무너뜨리는 대립만 골라 듣기부터 고친다.",
         columns=3, can_do_col=1, pattern_col=2)   # 습관 | 고치는 법 | 최소 대립쌍
 

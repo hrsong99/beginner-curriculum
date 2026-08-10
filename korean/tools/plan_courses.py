@@ -93,12 +93,27 @@ MERGE_IF_UNDER = 5
 #
 # The column is COLLATE utf8mb3_bin, so this string is CASE-SENSITIVE. 'BASIC_v2'
 # would be a separate curriculum with no tutors, and nothing would report it.
+#
+# `prefix` and `name` make every course say which track and level it belongs to.
+# A slug is <prefix>-<level>-<bare>, so `drama-crush` — which told you nothing —
+# is now `ctx-intermediate-drama-crush`, and a directory listing groups by track
+# and then by level on its own. Single-course tracks drop the bare part.
 TRACKS = {
-    "1-hangul":            {"band": 1000, "type": "BASIC_V2"},
-    "2-core-patterns":     {"band": 2000, "type": "BASIC_V2"},
-    "3-contextual-korean": {"band": 3000, "type": "BASIC_V2"},
-    "4-freetalking":       {"band": 4000, "type": "BASIC_V2"},
-    "5-pronunciation":     {"band": 5000, "type": "BASIC_V2"},
+    "1-hangul":            {"band": 1000, "type": "BASIC_V2", "prefix": "hangul",
+                            "name": {"ko": "한글 떼기", "en": "Hangul reading",
+                                     "ja": "ハングル入門"}},
+    "2-core-patterns":     {"band": 2000, "type": "BASIC_V2", "prefix": "core",
+                            "name": {"ko": "핵심 문법 패턴", "en": "Core grammar patterns",
+                                     "ja": "コア文法パターン"}},
+    "3-contextual-korean": {"band": 3000, "type": "BASIC_V2", "prefix": "ctx",
+                            "name": {"ko": "상황별 한국어", "en": "Korean in context",
+                                     "ja": "場面別の韓国語"}},
+    "4-freetalking":       {"band": 4000, "type": "BASIC_V2", "prefix": "talk",
+                            "name": {"ko": "프리토킹", "en": "Free talking",
+                                     "ja": "フリートーキング"}},
+    "5-pronunciation":     {"band": 5000, "type": "BASIC_V2", "prefix": "pron",
+                            "name": {"ko": "발음 교정", "en": "Pronunciation repair",
+                                     "ja": "発音の矯正"}},
 }
 
 DIFFICULTY = {"왕초급": "BEGINNER", "초급": "BEGINNER", "초중급": "BEGINNER",
@@ -109,9 +124,6 @@ LEVEL_JA = {"왕초급": "超入門", "초급": "初級", "초중급": "初中�
             "중급": "中級", "중고급": "中上級", "고급": "上級"}
 LEVEL_EN = {"왕초급": "Starter", "초급": "Beginner", "초중급": "Upper beginner",
             "중급": "Intermediate", "중고급": "Upper intermediate", "고급": "Advanced"}
-
-CORE_TITLE = {"ko": "핵심 문법 패턴", "en": "Core grammar patterns",
-              "ja": "コア文法パターン"}
 
 ID_META = re.compile(r'<meta name="podo:lesson-id" content="([^"]*)">')
 TITLE_META = re.compile(r'<meta name="podo:title-(ko|en|ja)" content="([^"]*)">')
@@ -147,18 +159,46 @@ def pack_core(units: list) -> list[dict]:
         nth[level] = nth.get(level, 0) + 1
         lessons = [l for u in g for l in u["lessons"]]
         span = f"Unit {g[0]['no']}" + (f"–{g[-1]['no']}" if len(g) > 1 else "")
+        # bare name only — compose() adds the track prefix, level and titles, the
+        # same way it does for every other track.
         courses.append({
-            "slug": f"core-{LEVEL_SLUG[level]}-{nth[level]}",
+            "slug": str(nth[level]),
             "level": level,
-            "title": {k: f"{CORE_TITLE[k]} · "
-                         f"{ {'ko': level, 'ja': LEVEL_JA[level], 'en': LEVEL_EN[level]}[k] } "
-                         f"{nth[level]}" for k in ("ko", "en", "ja")},
+            "title": {k: str(nth[level]) for k in ("ko", "en", "ja")},
             "note": f"{span} · " + " · ".join(u["title"].split(" — ")[0] for u in g),
             "lessons": [{"no": l["no"], "title": l["title"], "canDo": l["can_do"],
                          "patterns": [p["form"] for p in l["patterns"]], "scene": None}
                         for l in lessons],
         })
     return courses
+
+
+def compose(course: dict, cfg: dict) -> dict:
+    """Give a course a slug and titles that name its track and level.
+
+    Parsers return a *bare* name — `drama-crush`, `me-lately`, `1` — because the
+    track knows its own prefix and the level comes off the course. Composing here
+    means a slug can never disagree with the track it sits in.
+
+        ctx-intermediate-drama-crush     상황별 한국어 · 중급 · 설렘 & 고백
+        talk-advanced-me-lately          프리토킹 · 고급 · 요즘의 나
+        core-beginner-1                  핵심 문법 패턴 · 초급 · 1
+        hangul-starter                   한글 떼기 · 왕초급
+
+    A single-course track drops the bare part rather than repeating itself
+    (`hangul-starter`, not `hangul-starter-reading`).
+    """
+    level = course["level"]
+    bare = course["slug"].strip("-")
+    course["slug"] = f"{cfg['prefix']}-{LEVEL_SLUG[level]}" + (f"-{bare}" if bare else "")
+
+    label = {"ko": level, "en": LEVEL_EN[level], "ja": LEVEL_JA[level]}
+    course["title"] = {
+        k: " · ".join(x for x in (cfg["name"][k], label[k], course["title"].get(k))
+                      if x)
+        for k in ("ko", "en", "ja")
+    }
+    return course
 
 
 def yaml_str(value: str) -> str:
@@ -261,6 +301,7 @@ def plan_track(track: pathlib.Path, dry: bool) -> int:
 
     parsed = parser(track)
     courses = pack_core(parsed) if track.name == "2-core-patterns" else parsed
+    courses = [compose(c, cfg) for c in courses]
 
     root, seen, written_n = track / "courses", set(), 0
     print(f"\n{track.name}")

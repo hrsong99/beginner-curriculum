@@ -15,9 +15,9 @@ spec:
   difficulty: BEGINNER
 
   title:
-    ko: 핵심 문법 패턴 · 초급 1
-    en: Core grammar patterns · Beginner 1
-    ja: コア文法パターン · 初級 1
+    ko: 핵심 문법 패턴 · 초급 · 1
+    en: Core grammar patterns · Beginner · 1
+    ja: コア文法パターン · 初級 · 1
 
   description:
     ko: Unit 1–2 · 이건 뭐예요? · 저는 매일 운동해요

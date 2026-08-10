@@ -15,9 +15,9 @@ spec:
   difficulty: ADVANCED
 
   title:
-    ko: 핵심 문법 패턴 · 고급 1
-    en: Core grammar patterns · Advanced 1
-    ja: コア文法パターン · 上級 1
+    ko: 핵심 문법 패턴 · 고급 · 1
+    en: Core grammar patterns · Advanced · 1
+    ja: コア文法パターン · 上級 · 1
 
   description:
     ko: Unit 23 · 첨가와 강조
