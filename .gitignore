@@ -16,3 +16,9 @@ lemonboard-build/
 
 # Python bytecode from the authoring scripts in korean/tools/.
 __pycache__/
+
+# Scratch renders that lesson-writing agents leave behind. They are copies of a
+# deck with the pager stripped, used to look at every page at once — never input
+# to anything, and a stale one is a deck that disagrees with itself.
+korean/**/__preview.html
+korean/_render*.html
