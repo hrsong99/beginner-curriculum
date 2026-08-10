@@ -171,6 +171,24 @@ So: if a lesson needs something the runtime cannot do, **stop and report it — 
 Note what is missing, build the page with what exists, and say so. The change then gets made
 once, reviewed, and published as a version, instead of ten times in ten directions.
 
+## The inline mark vocabulary is two classes, and some lessons need three
+
+Reported by two writers independently, so it is a gap in the system rather than two mistakes.
+Inline accents are exactly `.topic` (violet = 조사) and `.ending` (orange = 어미). Neither of
+these is a spare slot — see the colour rule below — but some lessons teach a piece that is
+neither:
+
+| Deck | What it needed | What it did |
+| --- | --- | --- |
+| 과 13 | two marks side by side (`3時`+`30分`) | `.ending` is a filled chip, so back-to-back marks **merge into one pill**. Merged the Japanese spans; kept the Korean side's two marks, which the space between 시 and 분 separates |
+| 과 23 | an accent for an adverb (제일 · 가장) | borrowed orange, with an HTML comment saying so |
+
+**Until a third token exists: borrow `.ending` for the deck's second taught piece and leave an
+HTML comment saying what it actually is.** Do not invent a class — a class the CDN tag does not
+carry renders as nothing. Every deck that teaches a 부사 or 관형사 will hit this, so it is worth
+one human decision in `lesson-card.css`: either a neutral third accent, or an explicit
+"`.ending` = the second taught piece, whatever its part of speech" semantics.
+
 ## The seat-colour system only covers the 과 1 case
 
 Three writers hit this independently, so it is a gap in the design system, not three mistakes.
