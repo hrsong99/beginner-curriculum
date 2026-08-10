@@ -359,7 +359,7 @@ closing
 - **`data-sync-id` 가 있는 요소만 공유됩니다.** id 가 없으면 그 칸은 각자의 것입니다.
 - 정답/오답은 절대 공유하지 않습니다 — 고른 값만 보내고 판정은 양쪽이 각자 합니다.
 - 티칭 모드(답 보기)는 공유하지 않습니다.
-- 자세한 계약은 [`interactive/interaction-protocol.md`](./interactive/interaction-protocol.md).
+- 자세한 계약은 [`interaction-protocol.md`](./interaction-protocol.md).
 
 ---
 
@@ -368,4 +368,5 @@ closing
 1. 브라우저 480px 폭에서 **전 페이지를 눈으로** 봅니다(시각 문서입니다).
 2. 페이저 스크러버로 끝까지 넘겨 가로 넘침이 없는지 봅니다.
 3. 티칭 모드(T)를 켜서 유령 답과 튜터 메모가 뜨는지 봅니다.
-4. 레몬보드에 올릴 zip 은 [`interactive/packaging.md`](./interactive/packaging.md).
+4. 레몬보드에 올릴 zip 은 이 레포에서 만들지 않습니다 — `podo-curriculum` 의
+   `tools/build.py` 가 배포 파이프라인의 일부로 처리합니다(`docs/packaging.md`).
