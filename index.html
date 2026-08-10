@@ -16,6 +16,9 @@
   .lang-list li:last-child a { border-bottom: 1px solid #ddd; }
   .lang-list a:hover { background: #f0f0f0; }
   .tag { font-size: 11px; color: #999; margin-left: 8px; }
+  .note { margin-top: 28px; font-size: 12px; line-height: 1.7; color: #999; }
+  .note a { color: #666; }
+  .note code { color: #666; }
 </style>
 </head>
 <body>
@@ -24,9 +27,14 @@
   <h2>Choose a Language</h2>
 
   <ul class="lang-list">
-    <li><a href="japanese-beginner/index.html">Japanese<span class="tag">日本語</span></a></li>
     <li><a href="korean/index.html">Korean<span class="tag">한국어</span></a></li>
+    <li><a href="english/README.md">English<span class="tag">curriculum plan — no decks yet</span></a></li>
   </ul>
+
+  <p class="note">Japanese is retired — the folder is in
+    <a href="_archive/japanese-beginner/index.html"><code>_archive/</code></a>, along with
+    the WebSocket sync server its lessons used. Korean decks share state through
+    lemonboard instead, so nothing here runs a server of its own.</p>
 </div>
 </body>
 </html>

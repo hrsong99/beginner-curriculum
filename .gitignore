@@ -1,5 +1,4 @@
 .omc/
-node_modules/
 .DS_Store
 
 # Local source PDFs for textbook references (kept out of git).
@@ -9,17 +8,11 @@ korean/**/sejong-hangugeo-hoehwa/**/*.pdf
 korean/**/sejong-hakdang-silyong-hangugeo/**/*.pdf
 /korean/references/curricula/temo/테모-회화
 
-# Build output: the zip is the deliverable and already contains these.
-# The loose html/css/images are unpacked copies, for local viewing only.
-korean/**/lemonboard-build/*.png
-korean/**/lemonboard-build/*.jpg
-korean/**/lemonboard-build/lesson.html
-korean/**/lemonboard-build/lesson.css
-
-# lemonboard upload zips are build output — regenerate with
-#   python3 korean/interactive/build_lemonboard.py <deck>.html --out korean/trial/lemonboard-build/<deck>
-# Committing them means shipping a deck that silently goes stale.
-korean/trial/lemonboard-build/
+# Nothing is packaged in this repo any more. Decks are authored here and
+# `podo-curriculum` builds the lemonboard zip as part of a deploy, so a
+# lemonboard-build/ directory anywhere under here is a leftover — ignored so an
+# old one cannot be committed and quietly shipped as a stale deck.
+lemonboard-build/
 
 # Python bytecode from the authoring scripts in korean/tools/.
 __pycache__/
