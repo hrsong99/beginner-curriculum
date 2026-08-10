@@ -59,6 +59,15 @@
     return el.closest(INTERACTIVE) && !el.closest(MARKABLE);
   }
 
+  /* 문장 한가운데 끼워 넣은 강조 — 블록이 아니라 부모의 글의 일부다.
+
+     낱말 하나를 <span> 으로 싸면 아래 stamp 가 그것도 한 블록으로 세고,
+     그 순간 부모 문장이 토막 난다. 그러면 강조를 가로질러 그은 자국이
+     그 낱말만 건너뛰고 남는다 — 문장 전체에 형광펜을 그었는데 가운데
+     한 낱말만 하얗게 뚫려 있는 그림이다. 번호를 안 주면 부모가 자기
+     글의 일부로 그대로 안고 가므로, 글자 세는 자리도 하나로 남는다. */
+  var INLINE = ".s-key";
+
   /* ---- 글이 든 블록에 번호 매기기 ----
      "자기 텍스트를 직접 가진 요소" 가 한 블록이다. 자식이 또 글을 가지고
      있으면 그 자식이 자기 블록을 따로 가지므로, 글은 겹치지 않게 나뉜다. */
@@ -67,7 +76,7 @@
     var all = phone.querySelectorAll("*");
     for (var i = 0; i < all.length; i++) {
       var el = all[i];
-      if (offLimits(el)) continue;
+      if (offLimits(el) || el.matches(INLINE)) continue;
       for (var c = el.firstChild; c; c = c.nextSibling) {
         if (c.nodeType === 3 && c.nodeValue.trim()) {
           el.setAttribute("data-hl", String(n++));
