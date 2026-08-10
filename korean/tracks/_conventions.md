@@ -149,17 +149,22 @@ hit that gap independently and answered it differently:
 | Deck | Answer |
 | --- | --- |
 | 과 10 | **added** `.seat-b` · `.seat-lrb` · `.seat-tbb` · `.blk.lrb/.tbb` to `runtime/css/trial.css`, uses them 64× |
-| 과 14 | uses the new seats, 2× |
-| 과 11 · 12 · 13 | leave every 받침 tile **plain** — 과 12 checked, found no usable seat colour, and worked around it |
+| 과 11 | uses them, 40× — read "match your neighbour" as decisive and followed 과 10 |
+| 과 14 | uses them, 2× |
+| 과 12 · 13 | every 받침 tile **plain** — 과 12 looked for a seat colour, found none, worked around it |
 
-A learner going 과 10 → 11 → 12 would see the bottom slot change appearance. One answer has to
-win. 과 10's is the better one on the merits — this track draws structure with seat colour and
-the third position deserves one — but it is a **shared stylesheet** change made by one of ten
-parallel agents, in a file that already carries uncommitted work and is the most drifted from
-the published CDN tag. It needs a human read before it publishes.
+A learner going 과 11 → 12 sees the bottom slot change appearance. **과 10's answer should win**
+— this track draws structure with seat colour and the third position deserves one, the floor
+was measured (62%, because glyph ink runs ~22–75% and the obvious 68% cuts through the 받침),
+and three of five decks already use it. The sweep is 과 12 and 13.
 
-**Until it is settled: do not add new 받침 seat markup.** Match whatever the deck next to yours
-already does, and say which in your report.
+Two things block just doing it. It is a **shared stylesheet** change made by one of ten
+parallel writers, tangled with pre-existing uncommitted work in the same file; and it does not
+exist on the published CDN tag, so **과 10 · 11 · 14 deploy with an unpainted bottom seat until
+`runtime/` is republished.** Both need a human, not another agent.
+
+**Until it is settled: do not add new 받침 seat markup.** Match the deck next to yours and say
+which in your report.
 
 ## Things that have already gone wrong
 
