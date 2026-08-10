@@ -95,9 +95,9 @@ MERGE_IF_UNDER = 5
 # would be a separate curriculum with no tutors, and nothing would report it.
 #
 # `prefix` and `name` make every course say which track and level it belongs to.
-# A slug is <prefix>-<level>-<bare>, so `drama-crush` — which told you nothing —
-# is now `ctx-intermediate-drama-crush`, and a directory listing groups by track
-# and then by level on its own. Single-course tracks drop the bare part.
+# A slug is <prefix>-<bare>-<level>, so `drama-crush` — which told you nothing —
+# is now `ctx-drama-crush-intermediate`, and a directory listing groups by track
+# and then by course, with the level last. Single-course tracks drop the bare part.
 TRACKS = {
     "1-hangul":            {"band": 1000, "type": "BASIC_V2", "prefix": "hangul",
                             "name": {"ko": "한글 떼기", "en": "Hangul reading",
@@ -180,21 +180,25 @@ def compose(course: dict, cfg: dict) -> dict:
     track knows its own prefix and the level comes off the course. Composing here
     means a slug can never disagree with the track it sits in.
 
-        ctx-intermediate-drama-crush     상황별 한국어 · 중급 · 설렘 & 고백
-        talk-advanced-me-lately          프리토킹 · 고급 · 요즘의 나
-        core-beginner-1                  핵심 문법 패턴 · 초급 · 1
+        ctx-drama-crush-intermediate     상황별 한국어 · 설렘 & 고백 · 중급
+        talk-me-lately-advanced          프리토킹 · 요즘의 나 · 고급
+        core-1-beginner                  핵심 문법 패턴 · 1 · 초급
         hangul-starter                   한글 떼기 · 왕초급
 
+    **The level goes last** — it is the least distinguishing part of the name, so
+    putting it at the end lets `ctx-drama-*` and `ctx-kpop-*` sort together by
+    show instead of being scattered across levels.
+
     A single-course track drops the bare part rather than repeating itself
-    (`hangul-starter`, not `hangul-starter-reading`).
+    (`hangul-starter`, not `hangul-reading-starter`).
     """
     level = course["level"]
     bare = course["slug"].strip("-")
-    course["slug"] = f"{cfg['prefix']}-{LEVEL_SLUG[level]}" + (f"-{bare}" if bare else "")
+    course["slug"] = "-".join(x for x in (cfg["prefix"], bare, LEVEL_SLUG[level]) if x)
 
     label = {"ko": level, "en": LEVEL_EN[level], "ja": LEVEL_JA[level]}
     course["title"] = {
-        k: " · ".join(x for x in (cfg["name"][k], label[k], course["title"].get(k))
+        k: " · ".join(x for x in (cfg["name"][k], course["title"].get(k), label[k])
                       if x)
         for k in ("ko", "en", "ja")
     }
