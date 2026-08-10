@@ -102,6 +102,28 @@ the TOC wins over this list.**
 
 ---
 
+## Touching `runtime/` is not a deck decision
+
+"No inline CSS or JS" means the deck ships none of its own. It does **not** mean the shared
+runtime is yours to change — and two lesson-writers read it that way in the same batch:
+
+| Deck | Changed | Why it was needed |
+| --- | --- | --- |
+| 과 7 | `js/hangul-activities.js` — `TALL` lacked ㅑㅕㅐㅔㅒㅖ | the builder drew a tall vowel into the bottom seat |
+| 과 10 | `css/trial.css` — `.seat-b` · `.seat-lrb` · `.seat-tbb` · `.blk.lrb/.tbb` | there was no 받침 seat at all |
+
+**Both fixes are correct.** That is the problem: a correct fix to a shared file, made by one of
+ten parallel writers, lands with no review, no coordination with the nine others, and no way
+for a reader to tell it apart from the file's existing uncommitted work.
+
+Worse, it does not reach a learner. Decks load a **pinned CDN tag**, not this folder, so a deck
+that depends on a local runtime change renders right for its author and **unstyled in class** —
+과 10's bottom seat would deploy unpainted today.
+
+So: if a lesson needs something the runtime cannot do, **stop and report it — do not fix it.**
+Note what is missing, build the page with what exists, and say so. The change then gets made
+once, reviewed, and published as a version, instead of ten times in ten directions.
+
 ## The seat-colour system only covers the 과 1 case
 
 Three writers hit this independently, so it is a gap in the design system, not three mistakes.
