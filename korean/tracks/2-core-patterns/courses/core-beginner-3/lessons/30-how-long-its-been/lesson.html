@@ -17,17 +17,542 @@
 <body>
   <div class="phone">
 
-    <!-- ============================================================
-         PAGES GO HERE — one .phone child per page, one activity per page.
+    <!-- the goal is the whole exchange: how long it has been, and what you do
+         on repeat. Four rows — a question and its answer, twice. -->
+    <div class="transition-page" data-page-id="lesson-goal" data-act="온 지 ~ 됐어요 · N마다">
+      <span class="transition-kicker">목표</span>
+      <h2 class="transition-title">오늘의 목표 <span class="title-ja">(今日のゴール)</span></h2>
+      <p class="section-subtitle"><span class="ko">오늘은 얼마나 됐는지 말하는 거예요. 수업이 끝나면 이렇게 말할 수 있어요.</span><span class="ja">今日は「どれくらい経ったか」を言うことばです。授業が終わると、こんなふうに言えるようになります。</span></p>
+      <div class="known lines">
+        <div class="known-row"><span class="k">한국에 온 지 얼마나 됐어요?</span><span class="yomi">ハングゲ オン ジ オルマナ テッソヨ</span><span class="j">韓国に来てどれくらいになりましたか？</span></div>
+        <div class="known-row"><span class="k">온 지 두 달 됐어요.</span><span class="yomi">オン ジ トゥ タル テッソヨ</span><span class="j">来て二か月になりました</span></div>
+        <div class="known-row"><span class="k">주말마다 뭐 해요?</span><span class="yomi">チュマルマダ ムォ ヘヨ</span><span class="j">毎週末、何をしますか？</span></div>
+        <div class="known-row"><span class="k">주말마다 등산해요.</span><span class="yomi">チュマルマダ トゥンサネヨ</span><span class="j">毎週末、山に登ります</span></div>
+      </div>
+    </div>
 
-         Plan the arc from  lesson-blueprint.md
-         Take the content from  toc/lesson-030.md
-         Copy component markup and tutor voice from the deck this
-         skeleton came from — do not invent components.
+    <!-- the same bridge shape as 과 7 · 8 · 10 · 19. 부동산 is here because the
+         bonus scene needs it, and it is free: the kanji is already theirs. -->
+    <div class="section" data-page-id="words-you-know">
+      <h2 class="section-title">이미 아는 단어 <span class="title-ja">(もう知っている単語)</span></h2>
+      <p class="section-subtitle"><span class="ko">오늘 쓸 단어, 이미 알아요. 이것도 한자에서 왔어요.</span><span class="ja">今日使うことば、もう知っています。これも漢字から来ています。</span></p>
+      <div class="bridge">
+        <div class="br-row"><span class="br-cn">登山</span><span class="br-eq">→</span><span class="br-ko">등산<small class="yomi">トゥンサン</small></span></div>
+        <div class="br-row"><span class="br-cn">清掃</span><span class="br-eq">→</span><span class="br-ko">청소<small class="yomi">チョンソ</small></span></div>
+        <div class="br-row"><span class="br-cn">不動産</span><span class="br-eq">→</span><span class="br-ko">부동산<small class="yomi">プドンサン</small></span></div>
+      </div>
+    </div>
 
-         The first page must carry data-act, since the cover that used
-         to supply it is a trial-only page and is not here.
-         ============================================================ -->
+    <!-- ============ PART 1 · 얼마나 됐는지 말하기 ============ -->
+    <div class="transition-page" data-page-id="part1-intro" data-act="온 지 ~ 됐어요">
+      <span class="transition-kicker">パート 1</span>
+      <h2 class="transition-title">온 지 두 달 됐어요<span class="yomi">オン ジ トゥ タル テッソヨ</span></h2>
+      <p class="transition-copy">〜して二か月です。始めてから、どれくらい経ったかを言う一言です。</p>
+    </div>
+
+    <!-- the sentence whole, with both ends of the frame accented: 온 지 opens it
+         and 됐어요 closes it, and the period sits between them. 온 지 is taught
+         as a lump — the 관형사형 rule is 과 50 の話. -->
+    <div class="section" data-page-id="p1-teach">
+      <h2 class="section-title">오늘의 패턴 <span class="title-ja">(今日のパターン)</span></h2>
+      <p class="section-subtitle"><span class="ko">시작한 일하고 흐른 시간, 두 개만 넣으면 돼요. 제가 읽을게요. 잘 듣고 따라 읽어 보세요.</span><span class="ja">始めたことと、経った時間。2つを入れるだけです。私が読みます。よく聞いて、まねして読んでみましょう。</span></p>
+      <div class="sent-hero">
+        <span class="korean">한국에 <span class="ending">온 지</span> 두 달 <span class="ending">됐어요</span>.</span><span class="yomi">ハングゲ オン ジ トゥ タル テッソヨ</span>
+        <span class="translation">韓国に<span class="ending">来て</span>二か月に<span class="ending">なりました</span>。</span>
+      </div>
+      <div class="sent-more">
+        <div><span class="korean">한국어를 <span class="ending">시작한 지</span> 일 년 <span class="ending">됐어요</span>.</span><span class="yomi">ハングゴルル シジャカン ジ イル リョン テッソヨ</span><span class="translation">韓国語を<span class="ending">始めて</span>一年に<span class="ending">なりました</span>。</span></div>
+        <div><span class="korean">밥을 <span class="ending">먹은 지</span> 세 시간 <span class="ending">됐어요</span>.</span><span class="yomi">パブル モグン ジ セ シガン テッソヨ</span><span class="translation">ご飯を<span class="ending">食べて</span>三時間に<span class="ending">なりました</span>。</span></div>
+      </div>
+    </div>
+
+    <!-- the four 표현 arrive here, inside lines the learner only reads:
+         벌써 · 아직 · 이제 · 한 달째. Nothing new is being carried — the frame
+         is the same one they just heard three times. -->
+    <div class="section" data-page-id="p1-read">
+      <h2 class="section-title">같이 읽어요 <span class="title-ja">(一緒に読もう)</span></h2>
+      <p class="section-subtitle"><span class="ko">이번엔 혼자 읽어 보세요. 네 문장이에요. 벌써는 'もう', 아직은 'まだ'예요.</span><span class="ja">今度はひとりで読んでみましょう。4つの文です。벌써は「もう」、아직は「まだ」です。</span></p>
+      <div class="model-list">
+        <div class="model-line"><span class="korean">한국에 <span class="ending">온 지</span> 벌써 두 달 <span class="ending">됐어요</span>.</span><span class="yomi">ハングゲ オン ジ ポルッソ トゥ タル テッソヨ</span><span class="translation">韓国に<span class="ending">来て</span>、もう二か月に<span class="ending">なりました</span>。</span></div>
+        <div class="model-line"><span class="korean">한국어를 <span class="ending">시작한 지</span> 아직 한 달 안 <span class="ending">됐어요</span>.</span><span class="yomi">ハングゴルル シジャカン ジ アジク ハン タル アン テッソヨ</span><span class="translation">韓国語を<span class="ending">始めて</span>、まだ一か月に<span class="ending">なりません</span>。</span></div>
+        <div class="model-line"><span class="korean">서울에 <span class="ending">온 지</span> 일 년 <span class="ending">됐어요</span>. 이제 괜찮아요.</span><span class="yomi">ソウレ オン ジ イル リョン テッソヨ。 イジェ ケンチャナヨ</span><span class="translation">ソウルに<span class="ending">来て</span>一年に<span class="ending">なりました</span>。もう大丈夫です。</span></div>
+        <div class="model-line"><span class="korean">한국어 공부는 한 달째예요.</span><span class="yomi">ハングゴ コンブヌン ハン タルッチェエヨ</span><span class="translation">韓国語の勉強は一か月目です。</span></div>
+      </div>
+    </div>
+
+    <!-- the one rule page of part 1, and the rule is where the pieces go, not
+         how 온 is built. So the boxes keep .bt-out alone: a letter tile here
+         would start a 관형사형 lesson that belongs to 과 50. -->
+    <div class="section" data-page-id="p1-frame-rule">
+      <h2 class="section-title">문장의 두 조각 <span class="title-ja">(文の 2つの かたまり)</span></h2>
+      <p class="section-subtitle"><span class="ko">이 문장은 조각이 두 개예요. 앞은 시작한 일, 뒤는 흐른 시간이에요. 온 지, 먹은 지, 시작한 지는 통째로 외우세요.</span><span class="ja">この文はかたまりが2つです。前は始めたこと、後ろは経った時間です。온 지・먹은 지・시작한 지は、まるごと覚えてください。</span></p>
+      <div class="tutor-note">왼쪽 조각은 통째로 읽어 주세요. 만드는 규칙은 아직 설명하지 마세요.</div>
+      <div class="batchim ending-rule">
+        <div class="bt-box">
+          <span class="bt-eq">
+            <span class="bt-out">온 지<span class="yomi">オン ジ</span></span>
+          </span>
+          <span class="bt-head">시작한 일<small>いつ始めたか — かたまりで 覚える</small></span>
+          <span class="bt-ex"><span>한국에 <b>온 지</b><span class="yomi">ハングゲ オン ジ</span></span><span>밥을 <b>먹은 지</b><span class="yomi">パブル モグン ジ</span></span></span>
+        </div>
+        <div class="bt-box">
+          <span class="bt-eq">
+            <span class="bt-out">두 달 됐어요<span class="yomi">トゥ タル テッソヨ</span></span>
+          </span>
+          <span class="bt-head">흐른 시간<small>どれくらい 経ったか</small></span>
+          <span class="bt-ex"><span><b>두 달 됐어요</b><span class="yomi">トゥ タル テッソヨ</span></span><span><b>일 년 됐어요</b><span class="yomi">イル リョン テッソヨ</span></span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- rows 1–2 turn on the tense: 「二か月です」 is present in Japanese, so 돼요
+         comes out. Rows 3–4 on where the period sits — it goes right in front
+         of 됐어요, never in front of the lump. -->
+    <div class="section" data-page-id="p1-choose">
+      <h2 class="section-title">알맞은 말 고르기 <span class="title-ja">(正しい言い方を選ぼう)</span></h2>
+      <p class="section-subtitle"><span class="ko">위에 있는 일본어를 잘 보고, 맞는 쪽을 눌러 보세요.</span><span class="ja">上にある日本語をよく見て、正しいほうをタップしてください。</span></p>
+      <div class="choose-list">
+        <div class="choose-row sentence" data-sync-id="p1-choice-korea" data-sync-kind="selection" data-sync-state="chosen">
+          <span class="translation">韓国に来て二か月になりました。</span>
+          <span class="choose-sentence">한국에 온 지 두 달 <span class="opt" data-sync-option="past" data-correct>됐어요.</span><span class="sep">/</span><span class="opt" data-sync-option="now">돼요.</span><span class="yomi">ハングゲ オン ジ トゥ タル …</span></span>
+        </div>
+        <div class="choose-row sentence" data-sync-id="p1-choice-korean" data-sync-kind="selection" data-sync-state="chosen">
+          <span class="translation">韓国語を始めて一年になりました。</span>
+          <span class="choose-sentence">한국어를 시작한 지 일 년 <span class="opt" data-sync-option="now">돼요.</span><span class="sep">/</span><span class="opt" data-sync-option="past" data-correct>됐어요.</span><span class="yomi">ハングゴルル シジャカン ジ イル リョン …</span></span>
+        </div>
+        <div class="choose-row sentence" data-sync-id="p1-choice-meal" data-sync-kind="selection" data-sync-state="chosen">
+          <span class="translation">ご飯を食べて三時間になりました。</span>
+          <span class="choose-sentence">밥을 <span class="opt" data-sync-option="keep" data-correct>먹은 지 세 시간</span><span class="sep">/</span><span class="opt" data-sync-option="swap">세 시간 먹은 지</span> 됐어요.<span class="yomi">パブル … テッソヨ</span></span>
+        </div>
+        <div class="choose-row sentence" data-sync-id="p1-choice-seoul" data-sync-kind="selection" data-sync-state="chosen">
+          <span class="translation">ソウルに来て一年になりました。</span>
+          <span class="choose-sentence">서울에 <span class="opt" data-sync-option="swap">일 년 온 지</span><span class="sep">/</span><span class="opt" data-sync-option="keep" data-correct>온 지 일 년</span> 됐어요.<span class="yomi">ソウレ … テッソヨ</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p1-reorder">
+      <h2 class="section-title">문장 만들기 <span class="title-ja">(文を組み立てよう)</span></h2>
+      <p class="section-subtitle"><span class="ko">단어를 순서대로 놓고, 소리 내어 말해 보세요.</span><span class="ja">単語を順番に並べて、声に出して言ってみましょう。</span></p>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">韓国に来て二か月になりました。</span>
+          <span class="answer-space" data-sync-id="p1-order-korea">한국에 온 지 두 달 됐어요</span>
+        </div>
+        <span class="choice" data-item-id="since-1">온 지<span class="yomi">オン ジ</span></span>
+        <span class="choice" data-item-id="korea-1">한국에<span class="yomi">ハングゲ</span></span>
+        <span class="choice" data-item-id="two-months-1">두 달 됐어요<span class="yomi">トゥ タル テッソヨ</span></span>
+      </div>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">韓国語を始めて一年になりました。</span>
+          <span class="answer-space" data-sync-id="p1-order-korean">한국어를 시작한 지 일 년 됐어요</span>
+        </div>
+        <span class="choice" data-item-id="since-2">시작한 지<span class="yomi">シジャカン ジ</span></span>
+        <span class="choice" data-item-id="korean-1">한국어를<span class="yomi">ハングゴルル</span></span>
+        <span class="choice" data-item-id="one-year-1">일 년 됐어요<span class="yomi">イル リョン テッソヨ</span></span>
+      </div>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">ご飯を食べて三時間になりました。</span>
+          <span class="answer-space" data-sync-id="p1-order-meal">밥을 먹은 지 세 시간 됐어요</span>
+        </div>
+        <span class="choice" data-item-id="three-hours-1">세 시간 됐어요<span class="yomi">セ シガン テッソヨ</span></span>
+        <span class="choice" data-item-id="since-3">먹은 지<span class="yomi">モグン ジ</span></span>
+        <span class="choice" data-item-id="meal-1">밥을<span class="yomi">パブル</span></span>
+      </div>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">ソウルに来て、もう一年になりました。</span>
+          <span class="answer-space" data-sync-id="p1-order-seoul">서울에 온 지 벌써 일 년 됐어요</span>
+        </div>
+        <span class="choice" data-item-id="already-1">벌써 일 년 됐어요<span class="yomi">ポルッソ イル リョン テッソヨ</span></span>
+        <span class="choice" data-item-id="seoul-1">서울에<span class="yomi">ソウレ</span></span>
+        <span class="choice" data-item-id="since-4">온 지<span class="yomi">オン ジ</span></span>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p1-fill">
+      <h2 class="section-title">빈칸을 채워요 <span class="title-ja">(空欄をうめよう)</span></h2>
+      <p class="section-subtitle"><span class="ko">빈칸에 들어갈 말을 넣어서, 문장을 통째로 소리 내어 말해 보세요.</span><span class="ja">空欄に入ることばを入れて、文をまるごと声に出して言ってみましょう。</span></p>
+      <div class="tutor-note">학생이 말한 대로 빈칸에 적어 주세요.</div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">韓国に来て二か月に<span class="target ending">なりました</span>。</span>
+          <span class="answer-fill"><span class="korean">한국에 온 지 두 달 <span class="slot" data-sync-id="p1-fill-korea">됐어요</span>.</span><span class="yomi">ハングゲ オン ジ トゥ タル ＿＿＿</span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">韓国語を<span class="target ending">始めて</span>一年になりました。</span>
+          <span class="answer-fill"><span class="korean">한국어를 <span class="slot" data-sync-id="p1-fill-korean">시작한 지</span> 일 년 됐어요.</span><span class="yomi">ハングゴルル ＿＿＿ イル リョン テッソヨ</span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">ご飯を<span class="target ending">食べて</span>三時間になりました。</span>
+          <span class="answer-fill"><span class="korean">밥을 <span class="slot" data-sync-id="p1-fill-meal">먹은 지</span> 세 시간 됐어요.</span><span class="yomi">パブル ＿＿＿ セ シガン テッソヨ</span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">韓国に来て、もう二か月に<span class="target ending">なりました</span>。</span>
+          <span class="answer-fill"><span class="korean">한국에 온 지 벌써 두 달 <span class="slot" data-sync-id="p1-fill-already">됐어요</span>.</span><span class="yomi">ハングゲ オン ジ ポルッソ トゥ タル ＿＿＿</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p1-translate">
+      <h2 class="section-title">한국어로 바꿔요 <span class="title-ja">(韓国語にしよう)</span></h2>
+      <p class="section-subtitle"><span class="ko">일본어를 보고, 한국어로 말해 보세요.</span><span class="ja">日本語を見て、韓国語で言ってみましょう。</span></p>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">韓国に来て二か月になりました。</span>
+          <span class="answer-space" data-sync-id="p1-translate-korea">한국에 온 지 두 달 됐어요</span>
+                  <span class="hint"><span class="hint-chip">二か月:두 달<span class="yomi">トゥ タル</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">韓国語を始めて一年になりました。</span>
+          <span class="answer-space" data-sync-id="p1-translate-korean">한국어를 시작한 지 일 년 됐어요</span>
+                  <span class="hint"><span class="hint-chip">始める:시작하다<span class="yomi">シジャカダ</span></span><span class="hint-chip">一年:일 년<span class="yomi">イル リョン</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">ご飯を食べて三時間になりました。</span>
+          <span class="answer-space" data-sync-id="p1-translate-meal">밥을 먹은 지 세 시간 됐어요</span>
+                  <span class="hint"><span class="hint-chip">三時間:세 시간<span class="yomi">セ シガン</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">ソウルに来て、もう一年になりました。</span>
+          <span class="answer-space" data-sync-id="p1-translate-seoul">서울에 온 지 벌써 일 년 됐어요</span>
+                  <span class="hint"><span class="hint-chip">ソウル:서울<span class="yomi">ソウル</span></span><span class="hint-chip">もう:벌써<span class="yomi">ポルッソ</span></span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p1-write">
+      <h2 class="section-title">내 문장 만들기 <span class="title-ja">(自分の文を作ろう)</span></h2>
+      <p class="section-subtitle"><span class="ko">이번엔 진짜 자기 이야기예요. 한국어 공부, 지금 회사, 지금 집 — 시작한 지 얼마나 됐어요?</span><span class="ja">今度は本当に自分の話です。韓国語の勉強、今の会社、今の家 — 始めてどれくらいになりましたか？</span></p>
+      <div class="tutor-note">학생이 말한 문장을 여기에 적어 주세요.</div>
+      <div class="task-block">
+        <div class="answer-box tall">
+          <span class="answer-space" data-sync-id="p1-free-since"></span>
+                  <span class="hint"><span class="hint-chip">韓国語:한국어<span class="yomi">ハングゴ</span></span><span class="hint-chip">会社:회사<span class="yomi">フェサ</span></span><span class="hint-chip">家:집<span class="yomi">チプ</span></span><span class="hint-chip">始める:시작하다<span class="yomi">シジャカダ</span></span><span class="hint-chip">一か月:한 달<span class="yomi">ハン タル</span></span><span class="hint-chip">二か月:두 달<span class="yomi">トゥ タル</span></span><span class="hint-chip">一年:일 년<span class="yomi">イル リョン</span></span><span class="hint-chip">三年:삼 년<span class="yomi">サム ニョン</span></span><span class="hint-chip">もう:벌써<span class="yomi">ポルッソ</span></span><span class="hint-chip">まだ:아직<span class="yomi">アジク</span></span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ PART 2 · 얼마나 자주 하는지 말하기 ============ -->
+    <div class="transition-page" data-page-id="part2-intro" data-act="N마다">
+      <span class="transition-kicker">パート 2</span>
+      <h2 class="transition-title">N마다<span class="yomi">N マダ</span></h2>
+      <p class="transition-copy">〜ごとに。毎週末、毎朝のように、くり返すことを言う助詞です。</p>
+    </div>
+
+    <!-- 마다 is a 조사, so the card is the violet one — the same colour 은/는 and
+         에 wear. Nothing about the noun changes it. -->
+    <div class="section" data-page-id="p2-teach">
+      <h2 class="section-title">오늘의 패턴 <span class="title-ja">(今日のパターン)</span></h2>
+      <p class="section-subtitle"><span class="ko">단어 뒤에 마다만 붙이면 돼요. 받침이 있어도 없어도 똑같아요. 제가 읽을게요. 잘 듣고 따라 읽어 보세요.</span><span class="ja">単語のうしろに마다をつけるだけです。パッチムがあってもなくても同じです。私が読みます。よく聞いて、まねして読んでみましょう。</span></p>
+      <div class="sent-hero topic">
+        <span class="korean">저는 주말<span class="topic">마다</span> 등산해요.</span><span class="yomi">チョヌン チュマルマダ トゥンサネヨ</span>
+        <span class="translation">私は<span class="topic">毎</span>週末、山に登ります。</span>
+      </div>
+      <div class="sent-more">
+        <div><span class="korean">아침<span class="topic">마다</span> 커피를 마셔요.</span><span class="yomi">アチムマダ コピルル マショヨ</span><span class="translation"><span class="topic">毎</span>朝コーヒーを飲みます。</span></div>
+        <div><span class="korean">일요일<span class="topic">마다</span> 청소해요.</span><span class="yomi">イリョイルマダ チョンソヘヨ</span><span class="translation"><span class="topic">毎</span>週日曜日に掃除します。</span></div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p2-read">
+      <h2 class="section-title">같이 읽어요 <span class="title-ja">(一緒に読もう)</span></h2>
+      <p class="section-subtitle"><span class="ko">이번엔 혼자 읽어 보세요. 네 문장이에요. 달마다는 '毎月'이에요.</span><span class="ja">今度はひとりで読んでみましょう。4つの文です。달마다は「毎月」です。</span></p>
+      <div class="model-list">
+        <div class="model-line"><span class="korean">저는 주말<span class="topic">마다</span> 등산해요.</span><span class="yomi">チョヌン チュマルマダ トゥンサネヨ</span><span class="translation">私は<span class="topic">毎</span>週末、山に登ります。</span></div>
+        <div class="model-line"><span class="korean">아침<span class="topic">마다</span> 커피를 마셔요.</span><span class="yomi">アチムマダ コピルル マショヨ</span><span class="translation"><span class="topic">毎</span>朝コーヒーを飲みます。</span></div>
+        <div class="model-line"><span class="korean">일요일<span class="topic">마다</span> 청소하고 요리해요.</span><span class="yomi">イリョイルマダ チョンソハゴ ヨリヘヨ</span><span class="translation"><span class="topic">毎</span>週日曜日に掃除して料理します。</span></div>
+        <div class="model-line"><span class="korean">달<span class="topic">마다</span> 한국 영화를 봐요.</span><span class="yomi">タルマダ ハングク ヨンファルル ポァヨ</span><span class="translation"><span class="topic">毎</span>月、韓国映画を見ます。</span></div>
+      </div>
+    </div>
+
+    <!-- the rule is not decided by sound — 주말 takes 마다 and 에 alike, and what
+         picks one is whether it happened once or happens every time. So the
+         boxes keep .bt-out alone: no letter tile, no arrow. -->
+    <div class="section" data-page-id="p2-rule">
+      <h2 class="section-title">에와 마다 <span class="title-ja">(에 と 마다、どう違う？)</span></h2>
+      <p class="section-subtitle"><span class="ko">받침으로 고르는 게 아니에요. 그 한 번이면 에, 매번이면 마다예요. 두 개를 이어서 읽을게요.</span><span class="ja">パッチムで選ぶのではありません。その一回なら에、毎回なら마다です。2つを続けて読みます。</span></p>
+      <div class="batchim">
+        <div class="bt-box">
+          <span class="bt-eq">
+            <span class="bt-out">주말에<span class="yomi">チュマレ</span></span>
+          </span>
+          <span class="bt-head">그 한 번<small>その一回だけ</small></span>
+          <span class="bt-ex"><span>지난 주말<b>에</b> 등산했어요<span class="yomi">チナン チュマレ トゥンサネッソヨ</span></span><span>일요일<b>에</b> 청소했어요<span class="yomi">イリョイレ チョンソヘッソヨ</span></span></span>
+        </div>
+        <div class="bt-box">
+          <span class="bt-eq">
+            <span class="bt-out">주말마다<span class="yomi">チュマルマダ</span></span>
+          </span>
+          <span class="bt-head">매번<small>毎回・くり返し</small></span>
+          <span class="bt-ex"><span>주말<b>마다</b> 등산해요<span class="yomi">チュマルマダ トゥンサネヨ</span></span><span>일요일<b>마다</b> 청소해요<span class="yomi">イリョイルマダ チョンソヘヨ</span></span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- nothing in the Korean picks the answer — both pills make a real
+         sentence. The Japanese on top is what decides, which is exactly the
+         choice the learner has to make when they open their mouth. -->
+    <div class="section" data-page-id="p2-choose">
+      <h2 class="section-title">에와 마다 고르기 <span class="title-ja">(에 と 마다 を選ぼう)</span></h2>
+      <p class="section-subtitle"><span class="ko">위에 있는 일본어를 잘 보고, 맞는 쪽을 눌러 보세요.</span><span class="ja">上にある日本語をよく見て、正しいほうをタップしてください。</span></p>
+      <div class="choose-list">
+        <div class="choose-row sentence" data-sync-id="p2-choice-hiking" data-sync-kind="selection" data-sync-state="chosen">
+          <span class="translation">私は毎週末、山に登ります。</span>
+          <span class="choose-sentence">저는 주말<span class="opt" data-sync-option="mada" data-correct>마다</span><span class="sep">/</span><span class="opt" data-sync-option="e">에</span> 등산해요.<span class="yomi">チョヌン チュマル … トゥンサネヨ</span></span>
+        </div>
+        <div class="choose-row sentence" data-sync-id="p2-choice-lastweek" data-sync-kind="selection" data-sync-state="chosen">
+          <span class="translation">私は先週末、山に登りました。</span>
+          <span class="choose-sentence">저는 지난 주말<span class="opt" data-sync-option="mada">마다</span><span class="sep">/</span><span class="opt" data-sync-option="e" data-correct>에</span> 등산했어요.<span class="yomi">チョヌン チナン チュマル … トゥンサネッソヨ</span></span>
+        </div>
+        <div class="choose-row sentence" data-sync-id="p2-choice-coffee" data-sync-kind="selection" data-sync-state="chosen">
+          <span class="translation">毎朝コーヒーを飲みます。</span>
+          <span class="choose-sentence">아침<span class="opt" data-sync-option="e">에</span><span class="sep">/</span><span class="opt" data-sync-option="mada" data-correct>마다</span> 커피를 마셔요.<span class="yomi">アチム … コピルル マショヨ</span></span>
+        </div>
+        <div class="choose-row sentence" data-sync-id="p2-choice-sunday" data-sync-kind="selection" data-sync-state="chosen">
+          <span class="translation">日曜日に掃除しました。</span>
+          <span class="choose-sentence">일요일<span class="opt" data-sync-option="mada">마다</span><span class="sep">/</span><span class="opt" data-sync-option="e" data-correct>에</span> 청소했어요.<span class="yomi">イリョイル … チョンソヘッソヨ</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p2-reorder">
+      <h2 class="section-title">문장 만들기 <span class="title-ja">(文を組み立てよう)</span></h2>
+      <p class="section-subtitle"><span class="ko">단어를 순서대로 놓고, 소리 내어 말해 보세요.</span><span class="ja">単語を順番に並べて、声に出して言ってみましょう。</span></p>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">私は毎週末、山に登ります。</span>
+          <span class="answer-space" data-sync-id="p2-order-hiking">저는 주말마다 등산해요</span>
+        </div>
+        <span class="choice" data-item-id="hike-1">등산해요<span class="yomi">トゥンサネヨ</span></span>
+        <span class="choice" data-item-id="me-1">저는<span class="yomi">チョヌン</span></span>
+        <span class="choice" data-item-id="weekend-1">주말마다<span class="yomi">チュマルマダ</span></span>
+      </div>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">毎朝コーヒーを飲みます。</span>
+          <span class="answer-space" data-sync-id="p2-order-coffee">아침마다 커피를 마셔요</span>
+        </div>
+        <span class="choice" data-item-id="coffee-1">커피를<span class="yomi">コピルル</span></span>
+        <span class="choice" data-item-id="morning-1">아침마다<span class="yomi">アチムマダ</span></span>
+        <span class="choice" data-item-id="drink-1">마셔요<span class="yomi">マショヨ</span></span>
+      </div>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">毎週日曜日に掃除します。</span>
+          <span class="answer-space" data-sync-id="p2-order-sunday">일요일마다 청소해요</span>
+        </div>
+        <span class="choice" data-item-id="clean-1">청소해요<span class="yomi">チョンソヘヨ</span></span>
+        <span class="choice" data-item-id="sunday-1">일요일마다<span class="yomi">イリョイルマダ</span></span>
+      </div>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">毎月、韓国映画を見ます。</span>
+          <span class="answer-space" data-sync-id="p2-order-movie">달마다 한국 영화를 봐요</span>
+        </div>
+        <span class="choice" data-item-id="movie-1">한국 영화를<span class="yomi">ハングク ヨンファルル</span></span>
+        <span class="choice" data-item-id="month-1">달마다<span class="yomi">タルマダ</span></span>
+        <span class="choice" data-item-id="watch-1">봐요<span class="yomi">ポァヨ</span></span>
+      </div>
+    </div>
+
+    <!-- the last row blanks 에, not 마다: the slot is the same slot, and the
+         learner has to hear which one the Japanese asked for. -->
+    <div class="section" data-page-id="p2-fill">
+      <h2 class="section-title">빈칸을 채워요 <span class="title-ja">(空欄をうめよう)</span></h2>
+      <p class="section-subtitle"><span class="ko">빈칸에 들어갈 말을 넣어서, 문장을 통째로 소리 내어 말해 보세요.</span><span class="ja">空欄に入ることばを入れて、文をまるごと声に出して言ってみましょう。</span></p>
+      <div class="tutor-note">학생이 말한 대로 빈칸에 적어 주세요.</div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label"><span class="target topic">毎</span>週末、山に登ります。</span>
+          <span class="answer-fill"><span class="korean">주말 <span class="slot" data-sync-id="p2-fill-weekend">마다</span> 등산해요.</span><span class="yomi">チュマル ＿＿ トゥンサネヨ</span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label"><span class="target topic">毎</span>朝コーヒーを飲みます。</span>
+          <span class="answer-fill"><span class="korean">아침 <span class="slot" data-sync-id="p2-fill-morning">마다</span> 커피를 마셔요.</span><span class="yomi">アチム ＿＿ コピルル マショヨ</span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label"><span class="target topic">毎</span>週日曜日に掃除します。</span>
+          <span class="answer-fill"><span class="korean">일요일 <span class="slot" data-sync-id="p2-fill-sunday">마다</span> 청소해요.</span><span class="yomi">イリョイル ＿＿ チョンソヘヨ</span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">先週末<span class="target topic">に</span>掃除しました。</span>
+          <span class="answer-fill"><span class="korean">지난 주말 <span class="slot" data-sync-id="p2-fill-lastweek">에</span> 청소했어요.</span><span class="yomi">チナン チュマル ＿ チョンソヘッソヨ</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p2-translate">
+      <h2 class="section-title">한국어로 바꿔요 <span class="title-ja">(韓国語にしよう)</span></h2>
+      <p class="section-subtitle"><span class="ko">일본어를 보고, 한국어로 말해 보세요.</span><span class="ja">日本語を見て、韓国語で言ってみましょう。</span></p>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">毎週末、山に登ります。</span>
+          <span class="answer-space" data-sync-id="p2-translate-hiking">주말마다 등산해요</span>
+                  <span class="hint"><span class="hint-chip">山に登る:등산하다<span class="yomi">トゥンサナダ</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">毎朝コーヒーを飲みます。</span>
+          <span class="answer-space" data-sync-id="p2-translate-coffee">아침마다 커피를 마셔요</span>
+                  <span class="hint"><span class="hint-chip">朝:아침<span class="yomi">アチム</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">毎月、韓国映画を見ます。</span>
+          <span class="answer-space" data-sync-id="p2-translate-movie">달마다 한국 영화를 봐요</span>
+                  <span class="hint"><span class="hint-chip">月:달<span class="yomi">タル</span></span><span class="hint-chip">映画:영화<span class="yomi">ヨンファ</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">毎週日曜日に掃除します。</span>
+          <span class="answer-space" data-sync-id="p2-translate-sunday">일요일마다 청소해요</span>
+                  <span class="hint"><span class="hint-chip">日曜日:일요일<span class="yomi">イリョイル</span></span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p2-write">
+      <h2 class="section-title">내 문장 만들기 <span class="title-ja">(自分の文を作ろう)</span></h2>
+      <p class="section-subtitle"><span class="ko">이번엔 진짜 자기 이야기예요. 자주 하는 일을 하나 말해 보세요.</span><span class="ja">今度は本当に自分の話です。よくすることを1つ言ってみましょう。</span></p>
+      <div class="tutor-note">학생이 말한 문장을 여기에 적어 주세요.</div>
+      <div class="task-block">
+        <div class="answer-box tall">
+          <span class="answer-space" data-sync-id="p2-free-routine"></span>
+                  <span class="hint"><span class="hint-chip">週末:주말<span class="yomi">チュマル</span></span><span class="hint-chip">朝:아침<span class="yomi">アチム</span></span><span class="hint-chip">日曜日:일요일<span class="yomi">イリョイル</span></span><span class="hint-chip">月:달<span class="yomi">タル</span></span><span class="hint-chip">山に登る:등산하다<span class="yomi">トゥンサナダ</span></span><span class="hint-chip">掃除する:청소하다<span class="yomi">チョンソハダ</span></span><span class="hint-chip">料理する:요리하다<span class="yomi">ヨリハダ</span></span><span class="hint-chip">運動する:운동하다<span class="yomi">ウンドンハダ</span></span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ PART 3 · 한국 이야기 ============ -->
+    <!-- the last integration page of the course: today's two patterns pull in
+         과 26–29 as well, because the question 「先週末は？」 cannot be answered
+         without 에 · (으)로 · -지만 · -아/어서. -->
+    <div class="transition-page" data-page-id="part3-intro" data-act="얼마나 됐는지 말하기">
+      <span class="transition-kicker">パート 3</span>
+      <h2 class="transition-title">이제 이야기해요!<span class="yomi">イジェ イヤギヘヨ！</span></h2>
+      <p class="transition-copy">2つがそろいました。韓国に来てどれくらいか、週末は何をするか、先週末はどうだったか。ぜんぶ自分のことばで話します。</p>
+    </div>
+
+    <!-- a "how long" sentence is half a conversation: somebody has to ask.
+         These four are the asking half, and they arrive as reading, not as a
+         third pattern. -->
+    <div class="section" data-page-id="p3-ask-read">
+      <h2 class="section-title">물어보는 말 <span class="title-ja">(たずねる ことば)</span></h2>
+      <p class="section-subtitle"><span class="ko">이번엔 묻는 쪽이에요. '얼마나 자주'는 'どれくらいの頻度で'예요. 같이 읽어 볼까요?</span><span class="ja">今度は聞くほうです。'얼마나 자주'は「どれくらいの頻度で」です。一緒に読んでみましょうか？</span></p>
+      <div class="model-list">
+        <div class="model-line"><span class="korean">한국에 <span class="ending">온 지</span> 얼마나 <span class="ending">됐어요</span>?</span><span class="yomi">ハングゲ オン ジ オルマナ テッソヨ</span><span class="translation">韓国に来てどれくらいになりましたか？</span></div>
+        <div class="model-line"><span class="korean">한국어 <span class="ending">시작한 지</span> 얼마나 <span class="ending">됐어요</span>?</span><span class="yomi">ハングゴ シジャカン ジ オルマナ テッソヨ</span><span class="translation">韓国語を始めてどれくらいになりましたか？</span></div>
+        <div class="model-line"><span class="korean">주말<span class="topic">마다</span> 뭐 해요?</span><span class="yomi">チュマルマダ ムォ ヘヨ</span><span class="translation">毎週末、何をしますか？</span></div>
+        <div class="model-line"><span class="korean">청소는 얼마나 자주 해요?</span><span class="yomi">チョンソヌン オルマナ チャジュ ヘヨ</span><span class="translation">掃除はどれくらいの頻度でしますか？</span></div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p3-model">
+      <h2 class="section-title">대화 읽기 <span class="title-ja">(会話を読もう)</span></h2>
+      <p class="section-subtitle"><span class="ko">하나가 하루카한테 한국 생활을 물어봐요. 제가 하나 쪽을 읽을게요. 하루카가 되어서 읽어 보세요.</span><span class="ja">ハナがハルカに韓国の暮らしを聞きます。私がハナのほうを読みます。ハルカになって読んでみましょう。</span></p>
+      <div class="dialogue">
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">하루카 씨, 한국에 <span class="ending">온 지</span> 얼마나 <span class="ending">됐어요</span>?</span><span class="yomi">ハルカ シ、ハングゲ オン ジ オルマナ テッソヨ</span><span class="translation">ハルカさん、韓国に来てどれくらいになりましたか？</span></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><span class="korean"><span class="ending">온 지</span> 두 달 <span class="ending">됐어요</span>. 벌써 두 달이에요!</span><span class="yomi">オン ジ トゥ タル テッソヨ。 ポルッソ トゥ タリエヨ！</span><span class="translation">来て二か月になりました。もう二か月です！</span></div></div>
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">그럼 주말<span class="topic">마다</span> 뭐 해요?</span><span class="yomi">クロム チュマルマダ ムォ ヘヨ</span><span class="translation">では、毎週末は何をしますか？</span></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><span class="korean">주말<span class="topic">마다</span> 등산해요. 힘들지만 재미있어요.</span><span class="yomi">チュマルマダ トゥンサネヨ。 ヒムドゥルジマン チェミイッソヨ</span><span class="translation">毎週末、山に登ります。大変ですが楽しいです。</span></div></div>
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">지난 주말에도 갔어요?</span><span class="yomi">チナン チュマレド カッソヨ</span><span class="translation">先週末も行きましたか？</span></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><span class="korean">네, 북한산에 갔어요. 지하철로 갔어요. 그런데 비가 와서 좀 힘들었어요.</span><span class="yomi">ネ、プカンサネ カッソヨ。 チハチョルロ カッソヨ。 クロンデ ピガ ワソ チョム ヒムドゥロッソヨ</span><span class="translation">はい、北漢山に行きました。地下鉄で行きました。でも、雨が降って少し大変でした。</span></div></div>
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">아, 그랬어요? 저도 등산 좋아해요!</span><span class="yomi">ア、クレッソヨ？ チョド トゥンサン チョアヘヨ！</span><span class="translation">あ、そうだったんですか？私も登山が好きです！</span></div></div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p3-complete">
+      <h2 class="section-title">대화 채우기 <span class="title-ja">(会話をうめよう)</span></h2>
+      <p class="section-subtitle"><span class="ko">이번엔 하루카 대사가 비어 있어요. 하루카가 되어서 문장을 소리 내어 말해 보세요.</span><span class="ja">今度はハルカのセリフが空いています。ハルカになって、文を声に出して言ってみましょう。</span></p>
+      <div class="tutor-note">학생이 말한 대로 빈칸에 적어 주세요.</div>
+      <div class="dialogue">
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">하루카 씨, 한국에 온 지 얼마나 됐어요?</span><span class="yomi">ハルカ シ、ハングゲ オン ジ オルマナ テッソヨ</span><span class="translation">ハルカさん、韓国に来てどれくらいになりましたか？</span></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label"><span class="target">来て二か月になりました</span>。もう二か月です！</span><span class="answer-fill"><span class="korean"><span class="slot" data-sync-id="p3-complete-since">온 지 두 달 됐어요</span>. 벌써 두 달이에요!</span><span class="yomi">＿＿＿ ポルッソ トゥ タリエヨ！</span></span><span class="hint"><span class="hint-chip">二か月:두 달<span class="yomi">トゥ タル</span></span></span></div></div></div>
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">그럼 주말마다 뭐 해요?</span><span class="yomi">クロム チュマルマダ ムォ ヘヨ</span><span class="translation">では、毎週末は何をしますか？</span></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label"><span class="target">毎週末、山に登ります</span>。大変ですが楽しいです。</span><span class="answer-fill"><span class="korean"><span class="slot" data-sync-id="p3-complete-hiking">주말마다 등산해요</span>. 힘들지만 재미있어요.</span><span class="yomi">＿＿＿ ヒムドゥルジマン チェミイッソヨ</span></span><span class="hint"><span class="hint-chip">山に登る:등산하다<span class="yomi">トゥンサナダ</span></span></span></div></div></div>
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">지난 주말에도 갔어요?</span><span class="yomi">チナン チュマレド カッソヨ</span><span class="translation">先週末も行きましたか？</span></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">はい、北漢山に行きました。<span class="target">地下鉄で行きました</span>。でも、雨が降って少し大変でした。</span><span class="answer-fill"><span class="korean">네, 북한산에 갔어요. <span class="slot" data-sync-id="p3-complete-subway">지하철로 갔어요</span>. 그런데 비가 와서 좀 힘들었어요.</span><span class="yomi">ネ、プカンサネ カッソヨ。 ＿＿＿ クロンデ ピガ ワソ チョム ヒムドゥロッソヨ</span></span><span class="hint"><span class="hint-chip">地下鉄:지하철<span class="yomi">チハチョル</span></span></span></div></div></div>
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">아, 그랬어요? 저도 등산 좋아해요!</span><span class="yomi">ア、クレッソヨ？ チョド トゥンサン チョアヘヨ！</span><span class="translation">あ、そうだったんですか？私も登山が好きです！</span></div></div>
+      </div>
+    </div>
+
+    <!-- the course ends on the unit's task: how long, how often, and then last
+         weekend whole — where, how, and how it went. -->
+    <div class="section" data-page-id="p3-freetalk">
+      <h2 class="section-title">자유 대화 <span class="title-ja">(フリートーク)</span></h2>
+      <p class="section-subtitle"><span class="ko">이번엔 진짜 자기 이야기예요. 제 질문에 하나씩 대답해 보세요.</span><span class="ja">今度は本当に自分の話です。私の質問に1つずつ答えてみましょう。</span></p>
+      <div class="tutor-note">마지막 칸은 길게 기다려 주세요. 지난 주말 이야기까지 나오면 이 코스는 끝이에요.</div>
+      <div class="dialogue">
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">先生</span></span><div class="bubble"><span class="korean">한국어 시작한 지 얼마나 됐어요?</span><span class="yomi">ハングゴ シジャカン ジ オルマナ テッソヨ</span><span class="translation">韓国語を始めてどれくらいになりましたか？</span></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label">시작한 지 〜 됐어요.<span class="task">自分のこと</span></span><span class="answer-space" data-sync-id="p3-freetalk-since"></span><span class="hint"><span class="hint-chip">一か月:한 달<span class="yomi">ハン タル</span></span><span class="hint-chip">二か月:두 달<span class="yomi">トゥ タル</span></span><span class="hint-chip">一年:일 년<span class="yomi">イル リョン</span></span><span class="hint-chip">もう:벌써<span class="yomi">ポルッソ</span></span><span class="hint-chip">まだ:아직<span class="yomi">アジク</span></span></span></div></div></div>
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">先生</span></span><div class="bubble"><span class="korean">그럼 주말마다 뭐 해요?</span><span class="yomi">クロム チュマルマダ ムォ ヘヨ</span><span class="translation">では、毎週末は何をしますか？</span></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label">〜마다 〜해요.<span class="task">自分のこと</span></span><span class="answer-space" data-sync-id="p3-freetalk-routine"></span><span class="hint"><span class="hint-chip">週末:주말<span class="yomi">チュマル</span></span><span class="hint-chip">朝:아침<span class="yomi">アチム</span></span><span class="hint-chip">日曜日:일요일<span class="yomi">イリョイル</span></span><span class="hint-chip">山に登る:등산하다<span class="yomi">トゥンサナダ</span></span><span class="hint-chip">運動する:운동하다<span class="yomi">ウンドンハダ</span></span><span class="hint-chip">料理する:요리하다<span class="yomi">ヨリハダ</span></span></span></div></div></div>
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">先生</span></span><div class="bubble"><span class="korean">지난 주말에는 어디에 갔어요? 어떻게 갔어요? 어땠어요?</span><span class="yomi">チナン チュマレヌン オディエ カッソヨ？ オットケ カッソヨ？ オッテッソヨ</span><span class="translation">先週末はどこに行きましたか？どうやって行きましたか？どうでしたか？</span></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label task">先週末のこと — どこに、何で行って、どうだったか</span><span class="answer-space" data-sync-id="p3-freetalk-lastweek"></span><span class="hint"><span class="hint-chip">先週末:지난 주말<span class="yomi">チナン チュマル</span></span><span class="hint-chip">地下鉄:지하철<span class="yomi">チハチョル</span></span><span class="hint-chip">バス:버스<span class="yomi">ボス</span></span><span class="hint-chip">雨:비<span class="yomi">ピ</span></span><span class="hint-chip">大変だ:힘들다<span class="yomi">ヒムドゥルダ</span></span><span class="hint-chip">面白い:재미있다<span class="yomi">チェミイッタ</span></span></span></div></div></div>
+      </div>
+    </div>
+
+    <!-- bonus scene · 부동산 중개소. The agent asks how long you have been here
+         before showing you anything, and the room is sold on what happens
+         every week — so both of today's patterns are what the room costs. -->
+    <div class="section" data-page-id="korea-trip">
+      <h2 class="section-title">부동산 중개소 <span class="title-ja">(不動産屋)</span></h2>
+      <p class="section-subtitle"><span class="ko">보너스! 여기는 한국 부동산 중개소예요. 방을 하나 봐요. 빈칸 대사를 말해 주세요.</span><span class="ja">ボーナス！ここは韓国の不動産屋さんです。部屋を1つ見ます。空欄のセリフを言ってください。</span></p>
+      <div class="dialogue">
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">相手</span></span><div class="bubble"><span class="korean">어서 오세요! 방을 찾으세요? 한국에 온 지 얼마나 됐어요?</span><span class="yomi">オソ オセヨ！ パンウル チャジュセヨ？ ハングゲ オン ジ オルマナ テッソヨ</span><span class="translation">いらっしゃいませ！お部屋をお探しですか？韓国に来てどれくらいになりましたか？</span></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">はい、<span class="target">来て二か月になりました</span>。</span><span class="answer-fill"><span class="korean">네, <span class="slot" data-sync-id="trip-since">온 지 두 달 됐어요</span>.</span><span class="yomi">ネ、＿＿＿</span></span><span class="hint"><span class="hint-chip">二か月:두 달<span class="yomi">トゥ タル</span></span></span></div></div></div>
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">相手</span></span><div class="bubble"><span class="korean">아, 그러세요? 그럼 이 방은 어때요? 지하철역이 바로 앞에 있어요.</span><span class="yomi">ア、クロセヨ？ クロム イ パンウン オッテヨ？ チハチョリョギ パロ アペ イッソヨ</span><span class="translation">あ、そうですか？では、この部屋はどうですか？地下鉄の駅がすぐ前にあります。</span></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">いいですね！<span class="target">私は毎週末、山に登ります</span>。</span><span class="answer-fill"><span class="korean">좋아요! <span class="slot" data-sync-id="trip-routine">저는 주말마다 등산해요</span>.</span><span class="yomi">チョアヨ！ ＿＿＿</span></span><span class="hint"><span class="hint-chip">山に登る:등산하다<span class="yomi">トゥンサナダ</span></span></span></div></div></div>
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">相手</span></span><div class="bubble"><span class="korean">아, 그럼 여기 좋아요! 그리고 여기는 청소도 자주 해요.</span><span class="yomi">ア、クロム ヨギ チョアヨ！ クリゴ ヨギヌン チョンソド チャジュ ヘヨ</span><span class="translation">あ、それならここはいいですよ！それに、ここは掃除もよくします。</span></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">掃除は<span class="target">どれくらいの頻度でしますか</span>？</span><span class="answer-fill"><span class="korean">청소는 <span class="slot" data-sync-id="trip-howoften">얼마나 자주 해요</span>?</span><span class="yomi">チョンソヌン ＿＿＿</span></span><span class="hint"><span class="hint-chip">どれくらいの頻度で:얼마나 자주<span class="yomi">オルマナ チャジュ</span></span></span></div></div></div>
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">相手</span></span><div class="bubble"><span class="korean">일주일마다 해요. 그래서 여기 사람들이 이 건물을 좋아해요.</span><span class="yomi">イルチュイルマダ ヘヨ。 クレソ ヨギ サラムドゥリ イ コンムルル チョアヘヨ</span><span class="translation">一週間ごとにします。だから、ここの人たちはこの建物が好きです。</span></div></div>
+      </div>
+    </div>
+
+    <!-- 부동산 아저씨 said 한국에 온 지 with the 에; nobody says it that way twice.
+         What drops is the 조사 in front of the lump, and it is violet on the top
+         line and simply gone on the bottom one — the page draws the drop. -->
+    <div class="section" data-page-id="native-tip">
+      <h2 class="section-title">원어민 팁 <span class="title-ja">(ネイティブのひとこと)</span></h2>
+      <p class="section-subtitle"><span class="ko">실제로 말할 때는 에나 를을 자주 빼요. 온 지, 시작한 지 앞에서는 특히 그래요.</span><span class="ja">実際に話すときは、에や를をよく省略します。온 지・시작한 지の前では特にそうです。</span></p>
+      <div class="tutor-note">한 줄씩 위아래로 읽어 주세요. 빠진 자리가 들리게요.</div>
+      <div class="swap">
+        <div class="swap-row">
+          <span class="translation">韓国に来て二か月になりました。</span>
+          <span class="sw-from">한국<span class="topic">에</span> 온 지 두 달 됐어요.<span class="yomi">ハングゲ オン ジ トゥ タル テッソヨ</span></span>
+          <span class="sw-to">한국 온 지 두 달 됐어요.<span class="yomi">ハングク オン ジ トゥ タル テッソヨ</span></span>
+        </div>
+        <div class="swap-row">
+          <span class="translation">韓国語を始めて一年になりました。</span>
+          <span class="sw-from">한국어<span class="topic">를</span> 시작한 지 일 년 됐어요.<span class="yomi">ハングゴルル シジャカン ジ イル リョン テッソヨ</span></span>
+          <span class="sw-to">한국어 시작한 지 일 년 됐어요.<span class="yomi">ハングゴ シジャカン ジ イル リョン テッソヨ</span></span>
+        </div>
+      </div>
+    </div>
   </div>
 
 

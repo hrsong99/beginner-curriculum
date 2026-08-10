@@ -93,6 +93,22 @@ is normal, rather than introducing it.
 This resolves the deadlock in the direction the evidence points, but **the TOC has not been
 fixed** — it still says both things, and only the curriculum owner should edit it.
 
+**Tested at 과 21, the lesson that owns the contested ground: it works, and it moved the
+difficulty rather than removing it.** What the deck found:
+
+- A learner who already says 저도요 has still never been shown that **도 replaces 은는·을를**
+  (저는도 is the error) and that the two never stack. That is the genuinely new thing, and it
+  is what `p1-rule` teaches.
+- Part 1's receptive rungs go thin, because `teach`/`read` become revision. `p1-reorder` was
+  cut outright — chip reorder attaches the particle to its noun, so a 도 reorder would test only
+  word order the learner owns. The freed page went to the unit's 표현.
+- The load therefore falls on `p1-choose`, whose four rows ask **which word carries 도**
+  (저도 커피 주세요 vs 저는 커피도 주세요, decided only by the Japanese above) rather than
+  which particle. **Do not cut that page** — without it part 1 is eleven minutes of revision.
+
+So the ruling stands on evidence, not just on inference. If the curriculum owner reverses it,
+과 21 is the deck to rewrite.
+
 ---
 
 ## Art
