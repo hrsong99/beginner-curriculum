@@ -2906,14 +2906,20 @@ button.opt-row:active { transform: scale(.99); }
   word-break: keep-all;
 }
 
+/* 아래 여백이 반드시 있어야 한다. 목록이 `margin-top: auto` 로 카드 바닥에
+   붙는데, auto 는 "남는 자리를 다 가져간다" 는 뜻이지 "최소 이만큼" 이 아니다.
+   두 카드는 그리드에서 키가 같아지므로 남는 자리는 긴 쪽 내용이 정하고,
+   그 내용의 높이는 폰트가 정한다 — 그래서 브라우저마다 이 선이 부제에 5px 까지
+   달라붙었다가 넉넉해졌다가 했다. 바닥이 필요하면 바닥을 적어야 한다. */
 .opt-row.pick .opt-sub {
   margin-top: 4px;
+  margin-bottom: 18px;
   font-size: 13.5px;
 }
 
 .opt-row.pick .opt-note {
   width: 100%;
-  margin-top: auto;                     /* 목록은 카드 바닥에 붙는다 */
+  margin-top: auto;                     /* 남으면 목록은 카드 바닥에 붙는다 */
   padding-top: 14px;
 }
 
