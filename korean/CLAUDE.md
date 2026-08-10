@@ -226,12 +226,22 @@ same document, so anything in the markup is already on the learner's screen.
 - `index.html` / `viewer.html` at the root are the navigation; `CLAUDE.md` / `AGENTS.md` stay at
   the root so they auto-load.
 - **`catalog.html` + `catalog/` are generated — never hand-edit them.** `catalog.html` is the
-  gateway (hero, five track cards, level ladder); `catalog/<track>.html` is that track's full
-  contents — every 과, what it teaches, and the pattern marked inside its own example sentence.
-  All six pages are built from the five `table-of-contents.md` files by `tools/build_catalog.py`,
-  out of `tools/gateway_template.html` and `tools/track_template.html`. They hold no facts of
-  their own, so a wrong number there is a wrong number in a TOC. Re-run
+  gateway (hero, five track cards, 완성된 레슨 덱, level ladder); `catalog/<track>.html` is that
+  track's full contents — every 과, what it teaches, and the pattern marked inside its own example
+  sentence. All six pages are built from the five `table-of-contents.md` files by
+  `tools/build_catalog.py`, out of `tools/gateway_template.html` and `tools/track_template.html`.
+  They hold no facts of their own, so a wrong number there is a wrong number in a TOC. Re-run
   `python3 korean/tools/build_catalog.py` after any TOC change, alongside `shard_toc.py`.
+
+  **Written decks link straight out of the catalog, and the disk decides which ones.** The build
+  walks `tracks/<track>/courses/*/lessons/*/lesson.html` and counts a 과 as written only if its
+  deck has at least one page (`data-act`) — `new_lesson.py` leaves page-less skeletons behind, and
+  without that test dozens of empty 과 would advertise themselves as finished. Which 과 a deck
+  belongs to comes from the `✓ <슬러그><제목>` line in its `course.yaml` (트랙 3·4 restart lesson
+  numbers per course, so the slug's number cannot say it); if that line is stale the build prints
+  `! 목차에서 못 찾은 덱` and the fix is to re-run `plan_courses.py`. Written 과 get a **덱 열기**
+  link on their row and a chip in the gateway's 완성된 레슨 덱 band — both `target="_blank"`, so
+  opening a deck never costs you the catalog.
 
   **The colour rules are the point, not decoration.** Each track owns one accent, validated as a
   categorical palette (`dataviz` skill's `validate_palette.js`), and that accent appears only in

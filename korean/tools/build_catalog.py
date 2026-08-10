@@ -458,6 +458,70 @@ def parse_pronunciation() -> list[dict]:
     return groups
 
 
+# -------------------------------------------------- 이미 써 놓은 덱 찾아 붙이기
+
+def deck_index(track: str) -> dict[str, str]:
+    """다 쓴 덱을 그 과의 목차 제목으로 찾아 준다: {목차 제목: korean/ 기준 경로}
+
+    **파일이 있다고 다 쓴 과가 아니다.** `new_lesson.py` 는 페이지가 한 장도 없는
+    골격을 먼저 깔아 두므로(`.phone` 이 비어 있는 lesson.html), 다 쓴 덱은 페이지가
+    한 장이라도 있는 것 — 즉 `data-act` 를 가진 것 — 으로만 센다. 이 조건을 빼면
+    아직 아무것도 안 쓴 과 수십 개가 카탈로그에서 완성으로 보인다.
+
+    그 덱이 목차의 몇 과인지는 그 코스의 과 목록(`course.yaml` 주석)이 정한다. 목록은
+    코스 안에서 매긴 번호이고 슬러그 앞의 숫자도 같은 번호라, 둘을 맞추면 제목이 나온다.
+    번호만으로 트랙 전체에서 과를 찾지 않는 이유는 트랙 3·4 의 과 번호가 코스마다 1부터
+    다시 시작하기 때문이다 — 거기서는 코스를 거치지 않으면 과를 특정할 수 없다.
+    """
+    out: dict[str, str] = {}
+    for deck in sorted((TRACKS / track).glob("courses/*/lessons/*/lesson.html")):
+        if "data-act=" not in deck.read_text(encoding="utf-8"):
+            continue                                   # 아직 페이지가 없는 골격
+        slug = deck.parent.name
+        n = int(m.group(1)) if (m := re.match(r"(\d+)-", slug)) else 0
+        title = course_titles(deck.parent.parent.parent / "course.yaml").get(n, "")
+        # 덱을 쓴 과의 줄은 `✓ <슬러그><제목>` 이라 슬러그가 제목 앞에 붙어 있다
+        if title.startswith(slug):
+            title = title[len(slug):].strip()
+        out[title or slug] = str(deck.relative_to(ROOT))
+    return out
+
+
+def course_titles(course: Path) -> dict[int, str]:
+    """`course.yaml` 꼬리의 과 목록 주석 → {코스 안의 과 번호: 목차 제목}
+
+    `#     7  ✓ 07-daily-routine저는 매일 운동해요 — 하루 일과 말하기`  (덱을 쓴 과)
+    `#     9  ·  와, 진짜 맛있네요! — 느낌 바로 말하기`                 (아직 안 쓴 과)
+    """
+    if not course.exists():
+        return {}
+    out: dict[int, str] = {}
+    for line in course.read_text(encoding="utf-8").splitlines():
+        m = re.match(r"^#\s+(\d+)\s+[✓·]\s*(.+)$", line)
+        if m:
+            out[int(m.group(1))] = m.group(2).strip()
+    return out
+
+
+def attach_decks(track: str, groups: list[dict]) -> list[dict]:
+    """완성된 덱을 그 과에 붙이고, 붙은 것들을 순서대로 돌려준다."""
+    idx = deck_index(track)
+    made: list[dict] = []
+    for g in groups:
+        for l in g["lessons"]:
+            full = f"{l['title']} — {l['sub']}" if l.get("sub") else l["title"]
+            href = idx.pop(full, None) or idx.pop(l["title"], None)
+            if href:
+                l["deck"] = href
+                made.append({"n": l["n"], "title": l["title"], "href": href,
+                             "group": g.get("label", "")})
+    for orphan, href in idx.items():
+        # 덱은 다 썼는데 목차의 과에 못 붙었다 — 대개 course.yaml 의 ✓ 줄이 낡은 것이라
+        # plan_courses.py 를 다시 돌리면 된다. 조용히 빠뜨리면 카탈로그에서 영영 안 보인다.
+        print(f"   ! {track}: 목차에서 못 찾은 덱 — {orphan} ({href})")
+    return made
+
+
 # ---------------------------------------------------------------- assembly
 
 def count_by_level(groups: list[dict]) -> dict[str, int]:
@@ -569,12 +633,14 @@ def build() -> dict:
                  if g.get("levelText") or g.get("level")]
         t["span"] = [lv for lv in LEVELS if lv in spans]
         t["total"] = sum(len(g["lessons"]) for g in t["groups"] if not g.get("warmup"))
+        t["decks"] = attach_decks(t["id"], t["groups"])
 
     totals = {
         "tracks": len(tracks),
         "lessons": sum(t["total"] for t in tracks),
         "units": sum(len(t["groups"]) for t in tracks if True) - 1,   # 워밍업 은행은 단원이 아니다
         "patterns": core_patterns,
+        "decks": sum(len(t["decks"]) for t in tracks),
     }
     return {"levels": LEVELS, "tracks": tracks, "totals": totals}
 
@@ -592,7 +658,8 @@ def main() -> None:
 
     # 관문에는 트랙의 겉면만 싣는다 — 과 목록은 각자의 페이지가 들고 있다
     nav = [{"id": t["id"], "no": t["no"], "ko": t["ko"], "accent": t["accent"],
-            "total": t["total"], "lessonWord": t["lessonWord"]} for t in data["tracks"]]
+            "total": t["total"], "lessonWord": t["lessonWord"],
+            "decks": len(t["decks"])} for t in data["tracks"]]
     summary = [{k: v for k, v in t.items() if k != "groups"} for t in data["tracks"]]
     render("gateway_template.html",
            {"levels": data["levels"], "totals": data["totals"], "tracks": summary}, OUT)
@@ -603,10 +670,11 @@ def main() -> None:
 
     print(f"→ {OUT.relative_to(ROOT.parent)}  +  {OUT_DIR.relative_to(ROOT.parent)}/*.html")
     for t in data["tracks"]:
+        made = f" · 완성 덱 {len(t['decks'])}" if t["decks"] else ""
         print(f"   {t['no']}. {t['ko']:<10} {t['total']:>4} {t['lessonWord']} · "
-              f"{len(t['groups'])} {t['unitWord']} · {' '.join(t['span']) or '전 레벨'}")
+              f"{len(t['groups'])} {t['unitWord']} · {' '.join(t['span']) or '전 레벨'}{made}")
     print(f"   합계 {data['totals']['lessons']} 레슨 · {data['totals']['units']} 단원 · "
-          f"{data['totals']['patterns']} 패턴")
+          f"{data['totals']['patterns']} 패턴 · 완성 덱 {data['totals']['decks']}")
 
 
 if __name__ == "__main__":

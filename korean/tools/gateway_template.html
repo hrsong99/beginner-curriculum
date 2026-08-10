@@ -99,6 +99,26 @@
   .flag { position: absolute; top: 20px; right: 52px; padding: 3px 8px; border-radius: 999px;
     background: #fff; color: var(--ac); font-size: 10px; font-weight: 700; box-shadow: inset 0 0 0 1px var(--ac); }
 
+  /* ---------- 완성된 덱 ----------
+     여기만 카탈로그 밖으로 나간다 — 목차가 아니라 실제 수업 화면으로. 그래서 새 탭에서
+     열고, 생김새는 트랙 카드보다 한참 조용하게 둔다. 색은 트랙 이름표의 점 하나뿐이다. */
+  .decks { display: grid; gap: 8px; margin-top: 16px; }
+  .dtrack { display: grid; grid-template-columns: 148px minmax(0, 1fr); align-items: baseline; gap: 16px;
+    padding: 14px 16px; border: 1px solid var(--line); border-radius: 12px; }
+  @media (max-width: 620px) { .dtrack { grid-template-columns: 1fr; gap: 9px; } }
+  .dtrack-h { display: flex; align-items: center; gap: 7px; font-size: 12.5px; font-weight: 750; letter-spacing: -.01em; }
+  .dtrack-h i { flex: 0 0 auto; width: 8px; height: 8px; border-radius: 2px; }
+  .dtrack-h em { font-style: normal; color: var(--ink-4); font-size: 11px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .dlist { display: flex; flex-wrap: wrap; gap: 6px; }
+  .dlist a { display: inline-flex; align-items: baseline; gap: 8px; padding: 6px 11px;
+    border: 1px solid var(--line); border-radius: 8px; background: #fff;
+    color: var(--ink-2); font-size: 12.5px; font-weight: 600; }
+  .dlist a:hover { border-color: var(--ink); color: var(--ink); }
+  .dlist a em { font-style: normal; color: var(--ink-4); font-size: 11px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .dlist a .ext { color: var(--ink-4); font-size: 10px; }
+  .dlist a:hover .ext { color: var(--ink-3); }
+  .dnone { margin: 16px 0 0; color: var(--ink-3); font-size: 13px; }
+
   /* ---------- level ladder ---------- */
   .ladder { margin-top: 18px; overflow-x: auto; }
   .ladder-grid { min-width: 620px; }
@@ -141,6 +161,12 @@
     <p>카드를 눌러 그 트랙의 전체 목차로 들어갑니다.</p>
   </div>
   <div class="cards" id="cards"></div>
+
+  <div class="band">
+    <h2 id="decks-h">완성된 레슨 덱</h2>
+    <p>덱이 나와 있는 과입니다. 누르면 실제 수업 화면이 새 탭에서 열립니다.</p>
+  </div>
+  <div class="decks" id="decks"></div>
 
   <div class="band">
     <h2>레벨 사다리</h2>
@@ -195,6 +221,20 @@ document.getElementById("cards").innerHTML = DATA.tracks.map(t => {
     <div class="card-go">전체 목차 보기 <span class="arr">→</span></div>
   </a>`;
 }).join("");
+
+/* ---------- 완성된 덱 ----------
+   덱이 있는 과만 여기 실린다 — 목록은 build_catalog.py 가 디스크에서 찾은 lesson.html 이
+   전부라, 과를 하나 더 쓰면 다시 돌리는 것만으로 이 자리에 나타난다. */
+{
+  const made = DATA.tracks.filter(t => (t.decks || []).length);
+  const n = made.reduce((s, t) => s + t.decks.length, 0);
+  document.getElementById("decks-h").textContent = `완성된 레슨 덱 ${n}`;
+  document.getElementById("decks").innerHTML = made.length ? made.map(t => `<div class="dtrack">
+    <a class="dtrack-h" href="catalog/${esc(t.id)}.html"><i style="background:${t.accent}"></i>${esc(t.ko)}<em>${t.decks.length}</em></a>
+    <div class="dlist">${t.decks.map(d => `<a href="${esc(d.href)}" target="_blank" rel="noopener"
+      title="${esc(d.title)}"><em>${String(d.n).padStart(2, "0")}</em>${esc(d.title)}<span class="ext">↗</span></a>`).join("")}</div>
+  </div>`).join("") : `<p class="dnone">아직 나와 있는 덱이 없습니다.</p>`;
+}
 
 document.getElementById("ladder-axis").innerHTML = LEVELS.map(l => `<span>${l}</span>`).join("");
 document.getElementById("ladder").innerHTML = DATA.tracks.map(t => {

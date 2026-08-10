@@ -168,8 +168,17 @@
   .gbody > .lessons:first-child { margin-top: 0; border-top: 0; }
   .lesson { border-bottom: 1px solid var(--line-soft); }
   .lesson.hide { display: none; }
-  .lrow-btn { display: grid; grid-template-columns: 58px minmax(0,1fr) minmax(0,auto) 14px; align-items: baseline; gap: 16px;
+  .lrow { display: flex; align-items: center; gap: 10px; }
+  .lrow-btn { flex: 1 1 auto; min-width: 0;
+    display: grid; grid-template-columns: 58px minmax(0,1fr) minmax(0,auto) 14px; align-items: baseline; gap: 16px;
     width: 100%; padding: 13px 2px; border: 0; background: none; font: inherit; text-align: left; cursor: pointer; }
+  /* 덱이 나와 있는 과에만 붙는 문. 여기는 4단이라 트랙색을 쓰지 않는다 —
+     색을 여기까지 내리면 펼친 과 안의 살구색 mark 가 묻힌다. */
+  .deck { flex: 0 0 auto; padding: 5px 11px; border: 1px solid var(--line); border-radius: 8px; background: #fff;
+    color: var(--ink-2); font-size: 11.5px; font-weight: 700; white-space: nowrap; }
+  .deck:hover { border-color: var(--ink); color: var(--ink); }
+  .deck .ext { color: var(--ink-4); font-size: 10px; }
+  .deck:hover .ext { color: var(--ink-3); }
   .lrow-btn:hover .ltitle { color: var(--ac); }
   .lno { color: var(--ink-4); font-size: 11px; font-weight: 600; font-variant-numeric: tabular-nums; }
   .ltitle { min-width: 0; font-size: 14.5px; font-weight: 650; letter-spacing: -.015em; word-break: keep-all; transition: color .12s; }
@@ -194,6 +203,7 @@
      행 옆에 번호만 남고 내용이 옆의 다른 상자로 빠지면 둘이 남처럼 보인다. */
   .lesson.open { margin: 12px 0; background: var(--surface);
     border: 1px solid var(--line); border-left: 3px solid var(--ac); border-radius: 0 12px 12px 0; }
+  .lesson.open .lrow { padding-right: 20px; }
   .lesson.open .lrow-btn { grid-template-columns: auto minmax(0,1fr) 14px; gap: 12px; padding: 15px 20px 13px; }
   .lesson.open .lno { color: var(--ac); font-weight: 700; }
   .lesson.open .ltitle { font-size: 17px; font-weight: 800; letter-spacing: -.025em; }
@@ -328,9 +338,13 @@ document.getElementById("tabs").innerHTML =
   document.getElementById("src").textContent = `korean/tracks/${T.id}/table-of-contents.md`;
 }
 
-document.getElementById("band").innerHTML =
-  `<h2>${T.groups.length}개 ${esc(T.unitWord)} · ${T.total}${esc(T.lessonWord)}</h2>
-   <p>${esc(eul(T.unitWord))} 눌러 펼치고, ${esc(eul(T.lessonWord))} 눌러 그 안을 봅니다.</p>`;
+{
+  const made = (T.decks || []).length;
+  document.getElementById("band").innerHTML =
+    `<h2>${T.groups.length}개 ${esc(T.unitWord)} · ${T.total}${esc(T.lessonWord)}${made ? ` · 완성 덱 ${made}` : ""}</h2>
+     <p>${esc(eul(T.unitWord))} 눌러 펼치고, ${esc(eul(T.lessonWord))} 눌러 그 안을 봅니다.${
+       made ? " 덱이 나와 있는 과에는 <b>덱 열기</b> 가 붙습니다 — 새 탭에서 열립니다." : ""}</p>`;
+}
 
 document.getElementById("levelbar").innerHTML =
   `<span class="lbl" style="margin-right:4px">레벨</span>` +
@@ -411,13 +425,21 @@ function lessonRow(l) {
   const c = chips(l);
   const sub = l.sub || (c ? "" : l.can);
   const no = String(l.n).padStart(2, "0");
+  // 덱이 있으면 그 과에서 곧장 수업 화면으로 나간다 — 카탈로그를 잃지 않도록 새 탭에서.
+  const deck = l.deck
+    ? `<a class="deck" href="../${esc(l.deck)}" target="_blank" rel="noopener"
+         title="${esc(l.title)} 덱을 새 탭에서 엽니다">덱 열기 <span class="ext">↗</span></a>`
+    : "";
   return `<div class="lesson" data-text="${esc([l.title, l.sub, l.can, l.scene, (l.chips||[]).join(" "), (l.notes||[]).map(n=>n.v).join(" ")].join(" ").toLowerCase())}">
-    <button class="lrow-btn" type="button">
-      <span class="lno">${esc(T.lessonWord)} ${no}</span>
-      <span class="ltitle">${esc(l.title)}${sub ? ` <em>— ${esc(sub)}</em>` : ""}</span>
-      <span class="lchips">${c}</span>
-      <span class="lcaret"></span>
-    </button>
+    <div class="lrow">
+      <button class="lrow-btn" type="button">
+        <span class="lno">${esc(T.lessonWord)} ${no}</span>
+        <span class="ltitle">${esc(l.title)}${sub ? ` <em>— ${esc(sub)}</em>` : ""}</span>
+        <span class="lchips">${c}</span>
+        <span class="lcaret"></span>
+      </button>
+      ${deck}
+    </div>
     <div class="ldetail">${detail(l)}</div>
   </div>`;
 }
@@ -469,10 +491,11 @@ const controlsTop = $controls.getBoundingClientRect().top + scrollY;
 addEventListener("scroll", () => $controls.classList.toggle("stuck", scrollY > controlsTop - 47), { passive: true });
 
 $groups.addEventListener("click", e => {
+  if (e.target.closest(".deck")) return;          // 덱 링크는 펼치기가 아니라 나가기다
   const head = e.target.closest(".ghead");
   if (head) { head.parentElement.classList.toggle("open"); return; }
   const row = e.target.closest(".lrow-btn");
-  if (row) { row.parentElement.classList.toggle("open"); }
+  if (row) { row.closest(".lesson").classList.toggle("open"); }
 });
 
 const $q = document.getElementById("q");
