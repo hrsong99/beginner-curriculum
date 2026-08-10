@@ -50,13 +50,32 @@ meets today's pattern somewhere they have not been yet.
 | 서울 지하철, 길 묻기 | 과 8 | core |
 | 포장마차, 떡볶이 첫 입 | 과 9 | core |
 | 회식 자리, 술 권하기 | 과 10 | core |
+| 빵집 계산대 | 과 12 | core |
+| 기차역 매표소 | 과 13 | core |
+| 미용실 예약 전화 | 과 14 | core |
+| 우체국 창구, 영업시간 확인 | 과 15 | core |
+| 백화점 안내데스크 | 과 16 | core |
+| 도서관 대출대 | 과 17 | core |
+| 병원 접수와 진료실 | 과 18 | core |
+| 식당 테이블, 물과 앞접시 | 과 19 | core |
 
 **과 11–45 already have scenes reserved.** They were assigned up front, one per
 lesson, precisely so parallel writers could not collide — the assignment travels in each
 writer's brief, and the table above gets extended as those decks land. Do not pick a bonus
 scene for a core lesson yourself; ask for the assigned one.
 
-Still unspent and worth using elsewhere: 병원 접수, 미용실, 택시, 우체국, 학교 첫날.
+Still unspent and worth using elsewhere: 택시, 학교 첫날, 회사 점심시간, 노래방, 은행 창구.
+
+**Nouns now in circulation from Unit 3–4** — reuse these rather than inventing synonyms:
+
+```
+사과 · 빵 · 가족 · 고양이 · 화장실 · 편의점 · 엘리베이터 · 자리 · 동생 · 지하
+책상 · 가방 · 건물 · 한국어 · 시간 · 요일 · 오전 · 오후 · 반 · 쯤 · 밤
+개 · 명 · 잔 · 병 · 마리   ·   위 · 아래 · 안 · 밖 · 앞 · 뒤 · 옆
+```
+
+**층 is used receptively only.** No 과 owns it, so it appears in partner lines with a reading
+and never in a learner-produced slot. Keep that restraint until the TOC assigns it.
 
 ---
 
