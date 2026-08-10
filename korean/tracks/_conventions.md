@@ -50,6 +50,7 @@ meets today's pattern somewhere they have not been yet.
 | 서울 지하철, 길 묻기 | 과 8 | core |
 | 포장마차, 떡볶이 첫 입 | 과 9 | core |
 | 회식 자리, 술 권하기 | 과 10 | core |
+| 동대문 옷가게, 값 흥정 | 과 11 | core |
 | 빵집 계산대 | 과 12 | core |
 | 기차역 매표소 | 과 13 | core |
 | 미용실 예약 전화 | 과 14 | core |
@@ -76,6 +77,21 @@ Still unspent and worth using elsewhere: 택시, 학교 첫날, 회사 점심시
 
 **층 is used receptively only.** No 과 owns it, so it appears in partner lines with a reading
 and never in a learner-produced slot. Keep that restraint until the TOC assigns it.
+
+### `N도` — available. **Working assumption, not a settled TOC fact.**
+
+The TOC lists `N도` under 「이미 배운 것 · U1」 *and* claims it for 과 21 in 「아직 아님」. Four
+writers hit that contradiction independently and split three-to-one on it, which left 과 18
+using 도 freely while 과 15 · 17 · 19 wrote around it — one of them at the cost of rewriting two
+dialogue turns. Inconsistent decks are worse than either answer.
+
+**Treat 도 as the learner's already.** U1 grants it and 과 7 ships 저도요, so it is on screen from
+the first course whatever the TOC says. 과 21 then owns `N만` and the *focusing* use of 도
+(같은 걸로 · 이것만) — teaching a familiar particle a second time as a highlighted pattern, which
+is normal, rather than introducing it.
+
+This resolves the deadlock in the direction the evidence points, but **the TOC has not been
+fixed** — it still says both things, and only the curriculum owner should edit it.
 
 ---
 
