@@ -57,14 +57,33 @@ MAX_AFTER_MERGE = 15   # a trailing stub may join the previous course up to this
 MERGE_IF_UNDER = 5
 
 # classLevel is part of grape's natural key, so two courses sharing one are the
-# same row. Each track gets its own band inside the 999.x test range; the schema
-# allows three decimals, which is 1000 slots.
+# same row.
+#
+# **The integer part of CLASS_LEVEL is the section.** This is not written down
+# anywhere in either repo — it is the convention the live data follows, and it is
+# how Breaking News and 프리토킹 are separate sections of the app while both being
+# CURRICULUM_TYPE=BASIC:
+#
+#     1–2          the graded ladder (level 1, level 2)
+#     1000         Breaking News          (15 courses, monthly × level)
+#     1001, 1002   single topic courses
+#     2001–2006    the Business series
+#     3500         가벼운 프리토킹          (12 courses)
+#     999          test junk — 'html test (john)' lives here
+#
+# So a track becomes a section by taking its own integer band, and each course in
+# it takes a decimal slot. 999.x was the wrong home: it is where throwaway rows go.
+#
+# LANG_TYPE already separates KR from EN/JP, so these bands cannot collide with
+# the English or Japanese curricula even where the numbers coincide. Audience
+# ("Korean for Japanese speakers" vs anything later) is GT_CLASS_COURSE.
+# COUNTRY_CODE, not this number — see CLAUDE.md § Getting a lesson to production.
 TRACKS = {
-    "1-hangul":            {"band": "999.1", "type": "BASIC"},
-    "2-core-patterns":     {"band": "999.3", "type": "BASIC"},
-    "3-contextual-korean": {"band": "999.5", "type": "BASIC"},
-    "4-freetalking":       {"band": "999.6", "type": "BASIC"},
-    "5-pronunciation":     {"band": "999.7", "type": "BASIC"},
+    "1-hangul":            {"band": 1000, "type": "BASIC"},
+    "2-core-patterns":     {"band": 2000, "type": "BASIC"},
+    "3-contextual-korean": {"band": 3000, "type": "BASIC"},
+    "4-freetalking":       {"band": 4000, "type": "BASIC"},
+    "5-pronunciation":     {"band": 5000, "type": "BASIC"},
 }
 
 DIFFICULTY = {"왕초급": "BEGINNER", "초급": "BEGINNER", "초중급": "BEGINNER",
@@ -232,7 +251,12 @@ def plan_track(track: pathlib.Path, dry: bool) -> int:
     print(f"\n{track.name}")
 
     for i, course in enumerate(courses, start=1):
-        class_level = f"{cfg['band']}{i:02d}"
+        # <band>.<slot> — the band is the section, the decimal is this course.
+        # decimal(10,3) in the DB, so three decimals is the whole slot space.
+        if i > 999:
+            print(f"    ! {track.name} has more than 999 courses — the band is full")
+            return 0
+        class_level = f"{cfg['band']}.{i:03d}"
         cdir = root / course["slug"]
         seen.add(cdir)
 

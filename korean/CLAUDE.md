@@ -90,6 +90,31 @@ tools expect. `sync-from-authoring.py` rewrites them to `shared/`, and
 (`curriculum.yaml` → `spec.sharedRuntime`). Writing a CDN URL here by hand would
 hand-pin a version in every file and break local verification.
 
+**A track becomes a section of the app by taking its own `classLevel` band.** The integer
+part of `CLASS_LEVEL` is the section and the decimal is the course inside it — that is how
+Breaking News (`1000.xxx`) and 가벼운 프리토킹 (`3500.xxx`) are separate sections while both
+being `curriculumType: BASIC`. The convention is written down nowhere; it is what the live
+`GT_CLASS_COURSE` rows do. Ours:
+
+| Band | Track | Courses |
+|---|---|---|
+| `1000` | `1-hangul` | 1 |
+| `2000` | `2-core-patterns` | 12 |
+| `3000` | `3-contextual-korean` | 14 |
+| `4000` | `4-freetalking` | 10 |
+| `5000` | `5-pronunciation` | 1 |
+
+`1–99` stays free in case Korean ever gets a graded ladder the way EN and JP have. **Never
+use `999.x`** — that is where throwaway rows live (`html test (john)`), which is why the
+trial decks sit there and nothing else should.
+
+`LANG_TYPE` (KR) already separates these from the English and Japanese curricula, so the
+numbers cannot collide across languages even where they coincide. **Audience is
+`GT_CLASS_COURSE.COUNTRY_CODE`**, not the level — the column exists, defaults to `KR`, and is
+`KR` on every row today. If "English for Japanese speakers" ever has to coexist with "English
+for Korean speakers", that is the column to use; the sync manifest does not send it yet, so
+it needs a grape-side change rather than a new number scheme.
+
 **A track is not a course.** 2-core-patterns is 116 lessons; a deployable course is one
 `classLevel` with weeks 1..N and no gaps. `tools/plan_courses.py` cuts the track against
 its TOC into ~12-lesson courses on unit boundaries, and writes `course.yaml` /
