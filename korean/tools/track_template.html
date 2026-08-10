@@ -13,29 +13,27 @@
   @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
   /* ────────────────────────────────────────────────────────────────────
-     읽는 순서를 다섯 단으로 못 박은 페이지다. 위에서 아래로 갈수록 조용해지고,
-     같은 단끼리는 생김새가 같다.
+     읽는 순서를 선이 아니라 면과 밀도로 만든다.
 
-       1. 트랙 이름          — 44px. 화면에 하나뿐이다.
-       2. 띠 제목            — 트랙색으로 채운 한 줄. "여기부터 목록"
-       3. 단원 머리          — 트랙색 번호칩 + 18px 제목. 훑을 때 눈이 걸리는 자리
-       4. 과 한 줄           — 14.5px. 단원 안에서는 이것이 본문이다
-       5. 펼친 내용          — 회색 글과 머리카락선. 단, 그 안의 예문 한 조각만
-                              살구색으로 칠한다 — 이 페이지에서 눈이 마지막으로
-                              머물러야 할 곳이 거기이기 때문이다.
+       1. 트랙 개요          — 트랙색을 품은 큰 면. 이름·설명·규모가 한 덩어리다.
+       2. 찾아보기           — 중립색 도구 면. 검색과 필터만 둔다.
+       3. 단원               — 흰 카드와 트랙색 번호칩으로 훑는다.
+       4. 과                 — 옅은 타일. 제목만 남겨 빠르게 고른다.
+       5. 선택한 과          — 트랙색 바닥과 예문 블록이 선택 상태를 만든다.
 
-     트랙색은 1·2·3단에만 쓴다. 4·5단까지 내려가면 색이 구조를 세는 것이 아니라
-     배경 무늬가 되고, 그러면 정작 예문의 살구색이 묻힌다.
+     예문의 배우는 조각은 살구색으로 고정해 트랙색과 역할이 겹치지 않게 한다.
      ──────────────────────────────────────────────────────────────────── */
   :root {
     --ink: #16181a;
     --ink-2: #454a4f;
-    --ink-3: #7a8085;
-    --ink-4: #a8adb2;
+    --ink-3: #62686e;
+    --ink-4: #7d848a;
     --line: #e6e8ea;
     --line-soft: #f1f2f3;
     --surface: #fafbfb;
     --lime: #b5fd4c;
+    --radius: 4px;
+    --radius-sm: 2px;
 
     /* 덱의 --ending-* 그대로. "이 과가 가르치는 조각"이라는 뜻이 레슨과 같다. */
     --pat-mark: #ffdfc7;
@@ -53,11 +51,11 @@
   body { margin: 0; background: #fff; color: var(--ink); line-height: 1.6;
     font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
     -webkit-font-smoothing: antialiased; }
-  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 28px 130px; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px 130px; }
   @media (max-width: 600px) { .wrap { padding: 0 18px 80px; } }
   a { color: inherit; text-decoration: none; }
-  :focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; border-radius: 5px; }
-  .lbl { color: var(--ink-4); font-size: 10.5px; font-weight: 700; letter-spacing: .08em; }
+  :focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; border-radius: var(--radius-sm); }
+  .lbl { color: var(--ink-3); font-size: 11px; font-weight: 700; letter-spacing: .07em; }
 
   /* ---------- 트랙 탭 ---------- */
   .tabs { position: sticky; top: 0; z-index: 30; background: rgba(255,255,255,.94); backdrop-filter: blur(10px);
@@ -65,7 +63,7 @@
   .tabs-in { max-width: 1040px; margin: 0 auto; padding: 0 28px; display: flex; gap: 2px; overflow-x: auto; }
   @media (max-width: 600px) { .tabs-in { padding: 0 18px; } }
   .tabs-in::-webkit-scrollbar { display: none; }
-  .tab { flex: 0 0 auto; padding: 15px 14px 13px; border-bottom: 2px solid transparent;
+  .tab { flex: 0 0 auto; padding: 13px 14px 11px; border-bottom: 2px solid transparent;
     color: var(--ink-3); font-size: 13px; font-weight: 600; white-space: nowrap; }
   .tab:hover { color: var(--ink); }
   .tab em { font-style: normal; margin-right: 7px; color: var(--ink-4); font-size: 11px; font-weight: 700; font-variant-numeric: tabular-nums; }
@@ -75,179 +73,222 @@
   .tab.home:hover { color: var(--ink); }
 
   /* ---------- 1단 · 트랙 머리 ---------- */
-  .hero { padding: 46px 0 0; }
-  .hero-no { color: var(--ac); font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
-  h1 { margin: 12px 0 0; font-size: 44px; font-weight: 800; line-height: 1.1; letter-spacing: -.04em; word-break: keep-all; }
-  h1 span { margin-left: 12px; color: var(--ink-4); font-size: 15px; font-weight: 500; letter-spacing: -.01em; }
-  .hero-d { max-width: 60ch; margin: 20px 0 0; color: var(--ink-2); font-size: 15.5px; line-height: 1.75; word-break: keep-all; }
-  .hero-n { max-width: 60ch; margin: 10px 0 0; color: var(--ink-4); font-size: 13px; line-height: 1.7; word-break: keep-all; }
+  .hero { padding: 32px 0 0; }
+  .hero-card { position: relative; isolation: isolate; overflow: hidden; display: grid;
+    grid-template-columns: minmax(0,1.35fr) minmax(290px,.65fr); gap: 44px; align-items: end;
+    padding: 40px 42px; border: 1px solid color-mix(in srgb, var(--ac) 12%, var(--line)); border-radius: 8px;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--tint) 86%, white), #fff 72%);
+    box-shadow: none; }
+  .hero-card::after { content: ""; position: absolute; z-index: -1; width: 260px; height: 260px;
+    right: -100px; top: -130px; border: 46px solid color-mix(in srgb, var(--ac) 10%, transparent);
+    border-radius: 50%; }
+  .hero-no { display: inline-flex; align-items: center; gap: 8px; color: var(--ac); font-size: 12px;
+    font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+  .hero-no::before { content: ""; width: 8px; height: 8px; background: var(--ac); }
+  h1 { margin: 11px 0 0; font-size: 44px; font-weight: 820; line-height: 1.08; letter-spacing: -.045em; word-break: keep-all; }
+  h1 span { display: block; margin: 7px 0 0; color: var(--ink-3); font-size: 14px; font-weight: 550; letter-spacing: 0; }
+  .hero-d { max-width: 52ch; margin: 19px 0 0; color: var(--ink-2); font-size: 15px; line-height: 1.72; word-break: keep-all; }
 
-  .panel { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 34px; align-items: center;
-    margin: 30px 0 0; padding: 22px 26px; background: var(--tint); border-radius: 14px; }
-  @media (max-width: 760px) { .panel { grid-template-columns: 1fr; gap: 22px; } }
-  .figs { display: flex; flex-wrap: wrap; gap: 0 30px; }
-  .figs div b { font-size: 30px; font-weight: 800; letter-spacing: -.04em; font-variant-numeric: tabular-nums; color: var(--ac); }
-  .figs div span { margin-left: 5px; color: var(--ink-2); font-size: 12.5px; font-weight: 650; }
+  .panel { min-width: 0; padding: 20px; border: 1px solid rgba(22,24,26,.08); border-radius: var(--radius);
+    background: rgba(255,255,255,.82); box-shadow: none; }
+  .overview-label { display: block; margin-bottom: 13px; color: var(--ink-3); font-size: 12px;
+    font-weight: 750; letter-spacing: .08em; }
+  .figs { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; }
+  .figs div { min-width: 0; }
+  .figs div b { display: block; color: var(--ac); font-size: 24px; font-weight: 780;
+    letter-spacing: -.04em; line-height: 1.1; font-variant-numeric: tabular-nums; }
+  .figs div span { display: block; margin-top: 3px; color: var(--ink-3); font-size: 12px; font-weight: 650; }
+  #distwrap:not([hidden]) { margin-top: 20px; }
   .dist { display: flex; gap: 2px; height: 10px; }
-  .dist i { border-radius: 2px; }
-  .dist-legend { display: flex; flex-wrap: wrap; gap: 4px 14px; margin: 11px 0 0; color: var(--ink-2); font-size: 11.5px; }
+  .dist i { border-radius: 1px; }
+  .dist-legend { display: flex; flex-wrap: wrap; gap: 4px 12px; margin: 10px 0 0; color: var(--ink-2); font-size: 12px; }
   .dist-legend span { display: inline-flex; align-items: center; gap: 5px; }
-  .dist-legend i { width: 8px; height: 8px; border-radius: 2px; box-shadow: inset 0 0 0 1px rgba(0,0,0,.08); }
+  .dist-legend i { width: 8px; height: 8px; border-radius: 1px; box-shadow: inset 0 0 0 1px rgba(0,0,0,.08); }
   .dist-legend b { font-weight: 750; font-variant-numeric: tabular-nums; }
 
-  .links { display: flex; flex-wrap: wrap; gap: 7px; margin: 22px 0 0; }
-  .links a { padding: 8px 14px; border: 1px solid var(--line); border-radius: 8px; font-size: 12.5px; font-weight: 600; color: var(--ink-2); background: #fff; }
-  .links a:hover { border-color: var(--ink); color: var(--ink); }
-  .links a.primary { background: var(--ac); border-color: var(--ac); color: #fff; }
-  .links a.primary:hover { filter: brightness(.92); }
-
-  /* ---------- 2단 · 띠 제목 ---------- */
-  .band { display: flex; align-items: baseline; flex-wrap: wrap; gap: 12px;
-    margin: 56px 0 0; padding: 13px 18px; background: var(--tint); border-radius: 10px; }
-  .band h2 { margin: 0; color: var(--ac); font-size: 14px; font-weight: 800; letter-spacing: -.01em; }
-  .band p { margin: 0; color: var(--ink-3); font-size: 12.5px; }
+  /* ---------- 2단 · 찾아보기 ---------- */
+  .curriculum-head { margin: 34px 0 0; padding: 20px; border-radius: var(--radius); background: #f4f6f8; }
+  .band { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin: 0 0 14px; }
+  .band h2 { margin: 0; color: var(--ink); font-size: 20px; font-weight: 780; letter-spacing: -.025em; }
+  .band p { margin: 0; color: var(--ink-3); font-size: 12px; font-weight: 650; }
 
   /* ---------- controls ---------- */
-  .controls { position: sticky; top: 47px; z-index: 20; padding: 12px 0 11px;
-    background: rgba(255,255,255,.94); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
-  .controls.stuck { box-shadow: 0 10px 20px -18px rgba(0,0,0,.5); }
+  .controls { padding: 0; }
   .crow { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
-  .crow + .crow { margin-top: 9px; }
-  .search { flex: 1 1 240px; min-width: 190px; padding: 9px 15px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); font: inherit; font-size: 13.5px; }
+  .crow[hidden] { display: none; }
+  .crow + .crow { margin-top: 12px; }
+  .search { flex: 1 1 240px; min-width: 190px; padding: 11px 15px; border: 1px solid #d7dce0;
+    border-radius: var(--radius-sm); background: #fff; box-shadow: none; font: inherit; font-size: 13.5px; }
   .search::placeholder { color: var(--ink-4); }
-  .search:focus { outline: none; border-color: var(--ac); background: #fff; }
-  .chip { padding: 6px 11px; border: 1px solid transparent; border-radius: 7px; background: none; color: var(--ink-3); font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; }
-  .chip:hover { background: var(--surface); color: var(--ink); }
+  .search:focus { outline: none; box-shadow: inset 0 0 0 2px var(--ac); }
+  .chip { padding: 6px 10px; border: 1px solid #dfe3e6; border-radius: var(--radius-sm); background: #fff; color: var(--ink-3); font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; }
+  .chip:hover { color: var(--ink); }
   .chip[aria-pressed="true"] { background: var(--ink); color: #fff; }
-  .chip .dot { display: inline-block; width: 7px; height: 7px; margin-right: 6px; border-radius: 2px; box-shadow: inset 0 0 0 1px rgba(0,0,0,.1); vertical-align: 1px; }
+  .chip .dot { display: inline-block; width: 7px; height: 7px; margin-right: 6px; border-radius: 1px; box-shadow: inset 0 0 0 1px rgba(0,0,0,.1); vertical-align: 1px; }
   /* 이 페이지에서 실제로 누르는 것은 이 둘뿐이라 버튼처럼 보이게 둔다 */
-  .btn { padding: 8px 14px; border: 1px solid var(--line); border-radius: 8px; background: #fff;
+  .btn { padding: 10px 12px; border: 1px solid #dfe3e6; border-radius: var(--radius-sm); background: #fff;
     color: var(--ink-2); font: inherit; font-size: 12.5px; font-weight: 650; cursor: pointer; white-space: nowrap; }
-  .btn:hover { border-color: var(--ink); color: var(--ink); }
+  .btn:hover { background: color-mix(in srgb, var(--tint) 64%, white); color: var(--ink); }
   .btn.on { background: var(--ink); border-color: var(--ink); color: #fff; }
-  .btn.deep { border-color: var(--ac); color: var(--ac); }
+  .btn.deep { color: var(--ac); }
   .btn.deep:hover { background: var(--tint); }
   .btn.deep.on { background: var(--ac); border-color: var(--ac); color: #fff; }
   .hits { margin-left: auto; color: var(--ink-3); font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums; }
 
   /* ---------- 3단 · 단원 카드 ---------- */
-  .groups { margin-top: 16px; display: grid; gap: 10px; }
-  .group { border: 1px solid var(--line); border-radius: 13px; overflow: hidden; transition: border-color .16s, box-shadow .16s; }
-  .group:hover { border-color: var(--ac); }
-  .group.open { border-color: var(--ac); box-shadow: 0 10px 26px -22px rgba(0,0,0,.5); }
+  .groups { margin-top: 18px; display: grid; gap: 12px; }
+  .group { border: 1px solid #dfe3e6; border-radius: var(--radius); overflow: hidden; background: #fff;
+    box-shadow: none; transition: border-color .16s, background .16s; }
+  .group:hover { border-color: #bdc4ca; }
+  .group.open { border-color: #c8ced3; }
   .group.hide { display: none; }
   .ghead { display: grid; grid-template-columns: auto minmax(0,1fr) auto; align-items: center; gap: 16px;
     width: 100%; padding: 16px 18px; border: 0; background: #fff; font: inherit; text-align: left; cursor: pointer; }
-  .group.open .ghead { background: var(--tint); }
-  .gnum { display: grid; place-items: center; min-width: 40px; height: 34px; padding: 0 9px; border-radius: 9px;
-    background: var(--tint); color: var(--ac); font-size: 12px; font-weight: 800; letter-spacing: -.01em; white-space: nowrap; }
-  .group.open .gnum { background: var(--ac); color: #fff; }
+  .group.open .ghead { background: linear-gradient(90deg, color-mix(in srgb, var(--tint) 76%, white), #fff 72%); }
+  .gnum { display: grid; place-items: center; min-width: 40px; height: 34px; padding: 0 9px; border-radius: var(--radius-sm);
+    background: var(--ac); color: #fff; font-size: 12px; font-weight: 800; letter-spacing: -.01em; white-space: nowrap; box-shadow: none; }
   .gtitle { min-width: 0; font-size: 18px; font-weight: 750; letter-spacing: -.03em; word-break: keep-all; }
   .gtitle em { display: block; margin-top: 2px; color: var(--ink-3); font-style: normal; font-size: 12.5px; font-weight: 500; letter-spacing: 0; }
-  .gmeta { display: flex; align-items: center; gap: 14px; color: var(--ink-3); font-size: 11.5px; font-weight: 600; white-space: nowrap; }
+  .gmeta { display: flex; align-items: center; gap: 14px; color: var(--ink-3); font-size: 12px; font-weight: 600; white-space: nowrap; }
   .gmeta > * { flex: 0 0 auto; }
   .lv-tag { display: inline-flex; align-items: center; gap: 6px; color: var(--ink-2); }
-  .lv-tag i { width: 9px; height: 9px; border-radius: 2px; box-shadow: inset 0 0 0 1px rgba(0,0,0,.1); }
+  .lv-tag i { width: 9px; height: 9px; border-radius: 1px; box-shadow: inset 0 0 0 1px rgba(0,0,0,.1); }
   .caret { display: inline-block; width: 10px; color: var(--ink-4); font-size: 9px; }
   .caret::before { content: "\25B8"; }
   .group.open .caret { color: var(--ac); }
   .group.open .caret::before { content: "\25BE"; }
-  .gbody { display: none; padding: 16px 20px 10px; }
+  .gbody { display: none; padding: 6px 20px 20px; }
   .group.open .gbody { display: block; }
 
   .story { margin: 0; max-width: 70ch; color: var(--ink-2); font-size: 13.5px; line-height: 1.75; word-break: keep-all; }
   .story b { color: var(--ink); font-weight: 750; }
   .story .cast { display: block; margin-top: 5px; color: var(--ink-4); font-size: 12px; }
-  .gcan { margin: 0; max-width: 70ch; padding-left: 13px; border-left: 2px solid var(--ac);
-    color: var(--ink); font-size: 13.5px; line-height: 1.7; word-break: keep-all; }
+  .gcan { margin: 12px 0 0; max-width: 70ch; padding: 12px 14px; border-radius: var(--radius-sm);
+    background: color-mix(in srgb, var(--tint) 58%, white); color: var(--ink); font-size: 13.5px; line-height: 1.7; word-break: keep-all; }
   .gcan b { display: block; margin-bottom: 2px; color: var(--ac); }
 
   /* ---------- 4단 · 과 한 줄 ---------- */
-  .lessons { margin-top: 16px; border-top: 1px solid var(--line-soft); }
+  .lessons { margin-top: 16px; display: grid; gap: 6px; }
   /* 머리글이 없는 단원(핵심·한글)에서는 목록이 곧바로 시작한다 */
-  .gbody > .lessons:first-child { margin-top: 0; border-top: 0; }
-  .lesson { border-bottom: 1px solid var(--line-soft); }
+  .gbody > .lessons:first-child { margin-top: 0; }
+  .lesson { border-radius: var(--radius-sm); background: var(--surface); }
   .lesson.hide { display: none; }
   .lrow { display: flex; align-items: center; gap: 10px; }
   .lrow-btn { flex: 1 1 auto; min-width: 0;
-    display: grid; grid-template-columns: 58px minmax(0,1fr) minmax(0,auto) 14px; align-items: baseline; gap: 16px;
-    width: 100%; padding: 13px 2px; border: 0; background: none; font: inherit; text-align: left; cursor: pointer; }
+    display: grid; grid-template-columns: 58px minmax(0,1fr) minmax(0,auto); align-items: baseline; gap: 16px;
+    width: 100%; padding: 12px 13px; border: 0; border-radius: var(--radius-sm); background: none; font: inherit; text-align: left; cursor: pointer; }
   /* 덱이 나와 있는 과에만 붙는 문. 여기는 4단이라 트랙색을 쓰지 않는다 —
      색을 여기까지 내리면 펼친 과 안의 살구색 mark 가 묻힌다. */
-  .deck { flex: 0 0 auto; padding: 5px 11px; border: 1px solid var(--line); border-radius: 8px; background: #fff;
+  .deck { flex: 0 0 auto; margin-right: 13px; padding: 5px 11px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: #fff;
     color: var(--ink-2); font-size: 11.5px; font-weight: 700; white-space: nowrap; }
   .deck:hover { border-color: var(--ink); color: var(--ink); }
   .deck .ext { color: var(--ink-4); font-size: 10px; }
   .deck:hover .ext { color: var(--ink-3); }
-  .lrow-btn:hover .ltitle { color: var(--ac); }
-  .lno { color: var(--ink-4); font-size: 11px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .lrow-btn:hover { background: color-mix(in srgb, var(--tint) 50%, white); }
+  .lrow-btn:hover .ltitle { color: var(--ink); }
+  .lno { color: var(--ac); font-size: 12px; font-weight: 750; font-variant-numeric: tabular-nums; }
   .ltitle { min-width: 0; font-size: 14.5px; font-weight: 650; letter-spacing: -.015em; word-break: keep-all; transition: color .12s; }
   .ltitle em { font-style: normal; color: var(--ink-3); font-weight: 450; letter-spacing: 0; }
-  .ltitle mark { background: var(--lime); color: var(--ink); border-radius: 3px; padding: 0 2px; }
-  .lchips { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0 5px; max-width: 100%; color: var(--ink-3); font-size: 12px; }
+  .first-tag { display: inline-block; margin-left: 8px; padding: 2px 6px; border: 1px solid color-mix(in srgb, var(--ac) 28%, var(--line));
+    border-radius: var(--radius-sm); color: var(--ac); font-size: 10px; font-weight: 750; letter-spacing: .02em; vertical-align: 1px; }
+  .ltitle mark { background: var(--lime); color: var(--ink); border-radius: var(--radius-sm); padding: 0 2px; }
+  .lchips { display: none; }
   .lchips .pat { max-width: 26ch; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 500; }
   .lchips .sep, .lchips .pat.ref { color: var(--ink-4); }
-  @media (max-width: 760px) { .lchips { display: none; } .lrow-btn { grid-template-columns: 46px minmax(0,1fr) 14px; } }
-  .lcaret { color: var(--line); font-size: 9px; transition: color .12s; }
-  .lcaret::before { content: "\25B8"; }
-  .lrow-btn:hover .lcaret { color: var(--ink-3); }
-  .lesson.open .lcaret { color: var(--ac); }
-  .lesson.open .lcaret::before { content: "\25BE"; }
+  @media (max-width: 760px) { .lchips { display: none; } .lrow-btn { grid-template-columns: 46px minmax(0,1fr); } }
 
   /* ---------- 5단 · 펼친 과 ----------
-     예문이 21px 인데 그 과의 제목은 14.5px 이라, 열어 놓으면 예문이 제 제목을
-     눌러 버렸다. 펼친 과는 이제 카드 한 장이고 — 제목이 그 카드의 머리, 나머지는
-     카드 안의 내용 — 순서가 제목 → 할 수 있는 것 → 예문 → 표현으로 고정된다.
-     예문은 흰 자리에 앉혀 제목보다 낮은 단이라는 것을 눈에 보이게 했다. */
-  /* 펼친 과는 통째로 한 블록이다 — 머리(번호 + 제목)와 본문이 한 테두리 안에 있다.
-     행 옆에 번호만 남고 내용이 옆의 다른 상자로 빠지면 둘이 남처럼 보인다. */
-  .lesson.open { margin: 12px 0; background: var(--surface);
-    border: 1px solid var(--line); border-left: 3px solid var(--ac); border-radius: 0 12px 12px 0; }
-  .lesson.open .lrow { padding-right: 20px; }
-  .lesson.open .lrow-btn { grid-template-columns: auto minmax(0,1fr) 14px; gap: 12px; padding: 15px 20px 13px; }
-  .lesson.open .lno { color: var(--ac); font-weight: 700; }
-  .lesson.open .ltitle { font-size: 17px; font-weight: 800; letter-spacing: -.025em; }
-  .lesson.open .ltitle em { font-size: 14px; }
+     펼친 과는 얇은 외곽선과 옅은 바닥 하나로만 선택 상태를 만든다. 제목 → 할 수 있는
+     것 → 예문 → 표현의 순서를 고정하고, 예문 둘은 넓은 화면에서 나란히 둔다. */
+  .lesson.open { margin: 5px 0 10px; border: 1px solid color-mix(in srgb, var(--ac) 42%, #d7dce0);
+    background: color-mix(in srgb, var(--tint) 58%, white); border-radius: var(--radius); box-shadow: none; }
+  .lesson.open .lrow { padding-right: 16px; }
+  .lesson.open .lrow-btn { grid-template-columns: auto minmax(0,1fr); gap: 12px; padding: 17px 18px 12px; }
+  .lesson.open .deck { margin-right: 0; }
+  .lesson.open .lrow-btn:hover { background: transparent; }
+  .lesson.open .lno { padding: 3px 8px; border-radius: var(--radius-sm); background: var(--ac); color: #fff; font-weight: 750; }
+  .lesson.open .ltitle { font-size: 16px; font-weight: 750; letter-spacing: -.02em; }
+  .lesson.open .ltitle em { font-size: 13.5px; }
   .lesson.open .lchips { display: none; }       /* 블록 안에서 패턴 이름이 다시 나온다 */
 
-  .ldetail { display: none; padding: 0 20px 18px; }
+  .ldetail { display: none; padding: 0 20px 22px; }
   .lesson.open .ldetail { display: block; }
   @media (max-width: 760px) { .ldetail { padding: 0 16px 16px; } }
 
-  /* 블록 안의 칸. 세 칸이 같은 생김새라 라벨만 보면 무엇인지 알 수 있다. */
-  .field + .field { margin-top: 15px; padding-top: 15px; border-top: 1px solid var(--line); }
-  .field > .lbl { display: block; margin-bottom: 8px; }
+  /* 펼친 과 안에서는 선 대신 여백·바닥색·작은 라벨로 의미를 나눈다. */
+  .field + .field { margin-top: 20px; }
+  .field > .lbl { display: inline-flex; align-items: center; margin-bottom: 10px; padding: 4px 7px;
+    border-radius: var(--radius-sm); background: color-mix(in srgb, var(--ac) 10%, white); color: var(--ac);
+    font-size: 10.5px; letter-spacing: .045em; }
+  .field-goal { position: relative; padding: 14px 16px 14px 46px; border-radius: var(--radius-sm); background: rgba(255,255,255,.74); }
+  .field-goal::before { content: "\2713"; position: absolute; left: 17px; top: 17px; display: grid; place-items: center;
+    width: 22px; height: 22px; border-radius: var(--radius-sm); background: var(--ac); color: #fff; font-size: 13px; font-weight: 800; }
+  .field-goal > .lbl { margin-bottom: 5px; padding: 0; background: none; }
 
   /* 이 과의 약속. 카드에서 제일 먼저 읽혀야 하는 줄이라 본문보다 크고 진하다. */
   .goal { margin: 0; max-width: 62ch; color: var(--ink); font-size: 15px; font-weight: 600; line-height: 1.65; word-break: keep-all; }
   .words { display: flex; flex-wrap: wrap; gap: 6px; }
-  .words span { padding: 5px 12px; background: #fff; border: 1px solid var(--line); border-radius: 8px; font-size: 16px; font-weight: 700; }
-  .scene { margin: 0 0 14px; max-width: 62ch; color: var(--ink-3); font-size: 13px; line-height: 1.6; word-break: keep-all; }
+  .words span { padding: 5px 10px; background: color-mix(in srgb, var(--tint) 55%, white); border-radius: var(--radius-sm); font-size: 16px; font-weight: 700; }
+  .scene { margin: 0 0 16px; max-width: 62ch; color: var(--ink-3); font-size: 12.5px; line-height: 1.6; word-break: keep-all; }
+
+  /* 한글 트랙에서는 단어가 결과 예시이고, 실제 학습 대상은 낱자와 조합 규칙이다.
+     그래서 글자·규칙을 가장 큰 면에, 읽기 예시는 조용한 보조 줄에 둔다. */
+  .hangul-focus { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; }
+  .hangul-focus-item { min-height: 66px; display: flex; align-items: center; padding: 14px 16px;
+    border-radius: var(--radius-sm); background: rgba(255,255,255,.9); color: var(--ink); font-size: 15px;
+    font-weight: 700; line-height: 1.65; word-break: keep-all; }
+  .hangul-focus-item .jamo { display: inline-block; margin: 0 2px; padding: 1px 5px;
+    border-radius: var(--radius-sm); background: color-mix(in srgb, var(--ac) 12%, white); color: var(--ac);
+    font-size: 21px; font-weight: 800; line-height: 1.35; letter-spacing: .035em; vertical-align: -1px; }
+  .field-hangul-practice { margin-top: 16px; }
+  .hangul-practice { display: flex; flex-wrap: wrap; align-items: center; gap: 5px 0; max-width: 72ch; }
+  .hangul-practice span { color: var(--ink-3); font-size: 13px; font-weight: 600; }
+  .hangul-practice span:not(:last-child)::after { content: "\00B7"; margin: 0 9px; color: var(--ink-4); }
 
   /* 페이지에서 채운 색은 트랙색과 이 살구색뿐이고, 트랙색은 3단 위쪽에만 있다.
      그래서 과를 펼쳤을 때 그 안에서 유일하게 칠해진 것이 배우는 조각이 된다. */
-  .pats { display: grid; gap: 8px; }
-  .pcard { padding: 13px 16px; background: #fff; border: 1px solid var(--line); border-radius: 10px; }
+  .pats { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+  .pcard { padding: 16px; border-radius: var(--radius-sm); background: rgba(255,255,255,.88); box-shadow: none; }
   .pcard .sent { margin: 0; font-size: 18.5px; font-weight: 700; line-height: 1.45; letter-spacing: -.025em; word-break: keep-all; }
-  .pcard .sent mark { background: var(--pat-mark); color: var(--pat-ink); padding: 1px 3px; margin: 0 -1px; border-radius: 4px; font-weight: 800;
+  .pcard .sent mark { background: var(--pat-mark); color: var(--pat-ink); padding: 1px 3px; margin: 0 -1px; border-radius: var(--radius-sm); font-weight: 800;
     -webkit-box-decoration-break: clone; box-decoration-break: clone; }
   .pcard .reply { margin: 5px 0 0; color: var(--ink-3); font-size: 13px; font-weight: 500; word-break: keep-all; }
   .pcard .reply::before { content: "\21B3 "; color: var(--ink-4); }
-  .pcard .pmeta { margin: 8px 0 0; padding-top: 7px; border-top: 1px solid var(--line-soft);
-    display: flex; flex-wrap: wrap; align-items: baseline; gap: 3px 9px; }
+  .pcard .pmeta { margin: 10px 0 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 3px 9px; }
   .pcard .pname { color: var(--pat-ink); font-size: 12px; font-weight: 750; }
-  .pcard .pgloss { color: var(--ink-4); font-size: 11.5px; word-break: keep-all; }
+  .pcard .pgloss { color: var(--ink-4); font-size: 12px; word-break: keep-all; }
 
   /* 표현 — 훑을 때 눈에 걸리도록 글줄이 아니라 낱개로 앉힌다 */
   .said { display: flex; flex-wrap: wrap; gap: 6px; }
-  .said span { padding: 4px 11px; background: #fff; border: 1px solid var(--line); border-radius: 7px;
+  .said span { padding: 5px 10px; background: rgba(255,255,255,.88); border-radius: var(--radius-sm);
     color: var(--ink-2); font-size: 12.5px; font-weight: 600; }
   .rule { margin: 11px 0 0; max-width: 66ch; color: var(--ink-2); font-size: 12.5px; line-height: 1.7; word-break: keep-all; }
+
+  @media (max-width: 600px) {
+    .hero { padding-top: 26px; }
+    .hero-card { grid-template-columns: 1fr; gap: 26px; padding: 28px 22px; border-radius: 6px; }
+    h1 { font-size: 34px; }
+    .panel { padding: 16px; }
+    .curriculum-head { margin-top: 24px; padding: 16px; }
+    .band { margin-bottom: 12px; }
+    .ghead { grid-template-columns: auto minmax(0,1fr); gap: 10px 12px; padding: 14px; }
+    .gtitle { font-size: 16px; }
+    .gmeta { grid-column: 2; justify-content: flex-start; flex-wrap: wrap; gap: 4px 10px; }
+    .gbody { padding: 6px 14px 16px; }
+    .lrow { gap: 6px; }
+    .deck { padding: 5px 8px; }
+    .lesson.open .lrow { padding-right: 8px; }
+    .lesson.open .lrow-btn { padding-inline: 15px 8px; }
+    .ldetail { padding: 0 15px 18px; }
+    .field-goal { padding: 14px 14px 14px 46px; }
+    .pats { grid-template-columns: 1fr; }
+  }
 
 
   .empty { margin-top: 40px; color: var(--ink-3); font-size: 13.5px; text-align: center; }
   .empty.hide { display: none; }
-  .nextrack { display: flex; justify-content: space-between; gap: 14px; margin-top: 70px; padding-top: 22px; border-top: 1px solid var(--line); }
+  .nextrack { display: flex; justify-content: space-between; gap: 14px; margin-top: 70px; padding: 15px 17px;
+    border-radius: var(--radius-sm); background: var(--surface); }
   .nextrack a { color: var(--ink-3); font-size: 13px; font-weight: 600; }
   .nextrack a:hover { color: var(--ink); }
   footer { margin-top: 26px; color: var(--ink-4); font-size: 12px; line-height: 1.8; }
@@ -259,28 +300,32 @@
 <div class="wrap">
 
   <header class="hero">
-    <span class="hero-no" id="hno"></span>
-    <h1 id="h1"></h1>
-    <p class="hero-d" id="hd"></p>
-    <p class="hero-n" id="hn"></p>
-    <div class="panel">
-      <div class="figs" id="figs"></div>
-      <div id="distwrap"></div>
+    <div class="hero-card">
+      <div class="hero-copy">
+        <span class="hero-no" id="hno"></span>
+        <h1 id="h1"></h1>
+        <p class="hero-d" id="hd"></p>
+      </div>
+      <div class="panel">
+        <span class="overview-label">한눈에 보기</span>
+        <div class="figs" id="figs"></div>
+        <div id="distwrap"></div>
+      </div>
     </div>
-    <div class="links" id="links"></div>
   </header>
 
-  <div class="band" id="band"></div>
-
-  <div class="controls">
-    <div class="crow">
-      <input class="search" id="q" type="search" placeholder="과·패턴·표현 검색" autocomplete="off">
-      <button class="btn" id="expandUnits" type="button">단원 모두 펼치기</button>
-      <button class="btn deep" id="expandAll" type="button">과까지 모두 펼치기</button>
-      <span class="hits" id="hits"></span>
+  <section class="curriculum-head" aria-labelledby="curriculum-title">
+    <div class="band" id="band"></div>
+    <div class="controls">
+      <div class="crow">
+        <input class="search" id="q" type="search" placeholder="과·패턴·표현 검색" autocomplete="off">
+        <button class="btn" id="expandUnits" type="button">단원 모두 펼치기</button>
+        <button class="btn deep" id="expandAll" type="button">과까지 모두 펼치기</button>
+        <span class="hits" id="hits"></span>
+      </div>
+      <div class="crow" id="levelbar"></div>
     </div>
-    <div class="crow" id="levelbar"></div>
-  </div>
+  </section>
 
   <div class="groups" id="groups"></div>
   <div class="empty hide" id="empty">검색 결과가 없습니다.</div>
@@ -299,11 +344,6 @@ const T = DATA.track, LEVELS = DATA.levels;
 const DARK = new Set(["중고급", "고급"]);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const lvColor = lv => `var(--lv-${lv})`;
-/** 받침이 있으면 을, 없으면 를. 단위 이름이 트랙마다 달라서(단원·코스·테마·부) 필요하다. */
-const eul = w => {
-  const c = w.charCodeAt(w.length - 1);
-  return w + (c >= 0xAC00 && c <= 0xD7A3 && (c - 0xAC00) % 28 ? "을" : "를");
-};
 
 document.documentElement.style.setProperty("--ac", T.accent);
 document.documentElement.style.setProperty("--tint", T.tint);
@@ -312,7 +352,7 @@ document.getElementById("ttl").textContent = `${T.ko} · PODO 한국어 커리�
 /* ---------- 탭 ---------- */
 document.getElementById("tabs").innerHTML =
   `<a class="tab home" href="../catalog.html">← 카탈로그</a>` +
-  DATA.nav.map(n => `<a class="tab${n.id === T.id ? " on" : ""}" href="${esc(n.id)}.html"
+  DATA.nav.map(n => `<a class="tab${n.id === T.id ? " on" : ""}" href="${esc(n.id)}.html"${n.id === T.id ? ' aria-current="page"' : ""}
     style="--ac:${n.accent}"><em>${String(n.no).padStart(2, "0")}</em>${esc(n.ko)}</a>`).join("");
 
 /* ---------- 1단 ---------- */
@@ -320,35 +360,39 @@ document.getElementById("tabs").innerHTML =
   const span = T.span.length ? (T.span.length === 1 ? T.span[0] : `${T.span[0]} — ${T.span[T.span.length - 1]}`) : "전 레벨";
   const flag = T.status === "plan" ? " · 계획 단계" : T.status === "open" ? " · 계속 추가" : "";
   document.getElementById("hno").textContent = `트랙 ${String(T.no).padStart(2, "0")} · ${span}${flag}`;
-  document.getElementById("h1").innerHTML = `${esc(T.ko)}<span>${esc(T.en)}</span>`;
+  document.getElementById("h1").setAttribute("aria-label", `${T.ko} — ${T.en}`);
+  document.getElementById("h1").innerHTML = `${esc(T.ko)}<span aria-hidden="true">${esc(T.en)}</span>`;
   document.getElementById("hd").textContent = T.desc;
-  document.getElementById("hn").textContent = T.note;
   document.getElementById("figs").innerHTML =
     T.stats.map(s => `<div><b>${esc(s.v)}</b><span>${esc(s.k)}</span></div>`).join("");
 
   const used = LEVELS.filter(lv => T.dist[lv]);
+  document.querySelector(".panel").classList.toggle("single", used.length === 1);
+  document.getElementById("distwrap").hidden = used.length === 1;
   document.getElementById("distwrap").innerHTML = used.length
     ? `<div class="dist">${used.map(lv => `<i style="flex:${T.dist[lv]};background:${lvColor(lv)}"
         title="${lv} ${T.dist[lv]}${esc(T.lessonWord)}"></i>`).join("")}</div>
        <div class="dist-legend">${used.map(lv => `<span><i style="background:${lvColor(lv)}"></i>${lv} <b>${T.dist[lv]}</b></span>`).join("")}</div>`
     : `<div class="dist-legend"><span>특정 레벨에 묶이지 않습니다 — 튜터가 문제를 들은 시점에 한 과씩 꺼내 씁니다.</span></div>`;
 
-  document.getElementById("links").innerHTML = T.links.map(l =>
-    `<a class="${l.kind === "ghost" ? "" : "primary"}" href="../${esc(l.href)}">${esc(l.t)}</a>`).join("");
+  document.getElementById("q").placeholder = `${T.lessonWord}·패턴·표현 검색`;
+  document.getElementById("expandUnits").textContent = `${T.unitWord} 모두 펼치기`;
+  document.getElementById("expandAll").textContent = `${T.lessonWord}까지 모두 펼치기`;
   document.getElementById("src").textContent = `korean/tracks/${T.id}/table-of-contents.md`;
 }
 
 {
   const made = (T.decks || []).length;
   document.getElementById("band").innerHTML =
-    `<h2>${T.groups.length}개 ${esc(T.unitWord)} · ${T.total}${esc(T.lessonWord)}${made ? ` · 완성 덱 ${made}` : ""}</h2>
-     <p>${esc(eul(T.unitWord))} 눌러 펼치고, ${esc(eul(T.lessonWord))} 눌러 그 안을 봅니다.${
-       made ? " 덱이 나와 있는 과에는 <b>덱 열기</b> 가 붙습니다 — 새 탭에서 열립니다." : ""}</p>`;
+    `<h2 id="curriculum-title">커리큘럼</h2>
+     <p>${T.groups.length}개 ${esc(T.unitWord)}${made ? ` · 덱 ${made}` : ""}</p>`;
 }
 
+const usedLevels = LEVELS.filter(lv => T.dist[lv]);
+document.getElementById("levelbar").hidden = usedLevels.length < 2;
 document.getElementById("levelbar").innerHTML =
   `<span class="lbl" style="margin-right:4px">레벨</span>` +
-  LEVELS.filter(lv => T.dist[lv]).map(lv => `<button class="chip lv" type="button" data-lv="${lv}" aria-pressed="false">
+  usedLevels.map(lv => `<button class="chip lv" type="button" data-lv="${lv}" aria-pressed="false">
     <span class="dot" style="background:${lvColor(lv)}"></span>${lv}</button>`).join("");
 
 /* ---------- 3·4·5단 ---------- */
@@ -370,34 +414,56 @@ function marked(sentence, spans) {
   return out + esc(sentence.slice(last));
 }
 
+/** 한글 학습 항목 안의 낱자 묶음만 크게 보여 준다. 설명은 그대로 두어 규칙의 맥락을 잃지 않는다. */
+function markedJamo(text) {
+  return esc(text).replace(/[ㄱ-ㅎㅏ-ㅣ](?:[\s＋/·–→]*[ㄱ-ㅎㅏ-ㅣ])*/g,
+    chars => `<strong class="jamo">${chars}</strong>`);
+}
+
 /** 펼친 과는 라벨 붙은 칸 셋으로 이루어진다 — 무엇을 할 수 있게 되는가,
     무엇을 배우는가, 그리고 그것을 받쳐 주는 말. 트랙마다 칸의 이름만 달라진다. */
 function detail(l) {
   const fields = [];
+  const isHangul = T.id === "1-hangul";
+
+  // 한글에서는 배울 글자·규칙이 본문이고, 읽을 수 있는 단어는 그 결과를 확인하는 예시다.
+  if (isHangul && l.chips && l.chips.length) {
+    fields.push({kind: "hangul-core", label: "이번에 배우는 것",
+      body: `<div class="hangul-focus">${l.chips.map(c =>
+        `<div class="hangul-focus-item"><span>${markedJamo(c)}</span></div>`).join("")}</div>`});
+  }
+  if (isHangul && l.can) {
+    const words = l.can.split(" · ").map(w => w.trim()).filter(Boolean);
+    fields.push({kind: "hangul-practice", label: "읽기 연습",
+      body: `<div class="hangul-practice">${words.map(w => `<span>${esc(w)}</span>`).join("")}</div>`});
+  }
 
   // ① 이 과의 약속
-  if (l.can) {
+  if (l.can && !isHangul) {
     const words = l.can.split(" · ").map(w => w.trim()).filter(Boolean);
     const listy = words.length >= 3 && words.every(w => w.length <= 7);
-    fields.push([l.canLabel || "할 수 있는 것", listy
+    const goalLabel = l.canLabel === "읽을 수 있다" ? "읽기 목표"
+      : l.canLabel === "이야기한다" ? "대화 목표"
+      : l.canLabel === "일본어의 습관" ? "교정 포인트" : "이 과의 목표";
+    fields.push({kind: "goal", label: goalLabel, body: listy
       ? `<div class="words">${words.map(w => `<span>${esc(w)}</span>`).join("")}</div>`
-      : `<p class="goal">${esc(l.can)}</p>`]);
+      : `<p class="goal">${esc(l.can)}</p>`});
   }
 
   // ② 배우는 것 — 패턴이 있으면 예문 안에서 짚어 주고, 없으면 이름만 늘어놓는다
   const ps = (l.pats || []).filter(p => p.ex || p.pat);
   if (ps.length) {
-    fields.push([`배우는 패턴 ${ps.length}`, `<div class="pats">` + ps.map(p => `<div class="pcard">
+    fields.push({kind: "patterns", label: "핵심 패턴", body: `<div class="pats">` + ps.map(p => `<div class="pcard">
       ${p.ex ? `<p class="sent">${marked(p.ex, p.spans)}</p>` : ""}
       ${p.reply ? `<p class="reply">${esc(p.reply)}</p>` : ""}
       <div class="pmeta"><span class="pname">${esc(p.pat)}</span>
-        ${p.gloss ? `<span class="pgloss">${esc(p.gloss)}</span>` : ""}</div></div>`).join("") + `</div>`]);
+        ${p.gloss ? `<span class="pgloss">${esc(p.gloss)}</span>` : ""}</div></div>`).join("") + `</div>`});
   } else if (l.fix) {
-    fields.push(["고치는 법", `<p class="goal">${esc(l.fix)}</p>`]);
+    fields.push({kind: "goal", label: "고치는 법", body: `<p class="goal">${esc(l.fix)}</p>`});
   }
-  if (l.chips && l.chips.length && !ps.length) {
-    fields.push([l.fix ? "최소 대립쌍" : "배우는 것",
-      `<div class="said">${l.chips.map(c => `<span>${esc(c)}</span>`).join("")}</div>`]);
+  if (l.chips && l.chips.length && !ps.length && !isHangul) {
+    fields.push({kind: "items", label: l.fix ? "최소 대립쌍" : "배우는 것",
+      body: `<div class="said">${l.chips.map(c => `<span>${esc(c)}</span>`).join("")}</div>`});
   }
 
   // ③ 받쳐 주는 말 — 통째로 외워 쓰는 표현과, 딱 한 줄짜리 규칙
@@ -411,40 +477,42 @@ function detail(l) {
       ws = said.v.split(/\s*·\s*/).filter(Boolean);
       if (ws.length === 1) ws = ws[0].split(/\s*,\s*/).filter(Boolean);
     }
-    fields.push([said && rule ? "표현과 규칙" : said ? "표현" : "규칙",
-      (ws.length ? `<div class="said">${ws.map(w => `<span>${esc(w)}</span>`).join("")}</div>` : "")
-      + (rule ? `<p class="rule">${esc(rule.v)}</p>` : "")]);
+    fields.push({kind: "support", label: said && rule ? "표현과 규칙" : said ? "바로 쓰는 표현" : "규칙",
+      body: (ws.length ? `<div class="said">${ws.map(w => `<span>${esc(w)}</span>`).join("")}</div>` : "")
+      + (rule ? `<p class="rule">${esc(rule.v)}</p>` : "")});
   }
 
   if (!fields.length) return `<p class="scene">이 과의 상세는 목차 원문에 있습니다.</p>`;
   return (l.scene ? `<p class="scene">${esc(l.scene)}</p>` : "")
-    + fields.map(([lbl, body]) => `<div class="field"><span class="lbl">${esc(lbl)}</span>${body}</div>`).join("");
+    + fields.map(f => `<section class="field field-${f.kind}"><span class="lbl">${esc(f.label)}</span>${f.body}</section>`).join("");
 }
 
-function lessonRow(l) {
+function lessonRow(l, groupIndex, lessonIndex) {
   const c = chips(l);
-  const sub = l.sub || (c ? "" : l.can);
+  const firstLabel = `첫 ${T.lessonWord}`;
+  const sub = l.sub === firstLabel ? "" : l.sub || (c ? "" : l.can);
+  const firstTag = l.first ? `<span class="first-tag">${esc(firstLabel)}</span>` : "";
   const no = String(l.n).padStart(2, "0");
   // 덱이 있으면 그 과에서 곧장 수업 화면으로 나간다 — 카탈로그를 잃지 않도록 새 탭에서.
   const deck = l.deck
     ? `<a class="deck" href="../${esc(l.deck)}" target="_blank" rel="noopener"
          title="${esc(l.title)} 덱을 새 탭에서 엽니다">덱 열기 <span class="ext">↗</span></a>`
     : "";
+  const detailId = `group-${groupIndex + 1}-lesson-${lessonIndex + 1}-detail`;
   return `<div class="lesson" data-text="${esc([l.title, l.sub, l.can, l.scene, (l.chips||[]).join(" "), (l.notes||[]).map(n=>n.v).join(" ")].join(" ").toLowerCase())}">
     <div class="lrow">
-      <button class="lrow-btn" type="button">
+      <button class="lrow-btn" type="button" aria-expanded="false" aria-controls="${detailId}">
         <span class="lno">${esc(T.lessonWord)} ${no}</span>
-        <span class="ltitle">${esc(l.title)}${sub ? ` <em>— ${esc(sub)}</em>` : ""}</span>
+        <span class="ltitle">${esc(l.title)}${sub ? ` <em>— ${esc(sub)}</em>` : ""}${firstTag}</span>
         <span class="lchips">${c}</span>
-        <span class="lcaret"></span>
       </button>
       ${deck}
     </div>
-    <div class="ldetail">${detail(l)}</div>
+    <div class="ldetail" id="${detailId}">${detail(l)}</div>
   </div>`;
 }
 
-function group(g) {
+function group(g, index) {
   // 단원 머리에는 "이 단원이 무엇인가"만 둔다.
   //   · 패턴 목록은 바로 아래 과 목록이 이미 한 줄씩 들고 있다 — 같은 것을 두 번 적는 셈이었다
   //   · 단원 설명문은 이 커리큘럼을 왜 이렇게 짰는지에 대한 메모라, 훑어보는 자리에 놓일 글이 아니다
@@ -458,17 +526,18 @@ function group(g) {
     head += `<p class="gcan"><b class="lbl">끝내면 할 수 있는 것</b>${esc(g.blurb)}</p>`;
   }
 
+  const bodyId = `group-${index + 1}-body`;
   return `<div class="group" data-lv="${esc(g.level || "")}">
-    <button class="ghead" type="button">
+    <button class="ghead" type="button" aria-expanded="false" aria-controls="${bodyId}">
       <span class="gnum">${esc(g.label)}</span>
       <span class="gtitle">${esc(g.title)}${g.subtitle ? `<em>${esc(g.subtitle)}</em>` : ""}</span>
       <span class="gmeta">${g.peak ? `<span>핵심 ${g.peak}과까지</span>` : ""}${g.form ? `<span>${esc(g.form)}</span>` : ""}
         ${g.level ? `<span class="lv-tag"><i style="background:${lvColor(g.level)}"></i>${esc(g.levelText || g.level)}</span>` : ""}
         <span>${g.lessons.length}${esc(T.lessonWord)}</span><span class="caret"></span></span>
     </button>
-    <div class="gbody">
+    <div class="gbody" id="${bodyId}">
       ${head}
-      <div class="lessons">${g.lessons.map(lessonRow).join("")}</div>
+      <div class="lessons">${g.lessons.map((l, lessonIndex) => lessonRow(l, index, lessonIndex)).join("")}</div>
     </div>
   </div>`;
 }
@@ -486,16 +555,19 @@ $groups.innerHTML = T.groups.map(group).join("");
 }
 
 /* ---------- behaviour ---------- */
-const $controls = document.querySelector(".controls");
-const controlsTop = $controls.getBoundingClientRect().top + scrollY;
-addEventListener("scroll", () => $controls.classList.toggle("stuck", scrollY > controlsTop - 47), { passive: true });
-
 $groups.addEventListener("click", e => {
   if (e.target.closest(".deck")) return;          // 덱 링크는 펼치기가 아니라 나가기다
   const head = e.target.closest(".ghead");
-  if (head) { head.parentElement.classList.toggle("open"); return; }
+  if (head) {
+    const open = head.parentElement.classList.toggle("open");
+    head.setAttribute("aria-expanded", open);
+    return;
+  }
   const row = e.target.closest(".lrow-btn");
-  if (row) { row.closest(".lesson").classList.toggle("open"); }
+  if (row) {
+    const open = row.closest(".lesson").classList.toggle("open");
+    row.setAttribute("aria-expanded", open);
+  }
 });
 
 const $q = document.getElementById("q");
@@ -517,7 +589,10 @@ function apply() {
     g.classList.toggle("hide", inGroup === 0);
     if (inGroup) shown++;
     hits += inGroup;
-    if (q) g.classList.add("open");
+    if (q) {
+      g.classList.add("open");
+      g.querySelector(".ghead")?.setAttribute("aria-expanded", "true");
+    }
   });
   const filtering = q || activeLevels.size;
   $hits.textContent = filtering ? `${hits}${T.lessonWord} · ${shown}${T.unitWord}` : "";
@@ -550,19 +625,27 @@ const $units = document.getElementById("expandUnits");
 const $all = document.getElementById("expandAll");
 
 function setOpen(units, lessons) {
-  document.querySelectorAll(".group").forEach(g => g.classList.toggle("open", units));
-  document.querySelectorAll(".lesson").forEach(l => l.classList.toggle("open", lessons));
+  document.querySelectorAll(".group").forEach(g => {
+    g.classList.toggle("open", units);
+    g.querySelector(".ghead")?.setAttribute("aria-expanded", units);
+  });
+  document.querySelectorAll(".lesson").forEach(l => {
+    l.classList.toggle("open", lessons);
+    l.querySelector(".lrow-btn")?.setAttribute("aria-expanded", lessons);
+  });
   $units.classList.toggle("on", units && !lessons);
   $all.classList.toggle("on", lessons);
-  $units.textContent = units && !lessons ? "단원 모두 접기" : "단원 모두 펼치기";
-  $all.textContent = lessons ? "과까지 모두 접기" : "과까지 모두 펼치기";
+  $units.textContent = units && !lessons ? `${T.unitWord} 모두 접기` : `${T.unitWord} 모두 펼치기`;
+  $all.textContent = lessons ? `${T.lessonWord}까지 모두 접기` : `${T.lessonWord}까지 모두 펼치기`;
 }
 $units.addEventListener("click", () => setOpen(!$units.classList.contains("on"), false));
 $all.addEventListener("click", () => { const on = !$all.classList.contains("on"); setOpen(on, on); });
 
 // 들어오자마자 첫 단원은 열어 둔다 — 이 페이지는 이미 한 트랙으로 좁혀진 자리라,
 // 무엇이 들어 있는지 한 번은 보여 주는 편이 낫다.
-document.querySelector(".group")?.classList.add("open");
+const firstGroup = document.querySelector(".group");
+firstGroup?.classList.add("open");
+firstGroup?.querySelector(".ghead")?.setAttribute("aria-expanded", "true");
 </script>
 </body>
 </html>

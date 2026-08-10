@@ -522,6 +522,40 @@ def attach_decks(track: str, groups: list[dict]) -> list[dict]:
     return made
 
 
+# 코스 폴더가 생기기 전에 만든 완성 레슨. 상단의 별도 링크로 빼지 않고,
+# 이제는 실제로 속한 목차 행의 덱으로 붙인다. 체험판은 같은 수업의 래퍼라 싣지 않는다.
+STANDALONE_DECKS = {
+    "1-hangul": ("글자 블록과 첫 소리", "tracks/1-hangul/sample-lesson.html"),
+    "3-contextual-korean": ("첫 만남", "tracks/3-contextual-korean/sample-lesson.html"),
+    "4-freetalking": ("로또 1등에 당첨된다면", "tracks/4-freetalking/sample-lesson.html"),
+}
+
+
+def attach_standalone_deck(track: str, groups: list[dict], made: list[dict]) -> None:
+    """예전 sample-lesson.html 을 별도 샘플이 아니라 해당 목차 행의 완성 덱으로 붙인다."""
+    target = STANDALONE_DECKS.get(track)
+    if not target:
+        return
+    title, href = target
+    for g in groups:
+        for lesson in g["lessons"]:
+            if lesson["title"] == title:
+                if not lesson.get("deck"):
+                    lesson["deck"] = href
+                    made.append({"n": lesson["n"], "title": title, "href": href,
+                                 "group": g.get("label", "")})
+                return
+    raise RuntimeError(f"{track}: standalone deck target not found: {title}")
+
+
+def mark_first_lesson(groups: list[dict]) -> None:
+    """워밍업 은행이 아닌 커리큘럼의 실제 시작점 하나만 표시한다."""
+    for g in groups:
+        if not g.get("warmup") and g["lessons"]:
+            g["lessons"][0]["first"] = True
+            return
+
+
 # ---------------------------------------------------------------- assembly
 
 def count_by_level(groups: list[dict]) -> dict[str, int]:
@@ -557,9 +591,6 @@ def build() -> dict:
             "note": "《세종학당 한국어 입문》과 같은 순서 — 모음 → 자음 → 격음 → 경음 → 받침 → 연음.",
             "stats": [("레슨", len(hangul[0]["lessons"]) + len(hangul[1]["lessons"]) + len(hangul[2]["lessons"])),
                       ("부", len(hangul)), ("복습 회차", 4)],
-            "links": [("샘플 레슨", "tracks/1-hangul/sample-lesson.html", "primary"),
-                      ("목차 원문", "viewer.html?doc=tracks/1-hangul/table-of-contents.md", "ghost"),
-                      ("체험 미니 레슨", "trial/lessons/trial-1-hangul-short.html", "ghost")],
             "groups": hangul,
         },
         {
@@ -573,14 +604,6 @@ def build() -> dict:
                       ("패턴", core_patterns)],
             # 완성 덱은 이제 코스 밑에 산다 — tools/plan_courses.py 가 트랙을
             # 코스로 끊은 뒤로 경로가 courses/<코스>/lessons/<슬러그>/lesson.html 이다.
-            "links": [("샘플 레슨", "tracks/2-core-patterns/sample-lesson.html", "primary"),
-                      ("7과 · 완성 덱",
-                       "tracks/2-core-patterns/courses/core-beginner-1/lessons/07-daily-routine/lesson.html",
-                       "ghost"),
-                      ("8과 · 완성 덱",
-                       "tracks/2-core-patterns/courses/core-beginner-1/lessons/08-place-particles/lesson.html",
-                       "ghost"),
-                      ("목차 원문", "viewer.html?doc=tracks/2-core-patterns/table-of-contents.md", "ghost")],
             "groups": core,
         },
         {
@@ -592,9 +615,6 @@ def build() -> dict:
             "note": "패턴마다 핵심 트랙의 과 번호가 붙습니다. 그 숫자는 문(gate)이 아니라 참고이고, "
                     "실제 조건은 코스마다 하나씩인 입장 바닥입니다.",
             "stats": [("레슨", ctx_lessons), ("코스", len(ctx)), ("커리큘럼", 4)],
-            "links": [("샘플 레슨 · 드라마", "tracks/3-contextual-korean/sample-lesson.html", "primary"),
-                      ("목차 원문", "viewer.html?doc=tracks/3-contextual-korean/table-of-contents.md", "ghost"),
-                      ("체험 미니 레슨", "trial/lessons/trial-3-contextual-short.html", "ghost")],
             "groups": ctx,
         },
         {
@@ -606,9 +626,6 @@ def build() -> dict:
             "note": "한 세션 = 워밍업 5분(밸런스 게임) + 본 주제 30분 + 마무리 5분(고쳐 준 문장 세 개 다시 말하기).",
             "stats": [("주제", free_topics), ("테마", len([g for g in free if not g.get('warmup')])),
                       ("워밍업", free_warmups)],
-            "links": [("샘플 레슨", "tracks/4-freetalking/sample-lesson.html", "primary"),
-                      ("목차 원문", "viewer.html?doc=tracks/4-freetalking/table-of-contents.md", "ghost"),
-                      ("체험 미니 레슨", "trial/lessons/trial-4-freetalking-short.html", "ghost")],
             "groups": free,
         },
         {
@@ -620,20 +637,20 @@ def build() -> dict:
             "note": "아직 덱이 없는 계획 단계. 레슨은 서로 독립적이라 튜터가 문제를 들은 순간 한 과씩 꺼내 쓸 수 있습니다.",
             "stats": [("레슨", sum(len(g["lessons"]) for g in pron)), ("부", len(pron)),
                       ("상태", "계획")],
-            "links": [("목차 원문", "viewer.html?doc=tracks/5-pronunciation/table-of-contents.md", "ghost")],
             "groups": pron,
         },
     ]
 
     for t in tracks:
         t["stats"] = [{"k": k, "v": v} for k, v in t["stats"]]
-        t["links"] = [{"t": a, "href": b, "kind": c} for a, b, c in t["links"]]
         t["dist"] = count_by_level(t["groups"])
         spans = [lv for g in t["groups"] for lv in level_span(g.get("levelText") or g.get("level") or "")
                  if g.get("levelText") or g.get("level")]
         t["span"] = [lv for lv in LEVELS if lv in spans]
         t["total"] = sum(len(g["lessons"]) for g in t["groups"] if not g.get("warmup"))
         t["decks"] = attach_decks(t["id"], t["groups"])
+        attach_standalone_deck(t["id"], t["groups"], t["decks"])
+        mark_first_lesson(t["groups"])
 
     totals = {
         "tracks": len(tracks),

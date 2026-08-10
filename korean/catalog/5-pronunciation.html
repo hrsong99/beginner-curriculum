@@ -106,13 +106,6 @@
   .dist-legend i { width: 8px; height: 8px; border-radius: 1px; box-shadow: inset 0 0 0 1px rgba(0,0,0,.08); }
   .dist-legend b { font-weight: 750; font-variant-numeric: tabular-nums; }
 
-  .links { display: flex; flex-wrap: wrap; gap: 7px; margin: 21px 0 0; }
-  .links a { padding: 8px 13px; border: 1px solid rgba(22,24,26,.12); border-radius: var(--radius-sm);
-    font-size: 12px; font-weight: 650; color: var(--ink-2); background: rgba(255,255,255,.78); }
-  .links a:hover { color: var(--ink); background: #fff; border-color: var(--ink-3); }
-  .links a.primary { border-color: var(--ac); background: var(--ac); color: #fff; box-shadow: none; }
-  .links a.primary:hover { filter: brightness(.92); }
-
   /* ---------- 2단 · 찾아보기 ---------- */
   .curriculum-head { margin: 34px 0 0; padding: 20px; border-radius: var(--radius); background: #f4f6f8; }
   .band { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin: 0 0 14px; }
@@ -182,11 +175,11 @@
   .lesson.hide { display: none; }
   .lrow { display: flex; align-items: center; gap: 10px; }
   .lrow-btn { flex: 1 1 auto; min-width: 0;
-    display: grid; grid-template-columns: 58px minmax(0,1fr) minmax(0,auto) 14px; align-items: baseline; gap: 16px;
+    display: grid; grid-template-columns: 58px minmax(0,1fr) minmax(0,auto); align-items: baseline; gap: 16px;
     width: 100%; padding: 12px 13px; border: 0; border-radius: var(--radius-sm); background: none; font: inherit; text-align: left; cursor: pointer; }
   /* 덱이 나와 있는 과에만 붙는 문. 여기는 4단이라 트랙색을 쓰지 않는다 —
      색을 여기까지 내리면 펼친 과 안의 살구색 mark 가 묻힌다. */
-  .deck { flex: 0 0 auto; padding: 5px 11px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: #fff;
+  .deck { flex: 0 0 auto; margin-right: 13px; padding: 5px 11px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: #fff;
     color: var(--ink-2); font-size: 11.5px; font-weight: 700; white-space: nowrap; }
   .deck:hover { border-color: var(--ink); color: var(--ink); }
   .deck .ext { color: var(--ink-4); font-size: 10px; }
@@ -196,16 +189,13 @@
   .lno { color: var(--ac); font-size: 12px; font-weight: 750; font-variant-numeric: tabular-nums; }
   .ltitle { min-width: 0; font-size: 14.5px; font-weight: 650; letter-spacing: -.015em; word-break: keep-all; transition: color .12s; }
   .ltitle em { font-style: normal; color: var(--ink-3); font-weight: 450; letter-spacing: 0; }
+  .first-tag { display: inline-block; margin-left: 8px; padding: 2px 6px; border: 1px solid color-mix(in srgb, var(--ac) 28%, var(--line));
+    border-radius: var(--radius-sm); color: var(--ac); font-size: 10px; font-weight: 750; letter-spacing: .02em; vertical-align: 1px; }
   .ltitle mark { background: var(--lime); color: var(--ink); border-radius: var(--radius-sm); padding: 0 2px; }
   .lchips { display: none; }
   .lchips .pat { max-width: 26ch; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 500; }
   .lchips .sep, .lchips .pat.ref { color: var(--ink-4); }
-  @media (max-width: 760px) { .lchips { display: none; } .lrow-btn { grid-template-columns: 46px minmax(0,1fr) 14px; } }
-  .lcaret { color: var(--line); font-size: 9px; transition: color .12s; }
-  .lcaret::before { content: "\25B8"; }
-  .lrow-btn:hover .lcaret { color: var(--ink-3); }
-  .lesson.open .lcaret { color: var(--ink-3); }
-  .lesson.open .lcaret::before { content: "\25BE"; }
+  @media (max-width: 760px) { .lchips { display: none; } .lrow-btn { grid-template-columns: 46px minmax(0,1fr); } }
 
   /* ---------- 5단 · 펼친 과 ----------
      펼친 과는 얇은 외곽선과 옅은 바닥 하나로만 선택 상태를 만든다. 제목 → 할 수 있는
@@ -213,7 +203,8 @@
   .lesson.open { margin: 5px 0 10px; border: 1px solid color-mix(in srgb, var(--ac) 42%, #d7dce0);
     background: color-mix(in srgb, var(--tint) 58%, white); border-radius: var(--radius); box-shadow: none; }
   .lesson.open .lrow { padding-right: 16px; }
-  .lesson.open .lrow-btn { grid-template-columns: auto minmax(0,1fr) 14px; gap: 12px; padding: 17px 18px 12px; }
+  .lesson.open .lrow-btn { grid-template-columns: auto minmax(0,1fr); gap: 12px; padding: 17px 18px 12px; }
+  .lesson.open .deck { margin-right: 0; }
   .lesson.open .lrow-btn:hover { background: transparent; }
   .lesson.open .lno { padding: 3px 8px; border-radius: var(--radius-sm); background: var(--ac); color: #fff; font-weight: 750; }
   .lesson.open .ltitle { font-size: 16px; font-weight: 750; letter-spacing: -.02em; }
@@ -239,6 +230,20 @@
   .words { display: flex; flex-wrap: wrap; gap: 6px; }
   .words span { padding: 5px 10px; background: color-mix(in srgb, var(--tint) 55%, white); border-radius: var(--radius-sm); font-size: 16px; font-weight: 700; }
   .scene { margin: 0 0 16px; max-width: 62ch; color: var(--ink-3); font-size: 12.5px; line-height: 1.6; word-break: keep-all; }
+
+  /* 한글 트랙에서는 단어가 결과 예시이고, 실제 학습 대상은 낱자와 조합 규칙이다.
+     그래서 글자·규칙을 가장 큰 면에, 읽기 예시는 조용한 보조 줄에 둔다. */
+  .hangul-focus { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; }
+  .hangul-focus-item { min-height: 66px; display: flex; align-items: center; padding: 14px 16px;
+    border-radius: var(--radius-sm); background: rgba(255,255,255,.9); color: var(--ink); font-size: 15px;
+    font-weight: 700; line-height: 1.65; word-break: keep-all; }
+  .hangul-focus-item .jamo { display: inline-block; margin: 0 2px; padding: 1px 5px;
+    border-radius: var(--radius-sm); background: color-mix(in srgb, var(--ac) 12%, white); color: var(--ac);
+    font-size: 21px; font-weight: 800; line-height: 1.35; letter-spacing: .035em; vertical-align: -1px; }
+  .field-hangul-practice { margin-top: 16px; }
+  .hangul-practice { display: flex; flex-wrap: wrap; align-items: center; gap: 5px 0; max-width: 72ch; }
+  .hangul-practice span { color: var(--ink-3); font-size: 13px; font-weight: 600; }
+  .hangul-practice span:not(:last-child)::after { content: "\00B7"; margin: 0 9px; color: var(--ink-4); }
 
   /* 페이지에서 채운 색은 트랙색과 이 살구색뿐이고, 트랙색은 3단 위쪽에만 있다.
      그래서 과를 펼쳤을 때 그 안에서 유일하게 칠해진 것이 배우는 조각이 된다. */
@@ -300,7 +305,6 @@
         <span class="hero-no" id="hno"></span>
         <h1 id="h1"></h1>
         <p class="hero-d" id="hd"></p>
-        <div class="links" id="links"></div>
       </div>
       <div class="panel">
         <span class="overview-label">한눈에 보기</span>
@@ -335,7 +339,7 @@
 </div>
 
 <script>
-const DATA = {"levels":["왕초급","초급","초중급","중급","중고급","고급"],"track":{"id":"5-pronunciation","no":5,"ko":"발음 교정","en":"Pronunciation","glyph":"音","status":"plan","accent":"#69737d","tint":"#f4f5f7","unitWord":"부","lessonWord":"레슨","desc":"일본어 화자의 한국어를 어색하게 만드는 지점만 골라 고칩니다. 일반적인 발음 강의가 아니라, 일본어에 한 칸뿐인 자리에 한국어가 두세 칸을 두는 곳의 목록입니다.","note":"아직 덱이 없는 계획 단계. 레슨은 서로 독립적이라 튜터가 문제를 들은 순간 한 과씩 꺼내 쓸 수 있습니다.","stats":[{"k":"레슨","v":10},{"k":"부","v":4},{"k":"상태","v":"계획"}],"links":[{"t":"목차 원문","href":"viewer.html?doc=tracks/5-pronunciation/table-of-contents.md","kind":"ghost"}],"groups":[{"label":"1부","title":"모음 — 일본어가 하나로 합쳐 버리는 모음","level":"","blurb":"","lessons":[{"n":1,"title":"ㅓ vs ㅗ","sub":"","can":"둘 다 オ로 떨어져서 거기와 고기가 같은 소리로 나옵니다","canLabel":"일본어의 습관","fix":"ㅓ = 唇を丸めない・あごを下げる · ㅗ = 唇をしっかり丸めて前に","level":"","chips":["거기 / 고기","서리 / 소리","널다 / 놀다","벌 / 볼","정말 / 종말"]},{"n":2,"title":"ㅡ vs ㅜ","sub":"","can":"둘 다 ウ로 떨어집니다. 일본어 ウ는 둘 사이에 있다가 ㅜ 쪽으로 끌려갑니다","canLabel":"일본어의 습관","fix":"ㅡ = 唇を横に引いたまま · ㅜ = 唇を丸く突き出して","level":"","chips":["글 / 굴","는 / 눈","들 / 둘","은행 / 운행"]}]},{"label":"2부","title":"자음 — 두 갈래와 세 갈래","level":"","blurb":"","lessons":[{"n":3,"title":"평음 vs 격음","sub":"ㄱㅋ · ㄷㅌ · ㅂㅍ · ㅈㅊ","can":"일본어는 유성 / 무성으로 갈리지만 한국어는 바람으로 갈립니다. か가 ㅋ·ㄱ 사이에서 헷갈립니다","canLabel":"일본어의 습관","fix":"手のひらを口の前に — 격음은 바람이 나가고 평음은 나가지 않습니다","level":"","chips":["개 / 캐","달 / 탈","불 / 풀","자다 / 차다"]},{"n":4,"title":"경음","sub":"ㄲㄸㅃㅆㅉ","can":"일본어에 자리가 아예 없는 유일한 계열 — 대개 평음으로 삼켜집니다","canLabel":"일본어의 습관","fix":"촉음에 겁니다: 「いっぱい」の「ぱ」= ㅃ. 힘을 주고, 바람 없이, 짧게 끊습니다","level":"","chips":["사다 / 싸다","자다 / 짜다","달 / 딸","방 / 빵","개 / 깨"]},{"n":5,"title":"어두는 안 울린다","sub":"어두 무성음화","can":"단어 첫머리에서 ㅂ→ば, ㄱ→が로 울립니다. 글자를 다 맞게 읽어도 외국어처럼 들리는 이유가 이것입니다","canLabel":"일본어의 습관","fix":"語頭は濁らない、語中で濁る。同じ字が位置で変わる","level":"","chips":["부부 [pubu]","고기 [kogi]","바다 [pada]","도도 [todo]"]},{"n":6,"title":"ㄹ","sub":"","can":"어중에서는 ら로 괜찮지만 받침 자리에서는 틀리고, ㄹㄹ은 뭉개집니다","canLabel":"일본어의 습관","fix":"어중 ㄹ ≈ ら (탄설음) · 받침 ㄹ = 舌先を歯ぐきにつけたまま離さない (설측음) · ㄹㄹ = 길게 끕니다","level":"","chips":["사랑","우리 / 발","물","서울 / 빨리","걸릴"]}]},{"label":"3부","title":"받침 — ん과 っ가 각각 셋으로 갈라지는 자리","level":"","blurb":"","lessons":[{"n":7,"title":"받침 ㄴ · ㅁ · ㅇ","sub":"","can":"일본어에서는 셋 다 ん이고, 뒤에 오는 소리가 알아서 골라 줍니다. 한국어에서는 서로 다른 세 단어입니다","canLabel":"일본어의 습관","fix":"ㄴ = 舌先を歯ぐきに · ㅁ = 唇を閉じる · ㅇ = 舌の奥を上げ口は開けたまま","level":"","chips":["산 / 삼 / 상","반 / 밤 / 방"]},{"n":8,"title":"받침 ㄱ · ㄷ · ㅂ","sub":"","can":"셋 다 っ입니다. 그리고 더 큰 오류 하나 — 모음을 붙입니다: 밥 → ぱぷ","canLabel":"일본어의 습관","fix":"止めて、離さない。母音を足さない","level":"","chips":["박 / 받 / 밥","국 / 굳 / 굽"]},{"n":9,"title":"연음 — 받침이 넘어갈 때","sub":"","can":"블록을 하나씩 끊어 읽어서, 쓰인 한국어와 말하는 한국어가 끝내 만나지 않습니다","canLabel":"일본어의 습관","fix":"받침이 뒤의 빈 ㅇ으로 넘어가고, ㅎ은 약해지고, 받침＋ㄴ/ㅁ은 비음이 됩니다","level":"","chips":["한국어→한구거","음악→으막","밥이→바비","좋아요→조아요","값이→갑씨","한국말→한궁말"]}]},{"label":"4부","title":"억양 — 단어가 아니라 문장","level":"","blurb":"","lessons":[{"n":10,"title":"문장 끝 억양","sub":"","can":"일본어의 고저 악센트는 단어 단위이고, 한국어의 억양 곡선은 구 단위입니다. 평평하게 말하면 차갑거나 기계처럼 들립니다","canLabel":"일본어의 습관","fix":"같은 글자, 곡선만으로 달라지는 뜻 — 네 가지 끝맺음을 이어서 연습합니다","level":"","chips":["학생이에요↘ / 학생이에요?↗ / 맛있죠?↗ / 진짜 싸네요!↘"]}]}],"dist":{},"span":[],"total":10,"decks":[]},"nav":[{"id":"1-hangul","no":1,"ko":"한글 읽기","accent":"#4f7d10","total":14,"lessonWord":"레슨","decks":13},{"id":"2-core-patterns","no":2,"ko":"핵심 문법 패턴","accent":"#2b5fd9","total":116,"lessonWord":"과","decks":19},{"id":"3-contextual-korean","no":3,"ko":"상황별 한국어","accent":"#c22a5f","total":140,"lessonWord":"레슨","decks":0},{"id":"4-freetalking","no":4,"ko":"고급 프리토킹","accent":"#0080a8","total":91,"lessonWord":"주제","decks":0},{"id":"5-pronunciation","no":5,"ko":"발음 교정","accent":"#69737d","total":10,"lessonWord":"레슨","decks":0}]};
+const DATA = {"levels":["왕초급","초급","초중급","중급","중고급","고급"],"track":{"id":"5-pronunciation","no":5,"ko":"발음 교정","en":"Pronunciation","glyph":"音","status":"plan","accent":"#69737d","tint":"#f4f5f7","unitWord":"부","lessonWord":"레슨","desc":"일본어 화자의 한국어를 어색하게 만드는 지점만 골라 고칩니다. 일반적인 발음 강의가 아니라, 일본어에 한 칸뿐인 자리에 한국어가 두세 칸을 두는 곳의 목록입니다.","note":"아직 덱이 없는 계획 단계. 레슨은 서로 독립적이라 튜터가 문제를 들은 순간 한 과씩 꺼내 쓸 수 있습니다.","stats":[{"k":"레슨","v":10},{"k":"부","v":4},{"k":"상태","v":"계획"}],"groups":[{"label":"1부","title":"모음 — 일본어가 하나로 합쳐 버리는 모음","level":"","blurb":"","lessons":[{"n":1,"title":"ㅓ vs ㅗ","sub":"","can":"둘 다 オ로 떨어져서 거기와 고기가 같은 소리로 나옵니다","canLabel":"일본어의 습관","fix":"ㅓ = 唇を丸めない・あごを下げる · ㅗ = 唇をしっかり丸めて前に","level":"","chips":["거기 / 고기","서리 / 소리","널다 / 놀다","벌 / 볼","정말 / 종말"],"first":true},{"n":2,"title":"ㅡ vs ㅜ","sub":"","can":"둘 다 ウ로 떨어집니다. 일본어 ウ는 둘 사이에 있다가 ㅜ 쪽으로 끌려갑니다","canLabel":"일본어의 습관","fix":"ㅡ = 唇を横に引いたまま · ㅜ = 唇を丸く突き出して","level":"","chips":["글 / 굴","는 / 눈","들 / 둘","은행 / 운행"]}]},{"label":"2부","title":"자음 — 두 갈래와 세 갈래","level":"","blurb":"","lessons":[{"n":3,"title":"평음 vs 격음","sub":"ㄱㅋ · ㄷㅌ · ㅂㅍ · ㅈㅊ","can":"일본어는 유성 / 무성으로 갈리지만 한국어는 바람으로 갈립니다. か가 ㅋ·ㄱ 사이에서 헷갈립니다","canLabel":"일본어의 습관","fix":"手のひらを口の前に — 격음은 바람이 나가고 평음은 나가지 않습니다","level":"","chips":["개 / 캐","달 / 탈","불 / 풀","자다 / 차다"]},{"n":4,"title":"경음","sub":"ㄲㄸㅃㅆㅉ","can":"일본어에 자리가 아예 없는 유일한 계열 — 대개 평음으로 삼켜집니다","canLabel":"일본어의 습관","fix":"촉음에 겁니다: 「いっぱい」の「ぱ」= ㅃ. 힘을 주고, 바람 없이, 짧게 끊습니다","level":"","chips":["사다 / 싸다","자다 / 짜다","달 / 딸","방 / 빵","개 / 깨"]},{"n":5,"title":"어두는 안 울린다","sub":"어두 무성음화","can":"단어 첫머리에서 ㅂ→ば, ㄱ→が로 울립니다. 글자를 다 맞게 읽어도 외국어처럼 들리는 이유가 이것입니다","canLabel":"일본어의 습관","fix":"語頭は濁らない、語中で濁る。同じ字が位置で変わる","level":"","chips":["부부 [pubu]","고기 [kogi]","바다 [pada]","도도 [todo]"]},{"n":6,"title":"ㄹ","sub":"","can":"어중에서는 ら로 괜찮지만 받침 자리에서는 틀리고, ㄹㄹ은 뭉개집니다","canLabel":"일본어의 습관","fix":"어중 ㄹ ≈ ら (탄설음) · 받침 ㄹ = 舌先を歯ぐきにつけたまま離さない (설측음) · ㄹㄹ = 길게 끕니다","level":"","chips":["사랑","우리 / 발","물","서울 / 빨리","걸릴"]}]},{"label":"3부","title":"받침 — ん과 っ가 각각 셋으로 갈라지는 자리","level":"","blurb":"","lessons":[{"n":7,"title":"받침 ㄴ · ㅁ · ㅇ","sub":"","can":"일본어에서는 셋 다 ん이고, 뒤에 오는 소리가 알아서 골라 줍니다. 한국어에서는 서로 다른 세 단어입니다","canLabel":"일본어의 습관","fix":"ㄴ = 舌先を歯ぐきに · ㅁ = 唇を閉じる · ㅇ = 舌の奥を上げ口は開けたまま","level":"","chips":["산 / 삼 / 상","반 / 밤 / 방"]},{"n":8,"title":"받침 ㄱ · ㄷ · ㅂ","sub":"","can":"셋 다 っ입니다. 그리고 더 큰 오류 하나 — 모음을 붙입니다: 밥 → ぱぷ","canLabel":"일본어의 습관","fix":"止めて、離さない。母音を足さない","level":"","chips":["박 / 받 / 밥","국 / 굳 / 굽"]},{"n":9,"title":"연음 — 받침이 넘어갈 때","sub":"","can":"블록을 하나씩 끊어 읽어서, 쓰인 한국어와 말하는 한국어가 끝내 만나지 않습니다","canLabel":"일본어의 습관","fix":"받침이 뒤의 빈 ㅇ으로 넘어가고, ㅎ은 약해지고, 받침＋ㄴ/ㅁ은 비음이 됩니다","level":"","chips":["한국어→한구거","음악→으막","밥이→바비","좋아요→조아요","값이→갑씨","한국말→한궁말"]}]},{"label":"4부","title":"억양 — 단어가 아니라 문장","level":"","blurb":"","lessons":[{"n":10,"title":"문장 끝 억양","sub":"","can":"일본어의 고저 악센트는 단어 단위이고, 한국어의 억양 곡선은 구 단위입니다. 평평하게 말하면 차갑거나 기계처럼 들립니다","canLabel":"일본어의 습관","fix":"같은 글자, 곡선만으로 달라지는 뜻 — 네 가지 끝맺음을 이어서 연습합니다","level":"","chips":["학생이에요↘ / 학생이에요?↗ / 맛있죠?↗ / 진짜 싸네요!↘"]}]}],"dist":{},"span":[],"total":10,"decks":[]},"nav":[{"id":"1-hangul","no":1,"ko":"한글 읽기","accent":"#4f7d10","total":14,"lessonWord":"레슨","decks":14},{"id":"2-core-patterns","no":2,"ko":"핵심 문법 패턴","accent":"#2b5fd9","total":116,"lessonWord":"과","decks":29},{"id":"3-contextual-korean","no":3,"ko":"상황별 한국어","accent":"#c22a5f","total":140,"lessonWord":"레슨","decks":1},{"id":"4-freetalking","no":4,"ko":"고급 프리토킹","accent":"#0080a8","total":91,"lessonWord":"주제","decks":1},{"id":"5-pronunciation","no":5,"ko":"발음 교정","accent":"#69737d","total":10,"lessonWord":"레슨","decks":0}]};
 const T = DATA.track, LEVELS = DATA.levels;
 const DARK = new Set(["중고급", "고급"]);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -371,8 +375,6 @@ document.getElementById("tabs").innerHTML =
        <div class="dist-legend">${used.map(lv => `<span><i style="background:${lvColor(lv)}"></i>${lv} <b>${T.dist[lv]}</b></span>`).join("")}</div>`
     : `<div class="dist-legend"><span>특정 레벨에 묶이지 않습니다 — 튜터가 문제를 들은 시점에 한 과씩 꺼내 씁니다.</span></div>`;
 
-  document.getElementById("links").innerHTML = T.links.map(l =>
-    `<a class="${l.kind === "ghost" ? "" : "primary"}" href="../${esc(l.href)}">${esc(l.t)}</a>`).join("");
   document.getElementById("q").placeholder = `${T.lessonWord}·패턴·표현 검색`;
   document.getElementById("expandUnits").textContent = `${T.unitWord} 모두 펼치기`;
   document.getElementById("expandAll").textContent = `${T.lessonWord}까지 모두 펼치기`;
@@ -412,13 +414,32 @@ function marked(sentence, spans) {
   return out + esc(sentence.slice(last));
 }
 
+/** 한글 학습 항목 안의 낱자 묶음만 크게 보여 준다. 설명은 그대로 두어 규칙의 맥락을 잃지 않는다. */
+function markedJamo(text) {
+  return esc(text).replace(/[ㄱ-ㅎㅏ-ㅣ](?:[\s＋/·–→]*[ㄱ-ㅎㅏ-ㅣ])*/g,
+    chars => `<strong class="jamo">${chars}</strong>`);
+}
+
 /** 펼친 과는 라벨 붙은 칸 셋으로 이루어진다 — 무엇을 할 수 있게 되는가,
     무엇을 배우는가, 그리고 그것을 받쳐 주는 말. 트랙마다 칸의 이름만 달라진다. */
 function detail(l) {
   const fields = [];
+  const isHangul = T.id === "1-hangul";
+
+  // 한글에서는 배울 글자·규칙이 본문이고, 읽을 수 있는 단어는 그 결과를 확인하는 예시다.
+  if (isHangul && l.chips && l.chips.length) {
+    fields.push({kind: "hangul-core", label: "이번에 배우는 것",
+      body: `<div class="hangul-focus">${l.chips.map(c =>
+        `<div class="hangul-focus-item"><span>${markedJamo(c)}</span></div>`).join("")}</div>`});
+  }
+  if (isHangul && l.can) {
+    const words = l.can.split(" · ").map(w => w.trim()).filter(Boolean);
+    fields.push({kind: "hangul-practice", label: "읽기 연습",
+      body: `<div class="hangul-practice">${words.map(w => `<span>${esc(w)}</span>`).join("")}</div>`});
+  }
 
   // ① 이 과의 약속
-  if (l.can) {
+  if (l.can && !isHangul) {
     const words = l.can.split(" · ").map(w => w.trim()).filter(Boolean);
     const listy = words.length >= 3 && words.every(w => w.length <= 7);
     const goalLabel = l.canLabel === "읽을 수 있다" ? "읽기 목표"
@@ -440,7 +461,7 @@ function detail(l) {
   } else if (l.fix) {
     fields.push({kind: "goal", label: "고치는 법", body: `<p class="goal">${esc(l.fix)}</p>`});
   }
-  if (l.chips && l.chips.length && !ps.length) {
+  if (l.chips && l.chips.length && !ps.length && !isHangul) {
     fields.push({kind: "items", label: l.fix ? "최소 대립쌍" : "배우는 것",
       body: `<div class="said">${l.chips.map(c => `<span>${esc(c)}</span>`).join("")}</div>`});
   }
@@ -468,7 +489,9 @@ function detail(l) {
 
 function lessonRow(l, groupIndex, lessonIndex) {
   const c = chips(l);
-  const sub = l.sub || (c ? "" : l.can);
+  const firstLabel = `첫 ${T.lessonWord}`;
+  const sub = l.sub === firstLabel ? "" : l.sub || (c ? "" : l.can);
+  const firstTag = l.first ? `<span class="first-tag">${esc(firstLabel)}</span>` : "";
   const no = String(l.n).padStart(2, "0");
   // 덱이 있으면 그 과에서 곧장 수업 화면으로 나간다 — 카탈로그를 잃지 않도록 새 탭에서.
   const deck = l.deck
@@ -480,9 +503,8 @@ function lessonRow(l, groupIndex, lessonIndex) {
     <div class="lrow">
       <button class="lrow-btn" type="button" aria-expanded="false" aria-controls="${detailId}">
         <span class="lno">${esc(T.lessonWord)} ${no}</span>
-        <span class="ltitle">${esc(l.title)}${sub ? ` <em>— ${esc(sub)}</em>` : ""}</span>
+        <span class="ltitle">${esc(l.title)}${sub ? ` <em>— ${esc(sub)}</em>` : ""}${firstTag}</span>
         <span class="lchips">${c}</span>
-        <span class="lcaret"></span>
       </button>
       ${deck}
     </div>
