@@ -3,6 +3,11 @@ kind: Course
 metadata:
   # beginner-curriculum 2-core-patterns · 9과.
   # tools/plan_courses.py 가 목차에서 끊었다.
+  #
+  # podo:level: 중고급
+  # 이 코스의 덱이 <meta name="podo:level"> 에 적을 값이다. 스키마가 metadata 에
+  # 새 필드를 막아서 주석으로 둔다 — tools/new_lesson.py 가 이 줄을 읽는다.
+  # 발음 표기(.yomi)를 다는지가 이 값으로 갈리므로 덱마다 손으로 넣게 두면 안 된다.
   slug: core-upper-intermediate-2
 
 spec:

@@ -3,6 +3,11 @@ kind: Course
 metadata:
   # beginner-curriculum 1-hangul · 14과.
   # tools/plan_courses.py 가 목차에서 끊었다.
+  #
+  # podo:level: 왕초급
+  # 이 코스의 덱이 <meta name="podo:level"> 에 적을 값이다. 스키마가 metadata 에
+  # 새 필드를 막아서 주석으로 둔다 — tools/new_lesson.py 가 이 줄을 읽는다.
+  # 발음 표기(.yomi)를 다는지가 이 값으로 갈리므로 덱마다 손으로 넣게 두면 안 된다.
   slug: hangul-starter
 
 spec:
@@ -30,9 +35,9 @@ spec:
 # 이 코스가 담을 과 — 덱을 쓰면 lessons/ 밑에 디렉터리가 생긴다.
 # 슬러그는 스키마가 NN-english-words 를 요구하므로 덱을 쓸 때 정해진다.
 #     1  ·  글자 블록과 첫 소리
-#     2  ·  평음 여섯 개
-#     3  ·  복습과 속도
-#     4  ·  획을 더하면 바람이 더해진다
+#     2  ✓ 02-six-plain-consonants평음 여섯 개
+#     3  ✓ 03-review-and-speed복습과 속도
+#     4  ✓ 04-add-a-stroke-add-air획을 더하면 바람이 더해진다
 #     5  ·  겹쳐 쓰면 세진다
 #     6  ·  자음표 전체
 #     7  ·  y 모음과 e 모음

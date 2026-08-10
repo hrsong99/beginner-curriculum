@@ -73,9 +73,29 @@ def split_skeleton(deck: Path):
     return "".join(lines[: open_at + 1]), "".join(lines[closes[0] :])
 
 
+def course_level(track_dir: Path, course: str) -> str:
+    """The Korean level this course's decks must declare.
+
+    It lives as a `# podo:level:` comment in the generated course.yaml rather
+    than being passed per lesson. Whether a deck carries kana readings is
+    decided by `<meta name="podo:level">`, so a default here would silently ship
+    a 왕초급 deck labelled 초급 — and nothing downstream would complain.
+    """
+    plan = track_dir / "courses" / course / "course.yaml"
+    if not plan.is_file():
+        sys.exit(f"no course plan at {plan} — run tools/plan_courses.py first")
+    m = re.search(r"^\s*#\s*podo:level:\s*(\S+)\s*$", plan.read_text(encoding="utf-8"), re.M)
+    if not m:
+        sys.exit(f"{plan} has no '# podo:level:' line — regenerate it with "
+                 f"tools/plan_courses.py, or pass --level explicitly")
+    return m.group(1)
+
+
 def find_course(track_dir: Path, lesson_no: int) -> str:
     """Which planned course holds this 과, per plan_courses.py's comments."""
-    marker = re.compile(rf"^#   과 +{lesson_no}  ", re.M)
+    # plan_courses.py writes one comment line per lesson: "#     6  ·  자음표 전체"
+    # (✓ instead of · once a deck exists). Keep this in step with course_yaml().
+    marker = re.compile(rf"^#\s+{lesson_no}\s+[·✓]", re.M)
     hits = [c.parent.name for c in sorted((track_dir / "courses").glob("*/course.yaml"))
             if marker.search(c.read_text(encoding="utf-8"))]
     if len(hits) == 1:
@@ -93,8 +113,14 @@ def redepth(page: str, out: Path) -> str:
     levels deeper under courses/<course>/lessons/<slug>/. Getting this wrong
     gives a deck that renders unstyled with nothing in the console to explain it.
     """
-    up = "../" * len(out.resolve().parent.relative_to(KOREAN).parts)
-    return REL_REF_RE.sub(lambda m: m.group(1) + up + m.group(2) + "/", page)
+    try:
+        depth = len(out.resolve().parent.relative_to(KOREAN).parts)
+    except ValueError:
+        # --out landed outside korean/, so there is no depth to compute. Leave the
+        # refs alone and say so rather than writing paths that cannot resolve.
+        print(f"! {out} is outside {KOREAN} — runtime refs left as-is and will not resolve")
+        return page
+    return REL_REF_RE.sub(lambda m: m.group(1) + "../" * depth + m.group(2) + "/", page)
 
 
 def retarget(head: str, *, lesson_id: str, level: str, titles: dict, version: str) -> str:
@@ -138,7 +164,7 @@ def main():
     ap.add_argument("--title-ko", required=True, help="Korean title; also becomes <title>")
     ap.add_argument("--title-ja", required=True, help="Japanese title — the learner reads this one")
     ap.add_argument("--title-en", required=True, help="English title, for the admin course list")
-    ap.add_argument("--level", default="초급")
+    ap.add_argument("--level", help="override; normally read from the course plan")
     ap.add_argument("--from-deck", help="deck to lift the skeleton from (default: the track's sample-lesson.html)")
     ap.add_argument("--out", help="output path (default: <track>/lesson-NNN.html)")
     args = ap.parse_args()
@@ -158,11 +184,10 @@ def main():
     if not args.id.startswith(f"{args.lesson:02d}-"):
         sys.exit(f"--id '{args.id}' should start with '{args.lesson:02d}-' to match --lesson")
 
-    if args.out:
-        out = Path(args.out)
-    else:
-        course = args.course or find_course(track_dir, args.lesson)
-        out = track_dir / "courses" / course / "lessons" / args.id / "lesson.html"
+    course = args.course or find_course(track_dir, args.lesson)
+    level = args.level or course_level(track_dir, course)
+    out = Path(args.out) if args.out else \
+        track_dir / "courses" / course / "lessons" / args.id / "lesson.html"
     if out.exists():
         sys.exit(f"{out} already exists — delete it or pass a different --out")
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -171,7 +196,7 @@ def main():
     head = retarget(
         head,
         lesson_id=args.id,
-        level=args.level,
+        level=level,
         titles={"ko": args.title_ko, "en": args.title_en, "ja": args.title_ja},
         version=dt.date.today().isoformat(),
     )
