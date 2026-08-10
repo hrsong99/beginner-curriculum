@@ -90,17 +90,17 @@ tools expect. `sync-from-authoring.py` rewrites them to `shared/`, and
 (`curriculum.yaml` → `spec.sharedRuntime`). Writing a CDN URL here by hand would
 hand-pin a version in every file and break local verification.
 
-**These courses are `curriculumType: BASICv2`, not `BASIC`.** The type is part of a course's
+**These courses are `curriculumType: BASIC_V2`, not `BASIC`.** The type is part of a course's
 identity — grape refuses a second course with the same
 `(LANG_TYPE, CURRICULUM_TYPE, LESSON_TIME, CLASS_LEVEL)` outright, so a separate type gives
 the interactive curriculum a namespace of its own and lets it roll out alongside the legacy
 PDF `BASIC` courses without competing for level bands. It also forks tutor assignment
 (`le_tutor_curriculum` keys on `PODO_{LANG}_{TYPE}`), which is wanted — driving an
 interactive board is a different skill from a PDF — but it means **no tutor can be matched
-until `PODO_KR_BASICv2` rows exist.** There are currently none, for any Korean type.
+until `PODO_KR_BASIC_V2` rows exist.** There are currently none, for any Korean type.
 
-The column is `COLLATE utf8mb3_bin`, so the string is **case-sensitive**: `BASICV2` would be
-a separate, tutor-less curriculum and nothing would report it.
+The column is `COLLATE utf8mb3_bin`, so the string is **case-sensitive**: `BASIC_v2` would be
+a separate, tutor-less curriculum and nothing would report it. Copy the value, don't retype it.
 
 **A track becomes a section of the app by taking its own `classLevel` band.** The integer
 part of `CLASS_LEVEL` is the section and the decimal is the course inside it — that is how
