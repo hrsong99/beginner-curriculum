@@ -1,0 +1,15 @@
+.git
+.gitignore
+.DS_Store
+**/.DS_Store
+**/__pycache__
+**/*.py[cod]
+**/node_modules
+
+# Local textbook sources are authoring inputs, not site assets. Some are
+# intentionally ignored by Git and total roughly 1 GB in this checkout.
+**/*.pdf
+korean/references/curricula/temo/
+
+# Generated Lemonboard packages are rebuilt from the checked-in sources.
+**/lemonboard-build/
