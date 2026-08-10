@@ -102,6 +102,43 @@ the TOC wins over this list.**
 
 ---
 
+## The seat-colour system only covers the 과 1 case
+
+Three writers hit this independently, so it is a gap in the design system, not three mistakes.
+Seat colour (`.seat-c` consonant, `.seat-v` vowel) was built for a block of **one simple
+consonant + one simple vowel**, and has no answer for anything else:
+
+| Shape | Problem | Where |
+| --- | --- | --- |
+| combined vowel (ㅘ ㅝ ㅢ) | uses *both* seats, so neither fill describes it | 과 8 |
+| 받침 | there is no third seat | 과 10–14 |
+| y/e vowels in `.builder` | `TALL = ["ㅏ","ㅓ","ㅣ"]` draws ㅑㅕㅐㅔㅒㅖ as top/bottom | 과 7–9 |
+
+The workaround the decks converged on: **a block that seat colour cannot describe runs
+un-tinted, and only the bare letter takes a seat.** Do that rather than tinting something
+half-true — a wrong seat teaches a wrong structure, which is worse than no colour at all.
+
+## Unresolved — 받침 자리 색 (decide before 과 10–14 ship)
+
+**Two decks in the same track draw the bottom slot two different ways.** The design system had
+no 받침 seat at all — every block until 과 10 is consonant-seat + vowel-seat — and two agents
+hit that gap independently and answered it differently:
+
+| Deck | Answer |
+| --- | --- |
+| 과 10 | **added** `.seat-b` · `.seat-lrb` · `.seat-tbb` · `.blk.lrb/.tbb` to `runtime/css/trial.css`, uses them 64× |
+| 과 14 | uses the new seats, 2× |
+| 과 11 · 12 · 13 | leave every 받침 tile **plain** — 과 12 checked, found no usable seat colour, and worked around it |
+
+A learner going 과 10 → 11 → 12 would see the bottom slot change appearance. One answer has to
+win. 과 10's is the better one on the merits — this track draws structure with seat colour and
+the third position deserves one — but it is a **shared stylesheet** change made by one of ten
+parallel agents, in a file that already carries uncommitted work and is the most drifted from
+the published CDN tag. It needs a human read before it publishes.
+
+**Until it is settled: do not add new 받침 seat markup.** Match whatever the deck next to yours
+already does, and say which in your report.
+
 ## Things that have already gone wrong
 
 Each of these cost a rewrite. They are not style preferences.
