@@ -1,13 +1,23 @@
 #!/usr/bin/env python3
 """Lay a track out as courses, in the shape podo-curriculum deploys.
 
-    python3 korean/tools/plan_courses.py korean/tracks/2-core-patterns
+    python3 korean/tools/plan_courses.py korean/tracks/3-contextual-korean
+    python3 korean/tools/plan_courses.py --all
 
-A track is not a course. `2-core-patterns` is 116 lessons across 23 units, while
-a deployable course is one `classLevel` with weeks running 1..N and no gaps — so
-the track has to be cut into courses before any of it can ship. Doing that cut
-here, against the table of contents, means the production importer copies a plan
-instead of inventing one.
+A track is not a course. A deployable course is one `classLevel` with weeks
+running 1..N and no gaps, so every track has to be cut into courses before any of
+it can ship. Doing that cut here, against the table of contents, means the
+production importer copies a plan instead of inventing one.
+
+Most tracks already say where the cuts go — `3-contextual-korean` is named shows
+of ten episodes, `4-freetalking` is themes of ten sessions, `1-hangul` and
+`5-pronunciation` are one course each. Only `2-core-patterns` has to be packed,
+because 116 numbered 과 have no course boundaries of their own; there the packer
+groups units into roughly twelve lessons without ever splitting a unit, so a
+course always ends on its 체크포인트.
+
+Reading each TOC is `track_parsers.py`'s job. This file only turns courses into
+YAML.
 
 Layout written under the track:
 
@@ -15,30 +25,21 @@ Layout written under the track:
     courses/<course-slug>/lessons/<lesson-slug>/lesson.yaml
     courses/<course-slug>/lessons/<lesson-slug>/lesson.html   <- the deck, if written
 
-Both YAML files validate against `schemas/{course,lesson}.schema.json` over
-there. Only `title.ko` is required, so a lesson that has no deck yet is still a
-valid, reviewable row — its Korean title comes from the TOC, and `en`/`ja` arrive
-with the deck (which carries `podo:title-*`).
+Both validate against podo-curriculum's `schemas/`.
 
-**`course.yaml` is written for all 12 courses; `lesson.yaml` only for lessons
-that have a deck.** The lesson schema requires a slug matching
-`^[0-9]{2}-[a-z0-9]+(-[a-z0-9]+)*$` — two digits and an English name — and the
-English name is a writing decision that does not exist before the lesson does.
-Scaffolding 108 `07-tbd` directories would just be 108 renames later. The full
-plan still shows up: every course lists its unwritten lessons as comments, so
-the diff shows what is coming without pretending it is here.
+**`course.yaml` for every course; `lesson.yaml` only where a deck exists.** The
+lesson schema wants a slug of `NN-english-words`, and the English name is a
+writing decision that does not exist before the lesson does — scaffolding 350 of
+them would be 350 renames later. The plan still shows up: each course lists its
+lessons as comments, so a diff shows what is coming without pretending it is here.
 
-The slug comes from the deck's own `podo:lesson-id`, so the authoring id and the
-deployed directory are the same string and neither can drift.
+**Weeks are provisional until a course is complete**, because `_check_weeks`
+demands 1..N with no gaps, so week is the position among lessons that exist. Safe
+only because an incomplete course is `enabled: false` and never applied.
 
-**Weeks are provisional until a course is complete.** Week is the position among
-lessons that exist, because `model._check_weeks` demands 1..N with no gaps. Add
-과 1–6 to a course that only had 과 7 and 과 7 moves from week 1 to week 7. That is
-safe precisely because an incomplete course is `enabled: false` and never applied.
-
-**This tool never deletes a directory holding a deck.** It owns the YAML and will
-rewrite it freely, but a `lesson.html` is handwritten work — if the plan moves a
-lesson to a different course, the old directory is reported, not removed.
+**This tool never deletes a directory holding a deck.** It owns the YAML; a
+`lesson.html` is handwritten work, so a lesson orphaned by a re-plan is reported,
+not removed.
 """
 
 from __future__ import annotations
@@ -48,116 +49,129 @@ import pathlib
 import re
 import sys
 
-import shard_toc
+import track_parsers
 
-# A course wants to look like the ones already shipping (hangul-lv1 is 11).
-# Units are never split — each ends on its 체크포인트, which is the course's exit
-# test — so these are targets the packer respects rather than hard sizes.
-TARGET = 12
-# A trailing stub gets folded back rather than shipped as a 3-lesson course,
-# provided the course it joins stays inside this.
-MAX_AFTER_MERGE = 15
+# --- 2-core-patterns packing ------------------------------------------------
+TARGET = 12            # a course should look like the ones already shipping
+MAX_AFTER_MERGE = 15   # a trailing stub may join the previous course up to this
 MERGE_IF_UNDER = 5
 
-# Per-track identity. classLevel is part of grape's natural key, so changing one
-# creates a course rather than editing it; 999.x is the test band.
+# classLevel is part of grape's natural key, so two courses sharing one are the
+# same row. Each track gets its own band inside the 999.x test range; the schema
+# allows three decimals, which is 1000 slots.
 TRACKS = {
-    "2-core-patterns": {
-        "prefix": "core",
-        "curriculumType": "BASIC",
-        "levelBase": {"초급": "999.31", "초중급": "999.32", "중급": "999.33",
-                      "중고급": "999.34", "고급": "999.35"},
-        "difficulty": {"초급": "BEGINNER", "초중급": "BEGINNER", "중급": "INTERMEDIATE",
-                       "중고급": "INTERMEDIATE", "고급": "ADVANCED"},
-        "levelSlug": {"초급": "beginner", "초중급": "upper-beginner", "중급": "intermediate",
-                      "중고급": "upper-intermediate", "고급": "advanced"},
-        "titleJa": {"초급": "初級", "초중급": "初中級", "중급": "中級",
-                    "중고급": "中上級", "고급": "上級"},
-        "titleEn": {"초급": "Beginner", "초중급": "Upper beginner", "중급": "Intermediate",
-                    "중고급": "Upper intermediate", "고급": "Advanced"},
-        "courseTitle": {"ko": "핵심 문법 패턴", "en": "Core grammar patterns",
-                        "ja": "コア文法パターン"},
-    },
+    "1-hangul":            {"band": "999.1", "type": "BASIC"},
+    "2-core-patterns":     {"band": "999.3", "type": "BASIC"},
+    "3-contextual-korean": {"band": "999.5", "type": "BASIC"},
+    "4-freetalking":       {"band": "999.6", "type": "BASIC"},
+    "5-pronunciation":     {"band": "999.7", "type": "BASIC"},
 }
 
-TITLE_META = re.compile(r'<meta name="podo:title-(ko|en|ja)" content="([^"]*)">')
+DIFFICULTY = {"왕초급": "BEGINNER", "초급": "BEGINNER", "초중급": "BEGINNER",
+              "중급": "INTERMEDIATE", "중고급": "INTERMEDIATE", "고급": "ADVANCED"}
+LEVEL_SLUG = {"왕초급": "starter", "초급": "beginner", "초중급": "upper-beginner",
+              "중급": "intermediate", "중고급": "upper-intermediate", "고급": "advanced"}
+LEVEL_JA = {"왕초급": "超入門", "초급": "初級", "초중급": "初中級",
+            "중급": "中級", "중고급": "中上級", "고급": "上級"}
+LEVEL_EN = {"왕초급": "Starter", "초급": "Beginner", "초중급": "Upper beginner",
+            "중급": "Intermediate", "중고급": "Upper intermediate", "고급": "Advanced"}
+
+CORE_TITLE = {"ko": "핵심 문법 패턴", "en": "Core grammar patterns",
+              "ja": "コア文法パターン"}
+
 ID_META = re.compile(r'<meta name="podo:lesson-id" content="([^"]*)">')
-# schemas/lesson.schema.json — metadata.slug. Kept here verbatim so a mismatch
-# surfaces while writing rather than at the merge gate.
+TITLE_META = re.compile(r'<meta name="podo:title-(ko|en|ja)" content="([^"]*)">')
+# schemas/lesson.schema.json — metadata.slug. Kept verbatim so a mismatch shows
+# up while writing rather than at the merge gate.
 SLUG_RE = re.compile(r"^[0-9]{2}-[a-z0-9]+(-[a-z0-9]+)*$")
 
 
-def pack(units: list) -> list[list]:
-    """Group units into courses of ~TARGET lessons without splitting a unit."""
-    courses: list[list] = []
-    for level in dict.fromkeys(u["level"] for u in units):     # keep TOC order
+def pack_core(units: list) -> list[dict]:
+    """2-core-patterns only: units -> ~12-lesson courses, never splitting a unit."""
+    groups: list[list] = []
+    for level in dict.fromkeys(u["level"] for u in units):      # keep TOC order
         band = [u for u in units if u["level"] == level]
         cur: list = []
         for unit in band:
             n = len(unit["lessons"])
             if cur and sum(len(u["lessons"]) for u in cur) + n > TARGET:
-                courses.append(cur)
+                groups.append(cur)
                 cur = []
             cur.append(unit)
         if cur:
             size = sum(len(u["lessons"]) for u in cur)
-            prev = courses[-1] if courses else None
+            prev = groups[-1] if groups else None
             if (prev and prev[0]["level"] == level and size < MERGE_IF_UNDER
                     and sum(len(u["lessons"]) for u in prev) + size <= MAX_AFTER_MERGE):
                 prev.extend(cur)
             else:
-                courses.append(cur)
+                groups.append(cur)
+
+    courses, nth = [], {}
+    for g in groups:
+        level = g[0]["level"]
+        nth[level] = nth.get(level, 0) + 1
+        lessons = [l for u in g for l in u["lessons"]]
+        span = f"Unit {g[0]['no']}" + (f"–{g[-1]['no']}" if len(g) > 1 else "")
+        courses.append({
+            "slug": f"core-{LEVEL_SLUG[level]}-{nth[level]}",
+            "level": level,
+            "title": {k: f"{CORE_TITLE[k]} · "
+                         f"{ {'ko': level, 'ja': LEVEL_JA[level], 'en': LEVEL_EN[level]}[k] } "
+                         f"{nth[level]}" for k in ("ko", "en", "ja")},
+            "note": f"{span} · " + " · ".join(u["title"].split(" — ")[0] for u in g),
+            "lessons": [{"no": l["no"], "title": l["title"], "canDo": l["can_do"],
+                         "patterns": [p["form"] for p in l["patterns"]], "scene": None}
+                        for l in lessons],
+        })
     return courses
 
 
 def yaml_str(value: str) -> str:
-    """Quote only when YAML would otherwise misread it."""
+    """Quote only where YAML would otherwise misread the scalar."""
+    value = value.replace("\n", " ").strip()
     if value == "" or value[0] in "!&*[]{}>|%@`'\"#-?:," or ": " in value or " #" in value:
-        return '"' + value.replace('"', '\\"') + '"'
+        return '"' + value.replace("\\", "\\\\").replace('"', '\\"') + '"'
     return value
 
 
-def deck_titles(deck: pathlib.Path | None) -> dict[str, str]:
-    if deck is None or not deck.is_file():
-        return {}
-    return dict(TITLE_META.findall(deck.read_text(encoding="utf-8")))
+def deck_meta(deck: pathlib.Path) -> tuple[dict, str | None]:
+    raw = deck.read_text(encoding="utf-8")
+    m = ID_META.search(raw)
+    return dict(TITLE_META.findall(raw)), (m.group(1) if m else None)
 
 
-def course_yaml(cfg, slug, level, units, lessons, track, nth, written) -> str:
-    first, last = lessons[0]["no"], lessons[-1]["no"]
+def course_yaml(course, cfg, class_level, track, written) -> str:
     plan = "\n".join(
-        f"#   과 {l['no']:>3}  {'✓ ' + written[l['no']] if l['no'] in written else '· '}"
+        f"#   {l['no']:>3}  {'✓ ' + written[l['no']] if l['no'] in written else '·  '}"
         f"{l['title']}"
-        for l in lessons)
-    unit_span = f"Unit {units[0]['no']}" + (
-        f"–{units[-1]['no']}" if len(units) > 1 else "")
+        for l in course["lessons"])
+    t = course["title"]
     return f"""\
 apiVersion: podo.curriculum/v1
 kind: Course
 metadata:
-  # beginner-curriculum {track} · {unit_span} · 과 {first}–{last}.
-  # tools/plan_courses.py 가 목차에서 끊었다 — 단원을 쪼개지 않고 12과 안팎으로
-  # 묶으므로, 코스의 마지막 과는 언제나 그 단원의 체크포인트다.
-  slug: {slug}
+  # beginner-curriculum {track} · {len(course['lessons'])}과.
+  # tools/plan_courses.py 가 목차에서 끊었다.
+  slug: {course['slug']}
 
 spec:
-  curriculumType: {cfg['curriculumType']}
+  curriculumType: {cfg['type']}
   # 자연키의 일부다 — 바꾸면 같은 코스의 수정이 아니라 다른 코스가 된다.
-  # 레벨 대역 + 그 안에서의 순번이라 같은 (KR, BASIC, 25) 안에서 겹치지 않는다.
-  classLevel: "{cfg['levelBase'][level]}{nth}"
+  classLevel: "{class_level}"
   lessonTime: 25
   # 검수 전까지는 false. true 로 바꾸는 순간 apply 가 학습자에게 노출시킨다.
   enabled: false
-  difficulty: {cfg['difficulty'][level]}
+  difficulty: {DIFFICULTY[course['level']]}
 
   title:
-    ko: {yaml_str(f"{cfg['courseTitle']['ko']} · {level} {slug.rsplit('-', 1)[-1]}")}
-    en: {yaml_str(f"{cfg['courseTitle']['en']} · {cfg['titleEn'][level]} {slug.rsplit('-', 1)[-1]}")}
-    ja: {yaml_str(f"{cfg['courseTitle']['ja']} · {cfg['titleJa'][level]} {slug.rsplit('-', 1)[-1]}")}
+    ko: {yaml_str(t['ko'])}
+    en: {yaml_str(t['en'])}
+    ja: {yaml_str(t['ja'])}
 
   description:
-    ko: {yaml_str(' · '.join(u['title'].split(' — ')[0] for u in units))}
-    ja: {yaml_str(f"{cfg['titleJa'][level]}。{len(lessons)}課。")}
+    ko: {yaml_str(course['note'] or t['ko'])}
+    ja: {yaml_str(f"{LEVEL_JA[course['level']]}。{len(course['lessons'])}課。")}
 
   tutorGroups:
     allowRandom: []
@@ -167,17 +181,14 @@ spec:
 # 슬러그는 스키마가 NN-english-words 를 요구하므로 덱을 쓸 때 정해진다.
 {plan}
 # Generated by korean/tools/plan_courses.py — 목차를 고치고 다시 돌린다.
-# enabled · tutorGroups 는 배포 쪽 검수에서 정하므로 저쪽에서 덮어쓰지 않는다.
 """
 
 
-def lesson_yaml(lesson, week, slug, titles, track, brief) -> str:
-    u = lesson["unit"]
-    patterns = "\n".join(f"      - {yaml_str(p['form'])}" for p in lesson["patterns"])
-    extra = ""
-    for lang in ("en", "ja"):
-        if titles.get(lang):
-            extra += f"    {lang}: {yaml_str(titles[lang])}\n"
+def lesson_yaml(lesson, week, slug, titles, track, course_slug) -> str:
+    extra = "".join(f"    {k}: {yaml_str(titles[k])}\n"
+                    for k in ("en", "ja") if titles.get(k))
+    pats = "\n".join(f"      - {yaml_str(p)}" for p in lesson["patterns"])
+    scene = f"  scene: {yaml_str(lesson['scene'])}\n" if lesson.get("scene") else ""
     return f"""\
 apiVersion: podo.curriculum/v1
 kind: Lesson
@@ -197,101 +208,104 @@ spec:
   # ---- 아래는 레포에만 남는다. DB 로 가지 않는다 ----
   teaches:
     patterns:
-{patterns or "      []"}
-    canDo: {yaml_str(lesson['can_do'] or '')}
+{pats or "      []"}
+    canDo: {yaml_str(lesson['canDo'] or '')}
+{scene}\
   prerequisites: []
-  source: beginner-curriculum {track}/toc/{brief}
+  source: beginner-curriculum {track}/{course_slug} · {lesson['no']}
 
 # Generated by korean/tools/plan_courses.py — 내용은 목차와 덱이 원본이다.
 """
 
 
-def main() -> int:
-    ap = argparse.ArgumentParser(
-        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("track", help="e.g. korean/tracks/2-core-patterns")
-    ap.add_argument("--dry-run", action="store_true")
-    args = ap.parse_args()
-
-    track = pathlib.Path(args.track)
+def plan_track(track: pathlib.Path, dry: bool) -> int:
     cfg = TRACKS.get(track.name)
-    if cfg is None:
-        sys.exit(f"no course plan for track '{track.name}' — add it to TRACKS "
-                 f"(each track's TOC has its own shape; see shard_toc.py)")
+    parser = track_parsers.PARSERS.get(track.name)
+    if cfg is None or parser is None:
+        print(f"✗ no plan for track '{track.name}'")
+        return 0
 
-    units = shard_toc.parse(track / "table-of-contents.md")
-    if not units:
-        sys.exit(f"parsed 0 units from {track}/table-of-contents.md")
+    parsed = parser(track)
+    courses = pack_core(parsed) if track.name == "2-core-patterns" else parsed
 
-    groups = pack(units)
-    root = track / "courses"
-    seen: set[pathlib.Path] = set()
-    counter: dict[str, int] = {}
-    written = 0
+    root, seen, written_n = track / "courses", set(), 0
+    print(f"\n{track.name}")
 
-    for units_in in groups:
-        level = units_in[0]["level"]
-        counter[level] = counter.get(level, 0) + 1
-        slug = f"{cfg['prefix']}-{cfg['levelSlug'][level]}-{counter[level]}"
-        lessons = [l for u in units_in for l in u["lessons"]]
-
-        cdir = root / slug
+    for i, course in enumerate(courses, start=1):
+        class_level = f"{cfg['band']}{i:02d}"
+        cdir = root / course["slug"]
         seen.add(cdir)
 
-        # A lesson exists here iff someone wrote a deck for it. Find them by
-        # their 과 number, which lives in the brief the deck was written from.
         decks: dict[int, pathlib.Path] = {}
-        for deck in sorted((cdir / "lessons").rglob("lesson.html")) \
-                if (cdir / "lessons").is_dir() else []:
-            m = re.search(r"toc/lesson-(\d+)\.md", deck.read_text(encoding="utf-8")) \
-                or re.match(r"(\d{2})-", deck.parent.name)
-            n = int(m.group(1)) if m else None
-            if n is None:
-                print(f"  ! cannot tell which 과 {deck} is — skipped")
-                continue
-            decks[n] = deck
+        if (cdir / "lessons").is_dir():
+            for deck in sorted((cdir / "lessons").glob("*/lesson.html")):
+                m = re.match(r"(\d{2})-", deck.parent.name)
+                if m:
+                    decks[int(m.group(1))] = deck
+                else:
+                    print(f"    ! {deck.parent.name}: cannot read a lesson number "
+                          f"from the directory name — skipped")
 
         week = 0
-        for lesson in lessons:
+        for lesson in course["lessons"]:
             deck = decks.get(lesson["no"])
             if deck is None:
                 continue
             week += 1
-            lslug = deck.parent.name
-            m = ID_META.search(deck.read_text(encoding="utf-8"))
-            if m and m.group(1) != lslug:
-                print(f"  ! {lslug}: podo:lesson-id is '{m.group(1)}' — "
-                      f"the deck and its directory must agree")
-            if not SLUG_RE.match(lslug):
-                print(f"  ! {lslug}: not a valid lesson slug "
-                      f"(needs NN-english-words) — will fail schema validation")
+            slug = deck.parent.name
+            titles, ident = deck_meta(deck)
+            if ident and ident != slug:
+                print(f"    ! {slug}: podo:lesson-id is '{ident}' — deck and "
+                      f"directory must agree")
+            if not SLUG_RE.match(slug):
+                print(f"    ! {slug}: not NN-english-words — will fail validation")
             seen.add(deck.parent)
-            text = lesson_yaml(lesson, week, lslug, deck_titles(deck), track.name,
-                               f"lesson-{lesson['no']:03d}.md")
-            if not args.dry_run:
-                (deck.parent / "lesson.yaml").write_text(text, encoding="utf-8")
-            written += 1
+            if not dry:
+                (deck.parent / "lesson.yaml").write_text(
+                    lesson_yaml(lesson, week, slug, titles, track.name,
+                                course["slug"]), encoding="utf-8")
+            written_n += 1
 
-        body = course_yaml(cfg, slug, level, units_in, lessons, track.name,
-                           counter[level],
-                           {n: d.parent.name for n, d in decks.items()})
-        if not args.dry_run:
+        if not dry:
             (cdir / "lessons").mkdir(parents=True, exist_ok=True)
-            (cdir / "course.yaml").write_text(body, encoding="utf-8")
+            (cdir / "course.yaml").write_text(
+                course_yaml(course, cfg, class_level,
+                            track.name, {n: d.parent.name for n, d in decks.items()}),
+                encoding="utf-8")
 
-        print(f"  {slug:<28} {level:<5} 과 {lessons[0]['no']:>3}–{lessons[-1]['no']:<3} "
-              f"{len(lessons):>2} planned, {len(decks)} written")
+        print(f"  {course['slug']:<30} {course['level']:<6} {class_level:<8} "
+              f"{len(course['lessons']):>3} planned, {len(decks)} written")
 
-    # Never delete handwritten work; say what no longer fits the plan.
     if root.is_dir():
-        orphans = [p for p in sorted(root.rglob("lesson.yaml"))
-                   if p.parent not in seen]
-        for p in orphans:
-            keep = "  (has a deck — move it, do not delete)" if \
-                (p.parent / "lesson.html").is_file() else ""
-            print(f"  ! orphaned by the current plan: {p.parent}{keep}")
+        for p in sorted(root.rglob("lesson.yaml")):
+            if p.parent not in seen:
+                keep = "  (has a deck — move it, do not delete)" if \
+                    (p.parent / "lesson.html").is_file() else ""
+                print(f"  ! orphaned by the current plan: {p.parent}{keep}")
 
-    print(f"\n{len(groups)} course(s), {written} lesson(s)"
+    print(f"  → {len(courses)} course(s), "
+          f"{sum(len(c['lessons']) for c in courses)} planned, {written_n} written")
+    return len(courses)
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser(
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("track", nargs="?", help="e.g. korean/tracks/1-hangul")
+    ap.add_argument("--all", action="store_true", help="every track with a parser")
+    ap.add_argument("--dry-run", action="store_true")
+    args = ap.parse_args()
+
+    here = pathlib.Path(__file__).resolve().parent.parent
+    if args.all:
+        targets = [here / "tracks" / n for n in sorted(TRACKS)]
+    elif args.track:
+        targets = [pathlib.Path(args.track)]
+    else:
+        return ap.error("give a track path or --all")
+
+    total = sum(plan_track(t, args.dry_run) for t in targets)
+    print(f"\n{total} course(s) across {len(targets)} track(s)"
           f"{' — dry run, nothing written' if args.dry_run else ''}")
     return 0
 
