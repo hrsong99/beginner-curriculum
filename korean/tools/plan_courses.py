@@ -78,12 +78,27 @@ MERGE_IF_UNDER = 5
 # the English or Japanese curricula even where the numbers coincide. Audience
 # ("Korean for Japanese speakers" vs anything later) is GT_CLASS_COURSE.
 # COUNTRY_CODE, not this number — see CLAUDE.md § Getting a lesson to production.
+# curriculumType is the product line, and it is part of the course's identity —
+# grape refuses a second course with the same (LANG_TYPE, CURRICULUM_TYPE,
+# LESSON_TIME, CLASS_LEVEL) outright ("동일한 조건의 코스가 이미 존재합니다",
+# class_course_ps.php:656). BASICv2 therefore gives the interactive curriculum a
+# namespace of its own: it can reuse any level band without colliding with the
+# legacy PDF BASIC courses, which is what lets it roll out to existing users.
+#
+# It also forks tutor assignment — le_tutor_curriculum keys on
+# PODO_{LANG}_{TYPE}, so a tutor opts into PODO_KR_BASICv2 specifically. That is
+# wanted (driving an interactive board is a different skill from a PDF), but it
+# means **no tutor can be matched until those rows exist**. There are currently
+# zero PODO_KR_* rows of any type.
+#
+# The column is COLLATE utf8mb3_bin, so this string is CASE-SENSITIVE. 'BASICV2'
+# would be a separate curriculum with no tutors and no error.
 TRACKS = {
-    "1-hangul":            {"band": 1000, "type": "BASIC"},
-    "2-core-patterns":     {"band": 2000, "type": "BASIC"},
-    "3-contextual-korean": {"band": 3000, "type": "BASIC"},
-    "4-freetalking":       {"band": 4000, "type": "BASIC"},
-    "5-pronunciation":     {"band": 5000, "type": "BASIC"},
+    "1-hangul":            {"band": 1000, "type": "BASICv2"},
+    "2-core-patterns":     {"band": 2000, "type": "BASICv2"},
+    "3-contextual-korean": {"band": 3000, "type": "BASICv2"},
+    "4-freetalking":       {"band": 4000, "type": "BASICv2"},
+    "5-pronunciation":     {"band": 5000, "type": "BASICv2"},
 }
 
 DIFFICULTY = {"왕초급": "BEGINNER", "초급": "BEGINNER", "초중급": "BEGINNER",
