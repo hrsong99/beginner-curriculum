@@ -90,10 +90,20 @@ tools expect. `sync-from-authoring.py` rewrites them to `shared/`, and
 (`curriculum.yaml` → `spec.sharedRuntime`). Writing a CDN URL here by hand would
 hand-pin a version in every file and break local verification.
 
+**A track is not a course.** 2-core-patterns is 116 lessons; a deployable course is one
+`classLevel` with weeks 1..N and no gaps. `tools/plan_courses.py` cuts the track against
+its TOC into ~12-lesson courses on unit boundaries, and writes `course.yaml` /
+`lesson.yaml` that already validate against podo-curriculum's `schemas/` — so the sync is
+a copy, not a translation. Decks live at
+`tracks/<track>/courses/<course>/lessons/<slug>/lesson.html`.
+
+Lesson slugs are `NN-english-words` (`07-daily-routine`) because the schema demands it, and
+the deck's `podo:lesson-id` must equal its directory name. `lesson.yaml` is written only for
+lessons that have a deck; the rest of the plan lives as comments in `course.yaml`.
+
 Over there, in order: `sync-from-authoring.py` → `import-track-lessons.py <track>`
-→ `repoint-shared.py` → `validate.py`. The importer discovers `lesson-NNN.html` and
-reads `podo:lesson-id` and `podo:title-{ko,en,ja}` out of the deck, so those metas are
-load-bearing — `new_lesson.py` writes them and they should not be removed.
+→ `repoint-shared.py` → `validate.py`. `podo:lesson-id` and `podo:title-{ko,en,ja}` are
+load-bearing — `new_lesson.py` writes them and they must not be removed.
 
 **Never edit `shared/` or `sandbox/` in podo-curriculum.** Both are sync destinations
 and get replaced wholesale; a fix made there disappears on the next sync with no error.
@@ -110,11 +120,11 @@ attributes and all, and there is nothing further to read. This is the normal cas
 why building a lesson out of the existing component vocabulary is cheaper *and* safer than
 inventing markup.
 
-**Read [`interactive/interaction-protocol.md`](./interactive/interaction-protocol.md) only when
+**Read [`interaction-protocol.md`](./interaction-protocol.md) only when
 you are inventing a new interaction type** — a new `data-sync-kind`, a new way of sharing state,
 anything not already in the vocabulary. Getting it wrong there fails silently: the activity
-works on your screen and never reaches the other person. See
-[`interactive/packaging.md`](./interactive/packaging.md) for turning a deck into an uploadable zip.
+works on your screen and never reaches the other person. Packaging a deck into an uploadable
+zip is not this repo's job — `podo-curriculum` does it in `tools/build.py`.
 
 Two rules that catch most mistakes: an element is shared **only** if it has a `data-sync-id`
 (no id = private), and verdicts are never shared — send the choice and let each side derive
@@ -163,9 +173,10 @@ same document, so anything in the markup is already on the learner's screen.
   track's sheet) and `js/` (the shared modules). This folder is the publish set — it is what
   gets mirrored to a public repo and served from a CDN, so nothing private may live in it.
   See [`runtime/README.md`](./runtime/README.md).
-- **`interactive/`** — the `data-sync` contract, the packaging guide, and the lemonboard
-  packager (`build_lemonboard.py`). Documentation and tooling only; the code decks load
-  lives in `runtime/`.
+- **`interaction-protocol.md`** — the `data-sync` contract. Documentation only; the code
+  decks load lives in `runtime/`. Packaging a deck for upload is not done here at all —
+  `podo-curriculum` owns it (`tools/build.py`), because the zip is a deploy artefact and
+  building one by hand is how a stale deck reaches a classroom.
 - **`tools/`** — authoring scripts. `shard_toc.py` (TOC → per-lesson briefs), `new_lesson.py`
   (deck skeleton) and `build_catalog.py` (five TOCs → `catalog.html`). All three derive their
   output from files that already exist, so none holds a second copy of anything.
