@@ -68,18 +68,32 @@ def split_skeleton(deck: Path):
     return "".join(lines[: open_at + 1]), "".join(lines[closes[0] :])
 
 
-def retarget(head: str, *, lesson_id: str, level: str, title: str, version: str) -> str:
-    """Swap the canonical deck's identity for the new lesson's."""
+def retarget(head: str, *, lesson_id: str, level: str, titles: dict, version: str) -> str:
+    """Swap the canonical deck's identity for the new lesson's.
+
+    The three `podo:title-*` metas exist so the deck is self-describing: the
+    production importer builds `lesson.yaml` from them rather than from a table
+    it has to keep in step with 116 files. A title that lives in two places is a
+    title that will disagree with itself.
+    """
     subs = [
         (r'(<meta name="podo:lesson-id" content=")[^"]*(")', lesson_id),
         (r'(<meta name="podo:level" content=")[^"]*(")', level),
         (r'(<meta name="podo:content-version" content=")[^"]*(")', version),
-        (r"(<title>).*?(</title>)", f"{title} — PODO 韓国語"),
+        (r"(<title>).*?(</title>)", f"{titles['ko']} — PODO 韓国語"),
     ]
     for pattern, value in subs:
         head, n = re.subn(pattern, lambda m: m.group(1) + value + m.group(2), head, count=1)
         if not n:
             sys.exit(f"skeleton is missing the field matched by {pattern!r} — deck format changed")
+
+    block = "".join(
+        f'  <meta name="podo:title-{lang}" content="{titles[lang]}">\n'
+        for lang in ("ko", "en", "ja")
+    )
+    head, n = re.subn(r"([ \t]*<title>)", block + r"\1", head, count=1)
+    if not n:
+        sys.exit("skeleton has no <title> to anchor the title metas to")
     return head
 
 
@@ -88,7 +102,9 @@ def main():
     ap.add_argument("--track", required=True, help="e.g. 2-core-patterns")
     ap.add_argument("--lesson", required=True, type=int, help="과 number, e.g. 7")
     ap.add_argument("--id", required=True, help="podo:lesson-id, e.g. core-07-daily-routine")
-    ap.add_argument("--title", required=True, help="<title>, without the — PODO 韓国語 suffix")
+    ap.add_argument("--title-ko", required=True, help="Korean title; also becomes <title>")
+    ap.add_argument("--title-ja", required=True, help="Japanese title — the learner reads this one")
+    ap.add_argument("--title-en", required=True, help="English title, for the admin course list")
     ap.add_argument("--level", default="초급")
     ap.add_argument("--from-deck", help="deck to lift the skeleton from (default: the track's sample-lesson.html)")
     ap.add_argument("--out", help="output path (default: <track>/lesson-NNN.html)")
@@ -111,7 +127,7 @@ def main():
         head,
         lesson_id=args.id,
         level=args.level,
-        title=args.title,
+        titles={"ko": args.title_ko, "en": args.title_en, "ja": args.title_ja},
         version=dt.date.today().isoformat(),
     )
 

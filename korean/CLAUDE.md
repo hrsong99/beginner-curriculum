@@ -75,6 +75,30 @@ spent on the last one.
 Regenerate the briefs after any TOC change:
 `python3 korean/tools/shard_toc.py korean/tracks/<track>`
 
+**Before trusting a local render, check the runtime you rendered against.**
+`python3 korean/tools/check_runtime_drift.py` compares `runtime/` with the CDN tag
+production actually serves. Deployed decks load that tag, not this folder — so when
+the two differ, the page you approved at 480px is not the page the learner gets, and
+nothing errors to tell you. A component that only exists locally just renders unstyled.
+
+## Getting a lesson to production
+
+This folder is the authoring tree; `re-speak/podo-curriculum` is what deploys. **Keep
+writing relative `../../runtime/…` refs** — that is the input format the production
+tools expect. `sync-from-authoring.py` rewrites them to `shared/`, and
+`repoint-shared.py` then pins them to the CDN tag declared in one place
+(`curriculum.yaml` → `spec.sharedRuntime`). Writing a CDN URL here by hand would
+hand-pin a version in every file and break local verification.
+
+Over there, in order: `sync-from-authoring.py` → `import-track-lessons.py <track>`
+→ `repoint-shared.py` → `validate.py`. The importer discovers `lesson-NNN.html` and
+reads `podo:lesson-id` and `podo:title-{ko,en,ja}` out of the deck, so those metas are
+load-bearing — `new_lesson.py` writes them and they should not be removed.
+
+**Never edit `shared/` or `sandbox/` in podo-curriculum.** Both are sync destinations
+and get replaced wholesale; a fix made there disappears on the next sync with no error.
+Fix it here instead.
+
 ## Interactive lessons
 
 Anything the learner taps, types, or drags — and anything that has to stay in step with the
