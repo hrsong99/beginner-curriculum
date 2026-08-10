@@ -39,12 +39,24 @@ meets today's pattern somewhere they have not been yet.
 | Scene | Where | Track |
 | --- | --- | --- |
 | Guesthouse, first meeting | `trial-2-patterns` | trial |
-| Korean café, book on the table | 과 7 `korea-trip` | core |
-| Seoul subway, asking the way | 과 8 `korea-trip` | core |
 | Convenience store, rainy night | `trial-3` / 설렘 & 고백 1화 | contextual |
+| 어학당 오리엔테이션 첫날 | 과 1 | core |
+| 공항 입국심사 창구 | 과 2 | core |
+| 시장 반찬가게 앞 | 과 3 | core |
+| 회사 첫 출근, 자리 안내 | 과 4 | core |
+| 헬스장 라커룸 | 과 5 | core |
+| 외국인등록 사무소 대기실 | 과 6 | core |
+| 한국 카페, 책 올려둔 테이블 | 과 7 | core |
+| 서울 지하철, 길 묻기 | 과 8 | core |
+| 포장마차, 떡볶이 첫 입 | 과 9 | core |
+| 회식 자리, 술 권하기 | 과 10 | core |
 
-Unspent and worth using: 시장, 병원 접수, 미용실, 택시, 편의점 계산대, 학교 첫날,
-회사 점심시간, 공항 입국심사, 우체국, 헬스장.
+**과 11–45 already have scenes reserved.** They were assigned up front, one per
+lesson, precisely so parallel writers could not collide — the assignment travels in each
+writer's brief, and the table above gets extended as those decks land. Do not pick a bonus
+scene for a core lesson yourself; ask for the assigned one.
+
+Still unspent and worth using elsewhere: 병원 접수, 미용실, 택시, 우체국, 학교 첫날.
 
 ---
 
@@ -202,19 +214,44 @@ Each of these cost a rewrite. They are not style preferences.
 2. Nothing from the brief's `아직 아님` appears in learner-produced Korean.
 3. Render at 480px and look at it. These are visual documents; a page that reads fine as
    markup can be unusable as a page.
-4. **Check every page for clipping, not just for looking right.** The pager floats over the
-   bottom ~60px, so a page taller than the window loses its last element with no scrollbar and
-   no error. Opening the deck and paging through will not show it — the clipped part is simply
-   not there. Measure it:
+4. **Check every page for a tail hidden under the pager.** Measure it — but measure the
+   right thing, with a probe that works. Both halves of this used to be wrong here.
 
-   ```js
-   [...document.querySelectorAll('.phone > [data-page-id]')]
-     .filter(p => { const d = p.style.display; p.style.display = '';
-                    const h = p.scrollHeight; p.style.display = d;
-                    return h > innerHeight - 60; })
-     .map(p => p.dataset.pageId)
+   *A tall page is not by itself a bug.* The document scrolls (`html` sets
+   `scrollbar-gutter: stable` exactly because the scrollbar comes and goes as you page), and
+   the runtime already clears the floating bar for the pages that grow:
+
+   ```css
+   .phone.paged > .section.pg-on { padding-bottom: 88px; }   /* trial.css */
    ```
 
-   A goal page carries **three or four rows, not six** — six overflowed and hid the last word
-   while the tutor line still promised it.
-4. Append whatever you spent — scene, payoff word, new noun — to this file.
+   So the defect is narrower: **a page taller than the viewport that is _not_ `.section`.**
+   It gets no clearance, so its last line ends under the bar with nothing below it to scroll
+   to. Brand and transition pages are the ones to watch, because the CSS is written on the
+   assumption that they stay short.
+
+   *And paged mode hides pages by class, not by inline style* — `.phone.paged > * { display:
+   none }`, with `pager.js` toggling `.pg-on`. So clearing `p.style.display` clears something
+   that was never set: the page stays `display:none`, `scrollHeight` reads **0**, and the
+   check passes on every deck by measuring nothing. Turn each page on for real:
+
+   ```js
+   const phone = document.querySelector('.phone');
+   const pages = [...phone.children].filter(p => p.hasAttribute('data-page-id'));
+   const was = phone.querySelector('.pg-on');
+   const bad = pages.filter(p => {
+     pages.forEach(q => q.classList.toggle('pg-on', q === p));
+     return document.documentElement.scrollHeight > innerHeight
+            && !p.classList.contains('section');
+   }).map(p => p.dataset.pageId);
+   pages.forEach(q => q.classList.toggle('pg-on', q === was));
+   bad
+   ```
+
+   Two things that will waste an hour otherwise: the decks reference remote avatars, so a
+   sandboxed browser never fires `load` — hang the probe off `DOMContentLoaded` and resolve
+   hosts to nothing. And a goal page carries **three or four rows, not six** — six overflowed
+   and hid the last word while the tutor line still promised it.
+5. Append whatever you spent — scene, payoff word, new noun — to this file. **Unless you are
+   one of a parallel batch**, in which case report it and let the orchestrator write it; ten
+   writers editing one file is how the file gets lost.
