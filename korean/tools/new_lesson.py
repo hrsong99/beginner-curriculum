@@ -33,6 +33,11 @@ KOREAN = Path(__file__).resolve().parent.parent
 # direct children, so everything before the opener and after the closer is frame
 PHONE_OPEN = '<div class="phone">'
 PHONE_CLOSE_RE = re.compile(r"^  </div>\s*$")
+# schemas/lesson.schema.json — metadata.slug. The deck sits in a directory of
+# this name, so the id and the directory are one string.
+SLUG_RE = re.compile(r"^[0-9]{2}-[a-z0-9]+(-[a-z0-9]+)*$")
+# every relative ref out of the deck, so depth can be fixed after placement
+REL_REF_RE = re.compile(r'((?:href|src)=")(?:\.\./)+(runtime|trial)/')
 
 PLACEHOLDER = """
     <!-- ============================================================
@@ -68,6 +73,30 @@ def split_skeleton(deck: Path):
     return "".join(lines[: open_at + 1]), "".join(lines[closes[0] :])
 
 
+def find_course(track_dir: Path, lesson_no: int) -> str:
+    """Which planned course holds this 과, per plan_courses.py's comments."""
+    marker = re.compile(rf"^#   과 +{lesson_no}  ", re.M)
+    hits = [c.parent.name for c in sorted((track_dir / "courses").glob("*/course.yaml"))
+            if marker.search(c.read_text(encoding="utf-8"))]
+    if len(hits) == 1:
+        return hits[0]
+    if not hits:
+        sys.exit(f"no course plans 과 {lesson_no} — run tools/plan_courses.py first, "
+                 f"or pass --course")
+    sys.exit(f"과 {lesson_no} appears in several courses ({', '.join(hits)}) — pass --course")
+
+
+def redepth(page: str, out: Path) -> str:
+    """Rewrite `../../runtime/…` for wherever the deck actually landed.
+
+    The skeleton is lifted off a deck at the track root, but lessons live four
+    levels deeper under courses/<course>/lessons/<slug>/. Getting this wrong
+    gives a deck that renders unstyled with nothing in the console to explain it.
+    """
+    up = "../" * len(out.resolve().parent.relative_to(KOREAN).parts)
+    return REL_REF_RE.sub(lambda m: m.group(1) + up + m.group(2) + "/", page)
+
+
 def retarget(head: str, *, lesson_id: str, level: str, titles: dict, version: str) -> str:
     """Swap the canonical deck's identity for the new lesson's.
 
@@ -101,7 +130,11 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--track", required=True, help="e.g. 2-core-patterns")
     ap.add_argument("--lesson", required=True, type=int, help="과 number, e.g. 7")
-    ap.add_argument("--id", required=True, help="podo:lesson-id, e.g. core-07-daily-routine")
+    ap.add_argument("--course", help="course slug under tracks/<track>/courses/ "
+                                     "(default: the course whose plan holds this 과)")
+    ap.add_argument("--id", required=True,
+                    help="lesson slug AND podo:lesson-id — NN-english-words, e.g. 07-daily-routine. "
+                         "NN is the 과 number; the schema requires this shape.")
     ap.add_argument("--title-ko", required=True, help="Korean title; also becomes <title>")
     ap.add_argument("--title-ja", required=True, help="Japanese title — the learner reads this one")
     ap.add_argument("--title-en", required=True, help="English title, for the admin course list")
@@ -118,9 +151,21 @@ def main():
     if not source.exists():
         sys.exit(f"no canonical deck at {source} — pass --from-deck")
 
-    out = Path(args.out) if args.out else track_dir / f"lesson-{args.lesson:03d}.html"
+    if not SLUG_RE.match(args.id):
+        sys.exit(f"--id '{args.id}' is not a valid lesson slug.\n"
+                 f"  Needs NN-english-words (e.g. {args.lesson:02d}-daily-routine); "
+                 f"the deck's directory takes this name and the schema enforces it.")
+    if not args.id.startswith(f"{args.lesson:02d}-"):
+        sys.exit(f"--id '{args.id}' should start with '{args.lesson:02d}-' to match --lesson")
+
+    if args.out:
+        out = Path(args.out)
+    else:
+        course = args.course or find_course(track_dir, args.lesson)
+        out = track_dir / "courses" / course / "lessons" / args.id / "lesson.html"
     if out.exists():
         sys.exit(f"{out} already exists — delete it or pass a different --out")
+    out.parent.mkdir(parents=True, exist_ok=True)
 
     head, foot = split_skeleton(source)
     head = retarget(
@@ -131,7 +176,13 @@ def main():
         version=dt.date.today().isoformat(),
     )
 
-    out.write_text(head + PLACEHOLDER.format(lesson=args.lesson) + foot, encoding="utf-8")
+    page = redepth(head + PLACEHOLDER.format(lesson=args.lesson) + foot, out)
+    out.write_text(page, encoding="utf-8")
+
+    broken = [r for r in re.findall(r'(?:href|src)="((?:\.\./)+[^"]+)"', page)
+              if not (out.parent / r).resolve().is_file()]
+    if broken:
+        sys.exit(f"✗ {len(broken)} ref(s) do not resolve from {out}, e.g. {broken[0]}")
 
     def rel(p: Path) -> str:
         """Repo-relative when possible — --out may point anywhere."""
