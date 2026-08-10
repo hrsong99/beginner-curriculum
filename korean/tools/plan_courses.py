@@ -102,7 +102,12 @@ TRACKS = {
     "1-hangul":            {"band": 1000, "type": "BASIC_V2", "prefix": "hangul",
                             "name": {"ko": "한글 떼기", "en": "Hangul reading",
                                      "ja": "ハングル入門"}},
+    # levelFirst: core's bare name is only a counter, so the level *is* its
+    # identity and the number just orders within it. Level-last would sort
+    # core-1-advanced next to core-1-beginner and hide the progression. Every
+    # other track has a real name (a show, a theme), which is what should sort.
     "2-core-patterns":     {"band": 2000, "type": "BASIC_V2", "prefix": "core",
+                            "levelFirst": True,
                             "name": {"ko": "핵심 문법 패턴", "en": "Core grammar patterns",
                                      "ja": "コア文法パターン"}},
     "3-contextual-korean": {"band": 3000, "type": "BASIC_V2", "prefix": "ctx",
@@ -189,17 +194,31 @@ def compose(course: dict, cfg: dict) -> dict:
     putting it at the end lets `ctx-drama-*` and `ctx-kpop-*` sort together by
     show instead of being scattered across levels.
 
+    **Except where the bare name is only a counter.** `2-core-patterns` sets
+    `levelFirst`, because there the level is the identity and the number merely
+    orders within it — level-last would interleave `core-1-advanced` with
+    `core-1-beginner` and lose the progression:
+
+        core-beginner-1 … -4      핵심 문법 패턴 · 초급 · 1
+        core-upper-beginner-1 … -2
+        core-intermediate-1 … -3
+
     A single-course track drops the bare part rather than repeating itself
     (`hangul-starter`, not `hangul-reading-starter`).
     """
     level = course["level"]
     bare = course["slug"].strip("-")
-    course["slug"] = "-".join(x for x in (cfg["prefix"], bare, LEVEL_SLUG[level]) if x)
+    lvl = LEVEL_SLUG[level]
+    order = (lvl, bare) if cfg.get("levelFirst") else (bare, lvl)
+    course["slug"] = "-".join(x for x in (cfg["prefix"], *order) if x)
 
     label = {"ko": level, "en": LEVEL_EN[level], "ja": LEVEL_JA[level]}
     course["title"] = {
-        k: " · ".join(x for x in (cfg["name"][k], course["title"].get(k), label[k])
-                      if x)
+        k: " · ".join(
+            x for x in (cfg["name"][k],
+                        *((label[k], course["title"].get(k)) if cfg.get("levelFirst")
+                          else (course["title"].get(k), label[k])))
+            if x)
         for k in ("ko", "en", "ja")
     }
     return course

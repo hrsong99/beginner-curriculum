@@ -511,10 +511,10 @@ def build() -> dict:
             # 코스로 끊은 뒤로 경로가 courses/<코스>/lessons/<슬러그>/lesson.html 이다.
             "links": [("샘플 레슨", "tracks/2-core-patterns/sample-lesson.html", "primary"),
                       ("7과 · 완성 덱",
-                       "tracks/2-core-patterns/courses/core-1-beginner/lessons/07-daily-routine/lesson.html",
+                       "tracks/2-core-patterns/courses/core-beginner-1/lessons/07-daily-routine/lesson.html",
                        "ghost"),
                       ("8과 · 완성 덱",
-                       "tracks/2-core-patterns/courses/core-1-beginner/lessons/08-place-particles/lesson.html",
+                       "tracks/2-core-patterns/courses/core-beginner-1/lessons/08-place-particles/lesson.html",
                        "ghost"),
                       ("목차 원문", "viewer.html?doc=tracks/2-core-patterns/table-of-contents.md", "ghost")],
             "groups": core,
