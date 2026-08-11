@@ -16,8 +16,14 @@
 
       /* ---------- (2) 정답이 없는 고르기 ----------
      초록은 여기서 "고른 것"이라는 뜻이고, .on 은 지워지지 않는 클래스라
-     늦게 들어온 쪽도 그대로 받는다. */
-  document.querySelectorAll(".opt-list[data-pick]").forEach(function (group) {
+     늦게 들어온 쪽도 그대로 받는다.
+
+     data-group 이 붙은 칸은 건너뛴다 — 그건 리포트의 답이고 report.js 가
+     이미 같은 버튼에 자기 핸들러를 매단다. 둘 다 매달리면 한 번 누를 때
+     .on 이 두 번 뒤집혀 아무것도 안 골린 것이 된다. 체험 4과(자유 대화)만
+     이 파일과 report.js 를 함께 싣기 때문에, 그 덱에서만 학습 동기가
+     영영 안 골라지고 「리포트 저장」 버튼이 끝까지 잠겨 있었다. */
+  document.querySelectorAll(".opt-list[data-pick]:not([data-group])").forEach(function (group) {
     var multi = group.getAttribute("data-pick") === "multi";
     var btns = [].slice.call(group.querySelectorAll("button.opt-row"));
     btns.forEach(function (b) {
