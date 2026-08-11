@@ -61,13 +61,28 @@ meets today's pattern somewhere they have not been yet.
 | 도서관 대출대 | 과 17 | core |
 | 병원 접수와 진료실 | 과 18 | core |
 | 식당 테이블, 물과 앞접시 | 과 19 | core |
+| 노래방, 곡 고르기 | 과 20 | core |
+| 카페 단체 주문 | 과 21 | core |
+| 회사 점심시간, 메뉴 정하기 | 과 22 | core |
+| 화장품 가게, 두 개 중 고르기 | 과 23 | core |
+| 면접장 자기소개 | 과 24 | core |
+| 택시 안, 기사님과 잡담 | 과 25 | core |
+| 동창 모임, 사진 보며 | 과 26 | core |
+| 약속 장소, 늦은 친구 | 과 27 | core |
+| 어학당 수업 끝난 복도 | 과 28 | core |
+| 버스 정류장 | 과 29 | core |
+| 부동산 중개소 | 과 30 | core |
 
 **과 11–45 already have scenes reserved.** They were assigned up front, one per
 lesson, precisely so parallel writers could not collide — the assignment travels in each
 writer's brief, and the table above gets extended as those decks land. Do not pick a bonus
 scene for a core lesson yourself; ask for the assigned one.
 
-Still unspent and worth using elsewhere: 택시, 학교 첫날, 회사 점심시간, 노래방, 은행 창구.
+Still unspent and worth using elsewhere: 학교 첫날, 은행 창구, 미술관, 한복 대여점, 한강공원.
+
+**Venues used for a part-3 dialogue are not bonus scenes, but do not build a bonus scene there
+either** — a learner who meets the same room twice in one 과 reads it as a mistake. Spent so
+far as part-3 venues: 과 21 학교 식당 · 과 22 주말 이야기 · 과 23 식당 앞 · 과 19 카페 테이블.
 
 **Nouns now in circulation from Unit 3–4** — reuse these rather than inventing synonyms:
 
@@ -200,6 +215,10 @@ neither:
 | --- | --- | --- |
 | 과 13 | two marks side by side (`3時`+`30分`) | `.ending` is a filled chip, so back-to-back marks **merge into one pill**. Merged the Japanese spans; kept the Korean side's two marks, which the space between 시 and 분 separates |
 | 과 23 | an accent for an adverb (제일 · 가장) | borrowed orange, with an HTML comment saying so |
+| 과 26 | an accent for 의문사 (언제) | same |
+| 과 27 | an accent for 의문사 (왜) — **and its other taught piece (서) is also non-조사** | both taught pieces run orange, so violet goes unused for the first time in the course, and `p3-model` carries two different taught pieces in one colour |
+| 과 22 | a rule page comparing a **조사 against an 어미** | impossible: `.batchim` takes its hue from the container, so it cannot tint two boxes differently. Made the rule page the 받침 split (all 조사, honest violet) and carried the noun-vs-verb point in the script line and the wrong pills |
+| 과 29 | a **three-case** form rule (no 받침 → 로, ㄹ → 로, other → 으로) | `.batchim` is single-column and three boxes overflow; compressed to two with `.bt-syls` |
 
 **Until a third token exists: borrow `.ending` for the deck's second taught piece and leave an
 HTML comment saying what it actually is.** Do not invent a class — a class the CDN tag does not
