@@ -12,7 +12,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-advanced/lessons/01-choosing-friends/lesson.html`
-- sha256: `45ed494ad74e805bd451a4c278bb1483e56e0311a8947d1676066b2a73602312`
+- sha256: `6ca819fdff79dbcb9c292647eb5560b74b13cc832201e40403466a8624b451d8`
 - source kind: `model-story`
 
 #### `metadata`
@@ -159,7 +159,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-intermediate/lessons/01-choosing-friends/lesson.html`
-- sha256: `5f8d68ddf6e2ba29ce4a62787a160b2a8c654d498f0383f2dbd828c34a604fa1`
+- sha256: `9724d88334f53ca379b12a89021fb014647ba5bf2f1bc12da86f3eda4dc9fa5f`
 - source kind: `model-story`
 
 #### `metadata`
@@ -287,8 +287,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 #### `q5`
 
-- `question.ko` · KO: 나와 성격이 다른 친구와 오래 지내려면 뭐가 필요해요?
-- `question.ja` · JA: 自分と性格が違う友達と長く付き合うには、何が必要ですか？
+- `question.ko` · KO: 성격이 다른 친구와 오래 지내려면 뭐가 중요해요?
+- `question.ja` · JA: 性格が違う友達と長く付き合うには、何が大切ですか？
 - `tutorGuidance.ko` · KO: 실제 다른 성격의 친구를 떠올려 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 어떤 점이 가장 달라요?
 - `followUp.2.ko` · KO: 그 차이 덕분에 좋은 것도 있어요?
@@ -308,7 +308,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-advanced/lessons/02-first-impression-changed/lesson.html`
-- sha256: `8189a9b1ff413ca07e58ea618f5834be68fd39f71a3560fff928ab2f709010a1`
+- sha256: `75f44d073c01d496ac7c0cbf3538e36aa204d311139aafd3a7e2e9e74b2514bf`
 - source kind: `model-story`
 
 #### `metadata`
@@ -455,7 +455,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-intermediate/lessons/02-first-impression-changed/lesson.html`
-- sha256: `605e857a56f72f58bfddadbd8fb544305e84d061a80514a43ce6699941f2b16d`
+- sha256: `e4b672ffda69d614f85f685d2e1e88c9ed7b51d5f114a73366b26bbb0372c582`
 - source kind: `model-story`
 
 #### `metadata`
@@ -604,7 +604,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-advanced/lessons/03-do-you-believe-mbti/lesson.html`
-- sha256: `b8fcc325a276f96a1824aeae4af436d9ec7503bc3c107f66f7ea1a94c65be6a2`
+- sha256: `6a24b2febf9cc696d1ff378c09e897cd44b1b852194ba3fa7d1c77ad001ab588`
 - source kind: `model-story`
 
 #### `metadata`
@@ -751,7 +751,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-intermediate/lessons/03-do-you-believe-mbti/lesson.html`
-- sha256: `d07e10f04a72471c03563235b9d1d2ef8686cf6af680d926b64fe9db921d624d`
+- sha256: `ba552283f8a89f3ccef278d9cfd2360ef48bf93a2b4ae80dbf001866521117ff`
 - source kind: `model-story`
 
 #### `metadata`
@@ -870,7 +870,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 #### `q4`
 
-- `question.ko` · KO: 사람들이 MBTI 이야기로 대화를 시작하는 걸 좋아하는 이유는 뭐예요?
+- `question.ko` · KO: 사람들은 왜 MBTI 이야기로 대화를 시작해요?
 - `question.ja` · JA: MBTIの話から会話を始める人が多いのはなぜですか？
 - `tutorGuidance.ko` · KO: 실제로 MBTI 이야기를 나눈 자리를 근거로 말하게 해 주세요.
 - `followUp.1.ko` · KO: 처음 보는 사람과도 편해져요?
@@ -900,7 +900,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-advanced/lessons/04-doing-things-alone/lesson.html`
-- sha256: `13ca56985ecf8c9c134f0d3ffa87dafc65a5f480882bf60a4bb6ad0c7ed62e78`
+- sha256: `c7e48caca22ccd0c85d0060af97fee6350cfe91a87ae5e4893fc066b5dc26b99`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1047,7 +1047,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-intermediate/lessons/04-doing-things-alone/lesson.html`
-- sha256: `65682acaf157297aa65b77646a491a2bec5a94e7c3d42ad7ad8e5e29e3eebbc0`
+- sha256: `baec7bce781d3ba0ce8c52655bd62a1a2c411633da139554bd00bedc61ed1945`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1196,7 +1196,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-advanced/lessons/05-five-minutes-with-a-stranger/lesson.html`
-- sha256: `b5052255cc22621c7ae794cefbb3c182a69ced36828599c8ef7cea11377f292a`
+- sha256: `7791bd8715e45d8f0ac16928bd064f8add9d2b0d5c4b4351a3fa1b3d7b236c04`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1343,7 +1343,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-intermediate/lessons/05-five-minutes-with-a-stranger/lesson.html`
-- sha256: `dd4d7e731bcc4b6584d784f9c43f74ce4139407763f675475eb42ef99f8825e9`
+- sha256: `1e6fbfc2bbc55501a50e4bc722eb9a84f38931e6e4df2d08bbca43486315a40e`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1462,8 +1462,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 #### `q4`
 
-- `question.ko` · KO: 첫 5분에 상대가 어떤 행동을 하면 편하게 이야기할 수 있다고 느껴요?
-- `question.ja` · JA: 最初の5分で、相手がどんな行動をすると話しやすいと感じますか？
+- `question.ko` · KO: 처음 만난 사람이 어떻게 해 주면 말하기 편해요?
+- `question.ja` · JA: 初めて会った人がどうしてくれると話しやすいですか？
 - `tutorGuidance.ko` · KO: 좋았던 실제 대화 상대를 근거로 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 상대가 얼마나 말했어요?
 - `followUp.2.ko` · KO: 눈을 보고 들었어요?
@@ -1492,7 +1492,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-advanced/lessons/06-making-up-after-a-fight/lesson.html`
-- sha256: `49c372c6750eea12f23091721dc06e7f3fa715ee7a6e72df9ba7a80ceb05280a`
+- sha256: `13c69e935ab6f923d14932fd51289bfe71c9e1485252a58ad8cc38335c25ad48`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1639,7 +1639,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-intermediate/lessons/06-making-up-after-a-fight/lesson.html`
-- sha256: `bbe2854c057e33d0a36368de4719c71e9419c0d4012461553b5e63f390760760`
+- sha256: `e8f9ab10f41d0c836ff2735ea52d28dcf1cf430b8a90fa2ab90e8c34724a9dc3`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1776,8 +1776,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 #### `q6`
 
-- `question.ko` · KO: 그럼 반대로, 화해하지 않고 거리를 두는 게 나은 문제는 뭐예요?
-- `question.ja` · JA: では逆に、仲直りせず距離を置くほうがよい問題は何ですか？
+- `question.ko` · KO: 그럼 반대로, 화해하지 않고 거리를 두는 게 나을 때는 언제예요?
+- `question.ja` · JA: では逆に、仲直りせず、距離を置いたほうがよいのはどんなときですか？
 - `tutorGuidance.ko` · KO: 개인 경험 공개를 강요하지 말고 일반적인 경계로 닫으세요.
 - `followUp.1.ko` · KO: 같은 일이 몇 번 반복됐어요?
 - `followUp.2.ko` · KO: 거리를 둔다고 어떻게 말할 거예요?
@@ -1788,7 +1788,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-advanced/lessons/07-why-friends-decrease-with-age/lesson.html`
-- sha256: `866cd180d1a449b3f7cdbc78837853dc00101b1bf8c4f8c7e81de76f4cc5dcc6`
+- sha256: `0515c8ef3404f304cdcd6d105f976109145595b0c569f1d181246220f0bfc8ec`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1935,7 +1935,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-intermediate/lessons/07-why-friends-decrease-with-age/lesson.html`
-- sha256: `de1981185ec82dd29a29ff64b69652fa6eac861c160ad265d6c94f7de215cdf7`
+- sha256: `b6a38fabbe91edeeee674091dbfa276b850c561eb28dad02512c5a029d232daf`
 - source kind: `model-story`
 
 #### `metadata`

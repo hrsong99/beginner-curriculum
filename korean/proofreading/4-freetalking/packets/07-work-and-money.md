@@ -12,7 +12,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-advanced/lessons/01-my-first-paycheck/lesson.html`
-- sha256: `0d939c227e1dc93a13f8ece36254900e2c3af8e0812e685192da73292b3e6fa9`
+- sha256: `1814b8ad67bf4be513922f3de068b720269c0b3630107915c806361f510e3ad4`
 - source kind: `model-story`
 
 #### `metadata`
@@ -159,7 +159,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-intermediate/lessons/01-my-first-paycheck/lesson.html`
-- sha256: `0dcbe036e7588b3a0baa2b447fcb9999bf64b6e2bddbc01d84905b0e7fc09a98`
+- sha256: `d1fbb8f6416e225a1eabcb3972f624665de00707167ad4d211e466ccfeb5d129`
 - source kind: `model-story`
 
 #### `metadata`
@@ -287,8 +287,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 #### `q5`
 
-- `question.ko` · KO: 처음 번 돈의 금액보다 더 오래 남은 것은 뭐예요?
-- `question.ja` · JA: 初めて稼いだ金額より長く残ったものは何ですか？
+- `question.ko` · KO: 첫 수입에서 금액보다 더 기억나는 건 뭐예요?
+- `question.ja` · JA: 初めての収入で、金額より覚えていることは何ですか？
 - `tutorGuidance.ko` · KO: 교훈을 요구하지 말고 사람, 물건, 감정 중 하나를 고르게 해 주세요.
 - `followUp.1.ko` · KO: 그 기억이 왜 남았어요?
 - `followUp.2.ko` · KO: 지금 돈을 쓰는 습관에도 영향이 있어요?
@@ -308,7 +308,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-advanced/lessons/02-proudest-work-moment/lesson.html`
-- sha256: `95f225f0b52850614cde6d828d170d2ea950bee9bf779e07218029236537a848`
+- sha256: `554b25da90e9d7c4ba45b13626d773c73363d21b4f8026a40ec70c61da339f4b`
 - source kind: `model-story`
 
 #### `metadata`
@@ -455,7 +455,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-intermediate/lessons/02-proudest-work-moment/lesson.html`
-- sha256: `47b4534bee18373996b0ddb1219f2aba7aa2ab936590f3fc0a2ad1e0bd599003`
+- sha256: `6b2c46bd0df036741071007628855746e4b4fd27a375a255ef9258850962715f`
 - source kind: `model-story`
 
 #### `metadata`
@@ -583,8 +583,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 #### `q5`
 
-- `question.ko` · KO: 큰 결과가 없어도 뿌듯함을 느끼게 하는 기준은 뭐예요?
-- `question.ja` · JA: 大きな結果がなくても誇らしさを感じる基準は何ですか？
+- `question.ko` · KO: 큰 결과가 없어도 언제 뿌듯해요?
+- `question.ja` · JA: 大きな結果がなくても、どんなときに誇らしく感じますか？
 - `tutorGuidance.ko` · KO: 방금 말한 경험의 작은 증거를 근거로 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 시간을 지킨 것도 결과가 될 수 있어요?
 - `followUp.2.ko` · KO: 전보다 나아진 점은 뭐였어요?
@@ -604,7 +604,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-advanced/lessons/03-when-i-felt-successful/lesson.html`
-- sha256: `417cab4f94bd641d64e6177f288685b52a7528798831256a5abe593c5aaecdaf`
+- sha256: `831319f25899308bd3e6524b566161e9a7c2a5b61cb6ab9a9b1f4ad9375e64fc`
 - source kind: `model-story`
 
 #### `metadata`
@@ -751,7 +751,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-intermediate/lessons/03-when-i-felt-successful/lesson.html`
-- sha256: `ebc078e1d99fea29c56f9d0c79e45eafdaff5ff79ffb706c0e3e2f93e233d1bd`
+- sha256: `c78f236fb7aac7c1de3c1379c612972ba4fd8d1a5989d7422a52803deb7c11bb`
 - source kind: `model-story`
 
 #### `metadata`
@@ -879,8 +879,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 #### `q5`
 
-- `question.ko` · KO: 한 번의 성공이 다음 행동을 바꾼 경험이 뭐예요?
-- `question.ja` · JA: 一度の成功が次の行動を変えた経験は何ですか？
+- `question.ko` · KO: 한 번 성공한 뒤에 다음 행동이 어떻게 달라졌어요?
+- `question.ja` · JA: 一度成功したあと、次の行動はどう変わりましたか？
 - `tutorGuidance.ko` · KO: 성공 뒤 실제로 시작하거나 계속한 일로 넓혀 주세요.
 - `followUp.1.ko` · KO: 다음 목표는 뭐였어요?
 - `followUp.2.ko` · KO: 더 자신 있게 한 일이 있어요?
@@ -900,7 +900,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-advanced/lessons/04-what-i-am-learning-now/lesson.html`
-- sha256: `ae6758ce0173f0b953764a5b24618c7b6d783d63c8ea51c7ef0dc2fd14ec2855`
+- sha256: `10f3e21bee5304d8aac380f0efd2b17d23c893097a02e6987ce27fb321311390`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1047,7 +1047,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-intermediate/lessons/04-what-i-am-learning-now/lesson.html`
-- sha256: `40e4ebefddcdbac61195336000d6346d877efe9f98f5bee3fe4bfeb31ab86161`
+- sha256: `0bd44fe0e3584ae7d70dc4bf058f99ad7e00e472723b99dbdab66151485d9749`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1175,8 +1175,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 #### `q5`
 
-- `question.ko` · KO: 오래 간 것과 금방 끝난 것의 가장 큰 차이는 뭐였어요?
-- `question.ja` · JA: 長く続いたものとすぐ終わったものの一番大きな違いは何でしたか？
+- `question.ko` · KO: 오래 한 배움과 금방 그만둔 배움은 뭐가 달랐어요?
+- `question.ja` · JA: 長く続けた学びと、すぐやめた学びは何が違いましたか？
 - `tutorGuidance.ko` · KO: 성격 평가 대신 시간, 비용, 사람, 재미 중 하나를 비교하세요.
 - `followUp.1.ko` · KO: 시간대가 달랐어요?
 - `followUp.2.ko` · KO: 돈을 낸 것이 영향을 줬어요?
@@ -1196,7 +1196,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-advanced/lessons/05-my-money-habit/lesson.html`
-- sha256: `f8fe334a0b1e0e7d82bd70caf24b9ee0dfdab4f3763aef58cf375c63e5c7b40d`
+- sha256: `8fad8aac739ae2317a3ef5031fbee6b36816ea80d0a0f9089d213ec205d61d71`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1343,7 +1343,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-intermediate/lessons/05-my-money-habit/lesson.html`
-- sha256: `4ae6df3993f4d7c0f77c83fd9797bb03fe06f5d22363518cd0d29ce1af6b1846`
+- sha256: `b5b9138c3279afe1624a7c6592c0cc35ede059513dc9aa6c4fe0e3b74657891f`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1462,7 +1462,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 #### `q4`
 
-- `question.ko` · KO: 같은 돈 습관도 사람마다 결과가 다른 이유는 뭐예요?
+- `question.ko` · KO: 같은 돈 습관도 사람마다 결과가 왜 달라요?
 - `question.ja` · JA: 同じお金の習慣でも人によって結果が違う理由は何ですか？
 - `tutorGuidance.ko` · KO: 수입 형태, 생활비, 성향 중 한 가지 실제 차이를 고르게 하세요.
 - `followUp.1.ko` · KO: 날짜가 일정한지가 중요해요?
@@ -1492,7 +1492,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-advanced/lessons/06-if-i-had-another-job/lesson.html`
-- sha256: `414aaaa545f18fe09e10a7bcadddc169a9af668a46b80e527d79efb9725bbc54`
+- sha256: `9fd717dba6aaf0b4886e9db10722084e6857a5aeaf014506062c03613d74bbe7`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1639,7 +1639,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-intermediate/lessons/06-if-i-had-another-job/lesson.html`
-- sha256: `e00f2a8f74e5cfd9d63a9da822d14062e2071110f20c4427da73e36b63f18c6e`
+- sha256: `ea7efa27f06536126a4b10e39120f68bbf585f8693cd1b56dfb4b3c571f11c47`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1788,7 +1788,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-advanced/lessons/07-how-ai-changed-my-work/lesson.html`
-- sha256: `23cb2eea540a01aa2c16a9c15f94fb65990202405be7a6b61219db10d87591f5`
+- sha256: `fcab48381072f39eb427a713e5e41569d4900c539c3d17fff11692d8ae3842df`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1935,7 +1935,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-intermediate/lessons/07-how-ai-changed-my-work/lesson.html`
-- sha256: `094635e630a9dfefe70b3abe480478ceb5d6758f3eb5f1ea00dcd1d9c570f4a7`
+- sha256: `4b96a36b2cbaf3bdd0e14d30d37555d7afcc090350aa35ec08502c00759101ce`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2063,8 +2063,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 #### `q5`
 
-- `question.ko` · KO: AI가 있어도 사람이 계속 맡아야 한다고 느끼는 부분은 뭐예요?
-- `question.ja` · JA: AIがあっても人が引き続き担うべきだと感じる部分は何ですか？
+- `question.ko` · KO: AI가 있어도 사람이 해야 하는 일은 뭐예요?
+- `question.ja` · JA: AIがあっても、人がするべき仕事は何ですか？
 - `tutorGuidance.ko` · KO: 거대한 전망보다 학생이 실제로 본 판단 하나에 붙잡아 주세요.
 - `followUp.1.ko` · KO: 누구의 판단이 필요해요?
 - `followUp.2.ko` · KO: 실수하면 어떤 영향이 있어요?
@@ -2084,7 +2084,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-advanced/lessons/08-why-i-wanted-a-change/lesson.html`
-- sha256: `53be1977f5b022dbc4f75f4fa38252b8888a8fd72265f19e30e8cb691bf964f0`
+- sha256: `13840f094a632f01ab7b262512ab038d035aa1c9b8ef46426326928b453db87d`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2231,7 +2231,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-intermediate/lessons/08-why-i-wanted-a-change/lesson.html`
-- sha256: `c9317389e72ae8995f2fa39dfa14b35af40580196b31c01fe27a6e4290630c01`
+- sha256: `d312e1378b2e70b470e4b994948f7576470dcaeaa72acce61a4983865aee2f37`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2341,8 +2341,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 #### `q3`
 
-- `question.ko` · KO: 바꾸고 싶은 마음이 구체적인 행동으로 이어진 날이 있었어요?
-- `question.ja` · JA: 変えたい気持ちが具体的な行動につながった日はありましたか？
+- `question.ko` · KO: 바꾸고 싶어서 실제로 한 행동이 있어요?
+- `question.ja` · JA: 変えたいと思って、実際にしたことはありますか？
 - `tutorGuidance.ko` · KO: 결정의 옳고 그름을 말하지 말고 실제 행동 한 가지를 따라가세요. 말하기 불편한 내용은 건너뛰고, 편한 범위에서만 답하게 해 주세요.
 - `followUp.1.ko` · KO: 누구와 이야기했어요?
 - `followUp.2.ko` · KO: 몇 분이나 이야기했어요?
@@ -2380,7 +2380,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-advanced/lessons/09-best-and-worst-bosses/lesson.html`
-- sha256: `b516fb716455c7b273caf6180c0dd966bcc58d63eef55f54d0fc7ec5acc41d38`
+- sha256: `7f46af0826c382d41c50fa05f9deb73917eec7873d3c600286c1cd19d262c936`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2527,7 +2527,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-intermediate/lessons/09-best-and-worst-bosses/lesson.html`
-- sha256: `00998d7e39c8be30e077d64bbd19ed5e93294906df8b2329d2d0042bf8ba8dd0`
+- sha256: `220637eca4be9765f2b48663c9d305d8bb2c7e2a104c3809bdda912a6f82fbe7`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2646,8 +2646,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 #### `q4`
 
-- `question.ko` · KO: 두 사람의 소통 방식은 구체적으로 무엇이 달랐어요?
-- `question.ja` · JA: 二人のコミュニケーション方法は具体的に何が違いましたか？
+- `question.ko` · KO: 두 사람은 이야기하는 방식이 어떻게 달랐어요?
+- `question.ja` · JA: 二人は話し方がどう違いましたか？
 - `tutorGuidance.ko` · KO: 좋고 나쁨보다 요청 시점, 설명 길이, 질문 반응을 비교하세요. 이름이나 불편한 내용은 건너뛰고, 편한 범위에서만 답하게 해 주세요.
 - `followUp.1.ko` · KO: 마감을 언제 알려 줬어요?
 - `followUp.2.ko` · KO: 질문했을 때 어떻게 답했어요?

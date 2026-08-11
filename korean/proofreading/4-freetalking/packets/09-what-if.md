@@ -12,7 +12,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-advanced/lessons/01-if-i-won-the-lottery/lesson.html`
-- sha256: `91ba2be13fa71669f93edba8f20dffcf7c5a25178cdb488282512b5ba2de8ab1`
+- sha256: `813994ffe9687d0d8d4509d4d06c0447f657a60555616aa4d1df35540e9e8e79`
 - source kind: `article`
 
 #### `metadata`
@@ -184,7 +184,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-intermediate/lessons/01-if-i-won-the-lottery/lesson.html`
-- sha256: `e85a9f98b948e7ece858f723a95de7251497ee062feebd3bde2ecff10438b25d`
+- sha256: `212fcea37db424111448efa975fc9736378e973af309fdc20fa1f98f901daba9`
 - source kind: `article`
 
 #### `metadata`
@@ -352,7 +352,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-advanced/lessons/02-three-things-on-a-desert-island/lesson.html`
-- sha256: `82dc55ab90c56f2154615fa6123150c9c123b204380c8dfab51003b40e3828b2`
+- sha256: `e5034b688d01bcfac664c8e49e35c35666ec2729de2b9ad151cc40fac4a7737b`
 - source kind: `model-story`
 
 #### `metadata`
@@ -499,7 +499,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-intermediate/lessons/02-three-things-on-a-desert-island/lesson.html`
-- sha256: `37915f3fe89b53b53d5133b0277f8d2511f21bf4c615440671c35891663c3f0d`
+- sha256: `c4e614f2f9c6bd01efc29085c04a550120199ec8d18f11eee90e8c389414b278`
 - source kind: `model-story`
 
 #### `metadata`
@@ -648,7 +648,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-advanced/lessons/03-be-someone-else-for-a-day/lesson.html`
-- sha256: `66a8db3edb5ce9ba1171ca85800e045df2953dbe713a08ea8dac8fc9e6dad123`
+- sha256: `4fe6346c1c781b68b1078f3f33ccf6e1d420189e9be62260277ebaa321750046`
 - source kind: `model-story`
 
 #### `metadata`
@@ -795,7 +795,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-intermediate/lessons/03-be-someone-else-for-a-day/lesson.html`
-- sha256: `e4ffc2f22d230186ff2512915b9e66374f05e2095bdf4ff5e345b0302a825d76`
+- sha256: `2aa6f403f17d165cf70b406097a5e4cafbae7071216c6de414b5bcf86838448c`
 - source kind: `model-story`
 
 #### `metadata`
@@ -944,7 +944,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-advanced/lessons/04-one-superpower/lesson.html`
-- sha256: `31a01fbe9d8a455d27513f65cbb39921ae75aa2f4b0a5086cac541ce0ed89ec7`
+- sha256: `eb521e98e4bd90ed8edf9fbf2491f158b7cf9cbec7188e49b1015585df749bad`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1091,7 +1091,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-intermediate/lessons/04-one-superpower/lesson.html`
-- sha256: `8e951e195104298b52c0bb471a4f725055fccb9a2b0fb0c17e40810dc80a07bc`
+- sha256: `07ce585c155b2d243924d3c90b675f9ae7111fd83f3f6a718136af109015b411`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1219,12 +1219,12 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 #### `q5`
 
-- `question.ko` · KO: 사람들이 내 능력을 알면 무엇을 책임져야 할까요?
-- `question.ja` · JA: 人々が自分の能力を知ったら、何に責任を持つ必要があるでしょうか？
-- `tutorGuidance.ko` · KO: 가장 생각이 필요한 자리예요. 타인의 기대까지 넓혀 주세요.
-- `followUp.1.ko` · KO: 도와달라는 부탁을 어디까지 받을 거예요?
-- `followUp.2.ko` · KO: 능력을 돈 받고 써도 될까요?
-- `followUp.3.ko` · KO: 누가 사용 규칙을 정해야 할까요?
+- `question.ko` · KO: 친구가 그 능력을 써 달라고 부탁하면 어떻게 할 거예요?
+- `question.ja` · JA: 友達にその能力を使ってほしいと頼まれたら、どうしますか？
+- `tutorGuidance.ko` · KO: 한 번의 부탁을 구체적으로 정한 뒤, 도와줄지 거절할지와 그 이유를 말하게 해 주세요.
+- `followUp.1.ko` · KO: 어떤 부탁까지 들어줄 거예요?
+- `followUp.2.ko` · KO: 돈을 준다고 하면 달라져요?
+- `followUp.3.ko` · KO: 거절할 때 뭐라고 말할 거예요?
 
 #### `q6`
 
@@ -1240,7 +1240,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-advanced/lessons/05-one-food-for-life/lesson.html`
-- sha256: `75b72cd4c14c125035a43813922c29b9d91c29ca6ec2fa7de79c6d3a1ccbaf05`
+- sha256: `a07c06fa72ba10c1dfdb1981006076430fba05d81ebe311d195c70450c6ebf93`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1387,7 +1387,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-intermediate/lessons/05-one-food-for-life/lesson.html`
-- sha256: `c7c0544f2d1508442cb605b17201941eb4507496945d8617416503cf0bf29740`
+- sha256: `fbd183a81c1b30f97360690b3fabba241510dd40799b413e857c1308960cad29`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1536,7 +1536,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-advanced/lessons/06-one-thing-free-for-life/lesson.html`
-- sha256: `1b9dbe943ab6063142b52edf12ab164c9768ff0cb040b803ab3ca66b171ed3fb`
+- sha256: `b9a634628b63de80b984fbefee2deabe75f65adbbd586b4666b6c52aa2ab3b98`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1683,7 +1683,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-intermediate/lessons/06-one-thing-free-for-life/lesson.html`
-- sha256: `f671a186a76224c110d5ffefc7ccd93d6a9d88888d37680eeb9f72fc65360cce`
+- sha256: `ab3df2a4ec0c5dfe6fcc471d62e0bf7b16e4e563485613d8964e0c1dc8540b9a`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1832,7 +1832,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-advanced/lessons/07-one-week-without-a-smartphone/lesson.html`
-- sha256: `946f02a562aaec8269bb80f0c21a570094ae11c7f799356600de1c68eeeba0c9`
+- sha256: `e89212f990d680238ded2be91d595900c59e68e539d52390862194ac8bb39911`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1979,7 +1979,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-intermediate/lessons/07-one-week-without-a-smartphone/lesson.html`
-- sha256: `8aea3fe7587aefdd6e3dd1e27e6eed0e9c60407529dc26c6a8b8bf623b768eb1`
+- sha256: `2b322e5be737d21cd8d719768e14c0d7f252356b8fd9e0b24a32b8d51abf933f`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2128,7 +2128,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-advanced/lessons/08-ai-does-my-job/lesson.html`
-- sha256: `97c1fca89a56116f56e9c58fa74ec919abc65201dee9b8d854005ce6db3febe5`
+- sha256: `a62a0b3c44e969a643ece88a393aaf056eb59910d1c13a2c02417a7cab33450e`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2275,7 +2275,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-intermediate/lessons/08-ai-does-my-job/lesson.html`
-- sha256: `07f9211ed7ab96b82d4090985485c7d9c1af5a643a47994f3cba0b2300022da1`
+- sha256: `7624db2b894fc333b6f934fbf1680218886ddbbbb66ff026882ad7e6be70937d`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2424,7 +2424,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-advanced/lessons/09-if-i-were-an-animal/lesson.html`
-- sha256: `5e7c243280ca9894673830052d175a707116c88c1563f8d3fc983826276aa84c`
+- sha256: `527a5e59b49fa8ff7f87de2510bd7c8b99d2396fed7a2ffb2255afb98d401f7e`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2571,7 +2571,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-intermediate/lessons/09-if-i-were-an-animal/lesson.html`
-- sha256: `61cdde7dbf64eccf768ead951378d278957af36088f480d1d0dce48c169809b5`
+- sha256: `f7380a68ecd9725b3a4da05a3c127e47cdd8db323aba48718186df1c6bf30124`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2720,7 +2720,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-advanced/lessons/10-country-in-my-next-life/lesson.html`
-- sha256: `d8f3deea71fc5911ef63d204575cc55727431ac8e539db873bcdcf4f9477fa66`
+- sha256: `9be55e3fb197e8ef831e0f2182abb4d215c2f42a14bfc38a810502f8505320c6`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2867,7 +2867,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-intermediate/lessons/10-country-in-my-next-life/lesson.html`
-- sha256: `fde8529e3e27063a2b215cf89559fd5c42e25c9d4bb6db4c1505011af178a33d`
+- sha256: `0c0acd29f6e204f67076c7899069ce267379c27c53f5591da202f9ea8fc103c5`
 - source kind: `model-story`
 
 #### `metadata`
@@ -3016,7 +3016,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-advanced/lessons/11-this-day-ten-years-later/lesson.html`
-- sha256: `a88d37e234a7b5e02709ad9d96d3b9e5fe322208b13d7e946d3f1b77fac238ad`
+- sha256: `e1528a2c2d3ae748e6026be9fa391134555d3e0caacfb837d257d3cc548a2f4c`
 - source kind: `model-story`
 
 #### `metadata`
@@ -3110,7 +3110,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 10년 뒤 오늘, 어디에서 뭘 하고 있을 것 같아요?
 - `question.ja` · JA: 10年後の今日、どこで何をしていると思いますか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 장소와 일을 먼저 고른 뒤 이유를 넓혀 주세요.
+- `tutorGuidance.ko` · KO: 가까운 미래나 원하는 생활 습관으로 답해도 되고, 미래 계획이 불편하면 건너뛰어도 된다고 안내해 주세요. 장소와 일을 고른 뒤 이유를 넓혀 주세요.
 - `followUp.1.ko` · KO: 왜 그곳에 있어요?
 - `followUp.2.ko` · KO: 몇 시쯤인 것 같아요?
 - `followUp.3.ko` · KO: 지금과 이어지는 부분은 뭐예요?
@@ -3163,7 +3163,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-intermediate/lessons/11-this-day-ten-years-later/lesson.html`
-- sha256: `948907d15c0e5b605bbae3dbce2d7a9839e435824e7b96bbe4494db207116315`
+- sha256: `ded68e1e8f9ecf2a39007c2da3518e7fc1fe72dcf319c12a04ffdeae3071046c`
 - source kind: `model-story`
 
 #### `metadata`
@@ -3257,7 +3257,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 10년 뒤 오늘, 어디에서 뭘 하고 있을 것 같아요?
 - `question.ja` · JA: 10年後の今日、どこで何をしていると思いますか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 장소와 일을 먼저 고른 뒤 이유를 넓혀 주세요.
+- `tutorGuidance.ko` · KO: 가까운 미래나 원하는 생활 습관으로 답해도 되고, 미래 계획이 불편하면 건너뛰어도 된다고 안내해 주세요. 장소와 일을 고른 뒤 이유를 넓혀 주세요.
 - `followUp.1.ko` · KO: 왜 그곳에 있어요?
 - `followUp.2.ko` · KO: 몇 시쯤인 것 같아요?
 - `followUp.3.ko` · KO: 지금과 이어지는 부분은 뭐예요?

@@ -20,10 +20,11 @@ author judgment remain unapplied and are consolidated in
 | [What if](09-what-if.issues.jsonl) | 53 |
 | [Worth thinking about](10-worth-thinking-about.issues.jsonl) | 101 |
 | [Cross-theme vocabulary](cross-theme-vocabulary.issues.jsonl) | 328 |
-| **Total reviewed field records** | **1,080** |
+| [Accepted product decisions](accepted-decisions-2026-08.issues.jsonl) | 46 |
+| **Total reviewed field records** | **1,126** |
 
-The shared boilerplate review in [00-boilerplate.md](00-boilerplate.md) produced two common fixes,
-each propagated to all 182 decks (364 string instances). Twenty-one first-pass vocabulary records
+The shared boilerplate review and accepted correction-mode policy produced four common fixes,
+each propagated to all 182 decks (728 string instances). Twenty-one first-pass vocabulary records
 were subsequently improved by the cross-theme vocabulary round. Those records retain the original
 audit history and use guarded `supersededBy` links to the final applied record.
 
@@ -35,12 +36,12 @@ audit history and use guarded `supersededBy` links to the final applied record.
   question notes retain comfortable-range and skip safeguards.
 - [Cross-theme vocabulary](cross-theme-vocabulary.md): highlight order, complete reusable chunks,
   gloss meaning and sibling shape.
-- [Open editorial decisions](open-editorial-decisions.md): 120 unapplied observations consolidated
-  without duplication into 30 decisions.
+- [Open editorial decisions](open-editorial-decisions.md): three product decisions are now applied;
+  the remaining 105 observations are consolidated without duplication into 27 decisions.
 
 ## Verification result
 
-- All 1,080 issue records are either the current applied suggestion or are explicitly and
+- All 1,126 issue records are either the current applied suggestion or are explicitly and
   verifiably superseded by a later applied record on the same field.
 - All 182 decks and ten generated Markdown packets are current.
 - Static deck validation passes for page shape, metadata, IDs, local references, bilingual prompts,
@@ -51,4 +52,5 @@ audit history and use guarded `supersededBy` links to the final applied record.
   observed.
 - `git diff --check` passes.
 
-No item from an `*.uncertain.md` file or from the consolidated open decisions was applied.
+Only the explicitly accepted D01, D17 and D18 policies were promoted from the uncertain reviews.
+The other 27 consolidated decisions remain unapplied.

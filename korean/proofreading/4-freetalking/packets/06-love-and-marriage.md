@@ -12,7 +12,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-advanced/lessons/01-heart-fluttering-moment/lesson.html`
-- sha256: `9fc77c0f84df2218c933557daae1be1ccad5b2dc760a4ff0b7e02d6d44f7cd8c`
+- sha256: `12c80b11bf3711bff582e980586b3d3becd6717af2c92a5f6ab6e2b095f37e29`
 - source kind: `model-story`
 
 #### `metadata`
@@ -159,7 +159,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-intermediate/lessons/01-heart-fluttering-moment/lesson.html`
-- sha256: `6287de07286969379383ab3e70720f7d018dc569b1be24bf4036becb0be3f3b9`
+- sha256: `22f85d071482c2368824e7820c28a022c1ce22f692dc1eabb7284f6a1f1798a3`
 - source kind: `model-story`
 
 #### `metadata`
@@ -308,7 +308,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-advanced/lessons/02-words-that-kill-the-mood/lesson.html`
-- sha256: `a6b87b62dbb617d6e2edc6e47049938d5bce3b353e949dc55d236046b82b9d0f`
+- sha256: `2ea0b4f8e33bb0bce7d79d51c9c06a05cfbae6a90d6b5e528e0c38c71008c448`
 - source kind: `model-story`
 
 #### `metadata`
@@ -455,7 +455,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-intermediate/lessons/02-words-that-kill-the-mood/lesson.html`
-- sha256: `549f41b2c7de3eed60b7f7bd29b55b1ab5be96ec9820f29b4cd781ed56f6bb3c`
+- sha256: `fb9d92c88226e92f4333802f6d858cba55edb5831e4a23f96df8a4f2aaf72889`
 - source kind: `model-story`
 
 #### `metadata`
@@ -604,7 +604,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-advanced/lessons/03-one-must-have-quality/lesson.html`
-- sha256: `b6a28ebfad93c4af36176e48a200aa4e836c5db621454793690066bada93ad0b`
+- sha256: `ff4ada18485c56dc424babb53196fb8a32be7174b9ed17e5a9359a8d42ab2b0b`
 - source kind: `model-story`
 
 #### `metadata`
@@ -751,7 +751,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-intermediate/lessons/03-one-must-have-quality/lesson.html`
-- sha256: `6c35f4bd091046ac7dab41cc15e801182c5a81df00225f8ade7c06c222241808`
+- sha256: `f388808a325f1e665e5f387790571a4226c35ec2d64ef9b3040e872d71d97ced`
 - source kind: `model-story`
 
 #### `metadata`
@@ -900,7 +900,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-advanced/lessons/04-my-bad-dating-habit/lesson.html`
-- sha256: `7497e15c33c8cbc1771cee7403b7691433af40217bc9669449d8f7554c43010b`
+- sha256: `511eb02f86c4ed26b065b4d9fbc92a05a3be0aa377507d67e4ecef670d86de2b`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1047,7 +1047,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-intermediate/lessons/04-my-bad-dating-habit/lesson.html`
-- sha256: `f6309f0612e13c3076e03887e71056e0d2a9375430656606d1c16726f77cb0b8`
+- sha256: `b1ce8c7e3704456b252742c387430e94617bf2140f292e3bdea6433279f68212`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1196,7 +1196,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-advanced/lessons/05-dream-wedding/lesson.html`
-- sha256: `f6791acc8908d746deb17152e6406582224c8f1d39e7503b05275dc9b1063e68`
+- sha256: `1c39465f461e1214691849108c264d76a8646d5fb85aada4fa5aad79fb593e2f`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1343,7 +1343,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-intermediate/lessons/05-dream-wedding/lesson.html`
-- sha256: `e55942c0f5a0ae9b82604e7ab8d13181f44ad4dedc3493a59b58e6ca4c49241a`
+- sha256: `b4952feacf9e0ec86667ca1cdcf29263e0a0b36b0dd6e18bf7724a165d56ee03`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1492,7 +1492,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-advanced/lessons/06-hardest-breakup/lesson.html`
-- sha256: `e324d21a26f7a3872c3e1e9bcaa04b21d8dc30dc01763d15951bf78613b26b81`
+- sha256: `abdec8655272e6941638fe64d7ec215b6077666fd8953abf0a5dc4cab34d4bbc`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1639,7 +1639,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-intermediate/lessons/06-hardest-breakup/lesson.html`
-- sha256: `ccdd9bb97c286ef237f31483199ee70fffcacc15c89481fcef830d834aa08692`
+- sha256: `ae8373f87556949ca36f229e7b6024a8825e790f361fce0b516d6f4d935fc65e`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1788,7 +1788,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-advanced/lessons/07-thoughts-on-single-life-and-dink/lesson.html`
-- sha256: `eb9d0de4441f9c8bba7dccb5106e98703d6162f6322eac49cae24aaf0ff68341`
+- sha256: `9d2ceeff01b6769789af09434cc1cf176fd11deb3caab50a96854c98b856a837`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1935,7 +1935,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-intermediate/lessons/07-thoughts-on-single-life-and-dink/lesson.html`
-- sha256: `692b7d512d4b43238aee6646959ba97b857d45b1ed275c4732580d1fd4fa1635`
+- sha256: `3ae93bd08ec9faa73e5d896030e3dc1f8a3386d522f7caa33d4f21898331721f`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2045,9 +2045,9 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 #### `q3`
 
-- `question.ko` · KO: 원하는 가족의 모습은 시간이 지나면 어떻게 달라질 수 있어요?
-- `question.ja` · JA: 望む家族の形は、時間がたつとどう変わるでしょうか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 앞에서 나온 이야기와 연결해 변화나 차이를 말하게 해 주세요.
+- `question.ko` · KO: 나중에는 원하는 가족의 모습이 달라질 수도 있어요?
+- `question.ja` · JA: 将来、望む家族の形が変わることもありますか？
+- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 앞에서 나온 이야기와 연결해 달라질 수 있는 이유 한 가지를 말하게 해 주세요.
 - `followUp.1.ko` · KO: 경험이 생각을 바꿀 수 있어요?
 - `followUp.2.ko` · KO: 경제 상황도 영향을 줘요?
 - `followUp.3.ko` · KO: 생각이 바뀌어도 괜찮아요?

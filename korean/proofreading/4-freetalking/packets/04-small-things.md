@@ -12,7 +12,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-advanced/lessons/01-petty-annoyance/lesson.html`
-- sha256: `b0881f46e1171499d91a37edd653a362e7a3a0e71cc144497cff99b9e9610870`
+- sha256: `3c366ab85d24d79a8574eb346e19fdb42fbe5d5a47164f15d624707b5d0eac5c`
 - source kind: `model-story`
 
 #### `metadata`
@@ -159,7 +159,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-intermediate/lessons/01-petty-annoyance/lesson.html`
-- sha256: `bdf340b52770b828bbeb4fe172a9e025378a9e4a2ada44cdf68c4384cbb34e79`
+- sha256: `a6edb9dc650ab4996851c665a8b3af7b00b78607517de1240d4a3820dc74eb2f`
 - source kind: `model-story`
 
 #### `metadata`
@@ -308,7 +308,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-advanced/lessons/02-my-tmi/lesson.html`
-- sha256: `b61bf11501f7c429a182af279d574295f6980a783e5fe627fffb8307dce554c5`
+- sha256: `bf3329ca183fe396bcf5b858b6cda749c70a6e10fb55d61d0e148943c27d5cba`
 - source kind: `model-story`
 
 #### `metadata`
@@ -455,7 +455,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-intermediate/lessons/02-my-tmi/lesson.html`
-- sha256: `4a3d5e78cf39f60fa97406312bfad5cb70f61fccb42b399af44510cb6db11454`
+- sha256: `bfcc402ca5a5f678d5c8cc0d9647765685d26569bd075b1ad8129b73ea5f1e95`
 - source kind: `model-story`
 
 #### `metadata`
@@ -604,7 +604,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-advanced/lessons/03-weird-habit/lesson.html`
-- sha256: `f76fa35d4acaa7c657b7ff139bc0aa32732ca49d74e88e8f2fb5e9226a50e710`
+- sha256: `8a7cd5550b28e7b36bdcda9ea41d4381b1a16c30d623582daceecd366e1b8666`
 - source kind: `model-story`
 
 #### `metadata`
@@ -751,7 +751,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-intermediate/lessons/03-weird-habit/lesson.html`
-- sha256: `d3d5983a65cbe783f1a4c5d942b8962b8b40e4b06fcb7a3c84a057a2b40e851e`
+- sha256: `42f48159f4c6595f3c56e2c935766e016e35fc0b3b548604b026eb123aee788b`
 - source kind: `model-story`
 
 #### `metadata`
@@ -900,7 +900,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-advanced/lessons/04-rainy-day-me/lesson.html`
-- sha256: `831ca04082a71f5b7d710a50621d8d06f989b3d8fdd3da99503bb887892f223e`
+- sha256: `7d8cd0fb3eaf83464aef082cfc294ee401be5adcf953225056c1b52b4f993795`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1047,7 +1047,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-intermediate/lessons/04-rainy-day-me/lesson.html`
-- sha256: `f68469b4245fc9b4fd664846c1a20d4461ef3f7733bff37f7b5dd8dce63b96ac`
+- sha256: `7efb2ec877dc0564dae8c4fc70c524bc82662b96941afed7994428b463de1718`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1196,7 +1196,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-advanced/lessons/05-energy-reset/lesson.html`
-- sha256: `ce4f983ebae4d1ad612c4aba154204280f8ae373faa44d73597885d67d0a169b`
+- sha256: `58e72ca0e3384e278fd84cb9f8ba722de1743f99a403a94203ba2fb29d1334f8`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1343,7 +1343,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-intermediate/lessons/05-energy-reset/lesson.html`
-- sha256: `6689f5053238890033dcc43af424276aa495e2a37c9a4a42f7f2c05417fb0883`
+- sha256: `d592f458b1fe69d07638dc44d4ca7a92ea5415760de92ee20e75dfa1bbda9c61`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1492,7 +1492,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-advanced/lessons/06-stress-relief/lesson.html`
-- sha256: `c50b104e3cbe1d00e1bfbb59b389a878d9c400c6bcb357acc22592bdc89ea39d`
+- sha256: `c9aa6f23edae8a11072efa96e5aae0dd93a7154b90127388a47ed018e03de960`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1639,7 +1639,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-intermediate/lessons/06-stress-relief/lesson.html`
-- sha256: `add46d1f4df9269b1d84c3e1f72c0b38db95156e4ff023c14bb440e7f47ffc3c`
+- sha256: `71fc677bbf5a91e8c728d4fca2f0d15fa5d4caac6c0f15161efa8036e361a227`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1788,7 +1788,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-advanced/lessons/07-one-superstition/lesson.html`
-- sha256: `a9cd1190a90b4886a7be9a92abdf40a2872837f559db860737f287468e71f700`
+- sha256: `bb7b8ca7bf7ac8c718ad694c818593c13ab96728b385e658256b9a51f7f7296d`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1935,7 +1935,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-intermediate/lessons/07-one-superstition/lesson.html`
-- sha256: `d57a786ddb1f7f6723afc6fe9327a34965e4faab9b27a6724ed0d030af6005fc`
+- sha256: `057948630a6d7f034815090af99ebe3185c8da5fdee351018de3a262e38283da`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2084,7 +2084,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-advanced/lessons/08-weekend-routine/lesson.html`
-- sha256: `1ea29f6ec21ff53c665bbf274188d7efe65f43faca750cca623f7d17ccaf06fc`
+- sha256: `f99e078c1f3398a7760334434ca3bd054d16201b558b55f8bbc4a5ca00e5da34`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2231,7 +2231,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-intermediate/lessons/08-weekend-routine/lesson.html`
-- sha256: `dc39870b02829d273f673cfacb24bdf3be04f67b09f9cd5a79a22d24ef3eb620`
+- sha256: `569781c90c6b30ecefd52bfb75fa728f45dab0e390d0f32fbd24ae7a295fafa9`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2380,7 +2380,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-advanced/lessons/09-house-rule/lesson.html`
-- sha256: `d28ccf888325e46d5f5dd40a69cbf8717588d4858d6e6992a5e3bf05e4db15da`
+- sha256: `dacd4f84c51868a238e89807dfdd5b5dab7bec994d1be38307cee9a3dedf9bfe`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2527,7 +2527,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-intermediate/lessons/09-house-rule/lesson.html`
-- sha256: `c0b3f0ab5550d3cfdc35a2f3123659460762af9a214b6fd990c578f266ac17e9`
+- sha256: `ec569aeb71610dba578ce69fe6f830b0977afdd7daf6d8cb48178498e97aff3f`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2676,7 +2676,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-advanced/lessons/10-cringe-memory/lesson.html`
-- sha256: `02bb76c9c28059dc13f1bbed114cabdc3f64762cf04c8dc0992748cada4e96ad`
+- sha256: `ea4a93d10203caeb449e09b642de025252c1089b4a77953ba850c03a350a110f`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2770,7 +2770,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 자다가 갑자기 떠오르는 이불킥 장면은 뭐예요?
 - `question.ja` · JA: 寝ていて急に思い出す、布団を蹴りたくなる場面は何ですか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 이유와 장면이 나올 때까지 기다려 주세요.
+- `tutorGuidance.ko` · KO: 가볍게 웃을 수 있는 기억만 말해도 되고, 떠오르지 않거나 불편하면 건너뛰어도 된다고 안내해 주세요. 이유와 장면이 나올 때까지 기다려 주세요.
 - `followUp.1.ko` · KO: 몇 년 전 일이에요?
 - `followUp.2.ko` · KO: 왜 아직 기억나요?
 - `followUp.3.ko` · KO: 함께 있던 사람은 기억할까요?
@@ -2823,7 +2823,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-intermediate/lessons/10-cringe-memory/lesson.html`
-- sha256: `0c34efee5de6f7ae77499b7a164ef6fd2c8a3caa9adb2076b61d4a056f6947a1`
+- sha256: `8958e1eb59ed06339ad58691a7c99c16cb3666e173b55faf429c969d897e9110`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2917,7 +2917,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 자다가 갑자기 떠오르는 이불킥 장면은 뭐예요?
 - `question.ja` · JA: 寝ていて急に思い出す、布団を蹴りたくなる場面は何ですか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 이유와 장면이 나올 때까지 기다려 주세요.
+- `tutorGuidance.ko` · KO: 가볍게 웃을 수 있는 기억만 말해도 되고, 떠오르지 않거나 불편하면 건너뛰어도 된다고 안내해 주세요. 이유와 장면이 나올 때까지 기다려 주세요.
 - `followUp.1.ko` · KO: 몇 년 전 일이에요?
 - `followUp.2.ko` · KO: 왜 아직 기억나요?
 - `followUp.3.ko` · KO: 함께 있던 사람은 기억할까요?
