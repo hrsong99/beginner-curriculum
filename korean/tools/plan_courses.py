@@ -236,7 +236,7 @@ def deck_meta(deck: pathlib.Path) -> tuple[dict, str | None]:
 def course_yaml(course, cfg, class_level, track, written) -> str:
     plan = "\n".join(
         f"#   {l['no']:>3}  {'✓ ' + written[l['no']] if l['no'] in written else '·  '}"
-        f"{l['title']}"
+        f"{l['title']}{' [깊게]' if l.get('deep') else ''}"
         for l in course["lessons"])
     t = course["title"]
     return f"""\

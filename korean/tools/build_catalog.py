@@ -15,6 +15,8 @@ import json
 import re
 from pathlib import Path
 
+import track_parsers
+
 ROOT = Path(__file__).resolve().parent.parent          # korean/
 TRACKS = ROOT / "tracks"
 OUT = ROOT / "catalog.html"                            # 관문
@@ -413,6 +415,15 @@ def parse_freetalking() -> list[dict]:
             continue
         g = groups[-1]
 
+        m = re.match(r"^\*\*Course outcome:\*\*\s*(.+?)\s*$", line)
+        if m:
+            g["blurb"] = plain(m.group(1))
+            continue
+        m = re.match(r"^\*\*Session format:\*\*\s*(.+?)\s*$", line)
+        if m:
+            g["form"] = plain(m.group(1))
+            continue
+
         # 테마 설명은 여러 줄에 걸친 한 덩어리의 이탤릭이라 닫는 * 를 만날 때까지 이어 붙인다
         if not g["lessons"] and (italic or (line.startswith("*") and not line.startswith("* "))):
             italic = not line.rstrip().endswith("*") or line.strip() == "*"
@@ -435,6 +446,24 @@ def parse_freetalking() -> list[dict]:
                                  "title": f"{plain(m.group(2))} vs {plain(m.group(3))}",
                                  "sub": "", "can": "", "canLabel": "", "level": "고급",
                                  "chips": []})
+    for group in groups:
+        if group.get("warmup"):
+            continue
+        if not group["blurb"]:
+            raise ValueError(f"free-talking {group['label']} has no Course outcome")
+        if group["form"] not in track_parsers.FT_FORMATS:
+            raise ValueError(
+                f"free-talking {group['label']} has invalid Session format: "
+                f"{group['form']!r}"
+            )
+        if not group["lessons"]:
+            raise ValueError(f"free-talking {group['label']} has no lessons")
+        missing = [str(lesson["n"]) for lesson in group["lessons"] if not lesson["can"]]
+        if missing:
+            raise ValueError(
+                f"free-talking {group['label']} lessons missing outcomes: "
+                + ", ".join(missing)
+            )
     return groups
 
 
@@ -600,9 +629,9 @@ def build() -> dict:
             "id": "4-freetalking", "no": 4, "ko": "고급 프리토킹", "en": "Advanced Freetalking",
             "glyph": "話", "status": "open", "accent": "#0080a8", "tint": "#e9f6fa",
             "unitWord": "테마", "lessonWord": "주제",
-            "desc": "새로 외울 문법은 없습니다. 말이 나오는 주제와, 그 주제를 40분 굴리는 질문 사다리만 있습니다. "
+            "desc": "새로 외울 문법은 없습니다. 말이 나오는 주제와, 25분 안에서 학습자 속도에 맞춰 꺼내 쓰는 질문 사다리만 있습니다. "
                     "끝이 없는 트랙이라 주제는 매주 늘어납니다.",
-            "note": "한 세션 = 워밍업 5분(밸런스 게임) + 본 주제 30분 + 마무리 5분(고쳐 준 문장 세 개 다시 말하기).",
+            "note": "한 세션은 25분입니다. 질문 여덟 개는 완료 목록이 아니라 넉넉한 콘텐츠 풀이라, 빠르면 전부 쓰고 천천히 길게 말하면 일부만 진행합니다.",
             "stats": [("주제", free_topics), ("테마", len([g for g in free if not g.get('warmup')])),
                       ("워밍업", free_warmups)],
             "groups": free,

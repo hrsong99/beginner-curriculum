@@ -58,6 +58,16 @@ you are about to make conflicts with it, say so and ask — don't quietly deviat
 It defines the course-aware brief pipeline, pilot gate, sub-agent ownership boundaries,
 continuity review and integrated QA for every track.
 
+### Mandatory pilot gate
+
+Treat the workflow's pilot sequence as a stop gate, not advice. For a new curriculum or course,
+author **one representative lesson by hand**, verify its complete narrative, pedagogy, component
+markup, and every page at 480px, then stop for explicit user approval. Do not use a generic content
+generator, assign a lesson batch, or present additional decks as finished before that approval.
+Structural checks alone never approve a pilot. If the pilot is rejected, rewrite and re-review it;
+do not use it as a template. After approval, draft three structurally different lessons, review
+those, and only then expand the remaining batch as described in the workflow.
+
 Four inputs, in this order. Read them all — the budget saved by the first two is there to be
 spent on the last one.
 

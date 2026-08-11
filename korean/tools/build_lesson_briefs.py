@@ -37,6 +37,10 @@ def _value(label: str, value: str | None) -> list[str]:
     return [f"- **{label}:** {value}"] if value else []
 
 
+def _lesson_label(lesson: dict) -> str:
+    return lesson["title"] + (" [깊게]" if lesson.get("deep") else "")
+
+
 def render_brief(track: pathlib.Path, course: dict, lesson: dict,
                  prior: dict | None, following: dict | None) -> str:
     number = lesson["no"]
@@ -61,6 +65,7 @@ def render_brief(track: pathlib.Path, course: dict, lesson: dict,
         "",
     ]
     lines += _value("Course outcome", course.get("note"))
+    lines += _value("Session format", course.get("sessionFormat"))
     lines += _value("Work", course.get("work"))
     lines += _value("Cast", course.get("cast"))
     for note in course.get("story", []):
@@ -70,6 +75,8 @@ def render_brief(track: pathlib.Path, course: dict, lesson: dict,
     lines += _value("Title", title)
     lines += _value("Scene", lesson.get("scene"))
     lines += _value("Can do", lesson.get("canDo"))
+    if lesson.get("deep"):
+        lines += _value("Sensitive topic", "[깊게] — 관계가 생긴 뒤에 사용")
 
     dialogues = lesson.get("dialogues", [])
     if dialogues:
@@ -100,11 +107,11 @@ def render_brief(track: pathlib.Path, course: dict, lesson: dict,
 
     lines += ["", "## Continuity", ""]
     lines.append(
-        f"- **Previous:** {prior['no']} · {prior['title']}" if prior
+        f"- **Previous:** {prior['no']} · {_lesson_label(prior)}" if prior
         else "- **Previous:** course opening"
     )
     lines.append(
-        f"- **Next:** {following['no']} · {following['title']}" if following
+        f"- **Next:** {following['no']} · {_lesson_label(following)}" if following
         else "- **Next:** course ending"
     )
     if track.name == "3-contextual-korean":
@@ -170,7 +177,10 @@ def build_track(track: pathlib.Path) -> tuple[int, int]:
                 lessons[i + 1] if i + 1 < len(lessons) else None,
             ), encoding="utf-8")
             expected.add(path)
-            index.append(f"- [`{lesson['no']:03d}`]({course['slug']}/{path.name}) {lesson['title']}")
+            index.append(
+                f"- [`{lesson['no']:03d}`]({course['slug']}/{path.name}) "
+                f"{_lesson_label(lesson)}"
+            )
         index.append("")
 
     index_path = toc_dir / "index.md"

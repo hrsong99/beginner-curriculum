@@ -310,8 +310,17 @@ def parse_contextual(track: pathlib.Path) -> list[dict]:
 FT_THEME = re.compile(r"^# (\d+)\. (.+?)\s*$")
 # `7. **나이 들면 왜 친구가 줄어들까** `[깊게]`` — the tail may be a dash-description,
 # a [깊게] marker, or both. [깊게] is not decoration: the TOC says those topics are
-# good but must wait until there is a relationship, so it belongs in the title.
+# good but must wait until there is a relationship, so keep it as structured metadata.
 FT_TOPIC = re.compile(r"^(\d+)\. \*\*(.+?)\*\*\s*(.*)$")
+
+FT_FORMATS = {
+    "이야기",
+    "고르기",
+    "한일",
+    "의견",
+    "이야기 + 의견",
+    "이야기 + 고르기",
+}
 
 FT_SLUGS = {
     1: ("between-two-countries", "Between two countries", "ふたつの国のあいだ"),
@@ -336,6 +345,27 @@ def parse_freetalking(track: pathlib.Path) -> list[dict]:
         if known is None:
             raise ParseError(f"theme {n} ('{name}') has no entry in FT_SLUGS")
         slug, t_en, t_ja = known
+        outcome = _paragraph_field(body, "Course outcome")
+        if not outcome:
+            raise ParseError(
+                f"free-talking theme {n} ('{name}') has no `**Course outcome:**` field"
+            )
+        session_format = _paragraph_field(body, "Session format")
+        if not session_format:
+            raise ParseError(
+                f"free-talking theme {n} ('{name}') has no `**Session format:**` field"
+            )
+        if session_format not in FT_FORMATS:
+            allowed = ", ".join(sorted(FT_FORMATS))
+            raise ParseError(
+                f"free-talking theme {n} ('{name}') has unknown session format "
+                f"'{session_format}' (expected one of: {allowed})"
+            )
+        if re.search(r"[*`]", outcome):
+            raise ParseError(
+                f"free-talking theme {n} ('{name}') course outcome contains "
+                "unresolved Markdown markup"
+            )
         lessons = []
         for tm in (FT_TOPIC.match(l) for l in body):
             if not tm:
@@ -343,17 +373,31 @@ def parse_freetalking(track: pathlib.Path) -> list[dict]:
             tail = tm.group(3).strip()
             deep = "[깊게]" in tail
             desc = re.sub(r"`?\[깊게\]`?", "", tail).lstrip("—– ").strip()
+            lesson_no = int(tm.group(1))
+            title = tm.group(2).strip()
+            if not desc:
+                raise ParseError(
+                    f"free-talking theme {n} ('{name}') lesson {lesson_no} "
+                    f"('{title}') has no observable outcome after `—`"
+                )
             lessons.append({
-                "no": int(tm.group(1)),
-                "title": tm.group(2).strip() + (" [깊게]" if deep else ""),
-                "canDo": desc or None,
+                "no": lesson_no,
+                "title": title,
+                "canDo": desc,
+                "deep": deep,
                 "patterns": [], "scene": None,
             })
         if not lessons:
             raise ParseError(f"theme '{name}' parsed 0 session topics")
-        note = next((l.strip("* ") for l in body if l.startswith("*이 트랙") or
-                     (l.startswith("*") and "형식은" in l)), "")
-        courses.append({"slug": slug, "level": "고급", "note": note[:180],
+        numbers = [lesson["no"] for lesson in lessons]
+        expected = list(range(1, len(lessons) + 1))
+        if numbers != expected:
+            raise ParseError(
+                f"free-talking theme {n} ('{name}') lesson numbers must be "
+                f"continuous from 1 (found {numbers})"
+            )
+        courses.append({"slug": slug, "level": "고급", "note": outcome,
+                        "sessionFormat": session_format,
                         "title": {"ko": name, "en": t_en, "ja": t_ja},
                         "lessons": lessons})
     if not courses:
