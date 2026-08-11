@@ -1,0 +1,54 @@
+# Freetalking proofreading status
+
+The full 182-deck freetalking curriculum has completed the compact-packet editorial workflow.
+High-confidence corrections are applied in the source HTML. Editorial calls that need product or
+author judgment remain unapplied and are consolidated in
+[open-editorial-decisions.md](open-editorial-decisions.md).
+
+## Applied review rounds
+
+| Review | Deck field records |
+| --- | ---: |
+| [Between two countries](01-between-two-countries.issues.jsonl) | 82 |
+| [Me lately](02-me-lately.issues.jsonl) | 99 |
+| [Things I like](03-things-i-like.issues.jsonl) | 40 |
+| [Small things](04-small-things.issues.jsonl) | 86 |
+| [People and ties](05-people-and-ties.issues.jsonl) | 32 |
+| [Love and marriage](06-love-and-marriage.issues.jsonl) | 69 |
+| [Work and money](07-work-and-money.issues.jsonl) | 50 |
+| [What came before](08-what-came-before.issues.jsonl) | 140 |
+| [What if](09-what-if.issues.jsonl) | 53 |
+| [Worth thinking about](10-worth-thinking-about.issues.jsonl) | 101 |
+| [Cross-theme vocabulary](cross-theme-vocabulary.issues.jsonl) | 328 |
+| **Total reviewed field records** | **1,080** |
+
+The shared boilerplate review in [00-boilerplate.md](00-boilerplate.md) produced two common fixes,
+each propagated to all 182 decks (364 string instances). Twenty-one first-pass vocabulary records
+were subsequently improved by the cross-theme vocabulary round. Those records retain the original
+audit history and use guarded `supersededBy` links to the final applied record.
+
+## Final audits
+
+- [Cross-theme language](cross-theme-language.md): titles, metadata, Korean/Japanese parity,
+  duplicates and terminology.
+- [Cross-theme sensitivity](cross-theme-sensitivity.md): all 18 deep-topic decks and all 144 deep
+  question notes retain comfortable-range and skip safeguards.
+- [Cross-theme vocabulary](cross-theme-vocabulary.md): highlight order, complete reusable chunks,
+  gloss meaning and sibling shape.
+- [Open editorial decisions](open-editorial-decisions.md): 120 unapplied observations consolidated
+  without duplication into 30 decisions.
+
+## Verification result
+
+- All 1,080 issue records are either the current applied suggestion or are explicitly and
+  verifiably superseded by a later applied record on the same field.
+- All 182 decks and ten generated Markdown packets are current.
+- Static deck validation passes for page shape, metadata, IDs, local references, bilingual prompts,
+  follow-ups, forbidden inline code and yomi.
+- Eleven generator/validator unit tests pass.
+- Representative 480px browser checks pass for corrected vocabulary expansion, shared style copy,
+  an opinion article and deep-topic skip guidance; no horizontal overflow or console errors were
+  observed.
+- `git diff --check` passes.
+
+No item from an `*.uncertain.md` file or from the consolidated open decisions was applied.
