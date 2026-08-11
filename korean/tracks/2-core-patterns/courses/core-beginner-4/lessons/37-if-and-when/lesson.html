@@ -17,17 +17,539 @@
 <body>
   <div class="phone">
 
-    <!-- ============================================================
-         PAGES GO HERE — one .phone child per page, one activity per page.
+    <!-- the goal is one exchange in two halves: put a condition on the plan,
+         then say how you want it to turn out. Four rows. -->
+    <div class="transition-page" data-page-id="lesson-goal" data-act="(으)면 · 았/었으면">
+      <span class="transition-kicker">목표</span>
+      <h2 class="transition-title">오늘의 목표 <span class="title-ja">(今日のゴール)</span></h2>
+      <p class="section-subtitle"><span class="ko">오늘은 조건을 붙여서 말하는 거예요. 수업이 끝나면 이렇게 말할 수 있어요.</span><span class="ja">今日は「条件をつけて言う」ことばです。授業が終わると、こんなふうに言えるようになります。</span></p>
+      <div class="known lines">
+        <div class="known-row"><span class="k">시간이 있으면 같이 가요.</span><span class="yomi">シガニ イッスミョン カチ カヨ</span><span class="j">時間があれば一緒に行きましょう</span></div>
+        <div class="known-row"><span class="k">만약에 비가 오면 다음에 가요.</span><span class="yomi">マニャゲ ピガ オミョン タウメ カヨ</span><span class="j">もし雨が降ったら、次にしましょう</span></div>
+        <div class="known-row"><span class="k">내일 날씨가 좋았으면 좋겠어요.</span><span class="yomi">ネイル ナルッシガ チョアッスミョン チョケッソヨ</span><span class="j">明日、天気がよかったらいいな</span></div>
+        <div class="known-row"><span class="k">감기가 빨리 나았으면 좋겠어요.</span><span class="yomi">カムギガ パルリ ナアッスミョン チョケッソヨ</span><span class="j">風邪が早く治ってほしいです</span></div>
+      </div>
+    </div>
 
-         Plan the arc from  lesson-blueprint.md
-         Take the content from  toc/lesson-037.md
-         Copy component markup and tutor voice from the deck this
-         skeleton came from — do not invent components.
+    <!-- the same bridge shape as 과 7 · 8 · 10 · 19 · 30. 연락 is the one the
+         learner has not met; 약속 and 토요일 come along because today's whole
+         business is fixing a day. -->
+    <div class="section" data-page-id="words-you-know">
+      <h2 class="section-title">이미 아는 단어 <span class="title-ja">(もう知っている単語)</span></h2>
+      <p class="section-subtitle"><span class="ko">오늘 쓸 단어, 이미 알아요. 이것도 한자에서 왔어요.</span><span class="ja">今日使うことば、もう知っています。これも漢字から来ています。</span></p>
+      <div class="bridge">
+        <div class="br-row"><span class="br-cn">連絡</span><span class="br-eq">→</span><span class="br-ko">연락<small class="yomi">ヨルラク</small></span></div>
+        <div class="br-row"><span class="br-cn">約束</span><span class="br-eq">→</span><span class="br-ko">약속<small class="yomi">ヤクソク</small></span></div>
+        <div class="br-row"><span class="br-cn">土曜日</span><span class="br-eq">→</span><span class="br-ko">토요일<small class="yomi">トヨイル</small></span></div>
+      </div>
+    </div>
 
-         The first page must carry data-act, since the cover that used
-         to supply it is a trial-only page and is not here.
-         ============================================================ -->
+    <!-- ============ PART 1 · 조건 붙이기 ============ -->
+    <div class="transition-page" data-page-id="part1-intro" data-act="(으)면">
+      <span class="transition-kicker">パート 1</span>
+      <h2 class="transition-title">시간이 있으면<span class="yomi">シガニ イッスミョン</span></h2>
+      <p class="transition-copy">〜たら・〜なら。条件を先に置いて、そのうえで誘います。</p>
+    </div>
+
+    <!-- the sentence whole, with the joint carrying the accent. 조건 comes
+         first and the plan second — the same order as Japanese, so the page
+         only has to show where the piece attaches. -->
+    <div class="section" data-page-id="p1-teach">
+      <h2 class="section-title">오늘의 패턴 <span class="title-ja">(今日のパターン)</span></h2>
+      <p class="section-subtitle"><span class="ko">조건을 먼저 말하고, 그다음에 하고 싶은 말을 해요. 순서는 일본어하고 똑같아요. 제가 읽을게요. 잘 듣고 따라 읽어 보세요.</span><span class="ja">条件を先に言って、そのあとに言いたいことを言います。順番は日本語と同じです。私が読みます。よく聞いて、まねして読んでみましょう。</span></p>
+      <div class="sent-hero">
+        <span class="korean">시간이 <span class="ending">있으면</span> 같이 가요.</span><span class="yomi">シガニ イッスミョン カチ カヨ</span>
+        <span class="translation">時間が<span class="ending">あれば</span>一緒に行きましょう。</span>
+      </div>
+      <div class="sent-more">
+        <div><span class="korean">비가 <span class="ending">오면</span> 집에 있어요.</span><span class="yomi">ピガ オミョン チベ イッソヨ</span><span class="translation">雨が<span class="ending">降ったら</span>家にいます。</span></div>
+        <div><span class="korean">시간이 <span class="ending">없으면</span> 다음에 가요.</span><span class="yomi">シガニ オプスミョン タウメ カヨ</span><span class="translation">時間が<span class="ending">なければ</span>次にしましょう。</span></div>
+      </div>
+    </div>
+
+    <!-- the unit's 표현 arrive here, inside lines the learner only reads:
+         혹시 · 만약에 · 그러면. Nothing new is carried — the frame is the one
+         they just heard three times, and 그러면 is that frame on 그렇다. -->
+    <div class="section" data-page-id="p1-read">
+      <h2 class="section-title">같이 읽어요 <span class="title-ja">(一緒に読もう)</span></h2>
+      <p class="section-subtitle"><span class="ko">이번엔 혼자 읽어 보세요. 네 문장이에요. 혹시는 'もしかして', 만약에는 'もし'예요.</span><span class="ja">今度はひとりで読んでみましょう。4つの文です。혹시は「もしかして」、만약에は「もし」です。</span></p>
+      <div class="model-list">
+        <div class="model-line"><span class="korean">혹시 이번 주말에 시간이 <span class="ending">있으면</span> 같이 가요.</span><span class="yomi">ホクシ イボン チュマレ シガニ イッスミョン カチ カヨ</span><span class="translation">もしかして今週末、時間が<span class="ending">あれば</span>一緒に行きましょう。</span></div>
+        <div class="model-line"><span class="korean">만약에 비가 <span class="ending">오면</span> 집에서 영화 봐요.</span><span class="yomi">マニャゲ ピガ オミョン チベソ ヨンファ ポァヨ</span><span class="translation">もし雨が<span class="ending">降ったら</span>、家で映画を見ます。</span></div>
+        <div class="model-line"><span class="korean">날씨가 <span class="ending">좋으면</span> 밖에서 커피 마셔요.</span><span class="yomi">ナルッシガ チョウミョン パッケソ コピ マショヨ</span><span class="translation">天気が<span class="ending">よければ</span>、外でコーヒーを飲みます。</span></div>
+        <div class="model-line"><span class="korean">주말에 시간이 <span class="ending">있으면</span> 연락해 주세요. 그러면 같이 가요.</span><span class="yomi">チュマレ シガニ イッスミョン ヨルラケ ジュセヨ。 クロミョン カチ カヨ</span><span class="translation">週末に時間が<span class="ending">あれば</span>連絡してください。それなら一緒に行きましょう。</span></div>
+      </div>
+    </div>
+
+    <!-- the one rule page of part 1, and it is a sound rule: the floor of the
+         stem's last syllable picks 으면 or 면. Same 받침 split the learner has
+         met for 은/는 and 을/를, so the page says so instead of teaching it
+         twice. ㄹ 받침 stems are kept out of this deck entirely — they take 면
+         and would need a third box the component cannot stand up. -->
+    <div class="section" data-page-id="p1-myeon-rule">
+      <h2 class="section-title">으면과 면 <span class="title-ja">(으면 と 면、どっち？)</span></h2>
+      <p class="section-subtitle"><span class="ko">그 받침 규칙, 여기서도 똑같아요. 다 빼고 마지막 글자를 봐 주세요. 받침이 있으면 으면, 없으면 면이에요.</span><span class="ja">あのパッチムのルール、ここでも同じです。다を取って、最後の文字を見てください。パッチムがあれば으면、なければ면です。</span></p>
+      <div class="batchim ending-rule">
+        <div class="bt-box">
+          <span class="bt-eq">
+            <span class="bt-syl on">있</span>
+            <span class="bt-arrow" aria-hidden="true">→</span>
+            <span class="bt-out">으면<span class="yomi">ウミョン</span></span>
+          </span>
+          <span class="bt-head">받침 있음<small>パッチムあり（子音で終わる）</small></span>
+          <span class="bt-ex"><span>있다 → 있<b>으면</b><span class="yomi">イッスミョン</span></span><span>좋다 → 좋<b>으면</b><span class="yomi">チョウミョン</span></span></span>
+        </div>
+        <div class="bt-box">
+          <span class="bt-eq">
+            <span class="bt-syl off">가</span>
+            <span class="bt-arrow" aria-hidden="true">→</span>
+            <span class="bt-out">면<span class="yomi">ミョン</span></span>
+          </span>
+          <span class="bt-head">받침 없음<small>パッチムなし（母音で終わる）</small></span>
+          <span class="bt-ex"><span>가다 → 가<b>면</b><span class="yomi">カミョン</span></span><span>오다 → 오<b>면</b><span class="yomi">オミョン</span></span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- nothing but the last sound of the stem decides these, so the pills are
+         the two shapes and the word in front of them is the whole question. -->
+    <div class="section" data-page-id="p1-choose">
+      <h2 class="section-title">알맞은 말 고르기 <span class="title-ja">(正しい言い方を選ぼう)</span></h2>
+      <p class="section-subtitle"><span class="ko">앞 글자에 받침이 있는지 보고, 맞는 쪽을 눌러 보세요.</span><span class="ja">前の文字にパッチムがあるかを見て、正しいほうをタップしてください。</span></p>
+      <div class="choose-list">
+        <div class="choose-row sentence" data-sync-id="p1-choice-time" data-sync-kind="selection" data-sync-state="chosen">
+          <span class="translation">時間があれば一緒に行きましょう。</span>
+          <span class="choose-sentence">시간이 있<span class="opt" data-sync-option="eumyeon" data-correct>으면</span><span class="sep">/</span><span class="opt" data-sync-option="myeon">면</span> 같이 가요.<span class="yomi">シガニ イッ … カチ カヨ</span></span>
+        </div>
+        <div class="choose-row sentence" data-sync-id="p1-choice-rain" data-sync-kind="selection" data-sync-state="chosen">
+          <span class="translation">雨が降ったら家にいます。</span>
+          <span class="choose-sentence">비가 오<span class="opt" data-sync-option="myeon" data-correct>면</span><span class="sep">/</span><span class="opt" data-sync-option="eumyeon">으면</span> 집에 있어요.<span class="yomi">ピガ オ … チベ イッソヨ</span></span>
+        </div>
+        <div class="choose-row sentence" data-sync-id="p1-choice-weather" data-sync-kind="selection" data-sync-state="chosen">
+          <span class="translation">天気がよければ外でコーヒーを飲みます。</span>
+          <span class="choose-sentence">날씨가 좋<span class="opt" data-sync-option="myeon">면</span><span class="sep">/</span><span class="opt" data-sync-option="eumyeon" data-correct>으면</span> 밖에서 커피 마셔요.<span class="yomi">ナルッシガ チョ … パッケソ コピ マショヨ</span></span>
+        </div>
+        <div class="choose-row sentence" data-sync-id="p1-choice-call" data-sync-kind="selection" data-sync-state="chosen">
+          <span class="translation">週末に連絡したら一緒に行きましょう。</span>
+          <span class="choose-sentence">주말에 연락하<span class="opt" data-sync-option="eumyeon">으면</span><span class="sep">/</span><span class="opt" data-sync-option="myeon" data-correct>면</span> 같이 가요.<span class="yomi">チュマレ ヨルラカ … カチ カヨ</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p1-reorder">
+      <h2 class="section-title">문장 만들기 <span class="title-ja">(文を組み立てよう)</span></h2>
+      <p class="section-subtitle"><span class="ko">단어를 순서대로 놓고, 소리 내어 말해 보세요.</span><span class="ja">単語を順番に並べて、声に出して言ってみましょう。</span></p>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">時間があれば一緒に行きましょう。</span>
+          <span class="answer-space" data-sync-id="p1-order-time">시간이 있으면 같이 가요</span>
+        </div>
+        <span class="choice" data-item-id="together-1">같이 가요<span class="yomi">カチ カヨ</span></span>
+        <span class="choice" data-item-id="time-1">시간이<span class="yomi">シガニ</span></span>
+        <span class="choice" data-item-id="if-have-1">있으면<span class="yomi">イッスミョン</span></span>
+      </div>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">もし雨が降ったら、家で映画を見ます。</span>
+          <span class="answer-space" data-sync-id="p1-order-rain">만약에 비가 오면 집에서 영화 봐요</span>
+        </div>
+        <span class="choice" data-item-id="home-1">집에서<span class="yomi">チベソ</span></span>
+        <span class="choice" data-item-id="if-rain-1">비가 오면<span class="yomi">ピガ オミョン</span></span>
+        <span class="choice" data-item-id="movie-1">영화 봐요<span class="yomi">ヨンファ ポァヨ</span></span>
+        <span class="choice" data-item-id="maybe-1">만약에<span class="yomi">マニャゲ</span></span>
+      </div>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">天気がよければ外でコーヒーを飲みます。</span>
+          <span class="answer-space" data-sync-id="p1-order-weather">날씨가 좋으면 밖에서 커피 마셔요</span>
+        </div>
+        <span class="choice" data-item-id="coffee-1">커피 마셔요<span class="yomi">コピ マショヨ</span></span>
+        <span class="choice" data-item-id="if-nice-1">날씨가 좋으면<span class="yomi">ナルッシガ チョウミョン</span></span>
+        <span class="choice" data-item-id="outside-1">밖에서<span class="yomi">パッケソ</span></span>
+      </div>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">週末に時間があれば連絡してください。</span>
+          <span class="answer-space" data-sync-id="p1-order-call">주말에 시간이 있으면 연락해 주세요</span>
+        </div>
+        <span class="choice" data-item-id="call-1">연락해 주세요<span class="yomi">ヨルラケ ジュセヨ</span></span>
+        <span class="choice" data-item-id="weekend-1">주말에<span class="yomi">チュマレ</span></span>
+        <span class="choice" data-item-id="if-have-2">시간이 있으면<span class="yomi">シガニ イッスミョン</span></span>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p1-fill">
+      <h2 class="section-title">빈칸을 채워요 <span class="title-ja">(空欄をうめよう)</span></h2>
+      <p class="section-subtitle"><span class="ko">빈칸에 들어갈 말을 넣어서, 문장을 통째로 소리 내어 말해 보세요.</span><span class="ja">空欄に入ることばを入れて、文をまるごと声に出して言ってみましょう。</span></p>
+      <div class="tutor-note">학생이 말한 대로 빈칸에 적어 주세요.</div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">時間が<span class="target ending">あれば</span>一緒に行きましょう。</span>
+          <span class="answer-fill"><span class="korean">시간이 있<span class="slot" data-sync-id="p1-fill-time">으면</span> 같이 가요.</span><span class="yomi">シガニ イッ ＿＿ カチ カヨ</span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">もし雨が<span class="target ending">降ったら</span>家にいます。</span>
+          <span class="answer-fill"><span class="korean">만약에 비가 오<span class="slot" data-sync-id="p1-fill-rain">면</span> 집에 있어요.</span><span class="yomi">マニャゲ ピガ オ ＿＿ チベ イッソヨ</span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">天気が<span class="target ending">よければ</span>外でコーヒーを飲みます。</span>
+          <span class="answer-fill"><span class="korean">날씨가 좋<span class="slot" data-sync-id="p1-fill-weather">으면</span> 밖에서 커피 마셔요.</span><span class="yomi">ナルッシガ チョ ＿＿ パッケソ コピ マショヨ</span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">時間が<span class="target ending">なければ</span>次にしましょう。</span>
+          <span class="answer-fill"><span class="korean">시간이 없<span class="slot" data-sync-id="p1-fill-notime">으면</span> 다음에 가요.</span><span class="yomi">シガニ オプ ＿＿ タウメ カヨ</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p1-translate">
+      <h2 class="section-title">한국어로 바꿔요 <span class="title-ja">(韓国語にしよう)</span></h2>
+      <p class="section-subtitle"><span class="ko">일본어를 보고, 한국어로 말해 보세요.</span><span class="ja">日本語を見て、韓国語で言ってみましょう。</span></p>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">時間があれば一緒に行きましょう。</span>
+          <span class="answer-space" data-sync-id="p1-translate-time">시간이 있으면 같이 가요</span>
+                  <span class="hint"><span class="hint-chip">時間:시간<span class="yomi">シガン</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">もし雨が降ったら、家で映画を見ます。</span>
+          <span class="answer-space" data-sync-id="p1-translate-rain">만약에 비가 오면 집에서 영화 봐요</span>
+                  <span class="hint"><span class="hint-chip">もし:만약에<span class="yomi">マニャゲ</span></span><span class="hint-chip">雨:비<span class="yomi">ピ</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">天気がよければ外でコーヒーを飲みます。</span>
+          <span class="answer-space" data-sync-id="p1-translate-weather">날씨가 좋으면 밖에서 커피 마셔요</span>
+                  <span class="hint"><span class="hint-chip">天気:날씨<span class="yomi">ナルッシ</span></span><span class="hint-chip">外:밖<span class="yomi">パク</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">週末に時間があれば連絡してください。</span>
+          <span class="answer-space" data-sync-id="p1-translate-call">주말에 시간이 있으면 연락해 주세요</span>
+                  <span class="hint"><span class="hint-chip">連絡する:연락하다<span class="yomi">ヨルラカダ</span></span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p1-write">
+      <h2 class="section-title">내 문장 만들기 <span class="title-ja">(自分の文を作ろう)</span></h2>
+      <p class="section-subtitle"><span class="ko">이번엔 진짜 자기 이야기예요. 주말에 날씨가 좋으면 뭐 해요? 조건을 하나 붙여서 말해 보세요.</span><span class="ja">今度は本当に自分の話です。週末、天気がよければ何をしますか？条件を1つつけて言ってみましょう。</span></p>
+      <div class="tutor-note">학생이 말한 문장을 여기에 적어 주세요.</div>
+      <div class="task-block">
+        <div class="answer-box tall">
+          <span class="answer-space" data-sync-id="p1-free-condition"></span>
+                  <span class="hint"><span class="hint-chip">天気:날씨<span class="yomi">ナルッシ</span></span><span class="hint-chip">雨:비<span class="yomi">ピ</span></span><span class="hint-chip">時間:시간<span class="yomi">シガン</span></span><span class="hint-chip">週末:주말<span class="yomi">チュマル</span></span><span class="hint-chip">家:집<span class="yomi">チプ</span></span><span class="hint-chip">カフェ:카페<span class="yomi">カペ</span></span><span class="hint-chip">映画:영화<span class="yomi">ヨンファ</span></span><span class="hint-chip">運動する:운동하다<span class="yomi">ウンドンハダ</span></span><span class="hint-chip">料理する:요리하다<span class="yomi">ヨリハダ</span></span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ PART 2 · 바라는 것 말하기 ============ -->
+    <div class="transition-page" data-page-id="part2-intro" data-act="았/었으면 좋겠어요">
+      <span class="transition-kicker">パート 2</span>
+      <h2 class="transition-title">좋았으면 좋겠어요<span class="yomi">チョアッスミョン チョケッソヨ</span></h2>
+      <p class="transition-copy">〜たらいいな。いま、そうなってほしいという願いです。</p>
+    </div>
+
+    <!-- 나았으면 is taught as a lump — 낫다 is irregular and the deck never
+         asks the learner to build it, only to say it. The two lines under the
+         card are the regular shape the drills use. -->
+    <div class="section" data-page-id="p2-teach">
+      <h2 class="section-title">오늘의 패턴 <span class="title-ja">(今日のパターン)</span></h2>
+      <p class="section-subtitle"><span class="ko">이번엔 바람이에요. 이렇게 됐으면 좋겠다, 그 마음이에요. 제가 읽을게요. 잘 듣고 따라 읽어 보세요.</span><span class="ja">今度は「願い」です。こうなってほしいな、という気持ちです。私が読みます。よく聞いて、まねして読んでみましょう。</span></p>
+      <div class="sent-hero">
+        <span class="korean">빨리 <span class="ending">나았으면 좋겠어요</span>.</span><span class="yomi">パルリ ナアッスミョン チョケッソヨ</span>
+        <span class="translation">早く<span class="ending">治ってほしいです</span>。</span>
+      </div>
+      <div class="sent-more">
+        <div><span class="korean">내일 날씨가 <span class="ending">좋았으면 좋겠어요</span>.</span><span class="yomi">ネイル ナルッシガ チョアッスミョン チョケッソヨ</span><span class="translation">明日、天気が<span class="ending">よかったらいいな</span>。</span></div>
+        <div><span class="korean">주말에 비가 안 <span class="ending">왔으면 좋겠어요</span>.</span><span class="yomi">チュマレ ピガ アン ワッスミョン チョケッソヨ</span><span class="translation">週末、雨が<span class="ending">降らなかったらいいな</span>。</span></div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p2-read">
+      <h2 class="section-title">같이 읽어요 <span class="title-ja">(一緒に読もう)</span></h2>
+      <p class="section-subtitle"><span class="ko">이번엔 혼자 읽어 보세요. 네 문장이에요. 빨리는 '早く', 감기는 '風邪'예요.</span><span class="ja">今度はひとりで読んでみましょう。4つの文です。빨리は「早く」、감기は「風邪」です。</span></p>
+      <div class="model-list">
+        <div class="model-line"><span class="korean">내일 날씨가 <span class="ending">좋았으면 좋겠어요</span>.</span><span class="yomi">ネイル ナルッシガ チョアッスミョン チョケッソヨ</span><span class="translation">明日、天気が<span class="ending">よかったらいいな</span>。</span></div>
+        <div class="model-line"><span class="korean">주말에 시간이 <span class="ending">있었으면 좋겠어요</span>.</span><span class="yomi">チュマレ シガニ イッソッスミョン チョケッソヨ</span><span class="translation">週末、時間が<span class="ending">あったらいいな</span>。</span></div>
+        <div class="model-line"><span class="korean">우리 같이 <span class="ending">갔으면 좋겠어요</span>.</span><span class="yomi">ウリ カチ カッスミョン チョケッソヨ</span><span class="translation">一緒に<span class="ending">行けたらいいな</span>。</span></div>
+        <div class="model-line"><span class="korean">감기가 빨리 <span class="ending">나았으면 좋겠어요</span>.</span><span class="yomi">カムギガ パルリ ナアッスミョン チョケッソヨ</span><span class="translation">風邪が早く<span class="ending">治ってほしいです</span>。</span></div>
+      </div>
+    </div>
+
+    <!-- the rule is not decided by sound — 좋았 and 왔 are the past forms the
+         learner already builds. What has to be taught is that the past shape
+         is pointing at now. So the boxes keep .bt-out alone: no letter tile,
+         no arrow. -->
+    <div class="section" data-page-id="p2-wish-rule">
+      <h2 class="section-title">지난 일과 바람 <span class="title-ja">(過去の形なのに、今の願い)</span></h2>
+      <p class="section-subtitle"><span class="ko">모양은 과거예요. 그런데 뜻은 지금의 바람이에요. 아는 과거형에서 어요를 빼고, 으면 좋겠어요를 붙여요. 두 개를 이어서 읽을게요.</span><span class="ja">形は過去です。でも意味は「今の願い」です。知っている過去形から어요を取って、으면 좋겠어요をつけます。2つを続けて読みます。</span></p>
+      <div class="batchim ending-rule">
+        <div class="bt-box">
+          <span class="bt-eq">
+            <span class="bt-out">좋았어요<span class="yomi">チョアッソヨ</span></span>
+          </span>
+          <span class="bt-head">지난 일<small>実際にあったこと</small></span>
+          <span class="bt-ex"><span>어제 날씨가 <b>좋았어요</b><span class="yomi">オジェ ナルッシガ チョアッソヨ</span></span><span>지난 주말에 비가 <b>왔어요</b><span class="yomi">チナン チュマレ ピガ ワッソヨ</span></span></span>
+        </div>
+        <div class="bt-box">
+          <span class="bt-eq">
+            <span class="bt-out">좋았으면 좋겠어요<span class="yomi">チョアッスミョン チョケッソヨ</span></span>
+          </span>
+          <span class="bt-head">지금의 바람<small>今、そうなってほしい</small></span>
+          <span class="bt-ex"><span>내일 날씨가 <b>좋았으면 좋겠어요</b><span class="yomi">ネイル ナルッシガ チョアッスミョン チョケッソヨ</span></span><span>비가 안 <b>왔으면 좋겠어요</b><span class="yomi">ピガ アン ワッスミョン チョケッソヨ</span></span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- nothing in the Korean picks the answer — both pills are real
+         sentences. The Japanese on top is what decides, and that is exactly
+         the choice the learner makes when they open their mouth. -->
+    <div class="section" data-page-id="p2-choose">
+      <h2 class="section-title">지난 일과 바람 고르기 <span class="title-ja">(過去 と 願い を選ぼう)</span></h2>
+      <p class="section-subtitle"><span class="ko">위에 있는 일본어를 잘 보고, 맞는 쪽을 눌러 보세요.</span><span class="ja">上にある日本語をよく見て、正しいほうをタップしてください。</span></p>
+      <div class="choose-list">
+        <div class="choose-row sentence" data-sync-id="p2-choice-tomorrow" data-sync-kind="selection" data-sync-state="chosen">
+          <span class="translation">明日、天気がよかったらいいな。</span>
+          <span class="choose-sentence">내일 날씨가 <span class="opt" data-sync-option="wish" data-correct>좋았으면 좋겠어요.</span><span class="sep">/</span><span class="opt" data-sync-option="past">좋았어요.</span><span class="yomi">ネイル ナルッシガ …</span></span>
+        </div>
+        <div class="choose-row sentence" data-sync-id="p2-choice-yesterday" data-sync-kind="selection" data-sync-state="chosen">
+          <span class="translation">昨日、天気がよかったです。</span>
+          <span class="choose-sentence">어제 날씨가 <span class="opt" data-sync-option="wish">좋았으면 좋겠어요.</span><span class="sep">/</span><span class="opt" data-sync-option="past" data-correct>좋았어요.</span><span class="yomi">オジェ ナルッシガ …</span></span>
+        </div>
+        <div class="choose-row sentence" data-sync-id="p2-choice-norain" data-sync-kind="selection" data-sync-state="chosen">
+          <span class="translation">週末、雨が降らなかったらいいな。</span>
+          <span class="choose-sentence">주말에 비가 안 <span class="opt" data-sync-option="past">왔어요.</span><span class="sep">/</span><span class="opt" data-sync-option="wish" data-correct>왔으면 좋겠어요.</span><span class="yomi">チュマレ ピガ アン …</span></span>
+        </div>
+        <div class="choose-row sentence" data-sync-id="p2-choice-lastweek" data-sync-kind="selection" data-sync-state="chosen">
+          <span class="translation">先週末、雨が降りました。</span>
+          <span class="choose-sentence">지난 주말에 비가 <span class="opt" data-sync-option="wish">왔으면 좋겠어요.</span><span class="sep">/</span><span class="opt" data-sync-option="past" data-correct>왔어요.</span><span class="yomi">チナン チュマレ ピガ …</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p2-reorder">
+      <h2 class="section-title">문장 만들기 <span class="title-ja">(文を組み立てよう)</span></h2>
+      <p class="section-subtitle"><span class="ko">단어를 순서대로 놓고, 소리 내어 말해 보세요.</span><span class="ja">単語を順番に並べて、声に出して言ってみましょう。</span></p>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">明日、天気がよかったらいいな。</span>
+          <span class="answer-space" data-sync-id="p2-order-tomorrow">내일 날씨가 좋았으면 좋겠어요</span>
+        </div>
+        <span class="choice" data-item-id="hope-1">좋겠어요<span class="yomi">チョケッソヨ</span></span>
+        <span class="choice" data-item-id="tomorrow-1">내일<span class="yomi">ネイル</span></span>
+        <span class="choice" data-item-id="ifgood-1">좋았으면<span class="yomi">チョアッスミョン</span></span>
+        <span class="choice" data-item-id="weather-1">날씨가<span class="yomi">ナルッシガ</span></span>
+      </div>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">週末、雨が降らなかったらいいな。</span>
+          <span class="answer-space" data-sync-id="p2-order-norain">주말에 비가 안 왔으면 좋겠어요</span>
+        </div>
+        <span class="choice" data-item-id="rain-2">비가<span class="yomi">ピガ</span></span>
+        <span class="choice" data-item-id="hope-2">좋겠어요<span class="yomi">チョケッソヨ</span></span>
+        <span class="choice" data-item-id="weekend-2">주말에<span class="yomi">チュマレ</span></span>
+        <span class="choice" data-item-id="ifnorain-1">안 왔으면<span class="yomi">アン ワッスミョン</span></span>
+      </div>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">一緒に行けたらいいな。</span>
+          <span class="answer-space" data-sync-id="p2-order-together">우리 같이 갔으면 좋겠어요</span>
+        </div>
+        <span class="choice" data-item-id="ifgo-1">갔으면<span class="yomi">カッスミョン</span></span>
+        <span class="choice" data-item-id="we-1">우리 같이<span class="yomi">ウリ カチ</span></span>
+        <span class="choice" data-item-id="hope-3">좋겠어요<span class="yomi">チョケッソヨ</span></span>
+      </div>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">風邪が早く治ってほしいです。</span>
+          <span class="answer-space" data-sync-id="p2-order-cold">감기가 빨리 나았으면 좋겠어요</span>
+        </div>
+        <span class="choice" data-item-id="ifheal-1">나았으면<span class="yomi">ナアッスミョン</span></span>
+        <span class="choice" data-item-id="cold-1">감기가<span class="yomi">カムギガ</span></span>
+        <span class="choice" data-item-id="hope-4">좋겠어요<span class="yomi">チョケッソヨ</span></span>
+        <span class="choice" data-item-id="fast-1">빨리<span class="yomi">パルリ</span></span>
+      </div>
+    </div>
+
+    <!-- the past stem is printed and the blank is only 으면 좋겠어요 — so even
+         the irregular 나았 gets said out loud without being built. -->
+    <div class="section" data-page-id="p2-fill">
+      <h2 class="section-title">빈칸을 채워요 <span class="title-ja">(空欄をうめよう)</span></h2>
+      <p class="section-subtitle"><span class="ko">빈칸에 들어갈 말을 넣어서, 문장을 통째로 소리 내어 말해 보세요.</span><span class="ja">空欄に入ることばを入れて、文をまるごと声に出して言ってみましょう。</span></p>
+      <div class="tutor-note">학생이 말한 대로 빈칸에 적어 주세요.</div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">明日、天気が<span class="target ending">よかったらいいな</span>。</span>
+          <span class="answer-fill"><span class="korean">내일 날씨가 좋았<span class="slot" data-sync-id="p2-fill-tomorrow">으면 좋겠어요</span>.</span><span class="yomi">ネイル ナルッシガ チョアッ ＿＿＿</span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">週末、雨が<span class="target ending">降らなかったらいいな</span>。</span>
+          <span class="answer-fill"><span class="korean">주말에 비가 안 왔<span class="slot" data-sync-id="p2-fill-norain">으면 좋겠어요</span>.</span><span class="yomi">チュマレ ピガ アン ワッ ＿＿＿</span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">週末、時間が<span class="target ending">あったらいいな</span>。</span>
+          <span class="answer-fill"><span class="korean">주말에 시간이 있었<span class="slot" data-sync-id="p2-fill-time">으면 좋겠어요</span>.</span><span class="yomi">チュマレ シガニ イッソッ ＿＿＿</span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">風邪が早く<span class="target ending">治ってほしいです</span>。</span>
+          <span class="answer-fill"><span class="korean">감기가 빨리 나았<span class="slot" data-sync-id="p2-fill-cold">으면 좋겠어요</span>.</span><span class="yomi">カムギガ パルリ ナアッ ＿＿＿</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p2-translate">
+      <h2 class="section-title">한국어로 바꿔요 <span class="title-ja">(韓国語にしよう)</span></h2>
+      <p class="section-subtitle"><span class="ko">일본어를 보고, 한국어로 말해 보세요.</span><span class="ja">日本語を見て、韓国語で言ってみましょう。</span></p>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">明日、天気がよかったらいいな。</span>
+          <span class="answer-space" data-sync-id="p2-translate-tomorrow">내일 날씨가 좋았으면 좋겠어요</span>
+                  <span class="hint"><span class="hint-chip">天気:날씨<span class="yomi">ナルッシ</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">週末、雨が降らなかったらいいな。</span>
+          <span class="answer-space" data-sync-id="p2-translate-norain">주말에 비가 안 왔으면 좋겠어요</span>
+                  <span class="hint"><span class="hint-chip">雨:비<span class="yomi">ピ</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">週末、時間があったらいいな。</span>
+          <span class="answer-space" data-sync-id="p2-translate-time">주말에 시간이 있었으면 좋겠어요</span>
+                  <span class="hint"><span class="hint-chip">時間:시간<span class="yomi">シガン</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">一緒に行けたらいいな。</span>
+          <span class="answer-space" data-sync-id="p2-translate-together">우리 같이 갔으면 좋겠어요</span>
+                  <span class="hint"><span class="hint-chip">一緒に:같이<span class="yomi">カチ</span></span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p2-write">
+      <h2 class="section-title">내 바람 말하기 <span class="title-ja">(自分の願いを言おう)</span></h2>
+      <p class="section-subtitle"><span class="ko">이번엔 진짜 자기 바람이에요. 이번 주말에 뭐가 어떻게 됐으면 좋겠어요? 하나만 말해 보세요.</span><span class="ja">今度は本当に自分の願いです。今週末、何がどうなってほしいですか？1つだけ言ってみましょう。</span></p>
+      <div class="tutor-note">학생이 말한 문장을 여기에 적어 주세요.</div>
+      <div class="task-block">
+        <div class="answer-box tall">
+          <span class="answer-space" data-sync-id="p2-free-wish"></span>
+                  <span class="hint"><span class="hint-chip">天気:날씨<span class="yomi">ナルッシ</span></span><span class="hint-chip">雨:비<span class="yomi">ピ</span></span><span class="hint-chip">時間:시간<span class="yomi">シガン</span></span><span class="hint-chip">韓国語:한국어<span class="yomi">ハングゴ</span></span><span class="hint-chip">友だち:친구<span class="yomi">チング</span></span><span class="hint-chip">会う:만나다<span class="yomi">マンナダ</span></span><span class="hint-chip">上手だ:잘하다<span class="yomi">チャラダ</span></span><span class="hint-chip">風邪:감기<span class="yomi">カムギ</span></span><span class="hint-chip">早く:빨리<span class="yomi">パルリ</span></span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ PART 3 · 한국어 공부 이야기 ============ -->
+    <!-- the two patterns call each other here: 하나 asks what 하루카 does when
+         there is time, and the answer opens onto what 하루카 wants to become.
+         The weekend-and-weather scene is the bonus page, so this one stays a
+         topic rather than a room. -->
+    <div class="transition-page" data-page-id="part3-intro" data-act="약속하기">
+      <span class="transition-kicker">パート 3</span>
+      <h2 class="transition-title">이제 약속해요!<span class="yomi">イジェ ヤクソケヨ！</span></h2>
+      <p class="transition-copy">2つがそろいました。条件をつけて誘って、そうなってほしいことも言います。</p>
+    </div>
+
+    <div class="section" data-page-id="p3-model">
+      <h2 class="section-title">대화 읽기 <span class="title-ja">(会話を読もう)</span></h2>
+      <p class="section-subtitle"><span class="ko">하나가 하루카한테 한국어 공부를 물어봐요. 꼭이요는 'ぜひ'예요. 제가 하나 쪽을 읽을게요. 하루카가 되어서 읽어 보세요.</span><span class="ja">ハナがハルカに韓国語の勉強のことを聞きます。꼭이요は「ぜひ」です。私がハナのほうを読みます。ハルカになって読んでみましょう。</span></p>
+      <div class="dialogue">
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">하루카 씨, 시간이 <span class="ending">있으면</span> 보통 뭐 해요?</span><span class="yomi">ハルカ シ、シガニ イッスミョン ポトン ムォ ヘヨ</span><span class="translation">ハルカさん、時間が<span class="ending">あれば</span>、普段は何をしますか？</span></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><span class="korean">시간이 <span class="ending">있으면</span> 한국어 공부해요. 드라마도 봐요.</span><span class="yomi">シガニ イッスミョン ハングゴ コンブヘヨ。 トゥラマド ポァヨ</span><span class="translation">時間が<span class="ending">あれば</span>韓国語を勉強します。ドラマも見ます。</span></div></div>
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">우와, 잘됐네요! 한국 드라마 재미있어요?</span><span class="yomi">ウワ、チャルドェンネヨ！ ハングク トゥラマ チェミイッソヨ</span><span class="translation">わあ、いいですね！韓国ドラマ、面白いですか？</span></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><span class="korean">네, 재미있어요. 그래서 매일 봐요.</span><span class="yomi">ネ、チェミイッソヨ。 クレソ メイル ポァヨ</span><span class="translation">はい、面白いです。だから毎日見ます。</span></div></div>
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">그러면 저하고 한국어로 말해요. 시간이 <span class="ending">있으면</span> 연락해 주세요. 꼭이요!</span><span class="yomi">クロミョン チョハゴ ハングゴロ マレヨ。 シガニ イッスミョン ヨルラケ ジュセヨ。 ッコギヨ！</span><span class="translation">それなら私と韓国語で話しましょう。時間が<span class="ending">あれば</span>連絡してください。ぜひ！</span></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><span class="korean">네, 꼭 연락할게요. 저도 빨리 <span class="ending">잘했으면 좋겠어요</span>.</span><span class="yomi">ネ、ッコク ヨルラカルケヨ。 チョド パルリ チャレッスミョン チョケッソヨ</span><span class="translation">はい、必ず連絡します。私も早く<span class="ending">上手になったらいいな</span>。</span></div></div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p3-complete">
+      <h2 class="section-title">대화 채우기 <span class="title-ja">(会話をうめよう)</span></h2>
+      <p class="section-subtitle"><span class="ko">이번엔 하루카 대사가 비어 있어요. 하루카가 되어서 문장을 소리 내어 말해 보세요.</span><span class="ja">今度はハルカのセリフが空いています。ハルカになって、文を声に出して言ってみましょう。</span></p>
+      <div class="tutor-note">학생이 말한 대로 빈칸에 적어 주세요.</div>
+      <div class="dialogue">
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">하루카 씨, 시간이 있으면 보통 뭐 해요?</span><span class="yomi">ハルカ シ、シガニ イッスミョン ポトン ムォ ヘヨ</span><span class="translation">ハルカさん、時間があれば、普段は何をしますか？</span></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label"><span class="target">時間があれば韓国語を勉強します</span>。ドラマも見ます。</span><span class="answer-fill"><span class="korean"><span class="slot" data-sync-id="p3-complete-study">시간이 있으면 한국어 공부해요</span>. 드라마도 봐요.</span><span class="yomi">＿＿＿ トゥラマド ポァヨ</span></span><span class="hint"><span class="hint-chip">韓国語:한국어<span class="yomi">ハングゴ</span></span></span></div></div></div>
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">우와, 잘됐네요! 한국 드라마 재미있어요?</span><span class="yomi">ウワ、チャルドェンネヨ！ ハングク トゥラマ チェミイッソヨ</span><span class="translation">わあ、いいですね！韓国ドラマ、面白いですか？</span></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">はい、面白いです。<span class="target">だから毎日見ます</span>。</span><span class="answer-fill"><span class="korean">네, 재미있어요. <span class="slot" data-sync-id="p3-complete-everyday">그래서 매일 봐요</span>.</span><span class="yomi">ネ、チェミイッソヨ。 ＿＿＿</span></span><span class="hint"><span class="hint-chip">毎日:매일<span class="yomi">メイル</span></span></span></div></div></div>
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">그러면 저하고 한국어로 말해요. 시간이 있으면 연락해 주세요. 꼭이요!</span><span class="yomi">クロミョン チョハゴ ハングゴロ マレヨ。 シガニ イッスミョン ヨルラケ ジュセヨ。 ッコギヨ！</span><span class="translation">それなら私と韓国語で話しましょう。時間があれば連絡してください。ぜひ！</span></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">はい、必ず連絡します。<span class="target">私も早く上手になったらいいな</span>。</span><span class="answer-fill"><span class="korean">네, 꼭 연락할게요. <span class="slot" data-sync-id="p3-complete-wish">저도 빨리 잘했으면 좋겠어요</span>.</span><span class="yomi">ネ、ッコク ヨルラカルケヨ。 ＿＿＿</span></span><span class="hint"><span class="hint-chip">早く:빨리<span class="yomi">パルリ</span></span><span class="hint-chip">上手だ:잘하다<span class="yomi">チャラダ</span></span></span></div></div></div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p3-freetalk">
+      <h2 class="section-title">자유 대화 <span class="title-ja">(フリートーク)</span></h2>
+      <p class="section-subtitle"><span class="ko">이번엔 진짜 자기 이야기예요. 제 질문에 하나씩 대답해 보세요.</span><span class="ja">今度は本当に自分の話です。私の質問に1つずつ答えてみましょう。</span></p>
+      <div class="tutor-note">마지막 칸은 길게 기다려 주세요.</div>
+      <div class="dialogue">
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">先生</span></span><div class="bubble"><span class="korean">시간이 있으면 보통 뭐 해요?</span><span class="yomi">シガニ イッスミョン ポトン ムォ ヘヨ</span><span class="translation">時間があれば、普段は何をしますか？</span></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label">시간이 있으면 〜해요.<span class="task">自分のこと</span></span><span class="answer-space" data-sync-id="p3-freetalk-freetime"></span><span class="hint"><span class="hint-chip">映画:영화<span class="yomi">ヨンファ</span></span><span class="hint-chip">ドラマ:드라마<span class="yomi">トゥラマ</span></span><span class="hint-chip">音楽:음악<span class="yomi">ウマク</span></span><span class="hint-chip">運動する:운동하다<span class="yomi">ウンドンハダ</span></span><span class="hint-chip">料理する:요리하다<span class="yomi">ヨリハダ</span></span><span class="hint-chip">勉強する:공부하다<span class="yomi">コンブハダ</span></span></span></div></div></div>
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">先生</span></span><div class="bubble"><span class="korean">주말에 비가 오면 뭐 해요?</span><span class="yomi">チュマレ ピガ オミョン ムォ ヘヨ</span><span class="translation">週末、雨が降ったら何をしますか？</span></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label">비가 오면 〜해요.<span class="task">自分のこと</span></span><span class="answer-space" data-sync-id="p3-freetalk-rain"></span><span class="hint"><span class="hint-chip">家:집<span class="yomi">チプ</span></span><span class="hint-chip">カフェ:카페<span class="yomi">カペ</span></span><span class="hint-chip">本:책<span class="yomi">チェク</span></span><span class="hint-chip">映画:영화<span class="yomi">ヨンファ</span></span><span class="hint-chip">掃除する:청소하다<span class="yomi">チョンソハダ</span></span></span></div></div></div>
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">先生</span></span><div class="bubble"><span class="korean">지금 뭐가 어떻게 됐으면 좋겠어요?</span><span class="yomi">チグム ムォガ オットケ テッスミョン チョケッソヨ</span><span class="translation">今、何がどうなってほしいですか？</span></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label task">今いちばんの願い — 〜たらいいな</span><span class="answer-space" data-sync-id="p3-freetalk-wish"></span><span class="hint"><span class="hint-chip">天気:날씨<span class="yomi">ナルッシ</span></span><span class="hint-chip">時間:시간<span class="yomi">シガン</span></span><span class="hint-chip">韓国語:한국어<span class="yomi">ハングゴ</span></span><span class="hint-chip">友だち:친구<span class="yomi">チング</span></span><span class="hint-chip">上手だ:잘하다<span class="yomi">チャラダ</span></span><span class="hint-chip">風邪:감기<span class="yomi">カムギ</span></span><span class="hint-chip">早く:빨리<span class="yomi">パルリ</span></span></span></div></div></div>
+      </div>
+    </div>
+
+    <!-- bonus scene · 주말 약속 잡기, 날씨 보며. The day is not settled until
+         the weather is, so the condition and the wish are what the scene
+         costs — and the person is somebody met in Korea, so the column says
+         相手. -->
+    <div class="section" data-page-id="korea-trip">
+      <h2 class="section-title">주말 약속 <span class="title-ja">(週末の約束)</span></h2>
+      <p class="section-subtitle"><span class="ko">보너스! 주말 약속을 정하는 자리예요. 날씨를 보고 요일을 정해요. 빈칸 대사를 말해 주세요.</span><span class="ja">ボーナス！週末の約束を決める場面です。天気を見て、曜日を決めます。空欄のセリフを言ってください。</span></p>
+      <div class="dialogue">
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">相手</span></span><div class="bubble"><span class="korean">이번 주말에 시간 있어요? 같이 등산 갈까요?</span><span class="yomi">イボン チュマレ シガン イッソヨ？ カチ トゥンサン カルッカヨ</span><span class="translation">今週末、時間ありますか？一緒に山に登りませんか？</span></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">はい！<span class="target">土曜日に時間があれば一緒に行きましょう</span>。</span><span class="answer-fill"><span class="korean">네! <span class="slot" data-sync-id="trip-if-time">토요일에 시간이 있으면 같이 가요</span>.</span><span class="yomi">ネ！ ＿＿＿</span></span><span class="hint"><span class="hint-chip">土曜日:토요일<span class="yomi">トヨイル</span></span><span class="hint-chip">時間:시간<span class="yomi">シガン</span></span></span></div></div></div>
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">相手</span></span><div class="bubble"><span class="korean">그런데 토요일에 비가 와요. 일요일은 어때요?</span><span class="yomi">クロンデ トヨイレ ピガ ワヨ。 イリョイルン オッテヨ</span><span class="translation">でも土曜日は雨が降ります。日曜日はどうですか？</span></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label"><span class="target">雨が降ったら次にしましょう</span>。日曜日は大丈夫です。</span><span class="answer-fill"><span class="korean"><span class="slot" data-sync-id="trip-if-rain">비가 오면 다음에 가요</span>. 일요일은 괜찮아요.</span><span class="yomi">＿＿＿ イリョイルン ケンチャナヨ</span></span><span class="hint"><span class="hint-chip">雨:비<span class="yomi">ピ</span></span></span></div></div></div>
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">相手</span></span><div class="bubble"><span class="korean">좋아요! 그러면 일요일에 만나요. 날씨가 좋았으면 좋겠어요.</span><span class="yomi">チョアヨ！ クロミョン イリョイレ マンナヨ。 ナルッシガ チョアッスミョン チョケッソヨ</span><span class="translation">いいですね！それなら日曜日に会いましょう。天気がよかったらいいな。</span></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label"><span class="target">私も天気がよかったらいいなと思います</span>。ぜひ！</span><span class="answer-fill"><span class="korean"><span class="slot" data-sync-id="trip-wish">저도 날씨가 좋았으면 좋겠어요</span>. 꼭이요!</span><span class="yomi">＿＿＿ ッコギヨ！</span></span><span class="hint"><span class="hint-chip">天気:날씨<span class="yomi">ナルッシ</span></span></span></div></div></div>
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">相手</span></span><div class="bubble"><span class="korean">네! 일요일에 봐요. 저도 꼭 연락할게요.</span><span class="yomi">ネ！ イリョイレ ポァヨ。 チョド ッコク ヨルラカルケヨ</span><span class="translation">はい！日曜日に会いましょう。私も必ず連絡します。</span></div></div>
+      </div>
+    </div>
+
+    <!-- the 相手 said 좋았으면 좋겠어요 and the learner said it back; in real
+         speech the 았/었 falls out of the wish and nothing changes. What drops
+         is an 어미, so it is orange on the top line and simply gone on the
+         bottom one — the page draws the drop instead of describing it. -->
+    <div class="section" data-page-id="native-tip">
+      <h2 class="section-title">원어민 팁 <span class="title-ja">(ネイティブのひとこと)</span></h2>
+      <p class="section-subtitle"><span class="ko">실제로 말할 때는 았, 었을 빼고 말하기도 해요. 뜻은 똑같아요.</span><span class="ja">実際に話すときは、았・었を抜いて言うこともあります。意味はまったく同じです。</span></p>
+      <div class="tutor-note">한 줄씩 위아래로 읽어 주세요. 빠진 자리가 들리게요.</div>
+      <div class="swap">
+        <div class="swap-row">
+          <span class="translation">明日、天気がよかったらいいな。</span>
+          <span class="sw-from">내일 날씨가 좋<span class="ending">았</span>으면 좋겠어요.<span class="yomi">ネイル ナルッシガ チョアッスミョン チョケッソヨ</span></span>
+          <span class="sw-to">내일 날씨가 좋으면 좋겠어요.<span class="yomi">ネイル ナルッシガ チョウミョン チョケッソヨ</span></span>
+        </div>
+        <div class="swap-row">
+          <span class="translation">週末、時間があったらいいな。</span>
+          <span class="sw-from">주말에 시간이 있<span class="ending">었</span>으면 좋겠어요.<span class="yomi">チュマレ シガニ イッソッスミョン チョケッソヨ</span></span>
+          <span class="sw-to">주말에 시간이 있으면 좋겠어요.<span class="yomi">チュマレ シガニ イッスミョン チョケッソヨ</span></span>
+        </div>
+      </div>
+    </div>
   </div>
 
 

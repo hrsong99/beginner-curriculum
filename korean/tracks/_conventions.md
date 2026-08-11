@@ -226,6 +226,50 @@ carry renders as nothing. Every deck that teaches a 부사 or 관형사 will hit
 one human decision in `lesson-card.css`: either a neutral third accent, or an explicit
 "`.ending` = the second taught piece, whatever its part of speech" semantics.
 
+## ㄹ 어간이 커리큘럼에서 통째로 빠지고 있다 — one component limit, compounding
+
+**Four decks hit this independently (과 29 · 34 · 36 · 37) and all four answered it the same
+way. That makes it a hole in the curriculum, not four local judgement calls.** It recurs in
+every `-(으)` lesson, so expect the count to keep rising until someone fixes the component or
+the TOC.
+
+Every `-(으)` form is a **three-branch** rule:
+
+```
+받침 없음  →  러 / 면 / 려고        (보다 → 보러)
+ㄹ 받침    →  러 / 면 / 려고        (놀다 → 놀러)   ← the exception
+그 외 받침  →  으러 / 으면 / 으려고   (먹다 → 먹으러)
+```
+
+`.batchim` is single-column and three `.bt-box` overflow the page (과 29 measured it). 과 29's
+`.bt-syls` compression cannot be reused, because 놀 would have to sit inside the 「받침 없음」 box
+with its bottom seat lit — **a wrong seat teaches a wrong structure**, which the seat-colour
+section below says is worse than no colour.
+
+So each writer shipped the honest two-box split and **kept every ㄹ-stem verb out of
+learner-produced Korean.** Correct per deck. The compounding cost:
+
+- 놀다 · 살다 · 만들다 have been in circulation since 과 7 and appear in **no** `-(으)` lesson.
+- `놀러 가요` / `놀러 오세요` is high-frequency and **owned by no 과 in the TOC.**
+- Any future 과 teaching a `-(으)` form hits the same wall and widens the hole.
+
+**And ㄹ-stems are not the only casualty — the real constraint is "two boxes, three cases".**
+과 38 hit it from the other direction: `-아/어도` needs `하다 → 해도` constantly (전화해도 돼요?),
+that is a third box, and so **하다 is absent from its part 1 altogether** — the most useful
+permission verb missing from the permission lesson. 과 7 handled 하다 by putting it in the
+tutor's spoken line rather than the diagram; that dodge is available and worth reusing, but it
+means the form is heard and never drawn.
+
+Expect this wall wherever a rule has three branches. It is one component limit generating a
+different missing piece in every lesson that meets it.
+
+**Until it is decided: keep doing what 과 29 · 34 · 36 did** — two honest boxes, no ㄹ-stems in
+produced Korean, and say so in your report. Do not compress into a misleading seat.
+
+The fix is one of two human decisions, neither of which a lesson-writer may take: give
+`.batchim` a three-case layout in `runtime/css/trial.css`, or assign ㄹ-stems their own 과 in
+the TOC.
+
 ## The seat-colour system only covers the 과 1 case
 
 Three writers hit this independently, so it is a gap in the design system, not three mistakes.

@@ -17,17 +17,555 @@
 <body>
   <div class="phone">
 
-    <!-- ============================================================
-         PAGES GO HERE — one .phone child per page, one activity per page.
+    <!-- Both taught pieces of this 과 are 어미-side, not 조사 — so both run
+         orange (.ending) and violet goes unused, the same way 과 27 had to.
+         See _conventions.md § "The inline mark vocabulary is two classes". -->
 
-         Plan the arc from  lesson-blueprint.md
-         Take the content from  toc/lesson-040.md
-         Copy component markup and tutor voice from the deck this
-         skeleton came from — do not invent components.
+    <!-- the goal is one small negotiation: what must be done by when, and
+         what turns out not to need doing. Three rows — a statement, then a
+         question and the answer that undoes it. -->
+    <div class="transition-page" data-page-id="lesson-goal" data-act="-아/어야 돼요 · 필요 없어요">
+      <span class="transition-kicker">목표</span>
+      <h2 class="transition-title">오늘의 목표 <span class="title-ja">(今日のゴール)</span></h2>
+      <p class="section-subtitle"><span class="ko">오늘은 꼭 해야 하는 일을 말해요. 수업이 끝나면 이렇게 말할 수 있어요.</span><span class="ja">今日は「必ずしないといけないこと」を言います。授業が終わると、こんなふうに言えるようになります。</span></p>
+      <div class="known lines">
+        <div class="known-row"><span class="k">내일까지 끝내야 돼요.</span><span class="yomi">ネイルッカジ ックンネヤ トェヨ</span><span class="j">明日までに終わらせないといけません</span></div>
+        <div class="known-row"><span class="k">이거 꼭 확인해야 돼요?</span><span class="yomi">イゴ ッコク ファギネヤ トェヨ</span><span class="j">これは必ず確認しないといけませんか？</span></div>
+        <div class="known-row"><span class="k">아니요, 지금 확인할 필요 없어요.</span><span class="yomi">アニヨ、チグム ファギナル ピリョ オプソヨ</span><span class="j">いいえ、今は確認する必要ありません</span></div>
+      </div>
+    </div>
 
-         The first page must carry data-act, since the cover that used
-         to supply it is a trial-only page and is not here.
-         ============================================================ -->
+    <!-- the same bridge shape as 과 7 · 8 · 10 · 15 · 19 · 30. Today's scene is
+         an office deadline, so the three nouns it runs on come free: the kanji
+         is already the learner's. -->
+    <div class="section" data-page-id="words-you-know">
+      <h2 class="section-title">이미 아는 단어 <span class="title-ja">(もう知っている単語)</span></h2>
+      <p class="section-subtitle"><span class="ko">오늘 회사 이야기를 할 건데요. 그 단어들, 이미 알아요. 이것도 한자에서 왔어요.</span><span class="ja">今日は会社の話をするんですが、その単語、もう知っています。これも漢字から来ています。</span></p>
+      <div class="bridge">
+        <div class="br-row"><span class="br-cn">準備</span><span class="br-eq">→</span><span class="br-ko">준비<small class="yomi">チュンビ</small></span></div>
+        <div class="br-row"><span class="br-cn">確認</span><span class="br-eq">→</span><span class="br-ko">확인<small class="yomi">ファギン</small></span></div>
+        <div class="br-row"><span class="br-cn">会議</span><span class="br-eq">→</span><span class="br-ko">회의<small class="yomi">フェイ</small></span></div>
+      </div>
+    </div>
+
+    <!-- ============ PART 1 · 꼭 해야 하는 것 ============ -->
+    <div class="transition-page" data-page-id="part1-intro" data-act="-아/어야 돼요">
+      <span class="transition-kicker">パート 1</span>
+      <h2 class="transition-title">-아/어야 돼요<span class="yomi">アヤ / オヤ トェヨ</span></h2>
+      <p class="transition-copy">〜しないといけません。しめきりも、決まりも、この一言で言えます。</p>
+    </div>
+
+    <!-- the sentence whole, and the accent sits exactly on the piece that
+         replaces 요 — 끝내요 → 끝내야 돼요. The stem stays unmarked on both
+         sides so the swap is the only thing lit. -->
+    <div class="section" data-page-id="p1-teach">
+      <h2 class="section-title">오늘의 패턴 <span class="title-ja">(今日のパターン)</span></h2>
+      <p class="section-subtitle"><span class="ko">해요를 알면 이건 쉬워요. 요 자리에 야 돼요를 넣어요. 제가 읽을게요. 잘 듣고 따라 읽어 보세요.</span><span class="ja">「해요」を知っていれば、これはかんたんです。요のところに야 돼요を入れます。私が読みます。よく聞いて、まねして読んでみましょう。</span></p>
+      <div class="sent-hero">
+        <span class="korean">내일까지 끝내<span class="ending">야 돼요</span>.</span><span class="yomi">ネイルッカジ ックンネヤ トェヨ</span>
+        <span class="translation">明日までに終わらせ<span class="ending">ないといけません</span>。</span>
+      </div>
+      <div class="sent-more">
+        <div><span class="korean">아홉 시까지 회사에 가<span class="ending">야 돼요</span>.</span><span class="yomi">アホプ シッカジ フェサエ カヤ トェヨ</span><span class="translation">9時までに会社に行か<span class="ending">ないといけません</span>。</span></div>
+        <div><span class="korean">이거 꼭 확인<span class="ending">해야 돼요</span>.</span><span class="yomi">イゴ ッコク ファギネヤ トェヨ</span><span class="translation">これは必ず確認し<span class="ending">ないといけません</span>。</span></div>
+      </div>
+    </div>
+
+    <!-- the four 표현 arrive inside lines the learner only reads: 꼭 · 반드시 ·
+         까지 · 늦으면 안 돼요. Nothing new is carried — the frame is the one
+         they heard three times a page ago. -->
+    <div class="section" data-page-id="p1-read">
+      <h2 class="section-title">같이 읽어요 <span class="title-ja">(一緒に読もう)</span></h2>
+      <p class="section-subtitle"><span class="ko">이번엔 혼자 읽어 보세요. 네 문장이에요. 꼭하고 반드시는 둘 다 '必ず'예요. 반드시가 조금 더 딱딱해요.</span><span class="ja">今度はひとりで読んでみましょう。4つの文です。꼭と반드시はどちらも「必ず」です。반드시のほうが少しかたい言い方です。</span></p>
+      <div class="model-list">
+        <div class="model-line"><span class="korean">내일까지 끝내<span class="ending">야 돼요</span>.</span><span class="yomi">ネイルッカジ ックンネヤ トェヨ</span><span class="translation">明日までに終わらせ<span class="ending">ないといけません</span>。</span></div>
+        <div class="model-line"><span class="korean">이거 꼭 확인<span class="ending">해야 돼요</span>.</span><span class="yomi">イゴ ッコク ファギネヤ トェヨ</span><span class="translation">これは必ず確認し<span class="ending">ないといけません</span>。</span></div>
+        <div class="model-line"><span class="korean">아홉 시까지 회사에 가<span class="ending">야 돼요</span>. 늦으면 안 돼요.</span><span class="yomi">アホプ シッカジ フェサエ カヤ トェヨ。 ヌジュミョン アン トェヨ</span><span class="translation">9時までに会社に行か<span class="ending">ないといけません</span>。遅れてはいけません。</span></div>
+        <div class="model-line"><span class="korean">내일 회의는 반드시 준비<span class="ending">해야 돼요</span>.</span><span class="yomi">ネイル フェイヌン パンドゥシ チュンビヘヤ トェヨ</span><span class="translation">明日の会議は必ず準備し<span class="ending">ないといけません</span>。</span></div>
+      </div>
+    </div>
+
+    <!-- the one rule page of part 1. Nothing here is decided by sound — the
+         learner already owns 해요, and the whole operation is what replaces
+         its 요 — so the boxes keep .bt-out alone: no letter tile, no arrow.
+         The two boxes are not a branch but the two shapes a learner sorts
+         verbs into, and 하다 is half of today's vocabulary. -->
+    <div class="section" data-page-id="p1-form-rule">
+      <h2 class="section-title">해요에서 야 돼요로 <span class="title-ja">(해요 から 야 돼요 へ)</span></h2>
+      <p class="section-subtitle"><span class="ko">받침으로 고르는 게 아니에요. 아는 해요에서 요만 야 돼요로 바꿔요. 하다는 해야 돼요고요.</span><span class="ja">パッチムで選ぶのではありません。知っている해요の요だけを야 돼요に変えます。하다は해야 돼요です。</span></p>
+      <div class="tutor-note">학생이 아는 동사 두세 개로 더 바꿔 주세요.</div>
+      <div class="batchim ending-rule">
+        <div class="bt-box">
+          <span class="bt-eq">
+            <span class="bt-out">야 돼요<span class="yomi">ヤ トェヨ</span></span>
+          </span>
+          <span class="bt-head">보통 동사<small>〜아/어요 の 요 を 야 돼요 に</small></span>
+          <span class="bt-ex"><span>가요 → 가<b>야 돼요</b><span class="yomi">カヤ トェヨ</span></span><span>먹어요 → 먹어<b>야 돼요</b><span class="yomi">モゴヤ トェヨ</span></span></span>
+        </div>
+        <div class="bt-box">
+          <span class="bt-eq">
+            <span class="bt-out">해야 돼요<span class="yomi">ヘヤ トェヨ</span></span>
+          </span>
+          <span class="bt-head">하다 동사<small>해요 → 해야 돼요</small></span>
+          <span class="bt-ex"><span>확인해요 → 확인<b>해야 돼요</b><span class="yomi">ファギネヤ トェヨ</span></span><span>준비해요 → 준비<b>해야 돼요</b><span class="yomi">チュンビヘヤ トェヨ</span></span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- the honest binary is not inside today's form — it is 야 vs 도, one
+         syllable apart, and 과 38 already taught the other side. Nothing in
+         the Korean picks it; the Japanese on top does, which is exactly the
+         choice the learner has to make when they open their mouth. -->
+    <div class="section" data-page-id="p1-choose">
+      <h2 class="section-title">야 돼요와 도 돼요 <span class="title-ja">(야 돼요 と 도 돼요、どっち？)</span></h2>
+      <p class="section-subtitle"><span class="ko">위에 있는 일본어를 잘 보고, 맞는 쪽을 눌러 보세요.</span><span class="ja">上にある日本語をよく見て、正しいほうをタップしてください。</span></p>
+      <div class="choose-list">
+        <div class="choose-row sentence" data-sync-id="p1-choice-finish" data-sync-kind="selection" data-sync-state="chosen">
+          <span class="translation">明日までに終わらせないといけません。</span>
+          <span class="choose-sentence">내일까지 끝내<span class="opt" data-sync-option="must" data-correct>야 돼요.</span><span class="sep">/</span><span class="opt" data-sync-option="may">도 돼요.</span><span class="yomi">ネイルッカジ ックンネ …</span></span>
+        </div>
+        <div class="choose-row sentence" data-sync-id="p1-choice-gonow" data-sync-kind="selection" data-sync-state="chosen">
+          <span class="translation">今、行ってもいいです。</span>
+          <span class="choose-sentence">지금 가<span class="opt" data-sync-option="must">야 돼요.</span><span class="sep">/</span><span class="opt" data-sync-option="may" data-correct>도 돼요.</span><span class="yomi">チグム カ …</span></span>
+        </div>
+        <div class="choose-row sentence" data-sync-id="p1-choice-nine" data-sync-kind="selection" data-sync-state="chosen">
+          <span class="translation">9時までに会社に行かないといけません。</span>
+          <span class="choose-sentence">아홉 시까지 회사에 가<span class="opt" data-sync-option="must" data-correct>야 돼요.</span><span class="sep">/</span><span class="opt" data-sync-option="may">도 돼요.</span><span class="yomi">アホプ シッカジ フェサエ カ …</span></span>
+        </div>
+        <div class="choose-row sentence" data-sync-id="p1-choice-coffee" data-sync-kind="selection" data-sync-state="chosen">
+          <span class="translation">ここでコーヒーを飲んでもいいです。</span>
+          <span class="choose-sentence">여기에서 커피 마셔<span class="opt" data-sync-option="must">야 돼요.</span><span class="sep">/</span><span class="opt" data-sync-option="may" data-correct>도 돼요.</span><span class="yomi">ヨギエソ コピ マショ …</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p1-reorder">
+      <h2 class="section-title">문장 만들기 <span class="title-ja">(文を組み立てよう)</span></h2>
+      <p class="section-subtitle"><span class="ko">단어를 순서대로 놓고, 소리 내어 말해 보세요.</span><span class="ja">単語を順番に並べて、声に出して言ってみましょう。</span></p>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">この仕事は明日までに終わらせないといけません。</span>
+          <span class="answer-space" data-sync-id="p1-order-finish">이 일은 내일까지 끝내야 돼요</span>
+        </div>
+        <span class="choice" data-item-id="until-tomorrow-1">내일까지<span class="yomi">ネイルッカジ</span></span>
+        <span class="choice" data-item-id="this-work-1">이 일은<span class="yomi">イ イルン</span></span>
+        <span class="choice" data-item-id="finish-1">끝내야 돼요<span class="yomi">ックンネヤ トェヨ</span></span>
+      </div>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">9時までに会社に行かないといけません。</span>
+          <span class="answer-space" data-sync-id="p1-order-nine">아홉 시까지 회사에 가야 돼요</span>
+        </div>
+        <span class="choice" data-item-id="office-1">회사에<span class="yomi">フェサエ</span></span>
+        <span class="choice" data-item-id="go-1">가야 돼요<span class="yomi">カヤ トェヨ</span></span>
+        <span class="choice" data-item-id="until-nine-1">아홉 시까지<span class="yomi">アホプ シッカジ</span></span>
+      </div>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">これは必ず確認しないといけません。</span>
+          <span class="answer-space" data-sync-id="p1-order-check">이거 반드시 확인해야 돼요</span>
+        </div>
+        <span class="choice" data-item-id="check-1">확인해야 돼요<span class="yomi">ファギネヤ トェヨ</span></span>
+        <span class="choice" data-item-id="this-1">이거<span class="yomi">イゴ</span></span>
+        <span class="choice" data-item-id="surely-1">반드시<span class="yomi">パンドゥシ</span></span>
+      </div>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">今日は遅くまで働かないといけません。</span>
+          <span class="answer-space" data-sync-id="p1-order-late">오늘은 늦게까지 일해야 돼요</span>
+        </div>
+        <span class="choice" data-item-id="work-1">일해야 돼요<span class="yomi">イレヤ トェヨ</span></span>
+        <span class="choice" data-item-id="today-1">오늘은<span class="yomi">オヌルン</span></span>
+        <span class="choice" data-item-id="until-late-1">늦게까지<span class="yomi">ヌッケッカジ</span></span>
+      </div>
+    </div>
+
+    <!-- the stem stays on the page and the blank is the ending alone — the
+         same shape the trial deck's 이에요/예요 blank has. -->
+    <div class="section" data-page-id="p1-fill">
+      <h2 class="section-title">빈칸을 채워요 <span class="title-ja">(空欄をうめよう)</span></h2>
+      <p class="section-subtitle"><span class="ko">빈칸에 들어갈 말을 넣어서, 문장을 통째로 소리 내어 말해 보세요.</span><span class="ja">空欄に入ることばを入れて、文をまるごと声に出して言ってみましょう。</span></p>
+      <div class="tutor-note">학생이 말한 대로 빈칸에 적어 주세요.</div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">明日までに終わらせ<span class="target ending">ないといけません</span>。</span>
+          <span class="answer-fill"><span class="korean">내일까지 끝내<span class="slot" data-sync-id="p1-fill-finish">야 돼요</span>.</span><span class="yomi">ネイルッカジ ックンネ ＿＿＿</span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">9時までに会社に行か<span class="target ending">ないといけません</span>。</span>
+          <span class="answer-fill"><span class="korean">아홉 시까지 회사에 가<span class="slot" data-sync-id="p1-fill-nine">야 돼요</span>.</span><span class="yomi">アホプ シッカジ フェサエ カ ＿＿＿</span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">これは必ず確認し<span class="target ending">ないといけません</span>。</span>
+          <span class="answer-fill"><span class="korean">이거 반드시 확인<span class="slot" data-sync-id="p1-fill-check">해야 돼요</span>.</span><span class="yomi">イゴ パンドゥシ ファギン ＿＿＿</span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">今日は遅くまで働か<span class="target ending">ないといけません</span>。</span>
+          <span class="answer-fill"><span class="korean">오늘은 늦게까지 일<span class="slot" data-sync-id="p1-fill-late">해야 돼요</span>.</span><span class="yomi">オヌルン ヌッケッカジ イル ＿＿＿</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p1-translate">
+      <h2 class="section-title">한국어로 바꿔요 <span class="title-ja">(韓国語にしよう)</span></h2>
+      <p class="section-subtitle"><span class="ko">일본어를 보고, 한국어로 말해 보세요.</span><span class="ja">日本語を見て、韓国語で言ってみましょう。</span></p>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">明日までに終わらせないといけません。</span>
+          <span class="answer-space" data-sync-id="p1-translate-finish">내일까지 끝내야 돼요</span>
+                  <span class="hint"><span class="hint-chip">終わらせる:끝내다<span class="yomi">ックンネダ</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">9時までに会社に行かないといけません。</span>
+          <span class="answer-space" data-sync-id="p1-translate-nine">아홉 시까지 회사에 가야 돼요</span>
+                  <span class="hint"><span class="hint-chip">9時:아홉 시<span class="yomi">アホプ シ</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">これは必ず確認しないといけません。</span>
+          <span class="answer-space" data-sync-id="p1-translate-check">이거 반드시 확인해야 돼요</span>
+                  <span class="hint"><span class="hint-chip">必ず:반드시<span class="yomi">パンドゥシ</span></span><span class="hint-chip">確認する:확인하다<span class="yomi">ファギナダ</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">今日は会議を準備しないといけません。</span>
+          <span class="answer-space" data-sync-id="p1-translate-meeting">오늘은 회의를 준비해야 돼요</span>
+                  <span class="hint"><span class="hint-chip">会議:회의<span class="yomi">フェイ</span></span><span class="hint-chip">準備する:준비하다<span class="yomi">チュンビハダ</span></span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p1-write">
+      <h2 class="section-title">내 문장 만들기 <span class="title-ja">(自分の文を作ろう)</span></h2>
+      <p class="section-subtitle"><span class="ko">이번엔 진짜 자기 이야기예요. 오늘이나 이번 주에 꼭 해야 하는 일, 하나 말해 보세요.</span><span class="ja">今度は本当に自分の話です。今日か今週、必ずしないといけないことを1つ言ってみましょう。</span></p>
+      <div class="tutor-note">학생이 말한 문장을 여기에 적어 주세요.</div>
+      <div class="task-block">
+        <div class="answer-box tall">
+          <span class="answer-space" data-sync-id="p1-free-must"></span>
+                  <span class="hint"><span class="hint-chip">会社:회사<span class="yomi">フェサ</span></span><span class="hint-chip">学校:학교<span class="yomi">ハッキョ</span></span><span class="hint-chip">会議:회의<span class="yomi">フェイ</span></span><span class="hint-chip">準備する:준비하다<span class="yomi">チュンビハダ</span></span><span class="hint-chip">確認する:확인하다<span class="yomi">ファギナダ</span></span><span class="hint-chip">終わらせる:끝내다<span class="yomi">ックンネダ</span></span><span class="hint-chip">勉強する:공부하다<span class="yomi">コンブハダ</span></span><span class="hint-chip">掃除する:청소하다<span class="yomi">チョンソハダ</span></span><span class="hint-chip">働く:일하다<span class="yomi">イラダ</span></span><span class="hint-chip">必ず:꼭<span class="yomi">ッコク</span></span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ PART 2 · 안 해도 되는 것이 아니라, 그럴 까닭이 없는 것 ============ -->
+    <div class="transition-page" data-page-id="part2-intro" data-act="-(으)ㄹ 필요 없어요">
+      <span class="transition-kicker">パート 2</span>
+      <h2 class="transition-title">-(으)ㄹ 필요 없어요<span class="yomi">(ウ)ル ピリョ オプソヨ</span></h2>
+      <p class="transition-copy">〜する必要ありません。39과の「안 〜아/어도 돼요」に近いですが、こちらは「そうする理由がない」と伝える言い方です。</p>
+    </div>
+
+    <!-- 갈 cannot be split, so the accent takes the whole predicate here —
+         unlike part 1, where the stem stayed outside it. -->
+    <div class="section" data-page-id="p2-teach">
+      <h2 class="section-title">오늘의 패턴 <span class="title-ja">(今日のパターン)</span></h2>
+      <p class="section-subtitle"><span class="ko">이번엔 반대예요. 안 해도 되는 게 아니라, 그럴 까닭이 없는 거예요. 제가 읽을게요. 잘 듣고 따라 읽어 보세요.</span><span class="ja">今度は反対です。「しなくてもいい」というより「そうする理由がない」という言い方です。私が読みます。よく聞いて、まねして読んでみましょう。</span></p>
+      <div class="sent-hero">
+        <span class="korean">지금 <span class="ending">갈 필요 없어요</span>.</span><span class="yomi">チグム カル ピリョ オプソヨ</span>
+        <span class="translation">今、<span class="ending">行く必要ありません</span>。</span>
+      </div>
+      <div class="sent-more">
+        <div><span class="korean">우산 <span class="ending">살 필요 없어요</span>.</span><span class="yomi">ウサン サル ピリョ オプソヨ</span><span class="translation">傘を<span class="ending">買う必要ありません</span>。</span></div>
+        <div><span class="korean"><span class="ending">걱정할 필요 없어요</span>.</span><span class="yomi">コクチョンハル ピリョ オプソヨ</span><span class="translation"><span class="ending">心配する必要ありません</span>。</span></div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p2-read">
+      <h2 class="section-title">같이 읽어요 <span class="title-ja">(一緒に読もう)</span></h2>
+      <p class="section-subtitle"><span class="ko">이번엔 혼자 읽어 보세요. 네 문장이에요. 뒤에 이유를 한마디 붙이면 더 자연스러워요.</span><span class="ja">今度はひとりで読んでみましょう。4つの文です。うしろに理由をひとこと足すと、もっと自然になります。</span></p>
+      <div class="model-list">
+        <div class="model-line"><span class="korean">지금 <span class="ending">갈 필요 없어요</span>. 회의는 세 시예요.</span><span class="yomi">チグム カル ピリョ オプソヨ。 フェイヌン セ シエヨ</span><span class="translation">今、<span class="ending">行く必要ありません</span>。会議は3時です。</span></div>
+        <div class="model-line"><span class="korean">우산 <span class="ending">살 필요 없어요</span>. 오늘 비 안 와요.</span><span class="yomi">ウサン サル ピリョ オプソヨ。 オヌル ピ アン ワヨ</span><span class="translation">傘を<span class="ending">買う必要ありません</span>。今日は雨が降りません。</span></div>
+        <div class="model-line"><span class="korean">이거 다시 <span class="ending">확인할 필요 없어요</span>.</span><span class="yomi">イゴ タシ ファギナル ピリョ オプソヨ</span><span class="translation">これはもう一度<span class="ending">確認する必要ありません</span>。</span></div>
+        <div class="model-line"><span class="korean"><span class="ending">걱정할 필요 없어요</span>. 제가 할게요.</span><span class="yomi">コクチョンハル ピリョ オプソヨ。 チェガ ハルケヨ</span><span class="translation"><span class="ending">心配する必要ありません</span>。私がやります。</span></div>
+      </div>
+    </div>
+
+    <!-- this one IS decided by sound, and it is the rule the learner already
+         met on 과 35's -(으)ㄹ 수 있어요 — so the page says so rather than
+         teaching the 받침 split a second time from scratch. -->
+    <div class="section" data-page-id="p2-rule">
+      <h2 class="section-title">을과 ㄹ <span class="title-ja">(을 と ㄹ、どっち？)</span></h2>
+      <p class="section-subtitle"><span class="ko">-(으)ㄹ 수 있어요 때랑 같은 규칙이에요. 받침이 있으면 을, 없으면 ㄹ을 붙여요.</span><span class="ja">「-(으)ㄹ 수 있어요」のときと同じルールです。パッチムがあれば을、なければㄹをつけます。</span></p>
+      <div class="batchim ending-rule">
+        <div class="bt-box">
+          <span class="bt-eq">
+            <span class="bt-syl on">먹</span>
+            <span class="bt-arrow" aria-hidden="true">→</span>
+            <span class="bt-out">을 필요 없어요<span class="yomi">ウル ピリョ オプソヨ</span></span>
+          </span>
+          <span class="bt-head">받침 있음<small>パッチムあり（子音で終わる）</small></span>
+          <span class="bt-ex"><span>먹다 → <b>먹을 필요 없어요</b><span class="yomi">モグル ピリョ オプソヨ</span></span><span>읽다 → <b>읽을 필요 없어요</b><span class="yomi">イルグル ピリョ オプソヨ</span></span></span>
+        </div>
+        <div class="bt-box">
+          <span class="bt-eq">
+            <span class="bt-syl off">가</span>
+            <span class="bt-arrow" aria-hidden="true">→</span>
+            <span class="bt-out">ㄹ 필요 없어요<span class="yomi">ル ピリョ オプソヨ</span></span>
+          </span>
+          <span class="bt-head">받침 없음<small>パッチムなし（母音で終わる）</small></span>
+          <span class="bt-ex"><span>가다 → <b>갈 필요 없어요</b><span class="yomi">カル ピリョ オプソヨ</span></span><span>하다 → <b>할 필요 없어요</b><span class="yomi">ハル ピリョ オプソヨ</span></span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- both pills make a real sentence and 갈 cannot be broken into a fake
+         wrong syllable, so the choice is today's two patterns against each
+         other — which is the choice the scene in part 3 keeps asking for. -->
+    <div class="section" data-page-id="p2-choose">
+      <h2 class="section-title">해야 돼요와 필요 없어요 <span class="title-ja">(해야 돼요 と 필요 없어요、どっち？)</span></h2>
+      <p class="section-subtitle"><span class="ko">위에 있는 일본어를 잘 보고, 맞는 쪽을 눌러 보세요.</span><span class="ja">上にある日本語をよく見て、正しいほうをタップしてください。</span></p>
+      <div class="choose-list">
+        <div class="choose-row sentence" data-sync-id="p2-choice-office" data-sync-kind="selection" data-sync-state="chosen">
+          <span class="translation">今日は会社に行く必要ありません。</span>
+          <span class="choose-sentence">오늘은 회사에 <span class="opt" data-sync-option="noneed" data-correct>갈 필요 없어요.</span><span class="sep">/</span><span class="opt" data-sync-option="must">가야 돼요.</span><span class="yomi">オヌルン フェサエ …</span></span>
+        </div>
+        <div class="choose-row sentence" data-sync-id="p2-choice-finish" data-sync-kind="selection" data-sync-state="chosen">
+          <span class="translation">明日までに終わらせないといけません。</span>
+          <span class="choose-sentence">내일까지 <span class="opt" data-sync-option="noneed">끝낼 필요 없어요.</span><span class="sep">/</span><span class="opt" data-sync-option="must" data-correct>끝내야 돼요.</span><span class="yomi">ネイルッカジ …</span></span>
+        </div>
+        <div class="choose-row sentence" data-sync-id="p2-choice-umbrella" data-sync-kind="selection" data-sync-state="chosen">
+          <span class="translation">傘は買う必要ありません。</span>
+          <span class="choose-sentence">우산은 <span class="opt" data-sync-option="noneed" data-correct>살 필요 없어요.</span><span class="sep">/</span><span class="opt" data-sync-option="must">사야 돼요.</span><span class="yomi">ウサヌン …</span></span>
+        </div>
+        <div class="choose-row sentence" data-sync-id="p2-choice-check" data-sync-kind="selection" data-sync-state="chosen">
+          <span class="translation">これは必ず確認しないといけません。</span>
+          <span class="choose-sentence">이거 반드시 <span class="opt" data-sync-option="noneed">확인할 필요 없어요.</span><span class="sep">/</span><span class="opt" data-sync-option="must" data-correct>확인해야 돼요.</span><span class="yomi">イゴ パンドゥシ …</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p2-reorder">
+      <h2 class="section-title">문장 만들기 <span class="title-ja">(文を組み立てよう)</span></h2>
+      <p class="section-subtitle"><span class="ko">단어를 순서대로 놓고, 소리 내어 말해 보세요.</span><span class="ja">単語を順番に並べて、声に出して言ってみましょう。</span></p>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">今は会社に行く必要ありません。</span>
+          <span class="answer-space" data-sync-id="p2-order-office">지금은 회사에 갈 필요 없어요</span>
+        </div>
+        <span class="choice" data-item-id="office-2">회사에<span class="yomi">フェサエ</span></span>
+        <span class="choice" data-item-id="noneed-go-1">갈 필요 없어요<span class="yomi">カル ピリョ オプソヨ</span></span>
+        <span class="choice" data-item-id="now-1">지금은<span class="yomi">チグムン</span></span>
+      </div>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">今日は傘を買う必要ありません。</span>
+          <span class="answer-space" data-sync-id="p2-order-umbrella">오늘은 우산 살 필요 없어요</span>
+        </div>
+        <span class="choice" data-item-id="noneed-buy-1">살 필요 없어요<span class="yomi">サル ピリョ オプソヨ</span></span>
+        <span class="choice" data-item-id="today-2">오늘은<span class="yomi">オヌルン</span></span>
+        <span class="choice" data-item-id="umbrella-1">우산<span class="yomi">ウサン</span></span>
+      </div>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">これはもう一度確認する必要ありません。</span>
+          <span class="answer-space" data-sync-id="p2-order-check">이거 다시 확인할 필요 없어요</span>
+        </div>
+        <span class="choice" data-item-id="again-1">다시<span class="yomi">タシ</span></span>
+        <span class="choice" data-item-id="noneed-check-1">확인할 필요 없어요<span class="yomi">ファギナル ピリョ オプソヨ</span></span>
+        <span class="choice" data-item-id="this-2">이거<span class="yomi">イゴ</span></span>
+      </div>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">明日は早く来る必要ありません。</span>
+          <span class="answer-space" data-sync-id="p2-order-early">내일은 일찍 올 필요 없어요</span>
+        </div>
+        <span class="choice" data-item-id="noneed-come-1">올 필요 없어요<span class="yomi">オル ピリョ オプソヨ</span></span>
+        <span class="choice" data-item-id="tomorrow-1">내일은<span class="yomi">ネイルン</span></span>
+        <span class="choice" data-item-id="early-1">일찍<span class="yomi">イルチク</span></span>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p2-fill">
+      <h2 class="section-title">빈칸을 채워요 <span class="title-ja">(空欄をうめよう)</span></h2>
+      <p class="section-subtitle"><span class="ko">빈칸에 들어갈 말을 넣어서, 문장을 통째로 소리 내어 말해 보세요.</span><span class="ja">空欄に入ることばを入れて、文をまるごと声に出して言ってみましょう。</span></p>
+      <div class="tutor-note">학생이 말한 대로 빈칸에 적어 주세요.</div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">今日は会社に<span class="target ending">行く必要ありません</span>。</span>
+          <span class="answer-fill"><span class="korean">오늘은 회사에 <span class="slot" data-sync-id="p2-fill-office">갈 필요 없어요</span>.</span><span class="yomi">オヌルン フェサエ ＿＿＿</span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">今日は傘を<span class="target ending">買う必要ありません</span>。</span>
+          <span class="answer-fill"><span class="korean">오늘은 우산 <span class="slot" data-sync-id="p2-fill-umbrella">살 필요 없어요</span>.</span><span class="yomi">オヌルン ウサン ＿＿＿</span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">これはもう一度<span class="target ending">確認する必要ありません</span>。</span>
+          <span class="answer-fill"><span class="korean">이거 다시 <span class="slot" data-sync-id="p2-fill-check">확인할 필요 없어요</span>.</span><span class="yomi">イゴ タシ ＿＿＿</span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">明日は早く<span class="target ending">来る必要ありません</span>。</span>
+          <span class="answer-fill"><span class="korean">내일은 일찍 <span class="slot" data-sync-id="p2-fill-early">올 필요 없어요</span>.</span><span class="yomi">ネイルン イルチク ＿＿＿</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p2-translate">
+      <h2 class="section-title">한국어로 바꿔요 <span class="title-ja">(韓国語にしよう)</span></h2>
+      <p class="section-subtitle"><span class="ko">일본어를 보고, 한국어로 말해 보세요.</span><span class="ja">日本語を見て、韓国語で言ってみましょう。</span></p>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">今日は会社に行く必要ありません。</span>
+          <span class="answer-space" data-sync-id="p2-translate-office">오늘은 회사에 갈 필요 없어요</span>
+                  <span class="hint"><span class="hint-chip">行く:가다<span class="yomi">カダ</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">傘は買う必要ありません。</span>
+          <span class="answer-space" data-sync-id="p2-translate-umbrella">우산은 살 필요 없어요</span>
+                  <span class="hint"><span class="hint-chip">傘:우산<span class="yomi">ウサン</span></span><span class="hint-chip">買う:사다<span class="yomi">サダ</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">これはもう一度確認する必要ありません。</span>
+          <span class="answer-space" data-sync-id="p2-translate-check">이거 다시 확인할 필요 없어요</span>
+                  <span class="hint"><span class="hint-chip">もう一度:다시<span class="yomi">タシ</span></span><span class="hint-chip">確認する:확인하다<span class="yomi">ファギナダ</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">心配する必要ありません。</span>
+          <span class="answer-space" data-sync-id="p2-translate-worry">걱정할 필요 없어요</span>
+                  <span class="hint"><span class="hint-chip">心配する:걱정하다<span class="yomi">コクチョンハダ</span></span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p2-write">
+      <h2 class="section-title">내 문장 만들기 <span class="title-ja">(自分の文を作ろう)</span></h2>
+      <p class="section-subtitle"><span class="ko">이번엔 반대예요. 이번 주에 할 필요 없는 일을 하나 말해 보세요.</span><span class="ja">今度は反対です。今週、する必要のないことを1つ言ってみましょう。</span></p>
+      <div class="tutor-note">학생이 말한 문장을 여기에 적어 주세요.</div>
+      <div class="task-block">
+        <div class="answer-box tall">
+          <span class="answer-space" data-sync-id="p2-free-noneed"></span>
+                  <span class="hint"><span class="hint-chip">掃除する:청소하다<span class="yomi">チョンソハダ</span></span><span class="hint-chip">料理する:요리하다<span class="yomi">ヨリハダ</span></span><span class="hint-chip">買う:사다<span class="yomi">サダ</span></span><span class="hint-chip">行く:가다<span class="yomi">カダ</span></span><span class="hint-chip">来る:오다<span class="yomi">オダ</span></span><span class="hint-chip">心配する:걱정하다<span class="yomi">コクチョンハダ</span></span><span class="hint-chip">傘:우산<span class="yomi">ウサン</span></span><span class="hint-chip">早く:일찍<span class="yomi">イルチク</span></span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ PART 3 · 여행 준비 ============ -->
+    <!-- pattern B is called by pattern A here: 하나 lists what 하루카 must do,
+         and every item she lists invites the question of what can be dropped. -->
+    <div class="transition-page" data-page-id="part3-intro" data-act="여행 준비">
+      <span class="transition-kicker">パート 3</span>
+      <h2 class="transition-title">뭘 준비해야 돼요?<span class="yomi">ムォル チュンビヘヤ トェヨ</span></h2>
+      <p class="transition-copy">2つがそろいました。必ずすることと、しなくていいこと。週末の旅行の準備を、ふたりで決めます。</p>
+    </div>
+
+    <!-- a 「〜しないといけません」 is half a conversation: somebody has to ask.
+         These four are the asking half, and they arrive as reading, not as a
+         third pattern. -->
+    <div class="section" data-page-id="p3-ask-read">
+      <h2 class="section-title">물어보는 말 <span class="title-ja">(たずねる ことば)</span></h2>
+      <p class="section-subtitle"><span class="ko">이번엔 묻는 쪽이에요. 뭘은 '무엇을'이에요. 같이 읽어 볼까요?</span><span class="ja">今度は聞くほうです。뭘は「무엇을（何を）」です。一緒に読んでみましょうか？</span></p>
+      <div class="model-list">
+        <div class="model-line"><span class="korean">뭘 꼭 준비<span class="ending">해야 돼요</span>?</span><span class="yomi">ムォル ッコク チュンビヘヤ トェヨ</span><span class="translation">何を必ず準備し<span class="ending">ないといけませんか</span>？</span></div>
+        <div class="model-line"><span class="korean">표는 언제까지 사<span class="ending">야 돼요</span>?</span><span class="yomi">ピョヌン オンジェッカジ サヤ トェヨ</span><span class="translation">チケットはいつまでに買わ<span class="ending">ないといけませんか</span>？</span></div>
+        <div class="model-line"><span class="korean">저도 일찍 가<span class="ending">야 돼요</span>?</span><span class="yomi">チョド イルチク カヤ トェヨ</span><span class="translation">私も早く行か<span class="ending">ないといけませんか</span>？</span></div>
+        <div class="model-line"><span class="korean">우산도 사<span class="ending">야 돼요</span>?</span><span class="yomi">ウサンド サヤ トェヨ</span><span class="translation">傘も買わ<span class="ending">ないといけませんか</span>？</span></div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p3-model">
+      <h2 class="section-title">대화 읽기 <span class="title-ja">(会話を読もう)</span></h2>
+      <p class="section-subtitle"><span class="ko">하루카가 주말에 부산에 가요. 제가 하나 쪽을 읽을게요. 하루카가 되어서 읽어 보세요.</span><span class="ja">ハルカが週末に釜山へ行きます。私がハナのほうを読みます。ハルカになって読んでみましょう。</span></p>
+      <div class="dialogue">
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">하루카 씨, 주말에 부산에 가요? 그럼 표는 오늘까지 사<span class="ending">야 돼요</span>.</span><span class="yomi">ハルカ シ、チュマレ プサネ カヨ？ クロム ピョヌン オヌルッカジ サヤ トェヨ</span><span class="translation">ハルカさん、週末に釜山へ行きますか？なら、チケットは今日までに買わ<span class="ending">ないといけません</span>。</span></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><span class="korean">네? 오늘까지요? 그럼 지금 예약<span class="ending">해야 돼요</span>.</span><span class="yomi">ネ？ オヌルッカジヨ？ クロム チグム イェヤケヤ トェヨ</span><span class="translation">え？今日までですか？では今すぐ予約し<span class="ending">ないといけません</span>。</span></div></div>
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">네. 그리고 아침 아홉 시까지 역에 가<span class="ending">야 돼요</span>. 늦으면 안 돼요.</span><span class="yomi">ネ。 クリゴ アチム アホプ シッカジ ヨゲ カヤ トェヨ。 ヌジュミョン アン トェヨ</span><span class="translation">はい。それと朝9時までに駅へ行か<span class="ending">ないといけません</span>。遅れてはいけません。</span></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><span class="korean">아, 그래요? 우산도 사<span class="ending">야 돼요</span>?</span><span class="yomi">ア、クレヨ？ ウサンド サヤ トェヨ</span><span class="translation">あ、そうですか？傘も買わ<span class="ending">ないといけませんか</span>？</span></div></div>
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">아니요, 우산은 <span class="ending">살 필요 없어요</span>. 부산은 지금 비가 안 와요.</span><span class="yomi">アニヨ、ウサヌン サル ピリョ オプソヨ。 プサヌン チグム ピガ アン ワヨ</span><span class="translation">いいえ、傘は<span class="ending">買う必要ありません</span>。釜山は今、雨が降りません。</span></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><span class="korean">그럼 아침도 <span class="ending">준비할 필요 없어요</span>?</span><span class="yomi">クロム アチムド チュンビハル ピリョ オプソヨ</span><span class="translation">では朝ごはんも<span class="ending">準備する必要ありませんか</span>？</span></div></div>
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">네, 호텔에 아침이 있어요. 아침은 <span class="ending">준비할 필요 없어요</span>.</span><span class="yomi">ネ、ホテレ アチミ イッソヨ。 アチムン チュンビハル ピリョ オプソヨ</span><span class="translation">はい、ホテルに朝ごはんがあります。朝ごはんは<span class="ending">準備する必要ありません</span>。</span></div></div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p3-complete">
+      <h2 class="section-title">대화 채우기 <span class="title-ja">(会話をうめよう)</span></h2>
+      <p class="section-subtitle"><span class="ko">이번엔 하루카 대사가 비어 있어요. 하루카가 되어서 문장을 소리 내어 말해 보세요.</span><span class="ja">今度はハルカのセリフが空いています。ハルカになって、文を声に出して言ってみましょう。</span></p>
+      <div class="tutor-note">학생이 말한 대로 빈칸에 적어 주세요.</div>
+      <div class="dialogue">
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">하루카 씨, 주말에 부산에 가요? 그럼 표는 오늘까지 사야 돼요.</span><span class="yomi">ハルカ シ、チュマレ プサネ カヨ？ クロム ピョヌン オヌルッカジ サヤ トェヨ</span><span class="translation">ハルカさん、週末に釜山へ行きますか？なら、チケットは今日までに買わないといけません。</span></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">え？今日までですか？では<span class="target">今すぐ予約しないといけません</span>。</span><span class="answer-fill"><span class="korean">네? 오늘까지요? 그럼 <span class="slot" data-sync-id="p3-complete-book">지금 예약해야 돼요</span>.</span><span class="yomi">ネ？ オヌルッカジヨ？ クロム ＿＿＿</span></span><span class="hint"><span class="hint-chip">予約する:예약하다<span class="yomi">イェヤカダ</span></span></span></div></div></div>
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">네. 그리고 아침 아홉 시까지 역에 가야 돼요. 늦으면 안 돼요.</span><span class="yomi">ネ。 クリゴ アチム アホプ シッカジ ヨゲ カヤ トェヨ。 ヌジュミョン アン トェヨ</span><span class="translation">はい。それと朝9時までに駅へ行かないといけません。遅れてはいけません。</span></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">あ、そうですか？<span class="target">傘も買わないといけませんか</span>？</span><span class="answer-fill"><span class="korean">아, 그래요? <span class="slot" data-sync-id="p3-complete-umbrella">우산도 사야 돼요</span>?</span><span class="yomi">ア、クレヨ？ ＿＿＿</span></span><span class="hint"><span class="hint-chip">傘:우산<span class="yomi">ウサン</span></span></span></div></div></div>
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">아니요, 우산은 살 필요 없어요. 부산은 지금 비가 안 와요.</span><span class="yomi">アニヨ、ウサヌン サル ピリョ オプソヨ。 プサヌン チグム ピガ アン ワヨ</span><span class="translation">いいえ、傘は買う必要ありません。釜山は今、雨が降りません。</span></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">では朝ごはんも<span class="target">準備する必要ありませんか</span>？</span><span class="answer-fill"><span class="korean">그럼 아침도 <span class="slot" data-sync-id="p3-complete-breakfast">준비할 필요 없어요</span>?</span><span class="yomi">クロム アチムド ＿＿＿</span></span><span class="hint"><span class="hint-chip">準備する:준비하다<span class="yomi">チュンビハダ</span></span></span></div></div></div>
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">네, 호텔에 아침이 있어요. 아침은 준비할 필요 없어요.</span><span class="yomi">ネ、ホテレ アチミ イッソヨ。 アチムン チュンビハル ピリョ オプソヨ</span><span class="translation">はい、ホテルに朝ごはんがあります。朝ごはんは準備する必要ありません。</span></div></div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p3-freetalk">
+      <h2 class="section-title">자유 대화 <span class="title-ja">(フリートーク)</span></h2>
+      <p class="section-subtitle"><span class="ko">이번엔 진짜 자기 이야기예요. 제 질문에 하나씩 대답해 보세요.</span><span class="ja">今度は本当に自分の話です。私の質問に1つずつ答えてみましょう。</span></p>
+      <div class="tutor-note">마지막 칸은 길게 기다려 주세요.</div>
+      <div class="dialogue">
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">先生</span></span><div class="bubble"><span class="korean">이번 주에 꼭 해야 하는 일이 뭐예요?</span><span class="yomi">イボン チュエ ッコク ヘヤ ハヌン イリ ムォエヨ</span><span class="translation">今週、必ずしないといけないことは何ですか？</span></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label">〜야 돼요.<span class="task">自分のこと</span></span><span class="answer-space" data-sync-id="p3-freetalk-must"></span><span class="hint"><span class="hint-chip">会社:회사<span class="yomi">フェサ</span></span><span class="hint-chip">会議:회의<span class="yomi">フェイ</span></span><span class="hint-chip">準備する:준비하다<span class="yomi">チュンビハダ</span></span><span class="hint-chip">確認する:확인하다<span class="yomi">ファギナダ</span></span><span class="hint-chip">終わらせる:끝내다<span class="yomi">ックンネダ</span></span><span class="hint-chip">勉強する:공부하다<span class="yomi">コンブハダ</span></span></span></div></div></div>
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">先生</span></span><div class="bubble"><span class="korean">그럼 오늘 할 필요 없는 일도 있어요?</span><span class="yomi">クロム オヌル ハル ピリョ オムヌン イルド イッソヨ</span><span class="translation">では、今日する必要のないこともありますか？</span></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label">〜ㄹ 필요 없어요.<span class="task">自分のこと</span></span><span class="answer-space" data-sync-id="p3-freetalk-noneed"></span><span class="hint"><span class="hint-chip">掃除する:청소하다<span class="yomi">チョンソハダ</span></span><span class="hint-chip">料理する:요리하다<span class="yomi">ヨリハダ</span></span><span class="hint-chip">買う:사다<span class="yomi">サダ</span></span><span class="hint-chip">行く:가다<span class="yomi">カダ</span></span><span class="hint-chip">心配する:걱정하다<span class="yomi">コクチョンハダ</span></span></span></div></div></div>
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">先生</span></span><div class="bubble"><span class="korean">그 일은 언제까지 끝내야 돼요?</span><span class="yomi">ク イルン オンジェッカジ ックンネヤ トェヨ</span><span class="translation">その仕事はいつまでに終わらせないといけませんか？</span></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label">〜까지 끝내야 돼요.<span class="task">自分のこと</span></span><span class="answer-space" data-sync-id="p3-freetalk-deadline"></span><span class="hint"><span class="hint-chip">今日:오늘<span class="yomi">オヌル</span></span><span class="hint-chip">明日:내일<span class="yomi">ネイル</span></span><span class="hint-chip">金曜日:금요일<span class="yomi">クミョイル</span></span><span class="hint-chip">週末:주말<span class="yomi">チュマル</span></span><span class="hint-chip">9時:아홉 시<span class="yomi">アホプ シ</span></span></span></div></div></div>
+      </div>
+    </div>
+
+    <!-- bonus scene · 회사 마감, 팀장과. The room is nothing but deadlines, so
+         both of today's patterns are what it costs: the 팀장 sets one and then
+         takes two away. The partner stays 相手 — a bonus scene never names its
+         person. -->
+    <div class="section" data-page-id="korea-trip">
+      <h2 class="section-title">회사 마감 <span class="title-ja">(会社のしめきり)</span></h2>
+      <p class="section-subtitle"><span class="ko">보너스! 여기는 한국 회사예요. 팀장님이 마감 이야기를 해요. 빈칸 대사를 말해 주세요.</span><span class="ja">ボーナス！ここは韓国の会社です。チーム長がしめきりの話をします。空欄のセリフを言ってください。</span></p>
+      <div class="dialogue">
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">相手</span></span><div class="bubble"><span class="korean">다나카 씨, 회의 준비 마감이 내일이에요. 괜찮아요?</span><span class="yomi">タナカ シ、フェイ チュンビ マガミ ネイリエヨ。 ケンチャナヨ</span><span class="translation">田中さん、会議の準備のしめきりが明日です。大丈夫ですか？</span></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">はい！では<span class="target">明日までに終わらせないといけませんね</span>。</span><span class="answer-fill"><span class="korean">네! 그럼 <span class="slot" data-sync-id="trip-deadline">내일까지 끝내야 돼요</span>.</span><span class="yomi">ネ！ クロム ＿＿＿</span></span><span class="hint"><span class="hint-chip">終わらせる:끝내다<span class="yomi">ックンネダ</span></span></span></div></div></div>
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">相手</span></span><div class="bubble"><span class="korean">네, 꼭 부탁해요. 그리고 내일 회의는 아홉 시예요. 늦으면 안 돼요.</span><span class="yomi">ネ、ッコク プタケヨ。 クリゴ ネイル フェイヌン アホプ シエヨ。 ヌジュミョン アン トェヨ</span><span class="translation">はい、ぜひお願いします。それと明日の会議は9時です。遅れてはいけません。</span></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">はい、では<span class="target">8時までに来ないといけませんか</span>？</span><span class="answer-fill"><span class="korean">네, 그럼 <span class="slot" data-sync-id="trip-early">여덟 시까지 와야 돼요</span>?</span><span class="yomi">ネ、クロム ＿＿＿</span></span><span class="hint"><span class="hint-chip">8時:여덟 시<span class="yomi">ヨドル シ</span></span><span class="hint-chip">来る:오다<span class="yomi">オダ</span></span></span></div></div></div>
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">相手</span></span><div class="bubble"><span class="korean">아니요, 일찍 올 필요 없어요. 아홉 시까지 오면 돼요.</span><span class="yomi">アニヨ、イルチク オル ピリョ オプソヨ。 アホプ シッカジ オミョン トェヨ</span><span class="translation">いいえ、早く来る必要ありません。9時までに来れば大丈夫です。</span></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">よかったです！では今日は<span class="target">心配する必要ありませんね</span>。</span><span class="answer-fill"><span class="korean">좋아요! 그럼 오늘은 <span class="slot" data-sync-id="trip-worry">걱정할 필요 없어요</span>.</span><span class="yomi">チョアヨ！ クロム オヌルン ＿＿＿</span></span><span class="hint"><span class="hint-chip">心配する:걱정하다<span class="yomi">コクチョンハダ</span></span></span></div></div></div>
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">相手</span></span><div class="bubble"><span class="korean">네! 오늘은 일찍 가세요.</span><span class="yomi">ネ！ オヌルン イルチク カセヨ</span><span class="translation">はい！今日は早く帰ってください。</span></div></div>
+      </div>
+    </div>
+
+    <!-- the tip is the one thing the brief marks 이해만: 해요 and 돼요 are the
+         same sentence, and which one you hear depends on whether it was
+         written or said. What changes is marked orange on the top line and
+         orange again on the bottom, because both are the taught ending —
+         the page draws the swap rather than describing it. -->
+    <div class="section" data-page-id="native-tip">
+      <h2 class="section-title">원어민 팁 <span class="title-ja">(ネイティブのひとこと)</span></h2>
+      <p class="section-subtitle"><span class="ko">책에서는 -아/어야 해요를 많이 봐요. 그런데 말할 때는 -아/어야 돼요를 더 자주 써요. 뜻은 똑같아요.</span><span class="ja">本では「-아/어야 해요」をよく見ます。でも話すときは「-아/어야 돼요」のほうをよく使います。意味は同じです。</span></p>
+      <div class="tutor-note">한 줄씩 위아래로 읽어 주세요. 소리 차이가 들리게요.</div>
+      <div class="swap">
+        <div class="swap-row">
+          <span class="translation">明日までに終わらせないといけません。</span>
+          <span class="sw-from">내일까지 끝내<span class="ending">야 해요</span>.<span class="yomi">ネイルッカジ ックンネヤ ヘヨ</span></span>
+          <span class="sw-to">내일까지 끝내<span class="ending">야 돼요</span>.<span class="yomi">ネイルッカジ ックンネヤ トェヨ</span></span>
+        </div>
+        <div class="swap-row">
+          <span class="translation">これは必ず確認しないといけません。</span>
+          <span class="sw-from">이거 반드시 확인<span class="ending">해야 해요</span>.<span class="yomi">イゴ パンドゥシ ファギネヤ ヘヨ</span></span>
+          <span class="sw-to">이거 반드시 확인<span class="ending">해야 돼요</span>.<span class="yomi">イゴ パンドゥシ ファギネヤ トェヨ</span></span>
+        </div>
+      </div>
+    </div>
   </div>
 
 

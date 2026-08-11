@@ -71,6 +71,15 @@ The guiding principles behind every page of the Korean curriculum.
 - **Four items in every closed sentence activity.** Read, choose, reorder, fill and translate do not taper as the learner moves toward production; scrolling is preferable to quietly reducing practice. Review may intentionally use fewer, and free-writing stays one open prompt. A decoding drill instead matches the block it drills — three new letters, three items.
 - **Reorder four meaningful chunks, not four arbitrary fragments.** Four is the default and the ceiling for one sentence. Keep learned patterns and natural phrase units intact; if a sentence cannot yield four useful chunks, make the sentence richer instead of splitting particles or endings into puzzle pieces.
 - **A choice needs two teachable branches.** Use a two-way choice when the lesson has two forms the learner must genuinely distinguish (such as 받침/받침 없음 or 명사+만/동사+기만). Do not manufacture a wrong syllable for an invariant pattern, and do not use two grammatical sentences whose difference requires an unintroduced nuance lecture. When there is no honest binary decision, omit the choose page.
+- **Show the operation, not a clipped answer.** When an invariant rule removes dictionary-form `다` and attaches one ending, the visual starts with the complete dictionary form (`듣다 → 듣기 싫어`). Keep that source grouped as one word; a lone stem such as `듣` hides the operation, while separate syllable tiles falsely suggest alternatives. Stem-only tiles remain useful when the final stem sound itself determines a real branch.
+- **Meaning comes before mechanics.** A pattern intro states its short meaning and the communicative
+  situation it serves; translating the hero sentence is not enough. The visual rule that follows
+  shows how to build the form, not what the form is for.
+- **A native tip must add something.** It contributes one immediately usable adjacent choice — such
+  as register, softening, contraction, prosody, collocation or intensity — and never repeats the
+  intro, expression page or rule.
+- **End by playing the next beat.** A contextual teaser is a complete 5–7-turn mini-scene with 2–3
+  learner completions using both patterns, and its final turn leaves an unresolved story hook.
 - **3-part lesson shape:** Teach → Practice → Converse / Roleplay.
 
 ## Dialogue & characters

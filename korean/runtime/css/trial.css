@@ -1958,6 +1958,22 @@ body:not(.no-yomi) .sent-more .yomi + .translation { margin-top: 7px; }
   font-size: 45px;
 }
 
+/* A dictionary form is one source word, not a set of alternative syllables.
+   Keep it grouped in one neutral tile; reserve .bt-syl / .bt-syls for rules
+   where the final syllable's 받침 or vowel is itself the visual evidence. */
+.bt-word {
+  display: grid;
+  place-items: center;
+  min-height: 78px;
+  padding: 0 18px;
+  border-radius: 14px;
+  background: var(--gray-50);
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1;
+  white-space: nowrap;
+}
+
 .bt-syl {
   position: relative;
   isolation: isolate;   /* keeps the floor's z-index:-1 inside this box */
@@ -2298,6 +2314,7 @@ body:not(.no-yomi) .sent-more .yomi + .translation { margin-top: 7px; }
      This used to be @media (max-width: 480px), which missed the fixed-width
      phone column whenever it was previewed inside a wide desktop browser. */
   .bt-syl { width: 94px; height: 94px; font-size: 54px; }
+  .bt-word { min-height: 62px; padding-inline: 14px; font-size: 36px; }
   /* A pair of stems is the widest thing the equation ever carries — nearly
      twice a single one — so it is the case that decides this breakpoint.
      Measured on a 360px column: any bigger and the page scrolls sideways,
@@ -2321,6 +2338,7 @@ body:not(.no-yomi) .sent-more .yomi + .translation { margin-top: 7px; }
 @container (max-width: 300px) {
   .bt-box { padding-inline: 10px; }
   .bt-syl { width: 72px; height: 72px; font-size: 42px; }
+  .bt-word { min-height: 40px; padding-inline: 8px; font-size: 24px; }
   .bt-syls > .bt-syl { width: 40px; height: 40px; font-size: 24px; }
   .bt-syls { gap: 3px; }
   .bt-syls > .sep { font-size: 18px; }

@@ -17,17 +17,577 @@
 <body>
   <div class="phone">
 
-    <!-- ============================================================
-         PAGES GO HERE — one .phone child per page, one activity per page.
+    <!-- Both taught pieces of this 과 are verb endings, so both run .ending
+         (orange) and violet goes unused — the same call 과 27 made. There is
+         no third inline accent, and inventing a class the CDN tag does not
+         carry would render as nothing. -->
 
-         Plan the arc from  lesson-blueprint.md
-         Take the content from  toc/lesson-035.md
-         Copy component markup and tutor voice from the deck this
-         skeleton came from — do not invent components.
+    <!-- 과 10 gave the learner 못 and 과 16 gave them 있어요/없어요. Today's
+         pattern is literally those two bolted onto a verb, so the goal page
+         opens on the question the learner will be asked in Korea rather than
+         on anything that has to be memorised. -->
+    <div class="transition-page" data-page-id="lesson-goal" data-act="수 있어요 · 줄 알아요">
+      <span class="transition-kicker">목표</span>
+      <h2 class="transition-title">오늘의 목표 <span class="title-ja">(今日のゴール)</span></h2>
+      <p class="section-subtitle"><span class="ko">지금까지 하는 것, 안 하는 것을 말했죠? 오늘은 할 수 있는 것하고 할 줄 아는 것을 말해요.</span><span class="ja">今まで「すること」「しないこと」を言ってきましたよね？今日は「できること」と「やり方を知っていること」を言います。</span></p>
+      <div class="known lines">
+        <div class="known-row"><span class="k">다나카 씨, 김치 먹을 수 있어요?</span><span class="yomi">タナカ シ、キムチ モグル ス イッソヨ</span><span class="j">田中さん、キムチ食べられますか？</span></div>
+        <div class="known-row"><span class="k">네, 먹을 수 있어요. 조금은요.</span><span class="yomi">ネ、モグル ス イッソヨ。 チョグムンニョ</span><span class="j">はい、食べられます。少しは</span></div>
+        <div class="known-row"><span class="k">저는 한국 요리도 할 줄 알아요.</span><span class="yomi">チョヌン ハングク ヨリド ハル チュル アラヨ</span><span class="j">私は韓国料理も作れます</span></div>
+      </div>
+    </div>
 
-         The first page must carry data-act, since the cover that used
-         to supply it is a trial-only page and is not here.
-         ============================================================ -->
+    <!-- the same bridge shape as 과 7 · 8 · 10 · 16. Today the words are the
+         things the learner will say they can do, and all three are kanji —
+         so the vocabulary is free before the grammar starts. -->
+    <div class="section" data-page-id="words-you-know">
+      <h2 class="section-title">이미 아는 단어 <span class="title-ja">(もう知っている単語)</span></h2>
+      <p class="section-subtitle"><span class="ko">오늘 할 줄 아는 걸 말할 건데요. 그 단어들, 이미 알아요. 이것도 한자에서 왔어요.</span><span class="ja">今日は「できること」を言うんですが、その単語、もう知っています。これも漢字から来ています。</span></p>
+      <div class="bridge">
+        <div class="br-row"><span class="br-cn">自転車</span><span class="br-eq">→</span><span class="br-ko">자전거<small class="yomi">チャジョンゴ</small></span></div>
+        <div class="br-row"><span class="br-cn">韓国料理</span><span class="br-eq">→</span><span class="br-ko">한국 요리<small class="yomi">ハングク ヨリ</small></span></div>
+        <div class="br-row"><span class="br-cn">韓国語</span><span class="br-eq">→</span><span class="br-ko">한국어<small class="yomi">ハングゴ</small></span></div>
+      </div>
+    </div>
+
+    <!-- ============ PART 1 · -(으)ㄹ 수 있어요 / 없어요 ============ -->
+    <div class="transition-page" data-page-id="part1-intro" data-act="-(으)ㄹ 수 있어요">
+      <span class="transition-kicker">パート 1</span>
+      <h2 class="transition-title">-(으)ㄹ 수 있어요 / 없어요<span class="yomi">（ウ）ル ス イッソヨ / オプソヨ</span></h2>
+      <p class="transition-copy">〜できます / できません。今それができるかどうか。動詞に수 있어요をつけるだけです。</p>
+    </div>
+
+    <div class="section" data-page-id="p1-teach">
+      <h2 class="section-title">오늘의 패턴 <span class="title-ja">(今日のパターン)</span></h2>
+      <p class="section-subtitle"><span class="ko">동사 뒤에 수 있어요만 붙이면 돼요. 안 되는 일이면 있어요를 없어요로 바꾸고요. 제가 읽을게요. 잘 듣고 따라 읽어 보세요.</span><span class="ja">動詞のうしろに수 있어요をつけるだけです。できないことなら있어요を없어요に変えます。私が読みます。よく聞いて、まねして読んでみましょう。</span></p>
+      <div class="sent-hero">
+        <span class="korean">저는 김치를 <span class="ending">먹을 수 있어요</span>.</span><span class="yomi">チョヌン キムチルル モグル ス イッソヨ</span>
+        <span class="translation">私はキムチが<span class="ending">食べられます</span>。</span>
+      </div>
+      <div class="sent-more">
+        <div><span class="korean">저는 내일 <span class="ending">갈 수 있어요</span>.</span><span class="yomi">チョヌン ネイル カル ス イッソヨ</span><span class="translation">私は明日<span class="ending">行けます</span>。</span></div>
+        <div><span class="korean">오늘은 <span class="ending">갈 수 없어요</span>.</span><span class="yomi">オヌルン カル ス オプソヨ</span><span class="translation">今日は<span class="ending">行けません</span>。</span></div>
+      </div>
+    </div>
+
+    <!-- four lines, and two of them end 없어요 — the learner meets the split
+         here and the rule page names it two pages later. 책 is the only new
+         object and it is 과 4's word. -->
+    <div class="section" data-page-id="p1-read">
+      <h2 class="section-title">같이 읽어요 <span class="title-ja">(一緒に読もう)</span></h2>
+      <p class="section-subtitle"><span class="ko">이번엔 혼자 읽어 보세요. 네 문장이에요.</span><span class="ja">今度はひとりで読んでみましょう。4つの文です。</span></p>
+      <div class="model-list">
+        <div class="model-line"><span class="korean">저는 김치를 <span class="ending">먹을 수 있어요</span>.</span><span class="yomi">チョヌン キムチルル モグル ス イッソヨ</span><span class="translation">私はキムチが<span class="ending">食べられます</span>。</span></div>
+        <div class="model-line"><span class="korean">저는 한국어 책을 <span class="ending">읽을 수 있어요</span>.</span><span class="yomi">チョヌン ハングゴ チェグル イルグル ス イッソヨ</span><span class="translation">私は韓国語の本が<span class="ending">読めます</span>。</span></div>
+        <div class="model-line"><span class="korean">오늘은 술을 <span class="ending">마실 수 없어요</span>. 운전해요.</span><span class="yomi">オヌルン スルル マシル ス オプソヨ。 ウンジョネヨ</span><span class="translation">今日はお酒が<span class="ending">飲めません</span>。運転します。</span></div>
+        <div class="model-line"><span class="korean">주말에 <span class="ending">만날 수 있어요</span>?</span><span class="yomi">チュマレ マンナル ス イッソヨ</span><span class="translation">週末に<span class="ending">会えますか</span>？</span></div>
+      </div>
+    </div>
+
+    <!-- this one IS decided by sound, and it is the same floor rule the learner
+         already met with 은/는 · 이에요/예요 · 이/가 — so the tile is the last
+         syllable of the verb stem, not of a noun. The ㄹ side is the half that
+         needs the examples: ㄹ goes INSIDE the syllable (가 → 갈), which the
+         .bt-out alone cannot show. -->
+    <div class="section" data-page-id="p1-rule">
+      <h2 class="section-title">을 수와 ㄹ 수 <span class="title-ja">(을 수 と ㄹ 수、どっち？)</span></h2>
+      <p class="section-subtitle"><span class="ko">동사에서 다를 떼고, 남은 마지막 글자를 봐 주세요. 받침이 있으면 을 수, 없으면 ㄹ을 글자 안에 넣어요. 가다는 갈, 마시다는 마실이에요.</span><span class="ja">動詞から다をとって、残った最後の文字を見てください。パッチムがあれば을 수、なければㄹを文字の中に入れます。가다は갈、마시다は마실です。</span></p>
+      <div class="batchim ending-rule">
+        <div class="bt-box">
+          <span class="bt-eq">
+            <span class="bt-syl on">먹</span>
+            <span class="bt-arrow" aria-hidden="true">→</span>
+            <span class="bt-out">을 수 있어요<span class="yomi">ウル ス イッソヨ</span></span>
+          </span>
+          <span class="bt-head">받침 있음<small>パッチムあり（子音で終わる）</small></span>
+          <span class="bt-ex"><span>먹다 → <b>먹을 수 있어요</b><span class="yomi">モグル ス イッソヨ</span></span><span>읽다 → <b>읽을 수 있어요</b><span class="yomi">イルグル ス イッソヨ</span></span></span>
+        </div>
+        <div class="bt-box">
+          <span class="bt-eq">
+            <span class="bt-syl off">가</span>
+            <span class="bt-arrow" aria-hidden="true">→</span>
+            <span class="bt-out">ㄹ 수 있어요<span class="yomi">ル ス イッソヨ</span></span>
+          </span>
+          <span class="bt-head">받침 없음<small>パッチムなし（母音で終わる）</small></span>
+          <span class="bt-ex"><span>가다 → <b>갈 수 있어요</b><span class="yomi">カル ス イッソヨ</span></span><span>마시다 → <b>마실 수 있어요</b><span class="yomi">マシル ス イッソヨ</span></span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- the two pills are 있어요 / 없어요 and nothing in the Korean decides
+         them — the Japanese band on top does, which is the point. The 을/ㄹ
+         split is not the choice here on purpose: its wrong half is 먹ㄹ, a
+         non-syllable, and a pill holding one teaches nothing. That half gets
+         drilled where the learner writes it — reorder, fill, translate. -->
+    <div class="section" data-page-id="p1-choose">
+      <h2 class="section-title">있어요와 없어요 고르기 <span class="title-ja">(있어요 と 없어요 を選ぼう)</span></h2>
+      <p class="section-subtitle"><span class="ko">위에 있는 일본어를 잘 보고, 맞는 쪽을 눌러 보세요.</span><span class="ja">上にある日本語をよく見て、正しいほうをタップしてください。</span></p>
+      <div class="choose-list">
+        <div class="choose-row sentence" data-sync-id="p1-choice-kimchi" data-sync-kind="selection" data-sync-state="chosen">
+          <span class="translation">私はキムチが食べられます。</span>
+          <span class="choose-sentence">저는 김치를 먹을 수 <span class="opt" data-sync-option="itda" data-correct>있어요.</span><span class="sep">/</span><span class="opt" data-sync-option="eopda">없어요.</span><span class="yomi">チョヌン キムチルル モグル ス …</span></span>
+        </div>
+        <div class="choose-row sentence" data-sync-id="p1-choice-drink" data-sync-kind="selection" data-sync-state="chosen">
+          <span class="translation">今日はお酒が飲めません。</span>
+          <span class="choose-sentence">오늘은 술을 마실 수 <span class="opt" data-sync-option="itda">있어요.</span><span class="sep">/</span><span class="opt" data-sync-option="eopda" data-correct>없어요.</span><span class="yomi">オヌルン スルル マシル ス …</span></span>
+        </div>
+        <div class="choose-row sentence" data-sync-id="p1-choice-meet" data-sync-kind="selection" data-sync-state="chosen">
+          <span class="translation">私は明日会えます。</span>
+          <span class="choose-sentence">저는 내일 만날 수 <span class="opt" data-sync-option="eopda">없어요.</span><span class="sep">/</span><span class="opt" data-sync-option="itda" data-correct>있어요.</span><span class="yomi">チョヌン ネイル マンナル ス …</span></span>
+        </div>
+        <div class="choose-row sentence" data-sync-id="p1-choice-read" data-sync-kind="selection" data-sync-state="chosen">
+          <span class="translation">私は韓国語の本が読めません。</span>
+          <span class="choose-sentence">저는 한국어 책을 읽을 수 <span class="opt" data-sync-option="itda">있어요.</span><span class="sep">/</span><span class="opt" data-sync-option="eopda" data-correct>없어요.</span><span class="yomi">チョヌン ハングゴ チェグル イルグル ス …</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p1-reorder">
+      <h2 class="section-title">문장 만들기 <span class="title-ja">(文を組み立てよう)</span></h2>
+      <p class="section-subtitle"><span class="ko">단어를 순서대로 놓고, 소리 내어 말해 보세요.</span><span class="ja">単語を順番に並べて、声に出して言ってみましょう。</span></p>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">私はキムチが食べられます。</span>
+          <span class="answer-space" data-sync-id="p1-order-kimchi">저는 김치를 먹을 수 있어요</span>
+        </div>
+        <span class="choice" data-item-id="can-eat">먹을 수 있어요<span class="yomi">モグル ス イッソヨ</span></span>
+        <span class="choice" data-item-id="me-1">저는<span class="yomi">チョヌン</span></span>
+        <span class="choice" data-item-id="kimchi-1">김치를<span class="yomi">キムチルル</span></span>
+      </div>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">今日はお酒が飲めません。</span>
+          <span class="answer-space" data-sync-id="p1-order-drink">오늘은 술을 마실 수 없어요</span>
+        </div>
+        <span class="choice" data-item-id="alcohol-1">술을<span class="yomi">スルル</span></span>
+        <span class="choice" data-item-id="cant-drink">마실 수 없어요<span class="yomi">マシル ス オプソヨ</span></span>
+        <span class="choice" data-item-id="today-1">오늘은<span class="yomi">オヌルン</span></span>
+      </div>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">田中さんは週末に会えますか？</span>
+          <span class="answer-space" data-sync-id="p1-order-meet">다나카 씨는 주말에 만날 수 있어요?</span>
+        </div>
+        <span class="choice" data-item-id="can-meet">만날 수 있어요?<span class="yomi">マンナル ス イッソヨ</span></span>
+        <span class="choice" data-item-id="weekend-1">주말에<span class="yomi">チュマレ</span></span>
+        <span class="choice" data-item-id="tanaka-1">다나카 씨는<span class="yomi">タナカ シヌン</span></span>
+      </div>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">私は韓国語の本が読めます。</span>
+          <span class="answer-space" data-sync-id="p1-order-read">저는 한국어 책을 읽을 수 있어요</span>
+        </div>
+        <span class="choice" data-item-id="book-1">한국어 책을<span class="yomi">ハングゴ チェグル</span></span>
+        <span class="choice" data-item-id="me-2">저는<span class="yomi">チョヌン</span></span>
+        <span class="choice" data-item-id="can-read">읽을 수 있어요<span class="yomi">イルグル ス イッソヨ</span></span>
+      </div>
+    </div>
+
+    <!-- the blank is the whole predicate, because the pattern IS the whole
+         predicate: the hint chip hands over the dictionary form and the
+         learner does the 을/ㄹ themselves. -->
+    <div class="section" data-page-id="p1-fill">
+      <h2 class="section-title">빈칸을 채워요 <span class="title-ja">(空欄をうめよう)</span></h2>
+      <p class="section-subtitle"><span class="ko">빈칸에 들어갈 말을 넣어서, 문장을 통째로 소리 내어 말해 보세요.</span><span class="ja">空欄に入ることばを入れて、文をまるごと声に出して言ってみましょう。</span></p>
+      <div class="tutor-note">학생이 말한 대로 빈칸에 적어 주세요.</div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">私はキムチが<span class="target ending">食べられます</span>。</span>
+          <span class="answer-fill"><span class="korean">저는 김치를 <span class="slot" data-sync-id="p1-fill-kimchi">먹을 수 있어요</span>.</span><span class="yomi">チョヌン キムチルル ＿＿＿</span></span>
+                  <span class="hint"><span class="hint-chip">食べる:먹다<span class="yomi">モクタ</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">今日はお酒が<span class="target ending">飲めません</span>。</span>
+          <span class="answer-fill"><span class="korean">오늘은 술을 <span class="slot" data-sync-id="p1-fill-drink">마실 수 없어요</span>.</span><span class="yomi">オヌルン スルル ＿＿＿</span></span>
+                  <span class="hint"><span class="hint-chip">飲む:마시다<span class="yomi">マシダ</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">週末に<span class="target ending">会えますか</span>？</span>
+          <span class="answer-fill"><span class="korean">주말에 <span class="slot" data-sync-id="p1-fill-meet">만날 수 있어요</span>?</span><span class="yomi">チュマレ ＿＿＿</span></span>
+                  <span class="hint"><span class="hint-chip">会う:만나다<span class="yomi">マンナダ</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">私は韓国語の本が<span class="target ending">読めます</span>。</span>
+          <span class="answer-fill"><span class="korean">저는 한국어 책을 <span class="slot" data-sync-id="p1-fill-read">읽을 수 있어요</span>.</span><span class="yomi">チョヌン ハングゴ チェグル ＿＿＿</span></span>
+                  <span class="hint"><span class="hint-chip">読む:읽다<span class="yomi">イクタ</span></span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p1-translate">
+      <h2 class="section-title">한국어로 바꿔요 <span class="title-ja">(韓国語にしよう)</span></h2>
+      <p class="section-subtitle"><span class="ko">일본어를 보고, 한국어로 말해 보세요.</span><span class="ja">日本語を見て、韓国語で言ってみましょう。</span></p>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">私はキムチが食べられます。</span>
+          <span class="answer-space" data-sync-id="p1-translate-kimchi">저는 김치를 먹을 수 있어요</span>
+                  <span class="hint"><span class="hint-chip">キムチ:김치<span class="yomi">キムチ</span></span><span class="hint-chip">食べる:먹다<span class="yomi">モクタ</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">今日は行けません。</span>
+          <span class="answer-space" data-sync-id="p1-translate-go">오늘은 갈 수 없어요</span>
+                  <span class="hint"><span class="hint-chip">今日:오늘<span class="yomi">オヌル</span></span><span class="hint-chip">行く:가다<span class="yomi">カダ</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">田中さんは明日会えますか？</span>
+          <span class="answer-space" data-sync-id="p1-translate-meet">다나카 씨는 내일 만날 수 있어요?</span>
+                  <span class="hint"><span class="hint-chip">明日:내일<span class="yomi">ネイル</span></span><span class="hint-chip">会う:만나다<span class="yomi">マンナダ</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">友だちは韓国語の本が読めます。</span>
+          <span class="answer-space" data-sync-id="p1-translate-read">친구는 한국어 책을 읽을 수 있어요</span>
+                  <span class="hint"><span class="hint-chip">友だち:친구<span class="yomi">チング</span></span><span class="hint-chip">本:책<span class="yomi">チェク</span></span><span class="hint-chip">読む:읽다<span class="yomi">イクタ</span></span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p1-write">
+      <h2 class="section-title">내 문장 만들기 <span class="title-ja">(自分の文を作ろう)</span></h2>
+      <p class="section-subtitle"><span class="ko">이번엔 진짜 자기 이야기예요. 오늘 할 수 있는 거 하나 말해 보세요. 아니면 못 하는 거요.</span><span class="ja">今度は本当に自分の話です。今日できること、1つ言ってみましょう。それとも、できないことを。</span></p>
+      <div class="tutor-note">학생이 말한 문장을 여기에 적어 주세요.</div>
+      <div class="task-block">
+        <div class="answer-box tall">
+          <span class="answer-space" data-sync-id="p1-free-statement"></span>
+                  <span class="hint"><span class="hint-chip">キムチ:김치<span class="yomi">キムチ</span></span><span class="hint-chip">お酒:술<span class="yomi">スル</span></span><span class="hint-chip">本:책<span class="yomi">チェク</span></span><span class="hint-chip">週末:주말<span class="yomi">チュマル</span></span><span class="hint-chip">食べる:먹다<span class="yomi">モクタ</span></span><span class="hint-chip">飲む:마시다<span class="yomi">マシダ</span></span><span class="hint-chip">読む:읽다<span class="yomi">イクタ</span></span><span class="hint-chip">会う:만나다<span class="yomi">マンナダ</span></span><span class="hint-chip">行く:가다<span class="yomi">カダ</span></span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ PART 2 · -(으)ㄹ 줄 알아요 / 몰라요 ============ -->
+    <div class="transition-page" data-page-id="part2-intro" data-act="-(으)ㄹ 줄 알아요">
+      <span class="transition-kicker">パート 2</span>
+      <h2 class="transition-title">-(으)ㄹ 줄 알아요 / 몰라요<span class="yomi">（ウ）ル チュル アラヨ / モルラヨ</span></h2>
+      <p class="transition-copy">やり方を知っています / 知りません。習って身につけたこと。形の作り方はパート1とまったく同じです。</p>
+    </div>
+
+    <div class="section" data-page-id="p2-teach">
+      <h2 class="section-title">오늘의 패턴 <span class="title-ja">(今日のパターン)</span></h2>
+      <p class="section-subtitle"><span class="ko">배워서 할 줄 아는 거예요. 만드는 법은 아까랑 똑같아요. 수 있어요 자리에 줄 알아요만 넣으면 돼요. 제가 읽을게요. 잘 듣고 따라 읽어 보세요.</span><span class="ja">習ってできるようになったことです。作り方はさっきとまったく同じです。수 있어요のところに줄 알아요を入れるだけです。私が読みます。よく聞いて、まねして読んでみましょう。</span></p>
+      <div class="sent-hero">
+        <span class="korean">저는 <span class="ending">운전할 줄 알아요</span>.</span><span class="yomi">チョヌン ウンジョナル チュル アラヨ</span>
+        <span class="translation">私は<span class="ending">運転ができます</span>。</span>
+      </div>
+      <div class="sent-more">
+        <div><span class="korean">저는 <span class="ending">수영할 줄 알아요</span>.</span><span class="yomi">チョヌン スヨンハル チュル アラヨ</span><span class="translation">私は<span class="ending">泳げます</span>。</span></div>
+        <div><span class="korean">저는 자전거를 <span class="ending">탈 줄 알아요</span>.</span><span class="yomi">チョヌン チャジョンゴルル タル チュル アラヨ</span><span class="translation">私は自転車に<span class="ending">乗れます</span>。</span></div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p2-read">
+      <h2 class="section-title">같이 읽어요 <span class="title-ja">(一緒に読もう)</span></h2>
+      <p class="section-subtitle"><span class="ko">이번엔 혼자 읽어 보세요. 잘해요는 '上手です'예요. 뒤에 붙여서 한마디 더 할 수 있어요.</span><span class="ja">今度はひとりで読んでみましょう。잘해요は「上手です」です。うしろにつけて、ひとこと足せます。</span></p>
+      <div class="model-list">
+        <div class="model-line"><span class="korean">저는 <span class="ending">운전할 줄 알아요</span>.</span><span class="yomi">チョヌン ウンジョナル チュル アラヨ</span><span class="translation">私は<span class="ending">運転ができます</span>。</span></div>
+        <div class="model-line"><span class="korean">저는 한국 요리를 <span class="ending">할 줄 알아요</span>. 잘해요!</span><span class="yomi">チョヌン ハングク ヨリルル ハル チュル アラヨ。 チャレヨ！</span><span class="translation">私は韓国料理が<span class="ending">作れます</span>。上手です！</span></div>
+        <div class="model-line"><span class="korean">저는 한국어를 <span class="ending">읽을 줄 알아요</span>.</span><span class="yomi">チョヌン ハングゴルル イルグル チュル アラヨ</span><span class="translation">私は韓国語が<span class="ending">読めます</span>。</span></div>
+        <div class="model-line"><span class="korean">다나카 씨는 자전거를 <span class="ending">탈 줄 알아요</span>?</span><span class="yomi">タナカ シヌン チャジョンゴルル タル チュル アラヨ</span><span class="translation">田中さんは自転車に<span class="ending">乗れますか</span>？</span></div>
+      </div>
+    </div>
+
+    <!-- the negative is a different WORD, not 안 + 알아요 — and 과 10 spent a
+         whole lesson putting 안 in front of things, so the learner will reach
+         for it here. That is why 몰라요 gets its own teach+read pair, exactly
+         as 없어요 did in 과 16. -->
+    <div class="section" data-page-id="p2-none-teach">
+      <h2 class="section-title">줄 몰라요 <span class="title-ja">(やり方を知りません)</span></h2>
+      <p class="section-subtitle"><span class="ko">못 할 때는 몰라요예요. 안 알아요는 안 써요. 아예 다른 단어예요. 제가 읽을게요. 잘 듣고 따라 읽어 보세요.</span><span class="ja">できないときは몰라요です。안 알아요とは言いません。まったく別の単語です。私が読みます。よく聞いて、まねして読んでみましょう。</span></p>
+      <div class="sent-hero">
+        <span class="korean">저는 <span class="ending">수영할 줄 몰라요</span>.</span><span class="yomi">チョヌン スヨンハル チュル モルラヨ</span>
+        <span class="translation">私は<span class="ending">泳げません</span>。</span>
+      </div>
+      <div class="sent-more">
+        <div><span class="korean">저는 자전거를 <span class="ending">탈 줄 몰라요</span>.</span><span class="yomi">チョヌン チャジョンゴルル タル チュル モルラヨ</span><span class="translation">私は自転車に<span class="ending">乗れません</span>。</span></div>
+        <div><span class="korean">저는 한국 요리는 <span class="ending">할 줄 몰라요</span>.</span><span class="yomi">チョヌン ハングク ヨリヌン ハル チュル モルラヨ</span><span class="translation">私は韓国料理は<span class="ending">作れません</span>。</span></div>
+      </div>
+    </div>
+
+    <!-- the unit's remaining 표현 arrive here, inside lines the learner only
+         has to read: 조금은요 answers a question on its own, 전혀 못해요 goes
+         on the end. Neither changes the sentence around it. -->
+    <div class="section" data-page-id="p2-none-read">
+      <h2 class="section-title">줄 몰라요 읽기 <span class="title-ja">(줄 몰라요 の 文を読もう)</span></h2>
+      <p class="section-subtitle"><span class="ko">이번엔 혼자 읽어 보세요. 조금은요는 'ちょっとだけなら', 전혀 못해요는 '全然できません'이에요.</span><span class="ja">今度はひとりで読んでみましょう。조금은요は「ちょっとだけなら」、전혀 못해요は「全然できません」です。</span></p>
+      <div class="model-list">
+        <div class="model-line"><span class="korean">저는 <span class="ending">수영할 줄 몰라요</span>.</span><span class="yomi">チョヌン スヨンハル チュル モルラヨ</span><span class="translation">私は<span class="ending">泳げません</span>。</span></div>
+        <div class="model-line"><span class="korean">한국 요리 <span class="ending">할 줄 알아요</span>?</span><span class="yomi">ハングク ヨリ ハル チュル アラヨ</span><span class="translation">韓国料理、<span class="ending">作れますか</span>？</span></div>
+        <div class="model-line"><span class="korean">조금은요. 라면은 <span class="ending">할 줄 알아요</span>.</span><span class="yomi">チョグムンニョ。 ラミョヌン ハル チュル アラヨ</span><span class="translation">少しは。ラーメンは<span class="ending">作れます</span>。</span></div>
+        <div class="model-line"><span class="korean">저는 노래를 <span class="ending">할 줄 몰라요</span>. 전혀 못해요.</span><span class="yomi">チョヌン ノレルル ハル チュル モルラヨ。 チョニョ モテヨ</span><span class="translation">私は歌が<span class="ending">歌えません</span>。全然できません。</span></div>
+      </div>
+    </div>
+
+    <!-- the lesson's one real grammar point, and there is no sound in it:
+         운전 does not pick 수 있어요 or 줄 알아요, the reason does. So the
+         boxes keep .bt-out alone — a letter tile here would send the learner
+         hunting for a 받침 rule they already got on p1-rule. -->
+    <div class="section" data-page-id="p2-rule">
+      <h2 class="section-title">수 있어요와 줄 알아요 <span class="title-ja">(수 있어요 と 줄 알아요、どっち？)</span></h2>
+      <p class="section-subtitle"><span class="ko">소리로 고르는 게 아니에요. 배워서 하는 일이면 줄 알아요, 지금 상황이 되는 일이면 수 있어요예요. 저는 수영할 줄 알아요. 그런데 오늘은 수영할 수 없어요.</span><span class="ja">音で選ぶのではありません。習ってできることなら줄 알아요、今の状況でできることなら수 있어요です。私は泳げます。でも今日は泳ぐことができません。</span></p>
+      <div class="batchim ending-rule">
+        <div class="bt-box">
+          <span class="bt-eq">
+            <span class="bt-out">수 있어요<span class="yomi">ス イッソヨ</span></span>
+          </span>
+          <span class="bt-head">지금 상황이 돼요<small>できる — 今それが可能かどうか</small></span>
+          <span class="bt-ex"><span>내일 <b>만날 수 있어요</b><span class="yomi">ネイル マンナル ス イッソヨ</span></span><span>오늘은 <b>갈 수 없어요</b><span class="yomi">オヌルン カル ス オプソヨ</span></span></span>
+        </div>
+        <div class="bt-box">
+          <span class="bt-eq">
+            <span class="bt-out">줄 알아요<span class="yomi">チュル アラヨ</span></span>
+          </span>
+          <span class="bt-head">배워서 할 줄 알아요<small>できる — 習って身につけたこと</small></span>
+          <span class="bt-ex"><span>저는 <b>운전할 줄 알아요</b><span class="yomi">チョヌン ウンジョナル チュル アラヨ</span></span><span>저는 <b>수영할 줄 몰라요</b><span class="yomi">チョヌン スヨンハル チュル モルラヨ</span></span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- nothing in the Korean can decide these rows — the parenthesis in the
+         Japanese band is the only thing that says 習った or 今日は, which is
+         the point. The verb before the pills is already conjugated, so the
+         choice is only ever 수 / 줄. -->
+    <div class="section" data-page-id="p2-choose">
+      <h2 class="section-title">수 있어요와 줄 알아요 고르기 <span class="title-ja">(수 있어요 と 줄 알아요 を選ぼう)</span></h2>
+      <p class="section-subtitle"><span class="ko">위에 있는 일본어를 잘 보고, 맞는 쪽을 눌러 보세요.</span><span class="ja">上にある日本語をよく見て、正しいほうをタップしてください。</span></p>
+      <div class="choose-list">
+        <div class="choose-row sentence" data-sync-id="p2-choice-drive" data-sync-kind="selection" data-sync-state="chosen">
+          <span class="translation">私は運転のやり方を知っています。（習ったので）</span>
+          <span class="choose-sentence">저는 운전할 <span class="opt" data-sync-option="jul" data-correct>줄 알아요.</span><span class="sep">/</span><span class="opt" data-sync-option="su">수 있어요.</span><span class="yomi">チョヌン ウンジョナル …</span></span>
+        </div>
+        <div class="choose-row sentence" data-sync-id="p2-choice-go" data-sync-kind="selection" data-sync-state="chosen">
+          <span class="translation">私は明日行けます。（時間があるので）</span>
+          <span class="choose-sentence">저는 내일 갈 <span class="opt" data-sync-option="jul">줄 알아요.</span><span class="sep">/</span><span class="opt" data-sync-option="su" data-correct>수 있어요.</span><span class="yomi">チョヌン ネイル カル …</span></span>
+        </div>
+        <div class="choose-row sentence" data-sync-id="p2-choice-bike" data-sync-kind="selection" data-sync-state="chosen">
+          <span class="translation">私は自転車に乗れません。（習ったことがないので）</span>
+          <span class="choose-sentence">저는 자전거를 탈 <span class="opt" data-sync-option="su">수 없어요.</span><span class="sep">/</span><span class="opt" data-sync-option="jul" data-correct>줄 몰라요.</span><span class="yomi">チョヌン チャジョンゴルル タル …</span></span>
+        </div>
+        <div class="choose-row sentence" data-sync-id="p2-choice-drink" data-sync-kind="selection" data-sync-state="chosen">
+          <span class="translation">今日はお酒が飲めません。（運転するので）</span>
+          <span class="choose-sentence">오늘은 술을 마실 <span class="opt" data-sync-option="jul">줄 몰라요.</span><span class="sep">/</span><span class="opt" data-sync-option="su" data-correct>수 없어요.</span><span class="yomi">オヌルン スルル マシル …</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p2-reorder">
+      <h2 class="section-title">문장 만들기 <span class="title-ja">(文を組み立てよう)</span></h2>
+      <p class="section-subtitle"><span class="ko">단어를 순서대로 놓고, 소리 내어 말해 보세요.</span><span class="ja">単語を順番に並べて、声に出して言ってみましょう。</span></p>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">私は韓国料理が作れます。</span>
+          <span class="answer-space" data-sync-id="p2-order-cook">저는 한국 요리를 할 줄 알아요</span>
+        </div>
+        <span class="choice" data-item-id="know-do">할 줄 알아요<span class="yomi">ハル チュル アラヨ</span></span>
+        <span class="choice" data-item-id="me-3">저는<span class="yomi">チョヌン</span></span>
+        <span class="choice" data-item-id="food-1">한국 요리를<span class="yomi">ハングク ヨリルル</span></span>
+      </div>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">私は自転車に乗れません。</span>
+          <span class="answer-space" data-sync-id="p2-order-bike">저는 자전거를 탈 줄 몰라요</span>
+        </div>
+        <span class="choice" data-item-id="bike-1">자전거를<span class="yomi">チャジョンゴルル</span></span>
+        <span class="choice" data-item-id="dont-ride">탈 줄 몰라요<span class="yomi">タル チュル モルラヨ</span></span>
+        <span class="choice" data-item-id="me-4">저는<span class="yomi">チョヌン</span></span>
+      </div>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">田中さんは韓国語が読めますか？</span>
+          <span class="answer-space" data-sync-id="p2-order-read">다나카 씨는 한국어를 읽을 줄 알아요?</span>
+        </div>
+        <span class="choice" data-item-id="know-read">읽을 줄 알아요?<span class="yomi">イルグル チュル アラヨ</span></span>
+        <span class="choice" data-item-id="tanaka-2">다나카 씨는<span class="yomi">タナカ シヌン</span></span>
+        <span class="choice" data-item-id="korean-1">한국어를<span class="yomi">ハングゴルル</span></span>
+      </div>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">私はまだ泳げません。</span>
+          <span class="answer-space" data-sync-id="p2-order-swim">저는 아직 수영할 줄 몰라요</span>
+        </div>
+        <span class="choice" data-item-id="dont-swim">수영할 줄 몰라요<span class="yomi">スヨンハル チュル モルラヨ</span></span>
+        <span class="choice" data-item-id="yet-1">아직<span class="yomi">アジク</span></span>
+        <span class="choice" data-item-id="me-5">저는<span class="yomi">チョヌン</span></span>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p2-fill">
+      <h2 class="section-title">빈칸을 채워요 <span class="title-ja">(空欄をうめよう)</span></h2>
+      <p class="section-subtitle"><span class="ko">알아요인지 몰라요인지 골라서, 문장을 통째로 소리 내어 말해 보세요.</span><span class="ja">알아요か몰라요かを選んで、文をまるごと声に出して言ってみましょう。</span></p>
+      <div class="tutor-note">학생이 말한 대로 빈칸에 적어 주세요.</div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">私は<span class="target ending">運転ができます</span>。</span>
+          <span class="answer-fill"><span class="korean">저는 <span class="slot" data-sync-id="p2-fill-drive">운전할 줄 알아요</span>.</span><span class="yomi">チョヌン ＿＿＿</span></span>
+                  <span class="hint"><span class="hint-chip">運転:운전<span class="yomi">ウンジョン</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">私は自転車に<span class="target ending">乗れません</span>。</span>
+          <span class="answer-fill"><span class="korean">저는 자전거를 <span class="slot" data-sync-id="p2-fill-bike">탈 줄 몰라요</span>.</span><span class="yomi">チョヌン チャジョンゴルル ＿＿＿</span></span>
+                  <span class="hint"><span class="hint-chip">乗る:타다<span class="yomi">タダ</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">韓国料理が<span class="target ending">作れますか</span>？</span>
+          <span class="answer-fill"><span class="korean">한국 요리 <span class="slot" data-sync-id="p2-fill-cook">할 줄 알아요</span>?</span><span class="yomi">ハングク ヨリ ＿＿＿</span></span>
+                  <span class="hint"><span class="hint-chip">する:하다<span class="yomi">ハダ</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">私は韓国語が<span class="target ending">読めます</span>。</span>
+          <span class="answer-fill"><span class="korean">저는 한국어를 <span class="slot" data-sync-id="p2-fill-read">읽을 줄 알아요</span>.</span><span class="yomi">チョヌン ハングゴルル ＿＿＿</span></span>
+                  <span class="hint"><span class="hint-chip">読む:읽다<span class="yomi">イクタ</span></span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p2-translate">
+      <h2 class="section-title">한국어로 바꿔요 <span class="title-ja">(韓国語にしよう)</span></h2>
+      <p class="section-subtitle"><span class="ko">일본어를 보고, 한국어로 말해 보세요.</span><span class="ja">日本語を見て、韓国語で言ってみましょう。</span></p>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">私は運転ができます。</span>
+          <span class="answer-space" data-sync-id="p2-translate-drive">저는 운전할 줄 알아요</span>
+                  <span class="hint"><span class="hint-chip">運転:운전<span class="yomi">ウンジョン</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">私はまだ泳げません。</span>
+          <span class="answer-space" data-sync-id="p2-translate-swim">저는 아직 수영할 줄 몰라요</span>
+                  <span class="hint"><span class="hint-chip">水泳:수영<span class="yomi">スヨン</span></span><span class="hint-chip">まだ:아직<span class="yomi">アジク</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">田中さんは自転車に乗れますか？</span>
+          <span class="answer-space" data-sync-id="p2-translate-bike">다나카 씨는 자전거를 탈 줄 알아요?</span>
+                  <span class="hint"><span class="hint-chip">自転車:자전거<span class="yomi">チャジョンゴ</span></span><span class="hint-chip">乗る:타다<span class="yomi">タダ</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">友だちは韓国料理が作れます。上手です！</span>
+          <span class="answer-space" data-sync-id="p2-translate-cook">친구는 한국 요리를 할 줄 알아요. 잘해요!</span>
+                  <span class="hint"><span class="hint-chip">友だち:친구<span class="yomi">チング</span></span><span class="hint-chip">韓国料理:한국 요리<span class="yomi">ハングク ヨリ</span></span><span class="hint-chip">上手です:잘해요<span class="yomi">チャレヨ</span></span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p2-write">
+      <h2 class="section-title">내 문장 만들기 <span class="title-ja">(自分の文を作ろう)</span></h2>
+      <p class="section-subtitle"><span class="ko">이번엔 줄 알아요예요. 배워서 할 줄 아는 거 하나 말해 보세요. 저는 자전거를 탈 줄 알아요.</span><span class="ja">今度は줄 알아요です。習ってできるようになったこと、1つ言ってみましょう。私は自転車に乗れます。</span></p>
+      <div class="tutor-note">학생이 말한 문장을 여기에 적어 주세요.</div>
+      <div class="task-block">
+        <div class="answer-box tall">
+          <span class="answer-space" data-sync-id="p2-free-statement"></span>
+                  <span class="hint"><span class="hint-chip">運転:운전<span class="yomi">ウンジョン</span></span><span class="hint-chip">水泳:수영<span class="yomi">スヨン</span></span><span class="hint-chip">自転車:자전거<span class="yomi">チャジョンゴ</span></span><span class="hint-chip">韓国料理:한국 요리<span class="yomi">ハングク ヨリ</span></span><span class="hint-chip">歌:노래<span class="yomi">ノレ</span></span><span class="hint-chip">韓国語:한국어<span class="yomi">ハングゴ</span></span><span class="hint-chip">乗る:타다<span class="yomi">タダ</span></span><span class="hint-chip">読む:읽다<span class="yomi">イクタ</span></span><span class="hint-chip">上手です:잘해요<span class="yomi">チャレヨ</span></span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ PART 3 · making a weekend plan work ============ -->
+    <div class="transition-page" data-page-id="part3-intro" data-act="할 수 있는 것 · 할 줄 아는 것">
+      <span class="transition-kicker">パート 3</span>
+      <h2 class="transition-title">할 수 있는 것, 할 줄 아는 것<span class="yomi">ハル ス インヌン ゴッ、ハル チュル アヌン ゴッ</span></h2>
+      <p class="transition-copy">2つがそろいました。さそわれたときに、まず「できるかどうか」、そして「その日いけるかどうか」。この2つで約束が決まります。</p>
+    </div>
+
+    <!-- 줄 알아요 is what makes 수 있어요 necessary here: once the skill
+         question is settled the plan still has to fit the day, and only
+         수 있어요 can say that. That is the pairing the two patterns owe
+         each other. -->
+    <div class="section" data-page-id="p3-model">
+      <h2 class="section-title">대화 읽기 <span class="title-ja">(会話を読もう)</span></h2>
+      <p class="section-subtitle"><span class="ko">제가 하나 쪽을 읽을게요. 하루카가 되어서 읽어 보세요.</span><span class="ja">私がハナのほうを読みます。ハルカになって読んでみましょう。</span></p>
+      <div class="dialogue">
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">하루카 씨, 이번 주말에 같이 수영장에 갈까요?</span><span class="yomi">ハルカ シ、イボン チュマレ カチ スヨンジャンエ カルカヨ</span><span class="translation">ハルカさん、今週末いっしょにプールに行きましょうか？</span></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><span class="korean">아, 저는 <span class="ending">수영할 줄 몰라요</span>. 자전거는 <span class="ending">탈 줄 알아요</span>!</span><span class="yomi">ア、チョヌン スヨンハル チュル モルラヨ。 チャジョンゴヌン タル チュル アラヨ！</span><span class="translation">あ、私は<span class="ending">泳げません</span>。自転車は<span class="ending">乗れます</span>！</span></div></div>
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">그래요? 그럼 토요일에 자전거 타러 갈까요?</span><span class="yomi">クレヨ？ クロム トヨイレ チャジョンゴ タロ カルカヨ</span><span class="translation">そうですか？じゃあ土曜日に自転車に乗りに行きましょうか？</span></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><span class="korean">토요일은 약속이 있어서 <span class="ending">갈 수 없어요</span>. 일요일은 <span class="ending">갈 수 있어요</span>.</span><span class="yomi">トヨイルン ヤクソギ イッソソ カル ス オプソヨ。 イリョイルン カル ス イッソヨ</span><span class="translation">土曜日は約束があるので<span class="ending">行けません</span>。日曜日は<span class="ending">行けます</span>。</span></div></div>
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">좋아요! 그럼 일요일에 만나요. 저도 자전거 <span class="ending">탈 줄 알아요</span>!</span><span class="yomi">チョアヨ！ クロム イリョイレ マンナヨ。 チョド チャジョンゴ タル チュル アラヨ！</span><span class="translation">いいですね！じゃあ日曜日に会いましょう。私も自転車に<span class="ending">乗れます</span>！</span></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><span class="korean">네! 일요일에 봐요. 저는 자전거 잘해요!</span><span class="yomi">ネ！ イリョイレ ボァヨ。 チョヌン チャジョンゴ チャレヨ！</span><span class="translation">はい！日曜日に会いましょう。私は自転車、上手です！</span></div></div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p3-complete">
+      <h2 class="section-title">대화 채우기 <span class="title-ja">(会話をうめよう)</span></h2>
+      <p class="section-subtitle"><span class="ko">이번엔 하루카 대사가 비어 있어요. 하루카가 되어서 문장을 소리 내어 말해 보세요.</span><span class="ja">今度はハルカのセリフが空いています。ハルカになって、文を声に出して言ってみましょう。</span></p>
+      <div class="tutor-note">학생이 말한 대로 빈칸에 적어 주세요.</div>
+      <div class="dialogue">
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">하루카 씨, 이번 주말에 같이 수영장에 갈까요?</span><span class="yomi">ハルカ シ、イボン チュマレ カチ スヨンジャンエ カルカヨ</span><span class="translation">ハルカさん、今週末いっしょにプールに行きましょうか？</span></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">あ、<span class="target">私は泳げません</span>。自転車は乗れます！</span><span class="answer-fill"><span class="korean">아, <span class="slot" data-sync-id="p3-complete-swim">저는 수영할 줄 몰라요</span>. 자전거는 탈 줄 알아요!</span><span class="yomi">ア、＿＿＿ チャジョンゴヌン タル チュル アラヨ！</span></span><span class="hint"><span class="hint-chip">水泳:수영<span class="yomi">スヨン</span></span></span></div></div></div>
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">그래요? 그럼 토요일에 자전거 타러 갈까요?</span><span class="yomi">クレヨ？ クロム トヨイレ チャジョンゴ タロ カルカヨ</span><span class="translation">そうですか？じゃあ土曜日に自転車に乗りに行きましょうか？</span></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">土曜日は約束があるので<span class="target">行けません</span>。日曜日は<span class="target">行けます</span>。</span><span class="answer-fill"><span class="korean">토요일은 약속이 있어서 <span class="slot" data-sync-id="p3-complete-saturday">갈 수 없어요</span>. 일요일은 <span class="slot" data-sync-id="p3-complete-sunday">갈 수 있어요</span>.</span><span class="yomi">トヨイルン ヤクソギ イッソソ ＿＿＿ イリョイルン ＿＿＿</span></span><span class="hint"><span class="hint-chip">行く:가다<span class="yomi">カダ</span></span></span></div></div></div>
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">좋아요! 그럼 일요일에 만나요. 저도 자전거 탈 줄 알아요!</span><span class="yomi">チョアヨ！ クロム イリョイレ マンナヨ。 チョド チャジョンゴ タル チュル アラヨ！</span><span class="translation">いいですね！じゃあ日曜日に会いましょう。私も自転車に乗れます！</span></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">はい！日曜日に会いましょう。<span class="target">私は自転車、上手です</span>！</span><span class="answer-fill"><span class="korean">네! 일요일에 봐요. <span class="slot" data-sync-id="p3-complete-good">저는 자전거 잘해요</span>!</span><span class="yomi">ネ！ イリョイレ ボァヨ。 ＿＿＿</span></span><span class="hint"><span class="hint-chip">自転車:자전거<span class="yomi">チャジョンゴ</span></span><span class="hint-chip">上手です:잘해요<span class="yomi">チャレヨ</span></span></span></div></div></div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p3-freetalk">
+      <h2 class="section-title">자유 대화 <span class="title-ja">(フリートーク)</span></h2>
+      <p class="section-subtitle"><span class="ko">이번엔 진짜 이야기예요. 할 줄 아는 거 하나를 말하고, 저한테도 물어봐 주세요.</span><span class="ja">今度は本当の話です。できることを1つ話して、私にも聞いてみてください。</span></p>
+      <div class="tutor-note">학생 대답에 「그럼 오늘도 할 수 있어요?」 한 번 더 물어 주세요.</div>
+      <div class="dialogue">
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">先生</span></span><div class="bubble"><span class="korean">뭘 할 줄 알아요? 운전할 줄 알아요?</span><span class="yomi">ムォル ハル チュル アラヨ？ ウンジョナル チュル アラヨ</span><span class="translation">何ができますか？運転できますか？</span></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label">私は〜ができます。<span class="task">自分のこと</span></span><span class="answer-space" data-sync-id="p3-freetalk-about-me"></span><span class="hint"><span class="hint-chip">運転:운전<span class="yomi">ウンジョン</span></span><span class="hint-chip">水泳:수영<span class="yomi">スヨン</span></span><span class="hint-chip">自転車:자전거<span class="yomi">チャジョンゴ</span></span><span class="hint-chip">韓国料理:한국 요리<span class="yomi">ハングク ヨリ</span></span><span class="hint-chip">歌:노래<span class="yomi">ノレ</span></span></span></div></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label">先生は何ができますか？<span class="task">先生にも聞いてみましょう</span></span><span class="answer-space" data-sync-id="p3-freetalk-question">선생님은 뭘 할 줄 알아요?</span></div></div></div>
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">先生</span></span><div class="bubble"><div class="answer-box small"><span class="answer-label">先生の答え</span><span class="answer-space" data-sync-id="p3-freetalk-tutor-answer"></span></div></div></div>
+      </div>
+    </div>
+
+    <!-- bonus scene · a 한정식집, where the two patterns are what the staff
+         actually asks a first-time foreign guest: can you eat this, and do you
+         know how to make it. 한번 해 볼게요 is the line the scene is built to
+         end on. -->
+    <div class="section" data-page-id="korea-trip">
+      <h2 class="section-title">한정식집 첫 방문 <span class="title-ja">(韓定食のお店、はじめて)</span></h2>
+      <p class="section-subtitle"><span class="ko">보너스! 한국 한정식집에 처음 갔어요. 반찬이 상에 가득 나와요. 빈칸 대사를 말해 주세요.</span><span class="ja">ボーナス！韓国の韓定食のお店に、はじめて行きました。おかずがテーブルいっぱいに出てきます。空欄のセリフを言ってください。</span></p>
+      <div class="dialogue">
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">相手</span></span><div class="bubble"><span class="korean">어서 오세요! 한정식집은 처음이에요? 여기는 반찬이 많아요. 김치 먹을 수 있어요?</span><span class="yomi">オソ オセヨ！ ハンジョンシクチブン チョウミエヨ？ ヨギヌン パンチャニ マナヨ。 キムチ モグル ス イッソヨ</span><span class="translation">いらっしゃいませ！韓定食のお店ははじめてですか？ここはおかずが多いです。キムチ食べられますか？</span></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">はい！<span class="target">私はキムチが食べられます</span>。キムチが好きです。</span><span class="answer-fill"><span class="korean">네! <span class="slot" data-sync-id="trip-can-eat">저는 김치를 먹을 수 있어요</span>. 김치를 좋아해요.</span><span class="yomi">ネ！ ＿＿＿ キムチルル チョアヘヨ</span></span><span class="hint"><span class="hint-chip">キムチ:김치<span class="yomi">キムチ</span></span><span class="hint-chip">食べる:먹다<span class="yomi">モクタ</span></span></span></div></div></div>
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">相手</span></span><div class="bubble"><span class="korean">좋아요! 그런데 음식이 진짜 많아요. 다 먹을 수 있어요?</span><span class="yomi">チョアヨ！ クロンデ ウムシギ チンチャ マナヨ。 タ モグル ス イッソヨ</span><span class="translation">いいですね！でも料理が本当に多いです。全部食べられますか？</span></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">うーん…<span class="target">全部は食べられません</span>。少しは！</span><span class="answer-fill"><span class="korean">음… <span class="slot" data-sync-id="trip-cannot-eat-all">다 먹을 수 없어요</span>. 조금은요!</span><span class="yomi">ウム… ＿＿＿ チョグムンニョ！</span></span><span class="hint"><span class="hint-chip">全部:다<span class="yomi">タ</span></span><span class="hint-chip">食べる:먹다<span class="yomi">モクタ</span></span></span></div></div></div>
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">相手</span></span><div class="bubble"><span class="korean">하하, 괜찮아요. 그럼 집에서 한국 요리 할 줄 알아요?</span><span class="yomi">ハハ、ケンチャナヨ。 クロム チベソ ハングク ヨリ ハル チュル アラヨ</span><span class="translation">はは、大丈夫です。じゃあ、家で韓国料理は作れますか？</span></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">いいえ、まだ<span class="target">作れません</span>。でも一度やってみます！</span><span class="answer-fill"><span class="korean">아니요, 아직 <span class="slot" data-sync-id="trip-dont-know-cook">할 줄 몰라요</span>. 그런데 한번 해 볼게요!</span><span class="yomi">アニヨ、アジク ＿＿＿ クロンデ ハンボン ヘ ボルケヨ！</span></span><span class="hint"><span class="hint-chip">する:하다<span class="yomi">ハダ</span></span></span></div></div></div>
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">相手</span></span><div class="bubble"><span class="korean">좋아요! 오늘 맛있게 드세요.</span><span class="yomi">チョアヨ！ オヌル マシッケ トゥセヨ</span><span class="translation">いいですね！今日はおいしく召し上がってください。</span></div></div>
+      </div>
+    </div>
+
+    <!-- the scene said 다 먹을 수 없어요 and nobody would say that at a table —
+         한국 사람은 다 못 먹어요 라고 해요. 못 is already the learner's from
+         과 10, so this page is a swap, not a new form. 줄 몰라요 has no such
+         twin, and the tutor line says so. -->
+    <div class="section" data-page-id="native-tip">
+      <h2 class="section-title">원어민 팁 <span class="title-ja">(ネイティブのひとこと)</span></h2>
+      <p class="section-subtitle"><span class="ko">말할 때는 수 없어요보다 못을 훨씬 많이 써요. 짧고 편하거든요. 그런데 줄 몰라요는 못으로 못 바꿔요. 그대로 쓰세요.</span><span class="ja">話すときは수 없어요より못をずっとよく使います。短くて楽なんです。でも줄 몰라요は못に置きかえられません。そのまま使ってください。</span></p>
+      <div class="tutor-note">한 줄씩 위아래로 읽어 주세요. 짧아지는 게 들리게요.</div>
+      <div class="swap">
+        <div class="swap-row">
+          <span class="translation">私は泳げません。</span>
+          <span class="sw-from">저는 수영<span class="ending">할 수 없어요</span>.<span class="yomi">チョヌン スヨンハル ス オプソヨ</span></span>
+          <span class="sw-to">저는 수영 <span class="ending">못 해요</span>.<span class="yomi">チョヌン スヨン モテヨ</span></span>
+        </div>
+        <div class="swap-row">
+          <span class="translation">今日はお酒が飲めません。</span>
+          <span class="sw-from">오늘은 술을 <span class="ending">마실 수 없어요</span>.<span class="yomi">オヌルン スルル マシル ス オプソヨ</span></span>
+          <span class="sw-to">오늘은 술을 <span class="ending">못 마셔요</span>.<span class="yomi">オヌルン スルル モン マショヨ</span></span>
+        </div>
+      </div>
+    </div>
   </div>
 
 

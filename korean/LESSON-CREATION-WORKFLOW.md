@@ -137,6 +137,9 @@ not fan out all episodes until the season bible and pilot have held up under rev
 ## 5. Authoring rules every writer checks
 
 - One activity per page; Korean-first title; one blue tutor-script box.
+- Every `partN-intro` gives the pattern's short Japanese meaning and its communicative use. A
+  translated scene line alone is an example, not an explanation; establish meaning before the
+  later rule page explains formation.
 - Every closed sentence activity keeps four questions from read through translate; difficulty must
   not taper by silently dropping questions. Free-writing remains one open prompt.
 - Reorder activities use four meaningful phrase chunks per sentence, with four as the ceiling. Keep
@@ -144,8 +147,21 @@ not fan out all episodes until the season bible and pilot have held up under rev
 - A visual rule page has one block per real formation branch, not one block per example. Keep one
   block for an invariant rule; compare two or three blocks only when the learner must distinguish
   those forms.
+- When that one rule removes dictionary-form `다`, show the complete source form and its result
+  (`듣다 → 듣기 싫어`), not an unexplained clipped stem (`듣 → 듣기 싫어`). Use a stem-only tile
+  only when the stem's final sound is what determines a real formation branch. Group the dictionary
+  form as one `.bt-word`; separate syllable tiles are visual evidence for sound-based branches.
+- Build rule diagrams with the shared `.batchim` / `.bt-*` component and no lesson-specific widths.
+  The rule card must align with the tutor-script column at both a 480px lesson column and a 360px
+  narrow column; multiword results may wrap only at an authored space, never between Korean syllables.
 - Include a choose page only for an honest, taught distinction. Omit it when one option is merely a
   fake ending or when both answers are grammatical and choosing requires an unintroduced nuance.
+- A native tip adds one adjacent choice not already taught: register, softening, contraction,
+  prosody, collocation or a useful difference in intensity. It is not a recap or a delayed core
+  explanation.
+- The final teaser is a complete 5–7-turn mini-scene with 2–3 learner completions, uses both of
+  today's patterns, advances the relationship or conflict, and ends on an unresolved hook. A
+  receptive lesson may ask the learner to reconstruct the other speaker's lines.
 - Use existing components and `data-sync` contracts from `AUTHORING.md`.
 - Keep the required receptive → productive arc from the track blueprint.
 - Show a short, consistent speaker name beside every avatar.
