@@ -1891,6 +1891,10 @@ body:not(.no-yomi) .sent-more .yomi + .translation { margin-top: 7px; }
   display: grid;
   gap: var(--item-gap);
   margin-top: 24px;
+  /* The lesson stays a 480px phone column even inside a wide desktop browser.
+     Rule equations therefore respond to this component's real width, not to
+     the browser viewport (which may be more than 1000px wide). */
+  container-type: inline-size;
 }
 
 /* The box is an equation read left to right — syllable → the form it takes —
@@ -1901,6 +1905,8 @@ body:not(.no-yomi) .sent-more .yomi + .translation { margin-top: 7px; }
 .bt-box {
   display: grid;
   justify-items: center;
+  width: 100%;
+  min-width: 0;
   gap: 15px;
   padding: 22px 16px 20px;
   border: 1px solid var(--gray-200);
@@ -1912,6 +1918,7 @@ body:not(.no-yomi) .sent-more .yomi + .translation { margin-top: 7px; }
 .bt-eq {
   display: flex;
   align-items: center;
+  max-width: 100%;
   gap: 18px;
 }
 
@@ -2023,6 +2030,8 @@ body:not(.no-yomi) .sent-more .yomi + .translation { margin-top: 7px; }
    say. It is the biggest coloured thing on the page, which is correct —
    it is the answer the rule produces. */
 .bt-out {
+  min-width: 0;
+  max-width: 100%;
   padding: 8px 18px;
   border-radius: 12px;
   background: var(--topic-bg);
@@ -2030,7 +2039,11 @@ body:not(.no-yomi) .sent-more .yomi + .translation { margin-top: 7px; }
   font-size: 34px;
   font-weight: 900;
   line-height: 1.1;
-  white-space: nowrap;   /* 이에요 breaking across two lines is not a pill */
+  /* One Korean word such as 이에요 must never split between syllables, but a
+     genuinely long phrase may wrap at its authored space instead of pushing
+     the whole equation outside the card. */
+  white-space: normal;
+  word-break: keep-all;
 }
 
 .bt-head {
@@ -2280,8 +2293,10 @@ body:not(.no-yomi) .sent-more .yomi + .translation { margin-top: 7px; }
    the box now leads with the answer. */
 .section > .payoff + .combi { margin-top: 24px; }
 
-@media (max-width: 480px) {
-  /* the box is one centred column at every width — only the type steps down */
+@container (max-width: 420px) {
+  /* The box is one centred column at every width — only the type steps down.
+     This used to be @media (max-width: 480px), which missed the fixed-width
+     phone column whenever it was previewed inside a wide desktop browser. */
   .bt-syl { width: 94px; height: 94px; font-size: 54px; }
   /* A pair of stems is the widest thing the equation ever carries — nearly
      twice a single one — so it is the case that decides this breakpoint.
@@ -2294,7 +2309,25 @@ body:not(.no-yomi) .sent-more .yomi + .translation { margin-top: 7px; }
   .bt-eq:has(.bt-syls) { gap: 11px; }
   .bt-out { padding: 7px 15px; font-size: 30px; }
   .bt-ex { font-size: 16px; }
+}
+
+@media (max-width: 480px) {
   .combi-nouns > span { font-size: 12px; }
+}
+
+/* A real 320–360px phone leaves roughly 250–290px inside the section after
+   page margins and padding. Keep the same left-to-right equation there, but
+   step all four width contributors down together: tiles, gaps, arrow, result. */
+@container (max-width: 300px) {
+  .bt-box { padding-inline: 10px; }
+  .bt-syl { width: 72px; height: 72px; font-size: 42px; }
+  .bt-syls > .bt-syl { width: 40px; height: 40px; font-size: 24px; }
+  .bt-syls { gap: 3px; }
+  .bt-syls > .sep { font-size: 18px; }
+  .bt-eq { gap: 8px; }
+  .bt-eq:has(.bt-syls) { gap: 5px; }
+  .bt-arrow { font-size: 20px; }
+  .bt-out { padding: 6px 8px; font-size: 22px; }
 }
 
 /* ============================================================
