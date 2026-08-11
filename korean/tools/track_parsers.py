@@ -76,6 +76,63 @@ def _field(block: list[str], label: str) -> str | None:
     return None
 
 
+def _bullet_field(block: list[str], label: str) -> str | None:
+    """Read `- *표현:* ...` fields used by the contextual TOC."""
+    for line in block:
+        m = re.match(rf"^- \*{label}:\*\s*(.+?)\s*$", line)
+        if m:
+            return m.group(1)
+    return None
+
+
+def _paragraph_field(block: list[str], label: str) -> str | None:
+    """Read a bold label whose value may continue on following Markdown lines."""
+    for i, line in enumerate(block):
+        m = re.match(rf"^\*\*{label}:\*\*\s*(.*?)\s*$", line)
+        if not m:
+            continue
+        value = [m.group(1)] if m.group(1) else []
+        for following in block[i + 1:]:
+            if not following.strip():
+                break
+            if following.startswith(("#", "**", "- ", ">")):
+                break
+            value.append(following.strip())
+        return " ".join(value) or None
+    return None
+
+
+def _dialogues_from(block: list[str]) -> list[dict]:
+    """Keep the contextual learner line, pattern and partner reaction together.
+
+    `_patterns_from` is sufficient for course manifests, but an episode writer
+    also needs the actual dramatic exchange. Keeping the reaction next to the
+    pattern prevents a generated lesson from turning a scene into two unrelated
+    example sentences.
+    """
+    dialogues = []
+    for i, line in enumerate(block):
+        m = re.match(r"^- (?!\*)(.+?) [—–] (.+?)\s*$", line)
+        if not m:
+            continue
+        rest = m.group(2)
+        g = re.match(r"^(.*?)\s*\(([^()]*)\)$", rest)
+        form = (g.group(1) if g else rest).replace("`", "").strip()
+        reference = g.group(2).strip() if g else None
+        reaction = None
+        if i + 1 < len(block):
+            rm = re.match(r"^\s+→\s*(.+?)\s*$", block[i + 1])
+            if rm:
+                reaction = rm.group(1)
+        dialogues.append({
+            "line": m.group(1).strip(),
+            "form": form,
+            "reference": reference,
+            "reaction": reaction,
+        })
+    return dialogues
+
+
 def _split_blocks(lines: list[str], header: re.Pattern,
                   stop: re.Pattern | None = None) -> list[tuple[re.Match, list[str]]]:
     """Cut `lines` at every header match; return (match, body-until-next).
@@ -204,22 +261,41 @@ def parse_contextual(track: pathlib.Path) -> list[dict]:
         slug, t_en, t_ja = known
         # "초급 → 초중급" means it opens at 초급; the entry level is what gates it.
         entry = level.split("→")[0].strip()
+        first_lesson = next((i for i, line in enumerate(body)
+                             if CTX_LESSON.match(line)), len(body))
+        prelude = body[:first_lesson]
+        work = next((m.group(1) for line in prelude
+                     if (m := re.match(r"^> ### 《(.+?)》\s*$", line))), None)
+        cast = next((m.group(1) for line in prelude
+                     if (m := re.match(r"^> \*\*등장인물\*\* — (.+?)\s*$", line))), None)
+        story = [line[2:].strip() for line in prelude
+                 if line.startswith("> ")
+                 and not line.startswith("> ### ")
+                 and not line.startswith("> **등장인물**")]
+        story = [line for line in story if line]
         lessons = []
         for lm, lbody in _split_blocks(body, CTX_LESSON):
             aside = re.sub(r"[*`]", "", lm.group(3)).strip()
+            dialogues = _dialogues_from(lbody)
             lessons.append({
                 "no": int(lm.group(1)),
                 "title": lm.group(2).strip() + (f" {aside}" if aside else ""),
                 "canDo": _field(lbody, "할 수 있는 것"),
-                "patterns": _patterns_from(lbody),
+                "patterns": [d["form"] for d in dialogues],
                 "scene": _field(lbody, "장면"),
+                "dialogues": dialogues,
+                "expressions": _bullet_field(lbody, "표현"),
+                "grammar": _bullet_field(lbody, "문법"),
+                "understanding": _bullet_field(lbody, "이해"),
+                "chunk": _bullet_field(lbody, "덩어리"),
+                "memo": _bullet_field(lbody, "메모"),
             })
         if not lessons:
             raise ParseError(f"course '{name}' parsed 0 lessons")
         lessons.sort(key=lambda l: l["no"])
-        note = next((l.strip("* ") for l in body
-                     if l.startswith("**끝내면 할 수 있는 것:**")), "")
-        courses.append({"slug": slug, "level": entry, "note": note[:180],
+        note = _paragraph_field(prelude, "끝내면 할 수 있는 것") or ""
+        courses.append({"slug": slug, "level": entry, "note": note,
+                        "work": work, "cast": cast, "story": story,
                         "title": {"ko": name, "en": t_en, "ja": t_ja},
                         "lessons": lessons})
     if not courses:

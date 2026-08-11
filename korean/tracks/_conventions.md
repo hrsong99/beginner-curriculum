@@ -1,7 +1,9 @@
 # Deck conventions — read before writing any lesson
 
-The briefs (`toc/lesson-NNN.md`) fix the **grammar**: what this lesson teaches, what the
-learner already has, what a later lesson owns and must not be borrowed. That part is airtight.
+The generated briefs (`toc/<course-code>/lesson-NNN.md`, with Core's globally numbered
+`toc/lesson-NNN.md` as the legacy exception) fix the **grammar**: what this lesson teaches,
+what the learner already has, what a later lesson owns and must not be borrowed. The course
+code is mandatory anywhere lesson numbers restart. That part is airtight.
 
 This file fixes everything the briefs do not: **who appears, what things are called, which
 scenes are spent, and what art exists.** Lessons get written in parallel, and without a shared
@@ -268,7 +270,7 @@ Each of these cost a rewrite. They are not style preferences.
   a word the learner is being asked to decode hands them the answer and cancels the drill.
   The track's kana surfaces are `.kana-eq` (the letter↔kana anchor, while a letter is being
   taught), `.word-card` and `.known-row small`. Decode drills carry nothing. Every other track
-  follows the level rule in `CLAUDE.md` instead. *(Three lesson-writers were told the opposite
+  follows the level rule in `AGENTS.md` instead. *(Three lesson-writers were told the opposite
   by their brief and all three followed the sample deck over the brief — which is the reason
   the deck is read in full.)*
 - **A mouth photo on a listening tile is noise unless the two options differ in vowel.** Both

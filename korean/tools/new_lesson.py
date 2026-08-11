@@ -44,7 +44,7 @@ PLACEHOLDER = """
          PAGES GO HERE — one .phone child per page, one activity per page.
 
          Plan the arc from  lesson-blueprint.md
-         Take the content from  toc/lesson-{lesson:03d}.md
+         Take the content from  {brief}
          Copy component markup and tutor voice from the deck this
          skeleton came from — do not invent components.
 
@@ -52,6 +52,13 @@ PLACEHOLDER = """
          to supply it is a trial-only page and is not here.
          ============================================================ -->
 """
+
+
+def lesson_brief(track_dir: Path, course: str, lesson_no: int) -> Path:
+    """Return the course-scoped brief, with Core's legacy flat path as fallback."""
+    scoped = track_dir / "toc" / course / f"lesson-{lesson_no:03d}.md"
+    legacy = track_dir / "toc" / f"lesson-{lesson_no:03d}.md"
+    return scoped if scoped.exists() or not legacy.exists() else legacy
 
 
 def split_skeleton(deck: Path):
@@ -166,7 +173,7 @@ def main():
     ap.add_argument("--title-en", required=True, help="English title, for the admin course list")
     ap.add_argument("--level", help="override; normally read from the course plan")
     ap.add_argument("--from-deck", help="deck to lift the skeleton from (default: the track's sample-lesson.html)")
-    ap.add_argument("--out", help="output path (default: <track>/lesson-NNN.html)")
+    ap.add_argument("--out", help="output path (default: <track>/courses/<course>/lessons/<id>/lesson.html)")
     args = ap.parse_args()
 
     track_dir = KOREAN / "tracks" / args.track
@@ -186,6 +193,13 @@ def main():
 
     course = args.course or find_course(track_dir, args.lesson)
     level = args.level or course_level(track_dir, course)
+    brief = lesson_brief(track_dir, course, args.lesson)
+    if not brief.is_file():
+        sys.exit(
+            f"no brief for {course} lesson {args.lesson} at {brief} — run "
+            f"tools/build_lesson_briefs.py {track_dir} first, and check that "
+            f"--course names the course that owns this lesson"
+        )
     out = Path(args.out) if args.out else \
         track_dir / "courses" / course / "lessons" / args.id / "lesson.html"
     if out.exists():
@@ -201,7 +215,8 @@ def main():
         version=dt.date.today().isoformat(),
     )
 
-    page = redepth(head + PLACEHOLDER.format(lesson=args.lesson) + foot, out)
+    brief_hint = str(brief.relative_to(track_dir))
+    page = redepth(head + PLACEHOLDER.format(brief=brief_hint) + foot, out)
     out.write_text(page, encoding="utf-8")
 
     broken = [r for r in re.findall(r'(?:href|src)="((?:\.\./)+[^"]+)"', page)
@@ -216,11 +231,10 @@ def main():
         except ValueError:
             return str(p)
 
-    brief = track_dir / "toc" / f"lesson-{args.lesson:03d}.md"
     print(f"wrote {rel(out)}")
     print(f"  skeleton from : {rel(source)}")
     print(f"  now read      : {rel(track_dir / 'lesson-blueprint.md')}")
-    print(f"                  {rel(brief)}" + ("" if brief.exists() else "  (missing — run shard_toc.py)"))
+    print(f"                  {rel(brief)}" + ("" if brief.exists() else "  (missing — run build_lesson_briefs.py)"))
     print(f"                  {rel(source)}  ← voice and components")
 
 
