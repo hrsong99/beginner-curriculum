@@ -315,7 +315,7 @@ spec:
 """
 
 
-def plan_track(track: pathlib.Path, dry: bool) -> int:
+def plan_track(track: pathlib.Path, dry: bool, only_course: str | None = None) -> int:
     cfg = TRACKS.get(track.name)
     parser = track_parsers.PARSERS.get(track.name)
     if cfg is None or parser is None:
@@ -325,6 +325,10 @@ def plan_track(track: pathlib.Path, dry: bool) -> int:
     parsed = parser(track)
     courses = pack_core(parsed) if track.name == "2-core-patterns" else parsed
     courses = [compose(c, cfg) for c in courses]
+    selected_courses = [c for c in courses if only_course is None or c["slug"] == only_course]
+    if not selected_courses:
+        print(f"✗ no course '{only_course}' in track '{track.name}'")
+        return 0
 
     root, seen, written_n = track / "courses", set(), 0
     print(f"\n{track.name}")
@@ -339,6 +343,8 @@ def plan_track(track: pathlib.Path, dry: bool) -> int:
         level_hundredths = cfg["band"] * 100 + i
         class_level = (f"{level_hundredths // 100}."
                        f"{(level_hundredths % 100) * 10:03d}")
+        if only_course is not None and course["slug"] != only_course:
+            continue
         cdir = root / course["slug"]
         seen.add(cdir)
 
@@ -382,16 +388,16 @@ def plan_track(track: pathlib.Path, dry: bool) -> int:
         print(f"  {course['slug']:<30} {course['level']:<6} {class_level:<8} "
               f"{len(course['lessons']):>3} planned, {len(decks)} written")
 
-    if root.is_dir():
+    if only_course is None and root.is_dir():
         for p in sorted(root.rglob("lesson.yaml")):
             if p.parent not in seen:
                 keep = "  (has a deck — move it, do not delete)" if \
                     (p.parent / "lesson.html").is_file() else ""
                 print(f"  ! orphaned by the current plan: {p.parent}{keep}")
 
-    print(f"  → {len(courses)} course(s), "
-          f"{sum(len(c['lessons']) for c in courses)} planned, {written_n} written")
-    return len(courses)
+    print(f"  → {len(selected_courses)} course(s), "
+          f"{sum(len(c['lessons']) for c in selected_courses)} planned, {written_n} written")
+    return len(selected_courses)
 
 
 def main() -> int:
@@ -399,8 +405,12 @@ def main() -> int:
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("track", nargs="?", help="e.g. korean/tracks/1-hangul")
     ap.add_argument("--all", action="store_true", help="every track with a parser")
+    ap.add_argument("--course", help="regenerate only this course (requires one track)")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
+
+    if args.all and args.course:
+        return ap.error("--course cannot be combined with --all")
 
     here = pathlib.Path(__file__).resolve().parent.parent
     if args.all:
@@ -410,7 +420,7 @@ def main() -> int:
     else:
         return ap.error("give a track path or --all")
 
-    total = sum(plan_track(t, args.dry_run) for t in targets)
+    total = sum(plan_track(t, args.dry_run, args.course) for t in targets)
     print(f"\n{total} course(s) across {len(targets)} track(s)"
           f"{' — dry run, nothing written' if args.dry_run else ''}")
     return 0

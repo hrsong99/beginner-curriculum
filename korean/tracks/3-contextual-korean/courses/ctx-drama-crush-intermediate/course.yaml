@@ -34,8 +34,8 @@ spec:
 
 # 이 코스가 담을 과 — 덱을 쓰면 lessons/ 밑에 디렉터리가 생긴다.
 # 슬러그는 스키마가 NN-english-words 를 요구하므로 덱을 쓸 때 정해진다.
-#     1  ·  첫 만남
-#     2  ·  자꾸 생각나
+#     1  ✓ 01-first-meeting첫 만남
+#     2  ✓ 02-keeps-crossing-my-mind자꾸 생각나
 #     3  ·  밀당
 #     4  ·  첫 데이트
 #     5  ·  설렘

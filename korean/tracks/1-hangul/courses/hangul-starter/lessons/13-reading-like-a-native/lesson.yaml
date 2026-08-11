@@ -4,7 +4,7 @@ metadata:
   slug: 13-reading-like-a-native
 
 spec:
-  week: 12                      # → CLASS_WEEK. 코스 안에서 1..N 연속이어야 한다.
+  week: 13                      # → CLASS_WEEK. 코스 안에서 1..N 연속이어야 한다.
 
   title:
     ko: 한국 사람처럼 읽기

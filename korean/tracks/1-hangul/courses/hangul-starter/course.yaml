@@ -34,7 +34,7 @@ spec:
 
 # 이 코스가 담을 과 — 덱을 쓰면 lessons/ 밑에 디렉터리가 생긴다.
 # 슬러그는 스키마가 NN-english-words 를 요구하므로 덱을 쓸 때 정해진다.
-#     1  ·  글자 블록과 첫 소리
+#     1  ✓ 01-letter-blocks-and-first-sounds글자 블록과 첫 소리
 #     2  ✓ 02-six-plain-consonants평음 여섯 개
 #     3  ✓ 03-review-and-speed복습과 속도
 #     4  ✓ 04-add-a-stroke-add-air획을 더하면 바람이 더해진다

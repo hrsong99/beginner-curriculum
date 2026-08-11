@@ -4,7 +4,7 @@ metadata:
   slug: 07-y-vowels-and-e-vowels
 
 spec:
-  week: 6                      # → CLASS_WEEK. 코스 안에서 1..N 연속이어야 한다.
+  week: 7                      # → CLASS_WEEK. 코스 안에서 1..N 연속이어야 한다.
 
   title:
     ko: y 모음과 e 모음

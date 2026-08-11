@@ -4,7 +4,7 @@ metadata:
   slug: 14-capstone-read-anything
 
 spec:
-  week: 13                      # → CLASS_WEEK. 코스 안에서 1..N 연속이어야 한다.
+  week: 14                      # → CLASS_WEEK. 코스 안에서 1..N 연속이어야 한다.
 
   title:
     ko: 마무리 — 무엇이든 읽는다

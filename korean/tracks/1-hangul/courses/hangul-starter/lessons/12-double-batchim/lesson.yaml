@@ -4,7 +4,7 @@ metadata:
   slug: 12-double-batchim
 
 spec:
-  week: 11                      # → CLASS_WEEK. 코스 안에서 1..N 연속이어야 한다.
+  week: 12                      # → CLASS_WEEK. 코스 안에서 1..N 연속이어야 한다.
 
   title:
     ko: 겹받침 — 글자 둘, 자리 하나

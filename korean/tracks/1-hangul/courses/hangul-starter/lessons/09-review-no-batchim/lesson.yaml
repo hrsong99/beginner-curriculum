@@ -4,7 +4,7 @@ metadata:
   slug: 09-review-no-batchim
 
 spec:
-  week: 8                      # → CLASS_WEEK. 코스 안에서 1..N 연속이어야 한다.
+  week: 9                      # → CLASS_WEEK. 코스 안에서 1..N 연속이어야 한다.
 
   title:
     ko: 복습 — 모든 글자

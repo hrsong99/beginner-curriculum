@@ -349,6 +349,11 @@ def parse_contextual() -> list[dict]:
         m = re.match(r"^\*\*(\d+)(화)? ?[·.] ?(.+?)\*\*\s*(\*\([^)]*\)\*)?\s*$", line)
         if m:
             title, sub = split_title(m.group(3))
+            # Family-drama episodes put the speaking direction just outside the
+            # bold title: **잔소리** *(엄마 → 나)*. It is part of the canonical
+            # lesson identity used by plan_courses.py and the deck index.
+            if m.group(4):
+                title = f"{title} {plain(m.group(4))}"
             cur = {"n": int(m.group(1)), "title": title, "sub": sub, "scene": "", "can": "",
                    "canLabel": "할 수 있다", "level": g["level"],
                    "chips": [], "pats": [], "refs": [], "notes": []}
@@ -522,32 +527,6 @@ def attach_decks(track: str, groups: list[dict]) -> list[dict]:
     return made
 
 
-# 코스 폴더가 생기기 전에 만든 완성 레슨. 상단의 별도 링크로 빼지 않고,
-# 이제는 실제로 속한 목차 행의 덱으로 붙인다. 체험판은 같은 수업의 래퍼라 싣지 않는다.
-STANDALONE_DECKS = {
-    "1-hangul": ("글자 블록과 첫 소리", "tracks/1-hangul/sample-lesson.html"),
-    "3-contextual-korean": ("첫 만남", "tracks/3-contextual-korean/sample-lesson.html"),
-    "4-freetalking": ("로또 1등에 당첨된다면", "tracks/4-freetalking/sample-lesson.html"),
-}
-
-
-def attach_standalone_deck(track: str, groups: list[dict], made: list[dict]) -> None:
-    """예전 sample-lesson.html 을 별도 샘플이 아니라 해당 목차 행의 완성 덱으로 붙인다."""
-    target = STANDALONE_DECKS.get(track)
-    if not target:
-        return
-    title, href = target
-    for g in groups:
-        for lesson in g["lessons"]:
-            if lesson["title"] == title:
-                if not lesson.get("deck"):
-                    lesson["deck"] = href
-                    made.append({"n": lesson["n"], "title": title, "href": href,
-                                 "group": g.get("label", "")})
-                return
-    raise RuntimeError(f"{track}: standalone deck target not found: {title}")
-
-
 def mark_first_lesson(groups: list[dict]) -> None:
     """워밍업 은행이 아닌 커리큘럼의 실제 시작점 하나만 표시한다."""
     for g in groups:
@@ -649,7 +628,6 @@ def build() -> dict:
         t["span"] = [lv for lv in LEVELS if lv in spans]
         t["total"] = sum(len(g["lessons"]) for g in t["groups"] if not g.get("warmup"))
         t["decks"] = attach_decks(t["id"], t["groups"])
-        attach_standalone_deck(t["id"], t["groups"], t["decks"])
         mark_first_lesson(t["groups"])
 
     totals = {

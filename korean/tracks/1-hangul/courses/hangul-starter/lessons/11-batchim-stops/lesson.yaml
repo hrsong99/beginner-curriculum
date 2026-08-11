@@ -4,7 +4,7 @@ metadata:
   slug: 11-batchim-stops
 
 spec:
-  week: 10                      # → CLASS_WEEK. 코스 안에서 1..N 연속이어야 한다.
+  week: 11                      # → CLASS_WEEK. 코스 안에서 1..N 연속이어야 한다.
 
   title:
     ko: 받침 ② 막는 소리

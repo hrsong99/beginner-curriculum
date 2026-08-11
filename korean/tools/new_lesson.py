@@ -18,7 +18,9 @@ So this does not hold a copy of the skeleton. It reads the track's canonical
 deck and lifts the head and foot off it, which means the skeleton can never
 drift from the real one and per-track differences (a hangul deck's extra
 hangul-activities.js, a freetalk deck's freetalk-activities.js) come along for
-free. Writing the pages is the only thing left to do.
+free. Writing the pages is the only thing left to do. ``--copy-pages`` is the
+narrow exception for promoting an already-finished sample into its planned
+course slot without re-authoring it.
 """
 
 import argparse
@@ -61,8 +63,8 @@ def lesson_brief(track_dir: Path, course: str, lesson_no: int) -> Path:
     return scoped if scoped.exists() or not legacy.exists() else legacy
 
 
-def split_skeleton(deck: Path):
-    """Return (head, foot) of a canonical deck — everything that isn't pages."""
+def split_deck(deck: Path):
+    """Return (head, pages, foot) from a canonical deck."""
     lines = deck.read_text(encoding="utf-8").splitlines(keepends=True)
 
     open_at = next((i for i, l in enumerate(lines) if PHONE_OPEN in l), None)
@@ -77,7 +79,17 @@ def split_skeleton(deck: Path):
             f"rather than guessing a boundary."
         )
 
-    return "".join(lines[: open_at + 1]), "".join(lines[closes[0] :])
+    return (
+        "".join(lines[: open_at + 1]),
+        "".join(lines[open_at + 1 : closes[0]]),
+        "".join(lines[closes[0] :]),
+    )
+
+
+def split_skeleton(deck: Path):
+    """Return (head, foot) of a canonical deck — everything that isn't pages."""
+    head, _, foot = split_deck(deck)
+    return head, foot
 
 
 def course_level(track_dir: Path, course: str) -> str:
@@ -173,6 +185,12 @@ def main():
     ap.add_argument("--title-en", required=True, help="English title, for the admin course list")
     ap.add_argument("--level", help="override; normally read from the course plan")
     ap.add_argument("--from-deck", help="deck to lift the skeleton from (default: the track's sample-lesson.html)")
+    ap.add_argument(
+        "--copy-pages",
+        action="store_true",
+        help="copy the source deck's existing pages instead of stamping an empty skeleton; "
+             "use only to promote an already-finished sample",
+    )
     ap.add_argument("--out", help="output path (default: <track>/courses/<course>/lessons/<id>/lesson.html)")
     args = ap.parse_args()
 
@@ -206,7 +224,7 @@ def main():
         sys.exit(f"{out} already exists — delete it or pass a different --out")
     out.parent.mkdir(parents=True, exist_ok=True)
 
-    head, foot = split_skeleton(source)
+    head, pages, foot = split_deck(source)
     head = retarget(
         head,
         lesson_id=args.id,
@@ -216,7 +234,8 @@ def main():
     )
 
     brief_hint = str(brief.relative_to(track_dir))
-    page = redepth(head + PLACEHOLDER.format(brief=brief_hint) + foot, out)
+    body = pages if args.copy_pages else PLACEHOLDER.format(brief=brief_hint)
+    page = redepth(head + body + foot, out)
     out.write_text(page, encoding="utf-8")
 
     broken = [r for r in re.findall(r'(?:href|src)="((?:\.\./)+[^"]+)"', page)

@@ -4,7 +4,7 @@ metadata:
   slug: 08-combined-w-vowels
 
 spec:
-  week: 7                      # → CLASS_WEEK. 코스 안에서 1..N 연속이어야 한다.
+  week: 8                      # → CLASS_WEEK. 코스 안에서 1..N 연속이어야 한다.
 
   title:
     ko: 합쳐진 모음
