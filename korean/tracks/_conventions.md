@@ -72,6 +72,26 @@ meets today's pattern somewhere they have not been yet.
 | 어학당 수업 끝난 복도 | 과 28 | core |
 | 버스 정류장 | 과 29 | core |
 | 부동산 중개소 | 과 30 | core |
+| 시장 먹자골목 | 과 31 | core |
+| 퇴근길 엘리베이터 | 과 32 | core |
+| 친구를 기다리며 하는 전화 (영화관 앞) | 과 33 | core |
+| 기숙사, 룸메이트와 | 과 34 | core |
+| 한정식집 첫 방문 | 과 35 | core |
+| 어학당 상담실 | 과 36 | core |
+| 주말 약속 잡기, 날씨 보며 | 과 37 | core |
+| 미술관 전시장 | 과 38 | core |
+| 은행 창구 | 과 39 | core |
+| 회사 마감, 팀장과 | 과 40 | core |
+| 배달 기사님과 통화 | 과 41 | core |
+| 한복 대여점 | 과 42 | core |
+| 대학교 동아리방 | 과 43 | core |
+| 친구 자취방 | 과 44 | core |
+| 한강공원 | 과 45 | core |
+
+**과 27 과 과 33 은 사실상 같은 상황이다** — 늦은 친구를 기다리고 사과하는 장면. 배정할 때
+글자만 비교하고 상황을 비교하지 않아서 생긴 실수다. 과 33 이 영화관 앞 전화로 옮겨 거리를
+벌렸지만, 27 → 33 을 이어 듣는 학습자는 알아챈다. 다시 배정한다면 과 33 쪽이다.
+**장면을 배정할 때는 이름이 아니라 상황이 겹치는지 본다.**
 
 **과 11–45 already have scenes reserved.** They were assigned up front, one per
 lesson, precisely so parallel writers could not collide — the assignment travels in each
