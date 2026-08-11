@@ -4,7 +4,7 @@ metadata:
   slug: 08-place-particles
 
 spec:
-  week: 2                      # → CLASS_WEEK. 코스 안에서 1..N 연속이어야 한다.
+  week: 8                      # → CLASS_WEEK. 코스 안에서 1..N 연속이어야 한다.
 
   title:
     ko: 학교에 가요 · 어디에서 무엇을

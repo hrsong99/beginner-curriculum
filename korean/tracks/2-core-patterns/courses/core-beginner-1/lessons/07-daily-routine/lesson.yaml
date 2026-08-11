@@ -4,7 +4,7 @@ metadata:
   slug: 07-daily-routine
 
 spec:
-  week: 1                      # → CLASS_WEEK. 코스 안에서 1..N 연속이어야 한다.
+  week: 7                      # → CLASS_WEEK. 코스 안에서 1..N 연속이어야 한다.
 
   title:
     ko: 매일 운동해요 · 하루 일과

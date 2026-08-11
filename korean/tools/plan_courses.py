@@ -59,10 +59,9 @@ MERGE_IF_UNDER = 5
 # classLevel is part of grape's natural key, so two courses sharing one are the
 # same row.
 #
-# **The integer part of CLASS_LEVEL is the section.** This is not written down
-# anywhere in either repo — it is the convention the live data follows, and it is
-# how Breaking News and 프리토킹 are separate sections of the app while both being
-# CURRICULUM_TYPE=BASIC:
+# CLASS_LEVEL is also used by hard-coded backend ranges. Existing data follows
+# an integer-band convention, but a band does not create a new app section by
+# itself — the backend and app still need an explicit label/filter for that range:
 #
 #     1–2          the graded ladder (level 1, level 2)
 #     1000         Breaking News          (15 courses, monthly × level)
@@ -71,52 +70,48 @@ MERGE_IF_UNDER = 5
 #     3500         가벼운 프리토킹          (12 courses)
 #     999          test junk — 'html test (john)' lives here
 #
-# So a track becomes a section by taking its own integer band, and each course in
-# it takes a decimal slot. 999.x was the wrong home: it is where throwaway rows go.
+# Give each Korean track its own 100-level band. Primary course positions advance
+# by 0.010, leaving nine 0.001 insertion slots between neighbours. When the
+# fractional part is exhausted the sequence continues normally (200.990,
+# 201.000, 201.010, ...), so one section can hold 9,999 primary positions.
+# Keeping the bands below 1000 matters: the current BASIC query treats >=1000 as
+# legacy special content (Breaking News / free talking), while <1000 remains in
+# the regular BASIC ladder. 999.x is also the wrong home: throwaway rows live there.
 #
 # LANG_TYPE already separates KR from EN/JP, so these bands cannot collide with
 # the English or Japanese curricula even where the numbers coincide. Audience
 # ("Korean for Japanese speakers" vs anything later) is GT_CLASS_COURSE.
-# COUNTRY_CODE, not this number — see CLAUDE.md § Getting a lesson to production.
-# curriculumType is the product line, and it is part of the course's identity —
-# grape refuses a second course with the same (LANG_TYPE, CURRICULUM_TYPE,
-# LESSON_TIME, CLASS_LEVEL) outright ("동일한 조건의 코스가 이미 존재합니다",
-# class_course_ps.php:656). BASIC_V2 therefore gives the interactive curriculum a
-# namespace of its own: it can reuse any level band without colliding with the
-# legacy PDF BASIC courses, which is what lets it roll out to existing users.
-#
-# It also forks tutor assignment — le_tutor_curriculum keys on
-# PODO_{LANG}_{TYPE}, so a tutor opts into PODO_KR_BASIC_V2 specifically. That is
-# wanted (driving an interactive board is a different skill from a PDF), but it
-# means **no tutor can be matched until those rows exist**. There are currently
-# zero PODO_KR_* rows of any type.
-#
-# The column is COLLATE utf8mb3_bin, so this string is CASE-SENSITIVE. 'BASIC_v2'
-# would be a separate curriculum with no tutors, and nothing would report it.
+# COUNTRY_CODE, not this number — see AGENTS.md § Getting a lesson to production.
+# curriculumType is a supported product line, not a content-edition number.
+# podo-app, podo-backend, and grape all know BASIC; none supports invented
+# version-suffixed variants. Using
+# BASIC also makes tutor assignment use the supported PODO_KR_BASIC key. A future
+# English curriculum generation should likewise stay BASIC and receive unused
+# CLASS_LEVEL values; do not invent BASIC_V3.
 #
 # `prefix` and `name` make every course say which track and level it belongs to.
 # A slug is <prefix>-<bare>-<level>, so `drama-crush` — which told you nothing —
 # is now `ctx-drama-crush-intermediate`, and a directory listing groups by track
 # and then by course, with the level last. Single-course tracks drop the bare part.
 TRACKS = {
-    "1-hangul":            {"band": 1000, "type": "BASIC_V2", "prefix": "hangul",
+    "1-hangul":            {"band": 100, "type": "BASIC", "prefix": "hangul",
                             "name": {"ko": "한글 떼기", "en": "Hangul reading",
                                      "ja": "ハングル入門"}},
     # levelFirst: core's bare name is only a counter, so the level *is* its
     # identity and the number just orders within it. Level-last would sort
     # core-1-advanced next to core-1-beginner and hide the progression. Every
     # other track has a real name (a show, a theme), which is what should sort.
-    "2-core-patterns":     {"band": 2000, "type": "BASIC_V2", "prefix": "core",
+    "2-core-patterns":     {"band": 200, "type": "BASIC", "prefix": "core",
                             "levelFirst": True,
                             "name": {"ko": "핵심 문법 패턴", "en": "Core grammar patterns",
                                      "ja": "コア文法パターン"}},
-    "3-contextual-korean": {"band": 3000, "type": "BASIC_V2", "prefix": "ctx",
+    "3-contextual-korean": {"band": 300, "type": "BASIC", "prefix": "ctx",
                             "name": {"ko": "상황별 한국어", "en": "Korean in context",
                                      "ja": "場面別の韓国語"}},
-    "4-freetalking":       {"band": 4000, "type": "BASIC_V2", "prefix": "talk",
+    "4-freetalking":       {"band": 400, "type": "BASIC", "prefix": "talk",
                             "name": {"ko": "프리토킹", "en": "Free talking",
                                      "ja": "フリートーキング"}},
-    "5-pronunciation":     {"band": 5000, "type": "BASIC_V2", "prefix": "pron",
+    "5-pronunciation":     {"band": 500, "type": "BASIC", "prefix": "pron",
                             "name": {"ko": "발음 교정", "en": "Pronunciation repair",
                                      "ja": "発音の矯正"}},
 }
@@ -335,12 +330,15 @@ def plan_track(track: pathlib.Path, dry: bool) -> int:
     print(f"\n{track.name}")
 
     for i, course in enumerate(courses, start=1):
-        # <band>.<slot> — the band is the section, the decimal is this course.
-        # decimal(10,3) in the DB, so three decimals is the whole slot space.
-        if i > 999:
-            print(f"    ! {track.name} has more than 999 courses — the band is full")
+        # Advance in hundredths across the entire 100-level section. Persist
+        # three decimals so the nine insertion positions between primary slots
+        # are visible: 200.010, 200.020, ... 200.990, 201.000, 201.010.
+        if i > 9999:
+            print(f"    ! {track.name} has more than 9,999 courses — the band is full")
             return 0
-        class_level = f"{cfg['band']}.{i:03d}"
+        level_hundredths = cfg["band"] * 100 + i
+        class_level = (f"{level_hundredths // 100}."
+                       f"{(level_hundredths % 100) * 10:03d}")
         cdir = root / course["slug"]
         seen.add(cdir)
 

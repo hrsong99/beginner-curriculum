@@ -11,9 +11,9 @@ metadata:
   slug: ctx-kpop-online-intermediate
 
 spec:
-  curriculumType: BASIC_V2
+  curriculumType: BASIC
   # 자연키의 일부다 — 바꾸면 같은 코스의 수정이 아니라 다른 코스가 된다.
-  classLevel: "3000.008"
+  classLevel: "300.080"
   lessonTime: 25
   # 검수 전까지는 false. true 로 바꾸는 순간 apply 가 학습자에게 노출시킨다.
   enabled: false
@@ -25,7 +25,7 @@ spec:
     ja: 場面別の韓国語 · オンラインファンダム · 中級
 
   description:
-    ko: 끝내면 할 수 있는 것:** 트위터·커뮤니티 글을 읽고 무슨 일이 벌어졌는지 파악하고,
+    ko: 트위터·커뮤니티 글을 읽고 무슨 일이 벌어졌는지 파악하고, 짧은 반응 글과 리플을 직접 쓸 수 있다.
     ja: 中級。10課。
 
   tutorGroups:
