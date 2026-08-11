@@ -33,7 +33,8 @@
 
 ## 전체 골격
 
-**장면 4장 + 패턴 파트 2개 + 되돌아오기 + 예고.** 28장 안팎.
+**장면 4장 + 패턴 파트 2개 + 되돌아오기 + 예고.** 보통 26–28장이다. 실제 형태 분기가
+없는 패턴은 `pN-choose` 를 억지로 넣지 않으므로 정확한 장수보다 학습 가치가 우선이다.
 
 | # | data-page-id | 자리 |
 | ---: | --- | --- |
@@ -63,12 +64,20 @@
 | `partN-intro` | `.transition-page` | 패턴 이름 한 줄 | — |
 | `pN-teach` | `.sent-hero` | **장면에 있던 그 대사.** 튜터가 읽는다 | 있음 |
 | `pN-read` | `.model-line` ×4 | 혼자 읽는다 | 있음 |
-| `pN-rule` | `.batchim` / `.batchim.ending-rule` | 형태 규칙 한 개 | — |
-| `pN-choose` | `.choose-row sentence` | 둘 중 고르기 | 있음 |
-| `pN-reorder` | `.task-block` + `.answer-box small` | 칩 배열 | 없음 |
-| `pN-fill` | `.task-block` + `.answer-box` | 빈칸은 패턴 자리만 | 없음 |
-| `pN-translate` | `.task-block` + `.answer-box` | 일본어 → 한국어 | 없음 |
+| `pN-rule` | `.batchim` / `.batchim.ending-rule` | 실제 형태 분기당 규칙 상자 하나 | — |
+| `pN-choose` (조건부) | `.choose-row sentence` ×4 | 실제 두 형태를 구별할 때만 | 있음 |
+| `pN-reorder` | `.task-block` ×4 + `.answer-box small` | 문장마다 의미 덩어리 4개 배열 | 없음 |
+| `pN-fill` | `.task-block` ×4 + `.answer-box` | 빈칸은 패턴 자리만 | 없음 |
+| `pN-translate` | `.task-block` ×4 + `.answer-box` | 일본어 → 한국어 | 없음 |
 | `pN-write` | `.answer-box tall` | 자기 이야기 / 자기 질문 | 없음 |
+
+`pN-rule` 의 상자 수는 예문 수가 아니라 **규칙의 갈래 수**다. `동사 어간 + 기 싫다`처럼
+받침과 무관하게 한 방식이면 시각 상자도 하나만 둔다. `명사 + 만`과 `동사 + 기만 하다`처럼
+만드는 방식이 둘이면 두 상자를 두고, 무엇이 갈라지는지 타일·제목·결과에서 바로 보이게 한다.
+
+`pN-choose` 는 사다리의 고정 장수가 아니다. 두 선택지가 모두 문법적으로 가능하고 차이가
+아직 배우지 않은 뉘앙스에 달렸거나, 한쪽이 그저 가짜 음절인 경우에는 페이지를 뺀다.
+페이지 번호와 페이저는 `data-page-id` 로 움직이므로 중간 장을 생략해도 된다.
 
 ## 되돌아오기 (part3)
 
