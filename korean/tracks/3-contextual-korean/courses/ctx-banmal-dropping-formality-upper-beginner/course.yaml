@@ -1,7 +1,7 @@
 apiVersion: podo.curriculum/v1
 kind: Course
 metadata:
-  # beginner-curriculum 3-contextual-korean · 10과.
+  # podo-curriculum-public 3-contextual-korean · 10과.
   # tools/plan_courses.py 가 목차에서 끊었다.
   #
   # podo:level: 초중급
