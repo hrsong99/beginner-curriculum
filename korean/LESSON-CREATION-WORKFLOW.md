@@ -137,6 +137,15 @@ not fan out all episodes until the season bible and pilot have held up under rev
 ## 5. Authoring rules every writer checks
 
 - One activity per page; Korean-first title; one blue tutor-script box.
+- Every closed sentence activity keeps four questions from read through translate; difficulty must
+  not taper by silently dropping questions. Free-writing remains one open prompt.
+- Reorder activities use four meaningful phrase chunks per sentence, with four as the ceiling. Keep
+  the target pattern intact and enrich a short sentence instead of chopping it into grammar scraps.
+- A visual rule page has one block per real formation branch, not one block per example. Keep one
+  block for an invariant rule; compare two or three blocks only when the learner must distinguish
+  those forms.
+- Include a choose page only for an honest, taught distinction. Omit it when one option is merely a
+  fake ending or when both answers are grammatical and choosing requires an unintroduced nuance.
 - Use existing components and `data-sync` contracts from `AUTHORING.md`.
 - Keep the required receptive → productive arc from the track blueprint.
 - Show a short, consistent speaker name beside every avatar.

@@ -11,6 +11,7 @@ Each returns the same thing — a list of courses, in TOC order:
 
     [{ "slug":  "kpop-talk",          # ascii, kebab; becomes the directory
        "level": "초급",                # picks classLevel band + difficulty
+       "classLevelSlot": 10,          # optional stable .001 slot inside the band
        "title": {"ko":…, "en":…, "ja":…},
        "note":  "…",                  # one line for the course description
        "lessons": [
@@ -335,6 +336,14 @@ FT_SLUGS = {
     10: ("worth-thinking-about", "Worth thinking about", "考えてみたいこと"),
 }
 
+# Each topic exists at both levels. Intermediate is placed in the insertion slot
+# immediately before its existing Advanced sibling, so the shipped Advanced
+# natural keys (400.010, 400.020, ...) never move.
+FT_LEVELS = (
+    ("중급", -1),
+    ("고급", 0),
+)
+
 
 def parse_freetalking(track: pathlib.Path) -> list[dict]:
     lines = (track / "table-of-contents.md").read_text(encoding="utf-8").splitlines()
@@ -396,10 +405,17 @@ def parse_freetalking(track: pathlib.Path) -> list[dict]:
                 f"free-talking theme {n} ('{name}') lesson numbers must be "
                 f"continuous from 1 (found {numbers})"
             )
-        courses.append({"slug": slug, "level": "고급", "note": outcome,
-                        "sessionFormat": session_format,
-                        "title": {"ko": name, "en": t_en, "ja": t_ja},
-                        "lessons": lessons})
+        for level, slot_offset in FT_LEVELS:
+            courses.append({
+                "slug": slug,
+                "level": level,
+                "classLevelSlot": n * 10 + slot_offset,
+                "pairKey": slug,
+                "note": outcome,
+                "sessionFormat": session_format,
+                "title": {"ko": name, "en": t_en, "ja": t_ja},
+                "lessons": [lesson.copy() for lesson in lessons],
+            })
     if not courses:
         raise ParseError("no `# N. theme` headers found")
     return courses

@@ -15,7 +15,7 @@ import track_parsers
 
 
 VALID_FREETALKING = """\
-# 고급 프리토킹 — 목차
+# 중급·고급 프리토킹 — 목차
 
 # 1. 두 나라 사이
 
@@ -41,8 +41,13 @@ class FreeTalkingParserTests(unittest.TestCase):
     def test_reads_structured_course_fields_and_lesson_metadata(self):
         courses = self.parse(VALID_FREETALKING)
 
-        self.assertEqual(len(courses), 1)
-        course = courses[0]
+        self.assertEqual(len(courses), 2)
+        intermediate, advanced = courses
+        self.assertEqual(intermediate["level"], "중급")
+        self.assertEqual(intermediate["classLevelSlot"], 9)
+        self.assertEqual(advanced["level"], "고급")
+        self.assertEqual(advanced["classLevelSlot"], 10)
+        course = advanced
         self.assertEqual(course["note"], "한일 차이를 설명하고 비교한다.")
         self.assertEqual(course["sessionFormat"], "한일")
         self.assertEqual(course["lessons"][1]["title"], "민감한 경험")

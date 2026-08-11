@@ -129,7 +129,9 @@ and app add a label/filter for that range. Ours:
 Primary course positions advance by `0.010`: for example, Core starts at `200.010`,
 `200.020`, and continues across the full `200 ≤ classLevel < 300` range. This leaves
 `200.011` through `200.019` available for later insertion between the first two courses and
-provides 9,999 primary positions in one section.
+provides 9,999 primary positions in one section. Free talking uses reserved thousandth slots
+deliberately for level pairs while preserving its existing Advanced natural keys: Intermediate
+is `400.009`, `400.019`, ... and its Advanced sibling remains `400.010`, `400.020`, ....
 
 `1–99` stays free in case Korean ever gets a graded ladder the way EN and JP have. **Never
 use `999.x`** — that is where throwaway rows live (`html test (john)`), which is why the

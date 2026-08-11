@@ -71,6 +71,23 @@ def render_brief(track: pathlib.Path, course: dict, lesson: dict,
     for note in course.get("story", []):
         lines.append(f"> {note}")
 
+    if track.name == "4-freetalking":
+        lines += ["", "## Level version", ""]
+        sibling = course.get("pairedCourse")
+        if course["level"] == "고급":
+            lines += [
+                "- **Authoring order:** Write this Advanced lesson first.",
+                "- Use the strongest natural article or model story and the most interesting question ladder for the topic.",
+                f"- **Intermediate sibling:** `{sibling}` · lesson `{number:03d}`.",
+            ]
+        else:
+            lines += [
+                f"- **Adapt from:** `{sibling}` · lesson `{number:03d}`.",
+                "- Keep the topic, page order, question intent and conversation arc the same.",
+                "- Simplify the article or model story first. Keep already-accessible questions unchanged; rewrite only questions whose language is too difficult.",
+                "- Lower vocabulary and sentence complexity, not the intellectual interest of the conversation.",
+            ]
+
     lines += ["", "## Lesson brief", ""]
     lines += _value("Title", title)
     lines += _value("Scene", lesson.get("scene"))
@@ -152,6 +169,12 @@ def build_track(track: pathlib.Path) -> tuple[int, int]:
         raise SystemExit(f"no brief builder for track '{track.name}'")
 
     courses = [plan_courses.compose(course, cfg) for course in parser(track)]
+    pairs = {(course.get("pairKey"), course["level"]): course["slug"]
+             for course in courses if course.get("pairKey")}
+    for course in courses:
+        if course.get("pairKey"):
+            sibling_level = "고급" if course["level"] == "중급" else "중급"
+            course["pairedCourse"] = pairs[(course["pairKey"], sibling_level)]
     toc_dir = track / "toc"
     toc_dir.mkdir(exist_ok=True)
     expected: set[pathlib.Path] = set()

@@ -391,7 +391,7 @@ def parse_contextual() -> list[dict]:
     return groups
 
 
-# ------------------------------------------------------ 4 · 고급 프리토킹
+# ------------------------------------------------- 4 · 중급·고급 프리토킹
 
 def parse_freetalking() -> list[dict]:
     groups: list[dict] = []
@@ -401,13 +401,17 @@ def parse_freetalking() -> list[dict]:
         m = re.match(r"^# (\d+)\. (.+)$", line)
         if m:
             groups.append({"label": f"테마 {m.group(1)}", "title": m.group(2).strip(),
-                           "level": "고급", "blurb": "", "form": "", "lessons": []})
+                           "level": "중급", "levelText": "중급 · 고급",
+                           "levels": ["중급", "고급"],
+                           "blurb": "", "form": "", "lessons": []})
             italic = False
             continue
         m = re.match(r"^# 워밍업 은행 — (.+)$", line)
         if m:
             groups.append({"label": "워밍업 은행", "title": m.group(1).strip(),
-                           "level": "고급", "blurb": "", "form": "고르기",
+                           "level": "중급", "levelText": "중급 · 고급",
+                           "levels": ["중급", "고급"],
+                           "blurb": "", "form": "고르기",
                            "warmup": True, "lessons": []})
             italic = False
             continue
@@ -433,18 +437,28 @@ def parse_freetalking() -> list[dict]:
                 g["form"] = m.group(1)
             continue
 
-        m = re.match(r"^(\d+)\. \*\*(.+?)\*\*(?: — (.+?))?\s*(`\[.+?\]`)?\s*$", line)
+        # Editorial flags have appeared both as `[깊게]` and as
+        # `` `[깊게]` `` in the TOC.  Keep either spelling out of the
+        # observable outcome so the catalog can match the generated course
+        # plan, which records the flag after the lesson title.
+        m = re.match(
+            r"^(\d+)\. \*\*(.+?)\*\*(?: — (.*?))?"
+            r"(?:\s+`?\[([^\]]+)\]`?)?\s*$",
+            line,
+        )
         if m:
             g["lessons"].append({"n": int(m.group(1)), "title": m.group(2).strip(),
-                                 "sub": plain(m.group(4) or "").strip("[]"),
+                                 "sub": plain(m.group(4) or ""),
                                  "can": plain(m.group(3) or ""),
-                                 "canLabel": "이야기한다", "level": "고급", "chips": []})
+                                 "canLabel": "이야기한다", "level": "중급",
+                                 "levels": ["중급", "고급"], "chips": []})
             continue
         m = re.match(r"^(\d+)\. (.+?) \*\*vs\*\* (.+)$", line)
         if m and g.get("warmup"):
             g["lessons"].append({"n": int(m.group(1)),
                                  "title": f"{plain(m.group(2))} vs {plain(m.group(3))}",
-                                 "sub": "", "can": "", "canLabel": "", "level": "고급",
+                                 "sub": "", "can": "", "canLabel": "", "level": "중급",
+                                 "levels": ["중급", "고급"],
                                  "chips": []})
     for group in groups:
         if group.get("warmup"):
@@ -494,8 +508,11 @@ def parse_pronunciation() -> list[dict]:
 
 # -------------------------------------------------- 이미 써 놓은 덱 찾아 붙이기
 
-def deck_index(track: str) -> dict[str, str]:
-    """다 쓴 덱을 그 과의 목차 제목으로 찾아 준다: {목차 제목: korean/ 기준 경로}
+def deck_index(track: str) -> dict[str, list[dict]]:
+    """다 쓴 덱을 그 과의 목차 제목으로 찾아 준다.
+
+    한 주제에 중급·고급 덱이 함께 있을 수 있으므로 값은 경로 하나가 아니라
+    ``[{href, level}, ...]`` 이다.
 
     **파일이 있다고 다 쓴 과가 아니다.** `new_lesson.py` 는 페이지가 한 장도 없는
     골격을 먼저 깔아 두므로(`.phone` 이 비어 있는 lesson.html), 다 쓴 덱은 페이지가
@@ -507,17 +524,29 @@ def deck_index(track: str) -> dict[str, str]:
     번호만으로 트랙 전체에서 과를 찾지 않는 이유는 트랙 3·4 의 과 번호가 코스마다 1부터
     다시 시작하기 때문이다 — 거기서는 코스를 거치지 않으면 과를 특정할 수 없다.
     """
-    out: dict[str, str] = {}
+    out: dict[str, list[dict]] = {}
     for deck in sorted((TRACKS / track).glob("courses/*/lessons/*/lesson.html")):
         if "data-act=" not in deck.read_text(encoding="utf-8"):
             continue                                   # 아직 페이지가 없는 골격
         slug = deck.parent.name
         n = int(m.group(1)) if (m := re.match(r"(\d+)-", slug)) else 0
-        title = course_titles(deck.parent.parent.parent / "course.yaml").get(n, "")
+        course_path = deck.parent.parent.parent / "course.yaml"
+        course_text = course_path.read_text(encoding="utf-8")
+        title = course_titles(course_path).get(n, "")
         # 덱을 쓴 과의 줄은 `✓ <슬러그><제목>` 이라 슬러그가 제목 앞에 붙어 있다
         if title.startswith(slug):
             title = title[len(slug):].strip()
-        out[title or slug] = str(deck.relative_to(ROOT))
+        # `[깊게]` is an editorial/sensitivity flag, not part of the lesson's
+        # learner-facing title.  The TOC parser exposes it separately as the
+        # lesson sublabel, while plan_courses.py intentionally records it in
+        # the course comment.  Normalize the comment before title matching.
+        title = re.sub(r"\s+\[깊게\]\s*$", "", title)
+        level_match = re.search(r"^  # podo:level: (.+)$", course_text, re.MULTILINE)
+        level = level_match.group(1).strip() if level_match else ""
+        out.setdefault(title or slug, []).append({
+            "href": str(deck.relative_to(ROOT)),
+            "level": level,
+        })
     return out
 
 
@@ -544,15 +573,17 @@ def attach_decks(track: str, groups: list[dict]) -> list[dict]:
     for g in groups:
         for l in g["lessons"]:
             full = f"{l['title']} — {l['sub']}" if l.get("sub") else l["title"]
-            href = idx.pop(full, None) or idx.pop(l["title"], None)
-            if href:
-                l["deck"] = href
-                made.append({"n": l["n"], "title": l["title"], "href": href,
-                             "group": g.get("label", "")})
-    for orphan, href in idx.items():
+            decks = idx.pop(full, None) or idx.pop(l["title"], None)
+            if decks:
+                l["decks"] = decks
+                for deck in decks:
+                    made.append({"n": l["n"], "title": l["title"], **deck,
+                                 "group": g.get("label", "")})
+    for orphan, decks in idx.items():
         # 덱은 다 썼는데 목차의 과에 못 붙었다 — 대개 course.yaml 의 ✓ 줄이 낡은 것이라
         # plan_courses.py 를 다시 돌리면 된다. 조용히 빠뜨리면 카탈로그에서 영영 안 보인다.
-        print(f"   ! {track}: 목차에서 못 찾은 덱 — {orphan} ({href})")
+        hrefs = ", ".join(deck["href"] for deck in decks)
+        print(f"   ! {track}: 목차에서 못 찾은 덱 — {orphan} ({hrefs})")
     return made
 
 
@@ -570,10 +601,11 @@ def count_by_level(groups: list[dict]) -> dict[str, int]:
     """워밍업 은행은 과가 아니라 5분짜리 여는 질문이라 과 수에 넣지 않는다."""
     out: dict[str, int] = {}
     for g in groups:
-        lv = g.get("level") or ""
-        if not lv or g.get("warmup"):
+        levels = g.get("levels") or [g.get("level") or ""]
+        if not any(levels) or g.get("warmup"):
             continue
-        out[lv] = out.get(lv, 0) + len(g["lessons"])
+        for lv in levels:
+            out[lv] = out.get(lv, 0) + len(g["lessons"])
     return out
 
 
@@ -626,14 +658,15 @@ def build() -> dict:
             "groups": ctx,
         },
         {
-            "id": "4-freetalking", "no": 4, "ko": "고급 프리토킹", "en": "Advanced Freetalking",
+            "id": "4-freetalking", "no": 4, "ko": "중급·고급 프리토킹", "en": "Intermediate & Advanced Freetalking",
             "glyph": "話", "status": "open", "accent": "#0080a8", "tint": "#e9f6fa",
-            "unitWord": "테마", "lessonWord": "주제",
-            "desc": "새로 외울 문법은 없습니다. 말이 나오는 주제와, 25분 안에서 학습자 속도에 맞춰 꺼내 쓰는 질문 사다리만 있습니다. "
+            "unitWord": "테마", "unitCount": 10, "lessonWord": "레슨",
+            "desc": "같은 말이 나오는 주제를 중급과 고급 두 버전으로 제공합니다. 고급을 먼저 쓰고, 중급은 지문과 어려운 질문의 한국어 부담만 낮춥니다. "
                     "끝이 없는 트랙이라 주제는 매주 늘어납니다.",
             "note": "한 세션은 25분입니다. 질문 여덟 개는 완료 목록이 아니라 넉넉한 콘텐츠 풀이라, 빠르면 전부 쓰고 천천히 길게 말하면 일부만 진행합니다.",
-            "stats": [("주제", free_topics), ("테마", len([g for g in free if not g.get('warmup')])),
+            "stats": [("주제", free_topics), ("레벨", 2), ("레슨", free_topics * 2),
                       ("워밍업", free_warmups)],
+            "totalMultiplier": 2,
             "groups": free,
         },
         {
@@ -652,10 +685,12 @@ def build() -> dict:
     for t in tracks:
         t["stats"] = [{"k": k, "v": v} for k, v in t["stats"]]
         t["dist"] = count_by_level(t["groups"])
-        spans = [lv for g in t["groups"] for lv in level_span(g.get("levelText") or g.get("level") or "")
-                 if g.get("levelText") or g.get("level")]
+        spans = [lv for g in t["groups"]
+                 for lv in (g.get("levels") or level_span(g.get("levelText") or g.get("level") or ""))
+                 if g.get("levels") or g.get("levelText") or g.get("level")]
         t["span"] = [lv for lv in LEVELS if lv in spans]
-        t["total"] = sum(len(g["lessons"]) for g in t["groups"] if not g.get("warmup"))
+        t["total"] = (sum(len(g["lessons"]) for g in t["groups"] if not g.get("warmup"))
+                      * t.get("totalMultiplier", 1))
         t["decks"] = attach_decks(t["id"], t["groups"])
         mark_first_lesson(t["groups"])
 
@@ -696,7 +731,8 @@ def main() -> None:
     for t in data["tracks"]:
         made = f" · 완성 덱 {len(t['decks'])}" if t["decks"] else ""
         print(f"   {t['no']}. {t['ko']:<10} {t['total']:>4} {t['lessonWord']} · "
-              f"{len(t['groups'])} {t['unitWord']} · {' '.join(t['span']) or '전 레벨'}{made}")
+              f"{t.get('unitCount', len(t['groups']))} {t['unitWord']} · "
+              f"{' '.join(t['span']) or '전 레벨'}{made}")
     print(f"   합계 {data['totals']['lessons']} 레슨 · {data['totals']['units']} 단원 · "
           f"{data['totals']['patterns']} 패턴 · 완성 덱 {data['totals']['decks']}")
 

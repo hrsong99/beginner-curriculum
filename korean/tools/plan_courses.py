@@ -333,16 +333,23 @@ def plan_track(track: pathlib.Path, dry: bool, only_course: str | None = None) -
     root, seen, written_n = track / "courses", set(), 0
     print(f"\n{track.name}")
 
+    used_class_levels: set[str] = set()
     for i, course in enumerate(courses, start=1):
-        # Advance in hundredths across the entire 100-level section. Persist
-        # three decimals so the nine insertion positions between primary slots
-        # are visible: 200.010, 200.020, ... 200.990, 201.000, 201.010.
-        if i > 9999:
-            print(f"    ! {track.name} has more than 9,999 courses — the band is full")
+        # Most courses advance by .010 across the 100-level section. A parser
+        # may reserve an explicit thousandth slot when an existing natural key
+        # must stay fixed while a paired course is inserted beside it. Free
+        # talking uses .009/.010, .019/.020, ... for Intermediate/Advanced.
+        slot = course.get("classLevelSlot", i * 10)
+        if not isinstance(slot, int) or not 1 <= slot <= 99_999:
+            print(f"    ! {course['slug']}: classLevelSlot must be an integer "
+                  "from 1 to 99,999")
             return 0
-        level_hundredths = cfg["band"] * 100 + i
-        class_level = (f"{level_hundredths // 100}."
-                       f"{(level_hundredths % 100) * 10:03d}")
+        class_level_units = cfg["band"] * 1000 + slot
+        class_level = f"{class_level_units // 1000}.{class_level_units % 1000:03d}"
+        if class_level in used_class_levels:
+            print(f"    ! {course['slug']}: duplicate classLevel {class_level}")
+            return 0
+        used_class_levels.add(class_level)
         if only_course is not None and course["slug"] != only_course:
             continue
         cdir = root / course["slug"]

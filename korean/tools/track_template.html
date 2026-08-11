@@ -179,7 +179,8 @@
     width: 100%; padding: 12px 13px; border: 0; border-radius: var(--radius-sm); background: none; font: inherit; text-align: left; cursor: pointer; }
   /* 덱이 나와 있는 과에만 붙는 문. 여기는 4단이라 트랙색을 쓰지 않는다 —
      색을 여기까지 내리면 펼친 과 안의 살구색 mark 가 묻힌다. */
-  .deck { flex: 0 0 auto; margin-right: 13px; padding: 5px 11px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: #fff;
+  .deck-links { flex: 0 0 auto; display: flex; gap: 5px; margin-right: 13px; }
+  .deck { flex: 0 0 auto; padding: 5px 11px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: #fff;
     color: var(--ink-2); font-size: 11.5px; font-weight: 700; white-space: nowrap; }
   .deck:hover { border-color: var(--ink); color: var(--ink); }
   .deck .ext { color: var(--ink-4); font-size: 10px; }
@@ -204,7 +205,7 @@
     background: color-mix(in srgb, var(--tint) 58%, white); border-radius: var(--radius); box-shadow: none; }
   .lesson.open .lrow { padding-right: 16px; }
   .lesson.open .lrow-btn { grid-template-columns: auto minmax(0,1fr); gap: 12px; padding: 17px 18px 12px; }
-  .lesson.open .deck { margin-right: 0; }
+  .lesson.open .deck-links { margin-right: 0; }
   .lesson.open .lrow-btn:hover { background: transparent; }
   .lesson.open .lno { padding: 3px 8px; border-radius: var(--radius-sm); background: var(--ac); color: #fff; font-weight: 750; }
   .lesson.open .ltitle { font-size: 16px; font-weight: 750; letter-spacing: -.02em; }
@@ -385,7 +386,7 @@ document.getElementById("tabs").innerHTML =
   const made = (T.decks || []).length;
   document.getElementById("band").innerHTML =
     `<h2 id="curriculum-title">커리큘럼</h2>
-     <p>${T.groups.length}개 ${esc(T.unitWord)}${made ? ` · 덱 ${made}` : ""}</p>`;
+     <p>${T.unitCount || T.groups.length}개 ${esc(T.unitWord)}${made ? ` · 덱 ${made}` : ""}</p>`;
 }
 
 const usedLevels = LEVELS.filter(lv => T.dist[lv]);
@@ -494,10 +495,12 @@ function lessonRow(l, groupIndex, lessonIndex) {
   const firstTag = l.first ? `<span class="first-tag">${esc(firstLabel)}</span>` : "";
   const no = String(l.n).padStart(2, "0");
   // 덱이 있으면 그 과에서 곧장 수업 화면으로 나간다 — 카탈로그를 잃지 않도록 새 탭에서.
-  const deck = l.deck
-    ? `<a class="deck" href="../${esc(l.deck)}" target="_blank" rel="noopener"
-         title="${esc(l.title)} 덱을 새 탭에서 엽니다">덱 열기 <span class="ext">↗</span></a>`
-    : "";
+  const variants = l.decks || (l.deck ? [{href:l.deck, level:""}] : []);
+  const showLevels = (l.levels || []).length > 1 || variants.length > 1;
+  const deck = variants.length ? `<div class="deck-links">${variants.map(d =>
+    `<a class="deck" href="../${esc(d.href)}" target="_blank" rel="noopener"
+       title="${esc(l.title)}${d.level ? ` · ${esc(d.level)}` : ""} 덱을 새 탭에서 엽니다">${showLevels && d.level ? esc(d.level) : "덱 열기"} <span class="ext">↗</span></a>`
+  ).join("")}</div>` : "";
   const detailId = `group-${groupIndex + 1}-lesson-${lessonIndex + 1}-detail`;
   return `<div class="lesson" data-text="${esc([l.title, l.sub, l.can, l.scene, (l.chips||[]).join(" "), (l.notes||[]).map(n=>n.v).join(" ")].join(" ").toLowerCase())}">
     <div class="lrow">
@@ -527,12 +530,15 @@ function group(g, index) {
   }
 
   const bodyId = `group-${index + 1}-body`;
-  return `<div class="group" data-lv="${esc(g.level || "")}">
+  const groupLevels = g.levels || (g.level ? [g.level] : []);
+  const levelTags = groupLevels.map(lv =>
+    `<span class="lv-tag"><i style="background:${lvColor(lv)}"></i>${esc(lv)}</span>`).join("");
+  return `<div class="group" data-lv="${esc(groupLevels.join(" "))}">
     <button class="ghead" type="button" aria-expanded="false" aria-controls="${bodyId}">
       <span class="gnum">${esc(g.label)}</span>
       <span class="gtitle">${esc(g.title)}${g.subtitle ? `<em>${esc(g.subtitle)}</em>` : ""}</span>
       <span class="gmeta">${g.peak ? `<span>핵심 ${g.peak}과까지</span>` : ""}${g.form ? `<span>${esc(g.form)}</span>` : ""}
-        ${g.level ? `<span class="lv-tag"><i style="background:${lvColor(g.level)}"></i>${esc(g.levelText || g.level)}</span>` : ""}
+        ${levelTags}
         <span>${g.lessons.length}${esc(T.lessonWord)}</span><span class="caret"></span></span>
     </button>
     <div class="gbody" id="${bodyId}">
@@ -579,7 +585,8 @@ function apply() {
   const q = $q.value.trim().toLowerCase();
   let hits = 0, shown = 0;
   document.querySelectorAll(".group").forEach(g => {
-    const lvOk = !activeLevels.size || activeLevels.has(g.dataset.lv);
+    const groupLevels = new Set(g.dataset.lv.split(" ").filter(Boolean));
+    const lvOk = !activeLevels.size || [...activeLevels].some(lv => groupLevels.has(lv));
     let inGroup = 0;
     g.querySelectorAll(".lesson").forEach(l => {
       const ok = lvOk && (!q || l.dataset.text.includes(q));
