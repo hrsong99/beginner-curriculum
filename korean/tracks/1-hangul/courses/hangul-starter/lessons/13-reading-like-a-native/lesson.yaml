@@ -17,10 +17,9 @@ spec:
   # ---- 아래는 레포에만 남는다. DB 로 가지 않는다 ----
   teaches:
     patterns:
-      - 연음 *(받침이 뒤의 빈 ㅇ으로 넘어갑니다 — 겹받침에서도)*
-      - ㅎ 약화
-      - 비음화
-    canDo: 한국어→한구거 · 음악→으막 · 좋아요→조아요 · 값이→갑씨 · 한국말→한궁말 · 십만→심만
+      - 연음 (겹받침 포함)
+      - ㅎ 변화
+    canDo: 한국어→한구거 · 음악→으막 · 좋아요→조아요 · 많다→만타
   prerequisites: []
   source: podo-curriculum-public 1-hangul/hangul-starter · 13
 

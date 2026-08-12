@@ -6,19 +6,45 @@
   <meta name="google" content="notranslate">
   <meta name="podo:lesson-id" content="13-reading-like-a-native">
   <meta name="podo:level" content="왕초급">
-  <meta name="podo:content-version" content="2026-08-10">
+  <meta name="podo:content-version" content="2026-08-12">
   <meta name="podo:title-ko" content="한국 사람처럼 읽기">
   <meta name="podo:title-en" content="Reading like a native">
   <meta name="podo:title-ja" content="韓国の人みたいに読む">
   <title>한국 사람처럼 읽기 — PODO 韓国語</title>
   <link rel="stylesheet" href="../../../../../../runtime/css/lesson-card.css">
   <link rel="stylesheet" href="../../../../../../runtime/css/trial.css">
+  <style>
+    /* On pronunciation listening pages, the real spelling is a fixed prompt;
+       only the two things that might have been heard are buttons. */
+    .tap-row.sound-choice { grid-template-columns: 108px 1fr 1fr; }
+    .sound-prompt {
+      min-width: 0;
+      text-align: center;
+      color: #1c1c1c;
+      font-size: 25px;
+      font-weight: 800;
+      line-height: 1.15;
+      word-break: keep-all;
+    }
+    .sound-prompt small {
+      display: block;
+      margin-top: 6px;
+      color: var(--gray-500);
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .tap-grid.rows.words .sound-choice .tap-tile {
+      height: 92px;
+      font-size: 27px;
+    }
+  </style>
 </head>
 <body>
   <div class="phone">
 
     <!-- ================================================================
-         과 13 · 한국 사람처럼 읽기 — 연음 · ㅎ 약화 · 비음화
+         과 13 · 한국 사람처럼 읽기 — 연음 · ㅎ 변화
 
          For twelve lessons the deal has been "a letter is read as
          itself", and this is the lesson that breaks it. So the second
@@ -26,12 +52,10 @@
          다 맞아요 — the learner has NOT been reading wrong. Skip that
          sentence and every page after it reads as a correction.
 
-         The three changes are not worth the same and do not get the
-         same space. 연음 is by far the most common and takes Part 1
-         (seven pages, two rule cards); ㅎ 약화 is one clean rule and
-         takes four; 비음화 is the least predictable, so it stays on the
-         two cases that never vary (ㄱ→ㅇ, ㅂ→ㅁ before ㅁ/ㄴ) and takes
-         four. Everything past that is the three of them mixed.
+         This lesson has exactly two outcomes. Part 1 applies 연음,
+         including double batchim. Part 2 decides what final ㅎ does:
+         disappear before ㅇ or add breath before ㄱ·ㄷ·ㅈ. Nasalization
+         and post-batchim tensification belong to the pronunciation track.
 
          No mouth photos anywhere in this deck. They exist for the six
          basic vowels and they say "this is what your lips do" — none of
@@ -50,11 +74,11 @@
     <div class="transition-page" data-page-id="lesson-goal" data-act="한국 사람처럼">
       <span class="transition-kicker">목표</span>
       <h2 class="transition-title">오늘의 목표 <span class="title-ja">(今日のゴール)</span></h2>
-      <p class="section-subtitle"><span class="ko">오늘은 새 글자가 없어요. 대신 쓰는 것과 소리가 다른 세 가지를 배워요.</span><span class="ja">今日は新しい文字はありません。かわりに、書き方と音が違う3つを習います。</span></p>
+      <p class="section-subtitle"><span class="ko">오늘은 새 글자가 없어요. 받침 넘기기와 ㅎ 소리 변화, 두 가지만 연습해요.</span><span class="ja">今日は新しい文字はありません。パッチムの移動と ㅎ の音の変化、この2つだけを練習します。</span></p>
       <div class="known">
         <div class="known-row"><span class="k">한국어</span><span class="j">韓国語<small>言うときは「한구거」</small></span></div>
         <div class="known-row"><span class="k">좋아요</span><span class="j">いいです<small>言うときは「조아요」</small></span></div>
-        <div class="known-row"><span class="k">한국말</span><span class="j">韓国のことば<small>言うときは「한궁말」</small></span></div>
+        <div class="known-row"><span class="k">많다</span><span class="j">多い<small>言うときは「만타」</small></span></div>
       </div>
     </div>
 
@@ -83,12 +107,12 @@
           <span class="sw-to">조아요</span>
         </div>
         <div class="swap-row">
-          <span class="translation">韓国のことば</span>
-          <span class="sw-from">한국말</span>
-          <span class="sw-to">한궁말</span>
+          <span class="translation">多い</span>
+          <span class="sw-from">많다</span>
+          <span class="sw-to">만타</span>
         </div>
       </div>
-      <div class="hint"><span class="hint-chip">書くときは「한국어」のまま</span><span class="hint-chip">今日のルールは3つだけ</span></div>
+      <div class="hint"><span class="hint-chip">書くときは「한국어」のまま</span><span class="hint-chip">変わるのは文字ではなく音</span></div>
     </div>
 
     <!-- Part 1 · 연음. It is first and it is the longest because it is
@@ -98,7 +122,7 @@
     <div class="transition-page" data-page-id="linking-intro">
       <span class="transition-kicker">パート 1</span>
       <h2 class="transition-title">받침이 넘어가요 <span class="title-ja">(パッチムが移る)</span></h2>
-      <p class="section-subtitle"><span class="ko">첫 번째예요. 오늘 배우는 세 가지 중에서 이게 제일 많이 나와요.</span><span class="ja">1つめ。今日習う3つのなかで、これがいちばんよく出ます。</span></p>
+      <p class="section-subtitle"><span class="ko">첫 번째예요. 오늘 연습할 변화 중에서 이게 제일 많이 나와요.</span><span class="ja">1つめ。今日練習する変化のなかで、これがいちばんよく出ます。</span></p>
     </div>
 
     <!-- the rule, and the second box is not padding: without it the
@@ -147,19 +171,20 @@
       </div>
     </div>
 
-    <!-- drill 2 of 3 · both tiles in a row are the SAME word — one spelt
-         out letter by letter, one as it is actually said. That is the
-         only difference the ear has to catch, and it is the lesson.
+    <!-- drill 2 of 3 · the standard spelling stays fixed at the left. The
+         two buttons are explicitly possible heard forms, so a phonetic
+         respelling can never be mistaken for a second legitimate spelling.
          The answer side alternates (R·L·R) so a learner cannot score 3/3
          by tapping one column. -->
     <div class="section" data-page-id="listen-linking">
-      <h2 class="section-title">듣고 고르기 <span class="title-ja">(聞いて選ぼう)</span></h2>
-      <p class="section-subtitle"><span class="ko">제가 읽을 테니까 잘 듣고 맞는 쪽을 눌러 보세요.</span><span class="ja">私が読むので、よく聞いて正しいほうをタップしてください。</span></p>
-      <div class="tutor-note">표시된 쪽을 한 줄에 하나씩, 적힌 그대로 읽어 주세요.</div>
+      <h2 class="section-title">어떻게 들려요? <span class="title-ja">(どう聞こえる？)</span></h2>
+      <p class="section-subtitle"><span class="ko">왼쪽은 쓰는 단어예요. 두 버튼은 모두 들리는 소리를 적은 거예요. 제가 읽는 쪽을 눌러 보세요.</span><span class="ja">左は書く言葉です。ボタンはどちらも音を表しています。私が読むほうをタップしてください。</span></p>
+      <div class="tutor-note">한구거 · 으막 · 바름을 한 줄에 하나씩 자연스럽게 읽어 주세요.</div>
+      <div class="hint"><span class="hint-chip">左＝書く言葉</span><span class="hint-chip">ボタン＝音だけ</span></div>
       <div class="tap-grid rows words" data-sync-id="tiles-listen-linking" data-sync-kind="selection" data-sync-state="right wrong">
-        <div class="tap-row"><span class="tap-n">①</span><button class="tap-tile" data-sync-option="한국어">한국어</button><button class="tap-tile" data-ok="1" data-sync-option="한구거">한구거</button></div>
-        <div class="tap-row"><span class="tap-n">②</span><button class="tap-tile" data-ok="1" data-sync-option="으막">으막</button><button class="tap-tile" data-sync-option="음악">음악</button></div>
-        <div class="tap-row"><span class="tap-n">③</span><button class="tap-tile" data-sync-option="발음">발음</button><button class="tap-tile" data-ok="1" data-sync-option="바름">바름</button></div>
+        <div class="tap-row sound-choice"><span class="sound-prompt">한국어<small>韓国語</small></span><button class="tap-tile" data-sync-option="한구어">한구어</button><button class="tap-tile" data-ok="1" data-sync-option="한구거">한구거</button></div>
+        <div class="tap-row sound-choice"><span class="sound-prompt">음악<small>音楽</small></span><button class="tap-tile" data-ok="1" data-sync-option="으막">으막</button><button class="tap-tile" data-sync-option="으악">으악</button></div>
+        <div class="tap-row sound-choice"><span class="sound-prompt">발음<small>発音</small></span><button class="tap-tile" data-sync-option="바음">바음</button><button class="tap-tile" data-ok="1" data-sync-option="바름">바름</button></div>
       </div>
     </div>
 
@@ -212,16 +237,17 @@
       </div>
     </div>
 
-    <!-- Part 2 · ㅎ. Short, and it says so. -->
+    <!-- Part 2 · ㅎ. It disappears before ㅇ and adds breath before
+         ㄱ·ㄷ·ㅈ. Both are common faces of the same final ㅎ. -->
     <div class="transition-page" data-page-id="h-intro">
       <span class="transition-kicker">パート 2</span>
-      <h2 class="transition-title">ㅎ이 사라져요 <span class="title-ja">(ㅎ が消える)</span></h2>
-      <p class="section-subtitle"><span class="ko">두 번째예요. 이건 아주 짧아요. 규칙 하나면 끝이에요.</span><span class="ja">2つめ。これはとても短いです。ルール1つで終わりです。</span></p>
+      <h2 class="transition-title">ㅎ 소리가 바뀌어요 <span class="title-ja">(ㅎ の音が変わる)</span></h2>
+      <p class="section-subtitle"><span class="ko">두 번째예요. ㅎ 뒤에 어떤 글자가 오는지 보세요.</span><span class="ja">2つめ。ㅎ のあとに、どの文字が来るかを見ましょう。</span></p>
     </div>
 
     <div class="section" data-page-id="h-rule">
-      <h2 class="section-title">받침 ㅎ <span class="title-ja">(パッチムの ㅎ)</span></h2>
-      <p class="section-subtitle"><span class="ko">받침 ㅎ은 뒤에 ㅇ이 오면 소리가 없어져요. 넘어가지 않고 그냥 사라져요.</span><span class="ja">パッチムの ㅎ は、次に ㅇ が来ると音が消えます。移るのではなく、消えます。</span></p>
+      <h2 class="section-title">받침 ㅎ의 두 얼굴 <span class="title-ja">(パッチム ㅎ の2つの顔)</span></h2>
+      <p class="section-subtitle"><span class="ko">뒤에 ㅇ이 오면 ㅎ이 사라져요. ㄱ·ㄷ·ㅈ이 오면 바람을 더해서 ㅋ·ㅌ·ㅊ으로 읽어요.</span><span class="ja">次が ㅇ なら ㅎ は消えます。ㄱ・ㄷ・ㅈ なら息を足して、ㅋ・ㅌ・ㅊ と読みます。</span></p>
       <div class="batchim">
         <div class="bt-box">
           <span class="bt-eq">
@@ -232,18 +258,28 @@
           <span class="bt-head">ㅎ ＋ ㅇ<small>ㅎ は音を残さずに消える</small></span>
           <span class="bt-ex"><span>좋아요 → <b>조아요</b></span><span>넣어요 → <b>너어요</b></span></span>
         </div>
+        <div class="bt-box">
+          <span class="bt-eq">
+            <span class="bt-syls"><span class="bt-syl on">많</span><span class="bt-syl">다</span></span>
+            <span class="bt-arrow" aria-hidden="true">→</span>
+            <span class="bt-out">만타</span>
+          </span>
+          <span class="bt-head">ㅎ ＋ ㄱ · ㄷ · ㅈ<small>息を足して ㅋ・ㅌ・ㅊ</small></span>
+          <span class="bt-ex"><span>좋다 → <b>조타</b></span><span>싫다 → <b>실타</b></span></span>
+        </div>
       </div>
-      <div class="hint"><span class="hint-chip">消えるのは、次が ㅇ のときだけ</span></div>
+      <div class="hint"><span class="hint-chip">ㅇ の前では消える</span><span class="hint-chip">ㄱ・ㄷ・ㅈ の前では強い息</span></div>
     </div>
 
     <div class="section" data-page-id="listen-h-drop">
-      <h2 class="section-title">듣고 고르기 <span class="title-ja">(聞いて選ぼう)</span></h2>
-      <p class="section-subtitle"><span class="ko">제가 읽을 테니까 잘 듣고 맞는 쪽을 눌러 보세요.</span><span class="ja">私が読むので、よく聞いて正しいほうをタップしてください。</span></p>
-      <div class="tutor-note">표시된 쪽을 한 줄에 하나씩, 적힌 그대로 읽어 주세요.</div>
+      <h2 class="section-title">어떻게 들려요? <span class="title-ja">(どう聞こえる？)</span></h2>
+      <p class="section-subtitle"><span class="ko">왼쪽은 쓰는 단어예요. 두 버튼은 모두 들리는 소리를 적은 거예요. 제가 읽는 쪽을 눌러 보세요.</span><span class="ja">左は書く言葉です。ボタンはどちらも音を表しています。私が読むほうをタップしてください。</span></p>
+      <div class="tutor-note">조아요 · 만타 · 실타를 한 줄에 하나씩 자연스럽게 읽어 주세요.</div>
+      <div class="hint"><span class="hint-chip">左＝書く言葉</span><span class="hint-chip">ボタン＝音だけ</span></div>
       <div class="tap-grid rows words" data-sync-id="tiles-listen-h-drop" data-sync-kind="selection" data-sync-state="right wrong">
-        <div class="tap-row"><span class="tap-n">①</span><button class="tap-tile" data-sync-option="좋아요">좋아요</button><button class="tap-tile" data-ok="1" data-sync-option="조아요">조아요</button></div>
-        <div class="tap-row"><span class="tap-n">②</span><button class="tap-tile" data-ok="1" data-sync-option="너어요">너어요</button><button class="tap-tile" data-sync-option="넣어요">넣어요</button></div>
-        <div class="tap-row"><span class="tap-n">③</span><button class="tap-tile" data-sync-option="놓아요">놓아요</button><button class="tap-tile" data-ok="1" data-sync-option="노아요">노아요</button></div>
+        <div class="tap-row sound-choice"><span class="sound-prompt">좋아요<small>いいです</small></span><button class="tap-tile" data-sync-option="조하요">조하요</button><button class="tap-tile" data-ok="1" data-sync-option="조아요">조아요</button></div>
+        <div class="tap-row sound-choice"><span class="sound-prompt">많다<small>多い</small></span><button class="tap-tile" data-ok="1" data-sync-option="만타">만타</button><button class="tap-tile" data-sync-option="만다">만다</button></div>
+        <div class="tap-row sound-choice"><span class="sound-prompt">싫다<small>嫌だ</small></span><button class="tap-tile" data-sync-option="실다">실다</button><button class="tap-tile" data-ok="1" data-sync-option="실타">실타</button></div>
       </div>
     </div>
 
@@ -252,133 +288,43 @@
          많아요 need the hidden letter to move AND the ㅎ to go. -->
     <div class="section" data-page-id="h-reading">
       <h2 class="section-title">혼자 읽기 <span class="title-ja">(ひとりで読もう)</span></h2>
-      <p class="section-subtitle"><span class="ko">이번에도 혼자 읽어 보세요. ㅎ은 빼고요.</span><span class="ja">今度もひとりで読んでみましょう。ㅎ は抜いて。</span></p>
-      <div class="tutor-note">조아요 · 노아요 · 너어요 · 싸아요 · 시러요 · 마나요 입니다. 마지막 두 개는 겹받침이라 한 번 더 들려주세요.</div>
+      <p class="section-subtitle"><span class="ko">이번에도 혼자 읽어 보세요. ㅎ이 사라지는지, 바람을 더하는지 잘 보세요.</span><span class="ja">今度もひとりで読んでみましょう。ㅎ が消えるか、息を足すか、よく見てください。</span></p>
+      <div class="tutor-note">조아요 · 너어요 · 만타 · 실타 · 조타 · 노코 입니다. 두 종류를 번갈아 읽게 해 주세요.</div>
       <div class="read-grid words">
         <span class="read-chip">좋아요</span>
-        <span class="read-chip">놓아요</span>
         <span class="read-chip">넣어요</span>
-        <span class="read-chip">쌓아요</span>
-        <span class="read-chip">싫어요</span>
-        <span class="read-chip">많아요</span>
+        <span class="read-chip">많다</span>
+        <span class="read-chip">싫다</span>
+        <span class="read-chip">좋다</span>
+        <span class="read-chip">놓고</span>
       </div>
     </div>
 
-    <!-- Part 3 · 비음화. The least predictable of the three, so the deck
-         takes only the two cases that never vary and says nothing about
-         the rest. A half-learned rule here is worse than none: the
-         learner starts nasalising words that do not. -->
-    <div class="transition-page" data-page-id="nasal-intro">
-      <span class="transition-kicker">パート 3</span>
-      <h2 class="transition-title">코로 나오는 소리 <span class="title-ja">(鼻から出る音)</span></h2>
-      <p class="section-subtitle"><span class="ko">마지막이에요. 뒤에 ㅁ이나 ㄴ이 오면 앞 받침이 코로 나오는 소리로 바뀌어요. 두 가지만 알면 돼요.</span><span class="ja">最後です。次に ㅁ か ㄴ が来ると、前のパッチムが鼻から出る音に変わります。2つだけ知っていれば大丈夫です。</span></p>
-    </div>
-
-    <div class="section" data-page-id="nasal-rule">
-      <h2 class="section-title">바뀌는 두 가지 <span class="title-ja">(変わる2つ)</span></h2>
-      <p class="section-subtitle"><span class="ko">받침 ㄱ은 ㅇ으로, 받침 ㅂ은 ㅁ으로 바뀌어요. 제가 두 개 다 읽어 볼게요.</span><span class="ja">パッチムの ㄱ は ㅇ に、パッチムの ㅂ は ㅁ に変わります。私が2つとも読みます。</span></p>
-      <div class="batchim">
-        <div class="bt-box">
-          <span class="bt-eq">
-            <span class="bt-syls"><span class="bt-syl on">국</span><span class="bt-syl">말</span></span>
-            <span class="bt-arrow" aria-hidden="true">→</span>
-            <span class="bt-out">궁말</span>
-          </span>
-          <span class="bt-head">ㄱ ＋ ㅁ · ㄴ<small>ㄱ が ㅇ の音になる</small></span>
-          <span class="bt-ex"><span>한국말 → 한<b>궁말</b></span><span>국물 → <b>궁물</b></span></span>
-        </div>
-        <div class="bt-box">
-          <span class="bt-eq">
-            <span class="bt-syls"><span class="bt-syl on">십</span><span class="bt-syl">만</span></span>
-            <span class="bt-arrow" aria-hidden="true">→</span>
-            <span class="bt-out">심만</span>
-          </span>
-          <span class="bt-head">ㅂ ＋ ㅁ · ㄴ<small>ㅂ が ㅁ の音になる</small></span>
-          <span class="bt-ex"><span>십만 → <b>심만</b></span><span>십년 → <b>심년</b></span></span>
-        </div>
-      </div>
-    </div>
-
-    <div class="section" data-page-id="listen-nasal">
-      <h2 class="section-title">듣고 고르기 <span class="title-ja">(聞いて選ぼう)</span></h2>
-      <p class="section-subtitle"><span class="ko">제가 읽을 테니까 잘 듣고 맞는 쪽을 눌러 보세요.</span><span class="ja">私が読むので、よく聞いて正しいほうをタップしてください。</span></p>
-      <div class="tutor-note">표시된 쪽을 한 줄에 하나씩, 적힌 그대로 읽어 주세요.</div>
-      <div class="tap-grid rows words" data-sync-id="tiles-listen-nasal" data-sync-kind="selection" data-sync-state="right wrong">
-        <div class="tap-row"><span class="tap-n">①</span><button class="tap-tile" data-sync-option="한국말">한국말</button><button class="tap-tile" data-ok="1" data-sync-option="한궁말">한궁말</button></div>
-        <div class="tap-row"><span class="tap-n">②</span><button class="tap-tile" data-ok="1" data-sync-option="궁물">궁물</button><button class="tap-tile" data-sync-option="국물">국물</button></div>
-        <div class="tap-row"><span class="tap-n">③</span><button class="tap-tile" data-sync-option="십만">십만</button><button class="tap-tile" data-ok="1" data-sync-option="심만">심만</button></div>
-      </div>
-    </div>
-
-    <div class="section" data-page-id="nasal-reading">
-      <h2 class="section-title">혼자 읽기 <span class="title-ja">(ひとりで読もう)</span></h2>
-      <p class="section-subtitle"><span class="ko">여섯 개예요. 받침을 코로 내면서 읽어 보세요.</span><span class="ja">6つです。パッチムを鼻から出しながら読んでみましょう。</span></p>
-      <div class="tutor-note">한궁말 · 궁물 · 심만 · 방물관 · 심년 · 장년 입니다.</div>
-      <div class="read-grid words">
-        <span class="read-chip">한국말</span>
-        <span class="read-chip">국물</span>
-        <span class="read-chip">십만</span>
-        <span class="read-chip">박물관</span>
-        <span class="read-chip">십년</span>
-        <span class="read-chip">작년</span>
-      </div>
-    </div>
-
-    <!-- all three, unlabelled. Until now every page named which rule was
-         in play; here the learner has to decide, which is what reading a
-         real word is. -->
+    <!-- The two outcomes meet here. Until now each page named its rule;
+         here the learner decides between liaison and final-ㅎ behavior. -->
     <div class="section" data-page-id="mixed-reading">
-      <h2 class="section-title">섞어 읽기 <span class="title-ja">(まぜて読もう)</span></h2>
-      <p class="section-subtitle"><span class="ko">이번엔 세 가지를 다 섞었어요. 어떤 규칙인지 말하지 않을게요. 그냥 읽어 보세요.</span><span class="ja">今度は3つを全部まぜました。どのルールかは言いません。そのまま読んでみましょう。</span></p>
-      <div class="tutor-note">으막 · 조아요 · 궁물 · 한구거 · 갑씨 · 심만 입니다. 막히면 규칙 이름 대신 다시 들려주세요.</div>
+      <h2 class="section-title">두 가지 섞어 읽기 <span class="title-ja">(2つをまぜて読もう)</span></h2>
+      <p class="section-subtitle"><span class="ko">받침 넘기기와 ㅎ 변화를 섞었어요. 어떤 것인지 보고 읽어 보세요.</span><span class="ja">パッチムの移動と ㅎ の変化をまぜました。どちらか見て読んでみましょう。</span></p>
+      <div class="tutor-note">으막 · 조아요 · 갑씨 · 한구거 · 만타 · 실타 입니다. 막히면 두 규칙 중 어느 쪽인지 물어보세요.</div>
       <div class="read-grid words">
         <span class="read-chip">음악</span>
         <span class="read-chip">좋아요</span>
-        <span class="read-chip">국물</span>
-        <span class="read-chip">한국어</span>
         <span class="read-chip">값이</span>
-        <span class="read-chip">십만</span>
+        <span class="read-chip">한국어</span>
+        <span class="read-chip">많다</span>
+        <span class="read-chip">싫다</span>
       </div>
     </div>
 
-    <!-- the payoff, and .swap again on purpose: the deck opened with
-         three single words said twice, and it closes with three real
-         phrases said twice. Same component, so the learner reads the
-         page without being taught it. -->
-    <div class="section" data-page-id="native-swap">
-      <h2 class="section-title">한국 사람처럼 <span class="title-ja">(韓国の人みたいに)</span></h2>
-      <p class="section-subtitle"><span class="ko">이제 단어 두 개를 이어서 말해 볼까요? 윗줄은 쓰는 것, 아랫줄은 소리예요.</span><span class="ja">では、単語を2つつなげて言ってみましょうか。上の行は書き方、下の行は音です。</span></p>
-      <div class="tutor-note">아랫줄만 두 번씩 읽어 주세요. 학생이 아랫줄을 보고 따라 하면 됩니다.</div>
-      <div class="swap">
-        <div class="swap-row">
-          <span class="translation">韓国語の勉強</span>
-          <span class="sw-from">한국어 공부</span>
-          <span class="sw-to">한구거 공부</span>
-        </div>
-        <div class="swap-row">
-          <span class="translation">音楽、いいですね</span>
-          <span class="sw-from">음악 좋아요</span>
-          <span class="sw-to">으막 조아요</span>
-        </div>
-        <div class="swap-row">
-          <span class="translation">韓国語の発音</span>
-          <span class="sw-from">한국말 발음</span>
-          <span class="sw-to">한궁말 바름</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- the track always ends on a sign. 십만 원 runs two changes in one
-         breath (십만 → 심만, 만 원 → 마눤) and it is on every price tag;
-         좋아요 is the button they have already tapped a hundred times. -->
+    <!-- The track ends by applying only the two outcomes in real places. -->
     <div class="section" data-page-id="sign-reading">
       <h2 class="section-title">간판 읽기 <span class="title-ja">(看板を読もう)</span></h2>
       <p class="section-subtitle"><span class="ko">한국에 있다고 상상해 보세요. 소리 내어 읽어 보세요!</span><span class="ja">韓国にいると想像してみてください。声に出して読んでみましょう！</span></p>
-      <div class="tutor-note">한구거 · 심마눤 · 조아요 입니다. 마지막은 학생이 매일 누르는 버튼이라고 알려 주세요.</div>
+      <div class="tutor-note">한구거 · 조아요 · 시러요 입니다. 학생이 먼저 읽고, 두 규칙 중 어느 쪽인지 확인해 주세요.</div>
       <div class="grid">
         <div class="sign"><span class="korean xl">한국어</span><span class="english">語学教室の看板</span></div>
-        <div class="sign"><span class="korean xl">십만 원</span><span class="english">市場の値札</span></div>
         <div class="sign"><span class="korean xl">좋아요</span><span class="english">SNSのボタン</span></div>
+        <div class="sign"><span class="korean xl">싫어요</span><span class="english">アンケートの選択肢</span></div>
       </div>
     </div>
 
@@ -400,7 +346,7 @@
 
   <!-- ================================================================
        PAGER · 한 장씩 넘겨 보는 모드
-       The deck is 43 flat siblings under .phone, so paging is just
+       The deck is 15 flat siblings under .phone, so paging is just
        "show one, hide the rest" — no restructuring. Off by default:
        scrolling stays the ground truth (printing, Cmd+F, scanning
        ahead all rely on it), and this is the presentation layer.

@@ -17,6 +17,6 @@ Lesson numbers may restart per course. Always identify a lesson by both course c
 - [`009`](hangul-starter/lesson-009.md) 복습 — 모든 글자, 받침만 빼고
 - [`010`](hangul-starter/lesson-010.md) 받침 ① 울리는 소리
 - [`011`](hangul-starter/lesson-011.md) 받침 ② 막는 소리
-- [`012`](hangul-starter/lesson-012.md) 겹받침 — 글자 둘, 자리 하나
+- [`012`](hangul-starter/lesson-012.md) 겹받침 입문 — 글자 둘, 자리 하나
 - [`013`](hangul-starter/lesson-013.md) 한국 사람처럼 읽기
-- [`014`](hangul-starter/lesson-014.md) 마무리 — 무엇이든 읽는다
+- [`014`](hangul-starter/lesson-014.md) 마무리 — 낯선 단어도 읽는다

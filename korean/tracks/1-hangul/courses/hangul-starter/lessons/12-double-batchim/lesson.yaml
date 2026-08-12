@@ -7,9 +7,9 @@ spec:
   week: 12                      # → CLASS_WEEK. 코스 안에서 1..N 연속이어야 한다.
 
   title:
-    ko: 겹받침 — 글자 둘, 자리 하나
-    en: Double batchim — two letters, one slot
-    ja: 二重パッチム — 文字は2つ、席は1つ
+    ko: 겹받침 입문 — 글자 둘, 자리 하나
+    en: Double batchim starter — two letters, one slot
+    ja: 二重パッチム入門 — 文字は2つ、席は1つ
   decks:
     lecture:  { entry: lecture/index.html }    # 수업용  → CLASS_LEMONBOARD_KEY
     prestudy: { entry: prestudy/index.html }   # 예습용  → PRESTUDY_LEMONBOARD_KEY
@@ -17,7 +17,7 @@ spec:
   # ---- 아래는 레포에만 남는다. DB 로 가지 않는다 ----
   teaches:
     patterns:
-      - ㄺ ㄻ ㅀ
+      - 먼저 익힐 여섯 짝 ㄺ ㄻ ㅀ
       - ㅄ ㄳ ㄶ *(둘 중 하나만 소리 납니다 — 어느 쪽인지가 규칙)*
     canDo: 닭 · 삶 · 싫다 · 값 · 몫 · 많다
   prerequisites: []
