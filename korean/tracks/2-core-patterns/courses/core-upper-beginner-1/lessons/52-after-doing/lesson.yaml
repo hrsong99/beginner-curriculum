@@ -4,7 +4,7 @@ metadata:
   slug: 52-after-doing
 
 spec:
-  week: 4                      # → CLASS_WEEK. 코스 안에서 1..N 연속이어야 한다.
+  week: 7                      # → CLASS_WEEK. 코스 안에서 1..N 연속이어야 한다.
 
   title:
     ko: 밥을 먹은 후에 산책해요
