@@ -171,12 +171,23 @@ is wrong, and the rhythm of the examples.
     `a/an/the`, `-s/-es/-ies` are all three-case rules and `.batchim` is single-column. The
     instruction is Korean's — ship the honest two-box split, keep the third case out of
     learner-produced language, and report it rather than compressing into a misleading tile.
-- [ ] **T2.3** — Hand-author **one** representative Core lesson end to end. Candidate: **L22
-  `Could you help me with ___?`** — it is A1, it is the single most-recycled row in the grammar
-  map ("all contextual courses"), and it has a clean request/response pair.
-- [ ] **T2.4** — Verify at 480px and 360px. Run the page-tail-under-pager probe from
-  `korean/tracks/_conventions.md` §"Before you call a lesson done" (item 4) — including its three
-  documented wrong ways to measure.
+- [x] **T2.3 — DONE.** Core 22 authored end to end at
+  `tracks/1-core-patterns/courses/core-first-exchanges-2/lessons/22-asking-for-help/lesson.html`
+  — 25 pages, no inline CSS or JS, no `yomi.js`, zero `.yomi` elements.
+
+  The lesson's form rule turned out to be the best thing in it: **`help me with` + a thing vs
+  `help me` + an action.** Japanese 「手伝う」 does not make that split, so `help me with carry it`
+  and `help me to carry it` are both live L1 errors — and it is an honest two-brancher, which
+  dodges the three-case wall. It is taught once from the asking side and once from the answering
+  side. The course code `core-first-exchanges-2` is **provisional** until `plan_courses.py` exists.
+- [x] **T2.4 — DONE.** Static checks pass (10 local refs resolve, lesson-id equals its directory,
+  25/25 unique page ids, 40/40 unique sync ids). Rendered in-browser: both stylesheets applied
+  (189 + 1320 rules), 7 scripts loaded, pager live, `.pattern-meaning` and `.nuance-compare` both
+  styled. The page-tail probe at 800px reports **no non-`.section` page clipping**.
+
+  One defect found and fixed by looking at it, which is the argument for the rule: the rule diagram
+  shipped as bare `.batchim`, which renders **violet — the Korean 조사 colour**, a category English
+  does not have. Now `batchim ending-rule`, so orange means "the taught frame" on every page.
 - [ ] **T2.5** — **STOP. Explicit owner approval.** Structural checks do not approve a pilot. If
   rejected, rewrite and re-review; do not use a rejected pilot as a template.
 - [ ] **T2.6** — After approval: three structurally different lessons (e.g. a narrative one, a

@@ -13,9 +13,29 @@ used. This is the one file a lesson-writer is expected to edit — **unless you 
 batch**, in which case report it and let the orchestrator write it. Ten writers editing one file is
 how the file gets lost.
 
-> **Status: seeded, nothing spent.** No English deck exists yet, so every ledger below is empty by
-> fact rather than by oversight. The first pilot deck fills the first rows. Do not treat an empty
-> table as permission to skip the ledger — treat it as the reason to start it correctly.
+> **Status: one deck written.** Core 22 (`Could you help me with ___?`) is the pilot and the
+> canonical deck for `1-core-patterns`. The ledgers below carry what it spent. Contextual and
+> Freetalking have no decks yet, so their rows are empty by fact rather than by oversight.
+
+---
+
+## The inline mark vocabulary in English
+
+**`.ending` means "the taught frame words" — the fixed language the learner has to retrieve.**
+It is the only inline accent an English deck uses, and it has exactly one meaning.
+
+This is a decision, not an inheritance. Korean's two accents are grammatical categories —
+`.topic` violet = 조사, `.ending` orange = 어미 — and English has neither. Rather than pick a
+second category arbitrarily, English spends one accent on one idea and leaves violet unused.
+
+Consequences a writer has to honour:
+
+- A rule diagram about the taught frame takes **`class="batchim ending-rule"`**, not bare
+  `.batchim`. Bare `.batchim` renders violet, which in this repo means 조사 — a category English
+  does not have and must not borrow. The pilot shipped violet first and it was wrong.
+- **`.topic` is unspent.** Do not reach for it as a spare slot. If a lesson genuinely teaches two
+  distinct pieces, report it — a second accent needs one human decision about what it *means*,
+  the same way Korean's third-accent gap does.
 
 ---
 
@@ -53,7 +73,8 @@ the learner meets today's pattern somewhere they have not been yet.
 
 | Scene | Where | Track |
 | --- | --- | --- |
-| *(none yet)* | | |
+| Airport check-in counter, too much luggage | Core 22 `in-the-wild` | core |
+| New office, moving boxes in | Core 22 `p3-model` (main dialogue, **not** available as a transfer scene) | core |
 
 **Assign scenes up front for a parallel batch, one per lesson**, and let the assignment travel in
 each writer's packet. Korean assigned 과 11–45 in advance precisely so parallel writers could not
@@ -74,7 +95,7 @@ over this list.
 
 | Track | Spent | By |
 | --- | --- | --- |
-| *(none yet)* | | |
+| 1-core-patterns | `I can carry the small one.` — the line the transfer scene lands on | Core 22 |
 
 ### Vocabulary in circulation
 
@@ -84,7 +105,16 @@ and this is where its per-track working copy lives once it does.
 
 Reuse what is already in circulation rather than inventing synonyms.
 
-**Core Patterns** — *(none yet)*
+**Core Patterns** — in circulation after Core 22. Reuse these rather than inventing synonyms:
+
+```
+box · suitcase · bag · menu · Wi-Fi · station · counter
+carry · find · help
+big · small · one (the big one / the small one — substitution, Core 20)
+```
+
+Supporting expressions heard but never asked for in a learner slot:
+`What do you need?` (Core 22) · `Anything else?` (Core 16) · `Do you need help?` (receptive)
 
 **Contextual English** — *(none yet)*
 
@@ -104,14 +134,18 @@ the TOC assigns it. Keep that restraint rather than quietly promoting a word to 
 and the packager only bundles paths written in the markup — so an invented filename 404s on the
 board while looking fine locally.
 
-Korean's assets live under `../korean/trial/assets/`. **Which of them English may reference is not
-yet decided** — the mascot and the stamp are brand-level and probably shared; the mouth-shape
-illustrations are hangul-vowel-specific and are not. Do not reference a Korean asset path from an
-English deck until this row is filled in.
+Korean's assets live under `korean/trial/assets/`. **Whether English may reference one is decided
+per asset, in the table below** — the test is whether the art carries anything Korean in it, not
+whether it happens to sit in the Korean folder. Check the file before adding a row; do not assume.
 
-| Asset | Covers | Path |
-| --- | --- | --- |
-| *(not yet decided)* | | |
+| Asset | Covers | Path | Shared? |
+| --- | --- | --- | --- |
+| Well-done stamp | the `stamp.js` mark | `korean/trial/assets/well-done.svg` | **yes** — checked, it is pure paths with no text in it, so nothing about it is Korean |
+| Mascot | brand pages | `korean/trial/assets/podo-character{,-point}.png` | untested — no English deck uses a brand page yet |
+| Mouth shapes | six Korean vowels | `korean/trial/assets/mouth/…` | **no** — hangul-specific. If an English pronunciation track ever needs mouth art it needs its own, drawn for English contrasts |
+
+Note the path: `trial/assets/` stayed inside `korean/` when the runtime was hoisted to the repo
+root, so from a lesson deck the assets are **one `../` shorter** than the runtime.
 
 ---
 
@@ -134,7 +168,11 @@ what is missing, build the page with what exists, and say so.
 
 | Needed | State | Why |
 | --- | --- | --- |
-| *(none recorded yet — the pilot deck will produce the first entries)* | | |
+| **Republish the runtime** | **blocking for class use** | `.pattern-meaning`, `.meaning-kicker` and `.nuance-compare` exist locally but are **not in the published CDN tag** (Korean's own queue says so). Core 22 uses all three. Until the runtime is republished the deck renders correctly for its author and **unstyled in class** — the exact failure this repo keeps warning about |
+| `.br-cn` sizing for loanwords | not written | 33px fits Korean's 2–3-character kanji. Katakana loanwords are longer: `スーツケース` wraps to two lines and makes its row taller than its neighbours. English will hit this constantly, because long loanwords are exactly the ones worth showing. Core 22 keeps `スーツケース` — dropping the lesson's best example to satisfy a layout constraint is the wrong trade |
+| A three-branch rule diagram | not written | inherited from Korean and **worse here**: `do/does/did`, `a/an/the` and `-s/-es/-ies` are all three-case, and `.batchim` is single-column. Core 22 dodged it (its rule is an honest two-brancher). The next lesson that does not, ships two boxes and reports it |
+| `.ko` / `.korean` class names | naming only, not a defect | they mean "the line the tutor reads" and "the target-language span". English decks reuse them as-is, because renaming is a runtime change touching 316 Korean decks. Worth knowing before someone reads an English deck and thinks it is mislabelled |
+| A second inline accent for English | not written | see the mark-vocabulary section above. Not needed yet |
 
 **Expect this table to fill up fast.** The Korean runtime was designed against Korean pedagogy, and
 several of its components encode assumptions that do not hold for English — the `.batchim` rule
