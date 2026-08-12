@@ -1,6 +1,15 @@
 # English Main Curriculum
 
+**Learner:** adult **Japanese speakers** learning English. All support text on the page is Japanese;
+English is reserved for the target language itself. **No katakana readings at any level** — see
+[`AGENTS.md`](./AGENTS.md) for why that rule inverts its Korean counterpart rather than copying it.
+
 **Goal:** take an adult beginner from first usable speaking frames to independent everyday and workplace conversation.
+
+> **Build status:** this folder is a curriculum specification plus its guardrails. **No lesson decks
+> exist yet.** [`BUILD-PLAN.md`](./BUILD-PLAN.md) is the ordered gap list; read it before proposing
+> work. Agents working here must read [`AGENTS.md`](./AGENTS.md) and
+> [`LESSON-CREATION-WORKFLOW.md`](./LESSON-CREATION-WORKFLOW.md) first.
 
 This folder adapts the teaching architecture in `korean/tracks/` to English. The central contract is the same:
 
