@@ -2868,7 +2868,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/10-remote-work-or-office/lesson.html`
-- sha256: `3ff191f2f2a42e790a2a3cf1b1b14c15e653e96a024ee32ae816b7f3e7b5a19d`
+- sha256: `a75ca818692b5e58bd55d2c268b5ee3ebe3cef5ee1ad6cd124851113f9c84306`
 - source kind: `article`
 
 #### `metadata`
@@ -2986,7 +2986,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `q2`
 
 - `question.ko` · KO: 앞으로 재택근무만 하거나 매일 출근한다면, 일하거나 공부하는 하루가 어떻게 달라질까요?
-- `question.ja` · JA: これから在宅だけ、または毎日出勤するなら、仕事や勉強をする一日はどう変わるでしょうか？
+- `question.ja` · JA: これから在宅勤務だけをするか、毎日出勤するなら、仕事や勉強をする一日はどう変わるでしょうか？
 - `tutorGuidance.ko` · KO: 주의: 직장 경험이 없으면 공부·프로젝트·취미 경험으로 바꿔도 됩니다.
 - `followUp.1.ko` · KO: 일을 시작하는 시간이 달라질까요?
 - `followUp.2.ko` · KO: 사람들과 소통하는 방식은 어때요?
@@ -3031,7 +3031,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/10-remote-work-or-office/lesson.html`
-- sha256: `4563e28e2342eb2024523d799949de183e6a184a0f6c7ce7c67089d3b3116717`
+- sha256: `ff71dc88ed1089f1ccbcdcab2577c7c18d79237f4dd6c80d7d5017465bdf18fa`
 - source kind: `article`
 
 #### `metadata`
@@ -3149,7 +3149,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `q2`
 
 - `question.ko` · KO: 앞으로 재택근무만 하거나 매일 출근한다면, 일하거나 공부하는 하루가 어떻게 달라질까요?
-- `question.ja` · JA: これから在宅だけ、または毎日出勤するなら、仕事や勉強をする一日はどう変わるでしょうか？
+- `question.ja` · JA: これから在宅勤務だけをするか、毎日出勤するなら、仕事や勉強をする一日はどう変わるでしょうか？
 - `tutorGuidance.ko` · KO: 주의: 직장 경험이 없으면 공부·프로젝트·취미 경험으로 바꿔도 됩니다.
 - `followUp.1.ko` · KO: 일을 시작하는 시간이 달라질까요?
 - `followUp.2.ko` · KO: 사람들과 소통하는 방식은 어때요?
@@ -3196,7 +3196,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/11-cafe-or-home-study/lesson.html`
-- sha256: `a47ba0722ad1340b4796b8d8265b83bb7532eafddb7f7aa239a7ef42752e094f`
+- sha256: `ee7d5b46f3e4e2a0ee1de52886122c2a1cffce7a3fc2425dbe84b739654626cf`
 - source kind: `article`
 
 #### `metadata`
@@ -3303,27 +3303,27 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 #### `q1`
 
-- `question.ko` · KO: 지금 고른다면 카페 공부 / 집 공부, 어느 쪽이에요?
-- `question.ja` · JA: 今選ぶなら、カフェでの勉強ですか、家での勉強ですか？
+- `question.ko` · KO: 지금 고른다면 카페 / 집, 어디에서 일하거나 공부하고 싶어요?
+- `question.ja` · JA: 今選ぶなら、カフェと家のどちらで仕事や勉強をしたいですか？
 - `followUp.1.ko` · KO: 왜 그 장소를 골랐어요?
-- `followUp.2.ko` · KO: 최근에도 그곳에서 공부했어요?
+- `followUp.2.ko` · KO: 최근에도 그곳에서 일하거나 공부했어요?
 - `followUp.3.ko` · KO: 반대 장소의 장점은 뭐예요?
 
 #### `q2`
 
-- `question.ko` · KO: 앞으로 한 달 동안 카페나 집 한 곳에서만 공부한다면, 공부 습관이 어떻게 달라질까요?
-- `question.ja` · JA: これから1か月、カフェか家の一方だけで勉強するなら、勉強の習慣はどう変わるでしょうか？
-- `followUp.1.ko` · KO: 공부를 시작하는 시간이 달라질까요?
+- `question.ko` · KO: 앞으로 한 달 동안 한 곳에서만 일하거나 공부한다면, 생활 습관이 어떻게 달라질까요?
+- `question.ja` · JA: これから1か月、一方の場所だけで仕事や勉強をするなら、生活習慣はどう変わるでしょうか？
+- `followUp.1.ko` · KO: 시작하는 시간이 달라질까요?
 - `followUp.2.ko` · KO: 준비해야 할 물건은 뭐예요?
 - `followUp.3.ko` · KO: 집중이 끊기면 어떻게 할 거예요?
 
 #### `q3`
 
-- `question.ko` · KO: 평소와 반대되는 장소에서 공부하는 게 더 나을 때는 언제예요?
-- `question.ja` · JA: 普段とは反対の場所で勉強するほうがよいのは、どんなときですか？
-- `followUp.1.ko` · KO: 어떤 과제를 할 때 그래요?
+- `question.ko` · KO: 평소와 반대되는 장소에서 일하거나 공부하는 게 더 나을 때는 언제예요?
+- `question.ja` · JA: 普段とは反対の場所で仕事や勉強をするほうがよいのは、どんなときですか？
+- `followUp.1.ko` · KO: 어떤 일을 할 때 그래요?
 - `followUp.2.ko` · KO: 소음과 편안함 중 무엇이 더 중요해요?
-- `followUp.3.ko` · KO: 몇 시간 공부하는지도 영향을 줘요?
+- `followUp.3.ko` · KO: 몇 시간 하는지도 영향을 줘요?
 
 #### `q4`
 
@@ -3335,24 +3335,24 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 #### `q5`
 
-- `question.ko` · KO: 집에 공부 전용 책상과 좋은 조명이 생기면 선택이 달라질까요?
-- `question.ja` · JA: 家に勉強専用の机と良い照明ができたら、選択は変わりますか？
-- `followUp.1.ko` · KO: 지금 집에서 공부할 때 가장 불편한 점은 뭐예요?
+- `question.ko` · KO: 집에 일과 공부를 위한 책상과 좋은 조명이 생기면 선택이 달라질까요?
+- `question.ja` · JA: 家に仕事や勉強のための机と良い照明ができたら、選択は変わりますか？
+- `followUp.1.ko` · KO: 지금 집에서 일하거나 공부할 때 가장 불편한 점은 뭐예요?
 - `followUp.2.ko` · KO: 책상과 조명 말고 무엇이 더 필요해요?
 - `followUp.3.ko` · KO: 그 환경이 생기면 카페에는 안 갈 것 같아요?
 
 #### `q6`
 
-- `question.ko` · KO: 어떤 과제나 공간 조건이면 반대 장소를 고를 거예요?
-- `question.ja` · JA: どんな課題や空間条件なら、反対の場所を選びますか？
-- `followUp.1.ko` · KO: 어떤 과제는 카페가 더 좋아요?
+- `question.ko` · KO: 어떤 일이나 공간 조건이면 반대 장소를 고를 거예요?
+- `question.ja` · JA: どんな作業や空間条件なら、反対の場所を選びますか？
+- `followUp.1.ko` · KO: 어떤 일은 카페가 더 좋아요?
 - `followUp.2.ko` · KO: 어떤 소음이나 공간이 필요해요?
-- `followUp.3.ko` · KO: 공부 시간이 길어지면 장소를 바꿀까요?
+- `followUp.3.ko` · KO: 하는 시간이 길어지면 장소를 바꿀까요?
 
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/11-cafe-or-home-study/lesson.html`
-- sha256: `52cf4acd5678b3e1f6c5bbcf48b34d08c31aa3c9b72ef4909efb77c6da2d2dc2`
+- sha256: `b0c8f49ca31b5ec17cf50ed822558cd38ca995f9c951297871e7b55c3585df23`
 - source kind: `article`
 
 #### `metadata`
@@ -3459,27 +3459,27 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 #### `q1`
 
-- `question.ko` · KO: 지금 고른다면 카페 공부 / 집 공부, 어느 쪽이에요?
-- `question.ja` · JA: 今選ぶなら、カフェでの勉強ですか、家での勉強ですか？
+- `question.ko` · KO: 지금 고른다면 카페 / 집, 어디에서 일하거나 공부하고 싶어요?
+- `question.ja` · JA: 今選ぶなら、カフェと家のどちらで仕事や勉強をしたいですか？
 - `followUp.1.ko` · KO: 왜 그 장소를 골랐어요?
-- `followUp.2.ko` · KO: 최근에도 그곳에서 공부했어요?
+- `followUp.2.ko` · KO: 최근에도 그곳에서 일하거나 공부했어요?
 - `followUp.3.ko` · KO: 반대 장소의 장점은 뭐예요?
 
 #### `q2`
 
-- `question.ko` · KO: 앞으로 한 달 동안 카페나 집 한 곳에서만 공부한다면, 공부 습관이 어떻게 달라질까요?
-- `question.ja` · JA: これから1か月、カフェか家の一方だけで勉強するなら、勉強の習慣はどう変わるでしょうか？
-- `followUp.1.ko` · KO: 공부를 시작하는 시간이 달라질까요?
+- `question.ko` · KO: 앞으로 한 달 동안 한 곳에서만 일하거나 공부한다면, 생활 습관이 어떻게 달라질까요?
+- `question.ja` · JA: これから1か月、一方の場所だけで仕事や勉強をするなら、生活習慣はどう変わるでしょうか？
+- `followUp.1.ko` · KO: 시작하는 시간이 달라질까요?
 - `followUp.2.ko` · KO: 준비해야 할 물건은 뭐예요?
 - `followUp.3.ko` · KO: 집중이 끊기면 어떻게 할 거예요?
 
 #### `q3`
 
-- `question.ko` · KO: 평소와 반대되는 장소에서 공부하는 게 더 나을 때는 언제예요?
-- `question.ja` · JA: 普段とは反対の場所で勉強するほうがよいのは、どんなときですか？
-- `followUp.1.ko` · KO: 어떤 과제를 할 때 그래요?
+- `question.ko` · KO: 평소와 반대되는 장소에서 일하거나 공부하는 게 더 나을 때는 언제예요?
+- `question.ja` · JA: 普段とは反対の場所で仕事や勉強をするほうがよいのは、どんなときですか？
+- `followUp.1.ko` · KO: 어떤 일을 할 때 그래요?
 - `followUp.2.ko` · KO: 소음과 편안함 중 무엇이 더 중요해요?
-- `followUp.3.ko` · KO: 몇 시간 공부하는지도 영향을 줘요?
+- `followUp.3.ko` · KO: 몇 시간 하는지도 영향을 줘요?
 
 #### `q4`
 
@@ -3493,17 +3493,17 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 집에 좋은 책상과 조명이 생기면 선택이 바뀌어요?
 - `question.ja` · JA: 家に良い机と照明ができたら、選択は変わりますか？
-- `followUp.1.ko` · KO: 지금 집에서 공부할 때 가장 불편한 점은 뭐예요?
+- `followUp.1.ko` · KO: 지금 집에서 일하거나 공부할 때 가장 불편한 점은 뭐예요?
 - `followUp.2.ko` · KO: 책상과 조명 말고 무엇이 더 필요해요?
 - `followUp.3.ko` · KO: 그 환경이 생기면 카페에는 안 갈 것 같아요?
 
 #### `q6`
 
-- `question.ko` · KO: 어떤 과제나 공간 조건이면 반대 장소를 고를 거예요?
-- `question.ja` · JA: どんな課題や空間条件なら、反対の場所を選びますか？
-- `followUp.1.ko` · KO: 어떤 과제는 카페가 더 좋아요?
+- `question.ko` · KO: 어떤 일이나 공간 조건이면 반대 장소를 고를 거예요?
+- `question.ja` · JA: どんな作業や空間条件なら、反対の場所を選びますか？
+- `followUp.1.ko` · KO: 어떤 일은 카페가 더 좋아요?
 - `followUp.2.ko` · KO: 어떤 소음이나 공간이 필요해요?
-- `followUp.3.ko` · KO: 공부 시간이 길어지면 장소를 바꿀까요?
+- `followUp.3.ko` · KO: 하는 시간이 길어지면 장소를 바꿀까요?
 
 ## 12 · 인터넷 쇼핑 vs 매장 쇼핑
 
@@ -3819,25 +3819,25 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 - `followUp.2.ko` · KO: 가격이 비싸면 어디에서 살 거예요?
 - `followUp.3.ko` · KO: 선물도 같은 방식으로 살 거예요?
 
-## 13 · 절대 안 잊기 vs 원하는 것만 잊기
+## 13 · 모든 일을 선명하게 기억하기 vs 힘든 일을 빨리 잊기
 
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/13-never-forget-or-choose-what-to-forget/lesson.html`
-- sha256: `f8aac417d8c77cb8c33b8612241961603cf476cdf32ed5635893a90e5ef0d03e`
+- sha256: `e806c1048d40c6899a9a23177d5cc02e66e2ea22c4c01bf4bde129aa2febdfe1`
 - source kind: `article`
 
 #### `metadata`
 
-- `title.ko` · KO: 절대 안 잊기 vs 원하는 것만 잊기
-- `title.en` · EN: Never forget vs choose what to forget
-- `title.ja` · JA: 絶対に忘れない vs 忘れたいことだけ忘れる
+- `title.ko` · KO: 모든 일을 선명하게 기억하기 vs 힘든 일을 빨리 잊기
+- `title.en` · EN: Remember everything clearly vs quickly forget hard times
+- `title.ja` · JA: すべてを鮮明に覚える vs つらいことを早く忘れる
 
 #### `lesson-goal`
 
 - `act.ko` · KO: 기억 vs 망각
-- `goal.ko` · KO: 오늘은 절대 안 잊기 vs 원하는 것만 잊기 중 하나를 고르고, 실제 장면과 조건 변화로 선택의 이유를 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、絶対に忘れない vs 忘れたいことだけ忘れるのどちらかを選び、具体的な場面や条件の変化をもとに選んだ理由をじっくり話してみましょう。
+- `goal.ko` · KO: 오늘은 모든 일을 선명하게 기억하기 vs 힘든 일을 빨리 잊기 중 하나를 고르고, 실제 장면과 조건 변화로 선택의 이유를 길게 이야기해 볼게요.
+- `goal.ja` · JA: 今日は、すべてを鮮明に覚える vs つらいことを早く忘れるのどちらかを選び、具体的な場面や条件の変化をもとに選んだ理由をじっくり話してみましょう。
 - `axis.1.ko` · KO: 지금 더 끌리는 쪽을 골라요.
 - `axis.1.ja` · JA: 今いちばん引かれるほうを選びます。
 - `axis.2.ko` · KO: 실제 생활 장면으로 이유를 설명해요.
@@ -3847,66 +3847,66 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 #### `article`
 
-- `source.title.ko` · KO: 절대 안 잊기 vs 원하는 것만 잊기, 무엇을 고를까
+- `source.title.ko` · KO: 선명하게 기억하기 vs 빨리 잊기, 무엇을 고를까
 - `source.intro.ko` · KO: 수업 전에 읽으면서 궁금한 거 있었어요? 있으면 그 문장을 눌러 주세요. 같이 볼게요.
 - `source.intro.ja` · JA: 授業前に読んでいて気になったことはありましたか？ あればその文を押してください。一緒に見てみましょう。
 - `source.tutorGuidance.ko` · KO: 질문이 없으면 오래 붙잡지 마세요. 안 읽고 왔으면 여기서 한 번 훑고 넘어갑니다. 어느 쪽이 더 옳다고 결론 내리지 않습니다. 힘든 개인 기억을 요구하지 마세요. 즐거운 기억, 작은 실수, 영화 속 사례로 답해도 됩니다.
-- `line.1.ko` · KO: 두 선택, 절대 잊지 않는 능력 / 원하는 것만 잊는 능력. 두 선택에는 서로 다른 장점이 있어요.
-- `line.1.ja` · JA: 二つの選択肢、絶対に忘れない能力と忘れたいことだけ忘れる能力にはそれぞれ違う長所があります。
-- `line.1.highlight.1.ko` · KO: 절대 잊지 않는 능력
-- `line.1.highlight.2.ko` · KO: 원하는 것만 잊는 능력
-- `line.1.vocabulary.1.ko` · KO: 절대 잊지 않는 능력
-- `line.1.vocabulary.1.ja` · JA: 絶対に忘れない能力
-- `line.1.vocabulary.2.ko` · KO: 원하는 것만 잊는 능력
-- `line.1.vocabulary.2.ja` · JA: 忘れたいことだけ忘れる能力
-- `line.2.ko` · KO: 첫 번째 선택인 절대 잊지 않는 능력 쪽을 고르면 약속과 배운 내용을 정확하게 오래 기억할 수 있어요. 그 장점을 실제로 얼마나 자주 쓰는지도 중요해요.
-- `line.2.ja` · JA: 一つ目の絶対に忘れない能力を選ぶと、約束や学んだ内容を正確に長く覚えられます。その長所を実際にどれほど生かすかも大切です。
-- `line.2.highlight.1.ko` · KO: 절대 잊지 않는 능력
-- `line.2.highlight.2.ko` · KO: 약속과 배운 내용을 정확하게 오래 기억할 수 있어요
-- `line.2.vocabulary.1.ko` · KO: 절대 잊지 않는 능력
-- `line.2.vocabulary.1.ja` · JA: 絶対に忘れない能力
-- `line.2.vocabulary.2.ko` · KO: 약속과 배운 내용을 정확하게 오래 기억할 수 있어요
-- `line.2.vocabulary.2.ja` · JA: 約束や学んだ内容を正確に長く覚えられます
-- `line.3.ko` · KO: 두 번째 선택인 원하는 것만 잊는 능력 쪽을 고르면 불필요한 기억을 놓고 새로운 일에 집중할 수 있어요. 현재 생활에서 그 기회가 얼마나 있는지도 봐야 해요.
-- `line.3.ja` · JA: 二つ目の忘れたいことだけ忘れる能力を選ぶと、不要な記憶を手放し、新しいことに集中できます。今の生活でその機会がどれほどあるかも考える必要があります。
-- `line.3.highlight.1.ko` · KO: 원하는 것만 잊는 능력
-- `line.3.highlight.2.ko` · KO: 불필요한 기억을 놓고 새로운 일에 집중할 수 있어요
-- `line.3.vocabulary.1.ko` · KO: 원하는 것만 잊는 능력
-- `line.3.vocabulary.1.ja` · JA: 忘れたいことだけ忘れる能力
-- `line.3.vocabulary.2.ko` · KO: 불필요한 기억을 놓고 새로운 일에 집중할 수 있어요
-- `line.3.vocabulary.2.ja` · JA: 不要な記憶を手放し、新しいことに集中できます
-- `line.4.ko` · KO: 하지만 절대 잊지 않는 능력 쪽에는 이런 부담도 있어요. 작은 실수와 불편한 장면도 계속 떠오를 수 있어요.
-- `line.4.ja` · JA: ただし、絶対に忘れない能力のほうにはこんな負担もあります。小さな失敗や嫌な場面もずっと思い出すかもしれません。
-- `line.4.highlight.1.ko` · KO: 절대 잊지 않는 능력
-- `line.4.highlight.2.ko` · KO: 작은 실수와 불편한 장면도 계속 떠오를 수 있어요
-- `line.4.vocabulary.1.ko` · KO: 절대 잊지 않는 능력
-- `line.4.vocabulary.1.ja` · JA: 絶対に忘れない能力
-- `line.4.vocabulary.2.ko` · KO: 작은 실수와 불편한 장면도 계속 떠오를 수 있어요
-- `line.4.vocabulary.2.ja` · JA: 小さな失敗や嫌な場面もずっと思い出すかもしれません
-- `line.5.ko` · KO: 반대로 원하는 것만 잊는 능력 쪽에도 약점은 있어요. 기억을 지우며 중요한 배움까지 잃을 수 있어요.
-- `line.5.ja` · JA: 反対に、忘れたいことだけ忘れる能力のほうにも弱点があります。記憶を消すことで大切な学びまで失うかもしれません。
-- `line.5.highlight.1.ko` · KO: 원하는 것만 잊는 능력
-- `line.5.highlight.2.ko` · KO: 기억을 지우며 중요한 배움까지 잃을 수 있어요
-- `line.5.vocabulary.1.ko` · KO: 원하는 것만 잊는 능력
-- `line.5.vocabulary.1.ja` · JA: 忘れたいことだけ忘れる能力
-- `line.5.vocabulary.2.ko` · KO: 기억을 지우며 중요한 배움까지 잃을 수 있어요
-- `line.5.vocabulary.2.ja` · JA: 記憶を消すことで大切な学びまで失うかもしれません
-- `line.6.ko` · KO: 기억을 되돌리거나 기록으로 남길 수 있을 때에는 같은 사람도 선택이 달라질 수 있어요. 그것은 모순이 아니라 조건의 차이예요.
-- `line.6.ja` · JA: 記憶を戻したり記録に残したりできるときは、同じ人でも選択が変わることがあります。それは矛盾ではなく、条件の違いです。
-- `line.6.highlight.1.ko` · KO: 기억을 되돌리거나 기록으로 남길 수 있을 때
+- `line.1.ko` · KO: 두 선택, 모든 일을 선명하게 기억하는 능력 / 힘든 일을 빨리 잊는 능력. 두 선택에는 서로 다른 장점이 있어요.
+- `line.1.ja` · JA: 二つの選択肢、すべてを鮮明に覚える能力と、つらいことを早く忘れる能力にはそれぞれ違う長所があります。
+- `line.1.highlight.1.ko` · KO: 모든 일을 선명하게 기억하는 능력
+- `line.1.highlight.2.ko` · KO: 힘든 일을 빨리 잊는 능력
+- `line.1.vocabulary.1.ko` · KO: 선명하게 기억하다
+- `line.1.vocabulary.1.ja` · JA: 鮮明に覚える
+- `line.1.vocabulary.2.ko` · KO: 빨리 잊다
+- `line.1.vocabulary.2.ja` · JA: 早く忘れる
+- `line.2.ko` · KO: 모든 일을 선명하게 기억하면 약속과 배운 내용, 행복한 순간의 세부까지 오래 간직할 수 있어요.
+- `line.2.ja` · JA: すべてを鮮明に覚えられれば、約束や学んだ内容、幸せな瞬間の細部まで長く覚えていられます。
+- `line.2.highlight.1.ko` · KO: 행복한 순간의 세부
+- `line.2.highlight.2.ko` · KO: 오래 간직할 수 있어요
+- `line.2.vocabulary.1.ko` · KO: 행복한 순간의 세부
+- `line.2.vocabulary.1.ja` · JA: 幸せな瞬間の細部
+- `line.2.vocabulary.2.ko` · KO: 오래 간직하다
+- `line.2.vocabulary.2.ja` · JA: 長く覚えている
+- `line.3.ko` · KO: 힘든 일을 빨리 잊으면 마음을 회복하고 새로운 선택에 집중하기 쉬워요.
+- `line.3.ja` · JA: つらいことを早く忘れられれば、心を立て直し、新しい選択に集中しやすくなります。
+- `line.3.highlight.1.ko` · KO: 마음을 회복하고
+- `line.3.highlight.2.ko` · KO: 새로운 선택에 집중하기 쉬워요
+- `line.3.vocabulary.1.ko` · KO: 마음을 회복하다
+- `line.3.vocabulary.1.ja` · JA: 心を立て直す
+- `line.3.vocabulary.2.ko` · KO: 새로운 선택에 집중하다
+- `line.3.vocabulary.2.ja` · JA: 新しい選択に集中する
+- `line.4.ko` · KO: 하지만 모든 일을 선명하게 기억하면 작은 실수와 상처도 시간이 지나도 흐려지지 않을 수 있어요.
+- `line.4.ja` · JA: しかし、すべてを鮮明に覚えていると、小さな失敗や傷ついた記憶も時間がたっても薄れないかもしれません。
+- `line.4.highlight.1.ko` · KO: 작은 실수와 상처
+- `line.4.highlight.2.ko` · KO: 흐려지지 않을 수 있어요
+- `line.4.vocabulary.1.ko` · KO: 작은 실수와 상처
+- `line.4.vocabulary.1.ja` · JA: 小さな失敗や傷ついた記憶
+- `line.4.vocabulary.2.ko` · KO: 흐려지지 않다
+- `line.4.vocabulary.2.ja` · JA: 薄れない
+- `line.5.ko` · KO: 반대로 힘든 일을 빨리 잊으면 같은 실수를 막아 줄 교훈까지 함께 흐려질 수 있어요.
+- `line.5.ja` · JA: 反対に、つらいことを早く忘れると、同じ失敗を防ぐための教訓まで一緒に薄れるかもしれません。
+- `line.5.highlight.1.ko` · KO: 같은 실수를 막아 줄 교훈
+- `line.5.highlight.2.ko` · KO: 함께 흐려질 수 있어요
+- `line.5.vocabulary.1.ko` · KO: 같은 실수를 막아 줄 교훈
+- `line.5.vocabulary.1.ja` · JA: 同じ失敗を防ぐための教訓
+- `line.5.vocabulary.2.ko` · KO: 함께 흐려지다
+- `line.5.vocabulary.2.ja` · JA: 一緒に薄れる
+- `line.6.ko` · KO: 기억해야 할 책임과 회복해야 할 마음의 크기에 따라 같은 사람도 선택이 달라질 수 있어요.
+- `line.6.ja` · JA: 覚えておくべき責任と、立て直したい心の負担の大きさによって、同じ人でも選択が変わることがあります。
+- `line.6.highlight.1.ko` · KO: 기억해야 할 책임과 회복해야 할 마음의 크기
 - `line.6.highlight.2.ko` · KO: 선택이 달라질 수 있어요
-- `line.6.vocabulary.1.ko` · KO: 기억을 되돌리거나 기록으로 남길 수 있을 때
-- `line.6.vocabulary.1.ja` · JA: 記憶を戻したり記録に残したりできるとき
+- `line.6.vocabulary.1.ko` · KO: 기억해야 할 책임
+- `line.6.vocabulary.1.ja` · JA: 覚えておくべき責任
 - `line.6.vocabulary.2.ko` · KO: 선택이 달라질 수 있어요
 - `line.6.vocabulary.2.ja` · JA: 選択が変わることがあります
-- `line.7.ko` · KO: 중요한 건 남들이 고른 답을 따르는 일이 아니라, 기억이 지금의 선택과 관계에 무엇을 남기는지 구체적으로 살피는 일이에요.
-- `line.7.ja` · JA: 大切なのは他人の答えに従うことではなく、記憶が今の選択や関係に何を残すのかを具体的に考えることです。
-- `line.7.highlight.1.ko` · KO: 남들이 고른 답
-- `line.7.highlight.2.ko` · KO: 기억이 지금의 선택과 관계에 무엇을 남기는지
-- `line.7.vocabulary.1.ko` · KO: 남들이 고른 답
-- `line.7.vocabulary.1.ja` · JA: 他人の答え
-- `line.7.vocabulary.2.ko` · KO: 기억이 지금의 선택과 관계에 무엇을 남기는지
-- `line.7.vocabulary.2.ja` · JA: 記憶が今の選択や関係に何を残すのか
+- `line.7.ko` · KO: 중요한 건 어느 능력이 더 좋아 보이는지가 아니라, 정확한 기억과 마음의 회복 중 지금 무엇이 더 필요한지 살피는 일이에요.
+- `line.7.ja` · JA: 大切なのはどちらの能力が優れて見えるかではなく、正確な記憶と心の回復のうち、今どちらがより必要かを考えることです。
+- `line.7.highlight.1.ko` · KO: 정확한 기억
+- `line.7.highlight.2.ko` · KO: 마음의 회복
+- `line.7.vocabulary.1.ko` · KO: 정확한 기억
+- `line.7.vocabulary.1.ja` · JA: 正確な記憶
+- `line.7.vocabulary.2.ko` · KO: 마음의 회복
+- `line.7.vocabulary.2.ja` · JA: 心の回復
 
 #### `talk-intro`
 
@@ -3923,17 +3923,17 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 #### `warm-2`
 
-- `question.ko` · KO: 외국어 단어를 절대 잊지 않는다면 무엇부터 외우고 싶어요?
-- `question.ja` · JA: 外国語の単語を絶対に忘れないなら、何から覚えたいですか？
+- `question.ko` · KO: 오래 기억하고 싶은 작은 일이 뭐예요?
+- `question.ja` · JA: 長く覚えていたい小さな出来事は何ですか？
 - `tutorGuidance.ko` · KO: 주의: 힘든 개인 기억을 요구하지 말고 편한 사례나 가상 상황으로 바꿔도 됩니다.
-- `followUp.1.ko` · KO: 왜 그것부터 외우고 싶어요?
-- `followUp.2.ko` · KO: 어디에서 쓸 수 있어요?
-- `followUp.3.ko` · KO: 문법이나 발음도 기억하고 싶어요?
+- `followUp.1.ko` · KO: 언제 있었던 일이에요?
+- `followUp.2.ko` · KO: 왜 오래 기억하고 싶어요?
+- `followUp.3.ko` · KO: 사진이나 글로 남겼어요?
 
 #### `q1`
 
-- `question.ko` · KO: 지금 고른다면 절대 안 잊기 / 원하는 것만 잊기, 어느 쪽이에요?
-- `question.ja` · JA: 今選ぶなら、絶対に忘れない能力ですか、忘れたいことだけ忘れる能力ですか？
+- `question.ko` · KO: 지금 고른다면 모든 일을 선명하게 기억하기 / 힘든 일을 빨리 잊기, 어느 쪽이에요?
+- `question.ja` · JA: 今選ぶなら、すべてを鮮明に覚えることと、つらいことを早く忘れることのどちらですか？
 - `tutorGuidance.ko` · KO: 주의: 힘든 개인 기억을 요구하지 말고 편한 사례나 가상 상황으로 바꿔도 됩니다.
 - `followUp.1.ko` · KO: 왜 그 능력을 골랐어요?
 - `followUp.2.ko` · KO: 일상에서 어디에 쓰고 싶어요?
@@ -3941,66 +3941,66 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 #### `q2`
 
-- `question.ko` · KO: 선택한 기억 능력이 생기면, 가장 먼저 어디에 쓰고 싶어요?
-- `question.ja` · JA: 選んだ記憶の能力を得たら、まず何に使いたいですか？
+- `question.ko` · KO: 모든 일을 선명하게 기억하면 일이나 공부가 어떻게 달라질까요?
+- `question.ja` · JA: すべてを鮮明に覚えられたら、仕事や勉強はどう変わるでしょうか？
 - `tutorGuidance.ko` · KO: 주의: 힘든 개인 기억을 요구하지 말고 편한 사례나 가상 상황으로 바꿔도 됩니다.
-- `followUp.1.ko` · KO: 일이나 공부에 어떻게 쓸 거예요?
-- `followUp.2.ko` · KO: 누구에게 도움을 주고 싶어요?
-- `followUp.3.ko` · KO: 그 능력 때문에 불편할 수도 있어요?
+- `followUp.1.ko` · KO: 무엇을 가장 잘 기억하고 싶어요?
+- `followUp.2.ko` · KO: 준비하는 시간이 줄어들까요?
+- `followUp.3.ko` · KO: 오히려 불편한 점도 있을까요?
 
 #### `q3`
 
-- `question.ko` · KO: 평소 선택과 반대되는 기억 능력이 더 필요할 때는 언제예요?
-- `question.ja` · JA: 普段選ぶほうとは反対の記憶の能力が、より必要になるのはどんなときですか？
+- `question.ko` · KO: 힘든 일을 빨리 잊는 능력이 가장 필요할 때는 언제예요?
+- `question.ja` · JA: つらいことを早く忘れる能力がいちばん必要なのは、どんなときですか？
 - `tutorGuidance.ko` · KO: 주의: 힘든 개인 기억을 요구하지 말고 편한 사례나 가상 상황으로 바꿔도 됩니다.
-- `followUp.1.ko` · KO: 어떤 기억이나 실수에서 그래요?
-- `followUp.2.ko` · KO: 기억하고 싶은 것과 잊고 싶은 것은 뭐예요?
-- `followUp.3.ko` · KO: 영화 속 상황으로 예를 들어도 돼요?
+- `followUp.1.ko` · KO: 작은 실수로 예를 들어도 돼요.
+- `followUp.2.ko` · KO: 빨리 잊으면 무엇이 좋아져요?
+- `followUp.3.ko` · KO: 기억해야 할 부분도 있을까요?
 
 #### `q4`
 
-- `question.ko` · KO: 잊은 기억을 나중에 한 번 되돌릴 수 있어도 같은 능력을 고를 거예요?
-- `question.ja` · JA: 忘れた記憶をあとで一度だけ戻せても、同じ能力を選びますか？
+- `question.ko` · KO: 행복한 기억과 힘든 기억이 똑같이 선명하게 남아도 첫 번째를 고를 거예요?
+- `question.ja` · JA: 幸せな記憶もつらい記憶も同じように鮮明に残っても、最初の能力を選びますか？
 - `tutorGuidance.ko` · KO: 주의: 힘든 개인 기억을 요구하지 말고 편한 사례나 가상 상황으로 바꿔도 됩니다.
-- `followUp.1.ko` · KO: 어떤 기억을 되돌리고 싶어요?
-- `followUp.2.ko` · KO: 한 번만 되돌릴 수 있어도 충분해요?
-- `followUp.3.ko` · KO: 처음 선택의 위험은 줄어들까요?
+- `followUp.1.ko` · KO: 어떤 기억은 계속 선명했으면 좋겠어요?
+- `followUp.2.ko` · KO: 작은 실수도 안 잊으면 힘들까요?
+- `followUp.3.ko` · KO: 시간이 지나도 괜찮을까요?
 
 #### `q5`
 
-- `question.ko` · KO: 소중한 사람과 함께한 기억은 지울 수 없다는 규칙이 있다면 어떨까요?
-- `question.ja` · JA: 大切な人との記憶は消せないというルールなら、どうですか？
+- `question.ko` · KO: 힘든 일을 잊을 때 그 일에서 배운 점도 함께 흐려진다면 선택이 달라질까요?
+- `question.ja` · JA: つらいことを忘れるとき、そこから学んだことも一緒に薄れるなら、選択は変わるでしょうか？
 - `tutorGuidance.ko` · KO: 주의: 힘든 개인 기억을 요구하지 말고 편한 사례나 가상 상황으로 바꿔도 됩니다.
-- `followUp.1.ko` · KO: 그 규칙이 있으면 더 안심돼요?
-- `followUp.2.ko` · KO: 지울 수 있어야 하는 기억도 있을까요?
-- `followUp.3.ko` · KO: 영화 속 인물이라면 어떻게 할까요?
+- `followUp.1.ko` · KO: 배운 점은 어떻게 남길 수 있어요?
+- `followUp.2.ko` · KO: 같은 실수를 다시 할 수도 있을까요?
+- `followUp.3.ko` · KO: 그래도 빨리 잊는 게 더 중요해요?
 
 #### `q6`
 
-- `question.ko` · KO: 기억에 어떤 규칙이 생기면 반대 능력을 고를 거예요?
-- `question.ja` · JA: 記憶にどんなルールが加われば、反対の能力を選びますか？
+- `question.ko` · KO: 어떤 경험이나 조건이면 반대 능력을 고를 거예요?
+- `question.ja` · JA: どんな経験や条件なら、反対の能力を選びますか？
 - `tutorGuidance.ko` · KO: 주의: 힘든 개인 기억을 요구하지 말고 편한 사례나 가상 상황으로 바꿔도 됩니다.
-- `followUp.1.ko` · KO: 어떤 기억은 꼭 보호해야 해요?
-- `followUp.2.ko` · KO: 능력을 몇 번까지 쓸 수 있어야 해요?
-- `followUp.3.ko` · KO: 다른 사람이 능력을 알면 선택이 바뀌어요?
+- `followUp.1.ko` · KO: 일이나 공부가 바뀌면 어떨까요?
+- `followUp.2.ko` · KO: 시간이 지나면 선택도 바뀔까요?
+- `followUp.3.ko` · KO: 반대 능력이 더 필요한 사람은 누구일까요?
 
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/13-never-forget-or-choose-what-to-forget/lesson.html`
-- sha256: `95b2101eb839b01fa9c1642174d563a5cd58fee6aa88e727a7a5ff7d9da7d386`
+- sha256: `6c0d321b7c176a93edcfbbbdffdc58f3bba542c4d763840015d50641a107372a`
 - source kind: `article`
 
 #### `metadata`
 
-- `title.ko` · KO: 절대 안 잊기 vs 원하는 것만 잊기
-- `title.en` · EN: Never forget vs choose what to forget
-- `title.ja` · JA: 絶対に忘れない vs 忘れたいことだけ忘れる
+- `title.ko` · KO: 모든 일을 선명하게 기억하기 vs 힘든 일을 빨리 잊기
+- `title.en` · EN: Remember everything clearly vs quickly forget hard times
+- `title.ja` · JA: すべてを鮮明に覚える vs つらいことを早く忘れる
 
 #### `lesson-goal`
 
 - `act.ko` · KO: 기억 vs 망각
-- `goal.ko` · KO: 오늘은 절대 안 잊기 vs 원하는 것만 잊기 중 하나를 고르고, 실제 장면과 조건 변화로 이유를 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、絶対に忘れない vs 忘れたいことだけ忘れるのどちらかを選び、具体的な場面や条件の変化をもとに理由を話してみましょう。
+- `goal.ko` · KO: 오늘은 모든 일을 선명하게 기억하기 vs 힘든 일을 빨리 잊기 중 하나를 고르고, 실제 장면과 조건 변화로 이유를 이야기해 볼게요.
+- `goal.ja` · JA: 今日は、すべてを鮮明に覚える vs つらいことを早く忘れるのどちらかを選び、具体的な場面や条件の変化をもとに理由を話してみましょう。
 - `axis.1.ko` · KO: 지금 더 끌리는 쪽을 골라요.
 - `axis.1.ja` · JA: 今いちばん引かれるほうを選びます。
 - `axis.2.ko` · KO: 실제 생활 장면으로 이유를 설명해요.
@@ -4010,66 +4010,66 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 #### `article`
 
-- `source.title.ko` · KO: 절대 안 잊기 vs 원하는 것만 잊기, 무엇을 고를까
+- `source.title.ko` · KO: 선명하게 기억하기 vs 빨리 잊기, 무엇을 고를까
 - `source.intro.ko` · KO: 수업 전에 읽으면서 궁금한 거 있었어요? 있으면 그 문장을 눌러 주세요. 같이 볼게요.
 - `source.intro.ja` · JA: 授業前に読んでいて気になったことはありましたか？ あればその文を押してください。一緒に見てみましょう。
 - `source.tutorGuidance.ko` · KO: 질문이 없으면 오래 붙잡지 마세요. 안 읽고 왔으면 여기서 한 번 훑고 넘어갑니다. 어느 쪽이 더 옳다고 결론 내리지 않습니다. 힘든 개인 기억을 요구하지 마세요. 즐거운 기억, 작은 실수, 영화 속 사례로 답해도 됩니다.
-- `line.1.ko` · KO: 절대 잊지 않는 능력 / 원하는 것만 잊는 능력. 두 선택에는 다른 장점이 있어요.
-- `line.1.ja` · JA: 絶対に忘れない能力と忘れたいことだけ忘れる能力には違う長所があります。
-- `line.1.highlight.1.ko` · KO: 절대 잊지 않는 능력
-- `line.1.highlight.2.ko` · KO: 원하는 것만 잊는 능력
-- `line.1.vocabulary.1.ko` · KO: 절대 잊지 않는 능력
-- `line.1.vocabulary.1.ja` · JA: 絶対に忘れない能力
-- `line.1.vocabulary.2.ko` · KO: 원하는 것만 잊는 능력
-- `line.1.vocabulary.2.ja` · JA: 忘れたいことだけ忘れる能力
-- `line.2.ko` · KO: 절대 잊지 않는 능력 쪽을 고르면 약속과 배운 내용을 정확하게 오래 기억할 수 있어요.
-- `line.2.ja` · JA: 絶対に忘れない能力を選ぶと、約束や学んだ内容を正確に長く覚えられます。
-- `line.2.highlight.1.ko` · KO: 절대 잊지 않는 능력
-- `line.2.highlight.2.ko` · KO: 약속과 배운 내용을 정확하게 오래 기억할 수 있어요
-- `line.2.vocabulary.1.ko` · KO: 절대 잊지 않는 능력
-- `line.2.vocabulary.1.ja` · JA: 絶対に忘れない能力
-- `line.2.vocabulary.2.ko` · KO: 약속과 배운 내용을 정확하게 오래 기억할 수 있어요
-- `line.2.vocabulary.2.ja` · JA: 約束や学んだ内容を正確に長く覚えられます
-- `line.3.ko` · KO: 원하는 것만 잊는 능력 쪽을 고르면 불필요한 기억을 놓고 새로운 일에 집중할 수 있어요.
-- `line.3.ja` · JA: 忘れたいことだけ忘れる能力を選ぶと、不要な記憶を手放し、新しいことに集中できます。
-- `line.3.highlight.1.ko` · KO: 원하는 것만 잊는 능력
-- `line.3.highlight.2.ko` · KO: 불필요한 기억을 놓고 새로운 일에 집중할 수 있어요
-- `line.3.vocabulary.1.ko` · KO: 원하는 것만 잊는 능력
-- `line.3.vocabulary.1.ja` · JA: 忘れたいことだけ忘れる能力
-- `line.3.vocabulary.2.ko` · KO: 불필요한 기억을 놓고 새로운 일에 집중할 수 있어요
-- `line.3.vocabulary.2.ja` · JA: 不要な記憶を手放し、新しいことに集中できます
-- `line.4.ko` · KO: 절대 잊지 않는 능력 쪽은 작은 실수와 불편한 장면도 계속 떠오를 수 있어요.
-- `line.4.ja` · JA: 絶対に忘れない能力のほうは、小さな失敗や嫌な場面もずっと思い出すかもしれません。
-- `line.4.highlight.1.ko` · KO: 절대 잊지 않는 능력
-- `line.4.highlight.2.ko` · KO: 작은 실수와 불편한 장면도 계속 떠오를 수 있어요
-- `line.4.vocabulary.1.ko` · KO: 절대 잊지 않는 능력
-- `line.4.vocabulary.1.ja` · JA: 絶対に忘れない能力
-- `line.4.vocabulary.2.ko` · KO: 작은 실수와 불편한 장면도 계속 떠오를 수 있어요
-- `line.4.vocabulary.2.ja` · JA: 小さな失敗や嫌な場面もずっと思い出すかもしれません
-- `line.5.ko` · KO: 원하는 것만 잊는 능력 쪽도 기억을 지우며 중요한 배움까지 잃을 수 있어요.
-- `line.5.ja` · JA: 忘れたいことだけ忘れる能力のほうも、記憶を消すことで大切な学びまで失うかもしれません。
-- `line.5.highlight.1.ko` · KO: 원하는 것만 잊는 능력
-- `line.5.highlight.2.ko` · KO: 기억을 지우며 중요한 배움까지 잃을 수 있어요
-- `line.5.vocabulary.1.ko` · KO: 원하는 것만 잊는 능력
-- `line.5.vocabulary.1.ja` · JA: 忘れたいことだけ忘れる能力
-- `line.5.vocabulary.2.ko` · KO: 기억을 지우며 중요한 배움까지 잃을 수 있어요
-- `line.5.vocabulary.2.ja` · JA: 記憶を消すことで大切な学びまで失うかもしれません
-- `line.6.ko` · KO: 기억을 되돌리거나 기록으로 남길 수 있을 때에는 선택이 달라질 수 있어요.
-- `line.6.ja` · JA: 記憶を戻したり記録に残したりできるときは、選択が変わることがあります。
-- `line.6.highlight.1.ko` · KO: 기억을 되돌리거나 기록으로 남길 수 있을 때
-- `line.6.highlight.2.ko` · KO: 선택이 달라질 수 있어요
-- `line.6.vocabulary.1.ko` · KO: 기억을 되돌리거나 기록으로 남길 수 있을 때
-- `line.6.vocabulary.1.ja` · JA: 記憶を戻したり記録に残したりできるとき
-- `line.6.vocabulary.2.ko` · KO: 선택이 달라질 수 있어요
-- `line.6.vocabulary.2.ja` · JA: 選択が変わることがあります
-- `line.7.ko` · KO: 중요한 건 남들의 답보다 기억이 지금의 선택과 관계에 무엇을 남기는지 살피는 일이에요.
-- `line.7.ja` · JA: 大切なのは、他人の答えより、記憶が今の選択や関係に何を残すのかを考えることです。
-- `line.7.highlight.1.ko` · KO: 남들의 답
-- `line.7.highlight.2.ko` · KO: 기억이 지금의 선택과 관계에 무엇을 남기는지
-- `line.7.vocabulary.1.ko` · KO: 남들의 답
-- `line.7.vocabulary.1.ja` · JA: 他人の答え
-- `line.7.vocabulary.2.ko` · KO: 기억이 지금의 선택과 관계에 무엇을 남기는지
-- `line.7.vocabulary.2.ja` · JA: 記憶が今の選択や関係に何を残すのか
+- `line.1.ko` · KO: 모든 일을 선명하게 기억하는 능력 / 힘든 일을 빨리 잊는 능력. 두 선택에는 다른 장점이 있어요.
+- `line.1.ja` · JA: すべてを鮮明に覚える能力と、つらいことを早く忘れる能力には違う長所があります。
+- `line.1.highlight.1.ko` · KO: 모든 일을 선명하게 기억하는 능력
+- `line.1.highlight.2.ko` · KO: 힘든 일을 빨리 잊는 능력
+- `line.1.vocabulary.1.ko` · KO: 선명하게 기억하다
+- `line.1.vocabulary.1.ja` · JA: 鮮明に覚える
+- `line.1.vocabulary.2.ko` · KO: 빨리 잊다
+- `line.1.vocabulary.2.ja` · JA: 早く忘れる
+- `line.2.ko` · KO: 모든 일을 선명하게 기억하면 약속과 배운 내용을 오래 기억할 수 있어요.
+- `line.2.ja` · JA: すべてを鮮明に覚えられれば、約束や学んだ内容を長く覚えていられます。
+- `line.2.highlight.1.ko` · KO: 모든 일을 선명하게 기억하면
+- `line.2.highlight.2.ko` · KO: 오래 기억할 수 있어요
+- `line.2.vocabulary.1.ko` · KO: 모든 일을 선명하게 기억하면
+- `line.2.vocabulary.1.ja` · JA: すべてを鮮明に覚えられれば
+- `line.2.vocabulary.2.ko` · KO: 오래 기억할 수 있어요
+- `line.2.vocabulary.2.ja` · JA: 長く覚えていられます
+- `line.3.ko` · KO: 힘든 일을 빨리 잊으면 마음을 정리하고 새로운 일에 집중하기 쉬워요.
+- `line.3.ja` · JA: つらいことを早く忘れられれば、気持ちを整理して新しいことに集中しやすくなります。
+- `line.3.highlight.1.ko` · KO: 힘든 일을 빨리 잊으면
+- `line.3.highlight.2.ko` · KO: 새로운 일에 집중하기 쉬워요
+- `line.3.vocabulary.1.ko` · KO: 힘든 일을 빨리 잊으면
+- `line.3.vocabulary.1.ja` · JA: つらいことを早く忘れられれば
+- `line.3.vocabulary.2.ko` · KO: 새로운 일에 집중하기 쉬워요
+- `line.3.vocabulary.2.ja` · JA: 新しいことに集中しやすくなります
+- `line.4.ko` · KO: 하지만 모든 일을 선명하게 기억하면 실수와 상처도 오래 남을 수 있어요.
+- `line.4.ja` · JA: しかし、すべてを鮮明に覚えていると、失敗や傷ついた記憶も長く残るかもしれません。
+- `line.4.highlight.1.ko` · KO: 실수와 상처
+- `line.4.highlight.2.ko` · KO: 오래 남을 수 있어요
+- `line.4.vocabulary.1.ko` · KO: 실수와 상처
+- `line.4.vocabulary.1.ja` · JA: 失敗や傷ついた記憶
+- `line.4.vocabulary.2.ko` · KO: 오래 남을 수 있어요
+- `line.4.vocabulary.2.ja` · JA: 長く残るかもしれません
+- `line.5.ko` · KO: 힘든 일을 빨리 잊으면 그 일에서 배운 점도 함께 흐려질 수 있어요.
+- `line.5.ja` · JA: つらいことを早く忘れると、そこから学んだことも一緒に薄れるかもしれません。
+- `line.5.highlight.1.ko` · KO: 배운 점
+- `line.5.highlight.2.ko` · KO: 함께 흐려질 수 있어요
+- `line.5.vocabulary.1.ko` · KO: 배운 점
+- `line.5.vocabulary.1.ja` · JA: 学んだこと
+- `line.5.vocabulary.2.ko` · KO: 함께 흐려질 수 있어요
+- `line.5.vocabulary.2.ja` · JA: 一緒に薄れるかもしれません
+- `line.6.ko` · KO: 기억해야 할 일과 잊고 싶은 일이 달라질 때 선택도 달라질 수 있어요.
+- `line.6.ja` · JA: 覚えておきたいことと忘れたいことが変われば、選択も変わることがあります。
+- `line.6.highlight.1.ko` · KO: 기억해야 할 일과 잊고 싶은 일이 달라질 때
+- `line.6.highlight.2.ko` · KO: 달라질 수 있어요
+- `line.6.vocabulary.1.ko` · KO: 기억해야 할 일과 잊고 싶은 일
+- `line.6.vocabulary.1.ja` · JA: 覚えておきたいことと忘れたいこと
+- `line.6.vocabulary.2.ko` · KO: 달라질 수 있어요
+- `line.6.vocabulary.2.ja` · JA: 変わることがあります
+- `line.7.ko` · KO: 중요한 건 정확한 기억과 마음의 회복 중 지금 무엇이 더 필요한지 생각하는 일이에요.
+- `line.7.ja` · JA: 大切なのは、正確な記憶と心の回復のうち、今どちらがより必要かを考えることです。
+- `line.7.highlight.1.ko` · KO: 정확한 기억
+- `line.7.highlight.2.ko` · KO: 마음의 회복
+- `line.7.vocabulary.1.ko` · KO: 정확한 기억
+- `line.7.vocabulary.1.ja` · JA: 正確な記憶
+- `line.7.vocabulary.2.ko` · KO: 마음의 회복
+- `line.7.vocabulary.2.ja` · JA: 心の回復
 
 #### `talk-intro`
 
@@ -4086,17 +4086,17 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 #### `warm-2`
 
-- `question.ko` · KO: 외국어 단어를 절대 잊지 않는다면 무엇부터 외우고 싶어요?
-- `question.ja` · JA: 外国語の単語を絶対に忘れないなら、何から覚えたいですか？
+- `question.ko` · KO: 오래 기억하고 싶은 작은 일이 뭐예요?
+- `question.ja` · JA: 長く覚えていたい小さな出来事は何ですか？
 - `tutorGuidance.ko` · KO: 주의: 힘든 개인 기억을 요구하지 말고 편한 사례나 가상 상황으로 바꿔도 됩니다.
-- `followUp.1.ko` · KO: 왜 그것부터 외우고 싶어요?
-- `followUp.2.ko` · KO: 어디에서 쓸 수 있어요?
-- `followUp.3.ko` · KO: 문법이나 발음도 기억하고 싶어요?
+- `followUp.1.ko` · KO: 언제 있었던 일이에요?
+- `followUp.2.ko` · KO: 왜 오래 기억하고 싶어요?
+- `followUp.3.ko` · KO: 사진이나 글로 남겼어요?
 
 #### `q1`
 
-- `question.ko` · KO: 지금 고른다면 절대 안 잊기 / 원하는 것만 잊기, 어느 쪽이에요?
-- `question.ja` · JA: 今選ぶなら、絶対に忘れない能力ですか、忘れたいことだけ忘れる能力ですか？
+- `question.ko` · KO: 지금 고른다면 모든 일을 선명하게 기억하기 / 힘든 일을 빨리 잊기, 어느 쪽이에요?
+- `question.ja` · JA: 今選ぶなら、すべてを鮮明に覚えることと、つらいことを早く忘れることのどちらですか？
 - `tutorGuidance.ko` · KO: 주의: 힘든 개인 기억을 요구하지 말고 편한 사례나 가상 상황으로 바꿔도 됩니다.
 - `followUp.1.ko` · KO: 왜 그 능력을 골랐어요?
 - `followUp.2.ko` · KO: 일상에서 어디에 쓰고 싶어요?
@@ -4104,48 +4104,48 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 #### `q2`
 
-- `question.ko` · KO: 선택한 기억 능력이 생기면, 가장 먼저 어디에 쓰고 싶어요?
-- `question.ja` · JA: 選んだ記憶の能力を得たら、まず何に使いたいですか？
+- `question.ko` · KO: 모든 일을 선명하게 기억하면 일이나 공부가 어떻게 달라질까요?
+- `question.ja` · JA: すべてを鮮明に覚えられたら、仕事や勉強はどう変わるでしょうか？
 - `tutorGuidance.ko` · KO: 주의: 힘든 개인 기억을 요구하지 말고 편한 사례나 가상 상황으로 바꿔도 됩니다.
-- `followUp.1.ko` · KO: 일이나 공부에 어떻게 쓸 거예요?
-- `followUp.2.ko` · KO: 누구에게 도움을 주고 싶어요?
-- `followUp.3.ko` · KO: 그 능력 때문에 불편할 수도 있어요?
+- `followUp.1.ko` · KO: 무엇을 가장 잘 기억하고 싶어요?
+- `followUp.2.ko` · KO: 준비하는 시간이 줄어들까요?
+- `followUp.3.ko` · KO: 오히려 불편한 점도 있을까요?
 
 #### `q3`
 
-- `question.ko` · KO: 평소 선택과 반대되는 기억 능력이 더 필요할 때는 언제예요?
-- `question.ja` · JA: 普段選ぶほうとは反対の記憶の能力が、より必要になるのはどんなときですか？
+- `question.ko` · KO: 힘든 일을 빨리 잊는 능력이 가장 필요할 때는 언제예요?
+- `question.ja` · JA: つらいことを早く忘れる能力がいちばん必要なのは、どんなときですか？
 - `tutorGuidance.ko` · KO: 주의: 힘든 개인 기억을 요구하지 말고 편한 사례나 가상 상황으로 바꿔도 됩니다.
-- `followUp.1.ko` · KO: 어떤 기억이나 실수에서 그래요?
-- `followUp.2.ko` · KO: 기억하고 싶은 것과 잊고 싶은 것은 뭐예요?
-- `followUp.3.ko` · KO: 영화 속 상황으로 예를 들어도 돼요?
+- `followUp.1.ko` · KO: 작은 실수로 예를 들어도 돼요.
+- `followUp.2.ko` · KO: 빨리 잊으면 무엇이 좋아져요?
+- `followUp.3.ko` · KO: 기억해야 할 부분도 있을까요?
 
 #### `q4`
 
-- `question.ko` · KO: 잊은 기억을 한 번 되돌릴 수 있으면 어떤 능력을 골라요?
-- `question.ja` · JA: 忘れた記憶を一度戻せるなら、どちらの能力を選びますか？
+- `question.ko` · KO: 행복한 기억과 힘든 기억이 똑같이 선명하게 남아도 첫 번째를 고를 거예요?
+- `question.ja` · JA: 幸せな記憶もつらい記憶も同じように鮮明に残っても、最初の能力を選びますか？
 - `tutorGuidance.ko` · KO: 주의: 힘든 개인 기억을 요구하지 말고 편한 사례나 가상 상황으로 바꿔도 됩니다.
-- `followUp.1.ko` · KO: 어떤 기억을 되돌리고 싶어요?
-- `followUp.2.ko` · KO: 한 번만 되돌릴 수 있어도 충분해요?
-- `followUp.3.ko` · KO: 처음 선택의 위험은 줄어들까요?
+- `followUp.1.ko` · KO: 어떤 기억은 계속 선명했으면 좋겠어요?
+- `followUp.2.ko` · KO: 작은 실수도 안 잊으면 힘들까요?
+- `followUp.3.ko` · KO: 시간이 지나도 괜찮을까요?
 
 #### `q5`
 
-- `question.ko` · KO: 소중한 사람의 기억은 못 지우면 어때요?
-- `question.ja` · JA: 大切な人との記憶は消せないなら、どうですか？
+- `question.ko` · KO: 힘든 일을 잊을 때 배운 점도 함께 흐려지면 선택이 달라져요?
+- `question.ja` · JA: つらいことを忘れるとき、そこから学んだことも一緒に薄れるなら、選択は変わりますか？
 - `tutorGuidance.ko` · KO: 주의: 힘든 개인 기억을 요구하지 말고 편한 사례나 가상 상황으로 바꿔도 됩니다.
-- `followUp.1.ko` · KO: 그 규칙이 있으면 더 안심돼요?
-- `followUp.2.ko` · KO: 지울 수 있어야 하는 기억도 있을까요?
-- `followUp.3.ko` · KO: 영화 속 인물이라면 어떻게 할까요?
+- `followUp.1.ko` · KO: 배운 점은 어떻게 남길 수 있어요?
+- `followUp.2.ko` · KO: 같은 실수를 다시 할 수도 있을까요?
+- `followUp.3.ko` · KO: 그래도 빨리 잊는 게 더 중요해요?
 
 #### `q6`
 
-- `question.ko` · KO: 기억에 어떤 규칙이 생기면 반대 능력을 고를 거예요?
-- `question.ja` · JA: 記憶にどんなルールが加われば、反対の能力を選びますか？
+- `question.ko` · KO: 어떤 경험이나 조건이면 반대 능력을 고를 거예요?
+- `question.ja` · JA: どんな経験や条件なら、反対の能力を選びますか？
 - `tutorGuidance.ko` · KO: 주의: 힘든 개인 기억을 요구하지 말고 편한 사례나 가상 상황으로 바꿔도 됩니다.
-- `followUp.1.ko` · KO: 어떤 기억은 꼭 보호해야 해요?
-- `followUp.2.ko` · KO: 능력을 몇 번까지 쓸 수 있어야 해요?
-- `followUp.3.ko` · KO: 다른 사람이 능력을 알면 선택이 바뀌어요?
+- `followUp.1.ko` · KO: 일이나 공부가 바뀌면 어때요?
+- `followUp.2.ko` · KO: 시간이 지나면 선택도 바뀔까요?
+- `followUp.3.ko` · KO: 반대 능력이 더 필요한 사람은 누구일까요?
 
 ## 14 · 숨은 부자 vs 존경받는 보통 사람 · [깊게]
 

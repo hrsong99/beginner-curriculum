@@ -7,9 +7,9 @@ spec:
   week: 13                      # → CLASS_WEEK. 코스 안에서 1..N 연속이어야 한다.
 
   title:
-    ko: 절대 안 잊기 vs 원하는 것만 잊기
-    en: Never forget vs choose what to forget
-    ja: 絶対に忘れない vs 忘れたいことだけ忘れる
+    ko: 모든 일을 선명하게 기억하기 vs 힘든 일을 빨리 잊기
+    en: Remember everything clearly vs quickly forget hard times
+    ja: すべてを鮮明に覚える vs つらいことを早く忘れる
   decks:
     lecture:  { entry: lecture/index.html }    # 수업용  → CLASS_LEMONBOARD_KEY
     prestudy: { entry: prestudy/index.html }   # 예습용  → PRESTUDY_LEMONBOARD_KEY
@@ -18,7 +18,7 @@ spec:
   teaches:
     patterns:
       []
-    canDo: 기억이 관계와 선택에 주는 이득과 부담을 상상하기
+    canDo: 정확한 기억과 빠른 회복의 이득과 부담을 비교하기
   prerequisites: []
   source: podo-curriculum-public 4-freetalking/talk-balance-games-advanced · 13
 

@@ -260,7 +260,7 @@ Lesson numbers may restart per course. Always identify a lesson by both course c
 - [`010`](talk-balance-games-intermediate/lesson-010.md) 재택근무 vs 출근
 - [`011`](talk-balance-games-intermediate/lesson-011.md) 카페 공부 vs 집 공부
 - [`012`](talk-balance-games-intermediate/lesson-012.md) 인터넷 쇼핑 vs 매장 쇼핑
-- [`013`](talk-balance-games-intermediate/lesson-013.md) 절대 안 잊기 vs 원하는 것만 잊기
+- [`013`](talk-balance-games-intermediate/lesson-013.md) 모든 일을 선명하게 기억하기 vs 힘든 일을 빨리 잊기
 - [`014`](talk-balance-games-intermediate/lesson-014.md) 숨은 부자 vs 존경받는 보통 사람 [깊게]
 
 ## `talk-balance-games-advanced` · 프리토킹 · 밸런스 게임 · 고급
@@ -277,5 +277,5 @@ Lesson numbers may restart per course. Always identify a lesson by both course c
 - [`010`](talk-balance-games-advanced/lesson-010.md) 재택근무 vs 출근
 - [`011`](talk-balance-games-advanced/lesson-011.md) 카페 공부 vs 집 공부
 - [`012`](talk-balance-games-advanced/lesson-012.md) 인터넷 쇼핑 vs 매장 쇼핑
-- [`013`](talk-balance-games-advanced/lesson-013.md) 절대 안 잊기 vs 원하는 것만 잊기
+- [`013`](talk-balance-games-advanced/lesson-013.md) 모든 일을 선명하게 기억하기 vs 힘든 일을 빨리 잊기
 - [`014`](talk-balance-games-advanced/lesson-014.md) 숨은 부자 vs 존경받는 보통 사람 [깊게]
