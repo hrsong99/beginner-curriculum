@@ -136,6 +136,15 @@ not fan out all episodes until the season bible and pilot have held up under rev
 
 ## 5. Authoring rules every writer checks
 
+**A rule added here only reaches the writers who were told to read this file.** In practice a lesson
+writer works from its track blueprint and the canonical trial deck, so a rule that exists only in this
+document or in `ux-philosophy.md` will be followed by whichever track was being written when it was
+added and silently missed by every other one. When you add or change a rule with a number in it,
+mirror it into each track's `lesson-blueprint.md` — and check the canonical trial deck actually obeys
+it, because that deck is what writers copy. Core Patterns spent 348 reorder sentences at three chips
+for exactly this reason: the four-chunk rule was written during the Contextual batch, and Core's
+blueprint and trial deck both said nothing about a count.
+
 - One activity per page; Korean-first title; one blue tutor-script box.
 - Keep `partN-intro` as a pacing and story bridge: pattern name plus one short Japanese line that
   moves from the scene into the next beat. Do not teach grammar on the dark transition page.
@@ -144,8 +153,14 @@ not fan out all episodes until the season bible and pilot have held up under rev
   reads the Korean and can point the learner to the Japanese. Keep formation for the later rule page.
 - Every closed sentence activity keeps four questions from read through translate; difficulty must
   not taper by silently dropping questions. Free-writing remains one open prompt.
-- Reorder activities use four meaningful phrase chunks per sentence, with four as the ceiling. Keep
-  the target pattern intact and enrich a short sentence instead of chopping it into grammar scraps.
+- Reorder activities use four meaningful phrase chunks per sentence, with four as the ceiling and the
+  working default. Three is fine when the sentence honestly holds three units; do not pad a sentence
+  to reach four, and never reach four by splitting a compound noun, a particle off its noun or an
+  ending off its stem. Do not stop short either — if a fourth unit is already in the sentence, give it
+  its own chip rather than gluing it to a neighbour, and chunk every sentence on a page the same way.
+- A spoken prompt that feeds one answer box asks one question. Two only when the second narrows the
+  first (either/or, or a yes/no setting up the real question); never three, and never two unrelated
+  questions joined with 그리고. Three answers wanted means three turns, not one crowded box.
 - A visual rule page has one block per real formation branch, not one block per example. Keep one
   block for an invariant rule; compare two or three blocks only when the learner must distinguish
   those forms.
