@@ -2477,6 +2477,15 @@ body.teaching .section-subtitle.pattern-meaning:has(+ .tutor-note) {
   .combi-nouns > span { font-size: 12px; }
 }
 
+/* A normal 480px lesson column leaves about 378px inside the rule card. Long
+   dictionary forms and their spoken result still have to share that one-line
+   equation, so step only those two text tiles down before they can establish a
+   wider min-content width. The 300px rule below remains the narrow-phone size. */
+@container (max-width: 390px) {
+  .bt-word { font-size: 28px; }
+  .bt-out { font-size: 24px; }
+}
+
 /* A real 320–360px phone leaves roughly 250–290px inside the section after
    page margins and padding. Keep the same left-to-right equation there, but
    step all four width contributors down together: tiles, gaps, arrow, result. */
@@ -2878,6 +2887,11 @@ body.teaching .section-subtitle + .tutor-note {
   font-size: 11px;
   font-weight: 800;
 }
+
+/* Most freetalk notes now open directly with the usable follow-up questions.
+   Do not reserve the gap that separated this label from an instruction line
+   when there is no instruction line above it. */
+.tn-body > .tn-cap:first-child { margin-top: 0; }
 
 .tn-more {
   margin: 4px 0 0;

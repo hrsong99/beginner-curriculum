@@ -1,11 +1,63 @@
 # Curriculum proofreading workflow
 
-This workflow reviews authored lesson language without feeding reviewers the runtime HTML. The
-HTML remains the only source of truth. Generated proofreading files are disposable views of that
-source and are never edited.
+This workflow defines both **complete lesson proofreading** and the narrower text-projection
+workflow used for large editorial batches. The HTML remains the only source of truth. Generated
+proofreading files are disposable views of that source and are never edited.
 
-The first implementation covers the complete `4-freetalking` track. Its unit of review is one
-theme containing the Advanced and Intermediate versions together.
+An unqualified request to **proofread a lesson, course or curriculum** means the complete review:
+language, pedagogy, narrative/role logic, activity usefulness, interaction behavior and rendered
+layout. Do not silently interpret “proofread” as spelling and translation only. A user may ask for
+a narrower text-only, Japanese-only or visual-only pass explicitly.
+
+The packet implementation currently covers the complete `4-freetalking` track. Its unit of review
+is one theme containing the Advanced and Intermediate versions together. Other tracks are reviewed
+directly from their `lesson.html` files until they have an equivalent projection.
+
+## Complete lesson proofreading
+
+Read `LESSON-CREATION-WORKFLOW.md`, the track's `lesson-blueprint.md`, the lesson brief and the
+relevant canonical trial deck before judging a generated lesson. Then inspect **every page in
+order as a learner**, not as disconnected HTML fragments. A pass must cover these dimensions:
+
+1. **Outcome contract:** the goal presents the lesson's two observable outcomes distinctly; each
+   outcome maps to one taught pattern and is earned again in the final application. A fluent tutor
+   and a Japanese learner should both be able to say what the two takeaways are.
+2. **Scene and roles:** dialogue is believable, every turn follows from the previous one, speaker
+   ownership stays stable and narrative continuity agrees with adjacent episodes. Receptive lessons
+   may reconstruct the partner's line, but instructions must say so and production must not quietly
+   switch roles.
+3. **Teaching:** each pattern receives a short Korean/Japanese meaning-and-use box on `pN-teach`;
+   formation belongs on `pN-rule`, not a dark transition page. Explanations must be short enough to
+   point at, accurate enough to prevent a false generalization and supported by the examples shown.
+4. **Activity value:** every page does teaching or retrieval work. Closed activities retain four
+   questions; reorder rows use up to four meaningful chunks; a choose page exists only for a real,
+   taught distinction. Do not use grammatical alternatives whose choice needs untaught nuance, nor
+   an obviously random character as a distractor. One prompt and one visible answer area must ask
+   for the same amount of work.
+5. **Application and nuance:** the replay and completion reconstruct the opening scene. Contextual
+   free talk is reciprocal—tutor asks, learner answers, learner asks, tutor gives an editable native
+   answer. A native tip adds adjacent register, prosody, contraction, collocation or intensity; it
+   does not repeat the lesson. The final 5–7-turn scene uses both outcomes and ends with a meaningful
+   hook or, in a finale, real closure.
+6. **Korean and Japanese:** Korean is natural spoken Korean at the promised level. Japanese carries
+   the same agent, object, tense, register and emotional force; it must not leave an object implicit
+   when doing so makes the Korean pattern ambiguous. Vocabulary glosses and highlighted spans agree
+   with the complete sentence.
+7. **Visual semantics:** the diagram must depict the rule it claims to teach. `.bt-word` holds a
+   complete dictionary form or other whole word. `.bt-syl` holds exactly one Hangul syllable whose
+   받침 or vowel is the visual evidence—never a multi-syllable stem squeezed into a syllable tile.
+   One block means one invariant rule; multiple blocks mean genuine formation branches.
+8. **Rendered behavior:** open the actual deck at a 480px lesson column and a 360px narrow column.
+   Visit every page, scroll to its real bottom and test representative wrong and correct choices,
+   all reorder answers, exact inputs, free-answer fields, reciprocal tutor fields and teaching mode.
+   Check console errors, pager obstruction and both outer and **internal** collisions: text can stay
+   inside a fixed tile's bounding box while wrapping across its 받침 seat, so `scrollWidth` alone is
+   not proof of visual correctness.
+
+Record exact page IDs and current/replacement text for content changes. Separate confirmed errors
+from editorial alternatives that need a human decision. After applying fixes, repeat the affected
+interaction and screenshot checks, run structural/reference validation and synchronize any
+deployable copy derived from the authoring HTML.
 
 ## Why the projection is one-way
 
