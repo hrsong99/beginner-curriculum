@@ -334,6 +334,7 @@ FT_SLUGS = {
     8: ("what-came-before", "What came before", "過ぎてきたもの"),
     9: ("what-if", "What if", "もしも"),
     10: ("worth-thinking-about", "Worth thinking about", "考えてみたいこと"),
+    11: ("balance-games", "Balance games", "究極の二択"),
 }
 
 # Each topic exists at both levels. Intermediate is placed in the insertion slot

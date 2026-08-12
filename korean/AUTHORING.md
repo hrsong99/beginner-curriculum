@@ -116,6 +116,10 @@ closing
 
 `data-act` 는 페이저 왼쪽에 뜨는 장 이름입니다. 붙인 페이지에서 새 장이 시작됩니다.
 
+어두운 `partN-intro` 는 문법 설명 상자가 아니라 호흡과 장면을 잇는 페이지입니다.
+`.transition-copy` 에는 일본어 장면 다리 한 줄만 두고, 뜻과 쓰임은 다음 학습 페이지로
+옮깁니다.
+
 ### 학습 페이지 한 장의 구조
 
 ```html
@@ -126,6 +130,20 @@ closing
   … 활동 하나 …
 </div>
 ```
+
+패턴을 처음 가르치는 `pN-teach` 는 일반 지시문 대신 이 이중 언어 상자로 시작합니다.
+
+```html
+<p class="section-subtitle pattern-meaning">
+  <span class="meaning-kicker">뜻과 쓰임 <small>意味・使い方</small></span>
+  <span class="ko">짧은 뜻과 언제 쓰는지.</span>
+  <span class="ja">同じ内容の日本語。</span>
+</p>
+```
+
+파란 면은 튜터가 읽는 한국어이고, 안쪽의 밝은 일본어 줄은 학생에게 짚어 줄 정확한
+대역입니다. 별개의 새 설명을 일본어 줄에 더하지 않습니다. 형태를 만드는 법은 `pN-rule`
+에서 다룹니다.
 
 - 제목은 **한국어 먼저**, 일본어는 괄호 안 `.title-ja`.
 - `.section-subtitle` 은 **튜터가 소리 내어 읽는 줄**입니다(`blue-100` 은 이 뜻 하나뿐).
@@ -234,11 +252,14 @@ closing
 쓸 수 있습니다: 학생 차례면 머리띠가 초록(`.bubble.me`), 튜터가 직접 답을 적는 자리면
 회색입니다.
 
+Contextual Korean의 `p3-freetalk` 은 반드시 네 차례로 닫습니다: **선생님 질문 → 학생 답변 →
+학생 질문 → 선생님 답변**. 마지막은 설명 문구가 아니라 아래의 편집 가능한 튜터 칸입니다.
+
 ```html
 <div class="turn other"><span class="who">…<span class="who-name">선생님</span></span>
   <div class="bubble"><div class="answer-box small">
     <span class="answer-label">先生の答え</span>
-    <span class="answer-space" data-sync-id="p3-freetalk-tutor"></span>
+    <span class="answer-space" data-sync-id="p3-freetalk-tutor-answer"></span>
   </div></div></div>
 ```
 
@@ -250,6 +271,7 @@ closing
 | 억양(끝 올리기/내리기) | `.pitch` > `.pi-card` > `.korean` + `.pi-curve`(SVG) + `.translation` |
 | 한자 다리 | `.bridge` > `.br-row` > `.br-cn` + `.br-eq` + `.br-ko` |
 | 바꿔 말하기(원어민 팁) | `.swap` > `.swap-row` > `.translation` + `.sw-from` + `.sw-to` |
+| 상황별 뉘앙스(원어민 팁) | `.nuance-compare` > `.nuance-choice` ×2 + 가운데 `.nuance-or` |
 | 오늘의 성과 | `.combi`(명사 은행 × 어미) + `.payoff`(큰 숫자) |
 
 받침 도식을 어미(주황) 색으로 쓰려면 `.batchim.ending-rule` 을 씁니다.
@@ -280,6 +302,12 @@ closing
 표시합니다. 화살표는 CSS 가 붙이므로 마크업에 적지 않습니다. 결과만 두 개 보여주고
 설명은 글로 쓰는 카드(옛 `.card` + `.tip` + `.example-card`)로 돌아가지 마세요 — 상자가
 세 겹이 되고, 정작 무엇이 바뀌었는지는 학습자가 되짚어야 합니다.
+
+둘 다 맞고 상황에 따라 고르는 표현은 `.swap` 이 아니라 `.nuance-compare` 를 씁니다.
+각 `.nuance-choice` 의 `.nuance-when` 에 한국어 상황 이름과 일본어 설명을 함께 적고,
+가운데 `.nuance-or` 는 `상황에 따라 <small>場面で選ぶ</small>` 로 둡니다. 두 카드의 시각적
+무게는 같아야 하며 화살표를 넣지 않습니다. `.swap` 은 실제 한 방향 교정이나 명백한
+바꿔 말하기일 때만 남겨 둡니다.
 
 ### 발음 표기 (`.yomi`)
 

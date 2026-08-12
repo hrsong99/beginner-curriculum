@@ -22,16 +22,20 @@ class ProofreadingPacketTests(unittest.TestCase):
         cls.outputs, cls.records = packets.build_outputs(cls.track)
 
     def test_full_freetalking_projection_is_complete_and_compact(self):
-        self.assertEqual(len(self.records), 182)
+        authored_decks = list((self.track / "courses").glob(
+            "talk-*/lessons/*/lesson.html"
+        ))
+        self.assertEqual(len(self.records), len(authored_decks))
+        theme_numbers = {record["themeNumber"] for record in self.records}
         self.assertEqual(
             len([path for path in self.outputs if path.parts[0] == "packets"]),
-            10,
+            len(theme_numbers),
         )
         json_records = [
             json.loads(line)
             for line in self.outputs[pathlib.Path("lessons.jsonl")].splitlines()
         ]
-        self.assertEqual(len(json_records), 182)
+        self.assertEqual(len(json_records), len(authored_decks))
         self.assertTrue(all(len(record["sourceSha256"]) == 64
                             for record in json_records))
 

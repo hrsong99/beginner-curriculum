@@ -1,9 +1,9 @@
 {
   "counts": {
-    "decks": 182,
-    "entries": 19346,
-    "lessonPairs": 91,
-    "themes": 10
+    "decks": 210,
+    "entries": 22734,
+    "lessonPairs": 105,
+    "themes": 11
   },
   "formatVersion": 1,
   "generator": "korean/tools/build_proofreading_packets.py",
@@ -11,14 +11,14 @@
   "omittedBoilerplateSignatures": {
     "feedback": [
       {
-        "decks": 182,
+        "decks": 210,
         "exampleSource": "korean/tracks/4-freetalking/courses/talk-between-two-countries-advanced/lessons/01-what-surprised-me/lesson.html",
         "sha256": "704c3b55e754bc066e5ed9b73dee6818d7a5c75380d14e6acad8a12808c127e3"
       }
     ],
     "lesson-style": [
       {
-        "decks": 182,
+        "decks": 210,
         "exampleSource": "korean/tracks/4-freetalking/courses/talk-between-two-countries-advanced/lessons/01-what-surprised-me/lesson.html",
         "sha256": "3e3fe09fc427c422925c5a180892abce646e9f14ddd755991db52c3ece698bcc"
       }
@@ -104,6 +104,14 @@
       "sourceSetSha256": "b69f14158d298e9f4ef5b800b794f95d32120380cb8ce10f3a147bc04254c6b8",
       "theme": "생각해 볼 것",
       "themeNumber": 10
+    },
+    {
+      "decks": 28,
+      "file": "packets/11-balance-games.md",
+      "lessonPairs": 14,
+      "sourceSetSha256": "b1945bee3f6149ffeb1672a355e89f1959f0109acab3c58d8ca604ad805f698f",
+      "theme": "밸런스 게임",
+      "themeNumber": 11
     }
   ],
   "track": "korean/tracks/4-freetalking"

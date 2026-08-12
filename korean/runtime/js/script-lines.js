@@ -49,6 +49,10 @@
   }
 
   document.querySelectorAll(".section-subtitle").forEach(function (box) {
+    // The pattern meaning component intentionally keeps one Korean teaching
+    // block over one Japanese inset; its own layout owns that pairing.
+    if (box.classList.contains("pattern-meaning")) return;
+
     var ko = box.querySelector(":scope > .ko");
     var ja = box.querySelector(":scope > .ja");
     if (!ko || !ja) return;                       // 한쪽만 있는 박스는 그대로

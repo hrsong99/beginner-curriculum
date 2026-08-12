@@ -137,9 +137,11 @@ not fan out all episodes until the season bible and pilot have held up under rev
 ## 5. Authoring rules every writer checks
 
 - One activity per page; Korean-first title; one blue tutor-script box.
-- Every `partN-intro` gives the pattern's short Japanese meaning and its communicative use. A
-  translated scene line alone is an example, not an explanation; establish meaning before the
-  later rule page explains formation.
+- Keep `partN-intro` as a pacing and story bridge: pattern name plus one short Japanese line that
+  moves from the scene into the next beat. Do not teach grammar on the dark transition page.
+- Open `pN-teach` with one compact `.section-subtitle.pattern-meaning` box. Give the short meaning
+  and communicative use in Korean, followed by its exact Japanese counterpart; the Korean tutor
+  reads the Korean and can point the learner to the Japanese. Keep formation for the later rule page.
 - Every closed sentence activity keeps four questions from read through translate; difficulty must
   not taper by silently dropping questions. Free-writing remains one open prompt.
 - Reorder activities use four meaningful phrase chunks per sentence, with four as the ceiling. Keep
@@ -158,7 +160,12 @@ not fan out all episodes until the season bible and pilot have held up under rev
   fake ending or when both answers are grammatical and choosing requires an unintroduced nuance.
 - A native tip adds one adjacent choice not already taught: register, softening, contraction,
   prosody, collocation or a useful difference in intensity. It is not a recap or a delayed core
-  explanation.
+  explanation. When both expressions are valid, show them with `.nuance-compare`: equal visual
+  weight, a Korean/Japanese situation label on each, and `상황에 따라 / 場面で選ぶ` between them.
+  Do not draw a correction arrow or frame the lesson expression as universally better.
+- Contextual `p3-freetalk` is a reciprocal exchange, not a single student prompt: the tutor asks,
+  the student answers, the student asks a related question, and the tutor gives a real personal
+  answer in the gray editable `先生の答え` field. Do not end the page after the student's answer.
 - The final teaser is a complete 5–7-turn mini-scene with 2–3 learner completions, uses both of
   today's patterns, advances the relationship or conflict, and ends on an unresolved hook. A
   receptive lesson may ask the learner to reconstruct the other speaker's lines.

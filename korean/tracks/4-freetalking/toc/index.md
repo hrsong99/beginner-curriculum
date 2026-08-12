@@ -245,3 +245,37 @@ Lesson numbers may restart per course. Always identify a lesson by both course c
 - [`004`](talk-worth-thinking-about-advanced/lesson-004.md) 돈과 행복 [깊게]
 - [`005`](talk-worth-thinking-about-advanced/lesson-005.md) 몇 살이 제일 좋을까 [깊게]
 - [`006`](talk-worth-thinking-about-advanced/lesson-006.md) 후회 없는 삶이 가능할까 [깊게]
+
+## `talk-balance-games-intermediate` · 프리토킹 · 밸런스 게임 · 중급
+
+- [`001`](talk-balance-games-intermediate/lesson-001.md) 돈이 많은 삶 vs 시간이 많은 삶
+- [`002`](talk-balance-games-intermediate/lesson-002.md) 친구 100명 vs 진짜 친구 3명
+- [`003`](talk-balance-games-intermediate/lesson-003.md) 평생 여름 vs 평생 겨울
+- [`004`](talk-balance-games-intermediate/lesson-004.md) 아침형 인간 vs 밤형 인간
+- [`005`](talk-balance-games-intermediate/lesson-005.md) 계획 여행 vs 즉흥 여행
+- [`006`](talk-balance-games-intermediate/lesson-006.md) 혼자 여행 vs 같이 여행
+- [`007`](talk-balance-games-intermediate/lesson-007.md) 도시 생활 vs 시골 생활
+- [`008`](talk-balance-games-intermediate/lesson-008.md) 인터넷 없이 vs 에어컨 없이
+- [`009`](talk-balance-games-intermediate/lesson-009.md) 워라밸 vs 높은 월급
+- [`010`](talk-balance-games-intermediate/lesson-010.md) 재택근무 vs 출근
+- [`011`](talk-balance-games-intermediate/lesson-011.md) 카페 공부 vs 집 공부
+- [`012`](talk-balance-games-intermediate/lesson-012.md) 인터넷 쇼핑 vs 매장 쇼핑
+- [`013`](talk-balance-games-intermediate/lesson-013.md) 절대 안 잊기 vs 원하는 것만 잊기
+- [`014`](talk-balance-games-intermediate/lesson-014.md) 숨은 부자 vs 존경받는 보통 사람 [깊게]
+
+## `talk-balance-games-advanced` · 프리토킹 · 밸런스 게임 · 고급
+
+- [`001`](talk-balance-games-advanced/lesson-001.md) 돈이 많은 삶 vs 시간이 많은 삶
+- [`002`](talk-balance-games-advanced/lesson-002.md) 친구 100명 vs 진짜 친구 3명
+- [`003`](talk-balance-games-advanced/lesson-003.md) 평생 여름 vs 평생 겨울
+- [`004`](talk-balance-games-advanced/lesson-004.md) 아침형 인간 vs 밤형 인간
+- [`005`](talk-balance-games-advanced/lesson-005.md) 계획 여행 vs 즉흥 여행
+- [`006`](talk-balance-games-advanced/lesson-006.md) 혼자 여행 vs 같이 여행
+- [`007`](talk-balance-games-advanced/lesson-007.md) 도시 생활 vs 시골 생활
+- [`008`](talk-balance-games-advanced/lesson-008.md) 인터넷 없이 vs 에어컨 없이
+- [`009`](talk-balance-games-advanced/lesson-009.md) 워라밸 vs 높은 월급
+- [`010`](talk-balance-games-advanced/lesson-010.md) 재택근무 vs 출근
+- [`011`](talk-balance-games-advanced/lesson-011.md) 카페 공부 vs 집 공부
+- [`012`](talk-balance-games-advanced/lesson-012.md) 인터넷 쇼핑 vs 매장 쇼핑
+- [`013`](talk-balance-games-advanced/lesson-013.md) 절대 안 잊기 vs 원하는 것만 잊기
+- [`014`](talk-balance-games-advanced/lesson-014.md) 숨은 부자 vs 존경받는 보통 사람 [깊게]

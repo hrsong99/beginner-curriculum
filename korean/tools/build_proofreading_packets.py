@@ -507,17 +507,28 @@ def build_outputs(track: pathlib.Path) -> tuple[dict[pathlib.Path, str], list[di
                 advanced_course["lessons"], intermediate_course["lessons"]):
             if advanced_plan["no"] != intermediate_plan["no"]:
                 raise ValueError(f"theme {key} has mismatched lesson numbers")
-            pair = []
+            planned_pair = []
             for course, lesson in (
                     (advanced_course, advanced_plan),
                     (intermediate_course, intermediate_plan)):
                 lesson_root = track / "courses" / course["slug"] / "lessons"
                 matches = sorted(lesson_root.glob(f"{lesson['no']:02d}-*/lesson.html"))
-                if len(matches) != 1:
+                if len(matches) > 1:
                     raise ValueError(
                         f"{course['slug']} lesson {lesson['no']}: "
-                        f"expected one deck, found {len(matches)}"
+                        f"expected at most one deck, found {len(matches)}"
                     )
+                planned_pair.append((course, lesson, matches))
+            written_counts = [len(item[2]) for item in planned_pair]
+            if written_counts == [0, 0]:
+                continue
+            if written_counts != [1, 1]:
+                raise ValueError(
+                    f"theme {key} lesson {advanced_plan['no']}: "
+                    "advanced and intermediate must be authored together"
+                )
+            pair = []
+            for course, lesson, matches in planned_pair:
                 record, signatures = extract_lesson(
                     matches[0], deep=lesson.get("deep", False),
                     planned_title=lesson["title"], course_slug=course["slug"],
