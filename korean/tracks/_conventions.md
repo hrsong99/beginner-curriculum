@@ -251,7 +251,7 @@ class today. Verify against the CDN before assuming a component exists.
 | --- | --- | --- |
 | `.phone.paged > .pg-on { padding-bottom: 88px }` — drop `.section` from the selector | not written | Only `.section` gets pager clearance, but `min-height: calc(100vh - 118px)` hides that: at a tall window every page is propped to fit and the usual check passes. Measured with the prop removed, **46 of 59 decks** put their `lesson-goal` tail under the bar at a 800px viewport (needs 852–905px). One selector fixes every deck and every future one |
 | `.bt-word` | local only, **not in v1.3.0** | groups a dictionary form as one word in a rule diagram |
-| `.pattern-meaning` / `.meaning-kicker` | local only, **not in v1.3.0** | the compact meaning box every `pN-teach` is supposed to open with. 12/12 contextual decks use it, so those decks are unstyled in class right now |
+| `.pattern-meaning` / `.meaning-kicker` | local only, **not in v1.3.0** — **now the top of this queue** | the 뜻과 쓰임 box every `pN-teach` opens with. **115 core teach pages across 46 decks** now carry it, plus 12/12 contextual decks. Until it ships, every one of them renders the box unstyled in class |
 | `.nuance-compare` | local only, **not in v1.3.0** | both-valid pairs shown at equal weight instead of `.swap`'s correction arrow. Same exposure as above |
 | a third inline accent token | not written | see the two-class section below |
 | three-case `.batchim` layout | not written | see the ㄹ-stem section below |
