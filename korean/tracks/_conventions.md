@@ -26,8 +26,25 @@ marks it used. This is the one file a lesson-writer is expected to edit.
 
 **Practice dialogues** — icon avatars, no photos: `先生` (the tutor) and `私` (the learner).
 **Bonus scenes** — the stranger is `相手`, never a named character.
-**Named third parties in example sentences**: 다나카 (the learner's stand-in in core), 소희
-(the contextual track's love interest — do not reuse her outside 3-contextual-korean).
+**Named third parties in example sentences**: 소희 (the contextual track's love interest — do
+not reuse her outside 3-contextual-korean).
+
+**The learner has two names, and that is deliberate.** In part 3 they *play* ハルカ opposite
+ハナ — a role, with a photo avatar and a name badge. In the bonus scene they are `私`, and the
+world addresses them as **다나카**, a Japanese name standing in for the learner's own. 다나카 is
+also the third-party name in example sentences (`다나카 씨는 학생이에요?`), which is consistent:
+in a drill they are somebody else's classmate, in the bonus scene they are you.
+
+Two bonus scenes have punchlines that **depend** on this and break if you "fix" them:
+
+- **과 2** — immigration mistakes you for your friend: 「하루카 씨예요?」 →
+  「아니요, 저는 하루카가 아니에요. 다나카예요.」 That is the lesson's `N이/가 아니에요` in its
+  most natural possible use, and it only works because you are not ハルカ here.
+- **과 5** — you say the bag is not yours, the clerk reads the name tag, and the name is 다나카.
+  The joke is that you did not recognise your own bag.
+
+So: **never rename the learner across frames to make a deck "consistent."** It already is. If a
+scene reads as a contradiction, the missing piece is this note, not the deck.
 
 `1-hangul` has **no cast at all.** It is decoding practice; there are no dialogue pages.
 
