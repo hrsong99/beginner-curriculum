@@ -113,7 +113,15 @@ about the runtime, not something a lesson writer works around.
 
 ### The counting rules
 
-These are not style preferences; each one was paid for on the Korean side.
+These are not style preferences; each one was paid for on the Korean side — and the first two
+below were paid for again by this track's own pilot, because they were not written here yet.
+
+- **The tutor script box has the same number of sentences on both sides.** `script-lines.js`
+  rebuilds the blue box as one sentence per line, each with its own translation underneath, but
+  **only when the counts match**; when they differ it deliberately does nothing rather than pair
+  the wrong translation to the wrong line. So a mismatch does not error — it just renders as a
+  block of bunched prose. Write the English, then write exactly that many Japanese sentences.
+  `.pattern-meaning` is exempt (it owns its own pairing), so keep *its* text short instead.
 
 - **Four questions in every closed activity** — read, choose, reorder, fill, translate. Difficulty
   must not taper by silently dropping questions. Free-writing stays one open prompt.

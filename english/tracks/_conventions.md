@@ -184,6 +184,8 @@ does not fit rather than bending a component into a wrong teaching.
 
 ## Before you call a lesson done
 
+0. **`python3 english/tools/check_deck.py <your deck>` — run this first.** It mechanises items
+   1, 3, 4 and 5 below and exits non-zero on any error. It does not replace looking at the page.
 1. Every `href`/`src` resolves — run the deck's own relative paths, do not eyeball them.
 2. Nothing the lesson has not taught appears in learner-produced English.
 3. **No `.yomi`, no katakana over any English word, and `yomi.js` is not loaded.** See

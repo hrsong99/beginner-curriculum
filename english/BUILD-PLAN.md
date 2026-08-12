@@ -249,7 +249,17 @@ copy of anything. Same rule here.
 - [ ] **T4.4** — `plan_courses.py` — cut tracks into deployable courses on unit boundaries;
   emit `course.yaml` / `lesson.yaml` validating against podo-curriculum's schemas.
 - [ ] **T4.5** — `build_catalog.py` — English catalog gateway + per-track pages.
-- [ ] **T4.6** — Tests, matching `test_track_parsers.py` / `test_build_proofreading_packets.py`.
+- [x] **T4.6a — DONE, ahead of the rest of Phase 4.** `english/tools/check_deck.py` — the static
+  deck checker. Built early because the pilot shipped two defects that pass markup review and leave
+  nothing in the console, and a checklist item only reaches whoever was told to read the checklist.
+  Covers metadata, id/directory match, ref resolution, duplicate ids, inline CSS/JS, the English
+  no-katakana rule, **tutor-script sentence parity** and **reorder chunk consistency**. Exits
+  non-zero, so it can gate a batch.
+
+  Run against the Korean tree it finds **94 pre-existing errors in 318 decks** — 39 parity, 54
+  mixed-chip-count pages, 1 deck shipping inline `<style>`. The chip figure independently confirms
+  the problem Korean's own `_conventions.md` records ("348문장 중 51문장"), which is still open.
+- [ ] **T4.6b** — Tests for the tools, matching `test_track_parsers.py`.
 
 ---
 

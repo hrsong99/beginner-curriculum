@@ -220,6 +220,19 @@ Static checks:
 - **every tutor script box has the same number of sentences on both sides**
 - **every reorder page uses one chunking criterion down the page**
 
+### Run the checker
+
+```sh
+python3 english/tools/check_deck.py english/tracks      # a tree
+python3 english/tools/check_deck.py path/to/lesson.html # one deck
+python3 english/tools/check_deck.py --all               # every deck in the repo
+```
+
+It covers every static check above and exits non-zero on any error, so it can gate a batch. It
+exists because the two checks below **cannot be caught by reading markup**, and a checklist item
+only reaches the writers who were told to read the checklist. The first English deck passed every
+other check and still shipped both.
+
 ### The two checks that fail silently
 
 Both of these produce a page that is *valid markup and wrong on screen*, with nothing in the
