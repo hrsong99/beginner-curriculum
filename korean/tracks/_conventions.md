@@ -224,6 +224,22 @@ So: if a lesson needs something the runtime cannot do, **stop and report it — 
 Note what is missing, build the page with what exists, and say so. The change then gets made
 once, reviewed, and published as a version, instead of ten times in ten directions.
 
+### Runtime queue — waiting on the next published version
+
+Nothing here is a deck's problem to work around. `check_runtime_drift.py` says `trial.css` is
+already **+3734 bytes ahead of `v1.3.0`**, so several of these render locally and unstyled in
+class today. Verify against the CDN before assuming a component exists.
+
+| Needed | State | Why |
+| --- | --- | --- |
+| `.phone.paged > .pg-on { padding-bottom: 88px }` — drop `.section` from the selector | not written | Only `.section` gets pager clearance, but `min-height: calc(100vh - 118px)` hides that: at a tall window every page is propped to fit and the usual check passes. Measured with the prop removed, **46 of 59 decks** put their `lesson-goal` tail under the bar at a 800px viewport (needs 852–905px). One selector fixes every deck and every future one |
+| `.bt-word` | local only, **not in v1.3.0** | groups a dictionary form as one word in a rule diagram |
+| `.pattern-meaning` / `.meaning-kicker` | local only, **not in v1.3.0** | the compact meaning box every `pN-teach` is supposed to open with. 12/12 contextual decks use it, so those decks are unstyled in class right now |
+| `.nuance-compare` | local only, **not in v1.3.0** | both-valid pairs shown at equal weight instead of `.swap`'s correction arrow. Same exposure as above |
+| a third inline accent token | not written | see the two-class section below |
+| three-case `.batchim` layout | not written | see the ㄹ-stem section below |
+| `.choose-word` in `spotlight.js`'s SPOT list | not written | the tutor cannot point at that activity |
+
 ## The inline mark vocabulary is two classes, and some lessons need three
 
 Reported by two writers independently, so it is a gap in the system rather than two mistakes.
@@ -404,20 +420,49 @@ Each of these cost a rewrite. They are not style preferences.
    *And paged mode hides pages by class, not by inline style* — `.phone.paged > * { display:
    none }`, with `pager.js` toggling `.pg-on`. So clearing `p.style.display` clears something
    that was never set: the page stays `display:none`, `scrollHeight` reads **0**, and the
-   check passes on every deck by measuring nothing. Turn each page on for real:
+   check passes on every deck by measuring nothing. Turn each page on for real.
+
+   **And do not compare against `innerHeight`** — that was the third wrong version, and it
+   passed on all 59 decks while the defect was live. The active page carries
+
+   ```css
+   .phone.paged > .pg-on { min-height: calc(100vh - 118px); }   /* trial.css:4600 */
+   ```
+
+   so on a tall window the box is *propped up to the viewport* and `scrollHeight >
+   innerHeight` can never fire. The check reports the window back to you. Measure the page's
+   **own** height with the prop removed, and compare that to the viewport you actually care
+   about — a tutor's laptop, not your monitor:
 
    ```js
+   const VH = 800;                     // the smallest screen this has to work on
    const phone = document.querySelector('.phone');
    const pages = [...phone.children].filter(p => p.hasAttribute('data-page-id'));
    const was = phone.querySelector('.pg-on');
    const bad = pages.filter(p => {
+     if (p.classList.contains('section')) return false;   // .section gets the 88px
      pages.forEach(q => q.classList.toggle('pg-on', q === p));
-     return document.documentElement.scrollHeight > innerHeight
-            && !p.classList.contains('section');
+     const prev = p.style.minHeight;
+     p.style.minHeight = '0px';                           // drop the viewport prop
+     const r = p.getBoundingClientRect();
+     const need = r.height + r.top + scrollY;
+     p.style.minHeight = prev;
+     return need > VH - 88;                               // 88px sits under the bar
    }).map(p => p.dataset.pageId);
    pages.forEach(q => q.classList.toggle('pg-on', q === was));
    bad
    ```
+
+   Measured this way across 1-hangul + 2-core-patterns (59 decks, 2026-08-12): every deck's
+   `lesson-goal` is the tall one, needing **852–905px**. Nothing clips at 1000px, 25 decks
+   clip at 900, **46 of 59 clip at 800**. The bottom of the opening page is under the bar on
+   any ordinary laptop. The one-line fix is in the runtime, not in 46 decks — drop `.section`
+   from the clearance rule so every paged page gets it — so it is on the runtime queue below,
+   not something a lesson writer works around.
+
+   Headless Chrome would not start in the sandbox; the Orca embedded browser runs the probe
+   fine (`orca goto --url file://… --json` then `orca eval --expression '…' --json`). Use it
+   rather than reporting this check as unrun.
 
    Two things that will waste an hour otherwise: the decks reference remote avatars, so a
    sandboxed browser never fires `load` — hang the probe off `DOMContentLoaded` and resolve
