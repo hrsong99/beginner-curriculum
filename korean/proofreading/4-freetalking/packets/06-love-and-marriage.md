@@ -12,7 +12,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-advanced/lessons/01-heart-fluttering-moment/lesson.html`
-- sha256: `12c80b11bf3711bff582e980586b3d3becd6717af2c92a5f6ab6e2b095f37e29`
+- sha256: `a2580e475ab02a4be0bb9fcef9fc6334aec4a6ffe5cc7394448d1ae6eb7435e7`
 - source kind: `model-story`
 
 #### `metadata`
@@ -88,7 +88,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 영화나 드라마에서 설렌 장면을 본 적 있어요?
 - `question.ja` · JA: 映画やドラマで、ときめく場面を見たことがありますか？
-- `tutorGuidance.ko` · KO: 가볍게 입을 여는 질문이에요. 경험이 없으면 본 장면이나 들은 이야기로 받아 주세요.
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
 - `followUp.1.ko` · KO: 어떤 작품이었어요?
 - `followUp.2.ko` · KO: 누가 무엇을 했어요?
 - `followUp.3.ko` · KO: 그 장면을 다시 봤어요?
@@ -97,7 +97,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 최근에 누군가에게 고마웠던 작은 행동이 뭐예요?
 - `question.ja` · JA: 最近、誰かにしてもらってうれしかった小さな行動は何ですか？
-- `tutorGuidance.ko` · KO: 하나가 나오면 그때의 사람, 장소, 느낌을 구체적으로 이어 가세요.
 - `followUp.1.ko` · KO: 누가 해 줬어요?
 - `followUp.2.ko` · KO: 어떤 상황이었어요?
 - `followUp.3.ko` · KO: 그 사람에게 고맙다고 했어요?
@@ -106,7 +105,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 어떤 순간에 사람에게 마음이 움직여요?
 - `question.ja` · JA: どんな瞬間に人に心を引かれますか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 한 가지를 고른 뒤 이유와 장면이 나올 때까지 기다려 주세요.
 - `followUp.1.ko` · KO: 처음 만났을 때도 알 수 있어요?
 - `followUp.2.ko` · KO: 말과 행동 중 무엇이 먼저 보여요?
 - `followUp.3.ko` · KO: 최근에 비슷한 장면이 있었어요?
@@ -115,7 +113,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 상대의 어떤 말투가 설레게 해요?
 - `question.ja` · JA: 相手のどんな話し方にときめきますか？
-- `tutorGuidance.ko` · KO: 정답을 정해 주지 말고 학생이 자기 기준을 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 목소리도 중요해요?
 - `followUp.2.ko` · KO: 직접적인 말이 좋아요?
 - `followUp.3.ko` · KO: 문자에서는 느낌이 달라요?
@@ -124,7 +121,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 오래 기억에 남은 작은 배려가 뭐예요?
 - `question.ja` · JA: 長く記憶に残っている小さな気遣いは何ですか？
-- `tutorGuidance.ko` · KO: 앞에서 나온 이야기와 연결해 변화나 차이를 말하게 해 주세요.
 - `followUp.1.ko` · KO: 그때 왜 더 특별했어요?
 - `followUp.2.ko` · KO: 다른 사람에게도 이야기했어요?
 - `followUp.3.ko` · KO: 나도 같은 행동을 해 본 적 있어요?
@@ -133,7 +129,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 첫인상과 나중에 생기는 설렘은 어떻게 달라요?
 - `question.ja` · JA: 第一印象と、あとから生まれるときめきはどう違いますか？
-- `tutorGuidance.ko` · KO: 생각이 필요한 질문이에요. 구체적인 예에서 시작하게 해 주세요.
 - `followUp.1.ko` · KO: 첫인상이 바뀐 사람이 있어요?
 - `followUp.2.ko` · KO: 시간이 얼마나 필요해요?
 - `followUp.3.ko` · KO: 외모보다 행동이 오래 남아요?
@@ -142,7 +137,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 설렘이 신뢰로 이어지려면 무엇이 필요할까요?
 - `question.ja` · JA: ときめきが信頼につながるには、何が必要でしょうか？
-- `tutorGuidance.ko` · KO: 제일 어려운 질문이에요. 판단하지 말고 기준을 한 가지씩 말하게 해 주세요.
 - `followUp.1.ko` · KO: 작은 약속도 중요해요?
 - `followUp.2.ko` · KO: 말보다 행동을 얼마나 봐야 해요?
 - `followUp.3.ko` · KO: 시간이 지나면 설렘은 꼭 줄어요?
@@ -151,7 +145,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 좋은 사람인데도 마음이 움직이지 않는 이유는 뭘까요?
 - `question.ja` · JA: では逆に、よい人なのに心が動かないのはなぜでしょうか？
-- `tutorGuidance.ko` · KO: 주제를 뒤집어 닫는 질문이에요. 앞에서 고친 표현을 다시 쓰게 해 주세요.
 - `followUp.1.ko` · KO: 친절함만으로는 부족해요?
 - `followUp.2.ko` · KO: 취향이 다르면 어려워요?
 - `followUp.3.ko` · KO: 시간이 지나면 달라질 수 있어요?
@@ -159,7 +152,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-intermediate/lessons/01-heart-fluttering-moment/lesson.html`
-- sha256: `22f85d071482c2368824e7820c28a022c1ce22f692dc1eabb7284f6a1f1798a3`
+- sha256: `1a2aafade493268f001b6d52b9c20026a46c1d252c9f841a5be80c3aba3e6a32`
 - source kind: `model-story`
 
 #### `metadata`
@@ -235,7 +228,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 영화나 드라마에서 설렌 장면을 본 적 있어요?
 - `question.ja` · JA: 映画やドラマで、ときめく場面を見たことがありますか？
-- `tutorGuidance.ko` · KO: 가볍게 입을 여는 질문이에요. 경험이 없으면 본 장면이나 들은 이야기로 받아 주세요.
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
 - `followUp.1.ko` · KO: 어떤 작품이었어요?
 - `followUp.2.ko` · KO: 누가 무엇을 했어요?
 - `followUp.3.ko` · KO: 그 장면을 다시 봤어요?
@@ -244,7 +237,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 최근에 누군가에게 고마웠던 작은 행동이 뭐예요?
 - `question.ja` · JA: 最近、誰かにしてもらってうれしかった小さな行動は何ですか？
-- `tutorGuidance.ko` · KO: 하나가 나오면 그때의 사람, 장소, 느낌을 구체적으로 이어 가세요.
 - `followUp.1.ko` · KO: 누가 해 줬어요?
 - `followUp.2.ko` · KO: 어떤 상황이었어요?
 - `followUp.3.ko` · KO: 그 사람에게 고맙다고 했어요?
@@ -253,7 +245,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 어떤 순간에 사람에게 마음이 움직여요?
 - `question.ja` · JA: どんな瞬間に人に心を引かれますか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 한 가지를 고른 뒤 이유와 장면이 나올 때까지 기다려 주세요.
 - `followUp.1.ko` · KO: 처음 만났을 때도 알 수 있어요?
 - `followUp.2.ko` · KO: 말과 행동 중 무엇이 먼저 보여요?
 - `followUp.3.ko` · KO: 최근에 비슷한 장면이 있었어요?
@@ -262,7 +253,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 상대의 어떤 말투가 설레게 해요?
 - `question.ja` · JA: 相手のどんな話し方にときめきますか？
-- `tutorGuidance.ko` · KO: 정답을 정해 주지 말고 학생이 자기 기준을 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 목소리도 중요해요?
 - `followUp.2.ko` · KO: 직접적인 말이 좋아요?
 - `followUp.3.ko` · KO: 문자에서는 느낌이 달라요?
@@ -271,7 +261,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 오래 기억에 남은 작은 배려가 뭐예요?
 - `question.ja` · JA: 長く記憶に残っている小さな気遣いは何ですか？
-- `tutorGuidance.ko` · KO: 앞에서 나온 이야기와 연결해 변화나 차이를 말하게 해 주세요.
 - `followUp.1.ko` · KO: 그때 왜 더 특별했어요?
 - `followUp.2.ko` · KO: 다른 사람에게도 이야기했어요?
 - `followUp.3.ko` · KO: 나도 같은 행동을 해 본 적 있어요?
@@ -280,7 +269,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 첫인상과 나중에 느끼는 설렘은 어떻게 달라요?
 - `question.ja` · JA: 第一印象と、あとで感じるときめきはどう違いますか？
-- `tutorGuidance.ko` · KO: 생각이 필요한 질문이에요. 구체적인 예에서 시작하게 해 주세요.
 - `followUp.1.ko` · KO: 첫인상이 바뀐 사람이 있어요?
 - `followUp.2.ko` · KO: 시간이 얼마나 필요해요?
 - `followUp.3.ko` · KO: 외모보다 행동이 오래 남아요?
@@ -289,7 +277,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 설렘이 믿음으로 바뀌려면 뭐가 필요할까요?
 - `question.ja` · JA: ときめきが信頼に変わるには、何が必要でしょうか？
-- `tutorGuidance.ko` · KO: 제일 어려운 질문이에요. 판단하지 말고 기준을 한 가지씩 말하게 해 주세요.
 - `followUp.1.ko` · KO: 작은 약속도 중요해요?
 - `followUp.2.ko` · KO: 말보다 행동을 얼마나 봐야 해요?
 - `followUp.3.ko` · KO: 시간이 지나면 설렘은 꼭 줄어요?
@@ -298,7 +285,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 좋은 사람인데도 마음이 움직이지 않는 이유는 뭘까요?
 - `question.ja` · JA: では逆に、よい人なのに心が動かないのはなぜでしょうか？
-- `tutorGuidance.ko` · KO: 주제를 뒤집어 닫는 질문이에요. 앞에서 고친 표현을 다시 쓰게 해 주세요.
 - `followUp.1.ko` · KO: 친절함만으로는 부족해요?
 - `followUp.2.ko` · KO: 취향이 다르면 어려워요?
 - `followUp.3.ko` · KO: 시간이 지나면 달라질 수 있어요?
@@ -308,7 +294,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-advanced/lessons/02-words-that-kill-the-mood/lesson.html`
-- sha256: `2ea0b4f8e33bb0bce7d79d51c9c06a05cfbae6a90d6b5e528e0c38c71008c448`
+- sha256: `1f56d890bb0fc3107d6b7f1f03590b51f7d74fb835ba6eb7f0a6595a2583311a`
 - source kind: `model-story`
 
 #### `metadata`
@@ -384,7 +370,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 영화나 드라마에서 무례한 말을 들은 장면이 있었어요?
 - `question.ja` · JA: 映画やドラマで、失礼な言葉を聞く場面はありましたか？
-- `tutorGuidance.ko` · KO: 가볍게 입을 여는 질문이에요. 경험이 없으면 본 장면이나 들은 이야기로 받아 주세요.
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
 - `followUp.1.ko` · KO: 어떤 상황이었어요?
 - `followUp.2.ko` · KO: 누가 그 말을 했어요?
 - `followUp.3.ko` · KO: 다른 사람은 어떻게 반응했어요?
@@ -393,7 +379,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 최근에 듣고 불편했던 말이 뭐예요?
 - `question.ja` · JA: 最近、聞いて不快だった言葉は何ですか？
-- `tutorGuidance.ko` · KO: 하나가 나오면 그때의 사람, 장소, 느낌을 구체적으로 이어 가세요.
 - `followUp.1.ko` · KO: 누구에게 한 말이었어요?
 - `followUp.2.ko` · KO: 말투는 어땠어요?
 - `followUp.3.ko` · KO: 그 자리의 분위기가 바뀌었어요?
@@ -402,7 +387,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 어떤 한마디를 들으면 마음이 바로 식어요?
 - `question.ja` · JA: どんな一言を聞くと、気持ちがすぐ冷めますか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 한 가지를 고른 뒤 이유와 장면이 나올 때까지 기다려 주세요.
 - `followUp.1.ko` · KO: 왜 그 말이 싫어요?
 - `followUp.2.ko` · KO: 농담이어도 싫어요?
 - `followUp.3.ko` · KO: 처음 만난 사람이라면 더 크게 느껴져요?
@@ -411,7 +395,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 농담과 무례한 말의 경계는 어디예요?
 - `question.ja` · JA: 冗談と失礼な言葉の境目はどこですか？
-- `tutorGuidance.ko` · KO: 정답을 정해 주지 말고 학생이 자기 기준을 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 상대가 웃으면 농담이 돼요?
 - `followUp.2.ko` · KO: 친한 사이면 기준이 달라요?
 - `followUp.3.ko` · KO: 사과하면 괜찮아져요?
@@ -420,7 +403,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 다른 사람을 대하는 말투가 중요한 이유는 뭐예요?
 - `question.ja` · JA: 他人への話し方が大切なのはなぜですか？
-- `tutorGuidance.ko` · KO: 앞에서 나온 이야기와 연결해 변화나 차이를 말하게 해 주세요.
 - `followUp.1.ko` · KO: 직원에게 하는 말도 보게 돼요?
 - `followUp.2.ko` · KO: 친구 앞과 혼자일 때가 다를 수 있어요?
 - `followUp.3.ko` · KO: 말투에서 성격이 보여요?
@@ -429,7 +411,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 상처를 주는 말과 솔직한 말은 어떻게 달라요?
 - `question.ja` · JA: 傷つける言葉と率直な言葉はどう違いますか？
-- `tutorGuidance.ko` · KO: 생각이 필요한 질문이에요. 구체적인 예에서 시작하게 해 주세요.
 - `followUp.1.ko` · KO: 내용보다 표현이 문제일 수 있어요?
 - `followUp.2.ko` · KO: 꼭 해야 하는 말도 있어요?
 - `followUp.3.ko` · KO: 듣는 사람의 상태도 중요해요?
@@ -438,7 +419,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 한번 나빠진 인상을 사과로 얼마나 바꿀 수 있을까요?
 - `question.ja` · JA: 一度悪くなった印象は、謝罪でどのくらい変えられるでしょうか？
-- `tutorGuidance.ko` · KO: 제일 어려운 질문이에요. 판단하지 말고 기준을 한 가지씩 말하게 해 주세요.
 - `followUp.1.ko` · KO: 바로 사과해야 해요?
 - `followUp.2.ko` · KO: 같은 실수를 반복하면요?
 - `followUp.3.ko` · KO: 말보다 행동이 더 필요해요?
@@ -447,7 +427,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 인상을 좋게 바꾼 한마디가 있어요?
 - `question.ja` · JA: では逆に、印象をよい方向に変えた一言はありますか？
-- `tutorGuidance.ko` · KO: 주제를 뒤집어 닫는 질문이에요. 앞에서 고친 표현을 다시 쓰게 해 주세요.
 - `followUp.1.ko` · KO: 언제 들었어요?
 - `followUp.2.ko` · KO: 그 말이 왜 특별했어요?
 - `followUp.3.ko` · KO: 지금도 기억나요?
@@ -455,7 +434,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-intermediate/lessons/02-words-that-kill-the-mood/lesson.html`
-- sha256: `fb9d92c88226e92f4333802f6d858cba55edb5831e4a23f96df8a4f2aaf72889`
+- sha256: `31a556d6c6ab267158875f2c47fa1e7e3bdb767da99dbb18b2b314c8becc599f`
 - source kind: `model-story`
 
 #### `metadata`
@@ -531,7 +510,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 영화나 드라마에서 무례한 말을 들은 장면이 있었어요?
 - `question.ja` · JA: 映画やドラマで、失礼な言葉を聞く場面はありましたか？
-- `tutorGuidance.ko` · KO: 가볍게 입을 여는 질문이에요. 경험이 없으면 본 장면이나 들은 이야기로 받아 주세요.
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
 - `followUp.1.ko` · KO: 어떤 상황이었어요?
 - `followUp.2.ko` · KO: 누가 그 말을 했어요?
 - `followUp.3.ko` · KO: 다른 사람은 어떻게 반응했어요?
@@ -540,7 +519,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 최근에 듣고 불편했던 말이 뭐예요?
 - `question.ja` · JA: 最近、聞いて不快だった言葉は何ですか？
-- `tutorGuidance.ko` · KO: 하나가 나오면 그때의 사람, 장소, 느낌을 구체적으로 이어 가세요.
 - `followUp.1.ko` · KO: 누구에게 한 말이었어요?
 - `followUp.2.ko` · KO: 말투는 어땠어요?
 - `followUp.3.ko` · KO: 그 자리의 분위기가 바뀌었어요?
@@ -549,7 +527,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 어떤 한마디를 들으면 마음이 바로 식어요?
 - `question.ja` · JA: どんな一言を聞くと、気持ちがすぐ冷めますか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 한 가지를 고른 뒤 이유와 장면이 나올 때까지 기다려 주세요.
 - `followUp.1.ko` · KO: 왜 그 말이 싫어요?
 - `followUp.2.ko` · KO: 농담이어도 싫어요?
 - `followUp.3.ko` · KO: 처음 만난 사람이라면 더 크게 느껴져요?
@@ -558,7 +535,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 농담과 무례한 말의 경계는 어디예요?
 - `question.ja` · JA: 冗談と失礼な言葉の境目はどこですか？
-- `tutorGuidance.ko` · KO: 정답을 정해 주지 말고 학생이 자기 기준을 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 상대가 웃으면 농담이 돼요?
 - `followUp.2.ko` · KO: 친한 사이면 기준이 달라요?
 - `followUp.3.ko` · KO: 사과하면 괜찮아져요?
@@ -567,7 +543,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 다른 사람을 대하는 말투가 중요한 이유는 뭐예요?
 - `question.ja` · JA: 他人への話し方が大切なのはなぜですか？
-- `tutorGuidance.ko` · KO: 앞에서 나온 이야기와 연결해 변화나 차이를 말하게 해 주세요.
 - `followUp.1.ko` · KO: 직원에게 하는 말도 보게 돼요?
 - `followUp.2.ko` · KO: 친구 앞과 혼자일 때가 다를 수 있어요?
 - `followUp.3.ko` · KO: 말투에서 성격이 보여요?
@@ -576,7 +551,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 상처 주는 말과 솔직한 말은 어떻게 달라요?
 - `question.ja` · JA: 傷つける言葉と率直な言葉はどう違いますか？
-- `tutorGuidance.ko` · KO: 생각이 필요한 질문이에요. 구체적인 예에서 시작하게 해 주세요.
 - `followUp.1.ko` · KO: 내용보다 표현이 문제일 수 있어요?
 - `followUp.2.ko` · KO: 꼭 해야 하는 말도 있어요?
 - `followUp.3.ko` · KO: 듣는 사람의 상태도 중요해요?
@@ -585,7 +559,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 나빠진 인상은 사과하면 얼마나 바뀔 수 있을까요?
 - `question.ja` · JA: 悪くなった印象は、謝ればどのくらい変えられるでしょうか？
-- `tutorGuidance.ko` · KO: 제일 어려운 질문이에요. 판단하지 말고 기준을 한 가지씩 말하게 해 주세요.
 - `followUp.1.ko` · KO: 바로 사과해야 해요?
 - `followUp.2.ko` · KO: 같은 실수를 반복하면요?
 - `followUp.3.ko` · KO: 말보다 행동이 더 필요해요?
@@ -594,7 +567,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 인상을 좋게 바꾼 한마디가 있어요?
 - `question.ja` · JA: では逆に、印象をよい方向に変えた一言はありますか？
-- `tutorGuidance.ko` · KO: 주제를 뒤집어 닫는 질문이에요. 앞에서 고친 표현을 다시 쓰게 해 주세요.
 - `followUp.1.ko` · KO: 언제 들었어요?
 - `followUp.2.ko` · KO: 그 말이 왜 특별했어요?
 - `followUp.3.ko` · KO: 지금도 기억나요?
@@ -604,7 +576,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-advanced/lessons/03-one-must-have-quality/lesson.html`
-- sha256: `ff4ada18485c56dc424babb53196fb8a32be7174b9ed17e5a9359a8d42ab2b0b`
+- sha256: `e0002595ded3776587668644d15a2560d4db5d7bae750a5c844e6005fb2bb553`
 - source kind: `model-story`
 
 #### `metadata`
@@ -680,7 +652,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 주변에서 멋지다고 느낀 사람이 있어요?
 - `question.ja` · JA: 周りに、すてきだと感じた人はいますか？
-- `tutorGuidance.ko` · KO: 가볍게 입을 여는 질문이에요. 경험이 없으면 본 장면이나 들은 이야기로 받아 주세요.
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
 - `followUp.1.ko` · KO: 어떤 관계의 사람이에요?
 - `followUp.2.ko` · KO: 어떤 행동을 했어요?
 - `followUp.3.ko` · KO: 다른 사람도 그렇게 느꼈어요?
@@ -689,7 +661,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 사람을 볼 때 가장 먼저 보이는 점이 뭐예요?
 - `question.ja` · JA: 人を見るとき、最初に目に入る点は何ですか？
-- `tutorGuidance.ko` · KO: 하나가 나오면 그때의 사람, 장소, 느낌을 구체적으로 이어 가세요.
 - `followUp.1.ko` · KO: 말투가 먼저 보여요?
 - `followUp.2.ko` · KO: 표정도 중요해요?
 - `followUp.3.ko` · KO: 첫인상이 자주 맞아요?
@@ -698,7 +669,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 이상형에서 양보하기 어려운 조건 하나가 뭐예요?
 - `question.ja` · JA: 理想のタイプで譲りにくい条件を一つ挙げるなら何ですか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 한 가지를 고른 뒤 이유와 장면이 나올 때까지 기다려 주세요.
 - `followUp.1.ko` · KO: 왜 그 조건이 중요해요?
 - `followUp.2.ko` · KO: 언제부터 그렇게 생각했어요?
 - `followUp.3.ko` · KO: 친구를 고를 때도 같은 기준이에요?
@@ -707,7 +677,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 조건을 실제 행동으로 어떻게 알 수 있어요?
 - `question.ja` · JA: その条件は、実際の行動からどう分かりますか？
-- `tutorGuidance.ko` · KO: 정답을 정해 주지 말고 학생이 자기 기준을 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 처음 만났을 때도 보여요?
 - `followUp.2.ko` · KO: 시간이 지나야 알 수 있어요?
 - `followUp.3.ko` · KO: 작은 약속에서 확인할 수 있어요?
@@ -716,7 +685,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 예전과 지금의 이상형은 어떻게 달라졌어요?
 - `question.ja` · JA: 以前と今の理想のタイプはどう変わりましたか？
-- `tutorGuidance.ko` · KO: 앞에서 나온 이야기와 연결해 변화나 차이를 말하게 해 주세요.
 - `followUp.1.ko` · KO: 예전에는 무엇이 중요했어요?
 - `followUp.2.ko` · KO: 생각이 바뀐 계기가 있어요?
 - `followUp.3.ko` · KO: 앞으로 또 달라질까요?
@@ -725,7 +693,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 좋아하는 마음이 생기면 원래 조건은 어떻게 달라져요?
 - `question.ja` · JA: 好きな気持ちが生まれると、もとの条件はどう変わりますか？
-- `tutorGuidance.ko` · KO: 생각이 필요한 질문이에요. 구체적인 예에서 시작하게 해 주세요.
 - `followUp.1.ko` · KO: 중요하지 않게 되는 조건이 있어요?
 - `followUp.2.ko` · KO: 새로 보이는 장점도 있어요?
 - `followUp.3.ko` · KO: 조건이 너무 많으면 기회를 놓칠까요?
@@ -734,7 +701,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 이상형의 조건이 현실적인지 어떻게 알 수 있을까요?
 - `question.ja` · JA: 理想のタイプの条件が現実的かどうか、どう判断できるでしょうか？
-- `tutorGuidance.ko` · KO: 제일 어려운 질문이에요. 판단하지 말고 기준을 한 가지씩 말하게 해 주세요.
 - `followUp.1.ko` · KO: 나도 같은 조건을 갖춰야 해요?
 - `followUp.2.ko` · KO: 경험에 따라 기준이 달라져요?
 - `followUp.3.ko` · KO: 주변 의견을 들을 필요가 있어요?
@@ -743,7 +709,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 중요해 보이지만 없어도 괜찮은 조건은 뭐예요?
 - `question.ja` · JA: では逆に、大切に見えても、なくてもよい条件は何ですか？
-- `tutorGuidance.ko` · KO: 주제를 뒤집어 닫는 질문이에요. 앞에서 고친 표현을 다시 쓰게 해 주세요.
 - `followUp.1.ko` · KO: 예전에는 중요했어요?
 - `followUp.2.ko` · KO: 다른 장점으로 보완할 수 있어요?
 - `followUp.3.ko` · KO: 사람마다 답이 많이 달라요?
@@ -751,7 +716,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-intermediate/lessons/03-one-must-have-quality/lesson.html`
-- sha256: `f388808a325f1e665e5f387790571a4226c35ec2d64ef9b3040e872d71d97ced`
+- sha256: `7ddf9c785fc9a407dbf58b80b20513a68aa66fc9bcd6ff56577c2482c7bcd23a`
 - source kind: `model-story`
 
 #### `metadata`
@@ -827,7 +792,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 주변에서 멋지다고 느낀 사람이 있어요?
 - `question.ja` · JA: 周りに、すてきだと感じた人はいますか？
-- `tutorGuidance.ko` · KO: 가볍게 입을 여는 질문이에요. 경험이 없으면 본 장면이나 들은 이야기로 받아 주세요.
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
 - `followUp.1.ko` · KO: 어떤 관계의 사람이에요?
 - `followUp.2.ko` · KO: 어떤 행동을 했어요?
 - `followUp.3.ko` · KO: 다른 사람도 그렇게 느꼈어요?
@@ -836,7 +801,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 사람을 볼 때 가장 먼저 보이는 점이 뭐예요?
 - `question.ja` · JA: 人を見るとき、最初に目に入る点は何ですか？
-- `tutorGuidance.ko` · KO: 하나가 나오면 그때의 사람, 장소, 느낌을 구체적으로 이어 가세요.
 - `followUp.1.ko` · KO: 말투가 먼저 보여요?
 - `followUp.2.ko` · KO: 표정도 중요해요?
 - `followUp.3.ko` · KO: 첫인상이 자주 맞아요?
@@ -845,7 +809,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 이상형에서 양보하기 어려운 조건 하나가 뭐예요?
 - `question.ja` · JA: 理想のタイプで譲りにくい条件を一つ挙げるなら何ですか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 한 가지를 고른 뒤 이유와 장면이 나올 때까지 기다려 주세요.
 - `followUp.1.ko` · KO: 왜 그 조건이 중요해요?
 - `followUp.2.ko` · KO: 언제부터 그렇게 생각했어요?
 - `followUp.3.ko` · KO: 친구를 고를 때도 같은 기준이에요?
@@ -854,7 +817,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 조건을 실제 행동으로 어떻게 알 수 있어요?
 - `question.ja` · JA: その条件は、実際の行動からどう分かりますか？
-- `tutorGuidance.ko` · KO: 정답을 정해 주지 말고 학생이 자기 기준을 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 처음 만났을 때도 보여요?
 - `followUp.2.ko` · KO: 시간이 지나야 알 수 있어요?
 - `followUp.3.ko` · KO: 작은 약속에서 확인할 수 있어요?
@@ -863,7 +825,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 예전과 지금의 이상형은 어떻게 달라졌어요?
 - `question.ja` · JA: 以前と今の理想のタイプはどう変わりましたか？
-- `tutorGuidance.ko` · KO: 앞에서 나온 이야기와 연결해 변화나 차이를 말하게 해 주세요.
 - `followUp.1.ko` · KO: 예전에는 무엇이 중요했어요?
 - `followUp.2.ko` · KO: 생각이 바뀐 계기가 있어요?
 - `followUp.3.ko` · KO: 앞으로 또 달라질까요?
@@ -872,7 +833,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 좋아하게 되면 원래 생각한 조건은 어떻게 바뀌어요?
 - `question.ja` · JA: 好きになると、もともと考えていた条件はどう変わりますか？
-- `tutorGuidance.ko` · KO: 생각이 필요한 질문이에요. 구체적인 예에서 시작하게 해 주세요.
 - `followUp.1.ko` · KO: 중요하지 않게 되는 조건이 있어요?
 - `followUp.2.ko` · KO: 새로 보이는 장점도 있어요?
 - `followUp.3.ko` · KO: 조건이 너무 많으면 기회를 놓칠까요?
@@ -881,7 +841,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 이상형의 조건이 현실적인지는 어떻게 알 수 있을까요?
 - `question.ja` · JA: 理想のタイプの条件が現実的かどうか、どう分かるでしょうか？
-- `tutorGuidance.ko` · KO: 제일 어려운 질문이에요. 판단하지 말고 기준을 한 가지씩 말하게 해 주세요.
 - `followUp.1.ko` · KO: 나도 같은 조건을 갖춰야 해요?
 - `followUp.2.ko` · KO: 경험에 따라 기준이 달라져요?
 - `followUp.3.ko` · KO: 주변 의견을 들을 필요가 있어요?
@@ -890,7 +849,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 중요해 보이지만 없어도 괜찮은 조건은 뭐예요?
 - `question.ja` · JA: では逆に、大切に見えても、なくてもよい条件は何ですか？
-- `tutorGuidance.ko` · KO: 주제를 뒤집어 닫는 질문이에요. 앞에서 고친 표현을 다시 쓰게 해 주세요.
 - `followUp.1.ko` · KO: 예전에는 중요했어요?
 - `followUp.2.ko` · KO: 다른 장점으로 보완할 수 있어요?
 - `followUp.3.ko` · KO: 사람마다 답이 많이 달라요?
@@ -900,7 +858,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-advanced/lessons/04-my-bad-dating-habit/lesson.html`
-- sha256: `511eb02f86c4ed26b065b4d9fbc92a05a3be0aa377507d67e4ecef670d86de2b`
+- sha256: `7c89832197a4bcb16fe9e8a4864fe0b5d594f0c5ea0fe810ab825099945664e9`
 - source kind: `model-story`
 
 #### `metadata`
@@ -976,7 +934,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 영화나 드라마에서 답답했던 연애 장면이 있었어요?
 - `question.ja` · JA: 映画やドラマで、もどかしかった恋愛の場面はありましたか？
-- `tutorGuidance.ko` · KO: 가볍게 입을 여는 질문이에요. 경험이 없으면 본 장면이나 들은 이야기로 받아 주세요.
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
 - `followUp.1.ko` · KO: 누가 무엇을 숨겼어요?
 - `followUp.2.ko` · KO: 왜 바로 말하지 않았어요?
 - `followUp.3.ko` · KO: 보면서 뭐라고 말하고 싶었어요?
@@ -985,7 +943,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 친한 관계에서 자주 생기는 오해가 뭐예요?
 - `question.ja` · JA: 親しい関係でよく起きる誤解は何ですか？
-- `tutorGuidance.ko` · KO: 하나가 나오면 그때의 사람, 장소, 느낌을 구체적으로 이어 가세요.
 - `followUp.1.ko` · KO: 연락 때문에 생겨요?
 - `followUp.2.ko` · KO: 말투 때문에 달라져요?
 - `followUp.3.ko` · KO: 보통 어떻게 풀려요?
@@ -994,7 +951,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 연애에서 반복할 것 같은 나쁜 습관이 뭐예요?
 - `question.ja` · JA: 恋愛で繰り返しそうな悪い癖は何ですか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 한 가지를 고른 뒤 이유와 장면이 나올 때까지 기다려 주세요.
 - `followUp.1.ko` · KO: 경험이 있다면 언제 알아챘어요?
 - `followUp.2.ko` · KO: 경험이 없다면 왜 그럴 것 같아요?
 - `followUp.3.ko` · KO: 친구 관계에서도 비슷해요?
@@ -1003,7 +959,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 습관 때문에 어떤 오해가 생길 수 있어요?
 - `question.ja` · JA: その癖のせいで、どんな誤解が起きることがありますか？
-- `tutorGuidance.ko` · KO: 정답을 정해 주지 말고 학생이 자기 기준을 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 상대는 어떻게 받아들일까요?
 - `followUp.2.ko` · KO: 바로 설명하면 달라져요?
 - `followUp.3.ko` · KO: 문자에서 더 자주 생겨요?
@@ -1012,7 +967,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 내가 먼저 사과하기 어려운 순간은 언제예요?
 - `question.ja` · JA: 自分から先に謝るのが難しいのはどんなときですか？
-- `tutorGuidance.ko` · KO: 앞에서 나온 이야기와 연결해 변화나 차이를 말하게 해 주세요.
 - `followUp.1.ko` · KO: 억울한 마음이 들어요?
 - `followUp.2.ko` · KO: 시간이 필요해요?
 - `followUp.3.ko` · KO: 사과할 말을 미리 생각해요?
@@ -1021,7 +975,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 솔직하게 말하는 것과 감정을 쏟아 내는 건 어떻게 달라요?
 - `question.ja` · JA: 率直に話すことと感情をぶつけることはどう違いますか？
-- `tutorGuidance.ko` · KO: 생각이 필요한 질문이에요. 구체적인 예에서 시작하게 해 주세요.
 - `followUp.1.ko` · KO: 말할 시간을 고르는 게 중요해요?
 - `followUp.2.ko` · KO: 상대가 들을 준비도 필요해요?
 - `followUp.3.ko` · KO: 감정을 먼저 정리하면 뭐가 달라져요?
@@ -1030,7 +983,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 나쁜 습관을 안다고 해서 바로 고치기 어려운 이유는 뭘까요?
 - `question.ja` · JA: 悪い癖を知っていても、すぐ直すのが難しいのはなぜでしょうか？
-- `tutorGuidance.ko` · KO: 제일 어려운 질문이에요. 판단하지 말고 기준을 한 가지씩 말하게 해 주세요.
 - `followUp.1.ko` · KO: 익숙해서 먼저 나와요?
 - `followUp.2.ko` · KO: 상대의 도움도 필요해요?
 - `followUp.3.ko` · KO: 작은 변화부터 할 수 있어요?
@@ -1039,7 +991,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 관계에서 내가 잘한다고 생각하는 건 뭐예요?
 - `question.ja` · JA: では逆に、人間関係で自分が上手だと思うことは何ですか？
-- `tutorGuidance.ko` · KO: 주제를 뒤집어 닫는 질문이에요. 앞에서 고친 표현을 다시 쓰게 해 주세요.
 - `followUp.1.ko` · KO: 친구도 그렇게 말해요?
 - `followUp.2.ko` · KO: 어떤 장면에서 잘 드러나요?
 - `followUp.3.ko` · KO: 더 키우고 싶은 장점이에요?
@@ -1047,7 +998,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-intermediate/lessons/04-my-bad-dating-habit/lesson.html`
-- sha256: `b1ce8c7e3704456b252742c387430e94617bf2140f292e3bdea6433279f68212`
+- sha256: `a40f6260fc010e7daf5c476006f2a815be56b60e8be7edc0622d8906bfcae7e1`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1123,7 +1074,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 영화나 드라마에서 답답했던 연애 장면이 있었어요?
 - `question.ja` · JA: 映画やドラマで、もどかしかった恋愛の場面はありましたか？
-- `tutorGuidance.ko` · KO: 가볍게 입을 여는 질문이에요. 경험이 없으면 본 장면이나 들은 이야기로 받아 주세요.
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
 - `followUp.1.ko` · KO: 누가 무엇을 숨겼어요?
 - `followUp.2.ko` · KO: 왜 바로 말하지 않았어요?
 - `followUp.3.ko` · KO: 보면서 뭐라고 말하고 싶었어요?
@@ -1132,7 +1083,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 친한 관계에서 자주 생기는 오해가 뭐예요?
 - `question.ja` · JA: 親しい関係でよく起きる誤解は何ですか？
-- `tutorGuidance.ko` · KO: 하나가 나오면 그때의 사람, 장소, 느낌을 구체적으로 이어 가세요.
 - `followUp.1.ko` · KO: 연락 때문에 생겨요?
 - `followUp.2.ko` · KO: 말투 때문에 달라져요?
 - `followUp.3.ko` · KO: 보통 어떻게 풀려요?
@@ -1141,7 +1091,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 연애에서 반복할 것 같은 나쁜 습관이 뭐예요?
 - `question.ja` · JA: 恋愛で繰り返しそうな悪い癖は何ですか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 한 가지를 고른 뒤 이유와 장면이 나올 때까지 기다려 주세요.
 - `followUp.1.ko` · KO: 경험이 있다면 언제 알아챘어요?
 - `followUp.2.ko` · KO: 경험이 없다면 왜 그럴 것 같아요?
 - `followUp.3.ko` · KO: 친구 관계에서도 비슷해요?
@@ -1150,7 +1099,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 습관 때문에 어떤 오해가 생길 수 있어요?
 - `question.ja` · JA: その癖のせいで、どんな誤解が起きることがありますか？
-- `tutorGuidance.ko` · KO: 정답을 정해 주지 말고 학생이 자기 기준을 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 상대는 어떻게 받아들일까요?
 - `followUp.2.ko` · KO: 바로 설명하면 달라져요?
 - `followUp.3.ko` · KO: 문자에서 더 자주 생겨요?
@@ -1159,7 +1107,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 내가 먼저 사과하기 어려운 순간은 언제예요?
 - `question.ja` · JA: 自分から先に謝るのが難しいのはどんなときですか？
-- `tutorGuidance.ko` · KO: 앞에서 나온 이야기와 연결해 변화나 차이를 말하게 해 주세요.
 - `followUp.1.ko` · KO: 억울한 마음이 들어요?
 - `followUp.2.ko` · KO: 시간이 필요해요?
 - `followUp.3.ko` · KO: 사과할 말을 미리 생각해요?
@@ -1168,7 +1115,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 솔직하게 말하는 것과 화를 쏟아 내는 건 어떻게 달라요?
 - `question.ja` · JA: 率直に話すことと、怒りを全部ぶつけることはどう違いますか？
-- `tutorGuidance.ko` · KO: 생각이 필요한 질문이에요. 구체적인 예에서 시작하게 해 주세요.
 - `followUp.1.ko` · KO: 말할 시간을 고르는 게 중요해요?
 - `followUp.2.ko` · KO: 상대가 들을 준비도 필요해요?
 - `followUp.3.ko` · KO: 감정을 먼저 정리하면 뭐가 달라져요?
@@ -1177,7 +1123,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 나쁜 습관을 알아도 바로 고치기 어려운 이유는 뭘까요?
 - `question.ja` · JA: 悪い癖を知っていても、すぐ直すのが難しいのはなぜでしょうか？
-- `tutorGuidance.ko` · KO: 제일 어려운 질문이에요. 판단하지 말고 기준을 한 가지씩 말하게 해 주세요.
 - `followUp.1.ko` · KO: 익숙해서 먼저 나와요?
 - `followUp.2.ko` · KO: 상대의 도움도 필요해요?
 - `followUp.3.ko` · KO: 작은 변화부터 할 수 있어요?
@@ -1186,7 +1131,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 관계에서 내가 잘한다고 생각하는 건 뭐예요?
 - `question.ja` · JA: では逆に、人間関係で自分が上手だと思うことは何ですか？
-- `tutorGuidance.ko` · KO: 주제를 뒤집어 닫는 질문이에요. 앞에서 고친 표현을 다시 쓰게 해 주세요.
 - `followUp.1.ko` · KO: 친구도 그렇게 말해요?
 - `followUp.2.ko` · KO: 어떤 장면에서 잘 드러나요?
 - `followUp.3.ko` · KO: 더 키우고 싶은 장점이에요?
@@ -1196,7 +1140,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-advanced/lessons/05-dream-wedding/lesson.html`
-- sha256: `1c39465f461e1214691849108c264d76a8646d5fb85aada4fa5aad79fb593e2f`
+- sha256: `34a2410a890119e3572e41447cc90cacf9dc569a8d85a106ba6723fbacf427ac`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1272,7 +1216,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 기억에 남는 결혼식을 본 적 있어요?
 - `question.ja` · JA: 印象に残る結婚式を見たことがありますか？
-- `tutorGuidance.ko` · KO: 가볍게 입을 여는 질문이에요. 경험이 없으면 본 장면이나 들은 이야기로 받아 주세요.
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
 - `followUp.1.ko` · KO: 직접 갔어요, 영상으로 봤어요?
 - `followUp.2.ko` · KO: 어떤 장소였어요?
 - `followUp.3.ko` · KO: 가장 기억나는 장면이 뭐예요?
@@ -1281,7 +1225,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 결혼식에서 가장 먼저 떠오르는 순서가 뭐예요?
 - `question.ja` · JA: 結婚式で最初に思い浮かぶ進行は何ですか？
-- `tutorGuidance.ko` · KO: 하나가 나오면 그때의 사람, 장소, 느낌을 구체적으로 이어 가세요.
 - `followUp.1.ko` · KO: 입장 장면이에요?
 - `followUp.2.ko` · KO: 음악도 기억나요?
 - `followUp.3.ko` · KO: 식사 시간은 어땠어요?
@@ -1290,7 +1233,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 결혼식을 한다면 꼭 하고 싶은 게 뭐예요?
 - `question.ja` · JA: 結婚式をするなら、必ずやりたいことは何ですか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 한 가지를 고른 뒤 이유와 장면이 나올 때까지 기다려 주세요.
 - `followUp.1.ko` · KO: 왜 그게 중요해요?
 - `followUp.2.ko` · KO: 누구와 함께하고 싶어요?
 - `followUp.3.ko` · KO: 어떤 장소가 어울려요?
@@ -1299,7 +1241,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 결혼식에서 절대 하고 싶지 않은 건 뭐예요?
 - `question.ja` · JA: 結婚式で絶対にやりたくないことは何ですか？
-- `tutorGuidance.ko` · KO: 정답을 정해 주지 말고 학생이 자기 기준을 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 직접 본 적이 있어요?
 - `followUp.2.ko` · KO: 왜 불편하게 느껴요?
 - `followUp.3.ko` · KO: 다른 순서로 바꿀 수 있어요?
@@ -1308,7 +1249,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 하객에게 어떤 하루로 기억되면 좋겠어요?
 - `question.ja` · JA: 招待客にどんな一日として覚えてもらいたいですか？
-- `tutorGuidance.ko` · KO: 앞에서 나온 이야기와 연결해 변화나 차이를 말하게 해 주세요.
 - `followUp.1.ko` · KO: 즐거움과 감동 중 무엇이 더 커야 해요?
 - `followUp.2.ko` · KO: 식사도 기억에 남아야 해요?
 - `followUp.3.ko` · KO: 오래 머물 수 있는 식이 좋아요?
@@ -1317,7 +1257,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 결혼식은 누구를 가장 만족시켜야 할까요?
 - `question.ja` · JA: 結婚式は誰をいちばん満足させるべきでしょうか？
-- `tutorGuidance.ko` · KO: 생각이 필요한 질문이에요. 구체적인 예에서 시작하게 해 주세요.
 - `followUp.1.ko` · KO: 두 사람의 취향이 다르면요?
 - `followUp.2.ko` · KO: 가족의 의견은 어디까지 들어요?
 - `followUp.3.ko` · KO: 하객의 편의도 중요해요?
@@ -1326,7 +1265,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 전통을 지키면서 자기다운 결혼식을 만드는 방법은 뭘까요?
 - `question.ja` · JA: 伝統を守りながら、自分らしい結婚式を作る方法は何でしょうか？
-- `tutorGuidance.ko` · KO: 제일 어려운 질문이에요. 판단하지 말고 기준을 한 가지씩 말하게 해 주세요.
 - `followUp.1.ko` · KO: 꼭 남겨야 할 순서가 있어요?
 - `followUp.2.ko` · KO: 옷이나 음악으로 개성을 보여 줄 수 있어요?
 - `followUp.3.ko` · KO: 지역에 따라 전통이 달라요?
@@ -1335,7 +1273,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 보기에는 멋지지만 나는 안 하고 싶은 게 뭐예요?
 - `question.ja` · JA: では逆に、見た目はすてきでも、自分はやりたくないことは何ですか？
-- `tutorGuidance.ko` · KO: 주제를 뒤집어 닫는 질문이에요. 앞에서 고친 표현을 다시 쓰게 해 주세요.
 - `followUp.1.ko` · KO: 준비가 너무 힘들 것 같아요?
 - `followUp.2.ko` · KO: 비용이 많이 들어요?
 - `followUp.3.ko` · KO: 다른 사람에게는 잘 어울려요?
@@ -1343,7 +1280,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-intermediate/lessons/05-dream-wedding/lesson.html`
-- sha256: `b4952feacf9e0ec86667ca1cdcf29263e0a0b36b0dd6e18bf7724a165d56ee03`
+- sha256: `97b3150acae0ac5bd015b298cc74cda77cb2ac87aac9d1dfcfcb9de073f36848`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1419,7 +1356,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 기억에 남는 결혼식을 본 적 있어요?
 - `question.ja` · JA: 印象に残る結婚式を見たことがありますか？
-- `tutorGuidance.ko` · KO: 가볍게 입을 여는 질문이에요. 경험이 없으면 본 장면이나 들은 이야기로 받아 주세요.
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
 - `followUp.1.ko` · KO: 직접 갔어요, 영상으로 봤어요?
 - `followUp.2.ko` · KO: 어떤 장소였어요?
 - `followUp.3.ko` · KO: 가장 기억나는 장면이 뭐예요?
@@ -1428,7 +1365,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 결혼식에서 가장 먼저 떠오르는 순서가 뭐예요?
 - `question.ja` · JA: 結婚式で最初に思い浮かぶ進行は何ですか？
-- `tutorGuidance.ko` · KO: 하나가 나오면 그때의 사람, 장소, 느낌을 구체적으로 이어 가세요.
 - `followUp.1.ko` · KO: 입장 장면이에요?
 - `followUp.2.ko` · KO: 음악도 기억나요?
 - `followUp.3.ko` · KO: 식사 시간은 어땠어요?
@@ -1437,7 +1373,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 결혼식을 한다면 꼭 하고 싶은 게 뭐예요?
 - `question.ja` · JA: 結婚式をするなら、必ずやりたいことは何ですか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 한 가지를 고른 뒤 이유와 장면이 나올 때까지 기다려 주세요.
 - `followUp.1.ko` · KO: 왜 그게 중요해요?
 - `followUp.2.ko` · KO: 누구와 함께하고 싶어요?
 - `followUp.3.ko` · KO: 어떤 장소가 어울려요?
@@ -1446,7 +1381,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 결혼식에서 절대 하고 싶지 않은 건 뭐예요?
 - `question.ja` · JA: 結婚式で絶対にやりたくないことは何ですか？
-- `tutorGuidance.ko` · KO: 정답을 정해 주지 말고 학생이 자기 기준을 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 직접 본 적이 있어요?
 - `followUp.2.ko` · KO: 왜 불편하게 느껴요?
 - `followUp.3.ko` · KO: 다른 순서로 바꿀 수 있어요?
@@ -1455,7 +1389,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 하객에게 어떤 하루로 기억되면 좋겠어요?
 - `question.ja` · JA: 招待客にどんな一日として覚えてもらいたいですか？
-- `tutorGuidance.ko` · KO: 앞에서 나온 이야기와 연결해 변화나 차이를 말하게 해 주세요.
 - `followUp.1.ko` · KO: 즐거움과 감동 중 무엇이 더 커야 해요?
 - `followUp.2.ko` · KO: 식사도 기억에 남아야 해요?
 - `followUp.3.ko` · KO: 오래 머물 수 있는 식이 좋아요?
@@ -1464,7 +1397,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 결혼식은 누구를 가장 기쁘게 해야 할까요?
 - `question.ja` · JA: 結婚式は誰をいちばん喜ばせるべきでしょうか？
-- `tutorGuidance.ko` · KO: 생각이 필요한 질문이에요. 구체적인 예에서 시작하게 해 주세요.
 - `followUp.1.ko` · KO: 두 사람의 취향이 다르면요?
 - `followUp.2.ko` · KO: 가족의 의견은 어디까지 들어요?
 - `followUp.3.ko` · KO: 하객의 편의도 중요해요?
@@ -1473,7 +1405,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 전통도 지키고 나다운 결혼식도 하려면 어떻게 해야 할까요?
 - `question.ja` · JA: 伝統も守り、自分らしい結婚式にするにはどうすればよいでしょうか？
-- `tutorGuidance.ko` · KO: 제일 어려운 질문이에요. 판단하지 말고 기준을 한 가지씩 말하게 해 주세요.
 - `followUp.1.ko` · KO: 꼭 남겨야 할 순서가 있어요?
 - `followUp.2.ko` · KO: 옷이나 음악으로 개성을 보여 줄 수 있어요?
 - `followUp.3.ko` · KO: 지역에 따라 전통이 달라요?
@@ -1482,7 +1413,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 보기에는 멋지지만 나는 안 하고 싶은 게 뭐예요?
 - `question.ja` · JA: では逆に、見た目はすてきでも、自分はやりたくないことは何ですか？
-- `tutorGuidance.ko` · KO: 주제를 뒤집어 닫는 질문이에요. 앞에서 고친 표현을 다시 쓰게 해 주세요.
 - `followUp.1.ko` · KO: 준비가 너무 힘들 것 같아요?
 - `followUp.2.ko` · KO: 비용이 많이 들어요?
 - `followUp.3.ko` · KO: 다른 사람에게는 잘 어울려요?
@@ -1492,7 +1422,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-advanced/lessons/06-hardest-breakup/lesson.html`
-- sha256: `abdec8655272e6941638fe64d7ec215b6077666fd8953abf0a5dc4cab34d4bbc`
+- sha256: `c6f4a2f00acc2323866b3487a04c29227b9385d4005a5fa60000eebc77e1c02a`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1568,7 +1498,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 영화나 드라마에서 기억에 남는 이별 장면이 있어요?
 - `question.ja` · JA: 映画やドラマで印象に残っている別れの場面はありますか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 가볍게 입을 여는 질문이에요. 경험이 없으면 본 장면이나 들은 이야기로 받아 주세요.
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
 - `followUp.1.ko` · KO: 어떤 작품이었어요?
 - `followUp.2.ko` · KO: 누가 먼저 말했어요?
 - `followUp.3.ko` · KO: 그 장면의 분위기는 어땠어요?
@@ -1577,7 +1507,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 사람들이 이별 뒤에 기분을 달래는 방법이 뭐예요?
 - `question.ja` · JA: 人は別れのあと、どんな方法で気持ちを落ち着けますか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 하나가 나오면 그때의 사람, 장소, 느낌을 구체적으로 이어 가세요.
 - `followUp.1.ko` · KO: 친구를 만나요?
 - `followUp.2.ko` · KO: 혼자 시간을 보내요?
 - `followUp.3.ko` · KO: 새로운 일을 시작하기도 해요?
@@ -1586,7 +1515,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 직접 겪었거나 들은 이별 중에서 말할 수 있는 장면이 뭐예요?
 - `question.ja` · JA: 自分で経験した、または聞いた別れの中で、話せる場面は何ですか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 오늘의 메인 질문이에요. 한 가지를 고른 뒤 이유와 장면이 나올 때까지 기다려 주세요.
 - `followUp.1.ko` · KO: 자세히 말하지 않아도 괜찮아요. 언제쯤 일이었어요?
 - `followUp.2.ko` · KO: 그때 가장 먼저 든 마음이 뭐였어요?
 - `followUp.3.ko` · KO: 사실 대신 영화 장면으로 이야기해도 돼요.
@@ -1595,7 +1523,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 이별에서 가장 힘들었던 순간은 무엇이었어요?
 - `question.ja` · JA: その別れでいちばんつらかった瞬間は何でしたか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 정답을 정해 주지 말고 학생이 자기 기준을 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 마지막 대화였어요?
 - `followUp.2.ko` · KO: 일상이 바뀐 게 힘들었어요?
 - `followUp.3.ko` · KO: 지금 말하기 어려우면 다음 질문으로 갈까요?
@@ -1604,7 +1531,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 뒤에 일상은 어떻게 달라졌어요?
 - `question.ja` · JA: そのあと、日常はどう変わりましたか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 앞에서 나온 이야기와 연결해 변화나 차이를 말하게 해 주세요.
 - `followUp.1.ko` · KO: 자주 가던 곳도 달라졌어요?
 - `followUp.2.ko` · KO: 친구들과 보내는 시간이 늘었어요?
 - `followUp.3.ko` · KO: 다시 편해지기까지 시간이 걸렸어요?
@@ -1613,7 +1539,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 서로 상처를 덜 남기는 이별은 어떤 모습일까요?
 - `question.ja` · JA: お互いに傷を少なく残す別れとは、どんな形でしょうか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 생각이 필요한 질문이에요. 구체적인 예에서 시작하게 해 주세요.
 - `followUp.1.ko` · KO: 솔직함은 어디까지 필요해요?
 - `followUp.2.ko` · KO: 마지막 대화의 장소도 중요해요?
 - `followUp.3.ko` · KO: 연락을 계속하는 건 도움이 돼요?
@@ -1622,7 +1547,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 힘든 이별에서 꼭 무언가를 배워야 한다는 생각은 어때요?
 - `question.ja` · JA: つらい別れから必ず何かを学ぶべきだという考えを、どう思いますか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 제일 어려운 질문이에요. 판단하지 말고 기준을 한 가지씩 말하게 해 주세요.
 - `followUp.1.ko` · KO: 아무것도 정리하지 못해도 괜찮을까요?
 - `followUp.2.ko` · KO: 시간이 지나야 보이는 것도 있어요?
 - `followUp.3.ko` · KO: 배운 점을 찾는 게 부담일 수도 있어요?
@@ -1631,7 +1555,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 좋은 기억으로 남은 작별도 있어요?
 - `question.ja` · JA: では逆に、よい記憶として残っている別れもありますか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 주제를 뒤집어 닫는 질문이에요. 앞에서 고친 표현을 다시 쓰게 해 주세요.
 - `followUp.1.ko` · KO: 연애가 아닌 작별로 답해도 돼요.
 - `followUp.2.ko` · KO: 어떤 말이 기억나요?
 - `followUp.3.ko` · KO: 그 사람을 떠올리면 지금은 어떤 마음이에요?
@@ -1639,7 +1562,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-intermediate/lessons/06-hardest-breakup/lesson.html`
-- sha256: `ae8373f87556949ca36f229e7b6024a8825e790f361fce0b516d6f4d935fc65e`
+- sha256: `68f0d725140c1c12fda3f2f8638469dbbb15afa8a8d6692ef5b2b7d3ed10635a`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1715,7 +1638,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 영화나 드라마에서 기억에 남는 이별 장면이 있어요?
 - `question.ja` · JA: 映画やドラマで印象に残っている別れの場面はありますか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 가볍게 입을 여는 질문이에요. 경험이 없으면 본 장면이나 들은 이야기로 받아 주세요.
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
 - `followUp.1.ko` · KO: 어떤 작품이었어요?
 - `followUp.2.ko` · KO: 누가 먼저 말했어요?
 - `followUp.3.ko` · KO: 그 장면의 분위기는 어땠어요?
@@ -1724,7 +1647,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 사람들이 이별 뒤에 기분을 달래는 방법이 뭐예요?
 - `question.ja` · JA: 人は別れのあと、どんな方法で気持ちを落ち着けますか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 하나가 나오면 그때의 사람, 장소, 느낌을 구체적으로 이어 가세요.
 - `followUp.1.ko` · KO: 친구를 만나요?
 - `followUp.2.ko` · KO: 혼자 시간을 보내요?
 - `followUp.3.ko` · KO: 새로운 일을 시작하기도 해요?
@@ -1733,7 +1655,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 직접 겪었거나 들은 이별 중에서 말할 수 있는 장면이 뭐예요?
 - `question.ja` · JA: 自分で経験した、または聞いた別れの中で、話せる場面は何ですか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 오늘의 메인 질문이에요. 한 가지를 고른 뒤 이유와 장면이 나올 때까지 기다려 주세요.
 - `followUp.1.ko` · KO: 자세히 말하지 않아도 괜찮아요. 언제쯤 일이었어요?
 - `followUp.2.ko` · KO: 그때 가장 먼저 든 마음이 뭐였어요?
 - `followUp.3.ko` · KO: 사실 대신 영화 장면으로 이야기해도 돼요.
@@ -1742,7 +1663,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 이별에서 가장 힘들었던 순간은 무엇이었어요?
 - `question.ja` · JA: その別れでいちばんつらかった瞬間は何でしたか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 정답을 정해 주지 말고 학생이 자기 기준을 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 마지막 대화였어요?
 - `followUp.2.ko` · KO: 일상이 바뀐 게 힘들었어요?
 - `followUp.3.ko` · KO: 지금 말하기 어려우면 다음 질문으로 갈까요?
@@ -1751,7 +1671,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 뒤에 일상은 어떻게 달라졌어요?
 - `question.ja` · JA: そのあと、日常はどう変わりましたか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 앞에서 나온 이야기와 연결해 변화나 차이를 말하게 해 주세요.
 - `followUp.1.ko` · KO: 자주 가던 곳도 달라졌어요?
 - `followUp.2.ko` · KO: 친구들과 보내는 시간이 늘었어요?
 - `followUp.3.ko` · KO: 다시 편해지기까지 시간이 걸렸어요?
@@ -1760,7 +1679,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 서로 덜 상처받으며 헤어지려면 무엇이 필요할까요?
 - `question.ja` · JA: お互いが少しでも傷つかずに別れるには、何が必要でしょうか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 생각이 필요한 질문이에요. 구체적인 예에서 시작하게 해 주세요.
 - `followUp.1.ko` · KO: 솔직함은 어디까지 필요해요?
 - `followUp.2.ko` · KO: 마지막 대화의 장소도 중요해요?
 - `followUp.3.ko` · KO: 연락을 계속하는 건 도움이 돼요?
@@ -1769,7 +1687,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 힘든 이별에서 꼭 뭔가를 배워야 한다는 생각은 어때요?
 - `question.ja` · JA: つらい別れから必ず何かを学ぶべきだという考えを、どう思いますか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 제일 어려운 질문이에요. 판단하지 말고 기준을 한 가지씩 말하게 해 주세요.
 - `followUp.1.ko` · KO: 아무것도 정리하지 못해도 괜찮을까요?
 - `followUp.2.ko` · KO: 시간이 지나야 보이는 것도 있어요?
 - `followUp.3.ko` · KO: 배운 점을 찾는 게 부담일 수도 있어요?
@@ -1778,7 +1695,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 좋은 기억으로 남은 작별도 있어요?
 - `question.ja` · JA: では逆に、よい記憶として残っている別れもありますか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 주제를 뒤집어 닫는 질문이에요. 앞에서 고친 표현을 다시 쓰게 해 주세요.
 - `followUp.1.ko` · KO: 연애가 아닌 작별로 답해도 돼요.
 - `followUp.2.ko` · KO: 어떤 말이 기억나요?
 - `followUp.3.ko` · KO: 그 사람을 떠올리면 지금은 어떤 마음이에요?
@@ -1788,7 +1704,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-advanced/lessons/07-thoughts-on-single-life-and-dink/lesson.html`
-- sha256: `9d2ceeff01b6769789af09434cc1cf176fd11deb3caab50a96854c98b856a837`
+- sha256: `2910e0c007e257cfbfcb670340281fd497f3b4d8bb82217e32f2a43bf233760e`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1864,7 +1780,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 비혼이나 딩크라는 말을 들어 본 적 있어요?
 - `question.ja` · JA: 非婚やDINKという言葉を聞いたことがありますか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 가볍게 입을 여는 질문이에요. 경험이 없으면 본 장면이나 들은 이야기로 받아 주세요.
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
 - `followUp.1.ko` · KO: 어디에서 들었어요?
 - `followUp.2.ko` · KO: 뜻을 바로 알았어요?
 - `followUp.3.ko` · KO: 주변에서 자주 쓰는 말이에요?
@@ -1873,7 +1789,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 영화나 드라마에서 혼자 사는 인물이 기억나요?
 - `question.ja` · JA: 映画やドラマで、一人で暮らす人物を覚えていますか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 하나가 나오면 그때의 사람, 장소, 느낌을 구체적으로 이어 가세요.
 - `followUp.1.ko` · KO: 어떤 생활을 했어요?
 - `followUp.2.ko` · KO: 행복해 보였어요?
 - `followUp.3.ko` · KO: 주변 사람은 어떻게 봤어요?
@@ -1882,7 +1797,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 비혼이나 딩크에 대해 어떤 생각이 들어요?
 - `question.ja` · JA: 非婚やDINKについて、どう思いますか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 오늘의 메인 질문이에요. 한 가지를 고른 뒤 이유와 장면이 나올 때까지 기다려 주세요.
 - `followUp.1.ko` · KO: 개인 경험은 말하지 않아도 괜찮아요.
 - `followUp.2.ko` · KO: 어떤 점을 먼저 떠올렸어요?
 - `followUp.3.ko` · KO: 둘은 서로 다른 선택이라고 느껴요?
@@ -1891,7 +1805,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 사람들이 결혼 여부를 자주 묻는 이유는 뭘까요?
 - `question.ja` · JA: 人はなぜ他人に結婚するかどうかをよく尋ねるのでしょうか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 정답을 정해 주지 말고 학생이 자기 기준을 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 관심과 부담의 경계는 어디예요?
 - `followUp.2.ko` · KO: 가족이 물으면 느낌이 달라요?
 - `followUp.3.ko` · KO: 어떤 답이면 질문이 끝날까요?
@@ -1900,7 +1813,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 원하는 가족의 모습은 시간이 지나면 어떻게 달라질 수 있어요?
 - `question.ja` · JA: 望む家族の形は、時間がたつとどう変わるでしょうか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 앞에서 나온 이야기와 연결해 변화나 차이를 말하게 해 주세요.
 - `followUp.1.ko` · KO: 경험이 생각을 바꿀 수 있어요?
 - `followUp.2.ko` · KO: 경제 상황도 영향을 줘요?
 - `followUp.3.ko` · KO: 생각이 바뀌어도 괜찮아요?
@@ -1909,7 +1821,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 왜 어떤 사람들은 결혼하지 않거나 아이를 갖지 않는 선택을 이기적이라고 볼까요?
 - `question.ja` · JA: なぜ結婚しない、または子どもを持たない選択を利己的だと考える人がいるのでしょうか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 생각이 필요한 질문이에요. 구체적인 예에서 시작하게 해 주세요.
 - `followUp.1.ko` · KO: 그렇게 말하는 사람은 누구에 대한 책임을 생각하는 걸까요?
 - `followUp.2.ko` · KO: 사회 분위기가 영향을 줘요?
 - `followUp.3.ko` · KO: 그 말이 당사자에게 어떻게 들릴까요?
@@ -1918,7 +1829,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 개인의 선택과 사회의 기대가 다를 때 무엇을 존중해야 할까요?
 - `question.ja` · JA: 個人の選択と社会の期待が違うとき、何を尊重すべきでしょうか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 제일 어려운 질문이에요. 판단하지 말고 기준을 한 가지씩 말하게 해 주세요.
 - `followUp.1.ko` · KO: 가족의 기대도 함께 생각해야 해요?
 - `followUp.2.ko` · KO: 선택의 결과는 누가 책임져요?
 - `followUp.3.ko` · KO: 서로 다른 선택을 어떻게 이야기할 수 있어요?
@@ -1927,7 +1837,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 결혼 여부보다 더 중요한 삶의 조건은 뭐예요?
 - `question.ja` · JA: では逆に、結婚するかどうかより大切な人生の条件は何ですか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 주제를 뒤집어 닫는 질문이에요. 앞에서 고친 표현을 다시 쓰게 해 주세요.
 - `followUp.1.ko` · KO: 안정된 생활이 중요해요?
 - `followUp.2.ko` · KO: 좋은 관계는 어떤 관계예요?
 - `followUp.3.ko` · KO: 내 답 대신 사회 이야기로 답해도 괜찮아요.
@@ -1935,7 +1844,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-intermediate/lessons/07-thoughts-on-single-life-and-dink/lesson.html`
-- sha256: `3ae93bd08ec9faa73e5d896030e3dc1f8a3386d522f7caa33d4f21898331721f`
+- sha256: `b6b4b0b8c9d8945ce70bd0806a5813f704e0a00f3a4c6557eb1b13f85020d341`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2011,7 +1920,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 비혼이나 딩크라는 말을 들어 본 적 있어요?
 - `question.ja` · JA: 非婚やDINKという言葉を聞いたことがありますか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 가볍게 입을 여는 질문이에요. 경험이 없으면 본 장면이나 들은 이야기로 받아 주세요.
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
 - `followUp.1.ko` · KO: 어디에서 들었어요?
 - `followUp.2.ko` · KO: 뜻을 바로 알았어요?
 - `followUp.3.ko` · KO: 주변에서 자주 쓰는 말이에요?
@@ -2020,7 +1929,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 영화나 드라마에서 혼자 사는 인물이 기억나요?
 - `question.ja` · JA: 映画やドラマで、一人で暮らす人物を覚えていますか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 하나가 나오면 그때의 사람, 장소, 느낌을 구체적으로 이어 가세요.
 - `followUp.1.ko` · KO: 어떤 생활을 했어요?
 - `followUp.2.ko` · KO: 행복해 보였어요?
 - `followUp.3.ko` · KO: 주변 사람은 어떻게 봤어요?
@@ -2029,7 +1937,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 비혼이나 딩크에 대해 어떤 생각이 들어요?
 - `question.ja` · JA: 非婚やDINKについて、どう思いますか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 오늘의 메인 질문이에요. 한 가지를 고른 뒤 이유와 장면이 나올 때까지 기다려 주세요.
 - `followUp.1.ko` · KO: 개인 경험은 말하지 않아도 괜찮아요.
 - `followUp.2.ko` · KO: 어떤 점을 먼저 떠올렸어요?
 - `followUp.3.ko` · KO: 둘은 서로 다른 선택이라고 느껴요?
@@ -2038,7 +1945,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 사람들이 결혼 여부를 자주 묻는 이유는 뭘까요?
 - `question.ja` · JA: 人はなぜ他人に結婚するかどうかをよく尋ねるのでしょうか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 정답을 정해 주지 말고 학생이 자기 기준을 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 관심과 부담의 경계는 어디예요?
 - `followUp.2.ko` · KO: 가족이 물으면 느낌이 달라요?
 - `followUp.3.ko` · KO: 어떤 답이면 질문이 끝날까요?
@@ -2047,7 +1953,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 나중에는 원하는 가족의 모습이 달라질 수도 있어요?
 - `question.ja` · JA: 将来、望む家族の形が変わることもありますか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 앞에서 나온 이야기와 연결해 달라질 수 있는 이유 한 가지를 말하게 해 주세요.
 - `followUp.1.ko` · KO: 경험이 생각을 바꿀 수 있어요?
 - `followUp.2.ko` · KO: 경제 상황도 영향을 줘요?
 - `followUp.3.ko` · KO: 생각이 바뀌어도 괜찮아요?
@@ -2056,7 +1961,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 왜 어떤 사람들은 결혼하지 않거나 아이를 갖지 않는 선택을 이기적이라고 볼까요?
 - `question.ja` · JA: なぜ結婚しない、または子どもを持たない選択を利己的だと考える人がいるのでしょうか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 생각이 필요한 질문이에요. 구체적인 예에서 시작하게 해 주세요.
 - `followUp.1.ko` · KO: 그렇게 말하는 사람은 누구에 대한 책임을 생각하는 걸까요?
 - `followUp.2.ko` · KO: 사회 분위기가 영향을 줘요?
 - `followUp.3.ko` · KO: 그 말이 당사자에게 어떻게 들릴까요?
@@ -2065,7 +1969,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 내 선택과 사회의 기대가 다르면 무엇을 존중해야 할까요?
 - `question.ja` · JA: 自分の選択と社会の期待が違うとき、何を尊重すべきでしょうか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 제일 어려운 질문이에요. 판단하지 말고 기준을 한 가지씩 말하게 해 주세요.
 - `followUp.1.ko` · KO: 가족의 기대도 함께 생각해야 해요?
 - `followUp.2.ko` · KO: 선택의 결과는 누가 책임져요?
 - `followUp.3.ko` · KO: 서로 다른 선택을 어떻게 이야기할 수 있어요?
@@ -2074,7 +1977,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 결혼 여부보다 더 중요한 삶의 조건은 뭐예요?
 - `question.ja` · JA: では逆に、結婚するかどうかより大切な人生の条件は何ですか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 주제를 뒤집어 닫는 질문이에요. 앞에서 고친 표현을 다시 쓰게 해 주세요.
 - `followUp.1.ko` · KO: 안정된 생활이 중요해요?
 - `followUp.2.ko` · KO: 좋은 관계는 어떤 관계예요?
 - `followUp.3.ko` · KO: 내 답 대신 사회 이야기로 답해도 괜찮아요.

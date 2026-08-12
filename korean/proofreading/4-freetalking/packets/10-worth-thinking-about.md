@@ -12,7 +12,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-worth-thinking-about-advanced/lessons/01-life-without-social-media/lesson.html`
-- sha256: `b84f12a2865a175e90de8fe8e9ab4debeac983f2f22d8789d079689faac6438c`
+- sha256: `54757577a207500d079019e3c09f857362540388622945ed47e0962e94a8b5fc`
 - source kind: `article`
 
 #### `metadata`
@@ -104,7 +104,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: SNS 앱을 지워 본 적 있어요?
 - `question.ja` · JA: SNSアプリを消したことがありますか？
-- `tutorGuidance.ko` · KO: 경험 유무를 가볍게 확인하고 실제로 해 본 장면을 받아 주세요.
 - `followUp.1.ko` · KO: 얼마 동안 지웠어요?
 - `followUp.2.ko` · KO: 왜 지웠어요?
 - `followUp.3.ko` · KO: 다시 설치한 이유가 뭐예요?
@@ -113,7 +112,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: SNS를 가장 자주 여는 시간은 언제예요?
 - `question.ja` · JA: SNSをいちばんよく開く時間はいつですか？
-- `tutorGuidance.ko` · KO: 하나를 고르면 시간, 장소, 불편했던 점을 구체적으로 이어 가세요.
 - `followUp.1.ko` · KO: 일어나자마자 봐요?
 - `followUp.2.ko` · KO: 한 번 보면 얼마나 오래 봐요?
 - `followUp.3.ko` · KO: 알림이 없어도 열어요?
@@ -122,7 +120,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: SNS 없이 며칠까지 지낼 수 있어요?
 - `question.ja` · JA: SNSなしで何日まで過ごせますか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 입장을 고른 뒤 일상의 근거가 나올 때까지 기다려 주세요.
 - `followUp.1.ko` · KO: 첫날에 가장 불편한 게 뭐예요?
 - `followUp.2.ko` · KO: 일주일이면 무엇을 놓칠까요?
 - `followUp.3.ko` · KO: 연락은 다른 방법으로 할 수 있어요?
@@ -131,7 +128,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: SNS에서 꼭 남기고 싶은 기능이 뭐예요?
 - `question.ja` · JA: SNSで必ず残したい機能は何ですか？
-- `tutorGuidance.ko` · KO: 학생의 생활에 가까운 예로 넓혀 주세요.
 - `followUp.1.ko` · KO: 친구 소식이 중요해요?
 - `followUp.2.ko` · KO: 정보 검색에도 써요?
 - `followUp.3.ko` · KO: 그 기능만 따로 쓸 수 있어요?
@@ -140,7 +136,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: SNS를 덜 보면 하루가 어떻게 달라질까요?
 - `question.ja` · JA: SNSを見る時間を減らすと、一日はどう変わるでしょうか？
-- `tutorGuidance.ko` · KO: 앞 답과 다른 상황을 비교해서 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 남는 시간에 뭘 할 수 있어요?
 - `followUp.2.ko` · KO: 집중이 더 잘될까요?
 - `followUp.3.ko` · KO: 외로움이 커질 수도 있어요?
@@ -149,7 +144,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: SNS의 연결과 비교는 생활에 각각 어떤 영향을 줘요?
 - `question.ja` · JA: SNSのつながりと比較は、生活にそれぞれどんな影響を与えますか？
-- `tutorGuidance.ko` · KO: 생각이 필요한 질문이에요. 지문의 두 입장을 모두 떠올리게 해 주세요.
 - `followUp.1.ko` · KO: 좋은 소식도 부담이 될 수 있어요?
 - `followUp.2.ko` · KO: 나와 비슷한 사람을 찾는 데 도움이 돼요?
 - `followUp.3.ko` · KO: 사용하는 계정에 따라 달라져요?
@@ -158,7 +152,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: SNS를 끊지 않고 건강하게 쓰는 기준은 뭐예요?
 - `question.ja` · JA: SNSをやめずに健全に使う基準は何ですか？
-- `tutorGuidance.ko` · KO: 제일 어려운 질문이에요. 정답을 정하지 말고 판단 기준을 말하게 해 주세요.
 - `followUp.1.ko` · KO: 하루 시간을 정해야 해요?
 - `followUp.2.ko` · KO: 알림을 줄이면 도움이 돼요?
 - `followUp.3.ko` · KO: 팔로우 목록도 정리해야 해요?
@@ -167,7 +160,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, SNS가 없으면 사라질 좋은 점은 뭐예요?
 - `question.ja` · JA: では逆に、SNSがなければ失われるよい点は何ですか？
-- `tutorGuidance.ko` · KO: 주제를 뒤집어 닫는 질문이에요. 반대쪽에서 남길 것을 찾게 해 주세요.
 - `followUp.1.ko` · KO: 작은 가게는 어떻게 알려질까요?
 - `followUp.2.ko` · KO: 멀리 있는 친구와 연락이 줄까요?
 - `followUp.3.ko` · KO: 새로운 취미를 찾기 어려워져요?
@@ -175,7 +167,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-worth-thinking-about-intermediate/lessons/01-life-without-social-media/lesson.html`
-- sha256: `993be0c5620158bf79bb5f48c05cd2180b4a0aece751fc78cc94de6b8d4fced6`
+- sha256: `d09ec04fafd3970f137419da73c3ad73c70a531ffe2cecc419ed5eda4e91c9f3`
 - source kind: `article`
 
 #### `metadata`
@@ -267,7 +259,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: SNS 앱을 지워 본 적 있어요?
 - `question.ja` · JA: SNSアプリを消したことがありますか？
-- `tutorGuidance.ko` · KO: 경험 유무를 가볍게 확인하고 실제로 해 본 장면을 받아 주세요.
 - `followUp.1.ko` · KO: 얼마 동안 지웠어요?
 - `followUp.2.ko` · KO: 왜 지웠어요?
 - `followUp.3.ko` · KO: 다시 설치한 이유가 뭐예요?
@@ -276,7 +267,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: SNS를 가장 자주 여는 시간은 언제예요?
 - `question.ja` · JA: SNSをいちばんよく開く時間はいつですか？
-- `tutorGuidance.ko` · KO: 하나를 고르면 시간, 장소, 불편했던 점을 구체적으로 이어 가세요.
 - `followUp.1.ko` · KO: 일어나자마자 봐요?
 - `followUp.2.ko` · KO: 한 번 보면 얼마나 오래 봐요?
 - `followUp.3.ko` · KO: 알림이 없어도 열어요?
@@ -285,7 +275,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: SNS 없이 며칠까지 지낼 수 있어요?
 - `question.ja` · JA: SNSなしで何日まで過ごせますか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 입장을 고른 뒤 일상의 근거가 나올 때까지 기다려 주세요.
 - `followUp.1.ko` · KO: 첫날에 가장 불편한 게 뭐예요?
 - `followUp.2.ko` · KO: 일주일이면 무엇을 놓칠까요?
 - `followUp.3.ko` · KO: 연락은 다른 방법으로 할 수 있어요?
@@ -294,7 +283,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: SNS에서 꼭 남기고 싶은 기능이 뭐예요?
 - `question.ja` · JA: SNSで必ず残したい機能は何ですか？
-- `tutorGuidance.ko` · KO: 학생의 생활에 가까운 예로 넓혀 주세요.
 - `followUp.1.ko` · KO: 친구 소식이 중요해요?
 - `followUp.2.ko` · KO: 정보 검색에도 써요?
 - `followUp.3.ko` · KO: 그 기능만 따로 쓸 수 있어요?
@@ -303,7 +291,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: SNS를 덜 보면 하루가 어떻게 달라질까요?
 - `question.ja` · JA: SNSを見る時間を減らすと、一日はどう変わるでしょうか？
-- `tutorGuidance.ko` · KO: 앞 답과 다른 상황을 비교해서 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 남는 시간에 뭘 할 수 있어요?
 - `followUp.2.ko` · KO: 집중이 더 잘될까요?
 - `followUp.3.ko` · KO: 외로움이 커질 수도 있어요?
@@ -312,7 +299,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: SNS로 사람과 연결되는 것과 남과 비교하는 것은 생활에 어떤 영향을 줘요?
 - `question.ja` · JA: SNSで人とつながることと、他人と比べることは、生活にどんな影響を与えますか？
-- `tutorGuidance.ko` · KO: 생각이 필요한 질문이에요. 지문의 두 입장을 모두 떠올리게 해 주세요.
 - `followUp.1.ko` · KO: 좋은 소식도 부담이 될 수 있어요?
 - `followUp.2.ko` · KO: 나와 비슷한 사람을 찾는 데 도움이 돼요?
 - `followUp.3.ko` · KO: 사용하는 계정에 따라 달라져요?
@@ -321,7 +307,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: SNS를 끊지 않고 잘 쓰려면 어떤 기준이 필요해요?
 - `question.ja` · JA: SNSをやめずに上手に使うには、どんな基準が必要ですか？
-- `tutorGuidance.ko` · KO: 제일 어려운 질문이에요. 정답을 정하지 말고 판단 기준을 말하게 해 주세요.
 - `followUp.1.ko` · KO: 하루 시간을 정해야 해요?
 - `followUp.2.ko` · KO: 알림을 줄이면 도움이 돼요?
 - `followUp.3.ko` · KO: 팔로우 목록도 정리해야 해요?
@@ -330,7 +315,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, SNS가 없으면 사라질 좋은 점은 뭐예요?
 - `question.ja` · JA: では逆に、SNSがなければ失われるよい点は何ですか？
-- `tutorGuidance.ko` · KO: 주제를 뒤집어 닫는 질문이에요. 반대쪽에서 남길 것을 찾게 해 주세요.
 - `followUp.1.ko` · KO: 작은 가게는 어떻게 알려질까요?
 - `followUp.2.ko` · KO: 멀리 있는 친구와 연락이 줄까요?
 - `followUp.3.ko` · KO: 새로운 취미를 찾기 어려워져요?
@@ -340,7 +324,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-worth-thinking-about-advanced/lessons/02-what-i-do-for-environment/lesson.html`
-- sha256: `19d83c192841cedf4669b1c0346529034c1975494be6cbfa85ed4e66ede41173`
+- sha256: `d7d9f94fe90f8819aea0928a88beb617a25b6589dd53bb93f423fd80fe2d1811`
 - source kind: `article`
 
 #### `metadata`
@@ -432,7 +416,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 환경을 생각해서 해 본 행동이 있어요?
 - `question.ja` · JA: 環境を考えて、やってみた行動はありますか？
-- `tutorGuidance.ko` · KO: 경험 유무를 가볍게 확인하고 실제로 해 본 장면을 받아 주세요.
 - `followUp.1.ko` · KO: 언제 시작했어요?
 - `followUp.2.ko` · KO: 누구와 같이 했어요?
 - `followUp.3.ko` · KO: 지금도 하고 있어요?
@@ -441,7 +424,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 요즘 가장 자주 하는 환경 행동이 뭐예요?
 - `question.ja` · JA: 最近いちばんよくしている環境のための行動は何ですか？
-- `tutorGuidance.ko` · KO: 하나를 고르면 시간, 장소, 불편했던 점을 구체적으로 이어 가세요.
 - `followUp.1.ko` · KO: 일주일에 몇 번 해요?
 - `followUp.2.ko` · KO: 돈도 절약돼요?
 - `followUp.3.ko` · KO: 준비할 물건이 있어요?
@@ -450,7 +432,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 환경을 위해 실제로 계속하는 게 뭐예요?
 - `question.ja` · JA: 環境のために実際に続けていることは何ですか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 입장을 고른 뒤 일상의 근거가 나올 때까지 기다려 주세요.
 - `followUp.1.ko` · KO: 왜 그 행동은 계속할 수 있어요?
 - `followUp.2.ko` · KO: 처음보다 쉬워졌어요?
 - `followUp.3.ko` · KO: 주변 사람도 알아요?
@@ -459,7 +440,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 환경을 위해 하다가 그만둔 건 뭐예요?
 - `question.ja` · JA: 環境のために始めたけれど、途中でやめたことは何ですか？
-- `tutorGuidance.ko` · KO: 학생의 생활에 가까운 예로 넓혀 주세요.
 - `followUp.1.ko` · KO: 얼마 동안 했어요?
 - `followUp.2.ko` · KO: 가장 불편한 점이 뭐였어요?
 - `followUp.3.ko` · KO: 다른 방법으로 바꿨어요?
@@ -468,7 +448,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 편리함을 조금 포기할 수 있는 범위는 어디까지예요?
 - `question.ja` · JA: 便利さを少し手放せる範囲はどこまでですか？
-- `tutorGuidance.ko` · KO: 앞 답과 다른 상황을 비교해서 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 시간이 더 걸려도 괜찮아요?
 - `followUp.2.ko` · KO: 비용이 더 들면요?
 - `followUp.3.ko` · KO: 매일이 아니라 가끔이면 가능해요?
@@ -477,7 +456,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 개인의 노력과 가게나 회사의 변화는 각각 어떤 영향을 줘요?
 - `question.ja` · JA: 個人の努力と店や会社の変化は、それぞれどんな影響を与えますか？
-- `tutorGuidance.ko` · KO: 생각이 필요한 질문이에요. 지문의 두 입장을 모두 떠올리게 해 주세요.
 - `followUp.1.ko` · KO: 포장을 줄이면 선택이 쉬워져요?
 - `followUp.2.ko` · KO: 소비자가 먼저 요구해야 해요?
 - `followUp.3.ko` · KO: 둘이 함께 바뀐 예가 있어요?
@@ -486,7 +464,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 완벽하게 하는 것보다 오래 하는 게 중요한 이유는 뭘까요?
 - `question.ja` · JA: 完璧にすることより、長く続けることが大切なのはなぜでしょうか？
-- `tutorGuidance.ko` · KO: 제일 어려운 질문이에요. 정답을 정하지 말고 판단 기준을 말하게 해 주세요.
 - `followUp.1.ko` · KO: 작은 행동도 모이면 달라져요?
 - `followUp.2.ko` · KO: 실패한 날은 어떻게 다시 시작해요?
 - `followUp.3.ko` · KO: 목표를 낮추는 것도 필요해요?
@@ -495,7 +472,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 친환경처럼 보이지만 낭비라고 느낀 게 있어요?
 - `question.ja` · JA: では逆に、環境によさそうに見えても、無駄だと感じたものはありますか？
-- `tutorGuidance.ko` · KO: 주제를 뒤집어 닫는 질문이에요. 반대쪽에서 남길 것을 찾게 해 주세요.
 - `followUp.1.ko` · KO: 포장이 더 많았어요?
 - `followUp.2.ko` · KO: 한 번 쓰고 버렸어요?
 - `followUp.3.ko` · KO: 실제로 효과를 확인하기 어려워요?
@@ -503,7 +479,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-worth-thinking-about-intermediate/lessons/02-what-i-do-for-environment/lesson.html`
-- sha256: `04a500c7196c9fce23e275d5f0e32cdf866998fc661fec1e3d9dfaba7597944b`
+- sha256: `4ec892877e72d925767f3f44d6f194510fa27a7b1680d1e0a53c1454c2319927`
 - source kind: `article`
 
 #### `metadata`
@@ -595,7 +571,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 환경을 생각해서 해 본 행동이 있어요?
 - `question.ja` · JA: 環境を考えて、やってみた行動はありますか？
-- `tutorGuidance.ko` · KO: 경험 유무를 가볍게 확인하고 실제로 해 본 장면을 받아 주세요.
 - `followUp.1.ko` · KO: 언제 시작했어요?
 - `followUp.2.ko` · KO: 누구와 같이 했어요?
 - `followUp.3.ko` · KO: 지금도 하고 있어요?
@@ -604,7 +579,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 요즘 가장 자주 하는 환경 행동이 뭐예요?
 - `question.ja` · JA: 最近いちばんよくしている環境のための行動は何ですか？
-- `tutorGuidance.ko` · KO: 하나를 고르면 시간, 장소, 불편했던 점을 구체적으로 이어 가세요.
 - `followUp.1.ko` · KO: 일주일에 몇 번 해요?
 - `followUp.2.ko` · KO: 돈도 절약돼요?
 - `followUp.3.ko` · KO: 준비할 물건이 있어요?
@@ -613,7 +587,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 환경을 위해 실제로 계속하는 게 뭐예요?
 - `question.ja` · JA: 環境のために実際に続けていることは何ですか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 입장을 고른 뒤 일상의 근거가 나올 때까지 기다려 주세요.
 - `followUp.1.ko` · KO: 왜 그 행동은 계속할 수 있어요?
 - `followUp.2.ko` · KO: 처음보다 쉬워졌어요?
 - `followUp.3.ko` · KO: 주변 사람도 알아요?
@@ -622,7 +595,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 환경을 위해 하다가 그만둔 건 뭐예요?
 - `question.ja` · JA: 環境のために始めたけれど、途中でやめたことは何ですか？
-- `tutorGuidance.ko` · KO: 학생의 생활에 가까운 예로 넓혀 주세요.
 - `followUp.1.ko` · KO: 얼마 동안 했어요?
 - `followUp.2.ko` · KO: 가장 불편한 점이 뭐였어요?
 - `followUp.3.ko` · KO: 다른 방법으로 바꿨어요?
@@ -631,7 +603,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 편리함을 조금 포기할 수 있는 범위는 어디까지예요?
 - `question.ja` · JA: 便利さを少し手放せる範囲はどこまでですか？
-- `tutorGuidance.ko` · KO: 앞 답과 다른 상황을 비교해서 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 시간이 더 걸려도 괜찮아요?
 - `followUp.2.ko` · KO: 비용이 더 들면요?
 - `followUp.3.ko` · KO: 매일이 아니라 가끔이면 가능해요?
@@ -640,7 +611,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 내 노력과 가게나 회사의 변화는 각각 어떤 영향을 줘요?
 - `question.ja` · JA: 自分の努力と店や会社の変化は、それぞれどんな影響を与えますか？
-- `tutorGuidance.ko` · KO: 생각이 필요한 질문이에요. 지문의 두 입장을 모두 떠올리게 해 주세요.
 - `followUp.1.ko` · KO: 포장을 줄이면 선택이 쉬워져요?
 - `followUp.2.ko` · KO: 소비자가 먼저 요구해야 해요?
 - `followUp.3.ko` · KO: 둘이 함께 바뀐 예가 있어요?
@@ -649,7 +619,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 완벽하게 하기보다 오래 하는 게 왜 중요할까요?
 - `question.ja` · JA: 完璧にするより、長く続けることがなぜ大切でしょうか？
-- `tutorGuidance.ko` · KO: 제일 어려운 질문이에요. 정답을 정하지 말고 판단 기준을 말하게 해 주세요.
 - `followUp.1.ko` · KO: 작은 행동도 모이면 달라져요?
 - `followUp.2.ko` · KO: 실패한 날은 어떻게 다시 시작해요?
 - `followUp.3.ko` · KO: 목표를 낮추는 것도 필요해요?
@@ -658,7 +627,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 친환경처럼 보이지만 낭비라고 느낀 게 있어요?
 - `question.ja` · JA: では逆に、環境によさそうに見えても、無駄だと感じたものはありますか？
-- `tutorGuidance.ko` · KO: 주제를 뒤집어 닫는 질문이에요. 반대쪽에서 남길 것을 찾게 해 주세요.
 - `followUp.1.ko` · KO: 포장이 더 많았어요?
 - `followUp.2.ko` · KO: 한 번 쓰고 버렸어요?
 - `followUp.3.ko` · KO: 실제로 효과를 확인하기 어려워요?
@@ -668,7 +636,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-worth-thinking-about-advanced/lessons/03-work-ai-cannot-do/lesson.html`
-- sha256: `01b8ae56be05f32540f0185acbc89a3832546db400ab19d88e3a13458fa057f3`
+- sha256: `3578a6f2460e3da3406edf709a9ec3daf8d6061bde6645fb0fd3f897068e5e05`
 - source kind: `article`
 
 #### `metadata`
@@ -760,7 +728,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 일이나 공부에서 AI를 써 본 적 있어요?
 - `question.ja` · JA: 仕事や勉強でAIを使ったことがありますか？
-- `tutorGuidance.ko` · KO: 경험 유무를 가볍게 확인하고 실제로 해 본 장면을 받아 주세요.
 - `followUp.1.ko` · KO: 어떤 일을 맡겼어요?
 - `followUp.2.ko` · KO: 처음 결과는 어땠어요?
 - `followUp.3.ko` · KO: 직접 다시 확인했어요?
@@ -769,7 +736,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: AI를 써서 시간을 가장 많이 아낀 일이 뭐예요?
 - `question.ja` · JA: AIを使っていちばん時間を節約できた作業は何ですか？
-- `tutorGuidance.ko` · KO: 하나를 고르면 시간, 장소, 불편했던 점을 구체적으로 이어 가세요.
 - `followUp.1.ko` · KO: 전에는 얼마나 걸렸어요?
 - `followUp.2.ko` · KO: 어떤 부분이 빨라졌어요?
 - `followUp.3.ko` · KO: 결과를 고치는 시간도 들었어요?
@@ -778,7 +744,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 내 일이나 공부에서 AI가 절대 못 할 것 같은 게 뭐예요?
 - `question.ja` · JA: 自分の仕事や勉強で、AIに絶対できなさそうなことは何ですか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 입장을 고른 뒤 일상의 근거가 나올 때까지 기다려 주세요.
 - `followUp.1.ko` · KO: 왜 사람만 할 수 있다고 느껴요?
 - `followUp.2.ko` · KO: 상대의 감정을 알아야 하는 일이에요?
 - `followUp.3.ko` · KO: 결과에 책임이 필요한 일이에요?
@@ -787,7 +752,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: AI에게 맡기면 불안한 판단은 어떤 판단이에요?
 - `question.ja` · JA: AIに任せると不安な判断は、どんな判断ですか？
-- `tutorGuidance.ko` · KO: 학생의 생활에 가까운 예로 넓혀 주세요.
 - `followUp.1.ko` · KO: 틀리면 누가 영향을 받아요?
 - `followUp.2.ko` · KO: 사람이 마지막에 확인하면 괜찮아요?
 - `followUp.3.ko` · KO: 자료가 충분해도 불안해요?
@@ -796,7 +760,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: AI 때문에 오히려 일이 늘어날 수 있는 순간은 언제예요?
 - `question.ja` · JA: AIのせいで、かえって仕事が増えるのはどんなときですか？
-- `tutorGuidance.ko` · KO: 앞 답과 다른 상황을 비교해서 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 틀린 답을 찾는 데 시간이 들어요?
 - `followUp.2.ko` · KO: 지시를 자세히 써야 해요?
 - `followUp.3.ko` · KO: 여러 답 중 고르기 어려워요?
@@ -805,7 +768,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 공감하는 말과 실제로 책임지는 행동은 어떻게 달라요?
 - `question.ja` · JA: 共感する言葉と、実際に責任を負う行動はどう違いますか？
-- `tutorGuidance.ko` · KO: 생각이 필요한 질문이에요. 지문의 두 입장을 모두 떠올리게 해 주세요.
 - `followUp.1.ko` · KO: 좋은 문장만으로 위로가 돼요?
 - `followUp.2.ko` · KO: 상대의 상황을 알아야 해요?
 - `followUp.3.ko` · KO: 결정을 함께 감당해야 해요?
@@ -814,7 +776,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 기술이 계속 바뀌는데도 사람에게 남을 역할은 뭐예요?
 - `question.ja` · JA: 技術が変わり続けても、人に残る役割は何ですか？
-- `tutorGuidance.ko` · KO: 제일 어려운 질문이에요. 정답을 정하지 말고 판단 기준을 말하게 해 주세요.
 - `followUp.1.ko` · KO: 질문을 정하는 일도 중요해요?
 - `followUp.2.ko` · KO: 최종 판단은 누가 해야 해요?
 - `followUp.3.ko` · KO: 사람 사이의 신뢰가 필요한가요?
@@ -823,7 +784,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 사람이 계속할 필요가 없는 일은 뭐예요?
 - `question.ja` · JA: では逆に、人が続ける必要のない仕事は何ですか？
-- `tutorGuidance.ko` · KO: 주제를 뒤집어 닫는 질문이에요. 반대쪽에서 남길 것을 찾게 해 주세요.
 - `followUp.1.ko` · KO: 반복되는 일이에요?
 - `followUp.2.ko` · KO: 실수가 적어질 수 있어요?
 - `followUp.3.ko` · KO: 그 시간을 어디에 쓰면 좋아요?
@@ -831,7 +791,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-worth-thinking-about-intermediate/lessons/03-work-ai-cannot-do/lesson.html`
-- sha256: `e38239b0b75ed46fe452185450232440103a3f137c0a1519761903ef6b57da3d`
+- sha256: `a95e9b6f303b35122fc652fd558085fd3c80aac580fab4dd47afe99b2b147399`
 - source kind: `article`
 
 #### `metadata`
@@ -923,7 +883,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 일이나 공부에서 AI를 써 본 적 있어요?
 - `question.ja` · JA: 仕事や勉強でAIを使ったことがありますか？
-- `tutorGuidance.ko` · KO: 경험 유무를 가볍게 확인하고 실제로 해 본 장면을 받아 주세요.
 - `followUp.1.ko` · KO: 어떤 일을 맡겼어요?
 - `followUp.2.ko` · KO: 처음 결과는 어땠어요?
 - `followUp.3.ko` · KO: 직접 다시 확인했어요?
@@ -932,7 +891,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: AI를 써서 시간을 가장 많이 아낀 일이 뭐예요?
 - `question.ja` · JA: AIを使っていちばん時間を節約できた作業は何ですか？
-- `tutorGuidance.ko` · KO: 하나를 고르면 시간, 장소, 불편했던 점을 구체적으로 이어 가세요.
 - `followUp.1.ko` · KO: 전에는 얼마나 걸렸어요?
 - `followUp.2.ko` · KO: 어떤 부분이 빨라졌어요?
 - `followUp.3.ko` · KO: 결과를 고치는 시간도 들었어요?
@@ -941,7 +899,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 내 일이나 공부에서 AI가 절대 못 할 것 같은 게 뭐예요?
 - `question.ja` · JA: 自分の仕事や勉強で、AIに絶対できなさそうなことは何ですか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 입장을 고른 뒤 일상의 근거가 나올 때까지 기다려 주세요.
 - `followUp.1.ko` · KO: 왜 사람만 할 수 있다고 느껴요?
 - `followUp.2.ko` · KO: 상대의 감정을 알아야 하는 일이에요?
 - `followUp.3.ko` · KO: 결과에 책임이 필요한 일이에요?
@@ -950,7 +907,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: AI에게 맡기면 불안한 판단은 어떤 판단이에요?
 - `question.ja` · JA: AIに任せると不安な判断は、どんな判断ですか？
-- `tutorGuidance.ko` · KO: 학생의 생활에 가까운 예로 넓혀 주세요.
 - `followUp.1.ko` · KO: 틀리면 누가 영향을 받아요?
 - `followUp.2.ko` · KO: 사람이 마지막에 확인하면 괜찮아요?
 - `followUp.3.ko` · KO: 자료가 충분해도 불안해요?
@@ -959,7 +915,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: AI 때문에 오히려 일이 늘어날 수 있는 순간은 언제예요?
 - `question.ja` · JA: AIのせいで、かえって仕事が増えるのはどんなときですか？
-- `tutorGuidance.ko` · KO: 앞 답과 다른 상황을 비교해서 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 틀린 답을 찾는 데 시간이 들어요?
 - `followUp.2.ko` · KO: 지시를 자세히 써야 해요?
 - `followUp.3.ko` · KO: 여러 답 중 고르기 어려워요?
@@ -968,7 +923,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 공감하는 말과 책임지는 행동은 어떻게 달라요?
 - `question.ja` · JA: 共感する言葉と、責任を負う行動はどう違いますか？
-- `tutorGuidance.ko` · KO: 생각이 필요한 질문이에요. 지문의 두 입장을 모두 떠올리게 해 주세요.
 - `followUp.1.ko` · KO: 좋은 문장만으로 위로가 돼요?
 - `followUp.2.ko` · KO: 상대의 상황을 알아야 해요?
 - `followUp.3.ko` · KO: 결정을 함께 감당해야 해요?
@@ -977,7 +931,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 기술이 바뀌어도 사람에게 남을 역할은 뭐예요?
 - `question.ja` · JA: 技術が変わっても、人に残る役割は何ですか？
-- `tutorGuidance.ko` · KO: 제일 어려운 질문이에요. 정답을 정하지 말고 판단 기준을 말하게 해 주세요.
 - `followUp.1.ko` · KO: 질문을 정하는 일도 중요해요?
 - `followUp.2.ko` · KO: 최종 판단은 누가 해야 해요?
 - `followUp.3.ko` · KO: 사람 사이의 신뢰가 필요한가요?
@@ -986,7 +939,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 사람이 계속할 필요가 없는 일은 뭐예요?
 - `question.ja` · JA: では逆に、人が続ける必要のない仕事は何ですか？
-- `tutorGuidance.ko` · KO: 주제를 뒤집어 닫는 질문이에요. 반대쪽에서 남길 것을 찾게 해 주세요.
 - `followUp.1.ko` · KO: 반복되는 일이에요?
 - `followUp.2.ko` · KO: 실수가 적어질 수 있어요?
 - `followUp.3.ko` · KO: 그 시간을 어디에 쓰면 좋아요?
@@ -996,7 +948,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-worth-thinking-about-advanced/lessons/04-money-and-happiness/lesson.html`
-- sha256: `b285459f16a68b33a9d784eec42a2d26c5792cd2408570931ad04599f735755d`
+- sha256: `7a034764a1fcce1f82bf5e3151c49326a2cf342fe0c1073a4fd84433a1d30160`
 - source kind: `article`
 
 #### `metadata`
@@ -1088,7 +1040,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 돈을 써서 걱정이 줄었던 경험이 있어요?
 - `question.ja` · JA: お金を使って心配が減った経験はありますか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 경험 유무를 가볍게 확인하고 실제로 해 본 장면을 받아 주세요.
 - `followUp.1.ko` · KO: 금액은 말하지 않아도 괜찮아요.
 - `followUp.2.ko` · KO: 어떤 걱정이었어요?
 - `followUp.3.ko` · KO: 돈보다 시간이 중요했어요?
@@ -1097,7 +1048,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 최근에 돈을 쓰고 만족한 작은 일이 뭐예요?
 - `question.ja` · JA: 最近、お金を使って満足した小さなことは何ですか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 하나를 고르면 시간, 장소, 불편했던 점을 구체적으로 이어 가세요.
 - `followUp.1.ko` · KO: 물건이었어요, 경험이었어요?
 - `followUp.2.ko` · KO: 왜 만족했어요?
 - `followUp.3.ko` · KO: 다시 같은 데 돈을 쓸 거예요?
@@ -1106,7 +1056,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 얼마면 충분한지 무엇으로 판단할 수 있을까요?
 - `question.ja` · JA: いくらあれば十分かを、何で判断できるでしょうか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 오늘의 메인 질문이에요. 입장을 고른 뒤 일상의 근거가 나올 때까지 기다려 주세요.
 - `followUp.1.ko` · KO: 정확한 금액은 말하지 않아도 돼요.
 - `followUp.2.ko` · KO: 어떤 걱정이 없어져야 해요?
 - `followUp.3.ko` · KO: 자유 시간이 늘면 충분해요?
@@ -1115,7 +1064,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 돈이 행복을 가장 크게 바꾸는 순간은 언제예요?
 - `question.ja` · JA: お金が幸せをいちばん大きく変えるのはどんなときですか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 학생의 생활에 가까운 예로 넓혀 주세요.
 - `followUp.1.ko` · KO: 기본 생활이 불안할 때예요?
 - `followUp.2.ko` · KO: 건강 문제가 생겼을 때는요?
 - `followUp.3.ko` · KO: 누군가를 도울 때도 행복해져요?
@@ -1124,7 +1072,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 돈이 늘어도 해결하기 어려운 걱정은 뭐예요?
 - `question.ja` · JA: お金が増えても解決しにくい心配は何ですか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 앞 답과 다른 상황을 비교해서 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 관계의 문제는 어때요?
 - `followUp.2.ko` · KO: 건강도 모두 해결할 수 있어요?
 - `followUp.3.ko` · KO: 시간은 돈으로 얼마나 살 수 있어요?
@@ -1133,7 +1080,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 충분함과 더 갖고 싶은 마음은 어떻게 구분할 수 있어요?
 - `question.ja` · JA: 十分だという感覚と、もっと欲しい気持ちはどう分けられますか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 생각이 필요한 질문이에요. 지문의 두 입장을 모두 떠올리게 해 주세요.
 - `followUp.1.ko` · KO: 비교가 기준을 바꿔요?
 - `followUp.2.ko` · KO: 목표를 정하면 도움이 돼요?
 - `followUp.3.ko` · KO: 원하는 게 바뀌어도 괜찮아요?
@@ -1142,7 +1088,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 돈과 행복의 관계가 사람마다 다른 이유는 뭘까요?
 - `question.ja` · JA: お金と幸せの関係が人によって違うのはなぜでしょうか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 제일 어려운 질문이에요. 정답을 정하지 말고 판단 기준을 말하게 해 주세요.
 - `followUp.1.ko` · KO: 사는 곳이 영향을 줘요?
 - `followUp.2.ko` · KO: 가족 상황도 달라요?
 - `followUp.3.ko` · KO: 원하는 생활이 다르기 때문이에요?
@@ -1151,7 +1096,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 돈이 적게 들어도 행복한 순간은 언제예요?
 - `question.ja` · JA: では逆に、お金があまりかからなくても幸せな瞬間はいつですか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 주제를 뒤집어 닫는 질문이에요. 반대쪽에서 남길 것을 찾게 해 주세요.
 - `followUp.1.ko` · KO: 누구와 함께해요?
 - `followUp.2.ko` · KO: 자주 만들 수 있는 순간이에요?
 - `followUp.3.ko` · KO: 시간이 충분해야 해요?
@@ -1159,7 +1103,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-worth-thinking-about-intermediate/lessons/04-money-and-happiness/lesson.html`
-- sha256: `6338bd203e0075a48f250cd3f7ff2c9e6f81e94712a8ee1f8882ee8d820428c8`
+- sha256: `0329984a2164671128d48e890c2befda8514b6ce0ede929756ba4e10f9d79b76`
 - source kind: `article`
 
 #### `metadata`
@@ -1251,7 +1195,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 돈을 써서 걱정이 줄었던 경험이 있어요?
 - `question.ja` · JA: お金を使って心配が減った経験はありますか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 경험 유무를 가볍게 확인하고 실제로 해 본 장면을 받아 주세요.
 - `followUp.1.ko` · KO: 금액은 말하지 않아도 괜찮아요.
 - `followUp.2.ko` · KO: 어떤 걱정이었어요?
 - `followUp.3.ko` · KO: 돈보다 시간이 중요했어요?
@@ -1260,7 +1203,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 최근에 돈을 쓰고 만족한 작은 일이 뭐예요?
 - `question.ja` · JA: 最近、お金を使って満足した小さなことは何ですか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 하나를 고르면 시간, 장소, 불편했던 점을 구체적으로 이어 가세요.
 - `followUp.1.ko` · KO: 물건이었어요, 경험이었어요?
 - `followUp.2.ko` · KO: 왜 만족했어요?
 - `followUp.3.ko` · KO: 다시 같은 데 돈을 쓸 거예요?
@@ -1269,7 +1211,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 얼마면 충분한지 무엇으로 판단할 수 있을까요?
 - `question.ja` · JA: いくらあれば十分かを、何で判断できるでしょうか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 오늘의 메인 질문이에요. 입장을 고른 뒤 일상의 근거가 나올 때까지 기다려 주세요.
 - `followUp.1.ko` · KO: 정확한 금액은 말하지 않아도 돼요.
 - `followUp.2.ko` · KO: 어떤 걱정이 없어져야 해요?
 - `followUp.3.ko` · KO: 자유 시간이 늘면 충분해요?
@@ -1278,7 +1219,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 돈이 행복을 가장 크게 바꾸는 순간은 언제예요?
 - `question.ja` · JA: お金が幸せをいちばん大きく変えるのはどんなときですか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 학생의 생활에 가까운 예로 넓혀 주세요.
 - `followUp.1.ko` · KO: 기본 생활이 불안할 때예요?
 - `followUp.2.ko` · KO: 건강 문제가 생겼을 때는요?
 - `followUp.3.ko` · KO: 누군가를 도울 때도 행복해져요?
@@ -1287,7 +1227,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 돈이 늘어도 해결하기 어려운 걱정은 뭐예요?
 - `question.ja` · JA: お金が増えても解決しにくい心配は何ですか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 앞 답과 다른 상황을 비교해서 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 관계의 문제는 어때요?
 - `followUp.2.ko` · KO: 건강도 모두 해결할 수 있어요?
 - `followUp.3.ko` · KO: 시간은 돈으로 얼마나 살 수 있어요?
@@ -1296,7 +1235,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 충분하다고 느끼는 마음과 더 갖고 싶은 마음은 어떻게 구분할 수 있어요?
 - `question.ja` · JA: 十分だという気持ちと、もっと欲しい気持ちはどう分けられますか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 생각이 필요한 질문이에요. 지문의 두 입장을 모두 떠올리게 해 주세요.
 - `followUp.1.ko` · KO: 비교가 기준을 바꿔요?
 - `followUp.2.ko` · KO: 목표를 정하면 도움이 돼요?
 - `followUp.3.ko` · KO: 원하는 게 바뀌어도 괜찮아요?
@@ -1305,7 +1243,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 돈과 행복의 관계가 사람마다 왜 달라요?
 - `question.ja` · JA: お金と幸せの関係は、人によってなぜ違いますか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 제일 어려운 질문이에요. 정답을 정하지 말고 판단 기준을 말하게 해 주세요.
 - `followUp.1.ko` · KO: 사는 곳이 영향을 줘요?
 - `followUp.2.ko` · KO: 가족 상황도 달라요?
 - `followUp.3.ko` · KO: 원하는 생활이 다르기 때문이에요?
@@ -1314,7 +1251,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 돈이 적게 들어도 행복한 순간은 언제예요?
 - `question.ja` · JA: では逆に、お金があまりかからなくても幸せな瞬間はいつですか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 주제를 뒤집어 닫는 질문이에요. 반대쪽에서 남길 것을 찾게 해 주세요.
 - `followUp.1.ko` · KO: 누구와 함께해요?
 - `followUp.2.ko` · KO: 자주 만들 수 있는 순간이에요?
 - `followUp.3.ko` · KO: 시간이 충분해야 해요?
@@ -1324,7 +1260,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-worth-thinking-about-advanced/lessons/05-best-age/lesson.html`
-- sha256: `3d41d63c3b236a06b654d6b1808a68ed45d6dd8cea48048aa10641a65d95c150`
+- sha256: `147b2d2dcb3eaa1d585267a6093e7362ddf1d8a5d328b2e24aa50ee9b8345823`
 - source kind: `article`
 
 #### `metadata`
@@ -1416,7 +1352,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 어릴 때 빨리 되고 싶었던 나이가 있어요?
 - `question.ja` · JA: 子どものころ、早くなりたかった年齢はありますか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 경험 유무를 가볍게 확인하고 실제로 해 본 장면을 받아 주세요.
 - `followUp.1.ko` · KO: 정확한 숫자는 말하지 않아도 돼요.
 - `followUp.2.ko` · KO: 왜 그 나이가 좋아 보였어요?
 - `followUp.3.ko` · KO: 지금 생각해도 같아요?
@@ -1425,7 +1360,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 영화나 드라마 속 인물을 보며 ‘저 나이가 좋겠다’고 생각한 적 있어요?
 - `question.ja` · JA: 映画やドラマの登場人物を見て、「あの年齢はいいな」と思ったことがありますか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 하나를 고르면 시간, 장소, 불편했던 점을 구체적으로 이어 가세요.
 - `followUp.1.ko` · KO: 어떤 생활을 했어요?
 - `followUp.2.ko` · KO: 무엇이 자유로워 보였어요?
 - `followUp.3.ko` · KO: 힘들어 보인 점도 있었어요?
@@ -1434,7 +1368,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 몇 살이 제일 좋다고 생각해요?
 - `question.ja` · JA: 何歳がいちばんよいと思いますか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 오늘의 메인 질문이에요. 입장을 고른 뒤 일상의 근거가 나올 때까지 기다려 주세요.
 - `followUp.1.ko` · KO: 범위로 말해도 괜찮아요.
 - `followUp.2.ko` · KO: 그때 무엇을 할 수 있어요?
 - `followUp.3.ko` · KO: 건강과 자유 중 무엇이 중요해요?
@@ -1443,7 +1376,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 나이에 가장 좋은 점은 뭐예요?
 - `question.ja` · JA: その年齢のいちばんよい点は何ですか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 학생의 생활에 가까운 예로 넓혀 주세요.
 - `followUp.1.ko` · KO: 선택이 많아요?
 - `followUp.2.ko` · KO: 경험이 충분해요?
 - `followUp.3.ko` · KO: 책임은 어느 정도예요?
@@ -1452,7 +1384,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 나이가 들면서 더 편해질 수 있는 건 뭐예요?
 - `question.ja` · JA: 年を重ねると、より楽になることは何ですか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 앞 답과 다른 상황을 비교해서 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 다른 사람의 시선을 덜 신경 써요?
 - `followUp.2.ko` · KO: 결정이 빨라질 수 있어요?
 - `followUp.3.ko` · KO: 관계도 편해져요?
@@ -1461,7 +1392,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 젊음과 경험이 주는 장점은 어떻게 달라요?
 - `question.ja` · JA: 若さの利点と経験の利点はどう違いますか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 생각이 필요한 질문이에요. 지문의 두 입장을 모두 떠올리게 해 주세요.
 - `followUp.1.ko` · KO: 새로운 도전에는 무엇이 중요해요?
 - `followUp.2.ko` · KO: 실수를 줄이는 데는요?
 - `followUp.3.ko` · KO: 둘을 함께 가질 방법이 있어요?
@@ -1470,7 +1400,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 제일 좋은 나이를 하나로 정하기 어려운 이유는 뭘까요?
 - `question.ja` · JA: いちばんよい年齢を一つに決めにくいのはなぜでしょうか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 제일 어려운 질문이에요. 정답을 정하지 말고 판단 기준을 말하게 해 주세요.
 - `followUp.1.ko` · KO: 원하는 일이 사람마다 달라요?
 - `followUp.2.ko` · KO: 건강과 돈의 시기가 달라요?
 - `followUp.3.ko` · KO: 시대에 따라서도 바뀌어요?
@@ -1479,7 +1408,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 나이와 상관없이 계속 가질 수 있는 건 뭐예요?
 - `question.ja` · JA: では逆に、年齢に関係なく持ち続けられるものは何ですか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 주제를 뒤집어 닫는 질문이에요. 반대쪽에서 남길 것을 찾게 해 주세요.
 - `followUp.1.ko` · KO: 호기심은 계속 가질 수 있어요?
 - `followUp.2.ko` · KO: 새로운 친구를 만들 수 있어요?
 - `followUp.3.ko` · KO: 배우는 일에도 나이 제한이 있어요?
@@ -1487,7 +1415,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-worth-thinking-about-intermediate/lessons/05-best-age/lesson.html`
-- sha256: `6dec41c626012e350bbc69b74d19464dd330a570f6f831de678e7a461762c159`
+- sha256: `2555fcafdc04aac4ec7d37ca632cfc4b04a1da2127161162f95ccec6cf60e182`
 - source kind: `article`
 
 #### `metadata`
@@ -1579,7 +1507,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 어릴 때 빨리 되고 싶었던 나이가 있어요?
 - `question.ja` · JA: 子どものころ、早くなりたかった年齢はありますか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 경험 유무를 가볍게 확인하고 실제로 해 본 장면을 받아 주세요.
 - `followUp.1.ko` · KO: 정확한 숫자는 말하지 않아도 돼요.
 - `followUp.2.ko` · KO: 왜 그 나이가 좋아 보였어요?
 - `followUp.3.ko` · KO: 지금 생각해도 같아요?
@@ -1588,7 +1515,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 영화나 드라마 속 인물을 보며 ‘저 나이가 좋겠다’고 생각한 적 있어요?
 - `question.ja` · JA: 映画やドラマの登場人物を見て、「あの年齢はいいな」と思ったことがありますか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 하나를 고르면 시간, 장소, 불편했던 점을 구체적으로 이어 가세요.
 - `followUp.1.ko` · KO: 어떤 생활을 했어요?
 - `followUp.2.ko` · KO: 무엇이 자유로워 보였어요?
 - `followUp.3.ko` · KO: 힘들어 보인 점도 있었어요?
@@ -1597,7 +1523,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 몇 살이 제일 좋다고 생각해요?
 - `question.ja` · JA: 何歳がいちばんよいと思いますか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 오늘의 메인 질문이에요. 입장을 고른 뒤 일상의 근거가 나올 때까지 기다려 주세요.
 - `followUp.1.ko` · KO: 범위로 말해도 괜찮아요.
 - `followUp.2.ko` · KO: 그때 무엇을 할 수 있어요?
 - `followUp.3.ko` · KO: 건강과 자유 중 무엇이 중요해요?
@@ -1606,7 +1531,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 나이에 가장 좋은 점은 뭐예요?
 - `question.ja` · JA: その年齢のいちばんよい点は何ですか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 학생의 생활에 가까운 예로 넓혀 주세요.
 - `followUp.1.ko` · KO: 선택이 많아요?
 - `followUp.2.ko` · KO: 경험이 충분해요?
 - `followUp.3.ko` · KO: 책임은 어느 정도예요?
@@ -1615,7 +1539,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 나이가 들면서 더 편해질 수 있는 건 뭐예요?
 - `question.ja` · JA: 年を重ねると、より楽になることは何ですか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 앞 답과 다른 상황을 비교해서 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 다른 사람의 시선을 덜 신경 써요?
 - `followUp.2.ko` · KO: 결정이 빨라질 수 있어요?
 - `followUp.3.ko` · KO: 관계도 편해져요?
@@ -1624,7 +1547,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 젊음의 좋은 점과 경험의 좋은 점은 어떻게 달라요?
 - `question.ja` · JA: 若さのよい点と経験のよい点はどう違いますか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 생각이 필요한 질문이에요. 지문의 두 입장을 모두 떠올리게 해 주세요.
 - `followUp.1.ko` · KO: 새로운 도전에는 무엇이 중요해요?
 - `followUp.2.ko` · KO: 실수를 줄이는 데는요?
 - `followUp.3.ko` · KO: 둘을 함께 가질 방법이 있어요?
@@ -1633,7 +1555,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 가장 좋은 나이를 하나로 정하기 어려운 이유는 뭘까요?
 - `question.ja` · JA: いちばんよい年齢を一つに決めにくいのはなぜでしょうか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 제일 어려운 질문이에요. 정답을 정하지 말고 판단 기준을 말하게 해 주세요.
 - `followUp.1.ko` · KO: 원하는 일이 사람마다 달라요?
 - `followUp.2.ko` · KO: 건강과 돈의 시기가 달라요?
 - `followUp.3.ko` · KO: 시대에 따라서도 바뀌어요?
@@ -1642,7 +1563,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 나이와 상관없이 계속 가질 수 있는 건 뭐예요?
 - `question.ja` · JA: では逆に、年齢に関係なく持ち続けられるものは何ですか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 주제를 뒤집어 닫는 질문이에요. 반대쪽에서 남길 것을 찾게 해 주세요.
 - `followUp.1.ko` · KO: 호기심은 계속 가질 수 있어요?
 - `followUp.2.ko` · KO: 새로운 친구를 만들 수 있어요?
 - `followUp.3.ko` · KO: 배우는 일에도 나이 제한이 있어요?
@@ -1652,7 +1572,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-worth-thinking-about-advanced/lessons/06-life-without-regret/lesson.html`
-- sha256: `64d3f045a7aae47fd841c60509ce5f1e30885caaf0dd90ef06ac0629ecbc9606`
+- sha256: `dbe44186724b3d7e912dc4b0ec8c5e9b2926020e8cd5e286db16623398831341`
 - source kind: `article`
 
 #### `metadata`
@@ -1744,7 +1664,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 작은 선택을 후회한 적 있어요?
 - `question.ja` · JA: 小さな選択を後悔したことがありますか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 경험 유무를 가볍게 확인하고 실제로 해 본 장면을 받아 주세요.
 - `followUp.1.ko` · KO: 말하고 싶은 범위의 일로 답해 주세요.
 - `followUp.2.ko` · KO: 무엇을 다르게 하고 싶었어요?
 - `followUp.3.ko` · KO: 지금은 웃으며 말할 수 있어요?
@@ -1753,7 +1672,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 최근에 선택을 오래 고민한 일이 뭐예요?
 - `question.ja` · JA: 最近、選ぶのに長く悩んだことは何ですか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 하나를 고르면 시간, 장소, 불편했던 점을 구체적으로 이어 가세요.
 - `followUp.1.ko` · KO: 두 가지 중 고민했어요?
 - `followUp.2.ko` · KO: 누구에게 물어봤어요?
 - `followUp.3.ko` · KO: 결정한 뒤 마음이 편해졌어요?
@@ -1762,7 +1680,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 후회 없는 삶이 가능하다고 생각해요?
 - `question.ja` · JA: 後悔のない人生は可能だと思いますか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 오늘의 메인 질문이에요. 입장을 고른 뒤 일상의 근거가 나올 때까지 기다려 주세요.
 - `followUp.1.ko` · KO: 먼저 가능하다는 쪽인지 어렵다는 쪽인지 골라요.
 - `followUp.2.ko` · KO: 작은 경험 하나로 이유를 말해 주세요.
 - `followUp.3.ko` · KO: 개인 경험 대신 영화 이야기로 답해도 돼요.
@@ -1771,7 +1688,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 후회가 다음 선택에 도움이 된 순간은 언제예요?
 - `question.ja` · JA: 後悔が次の選択に役立ったのはいつですか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 학생의 생활에 가까운 예로 넓혀 주세요.
 - `followUp.1.ko` · KO: 같은 실수를 피했어요?
 - `followUp.2.ko` · KO: 준비 방법을 바꿨어요?
 - `followUp.3.ko` · KO: 도움이 안 된 후회도 있어요?
@@ -1780,7 +1696,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 선택하지 않은 길이 더 좋아 보이는 이유는 뭘까요?
 - `question.ja` · JA: 選ばなかった道のほうがよく見えるのはなぜでしょうか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 앞 답과 다른 상황을 비교해서 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 그 길의 어려움은 안 보여요?
 - `followUp.2.ko` · KO: 현재가 힘들수록 더 좋아 보여요?
 - `followUp.3.ko` · KO: 실제로 비교할 수 있어요?
@@ -1789,7 +1704,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 후회를 받아들이는 것과 포기하는 건 어떻게 달라요?
 - `question.ja` · JA: 後悔を受け入れることと諦めることはどう違いますか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 생각이 필요한 질문이에요. 지문의 두 입장을 모두 떠올리게 해 주세요.
 - `followUp.1.ko` · KO: 지금 바꿀 수 있는 일이 남아 있어요?
 - `followUp.2.ko` · KO: 과거는 인정하고 다시 시도할 수 있어요?
 - `followUp.3.ko` · KO: 받아들이는 데 시간이 필요해요?
@@ -1798,7 +1712,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 모든 경험에서 교훈을 찾아야 한다는 생각은 어때요?
 - `question.ja` · JA: すべての経験から教訓を見つけるべきだという考えをどう思いますか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 제일 어려운 질문이에요. 정답을 정하지 말고 판단 기준을 말하게 해 주세요.
 - `followUp.1.ko` · KO: 아무 의미를 찾지 않아도 괜찮아요?
 - `followUp.2.ko` · KO: 나중에 자연스럽게 의미를 찾게 될 수도 있어요?
 - `followUp.3.ko` · KO: 교훈을 찾는 말이 부담이 될 때가 있어요?
@@ -1807,7 +1720,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 다시 선택할 수 있어도 같은 선택을 할 것 같은 일은 뭐예요?
 - `question.ja` · JA: では逆に、選び直せるとしても、同じ選択をすると思うのはどんなことですか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 주제를 뒤집어 닫는 질문이에요. 반대쪽에서 남길 것을 찾게 해 주세요.
 - `followUp.1.ko` · KO: 작은 일로 답해도 괜찮아요.
 - `followUp.2.ko` · KO: 왜 그 선택은 만족해요?
 - `followUp.3.ko` · KO: 힘든 점까지 포함해도 같아요?
@@ -1815,7 +1727,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-worth-thinking-about-intermediate/lessons/06-life-without-regret/lesson.html`
-- sha256: `d545d6a28ccc723ca90bc269117fad193f61196301efed337f53b42925dd5abb`
+- sha256: `ac2b0f3cf9afb4618aa7adf67f45cef486684e0740c6762a4e8d99fcfdbdb901`
 - source kind: `article`
 
 #### `metadata`
@@ -1907,7 +1819,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 작은 선택을 후회한 적 있어요?
 - `question.ja` · JA: 小さな選択を後悔したことがありますか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 경험 유무를 가볍게 확인하고 실제로 해 본 장면을 받아 주세요.
 - `followUp.1.ko` · KO: 말하고 싶은 범위의 일로 답해 주세요.
 - `followUp.2.ko` · KO: 무엇을 다르게 하고 싶었어요?
 - `followUp.3.ko` · KO: 지금은 웃으며 말할 수 있어요?
@@ -1916,7 +1827,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 최근에 선택을 오래 고민한 일이 뭐예요?
 - `question.ja` · JA: 最近、選ぶのに長く悩んだことは何ですか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 하나를 고르면 시간, 장소, 불편했던 점을 구체적으로 이어 가세요.
 - `followUp.1.ko` · KO: 두 가지 중 고민했어요?
 - `followUp.2.ko` · KO: 누구에게 물어봤어요?
 - `followUp.3.ko` · KO: 결정한 뒤 마음이 편해졌어요?
@@ -1925,7 +1835,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 후회 없는 삶이 가능하다고 생각해요?
 - `question.ja` · JA: 後悔のない人生は可能だと思いますか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 오늘의 메인 질문이에요. 입장을 고른 뒤 일상의 근거가 나올 때까지 기다려 주세요.
 - `followUp.1.ko` · KO: 먼저 가능하다는 쪽인지 어렵다는 쪽인지 골라요.
 - `followUp.2.ko` · KO: 작은 경험 하나로 이유를 말해 주세요.
 - `followUp.3.ko` · KO: 개인 경험 대신 영화 이야기로 답해도 돼요.
@@ -1934,7 +1843,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 후회가 다음 선택에 도움이 된 순간은 언제예요?
 - `question.ja` · JA: 後悔が次の選択に役立ったのはいつですか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 학생의 생활에 가까운 예로 넓혀 주세요.
 - `followUp.1.ko` · KO: 같은 실수를 피했어요?
 - `followUp.2.ko` · KO: 준비 방법을 바꿨어요?
 - `followUp.3.ko` · KO: 도움이 안 된 후회도 있어요?
@@ -1943,7 +1851,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 선택하지 않은 길이 더 좋아 보이는 이유는 뭘까요?
 - `question.ja` · JA: 選ばなかった道のほうがよく見えるのはなぜでしょうか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 앞 답과 다른 상황을 비교해서 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 그 길의 어려움은 안 보여요?
 - `followUp.2.ko` · KO: 현재가 힘들수록 더 좋아 보여요?
 - `followUp.3.ko` · KO: 실제로 비교할 수 있어요?
@@ -1952,7 +1859,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 후회를 받아들이는 것과 그냥 포기하는 건 어떻게 달라요?
 - `question.ja` · JA: 後悔を受け入れることと、ただ諦めることはどう違いますか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 생각이 필요한 질문이에요. 지문의 두 입장을 모두 떠올리게 해 주세요.
 - `followUp.1.ko` · KO: 지금 바꿀 수 있는 일이 남아 있어요?
 - `followUp.2.ko` · KO: 과거는 인정하고 다시 시도할 수 있어요?
 - `followUp.3.ko` · KO: 받아들이는 데 시간이 필요해요?
@@ -1961,7 +1867,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 모든 경험에서 꼭 배워야 한다는 생각은 어때요?
 - `question.ja` · JA: すべての経験から必ず学ぶべきだという考えをどう思いますか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 제일 어려운 질문이에요. 정답을 정하지 말고 판단 기준을 말하게 해 주세요.
 - `followUp.1.ko` · KO: 아무 의미를 찾지 않아도 괜찮아요?
 - `followUp.2.ko` · KO: 나중에 자연스럽게 의미를 찾게 될 수도 있어요?
 - `followUp.3.ko` · KO: 교훈을 찾는 말이 부담이 될 때가 있어요?
@@ -1970,7 +1875,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 다시 선택할 수 있어도 같은 선택을 할 것 같은 일은 뭐예요?
 - `question.ja` · JA: では逆に、選び直せるとしても、同じ選択をすると思うのはどんなことですか？
-- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 주제를 뒤집어 닫는 질문이에요. 반대쪽에서 남길 것을 찾게 해 주세요.
 - `followUp.1.ko` · KO: 작은 일로 답해도 괜찮아요.
 - `followUp.2.ko` · KO: 왜 그 선택은 만족해요?
 - `followUp.3.ko` · KO: 힘든 점까지 포함해도 같아요?

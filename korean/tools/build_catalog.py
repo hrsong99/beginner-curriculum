@@ -618,6 +618,7 @@ def build() -> dict:
 
     core_patterns = sum(l.get("np", 0) for g in core for l in g["lessons"])
     ctx_lessons = sum(len(g["lessons"]) for g in ctx)
+    free_themes = sum(1 for g in free if not g.get("warmup"))
     free_topics = sum(len(g["lessons"]) for g in free if not g.get("warmup"))
     free_warmups = sum(len(g["lessons"]) for g in free if g.get("warmup"))
 
@@ -660,7 +661,7 @@ def build() -> dict:
         {
             "id": "4-freetalking", "no": 4, "ko": "중급·고급 프리토킹", "en": "Intermediate & Advanced Freetalking",
             "glyph": "話", "status": "open", "accent": "#0080a8", "tint": "#e9f6fa",
-            "unitWord": "테마", "unitCount": 10, "lessonWord": "레슨",
+            "unitWord": "테마", "unitCount": free_themes, "lessonWord": "레슨",
             "desc": "같은 말이 나오는 주제를 중급과 고급 두 버전으로 제공합니다. 고급을 먼저 쓰고, 중급은 지문과 어려운 질문의 한국어 부담만 낮춥니다. "
                     "끝이 없는 트랙이라 주제는 매주 늘어납니다.",
             "note": "한 세션은 25분입니다. 질문 여덟 개는 완료 목록이 아니라 넉넉한 콘텐츠 풀이라, 빠르면 전부 쓰고 천천히 길게 말하면 일부만 진행합니다.",

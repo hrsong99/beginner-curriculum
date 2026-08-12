@@ -357,8 +357,9 @@ def extract_lesson(path: pathlib.Path, *, deep: bool, planned_title: str,
         body = first(note, class_name="tn-body") or note
         cap = first(body, class_name="tn-cap")
         more = first(body, class_name="tn-more")
-        add(entries, page_id, "tutorGuidance.ko", "ko",
-            text_without(body, [cap, more]))
+        guidance = text_without(body, [cap, more])
+        if guidance:
+            add(entries, page_id, "tutorGuidance.ko", "ko", guidance)
         followups = select(more, tag="li") if more is not None else []
         if len(followups) != 3:
             raise ValueError(f"{relative(path)}: {page_id} needs three follow-ups")

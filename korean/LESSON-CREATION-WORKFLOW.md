@@ -210,13 +210,15 @@ Static checks:
 - unique page and sync ids
 - no forbidden yomi, inline CSS/JS or accidental shared-runtime changes
 
-Interactive checks at a 480px viewport:
+Interactive checks at both a 480px lesson column and a 360px narrow column:
 
 - every page is reachable and readable, including after scrolling
 - choose/reorder/fill/write controls complete and reset correctly
 - learner and tutor views stay in sync where required
 - tutor notes and answer visibility are correct for each role
 - no console errors and no pager overlap that makes content unreachable
+- no page, dialogue turn or generated `.slot-input` widens its container; long answer fields wrap
+  onto their own line inside the answer box
 
 Use representative screenshots across the course, plus every new or unusually dense page. A
 pass means more than “it scrolls”: the learner must understand what to do before the activity

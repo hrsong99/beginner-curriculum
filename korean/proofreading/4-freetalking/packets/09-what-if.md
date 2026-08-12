@@ -12,7 +12,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-advanced/lessons/01-if-i-won-the-lottery/lesson.html`
-- sha256: `813994ffe9687d0d8d4509d4d06c0447f657a60555616aa4d1df35540e9e8e79`
+- sha256: `77fc27d88e0dd4d26cb26e5f688eaf33518f7ef045b1f0f89e3d398a1d0a0428`
 - source kind: `article`
 
 #### `metadata`
@@ -113,7 +113,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 로또 사 본 적 있어요?
 - `question.ja` · JA: 宝くじを買ったことがありますか？
-- `tutorGuidance.ko` · KO: 가볍게 받아 주세요. 학생이 말한 문장을 그대로 적습니다.
 - `followUp.1.ko` · KO: 안 사 봤으면, 왜 안 사요?
 - `followUp.2.ko` · KO: 사 봤으면, 마지막으로 산 게 언제예요?
 - `followUp.3.ko` · KO: 주변에 로또 사는 사람 있어요?
@@ -122,7 +121,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 요즘 갖고 싶은 것 중에서 제일 비싼 게 뭐예요?
 - `question.ja` · JA: 最近ほしいものの中で、いちばん高いものは何ですか？
-- `tutorGuidance.ko` · KO: 물건 이름만 나오고 끝나면, 아래에서 골라 이어 가세요.
 - `followUp.1.ko` · KO: 왜 그게 갖고 싶어요?
 - `followUp.2.ko` · KO: 그거 얼마쯤 해요?
 - `followUp.3.ko` · KO: 지금 못 사는 이유가 뭐예요?
@@ -131,7 +129,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 로또 1등에 당첨되면, 가장 먼저 뭘 할 거예요?
 - `question.ja` · JA: 宝くじで1等に当たったら、まず何をしますか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 이유가 나올 때까지 기다려 주세요.
 - `followUp.1.ko` · KO: 왜 그걸 제일 먼저 해요?
 - `followUp.2.ko` · KO: 그걸 하고 나면 뭐가 제일 달라질 것 같아요?
 - `followUp.3.ko` · KO: 지금은 왜 그걸 못 하고 있어요?
@@ -140,7 +137,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 당첨된 거, 누구한테 제일 먼저 말할 거예요?
 - `question.ja` · JA: 当たったこと、誰にいちばん先に話しますか？
-- `tutorGuidance.ko` · KO: 사람 이름만 말하고 끝나면, 아래에서 골라 넓혀 주세요.
 - `followUp.1.ko` · KO: 왜 하필 그 사람이에요?
 - `followUp.2.ko` · KO: 아무한테도 말 안 하는 사람도 있는데, 어떻게 생각해요?
 - `followUp.3.ko` · KO: 말하고 나면 그 사람이랑 사이가 달라질까요?
@@ -149,7 +145,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 돈 걱정이 없어져도, 지금 하는 일이나 공부를 계속할 거예요?
 - `question.ja` · JA: お金の心配がなくなっても、今の仕事や勉強を続けますか？
-- `tutorGuidance.ko` · KO: ‘~면 ~ㄹ 거예요’ 형태가 계속 나와요. 어미를 특히 잘 봐 주세요.
 - `followUp.1.ko` · KO: 그만둔다면, 그다음 날부터 뭘 하고 싶어요?
 - `followUp.2.ko` · KO: 계속한다면, 지금이랑 뭐가 달라질까요?
 - `followUp.3.ko` · KO: 일 안 하고 사는 사람, 부러워요?
@@ -158,7 +153,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 큰돈이 생겼는데 형편이 더 나빠지는 사람도 있어요. 왜 그럴까요?
 - `question.ja` · JA: 大金が入ったのに、かえって暮らし向きが悪くなる人もいます。どうしてでしょうか？
-- `tutorGuidance.ko` · KO: 지문을 다시 읽어 주지 말고, 학생이 자기 말로 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 그런 사람한테 딱 하나만 조언한다면요?
 - `followUp.2.ko` · KO: 그럼 돈을 잘 쓰는 사람은 뭐가 달라요?
 - `followUp.3.ko` · KO: 본인은 안 그럴 자신 있어요?
@@ -167,7 +161,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 노력해서 번 돈이랑 운으로 얻은 돈, 뭐가 달라요?
 - `question.ja` · JA: 努力して稼いだお金と、運で手に入れたお金、何が違いますか？
-- `tutorGuidance.ko` · KO: 제일 어려운 질문이에요. 문장이 막히면 먼저 일본어로 듣고, 같이 한국어로 옮겨 주세요.
 - `followUp.1.ko` · KO: 쓰는 방법도 달라질까요?
 - `followUp.2.ko` · KO: 그럼 물려받은 돈은 어느 쪽이에요?
 - `followUp.3.ko` · KO: 운으로 얻은 돈이어도 내 돈은 내 돈 아닐까요?
@@ -176,7 +169,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 돈이 아무리 많아도 못 하는 건 뭘까요?
 - `question.ja` · JA: では逆に、どんなにお金があってもできないことは何でしょうか？
-- `tutorGuidance.ko` · KO: 마지막 질문이에요. 오늘 고친 표현을 한 번 더 써 보게 해 주세요.
 - `followUp.1.ko` · KO: 그런 걸 이미 가진 사람, 주변에 있어요?
 - `followUp.2.ko` · KO: 그건 돈 말고 뭐가 있어야 얻을 수 있을까요?
 - `followUp.3.ko` · KO: 오늘 이야기하면서 생각이 좀 바뀐 게 있어요?
@@ -184,7 +176,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-intermediate/lessons/01-if-i-won-the-lottery/lesson.html`
-- sha256: `212fcea37db424111448efa975fc9736378e973af309fdc20fa1f98f901daba9`
+- sha256: `fe102070d570388ed12b16de80031b112868cdcad77288a1cfbda25c5acea952`
 - source kind: `article`
 
 #### `metadata`
@@ -279,7 +271,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 로또 사 본 적 있어요?
 - `question.ja` · JA: 宝くじを買ったことがありますか？
-- `tutorGuidance.ko` · KO: 가볍게 받아 주세요. 학생이 말한 문장을 그대로 적습니다.
 - `followUp.1.ko` · KO: 안 사 봤으면, 왜 안 사요?
 - `followUp.2.ko` · KO: 사 봤으면, 마지막으로 산 게 언제예요?
 - `followUp.3.ko` · KO: 주변에 로또 사는 사람 있어요?
@@ -288,7 +279,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 요즘 갖고 싶은 것 중에서 제일 비싼 게 뭐예요?
 - `question.ja` · JA: 最近ほしいものの中で、いちばん高いものは何ですか？
-- `tutorGuidance.ko` · KO: 물건 이름만 나오고 끝나면, 아래에서 골라 이어 가세요.
 - `followUp.1.ko` · KO: 왜 그게 갖고 싶어요?
 - `followUp.2.ko` · KO: 그거 얼마쯤 해요?
 - `followUp.3.ko` · KO: 지금 못 사는 이유가 뭐예요?
@@ -297,7 +287,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 로또 1등에 당첨되면, 가장 먼저 뭘 할 거예요?
 - `question.ja` · JA: 宝くじで1等に当たったら、まず何をしますか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 이유가 나올 때까지 기다려 주세요.
 - `followUp.1.ko` · KO: 왜 그걸 제일 먼저 해요?
 - `followUp.2.ko` · KO: 그걸 하고 나면 뭐가 제일 달라질 것 같아요?
 - `followUp.3.ko` · KO: 지금은 왜 그걸 못 하고 있어요?
@@ -306,7 +295,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 당첨된 거, 누구한테 제일 먼저 말할 거예요?
 - `question.ja` · JA: 当たったこと、誰にいちばん先に話しますか？
-- `tutorGuidance.ko` · KO: 사람 이름만 말하고 끝나면, 아래에서 골라 넓혀 주세요.
 - `followUp.1.ko` · KO: 왜 하필 그 사람이에요?
 - `followUp.2.ko` · KO: 아무한테도 말 안 하는 사람도 있는데, 어떻게 생각해요?
 - `followUp.3.ko` · KO: 말하고 나면 그 사람이랑 사이가 달라질까요?
@@ -315,7 +303,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 돈 걱정이 없어져도, 지금 하는 일이나 공부를 계속할 거예요?
 - `question.ja` · JA: お金の心配がなくなっても、今の仕事や勉強を続けますか？
-- `tutorGuidance.ko` · KO: ‘~면 ~ㄹ 거예요’ 형태가 계속 나와요. 어미를 특히 잘 봐 주세요.
 - `followUp.1.ko` · KO: 그만둔다면, 그다음 날부터 뭘 하고 싶어요?
 - `followUp.2.ko` · KO: 계속한다면, 지금이랑 뭐가 달라질까요?
 - `followUp.3.ko` · KO: 일 안 하고 사는 사람, 부러워요?
@@ -324,7 +311,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 큰돈을 받고도 생활이 더 힘들어지는 사람은 왜 생길까요?
 - `question.ja` · JA: 大金を受け取っても、生活がもっと苦しくなる人がいるのはなぜでしょうか？
-- `tutorGuidance.ko` · KO: 지문을 다시 읽어 주지 말고, 학생이 자기 말로 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 그런 사람한테 딱 하나만 조언한다면요?
 - `followUp.2.ko` · KO: 그럼 돈을 잘 쓰는 사람은 뭐가 달라요?
 - `followUp.3.ko` · KO: 본인은 안 그럴 자신 있어요?
@@ -333,7 +319,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 노력해서 번 돈이랑 운으로 얻은 돈, 뭐가 달라요?
 - `question.ja` · JA: 努力して稼いだお金と、運で手に入れたお金、何が違いますか？
-- `tutorGuidance.ko` · KO: 제일 어려운 질문이에요. 문장이 막히면 먼저 일본어로 듣고, 같이 한국어로 옮겨 주세요.
 - `followUp.1.ko` · KO: 쓰는 방법도 달라질까요?
 - `followUp.2.ko` · KO: 그럼 물려받은 돈은 어느 쪽이에요?
 - `followUp.3.ko` · KO: 운으로 얻은 돈이어도 내 돈은 내 돈 아닐까요?
@@ -342,7 +327,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 돈이 아무리 많아도 못 하는 건 뭘까요?
 - `question.ja` · JA: では逆に、どんなにお金があってもできないことは何でしょうか？
-- `tutorGuidance.ko` · KO: 마지막 질문이에요. 오늘 고친 표현을 한 번 더 써 보게 해 주세요.
 - `followUp.1.ko` · KO: 그런 걸 이미 가진 사람, 주변에 있어요?
 - `followUp.2.ko` · KO: 그건 돈 말고 뭐가 있어야 얻을 수 있을까요?
 - `followUp.3.ko` · KO: 오늘 이야기하면서 생각이 좀 바뀐 게 있어요?
@@ -352,7 +336,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-advanced/lessons/02-three-things-on-a-desert-island/lesson.html`
-- sha256: `e5034b688d01bcfac664c8e49e35c35666ec2729de2b9ad151cc40fac4a7737b`
+- sha256: `7ac6b967a3c4cc364ff70a952bdcf8f78438b9a4df267112ba623f06c17233a5`
 - source kind: `model-story`
 
 #### `metadata`
@@ -428,7 +412,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 혼자 여행해 본 적 있어요?
 - `question.ja` · JA: 一人で旅行したことがありますか？
-- `tutorGuidance.ko` · KO: 경험이 있으면 가장 기억나는 장면으로 이어 가세요.
 - `followUp.1.ko` · KO: 어디로 갔어요?
 - `followUp.2.ko` · KO: 혼자라서 좋았던 게 뭐예요?
 - `followUp.3.ko` · KO: 제일 곤란했던 순간은 언제였어요?
@@ -437,7 +420,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 여행 갈 때 꼭 챙기는 물건이 뭐예요?
 - `question.ja` · JA: 旅行に必ず持っていくものは何ですか？
-- `tutorGuidance.ko` · KO: 물건 이름 뒤에 실제로 쓴 장면을 받아 주세요.
 - `followUp.1.ko` · KO: 언제부터 꼭 챙겼어요?
 - `followUp.2.ko` · KO: 없으면 뭐가 불편해요?
 - `followUp.3.ko` · KO: 다른 사람에게도 빌려줘요?
@@ -446,7 +428,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 무인도에 딱 세 가지만 가져갈 수 있으면, 뭘 고를 거예요?
 - `question.ja` · JA: 無人島に三つだけ持っていけるなら、何を選びますか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 세 가지를 먼저 고르게 한 뒤 이유를 넓혀 주세요.
 - `followUp.1.ko` · KO: 세 가지 중 제일 중요한 건 뭐예요?
 - `followUp.2.ko` · KO: 그 물건을 어떻게 쓸 거예요?
 - `followUp.3.ko` · KO: 마지막까지 고민한 다른 물건은 뭐였어요?
@@ -455,7 +436,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그중에서 무인도에 도착하자마자 가장 먼저 쓸 건 뭐예요?
 - `question.ja` · JA: その中で、無人島に着いてすぐ最初に使うものは何ですか？
-- `tutorGuidance.ko` · KO: 첫날의 구체적인 행동이 보이게 이어 가세요.
 - `followUp.1.ko` · KO: 어디에서 쓸 거예요?
 - `followUp.2.ko` · KO: 그다음에는 뭘 할 거예요?
 - `followUp.3.ko` · KO: 날씨가 나쁘면 계획이 달라져요?
@@ -464,7 +444,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 같이 갈 사람 한 명을 고를 수 있다면 누구예요?
 - `question.ja` · JA: 一緒に行く人を一人選べるなら、誰ですか？
-- `tutorGuidance.ko` · KO: 이름보다 그 사람이 맡을 역할을 말하게 해 주세요.
 - `followUp.1.ko` · KO: 그 사람은 뭘 잘해요?
 - `followUp.2.ko` · KO: 둘이 의견이 다르면 어떻게 할 거예요?
 - `followUp.3.ko` · KO: 그 사람도 같이 가고 싶어 할까요?
@@ -473,7 +452,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 가져갈 세 가지를 고를 때 가장 중요한 기준은 뭐예요?
 - `question.ja` · JA: 持っていく三つを選ぶとき、いちばん大切な基準は何ですか？
-- `tutorGuidance.ko` · KO: 물건 목록에서 선택 기준으로 올라가는 질문이에요.
 - `followUp.1.ko` · KO: 살아남는 것 말고도 필요한 게 있어요?
 - `followUp.2.ko` · KO: 본인의 성격이 선택에 어떻게 드러나요?
 - `followUp.3.ko` · KO: 일주일과 일 년이면 기준이 달라질까요?
@@ -482,7 +460,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 무인도에서 일주일을 보내면 평소 생활을 보는 눈이 어떻게 달라질까요?
 - `question.ja` · JA: 無人島で一週間過ごしたら、普段の暮らしの見方はどう変わるでしょうか？
-- `tutorGuidance.ko` · KO: 평소 당연하게 쓰던 것을 떠올리게 해 주세요.
 - `followUp.1.ko` · KO: 제일 고마워질 것은 뭐예요?
 - `followUp.2.ko` · KO: 돌아온 뒤 줄이고 싶은 것도 있을까요?
 - `followUp.3.ko` · KO: 사람 관계도 다르게 보일까요?
@@ -491,7 +468,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 아무리 유용해도 가져가지 않을 물건은 뭐예요?
 - `question.ja` · JA: では逆に、どんなに便利でも持っていかないものは何ですか？
-- `tutorGuidance.ko` · KO: 선택 기준을 뒤집어 닫는 질문이에요.
 - `followUp.1.ko` · KO: 왜 거기서는 필요 없어요?
 - `followUp.2.ko` · KO: 평소에는 얼마나 자주 써요?
 - `followUp.3.ko` · KO: 그 자리를 다른 무엇으로 채울 거예요?
@@ -499,7 +475,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-intermediate/lessons/02-three-things-on-a-desert-island/lesson.html`
-- sha256: `c4e614f2f9c6bd01efc29085c04a550120199ec8d18f11eee90e8c389414b278`
+- sha256: `513ae6592b4704793bebd5a591588fd14e2ebf522d7e16c43b20cc5a53f1af4e`
 - source kind: `model-story`
 
 #### `metadata`
@@ -575,7 +551,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 혼자 여행해 본 적 있어요?
 - `question.ja` · JA: 一人で旅行したことがありますか？
-- `tutorGuidance.ko` · KO: 경험이 있으면 가장 기억나는 장면으로 이어 가세요.
 - `followUp.1.ko` · KO: 어디로 갔어요?
 - `followUp.2.ko` · KO: 혼자라서 좋았던 게 뭐예요?
 - `followUp.3.ko` · KO: 제일 곤란했던 순간은 언제였어요?
@@ -584,7 +559,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 여행 갈 때 꼭 챙기는 물건이 뭐예요?
 - `question.ja` · JA: 旅行に必ず持っていくものは何ですか？
-- `tutorGuidance.ko` · KO: 물건 이름 뒤에 실제로 쓴 장면을 받아 주세요.
 - `followUp.1.ko` · KO: 언제부터 꼭 챙겼어요?
 - `followUp.2.ko` · KO: 없으면 뭐가 불편해요?
 - `followUp.3.ko` · KO: 다른 사람에게도 빌려줘요?
@@ -593,7 +567,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 무인도에 딱 세 가지만 가져갈 수 있으면, 뭘 고를 거예요?
 - `question.ja` · JA: 無人島に三つだけ持っていけるなら、何を選びますか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 세 가지를 먼저 고르게 한 뒤 이유를 넓혀 주세요.
 - `followUp.1.ko` · KO: 세 가지 중 제일 중요한 건 뭐예요?
 - `followUp.2.ko` · KO: 그 물건을 어떻게 쓸 거예요?
 - `followUp.3.ko` · KO: 마지막까지 고민한 다른 물건은 뭐였어요?
@@ -602,7 +575,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그중에서 무인도에 도착하자마자 가장 먼저 쓸 건 뭐예요?
 - `question.ja` · JA: その中で、無人島に着いてすぐ最初に使うものは何ですか？
-- `tutorGuidance.ko` · KO: 첫날의 구체적인 행동이 보이게 이어 가세요.
 - `followUp.1.ko` · KO: 어디에서 쓸 거예요?
 - `followUp.2.ko` · KO: 그다음에는 뭘 할 거예요?
 - `followUp.3.ko` · KO: 날씨가 나쁘면 계획이 달라져요?
@@ -611,7 +583,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 같이 갈 사람 한 명을 고를 수 있다면 누구예요?
 - `question.ja` · JA: 一緒に行く人を一人選べるなら、誰ですか？
-- `tutorGuidance.ko` · KO: 이름보다 그 사람이 맡을 역할을 말하게 해 주세요.
 - `followUp.1.ko` · KO: 그 사람은 뭘 잘해요?
 - `followUp.2.ko` · KO: 둘이 의견이 다르면 어떻게 할 거예요?
 - `followUp.3.ko` · KO: 그 사람도 같이 가고 싶어 할까요?
@@ -620,7 +591,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 가져갈 세 가지를 고를 때 가장 중요한 기준은 뭐예요?
 - `question.ja` · JA: 持っていく三つを選ぶとき、いちばん大切な基準は何ですか？
-- `tutorGuidance.ko` · KO: 물건 목록에서 선택 기준으로 올라가는 질문이에요.
 - `followUp.1.ko` · KO: 살아남는 것 말고도 필요한 게 있어요?
 - `followUp.2.ko` · KO: 본인의 성격이 선택에 어떻게 드러나요?
 - `followUp.3.ko` · KO: 일주일과 일 년이면 기준이 달라질까요?
@@ -629,7 +599,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 무인도에서 일주일 지내면 평소 생활에서 무엇이 더 고마워질까요?
 - `question.ja` · JA: 無人島で一週間過ごしたら、普段の生活で何がもっとありがたくなるでしょうか？
-- `tutorGuidance.ko` · KO: 평소 당연하게 쓰던 것을 떠올리게 해 주세요.
 - `followUp.1.ko` · KO: 제일 고마워질 것은 뭐예요?
 - `followUp.2.ko` · KO: 돌아온 뒤 줄이고 싶은 것도 있을까요?
 - `followUp.3.ko` · KO: 사람 관계도 다르게 보일까요?
@@ -638,7 +607,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 아무리 유용해도 가져가지 않을 물건은 뭐예요?
 - `question.ja` · JA: では逆に、どんなに便利でも持っていかないものは何ですか？
-- `tutorGuidance.ko` · KO: 선택 기준을 뒤집어 닫는 질문이에요.
 - `followUp.1.ko` · KO: 왜 거기서는 필요 없어요?
 - `followUp.2.ko` · KO: 평소에는 얼마나 자주 써요?
 - `followUp.3.ko` · KO: 그 자리를 다른 무엇으로 채울 거예요?
@@ -648,7 +616,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-advanced/lessons/03-be-someone-else-for-a-day/lesson.html`
-- sha256: `4fe6346c1c781b68b1078f3f33ccf6e1d420189e9be62260277ebaa321750046`
+- sha256: `3ca4a6ff2f0f0473272319c97010f13cc75641170c33820a288854e60a1ec0b7`
 - source kind: `model-story`
 
 #### `metadata`
@@ -724,7 +692,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 하루 동안 따라 해 보고 싶은 사람 있어요?
 - `question.ja` · JA: 一日、まねしてみたい人はいますか？
-- `tutorGuidance.ko` · KO: 바로 떠오르는 사람을 가볍게 받아 주세요.
 - `followUp.1.ko` · KO: 어떻게 알게 된 사람이에요?
 - `followUp.2.ko` · KO: 그 사람의 어떤 점이 멋있어요?
 - `followUp.3.ko` · KO: 예전에 따라 해 본 적도 있어요?
@@ -733,7 +700,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 사람의 하루에서 제일 궁금한 장면은 뭐예요?
 - `question.ja` · JA: その人の一日で、いちばん気になる場面は何ですか？
-- `tutorGuidance.ko` · KO: 시간과 장소가 보이도록 구체화해 주세요.
 - `followUp.1.ko` · KO: 몇 시쯤일 것 같아요?
 - `followUp.2.ko` · KO: 누구와 같이 있을까요?
 - `followUp.3.ko` · KO: 그때 무슨 기분일까요?
@@ -742,7 +708,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 하루만 다른 사람이 될 수 있다면 누구로 살고 싶어요?
 - `question.ja` · JA: 一日だけ別の人になれるなら、誰として生きたいですか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 이름과 선택 이유를 충분히 받아 주세요.
 - `followUp.1.ko` · KO: 왜 그 사람이 제일 먼저 떠올랐어요?
 - `followUp.2.ko` · KO: 그 사람에게 미리 뭘 물어보고 싶어요?
 - `followUp.3.ko` · KO: 하루가 짧다고 느껴질까요?
@@ -751,7 +716,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 사람으로 눈을 뜨자마자 가장 먼저 뭘 할 거예요?
 - `question.ja` · JA: その人として目を覚ましたら、まず何をしますか？
-- `tutorGuidance.ko` · KO: 첫 행동에서 그 사람의 생활로 이어 가세요.
 - `followUp.1.ko` · KO: 어디에서 눈을 뜰까요?
 - `followUp.2.ko` · KO: 누구에게 먼저 연락할 거예요?
 - `followUp.3.ko` · KO: 평소 본인 아침과 뭐가 달라요?
@@ -760,7 +724,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 사람의 어떤 능력을 직접 느껴 보고 싶어요?
 - `question.ja` · JA: その人のどんな能力を実際に感じてみたいですか？
-- `tutorGuidance.ko` · KO: 능력 이름보다 쓰는 장면을 말하게 해 주세요.
 - `followUp.1.ko` · KO: 그 능력을 어디에 쓸 거예요?
 - `followUp.2.ko` · KO: 생각보다 어렵다면 어떻게 할까요?
 - `followUp.3.ko` · KO: 그 능력을 본인에게도 가져오고 싶어요?
@@ -769,7 +732,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 남의 삶을 하루 살아 보면 그 사람을 보는 시각이 어떻게 달라질까요?
 - `question.ja` · JA: 他の人の人生を一日生きたら、その人への見方はどう変わるでしょうか？
-- `tutorGuidance.ko` · KO: 겉으로 보이는 모습과 실제 하루를 비교하게 해 주세요.
 - `followUp.1.ko` · KO: 새롭게 이해할 어려움은 뭐예요?
 - `followUp.2.ko` · KO: 부러웠던 마음도 달라질까요?
 - `followUp.3.ko` · KO: 그 사람에게 어떤 말을 해 주고 싶을까요?
@@ -778,7 +740,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 유명한 사람의 하루와 가까운 사람의 하루는 무엇이 다를까요?
 - `question.ja` · JA: 有名な人の一日と身近な人の一日は、何が違うでしょうか？
-- `tutorGuidance.ko` · KO: 두 선택이 주는 호기심의 차이를 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 어느 쪽에서 더 놀랄 것 같아요?
 - `followUp.2.ko` · KO: 가까운 사람의 새로운 어려움을 알게 되면 어떻게 대할까요?
 - `followUp.3.ko` · KO: 누구를 더 깊이 이해하게 될까요?
@@ -787,7 +748,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 아무리 궁금해도 살고 싶지 않은 하루는 어떤 하루예요?
 - `question.ja` · JA: では逆に、どんなに気になっても生きたくないのはどんな一日ですか？
-- `tutorGuidance.ko` · KO: 원하지 않는 조건으로 주제를 뒤집어 닫으세요.
 - `followUp.1.ko` · KO: 무엇이 제일 힘들 것 같아요?
 - `followUp.2.ko` · KO: 그 하루를 사는 사람에게 뭐라고 말하고 싶어요?
 - `followUp.3.ko` · KO: 지금의 내 하루가 더 좋아 보이는 점은 뭐예요?
@@ -795,7 +755,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-intermediate/lessons/03-be-someone-else-for-a-day/lesson.html`
-- sha256: `2aa6f403f17d165cf70b406097a5e4cafbae7071216c6de414b5bcf86838448c`
+- sha256: `11c8214a07982e645ce4d514627a51f26ba68bcb344b646641e5f199b4f667b9`
 - source kind: `model-story`
 
 #### `metadata`
@@ -871,7 +831,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 하루 동안 따라 해 보고 싶은 사람 있어요?
 - `question.ja` · JA: 一日、まねしてみたい人はいますか？
-- `tutorGuidance.ko` · KO: 바로 떠오르는 사람을 가볍게 받아 주세요.
 - `followUp.1.ko` · KO: 어떻게 알게 된 사람이에요?
 - `followUp.2.ko` · KO: 그 사람의 어떤 점이 멋있어요?
 - `followUp.3.ko` · KO: 예전에 따라 해 본 적도 있어요?
@@ -880,7 +839,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 사람의 하루에서 제일 궁금한 장면은 뭐예요?
 - `question.ja` · JA: その人の一日で、いちばん気になる場面は何ですか？
-- `tutorGuidance.ko` · KO: 시간과 장소가 보이도록 구체화해 주세요.
 - `followUp.1.ko` · KO: 몇 시쯤일 것 같아요?
 - `followUp.2.ko` · KO: 누구와 같이 있을까요?
 - `followUp.3.ko` · KO: 그때 무슨 기분일까요?
@@ -889,7 +847,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 하루만 다른 사람이 될 수 있다면 누구로 살고 싶어요?
 - `question.ja` · JA: 一日だけ別の人になれるなら、誰として生きたいですか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 이름과 선택 이유를 충분히 받아 주세요.
 - `followUp.1.ko` · KO: 왜 그 사람이 제일 먼저 떠올랐어요?
 - `followUp.2.ko` · KO: 그 사람에게 미리 뭘 물어보고 싶어요?
 - `followUp.3.ko` · KO: 하루가 짧다고 느껴질까요?
@@ -898,7 +855,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 사람으로 눈을 뜨자마자 가장 먼저 뭘 할 거예요?
 - `question.ja` · JA: その人として目を覚ましたら、まず何をしますか？
-- `tutorGuidance.ko` · KO: 첫 행동에서 그 사람의 생활로 이어 가세요.
 - `followUp.1.ko` · KO: 어디에서 눈을 뜰까요?
 - `followUp.2.ko` · KO: 누구에게 먼저 연락할 거예요?
 - `followUp.3.ko` · KO: 평소 본인 아침과 뭐가 달라요?
@@ -907,7 +863,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 사람의 어떤 능력을 직접 느껴 보고 싶어요?
 - `question.ja` · JA: その人のどんな能力を実際に感じてみたいですか？
-- `tutorGuidance.ko` · KO: 능력 이름보다 쓰는 장면을 말하게 해 주세요.
 - `followUp.1.ko` · KO: 그 능력을 어디에 쓸 거예요?
 - `followUp.2.ko` · KO: 생각보다 어렵다면 어떻게 할까요?
 - `followUp.3.ko` · KO: 그 능력을 본인에게도 가져오고 싶어요?
@@ -916,7 +871,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 다른 사람으로 하루 살면 그 사람을 어떻게 더 이해하게 될까요?
 - `question.ja` · JA: 別の人として一日生きたら、その人をもっと深く理解できるようになるでしょうか？
-- `tutorGuidance.ko` · KO: 겉으로 보이는 모습과 실제 하루를 비교하게 해 주세요.
 - `followUp.1.ko` · KO: 새롭게 이해할 어려움은 뭐예요?
 - `followUp.2.ko` · KO: 부러웠던 마음도 달라질까요?
 - `followUp.3.ko` · KO: 그 사람에게 어떤 말을 해 주고 싶을까요?
@@ -925,7 +879,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 유명한 사람의 하루와 가까운 사람의 하루는 무엇이 다를까요?
 - `question.ja` · JA: 有名な人の一日と身近な人の一日は、何が違うでしょうか？
-- `tutorGuidance.ko` · KO: 두 선택이 주는 호기심의 차이를 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 어느 쪽에서 더 놀랄 것 같아요?
 - `followUp.2.ko` · KO: 가까운 사람의 새로운 어려움을 알게 되면 어떻게 대할까요?
 - `followUp.3.ko` · KO: 누구를 더 깊이 이해하게 될까요?
@@ -934,7 +887,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 아무리 궁금해도 살고 싶지 않은 하루는 어떤 하루예요?
 - `question.ja` · JA: では逆に、どんなに気になっても生きたくないのはどんな一日ですか？
-- `tutorGuidance.ko` · KO: 원하지 않는 조건으로 주제를 뒤집어 닫으세요.
 - `followUp.1.ko` · KO: 무엇이 제일 힘들 것 같아요?
 - `followUp.2.ko` · KO: 그 하루를 사는 사람에게 뭐라고 말하고 싶어요?
 - `followUp.3.ko` · KO: 지금의 내 하루가 더 좋아 보이는 점은 뭐예요?
@@ -944,7 +896,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-advanced/lessons/04-one-superpower/lesson.html`
-- sha256: `eb521e98e4bd90ed8edf9fbf2491f158b7cf9cbec7188e49b1015585df749bad`
+- sha256: `8d1bfe05ec49bf8660f1bdd2a35f606fd81b63a22bb8b61813685fe7a3f7cb89`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1020,7 +972,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 좋아하는 초능력 영화나 캐릭터가 있어요?
 - `question.ja` · JA: 好きな超能力映画やキャラクターはありますか？
-- `tutorGuidance.ko` · KO: 작품 이야기로 가볍게 입을 열게 해 주세요.
 - `followUp.1.ko` · KO: 어떤 능력을 써요?
 - `followUp.2.ko` · KO: 제일 기억나는 장면은 뭐예요?
 - `followUp.3.ko` · KO: 어릴 때도 좋아했어요?
@@ -1029,7 +980,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 요즘 생활에서 없애고 싶은 불편이 뭐예요?
 - `question.ja` · JA: 最近の生活でなくしたい不便は何ですか？
-- `tutorGuidance.ko` · KO: 초능력이 필요한 실제 장면으로 이어 주세요.
 - `followUp.1.ko` · KO: 언제 제일 불편해요?
 - `followUp.2.ko` · KO: 얼마나 자주 생겨요?
 - `followUp.3.ko` · KO: 지금은 어떻게 해결해요?
@@ -1038,7 +988,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 초능력 하나를 가질 수 있다면 뭘 고를 거예요?
 - `question.ja` · JA: 超能力を一つ持てるなら、何を選びますか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 능력을 정한 뒤 첫 용도를 물어보세요.
 - `followUp.1.ko` · KO: 왜 그 능력이 필요해요?
 - `followUp.2.ko` · KO: 비슷한 다른 능력도 고민했어요?
 - `followUp.3.ko` · KO: 이름을 직접 붙인다면 뭐라고 할 거예요?
@@ -1047,7 +996,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 능력을 어디에서 가장 먼저 쓸 거예요?
 - `question.ja` · JA: その能力をどこで最初に使いますか？
-- `tutorGuidance.ko` · KO: 장소와 행동이 선명하게 나오게 해 주세요.
 - `followUp.1.ko` · KO: 누구와 같이 있을 거예요?
 - `followUp.2.ko` · KO: 성공했는지 어떻게 알 수 있어요?
 - `followUp.3.ko` · KO: 한 번만 쓸 수 있어도 거기서 쓸 거예요?
@@ -1056,7 +1004,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 능력으로 가장 먼저 도와주고 싶은 사람은 누구예요?
 - `question.ja` · JA: その能力で最初に助けたい人は誰ですか？
-- `tutorGuidance.ko` · KO: 사람과 도움의 구체적인 내용을 연결하세요.
 - `followUp.1.ko` · KO: 그 사람에게 어떤 도움이 필요해요?
 - `followUp.2.ko` · KO: 능력의 비밀을 말할 거예요?
 - `followUp.3.ko` · KO: 도움을 거절하면 어떻게 할까요?
@@ -1065,7 +1012,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 초능력이 생기면 평소 선택이 어떻게 달라질까요?
 - `question.ja` · JA: 超能力が使えるようになったら、普段の選択はどう変わるでしょうか？
-- `tutorGuidance.ko` · KO: 편리함을 넘어 생활 방식의 변화를 말하게 해 주세요.
 - `followUp.1.ko` · KO: 일이나 공부도 바뀔까요?
 - `followUp.2.ko` · KO: 포기하게 되는 습관도 있을까요?
 - `followUp.3.ko` · KO: 오히려 더 어려워지는 선택은 뭐예요?
@@ -1074,7 +1020,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 사람들이 그 능력을 알게 되면 어떤 책임이 생길까요?
 - `question.ja` · JA: 人々にその能力を知られたら、どんな責任が生まれるでしょうか？
-- `tutorGuidance.ko` · KO: 가장 생각이 필요한 자리예요. 타인의 기대까지 넓혀 주세요.
 - `followUp.1.ko` · KO: 도와달라는 부탁을 어디까지 받을 거예요?
 - `followUp.2.ko` · KO: 능력을 돈 받고 써도 될까요?
 - `followUp.3.ko` · KO: 누가 사용 규칙을 정해야 할까요?
@@ -1083,7 +1028,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 절대 갖고 싶지 않은 초능력은 뭐예요?
 - `question.ja` · JA: では逆に、絶対に欲しくない超能力は何ですか？
-- `tutorGuidance.ko` · KO: 능력의 불편과 위험으로 뒤집어 닫으세요.
 - `followUp.1.ko` · KO: 왜 오히려 힘들 것 같아요?
 - `followUp.2.ko` · KO: 잠깐만 생겨도 싫어요?
 - `followUp.3.ko` · KO: 그 능력이 있는 사람을 이해할 수 있을까요?
@@ -1091,7 +1035,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-intermediate/lessons/04-one-superpower/lesson.html`
-- sha256: `07ce585c155b2d243924d3c90b675f9ae7111fd83f3f6a718136af109015b411`
+- sha256: `e56c6457c86c14d35be102cda2ead9dfb2ea1c2183083d0fd329b59555143b24`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1167,7 +1111,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 좋아하는 초능력 영화나 캐릭터가 있어요?
 - `question.ja` · JA: 好きな超能力映画やキャラクターはありますか？
-- `tutorGuidance.ko` · KO: 작품 이야기로 가볍게 입을 열게 해 주세요.
 - `followUp.1.ko` · KO: 어떤 능력을 써요?
 - `followUp.2.ko` · KO: 제일 기억나는 장면은 뭐예요?
 - `followUp.3.ko` · KO: 어릴 때도 좋아했어요?
@@ -1176,7 +1119,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 요즘 생활에서 없애고 싶은 불편이 뭐예요?
 - `question.ja` · JA: 最近の生活でなくしたい不便は何ですか？
-- `tutorGuidance.ko` · KO: 초능력이 필요한 실제 장면으로 이어 주세요.
 - `followUp.1.ko` · KO: 언제 제일 불편해요?
 - `followUp.2.ko` · KO: 얼마나 자주 생겨요?
 - `followUp.3.ko` · KO: 지금은 어떻게 해결해요?
@@ -1185,7 +1127,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 초능력 하나를 가질 수 있다면 뭘 고를 거예요?
 - `question.ja` · JA: 超能力を一つ持てるなら、何を選びますか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 능력을 정한 뒤 첫 용도를 물어보세요.
 - `followUp.1.ko` · KO: 왜 그 능력이 필요해요?
 - `followUp.2.ko` · KO: 비슷한 다른 능력도 고민했어요?
 - `followUp.3.ko` · KO: 이름을 직접 붙인다면 뭐라고 할 거예요?
@@ -1194,7 +1135,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 능력을 어디에서 가장 먼저 쓸 거예요?
 - `question.ja` · JA: その能力をどこで最初に使いますか？
-- `tutorGuidance.ko` · KO: 장소와 행동이 선명하게 나오게 해 주세요.
 - `followUp.1.ko` · KO: 누구와 같이 있을 거예요?
 - `followUp.2.ko` · KO: 성공했는지 어떻게 알 수 있어요?
 - `followUp.3.ko` · KO: 한 번만 쓸 수 있어도 거기서 쓸 거예요?
@@ -1203,7 +1143,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 능력으로 가장 먼저 도와주고 싶은 사람은 누구예요?
 - `question.ja` · JA: その能力で最初に助けたい人は誰ですか？
-- `tutorGuidance.ko` · KO: 사람과 도움의 구체적인 내용을 연결하세요.
 - `followUp.1.ko` · KO: 그 사람에게 어떤 도움이 필요해요?
 - `followUp.2.ko` · KO: 능력의 비밀을 말할 거예요?
 - `followUp.3.ko` · KO: 도움을 거절하면 어떻게 할까요?
@@ -1212,7 +1151,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 초능력이 생기면 매일 하는 일이 어떻게 달라질까요?
 - `question.ja` · JA: 超能力が使えるようになったら、毎日することはどう変わるでしょうか？
-- `tutorGuidance.ko` · KO: 편리함을 넘어 생활 방식의 변화를 말하게 해 주세요.
 - `followUp.1.ko` · KO: 일이나 공부도 바뀔까요?
 - `followUp.2.ko` · KO: 포기하게 되는 습관도 있을까요?
 - `followUp.3.ko` · KO: 오히려 더 어려워지는 선택은 뭐예요?
@@ -1221,7 +1159,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 친구가 그 능력을 써 달라고 부탁하면 어떻게 할 거예요?
 - `question.ja` · JA: 友達にその能力を使ってほしいと頼まれたら、どうしますか？
-- `tutorGuidance.ko` · KO: 한 번의 부탁을 구체적으로 정한 뒤, 도와줄지 거절할지와 그 이유를 말하게 해 주세요.
 - `followUp.1.ko` · KO: 어떤 부탁까지 들어줄 거예요?
 - `followUp.2.ko` · KO: 돈을 준다고 하면 달라져요?
 - `followUp.3.ko` · KO: 거절할 때 뭐라고 말할 거예요?
@@ -1230,7 +1167,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 절대 갖고 싶지 않은 초능력은 뭐예요?
 - `question.ja` · JA: では逆に、絶対に欲しくない超能力は何ですか？
-- `tutorGuidance.ko` · KO: 능력의 불편과 위험으로 뒤집어 닫으세요.
 - `followUp.1.ko` · KO: 왜 오히려 힘들 것 같아요?
 - `followUp.2.ko` · KO: 잠깐만 생겨도 싫어요?
 - `followUp.3.ko` · KO: 그 능력이 있는 사람을 이해할 수 있을까요?
@@ -1240,7 +1176,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-advanced/lessons/05-one-food-for-life/lesson.html`
-- sha256: `a07c06fa72ba10c1dfdb1981006076430fba05d81ebe311d195c70450c6ebf93`
+- sha256: `f9edf72d691975bb26cdc859d8048f369d2c5ff4fd11c61d81380819961edd33`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1316,7 +1252,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 요즘 자주 먹는 음식이 뭐예요?
 - `question.ja` · JA: 最近よく食べる料理は何ですか？
-- `tutorGuidance.ko` · KO: 최근 한 끼의 구체적인 장면으로 이어 가세요.
 - `followUp.1.ko` · KO: 일주일에 몇 번쯤 먹어요?
 - `followUp.2.ko` · KO: 주로 어디에서 먹어요?
 - `followUp.3.ko` · KO: 누구와 같이 먹어요?
@@ -1325,7 +1260,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 기분이 안 좋을 때 찾는 음식이 뭐예요?
 - `question.ja` · JA: 気分がよくないときに食べたくなる料理は何ですか？
-- `tutorGuidance.ko` · KO: 음식과 기분이 연결되는 이유를 받아 주세요.
 - `followUp.1.ko` · KO: 언제부터 좋아했어요?
 - `followUp.2.ko` · KO: 먹고 나면 기분이 어떻게 달라져요?
 - `followUp.3.ko` · KO: 직접 만들 수도 있어요?
@@ -1334,7 +1268,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 평생 한 가지 음식만 먹어야 한다면 뭘 고를 거예요?
 - `question.ja` · JA: 一生一つの料理だけ食べるなら、何を選びますか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 바로 하나를 고른 뒤 이유를 충분히 넓혀 주세요.
 - `followUp.1.ko` · KO: 왜 그 음식이 제일 먼저 떠올랐어요?
 - `followUp.2.ko` · KO: 어떤 가게의 음식이어야 해요?
 - `followUp.3.ko` · KO: 마지막까지 고민한 다른 음식은 뭐예요?
@@ -1343,16 +1276,14 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 음식을 매일 어떻게 다르게 먹을 거예요?
 - `question.ja` · JA: その料理を毎日どう変えて食べますか？
-- `tutorGuidance.ko` · KO: 재료나 조리법의 구체적인 변화를 말하게 해 주세요.
 - `followUp.1.ko` · KO: 아침에는 어떻게 먹어요?
 - `followUp.2.ko` · KO: 계절에 따라 뭘 바꿀 거예요?
 - `followUp.3.ko` · KO: 직접 만들 건가요?
 
 #### `q3`
 
-- `question.ko` · KO: 그 음식과 가장 잘 어울리는 추억은 뭐예요?
-- `question.ja` · JA: その料理にいちばんよく合う思い出は何ですか？
-- `tutorGuidance.ko` · KO: 맛에서 사람과 장면으로 이야기를 넓혀 주세요.
+- `question.ko` · KO: 그 음식을 생각하면 떠오르는 추억이 있어요?
+- `question.ja` · JA: その料理を思い浮かべると、よみがえる思い出はありますか？
 - `followUp.1.ko` · KO: 그때 누구와 있었어요?
 - `followUp.2.ko` · KO: 어디에서 먹었어요?
 - `followUp.3.ko` · KO: 지금 다시 먹으면 같은 기분일까요?
@@ -1361,7 +1292,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 평생 먹으려면 맛 말고 어떤 조건이 필요해요?
 - `question.ja` · JA: 一生食べるには、味以外にどんな条件が必要ですか？
-- `tutorGuidance.ko` · KO: 가격, 건강, 준비 과정 같은 기준을 말하게 해 주세요.
 - `followUp.1.ko` · KO: 건강에 좋아야 하나요?
 - `followUp.2.ko` · KO: 쉽게 구할 수 있어야 하나요?
 - `followUp.3.ko` · KO: 준비 시간이 길어도 괜찮아요?
@@ -1370,7 +1300,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 좋아하는 다른 음식을 포기하면 생활에서 뭐가 가장 아쉬울까요?
 - `question.ja` · JA: ほかの好きな料理を諦めたら、生活で何がいちばん寂しいでしょうか？
-- `tutorGuidance.ko` · KO: 음식이 관계와 문화에서 하는 역할까지 넓혀 주세요.
 - `followUp.1.ko` · KO: 특별한 날은 어떻게 보낼 거예요?
 - `followUp.2.ko` · KO: 가족 식사도 달라질까요?
 - `followUp.3.ko` · KO: 여행의 재미도 줄어들까요?
@@ -1379,7 +1308,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 평생 다시 안 먹어도 괜찮은 음식은 뭐예요?
 - `question.ja` · JA: では逆に、一生もう食べなくても平気な料理は何ですか？
-- `tutorGuidance.ko` · KO: 싫거나 중요하지 않은 음식으로 뒤집어 닫으세요.
 - `followUp.1.ko` · KO: 왜 없어도 괜찮아요?
 - `followUp.2.ko` · KO: 마지막으로 먹은 게 언제예요?
 - `followUp.3.ko` · KO: 좋아하는 사람이 권하면 먹을까요?
@@ -1387,7 +1315,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-intermediate/lessons/05-one-food-for-life/lesson.html`
-- sha256: `fbd183a81c1b30f97360690b3fabba241510dd40799b413e857c1308960cad29`
+- sha256: `b295c4b4d7d7a337d8783c4cbc107f6048fcf4100ad3fa35675ce49d459941e8`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1463,7 +1391,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 요즘 자주 먹는 음식이 뭐예요?
 - `question.ja` · JA: 最近よく食べる料理は何ですか？
-- `tutorGuidance.ko` · KO: 최근 한 끼의 구체적인 장면으로 이어 가세요.
 - `followUp.1.ko` · KO: 일주일에 몇 번쯤 먹어요?
 - `followUp.2.ko` · KO: 주로 어디에서 먹어요?
 - `followUp.3.ko` · KO: 누구와 같이 먹어요?
@@ -1472,7 +1399,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 기분이 안 좋을 때 찾는 음식이 뭐예요?
 - `question.ja` · JA: 気分がよくないときに食べたくなる料理は何ですか？
-- `tutorGuidance.ko` · KO: 음식과 기분이 연결되는 이유를 받아 주세요.
 - `followUp.1.ko` · KO: 언제부터 좋아했어요?
 - `followUp.2.ko` · KO: 먹고 나면 기분이 어떻게 달라져요?
 - `followUp.3.ko` · KO: 직접 만들 수도 있어요?
@@ -1481,7 +1407,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 평생 한 가지 음식만 먹어야 한다면 뭘 고를 거예요?
 - `question.ja` · JA: 一生一つの料理だけ食べるなら、何を選びますか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 바로 하나를 고른 뒤 이유를 충분히 넓혀 주세요.
 - `followUp.1.ko` · KO: 왜 그 음식이 제일 먼저 떠올랐어요?
 - `followUp.2.ko` · KO: 어떤 가게의 음식이어야 해요?
 - `followUp.3.ko` · KO: 마지막까지 고민한 다른 음식은 뭐예요?
@@ -1490,16 +1415,14 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 음식을 매일 어떻게 다르게 먹을 거예요?
 - `question.ja` · JA: その料理を毎日どう変えて食べますか？
-- `tutorGuidance.ko` · KO: 재료나 조리법의 구체적인 변화를 말하게 해 주세요.
 - `followUp.1.ko` · KO: 아침에는 어떻게 먹어요?
 - `followUp.2.ko` · KO: 계절에 따라 뭘 바꿀 거예요?
 - `followUp.3.ko` · KO: 직접 만들 건가요?
 
 #### `q3`
 
-- `question.ko` · KO: 그 음식과 가장 잘 어울리는 추억은 뭐예요?
-- `question.ja` · JA: その料理にいちばんよく合う思い出は何ですか？
-- `tutorGuidance.ko` · KO: 맛에서 사람과 장면으로 이야기를 넓혀 주세요.
+- `question.ko` · KO: 그 음식을 생각하면 떠오르는 추억이 있어요?
+- `question.ja` · JA: その料理を思い浮かべると、よみがえる思い出はありますか？
 - `followUp.1.ko` · KO: 그때 누구와 있었어요?
 - `followUp.2.ko` · KO: 어디에서 먹었어요?
 - `followUp.3.ko` · KO: 지금 다시 먹으면 같은 기분일까요?
@@ -1508,7 +1431,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 평생 먹으려면 맛 말고 뭐가 중요해요?
 - `question.ja` · JA: 一生食べるには、味以外に何が大切ですか？
-- `tutorGuidance.ko` · KO: 가격, 건강, 준비 과정 같은 기준을 말하게 해 주세요.
 - `followUp.1.ko` · KO: 건강에 좋아야 하나요?
 - `followUp.2.ko` · KO: 쉽게 구할 수 있어야 하나요?
 - `followUp.3.ko` · KO: 준비 시간이 길어도 괜찮아요?
@@ -1517,7 +1439,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 다른 좋아하는 음식을 못 먹으면 뭐가 가장 아쉬워요?
 - `question.ja` · JA: ほかの好きな料理を食べられないなら、何がいちばん寂しいですか？
-- `tutorGuidance.ko` · KO: 음식이 관계와 문화에서 하는 역할까지 넓혀 주세요.
 - `followUp.1.ko` · KO: 특별한 날은 어떻게 보낼 거예요?
 - `followUp.2.ko` · KO: 가족 식사도 달라질까요?
 - `followUp.3.ko` · KO: 여행의 재미도 줄어들까요?
@@ -1526,7 +1447,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 평생 다시 안 먹어도 괜찮은 음식은 뭐예요?
 - `question.ja` · JA: では逆に、一生もう食べなくても平気な料理は何ですか？
-- `tutorGuidance.ko` · KO: 싫거나 중요하지 않은 음식으로 뒤집어 닫으세요.
 - `followUp.1.ko` · KO: 왜 없어도 괜찮아요?
 - `followUp.2.ko` · KO: 마지막으로 먹은 게 언제예요?
 - `followUp.3.ko` · KO: 좋아하는 사람이 권하면 먹을까요?
@@ -1536,7 +1456,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-advanced/lessons/06-one-thing-free-for-life/lesson.html`
-- sha256: `b9a634628b63de80b984fbefee2deabe75f65adbbd586b4666b6c52aa2ab3b98`
+- sha256: `23049e160b4f627038aed911fe68cf651849f164ce5efd50fdbeacff31b2beb7`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1612,7 +1532,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 이번 주에 돈을 제일 많이 쓴 게 뭐예요?
 - `question.ja` · JA: 今週、いちばんお金を使ったものは何ですか？
-- `tutorGuidance.ko` · KO: 금액보다 실제로 쓴 상황을 먼저 받아 주세요.
 - `followUp.1.ko` · KO: 언제 썼어요?
 - `followUp.2.ko` · KO: 예상보다 많이 썼어요?
 - `followUp.3.ko` · KO: 다시 써도 아깝지 않아요?
@@ -1621,7 +1540,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 공짜라서 자주 이용하는 게 있어요?
 - `question.ja` · JA: 無料だからよく利用するものはありますか？
-- `tutorGuidance.ko` · KO: 공짜가 사용 횟수에 미친 영향을 물어보세요.
 - `followUp.1.ko` · KO: 어떻게 알게 됐어요?
 - `followUp.2.ko` · KO: 유료여도 계속 쓸 거예요?
 - `followUp.3.ko` · KO: 주변 사람도 같이 써요?
@@ -1630,7 +1548,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 커피, 치킨, 영화, 여행, 택시 중 하나가 평생 공짜라면 뭘 고를 거예요?
 - `question.ja` · JA: コーヒー、チキン、映画、旅行、タクシーのうち、一つが一生無料なら何を選びますか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 다섯 개 중 하나를 빠르게 고르게 해 주세요.
 - `followUp.1.ko` · KO: 왜 그게 제일 이득이에요?
 - `followUp.2.ko` · KO: 두 번째로 고르고 싶은 건 뭐예요?
 - `followUp.3.ko` · KO: 조건을 하나 붙인다면 뭐예요?
@@ -1639,7 +1556,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 공짜가 된 걸 일주일에 몇 번쯤 이용할 거예요?
 - `question.ja` · JA: 無料になったものを週に何回くらい利用しますか？
-- `tutorGuidance.ko` · KO: 횟수와 실제 생활 장면을 연결해 주세요.
 - `followUp.1.ko` · KO: 주로 언제 이용해요?
 - `followUp.2.ko` · KO: 누구와 같이 쓸 거예요?
 - `followUp.3.ko` · KO: 처음 한 달에는 더 많이 쓸까요?
@@ -1648,7 +1564,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그걸로 아낀 돈은 어디에 쓸 거예요?
 - `question.ja` · JA: それで節約したお金は何に使いますか？
-- `tutorGuidance.ko` · KO: 절약한 금액의 다음 선택으로 넓혀 주세요.
 - `followUp.1.ko` · KO: 한 달에 얼마쯤 아낄까요?
 - `followUp.2.ko` · KO: 바로 쓸 건가요?
 - `followUp.3.ko` · KO: 누구를 위해 쓰고 싶어요?
@@ -1657,7 +1572,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 평생 공짜가 되면 그 물건의 가치가 어떻게 달라질까요?
 - `question.ja` · JA: 一生無料になったら、そのものの価値はどう変わるでしょうか？
-- `tutorGuidance.ko` · KO: 가격이 사라진 뒤 느끼는 가치로 올라가세요.
 - `followUp.1.ko` · KO: 고마운 마음이 줄어들까요?
 - `followUp.2.ko` · KO: 특별한 날의 느낌도 달라질까요?
 - `followUp.3.ko` · KO: 돈을 내는 사람이 더 소중하게 쓸까요?
@@ -1666,7 +1580,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 공짜인 걸 필요 이상으로 쓰게 되는 이유는 뭐예요?
 - `question.ja` · JA: 無料のものを必要以上に使ってしまうのはなぜですか？
-- `tutorGuidance.ko` · KO: 자기 습관과 소비 심리를 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 본인도 그런 경험이 있어요?
 - `followUp.2.ko` · KO: 낭비를 막을 기준은 뭐예요?
 - `followUp.3.ko` · KO: 이용 횟수를 제한해야 할까요?
@@ -1675,7 +1588,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 평생 공짜여도 고르지 않을 건 뭐예요?
 - `question.ja` · JA: では逆に、一生無料でも選ばないものは何ですか？
-- `tutorGuidance.ko` · KO: 가격보다 취향과 필요가 중요한 경우로 닫으세요.
 - `followUp.1.ko` · KO: 왜 본인 생활에는 필요 없어요?
 - `followUp.2.ko` · KO: 다른 사람에게는 유용할까요?
 - `followUp.3.ko` · KO: 돈을 받으면 이용할 수 있어요?
@@ -1683,7 +1595,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-intermediate/lessons/06-one-thing-free-for-life/lesson.html`
-- sha256: `ab3df2a4ec0c5dfe6fcc471d62e0bf7b16e4e563485613d8964e0c1dc8540b9a`
+- sha256: `d3a50480eb7473ca243f3b1f13e109712054676843d2961bb369a8bdb9d4dc90`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1759,7 +1671,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 이번 주에 돈을 제일 많이 쓴 게 뭐예요?
 - `question.ja` · JA: 今週、いちばんお金を使ったものは何ですか？
-- `tutorGuidance.ko` · KO: 금액보다 실제로 쓴 상황을 먼저 받아 주세요.
 - `followUp.1.ko` · KO: 언제 썼어요?
 - `followUp.2.ko` · KO: 예상보다 많이 썼어요?
 - `followUp.3.ko` · KO: 다시 써도 아깝지 않아요?
@@ -1768,7 +1679,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 공짜라서 자주 이용하는 게 있어요?
 - `question.ja` · JA: 無料だからよく利用するものはありますか？
-- `tutorGuidance.ko` · KO: 공짜가 사용 횟수에 미친 영향을 물어보세요.
 - `followUp.1.ko` · KO: 어떻게 알게 됐어요?
 - `followUp.2.ko` · KO: 유료여도 계속 쓸 거예요?
 - `followUp.3.ko` · KO: 주변 사람도 같이 써요?
@@ -1777,7 +1687,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 커피, 치킨, 영화, 여행, 택시 중 하나가 평생 공짜라면 뭘 고를 거예요?
 - `question.ja` · JA: コーヒー、チキン、映画、旅行、タクシーのうち、一つが一生無料なら何を選びますか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 다섯 개 중 하나를 빠르게 고르게 해 주세요.
 - `followUp.1.ko` · KO: 왜 그게 제일 이득이에요?
 - `followUp.2.ko` · KO: 두 번째로 고르고 싶은 건 뭐예요?
 - `followUp.3.ko` · KO: 조건을 하나 붙인다면 뭐예요?
@@ -1786,7 +1695,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 공짜가 된 걸 일주일에 몇 번쯤 이용할 거예요?
 - `question.ja` · JA: 無料になったものを週に何回くらい利用しますか？
-- `tutorGuidance.ko` · KO: 횟수와 실제 생활 장면을 연결해 주세요.
 - `followUp.1.ko` · KO: 주로 언제 이용해요?
 - `followUp.2.ko` · KO: 누구와 같이 쓸 거예요?
 - `followUp.3.ko` · KO: 처음 한 달에는 더 많이 쓸까요?
@@ -1795,7 +1703,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그걸로 아낀 돈은 어디에 쓸 거예요?
 - `question.ja` · JA: それで節約したお金は何に使いますか？
-- `tutorGuidance.ko` · KO: 절약한 금액의 다음 선택으로 넓혀 주세요.
 - `followUp.1.ko` · KO: 한 달에 얼마쯤 아낄까요?
 - `followUp.2.ko` · KO: 바로 쓸 건가요?
 - `followUp.3.ko` · KO: 누구를 위해 쓰고 싶어요?
@@ -1804,7 +1711,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 평생 공짜가 되면 그 물건을 보는 마음이 어떻게 달라져요?
 - `question.ja` · JA: 一生無料になったら、そのものを見る気持ちはどう変わりますか？
-- `tutorGuidance.ko` · KO: 가격이 사라진 뒤 느끼는 가치로 올라가세요.
 - `followUp.1.ko` · KO: 고마운 마음이 줄어들까요?
 - `followUp.2.ko` · KO: 특별한 날의 느낌도 달라질까요?
 - `followUp.3.ko` · KO: 돈을 내는 사람이 더 소중하게 쓸까요?
@@ -1813,7 +1719,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 공짜인 것은 왜 필요 이상으로 쓰게 될까요?
 - `question.ja` · JA: 無料のものは、なぜ必要以上に使ってしまうのでしょうか？
-- `tutorGuidance.ko` · KO: 자기 습관과 소비 심리를 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 본인도 그런 경험이 있어요?
 - `followUp.2.ko` · KO: 낭비를 막을 기준은 뭐예요?
 - `followUp.3.ko` · KO: 이용 횟수를 제한해야 할까요?
@@ -1822,7 +1727,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 평생 공짜여도 고르지 않을 건 뭐예요?
 - `question.ja` · JA: では逆に、一生無料でも選ばないものは何ですか？
-- `tutorGuidance.ko` · KO: 가격보다 취향과 필요가 중요한 경우로 닫으세요.
 - `followUp.1.ko` · KO: 왜 본인 생활에는 필요 없어요?
 - `followUp.2.ko` · KO: 다른 사람에게는 유용할까요?
 - `followUp.3.ko` · KO: 돈을 받으면 이용할 수 있어요?
@@ -1832,7 +1736,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-advanced/lessons/07-one-week-without-a-smartphone/lesson.html`
-- sha256: `e89212f990d680238ded2be91d595900c59e68e539d52390862194ac8bb39911`
+- sha256: `22cac29bc381bfad71083dadabc8238d66c1fc7118215858d3ab4b160ce9cb90`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1908,7 +1812,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 아침에 일어나서 몇 분 만에 스마트폰을 봐요?
 - `question.ja` · JA: 朝起きて何分後にスマホを見ますか？
-- `tutorGuidance.ko` · KO: 오늘 아침의 실제 행동부터 받아 주세요.
 - `followUp.1.ko` · KO: 제일 먼저 뭘 확인해요?
 - `followUp.2.ko` · KO: 알람도 스마트폰으로 써요?
 - `followUp.3.ko` · KO: 안 보면 불안해요?
@@ -1917,7 +1820,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 스마트폰에서 가장 자주 쓰는 앱이 뭐예요?
 - `question.ja` · JA: スマホでいちばんよく使うアプリは何ですか？
-- `tutorGuidance.ko` · KO: 앱 이름 뒤에 쓰는 시간과 이유를 묻습니다.
 - `followUp.1.ko` · KO: 하루에 몇 번 열어요?
 - `followUp.2.ko` · KO: 주로 언제 써요?
 - `followUp.3.ko` · KO: 없으면 무엇으로 대신할 수 있어요?
@@ -1926,7 +1828,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 스마트폰 없이 산속 리조트에서 일주일을 보내야 한다면, 가장 먼저 뭘 준비할 거예요?
 - `question.ja` · JA: スマホなしで山のリゾートに一週間滞在するなら、最初に何を準備しますか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 준비할 것 하나를 먼저 받고 버틸 방법을 넓혀 주세요.
 - `followUp.1.ko` · KO: 왜 그게 제일 필요해요?
 - `followUp.2.ko` · KO: 일주일 동안 누구와 있을 거예요?
 - `followUp.3.ko` · KO: 가장 먼저 포기할 것은 뭐예요?
@@ -1935,7 +1836,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 스마트폰이 없어서 가장 힘든 순간은 언제일까요?
 - `question.ja` · JA: スマホがなくて、いちばん困るのはいつでしょうか？
-- `tutorGuidance.ko` · KO: 시간과 행동이 보이는 장면을 말하게 해 주세요.
 - `followUp.1.ko` · KO: 그때 무엇이 필요해요?
 - `followUp.2.ko` · KO: 누구에게 도움을 받을 수 있어요?
 - `followUp.3.ko` · KO: 첫날과 마지막 날이 다를까요?
@@ -1944,7 +1844,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 스마트폰 대신 시간을 어떻게 보낼 거예요?
 - `question.ja` · JA: スマホの代わりに、時間をどう過ごしますか？
-- `tutorGuidance.ko` · KO: 대체 활동을 하루 일정으로 넓혀 주세요.
 - `followUp.1.ko` · KO: 아침에는 뭘 할 거예요?
 - `followUp.2.ko` · KO: 혼자 할 수 있는 일은 뭐예요?
 - `followUp.3.ko` · KO: 준비해 갈 물건도 있어요?
@@ -1953,7 +1852,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 연락을 바로 못 하면 사람 관계가 어떻게 달라질까요?
 - `question.ja` · JA: すぐ連絡できなければ、人間関係はどう変わるでしょうか？
-- `tutorGuidance.ko` · KO: 불편뿐 아니라 관계의 속도를 생각하게 해 주세요.
 - `followUp.1.ko` · KO: 누가 가장 걱정할까요?
 - `followUp.2.ko` · KO: 약속하는 방법도 달라질까요?
 - `followUp.3.ko` · KO: 오히려 편해지는 관계도 있을까요?
@@ -1962,7 +1860,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 일주일이 끝난 뒤에도 남기고 싶은 습관은 뭐예요?
 - `question.ja` · JA: その一週間が終わったあとも残したい習慣は何ですか？
-- `tutorGuidance.ko` · KO: 가정이 현재 생활의 변화로 이어지게 해 주세요.
 - `followUp.1.ko` · KO: 사용 시간을 줄일 수 있을까요?
 - `followUp.2.ko` · KO: 침실에서 없애고 싶어요?
 - `followUp.3.ko` · KO: 가장 먼저 지우고 싶은 앱은 뭐예요?
@@ -1971,7 +1868,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 스마트폰이 없어서 더 좋아질 시간은 언제예요?
 - `question.ja` · JA: では逆に、スマホがないほうが、もっとよい時間を過ごせるのはいつですか？
-- `tutorGuidance.ko` · KO: 없음의 장점으로 뒤집어 닫으세요.
 - `followUp.1.ko` · KO: 그때 누구와 있고 싶어요?
 - `followUp.2.ko` · KO: 무엇에 더 집중할 수 있어요?
 - `followUp.3.ko` · KO: 이번 주에 바로 시험해 볼 수 있어요?
@@ -1979,7 +1875,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-intermediate/lessons/07-one-week-without-a-smartphone/lesson.html`
-- sha256: `2b322e5be737d21cd8d719768e14c0d7f252356b8fd9e0b24a32b8d51abf933f`
+- sha256: `1b85cc2bdb7869f1a1989351cd4cb257c56e72bd52cd5835ee6242a32d8984d3`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2055,7 +1951,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 아침에 일어나서 몇 분 만에 스마트폰을 봐요?
 - `question.ja` · JA: 朝起きて何分後にスマホを見ますか？
-- `tutorGuidance.ko` · KO: 오늘 아침의 실제 행동부터 받아 주세요.
 - `followUp.1.ko` · KO: 제일 먼저 뭘 확인해요?
 - `followUp.2.ko` · KO: 알람도 스마트폰으로 써요?
 - `followUp.3.ko` · KO: 안 보면 불안해요?
@@ -2064,7 +1959,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 스마트폰에서 가장 자주 쓰는 앱이 뭐예요?
 - `question.ja` · JA: スマホでいちばんよく使うアプリは何ですか？
-- `tutorGuidance.ko` · KO: 앱 이름 뒤에 쓰는 시간과 이유를 묻습니다.
 - `followUp.1.ko` · KO: 하루에 몇 번 열어요?
 - `followUp.2.ko` · KO: 주로 언제 써요?
 - `followUp.3.ko` · KO: 없으면 무엇으로 대신할 수 있어요?
@@ -2073,7 +1967,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 스마트폰 없이 산속에서 일주일을 보내려면, 뭘 먼저 준비할 거예요?
 - `question.ja` · JA: スマホなしで山で一週間過ごすなら、何を最初に準備しますか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 준비할 것 하나를 먼저 받고 버틸 방법을 넓혀 주세요.
 - `followUp.1.ko` · KO: 왜 그게 제일 필요해요?
 - `followUp.2.ko` · KO: 일주일 동안 누구와 있을 거예요?
 - `followUp.3.ko` · KO: 가장 먼저 포기할 것은 뭐예요?
@@ -2082,7 +1975,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 스마트폰이 없어서 가장 힘든 순간은 언제일까요?
 - `question.ja` · JA: スマホがなくて、いちばん困るのはいつでしょうか？
-- `tutorGuidance.ko` · KO: 시간과 행동이 보이는 장면을 말하게 해 주세요.
 - `followUp.1.ko` · KO: 그때 무엇이 필요해요?
 - `followUp.2.ko` · KO: 누구에게 도움을 받을 수 있어요?
 - `followUp.3.ko` · KO: 첫날과 마지막 날이 다를까요?
@@ -2091,7 +1983,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 스마트폰 대신 시간을 어떻게 보낼 거예요?
 - `question.ja` · JA: スマホの代わりに、時間をどう過ごしますか？
-- `tutorGuidance.ko` · KO: 대체 활동을 하루 일정으로 넓혀 주세요.
 - `followUp.1.ko` · KO: 아침에는 뭘 할 거예요?
 - `followUp.2.ko` · KO: 혼자 할 수 있는 일은 뭐예요?
 - `followUp.3.ko` · KO: 준비해 갈 물건도 있어요?
@@ -2100,7 +1991,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 연락을 바로 못 하면 사람들과 지내는 방법이 어떻게 달라져요?
 - `question.ja` · JA: すぐ連絡できなければ、人との付き合い方はどう変わりますか？
-- `tutorGuidance.ko` · KO: 불편뿐 아니라 관계의 속도를 생각하게 해 주세요.
 - `followUp.1.ko` · KO: 누가 가장 걱정할까요?
 - `followUp.2.ko` · KO: 약속하는 방법도 달라질까요?
 - `followUp.3.ko` · KO: 오히려 편해지는 관계도 있을까요?
@@ -2109,7 +1999,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 일주일 뒤에도 계속하고 싶은 습관은 뭐예요?
 - `question.ja` · JA: 一週間後も続けたい習慣は何ですか？
-- `tutorGuidance.ko` · KO: 가정이 현재 생활의 변화로 이어지게 해 주세요.
 - `followUp.1.ko` · KO: 사용 시간을 줄일 수 있을까요?
 - `followUp.2.ko` · KO: 침실에서 없애고 싶어요?
 - `followUp.3.ko` · KO: 가장 먼저 지우고 싶은 앱은 뭐예요?
@@ -2118,7 +2007,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 스마트폰이 없어서 더 좋아질 시간은 언제예요?
 - `question.ja` · JA: では逆に、スマホがないほうが、もっとよい時間を過ごせるのはいつですか？
-- `tutorGuidance.ko` · KO: 없음의 장점으로 뒤집어 닫으세요.
 - `followUp.1.ko` · KO: 그때 누구와 있고 싶어요?
 - `followUp.2.ko` · KO: 무엇에 더 집중할 수 있어요?
 - `followUp.3.ko` · KO: 이번 주에 바로 시험해 볼 수 있어요?
@@ -2128,7 +2016,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-advanced/lessons/08-ai-does-my-job/lesson.html`
-- sha256: `a62a0b3c44e969a643ece88a393aaf056eb59910d1c13a2c02417a7cab33450e`
+- sha256: `8d781c13fb965e363aea42f64ee19611c7cb24e62b0cb0dc7aecad45b14ddd62`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2204,7 +2092,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 일이나 공부에서 시간이 가장 오래 걸리는 게 뭐예요?
 - `question.ja` · JA: 仕事や勉強でいちばん時間がかかることは何ですか？
-- `tutorGuidance.ko` · KO: 실제로 반복하는 일 하나를 구체적으로 받아 주세요.
 - `followUp.1.ko` · KO: 일주일에 몇 번 해요?
 - `followUp.2.ko` · KO: 왜 오래 걸려요?
 - `followUp.3.ko` · KO: 끝나면 어떤 기분이에요?
@@ -2213,7 +2100,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 한 가지를 자동으로 끝낼 수 있다면 뭘 고를 거예요?
 - `question.ja` · JA: 一つを自動で終わらせられるなら、何を選びますか？
-- `tutorGuidance.ko` · KO: 작은 자동화에서 가정으로 자연스럽게 이어 주세요.
 - `followUp.1.ko` · KO: 얼마나 시간을 아낄까요?
 - `followUp.2.ko` · KO: 결과를 꼭 확인할 거예요?
 - `followUp.3.ko` · KO: 이미 쓰는 도구가 있어요?
@@ -2222,7 +2108,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: AI가 내 일을 다 해 주고 월급도 나온다면, 남는 시간에 뭘 할 거예요?
 - `question.ja` · JA: AIが仕事を全部してくれて給料も出るなら、余る時間に何をしますか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 첫 선택을 받은 뒤 구체적인 하루로 넓혀 주세요.
 - `followUp.1.ko` · KO: 제일 먼저 시작할 건 뭐예요?
 - `followUp.2.ko` · KO: 누구와 같이 하고 싶어요?
 - `followUp.3.ko` · KO: 한 달 뒤에도 계속할까요?
@@ -2231,7 +2116,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 생활의 첫 일주일은 어떻게 보낼 거예요?
 - `question.ja` · JA: その生活の最初の一週間をどう過ごしますか？
-- `tutorGuidance.ko` · KO: 휴식과 활동을 실제 일정으로 말하게 해 주세요.
 - `followUp.1.ko` · KO: 몇 시에 일어날 거예요?
 - `followUp.2.ko` · KO: 평일과 주말이 다를까요?
 - `followUp.3.ko` · KO: 밖에 나가는 날은 언제예요?
@@ -2240,7 +2124,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: AI가 일을 대신한다는 걸 누구에게 가장 먼저 말할 거예요?
 - `question.ja` · JA: AIに仕事を任せていることを、誰に最初に話しますか？
-- `tutorGuidance.ko` · KO: 사람의 반응과 관계 변화로 이어 가세요.
 - `followUp.1.ko` · KO: 그 사람은 뭐라고 할까요?
 - `followUp.2.ko` · KO: 회사에는 바로 말할 거예요?
 - `followUp.3.ko` · KO: 비밀로 하면 어떤 문제가 생겨요?
@@ -2249,7 +2132,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 일을 하지 않으면 성취감은 어디에서 얻을 수 있을까요?
 - `question.ja` · JA: 仕事をしなければ、達成感はどこから得られるでしょうか？
-- `tutorGuidance.ko` · KO: 일과 보람의 관계를 자기 경험으로 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 최근 성취감을 느낀 일이 뭐예요?
 - `followUp.2.ko` · KO: 돈이 안 되는 일도 충분할까요?
 - `followUp.3.ko` · KO: 다른 사람에게 인정받아야 하나요?
@@ -2258,7 +2140,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 월급은 그대로인데 내 역할이 사라지면 나 자신을 보는 시각이 어떻게 달라질까요?
 - `question.ja` · JA: 給料は同じでも自分の役割がなくなったら、自分への見方はどう変わるでしょうか？
-- `tutorGuidance.ko` · KO: 가장 생각이 필요한 자리예요. 정체성과 책임으로 넓혀 주세요.
 - `followUp.1.ko` · KO: 필요한 사람이라는 느낌이 중요해요?
 - `followUp.2.ko` · KO: 새 역할을 직접 만들고 싶어요?
 - `followUp.3.ko` · KO: AI의 결과에 책임질 수 있어요?
@@ -2267,7 +2148,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, AI에게 절대 맡기고 싶지 않은 일은 뭐예요?
 - `question.ja` · JA: では逆に、AIに絶対任せたくない仕事は何ですか？
-- `tutorGuidance.ko` · KO: 사람이 직접 해야 할 일을 골라 닫으세요.
 - `followUp.1.ko` · KO: 왜 사람이 해야 해요?
 - `followUp.2.ko` · KO: 도움만 받는 건 괜찮아요?
 - `followUp.3.ko` · KO: 앞으로도 생각이 안 바뀔까요?
@@ -2275,7 +2155,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-intermediate/lessons/08-ai-does-my-job/lesson.html`
-- sha256: `7624db2b894fc333b6f934fbf1680218886ddbbbb66ff026882ad7e6be70937d`
+- sha256: `0ba3a1225ac054e70ac36169e5432433770272e24437d3bdf98855fff8fba7bf`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2351,7 +2231,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 일이나 공부에서 시간이 가장 오래 걸리는 게 뭐예요?
 - `question.ja` · JA: 仕事や勉強でいちばん時間がかかることは何ですか？
-- `tutorGuidance.ko` · KO: 실제로 반복하는 일 하나를 구체적으로 받아 주세요.
 - `followUp.1.ko` · KO: 일주일에 몇 번 해요?
 - `followUp.2.ko` · KO: 왜 오래 걸려요?
 - `followUp.3.ko` · KO: 끝나면 어떤 기분이에요?
@@ -2360,7 +2239,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 한 가지를 자동으로 끝낼 수 있다면 뭘 고를 거예요?
 - `question.ja` · JA: 一つを自動で終わらせられるなら、何を選びますか？
-- `tutorGuidance.ko` · KO: 작은 자동화에서 가정으로 자연스럽게 이어 주세요.
 - `followUp.1.ko` · KO: 얼마나 시간을 아낄까요?
 - `followUp.2.ko` · KO: 결과를 꼭 확인할 거예요?
 - `followUp.3.ko` · KO: 이미 쓰는 도구가 있어요?
@@ -2369,7 +2247,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: AI가 내 일을 다 해 주고 월급도 나온다면, 남는 시간에 뭘 할 거예요?
 - `question.ja` · JA: AIが仕事を全部してくれて給料も出るなら、余る時間に何をしますか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 첫 선택을 받은 뒤 구체적인 하루로 넓혀 주세요.
 - `followUp.1.ko` · KO: 제일 먼저 시작할 건 뭐예요?
 - `followUp.2.ko` · KO: 누구와 같이 하고 싶어요?
 - `followUp.3.ko` · KO: 한 달 뒤에도 계속할까요?
@@ -2378,7 +2255,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 생활의 첫 일주일은 어떻게 보낼 거예요?
 - `question.ja` · JA: その生活の最初の一週間をどう過ごしますか？
-- `tutorGuidance.ko` · KO: 휴식과 활동을 실제 일정으로 말하게 해 주세요.
 - `followUp.1.ko` · KO: 몇 시에 일어날 거예요?
 - `followUp.2.ko` · KO: 평일과 주말이 다를까요?
 - `followUp.3.ko` · KO: 밖에 나가는 날은 언제예요?
@@ -2387,7 +2263,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: AI가 일을 대신한다는 걸 누구에게 가장 먼저 말할 거예요?
 - `question.ja` · JA: AIに仕事を任せていることを、誰に最初に話しますか？
-- `tutorGuidance.ko` · KO: 사람의 반응과 관계 변화로 이어 가세요.
 - `followUp.1.ko` · KO: 그 사람은 뭐라고 할까요?
 - `followUp.2.ko` · KO: 회사에는 바로 말할 거예요?
 - `followUp.3.ko` · KO: 비밀로 하면 어떤 문제가 생겨요?
@@ -2396,7 +2271,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 일을 안 하면 어디에서 뿌듯함을 느낄 수 있을까요?
 - `question.ja` · JA: 仕事をしなければ、どこで達成感を感じられるでしょうか？
-- `tutorGuidance.ko` · KO: 일과 보람의 관계를 자기 경험으로 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 최근 성취감을 느낀 일이 뭐예요?
 - `followUp.2.ko` · KO: 돈이 안 되는 일도 충분할까요?
 - `followUp.3.ko` · KO: 다른 사람에게 인정받아야 하나요?
@@ -2405,7 +2279,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 월급은 받아도 내 일이 없어지면 내 기분은 어떻게 달라질까요?
 - `question.ja` · JA: 給料をもらっても自分の仕事がなくなったら、気持ちはどう変わるでしょうか？
-- `tutorGuidance.ko` · KO: 가장 생각이 필요한 자리예요. 정체성과 책임으로 넓혀 주세요.
 - `followUp.1.ko` · KO: 필요한 사람이라는 느낌이 중요해요?
 - `followUp.2.ko` · KO: 새 역할을 직접 만들고 싶어요?
 - `followUp.3.ko` · KO: AI의 결과에 책임질 수 있어요?
@@ -2414,7 +2287,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, AI에게 절대 맡기고 싶지 않은 일은 뭐예요?
 - `question.ja` · JA: では逆に、AIに絶対任せたくない仕事は何ですか？
-- `tutorGuidance.ko` · KO: 사람이 직접 해야 할 일을 골라 닫으세요.
 - `followUp.1.ko` · KO: 왜 사람이 해야 해요?
 - `followUp.2.ko` · KO: 도움만 받는 건 괜찮아요?
 - `followUp.3.ko` · KO: 앞으로도 생각이 안 바뀔까요?
@@ -2424,7 +2296,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-advanced/lessons/09-if-i-were-an-animal/lesson.html`
-- sha256: `527a5e59b49fa8ff7f87de2510bd7c8b99d2396fed7a2ffb2255afb98d401f7e`
+- sha256: `9059f9837533fa460a546fdcfe742ad975e2a8f2da32c4d59198637af5fc092f`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2500,7 +2372,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 좋아하는 동물이 뭐예요?
 - `question.ja` · JA: 好きな動物は何ですか？
-- `tutorGuidance.ko` · KO: 좋아하게 된 계기나 실제 만난 경험으로 이어 주세요.
 - `followUp.1.ko` · KO: 언제부터 좋아했어요?
 - `followUp.2.ko` · KO: 직접 키워 본 적 있어요?
 - `followUp.3.ko` · KO: 어떤 행동이 제일 귀여워요?
@@ -2509,7 +2380,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 주변 사람들이 본인에게 자주 하는 말이 뭐예요?
 - `question.ja` · JA: 周りの人があなたによく言う言葉は何ですか？
-- `tutorGuidance.ko` · KO: 성격을 보여 주는 실제 장면을 받아 주세요.
 - `followUp.1.ko` · KO: 누가 자주 말해요?
 - `followUp.2.ko` · KO: 본인도 동의해요?
 - `followUp.3.ko` · KO: 최근에 그런 말을 들은 게 언제예요?
@@ -2518,7 +2388,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 나를 동물로 표현하면 어떤 동물이 제일 잘 맞아요?
 - `question.ja` · JA: 自分を動物にたとえるなら、どの動物がいちばん合いますか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 동물을 먼저 고른 뒤 행동으로 이유를 넓혀 주세요.
 - `followUp.1.ko` · KO: 왜 그 동물이 떠올랐어요?
 - `followUp.2.ko` · KO: 외모도 닮았어요?
 - `followUp.3.ko` · KO: 다른 후보는 어떤 동물이었어요?
@@ -2527,7 +2396,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 동물과 닮았다고 느낀 실제 장면은 언제예요?
 - `question.ja` · JA: その動物に似ていると感じた実際の場面はいつですか？
-- `tutorGuidance.ko` · KO: 추상적인 성격을 한 장면으로 바꾸게 해 주세요.
 - `followUp.1.ko` · KO: 그때 누구와 있었어요?
 - `followUp.2.ko` · KO: 무슨 행동을 했어요?
 - `followUp.3.ko` · KO: 평소에도 자주 그래요?
@@ -2536,7 +2404,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 스트레스를 받을 때는 어떤 동물처럼 행동해요?
 - `question.ja` · JA: ストレスを受けたとき、どんな動物のように行動しますか？
-- `tutorGuidance.ko` · KO: 평소와 다른 모습이 나오는지 이어 가세요.
 - `followUp.1.ko` · KO: 혼자 있고 싶어요?
 - `followUp.2.ko` · KO: 말과 표정이 어떻게 달라져요?
 - `followUp.3.ko` · KO: 기분을 풀 때는 어떤 동물 같아요?
@@ -2545,7 +2412,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 함께 있는 사람에 따라 내 동물 같은 모습이 어떻게 달라져요?
 - `question.ja` · JA: 一緒にいる人によって、自分の動物らしい姿はどう変わりますか？
-- `tutorGuidance.ko` · KO: 관계에 따라 달라지는 자기를 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 가족 앞에서는 어떤 동물 같아요?
 - `followUp.2.ko` · KO: 직장이나 학교에서는 달라요?
 - `followUp.3.ko` · KO: 처음 만난 사람 앞에서는 어때요?
@@ -2554,7 +2420,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 내가 고른 동물과 다른 사람이 나를 보고 고를 동물은 왜 다를까요?
 - `question.ja` · JA: 自分で選ぶ動物と、他の人が自分にたとえる動物は、なぜ違うのでしょうか？
-- `tutorGuidance.ko` · KO: 자기 인식과 타인의 인식을 비교하게 해 주세요.
 - `followUp.1.ko` · KO: 친한 친구는 뭘 고를까요?
 - `followUp.2.ko` · KO: 그 답을 들으면 놀랄까요?
 - `followUp.3.ko` · KO: 어느 쪽이 더 정확할까요?
@@ -2563,7 +2428,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 나와 가장 안 닮은 동물은 뭐예요?
 - `question.ja` · JA: では逆に、自分にいちばん似ていない動物は何ですか？
-- `tutorGuidance.ko` · KO: 반대 성격을 통해 주제를 닫으세요.
 - `followUp.1.ko` · KO: 어떤 점이 정반대예요?
 - `followUp.2.ko` · KO: 그 동물처럼 살아 보면 힘들까요?
 - `followUp.3.ko` · KO: 조금 닮고 싶은 점도 있어요?
@@ -2571,7 +2435,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-intermediate/lessons/09-if-i-were-an-animal/lesson.html`
-- sha256: `f7380a68ecd9725b3a4da05a3c127e47cdd8db323aba48718186df1c6bf30124`
+- sha256: `23ff2326489af28b8a41e332c4dba2702a1d348a8ef659a26058df1163ea7d1f`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2647,7 +2511,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 좋아하는 동물이 뭐예요?
 - `question.ja` · JA: 好きな動物は何ですか？
-- `tutorGuidance.ko` · KO: 좋아하게 된 계기나 실제 만난 경험으로 이어 주세요.
 - `followUp.1.ko` · KO: 언제부터 좋아했어요?
 - `followUp.2.ko` · KO: 직접 키워 본 적 있어요?
 - `followUp.3.ko` · KO: 어떤 행동이 제일 귀여워요?
@@ -2656,7 +2519,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 주변 사람들이 본인에게 자주 하는 말이 뭐예요?
 - `question.ja` · JA: 周りの人があなたによく言う言葉は何ですか？
-- `tutorGuidance.ko` · KO: 성격을 보여 주는 실제 장면을 받아 주세요.
 - `followUp.1.ko` · KO: 누가 자주 말해요?
 - `followUp.2.ko` · KO: 본인도 동의해요?
 - `followUp.3.ko` · KO: 최근에 그런 말을 들은 게 언제예요?
@@ -2665,7 +2527,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 나를 동물로 표현하면 어떤 동물이 제일 잘 맞아요?
 - `question.ja` · JA: 自分を動物にたとえるなら、どの動物がいちばん合いますか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 동물을 먼저 고른 뒤 행동으로 이유를 넓혀 주세요.
 - `followUp.1.ko` · KO: 왜 그 동물이 떠올랐어요?
 - `followUp.2.ko` · KO: 외모도 닮았어요?
 - `followUp.3.ko` · KO: 다른 후보는 어떤 동물이었어요?
@@ -2674,7 +2535,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 동물과 닮았다고 느낀 실제 장면은 언제예요?
 - `question.ja` · JA: その動物に似ていると感じた実際の場面はいつですか？
-- `tutorGuidance.ko` · KO: 추상적인 성격을 한 장면으로 바꾸게 해 주세요.
 - `followUp.1.ko` · KO: 그때 누구와 있었어요?
 - `followUp.2.ko` · KO: 무슨 행동을 했어요?
 - `followUp.3.ko` · KO: 평소에도 자주 그래요?
@@ -2683,7 +2543,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 스트레스를 받을 때는 어떤 동물처럼 행동해요?
 - `question.ja` · JA: ストレスを受けたとき、どんな動物のように行動しますか？
-- `tutorGuidance.ko` · KO: 평소와 다른 모습이 나오는지 이어 가세요.
 - `followUp.1.ko` · KO: 혼자 있고 싶어요?
 - `followUp.2.ko` · KO: 말과 표정이 어떻게 달라져요?
 - `followUp.3.ko` · KO: 기분을 풀 때는 어떤 동물 같아요?
@@ -2692,7 +2551,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 만나는 사람에 따라 내 동물 같은 모습이 어떻게 달라져요?
 - `question.ja` · JA: 会う人によって、自分の動物らしい姿はどう変わりますか？
-- `tutorGuidance.ko` · KO: 관계에 따라 달라지는 자기를 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 가족 앞에서는 어떤 동물 같아요?
 - `followUp.2.ko` · KO: 직장이나 학교에서는 달라요?
 - `followUp.3.ko` · KO: 처음 만난 사람 앞에서는 어때요?
@@ -2701,7 +2559,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 내가 고른 동물과 친구가 나를 보고 고를 동물은 왜 다를까요?
 - `question.ja` · JA: 自分で選ぶ動物と、友達が自分にたとえる動物は、なぜ違うのでしょうか？
-- `tutorGuidance.ko` · KO: 자기 인식과 타인의 인식을 비교하게 해 주세요.
 - `followUp.1.ko` · KO: 친한 친구는 뭘 고를까요?
 - `followUp.2.ko` · KO: 그 답을 들으면 놀랄까요?
 - `followUp.3.ko` · KO: 어느 쪽이 더 정확할까요?
@@ -2710,7 +2567,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 나와 가장 안 닮은 동물은 뭐예요?
 - `question.ja` · JA: では逆に、自分にいちばん似ていない動物は何ですか？
-- `tutorGuidance.ko` · KO: 반대 성격을 통해 주제를 닫으세요.
 - `followUp.1.ko` · KO: 어떤 점이 정반대예요?
 - `followUp.2.ko` · KO: 그 동물처럼 살아 보면 힘들까요?
 - `followUp.3.ko` · KO: 조금 닮고 싶은 점도 있어요?
@@ -2720,7 +2576,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-advanced/lessons/10-country-in-my-next-life/lesson.html`
-- sha256: `9be55e3fb197e8ef831e0f2182abb4d215c2f42a14bfc38a810502f8505320c6`
+- sha256: `7d62f0a9322b1279ab6569cbff1528c2a9b6cb4a5fffd414f00eaea567edbcf7`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2796,7 +2652,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 외국에서 살아 본 적 있어요?
 - `question.ja` · JA: 外国で暮らしたことがありますか？
-- `tutorGuidance.ko` · KO: 없으면 가장 오래 머문 해외 경험으로 열어 주세요.
 - `followUp.1.ko` · KO: 어느 나라였어요?
 - `followUp.2.ko` · KO: 얼마 동안 있었어요?
 - `followUp.3.ko` · KO: 제일 적응하기 어려운 게 뭐였어요?
@@ -2805,7 +2660,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 한 달 살아 보고 싶은 나라가 어디예요?
 - `question.ja` · JA: 一か月暮らしてみたい国はどこですか？
-- `tutorGuidance.ko` · KO: 관광이 아니라 생활 장면을 말하게 해 주세요.
 - `followUp.1.ko` · KO: 어느 도시에 있고 싶어요?
 - `followUp.2.ko` · KO: 집은 어디에 구할 거예요?
 - `followUp.3.ko` · KO: 평일에는 뭘 할 거예요?
@@ -2814,7 +2668,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 다시 태어난다면 어느 나라에서 살고 싶어요?
 - `question.ja` · JA: 生まれ変わるなら、どの国で暮らしたいですか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 나라를 빠르게 고른 뒤 이유를 넓혀 주세요.
 - `followUp.1.ko` · KO: 왜 그 나라가 먼저 떠올랐어요?
 - `followUp.2.ko` · KO: 지금 사는 나라와 뭐가 달라요?
 - `followUp.3.ko` · KO: 다른 후보는 어디였어요?
@@ -2823,7 +2676,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 나라의 어느 도시에서 살고 싶어요?
 - `question.ja` · JA: その国のどの都市で暮らしたいですか？
-- `tutorGuidance.ko` · KO: 도시의 크기와 생활 환경을 구체화해 주세요.
 - `followUp.1.ko` · KO: 집 주변에 뭐가 있어야 해요?
 - `followUp.2.ko` · KO: 출퇴근은 어떻게 할까요?
 - `followUp.3.ko` · KO: 주말에는 어디로 갈 거예요?
@@ -2832,7 +2684,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그곳에서 보내는 평범한 하루는 어떤 모습이에요?
 - `question.ja` · JA: そこで過ごす普通の一日はどんな様子ですか？
-- `tutorGuidance.ko` · KO: 이상적인 여행이 아니라 일상의 시간표를 말하게 해 주세요.
 - `followUp.1.ko` · KO: 몇 시에 일어나요?
 - `followUp.2.ko` · KO: 어떤 일을 하고 있어요?
 - `followUp.3.ko` · KO: 저녁에는 누구와 있어요?
@@ -2841,7 +2692,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 쓰는 언어와 문화가 달라지면 성격도 어떻게 달라질까요?
 - `question.ja` · JA: 使う言語と文化が変わったら、性格もどう変わるでしょうか？
-- `tutorGuidance.ko` · KO: 환경이 자기 표현에 주는 영향을 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 말이 줄어들까요?
 - `followUp.2.ko` · KO: 새롭게 생길 습관은 뭐예요?
 - `followUp.3.ko` · KO: 지금보다 용감해질 수 있을까요?
@@ -2850,7 +2700,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 나라에 대한 기대와 현실이 다르면 어떻게 적응할 거예요?
 - `question.ja` · JA: その国への期待と現実が違ったら、どう適応しますか？
-- `tutorGuidance.ko` · KO: 환상을 유지하지 않고 현실의 선택으로 넓혀 주세요.
 - `followUp.1.ko` · KO: 가장 힘든 현실은 뭐예요?
 - `followUp.2.ko` · KO: 누구에게 도움을 받을 수 있어요?
 - `followUp.3.ko` · KO: 언제 떠날 생각을 할까요?
@@ -2859,7 +2708,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 여행은 좋지만 살고 싶지는 않은 나라는 어디예요?
 - `question.ja` · JA: では逆に、旅行で行くのはよくても、住みたくない国はどこですか？
-- `tutorGuidance.ko` · KO: 여행과 생활의 차이로 주제를 닫되, 나라 전체를 평가하지 말고 본인에게 맞지 않는 구체적인 생활 조건을 말하게 해 주세요.
 - `followUp.1.ko` · KO: 여행할 때는 뭐가 좋아요?
 - `followUp.2.ko` · KO: 살면 어떤 점이 힘들어요?
 - `followUp.3.ko` · KO: 짧게 산다면 몇 달까지 괜찮아요?
@@ -2867,7 +2715,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-intermediate/lessons/10-country-in-my-next-life/lesson.html`
-- sha256: `0c0acd29f6e204f67076c7899069ce267379c27c53f5591da202f9ea8fc103c5`
+- sha256: `9a3d4780f08f84ab166204d39d4693bef6476fe62c10b011c99b20f23e3d9cd5`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2943,7 +2791,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 외국에서 살아 본 적 있어요?
 - `question.ja` · JA: 外国で暮らしたことがありますか？
-- `tutorGuidance.ko` · KO: 없으면 가장 오래 머문 해외 경험으로 열어 주세요.
 - `followUp.1.ko` · KO: 어느 나라였어요?
 - `followUp.2.ko` · KO: 얼마 동안 있었어요?
 - `followUp.3.ko` · KO: 제일 적응하기 어려운 게 뭐였어요?
@@ -2952,7 +2799,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 한 달 살아 보고 싶은 나라가 어디예요?
 - `question.ja` · JA: 一か月暮らしてみたい国はどこですか？
-- `tutorGuidance.ko` · KO: 관광이 아니라 생활 장면을 말하게 해 주세요.
 - `followUp.1.ko` · KO: 어느 도시에 있고 싶어요?
 - `followUp.2.ko` · KO: 집은 어디에 구할 거예요?
 - `followUp.3.ko` · KO: 평일에는 뭘 할 거예요?
@@ -2961,7 +2807,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 다시 태어난다면 어느 나라에서 살고 싶어요?
 - `question.ja` · JA: 生まれ変わるなら、どの国で暮らしたいですか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 나라를 빠르게 고른 뒤 이유를 넓혀 주세요.
 - `followUp.1.ko` · KO: 왜 그 나라가 먼저 떠올랐어요?
 - `followUp.2.ko` · KO: 지금 사는 나라와 뭐가 달라요?
 - `followUp.3.ko` · KO: 다른 후보는 어디였어요?
@@ -2970,7 +2815,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 나라의 어느 도시에서 살고 싶어요?
 - `question.ja` · JA: その国のどの都市で暮らしたいですか？
-- `tutorGuidance.ko` · KO: 도시의 크기와 생활 환경을 구체화해 주세요.
 - `followUp.1.ko` · KO: 집 주변에 뭐가 있어야 해요?
 - `followUp.2.ko` · KO: 출퇴근은 어떻게 할까요?
 - `followUp.3.ko` · KO: 주말에는 어디로 갈 거예요?
@@ -2979,7 +2823,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그곳에서 보내는 평범한 하루는 어떤 모습이에요?
 - `question.ja` · JA: そこで過ごす普通の一日はどんな様子ですか？
-- `tutorGuidance.ko` · KO: 이상적인 여행이 아니라 일상의 시간표를 말하게 해 주세요.
 - `followUp.1.ko` · KO: 몇 시에 일어나요?
 - `followUp.2.ko` · KO: 어떤 일을 하고 있어요?
 - `followUp.3.ko` · KO: 저녁에는 누구와 있어요?
@@ -2988,7 +2831,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 다른 언어와 문화에서 살면 내 성격은 어떻게 달라질까요?
 - `question.ja` · JA: 違う言語と文化の中で暮らしたら、自分の性格はどう変わるでしょうか？
-- `tutorGuidance.ko` · KO: 환경이 자기 표현에 주는 영향을 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 말이 줄어들까요?
 - `followUp.2.ko` · KO: 새롭게 생길 습관은 뭐예요?
 - `followUp.3.ko` · KO: 지금보다 용감해질 수 있을까요?
@@ -2997,7 +2839,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 기대했던 것과 실제 생활이 다르면 어떻게 적응할 거예요?
 - `question.ja` · JA: 期待していたことと実際の生活が違ったら、どう適応しますか？
-- `tutorGuidance.ko` · KO: 환상을 유지하지 않고 현실의 선택으로 넓혀 주세요.
 - `followUp.1.ko` · KO: 가장 힘든 현실은 뭐예요?
 - `followUp.2.ko` · KO: 누구에게 도움을 받을 수 있어요?
 - `followUp.3.ko` · KO: 언제 떠날 생각을 할까요?
@@ -3006,7 +2847,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 여행은 좋지만 살고 싶지는 않은 나라는 어디예요?
 - `question.ja` · JA: では逆に、旅行で行くのはよくても、住みたくない国はどこですか？
-- `tutorGuidance.ko` · KO: 여행과 생활의 차이로 주제를 닫되, 나라 전체를 평가하지 말고 본인에게 맞지 않는 구체적인 생활 조건을 말하게 해 주세요.
 - `followUp.1.ko` · KO: 여행할 때는 뭐가 좋아요?
 - `followUp.2.ko` · KO: 살면 어떤 점이 힘들어요?
 - `followUp.3.ko` · KO: 짧게 산다면 몇 달까지 괜찮아요?
@@ -3016,7 +2856,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-advanced/lessons/11-this-day-ten-years-later/lesson.html`
-- sha256: `e1528a2c2d3ae748e6026be9fa391134555d3e0caacfb837d257d3cc548a2f4c`
+- sha256: `c85b1cc7775a84d8e74362b99a3ec3cba75cf08fa8bb9edbb16f3d4ce200c0b8`
 - source kind: `model-story`
 
 #### `metadata`
@@ -3092,7 +2932,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 10년 전에는 어디에서 뭘 하고 있었어요?
 - `question.ja` · JA: 10年前はどこで何をしていましたか？
-- `tutorGuidance.ko` · KO: 기억나는 장소와 일 하나로 과거를 열어 주세요.
 - `followUp.1.ko` · KO: 그때 몇 살이었어요?
 - `followUp.2.ko` · KO: 누구와 자주 만났어요?
 - `followUp.3.ko` · KO: 지금과 제일 다른 게 뭐예요?
@@ -3101,7 +2940,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 지금 생활에서 10년 뒤에도 남기고 싶은 게 뭐예요?
 - `question.ja` · JA: 今の生活で、10年後も残したいものは何ですか？
-- `tutorGuidance.ko` · KO: 사람, 습관, 장소 중 하나를 구체적으로 받아 주세요.
 - `followUp.1.ko` · KO: 왜 꼭 남기고 싶어요?
 - `followUp.2.ko` · KO: 요즘 얼마나 자주 하고 있어요?
 - `followUp.3.ko` · KO: 지키려면 무엇이 필요해요?
@@ -3110,7 +2948,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 10년 뒤 오늘, 어디에서 뭘 하고 있을 것 같아요?
 - `question.ja` · JA: 10年後の今日、どこで何をしていると思いますか？
-- `tutorGuidance.ko` · KO: 가까운 미래나 원하는 생활 습관으로 답해도 되고, 미래 계획이 불편하면 건너뛰어도 된다고 안내해 주세요. 장소와 일을 고른 뒤 이유를 넓혀 주세요.
 - `followUp.1.ko` · KO: 왜 그곳에 있어요?
 - `followUp.2.ko` · KO: 몇 시쯤인 것 같아요?
 - `followUp.3.ko` · KO: 지금과 이어지는 부분은 뭐예요?
@@ -3119,7 +2956,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그때 내 곁에는 누가 있을까요?
 - `question.ja` · JA: そのとき、自分のそばには誰がいるでしょうか？
-- `tutorGuidance.ko` · KO: 사람 이름 뒤에 함께하는 일과 관계를 받아 주세요.
 - `followUp.1.ko` · KO: 얼마나 자주 만나요?
 - `followUp.2.ko` · KO: 새롭게 알게 된 사람도 있을까요?
 - `followUp.3.ko` · KO: 지금 아는 사람과 관계가 어떻게 달라져요?
@@ -3128,7 +2964,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 10년 뒤의 평범한 평일은 어떻게 흘러가요?
 - `question.ja` · JA: 10年後の普通の平日は、どのように過ぎますか？
-- `tutorGuidance.ko` · KO: 특별한 성공보다 실제 일상의 시간표를 말하게 해 주세요.
 - `followUp.1.ko` · KO: 아침에 제일 먼저 뭘 해요?
 - `followUp.2.ko` · KO: 낮에는 주로 뭘 해요?
 - `followUp.3.ko` · KO: 저녁에는 어떻게 쉬어요?
@@ -3137,7 +2972,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 미래와 이어지는 지금의 선택은 뭐예요?
 - `question.ja` · JA: その未来につながる今の選択は何ですか？
-- `tutorGuidance.ko` · KO: 오늘 할 수 있는 작은 행동으로 미래를 연결해 주세요.
 - `followUp.1.ko` · KO: 이번 달에 시작할 수 있어요?
 - `followUp.2.ko` · KO: 그 선택을 방해하는 건 뭐예요?
 - `followUp.3.ko` · KO: 누구의 도움이 필요해요?
@@ -3146,7 +2980,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 계획대로 되지 않아도 꼭 지키고 싶은 것은 뭐예요?
 - `question.ja` · JA: 計画どおりにならなくても、必ず守りたいものは何ですか？
-- `tutorGuidance.ko` · KO: 직업이나 장소 아래의 핵심 가치를 말하게 해 주세요.
 - `followUp.1.ko` · KO: 왜 그게 가장 중요해요?
 - `followUp.2.ko` · KO: 다른 방식으로도 지킬 수 있어요?
 - `followUp.3.ko` · KO: 포기할 수 있는 계획은 뭐예요?
@@ -3155,7 +2988,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 10년 뒤에는 더 이상 하지 않고 싶은 게 뭐예요?
 - `question.ja` · JA: では逆に、10年後にはもう続けたくないことは何ですか？
-- `tutorGuidance.ko` · KO: 없애고 싶은 습관이나 부담으로 닫으세요.
 - `followUp.1.ko` · KO: 언제부터 줄이고 싶었어요?
 - `followUp.2.ko` · KO: 없어지면 하루가 어떻게 달라져요?
 - `followUp.3.ko` · KO: 지금 바로 조금 줄일 수 있어요?
@@ -3163,7 +2995,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-intermediate/lessons/11-this-day-ten-years-later/lesson.html`
-- sha256: `ded68e1e8f9ecf2a39007c2da3518e7fc1fe72dcf319c12a04ffdeae3071046c`
+- sha256: `41bb97353bb3ae40029dccbbb2144c2dd1a15ee17e7686d5d7ebc972b23c7086`
 - source kind: `model-story`
 
 #### `metadata`
@@ -3239,7 +3071,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 10년 전에는 어디에서 뭘 하고 있었어요?
 - `question.ja` · JA: 10年前はどこで何をしていましたか？
-- `tutorGuidance.ko` · KO: 기억나는 장소와 일 하나로 과거를 열어 주세요.
 - `followUp.1.ko` · KO: 그때 몇 살이었어요?
 - `followUp.2.ko` · KO: 누구와 자주 만났어요?
 - `followUp.3.ko` · KO: 지금과 제일 다른 게 뭐예요?
@@ -3248,7 +3079,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 지금 생활에서 10년 뒤에도 남기고 싶은 게 뭐예요?
 - `question.ja` · JA: 今の生活で、10年後も残したいものは何ですか？
-- `tutorGuidance.ko` · KO: 사람, 습관, 장소 중 하나를 구체적으로 받아 주세요.
 - `followUp.1.ko` · KO: 왜 꼭 남기고 싶어요?
 - `followUp.2.ko` · KO: 요즘 얼마나 자주 하고 있어요?
 - `followUp.3.ko` · KO: 지키려면 무엇이 필요해요?
@@ -3257,7 +3087,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 10년 뒤 오늘, 어디에서 뭘 하고 있을 것 같아요?
 - `question.ja` · JA: 10年後の今日、どこで何をしていると思いますか？
-- `tutorGuidance.ko` · KO: 가까운 미래나 원하는 생활 습관으로 답해도 되고, 미래 계획이 불편하면 건너뛰어도 된다고 안내해 주세요. 장소와 일을 고른 뒤 이유를 넓혀 주세요.
 - `followUp.1.ko` · KO: 왜 그곳에 있어요?
 - `followUp.2.ko` · KO: 몇 시쯤인 것 같아요?
 - `followUp.3.ko` · KO: 지금과 이어지는 부분은 뭐예요?
@@ -3266,7 +3095,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그때 내 곁에는 누가 있을까요?
 - `question.ja` · JA: そのとき、自分のそばには誰がいるでしょうか？
-- `tutorGuidance.ko` · KO: 사람 이름 뒤에 함께하는 일과 관계를 받아 주세요.
 - `followUp.1.ko` · KO: 얼마나 자주 만나요?
 - `followUp.2.ko` · KO: 새롭게 알게 된 사람도 있을까요?
 - `followUp.3.ko` · KO: 지금 아는 사람과 관계가 어떻게 달라져요?
@@ -3275,7 +3103,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 10년 뒤의 평범한 평일은 어떻게 흘러가요?
 - `question.ja` · JA: 10年後の普通の平日は、どのように過ぎますか？
-- `tutorGuidance.ko` · KO: 특별한 성공보다 실제 일상의 시간표를 말하게 해 주세요.
 - `followUp.1.ko` · KO: 아침에 제일 먼저 뭘 해요?
 - `followUp.2.ko` · KO: 낮에는 주로 뭘 해요?
 - `followUp.3.ko` · KO: 저녁에는 어떻게 쉬어요?
@@ -3284,7 +3111,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 미래를 위해 지금 할 수 있는 일은 뭐예요?
 - `question.ja` · JA: その未来のために、今できることは何ですか？
-- `tutorGuidance.ko` · KO: 오늘 할 수 있는 작은 행동으로 미래를 연결해 주세요.
 - `followUp.1.ko` · KO: 이번 달에 시작할 수 있어요?
 - `followUp.2.ko` · KO: 그 선택을 방해하는 건 뭐예요?
 - `followUp.3.ko` · KO: 누구의 도움이 필요해요?
@@ -3293,7 +3119,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 계획대로 안 돼도 꼭 지키고 싶은 것은 뭐예요?
 - `question.ja` · JA: 計画どおりにならなくても、必ず守りたいものは何ですか？
-- `tutorGuidance.ko` · KO: 직업이나 장소 아래의 핵심 가치를 말하게 해 주세요.
 - `followUp.1.ko` · KO: 왜 그게 가장 중요해요?
 - `followUp.2.ko` · KO: 다른 방식으로도 지킬 수 있어요?
 - `followUp.3.ko` · KO: 포기할 수 있는 계획은 뭐예요?
@@ -3302,7 +3127,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 10년 뒤에는 더 이상 하지 않고 싶은 게 뭐예요?
 - `question.ja` · JA: では逆に、10年後にはもう続けたくないことは何ですか？
-- `tutorGuidance.ko` · KO: 없애고 싶은 습관이나 부담으로 닫으세요.
 - `followUp.1.ko` · KO: 언제부터 줄이고 싶었어요?
 - `followUp.2.ko` · KO: 없어지면 하루가 어떻게 달라져요?
 - `followUp.3.ko` · KO: 지금 바로 조금 줄일 수 있어요?

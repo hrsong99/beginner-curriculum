@@ -12,7 +12,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/01-more-money-or-more-time/lesson.html`
-- sha256: `4878c45821003ee3b05495a040f2e937612908a6617a8624d9d01a13960400cf`
+- sha256: `1f4b2fe154260cd15f19702105ea00e1a98893f65b2346a84ace3e1f69cc29f7`
 - source kind: `article`
 
 #### `metadata`
@@ -104,7 +104,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 이번 주에 돈을 아끼려고 시간을 더 쓴 일이 있어요?
 - `question.ja` · JA: 今週、お金を節約するために時間を多く使ったことはありますか？
-- `tutorGuidance.ko` · KO: 작은 생활 장면 하나를 받으세요.
 - `followUp.1.ko` · KO: 무엇을 직접 했어요?
 - `followUp.2.ko` · KO: 시간이 얼마나 더 걸렸어요?
 - `followUp.3.ko` · KO: 다시 그렇게 할 거예요?
@@ -113,8 +112,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 오늘 평소보다 자유 시간이 세 시간 더 생기면 뭘 하고 싶어요?
 - `question.ja` · JA: 今日、いつもより自由な時間が3時間増えたら、何をしたいですか？
-- `tutorGuidance.ko` · KO: 평소 일정에 더해 오늘 한 번 생긴 세 시간이에요. 바로 떠오르는 행동을 구체화해 주세요.
-- `followUp.1.ko` · KO: 어디에서 할 거예요?
+- `followUp.1.ko` · KO: 그 세 시간에 가장 먼저 뭘 할 거예요?
 - `followUp.2.ko` · KO: 누구와 하고 싶어요?
 - `followUp.3.ko` · KO: 평소에는 왜 못 해요?
 
@@ -122,60 +120,56 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 지금 더 필요한 건 돈이 많은 삶이에요, 시간이 많은 삶이에요?
 - `question.ja` · JA: 今必要なのは、お金に余裕のある暮らしですか、時間に余裕のある暮らしですか？
-- `tutorGuidance.ko` · KO: 오늘의 선택이에요. 정확한 수입이나 금액을 묻지 말고, 지금 부족한 생활 장면을 받으세요.
-- `followUp.1.ko` · KO: 왜 그쪽을 골랐어요?
-- `followUp.2.ko` · KO: 요즘 무엇이 가장 부족해요?
+- `tutorGuidance.ko` · KO: 주의: 직업이나 정확한 수입·금액을 묻지 마세요.
+- `followUp.1.ko` · KO: 요즘 돈과 시간 중 무엇이 더 부족해요?
+- `followUp.2.ko` · KO: 그 부족함 때문에 못 하는 일이 있어요?
 - `followUp.3.ko` · KO: 반대쪽은 지금 충분해요?
 
 #### `q2`
 
 - `question.ko` · KO: 선택한 것이 늘어나면 일상에서 가장 먼저 뭘 바꾸고 싶어요?
 - `question.ja` · JA: 選んだものが増えたら、日常でまず何を変えたいですか？
-- `tutorGuidance.ko` · KO: 선택을 실제 하루에 연결해 주세요.
-- `followUp.1.ko` · KO: 아침부터 뭐가 달라져요?
-- `followUp.2.ko` · KO: 지금 못 하는 걸 할 수 있어요?
-- `followUp.3.ko` · KO: 주변 사람에게도 변화가 생겨요?
+- `followUp.1.ko` · KO: 아침부터 무엇을 바꿀 거예요?
+- `followUp.2.ko` · KO: 지금 못 하는 일을 할 수 있어요?
+- `followUp.3.ko` · KO: 주변 사람과 보내는 시간도 달라져요?
 
 #### `q3`
 
 - `question.ko` · KO: 반대쪽이 더 중요했던 최근 순간은 언제였어요?
 - `question.ja` · JA: 最近、反対のほうが大切だと感じたのはいつですか？
-- `tutorGuidance.ko` · KO: 처음 선택을 바꾸게 하지 말고 예외 장면 하나만 찾으세요.
 - `followUp.1.ko` · KO: 그때 무슨 일이 있었어요?
-- `followUp.2.ko` · KO: 무엇이 부족했어요?
-- `followUp.3.ko` · KO: 그 순간은 얼마나 오래 갔어요?
+- `followUp.2.ko` · KO: 돈과 시간 중 무엇이 부족했어요?
+- `followUp.3.ko` · KO: 지금도 같은 선택을 할 거예요?
 
 #### `q4`
 
 - `question.ko` · KO: 월급이 20% 늘지만 매주 열 시간 더 일해야 한다면 어떻게 할 거예요?
 - `question.ja` · JA: 給料が20％増える代わりに毎週10時間多く働くなら、どうしますか？
-- `tutorGuidance.ko` · KO: 가상의 조건이에요. 현재 직업이나 실제 금액을 공개하게 하지 마세요.
-- `followUp.1.ko` · KO: 몇 달 동안이라면 가능해요?
-- `followUp.2.ko` · KO: 무엇을 포기해야 해요?
-- `followUp.3.ko` · KO: 조건을 하나 바꿀 수 있다면요?
+- `tutorGuidance.ko` · KO: 주의: 직업이나 정확한 수입·금액을 묻지 마세요.
+- `followUp.1.ko` · KO: 늘어난 월급으로 무엇을 하고 싶어요?
+- `followUp.2.ko` · KO: 열 시간을 더 일하면 무엇을 포기해야 해요?
+- `followUp.3.ko` · KO: 몇 달까지 할 수 있어요?
 
 #### `q5`
 
 - `question.ko` · KO: 오 년 뒤의 선택에 가장 큰 영향을 줄 것은 뭐예요?
 - `question.ja` · JA: 5年後の選択に最も大きな影響を与えるものは何ですか？
-- `tutorGuidance.ko` · KO: 추상적인 인생 계획보다 바뀔 수 있는 조건 하나를 고르게 해 주세요.
-- `followUp.1.ko` · KO: 가족이 생기면 달라져요?
-- `followUp.2.ko` · KO: 건강은 어떤 영향을 줘요?
-- `followUp.3.ko` · KO: 목표가 바뀌면요?
+- `followUp.1.ko` · KO: 가족이나 건강이 영향을 줄까요?
+- `followUp.2.ko` · KO: 목표가 바뀌면 선택도 바뀌어요?
+- `followUp.3.ko` · KO: 지금 준비할 수 있는 것은 뭐예요?
 
 #### `q6`
 
 - `question.ko` · KO: 반대쪽으로 선택을 바꾸게 되는 조건은 뭐예요?
 - `question.ja` · JA: どんな条件なら、反対のほうに選択を変えますか？
-- `tutorGuidance.ko` · KO: 처음 선택을 뒤집는 정확한 경계 하나로 닫으세요.
-- `followUp.1.ko` · KO: 어느 정도가 되면 바뀌어요?
-- `followUp.2.ko` · KO: 누구 때문에 바뀔 수 있어요?
+- `followUp.1.ko` · KO: 돈이나 시간이 어느 정도 부족해야 바뀌어요?
+- `followUp.2.ko` · KO: 누구의 상황이 영향을 줄 수 있어요?
 - `followUp.3.ko` · KO: 지금도 그 조건에 가까워요?
 
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/01-more-money-or-more-time/lesson.html`
-- sha256: `81ea2e2a19259262f002dfdf65e080d98ed23af2ccc908552febb3d95977cd85`
+- sha256: `27db62314e5ae57a7868d96e8c23bba768dd807ee63e4f51c1478ae0c042d63c`
 - source kind: `article`
 
 #### `metadata`
@@ -267,7 +261,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 이번 주에 돈을 아끼려고 시간을 더 쓴 일이 있어요?
 - `question.ja` · JA: 今週、お金を節約するために時間を多く使ったことはありますか？
-- `tutorGuidance.ko` · KO: 작은 생활 장면 하나를 받으세요.
 - `followUp.1.ko` · KO: 무엇을 직접 했어요?
 - `followUp.2.ko` · KO: 시간이 얼마나 더 걸렸어요?
 - `followUp.3.ko` · KO: 다시 그렇게 할 거예요?
@@ -276,8 +269,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 오늘 평소보다 자유 시간이 세 시간 더 생기면 뭘 하고 싶어요?
 - `question.ja` · JA: 今日、いつもより自由な時間が3時間増えたら、何をしたいですか？
-- `tutorGuidance.ko` · KO: 평소 일정에 더해 오늘 한 번 생긴 세 시간이에요. 바로 떠오르는 행동을 구체화해 주세요.
-- `followUp.1.ko` · KO: 어디에서 할 거예요?
+- `followUp.1.ko` · KO: 그 세 시간에 가장 먼저 뭘 할 거예요?
 - `followUp.2.ko` · KO: 누구와 하고 싶어요?
 - `followUp.3.ko` · KO: 평소에는 왜 못 해요?
 
@@ -285,54 +277,50 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 지금 더 필요한 건 돈이 많은 삶이에요, 시간이 많은 삶이에요?
 - `question.ja` · JA: 今必要なのは、お金に余裕のある暮らしですか、時間に余裕のある暮らしですか？
-- `tutorGuidance.ko` · KO: 오늘의 선택이에요. 정확한 수입이나 금액을 묻지 말고, 지금 부족한 생활 장면을 받으세요.
-- `followUp.1.ko` · KO: 왜 그쪽을 골랐어요?
-- `followUp.2.ko` · KO: 요즘 무엇이 가장 부족해요?
+- `tutorGuidance.ko` · KO: 주의: 직업이나 정확한 수입·금액을 묻지 마세요.
+- `followUp.1.ko` · KO: 요즘 돈과 시간 중 무엇이 더 부족해요?
+- `followUp.2.ko` · KO: 그 부족함 때문에 못 하는 일이 있어요?
 - `followUp.3.ko` · KO: 반대쪽은 지금 충분해요?
 
 #### `q2`
 
 - `question.ko` · KO: 선택한 것이 많아지면 일상에서 가장 먼저 뭘 바꿀 거예요?
 - `question.ja` · JA: 選んだものが増えたら、日常でまず何を変えますか？
-- `tutorGuidance.ko` · KO: 선택을 실제 하루에 연결해 주세요.
-- `followUp.1.ko` · KO: 아침부터 뭐가 달라져요?
-- `followUp.2.ko` · KO: 지금 못 하는 걸 할 수 있어요?
-- `followUp.3.ko` · KO: 주변 사람에게도 변화가 생겨요?
+- `followUp.1.ko` · KO: 아침부터 무엇을 바꿀 거예요?
+- `followUp.2.ko` · KO: 지금 못 하는 일을 할 수 있어요?
+- `followUp.3.ko` · KO: 주변 사람과 보내는 시간도 달라져요?
 
 #### `q3`
 
 - `question.ko` · KO: 반대쪽이 더 중요했던 최근 순간은 언제였어요?
 - `question.ja` · JA: 最近、反対のほうが大切だと感じたのはいつですか？
-- `tutorGuidance.ko` · KO: 처음 선택을 바꾸게 하지 말고 예외 장면 하나만 찾으세요.
 - `followUp.1.ko` · KO: 그때 무슨 일이 있었어요?
-- `followUp.2.ko` · KO: 무엇이 부족했어요?
-- `followUp.3.ko` · KO: 그 순간은 얼마나 오래 갔어요?
+- `followUp.2.ko` · KO: 돈과 시간 중 무엇이 부족했어요?
+- `followUp.3.ko` · KO: 지금도 같은 선택을 할 거예요?
 
 #### `q4`
 
 - `question.ko` · KO: 월급이 늘어도 매주 열 시간 더 일해야 하면 어떻게 할 거예요?
 - `question.ja` · JA: 給料が増えても、毎週10時間多く働くならどうしますか？
-- `tutorGuidance.ko` · KO: 가상의 조건이에요. 현재 직업이나 실제 금액을 공개하게 하지 마세요.
-- `followUp.1.ko` · KO: 몇 달 동안이라면 가능해요?
-- `followUp.2.ko` · KO: 무엇을 포기해야 해요?
-- `followUp.3.ko` · KO: 조건을 하나 바꿀 수 있다면요?
+- `tutorGuidance.ko` · KO: 주의: 직업이나 정확한 수입·금액을 묻지 마세요.
+- `followUp.1.ko` · KO: 늘어난 월급으로 무엇을 하고 싶어요?
+- `followUp.2.ko` · KO: 열 시간을 더 일하면 무엇을 포기해야 해요?
+- `followUp.3.ko` · KO: 몇 달까지 할 수 있어요?
 
 #### `q5`
 
 - `question.ko` · KO: 나중에 선택이 바뀐다면, 어떤 일이 계기가 될까요?
 - `question.ja` · JA: 将来選択が変わるとしたら、どんな出来事がきっかけになりそうですか？
-- `tutorGuidance.ko` · KO: 큰 인생 계획보다 바뀔 수 있는 조건 하나를 고르게 해 주세요.
-- `followUp.1.ko` · KO: 가족이 생기면 달라져요?
-- `followUp.2.ko` · KO: 건강은 어떤 영향을 줘요?
-- `followUp.3.ko` · KO: 목표가 바뀌면요?
+- `followUp.1.ko` · KO: 가족이나 건강이 영향을 줄까요?
+- `followUp.2.ko` · KO: 목표가 바뀌면 선택도 바뀌어요?
+- `followUp.3.ko` · KO: 지금 준비할 수 있는 것은 뭐예요?
 
 #### `q6`
 
 - `question.ko` · KO: 언제 반대쪽을 고르게 될까요?
 - `question.ja` · JA: どんなときに反対のほうを選ぶでしょうか？
-- `tutorGuidance.ko` · KO: 처음 선택을 바꾸는 조건 하나로 닫으세요.
-- `followUp.1.ko` · KO: 어느 정도가 되면 바뀌어요?
-- `followUp.2.ko` · KO: 누구 때문에 바뀔 수 있어요?
+- `followUp.1.ko` · KO: 돈이나 시간이 어느 정도 부족해야 바뀌어요?
+- `followUp.2.ko` · KO: 누구의 상황이 영향을 줄 수 있어요?
 - `followUp.3.ko` · KO: 지금도 그 조건에 가까워요?
 
 ## 02 · 친구 100명 vs 진짜 친구 3명
@@ -340,7 +328,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/02-many-friends-or-three-close-friends/lesson.html`
-- sha256: `31e2b1dc89374170c3f6b9665f6896c8cf4576e0490205be6e644465424d7f48`
+- sha256: `b48bf4aa45fa58cdd4a09afa582c4426a60f0b802e84f5f90552932c1cfc851b`
 - source kind: `article`
 
 #### `metadata`
@@ -432,78 +420,71 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 최근에 친구 한 명과 오래 이야기한 적이 있어요?
 - `question.ja` · JA: 最近、一人の友達とゆっくり話したことはありますか？
-- `tutorGuidance.ko` · KO: 최근의 작은 장면 하나를 받으세요. 경험이 없으면 가까운 예나 가상 장면으로 바꿉니다.
-- `followUp.1.ko` · KO: 그때 어떤 상황이었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 좋거나 불편했어요?
-- `followUp.3.ko` · KO: 다시 같은 선택을 할 거예요?
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 누구와 이야기했어요?
+- `followUp.2.ko` · KO: 무슨 이야기를 했어요?
+- `followUp.3.ko` · KO: 왜 오래 이야기할 수 있었어요?
 
 #### `warm-2`
 
 - `question.ko` · KO: 모르는 사람이 많은 모임에 가면 먼저 말을 거는 편이에요?
 - `question.ja` · JA: 知らない人が多い集まりでは、自分から話しかけるほうですか？
-- `tutorGuidance.ko` · KO: 바로 떠오르는 행동을 구체화해 주세요.
-- `followUp.1.ko` · KO: 왜 그렇게 하고 싶어요?
-- `followUp.2.ko` · KO: 비슷한 경험이 있어요?
-- `followUp.3.ko` · KO: 조건이 달라지면 답도 달라져요?
+- `followUp.1.ko` · KO: 먼저 어떤 말을 해요?
+- `followUp.2.ko` · KO: 혼자 가도 괜찮아요?
+- `followUp.3.ko` · KO: 어떤 모임이면 더 편해요?
 
 #### `q1`
 
 - `question.ko` · KO: 지금 고른다면 친구 100명 / 진짜 친구 3명, 어느 쪽이에요?
 - `question.ja` · JA: 今選ぶなら、友達100人ですか、親友3人ですか？
-- `tutorGuidance.ko` · KO: 오늘의 첫 선택이에요. 정답을 정해 주지 말고 실제 이유를 받으세요.
 - `followUp.1.ko` · KO: 왜 그쪽을 골랐어요?
-- `followUp.2.ko` · KO: 실제 경험이 영향을 줬어요?
-- `followUp.3.ko` · KO: 반대쪽의 장점은 뭐예요?
+- `followUp.2.ko` · KO: 지금 친구 관계도 그쪽에 가까워요?
+- `followUp.3.ko` · KO: 반대쪽의 좋은 점은 뭐예요?
 
 #### `q2`
 
-- `question.ko` · KO: 선택한 쪽이 현실이 되면 인간관계에서 가장 먼저 무엇이 달라질까요?
-- `question.ja` · JA: 選んだほうが現実になったら、人間関係で最初に何が変わりますか？
-- `tutorGuidance.ko` · KO: 선택을 실제 하루의 변화에 연결해 주세요.
-- `followUp.1.ko` · KO: 가장 먼저 달라지는 장면은 뭐예요?
-- `followUp.2.ko` · KO: 주변 사람에게도 변화가 생겨요?
-- `followUp.3.ko` · KO: 생각보다 불편한 점도 있을까요?
+- `question.ko` · KO: 친구 100명이나 진짜 친구 3명 중 하나만 가질 수 있다면, 평소 인간관계가 어떻게 달라질까요?
+- `question.ja` · JA: 友達100人か親友3人のどちらかしか持てないなら、普段の人間関係はどう変わるでしょうか？
+- `followUp.1.ko` · KO: 누구와 보내는 시간이 달라질까요?
+- `followUp.2.ko` · KO: 연락하는 방식도 바뀔까요?
+- `followUp.3.ko` · KO: 가장 아쉬울 것 같은 점은 뭐예요?
 
 #### `q3`
 
-- `question.ko` · KO: 최근 도움이나 새로운 연결이 필요해서 반대쪽이 더 낫다고 느낀 순간은 언제였어요?
-- `question.ja` · JA: 最近、助けや新しいつながりが必要で、反対のほうが良いと感じたのはいつですか？
-- `tutorGuidance.ko` · KO: 처음 선택을 부정하지 말고 반대쪽이 필요했던 예외를 찾으세요. 없으면 가상 장면으로 바꿉니다.
-- `followUp.1.ko` · KO: 그때 무슨 일이 있었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 필요했어요?
-- `followUp.3.ko` · KO: 그 경험 뒤에 생각이 달라졌어요?
+- `question.ko` · KO: 평소 선택과 반대되는 관계가 더 필요할 때는 언제예요?
+- `question.ja` · JA: 普段選ぶほうとは反対の人間関係が、より必要になるのはどんなときですか？
+- `followUp.1.ko` · KO: 어떤 상황에서 그래요?
+- `followUp.2.ko` · KO: 그때 몇 명의 친구가 필요해요?
+- `followUp.3.ko` · KO: 평소 선택의 단점은 뭐예요?
 
 #### `q4`
 
 - `question.ko` · KO: 힘든 일이 생겼을 때 연락할 세 명만 있다면 충분할까요?
 - `question.ja` · JA: 大変なことが起きたとき、連絡できる人が3人だけでも十分ですか？
-- `tutorGuidance.ko` · KO: 가상의 조건 하나가 선택을 어떻게 흔드는지 확인하세요.
-- `followUp.1.ko` · KO: 어느 조건이 가장 중요해요?
-- `followUp.2.ko` · KO: 얼마 동안이라면 가능해요?
-- `followUp.3.ko` · KO: 조건 하나를 바꿀 수 있다면요?
+- `followUp.1.ko` · KO: 그 세 명에게 어떤 도움을 바랄 수 있어요?
+- `followUp.2.ko` · KO: 자주 연락하지 않아도 괜찮아요?
+- `followUp.3.ko` · KO: 새 친구를 만들 필요는 없어요?
 
 #### `q5`
 
 - `question.ko` · KO: 새로운 도시로 이사하면 어느 쪽이 더 필요할까요?
 - `question.ja` · JA: 新しい街へ引っ越したら、どちらのほうが必要でしょうか？
-- `tutorGuidance.ko` · KO: 사람, 기간, 환경 중 달라진 조건 하나에 집중하세요.
-- `followUp.1.ko` · KO: 누구의 상황이 영향을 줘요?
-- `followUp.2.ko` · KO: 언제쯤 그런 변화가 올까요?
-- `followUp.3.ko` · KO: 지금도 그 변화에 가까워요?
+- `followUp.1.ko` · KO: 처음에는 어떤 친구가 필요해요?
+- `followUp.2.ko` · KO: 친한 친구를 만드는 데 얼마나 걸릴까요?
+- `followUp.3.ko` · KO: 기존 친구와는 어떻게 연락할 거예요?
 
 #### `q6`
 
 - `question.ko` · KO: 어떤 관계 변화가 생기면 반대쪽을 고를 거예요?
 - `question.ja` · JA: どんな人間関係の変化があれば、反対のほうを選びますか？
-- `tutorGuidance.ko` · KO: 처음 선택을 뒤집는 구체적인 경계 하나로 닫으세요.
-- `followUp.1.ko` · KO: 그 조건은 얼마나 오래 이어져야 해요?
-- `followUp.2.ko` · KO: 누가 함께하면 답이 달라져요?
-- `followUp.3.ko` · KO: 원래 선택으로 돌아오는 조건도 있어요?
+- `followUp.1.ko` · KO: 어떤 관계가 부족해지면 선택을 바꿔요?
+- `followUp.2.ko` · KO: 새로운 사람을 만날 기회가 중요해요?
+- `followUp.3.ko` · KO: 지금도 바꾸고 싶은 점이 있어요?
 
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/02-many-friends-or-three-close-friends/lesson.html`
-- sha256: `c130e9506075328f56c578f4065e5e62c8ca2cc8afd5da4caf15ac3b22b5f2da`
+- sha256: `7499d85b76d76da1fb3c1d62c363c65624c6d5510d6e6367c84a0be40197eabe`
 - source kind: `article`
 
 #### `metadata`
@@ -595,80 +576,73 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 최근에 친구 한 명과 오래 이야기한 적이 있어요?
 - `question.ja` · JA: 最近、一人の友達とゆっくり話したことはありますか？
-- `tutorGuidance.ko` · KO: 최근의 작은 장면 하나를 받으세요. 경험이 없으면 가까운 예나 가상 장면으로 바꿉니다.
-- `followUp.1.ko` · KO: 그때 어떤 상황이었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 좋거나 불편했어요?
-- `followUp.3.ko` · KO: 다시 같은 선택을 할 거예요?
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 누구와 이야기했어요?
+- `followUp.2.ko` · KO: 무슨 이야기를 했어요?
+- `followUp.3.ko` · KO: 왜 오래 이야기할 수 있었어요?
 
 #### `warm-2`
 
 - `question.ko` · KO: 모르는 사람이 많은 모임에 가면 먼저 말을 거는 편이에요?
 - `question.ja` · JA: 知らない人が多い集まりでは、自分から話しかけるほうですか？
-- `tutorGuidance.ko` · KO: 바로 떠오르는 행동을 구체화해 주세요.
-- `followUp.1.ko` · KO: 왜 그렇게 하고 싶어요?
-- `followUp.2.ko` · KO: 비슷한 경험이 있어요?
-- `followUp.3.ko` · KO: 조건이 달라지면 답도 달라져요?
+- `followUp.1.ko` · KO: 먼저 어떤 말을 해요?
+- `followUp.2.ko` · KO: 혼자 가도 괜찮아요?
+- `followUp.3.ko` · KO: 어떤 모임이면 더 편해요?
 
 #### `q1`
 
 - `question.ko` · KO: 지금 고른다면 친구 100명 / 진짜 친구 3명, 어느 쪽이에요?
 - `question.ja` · JA: 今選ぶなら、友達100人ですか、親友3人ですか？
-- `tutorGuidance.ko` · KO: 오늘의 첫 선택이에요. 정답을 정해 주지 말고 실제 이유를 받으세요.
 - `followUp.1.ko` · KO: 왜 그쪽을 골랐어요?
-- `followUp.2.ko` · KO: 실제 경험이 영향을 줬어요?
-- `followUp.3.ko` · KO: 반대쪽의 장점은 뭐예요?
+- `followUp.2.ko` · KO: 지금 친구 관계도 그쪽에 가까워요?
+- `followUp.3.ko` · KO: 반대쪽의 좋은 점은 뭐예요?
 
 #### `q2`
 
-- `question.ko` · KO: 선택한 쪽이 현실이 되면 인간관계에서 가장 먼저 무엇이 달라질까요?
-- `question.ja` · JA: 選んだほうが現実になったら、人間関係で最初に何が変わりますか？
-- `tutorGuidance.ko` · KO: 선택을 실제 하루의 변화에 연결해 주세요.
-- `followUp.1.ko` · KO: 가장 먼저 달라지는 장면은 뭐예요?
-- `followUp.2.ko` · KO: 주변 사람에게도 변화가 생겨요?
-- `followUp.3.ko` · KO: 생각보다 불편한 점도 있을까요?
+- `question.ko` · KO: 친구 100명이나 진짜 친구 3명 중 하나만 가질 수 있다면, 평소 인간관계가 어떻게 달라질까요?
+- `question.ja` · JA: 友達100人か親友3人のどちらかしか持てないなら、普段の人間関係はどう変わるでしょうか？
+- `followUp.1.ko` · KO: 누구와 보내는 시간이 달라질까요?
+- `followUp.2.ko` · KO: 연락하는 방식도 바뀔까요?
+- `followUp.3.ko` · KO: 가장 아쉬울 것 같은 점은 뭐예요?
 
 #### `q3`
 
-- `question.ko` · KO: 최근 도움이나 새로운 연결이 필요해서 반대쪽이 더 낫다고 느낀 순간은 언제였어요?
-- `question.ja` · JA: 最近、助けや新しいつながりが必要で、反対のほうが良いと感じたのはいつですか？
-- `tutorGuidance.ko` · KO: 처음 선택을 부정하지 말고 반대쪽이 필요했던 예외를 찾으세요. 없으면 가상 장면으로 바꿉니다.
-- `followUp.1.ko` · KO: 그때 무슨 일이 있었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 필요했어요?
-- `followUp.3.ko` · KO: 그 경험 뒤에 생각이 달라졌어요?
+- `question.ko` · KO: 평소 선택과 반대되는 관계가 더 필요할 때는 언제예요?
+- `question.ja` · JA: 普段選ぶほうとは反対の人間関係が、より必要になるのはどんなときですか？
+- `followUp.1.ko` · KO: 어떤 상황에서 그래요?
+- `followUp.2.ko` · KO: 그때 몇 명의 친구가 필요해요?
+- `followUp.3.ko` · KO: 평소 선택의 단점은 뭐예요?
 
 #### `q4`
 
 - `question.ko` · KO: 힘든 일이 생기면 연락할 사람이 세 명뿐이어도 괜찮아요?
 - `question.ja` · JA: 大変なことが起きたら、連絡できる人が3人だけでも大丈夫ですか？
-- `tutorGuidance.ko` · KO: 가상의 조건 하나가 선택을 어떻게 흔드는지 확인하세요.
-- `followUp.1.ko` · KO: 어느 조건이 가장 중요해요?
-- `followUp.2.ko` · KO: 얼마 동안이라면 가능해요?
-- `followUp.3.ko` · KO: 조건 하나를 바꿀 수 있다면요?
+- `followUp.1.ko` · KO: 그 세 명에게 어떤 도움을 바랄 수 있어요?
+- `followUp.2.ko` · KO: 자주 연락하지 않아도 괜찮아요?
+- `followUp.3.ko` · KO: 새 친구를 만들 필요는 없어요?
 
 #### `q5`
 
 - `question.ko` · KO: 새로운 도시로 이사하면 무엇을 고를 거예요?
 - `question.ja` · JA: 新しい街へ引っ越したら、どちらを選びますか？
-- `tutorGuidance.ko` · KO: 사람, 기간, 환경 중 달라진 조건 하나에 집중하세요.
-- `followUp.1.ko` · KO: 누구의 상황이 영향을 줘요?
-- `followUp.2.ko` · KO: 언제쯤 그런 변화가 올까요?
-- `followUp.3.ko` · KO: 지금도 그 변화에 가까워요?
+- `followUp.1.ko` · KO: 처음에는 어떤 친구가 필요해요?
+- `followUp.2.ko` · KO: 친한 친구를 만드는 데 얼마나 걸릴까요?
+- `followUp.3.ko` · KO: 기존 친구와는 어떻게 연락할 거예요?
 
 #### `q6`
 
 - `question.ko` · KO: 어떤 관계 변화가 생기면 반대쪽을 고를 거예요?
 - `question.ja` · JA: どんな人間関係の変化があれば、反対のほうを選びますか？
-- `tutorGuidance.ko` · KO: 처음 선택을 뒤집는 구체적인 경계 하나로 닫으세요.
-- `followUp.1.ko` · KO: 그 조건은 얼마나 오래 이어져야 해요?
-- `followUp.2.ko` · KO: 누가 함께하면 답이 달라져요?
-- `followUp.3.ko` · KO: 원래 선택으로 돌아오는 조건도 있어요?
+- `followUp.1.ko` · KO: 어떤 관계가 부족해지면 선택을 바꿔요?
+- `followUp.2.ko` · KO: 새로운 사람을 만날 기회가 중요해요?
+- `followUp.3.ko` · KO: 지금도 바꾸고 싶은 점이 있어요?
 
 ## 03 · 평생 여름 vs 평생 겨울
 
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/03-eternal-summer-or-winter/lesson.html`
-- sha256: `d8005bfc0b781c8bf167e237fa18866516f9664354310383ac9a105ddc32cd48`
+- sha256: `7e259c2fd30ecb5860886133c80248334233bbe05df842b2f0f4e1f7ce0db23a`
 - source kind: `article`
 
 #### `metadata`
@@ -760,78 +734,71 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 이번 여름이나 겨울에 가장 힘들었던 날은 언제였어요?
 - `question.ja` · JA: この夏や冬で、いちばん大変だった日はいつでしたか？
-- `tutorGuidance.ko` · KO: 최근의 작은 장면 하나를 받으세요. 경험이 없으면 가까운 예나 가상 장면으로 바꿉니다.
-- `followUp.1.ko` · KO: 그때 어떤 상황이었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 좋거나 불편했어요?
-- `followUp.3.ko` · KO: 다시 같은 선택을 할 거예요?
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 날씨가 어땠어요?
+- `followUp.2.ko` · KO: 그날 무엇을 해야 했어요?
+- `followUp.3.ko` · KO: 몸이나 기분은 어땠어요?
 
 #### `warm-2`
 
 - `question.ko` · KO: 날씨가 완벽한 하루라면 밖에서 뭘 하고 싶어요?
 - `question.ja` · JA: 天気が完璧な一日なら、外で何をしたいですか？
-- `tutorGuidance.ko` · KO: 바로 떠오르는 행동을 구체화해 주세요.
-- `followUp.1.ko` · KO: 왜 그렇게 하고 싶어요?
-- `followUp.2.ko` · KO: 비슷한 경험이 있어요?
-- `followUp.3.ko` · KO: 조건이 달라지면 답도 달라져요?
+- `followUp.1.ko` · KO: 어디에 가고 싶어요?
+- `followUp.2.ko` · KO: 누구와 하고 싶어요?
+- `followUp.3.ko` · KO: 몇 시간 정도 밖에 있고 싶어요?
 
 #### `q1`
 
 - `question.ko` · KO: 지금 고른다면 평생 여름 / 평생 겨울, 어느 쪽이에요?
 - `question.ja` · JA: 今選ぶなら、一生夏ですか、一生冬ですか？
-- `tutorGuidance.ko` · KO: 오늘의 첫 선택이에요. 정답을 정해 주지 말고 실제 이유를 받으세요.
-- `followUp.1.ko` · KO: 왜 그쪽을 골랐어요?
-- `followUp.2.ko` · KO: 실제 경험이 영향을 줬어요?
-- `followUp.3.ko` · KO: 반대쪽의 장점은 뭐예요?
+- `followUp.1.ko` · KO: 왜 그 계절을 골랐어요?
+- `followUp.2.ko` · KO: 그 계절에 가장 좋아하는 활동은 뭐예요?
+- `followUp.3.ko` · KO: 반대 계절의 장점은 뭐예요?
 
 #### `q2`
 
-- `question.ko` · KO: 일 년 내내 그 계절이라면 생활에서 가장 먼저 무엇이 달라질까요?
-- `question.ja` · JA: 一年中その季節なら、生活で最初に何が変わりますか？
-- `tutorGuidance.ko` · KO: 선택을 실제 하루의 변화에 연결해 주세요.
-- `followUp.1.ko` · KO: 가장 먼저 달라지는 장면은 뭐예요?
-- `followUp.2.ko` · KO: 주변 사람에게도 변화가 생겨요?
-- `followUp.3.ko` · KO: 생각보다 불편한 점도 있을까요?
+- `question.ko` · KO: 일 년 내내 고른 계절만 계속된다면, 일상이 어떻게 달라질까요?
+- `question.ja` · JA: 一年中、選んだ季節だけが続くなら、日常はどう変わるでしょうか？
+- `followUp.1.ko` · KO: 옷차림이 어떻게 달라져요?
+- `followUp.2.ko` · KO: 밖에서 하는 활동도 바뀌어요?
+- `followUp.3.ko` · KO: 가장 힘들 것 같은 점은 뭐예요?
 
 #### `q3`
 
-- `question.ko` · KO: 최근 계절 활동이나 몸 상태가 달라져서 반대쪽이 더 낫다고 느낀 순간은 언제였어요?
-- `question.ja` · JA: 最近、季節の活動や体調が変わって、反対のほうが良いと感じたのはいつですか？
-- `tutorGuidance.ko` · KO: 처음 선택을 부정하지 말고 반대쪽이 필요했던 예외를 찾으세요. 없으면 가상 장면으로 바꿉니다.
-- `followUp.1.ko` · KO: 그때 무슨 일이 있었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 필요했어요?
-- `followUp.3.ko` · KO: 그 경험 뒤에 생각이 달라졌어요?
+- `question.ko` · KO: 평소 고른 계절보다 반대 계절이 더 좋을 때는 언제예요?
+- `question.ja` · JA: 普段選ぶ季節より、反対の季節のほうがよいのはどんなときですか？
+- `followUp.1.ko` · KO: 어떤 활동을 할 때 그래요?
+- `followUp.2.ko` · KO: 몸 상태도 선택에 영향을 줘요?
+- `followUp.3.ko` · KO: 며칠만이라도 반대 계절을 원해요?
 
 #### `q4`
 
 - `question.ko` · KO: 집과 교통의 냉난방이 완벽해도 같은 계절을 고를 거예요?
 - `question.ja` · JA: 家や交通機関の冷暖房が完璧でも、同じ季節を選びますか？
-- `tutorGuidance.ko` · KO: 가상의 조건 하나가 선택을 어떻게 흔드는지 확인하세요.
-- `followUp.1.ko` · KO: 어느 조건이 가장 중요해요?
-- `followUp.2.ko` · KO: 얼마 동안이라면 가능해요?
-- `followUp.3.ko` · KO: 조건 하나를 바꿀 수 있다면요?
+- `followUp.1.ko` · KO: 냉난방 말고 중요한 조건은 뭐예요?
+- `followUp.2.ko` · KO: 밖에 나갈 때도 같은 선택이에요?
+- `followUp.3.ko` · KO: 전기 요금은 영향을 줄까요?
 
 #### `q5`
 
 - `question.ko` · KO: 낮의 길이가 늘 같다면 선택이 달라질까요?
 - `question.ja` · JA: 昼の長さがいつも同じなら、選択は変わりますか？
-- `tutorGuidance.ko` · KO: 사람, 기간, 환경 중 달라진 조건 하나에 집중하세요.
-- `followUp.1.ko` · KO: 누구의 상황이 영향을 줘요?
-- `followUp.2.ko` · KO: 언제쯤 그런 변화가 올까요?
-- `followUp.3.ko` · KO: 지금도 그 변화에 가까워요?
+- `followUp.1.ko` · KO: 낮이 길거나 짧은 게 왜 중요해요?
+- `followUp.2.ko` · KO: 잠자는 시간도 달라질까요?
+- `followUp.3.ko` · KO: 낮의 길이 말고 바꾸고 싶은 조건은 뭐예요?
 
 #### `q6`
 
 - `question.ko` · KO: 어떤 날씨 조건이면 반대쪽을 고를 거예요?
 - `question.ja` · JA: どんな天候条件なら、反対のほうを選びますか？
-- `tutorGuidance.ko` · KO: 처음 선택을 뒤집는 구체적인 경계 하나로 닫으세요.
-- `followUp.1.ko` · KO: 그 조건은 얼마나 오래 이어져야 해요?
-- `followUp.2.ko` · KO: 누가 함께하면 답이 달라져요?
-- `followUp.3.ko` · KO: 원래 선택으로 돌아오는 조건도 있어요?
+- `followUp.1.ko` · KO: 온도는 어느 정도여야 해요?
+- `followUp.2.ko` · KO: 비나 눈도 영향을 줘요?
+- `followUp.3.ko` · KO: 그 조건이면 무엇을 하고 싶어요?
 
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/03-eternal-summer-or-winter/lesson.html`
-- sha256: `7b44647173cd5685855fc3a6723496994d4cf7cd27d6f2f9207319d1bece9041`
+- sha256: `5ce90c11667e04ae3693711a3c5f3c0112db6e64e4864790cf301c1878eb0342`
 - source kind: `article`
 
 #### `metadata`
@@ -923,80 +890,73 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 이번 여름이나 겨울에 가장 힘들었던 날은 언제였어요?
 - `question.ja` · JA: この夏や冬で、いちばん大変だった日はいつでしたか？
-- `tutorGuidance.ko` · KO: 최근의 작은 장면 하나를 받으세요. 경험이 없으면 가까운 예나 가상 장면으로 바꿉니다.
-- `followUp.1.ko` · KO: 그때 어떤 상황이었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 좋거나 불편했어요?
-- `followUp.3.ko` · KO: 다시 같은 선택을 할 거예요?
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 날씨가 어땠어요?
+- `followUp.2.ko` · KO: 그날 무엇을 해야 했어요?
+- `followUp.3.ko` · KO: 몸이나 기분은 어땠어요?
 
 #### `warm-2`
 
 - `question.ko` · KO: 날씨가 완벽한 하루라면 밖에서 뭘 하고 싶어요?
 - `question.ja` · JA: 天気が完璧な一日なら、外で何をしたいですか？
-- `tutorGuidance.ko` · KO: 바로 떠오르는 행동을 구체화해 주세요.
-- `followUp.1.ko` · KO: 왜 그렇게 하고 싶어요?
-- `followUp.2.ko` · KO: 비슷한 경험이 있어요?
-- `followUp.3.ko` · KO: 조건이 달라지면 답도 달라져요?
+- `followUp.1.ko` · KO: 어디에 가고 싶어요?
+- `followUp.2.ko` · KO: 누구와 하고 싶어요?
+- `followUp.3.ko` · KO: 몇 시간 정도 밖에 있고 싶어요?
 
 #### `q1`
 
 - `question.ko` · KO: 지금 고른다면 평생 여름 / 평생 겨울, 어느 쪽이에요?
 - `question.ja` · JA: 今選ぶなら、一生夏ですか、一生冬ですか？
-- `tutorGuidance.ko` · KO: 오늘의 첫 선택이에요. 정답을 정해 주지 말고 실제 이유를 받으세요.
-- `followUp.1.ko` · KO: 왜 그쪽을 골랐어요?
-- `followUp.2.ko` · KO: 실제 경험이 영향을 줬어요?
-- `followUp.3.ko` · KO: 반대쪽의 장점은 뭐예요?
+- `followUp.1.ko` · KO: 왜 그 계절을 골랐어요?
+- `followUp.2.ko` · KO: 그 계절에 가장 좋아하는 활동은 뭐예요?
+- `followUp.3.ko` · KO: 반대 계절의 장점은 뭐예요?
 
 #### `q2`
 
-- `question.ko` · KO: 일 년 내내 그 계절이라면 생활에서 가장 먼저 무엇이 달라질까요?
-- `question.ja` · JA: 一年中その季節なら、生活で最初に何が変わりますか？
-- `tutorGuidance.ko` · KO: 선택을 실제 하루의 변화에 연결해 주세요.
-- `followUp.1.ko` · KO: 가장 먼저 달라지는 장면은 뭐예요?
-- `followUp.2.ko` · KO: 주변 사람에게도 변화가 생겨요?
-- `followUp.3.ko` · KO: 생각보다 불편한 점도 있을까요?
+- `question.ko` · KO: 일 년 내내 고른 계절만 계속된다면, 일상이 어떻게 달라질까요?
+- `question.ja` · JA: 一年中、選んだ季節だけが続くなら、日常はどう変わるでしょうか？
+- `followUp.1.ko` · KO: 옷차림이 어떻게 달라져요?
+- `followUp.2.ko` · KO: 밖에서 하는 활동도 바뀌어요?
+- `followUp.3.ko` · KO: 가장 힘들 것 같은 점은 뭐예요?
 
 #### `q3`
 
-- `question.ko` · KO: 최근 계절 활동이나 몸 상태가 달라져서 반대쪽이 더 낫다고 느낀 순간은 언제였어요?
-- `question.ja` · JA: 最近、季節の活動や体調が変わって、反対のほうが良いと感じたのはいつですか？
-- `tutorGuidance.ko` · KO: 처음 선택을 부정하지 말고 반대쪽이 필요했던 예외를 찾으세요. 없으면 가상 장면으로 바꿉니다.
-- `followUp.1.ko` · KO: 그때 무슨 일이 있었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 필요했어요?
-- `followUp.3.ko` · KO: 그 경험 뒤에 생각이 달라졌어요?
+- `question.ko` · KO: 평소 고른 계절보다 반대 계절이 더 좋을 때는 언제예요?
+- `question.ja` · JA: 普段選ぶ季節より、反対の季節のほうがよいのはどんなときですか？
+- `followUp.1.ko` · KO: 어떤 활동을 할 때 그래요?
+- `followUp.2.ko` · KO: 몸 상태도 선택에 영향을 줘요?
+- `followUp.3.ko` · KO: 며칠만이라도 반대 계절을 원해요?
 
 #### `q4`
 
 - `question.ko` · KO: 집과 교통이 늘 시원하거나 따뜻해도 같은 계절을 골라요?
 - `question.ja` · JA: 家や交通機関がいつも快適でも、同じ季節を選びますか？
-- `tutorGuidance.ko` · KO: 가상의 조건 하나가 선택을 어떻게 흔드는지 확인하세요.
-- `followUp.1.ko` · KO: 어느 조건이 가장 중요해요?
-- `followUp.2.ko` · KO: 얼마 동안이라면 가능해요?
-- `followUp.3.ko` · KO: 조건 하나를 바꿀 수 있다면요?
+- `followUp.1.ko` · KO: 냉난방 말고 중요한 조건은 뭐예요?
+- `followUp.2.ko` · KO: 밖에 나갈 때도 같은 선택이에요?
+- `followUp.3.ko` · KO: 전기 요금은 영향을 줄까요?
 
 #### `q5`
 
 - `question.ko` · KO: 낮의 길이가 같아도 선택이 바뀌어요?
 - `question.ja` · JA: 昼の長さが同じでも、選択は変わりますか？
-- `tutorGuidance.ko` · KO: 사람, 기간, 환경 중 달라진 조건 하나에 집중하세요.
-- `followUp.1.ko` · KO: 누구의 상황이 영향을 줘요?
-- `followUp.2.ko` · KO: 언제쯤 그런 변화가 올까요?
-- `followUp.3.ko` · KO: 지금도 그 변화에 가까워요?
+- `followUp.1.ko` · KO: 낮이 길거나 짧은 게 왜 중요해요?
+- `followUp.2.ko` · KO: 잠자는 시간도 달라질까요?
+- `followUp.3.ko` · KO: 낮의 길이 말고 바꾸고 싶은 조건은 뭐예요?
 
 #### `q6`
 
 - `question.ko` · KO: 어떤 날씨 조건이면 반대쪽을 고를 거예요?
 - `question.ja` · JA: どんな天候条件なら、反対のほうを選びますか？
-- `tutorGuidance.ko` · KO: 처음 선택을 뒤집는 구체적인 경계 하나로 닫으세요.
-- `followUp.1.ko` · KO: 그 조건은 얼마나 오래 이어져야 해요?
-- `followUp.2.ko` · KO: 누가 함께하면 답이 달라져요?
-- `followUp.3.ko` · KO: 원래 선택으로 돌아오는 조건도 있어요?
+- `followUp.1.ko` · KO: 온도는 어느 정도여야 해요?
+- `followUp.2.ko` · KO: 비나 눈도 영향을 줘요?
+- `followUp.3.ko` · KO: 그 조건이면 무엇을 하고 싶어요?
 
 ## 04 · 아침형 인간 vs 밤형 인간
 
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/04-morning-person-or-night-owl/lesson.html`
-- sha256: `0e6f61b0b1f55188244fd7f37b0c28c226f99c8c3bdf42091b3bfd415bbb04bb`
+- sha256: `14e3bc76c5044fee6f3d49f400b52d6e66bce84805f6f2bcd776caa960e761ab`
 - source kind: `article`
 
 #### `metadata`
@@ -1088,78 +1048,71 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 오늘 가장 정신이 맑았던 시간은 언제였어요?
 - `question.ja` · JA: 今日、いちばん頭がさえていたのは何時ごろでしたか？
-- `tutorGuidance.ko` · KO: 최근의 작은 장면 하나를 받으세요. 경험이 없으면 가까운 예나 가상 장면으로 바꿉니다.
-- `followUp.1.ko` · KO: 그때 어떤 상황이었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 좋거나 불편했어요?
-- `followUp.3.ko` · KO: 다시 같은 선택을 할 거예요?
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 그때 무엇을 하고 있었어요?
+- `followUp.2.ko` · KO: 몇 시간이나 집중할 수 있었어요?
+- `followUp.3.ko` · KO: 평소에도 그 시간에 정신이 맑아요?
 
 #### `warm-2`
 
 - `question.ko` · KO: 내일 아무 일정이 없다면 몇 시에 자고 일어나고 싶어요?
 - `question.ja` · JA: 明日何も予定がなければ、何時に寝て起きたいですか？
-- `tutorGuidance.ko` · KO: 바로 떠오르는 행동을 구체화해 주세요.
-- `followUp.1.ko` · KO: 왜 그렇게 하고 싶어요?
-- `followUp.2.ko` · KO: 비슷한 경험이 있어요?
-- `followUp.3.ko` · KO: 조건이 달라지면 답도 달라져요?
+- `followUp.1.ko` · KO: 왜 그 시간에 자고 싶어요?
+- `followUp.2.ko` · KO: 몇 시간 자면 충분해요?
+- `followUp.3.ko` · KO: 일정이 생기면 시간도 바뀌어요?
 
 #### `q1`
 
 - `question.ko` · KO: 지금 고른다면 아침형 인간 / 밤형 인간, 어느 쪽이에요?
 - `question.ja` · JA: 今選ぶなら、朝型の生活ですか、夜型の生活ですか？
-- `tutorGuidance.ko` · KO: 오늘의 첫 선택이에요. 정답을 정해 주지 말고 실제 이유를 받으세요.
-- `followUp.1.ko` · KO: 왜 그쪽을 골랐어요?
-- `followUp.2.ko` · KO: 실제 경험이 영향을 줬어요?
-- `followUp.3.ko` · KO: 반대쪽의 장점은 뭐예요?
+- `followUp.1.ko` · KO: 언제 가장 집중이 잘돼요?
+- `followUp.2.ko` · KO: 지금 생활도 그쪽에 가까워요?
+- `followUp.3.ko` · KO: 반대쪽의 좋은 점은 뭐예요?
 
 #### `q2`
 
-- `question.ko` · KO: 선택한 쪽이 현실이 되면 하루 리듬에서 가장 먼저 무엇이 달라질까요?
-- `question.ja` · JA: 選んだほうが現実になったら、一日のリズムで最初に何が変わりますか？
-- `tutorGuidance.ko` · KO: 선택을 실제 하루의 변화에 연결해 주세요.
-- `followUp.1.ko` · KO: 가장 먼저 달라지는 장면은 뭐예요?
-- `followUp.2.ko` · KO: 주변 사람에게도 변화가 생겨요?
-- `followUp.3.ko` · KO: 생각보다 불편한 점도 있을까요?
+- `question.ko` · KO: 앞으로 매일 아침형이나 밤형 생활을 해야 한다면, 하루 일과가 어떻게 달라질까요?
+- `question.ja` · JA: これから毎日、朝型か夜型の生活をするなら、一日の過ごし方はどう変わるでしょうか？
+- `followUp.1.ko` · KO: 자고 일어나는 시간이 어떻게 바뀌어요?
+- `followUp.2.ko` · KO: 식사나 운동 시간도 달라져요?
+- `followUp.3.ko` · KO: 가장 적응하기 힘든 것은 뭐예요?
 
 #### `q3`
 
-- `question.ko` · KO: 최근 꼭 맞춰야 하는 일정이 생겨서 반대쪽이 더 낫다고 느낀 순간은 언제였어요?
-- `question.ja` · JA: 最近、必ず合わせる予定ができて、反対のほうが良いと感じたのはいつですか？
-- `tutorGuidance.ko` · KO: 처음 선택을 부정하지 말고 반대쪽이 필요했던 예외를 찾으세요. 없으면 가상 장면으로 바꿉니다.
-- `followUp.1.ko` · KO: 그때 무슨 일이 있었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 필요했어요?
-- `followUp.3.ko` · KO: 그 경험 뒤에 생각이 달라졌어요?
+- `question.ko` · KO: 평소와 반대되는 생활 리듬이 더 나을 때는 언제예요?
+- `question.ja` · JA: 普段とは反対の生活リズムのほうがよいのは、どんなときですか？
+- `followUp.1.ko` · KO: 어떤 일정이 있을 때 그래요?
+- `followUp.2.ko` · KO: 억지로 리듬을 바꾸면 힘들어요?
+- `followUp.3.ko` · KO: 며칠 동안은 반대 리듬으로 살 수 있어요?
 
 #### `q4`
 
 - `question.ko` · KO: 출근이나 등교 시간이 없다면 지금과 같은 생활을 고를 거예요?
 - `question.ja` · JA: 出勤や登校の時間がなければ、今と同じ生活を選びますか？
-- `tutorGuidance.ko` · KO: 가상의 조건 하나가 선택을 어떻게 흔드는지 확인하세요.
-- `followUp.1.ko` · KO: 어느 조건이 가장 중요해요?
-- `followUp.2.ko` · KO: 얼마 동안이라면 가능해요?
-- `followUp.3.ko` · KO: 조건 하나를 바꿀 수 있다면요?
+- `followUp.1.ko` · KO: 몇 시에 자고 일어나고 싶어요?
+- `followUp.2.ko` · KO: 일정이 없어도 같은 리듬을 지켜요?
+- `followUp.3.ko` · KO: 건강에는 어느 쪽이 더 좋아요?
 
 #### `q5`
 
 - `question.ko` · KO: 가족이나 함께 사는 사람의 리듬이 반대라면 어떻게 할까요?
 - `question.ja` · JA: 家族や同居人の生活リズムが反対なら、どうしますか？
-- `tutorGuidance.ko` · KO: 사람, 기간, 환경 중 달라진 조건 하나에 집중하세요.
-- `followUp.1.ko` · KO: 누구의 상황이 영향을 줘요?
-- `followUp.2.ko` · KO: 언제쯤 그런 변화가 올까요?
-- `followUp.3.ko` · KO: 지금도 그 변화에 가까워요?
+- `followUp.1.ko` · KO: 소리나 조명을 어떻게 조절할 거예요?
+- `followUp.2.ko` · KO: 함께 보내는 시간은 언제예요?
+- `followUp.3.ko` · KO: 누가 더 많이 맞춰야 할까요?
 
 #### `q6`
 
 - `question.ko` · KO: 어떤 일정이면 반대쪽 생활을 고를 거예요?
 - `question.ja` · JA: どんな予定なら、反対の生活を選びますか？
-- `tutorGuidance.ko` · KO: 처음 선택을 뒤집는 구체적인 경계 하나로 닫으세요.
-- `followUp.1.ko` · KO: 그 조건은 얼마나 오래 이어져야 해요?
-- `followUp.2.ko` · KO: 누가 함께하면 답이 달라져요?
-- `followUp.3.ko` · KO: 원래 선택으로 돌아오는 조건도 있어요?
+- `followUp.1.ko` · KO: 어떤 일정이면 선택을 바꿔요?
+- `followUp.2.ko` · KO: 얼마나 오래 그 리듬을 유지할 수 있어요?
+- `followUp.3.ko` · KO: 원래 리듬으로 어떻게 돌아올 거예요?
 
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/04-morning-person-or-night-owl/lesson.html`
-- sha256: `13126f886c9f078b3c351ead92d0035e2ceb7422607387179a4c556920008556`
+- sha256: `4abde5579c69baa2aa50a220a4e157cf78ddc92f433317a79bcabcfaba110c1a`
 - source kind: `article`
 
 #### `metadata`
@@ -1251,80 +1204,73 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 오늘 가장 정신이 맑았던 시간은 언제였어요?
 - `question.ja` · JA: 今日、いちばん頭がさえていたのは何時ごろでしたか？
-- `tutorGuidance.ko` · KO: 최근의 작은 장면 하나를 받으세요. 경험이 없으면 가까운 예나 가상 장면으로 바꿉니다.
-- `followUp.1.ko` · KO: 그때 어떤 상황이었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 좋거나 불편했어요?
-- `followUp.3.ko` · KO: 다시 같은 선택을 할 거예요?
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 그때 무엇을 하고 있었어요?
+- `followUp.2.ko` · KO: 몇 시간이나 집중할 수 있었어요?
+- `followUp.3.ko` · KO: 평소에도 그 시간에 정신이 맑아요?
 
 #### `warm-2`
 
 - `question.ko` · KO: 내일 아무 일정이 없다면 몇 시에 자고 일어나고 싶어요?
 - `question.ja` · JA: 明日何も予定がなければ、何時に寝て起きたいですか？
-- `tutorGuidance.ko` · KO: 바로 떠오르는 행동을 구체화해 주세요.
-- `followUp.1.ko` · KO: 왜 그렇게 하고 싶어요?
-- `followUp.2.ko` · KO: 비슷한 경험이 있어요?
-- `followUp.3.ko` · KO: 조건이 달라지면 답도 달라져요?
+- `followUp.1.ko` · KO: 왜 그 시간에 자고 싶어요?
+- `followUp.2.ko` · KO: 몇 시간 자면 충분해요?
+- `followUp.3.ko` · KO: 일정이 생기면 시간도 바뀌어요?
 
 #### `q1`
 
 - `question.ko` · KO: 지금 고른다면 아침형 인간 / 밤형 인간, 어느 쪽이에요?
 - `question.ja` · JA: 今選ぶなら、朝型の生活ですか、夜型の生活ですか？
-- `tutorGuidance.ko` · KO: 오늘의 첫 선택이에요. 정답을 정해 주지 말고 실제 이유를 받으세요.
-- `followUp.1.ko` · KO: 왜 그쪽을 골랐어요?
-- `followUp.2.ko` · KO: 실제 경험이 영향을 줬어요?
-- `followUp.3.ko` · KO: 반대쪽의 장점은 뭐예요?
+- `followUp.1.ko` · KO: 언제 가장 집중이 잘돼요?
+- `followUp.2.ko` · KO: 지금 생활도 그쪽에 가까워요?
+- `followUp.3.ko` · KO: 반대쪽의 좋은 점은 뭐예요?
 
 #### `q2`
 
-- `question.ko` · KO: 선택한 쪽이 현실이 되면 하루 리듬에서 가장 먼저 무엇이 달라질까요?
-- `question.ja` · JA: 選んだほうが現実になったら、一日のリズムで最初に何が変わりますか？
-- `tutorGuidance.ko` · KO: 선택을 실제 하루의 변화에 연결해 주세요.
-- `followUp.1.ko` · KO: 가장 먼저 달라지는 장면은 뭐예요?
-- `followUp.2.ko` · KO: 주변 사람에게도 변화가 생겨요?
-- `followUp.3.ko` · KO: 생각보다 불편한 점도 있을까요?
+- `question.ko` · KO: 앞으로 매일 아침형이나 밤형 생활을 해야 한다면, 하루 일과가 어떻게 달라질까요?
+- `question.ja` · JA: これから毎日、朝型か夜型の生活をするなら、一日の過ごし方はどう変わるでしょうか？
+- `followUp.1.ko` · KO: 자고 일어나는 시간이 어떻게 바뀌어요?
+- `followUp.2.ko` · KO: 식사나 운동 시간도 달라져요?
+- `followUp.3.ko` · KO: 가장 적응하기 힘든 것은 뭐예요?
 
 #### `q3`
 
-- `question.ko` · KO: 최근 꼭 맞춰야 하는 일정이 생겨서 반대쪽이 더 낫다고 느낀 순간은 언제였어요?
-- `question.ja` · JA: 最近、必ず合わせる予定ができて、反対のほうが良いと感じたのはいつですか？
-- `tutorGuidance.ko` · KO: 처음 선택을 부정하지 말고 반대쪽이 필요했던 예외를 찾으세요. 없으면 가상 장면으로 바꿉니다.
-- `followUp.1.ko` · KO: 그때 무슨 일이 있었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 필요했어요?
-- `followUp.3.ko` · KO: 그 경험 뒤에 생각이 달라졌어요?
+- `question.ko` · KO: 평소와 반대되는 생활 리듬이 더 나을 때는 언제예요?
+- `question.ja` · JA: 普段とは反対の生活リズムのほうがよいのは、どんなときですか？
+- `followUp.1.ko` · KO: 어떤 일정이 있을 때 그래요?
+- `followUp.2.ko` · KO: 억지로 리듬을 바꾸면 힘들어요?
+- `followUp.3.ko` · KO: 며칠 동안은 반대 리듬으로 살 수 있어요?
 
 #### `q4`
 
 - `question.ko` · KO: 아침 일정이 없어도 지금처럼 살고 싶어요?
 - `question.ja` · JA: 朝の予定がなくても、今と同じ生活をしたいですか？
-- `tutorGuidance.ko` · KO: 가상의 조건 하나가 선택을 어떻게 흔드는지 확인하세요.
-- `followUp.1.ko` · KO: 어느 조건이 가장 중요해요?
-- `followUp.2.ko` · KO: 얼마 동안이라면 가능해요?
-- `followUp.3.ko` · KO: 조건 하나를 바꿀 수 있다면요?
+- `followUp.1.ko` · KO: 몇 시에 자고 일어나고 싶어요?
+- `followUp.2.ko` · KO: 일정이 없어도 같은 리듬을 지켜요?
+- `followUp.3.ko` · KO: 건강에는 어느 쪽이 더 좋아요?
 
 #### `q5`
 
 - `question.ko` · KO: 같이 사는 사람이 반대 시간에 생활하면 어떻게 해요?
 - `question.ja` · JA: 同居人が反対の時間帯に生活するなら、どうしますか？
-- `tutorGuidance.ko` · KO: 사람, 기간, 환경 중 달라진 조건 하나에 집중하세요.
-- `followUp.1.ko` · KO: 누구의 상황이 영향을 줘요?
-- `followUp.2.ko` · KO: 언제쯤 그런 변화가 올까요?
-- `followUp.3.ko` · KO: 지금도 그 변화에 가까워요?
+- `followUp.1.ko` · KO: 소리나 조명을 어떻게 조절할 거예요?
+- `followUp.2.ko` · KO: 함께 보내는 시간은 언제예요?
+- `followUp.3.ko` · KO: 누가 더 많이 맞춰야 할까요?
 
 #### `q6`
 
 - `question.ko` · KO: 어떤 일정이면 반대쪽 생활을 고를 거예요?
 - `question.ja` · JA: どんな予定なら、反対の生活を選びますか？
-- `tutorGuidance.ko` · KO: 처음 선택을 뒤집는 구체적인 경계 하나로 닫으세요.
-- `followUp.1.ko` · KO: 그 조건은 얼마나 오래 이어져야 해요?
-- `followUp.2.ko` · KO: 누가 함께하면 답이 달라져요?
-- `followUp.3.ko` · KO: 원래 선택으로 돌아오는 조건도 있어요?
+- `followUp.1.ko` · KO: 어떤 일정이면 선택을 바꿔요?
+- `followUp.2.ko` · KO: 얼마나 오래 그 리듬을 유지할 수 있어요?
+- `followUp.3.ko` · KO: 원래 리듬으로 어떻게 돌아올 거예요?
 
 ## 05 · 계획 여행 vs 즉흥 여행
 
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/05-planned-or-spontaneous-trip/lesson.html`
-- sha256: `17a7abf90429b92e133d5574178ffc18ec961a0de89ae063508330f370e6857b`
+- sha256: `b509b1572f8982247664127a44314cbb348446ff270d25df5f5fb5958a6fd32b`
 - source kind: `article`
 
 #### `metadata`
@@ -1416,78 +1362,71 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 최근 여행에서 계획대로 되지 않은 일은 뭐였어요?
 - `question.ja` · JA: 最近の旅行で、計画どおりにならなかったことは何ですか？
-- `tutorGuidance.ko` · KO: 최근의 작은 장면 하나를 받으세요. 경험이 없으면 가까운 예나 가상 장면으로 바꿉니다.
-- `followUp.1.ko` · KO: 그때 어떤 상황이었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 좋거나 불편했어요?
-- `followUp.3.ko` · KO: 다시 같은 선택을 할 거예요?
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 무엇이 계획과 달랐어요?
+- `followUp.2.ko` · KO: 그때 어떻게 해결했어요?
+- `followUp.3.ko` · KO: 지금은 좋은 추억이에요?
 
 #### `warm-2`
 
 - `question.ko` · KO: 내일 가까운 곳으로 떠난다면 무엇부터 정할 거예요?
 - `question.ja` · JA: 明日近くへ出かけるなら、最初に何を決めますか？
-- `tutorGuidance.ko` · KO: 바로 떠오르는 행동을 구체화해 주세요.
-- `followUp.1.ko` · KO: 왜 그렇게 하고 싶어요?
-- `followUp.2.ko` · KO: 비슷한 경험이 있어요?
-- `followUp.3.ko` · KO: 조건이 달라지면 답도 달라져요?
+- `followUp.1.ko` · KO: 숙소와 교통 중 무엇부터 정해요?
+- `followUp.2.ko` · KO: 누구와 가고 싶어요?
+- `followUp.3.ko` · KO: 당일에 정해도 되는 것은 뭐예요?
 
 #### `q1`
 
 - `question.ko` · KO: 지금 고른다면 계획 여행 / 즉흥 여행, 어느 쪽이에요?
 - `question.ja` · JA: 今選ぶなら、計画旅行ですか、行き当たりばったりの旅行ですか？
-- `tutorGuidance.ko` · KO: 오늘의 첫 선택이에요. 정답을 정해 주지 말고 실제 이유를 받으세요.
-- `followUp.1.ko` · KO: 왜 그쪽을 골랐어요?
-- `followUp.2.ko` · KO: 실제 경험이 영향을 줬어요?
-- `followUp.3.ko` · KO: 반대쪽의 장점은 뭐예요?
+- `followUp.1.ko` · KO: 왜 그 방식을 골랐어요?
+- `followUp.2.ko` · KO: 최근 여행도 그랬어요?
+- `followUp.3.ko` · KO: 반대 방식의 장점은 뭐예요?
 
 #### `q2`
 
-- `question.ko` · KO: 선택한 쪽이 현실이 되면 여행 일정에서 가장 먼저 무엇이 달라질까요?
-- `question.ja` · JA: 選んだほうが現実になったら、旅行の日程で最初に何が変わりますか？
-- `tutorGuidance.ko` · KO: 선택을 실제 하루의 변화에 연결해 주세요.
-- `followUp.1.ko` · KO: 가장 먼저 달라지는 장면은 뭐예요?
-- `followUp.2.ko` · KO: 주변 사람에게도 변화가 생겨요?
-- `followUp.3.ko` · KO: 생각보다 불편한 점도 있을까요?
+- `question.ko` · KO: 앞으로 모든 여행을 계획형이나 즉흥형으로 해야 한다면, 여행 준비가 어떻게 달라질까요?
+- `question.ja` · JA: これからすべての旅行を計画型か行き当たりばったり型でするなら、旅行の準備はどう変わるでしょうか？
+- `followUp.1.ko` · KO: 출발 전에 무엇을 정할 거예요?
+- `followUp.2.ko` · KO: 현지에서 자유롭게 바꿀 수 있는 것은 뭐예요?
+- `followUp.3.ko` · KO: 여행이 더 편해질까요?
 
 #### `q3`
 
-- `question.ko` · KO: 최근 계획이 틀어지거나 좋은 우연을 만나서 반대쪽이 더 낫다고 느낀 순간은 언제였어요?
-- `question.ja` · JA: 最近、計画が崩れたり素敵な偶然に出会ったりして、反対のほうが良いと感じたのはいつですか？
-- `tutorGuidance.ko` · KO: 처음 선택을 부정하지 말고 반대쪽이 필요했던 예외를 찾으세요. 없으면 가상 장면으로 바꿉니다.
-- `followUp.1.ko` · KO: 그때 무슨 일이 있었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 필요했어요?
-- `followUp.3.ko` · KO: 그 경험 뒤에 생각이 달라졌어요?
+- `question.ko` · KO: 평소와 반대되는 여행 방식이 더 나을 때는 언제예요?
+- `question.ja` · JA: 普段とは反対の旅行スタイルのほうがよいのは、どんなときですか？
+- `followUp.1.ko` · KO: 어떤 여행에서 그래요?
+- `followUp.2.ko` · KO: 계획이 없거나 너무 많으면 뭐가 힘들어요?
+- `followUp.3.ko` · KO: 누구와 가는지도 중요해요?
 
 #### `q4`
 
 - `question.ko` · KO: 일주일 여행인데 숙소만 예약돼 있다면 편할까요?
 - `question.ja` · JA: 一週間の旅行で宿だけ予約してあるなら、気楽ですか？
-- `tutorGuidance.ko` · KO: 가상의 조건 하나가 선택을 어떻게 흔드는지 확인하세요.
-- `followUp.1.ko` · KO: 어느 조건이 가장 중요해요?
-- `followUp.2.ko` · KO: 얼마 동안이라면 가능해요?
-- `followUp.3.ko` · KO: 조건 하나를 바꿀 수 있다면요?
+- `followUp.1.ko` · KO: 교통편도 미리 정하고 싶어요?
+- `followUp.2.ko` · KO: 현지에서 첫날 무엇을 할 거예요?
+- `followUp.3.ko` · KO: 일주일 내내 그렇게 여행할 수 있어요?
 
 #### `q5`
 
 - `question.ko` · KO: 계획 스타일이 반대인 사람과 여행하면 어떻게 맞출 거예요?
 - `question.ja` · JA: 旅行の計画スタイルが反対の人とは、どう合わせますか？
-- `tutorGuidance.ko` · KO: 사람, 기간, 환경 중 달라진 조건 하나에 집중하세요.
-- `followUp.1.ko` · KO: 누구의 상황이 영향을 줘요?
-- `followUp.2.ko` · KO: 언제쯤 그런 변화가 올까요?
-- `followUp.3.ko` · KO: 지금도 그 변화에 가까워요?
+- `followUp.1.ko` · KO: 무엇은 미리 정하고 무엇은 열어 둘 거예요?
+- `followUp.2.ko` · KO: 의견이 다르면 누가 결정해요?
+- `followUp.3.ko` · KO: 여행 전에 규칙을 정할까요?
 
 #### `q6`
 
 - `question.ko` · KO: 어떤 여행 조건이면 반대 스타일을 고를 거예요?
 - `question.ja` · JA: どんな旅行条件なら、反対のスタイルを選びますか？
-- `tutorGuidance.ko` · KO: 처음 선택을 뒤집는 구체적인 경계 하나로 닫으세요.
-- `followUp.1.ko` · KO: 그 조건은 얼마나 오래 이어져야 해요?
-- `followUp.2.ko` · KO: 누가 함께하면 답이 달라져요?
-- `followUp.3.ko` · KO: 원래 선택으로 돌아오는 조건도 있어요?
+- `followUp.1.ko` · KO: 여행 기간이 길면 선택이 바뀌어요?
+- `followUp.2.ko` · KO: 처음 가는 곳인지도 중요해요?
+- `followUp.3.ko` · KO: 혼자 갈 때도 같은 방식이에요?
 
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/05-planned-or-spontaneous-trip/lesson.html`
-- sha256: `6ad6436f85847906a6afb370433021bc1d4e3b17581e37583f502e110ad5c563`
+- sha256: `d731fa704f81b24be0d601deaf5243ae04a125603a58aad433c7dbfbe45c7a1e`
 - source kind: `article`
 
 #### `metadata`
@@ -1579,80 +1518,73 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 최근 여행에서 계획대로 되지 않은 일은 뭐였어요?
 - `question.ja` · JA: 最近の旅行で、計画どおりにならなかったことは何ですか？
-- `tutorGuidance.ko` · KO: 최근의 작은 장면 하나를 받으세요. 경험이 없으면 가까운 예나 가상 장면으로 바꿉니다.
-- `followUp.1.ko` · KO: 그때 어떤 상황이었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 좋거나 불편했어요?
-- `followUp.3.ko` · KO: 다시 같은 선택을 할 거예요?
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 무엇이 계획과 달랐어요?
+- `followUp.2.ko` · KO: 그때 어떻게 해결했어요?
+- `followUp.3.ko` · KO: 지금은 좋은 추억이에요?
 
 #### `warm-2`
 
 - `question.ko` · KO: 내일 가까운 곳으로 떠난다면 무엇부터 정할 거예요?
 - `question.ja` · JA: 明日近くへ出かけるなら、最初に何を決めますか？
-- `tutorGuidance.ko` · KO: 바로 떠오르는 행동을 구체화해 주세요.
-- `followUp.1.ko` · KO: 왜 그렇게 하고 싶어요?
-- `followUp.2.ko` · KO: 비슷한 경험이 있어요?
-- `followUp.3.ko` · KO: 조건이 달라지면 답도 달라져요?
+- `followUp.1.ko` · KO: 숙소와 교통 중 무엇부터 정해요?
+- `followUp.2.ko` · KO: 누구와 가고 싶어요?
+- `followUp.3.ko` · KO: 당일에 정해도 되는 것은 뭐예요?
 
 #### `q1`
 
 - `question.ko` · KO: 지금 고른다면 계획 여행 / 즉흥 여행, 어느 쪽이에요?
 - `question.ja` · JA: 今選ぶなら、計画旅行ですか、行き当たりばったりの旅行ですか？
-- `tutorGuidance.ko` · KO: 오늘의 첫 선택이에요. 정답을 정해 주지 말고 실제 이유를 받으세요.
-- `followUp.1.ko` · KO: 왜 그쪽을 골랐어요?
-- `followUp.2.ko` · KO: 실제 경험이 영향을 줬어요?
-- `followUp.3.ko` · KO: 반대쪽의 장점은 뭐예요?
+- `followUp.1.ko` · KO: 왜 그 방식을 골랐어요?
+- `followUp.2.ko` · KO: 최근 여행도 그랬어요?
+- `followUp.3.ko` · KO: 반대 방식의 장점은 뭐예요?
 
 #### `q2`
 
-- `question.ko` · KO: 선택한 쪽이 현실이 되면 여행 일정에서 가장 먼저 무엇이 달라질까요?
-- `question.ja` · JA: 選んだほうが現実になったら、旅行の日程で最初に何が変わりますか？
-- `tutorGuidance.ko` · KO: 선택을 실제 하루의 변화에 연결해 주세요.
-- `followUp.1.ko` · KO: 가장 먼저 달라지는 장면은 뭐예요?
-- `followUp.2.ko` · KO: 주변 사람에게도 변화가 생겨요?
-- `followUp.3.ko` · KO: 생각보다 불편한 점도 있을까요?
+- `question.ko` · KO: 앞으로 모든 여행을 계획형이나 즉흥형으로 해야 한다면, 여행 준비가 어떻게 달라질까요?
+- `question.ja` · JA: これからすべての旅行を計画型か行き当たりばったり型でするなら、旅行の準備はどう変わるでしょうか？
+- `followUp.1.ko` · KO: 출발 전에 무엇을 정할 거예요?
+- `followUp.2.ko` · KO: 현지에서 자유롭게 바꿀 수 있는 것은 뭐예요?
+- `followUp.3.ko` · KO: 여행이 더 편해질까요?
 
 #### `q3`
 
-- `question.ko` · KO: 최근 계획이 틀어지거나 좋은 우연을 만나서 반대쪽이 더 낫다고 느낀 순간은 언제였어요?
-- `question.ja` · JA: 最近、計画が崩れたり素敵な偶然に出会ったりして、反対のほうが良いと感じたのはいつですか？
-- `tutorGuidance.ko` · KO: 처음 선택을 부정하지 말고 반대쪽이 필요했던 예외를 찾으세요. 없으면 가상 장면으로 바꿉니다.
-- `followUp.1.ko` · KO: 그때 무슨 일이 있었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 필요했어요?
-- `followUp.3.ko` · KO: 그 경험 뒤에 생각이 달라졌어요?
+- `question.ko` · KO: 평소와 반대되는 여행 방식이 더 나을 때는 언제예요?
+- `question.ja` · JA: 普段とは反対の旅行スタイルのほうがよいのは、どんなときですか？
+- `followUp.1.ko` · KO: 어떤 여행에서 그래요?
+- `followUp.2.ko` · KO: 계획이 없거나 너무 많으면 뭐가 힘들어요?
+- `followUp.3.ko` · KO: 누구와 가는지도 중요해요?
 
 #### `q4`
 
 - `question.ko` · KO: 일주일 여행에서 숙소만 정해도 편해요?
 - `question.ja` · JA: 一週間の旅行で宿だけ決めても気楽ですか？
-- `tutorGuidance.ko` · KO: 가상의 조건 하나가 선택을 어떻게 흔드는지 확인하세요.
-- `followUp.1.ko` · KO: 어느 조건이 가장 중요해요?
-- `followUp.2.ko` · KO: 얼마 동안이라면 가능해요?
-- `followUp.3.ko` · KO: 조건 하나를 바꿀 수 있다면요?
+- `followUp.1.ko` · KO: 교통편도 미리 정하고 싶어요?
+- `followUp.2.ko` · KO: 현지에서 첫날 무엇을 할 거예요?
+- `followUp.3.ko` · KO: 일주일 내내 그렇게 여행할 수 있어요?
 
 #### `q5`
 
 - `question.ko` · KO: 계획 방식이 다른 사람과 어떻게 여행할 거예요?
 - `question.ja` · JA: 計画のしかたが違う人と、どう旅行しますか？
-- `tutorGuidance.ko` · KO: 사람, 기간, 환경 중 달라진 조건 하나에 집중하세요.
-- `followUp.1.ko` · KO: 누구의 상황이 영향을 줘요?
-- `followUp.2.ko` · KO: 언제쯤 그런 변화가 올까요?
-- `followUp.3.ko` · KO: 지금도 그 변화에 가까워요?
+- `followUp.1.ko` · KO: 무엇은 미리 정하고 무엇은 열어 둘 거예요?
+- `followUp.2.ko` · KO: 의견이 다르면 누가 결정해요?
+- `followUp.3.ko` · KO: 여행 전에 규칙을 정할까요?
 
 #### `q6`
 
 - `question.ko` · KO: 어떤 여행 조건이면 반대 스타일을 고를 거예요?
 - `question.ja` · JA: どんな旅行条件なら、反対のスタイルを選びますか？
-- `tutorGuidance.ko` · KO: 처음 선택을 뒤집는 구체적인 경계 하나로 닫으세요.
-- `followUp.1.ko` · KO: 그 조건은 얼마나 오래 이어져야 해요?
-- `followUp.2.ko` · KO: 누가 함께하면 답이 달라져요?
-- `followUp.3.ko` · KO: 원래 선택으로 돌아오는 조건도 있어요?
+- `followUp.1.ko` · KO: 여행 기간이 길면 선택이 바뀌어요?
+- `followUp.2.ko` · KO: 처음 가는 곳인지도 중요해요?
+- `followUp.3.ko` · KO: 혼자 갈 때도 같은 방식이에요?
 
 ## 06 · 혼자 여행 vs 같이 여행
 
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/06-solo-or-group-travel/lesson.html`
-- sha256: `e82dbde412ec26064007ef6110fb20a8b79003691fe7213b0c0262aa31c9653b`
+- sha256: `1fd36555d456955607b570017f3ab8080ef4cdf40c33b9011fbe7b87c7597846`
 - source kind: `article`
 
 #### `metadata`
@@ -1744,78 +1676,71 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 여행에서 혼자 있고 싶었던 순간이 있었어요?
 - `question.ja` · JA: 旅行中、一人になりたいと思った瞬間はありましたか？
-- `tutorGuidance.ko` · KO: 최근의 작은 장면 하나를 받으세요. 경험이 없으면 가까운 예나 가상 장면으로 바꿉니다.
-- `followUp.1.ko` · KO: 그때 어떤 상황이었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 좋거나 불편했어요?
-- `followUp.3.ko` · KO: 다시 같은 선택을 할 거예요?
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 왜 혼자 있고 싶었어요?
+- `followUp.2.ko` · KO: 얼마 동안 혼자 있었어요?
+- `followUp.3.ko` · KO: 동행자에게 어떻게 말했어요?
 
 #### `warm-2`
 
 - `question.ko` · KO: 멋진 풍경을 보면 가장 먼저 누구에게 보여 주고 싶어요?
 - `question.ja` · JA: すてきな景色を見たら、最初に誰に見せたいですか？
-- `tutorGuidance.ko` · KO: 바로 떠오르는 행동을 구체화해 주세요.
-- `followUp.1.ko` · KO: 왜 그렇게 하고 싶어요?
-- `followUp.2.ko` · KO: 비슷한 경험이 있어요?
-- `followUp.3.ko` · KO: 조건이 달라지면 답도 달라져요?
+- `followUp.1.ko` · KO: 왜 그 사람에게 보여 주고 싶어요?
+- `followUp.2.ko` · KO: 사진을 바로 보내요?
+- `followUp.3.ko` · KO: 같이 그곳에 가고 싶어요?
 
 #### `q1`
 
 - `question.ko` · KO: 지금 고른다면 혼자 여행 / 같이 여행, 어느 쪽이에요?
 - `question.ja` · JA: 今選ぶなら、一人旅ですか、誰かとの旅行ですか？
-- `tutorGuidance.ko` · KO: 오늘의 첫 선택이에요. 정답을 정해 주지 말고 실제 이유를 받으세요.
 - `followUp.1.ko` · KO: 왜 그쪽을 골랐어요?
-- `followUp.2.ko` · KO: 실제 경험이 영향을 줬어요?
-- `followUp.3.ko` · KO: 반대쪽의 장점은 뭐예요?
+- `followUp.2.ko` · KO: 최근 여행도 그랬어요?
+- `followUp.3.ko` · KO: 반대쪽의 좋은 점은 뭐예요?
 
 #### `q2`
 
-- `question.ko` · KO: 선택한 쪽이 현실이 되면 여행 방식에서 가장 먼저 무엇이 달라질까요?
-- `question.ja` · JA: 選んだほうが現実になったら、旅行のしかたで最初に何が変わりますか？
-- `tutorGuidance.ko` · KO: 선택을 실제 하루의 변화에 연결해 주세요.
-- `followUp.1.ko` · KO: 가장 먼저 달라지는 장면은 뭐예요?
-- `followUp.2.ko` · KO: 주변 사람에게도 변화가 생겨요?
-- `followUp.3.ko` · KO: 생각보다 불편한 점도 있을까요?
+- `question.ko` · KO: 앞으로 모든 여행을 혼자 또는 다른 사람과 해야 한다면, 여행 방식이 어떻게 달라질까요?
+- `question.ja` · JA: これからすべての旅行を一人か誰かとするなら、旅のしかたはどう変わるでしょうか？
+- `followUp.1.ko` · KO: 일정을 누가 정하게 될까요?
+- `followUp.2.ko` · KO: 식사나 이동 방식도 달라져요?
+- `followUp.3.ko` · KO: 가장 아쉬울 것 같은 점은 뭐예요?
 
 #### `q3`
 
-- `question.ko` · KO: 최근 외롭거나 일정 조율이 힘들어서 반대쪽이 더 낫다고 느낀 순간은 언제였어요?
-- `question.ja` · JA: 最近、寂しかったり予定調整が大変だったりして、反対のほうが良いと感じたのはいつですか？
-- `tutorGuidance.ko` · KO: 처음 선택을 부정하지 말고 반대쪽이 필요했던 예외를 찾으세요. 없으면 가상 장면으로 바꿉니다.
-- `followUp.1.ko` · KO: 그때 무슨 일이 있었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 필요했어요?
-- `followUp.3.ko` · KO: 그 경험 뒤에 생각이 달라졌어요?
+- `question.ko` · KO: 평소와 반대되는 여행 방식이 더 나을 때는 언제예요?
+- `question.ja` · JA: 普段とは反対の旅行スタイルのほうがよいのは、どんなときですか？
+- `followUp.1.ko` · KO: 어떤 여행에서 그래요?
+- `followUp.2.ko` · KO: 외로움과 일정 조율 중 뭐가 더 힘들어요?
+- `followUp.3.ko` · KO: 동행자가 누구인지도 중요해요?
 
 #### `q4`
 
 - `question.ko` · KO: 처음 가는 나라에서 사흘을 보낸다면 혼자가 편할까요?
 - `question.ja` · JA: 初めて行く国で3日過ごすなら、一人のほうが気楽ですか？
-- `tutorGuidance.ko` · KO: 가상의 조건 하나가 선택을 어떻게 흔드는지 확인하세요.
-- `followUp.1.ko` · KO: 어느 조건이 가장 중요해요?
-- `followUp.2.ko` · KO: 얼마 동안이라면 가능해요?
-- `followUp.3.ko` · KO: 조건 하나를 바꿀 수 있다면요?
+- `followUp.1.ko` · KO: 언어가 통하지 않아도 괜찮아요?
+- `followUp.2.ko` · KO: 밤에 혼자 다니는 건 어때요?
+- `followUp.3.ko` · KO: 사흘보다 길면 답이 달라져요?
 
 #### `q5`
 
 - `question.ko` · KO: 동행자가 모든 계획을 맡아 준다면 선택이 달라질까요?
 - `question.ja` · JA: 同行者がすべての計画を担当してくれるなら、選択は変わりますか？
-- `tutorGuidance.ko` · KO: 사람, 기간, 환경 중 달라진 조건 하나에 집중하세요.
-- `followUp.1.ko` · KO: 누구의 상황이 영향을 줘요?
-- `followUp.2.ko` · KO: 언제쯤 그런 변화가 올까요?
-- `followUp.3.ko` · KO: 지금도 그 변화에 가까워요?
+- `followUp.1.ko` · KO: 계획을 맡기면 무엇이 편해져요?
+- `followUp.2.ko` · KO: 내가 꼭 결정하고 싶은 것은 뭐예요?
+- `followUp.3.ko` · KO: 그 사람을 얼마나 믿어야 해요?
 
 #### `q6`
 
 - `question.ko` · KO: 어떤 여행지나 동행 조건이면 반대쪽을 고를 거예요?
 - `question.ja` · JA: どんな旅先や同行者の条件なら、反対のほうを選びますか？
-- `tutorGuidance.ko` · KO: 처음 선택을 뒤집는 구체적인 경계 하나로 닫으세요.
-- `followUp.1.ko` · KO: 그 조건은 얼마나 오래 이어져야 해요?
-- `followUp.2.ko` · KO: 누가 함께하면 답이 달라져요?
-- `followUp.3.ko` · KO: 원래 선택으로 돌아오는 조건도 있어요?
+- `followUp.1.ko` · KO: 어떤 여행지에서는 선택을 바꿔요?
+- `followUp.2.ko` · KO: 누구와 가면 답이 달라져요?
+- `followUp.3.ko` · KO: 여행 기간도 영향을 줘요?
 
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/06-solo-or-group-travel/lesson.html`
-- sha256: `347da3284e4229f7a66cf1e8e819a90e5fde91344d6078eae33bbcee4fb41e84`
+- sha256: `4026838d2618842d5b866fddf600661e72b9846b3c3819829742b9adb84d2c6f`
 - source kind: `article`
 
 #### `metadata`
@@ -1907,80 +1832,73 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 여행에서 혼자 있고 싶었던 순간이 있었어요?
 - `question.ja` · JA: 旅行中、一人になりたいと思った瞬間はありましたか？
-- `tutorGuidance.ko` · KO: 최근의 작은 장면 하나를 받으세요. 경험이 없으면 가까운 예나 가상 장면으로 바꿉니다.
-- `followUp.1.ko` · KO: 그때 어떤 상황이었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 좋거나 불편했어요?
-- `followUp.3.ko` · KO: 다시 같은 선택을 할 거예요?
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 왜 혼자 있고 싶었어요?
+- `followUp.2.ko` · KO: 얼마 동안 혼자 있었어요?
+- `followUp.3.ko` · KO: 동행자에게 어떻게 말했어요?
 
 #### `warm-2`
 
 - `question.ko` · KO: 멋진 풍경을 보면 가장 먼저 누구에게 보여 주고 싶어요?
 - `question.ja` · JA: すてきな景色を見たら、最初に誰に見せたいですか？
-- `tutorGuidance.ko` · KO: 바로 떠오르는 행동을 구체화해 주세요.
-- `followUp.1.ko` · KO: 왜 그렇게 하고 싶어요?
-- `followUp.2.ko` · KO: 비슷한 경험이 있어요?
-- `followUp.3.ko` · KO: 조건이 달라지면 답도 달라져요?
+- `followUp.1.ko` · KO: 왜 그 사람에게 보여 주고 싶어요?
+- `followUp.2.ko` · KO: 사진을 바로 보내요?
+- `followUp.3.ko` · KO: 같이 그곳에 가고 싶어요?
 
 #### `q1`
 
 - `question.ko` · KO: 지금 고른다면 혼자 여행 / 같이 여행, 어느 쪽이에요?
 - `question.ja` · JA: 今選ぶなら、一人旅ですか、誰かとの旅行ですか？
-- `tutorGuidance.ko` · KO: 오늘의 첫 선택이에요. 정답을 정해 주지 말고 실제 이유를 받으세요.
 - `followUp.1.ko` · KO: 왜 그쪽을 골랐어요?
-- `followUp.2.ko` · KO: 실제 경험이 영향을 줬어요?
-- `followUp.3.ko` · KO: 반대쪽의 장점은 뭐예요?
+- `followUp.2.ko` · KO: 최근 여행도 그랬어요?
+- `followUp.3.ko` · KO: 반대쪽의 좋은 점은 뭐예요?
 
 #### `q2`
 
-- `question.ko` · KO: 선택한 쪽이 현실이 되면 여행 방식에서 가장 먼저 무엇이 달라질까요?
-- `question.ja` · JA: 選んだほうが現実になったら、旅行のしかたで最初に何が変わりますか？
-- `tutorGuidance.ko` · KO: 선택을 실제 하루의 변화에 연결해 주세요.
-- `followUp.1.ko` · KO: 가장 먼저 달라지는 장면은 뭐예요?
-- `followUp.2.ko` · KO: 주변 사람에게도 변화가 생겨요?
-- `followUp.3.ko` · KO: 생각보다 불편한 점도 있을까요?
+- `question.ko` · KO: 앞으로 모든 여행을 혼자 또는 다른 사람과 해야 한다면, 여행 방식이 어떻게 달라질까요?
+- `question.ja` · JA: これからすべての旅行を一人か誰かとするなら、旅のしかたはどう変わるでしょうか？
+- `followUp.1.ko` · KO: 일정을 누가 정하게 될까요?
+- `followUp.2.ko` · KO: 식사나 이동 방식도 달라져요?
+- `followUp.3.ko` · KO: 가장 아쉬울 것 같은 점은 뭐예요?
 
 #### `q3`
 
-- `question.ko` · KO: 최근 외롭거나 일정 조율이 힘들어서 반대쪽이 더 낫다고 느낀 순간은 언제였어요?
-- `question.ja` · JA: 最近、寂しかったり予定調整が大変だったりして、反対のほうが良いと感じたのはいつですか？
-- `tutorGuidance.ko` · KO: 처음 선택을 부정하지 말고 반대쪽이 필요했던 예외를 찾으세요. 없으면 가상 장면으로 바꿉니다.
-- `followUp.1.ko` · KO: 그때 무슨 일이 있었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 필요했어요?
-- `followUp.3.ko` · KO: 그 경험 뒤에 생각이 달라졌어요?
+- `question.ko` · KO: 평소와 반대되는 여행 방식이 더 나을 때는 언제예요?
+- `question.ja` · JA: 普段とは反対の旅行スタイルのほうがよいのは、どんなときですか？
+- `followUp.1.ko` · KO: 어떤 여행에서 그래요?
+- `followUp.2.ko` · KO: 외로움과 일정 조율 중 뭐가 더 힘들어요?
+- `followUp.3.ko` · KO: 동행자가 누구인지도 중요해요?
 
 #### `q4`
 
 - `question.ko` · KO: 처음 가는 나라에서는 혼자 여행할 수 있어요?
 - `question.ja` · JA: 初めて行く国でも一人で旅行できますか？
-- `tutorGuidance.ko` · KO: 가상의 조건 하나가 선택을 어떻게 흔드는지 확인하세요.
-- `followUp.1.ko` · KO: 어느 조건이 가장 중요해요?
-- `followUp.2.ko` · KO: 얼마 동안이라면 가능해요?
-- `followUp.3.ko` · KO: 조건 하나를 바꿀 수 있다면요?
+- `followUp.1.ko` · KO: 언어가 통하지 않아도 괜찮아요?
+- `followUp.2.ko` · KO: 밤에 혼자 다니는 건 어때요?
+- `followUp.3.ko` · KO: 사흘보다 길면 답이 달라져요?
 
 #### `q5`
 
 - `question.ko` · KO: 다른 사람이 계획을 다 해 주면 선택이 바뀌어요?
 - `question.ja` · JA: ほかの人が全部計画してくれたら、選択は変わりますか？
-- `tutorGuidance.ko` · KO: 사람, 기간, 환경 중 달라진 조건 하나에 집중하세요.
-- `followUp.1.ko` · KO: 누구의 상황이 영향을 줘요?
-- `followUp.2.ko` · KO: 언제쯤 그런 변화가 올까요?
-- `followUp.3.ko` · KO: 지금도 그 변화에 가까워요?
+- `followUp.1.ko` · KO: 계획을 맡기면 무엇이 편해져요?
+- `followUp.2.ko` · KO: 내가 꼭 결정하고 싶은 것은 뭐예요?
+- `followUp.3.ko` · KO: 그 사람을 얼마나 믿어야 해요?
 
 #### `q6`
 
 - `question.ko` · KO: 어떤 여행지나 동행 조건이면 반대쪽을 고를 거예요?
 - `question.ja` · JA: どんな旅先や同行者の条件なら、反対のほうを選びますか？
-- `tutorGuidance.ko` · KO: 처음 선택을 뒤집는 구체적인 경계 하나로 닫으세요.
-- `followUp.1.ko` · KO: 그 조건은 얼마나 오래 이어져야 해요?
-- `followUp.2.ko` · KO: 누가 함께하면 답이 달라져요?
-- `followUp.3.ko` · KO: 원래 선택으로 돌아오는 조건도 있어요?
+- `followUp.1.ko` · KO: 어떤 여행지에서는 선택을 바꿔요?
+- `followUp.2.ko` · KO: 누구와 가면 답이 달라져요?
+- `followUp.3.ko` · KO: 여행 기간도 영향을 줘요?
 
 ## 07 · 도시 생활 vs 시골 생활
 
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/07-city-or-countryside/lesson.html`
-- sha256: `ecc04d28f9b8ee583deb79a55dbefb6e5b67ea55dc4cb7a23d3322e7cb44e179`
+- sha256: `42534d0e3da15bbf8b75ea397ddd8f8768658b4c72bdced5ef6e38f091904301`
 - source kind: `article`
 
 #### `metadata`
@@ -2072,78 +1990,71 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 지금 사는 동네에서 가장 편리한 것은 뭐예요?
 - `question.ja` · JA: 今住んでいる町で、いちばん便利なものは何ですか？
-- `tutorGuidance.ko` · KO: 최근의 작은 장면 하나를 받으세요. 경험이 없으면 가까운 예나 가상 장면으로 바꿉니다.
-- `followUp.1.ko` · KO: 그때 어떤 상황이었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 좋거나 불편했어요?
-- `followUp.3.ko` · KO: 다시 같은 선택을 할 거예요?
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 언제 가장 편리하다고 느껴요?
+- `followUp.2.ko` · KO: 걸어서 갈 수 있어요?
+- `followUp.3.ko` · KO: 불편한 점도 있어요?
 
 #### `warm-2`
 
 - `question.ko` · KO: 창밖 풍경을 하나 고를 수 있다면 무엇을 보고 싶어요?
 - `question.ja` · JA: 窓の外の景色を一つ選べるなら、何を見たいですか？
-- `tutorGuidance.ko` · KO: 바로 떠오르는 행동을 구체화해 주세요.
-- `followUp.1.ko` · KO: 왜 그렇게 하고 싶어요?
-- `followUp.2.ko` · KO: 비슷한 경험이 있어요?
-- `followUp.3.ko` · KO: 조건이 달라지면 답도 달라져요?
+- `followUp.1.ko` · KO: 아침과 밤 중 언제 보고 싶어요?
+- `followUp.2.ko` · KO: 그 풍경 가까이에서 무엇을 하고 싶어요?
+- `followUp.3.ko` · KO: 교통이 불편해도 괜찮아요?
 
 #### `q1`
 
 - `question.ko` · KO: 지금 고른다면 도시 생활 / 시골 생활, 어느 쪽이에요?
 - `question.ja` · JA: 今選ぶなら、都会暮らしですか、田舎暮らしですか？
-- `tutorGuidance.ko` · KO: 오늘의 첫 선택이에요. 정답을 정해 주지 말고 실제 이유를 받으세요.
-- `followUp.1.ko` · KO: 왜 그쪽을 골랐어요?
-- `followUp.2.ko` · KO: 실제 경험이 영향을 줬어요?
+- `followUp.1.ko` · KO: 왜 그곳을 골랐어요?
+- `followUp.2.ko` · KO: 지금 사는 곳도 그쪽에 가까워요?
 - `followUp.3.ko` · KO: 반대쪽의 장점은 뭐예요?
 
 #### `q2`
 
-- `question.ko` · KO: 선택한 쪽이 현실이 되면 사는 곳에서 가장 먼저 무엇이 달라질까요?
-- `question.ja` · JA: 選んだほうが現実になったら、住む場所で最初に何が変わりますか？
-- `tutorGuidance.ko` · KO: 선택을 실제 하루의 변화에 연결해 주세요.
-- `followUp.1.ko` · KO: 가장 먼저 달라지는 장면은 뭐예요?
-- `followUp.2.ko` · KO: 주변 사람에게도 변화가 생겨요?
-- `followUp.3.ko` · KO: 생각보다 불편한 점도 있을까요?
+- `question.ko` · KO: 도시나 시골로 이사해 산다면, 일상에서 가장 먼저 달라지는 것은 뭐예요?
+- `question.ja` · JA: 都市か田舎へ引っ越して暮らすなら、日常で最初に変わることは何ですか？
+- `followUp.1.ko` · KO: 이동 시간이 어떻게 달라져요?
+- `followUp.2.ko` · KO: 자주 가는 장소도 바뀔까요?
+- `followUp.3.ko` · KO: 가장 적응하기 힘든 것은 뭐예요?
 
 #### `q3`
 
-- `question.ko` · KO: 최근 이동이나 소음 때문에 반대쪽이 더 낫다고 느낀 순간은 언제였어요?
-- `question.ja` · JA: 最近、移動や騒音のために、反対のほうが良いと感じたのはいつですか？
-- `tutorGuidance.ko` · KO: 처음 선택을 부정하지 말고 반대쪽이 필요했던 예외를 찾으세요. 없으면 가상 장면으로 바꿉니다.
-- `followUp.1.ko` · KO: 그때 무슨 일이 있었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 필요했어요?
-- `followUp.3.ko` · KO: 그 경험 뒤에 생각이 달라졌어요?
+- `question.ko` · KO: 평소 선택과 반대되는 곳에서 사는 게 더 나을 때는 언제예요?
+- `question.ja` · JA: 普段選ぶほうとは反対の場所に住むほうがよいのは、どんなときですか？
+- `followUp.1.ko` · KO: 어떤 생활을 할 때 그래요?
+- `followUp.2.ko` · KO: 교통과 조용함 중 무엇이 더 중요해요?
+- `followUp.3.ko` · KO: 가족 상황도 영향을 줘요?
 
 #### `q4`
 
 - `question.ko` · KO: 자동차 없이 살아야 한다면 어느 쪽을 고를 거예요?
 - `question.ja` · JA: 車なしで暮らすなら、どちらを選びますか？
-- `tutorGuidance.ko` · KO: 가상의 조건 하나가 선택을 어떻게 흔드는지 확인하세요.
-- `followUp.1.ko` · KO: 어느 조건이 가장 중요해요?
-- `followUp.2.ko` · KO: 얼마 동안이라면 가능해요?
-- `followUp.3.ko` · KO: 조건 하나를 바꿀 수 있다면요?
+- `followUp.1.ko` · KO: 대중교통만으로 생활할 수 있어요?
+- `followUp.2.ko` · KO: 장보기나 병원은 어떻게 갈 거예요?
+- `followUp.3.ko` · KO: 자동차를 쓸 수 있으면 선택이 바뀌어요?
 
 #### `q5`
 
 - `question.ko` · KO: 병원과 가게가 가까운 작은 시골 마을이라면 선택이 달라질까요?
 - `question.ja` · JA: 病院や店が近い小さな田舎町なら、選択は変わりますか？
-- `tutorGuidance.ko` · KO: 사람, 기간, 환경 중 달라진 조건 하나에 집중하세요.
-- `followUp.1.ko` · KO: 누구의 상황이 영향을 줘요?
-- `followUp.2.ko` · KO: 언제쯤 그런 변화가 올까요?
-- `followUp.3.ko` · KO: 지금도 그 변화에 가까워요?
+- `followUp.1.ko` · KO: 그 마을에 어떤 시설이 더 필요해요?
+- `followUp.2.ko` · KO: 직장이나 학교가 멀어도 괜찮아요?
+- `followUp.3.ko` · KO: 얼마나 오래 살고 싶어요?
 
 #### `q6`
 
 - `question.ko` · KO: 어떤 생활 조건이면 반대쪽에서 살고 싶어요?
 - `question.ja` · JA: どんな生活条件なら、反対の場所に住みたいですか？
-- `tutorGuidance.ko` · KO: 처음 선택을 뒤집는 구체적인 경계 하나로 닫으세요.
-- `followUp.1.ko` · KO: 그 조건은 얼마나 오래 이어져야 해요?
-- `followUp.2.ko` · KO: 누가 함께하면 답이 달라져요?
-- `followUp.3.ko` · KO: 원래 선택으로 돌아오는 조건도 있어요?
+- `followUp.1.ko` · KO: 교통과 편의시설 중 무엇이 꼭 필요해요?
+- `followUp.2.ko` · KO: 누구와 사는지도 중요해요?
+- `followUp.3.ko` · KO: 그 조건이면 언제 이사하고 싶어요?
 
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/07-city-or-countryside/lesson.html`
-- sha256: `9a24ac8d5d0ed2639a00f8a36231f98db89ea32db6628281a7612e47677e992d`
+- sha256: `63c9a3acc92bf316152a529f48e559251e72deea980e1259e3f0c4314b9ea38b`
 - source kind: `article`
 
 #### `metadata`
@@ -2235,80 +2146,73 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 지금 사는 동네에서 가장 편리한 것은 뭐예요?
 - `question.ja` · JA: 今住んでいる町で、いちばん便利なものは何ですか？
-- `tutorGuidance.ko` · KO: 최근의 작은 장면 하나를 받으세요. 경험이 없으면 가까운 예나 가상 장면으로 바꿉니다.
-- `followUp.1.ko` · KO: 그때 어떤 상황이었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 좋거나 불편했어요?
-- `followUp.3.ko` · KO: 다시 같은 선택을 할 거예요?
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 언제 가장 편리하다고 느껴요?
+- `followUp.2.ko` · KO: 걸어서 갈 수 있어요?
+- `followUp.3.ko` · KO: 불편한 점도 있어요?
 
 #### `warm-2`
 
 - `question.ko` · KO: 창밖 풍경을 하나 고를 수 있다면 무엇을 보고 싶어요?
 - `question.ja` · JA: 窓の外の景色を一つ選べるなら、何を見たいですか？
-- `tutorGuidance.ko` · KO: 바로 떠오르는 행동을 구체화해 주세요.
-- `followUp.1.ko` · KO: 왜 그렇게 하고 싶어요?
-- `followUp.2.ko` · KO: 비슷한 경험이 있어요?
-- `followUp.3.ko` · KO: 조건이 달라지면 답도 달라져요?
+- `followUp.1.ko` · KO: 아침과 밤 중 언제 보고 싶어요?
+- `followUp.2.ko` · KO: 그 풍경 가까이에서 무엇을 하고 싶어요?
+- `followUp.3.ko` · KO: 교통이 불편해도 괜찮아요?
 
 #### `q1`
 
 - `question.ko` · KO: 지금 고른다면 도시 생활 / 시골 생활, 어느 쪽이에요?
 - `question.ja` · JA: 今選ぶなら、都会暮らしですか、田舎暮らしですか？
-- `tutorGuidance.ko` · KO: 오늘의 첫 선택이에요. 정답을 정해 주지 말고 실제 이유를 받으세요.
-- `followUp.1.ko` · KO: 왜 그쪽을 골랐어요?
-- `followUp.2.ko` · KO: 실제 경험이 영향을 줬어요?
+- `followUp.1.ko` · KO: 왜 그곳을 골랐어요?
+- `followUp.2.ko` · KO: 지금 사는 곳도 그쪽에 가까워요?
 - `followUp.3.ko` · KO: 반대쪽의 장점은 뭐예요?
 
 #### `q2`
 
-- `question.ko` · KO: 선택한 쪽이 현실이 되면 사는 곳에서 가장 먼저 무엇이 달라질까요?
-- `question.ja` · JA: 選んだほうが現実になったら、住む場所で最初に何が変わりますか？
-- `tutorGuidance.ko` · KO: 선택을 실제 하루의 변화에 연결해 주세요.
-- `followUp.1.ko` · KO: 가장 먼저 달라지는 장면은 뭐예요?
-- `followUp.2.ko` · KO: 주변 사람에게도 변화가 생겨요?
-- `followUp.3.ko` · KO: 생각보다 불편한 점도 있을까요?
+- `question.ko` · KO: 도시나 시골로 이사해 산다면, 일상에서 가장 먼저 달라지는 것은 뭐예요?
+- `question.ja` · JA: 都市か田舎へ引っ越して暮らすなら、日常で最初に変わることは何ですか？
+- `followUp.1.ko` · KO: 이동 시간이 어떻게 달라져요?
+- `followUp.2.ko` · KO: 자주 가는 장소도 바뀔까요?
+- `followUp.3.ko` · KO: 가장 적응하기 힘든 것은 뭐예요?
 
 #### `q3`
 
-- `question.ko` · KO: 최근 이동이나 소음 때문에 반대쪽이 더 낫다고 느낀 순간은 언제였어요?
-- `question.ja` · JA: 最近、移動や騒音のために、反対のほうが良いと感じたのはいつですか？
-- `tutorGuidance.ko` · KO: 처음 선택을 부정하지 말고 반대쪽이 필요했던 예외를 찾으세요. 없으면 가상 장면으로 바꿉니다.
-- `followUp.1.ko` · KO: 그때 무슨 일이 있었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 필요했어요?
-- `followUp.3.ko` · KO: 그 경험 뒤에 생각이 달라졌어요?
+- `question.ko` · KO: 평소 선택과 반대되는 곳에서 사는 게 더 나을 때는 언제예요?
+- `question.ja` · JA: 普段選ぶほうとは反対の場所に住むほうがよいのは、どんなときですか？
+- `followUp.1.ko` · KO: 어떤 생활을 할 때 그래요?
+- `followUp.2.ko` · KO: 교통과 조용함 중 무엇이 더 중요해요?
+- `followUp.3.ko` · KO: 가족 상황도 영향을 줘요?
 
 #### `q4`
 
 - `question.ko` · KO: 차 없이 살면 도시와 시골 중 어디예요?
 - `question.ja` · JA: 車なしで暮らすなら、都会と田舎のどちらですか？
-- `tutorGuidance.ko` · KO: 가상의 조건 하나가 선택을 어떻게 흔드는지 확인하세요.
-- `followUp.1.ko` · KO: 어느 조건이 가장 중요해요?
-- `followUp.2.ko` · KO: 얼마 동안이라면 가능해요?
-- `followUp.3.ko` · KO: 조건 하나를 바꿀 수 있다면요?
+- `followUp.1.ko` · KO: 대중교통만으로 생활할 수 있어요?
+- `followUp.2.ko` · KO: 장보기나 병원은 어떻게 갈 거예요?
+- `followUp.3.ko` · KO: 자동차를 쓸 수 있으면 선택이 바뀌어요?
 
 #### `q5`
 
 - `question.ko` · KO: 병원과 가게가 가까운 시골이면 어때요?
 - `question.ja` · JA: 病院や店が近い田舎なら、どうですか？
-- `tutorGuidance.ko` · KO: 사람, 기간, 환경 중 달라진 조건 하나에 집중하세요.
-- `followUp.1.ko` · KO: 누구의 상황이 영향을 줘요?
-- `followUp.2.ko` · KO: 언제쯤 그런 변화가 올까요?
-- `followUp.3.ko` · KO: 지금도 그 변화에 가까워요?
+- `followUp.1.ko` · KO: 그 마을에 어떤 시설이 더 필요해요?
+- `followUp.2.ko` · KO: 직장이나 학교가 멀어도 괜찮아요?
+- `followUp.3.ko` · KO: 얼마나 오래 살고 싶어요?
 
 #### `q6`
 
 - `question.ko` · KO: 어떤 생활 조건이면 반대쪽에서 살고 싶어요?
 - `question.ja` · JA: どんな生活条件なら、反対の場所に住みたいですか？
-- `tutorGuidance.ko` · KO: 처음 선택을 뒤집는 구체적인 경계 하나로 닫으세요.
-- `followUp.1.ko` · KO: 그 조건은 얼마나 오래 이어져야 해요?
-- `followUp.2.ko` · KO: 누가 함께하면 답이 달라져요?
-- `followUp.3.ko` · KO: 원래 선택으로 돌아오는 조건도 있어요?
+- `followUp.1.ko` · KO: 교통과 편의시설 중 무엇이 꼭 필요해요?
+- `followUp.2.ko` · KO: 누구와 사는지도 중요해요?
+- `followUp.3.ko` · KO: 그 조건이면 언제 이사하고 싶어요?
 
 ## 08 · 인터넷 없이 vs 에어컨 없이
 
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/08-no-internet-or-no-air-conditioning/lesson.html`
-- sha256: `c1de8b65fc381b2ec0d32d89574548a01684fc7bcf53e5215b0fc78107605816`
+- sha256: `b336668372906894ef4f58da1c403d7d6a835b540ec9c6543a57a830ea1fea02`
 - source kind: `article`
 
 #### `metadata`
@@ -2400,78 +2304,78 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 인터넷이 한 시간 끊겼을 때 무엇을 했어요?
 - `question.ja` · JA: インターネットが1時間使えなかったとき、何をしましたか？
-- `tutorGuidance.ko` · KO: 최근의 작은 장면 하나를 받으세요. 경험이 없으면 가까운 예나 가상 장면으로 바꿉니다. 극심한 더위에 냉방 없이 버티라고 권하지 마세요. 안전과 건강을 먼저 확인합니다.
-- `followUp.1.ko` · KO: 그때 어떤 상황이었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 좋거나 불편했어요?
-- `followUp.3.ko` · KO: 다시 같은 선택을 할 거예요?
+- `tutorGuidance.ko` · KO: 주의: 더위와 관련된 답에서는 안전과 건강을 우선하세요.
+- `followUp.1.ko` · KO: 가장 먼저 못 한 일이 뭐예요?
+- `followUp.2.ko` · KO: 대신 무엇을 했어요?
+- `followUp.3.ko` · KO: 한 시간보다 길면 어땠을까요?
 
 #### `warm-2`
 
 - `question.ko` · KO: 선선한 날 휴대폰 없이 반나절을 보내면 뭘 하고 싶어요?
 - `question.ja` · JA: 涼しい日にスマホなしで半日過ごすなら、何をしたいですか？
-- `tutorGuidance.ko` · KO: 바로 떠오르는 행동을 구체화해 주세요. 극심한 더위에 냉방 없이 버티라고 권하지 마세요. 안전과 건강을 먼저 확인합니다.
-- `followUp.1.ko` · KO: 왜 그렇게 하고 싶어요?
-- `followUp.2.ko` · KO: 비슷한 경험이 있어요?
-- `followUp.3.ko` · KO: 조건이 달라지면 답도 달라져요?
+- `tutorGuidance.ko` · KO: 주의: 더위와 관련된 답에서는 안전과 건강을 우선하세요.
+- `followUp.1.ko` · KO: 어디에서 보낼 거예요?
+- `followUp.2.ko` · KO: 혼자 있어도 괜찮아요?
+- `followUp.3.ko` · KO: 휴대폰 없이 가장 불편한 것은 뭐예요?
 
 #### `q1`
 
 - `question.ko` · KO: 지금 고른다면 인터넷 없이 / 에어컨 없이, 어느 쪽이에요?
 - `question.ja` · JA: 今選ぶなら、インターネットなしで過ごすことですか、エアコンなしで過ごすことですか？
-- `tutorGuidance.ko` · KO: 오늘의 첫 선택이에요. 정답을 정해 주지 말고 실제 이유를 받으세요. 극심한 더위에 냉방 없이 버티라고 권하지 마세요. 안전과 건강을 먼저 확인합니다.
-- `followUp.1.ko` · KO: 왜 그쪽을 골랐어요?
-- `followUp.2.ko` · KO: 실제 경험이 영향을 줬어요?
-- `followUp.3.ko` · KO: 반대쪽의 장점은 뭐예요?
+- `tutorGuidance.ko` · KO: 주의: 더위와 관련된 답에서는 안전과 건강을 우선하세요.
+- `followUp.1.ko` · KO: 왜 그 불편을 골랐어요?
+- `followUp.2.ko` · KO: 일이나 공부에도 영향이 있어요?
+- `followUp.3.ko` · KO: 반대쪽이 더 힘든 이유는 뭐예요?
 
 #### `q2`
 
-- `question.ko` · KO: 선택한 쪽이 현실이 되면 하루의 생활에서 가장 먼저 무엇이 달라질까요?
-- `question.ja` · JA: 選んだほうが現実になったら、一日の生活で最初に何が変わりますか？
-- `tutorGuidance.ko` · KO: 선택을 실제 하루의 변화에 연결해 주세요. 극심한 더위에 냉방 없이 버티라고 권하지 마세요. 안전과 건강을 먼저 확인합니다.
-- `followUp.1.ko` · KO: 가장 먼저 달라지는 장면은 뭐예요?
-- `followUp.2.ko` · KO: 주변 사람에게도 변화가 생겨요?
-- `followUp.3.ko` · KO: 생각보다 불편한 점도 있을까요?
+- `question.ko` · KO: 하루 동안 인터넷이나 에어컨 없이 지낸다면, 가장 먼저 불편한 것은 뭐예요?
+- `question.ja` · JA: 一日、インターネットかエアコンなしで過ごすなら、最初に困ることは何ですか？
+- `tutorGuidance.ko` · KO: 주의: 더위와 관련된 답에서는 안전과 건강을 우선하세요.
+- `followUp.1.ko` · KO: 아침부터 무엇을 못 하게 돼요?
+- `followUp.2.ko` · KO: 일이나 공부는 어떻게 할 거예요?
+- `followUp.3.ko` · KO: 다른 사람에게도 영향이 있어요?
 
 #### `q3`
 
-- `question.ko` · KO: 최근 날씨나 온라인 일정이 바뀌어서 반대쪽이 더 낫다고 느낀 순간은 언제였어요?
-- `question.ja` · JA: 最近、天気やオンラインの予定が変わって、反対のほうが良いと感じたのはいつですか？
-- `tutorGuidance.ko` · KO: 처음 선택을 부정하지 말고 반대쪽이 필요했던 예외를 찾으세요. 없으면 가상 장면으로 바꿉니다. 극심한 더위에 냉방 없이 버티라고 권하지 마세요. 안전과 건강을 먼저 확인합니다.
-- `followUp.1.ko` · KO: 그때 무슨 일이 있었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 필요했어요?
-- `followUp.3.ko` · KO: 그 경험 뒤에 생각이 달라졌어요?
+- `question.ko` · KO: 평소 선택과 반대되는 불편을 감수하는 게 더 나을 때는 언제예요?
+- `question.ja` · JA: 普段選ぶほうとは反対の不便を受け入れるほうがよいのは、どんなときですか？
+- `tutorGuidance.ko` · KO: 주의: 더위와 관련된 답에서는 안전과 건강을 우선하세요.
+- `followUp.1.ko` · KO: 어떤 날씨나 일정에서 그래요?
+- `followUp.2.ko` · KO: 건강과 약속 중 무엇이 더 중요해요?
+- `followUp.3.ko` · KO: 몇 시간까지 괜찮아요?
 
 #### `q4`
 
 - `question.ko` · KO: 선선한 봄날 하루 동안이라면 어느 불편을 감수할 수 있어요?
 - `question.ja` · JA: 涼しい春の日に一日だけなら、どちらの不便を受け入れられますか？
-- `tutorGuidance.ko` · KO: 가상의 조건 하나가 선택을 어떻게 흔드는지 확인하세요. 극심한 더위에 냉방 없이 버티라고 권하지 마세요. 안전과 건강을 먼저 확인합니다.
-- `followUp.1.ko` · KO: 어느 조건이 가장 중요해요?
-- `followUp.2.ko` · KO: 얼마 동안이라면 가능해요?
-- `followUp.3.ko` · KO: 조건 하나를 바꿀 수 있다면요?
+- `tutorGuidance.ko` · KO: 주의: 더위와 관련된 답에서는 안전과 건강을 우선하세요.
+- `followUp.1.ko` · KO: 인터넷 없이 무엇을 할 거예요?
+- `followUp.2.ko` · KO: 에어컨 없이 어디에서 지낼 거예요?
+- `followUp.3.ko` · KO: 하루보다 길면 선택이 바뀌어요?
 
 #### `q5`
 
 - `question.ko` · KO: 한여름에는 시원하고 안전한 장소를 이용할 수 있다면 선택이 달라질까요?
 - `question.ja` · JA: 真夏でも涼しく安全な場所を利用できるなら、選択は変わりますか？
-- `tutorGuidance.ko` · KO: 사람, 기간, 환경 중 달라진 조건 하나에 집중하세요. 극심한 더위에 냉방 없이 버티라고 권하지 마세요. 안전과 건강을 먼저 확인합니다.
-- `followUp.1.ko` · KO: 누구의 상황이 영향을 줘요?
-- `followUp.2.ko` · KO: 언제쯤 그런 변화가 올까요?
-- `followUp.3.ko` · KO: 지금도 그 변화에 가까워요?
+- `tutorGuidance.ko` · KO: 주의: 더위와 관련된 답에서는 안전과 건강을 우선하세요.
+- `followUp.1.ko` · KO: 시원한 곳까지 어떻게 갈 거예요?
+- `followUp.2.ko` · KO: 밤에도 이용할 수 있어야 해요?
+- `followUp.3.ko` · KO: 그 조건이면 인터넷 없이 지낼 수 있어요?
 
 #### `q6`
 
 - `question.ko` · KO: 어떤 계절이나 안전 조건이면 반대쪽을 고를 거예요?
 - `question.ja` · JA: どんな季節や安全条件なら、反対のほうを選びますか？
-- `tutorGuidance.ko` · KO: 처음 선택을 뒤집는 구체적인 경계 하나로 닫으세요. 극심한 더위에 냉방 없이 버티라고 권하지 마세요. 안전과 건강을 먼저 확인합니다.
-- `followUp.1.ko` · KO: 그 조건은 얼마나 오래 이어져야 해요?
-- `followUp.2.ko` · KO: 누가 함께하면 답이 달라져요?
-- `followUp.3.ko` · KO: 원래 선택으로 돌아오는 조건도 있어요?
+- `tutorGuidance.ko` · KO: 주의: 더위와 관련된 답에서는 안전과 건강을 우선하세요.
+- `followUp.1.ko` · KO: 어느 계절에 선택이 바뀌어요?
+- `followUp.2.ko` · KO: 몇 시간까지 안전하게 지낼 수 있어요?
+- `followUp.3.ko` · KO: 어떤 장소를 이용할 수 있어야 해요?
 
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/08-no-internet-or-no-air-conditioning/lesson.html`
-- sha256: `df9644d22795fb12272141e14c0fc38947f5149f9f35d1880d7dacef15760fe0`
+- sha256: `95ecb46c85ed70fc56e3c8709b35bc3c602939433289c0c2380c11514040c175`
 - source kind: `article`
 
 #### `metadata`
@@ -2563,80 +2467,80 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 인터넷이 한 시간 끊겼을 때 무엇을 했어요?
 - `question.ja` · JA: インターネットが1時間使えなかったとき、何をしましたか？
-- `tutorGuidance.ko` · KO: 최근의 작은 장면 하나를 받으세요. 경험이 없으면 가까운 예나 가상 장면으로 바꿉니다. 극심한 더위에 냉방 없이 버티라고 권하지 마세요. 안전과 건강을 먼저 확인합니다.
-- `followUp.1.ko` · KO: 그때 어떤 상황이었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 좋거나 불편했어요?
-- `followUp.3.ko` · KO: 다시 같은 선택을 할 거예요?
+- `tutorGuidance.ko` · KO: 주의: 더위와 관련된 답에서는 안전과 건강을 우선하세요.
+- `followUp.1.ko` · KO: 가장 먼저 못 한 일이 뭐예요?
+- `followUp.2.ko` · KO: 대신 무엇을 했어요?
+- `followUp.3.ko` · KO: 한 시간보다 길면 어땠을까요?
 
 #### `warm-2`
 
 - `question.ko` · KO: 선선한 날 휴대폰 없이 반나절을 보내면 뭘 하고 싶어요?
 - `question.ja` · JA: 涼しい日にスマホなしで半日過ごすなら、何をしたいですか？
-- `tutorGuidance.ko` · KO: 바로 떠오르는 행동을 구체화해 주세요. 극심한 더위에 냉방 없이 버티라고 권하지 마세요. 안전과 건강을 먼저 확인합니다.
-- `followUp.1.ko` · KO: 왜 그렇게 하고 싶어요?
-- `followUp.2.ko` · KO: 비슷한 경험이 있어요?
-- `followUp.3.ko` · KO: 조건이 달라지면 답도 달라져요?
+- `tutorGuidance.ko` · KO: 주의: 더위와 관련된 답에서는 안전과 건강을 우선하세요.
+- `followUp.1.ko` · KO: 어디에서 보낼 거예요?
+- `followUp.2.ko` · KO: 혼자 있어도 괜찮아요?
+- `followUp.3.ko` · KO: 휴대폰 없이 가장 불편한 것은 뭐예요?
 
 #### `q1`
 
 - `question.ko` · KO: 지금 고른다면 인터넷 없이 / 에어컨 없이, 어느 쪽이에요?
 - `question.ja` · JA: 今選ぶなら、インターネットなしで過ごすことですか、エアコンなしで過ごすことですか？
-- `tutorGuidance.ko` · KO: 오늘의 첫 선택이에요. 정답을 정해 주지 말고 실제 이유를 받으세요. 극심한 더위에 냉방 없이 버티라고 권하지 마세요. 안전과 건강을 먼저 확인합니다.
-- `followUp.1.ko` · KO: 왜 그쪽을 골랐어요?
-- `followUp.2.ko` · KO: 실제 경험이 영향을 줬어요?
-- `followUp.3.ko` · KO: 반대쪽의 장점은 뭐예요?
+- `tutorGuidance.ko` · KO: 주의: 더위와 관련된 답에서는 안전과 건강을 우선하세요.
+- `followUp.1.ko` · KO: 왜 그 불편을 골랐어요?
+- `followUp.2.ko` · KO: 일이나 공부에도 영향이 있어요?
+- `followUp.3.ko` · KO: 반대쪽이 더 힘든 이유는 뭐예요?
 
 #### `q2`
 
-- `question.ko` · KO: 선택한 쪽이 현실이 되면 하루의 생활에서 가장 먼저 무엇이 달라질까요?
-- `question.ja` · JA: 選んだほうが現実になったら、一日の生活で最初に何が変わりますか？
-- `tutorGuidance.ko` · KO: 선택을 실제 하루의 변화에 연결해 주세요. 극심한 더위에 냉방 없이 버티라고 권하지 마세요. 안전과 건강을 먼저 확인합니다.
-- `followUp.1.ko` · KO: 가장 먼저 달라지는 장면은 뭐예요?
-- `followUp.2.ko` · KO: 주변 사람에게도 변화가 생겨요?
-- `followUp.3.ko` · KO: 생각보다 불편한 점도 있을까요?
+- `question.ko` · KO: 하루 동안 인터넷이나 에어컨 없이 지낸다면, 가장 먼저 불편한 것은 뭐예요?
+- `question.ja` · JA: 一日、インターネットかエアコンなしで過ごすなら、最初に困ることは何ですか？
+- `tutorGuidance.ko` · KO: 주의: 더위와 관련된 답에서는 안전과 건강을 우선하세요.
+- `followUp.1.ko` · KO: 아침부터 무엇을 못 하게 돼요?
+- `followUp.2.ko` · KO: 일이나 공부는 어떻게 할 거예요?
+- `followUp.3.ko` · KO: 다른 사람에게도 영향이 있어요?
 
 #### `q3`
 
-- `question.ko` · KO: 최근 날씨나 온라인 일정이 바뀌어서 반대쪽이 더 낫다고 느낀 순간은 언제였어요?
-- `question.ja` · JA: 最近、天気やオンラインの予定が変わって、反対のほうが良いと感じたのはいつですか？
-- `tutorGuidance.ko` · KO: 처음 선택을 부정하지 말고 반대쪽이 필요했던 예외를 찾으세요. 없으면 가상 장면으로 바꿉니다. 극심한 더위에 냉방 없이 버티라고 권하지 마세요. 안전과 건강을 먼저 확인합니다.
-- `followUp.1.ko` · KO: 그때 무슨 일이 있었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 필요했어요?
-- `followUp.3.ko` · KO: 그 경험 뒤에 생각이 달라졌어요?
+- `question.ko` · KO: 평소 선택과 반대되는 불편을 감수하는 게 더 나을 때는 언제예요?
+- `question.ja` · JA: 普段選ぶほうとは反対の不便を受け入れるほうがよいのは、どんなときですか？
+- `tutorGuidance.ko` · KO: 주의: 더위와 관련된 답에서는 안전과 건강을 우선하세요.
+- `followUp.1.ko` · KO: 어떤 날씨나 일정에서 그래요?
+- `followUp.2.ko` · KO: 건강과 약속 중 무엇이 더 중요해요?
+- `followUp.3.ko` · KO: 몇 시간까지 괜찮아요?
 
 #### `q4`
 
 - `question.ko` · KO: 선선한 봄날 하루 동안이라면 어느 불편을 참을 수 있어요?
 - `question.ja` · JA: 涼しい春の日に一日だけなら、どちらの不便を我慢できますか？
-- `tutorGuidance.ko` · KO: 가상의 조건 하나가 선택을 어떻게 흔드는지 확인하세요. 극심한 더위에 냉방 없이 버티라고 권하지 마세요. 안전과 건강을 먼저 확인합니다.
-- `followUp.1.ko` · KO: 어느 조건이 가장 중요해요?
-- `followUp.2.ko` · KO: 얼마 동안이라면 가능해요?
-- `followUp.3.ko` · KO: 조건 하나를 바꿀 수 있다면요?
+- `tutorGuidance.ko` · KO: 주의: 더위와 관련된 답에서는 안전과 건강을 우선하세요.
+- `followUp.1.ko` · KO: 인터넷 없이 무엇을 할 거예요?
+- `followUp.2.ko` · KO: 에어컨 없이 어디에서 지낼 거예요?
+- `followUp.3.ko` · KO: 하루보다 길면 선택이 바뀌어요?
 
 #### `q5`
 
 - `question.ko` · KO: 한여름에 시원한 곳을 쓸 수 있으면 선택이 바뀌어요?
 - `question.ja` · JA: 真夏に涼しい場所を使えるなら、選択は変わりますか？
-- `tutorGuidance.ko` · KO: 사람, 기간, 환경 중 달라진 조건 하나에 집중하세요. 극심한 더위에 냉방 없이 버티라고 권하지 마세요. 안전과 건강을 먼저 확인합니다.
-- `followUp.1.ko` · KO: 누구의 상황이 영향을 줘요?
-- `followUp.2.ko` · KO: 언제쯤 그런 변화가 올까요?
-- `followUp.3.ko` · KO: 지금도 그 변화에 가까워요?
+- `tutorGuidance.ko` · KO: 주의: 더위와 관련된 답에서는 안전과 건강을 우선하세요.
+- `followUp.1.ko` · KO: 시원한 곳까지 어떻게 갈 거예요?
+- `followUp.2.ko` · KO: 밤에도 이용할 수 있어야 해요?
+- `followUp.3.ko` · KO: 그 조건이면 인터넷 없이 지낼 수 있어요?
 
 #### `q6`
 
 - `question.ko` · KO: 어떤 계절이나 안전 조건이면 반대쪽을 고를 거예요?
 - `question.ja` · JA: どんな季節や安全条件なら、反対のほうを選びますか？
-- `tutorGuidance.ko` · KO: 처음 선택을 뒤집는 구체적인 경계 하나로 닫으세요. 극심한 더위에 냉방 없이 버티라고 권하지 마세요. 안전과 건강을 먼저 확인합니다.
-- `followUp.1.ko` · KO: 그 조건은 얼마나 오래 이어져야 해요?
-- `followUp.2.ko` · KO: 누가 함께하면 답이 달라져요?
-- `followUp.3.ko` · KO: 원래 선택으로 돌아오는 조건도 있어요?
+- `tutorGuidance.ko` · KO: 주의: 더위와 관련된 답에서는 안전과 건강을 우선하세요.
+- `followUp.1.ko` · KO: 어느 계절에 선택이 바뀌어요?
+- `followUp.2.ko` · KO: 몇 시간까지 안전하게 지낼 수 있어요?
+- `followUp.3.ko` · KO: 어떤 장소를 이용할 수 있어야 해요?
 
 ## 09 · 워라밸 vs 높은 월급
 
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/09-work-life-balance-or-high-salary/lesson.html`
-- sha256: `1bcfd8ad762acf95fb4522b87995453087fc507531b7e14ea78abf46b9f62579`
+- sha256: `05195c3abb3dd0244cef413ca76b36ad36c5812a5ab249f441ad61f0d8f806cc`
 - source kind: `article`
 
 #### `metadata`
@@ -2728,78 +2632,78 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 최근에 일이나 공부를 끝내고 완전히 쉰 날이 있었어요?
 - `question.ja` · JA: 最近、仕事や勉強を終えてしっかり休めた日はありましたか？
-- `tutorGuidance.ko` · KO: 최근의 작은 장면 하나를 받으세요. 경험이 없으면 가까운 예나 가상 장면으로 바꿉니다. 현재 직업이나 정확한 수입·금액을 공개하게 하지 마세요. 일, 공부, 돌봄, 가사 경험 모두 답이 됩니다.
-- `followUp.1.ko` · KO: 그때 어떤 상황이었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 좋거나 불편했어요?
-- `followUp.3.ko` · KO: 다시 같은 선택을 할 거예요?
+- `tutorGuidance.ko` · KO: 주의: 직업이나 정확한 수입·금액을 묻지 마세요.
+- `followUp.1.ko` · KO: 그날 몇 시에 일을 끝냈어요?
+- `followUp.2.ko` · KO: 쉬면서 무엇을 했어요?
+- `followUp.3.ko` · KO: 다음 날 기분은 어땠어요?
 
 #### `warm-2`
 
 - `question.ko` · KO: 하루에서 꼭 지키고 싶은 개인 시간은 언제예요?
 - `question.ja` · JA: 一日の中で必ず守りたい自分の時間はいつですか？
-- `tutorGuidance.ko` · KO: 바로 떠오르는 행동을 구체화해 주세요. 현재 직업이나 정확한 수입·금액을 공개하게 하지 마세요. 일, 공부, 돌봄, 가사 경험 모두 답이 됩니다.
-- `followUp.1.ko` · KO: 왜 그렇게 하고 싶어요?
-- `followUp.2.ko` · KO: 비슷한 경험이 있어요?
-- `followUp.3.ko` · KO: 조건이 달라지면 답도 달라져요?
+- `tutorGuidance.ko` · KO: 주의: 직업이나 정확한 수입·금액을 묻지 마세요.
+- `followUp.1.ko` · KO: 그 시간에 무엇을 하고 싶어요?
+- `followUp.2.ko` · KO: 누구와 보내고 싶어요?
+- `followUp.3.ko` · KO: 일이 바쁘면 어떻게 지켜요?
 
 #### `q1`
 
 - `question.ko` · KO: 지금 고른다면 워라밸 / 높은 월급, 어느 쪽이에요?
 - `question.ja` · JA: 今選ぶなら、ワークライフバランスですか、高い給料ですか？
-- `tutorGuidance.ko` · KO: 오늘의 첫 선택이에요. 정답을 정해 주지 말고 실제 이유를 받으세요. 현재 직업이나 정확한 수입·금액을 공개하게 하지 마세요. 일, 공부, 돌봄, 가사 경험 모두 답이 됩니다.
-- `followUp.1.ko` · KO: 왜 그쪽을 골랐어요?
-- `followUp.2.ko` · KO: 실제 경험이 영향을 줬어요?
+- `tutorGuidance.ko` · KO: 주의: 직업이나 정확한 수입·금액을 묻지 마세요.
+- `followUp.1.ko` · KO: 지금 무엇이 더 부족해요?
+- `followUp.2.ko` · KO: 그 선택이 생활에 어떤 도움이 돼요?
 - `followUp.3.ko` · KO: 반대쪽의 장점은 뭐예요?
 
 #### `q2`
 
-- `question.ko` · KO: 선택한 쪽이 현실이 되면 일과 생활의 경계에서 가장 먼저 무엇이 달라질까요?
-- `question.ja` · JA: 選んだほうが現実になったら、仕事と生活の境界で最初に何が変わりますか？
-- `tutorGuidance.ko` · KO: 선택을 실제 하루의 변화에 연결해 주세요. 현재 직업이나 정확한 수입·금액을 공개하게 하지 마세요. 일, 공부, 돌봄, 가사 경험 모두 답이 됩니다.
-- `followUp.1.ko` · KO: 가장 먼저 달라지는 장면은 뭐예요?
-- `followUp.2.ko` · KO: 주변 사람에게도 변화가 생겨요?
-- `followUp.3.ko` · KO: 생각보다 불편한 점도 있을까요?
+- `question.ko` · KO: 워라밸이나 높은 월급 중 하나만 얻는다면, 일상이 어떻게 달라질까요?
+- `question.ja` · JA: ワークライフバランスか高い給料のどちらか一つだけを得るなら、日常はどう変わるでしょうか？
+- `tutorGuidance.ko` · KO: 주의: 직업이나 정확한 수입·금액을 묻지 마세요.
+- `followUp.1.ko` · KO: 일하는 시간이 어떻게 달라져요?
+- `followUp.2.ko` · KO: 퇴근 후 생활도 바뀔까요?
+- `followUp.3.ko` · KO: 가장 아쉬울 것 같은 점은 뭐예요?
 
 #### `q3`
 
-- `question.ko` · KO: 최근 휴식이나 수입이 급하게 필요해서 반대쪽이 더 낫다고 느낀 순간은 언제였어요?
-- `question.ja` · JA: 最近、休息や収入が急に必要になって、反対のほうが良いと感じたのはいつですか？
-- `tutorGuidance.ko` · KO: 처음 선택을 부정하지 말고 반대쪽이 필요했던 예외를 찾으세요. 없으면 가상 장면으로 바꿉니다. 현재 직업이나 정확한 수입·금액을 공개하게 하지 마세요. 일, 공부, 돌봄, 가사 경험 모두 답이 됩니다.
-- `followUp.1.ko` · KO: 그때 무슨 일이 있었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 필요했어요?
-- `followUp.3.ko` · KO: 그 경험 뒤에 생각이 달라졌어요?
+- `question.ko` · KO: 평소 선택과 반대되는 조건이 더 필요할 때는 언제예요?
+- `question.ja` · JA: 普段選ぶほうとは反対の条件が、より必要になるのはどんなときですか？
+- `tutorGuidance.ko` · KO: 주의: 직업이나 정확한 수입·금액을 묻지 마세요.
+- `followUp.1.ko` · KO: 어떤 책임이나 목표가 있을 때 그래요?
+- `followUp.2.ko` · KO: 그 조건은 얼마나 오래 필요해요?
+- `followUp.3.ko` · KO: 건강도 선택에 영향을 줘요?
 
 #### `q4`
 
 - `question.ko` · KO: 보상이 크게 늘어도 저녁과 주말 약속을 자주 포기해야 하면 어떨까요?
 - `question.ja` · JA: 報酬が大きく増えても、夜や週末の予定をよく諦める必要があるならどうですか？
-- `tutorGuidance.ko` · KO: 가상의 조건 하나가 선택을 어떻게 흔드는지 확인하세요. 현재 직업이나 정확한 수입·금액을 공개하게 하지 마세요. 일, 공부, 돌봄, 가사 경험 모두 답이 됩니다.
-- `followUp.1.ko` · KO: 어느 조건이 가장 중요해요?
-- `followUp.2.ko` · KO: 얼마 동안이라면 가능해요?
-- `followUp.3.ko` · KO: 조건 하나를 바꿀 수 있다면요?
+- `tutorGuidance.ko` · KO: 주의: 직업이나 정확한 수입·금액을 묻지 마세요.
+- `followUp.1.ko` · KO: 늘어난 보상으로 무엇을 하고 싶어요?
+- `followUp.2.ko` · KO: 어떤 약속은 포기할 수 없어요?
+- `followUp.3.ko` · KO: 몇 달 동안이라면 가능해요?
 
 #### `q5`
 
 - `question.ko` · KO: 목표 기간이 딱 일 년이라면 높은 보상을 선택할 수 있어요?
 - `question.ja` · JA: 期間がちょうど1年なら、高い報酬を選べますか？
-- `tutorGuidance.ko` · KO: 사람, 기간, 환경 중 달라진 조건 하나에 집중하세요. 현재 직업이나 정확한 수입·금액을 공개하게 하지 마세요. 일, 공부, 돌봄, 가사 경험 모두 답이 됩니다.
-- `followUp.1.ko` · KO: 누구의 상황이 영향을 줘요?
-- `followUp.2.ko` · KO: 언제쯤 그런 변화가 올까요?
-- `followUp.3.ko` · KO: 지금도 그 변화에 가까워요?
+- `tutorGuidance.ko` · KO: 주의: 직업이나 정확한 수입·금액을 묻지 마세요.
+- `followUp.1.ko` · KO: 일 년 뒤에는 무엇을 하고 싶어요?
+- `followUp.2.ko` · KO: 그동안 포기해야 하는 것은 뭐예요?
+- `followUp.3.ko` · KO: 목표를 이루지 못해도 괜찮아요?
 
 #### `q6`
 
 - `question.ko` · KO: 어떤 책임이나 목표가 생기면 반대쪽을 고를 거예요?
 - `question.ja` · JA: どんな責任や目標ができたら、反対のほうを選びますか？
-- `tutorGuidance.ko` · KO: 처음 선택을 뒤집는 구체적인 경계 하나로 닫으세요. 현재 직업이나 정확한 수입·금액을 공개하게 하지 마세요. 일, 공부, 돌봄, 가사 경험 모두 답이 됩니다.
-- `followUp.1.ko` · KO: 그 조건은 얼마나 오래 이어져야 해요?
-- `followUp.2.ko` · KO: 누가 함께하면 답이 달라져요?
-- `followUp.3.ko` · KO: 원래 선택으로 돌아오는 조건도 있어요?
+- `tutorGuidance.ko` · KO: 주의: 직업이나 정확한 수입·금액을 묻지 마세요.
+- `followUp.1.ko` · KO: 어떤 책임이 생기면 선택을 바꿔요?
+- `followUp.2.ko` · KO: 필요한 보상이나 휴식은 어느 정도예요?
+- `followUp.3.ko` · KO: 지금도 그 조건에 가까워요?
 
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/09-work-life-balance-or-high-salary/lesson.html`
-- sha256: `a06b82c3726c6d6d6235a9bc6ae204bcf9ab141d59b093502c66a818f37924de`
+- sha256: `fb19fa5a7c30eacdccab95d9446c8d3e1894a1752188c7bb00d6026485c195cd`
 - source kind: `article`
 
 #### `metadata`
@@ -2891,80 +2795,80 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 최근에 일이나 공부를 끝내고 완전히 쉰 날이 있었어요?
 - `question.ja` · JA: 最近、仕事や勉強を終えてしっかり休めた日はありましたか？
-- `tutorGuidance.ko` · KO: 최근의 작은 장면 하나를 받으세요. 경험이 없으면 가까운 예나 가상 장면으로 바꿉니다. 현재 직업이나 정확한 수입·금액을 공개하게 하지 마세요. 일, 공부, 돌봄, 가사 경험 모두 답이 됩니다.
-- `followUp.1.ko` · KO: 그때 어떤 상황이었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 좋거나 불편했어요?
-- `followUp.3.ko` · KO: 다시 같은 선택을 할 거예요?
+- `tutorGuidance.ko` · KO: 주의: 직업이나 정확한 수입·금액을 묻지 마세요.
+- `followUp.1.ko` · KO: 그날 몇 시에 일을 끝냈어요?
+- `followUp.2.ko` · KO: 쉬면서 무엇을 했어요?
+- `followUp.3.ko` · KO: 다음 날 기분은 어땠어요?
 
 #### `warm-2`
 
 - `question.ko` · KO: 하루에서 꼭 지키고 싶은 개인 시간은 언제예요?
 - `question.ja` · JA: 一日の中で必ず守りたい自分の時間はいつですか？
-- `tutorGuidance.ko` · KO: 바로 떠오르는 행동을 구체화해 주세요. 현재 직업이나 정확한 수입·금액을 공개하게 하지 마세요. 일, 공부, 돌봄, 가사 경험 모두 답이 됩니다.
-- `followUp.1.ko` · KO: 왜 그렇게 하고 싶어요?
-- `followUp.2.ko` · KO: 비슷한 경험이 있어요?
-- `followUp.3.ko` · KO: 조건이 달라지면 답도 달라져요?
+- `tutorGuidance.ko` · KO: 주의: 직업이나 정확한 수입·금액을 묻지 마세요.
+- `followUp.1.ko` · KO: 그 시간에 무엇을 하고 싶어요?
+- `followUp.2.ko` · KO: 누구와 보내고 싶어요?
+- `followUp.3.ko` · KO: 일이 바쁘면 어떻게 지켜요?
 
 #### `q1`
 
 - `question.ko` · KO: 지금 고른다면 워라밸 / 높은 월급, 어느 쪽이에요?
 - `question.ja` · JA: 今選ぶなら、ワークライフバランスですか、高い給料ですか？
-- `tutorGuidance.ko` · KO: 오늘의 첫 선택이에요. 정답을 정해 주지 말고 실제 이유를 받으세요. 현재 직업이나 정확한 수입·금액을 공개하게 하지 마세요. 일, 공부, 돌봄, 가사 경험 모두 답이 됩니다.
-- `followUp.1.ko` · KO: 왜 그쪽을 골랐어요?
-- `followUp.2.ko` · KO: 실제 경험이 영향을 줬어요?
+- `tutorGuidance.ko` · KO: 주의: 직업이나 정확한 수입·금액을 묻지 마세요.
+- `followUp.1.ko` · KO: 지금 무엇이 더 부족해요?
+- `followUp.2.ko` · KO: 그 선택이 생활에 어떤 도움이 돼요?
 - `followUp.3.ko` · KO: 반대쪽의 장점은 뭐예요?
 
 #### `q2`
 
-- `question.ko` · KO: 선택한 쪽이 현실이 되면 일과 생활의 경계에서 가장 먼저 무엇이 달라질까요?
-- `question.ja` · JA: 選んだほうが現実になったら、仕事と生活の境界で最初に何が変わりますか？
-- `tutorGuidance.ko` · KO: 선택을 실제 하루의 변화에 연결해 주세요. 현재 직업이나 정확한 수입·금액을 공개하게 하지 마세요. 일, 공부, 돌봄, 가사 경험 모두 답이 됩니다.
-- `followUp.1.ko` · KO: 가장 먼저 달라지는 장면은 뭐예요?
-- `followUp.2.ko` · KO: 주변 사람에게도 변화가 생겨요?
-- `followUp.3.ko` · KO: 생각보다 불편한 점도 있을까요?
+- `question.ko` · KO: 워라밸이나 높은 월급 중 하나만 얻는다면, 일상이 어떻게 달라질까요?
+- `question.ja` · JA: ワークライフバランスか高い給料のどちらか一つだけを得るなら、日常はどう変わるでしょうか？
+- `tutorGuidance.ko` · KO: 주의: 직업이나 정확한 수입·금액을 묻지 마세요.
+- `followUp.1.ko` · KO: 일하는 시간이 어떻게 달라져요?
+- `followUp.2.ko` · KO: 퇴근 후 생활도 바뀔까요?
+- `followUp.3.ko` · KO: 가장 아쉬울 것 같은 점은 뭐예요?
 
 #### `q3`
 
-- `question.ko` · KO: 최근 휴식이나 수입이 급하게 필요해서 반대쪽이 더 낫다고 느낀 순간은 언제였어요?
-- `question.ja` · JA: 最近、休息や収入が急に必要になって、反対のほうが良いと感じたのはいつですか？
-- `tutorGuidance.ko` · KO: 처음 선택을 부정하지 말고 반대쪽이 필요했던 예외를 찾으세요. 없으면 가상 장면으로 바꿉니다. 현재 직업이나 정확한 수입·금액을 공개하게 하지 마세요. 일, 공부, 돌봄, 가사 경험 모두 답이 됩니다.
-- `followUp.1.ko` · KO: 그때 무슨 일이 있었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 필요했어요?
-- `followUp.3.ko` · KO: 그 경험 뒤에 생각이 달라졌어요?
+- `question.ko` · KO: 평소 선택과 반대되는 조건이 더 필요할 때는 언제예요?
+- `question.ja` · JA: 普段選ぶほうとは反対の条件が、より必要になるのはどんなときですか？
+- `tutorGuidance.ko` · KO: 주의: 직업이나 정확한 수입·금액을 묻지 마세요.
+- `followUp.1.ko` · KO: 어떤 책임이나 목표가 있을 때 그래요?
+- `followUp.2.ko` · KO: 그 조건은 얼마나 오래 필요해요?
+- `followUp.3.ko` · KO: 건강도 선택에 영향을 줘요?
 
 #### `q4`
 
 - `question.ko` · KO: 보상이 커도 저녁과 주말에 자주 일해야 하면 어때요?
 - `question.ja` · JA: 報酬が高くても、夜や週末によく働くならどうですか？
-- `tutorGuidance.ko` · KO: 가상의 조건 하나가 선택을 어떻게 흔드는지 확인하세요. 현재 직업이나 정확한 수입·금액을 공개하게 하지 마세요. 일, 공부, 돌봄, 가사 경험 모두 답이 됩니다.
-- `followUp.1.ko` · KO: 어느 조건이 가장 중요해요?
-- `followUp.2.ko` · KO: 얼마 동안이라면 가능해요?
-- `followUp.3.ko` · KO: 조건 하나를 바꿀 수 있다면요?
+- `tutorGuidance.ko` · KO: 주의: 직업이나 정확한 수입·금액을 묻지 마세요.
+- `followUp.1.ko` · KO: 늘어난 보상으로 무엇을 하고 싶어요?
+- `followUp.2.ko` · KO: 어떤 약속은 포기할 수 없어요?
+- `followUp.3.ko` · KO: 몇 달 동안이라면 가능해요?
 
 #### `q5`
 
 - `question.ko` · KO: 딱 일 년만이라면 높은 보상을 골라요?
 - `question.ja` · JA: ちょうど1年だけなら、高い報酬を選びますか？
-- `tutorGuidance.ko` · KO: 사람, 기간, 환경 중 달라진 조건 하나에 집중하세요. 현재 직업이나 정확한 수입·금액을 공개하게 하지 마세요. 일, 공부, 돌봄, 가사 경험 모두 답이 됩니다.
-- `followUp.1.ko` · KO: 누구의 상황이 영향을 줘요?
-- `followUp.2.ko` · KO: 언제쯤 그런 변화가 올까요?
-- `followUp.3.ko` · KO: 지금도 그 변화에 가까워요?
+- `tutorGuidance.ko` · KO: 주의: 직업이나 정확한 수입·금액을 묻지 마세요.
+- `followUp.1.ko` · KO: 일 년 뒤에는 무엇을 하고 싶어요?
+- `followUp.2.ko` · KO: 그동안 포기해야 하는 것은 뭐예요?
+- `followUp.3.ko` · KO: 목표를 이루지 못해도 괜찮아요?
 
 #### `q6`
 
 - `question.ko` · KO: 어떤 책임이나 목표가 생기면 반대쪽을 고를 거예요?
 - `question.ja` · JA: どんな責任や目標ができたら、反対のほうを選びますか？
-- `tutorGuidance.ko` · KO: 처음 선택을 뒤집는 구체적인 경계 하나로 닫으세요. 현재 직업이나 정확한 수입·금액을 공개하게 하지 마세요. 일, 공부, 돌봄, 가사 경험 모두 답이 됩니다.
-- `followUp.1.ko` · KO: 그 조건은 얼마나 오래 이어져야 해요?
-- `followUp.2.ko` · KO: 누가 함께하면 답이 달라져요?
-- `followUp.3.ko` · KO: 원래 선택으로 돌아오는 조건도 있어요?
+- `tutorGuidance.ko` · KO: 주의: 직업이나 정확한 수입·금액을 묻지 마세요.
+- `followUp.1.ko` · KO: 어떤 책임이 생기면 선택을 바꿔요?
+- `followUp.2.ko` · KO: 필요한 보상이나 휴식은 어느 정도예요?
+- `followUp.3.ko` · KO: 지금도 그 조건에 가까워요?
 
 ## 10 · 재택근무 vs 출근
 
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/10-remote-work-or-office/lesson.html`
-- sha256: `ac7c364428eee319481280f28ee199ae3d5e322bc732099bbdfa08cf3d4424b3`
+- sha256: `3ff191f2f2a42e790a2a3cf1b1b14c15e653e96a024ee32ae816b7f3e7b5a19d`
 - source kind: `article`
 
 #### `metadata`
@@ -3056,78 +2960,78 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 집에서 일하거나 공부할 때 가장 방해되는 것은 뭐예요?
 - `question.ja` · JA: 家で仕事や勉強をするとき、いちばん邪魔になるものは何ですか？
-- `tutorGuidance.ko` · KO: 최근의 작은 장면 하나를 받으세요. 경험이 없으면 가까운 예나 가상 장면으로 바꿉니다. 직장 경험을 전제로 하지 마세요. 공부, 프로젝트, 취미 작업 경험으로 바꿔도 됩니다.
-- `followUp.1.ko` · KO: 그때 어떤 상황이었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 좋거나 불편했어요?
-- `followUp.3.ko` · KO: 다시 같은 선택을 할 거예요?
+- `tutorGuidance.ko` · KO: 주의: 직장 경험이 없으면 공부·프로젝트·취미 경험으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 무엇 때문에 방해받아요?
+- `followUp.2.ko` · KO: 집중하려고 어떻게 해요?
+- `followUp.3.ko` · KO: 집 밖에서는 더 잘돼요?
 
 #### `warm-2`
 
 - `question.ko` · KO: 이동 시간이 없어진다면 그 시간을 어떻게 쓰고 싶어요?
 - `question.ja` · JA: 移動時間がなくなったら、その時間をどう使いたいですか？
-- `tutorGuidance.ko` · KO: 바로 떠오르는 행동을 구체화해 주세요. 직장 경험을 전제로 하지 마세요. 공부, 프로젝트, 취미 작업 경험으로 바꿔도 됩니다.
-- `followUp.1.ko` · KO: 왜 그렇게 하고 싶어요?
-- `followUp.2.ko` · KO: 비슷한 경험이 있어요?
-- `followUp.3.ko` · KO: 조건이 달라지면 답도 달라져요?
+- `tutorGuidance.ko` · KO: 주의: 직장 경험이 없으면 공부·프로젝트·취미 경험으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 가장 먼저 무엇을 하고 싶어요?
+- `followUp.2.ko` · KO: 누구와 보내고 싶어요?
+- `followUp.3.ko` · KO: 매일 생겨도 같은 일을 할 거예요?
 
 #### `q1`
 
 - `question.ko` · KO: 지금 고른다면 재택근무 / 출근, 어느 쪽이에요?
 - `question.ja` · JA: 今選ぶなら、在宅勤務ですか、出勤ですか？
-- `tutorGuidance.ko` · KO: 오늘의 첫 선택이에요. 정답을 정해 주지 말고 실제 이유를 받으세요. 직장 경험을 전제로 하지 마세요. 공부, 프로젝트, 취미 작업 경험으로 바꿔도 됩니다.
-- `followUp.1.ko` · KO: 왜 그쪽을 골랐어요?
-- `followUp.2.ko` · KO: 실제 경험이 영향을 줬어요?
+- `tutorGuidance.ko` · KO: 주의: 직장 경험이 없으면 공부·프로젝트·취미 경험으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 왜 그 방식을 골랐어요?
+- `followUp.2.ko` · KO: 직접 경험해 본 적이 있어요?
 - `followUp.3.ko` · KO: 반대쪽의 장점은 뭐예요?
 
 #### `q2`
 
-- `question.ko` · KO: 선택한 쪽이 현실이 되면 일하거나 공부하는 환경에서 가장 먼저 무엇이 달라질까요?
-- `question.ja` · JA: 選んだほうが現実になったら、仕事や勉強の環境で最初に何が変わりますか？
-- `tutorGuidance.ko` · KO: 선택을 실제 하루의 변화에 연결해 주세요. 직장 경험을 전제로 하지 마세요. 공부, 프로젝트, 취미 작업 경험으로 바꿔도 됩니다.
-- `followUp.1.ko` · KO: 가장 먼저 달라지는 장면은 뭐예요?
-- `followUp.2.ko` · KO: 주변 사람에게도 변화가 생겨요?
-- `followUp.3.ko` · KO: 생각보다 불편한 점도 있을까요?
+- `question.ko` · KO: 앞으로 재택근무만 하거나 매일 출근한다면, 일하거나 공부하는 하루가 어떻게 달라질까요?
+- `question.ja` · JA: これから在宅だけ、または毎日出勤するなら、仕事や勉強をする一日はどう変わるでしょうか？
+- `tutorGuidance.ko` · KO: 주의: 직장 경험이 없으면 공부·프로젝트·취미 경험으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 일을 시작하는 시간이 달라질까요?
+- `followUp.2.ko` · KO: 사람들과 소통하는 방식은 어때요?
+- `followUp.3.ko` · KO: 가장 불편할 것 같은 점은 뭐예요?
 
 #### `q3`
 
-- `question.ko` · KO: 최근 집중이나 소통이 필요해서 반대쪽이 더 낫다고 느낀 순간은 언제였어요?
-- `question.ja` · JA: 最近、集中やコミュニケーションが必要で、反対のほうが良いと感じたのはいつですか？
-- `tutorGuidance.ko` · KO: 처음 선택을 부정하지 말고 반대쪽이 필요했던 예외를 찾으세요. 없으면 가상 장면으로 바꿉니다. 직장 경험을 전제로 하지 마세요. 공부, 프로젝트, 취미 작업 경험으로 바꿔도 됩니다.
-- `followUp.1.ko` · KO: 그때 무슨 일이 있었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 필요했어요?
-- `followUp.3.ko` · KO: 그 경험 뒤에 생각이 달라졌어요?
+- `question.ko` · KO: 평소와 반대되는 근무 방식이 더 나을 때는 언제예요?
+- `question.ja` · JA: 普段とは反対の働き方のほうがよいのは、どんなときですか？
+- `tutorGuidance.ko` · KO: 주의: 직장 경험이 없으면 공부·프로젝트·취미 경험으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 혼자 집중해야 할 때와 협업할 때 답이 달라져요?
+- `followUp.2.ko` · KO: 어떤 업무에서 그래요?
+- `followUp.3.ko` · KO: 일주일 중 며칠이면 적당해요?
 
 #### `q4`
 
 - `question.ko` · KO: 출근 시간이 15분이고 조용한 자리가 보장된다면 어디를 고를 거예요?
 - `question.ja` · JA: 通勤が15分で静かな席が保証されるなら、どちらを選びますか？
-- `tutorGuidance.ko` · KO: 가상의 조건 하나가 선택을 어떻게 흔드는지 확인하세요. 직장 경험을 전제로 하지 마세요. 공부, 프로젝트, 취미 작업 경험으로 바꿔도 됩니다.
-- `followUp.1.ko` · KO: 어느 조건이 가장 중요해요?
-- `followUp.2.ko` · KO: 얼마 동안이라면 가능해요?
-- `followUp.3.ko` · KO: 조건 하나를 바꿀 수 있다면요?
+- `tutorGuidance.ko` · KO: 주의: 직장 경험이 없으면 공부·프로젝트·취미 경험으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 15분 이동은 괜찮아요?
+- `followUp.2.ko` · KO: 사무실에서 누구를 만나고 싶어요?
+- `followUp.3.ko` · KO: 조용한 자리가 없으면 선택이 바뀌어요?
 
 #### `q5`
 
 - `question.ko` · KO: 팀을 만나는 날을 일주일에 하루만 정할 수 있다면 어떨까요?
 - `question.ja` · JA: チームに会う日を週1日だけにできるなら、どうですか？
-- `tutorGuidance.ko` · KO: 사람, 기간, 환경 중 달라진 조건 하나에 집중하세요. 직장 경험을 전제로 하지 마세요. 공부, 프로젝트, 취미 작업 경험으로 바꿔도 됩니다.
-- `followUp.1.ko` · KO: 누구의 상황이 영향을 줘요?
-- `followUp.2.ko` · KO: 언제쯤 그런 변화가 올까요?
-- `followUp.3.ko` · KO: 지금도 그 변화에 가까워요?
+- `tutorGuidance.ko` · KO: 주의: 직장 경험이 없으면 공부·프로젝트·취미 경험으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 팀을 만나는 날에는 무엇을 하고 싶어요?
+- `followUp.2.ko` · KO: 나머지 날에는 어디에서 일할 거예요?
+- `followUp.3.ko` · KO: 하루보다 더 자주 만나야 할 때도 있어요?
 
 #### `q6`
 
 - `question.ko` · KO: 어떤 공간이나 협업 조건이면 반대쪽을 고를 거예요?
 - `question.ja` · JA: どんな空間や協働の条件なら、反対のほうを選びますか？
-- `tutorGuidance.ko` · KO: 처음 선택을 뒤집는 구체적인 경계 하나로 닫으세요. 직장 경험을 전제로 하지 마세요. 공부, 프로젝트, 취미 작업 경험으로 바꿔도 됩니다.
-- `followUp.1.ko` · KO: 그 조건은 얼마나 오래 이어져야 해요?
-- `followUp.2.ko` · KO: 누가 함께하면 답이 달라져요?
-- `followUp.3.ko` · KO: 원래 선택으로 돌아오는 조건도 있어요?
+- `tutorGuidance.ko` · KO: 주의: 직장 경험이 없으면 공부·프로젝트·취미 경험으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 어떤 업무는 사무실에서 해야 해요?
+- `followUp.2.ko` · KO: 집에 어떤 공간이 있어야 해요?
+- `followUp.3.ko` · KO: 함께 일하는 사람도 영향을 줘요?
 
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/10-remote-work-or-office/lesson.html`
-- sha256: `25dafdb17971cc7674b079180794bb7b6b0ed20ad2f39f439e312ee79e3cb7e6`
+- sha256: `4563e28e2342eb2024523d799949de183e6a184a0f6c7ce7c67089d3b3116717`
 - source kind: `article`
 
 #### `metadata`
@@ -3219,80 +3123,80 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 집에서 일하거나 공부할 때 가장 방해되는 것은 뭐예요?
 - `question.ja` · JA: 家で仕事や勉強をするとき、いちばん邪魔になるものは何ですか？
-- `tutorGuidance.ko` · KO: 최근의 작은 장면 하나를 받으세요. 경험이 없으면 가까운 예나 가상 장면으로 바꿉니다. 직장 경험을 전제로 하지 마세요. 공부, 프로젝트, 취미 작업 경험으로 바꿔도 됩니다.
-- `followUp.1.ko` · KO: 그때 어떤 상황이었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 좋거나 불편했어요?
-- `followUp.3.ko` · KO: 다시 같은 선택을 할 거예요?
+- `tutorGuidance.ko` · KO: 주의: 직장 경험이 없으면 공부·프로젝트·취미 경험으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 무엇 때문에 방해받아요?
+- `followUp.2.ko` · KO: 집중하려고 어떻게 해요?
+- `followUp.3.ko` · KO: 집 밖에서는 더 잘돼요?
 
 #### `warm-2`
 
 - `question.ko` · KO: 이동 시간이 없어진다면 그 시간을 어떻게 쓰고 싶어요?
 - `question.ja` · JA: 移動時間がなくなったら、その時間をどう使いたいですか？
-- `tutorGuidance.ko` · KO: 바로 떠오르는 행동을 구체화해 주세요. 직장 경험을 전제로 하지 마세요. 공부, 프로젝트, 취미 작업 경험으로 바꿔도 됩니다.
-- `followUp.1.ko` · KO: 왜 그렇게 하고 싶어요?
-- `followUp.2.ko` · KO: 비슷한 경험이 있어요?
-- `followUp.3.ko` · KO: 조건이 달라지면 답도 달라져요?
+- `tutorGuidance.ko` · KO: 주의: 직장 경험이 없으면 공부·프로젝트·취미 경험으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 가장 먼저 무엇을 하고 싶어요?
+- `followUp.2.ko` · KO: 누구와 보내고 싶어요?
+- `followUp.3.ko` · KO: 매일 생겨도 같은 일을 할 거예요?
 
 #### `q1`
 
 - `question.ko` · KO: 지금 고른다면 재택근무 / 출근, 어느 쪽이에요?
 - `question.ja` · JA: 今選ぶなら、在宅勤務ですか、出勤ですか？
-- `tutorGuidance.ko` · KO: 오늘의 첫 선택이에요. 정답을 정해 주지 말고 실제 이유를 받으세요. 직장 경험을 전제로 하지 마세요. 공부, 프로젝트, 취미 작업 경험으로 바꿔도 됩니다.
-- `followUp.1.ko` · KO: 왜 그쪽을 골랐어요?
-- `followUp.2.ko` · KO: 실제 경험이 영향을 줬어요?
+- `tutorGuidance.ko` · KO: 주의: 직장 경험이 없으면 공부·프로젝트·취미 경험으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 왜 그 방식을 골랐어요?
+- `followUp.2.ko` · KO: 직접 경험해 본 적이 있어요?
 - `followUp.3.ko` · KO: 반대쪽의 장점은 뭐예요?
 
 #### `q2`
 
-- `question.ko` · KO: 선택한 쪽이 현실이 되면 일하거나 공부하는 환경에서 가장 먼저 무엇이 달라질까요?
-- `question.ja` · JA: 選んだほうが現実になったら、仕事や勉強の環境で最初に何が変わりますか？
-- `tutorGuidance.ko` · KO: 선택을 실제 하루의 변화에 연결해 주세요. 직장 경험을 전제로 하지 마세요. 공부, 프로젝트, 취미 작업 경험으로 바꿔도 됩니다.
-- `followUp.1.ko` · KO: 가장 먼저 달라지는 장면은 뭐예요?
-- `followUp.2.ko` · KO: 주변 사람에게도 변화가 생겨요?
-- `followUp.3.ko` · KO: 생각보다 불편한 점도 있을까요?
+- `question.ko` · KO: 앞으로 재택근무만 하거나 매일 출근한다면, 일하거나 공부하는 하루가 어떻게 달라질까요?
+- `question.ja` · JA: これから在宅だけ、または毎日出勤するなら、仕事や勉強をする一日はどう変わるでしょうか？
+- `tutorGuidance.ko` · KO: 주의: 직장 경험이 없으면 공부·프로젝트·취미 경험으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 일을 시작하는 시간이 달라질까요?
+- `followUp.2.ko` · KO: 사람들과 소통하는 방식은 어때요?
+- `followUp.3.ko` · KO: 가장 불편할 것 같은 점은 뭐예요?
 
 #### `q3`
 
-- `question.ko` · KO: 최근 집중이나 소통이 필요해서 반대쪽이 더 낫다고 느낀 순간은 언제였어요?
-- `question.ja` · JA: 最近、集中やコミュニケーションが必要で、反対のほうが良いと感じたのはいつですか？
-- `tutorGuidance.ko` · KO: 처음 선택을 부정하지 말고 반대쪽이 필요했던 예외를 찾으세요. 없으면 가상 장면으로 바꿉니다. 직장 경험을 전제로 하지 마세요. 공부, 프로젝트, 취미 작업 경험으로 바꿔도 됩니다.
-- `followUp.1.ko` · KO: 그때 무슨 일이 있었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 필요했어요?
-- `followUp.3.ko` · KO: 그 경험 뒤에 생각이 달라졌어요?
+- `question.ko` · KO: 평소와 반대되는 근무 방식이 더 나을 때는 언제예요?
+- `question.ja` · JA: 普段とは反対の働き方のほうがよいのは、どんなときですか？
+- `tutorGuidance.ko` · KO: 주의: 직장 경험이 없으면 공부·프로젝트·취미 경험으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 혼자 집중해야 할 때와 협업할 때 답이 달라져요?
+- `followUp.2.ko` · KO: 어떤 업무에서 그래요?
+- `followUp.3.ko` · KO: 일주일 중 며칠이면 적당해요?
 
 #### `q4`
 
 - `question.ko` · KO: 출근이 15분이고 자리가 조용하면 어디를 골라요?
 - `question.ja` · JA: 通勤が15分で席が静かなら、どちらを選びますか？
-- `tutorGuidance.ko` · KO: 가상의 조건 하나가 선택을 어떻게 흔드는지 확인하세요. 직장 경험을 전제로 하지 마세요. 공부, 프로젝트, 취미 작업 경험으로 바꿔도 됩니다.
-- `followUp.1.ko` · KO: 어느 조건이 가장 중요해요?
-- `followUp.2.ko` · KO: 얼마 동안이라면 가능해요?
-- `followUp.3.ko` · KO: 조건 하나를 바꿀 수 있다면요?
+- `tutorGuidance.ko` · KO: 주의: 직장 경험이 없으면 공부·프로젝트·취미 경험으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 15분 이동은 괜찮아요?
+- `followUp.2.ko` · KO: 사무실에서 누구를 만나고 싶어요?
+- `followUp.3.ko` · KO: 조용한 자리가 없으면 선택이 바뀌어요?
 
 #### `q5`
 
 - `question.ko` · KO: 일주일에 하루만 팀을 만나면 어때요?
 - `question.ja` · JA: 週に1日だけチームに会うなら、どうですか？
-- `tutorGuidance.ko` · KO: 사람, 기간, 환경 중 달라진 조건 하나에 집중하세요. 직장 경험을 전제로 하지 마세요. 공부, 프로젝트, 취미 작업 경험으로 바꿔도 됩니다.
-- `followUp.1.ko` · KO: 누구의 상황이 영향을 줘요?
-- `followUp.2.ko` · KO: 언제쯤 그런 변화가 올까요?
-- `followUp.3.ko` · KO: 지금도 그 변화에 가까워요?
+- `tutorGuidance.ko` · KO: 주의: 직장 경험이 없으면 공부·프로젝트·취미 경험으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 팀을 만나는 날에는 무엇을 하고 싶어요?
+- `followUp.2.ko` · KO: 나머지 날에는 어디에서 일할 거예요?
+- `followUp.3.ko` · KO: 하루보다 더 자주 만나야 할 때도 있어요?
 
 #### `q6`
 
 - `question.ko` · KO: 어떤 공간이나 협업 조건이면 반대쪽을 고를 거예요?
 - `question.ja` · JA: どんな空間や協働の条件なら、反対のほうを選びますか？
-- `tutorGuidance.ko` · KO: 처음 선택을 뒤집는 구체적인 경계 하나로 닫으세요. 직장 경험을 전제로 하지 마세요. 공부, 프로젝트, 취미 작업 경험으로 바꿔도 됩니다.
-- `followUp.1.ko` · KO: 그 조건은 얼마나 오래 이어져야 해요?
-- `followUp.2.ko` · KO: 누가 함께하면 답이 달라져요?
-- `followUp.3.ko` · KO: 원래 선택으로 돌아오는 조건도 있어요?
+- `tutorGuidance.ko` · KO: 주의: 직장 경험이 없으면 공부·프로젝트·취미 경험으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 어떤 업무는 사무실에서 해야 해요?
+- `followUp.2.ko` · KO: 집에 어떤 공간이 있어야 해요?
+- `followUp.3.ko` · KO: 함께 일하는 사람도 영향을 줘요?
 
 ## 11 · 카페 공부 vs 집 공부
 
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/11-cafe-or-home-study/lesson.html`
-- sha256: `98bb288c747bb71c16522e22910017a2ee80203dcaaa4424bd8c0f6c400359da`
+- sha256: `a47ba0722ad1340b4796b8d8265b83bb7532eafddb7f7aa239a7ef42752e094f`
 - source kind: `article`
 
 #### `metadata`
@@ -3384,78 +3288,71 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 최근에 가장 집중이 잘됐던 장소는 어디였어요?
 - `question.ja` · JA: 最近、いちばん集中できた場所はどこでしたか？
-- `tutorGuidance.ko` · KO: 최근의 작은 장면 하나를 받으세요. 경험이 없으면 가까운 예나 가상 장면으로 바꿉니다.
-- `followUp.1.ko` · KO: 그때 어떤 상황이었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 좋거나 불편했어요?
-- `followUp.3.ko` · KO: 다시 같은 선택을 할 거예요?
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 그곳에서 무엇을 했어요?
+- `followUp.2.ko` · KO: 집중에 도움이 된 것은 뭐예요?
+- `followUp.3.ko` · KO: 다시 그곳에 가고 싶어요?
 
 #### `warm-2`
 
 - `question.ko` · KO: 한 시간 안에 끝낼 일이 있다면 어디에 앉고 싶어요?
 - `question.ja` · JA: 1時間で終わらせたいことがあるなら、どこに座りたいですか？
-- `tutorGuidance.ko` · KO: 바로 떠오르는 행동을 구체화해 주세요.
-- `followUp.1.ko` · KO: 왜 그렇게 하고 싶어요?
-- `followUp.2.ko` · KO: 비슷한 경험이 있어요?
-- `followUp.3.ko` · KO: 조건이 달라지면 답도 달라져요?
+- `followUp.1.ko` · KO: 무슨 일을 끝내야 해요?
+- `followUp.2.ko` · KO: 조용함과 편안함 중 무엇이 더 중요해요?
+- `followUp.3.ko` · KO: 한 시간보다 길면 장소를 바꿀까요?
 
 #### `q1`
 
 - `question.ko` · KO: 지금 고른다면 카페 공부 / 집 공부, 어느 쪽이에요?
 - `question.ja` · JA: 今選ぶなら、カフェでの勉強ですか、家での勉強ですか？
-- `tutorGuidance.ko` · KO: 오늘의 첫 선택이에요. 정답을 정해 주지 말고 실제 이유를 받으세요.
-- `followUp.1.ko` · KO: 왜 그쪽을 골랐어요?
-- `followUp.2.ko` · KO: 실제 경험이 영향을 줬어요?
-- `followUp.3.ko` · KO: 반대쪽의 장점은 뭐예요?
+- `followUp.1.ko` · KO: 왜 그 장소를 골랐어요?
+- `followUp.2.ko` · KO: 최근에도 그곳에서 공부했어요?
+- `followUp.3.ko` · KO: 반대 장소의 장점은 뭐예요?
 
 #### `q2`
 
-- `question.ko` · KO: 선택한 쪽이 현실이 되면 집중하는 장소에서 가장 먼저 무엇이 달라질까요?
-- `question.ja` · JA: 選んだほうが現実になったら、集中する場所で最初に何が変わりますか？
-- `tutorGuidance.ko` · KO: 선택을 실제 하루의 변화에 연결해 주세요.
-- `followUp.1.ko` · KO: 가장 먼저 달라지는 장면은 뭐예요?
-- `followUp.2.ko` · KO: 주변 사람에게도 변화가 생겨요?
-- `followUp.3.ko` · KO: 생각보다 불편한 점도 있을까요?
+- `question.ko` · KO: 앞으로 한 달 동안 카페나 집 한 곳에서만 공부한다면, 공부 습관이 어떻게 달라질까요?
+- `question.ja` · JA: これから1か月、カフェか家の一方だけで勉強するなら、勉強の習慣はどう変わるでしょうか？
+- `followUp.1.ko` · KO: 공부를 시작하는 시간이 달라질까요?
+- `followUp.2.ko` · KO: 준비해야 할 물건은 뭐예요?
+- `followUp.3.ko` · KO: 집중이 끊기면 어떻게 할 거예요?
 
 #### `q3`
 
-- `question.ko` · KO: 최근 소음이나 편안함이 달라져서 반대쪽이 더 낫다고 느낀 순간은 언제였어요?
-- `question.ja` · JA: 最近、音や快適さが変わって、反対のほうが良いと感じたのはいつですか？
-- `tutorGuidance.ko` · KO: 처음 선택을 부정하지 말고 반대쪽이 필요했던 예외를 찾으세요. 없으면 가상 장면으로 바꿉니다.
-- `followUp.1.ko` · KO: 그때 무슨 일이 있었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 필요했어요?
-- `followUp.3.ko` · KO: 그 경험 뒤에 생각이 달라졌어요?
+- `question.ko` · KO: 평소와 반대되는 장소에서 공부하는 게 더 나을 때는 언제예요?
+- `question.ja` · JA: 普段とは反対の場所で勉強するほうがよいのは、どんなときですか？
+- `followUp.1.ko` · KO: 어떤 과제를 할 때 그래요?
+- `followUp.2.ko` · KO: 소음과 편안함 중 무엇이 더 중요해요?
+- `followUp.3.ko` · KO: 몇 시간 공부하는지도 영향을 줘요?
 
 #### `q4`
 
 - `question.ko` · KO: 카페가 조용하지만 매번 음료를 사야 한다면 계속 갈 거예요?
 - `question.ja` · JA: カフェが静かでも毎回飲み物を買う必要があるなら、通い続けますか？
-- `tutorGuidance.ko` · KO: 가상의 조건 하나가 선택을 어떻게 흔드는지 확인하세요.
-- `followUp.1.ko` · KO: 어느 조건이 가장 중요해요?
-- `followUp.2.ko` · KO: 얼마 동안이라면 가능해요?
-- `followUp.3.ko` · KO: 조건 하나를 바꿀 수 있다면요?
+- `followUp.1.ko` · KO: 음료 비용은 얼마까지 괜찮아요?
+- `followUp.2.ko` · KO: 자리가 없으면 어떻게 할 거예요?
+- `followUp.3.ko` · KO: 매일 가도 계속 집중할 수 있을까요?
 
 #### `q5`
 
 - `question.ko` · KO: 집에 공부 전용 책상과 좋은 조명이 생기면 선택이 달라질까요?
 - `question.ja` · JA: 家に勉強専用の机と良い照明ができたら、選択は変わりますか？
-- `tutorGuidance.ko` · KO: 사람, 기간, 환경 중 달라진 조건 하나에 집중하세요.
-- `followUp.1.ko` · KO: 누구의 상황이 영향을 줘요?
-- `followUp.2.ko` · KO: 언제쯤 그런 변화가 올까요?
-- `followUp.3.ko` · KO: 지금도 그 변화에 가까워요?
+- `followUp.1.ko` · KO: 지금 집에서 공부할 때 가장 불편한 점은 뭐예요?
+- `followUp.2.ko` · KO: 책상과 조명 말고 무엇이 더 필요해요?
+- `followUp.3.ko` · KO: 그 환경이 생기면 카페에는 안 갈 것 같아요?
 
 #### `q6`
 
 - `question.ko` · KO: 어떤 과제나 공간 조건이면 반대 장소를 고를 거예요?
 - `question.ja` · JA: どんな課題や空間条件なら、反対の場所を選びますか？
-- `tutorGuidance.ko` · KO: 처음 선택을 뒤집는 구체적인 경계 하나로 닫으세요.
-- `followUp.1.ko` · KO: 그 조건은 얼마나 오래 이어져야 해요?
-- `followUp.2.ko` · KO: 누가 함께하면 답이 달라져요?
-- `followUp.3.ko` · KO: 원래 선택으로 돌아오는 조건도 있어요?
+- `followUp.1.ko` · KO: 어떤 과제는 카페가 더 좋아요?
+- `followUp.2.ko` · KO: 어떤 소음이나 공간이 필요해요?
+- `followUp.3.ko` · KO: 공부 시간이 길어지면 장소를 바꿀까요?
 
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/11-cafe-or-home-study/lesson.html`
-- sha256: `4a2e2e3a569b5d3ea21f6a787ce149e065fc7fda22b88cb5572d8ca296b72154`
+- sha256: `52cf4acd5678b3e1f6c5bbcf48b34d08c31aa3c9b72ef4909efb77c6da2d2dc2`
 - source kind: `article`
 
 #### `metadata`
@@ -3547,80 +3444,73 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 최근에 가장 집중이 잘됐던 장소는 어디였어요?
 - `question.ja` · JA: 最近、いちばん集中できた場所はどこでしたか？
-- `tutorGuidance.ko` · KO: 최근의 작은 장면 하나를 받으세요. 경험이 없으면 가까운 예나 가상 장면으로 바꿉니다.
-- `followUp.1.ko` · KO: 그때 어떤 상황이었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 좋거나 불편했어요?
-- `followUp.3.ko` · KO: 다시 같은 선택을 할 거예요?
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 그곳에서 무엇을 했어요?
+- `followUp.2.ko` · KO: 집중에 도움이 된 것은 뭐예요?
+- `followUp.3.ko` · KO: 다시 그곳에 가고 싶어요?
 
 #### `warm-2`
 
 - `question.ko` · KO: 한 시간 안에 끝낼 일이 있다면 어디에 앉고 싶어요?
 - `question.ja` · JA: 1時間で終わらせたいことがあるなら、どこに座りたいですか？
-- `tutorGuidance.ko` · KO: 바로 떠오르는 행동을 구체화해 주세요.
-- `followUp.1.ko` · KO: 왜 그렇게 하고 싶어요?
-- `followUp.2.ko` · KO: 비슷한 경험이 있어요?
-- `followUp.3.ko` · KO: 조건이 달라지면 답도 달라져요?
+- `followUp.1.ko` · KO: 무슨 일을 끝내야 해요?
+- `followUp.2.ko` · KO: 조용함과 편안함 중 무엇이 더 중요해요?
+- `followUp.3.ko` · KO: 한 시간보다 길면 장소를 바꿀까요?
 
 #### `q1`
 
 - `question.ko` · KO: 지금 고른다면 카페 공부 / 집 공부, 어느 쪽이에요?
 - `question.ja` · JA: 今選ぶなら、カフェでの勉強ですか、家での勉強ですか？
-- `tutorGuidance.ko` · KO: 오늘의 첫 선택이에요. 정답을 정해 주지 말고 실제 이유를 받으세요.
-- `followUp.1.ko` · KO: 왜 그쪽을 골랐어요?
-- `followUp.2.ko` · KO: 실제 경험이 영향을 줬어요?
-- `followUp.3.ko` · KO: 반대쪽의 장점은 뭐예요?
+- `followUp.1.ko` · KO: 왜 그 장소를 골랐어요?
+- `followUp.2.ko` · KO: 최근에도 그곳에서 공부했어요?
+- `followUp.3.ko` · KO: 반대 장소의 장점은 뭐예요?
 
 #### `q2`
 
-- `question.ko` · KO: 선택한 쪽이 현실이 되면 집중하는 장소에서 가장 먼저 무엇이 달라질까요?
-- `question.ja` · JA: 選んだほうが現実になったら、集中する場所で最初に何が変わりますか？
-- `tutorGuidance.ko` · KO: 선택을 실제 하루의 변화에 연결해 주세요.
-- `followUp.1.ko` · KO: 가장 먼저 달라지는 장면은 뭐예요?
-- `followUp.2.ko` · KO: 주변 사람에게도 변화가 생겨요?
-- `followUp.3.ko` · KO: 생각보다 불편한 점도 있을까요?
+- `question.ko` · KO: 앞으로 한 달 동안 카페나 집 한 곳에서만 공부한다면, 공부 습관이 어떻게 달라질까요?
+- `question.ja` · JA: これから1か月、カフェか家の一方だけで勉強するなら、勉強の習慣はどう変わるでしょうか？
+- `followUp.1.ko` · KO: 공부를 시작하는 시간이 달라질까요?
+- `followUp.2.ko` · KO: 준비해야 할 물건은 뭐예요?
+- `followUp.3.ko` · KO: 집중이 끊기면 어떻게 할 거예요?
 
 #### `q3`
 
-- `question.ko` · KO: 최근 소음이나 편안함이 달라져서 반대쪽이 더 낫다고 느낀 순간은 언제였어요?
-- `question.ja` · JA: 最近、音や快適さが変わって、反対のほうが良いと感じたのはいつですか？
-- `tutorGuidance.ko` · KO: 처음 선택을 부정하지 말고 반대쪽이 필요했던 예외를 찾으세요. 없으면 가상 장면으로 바꿉니다.
-- `followUp.1.ko` · KO: 그때 무슨 일이 있었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 필요했어요?
-- `followUp.3.ko` · KO: 그 경험 뒤에 생각이 달라졌어요?
+- `question.ko` · KO: 평소와 반대되는 장소에서 공부하는 게 더 나을 때는 언제예요?
+- `question.ja` · JA: 普段とは反対の場所で勉強するほうがよいのは、どんなときですか？
+- `followUp.1.ko` · KO: 어떤 과제를 할 때 그래요?
+- `followUp.2.ko` · KO: 소음과 편안함 중 무엇이 더 중요해요?
+- `followUp.3.ko` · KO: 몇 시간 공부하는지도 영향을 줘요?
 
 #### `q4`
 
 - `question.ko` · KO: 조용한 카페에서 매번 음료를 사야 해도 갈 거예요?
 - `question.ja` · JA: 静かなカフェで毎回飲み物を買う必要があっても、行きますか？
-- `tutorGuidance.ko` · KO: 가상의 조건 하나가 선택을 어떻게 흔드는지 확인하세요.
-- `followUp.1.ko` · KO: 어느 조건이 가장 중요해요?
-- `followUp.2.ko` · KO: 얼마 동안이라면 가능해요?
-- `followUp.3.ko` · KO: 조건 하나를 바꿀 수 있다면요?
+- `followUp.1.ko` · KO: 음료 비용은 얼마까지 괜찮아요?
+- `followUp.2.ko` · KO: 자리가 없으면 어떻게 할 거예요?
+- `followUp.3.ko` · KO: 매일 가도 계속 집중할 수 있을까요?
 
 #### `q5`
 
 - `question.ko` · KO: 집에 좋은 책상과 조명이 생기면 선택이 바뀌어요?
 - `question.ja` · JA: 家に良い机と照明ができたら、選択は変わりますか？
-- `tutorGuidance.ko` · KO: 사람, 기간, 환경 중 달라진 조건 하나에 집중하세요.
-- `followUp.1.ko` · KO: 누구의 상황이 영향을 줘요?
-- `followUp.2.ko` · KO: 언제쯤 그런 변화가 올까요?
-- `followUp.3.ko` · KO: 지금도 그 변화에 가까워요?
+- `followUp.1.ko` · KO: 지금 집에서 공부할 때 가장 불편한 점은 뭐예요?
+- `followUp.2.ko` · KO: 책상과 조명 말고 무엇이 더 필요해요?
+- `followUp.3.ko` · KO: 그 환경이 생기면 카페에는 안 갈 것 같아요?
 
 #### `q6`
 
 - `question.ko` · KO: 어떤 과제나 공간 조건이면 반대 장소를 고를 거예요?
 - `question.ja` · JA: どんな課題や空間条件なら、反対の場所を選びますか？
-- `tutorGuidance.ko` · KO: 처음 선택을 뒤집는 구체적인 경계 하나로 닫으세요.
-- `followUp.1.ko` · KO: 그 조건은 얼마나 오래 이어져야 해요?
-- `followUp.2.ko` · KO: 누가 함께하면 답이 달라져요?
-- `followUp.3.ko` · KO: 원래 선택으로 돌아오는 조건도 있어요?
+- `followUp.1.ko` · KO: 어떤 과제는 카페가 더 좋아요?
+- `followUp.2.ko` · KO: 어떤 소음이나 공간이 필요해요?
+- `followUp.3.ko` · KO: 공부 시간이 길어지면 장소를 바꿀까요?
 
 ## 12 · 인터넷 쇼핑 vs 매장 쇼핑
 
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/12-online-or-in-store-shopping/lesson.html`
-- sha256: `e368090337820feb72d7896810087bc4314bd608e1f86e37d0dd9459d75c9e05`
+- sha256: `f677b7f34eec22f40fda0e692c61784d393125ba7c391e26314178af815e784c`
 - source kind: `article`
 
 #### `metadata`
@@ -3712,78 +3602,71 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 최근 온라인에서 산 물건은 사진과 같았어요?
 - `question.ja` · JA: 最近ネットで買った物は、写真どおりでしたか？
-- `tutorGuidance.ko` · KO: 최근의 작은 장면 하나를 받으세요. 경험이 없으면 가까운 예나 가상 장면으로 바꿉니다.
-- `followUp.1.ko` · KO: 그때 어떤 상황이었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 좋거나 불편했어요?
-- `followUp.3.ko` · KO: 다시 같은 선택을 할 거예요?
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 사진과 무엇이 달랐어요?
+- `followUp.2.ko` · KO: 반품하거나 교환했어요?
+- `followUp.3.ko` · KO: 다시 온라인에서 살 거예요?
 
 #### `warm-2`
 
 - `question.ko` · KO: 오늘 꼭 필요한 물건 하나를 산다면 어디부터 볼 거예요?
 - `question.ja` · JA: 今日どうしても必要な物を一つ買うなら、まずどこを見ますか？
-- `tutorGuidance.ko` · KO: 바로 떠오르는 행동을 구체화해 주세요.
-- `followUp.1.ko` · KO: 왜 그렇게 하고 싶어요?
-- `followUp.2.ko` · KO: 비슷한 경험이 있어요?
-- `followUp.3.ko` · KO: 조건이 달라지면 답도 달라져요?
+- `followUp.1.ko` · KO: 어떤 물건이에요?
+- `followUp.2.ko` · KO: 가격과 상태 중 무엇을 먼저 확인해요?
+- `followUp.3.ko` · KO: 오늘 꼭 받아야 해요?
 
 #### `q1`
 
 - `question.ko` · KO: 지금 고른다면 인터넷 쇼핑 / 매장 쇼핑, 어느 쪽이에요?
 - `question.ja` · JA: 今選ぶなら、ネットショッピングですか、店頭ショッピングですか？
-- `tutorGuidance.ko` · KO: 오늘의 첫 선택이에요. 정답을 정해 주지 말고 실제 이유를 받으세요.
-- `followUp.1.ko` · KO: 왜 그쪽을 골랐어요?
-- `followUp.2.ko` · KO: 실제 경험이 영향을 줬어요?
-- `followUp.3.ko` · KO: 반대쪽의 장점은 뭐예요?
+- `followUp.1.ko` · KO: 왜 그 방식을 골랐어요?
+- `followUp.2.ko` · KO: 최근에도 그렇게 샀어요?
+- `followUp.3.ko` · KO: 반대 방식의 장점은 뭐예요?
 
 #### `q2`
 
-- `question.ko` · KO: 선택한 쪽이 현실이 되면 물건을 사는 방식에서 가장 먼저 무엇이 달라질까요?
-- `question.ja` · JA: 選んだほうが現実になったら、買い物のしかたで最初に何が変わりますか？
-- `tutorGuidance.ko` · KO: 선택을 실제 하루의 변화에 연결해 주세요.
-- `followUp.1.ko` · KO: 가장 먼저 달라지는 장면은 뭐예요?
-- `followUp.2.ko` · KO: 주변 사람에게도 변화가 생겨요?
-- `followUp.3.ko` · KO: 생각보다 불편한 점도 있을까요?
+- `question.ko` · KO: 앞으로 온라인이나 매장에서만 쇼핑한다면, 물건을 사는 방식이 어떻게 달라질까요?
+- `question.ja` · JA: これからオンラインか店頭だけで買い物をするなら、物の買い方はどう変わるでしょうか？
+- `followUp.1.ko` · KO: 물건을 고르는 시간이 달라질까요?
+- `followUp.2.ko` · KO: 가격을 어떻게 비교할 거예요?
+- `followUp.3.ko` · KO: 교환이나 반품은 더 불편해질까요?
 
 #### `q3`
 
-- `question.ko` · KO: 최근 배송이나 직접 확인 때문에 반대쪽이 더 낫다고 느낀 순간은 언제였어요?
-- `question.ja` · JA: 最近、配送や実物確認のために、反対のほうが良いと感じたのはいつですか？
-- `tutorGuidance.ko` · KO: 처음 선택을 부정하지 말고 반대쪽이 필요했던 예외를 찾으세요. 없으면 가상 장면으로 바꿉니다.
-- `followUp.1.ko` · KO: 그때 무슨 일이 있었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 필요했어요?
-- `followUp.3.ko` · KO: 그 경험 뒤에 생각이 달라졌어요?
+- `question.ko` · KO: 평소와 반대되는 쇼핑 방식이 더 나을 때는 언제예요?
+- `question.ja` · JA: 普段とは反対の買い物方法のほうがよいのは、どんなときですか？
+- `followUp.1.ko` · KO: 어떤 상품을 살 때 그래요?
+- `followUp.2.ko` · KO: 배송 시간과 직접 확인 중 무엇이 중요해요?
+- `followUp.3.ko` · KO: 가격 차이가 커도 같은 선택이에요?
 
 #### `q4`
 
 - `question.ko` · KO: 가격은 온라인이 더 싸지만 반품이 어렵다면 어디서 살 거예요?
 - `question.ja` · JA: ネットのほうが安くても返品が難しいなら、どこで買いますか？
-- `tutorGuidance.ko` · KO: 가상의 조건 하나가 선택을 어떻게 흔드는지 확인하세요.
-- `followUp.1.ko` · KO: 어느 조건이 가장 중요해요?
-- `followUp.2.ko` · KO: 얼마 동안이라면 가능해요?
-- `followUp.3.ko` · KO: 조건 하나를 바꿀 수 있다면요?
+- `followUp.1.ko` · KO: 얼마나 싸야 온라인에서 살 거예요?
+- `followUp.2.ko` · KO: 반품이 어려우면 무엇을 확인해야 해요?
+- `followUp.3.ko` · KO: 매장에서 직접 본 뒤 온라인으로 사도 돼요?
 
 #### `q5`
 
 - `question.ko` · KO: 같은 날 무료 배송이 된다면 매장에 갈 이유가 남아 있을까요?
 - `question.ja` · JA: 当日に無料で届くなら、店へ行く理由は残りますか？
-- `tutorGuidance.ko` · KO: 사람, 기간, 환경 중 달라진 조건 하나에 집중하세요.
-- `followUp.1.ko` · KO: 누구의 상황이 영향을 줘요?
-- `followUp.2.ko` · KO: 언제쯤 그런 변화가 올까요?
-- `followUp.3.ko` · KO: 지금도 그 변화에 가까워요?
+- `followUp.1.ko` · KO: 그래도 직접 보고 싶은 물건은 뭐예요?
+- `followUp.2.ko` · KO: 매장 직원의 도움이 필요할 때가 있어요?
+- `followUp.3.ko` · KO: 배송 시간을 믿을 수 있어야 해요?
 
 #### `q6`
 
 - `question.ko` · KO: 어떤 상품이면 반대 구매 방식을 고를 거예요?
 - `question.ja` · JA: どんな商品なら、反対の買い方を選びますか？
-- `tutorGuidance.ko` · KO: 처음 선택을 뒤집는 구체적인 경계 하나로 닫으세요.
-- `followUp.1.ko` · KO: 그 조건은 얼마나 오래 이어져야 해요?
-- `followUp.2.ko` · KO: 누가 함께하면 답이 달라져요?
-- `followUp.3.ko` · KO: 원래 선택으로 돌아오는 조건도 있어요?
+- `followUp.1.ko` · KO: 옷과 전자제품은 답이 달라요?
+- `followUp.2.ko` · KO: 가격이 비싸면 어디에서 살 거예요?
+- `followUp.3.ko` · KO: 선물도 같은 방식으로 살 거예요?
 
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/12-online-or-in-store-shopping/lesson.html`
-- sha256: `1c9c8f7a68e25de0e0b5b2cdb043cf77933aac16f23a545c40c511b0434e327e`
+- sha256: `d1dd562785892fce5835cef37ba0141ef99b34db2aafc4e21d049e6d9339134e`
 - source kind: `article`
 
 #### `metadata`
@@ -3875,80 +3758,73 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 최근 온라인에서 산 물건은 사진과 같았어요?
 - `question.ja` · JA: 最近ネットで買った物は、写真どおりでしたか？
-- `tutorGuidance.ko` · KO: 최근의 작은 장면 하나를 받으세요. 경험이 없으면 가까운 예나 가상 장면으로 바꿉니다.
-- `followUp.1.ko` · KO: 그때 어떤 상황이었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 좋거나 불편했어요?
-- `followUp.3.ko` · KO: 다시 같은 선택을 할 거예요?
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 사진과 무엇이 달랐어요?
+- `followUp.2.ko` · KO: 반품하거나 교환했어요?
+- `followUp.3.ko` · KO: 다시 온라인에서 살 거예요?
 
 #### `warm-2`
 
 - `question.ko` · KO: 오늘 꼭 필요한 물건 하나를 산다면 어디부터 볼 거예요?
 - `question.ja` · JA: 今日どうしても必要な物を一つ買うなら、まずどこを見ますか？
-- `tutorGuidance.ko` · KO: 바로 떠오르는 행동을 구체화해 주세요.
-- `followUp.1.ko` · KO: 왜 그렇게 하고 싶어요?
-- `followUp.2.ko` · KO: 비슷한 경험이 있어요?
-- `followUp.3.ko` · KO: 조건이 달라지면 답도 달라져요?
+- `followUp.1.ko` · KO: 어떤 물건이에요?
+- `followUp.2.ko` · KO: 가격과 상태 중 무엇을 먼저 확인해요?
+- `followUp.3.ko` · KO: 오늘 꼭 받아야 해요?
 
 #### `q1`
 
 - `question.ko` · KO: 지금 고른다면 인터넷 쇼핑 / 매장 쇼핑, 어느 쪽이에요?
 - `question.ja` · JA: 今選ぶなら、ネットショッピングですか、店頭ショッピングですか？
-- `tutorGuidance.ko` · KO: 오늘의 첫 선택이에요. 정답을 정해 주지 말고 실제 이유를 받으세요.
-- `followUp.1.ko` · KO: 왜 그쪽을 골랐어요?
-- `followUp.2.ko` · KO: 실제 경험이 영향을 줬어요?
-- `followUp.3.ko` · KO: 반대쪽의 장점은 뭐예요?
+- `followUp.1.ko` · KO: 왜 그 방식을 골랐어요?
+- `followUp.2.ko` · KO: 최근에도 그렇게 샀어요?
+- `followUp.3.ko` · KO: 반대 방식의 장점은 뭐예요?
 
 #### `q2`
 
-- `question.ko` · KO: 선택한 쪽이 현실이 되면 물건을 사는 방식에서 가장 먼저 무엇이 달라질까요?
-- `question.ja` · JA: 選んだほうが現実になったら、買い物のしかたで最初に何が変わりますか？
-- `tutorGuidance.ko` · KO: 선택을 실제 하루의 변화에 연결해 주세요.
-- `followUp.1.ko` · KO: 가장 먼저 달라지는 장면은 뭐예요?
-- `followUp.2.ko` · KO: 주변 사람에게도 변화가 생겨요?
-- `followUp.3.ko` · KO: 생각보다 불편한 점도 있을까요?
+- `question.ko` · KO: 앞으로 온라인이나 매장에서만 쇼핑한다면, 물건을 사는 방식이 어떻게 달라질까요?
+- `question.ja` · JA: これからオンラインか店頭だけで買い物をするなら、物の買い方はどう変わるでしょうか？
+- `followUp.1.ko` · KO: 물건을 고르는 시간이 달라질까요?
+- `followUp.2.ko` · KO: 가격을 어떻게 비교할 거예요?
+- `followUp.3.ko` · KO: 교환이나 반품은 더 불편해질까요?
 
 #### `q3`
 
-- `question.ko` · KO: 최근 배송이나 직접 확인 때문에 반대쪽이 더 낫다고 느낀 순간은 언제였어요?
-- `question.ja` · JA: 最近、配送や実物確認のために、反対のほうが良いと感じたのはいつですか？
-- `tutorGuidance.ko` · KO: 처음 선택을 부정하지 말고 반대쪽이 필요했던 예외를 찾으세요. 없으면 가상 장면으로 바꿉니다.
-- `followUp.1.ko` · KO: 그때 무슨 일이 있었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 필요했어요?
-- `followUp.3.ko` · KO: 그 경험 뒤에 생각이 달라졌어요?
+- `question.ko` · KO: 평소와 반대되는 쇼핑 방식이 더 나을 때는 언제예요?
+- `question.ja` · JA: 普段とは反対の買い物方法のほうがよいのは、どんなときですか？
+- `followUp.1.ko` · KO: 어떤 상품을 살 때 그래요?
+- `followUp.2.ko` · KO: 배송 시간과 직접 확인 중 무엇이 중요해요?
+- `followUp.3.ko` · KO: 가격 차이가 커도 같은 선택이에요?
 
 #### `q4`
 
 - `question.ko` · KO: 온라인이 더 싸도 반품이 어려우면 어디서 사요?
 - `question.ja` · JA: ネットのほうが安くても返品が難しいなら、どこで買いますか？
-- `tutorGuidance.ko` · KO: 가상의 조건 하나가 선택을 어떻게 흔드는지 확인하세요.
-- `followUp.1.ko` · KO: 어느 조건이 가장 중요해요?
-- `followUp.2.ko` · KO: 얼마 동안이라면 가능해요?
-- `followUp.3.ko` · KO: 조건 하나를 바꿀 수 있다면요?
+- `followUp.1.ko` · KO: 얼마나 싸야 온라인에서 살 거예요?
+- `followUp.2.ko` · KO: 반품이 어려우면 무엇을 확인해야 해요?
+- `followUp.3.ko` · KO: 매장에서 직접 본 뒤 온라인으로 사도 돼요?
 
 #### `q5`
 
 - `question.ko` · KO: 오늘 무료로 배송돼도 매장에 갈 거예요?
 - `question.ja` · JA: 今日無料で届いても、店へ行きますか？
-- `tutorGuidance.ko` · KO: 사람, 기간, 환경 중 달라진 조건 하나에 집중하세요.
-- `followUp.1.ko` · KO: 누구의 상황이 영향을 줘요?
-- `followUp.2.ko` · KO: 언제쯤 그런 변화가 올까요?
-- `followUp.3.ko` · KO: 지금도 그 변화에 가까워요?
+- `followUp.1.ko` · KO: 그래도 직접 보고 싶은 물건은 뭐예요?
+- `followUp.2.ko` · KO: 매장 직원의 도움이 필요할 때가 있어요?
+- `followUp.3.ko` · KO: 배송 시간을 믿을 수 있어야 해요?
 
 #### `q6`
 
 - `question.ko` · KO: 어떤 상품이면 반대 구매 방식을 고를 거예요?
 - `question.ja` · JA: どんな商品なら、反対の買い方を選びますか？
-- `tutorGuidance.ko` · KO: 처음 선택을 뒤집는 구체적인 경계 하나로 닫으세요.
-- `followUp.1.ko` · KO: 그 조건은 얼마나 오래 이어져야 해요?
-- `followUp.2.ko` · KO: 누가 함께하면 답이 달라져요?
-- `followUp.3.ko` · KO: 원래 선택으로 돌아오는 조건도 있어요?
+- `followUp.1.ko` · KO: 옷과 전자제품은 답이 달라요?
+- `followUp.2.ko` · KO: 가격이 비싸면 어디에서 살 거예요?
+- `followUp.3.ko` · KO: 선물도 같은 방식으로 살 거예요?
 
 ## 13 · 절대 안 잊기 vs 원하는 것만 잊기
 
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/13-never-forget-or-choose-what-to-forget/lesson.html`
-- sha256: `cc2d51ceeffa8bd2f97884faf9464dc37d02d9ef40baf22f48551783d0aadc39`
+- sha256: `f8aac417d8c77cb8c33b8612241961603cf476cdf32ed5635893a90e5ef0d03e`
 - source kind: `article`
 
 #### `metadata`
@@ -4040,78 +3916,78 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 잊고 있다가 사진을 보고 떠오른 즐거운 기억이 있어요?
 - `question.ja` · JA: 忘れていたのに、写真を見て思い出した楽しい記憶はありますか？
-- `tutorGuidance.ko` · KO: 최근의 작은 장면 하나를 받으세요. 경험이 없으면 가까운 예나 가상 장면으로 바꿉니다. 힘든 개인 기억을 요구하지 마세요. 즐거운 기억, 작은 실수, 영화 속 사례로 답해도 됩니다.
-- `followUp.1.ko` · KO: 그때 어떤 상황이었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 좋거나 불편했어요?
-- `followUp.3.ko` · KO: 다시 같은 선택을 할 거예요?
+- `tutorGuidance.ko` · KO: 주의: 힘든 개인 기억을 요구하지 말고 편한 사례나 가상 상황으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 어떤 사진이었어요?
+- `followUp.2.ko` · KO: 누구와 함께한 기억이에요?
+- `followUp.3.ko` · KO: 다시 떠올라서 기분이 어땠어요?
 
 #### `warm-2`
 
 - `question.ko` · KO: 외국어 단어를 절대 잊지 않는다면 무엇부터 외우고 싶어요?
 - `question.ja` · JA: 外国語の単語を絶対に忘れないなら、何から覚えたいですか？
-- `tutorGuidance.ko` · KO: 바로 떠오르는 행동을 구체화해 주세요. 힘든 개인 기억을 요구하지 마세요. 즐거운 기억, 작은 실수, 영화 속 사례로 답해도 됩니다.
-- `followUp.1.ko` · KO: 왜 그렇게 하고 싶어요?
-- `followUp.2.ko` · KO: 비슷한 경험이 있어요?
-- `followUp.3.ko` · KO: 조건이 달라지면 답도 달라져요?
+- `tutorGuidance.ko` · KO: 주의: 힘든 개인 기억을 요구하지 말고 편한 사례나 가상 상황으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 왜 그것부터 외우고 싶어요?
+- `followUp.2.ko` · KO: 어디에서 쓸 수 있어요?
+- `followUp.3.ko` · KO: 문법이나 발음도 기억하고 싶어요?
 
 #### `q1`
 
 - `question.ko` · KO: 지금 고른다면 절대 안 잊기 / 원하는 것만 잊기, 어느 쪽이에요?
 - `question.ja` · JA: 今選ぶなら、絶対に忘れない能力ですか、忘れたいことだけ忘れる能力ですか？
-- `tutorGuidance.ko` · KO: 오늘의 첫 선택이에요. 정답을 정해 주지 말고 실제 이유를 받으세요. 힘든 개인 기억을 요구하지 마세요. 즐거운 기억, 작은 실수, 영화 속 사례로 답해도 됩니다.
-- `followUp.1.ko` · KO: 왜 그쪽을 골랐어요?
-- `followUp.2.ko` · KO: 실제 경험이 영향을 줬어요?
-- `followUp.3.ko` · KO: 반대쪽의 장점은 뭐예요?
+- `tutorGuidance.ko` · KO: 주의: 힘든 개인 기억을 요구하지 말고 편한 사례나 가상 상황으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 왜 그 능력을 골랐어요?
+- `followUp.2.ko` · KO: 일상에서 어디에 쓰고 싶어요?
+- `followUp.3.ko` · KO: 반대 능력의 장점은 뭐예요?
 
 #### `q2`
 
-- `question.ko` · KO: 선택한 능력이 생기면 기억을 쓰는 방식에서 가장 먼저 무엇이 달라질까요?
-- `question.ja` · JA: 選んだ能力を持ったら、記憶の使い方で最初に何が変わりますか？
-- `tutorGuidance.ko` · KO: 선택을 실제 하루의 변화에 연결해 주세요. 힘든 개인 기억을 요구하지 마세요. 즐거운 기억, 작은 실수, 영화 속 사례로 답해도 됩니다.
-- `followUp.1.ko` · KO: 가장 먼저 달라지는 장면은 뭐예요?
-- `followUp.2.ko` · KO: 주변 사람에게도 변화가 생겨요?
-- `followUp.3.ko` · KO: 생각보다 불편한 점도 있을까요?
+- `question.ko` · KO: 선택한 기억 능력이 생기면, 가장 먼저 어디에 쓰고 싶어요?
+- `question.ja` · JA: 選んだ記憶の能力を得たら、まず何に使いたいですか？
+- `tutorGuidance.ko` · KO: 주의: 힘든 개인 기억을 요구하지 말고 편한 사례나 가상 상황으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 일이나 공부에 어떻게 쓸 거예요?
+- `followUp.2.ko` · KO: 누구에게 도움을 주고 싶어요?
+- `followUp.3.ko` · KO: 그 능력 때문에 불편할 수도 있어요?
 
 #### `q3`
 
-- `question.ko` · KO: 최근 실수나 소중한 장면을 떠올려서 반대쪽이 더 낫다고 느낀 순간은 언제였어요?
-- `question.ja` · JA: 最近、失敗や大切な場面を思い出して、反対のほうが良いと感じたのはいつですか？
-- `tutorGuidance.ko` · KO: 처음 선택을 부정하지 말고 반대쪽이 필요했던 예외를 찾으세요. 없으면 가상 장면으로 바꿉니다. 힘든 개인 기억을 요구하지 마세요. 즐거운 기억, 작은 실수, 영화 속 사례로 답해도 됩니다.
-- `followUp.1.ko` · KO: 그때 무슨 일이 있었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 필요했어요?
-- `followUp.3.ko` · KO: 그 경험 뒤에 생각이 달라졌어요?
+- `question.ko` · KO: 평소 선택과 반대되는 기억 능력이 더 필요할 때는 언제예요?
+- `question.ja` · JA: 普段選ぶほうとは反対の記憶の能力が、より必要になるのはどんなときですか？
+- `tutorGuidance.ko` · KO: 주의: 힘든 개인 기억을 요구하지 말고 편한 사례나 가상 상황으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 어떤 기억이나 실수에서 그래요?
+- `followUp.2.ko` · KO: 기억하고 싶은 것과 잊고 싶은 것은 뭐예요?
+- `followUp.3.ko` · KO: 영화 속 상황으로 예를 들어도 돼요?
 
 #### `q4`
 
 - `question.ko` · KO: 잊은 기억을 나중에 한 번 되돌릴 수 있어도 같은 능력을 고를 거예요?
 - `question.ja` · JA: 忘れた記憶をあとで一度だけ戻せても、同じ能力を選びますか？
-- `tutorGuidance.ko` · KO: 가상의 조건 하나가 선택을 어떻게 흔드는지 확인하세요. 힘든 개인 기억을 요구하지 마세요. 즐거운 기억, 작은 실수, 영화 속 사례로 답해도 됩니다.
-- `followUp.1.ko` · KO: 어느 조건이 가장 중요해요?
-- `followUp.2.ko` · KO: 얼마 동안이라면 가능해요?
-- `followUp.3.ko` · KO: 조건 하나를 바꿀 수 있다면요?
+- `tutorGuidance.ko` · KO: 주의: 힘든 개인 기억을 요구하지 말고 편한 사례나 가상 상황으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 어떤 기억을 되돌리고 싶어요?
+- `followUp.2.ko` · KO: 한 번만 되돌릴 수 있어도 충분해요?
+- `followUp.3.ko` · KO: 처음 선택의 위험은 줄어들까요?
 
 #### `q5`
 
 - `question.ko` · KO: 소중한 사람과 함께한 기억은 지울 수 없다는 규칙이 있다면 어떨까요?
 - `question.ja` · JA: 大切な人との記憶は消せないというルールなら、どうですか？
-- `tutorGuidance.ko` · KO: 사람, 기간, 환경 중 달라진 조건 하나에 집중하세요. 힘든 개인 기억을 요구하지 마세요. 즐거운 기억, 작은 실수, 영화 속 사례로 답해도 됩니다.
-- `followUp.1.ko` · KO: 누구의 상황이 영향을 줘요?
-- `followUp.2.ko` · KO: 언제쯤 그런 변화가 올까요?
-- `followUp.3.ko` · KO: 지금도 그 변화에 가까워요?
+- `tutorGuidance.ko` · KO: 주의: 힘든 개인 기억을 요구하지 말고 편한 사례나 가상 상황으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 그 규칙이 있으면 더 안심돼요?
+- `followUp.2.ko` · KO: 지울 수 있어야 하는 기억도 있을까요?
+- `followUp.3.ko` · KO: 영화 속 인물이라면 어떻게 할까요?
 
 #### `q6`
 
 - `question.ko` · KO: 기억에 어떤 규칙이 생기면 반대 능력을 고를 거예요?
 - `question.ja` · JA: 記憶にどんなルールが加われば、反対の能力を選びますか？
-- `tutorGuidance.ko` · KO: 처음 선택을 뒤집는 구체적인 경계 하나로 닫으세요. 힘든 개인 기억을 요구하지 마세요. 즐거운 기억, 작은 실수, 영화 속 사례로 답해도 됩니다.
-- `followUp.1.ko` · KO: 그 조건은 얼마나 오래 이어져야 해요?
-- `followUp.2.ko` · KO: 누가 함께하면 답이 달라져요?
-- `followUp.3.ko` · KO: 원래 선택으로 돌아오는 조건도 있어요?
+- `tutorGuidance.ko` · KO: 주의: 힘든 개인 기억을 요구하지 말고 편한 사례나 가상 상황으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 어떤 기억은 꼭 보호해야 해요?
+- `followUp.2.ko` · KO: 능력을 몇 번까지 쓸 수 있어야 해요?
+- `followUp.3.ko` · KO: 다른 사람이 능력을 알면 선택이 바뀌어요?
 
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/13-never-forget-or-choose-what-to-forget/lesson.html`
-- sha256: `555e27373cdae39789be4ecb73f7bbe41ab66f24a6b7d138d15e28e8af27e947`
+- sha256: `95b2101eb839b01fa9c1642174d563a5cd58fee6aa88e727a7a5ff7d9da7d386`
 - source kind: `article`
 
 #### `metadata`
@@ -4203,80 +4079,80 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 잊고 있다가 사진을 보고 떠오른 즐거운 기억이 있어요?
 - `question.ja` · JA: 忘れていたのに、写真を見て思い出した楽しい記憶はありますか？
-- `tutorGuidance.ko` · KO: 최근의 작은 장면 하나를 받으세요. 경험이 없으면 가까운 예나 가상 장면으로 바꿉니다. 힘든 개인 기억을 요구하지 마세요. 즐거운 기억, 작은 실수, 영화 속 사례로 답해도 됩니다.
-- `followUp.1.ko` · KO: 그때 어떤 상황이었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 좋거나 불편했어요?
-- `followUp.3.ko` · KO: 다시 같은 선택을 할 거예요?
+- `tutorGuidance.ko` · KO: 주의: 힘든 개인 기억을 요구하지 말고 편한 사례나 가상 상황으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 어떤 사진이었어요?
+- `followUp.2.ko` · KO: 누구와 함께한 기억이에요?
+- `followUp.3.ko` · KO: 다시 떠올라서 기분이 어땠어요?
 
 #### `warm-2`
 
 - `question.ko` · KO: 외국어 단어를 절대 잊지 않는다면 무엇부터 외우고 싶어요?
 - `question.ja` · JA: 外国語の単語を絶対に忘れないなら、何から覚えたいですか？
-- `tutorGuidance.ko` · KO: 바로 떠오르는 행동을 구체화해 주세요. 힘든 개인 기억을 요구하지 마세요. 즐거운 기억, 작은 실수, 영화 속 사례로 답해도 됩니다.
-- `followUp.1.ko` · KO: 왜 그렇게 하고 싶어요?
-- `followUp.2.ko` · KO: 비슷한 경험이 있어요?
-- `followUp.3.ko` · KO: 조건이 달라지면 답도 달라져요?
+- `tutorGuidance.ko` · KO: 주의: 힘든 개인 기억을 요구하지 말고 편한 사례나 가상 상황으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 왜 그것부터 외우고 싶어요?
+- `followUp.2.ko` · KO: 어디에서 쓸 수 있어요?
+- `followUp.3.ko` · KO: 문법이나 발음도 기억하고 싶어요?
 
 #### `q1`
 
 - `question.ko` · KO: 지금 고른다면 절대 안 잊기 / 원하는 것만 잊기, 어느 쪽이에요?
 - `question.ja` · JA: 今選ぶなら、絶対に忘れない能力ですか、忘れたいことだけ忘れる能力ですか？
-- `tutorGuidance.ko` · KO: 오늘의 첫 선택이에요. 정답을 정해 주지 말고 실제 이유를 받으세요. 힘든 개인 기억을 요구하지 마세요. 즐거운 기억, 작은 실수, 영화 속 사례로 답해도 됩니다.
-- `followUp.1.ko` · KO: 왜 그쪽을 골랐어요?
-- `followUp.2.ko` · KO: 실제 경험이 영향을 줬어요?
-- `followUp.3.ko` · KO: 반대쪽의 장점은 뭐예요?
+- `tutorGuidance.ko` · KO: 주의: 힘든 개인 기억을 요구하지 말고 편한 사례나 가상 상황으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 왜 그 능력을 골랐어요?
+- `followUp.2.ko` · KO: 일상에서 어디에 쓰고 싶어요?
+- `followUp.3.ko` · KO: 반대 능력의 장점은 뭐예요?
 
 #### `q2`
 
-- `question.ko` · KO: 선택한 능력이 생기면 기억을 쓰는 방식에서 가장 먼저 무엇이 달라질까요?
-- `question.ja` · JA: 選んだ能力を持ったら、記憶の使い方で最初に何が変わりますか？
-- `tutorGuidance.ko` · KO: 선택을 실제 하루의 변화에 연결해 주세요. 힘든 개인 기억을 요구하지 마세요. 즐거운 기억, 작은 실수, 영화 속 사례로 답해도 됩니다.
-- `followUp.1.ko` · KO: 가장 먼저 달라지는 장면은 뭐예요?
-- `followUp.2.ko` · KO: 주변 사람에게도 변화가 생겨요?
-- `followUp.3.ko` · KO: 생각보다 불편한 점도 있을까요?
+- `question.ko` · KO: 선택한 기억 능력이 생기면, 가장 먼저 어디에 쓰고 싶어요?
+- `question.ja` · JA: 選んだ記憶の能力を得たら、まず何に使いたいですか？
+- `tutorGuidance.ko` · KO: 주의: 힘든 개인 기억을 요구하지 말고 편한 사례나 가상 상황으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 일이나 공부에 어떻게 쓸 거예요?
+- `followUp.2.ko` · KO: 누구에게 도움을 주고 싶어요?
+- `followUp.3.ko` · KO: 그 능력 때문에 불편할 수도 있어요?
 
 #### `q3`
 
-- `question.ko` · KO: 최근 실수나 소중한 장면을 떠올려서 반대쪽이 더 낫다고 느낀 순간은 언제였어요?
-- `question.ja` · JA: 最近、失敗や大切な場面を思い出して、反対のほうが良いと感じたのはいつですか？
-- `tutorGuidance.ko` · KO: 처음 선택을 부정하지 말고 반대쪽이 필요했던 예외를 찾으세요. 없으면 가상 장면으로 바꿉니다. 힘든 개인 기억을 요구하지 마세요. 즐거운 기억, 작은 실수, 영화 속 사례로 답해도 됩니다.
-- `followUp.1.ko` · KO: 그때 무슨 일이 있었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 필요했어요?
-- `followUp.3.ko` · KO: 그 경험 뒤에 생각이 달라졌어요?
+- `question.ko` · KO: 평소 선택과 반대되는 기억 능력이 더 필요할 때는 언제예요?
+- `question.ja` · JA: 普段選ぶほうとは反対の記憶の能力が、より必要になるのはどんなときですか？
+- `tutorGuidance.ko` · KO: 주의: 힘든 개인 기억을 요구하지 말고 편한 사례나 가상 상황으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 어떤 기억이나 실수에서 그래요?
+- `followUp.2.ko` · KO: 기억하고 싶은 것과 잊고 싶은 것은 뭐예요?
+- `followUp.3.ko` · KO: 영화 속 상황으로 예를 들어도 돼요?
 
 #### `q4`
 
 - `question.ko` · KO: 잊은 기억을 한 번 되돌릴 수 있으면 어떤 능력을 골라요?
 - `question.ja` · JA: 忘れた記憶を一度戻せるなら、どちらの能力を選びますか？
-- `tutorGuidance.ko` · KO: 가상의 조건 하나가 선택을 어떻게 흔드는지 확인하세요. 힘든 개인 기억을 요구하지 마세요. 즐거운 기억, 작은 실수, 영화 속 사례로 답해도 됩니다.
-- `followUp.1.ko` · KO: 어느 조건이 가장 중요해요?
-- `followUp.2.ko` · KO: 얼마 동안이라면 가능해요?
-- `followUp.3.ko` · KO: 조건 하나를 바꿀 수 있다면요?
+- `tutorGuidance.ko` · KO: 주의: 힘든 개인 기억을 요구하지 말고 편한 사례나 가상 상황으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 어떤 기억을 되돌리고 싶어요?
+- `followUp.2.ko` · KO: 한 번만 되돌릴 수 있어도 충분해요?
+- `followUp.3.ko` · KO: 처음 선택의 위험은 줄어들까요?
 
 #### `q5`
 
 - `question.ko` · KO: 소중한 사람의 기억은 못 지우면 어때요?
 - `question.ja` · JA: 大切な人との記憶は消せないなら、どうですか？
-- `tutorGuidance.ko` · KO: 사람, 기간, 환경 중 달라진 조건 하나에 집중하세요. 힘든 개인 기억을 요구하지 마세요. 즐거운 기억, 작은 실수, 영화 속 사례로 답해도 됩니다.
-- `followUp.1.ko` · KO: 누구의 상황이 영향을 줘요?
-- `followUp.2.ko` · KO: 언제쯤 그런 변화가 올까요?
-- `followUp.3.ko` · KO: 지금도 그 변화에 가까워요?
+- `tutorGuidance.ko` · KO: 주의: 힘든 개인 기억을 요구하지 말고 편한 사례나 가상 상황으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 그 규칙이 있으면 더 안심돼요?
+- `followUp.2.ko` · KO: 지울 수 있어야 하는 기억도 있을까요?
+- `followUp.3.ko` · KO: 영화 속 인물이라면 어떻게 할까요?
 
 #### `q6`
 
 - `question.ko` · KO: 기억에 어떤 규칙이 생기면 반대 능력을 고를 거예요?
 - `question.ja` · JA: 記憶にどんなルールが加われば、反対の能力を選びますか？
-- `tutorGuidance.ko` · KO: 처음 선택을 뒤집는 구체적인 경계 하나로 닫으세요. 힘든 개인 기억을 요구하지 마세요. 즐거운 기억, 작은 실수, 영화 속 사례로 답해도 됩니다.
-- `followUp.1.ko` · KO: 그 조건은 얼마나 오래 이어져야 해요?
-- `followUp.2.ko` · KO: 누가 함께하면 답이 달라져요?
-- `followUp.3.ko` · KO: 원래 선택으로 돌아오는 조건도 있어요?
+- `tutorGuidance.ko` · KO: 주의: 힘든 개인 기억을 요구하지 말고 편한 사례나 가상 상황으로 바꿔도 됩니다.
+- `followUp.1.ko` · KO: 어떤 기억은 꼭 보호해야 해요?
+- `followUp.2.ko` · KO: 능력을 몇 번까지 쓸 수 있어야 해요?
+- `followUp.3.ko` · KO: 다른 사람이 능력을 알면 선택이 바뀌어요?
 
 ## 14 · 숨은 부자 vs 존경받는 보통 사람 · [깊게]
 
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/14-hidden-rich-or-respected-ordinary/lesson.html`
-- sha256: `e592dec6b41ba3fe5cb4b2ff9541e961607652cd84bfce9f4ca46f2c067552d2`
+- sha256: `386f1f0347602b1cef2bb99e68d63c98e1ae45e862643aea15fd1ebd98c28b04`
 - source kind: `article`
 
 #### `metadata`
@@ -4368,78 +4244,78 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 사람들이 몰라도 스스로 뿌듯했던 작은 일이 있어요?
 - `question.ja` · JA: 人に知られなくても、自分で誇らしかった小さなことはありますか？
-- `tutorGuidance.ko` · KO: 학습자가 말하고 싶은 범위에서만 받고, 이유 없이 건너뛰어도 됩니다. 최근의 작은 장면 하나를 받으세요. 경험이 없으면 가까운 예나 가상 장면으로 바꿉니다. 돈, 평판, 가족 이야기는 학습자가 편한 범위에서만 받으세요. 이유를 요구하지 않고 바로 건너뛸 수 있습니다.
-- `followUp.1.ko` · KO: 그때 어떤 상황이었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 좋거나 불편했어요?
-- `followUp.3.ko` · KO: 다시 같은 선택을 할 거예요?
+- `tutorGuidance.ko` · KO: 주의: 학습자가 불편해하면 이유를 묻지 말고 바로 건너뛰세요.
+- `followUp.1.ko` · KO: 무슨 일이었어요?
+- `followUp.2.ko` · KO: 왜 스스로 뿌듯했어요?
+- `followUp.3.ko` · KO: 누군가에게 말하고 싶었어요?
 
 #### `warm-2`
 
 - `question.ko` · KO: 이름을 밝히지 않고 좋은 일을 할 수 있다면 무엇을 하고 싶어요?
 - `question.ja` · JA: 名前を明かさずに良いことができるなら、何をしたいですか？
-- `tutorGuidance.ko` · KO: 학습자가 말하고 싶은 범위에서만 받고, 이유 없이 건너뛰어도 됩니다. 바로 떠오르는 행동을 구체화해 주세요. 돈, 평판, 가족 이야기는 학습자가 편한 범위에서만 받으세요. 이유를 요구하지 않고 바로 건너뛸 수 있습니다.
-- `followUp.1.ko` · KO: 왜 그렇게 하고 싶어요?
-- `followUp.2.ko` · KO: 비슷한 경험이 있어요?
-- `followUp.3.ko` · KO: 조건이 달라지면 답도 달라져요?
+- `tutorGuidance.ko` · KO: 주의: 학습자가 불편해하면 이유를 묻지 말고 바로 건너뛰세요.
+- `followUp.1.ko` · KO: 누구를 돕고 싶어요?
+- `followUp.2.ko` · KO: 왜 이름을 숨기고 싶어요?
+- `followUp.3.ko` · KO: 도움을 받은 사람이 알게 돼도 괜찮아요?
 
 #### `q1`
 
 - `question.ko` · KO: 지금 고른다면 숨은 부자 / 존경받는 보통 사람, 어느 쪽이에요?
 - `question.ja` · JA: 今選ぶなら、誰にも知られていない裕福な人ですか、尊敬される普通の人ですか？
-- `tutorGuidance.ko` · KO: 학습자가 말하고 싶은 범위에서만 받고, 이유 없이 건너뛰어도 됩니다. 오늘의 첫 선택이에요. 정답을 정해 주지 말고 실제 이유를 받으세요. 돈, 평판, 가족 이야기는 학습자가 편한 범위에서만 받으세요. 이유를 요구하지 않고 바로 건너뛸 수 있습니다.
-- `followUp.1.ko` · KO: 왜 그쪽을 골랐어요?
-- `followUp.2.ko` · KO: 실제 경험이 영향을 줬어요?
+- `tutorGuidance.ko` · KO: 주의: 학습자가 불편해하면 이유를 묻지 말고 바로 건너뛰세요.
+- `followUp.1.ko` · KO: 왜 그 삶을 골랐어요?
+- `followUp.2.ko` · KO: 돈과 존경 중 무엇이 더 중요해요?
 - `followUp.3.ko` · KO: 반대쪽의 장점은 뭐예요?
 
 #### `q2`
 
-- `question.ko` · KO: 선택한 삶을 살게 되면 일상에서 가장 먼저 무엇이 달라질까요?
-- `question.ja` · JA: 選んだ暮らしをするなら、日常で最初に何が変わりますか？
-- `tutorGuidance.ko` · KO: 학습자가 말하고 싶은 범위에서만 받고, 이유 없이 건너뛰어도 됩니다. 선택을 실제 하루의 변화에 연결해 주세요. 돈, 평판, 가족 이야기는 학습자가 편한 범위에서만 받으세요. 이유를 요구하지 않고 바로 건너뛸 수 있습니다.
-- `followUp.1.ko` · KO: 가장 먼저 달라지는 장면은 뭐예요?
-- `followUp.2.ko` · KO: 주변 사람에게도 변화가 생겨요?
-- `followUp.3.ko` · KO: 생각보다 불편한 점도 있을까요?
+- `question.ko` · KO: 숨은 부자나 존경받는 보통 사람으로 살게 된다면, 평소 생활이 어떻게 달라질까요?
+- `question.ja` · JA: 人知れず裕福な人か、尊敬される普通の人として暮らすなら、普段の生活はどう変わるでしょうか？
+- `tutorGuidance.ko` · KO: 주의: 학습자가 불편해하면 이유를 묻지 말고 바로 건너뛰세요.
+- `followUp.1.ko` · KO: 사람을 만나는 방식이 달라질까요?
+- `followUp.2.ko` · KO: 돈이나 평판을 어떻게 관리할 거예요?
+- `followUp.3.ko` · KO: 가장 불편할 것 같은 점은 뭐예요?
 
 #### `q3`
 
-- `question.ko` · KO: 최근 사생활이나 영향력이 필요해서 반대쪽이 더 낫다고 느낀 순간은 언제였어요?
-- `question.ja` · JA: 最近、私生活や影響力が必要になって、反対のほうが良いと感じたのはいつですか？
-- `tutorGuidance.ko` · KO: 학습자가 말하고 싶은 범위에서만 받고, 이유 없이 건너뛰어도 됩니다. 처음 선택을 부정하지 말고 반대쪽이 필요했던 예외를 찾으세요. 없으면 가상 장면으로 바꿉니다. 돈, 평판, 가족 이야기는 학습자가 편한 범위에서만 받으세요. 이유를 요구하지 않고 바로 건너뛸 수 있습니다.
-- `followUp.1.ko` · KO: 그때 무슨 일이 있었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 필요했어요?
-- `followUp.3.ko` · KO: 그 경험 뒤에 생각이 달라졌어요?
+- `question.ko` · KO: 평소 선택과 반대되는 삶이 더 나을 때는 언제예요?
+- `question.ja` · JA: 普段選ぶほうとは反対の生き方のほうがよいのは、どんなときですか？
+- `tutorGuidance.ko` · KO: 주의: 학습자가 불편해하면 이유를 묻지 말고 바로 건너뛰세요.
+- `followUp.1.ko` · KO: 어떤 상황에서 그래요?
+- `followUp.2.ko` · KO: 사생활과 영향력 중 무엇이 더 필요해요?
+- `followUp.3.ko` · KO: 가상의 인물로 이야기해도 돼요?
 
 #### `q4`
 
 - `question.ko` · KO: 존경받지만 늘 사람들의 평가를 받아야 한다면 어떨까요?
 - `question.ja` · JA: 尊敬されても、いつも人から評価され続けるならどうですか？
-- `tutorGuidance.ko` · KO: 학습자가 말하고 싶은 범위에서만 받고, 이유 없이 건너뛰어도 됩니다. 가상의 조건 하나가 선택을 어떻게 흔드는지 확인하세요. 돈, 평판, 가족 이야기는 학습자가 편한 범위에서만 받으세요. 이유를 요구하지 않고 바로 건너뛸 수 있습니다.
-- `followUp.1.ko` · KO: 어느 조건이 가장 중요해요?
-- `followUp.2.ko` · KO: 얼마 동안이라면 가능해요?
-- `followUp.3.ko` · KO: 조건 하나를 바꿀 수 있다면요?
+- `tutorGuidance.ko` · KO: 주의: 학습자가 불편해하면 이유를 묻지 말고 바로 건너뛰세요.
+- `followUp.1.ko` · KO: 어떤 평가가 가장 부담스러워요?
+- `followUp.2.ko` · KO: 존경받기 위해 포기해야 하는 게 있어요?
+- `followUp.3.ko` · KO: 사생활을 지킬 방법이 있을까요?
 
 #### `q5`
 
 - `question.ko` · KO: 가족만 내 경제 상황을 안다면 선택이 달라질까요?
 - `question.ja` · JA: 家族だけが自分の経済状況を知っているなら、選択は変わりますか？
-- `tutorGuidance.ko` · KO: 학습자가 말하고 싶은 범위에서만 받고, 이유 없이 건너뛰어도 됩니다. 사람, 기간, 환경 중 달라진 조건 하나에 집중하세요. 돈, 평판, 가족 이야기는 학습자가 편한 범위에서만 받으세요. 이유를 요구하지 않고 바로 건너뛸 수 있습니다.
-- `followUp.1.ko` · KO: 누구의 상황이 영향을 줘요?
-- `followUp.2.ko` · KO: 언제쯤 그런 변화가 올까요?
-- `followUp.3.ko` · KO: 지금도 그 변화에 가까워요?
+- `tutorGuidance.ko` · KO: 주의: 학습자가 불편해하면 이유를 묻지 말고 바로 건너뛰세요.
+- `followUp.1.ko` · KO: 가족에게 어디까지 말하고 싶어요?
+- `followUp.2.ko` · KO: 가족의 생활도 달라질까요?
+- `followUp.3.ko` · KO: 친구가 알게 되면 선택이 바뀌어요?
 
 #### `q6`
 
 - `question.ko` · KO: 돈이나 평판이 어느 정도 공개되면 반대쪽을 고를 거예요?
 - `question.ja` · JA: お金や評判がどの程度公開されたら、反対のほうを選びますか？
-- `tutorGuidance.ko` · KO: 학습자가 말하고 싶은 범위에서만 받고, 이유 없이 건너뛰어도 됩니다. 처음 선택을 뒤집는 구체적인 경계 하나로 닫으세요. 돈, 평판, 가족 이야기는 학습자가 편한 범위에서만 받으세요. 이유를 요구하지 않고 바로 건너뛸 수 있습니다.
-- `followUp.1.ko` · KO: 그 조건은 얼마나 오래 이어져야 해요?
-- `followUp.2.ko` · KO: 누가 함께하면 답이 달라져요?
-- `followUp.3.ko` · KO: 원래 선택으로 돌아오는 조건도 있어요?
+- `tutorGuidance.ko` · KO: 주의: 학습자가 불편해하면 이유를 묻지 말고 바로 건너뛰세요.
+- `followUp.1.ko` · KO: 누구까지 알면 부담스러워요?
+- `followUp.2.ko` · KO: 돈이나 평판이 얼마나 공개돼도 괜찮아요?
+- `followUp.3.ko` · KO: 가상의 인물이라면 어떤 선택을 할까요?
 
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/14-hidden-rich-or-respected-ordinary/lesson.html`
-- sha256: `02eb14b496ac7c9db14fcbd87d24915f69a6fa559dd911780427ca05d9efe126`
+- sha256: `41702e96498de99badcddba89fa35bdd53b55fc72ed8e5a43ef8273277779d81`
 - source kind: `article`
 
 #### `metadata`
@@ -4531,70 +4407,70 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 사람들이 몰라도 스스로 뿌듯했던 작은 일이 있어요?
 - `question.ja` · JA: 人に知られなくても、自分で誇らしかった小さなことはありますか？
-- `tutorGuidance.ko` · KO: 학습자가 말하고 싶은 범위에서만 받고, 이유 없이 건너뛰어도 됩니다. 최근의 작은 장면 하나를 받으세요. 경험이 없으면 가까운 예나 가상 장면으로 바꿉니다. 돈, 평판, 가족 이야기는 학습자가 편한 범위에서만 받으세요. 이유를 요구하지 않고 바로 건너뛸 수 있습니다.
-- `followUp.1.ko` · KO: 그때 어떤 상황이었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 좋거나 불편했어요?
-- `followUp.3.ko` · KO: 다시 같은 선택을 할 거예요?
+- `tutorGuidance.ko` · KO: 주의: 학습자가 불편해하면 이유를 묻지 말고 바로 건너뛰세요.
+- `followUp.1.ko` · KO: 무슨 일이었어요?
+- `followUp.2.ko` · KO: 왜 스스로 뿌듯했어요?
+- `followUp.3.ko` · KO: 누군가에게 말하고 싶었어요?
 
 #### `warm-2`
 
 - `question.ko` · KO: 이름을 밝히지 않고 좋은 일을 할 수 있다면 무엇을 하고 싶어요?
 - `question.ja` · JA: 名前を明かさずに良いことができるなら、何をしたいですか？
-- `tutorGuidance.ko` · KO: 학습자가 말하고 싶은 범위에서만 받고, 이유 없이 건너뛰어도 됩니다. 바로 떠오르는 행동을 구체화해 주세요. 돈, 평판, 가족 이야기는 학습자가 편한 범위에서만 받으세요. 이유를 요구하지 않고 바로 건너뛸 수 있습니다.
-- `followUp.1.ko` · KO: 왜 그렇게 하고 싶어요?
-- `followUp.2.ko` · KO: 비슷한 경험이 있어요?
-- `followUp.3.ko` · KO: 조건이 달라지면 답도 달라져요?
+- `tutorGuidance.ko` · KO: 주의: 학습자가 불편해하면 이유를 묻지 말고 바로 건너뛰세요.
+- `followUp.1.ko` · KO: 누구를 돕고 싶어요?
+- `followUp.2.ko` · KO: 왜 이름을 숨기고 싶어요?
+- `followUp.3.ko` · KO: 도움을 받은 사람이 알게 돼도 괜찮아요?
 
 #### `q1`
 
 - `question.ko` · KO: 지금 고른다면 숨은 부자 / 존경받는 보통 사람, 어느 쪽이에요?
 - `question.ja` · JA: 今選ぶなら、誰にも知られていない裕福な人ですか、尊敬される普通の人ですか？
-- `tutorGuidance.ko` · KO: 학습자가 말하고 싶은 범위에서만 받고, 이유 없이 건너뛰어도 됩니다. 오늘의 첫 선택이에요. 정답을 정해 주지 말고 실제 이유를 받으세요. 돈, 평판, 가족 이야기는 학습자가 편한 범위에서만 받으세요. 이유를 요구하지 않고 바로 건너뛸 수 있습니다.
-- `followUp.1.ko` · KO: 왜 그쪽을 골랐어요?
-- `followUp.2.ko` · KO: 실제 경험이 영향을 줬어요?
+- `tutorGuidance.ko` · KO: 주의: 학습자가 불편해하면 이유를 묻지 말고 바로 건너뛰세요.
+- `followUp.1.ko` · KO: 왜 그 삶을 골랐어요?
+- `followUp.2.ko` · KO: 돈과 존경 중 무엇이 더 중요해요?
 - `followUp.3.ko` · KO: 반대쪽의 장점은 뭐예요?
 
 #### `q2`
 
-- `question.ko` · KO: 선택한 삶을 살게 되면 일상에서 가장 먼저 무엇이 달라질까요?
-- `question.ja` · JA: 選んだ暮らしをするなら、日常で最初に何が変わりますか？
-- `tutorGuidance.ko` · KO: 학습자가 말하고 싶은 범위에서만 받고, 이유 없이 건너뛰어도 됩니다. 선택을 실제 하루의 변화에 연결해 주세요. 돈, 평판, 가족 이야기는 학습자가 편한 범위에서만 받으세요. 이유를 요구하지 않고 바로 건너뛸 수 있습니다.
-- `followUp.1.ko` · KO: 가장 먼저 달라지는 장면은 뭐예요?
-- `followUp.2.ko` · KO: 주변 사람에게도 변화가 생겨요?
-- `followUp.3.ko` · KO: 생각보다 불편한 점도 있을까요?
+- `question.ko` · KO: 숨은 부자나 존경받는 보통 사람으로 살게 된다면, 평소 생활이 어떻게 달라질까요?
+- `question.ja` · JA: 人知れず裕福な人か、尊敬される普通の人として暮らすなら、普段の生活はどう変わるでしょうか？
+- `tutorGuidance.ko` · KO: 주의: 학습자가 불편해하면 이유를 묻지 말고 바로 건너뛰세요.
+- `followUp.1.ko` · KO: 사람을 만나는 방식이 달라질까요?
+- `followUp.2.ko` · KO: 돈이나 평판을 어떻게 관리할 거예요?
+- `followUp.3.ko` · KO: 가장 불편할 것 같은 점은 뭐예요?
 
 #### `q3`
 
-- `question.ko` · KO: 최근 사생활이나 영향력이 필요해서 반대쪽이 더 낫다고 느낀 순간은 언제였어요?
-- `question.ja` · JA: 最近、私生活や影響力が必要になって、反対のほうが良いと感じたのはいつですか？
-- `tutorGuidance.ko` · KO: 학습자가 말하고 싶은 범위에서만 받고, 이유 없이 건너뛰어도 됩니다. 처음 선택을 부정하지 말고 반대쪽이 필요했던 예외를 찾으세요. 없으면 가상 장면으로 바꿉니다. 돈, 평판, 가족 이야기는 학습자가 편한 범위에서만 받으세요. 이유를 요구하지 않고 바로 건너뛸 수 있습니다.
-- `followUp.1.ko` · KO: 그때 무슨 일이 있었어요?
-- `followUp.2.ko` · KO: 무엇이 가장 필요했어요?
-- `followUp.3.ko` · KO: 그 경험 뒤에 생각이 달라졌어요?
+- `question.ko` · KO: 평소 선택과 반대되는 삶이 더 나을 때는 언제예요?
+- `question.ja` · JA: 普段選ぶほうとは反対の生き方のほうがよいのは、どんなときですか？
+- `tutorGuidance.ko` · KO: 주의: 학습자가 불편해하면 이유를 묻지 말고 바로 건너뛰세요.
+- `followUp.1.ko` · KO: 어떤 상황에서 그래요?
+- `followUp.2.ko` · KO: 사생활과 영향력 중 무엇이 더 필요해요?
+- `followUp.3.ko` · KO: 가상의 인물로 이야기해도 돼요?
 
 #### `q4`
 
 - `question.ko` · KO: 존경받지만 늘 평가를 받아야 하면 어때요?
 - `question.ja` · JA: 尊敬されても、いつも評価され続けるならどうですか？
-- `tutorGuidance.ko` · KO: 학습자가 말하고 싶은 범위에서만 받고, 이유 없이 건너뛰어도 됩니다. 가상의 조건 하나가 선택을 어떻게 흔드는지 확인하세요. 돈, 평판, 가족 이야기는 학습자가 편한 범위에서만 받으세요. 이유를 요구하지 않고 바로 건너뛸 수 있습니다.
-- `followUp.1.ko` · KO: 어느 조건이 가장 중요해요?
-- `followUp.2.ko` · KO: 얼마 동안이라면 가능해요?
-- `followUp.3.ko` · KO: 조건 하나를 바꿀 수 있다면요?
+- `tutorGuidance.ko` · KO: 주의: 학습자가 불편해하면 이유를 묻지 말고 바로 건너뛰세요.
+- `followUp.1.ko` · KO: 어떤 평가가 가장 부담스러워요?
+- `followUp.2.ko` · KO: 존경받기 위해 포기해야 하는 게 있어요?
+- `followUp.3.ko` · KO: 사생활을 지킬 방법이 있을까요?
 
 #### `q5`
 
 - `question.ko` · KO: 가족만 내 경제 상황을 알면 선택이 바뀌어요?
 - `question.ja` · JA: 家族だけが自分の経済状況を知るなら、選択は変わりますか？
-- `tutorGuidance.ko` · KO: 학습자가 말하고 싶은 범위에서만 받고, 이유 없이 건너뛰어도 됩니다. 사람, 기간, 환경 중 달라진 조건 하나에 집중하세요. 돈, 평판, 가족 이야기는 학습자가 편한 범위에서만 받으세요. 이유를 요구하지 않고 바로 건너뛸 수 있습니다.
-- `followUp.1.ko` · KO: 누구의 상황이 영향을 줘요?
-- `followUp.2.ko` · KO: 언제쯤 그런 변화가 올까요?
-- `followUp.3.ko` · KO: 지금도 그 변화에 가까워요?
+- `tutorGuidance.ko` · KO: 주의: 학습자가 불편해하면 이유를 묻지 말고 바로 건너뛰세요.
+- `followUp.1.ko` · KO: 가족에게 어디까지 말하고 싶어요?
+- `followUp.2.ko` · KO: 가족의 생활도 달라질까요?
+- `followUp.3.ko` · KO: 친구가 알게 되면 선택이 바뀌어요?
 
 #### `q6`
 
 - `question.ko` · KO: 돈이나 평판이 어느 정도 공개되면 반대쪽을 고를 거예요?
 - `question.ja` · JA: お金や評判がどの程度公開されたら、反対のほうを選びますか？
-- `tutorGuidance.ko` · KO: 학습자가 말하고 싶은 범위에서만 받고, 이유 없이 건너뛰어도 됩니다. 처음 선택을 뒤집는 구체적인 경계 하나로 닫으세요. 돈, 평판, 가족 이야기는 학습자가 편한 범위에서만 받으세요. 이유를 요구하지 않고 바로 건너뛸 수 있습니다.
-- `followUp.1.ko` · KO: 그 조건은 얼마나 오래 이어져야 해요?
-- `followUp.2.ko` · KO: 누가 함께하면 답이 달라져요?
-- `followUp.3.ko` · KO: 원래 선택으로 돌아오는 조건도 있어요?
+- `tutorGuidance.ko` · KO: 주의: 학습자가 불편해하면 이유를 묻지 말고 바로 건너뛰세요.
+- `followUp.1.ko` · KO: 누구까지 알면 부담스러워요?
+- `followUp.2.ko` · KO: 돈이나 평판이 얼마나 공개돼도 괜찮아요?
+- `followUp.3.ko` · KO: 가상의 인물이라면 어떤 선택을 할까요?

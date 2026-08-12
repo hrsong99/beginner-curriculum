@@ -12,7 +12,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-advanced/lessons/01-my-first-paycheck/lesson.html`
-- sha256: `1814b8ad67bf4be513922f3de068b720269c0b3630107915c806361f510e3ad4`
+- sha256: `eaf70cd44a50936e1ed55c5a17ac91d762016cd98172b170f5f803396ad96c19`
 - source kind: `model-story`
 
 #### `metadata`
@@ -88,7 +88,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 처음으로 직접 돈을 벌거나 받은 기억이 뭐예요?
 - `question.ja` · JA: 初めて自分でお金を稼いだり受け取ったりした記憶は何ですか？
-- `tutorGuidance.ko` · KO: 월급 경험이 없으면 아르바이트, 용돈, 판매, 사례비도 괜찮다고 안내해 주세요.
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
 - `followUp.1.ko` · KO: 몇 살 때였어요?
 - `followUp.2.ko` · KO: 무슨 일을 하거나 무엇을 했어요?
 - `followUp.3.ko` · KO: 누가 돈을 줬어요?
@@ -97,7 +97,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 돈을 받은 날 어디에 있었어요?
 - `question.ja` · JA: そのお金を受け取った日、どこにいましたか？
-- `tutorGuidance.ko` · KO: 시간과 장소가 보이도록 구체화해 주세요.
 - `followUp.1.ko` · KO: 몇 시쯤이었어요?
 - `followUp.2.ko` · KO: 어떻게 받았어요?
 - `followUp.3.ko` · KO: 누구에게 먼저 말했어요?
@@ -106,7 +105,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 첫 월급이나 처음 직접 번 돈은 얼마였어요?
 - `question.ja` · JA: 初めての給料や自分で初めて稼いだお金はいくらでしたか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 정확한 금액이 불편하면 대략적인 범위로 받아 주세요.
 - `followUp.1.ko` · KO: 며칠이나 몇 시간 일했어요?
 - `followUp.2.ko` · KO: 받기 전에 금액을 알고 있었어요?
 - `followUp.3.ko` · KO: 생각보다 많았어요?
@@ -115,7 +113,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 돈으로 가장 먼저 산 것이 뭐예요?
 - `question.ja` · JA: そのお金で最初に買ったものは何ですか？
-- `tutorGuidance.ko` · KO: 물건이나 식사 한 가지와 가격으로 이어 가세요.
 - `followUp.1.ko` · KO: 얼마였어요?
 - `followUp.2.ko` · KO: 왜 그걸 먼저 골랐어요?
 - `followUp.3.ko` · KO: 지금도 가지고 있어요?
@@ -124,7 +121,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 첫 수입으로 누군가를 위해 쓴 돈이 있었어요?
 - `question.ja` · JA: 最初の収入を誰かのために使ったことはありましたか？
-- `tutorGuidance.ko` · KO: 경험이 없으면 누구에게 쓰고 싶었는지 가정으로 열어 주세요.
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
 - `followUp.1.ko` · KO: 누구를 위해 썼어요?
 - `followUp.2.ko` · KO: 어디에서 함께 있었어요?
 - `followUp.3.ko` · KO: 그 사람 반응은 어땠어요?
@@ -133,7 +130,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 직접 번 돈을 쓸 때 이전과 무엇이 달랐어요?
 - `question.ja` · JA: 自分で稼いだお金を使うとき、それまでと何が違いましたか？
-- `tutorGuidance.ko` · KO: 가격을 보는 마음이나 고르는 시간을 실제 구매와 연결하세요.
 - `followUp.1.ko` · KO: 더 오래 고민했어요?
 - `followUp.2.ko` · KO: 아까워서 안 산 것도 있어요?
 - `followUp.3.ko` · KO: 현금과 카드가 다르게 느껴졌어요?
@@ -142,7 +138,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 처음 번 돈의 금액보다 더 오래 남은 것은 뭐예요?
 - `question.ja` · JA: 初めて稼いだ金額より長く残ったものは何ですか？
-- `tutorGuidance.ko` · KO: 교훈을 요구하지 말고 사람, 물건, 감정 중 하나를 고르게 해 주세요.
 - `followUp.1.ko` · KO: 그 기억이 왜 남았어요?
 - `followUp.2.ko` · KO: 지금 돈을 쓰는 습관에도 영향이 있어요?
 - `followUp.3.ko` · KO: 그때의 나에게 뭐라고 말하고 싶어요?
@@ -151,7 +146,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 첫 돈으로 샀지만 금방 후회한 것이 뭐예요?
 - `question.ja` · JA: では逆に、最初のお金で買ったものの、すぐ後悔したものは何ですか？
-- `tutorGuidance.ko` · KO: 해당 경험이 없으면 다른 첫 소비 경험으로 넓혀 닫으세요.
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
 - `followUp.1.ko` · KO: 얼마나 썼어요?
 - `followUp.2.ko` · KO: 왜 사고 싶었어요?
 - `followUp.3.ko` · KO: 지금 다시 고르면 뭘 살 거예요?
@@ -159,7 +154,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-intermediate/lessons/01-my-first-paycheck/lesson.html`
-- sha256: `d1fbb8f6416e225a1eabcb3972f624665de00707167ad4d211e466ccfeb5d129`
+- sha256: `709075f03744311a93cd15b279752ba0a65353f1521dd73976368c24ec930f3a`
 - source kind: `model-story`
 
 #### `metadata`
@@ -235,7 +230,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 처음으로 직접 돈을 벌거나 받은 기억이 뭐예요?
 - `question.ja` · JA: 初めて自分でお金を稼いだり受け取ったりした記憶は何ですか？
-- `tutorGuidance.ko` · KO: 월급 경험이 없으면 아르바이트, 용돈, 판매, 사례비도 괜찮다고 안내해 주세요.
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
 - `followUp.1.ko` · KO: 몇 살 때였어요?
 - `followUp.2.ko` · KO: 무슨 일을 하거나 무엇을 했어요?
 - `followUp.3.ko` · KO: 누가 돈을 줬어요?
@@ -244,7 +239,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 돈을 받은 날 어디에 있었어요?
 - `question.ja` · JA: そのお金を受け取った日、どこにいましたか？
-- `tutorGuidance.ko` · KO: 시간과 장소가 보이도록 구체화해 주세요.
 - `followUp.1.ko` · KO: 몇 시쯤이었어요?
 - `followUp.2.ko` · KO: 어떻게 받았어요?
 - `followUp.3.ko` · KO: 누구에게 먼저 말했어요?
@@ -253,7 +247,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 첫 월급이나 처음 번 돈은 얼마였어요?
 - `question.ja` · JA: 初めての給料や初めて稼いだお金はいくらでしたか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 정확한 금액이 불편하면 대략적인 범위로 받아 주세요.
 - `followUp.1.ko` · KO: 며칠이나 몇 시간 일했어요?
 - `followUp.2.ko` · KO: 받기 전에 금액을 알고 있었어요?
 - `followUp.3.ko` · KO: 생각보다 많았어요?
@@ -262,7 +255,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 돈으로 가장 먼저 산 것이 뭐예요?
 - `question.ja` · JA: そのお金で最初に買ったものは何ですか？
-- `tutorGuidance.ko` · KO: 물건이나 식사 한 가지와 가격으로 이어 가세요.
 - `followUp.1.ko` · KO: 얼마였어요?
 - `followUp.2.ko` · KO: 왜 그걸 먼저 골랐어요?
 - `followUp.3.ko` · KO: 지금도 가지고 있어요?
@@ -271,7 +263,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 첫 수입으로 누군가를 위해 쓴 돈이 있었어요?
 - `question.ja` · JA: 最初の収入を誰かのために使ったことはありましたか？
-- `tutorGuidance.ko` · KO: 경험이 없으면 누구에게 쓰고 싶었는지 가정으로 열어 주세요.
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
 - `followUp.1.ko` · KO: 누구를 위해 썼어요?
 - `followUp.2.ko` · KO: 어디에서 함께 있었어요?
 - `followUp.3.ko` · KO: 그 사람 반응은 어땠어요?
@@ -280,7 +272,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 직접 번 돈을 쓸 때 이전과 무엇이 달랐어요?
 - `question.ja` · JA: 自分で稼いだお金を使うとき、それまでと何が違いましたか？
-- `tutorGuidance.ko` · KO: 가격을 보는 마음이나 고르는 시간을 실제 구매와 연결하세요.
 - `followUp.1.ko` · KO: 더 오래 고민했어요?
 - `followUp.2.ko` · KO: 아까워서 안 산 것도 있어요?
 - `followUp.3.ko` · KO: 현금과 카드가 다르게 느껴졌어요?
@@ -289,7 +280,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 첫 수입에서 금액보다 더 기억나는 건 뭐예요?
 - `question.ja` · JA: 初めての収入で、金額より覚えていることは何ですか？
-- `tutorGuidance.ko` · KO: 교훈을 요구하지 말고 사람, 물건, 감정 중 하나를 고르게 해 주세요.
 - `followUp.1.ko` · KO: 그 기억이 왜 남았어요?
 - `followUp.2.ko` · KO: 지금 돈을 쓰는 습관에도 영향이 있어요?
 - `followUp.3.ko` · KO: 그때의 나에게 뭐라고 말하고 싶어요?
@@ -298,7 +288,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 첫 돈으로 샀지만 금방 후회한 것이 뭐예요?
 - `question.ja` · JA: では逆に、最初のお金で買ったものの、すぐ後悔したものは何ですか？
-- `tutorGuidance.ko` · KO: 해당 경험이 없으면 다른 첫 소비 경험으로 넓혀 닫으세요.
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
 - `followUp.1.ko` · KO: 얼마나 썼어요?
 - `followUp.2.ko` · KO: 왜 사고 싶었어요?
 - `followUp.3.ko` · KO: 지금 다시 고르면 뭘 살 거예요?
@@ -308,7 +298,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-advanced/lessons/02-proudest-work-moment/lesson.html`
-- sha256: `554b25da90e9d7c4ba45b13626d773c73363d21b4f8026a40ec70c61da339f4b`
+- sha256: `128f7f03dad692b5c640191e6b9a321ff401ab50c84308f57cc667a61264f908`
 - source kind: `model-story`
 
 #### `metadata`
@@ -384,7 +374,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 최근에 끝내서 뿌듯했던 일이 뭐예요?
 - `question.ja` · JA: 最近、終えて誇らしかったことは何ですか？
-- `tutorGuidance.ko` · KO: 일, 공부, 집안일, 돌봄, 취미 중 편한 경험을 고르게 해 주세요.
 - `followUp.1.ko` · KO: 언제 끝냈어요?
 - `followUp.2.ko` · KO: 얼마나 걸렸어요?
 - `followUp.3.ko` · KO: 누구와 함께했어요?
@@ -393,7 +382,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 일을 시작하기 전에 가장 걱정한 게 뭐예요?
 - `question.ja` · JA: それを始める前にいちばん心配したことは何ですか？
-- `tutorGuidance.ko` · KO: 결과보다 시작 전의 구체적인 걱정을 받아 주세요.
 - `followUp.1.ko` · KO: 왜 걱정했어요?
 - `followUp.2.ko` · KO: 누구에게 이야기했어요?
 - `followUp.3.ko` · KO: 준비할 시간은 얼마나 있었어요?
@@ -402,7 +390,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 일하거나 공부하거나 집안일을 하며 가장 뿌듯했던 순간은 언제예요?
 - `question.ja` · JA: 仕事、勉強、家のことをしながら、いちばん誇らしかった瞬間はいつですか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 역할을 제한하지 말고 한 장면을 먼저 받아 주세요.
 - `followUp.1.ko` · KO: 정확히 어디에 있었어요?
 - `followUp.2.ko` · KO: 그 순간 누가 함께 있었어요?
 - `followUp.3.ko` · KO: 무슨 결과를 확인했어요?
@@ -411,7 +398,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 결과를 만들기 위해 얼마나 준비했어요?
 - `question.ja` · JA: その結果を作るために、どれくらい準備しましたか？
-- `tutorGuidance.ko` · KO: 일수, 횟수, 시간 중 하나의 숫자를 꼭 받아 주세요.
 - `followUp.1.ko` · KO: 하루에 몇 시간 했어요?
 - `followUp.2.ko` · KO: 중간에 포기하고 싶었던 날은 언제예요?
 - `followUp.3.ko` · KO: 누가 도와줬어요?
@@ -420,7 +406,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 결과를 처음 확인했을 때 가장 먼저 한 행동이 뭐예요?
 - `question.ja` · JA: 結果を初めて確認したとき、最初にした行動は何ですか？
-- `tutorGuidance.ko` · KO: 전화, 메시지, 표정 같은 눈에 보이는 행동으로 이어 가세요.
 - `followUp.1.ko` · KO: 누구에게 먼저 알렸어요?
 - `followUp.2.ko` · KO: 정확히 뭐라고 말했어요?
 - `followUp.3.ko` · KO: 그날 어떻게 축하했어요?
@@ -429,7 +414,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 내 성과보다 다른 사람의 변화를 보고 뿌듯했던 경험이 뭐예요?
 - `question.ja` · JA: 自分の成果よりも、ほかの人の変化を見て誇らしく感じた経験は何ですか？
-- `tutorGuidance.ko` · KO: 가르침, 도움, 돌봄처럼 다양한 역할을 열어 주세요.
 - `followUp.1.ko` · KO: 누가 달라졌어요?
 - `followUp.2.ko` · KO: 본인은 어떤 도움을 줬어요?
 - `followUp.3.ko` · KO: 그 사람이 반응을 보여 줬어요?
@@ -438,7 +422,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 큰 결과가 없어도 뿌듯함을 느끼게 하는 기준은 뭐예요?
 - `question.ja` · JA: 大きな結果がなくても誇らしさを感じる基準は何ですか？
-- `tutorGuidance.ko` · KO: 방금 말한 경험의 작은 증거를 근거로 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 시간을 지킨 것도 결과가 될 수 있어요?
 - `followUp.2.ko` · KO: 전보다 나아진 점은 뭐였어요?
 - `followUp.3.ko` · KO: 다른 사람이 몰라도 뿌듯할 수 있어요?
@@ -447,7 +430,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 결과는 좋았지만 마음은 뿌듯하지 않았던 일이 뭐예요?
 - `question.ja` · JA: では逆に、結果はよかったのに誇らしくなかったことは何ですか？
-- `tutorGuidance.ko` · KO: 해당 경험이 없으면 왜 그럴 수 있는지 가까운 사례로 닫으세요.
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
 - `followUp.1.ko` · KO: 과정에서 뭐가 힘들었어요?
 - `followUp.2.ko` · KO: 내가 원한 결과였어요?
 - `followUp.3.ko` · KO: 다시 같은 방법을 쓸 거예요?
@@ -455,7 +438,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-intermediate/lessons/02-proudest-work-moment/lesson.html`
-- sha256: `6b2c46bd0df036741071007628855746e4b4fd27a375a255ef9258850962715f`
+- sha256: `43c9a18de19f196b3bb4f543a3c85d76aaee3f5da26afd3c8e586eda07053130`
 - source kind: `model-story`
 
 #### `metadata`
@@ -531,7 +514,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 최근에 끝내서 뿌듯했던 일이 뭐예요?
 - `question.ja` · JA: 最近、終えて誇らしかったことは何ですか？
-- `tutorGuidance.ko` · KO: 일, 공부, 집안일, 돌봄, 취미 중 편한 경험을 고르게 해 주세요.
 - `followUp.1.ko` · KO: 언제 끝냈어요?
 - `followUp.2.ko` · KO: 얼마나 걸렸어요?
 - `followUp.3.ko` · KO: 누구와 함께했어요?
@@ -540,7 +522,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 일을 시작하기 전에 가장 걱정한 게 뭐예요?
 - `question.ja` · JA: それを始める前にいちばん心配したことは何ですか？
-- `tutorGuidance.ko` · KO: 결과보다 시작 전의 구체적인 걱정을 받아 주세요.
 - `followUp.1.ko` · KO: 왜 걱정했어요?
 - `followUp.2.ko` · KO: 누구에게 이야기했어요?
 - `followUp.3.ko` · KO: 준비할 시간은 얼마나 있었어요?
@@ -549,7 +530,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 일·공부·집안일에서 가장 뿌듯했던 때는 언제예요?
 - `question.ja` · JA: 仕事・勉強・家事で、いちばん誇らしかったのはいつですか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 역할을 제한하지 말고 한 장면을 먼저 받아 주세요.
 - `followUp.1.ko` · KO: 정확히 어디에 있었어요?
 - `followUp.2.ko` · KO: 그 순간 누가 함께 있었어요?
 - `followUp.3.ko` · KO: 무슨 결과를 확인했어요?
@@ -558,7 +538,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 결과를 만들기 위해 얼마나 준비했어요?
 - `question.ja` · JA: その結果を作るために、どれくらい準備しましたか？
-- `tutorGuidance.ko` · KO: 일수, 횟수, 시간 중 하나의 숫자를 꼭 받아 주세요.
 - `followUp.1.ko` · KO: 하루에 몇 시간 했어요?
 - `followUp.2.ko` · KO: 중간에 포기하고 싶었던 날은 언제예요?
 - `followUp.3.ko` · KO: 누가 도와줬어요?
@@ -567,7 +546,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 결과를 처음 확인했을 때 가장 먼저 한 행동이 뭐예요?
 - `question.ja` · JA: 結果を初めて確認したとき、最初にした行動は何ですか？
-- `tutorGuidance.ko` · KO: 전화, 메시지, 표정 같은 눈에 보이는 행동으로 이어 가세요.
 - `followUp.1.ko` · KO: 누구에게 먼저 알렸어요?
 - `followUp.2.ko` · KO: 정확히 뭐라고 말했어요?
 - `followUp.3.ko` · KO: 그날 어떻게 축하했어요?
@@ -576,7 +554,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 내 성과보다 다른 사람의 변화를 보고 뿌듯했던 경험이 뭐예요?
 - `question.ja` · JA: 自分の成果よりも、ほかの人の変化を見て誇らしく感じた経験は何ですか？
-- `tutorGuidance.ko` · KO: 가르침, 도움, 돌봄처럼 다양한 역할을 열어 주세요.
 - `followUp.1.ko` · KO: 누가 달라졌어요?
 - `followUp.2.ko` · KO: 본인은 어떤 도움을 줬어요?
 - `followUp.3.ko` · KO: 그 사람이 반응을 보여 줬어요?
@@ -585,7 +562,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 큰 결과가 없어도 언제 뿌듯해요?
 - `question.ja` · JA: 大きな結果がなくても、どんなときに誇らしく感じますか？
-- `tutorGuidance.ko` · KO: 방금 말한 경험의 작은 증거를 근거로 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 시간을 지킨 것도 결과가 될 수 있어요?
 - `followUp.2.ko` · KO: 전보다 나아진 점은 뭐였어요?
 - `followUp.3.ko` · KO: 다른 사람이 몰라도 뿌듯할 수 있어요?
@@ -594,7 +570,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 결과는 좋았지만 마음은 뿌듯하지 않았던 일이 뭐예요?
 - `question.ja` · JA: では逆に、結果はよかったのに誇らしくなかったことは何ですか？
-- `tutorGuidance.ko` · KO: 해당 경험이 없으면 왜 그럴 수 있는지 가까운 사례로 닫으세요.
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
 - `followUp.1.ko` · KO: 과정에서 뭐가 힘들었어요?
 - `followUp.2.ko` · KO: 내가 원한 결과였어요?
 - `followUp.3.ko` · KO: 다시 같은 방법을 쓸 거예요?
@@ -604,7 +580,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-advanced/lessons/03-when-i-felt-successful/lesson.html`
-- sha256: `831319f25899308bd3e6524b566161e9a7c2a5b61cb6ab9a9b1f4ad9375e64fc`
+- sha256: `1c24e72ea34df7fc8335262f31c8f6d6bfbea733920d7203a8aafd99b94b0b0b`
 - source kind: `model-story`
 
 #### `metadata`
@@ -680,7 +656,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 최근에 계획대로 끝낸 작은 일이 뭐예요?
 - `question.ja` · JA: 最近、計画どおり終えた小さなことは何ですか？
-- `tutorGuidance.ko` · KO: 성과 크기를 평가하지 말고 최근 행동 하나를 받아 주세요.
 - `followUp.1.ko` · KO: 언제 끝냈어요?
 - `followUp.2.ko` · KO: 며칠이나 걸렸어요?
 - `followUp.3.ko` · KO: 혼자 했어요?
@@ -689,7 +664,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 일을 시작할 때 세운 숫자 목표가 뭐였어요?
 - `question.ja` · JA: それを始めるときに立てた数字の目標は何でしたか？
-- `tutorGuidance.ko` · KO: 시간, 횟수, 금액, 분량 중 편한 숫자로 열어 주세요.
 - `followUp.1.ko` · KO: 왜 그 숫자로 정했어요?
 - `followUp.2.ko` · KO: 중간에 바꿨어요?
 - `followUp.3.ko` · KO: 기록은 어디에 남겼어요?
@@ -698,7 +672,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 크지 않아도 성공했다고 느낀 순간은 언제예요?
 - `question.ja` · JA: 大きくなくても、成功したと感じた瞬間はいつですか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 판단보다 한 장면과 행동을 먼저 받아 주세요.
 - `followUp.1.ko` · KO: 정확히 뭘 끝냈어요?
 - `followUp.2.ko` · KO: 그때 어디에 있었어요?
 - `followUp.3.ko` · KO: 누가 결과를 봤어요?
@@ -707,7 +680,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 성공까지 얼마나 걸렸어요?
 - `question.ja` · JA: その成功までどれくらいかかりましたか？
-- `tutorGuidance.ko` · KO: 기간과 반복 횟수를 구체적으로 받아 주세요.
 - `followUp.1.ko` · KO: 처음 시작한 날이 언제예요?
 - `followUp.2.ko` · KO: 일주일에 몇 번 했어요?
 - `followUp.3.ko` · KO: 가장 오래 쉰 기간은 얼마예요?
@@ -716,7 +688,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 성공한 걸 확인하고 바로 뭘 했어요?
 - `question.ja` · JA: 成功したと確認して、すぐ何をしましたか？
-- `tutorGuidance.ko` · KO: 축하 방식이나 다음 행동을 눈에 보이게 말하게 해 주세요.
 - `followUp.1.ko` · KO: 사진이나 기록을 남겼어요?
 - `followUp.2.ko` · KO: 누구에게 알렸어요?
 - `followUp.3.ko` · KO: 그날 자신에게 뭘 해 줬어요?
@@ -725,7 +696,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 다른 사람은 작다고 해도 나에게 컸던 성공이 뭐예요?
 - `question.ja` · JA: 他の人には小さく見えても、自分には大きかった成功は何ですか？
-- `tutorGuidance.ko` · KO: 비교나 자랑이 아니라 이전의 어려움과 연결하세요.
 - `followUp.1.ko` · KO: 전에는 왜 어려웠어요?
 - `followUp.2.ko` · KO: 어떤 점이 가장 많이 나아졌어요?
 - `followUp.3.ko` · KO: 누가 그 의미를 알아줬어요?
@@ -734,7 +704,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 한 번의 성공이 다음 행동을 바꾼 경험이 뭐예요?
 - `question.ja` · JA: 一度の成功が次の行動を変えた経験は何ですか？
-- `tutorGuidance.ko` · KO: 성공 뒤 실제로 시작하거나 계속한 일로 넓혀 주세요.
 - `followUp.1.ko` · KO: 다음 목표는 뭐였어요?
 - `followUp.2.ko` · KO: 더 자신 있게 한 일이 있어요?
 - `followUp.3.ko` · KO: 그 변화가 얼마나 오래 갔어요?
@@ -743,7 +712,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 숫자 목표는 달성했지만 성공처럼 느껴지지 않은 일이 뭐예요?
 - `question.ja` · JA: では逆に、数字の目標は達成したのに、成功したとは感じなかったことは何ですか？
-- `tutorGuidance.ko` · KO: 숫자와 마음이 달랐던 가까운 사례로 닫으세요.
 - `followUp.1.ko` · KO: 왜 만족하지 못했어요?
 - `followUp.2.ko` · KO: 목표를 너무 낮게 잡았어요?
 - `followUp.3.ko` · KO: 다시 목표를 세우면 뭘 바꿀 거예요?
@@ -751,7 +719,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-intermediate/lessons/03-when-i-felt-successful/lesson.html`
-- sha256: `c78f236fb7aac7c1de3c1379c612972ba4fd8d1a5989d7422a52803deb7c11bb`
+- sha256: `a2d5febe6a4ffaa06d570d35f49c38566f06d93403d0a051958659ac361ef7a5`
 - source kind: `model-story`
 
 #### `metadata`
@@ -827,7 +795,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 최근에 계획대로 끝낸 작은 일이 뭐예요?
 - `question.ja` · JA: 最近、計画どおり終えた小さなことは何ですか？
-- `tutorGuidance.ko` · KO: 성과 크기를 평가하지 말고 최근 행동 하나를 받아 주세요.
 - `followUp.1.ko` · KO: 언제 끝냈어요?
 - `followUp.2.ko` · KO: 며칠이나 걸렸어요?
 - `followUp.3.ko` · KO: 혼자 했어요?
@@ -836,7 +803,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 일을 시작할 때 세운 숫자 목표가 뭐였어요?
 - `question.ja` · JA: それを始めるときに立てた数字の目標は何でしたか？
-- `tutorGuidance.ko` · KO: 시간, 횟수, 금액, 분량 중 편한 숫자로 열어 주세요.
 - `followUp.1.ko` · KO: 왜 그 숫자로 정했어요?
 - `followUp.2.ko` · KO: 중간에 바꿨어요?
 - `followUp.3.ko` · KO: 기록은 어디에 남겼어요?
@@ -845,7 +811,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 작아도 성공했다고 느낀 때는 언제예요?
 - `question.ja` · JA: 小さくても成功したと感じたのはいつですか？
-- `tutorGuidance.ko` · KO: 오늘의 메인 질문이에요. 판단보다 한 장면과 행동을 먼저 받아 주세요.
 - `followUp.1.ko` · KO: 정확히 뭘 끝냈어요?
 - `followUp.2.ko` · KO: 그때 어디에 있었어요?
 - `followUp.3.ko` · KO: 누가 결과를 봤어요?
@@ -854,7 +819,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 성공까지 얼마나 걸렸어요?
 - `question.ja` · JA: その成功までどれくらいかかりましたか？
-- `tutorGuidance.ko` · KO: 기간과 반복 횟수를 구체적으로 받아 주세요.
 - `followUp.1.ko` · KO: 처음 시작한 날이 언제예요?
 - `followUp.2.ko` · KO: 일주일에 몇 번 했어요?
 - `followUp.3.ko` · KO: 가장 오래 쉰 기간은 얼마예요?
@@ -863,7 +827,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 성공한 걸 확인하고 바로 뭘 했어요?
 - `question.ja` · JA: 成功したと確認して、すぐ何をしましたか？
-- `tutorGuidance.ko` · KO: 축하 방식이나 다음 행동을 눈에 보이게 말하게 해 주세요.
 - `followUp.1.ko` · KO: 사진이나 기록을 남겼어요?
 - `followUp.2.ko` · KO: 누구에게 알렸어요?
 - `followUp.3.ko` · KO: 그날 자신에게 뭘 해 줬어요?
@@ -872,7 +835,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 다른 사람은 작다고 해도 나에게 컸던 성공이 뭐예요?
 - `question.ja` · JA: 他の人には小さく見えても、自分には大きかった成功は何ですか？
-- `tutorGuidance.ko` · KO: 비교나 자랑이 아니라 이전의 어려움과 연결하세요.
 - `followUp.1.ko` · KO: 전에는 왜 어려웠어요?
 - `followUp.2.ko` · KO: 어떤 점이 가장 많이 나아졌어요?
 - `followUp.3.ko` · KO: 누가 그 의미를 알아줬어요?
@@ -881,7 +843,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 한 번 성공한 뒤에 다음 행동이 어떻게 달라졌어요?
 - `question.ja` · JA: 一度成功したあと、次の行動はどう変わりましたか？
-- `tutorGuidance.ko` · KO: 성공 뒤 실제로 시작하거나 계속한 일로 넓혀 주세요.
 - `followUp.1.ko` · KO: 다음 목표는 뭐였어요?
 - `followUp.2.ko` · KO: 더 자신 있게 한 일이 있어요?
 - `followUp.3.ko` · KO: 그 변화가 얼마나 오래 갔어요?
@@ -890,7 +851,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 숫자 목표는 달성했지만 성공처럼 느껴지지 않은 일이 뭐예요?
 - `question.ja` · JA: では逆に、数字の目標は達成したのに、成功したとは感じなかったことは何ですか？
-- `tutorGuidance.ko` · KO: 숫자와 마음이 달랐던 가까운 사례로 닫으세요.
 - `followUp.1.ko` · KO: 왜 만족하지 못했어요?
 - `followUp.2.ko` · KO: 목표를 너무 낮게 잡았어요?
 - `followUp.3.ko` · KO: 다시 목표를 세우면 뭘 바꿀 거예요?
@@ -900,7 +860,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-advanced/lessons/04-what-i-am-learning-now/lesson.html`
-- sha256: `10f3e21bee5304d8aac380f0efd2b17d23c893097a02e6987ce27fb321311390`
+- sha256: `52adf494fd7c8b2fce9a5c64b179b59add8b649cfdb2dce071f386ab897c3894`
 - source kind: `model-story`
 
 #### `metadata`
@@ -976,7 +936,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 요즘 새로 배우거나 연습하는 것이 있어요?
 - `question.ja` · JA: 最近、新しく学んだり練習したりしていることはありますか？
-- `tutorGuidance.ko` · KO: 공부, 운동, 요리, 취미처럼 생활 속 연습도 모두 괜찮아요.
 - `followUp.1.ko` · KO: 언제 시작했어요?
 - `followUp.2.ko` · KO: 일주일에 몇 번 해요?
 - `followUp.3.ko` · KO: 혼자 해요, 다른 사람과 해요?
@@ -985,7 +944,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 이번 주에 그걸 실제로 한 때가 언제였어요?
 - `question.ja` · JA: 今週、それを実際にしたのはいつですか？
-- `tutorGuidance.ko` · KO: 가장 최근의 한 장면으로 좁혀 주세요.
 - `followUp.1.ko` · KO: 몇 분이나 했어요?
 - `followUp.2.ko` · KO: 어디에서 했어요?
 - `followUp.3.ko` · KO: 무엇까지 끝냈어요?
@@ -994,7 +952,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 지금 가장 꾸준히 하고 있는 자기계발은 뭐예요?
 - `question.ja` · JA: 今、いちばん継続している自己啓発は何ですか？
-- `tutorGuidance.ko` · KO: 거창한 목표보다 실제로 반복하는 한 가지를 골라 주세요.
 - `followUp.1.ko` · KO: 왜 그걸 골랐어요?
 - `followUp.2.ko` · KO: 몇 달째 하고 있어요?
 - `followUp.3.ko` · KO: 처음보다 무엇이 늘었어요?
@@ -1003,7 +960,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 습관을 계속하게 만드는 구체적인 장치가 있어요?
 - `question.ja` · JA: その習慣を続けさせる具体的な仕組みはありますか？
-- `tutorGuidance.ko` · KO: 알람, 수업, 사람, 장소 가운데 실제 도움이 된 것을 물어보세요.
 - `followUp.1.ko` · KO: 언제 그 장치를 만들었어요?
 - `followUp.2.ko` · KO: 없으면 얼마나 자주 빼먹어요?
 - `followUp.3.ko` · KO: 다른 습관에도 쓸 수 있어요?
@@ -1012,7 +968,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 하기 싫었지만 그래도 한 날이 있었어요?
 - `question.ja` · JA: やりたくなかったのに、それでもやった日はありましたか？
-- `tutorGuidance.ko` · KO: 의지에 대한 평가보다 그날의 시간과 행동을 따라가세요.
 - `followUp.1.ko` · KO: 그날 왜 하기 싫었어요?
 - `followUp.2.ko` · KO: 몇 분만 하기로 했어요?
 - `followUp.3.ko` · KO: 끝난 뒤 기분은 어땠어요?
@@ -1021,7 +976,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 반대로, 며칠 만에 끝난 자기계발 시도가 뭐예요?
 - `question.ja` · JA: 反対に、数日で終わった自己啓発の挑戦は何ですか？
-- `tutorGuidance.ko` · KO: 작심삼일도 편하게 웃으며 말할 수 있는 경험으로 받아 주세요.
 - `followUp.1.ko` · KO: 정확히 며칠 갔어요?
 - `followUp.2.ko` · KO: 처음에는 왜 시작했어요?
 - `followUp.3.ko` · KO: 그만둔 날 무슨 일이 있었어요?
@@ -1030,7 +984,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 오래 간 것과 금방 끝난 것의 가장 큰 차이는 뭐였어요?
 - `question.ja` · JA: 長く続いたものとすぐ終わったものの一番大きな違いは何でしたか？
-- `tutorGuidance.ko` · KO: 성격 평가 대신 시간, 비용, 사람, 재미 중 하나를 비교하세요.
 - `followUp.1.ko` · KO: 시간대가 달랐어요?
 - `followUp.2.ko` · KO: 돈을 낸 것이 영향을 줬어요?
 - `followUp.3.ko` · KO: 함께한 사람이 있었어요?
@@ -1039,7 +992,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 다시 시작하지 않아도 괜찮다고 느끼는 배움이 있어요?
 - `question.ja` · JA: では反対に、再開しなくてもいいと思う学びはありますか？
-- `tutorGuidance.ko` · KO: 모든 시도를 계속해야 한다는 결론 없이 닫아 주세요.
 - `followUp.1.ko` · KO: 무엇을 해 봤어요?
 - `followUp.2.ko` · KO: 왜 이제 미련이 없어요?
 - `followUp.3.ko` · KO: 대신 무엇에 시간을 쓰고 싶어요?
@@ -1047,7 +999,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-intermediate/lessons/04-what-i-am-learning-now/lesson.html`
-- sha256: `0bd44fe0e3584ae7d70dc4bf058f99ad7e00e472723b99dbdab66151485d9749`
+- sha256: `cf062315b6e60903df408ae77a8d3273f07ff24583bc6245d78dc93da4bb4bdd`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1123,7 +1075,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 요즘 새로 배우거나 연습하는 것이 있어요?
 - `question.ja` · JA: 最近、新しく学んだり練習したりしていることはありますか？
-- `tutorGuidance.ko` · KO: 공부, 운동, 요리, 취미처럼 생활 속 연습도 모두 괜찮아요.
 - `followUp.1.ko` · KO: 언제 시작했어요?
 - `followUp.2.ko` · KO: 일주일에 몇 번 해요?
 - `followUp.3.ko` · KO: 혼자 해요, 다른 사람과 해요?
@@ -1132,7 +1083,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 이번 주에 그걸 실제로 한 때가 언제였어요?
 - `question.ja` · JA: 今週、それを実際にしたのはいつですか？
-- `tutorGuidance.ko` · KO: 가장 최근의 한 장면으로 좁혀 주세요.
 - `followUp.1.ko` · KO: 몇 분이나 했어요?
 - `followUp.2.ko` · KO: 어디에서 했어요?
 - `followUp.3.ko` · KO: 무엇까지 끝냈어요?
@@ -1141,7 +1091,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 요즘 꾸준히 배우는 것은 뭐예요?
 - `question.ja` · JA: 最近、続けて学んでいることは何ですか？
-- `tutorGuidance.ko` · KO: 거창한 목표보다 실제로 반복하는 한 가지를 골라 주세요.
 - `followUp.1.ko` · KO: 왜 그걸 골랐어요?
 - `followUp.2.ko` · KO: 몇 달째 하고 있어요?
 - `followUp.3.ko` · KO: 처음보다 무엇이 늘었어요?
@@ -1150,7 +1099,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 습관을 계속하게 만드는 구체적인 장치가 있어요?
 - `question.ja` · JA: その習慣を続けさせる具体的な仕組みはありますか？
-- `tutorGuidance.ko` · KO: 알람, 수업, 사람, 장소 가운데 실제 도움이 된 것을 물어보세요.
 - `followUp.1.ko` · KO: 언제 그 장치를 만들었어요?
 - `followUp.2.ko` · KO: 없으면 얼마나 자주 빼먹어요?
 - `followUp.3.ko` · KO: 다른 습관에도 쓸 수 있어요?
@@ -1159,7 +1107,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 하기 싫었지만 그래도 한 날이 있었어요?
 - `question.ja` · JA: やりたくなかったのに、それでもやった日はありましたか？
-- `tutorGuidance.ko` · KO: 의지에 대한 평가보다 그날의 시간과 행동을 따라가세요.
 - `followUp.1.ko` · KO: 그날 왜 하기 싫었어요?
 - `followUp.2.ko` · KO: 몇 분만 하기로 했어요?
 - `followUp.3.ko` · KO: 끝난 뒤 기분은 어땠어요?
@@ -1168,7 +1115,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 반대로, 며칠 만에 끝난 자기계발 시도가 뭐예요?
 - `question.ja` · JA: 反対に、数日で終わった自己啓発の挑戦は何ですか？
-- `tutorGuidance.ko` · KO: 작심삼일도 편하게 웃으며 말할 수 있는 경험으로 받아 주세요.
 - `followUp.1.ko` · KO: 정확히 며칠 갔어요?
 - `followUp.2.ko` · KO: 처음에는 왜 시작했어요?
 - `followUp.3.ko` · KO: 그만둔 날 무슨 일이 있었어요?
@@ -1177,7 +1123,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 오래 한 배움과 금방 그만둔 배움은 뭐가 달랐어요?
 - `question.ja` · JA: 長く続けた学びと、すぐやめた学びは何が違いましたか？
-- `tutorGuidance.ko` · KO: 성격 평가 대신 시간, 비용, 사람, 재미 중 하나를 비교하세요.
 - `followUp.1.ko` · KO: 시간대가 달랐어요?
 - `followUp.2.ko` · KO: 돈을 낸 것이 영향을 줬어요?
 - `followUp.3.ko` · KO: 함께한 사람이 있었어요?
@@ -1186,7 +1131,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 다시 시작하지 않아도 괜찮다고 느끼는 배움이 있어요?
 - `question.ja` · JA: では反対に、再開しなくてもいいと思う学びはありますか？
-- `tutorGuidance.ko` · KO: 모든 시도를 계속해야 한다는 결론 없이 닫아 주세요.
 - `followUp.1.ko` · KO: 무엇을 해 봤어요?
 - `followUp.2.ko` · KO: 왜 이제 미련이 없어요?
 - `followUp.3.ko` · KO: 대신 무엇에 시간을 쓰고 싶어요?
@@ -1196,7 +1140,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-advanced/lessons/05-my-money-habit/lesson.html`
-- sha256: `8fad8aac739ae2317a3ef5031fbee6b36816ea80d0a0f9089d213ec205d61d71`
+- sha256: `b4c38225a54c0fe43df222101e7e855f3d25556f47a66628bcd1733606d43985`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1272,7 +1216,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 돈을 관리할 때 자주 확인하는 것이 있어요?
 - `question.ja` · JA: お金を管理するとき、よく確認するものはありますか？
-- `tutorGuidance.ko` · KO: 통장, 현금, 앱, 영수증 중 익숙한 장면으로 시작하세요.
 - `followUp.1.ko` · KO: 얼마나 자주 봐요?
 - `followUp.2.ko` · KO: 주로 언제 확인해요?
 - `followUp.3.ko` · KO: 확인하는 데 몇 분 걸려요?
@@ -1281,7 +1224,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 최근에 계획해서 돈을 모으거나 아낀 일이 뭐예요?
 - `question.ja` · JA: 最近、計画してお金を貯めたり節約したことは何ですか？
-- `tutorGuidance.ko` · KO: 정확한 액수가 불편하면 편한 범위로 말해도 된다고 안내해 주세요.
 - `followUp.1.ko` · KO: 무엇을 위한 돈이었어요?
 - `followUp.2.ko` · KO: 몇 주나 몇 달 걸렸어요?
 - `followUp.3.ko` · KO: 계획대로 됐어요?
@@ -1290,7 +1232,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 지금 실제로 지키는 나만의 돈 관리 습관은 뭐예요?
 - `question.ja` · JA: 今、実際に続けている自分なりのお金の管理習慣は何ですか？
-- `tutorGuidance.ko` · KO: 수익을 약속하는 방법이 아니라 개인 생활 습관을 이야기해요. 정확한 금액이 불편하면 범위나 비율로 답해도 된다고 안내해 주세요.
 - `followUp.1.ko` · KO: 언제 시작했어요?
 - `followUp.2.ko` · KO: 한 번에 얼마를 움직여요?
 - `followUp.3.ko` · KO: 자동이에요, 직접 해요?
@@ -1299,7 +1240,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 습관이 실제로 도움이 된 순간이 있었어요?
 - `question.ja` · JA: その習慣が実際に役立った瞬間はありましたか？
-- `tutorGuidance.ko` · KO: 구체적인 결제나 준비 장면으로 이어 가세요.
 - `followUp.1.ko` · KO: 언제였어요?
 - `followUp.2.ko` · KO: 얼마가 필요했어요?
 - `followUp.3.ko` · KO: 그 습관이 없었다면 어땠을까요?
@@ -1308,7 +1248,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 방법을 다른 사람에게도 소개하고 싶어요?
 - `question.ja` · JA: その方法をほかの人にも紹介したいですか？
-- `tutorGuidance.ko` · KO: 추천 여부를 먼저 고르고, 정답처럼 말하지 않게 해 주세요.
 - `followUp.1.ko` · KO: 어떤 사람에게 잘 맞아요?
 - `followUp.2.ko` · KO: 어떤 사람에게는 불편할까요?
 - `followUp.3.ko` · KO: 처음에는 얼마로 시작하면 편할까요?
@@ -1317,7 +1256,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 같은 돈 습관도 사람마다 결과가 다른 이유는 뭐예요?
 - `question.ja` · JA: 同じお金の習慣でも人によって結果が違う理由は何ですか？
-- `tutorGuidance.ko` · KO: 수입 형태, 생활비, 성향 중 한 가지 실제 차이를 고르게 하세요.
 - `followUp.1.ko` · KO: 날짜가 일정한지가 중요해요?
 - `followUp.2.ko` · KO: 가족과 함께 관리하면 달라져요?
 - `followUp.3.ko` · KO: 기록을 좋아하는지도 중요해요?
@@ -1326,7 +1264,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 돈을 쓸 때 자신만의 기준을 적용한 최근 장면이 있어요?
 - `question.ja` · JA: お金を使うとき、自分なりの基準を使った最近の場面はありますか？
-- `tutorGuidance.ko` · KO: 구매 조언이 아니라 본인의 선택 과정을 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 무엇을 사려고 했어요?
 - `followUp.2.ko` · KO: 얼마까지 괜찮다고 생각했어요?
 - `followUp.3.ko` · KO: 결국 샀어요, 안 샀어요?
@@ -1335,7 +1272,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 해 봤지만 나와 맞지 않아 그만둔 돈 습관은 뭐예요?
 - `question.ja` · JA: では反対に、試したものの自分に合わずやめたお金の習慣は何ですか？
-- `tutorGuidance.ko` · KO: 실패나 도덕성 평가 없이 불편했던 점으로 닫으세요.
 - `followUp.1.ko` · KO: 얼마 동안 해 봤어요?
 - `followUp.2.ko` · KO: 무엇이 가장 번거로웠어요?
 - `followUp.3.ko` · KO: 그만둔 뒤 무엇으로 바꿨어요?
@@ -1343,7 +1279,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-intermediate/lessons/05-my-money-habit/lesson.html`
-- sha256: `b5b9138c3279afe1624a7c6592c0cc35ede059513dc9aa6c4fe0e3b74657891f`
+- sha256: `6136453a2b58472ef60a6cc4ec5ecb5decee39962d252f4df20b91586ec4eb2a`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1419,7 +1355,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 돈을 관리할 때 자주 확인하는 것이 있어요?
 - `question.ja` · JA: お金を管理するとき、よく確認するものはありますか？
-- `tutorGuidance.ko` · KO: 통장, 현금, 앱, 영수증 중 익숙한 장면으로 시작하세요.
 - `followUp.1.ko` · KO: 얼마나 자주 봐요?
 - `followUp.2.ko` · KO: 주로 언제 확인해요?
 - `followUp.3.ko` · KO: 확인하는 데 몇 분 걸려요?
@@ -1428,7 +1363,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 최근에 계획해서 돈을 모으거나 아낀 일이 뭐예요?
 - `question.ja` · JA: 最近、計画してお金を貯めたり節約したことは何ですか？
-- `tutorGuidance.ko` · KO: 정확한 액수가 불편하면 편한 범위로 말해도 된다고 안내해 주세요.
 - `followUp.1.ko` · KO: 무엇을 위한 돈이었어요?
 - `followUp.2.ko` · KO: 몇 주나 몇 달 걸렸어요?
 - `followUp.3.ko` · KO: 계획대로 됐어요?
@@ -1437,7 +1371,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 지금 지키는 돈 습관은 뭐예요?
 - `question.ja` · JA: 今続けているお金の習慣は何ですか？
-- `tutorGuidance.ko` · KO: 수익을 약속하는 방법이 아니라 개인 생활 습관을 이야기해요. 정확한 금액이 불편하면 범위나 비율로 답해도 된다고 안내해 주세요.
 - `followUp.1.ko` · KO: 언제 시작했어요?
 - `followUp.2.ko` · KO: 한 번에 얼마를 움직여요?
 - `followUp.3.ko` · KO: 자동이에요, 직접 해요?
@@ -1446,7 +1379,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 습관이 실제로 도움이 된 순간이 있었어요?
 - `question.ja` · JA: その習慣が実際に役立った瞬間はありましたか？
-- `tutorGuidance.ko` · KO: 구체적인 결제나 준비 장면으로 이어 가세요.
 - `followUp.1.ko` · KO: 언제였어요?
 - `followUp.2.ko` · KO: 얼마가 필요했어요?
 - `followUp.3.ko` · KO: 그 습관이 없었다면 어땠을까요?
@@ -1455,7 +1387,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 방법을 다른 사람에게도 소개하고 싶어요?
 - `question.ja` · JA: その方法をほかの人にも紹介したいですか？
-- `tutorGuidance.ko` · KO: 추천 여부를 먼저 고르고, 정답처럼 말하지 않게 해 주세요.
 - `followUp.1.ko` · KO: 어떤 사람에게 잘 맞아요?
 - `followUp.2.ko` · KO: 어떤 사람에게는 불편할까요?
 - `followUp.3.ko` · KO: 처음에는 얼마로 시작하면 편할까요?
@@ -1464,7 +1395,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 같은 돈 습관도 사람마다 결과가 왜 달라요?
 - `question.ja` · JA: 同じお金の習慣でも人によって結果が違う理由は何ですか？
-- `tutorGuidance.ko` · KO: 수입 형태, 생활비, 성향 중 한 가지 실제 차이를 고르게 하세요.
 - `followUp.1.ko` · KO: 날짜가 일정한지가 중요해요?
 - `followUp.2.ko` · KO: 가족과 함께 관리하면 달라져요?
 - `followUp.3.ko` · KO: 기록을 좋아하는지도 중요해요?
@@ -1473,7 +1403,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 돈을 쓸 때 자신만의 기준을 적용한 최근 장면이 있어요?
 - `question.ja` · JA: お金を使うとき、自分なりの基準を使った最近の場面はありますか？
-- `tutorGuidance.ko` · KO: 구매 조언이 아니라 본인의 선택 과정을 설명하게 해 주세요.
 - `followUp.1.ko` · KO: 무엇을 사려고 했어요?
 - `followUp.2.ko` · KO: 얼마까지 괜찮다고 생각했어요?
 - `followUp.3.ko` · KO: 결국 샀어요, 안 샀어요?
@@ -1482,7 +1411,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 해 봤지만 나와 맞지 않아 그만둔 돈 습관은 뭐예요?
 - `question.ja` · JA: では反対に、試したものの自分に合わずやめたお金の習慣は何ですか？
-- `tutorGuidance.ko` · KO: 실패나 도덕성 평가 없이 불편했던 점으로 닫으세요.
 - `followUp.1.ko` · KO: 얼마 동안 해 봤어요?
 - `followUp.2.ko` · KO: 무엇이 가장 번거로웠어요?
 - `followUp.3.ko` · KO: 그만둔 뒤 무엇으로 바꿨어요?
@@ -1492,7 +1420,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-advanced/lessons/06-if-i-had-another-job/lesson.html`
-- sha256: `9fd717dba6aaf0b4886e9db10722084e6857a5aeaf014506062c03613d74bbe7`
+- sha256: `69e01ce5e09297750f0e40ab94048eebc5f13d07a907ec30c51dcb90f6b18d4a`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1568,7 +1496,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 한 번쯤 해 보고 싶다고 생각한 일이 있어요?
 - `question.ja` · JA: 一度はやってみたいと思った仕事はありますか？
-- `tutorGuidance.ko` · KO: 직업뿐 아니라 가게 운영, 창작, 돌봄처럼 역할로도 열어 주세요.
 - `followUp.1.ko` · KO: 언제 처음 생각했어요?
 - `followUp.2.ko` · KO: 누구를 보고 떠올렸어요?
 - `followUp.3.ko` · KO: 직접 해 본 적이 있어요?
@@ -1577,7 +1504,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 일을 하는 사람의 하루는 몇 시에 시작할까요?
 - `question.ja` · JA: その仕事をする人の一日は何時に始まるでしょうか？
-- `tutorGuidance.ko` · KO: 상상이라도 구체적인 시간표를 먼저 만들게 해 주세요.
 - `followUp.1.ko` · KO: 첫 번째 일은 뭐예요?
 - `followUp.2.ko` · KO: 가장 바쁜 시간은 언제예요?
 - `followUp.3.ko` · KO: 하루가 몇 시에 끝나요?
@@ -1586,7 +1512,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 지금 하는 일·공부·생활 역할 말고 하나를 고른다면 무슨 일을 하고 싶어요?
 - `question.ja` · JA: 今している仕事・勉強・生活上の役割とは別に一つ選ぶなら、何をしたいですか？
-- `tutorGuidance.ko` · KO: 현재 고용 상태를 묻지 말고 다른 역할 하나를 빠르게 고르게 하세요.
 - `followUp.1.ko` · KO: 왜 그 일을 골랐어요?
 - `followUp.2.ko` · KO: 어디에서 하고 싶어요?
 - `followUp.3.ko` · KO: 혼자 해요, 팀과 해요?
@@ -1595,7 +1520,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 일을 하는 평범한 하루는 어떤 모습일까요?
 - `question.ja` · JA: その仕事をする普通の一日は、どんな様子でしょうか？
-- `tutorGuidance.ko` · KO: 시간, 장소, 사람을 넣어 한 장면씩 이어 가세요.
 - `followUp.1.ko` · KO: 아침에 가장 먼저 뭘 해요?
 - `followUp.2.ko` · KO: 누구를 만나요?
 - `followUp.3.ko` · KO: 저녁에는 얼마나 피곤할까요?
@@ -1604,7 +1528,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 일을 할 때 지금까지의 어떤 경험을 활용할 수 있어요?
 - `question.ja` · JA: その仕事では、これまでのどんな経験を生かせますか？
-- `tutorGuidance.ko` · KO: 일, 공부, 집안일, 취미에서 얻은 경험을 모두 자원으로 받아 주세요.
 - `followUp.1.ko` · KO: 구체적으로 언제 써 본 경험이에요?
 - `followUp.2.ko` · KO: 새로 배워야 할 것은 뭐예요?
 - `followUp.3.ko` · KO: 배우는 데 얼마나 걸릴까요?
@@ -1613,7 +1536,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 재미 외에 현실적으로 확인하고 싶은 조건은 뭐예요?
 - `question.ja` · JA: 楽しさ以外に、現実的に確認したい条件は何ですか？
-- `tutorGuidance.ko` · KO: 급여는 정확한 액수 대신 편한 범위로 답해도 된다고 안내해 주세요.
 - `followUp.1.ko` · KO: 원하는 시간대가 있어요?
 - `followUp.2.ko` · KO: 어느 정도 수입이면 편할까요?
 - `followUp.3.ko` · KO: 이동 시간은 몇 분까지 괜찮아요?
@@ -1622,7 +1544,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 일을 딱 일주일 체험한다면 무엇부터 확인하고 싶어요?
 - `question.ja` · JA: その仕事をちょうど1週間体験するなら、何から確認したいですか？
-- `tutorGuidance.ko` · KO: 직업 결정이 아니라 안전한 체험 장면으로 구체화하세요.
 - `followUp.1.ko` · KO: 첫날 어디로 갈 거예요?
 - `followUp.2.ko` · KO: 누구에게 질문하고 싶어요?
 - `followUp.3.ko` · KO: 일주일 뒤 무엇을 기록할 거예요?
@@ -1631,7 +1552,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 흥미는 있지만 직업으로는 고르지 않을 일이 뭐예요?
 - `question.ja` · JA: では反対に、興味はあるけれど仕事には選ばないものは何ですか？
-- `tutorGuidance.ko` · KO: 좋아함과 직업 선택이 다를 수 있다는 비교로 닫으세요.
 - `followUp.1.ko` · KO: 어떤 점은 재미있어요?
 - `followUp.2.ko` · KO: 어떤 조건이 맞지 않아요?
 - `followUp.3.ko` · KO: 취미로는 얼마나 자주 하고 싶어요?
@@ -1639,7 +1559,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-intermediate/lessons/06-if-i-had-another-job/lesson.html`
-- sha256: `ea7efa27f06536126a4b10e39120f68bbf585f8693cd1b56dfb4b3c571f11c47`
+- sha256: `ac7f60e71e49bb650da9d23cf30c4560b3d3ac735a78df0bba948b69427fc407`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1715,7 +1635,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 한 번쯤 해 보고 싶다고 생각한 일이 있어요?
 - `question.ja` · JA: 一度はやってみたいと思った仕事はありますか？
-- `tutorGuidance.ko` · KO: 직업뿐 아니라 가게 운영, 창작, 돌봄처럼 역할로도 열어 주세요.
 - `followUp.1.ko` · KO: 언제 처음 생각했어요?
 - `followUp.2.ko` · KO: 누구를 보고 떠올렸어요?
 - `followUp.3.ko` · KO: 직접 해 본 적이 있어요?
@@ -1724,7 +1643,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 일을 하는 사람의 하루는 몇 시에 시작할까요?
 - `question.ja` · JA: その仕事をする人の一日は何時に始まるでしょうか？
-- `tutorGuidance.ko` · KO: 상상이라도 구체적인 시간표를 먼저 만들게 해 주세요.
 - `followUp.1.ko` · KO: 첫 번째 일은 뭐예요?
 - `followUp.2.ko` · KO: 가장 바쁜 시간은 언제예요?
 - `followUp.3.ko` · KO: 하루가 몇 시에 끝나요?
@@ -1733,7 +1651,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 다른 일을 하나 고르면 무엇을 하고 싶어요?
 - `question.ja` · JA: 別の仕事を一つ選ぶなら、何をしたいですか？
-- `tutorGuidance.ko` · KO: 현재 고용 상태를 묻지 말고 다른 역할 하나를 빠르게 고르게 하세요.
 - `followUp.1.ko` · KO: 왜 그 일을 골랐어요?
 - `followUp.2.ko` · KO: 어디에서 하고 싶어요?
 - `followUp.3.ko` · KO: 혼자 해요, 팀과 해요?
@@ -1742,7 +1659,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 일을 하는 평범한 하루는 어때요?
 - `question.ja` · JA: その仕事をする普通の一日はどんな一日ですか？
-- `tutorGuidance.ko` · KO: 시간, 장소, 사람을 넣어 한 장면씩 이어 가세요.
 - `followUp.1.ko` · KO: 아침에 가장 먼저 뭘 해요?
 - `followUp.2.ko` · KO: 누구를 만나요?
 - `followUp.3.ko` · KO: 저녁에는 얼마나 피곤할까요?
@@ -1751,7 +1667,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 지금까지 한 일 중 무엇이 그 일에 도움이 될까요?
 - `question.ja` · JA: これまでしたことの中で、何がその仕事に役立つでしょうか？
-- `tutorGuidance.ko` · KO: 일, 공부, 집안일, 취미에서 얻은 경험을 모두 자원으로 받아 주세요.
 - `followUp.1.ko` · KO: 구체적으로 언제 써 본 경험이에요?
 - `followUp.2.ko` · KO: 새로 배워야 할 것은 뭐예요?
 - `followUp.3.ko` · KO: 배우는 데 얼마나 걸릴까요?
@@ -1760,7 +1675,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 재미 외에 현실적으로 확인하고 싶은 조건은 뭐예요?
 - `question.ja` · JA: 楽しさ以外に、現実的に確認したい条件は何ですか？
-- `tutorGuidance.ko` · KO: 급여는 정확한 액수 대신 편한 범위로 답해도 된다고 안내해 주세요.
 - `followUp.1.ko` · KO: 원하는 시간대가 있어요?
 - `followUp.2.ko` · KO: 어느 정도 수입이면 편할까요?
 - `followUp.3.ko` · KO: 이동 시간은 몇 분까지 괜찮아요?
@@ -1769,7 +1683,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 일을 딱 일주일 체험한다면 무엇부터 확인하고 싶어요?
 - `question.ja` · JA: その仕事をちょうど1週間体験するなら、何から確認したいですか？
-- `tutorGuidance.ko` · KO: 직업 결정이 아니라 안전한 체험 장면으로 구체화하세요.
 - `followUp.1.ko` · KO: 첫날 어디로 갈 거예요?
 - `followUp.2.ko` · KO: 누구에게 질문하고 싶어요?
 - `followUp.3.ko` · KO: 일주일 뒤 무엇을 기록할 거예요?
@@ -1778,7 +1691,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 흥미는 있지만 직업으로는 고르지 않을 일이 뭐예요?
 - `question.ja` · JA: では反対に、興味はあるけれど仕事には選ばないものは何ですか？
-- `tutorGuidance.ko` · KO: 좋아함과 직업 선택이 다를 수 있다는 비교로 닫으세요.
 - `followUp.1.ko` · KO: 어떤 점은 재미있어요?
 - `followUp.2.ko` · KO: 어떤 조건이 맞지 않아요?
 - `followUp.3.ko` · KO: 취미로는 얼마나 자주 하고 싶어요?
@@ -1788,7 +1700,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-advanced/lessons/07-how-ai-changed-my-work/lesson.html`
-- sha256: `fcab48381072f39eb427a713e5e41569d4900c539c3d17fff11692d8ae3842df`
+- sha256: `846f52e9d0aaa73978643cf6922b853874e860abf92b33d94b5f0cd4bcef7d04`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1864,7 +1776,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 최근에 AI를 써 본 가장 구체적인 장면이 뭐예요?
 - `question.ja` · JA: 最近AIを使った最も具体的な場面は何ですか？
-- `tutorGuidance.ko` · KO: 직접 쓴 적이 없으면 주변 사람이 쓰는 장면이나 궁금한 기능으로 열어 주세요.
 - `followUp.1.ko` · KO: 언제였어요?
 - `followUp.2.ko` · KO: 무슨 일을 하려 했어요?
 - `followUp.3.ko` · KO: 어떤 도구를 썼어요?
@@ -1873,7 +1784,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: AI를 쓰기 전에는 그 일을 어떻게 했어요?
 - `question.ja` · JA: AIを使う前はその作業をどうしていましたか？
-- `tutorGuidance.ko` · KO: 일, 공부, 집안일 가운데 한 과정의 이전 모습을 그려 주세요.
 - `followUp.1.ko` · KO: 몇 분 걸렸어요?
 - `followUp.2.ko` · KO: 어떤 순서로 했어요?
 - `followUp.3.ko` · KO: 가장 번거로운 부분은 뭐였어요?
@@ -1882,7 +1792,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: AI 때문에 실제로 달라진 일·공부·집안일 한 가지는 뭐예요?
 - `question.ja` · JA: AIによって実際に変わった仕事・勉強・家事の一つは何ですか？
-- `tutorGuidance.ko` · KO: 본인 경험이 없으면 가까이서 본 사람의 변화를 고르고, 이후 질문도 그 사람의 경험으로 이어 가세요.
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
 - `followUp.1.ko` · KO: 처음 쓴 날은 언제예요?
 - `followUp.2.ko` · KO: 무엇이 가장 먼저 달라졌어요?
 - `followUp.3.ko` · KO: 지금 얼마나 자주 써요?
@@ -1891,7 +1801,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: AI를 쓰기 전과 뒤의 시간을 숫자로 비교하면 어때요?
 - `question.ja` · JA: AIを使う前と後の時間を数字で比べるとどうですか？
-- `tutorGuidance.ko` · KO: 정확하지 않아도 대략 몇 분인지 비교하게 해 주세요.
 - `followUp.1.ko` · KO: 전에는 몇 분이었어요?
 - `followUp.2.ko` · KO: 지금은 몇 분이에요?
 - `followUp.3.ko` · KO: 아낀 시간에 무엇을 해요?
@@ -1900,7 +1809,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: AI가 만든 결과에서 직접 확인하거나 고친 것이 있었어요?
 - `question.ja` · JA: AIが出した結果の中で、自分で確認したり直したものはありましたか？
-- `tutorGuidance.ko` · KO: 성공담만 만들지 말고 실제 오류나 어색함 한 가지를 찾아가세요.
 - `followUp.1.ko` · KO: 무엇이 틀렸어요?
 - `followUp.2.ko` · KO: 어떻게 발견했어요?
 - `followUp.3.ko` · KO: 고치는 데 몇 분 걸렸어요?
@@ -1909,7 +1817,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: AI를 써서 빨리 끝났지만 결과가 마음에 들지 않은 때가 있어요?
 - `question.ja` · JA: AIを使って早く終わったのに、結果が気に入らなかったことはありますか？
-- `tutorGuidance.ko` · KO: 좋다·나쁘다 결론보다 기대와 결과의 차이를 묻게 해 주세요.
 - `followUp.1.ko` · KO: 무엇을 기대했어요?
 - `followUp.2.ko` · KO: 결과의 어떤 부분이 달랐어요?
 - `followUp.3.ko` · KO: 결국 직접 다시 했어요?
@@ -1918,7 +1825,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: AI가 있어도 사람이 계속 맡아야 한다고 느끼는 부분은 뭐예요?
 - `question.ja` · JA: AIがあっても人が引き続き担うべきだと感じる部分は何ですか？
-- `tutorGuidance.ko` · KO: 거대한 전망보다 학생이 실제로 본 판단 하나에 붙잡아 주세요.
 - `followUp.1.ko` · KO: 누구의 판단이 필요해요?
 - `followUp.2.ko` · KO: 실수하면 어떤 영향이 있어요?
 - `followUp.3.ko` · KO: 마지막 확인은 얼마나 걸려요?
@@ -1927,7 +1833,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, AI를 쓰지 않는 편을 고른 일은 뭐예요?
 - `question.ja` · JA: では反対に、AIを使わないほうを選んだことは何ですか？
-- `tutorGuidance.ko` · KO: 개인 정보, 재미, 관계, 정확성 등 본인의 이유로 닫으세요.
 - `followUp.1.ko` · KO: 어떤 일이었어요?
 - `followUp.2.ko` · KO: 왜 직접 하고 싶었어요?
 - `followUp.3.ko` · KO: 앞으로도 같은 선택을 할까요?
@@ -1935,7 +1840,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-intermediate/lessons/07-how-ai-changed-my-work/lesson.html`
-- sha256: `4b96a36b2cbaf3bdd0e14d30d37555d7afcc090350aa35ec08502c00759101ce`
+- sha256: `afd537672d69887c8b8cca52cdeb8b1b1ae267414585a09553d3f166b9e2e7e2`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2011,7 +1916,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 최근에 AI를 써 본 가장 구체적인 장면이 뭐예요?
 - `question.ja` · JA: 最近AIを使った最も具体的な場面は何ですか？
-- `tutorGuidance.ko` · KO: 직접 쓴 적이 없으면 주변 사람이 쓰는 장면이나 궁금한 기능으로 열어 주세요.
 - `followUp.1.ko` · KO: 언제였어요?
 - `followUp.2.ko` · KO: 무슨 일을 하려 했어요?
 - `followUp.3.ko` · KO: 어떤 도구를 썼어요?
@@ -2020,7 +1924,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: AI를 쓰기 전에는 그 일을 어떻게 했어요?
 - `question.ja` · JA: AIを使う前はその作業をどうしていましたか？
-- `tutorGuidance.ko` · KO: 일, 공부, 집안일 가운데 한 과정의 이전 모습을 그려 주세요.
 - `followUp.1.ko` · KO: 몇 분 걸렸어요?
 - `followUp.2.ko` · KO: 어떤 순서로 했어요?
 - `followUp.3.ko` · KO: 가장 번거로운 부분은 뭐였어요?
@@ -2029,7 +1932,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: AI 때문에 달라진 일·공부·집안일은 뭐예요?
 - `question.ja` · JA: AIによって変わった仕事・勉強・家事は何ですか？
-- `tutorGuidance.ko` · KO: 본인 경험이 없으면 가까이서 본 사람의 변화를 고르고, 이후 질문도 그 사람의 경험으로 이어 가세요.
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
 - `followUp.1.ko` · KO: 처음 쓴 날은 언제예요?
 - `followUp.2.ko` · KO: 무엇이 가장 먼저 달라졌어요?
 - `followUp.3.ko` · KO: 지금 얼마나 자주 써요?
@@ -2038,7 +1941,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: AI를 쓰기 전과 뒤의 시간을 숫자로 비교하면 어때요?
 - `question.ja` · JA: AIを使う前と後の時間を数字で比べるとどうですか？
-- `tutorGuidance.ko` · KO: 정확하지 않아도 대략 몇 분인지 비교하게 해 주세요.
 - `followUp.1.ko` · KO: 전에는 몇 분이었어요?
 - `followUp.2.ko` · KO: 지금은 몇 분이에요?
 - `followUp.3.ko` · KO: 아낀 시간에 무엇을 해요?
@@ -2047,7 +1949,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: AI가 만든 결과에서 직접 확인하거나 고친 것이 있었어요?
 - `question.ja` · JA: AIが出した結果の中で、自分で確認したり直したものはありましたか？
-- `tutorGuidance.ko` · KO: 성공담만 만들지 말고 실제 오류나 어색함 한 가지를 찾아가세요.
 - `followUp.1.ko` · KO: 무엇이 틀렸어요?
 - `followUp.2.ko` · KO: 어떻게 발견했어요?
 - `followUp.3.ko` · KO: 고치는 데 몇 분 걸렸어요?
@@ -2056,7 +1957,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: AI를 써서 빨리 끝났지만 결과가 마음에 들지 않은 때가 있어요?
 - `question.ja` · JA: AIを使って早く終わったのに、結果が気に入らなかったことはありますか？
-- `tutorGuidance.ko` · KO: 좋다·나쁘다 결론보다 기대와 결과의 차이를 묻게 해 주세요.
 - `followUp.1.ko` · KO: 무엇을 기대했어요?
 - `followUp.2.ko` · KO: 결과의 어떤 부분이 달랐어요?
 - `followUp.3.ko` · KO: 결국 직접 다시 했어요?
@@ -2065,7 +1965,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: AI가 있어도 사람이 해야 하는 일은 뭐예요?
 - `question.ja` · JA: AIがあっても、人がするべき仕事は何ですか？
-- `tutorGuidance.ko` · KO: 거대한 전망보다 학생이 실제로 본 판단 하나에 붙잡아 주세요.
 - `followUp.1.ko` · KO: 누구의 판단이 필요해요?
 - `followUp.2.ko` · KO: 실수하면 어떤 영향이 있어요?
 - `followUp.3.ko` · KO: 마지막 확인은 얼마나 걸려요?
@@ -2074,7 +1973,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, AI를 쓰지 않는 편을 고른 일은 뭐예요?
 - `question.ja` · JA: では反対に、AIを使わないほうを選んだことは何ですか？
-- `tutorGuidance.ko` · KO: 개인 정보, 재미, 관계, 정확성 등 본인의 이유로 닫으세요.
 - `followUp.1.ko` · KO: 어떤 일이었어요?
 - `followUp.2.ko` · KO: 왜 직접 하고 싶었어요?
 - `followUp.3.ko` · KO: 앞으로도 같은 선택을 할까요?
@@ -2084,7 +1982,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-advanced/lessons/08-why-i-wanted-a-change/lesson.html`
-- sha256: `13840f094a632f01ab7b262512ab038d035aa1c9b8ef46426326928b453db87d`
+- sha256: `84c841198018436c87954519726101903db7f0d39cc0d9cec772bd3d3ae13ae0`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2160,7 +2058,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 최근에 일·공부·생활에서 조금 바꾸고 싶었던 것이 있어요?
 - `question.ja` · JA: 最近、仕事・勉強・生活で少し変えたいと思ったことはありますか？
-- `tutorGuidance.ko` · KO: 큰 진로가 아니어도 시간표, 역할, 방식처럼 편한 주제로 시작하세요. 말하기 불편한 내용은 건너뛰고, 편한 범위에서만 답하게 해 주세요.
 - `followUp.1.ko` · KO: 언제 그런 생각이 들었어요?
 - `followUp.2.ko` · KO: 무엇을 바꾸고 싶었어요?
 - `followUp.3.ko` · KO: 지금도 같은 생각이에요?
@@ -2169,7 +2066,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 생각이 가장 강했던 한 장면을 말할 수 있어요?
 - `question.ja` · JA: その思いが最も強かった一つの場面を話せますか？
-- `tutorGuidance.ko` · KO: 말하기 편한 범위만 고르고, 직접 경험이 없으면 가까이서 본 변화도 괜찮아요. 말하기 불편한 내용은 건너뛰고, 편한 범위에서만 답하게 해 주세요.
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
 - `followUp.1.ko` · KO: 어디에 있었어요?
 - `followUp.2.ko` · KO: 누가 함께 있었어요?
 - `followUp.3.ko` · KO: 그날 무슨 일이 있었어요?
@@ -2178,7 +2075,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 일·공부·생활 역할을 바꾸고 싶었던 때가 있다면 가장 큰 이유는 뭐였어요?
 - `question.ja` · JA: 仕事・勉強・生活上の役割を変えたいと思ったことがあれば、最大の理由は何でしたか？
-- `tutorGuidance.ko` · KO: 현재 직장이 있다고 전제하지 마세요. 경험이 없으면 작은 일정 변화나 관찰한 사람으로 넓혀 주세요. 말하기 불편한 내용은 건너뛰고, 편한 범위에서만 답하게 해 주세요.
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
 - `followUp.1.ko` · KO: 그 이유는 언제부터 있었어요?
 - `followUp.2.ko` · KO: 한 번의 사건이었어요, 반복됐어요?
 - `followUp.3.ko` · KO: 몇 달 정도 이어졌어요?
@@ -2187,7 +2084,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 이유를 두세 가지로 나누면 각각 뭐였어요?
 - `question.ja` · JA: その理由を二、三に分けると、それぞれ何でしたか？
-- `tutorGuidance.ko` · KO: 사람을 평가하지 말고 시간, 일의 양, 환경, 소통처럼 관찰 가능한 요소로 나눠요. 말하기 불편한 내용은 건너뛰고, 편한 범위에서만 답하게 해 주세요.
 - `followUp.1.ko` · KO: 가장 큰 것은 어느 쪽이었어요?
 - `followUp.2.ko` · KO: 숫자로 설명할 부분이 있어요?
 - `followUp.3.ko` · KO: 처음과 나중에 이유가 달라졌어요?
@@ -2196,7 +2092,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 바꾸고 싶은 마음이 구체적인 행동으로 이어진 날이 있었어요?
 - `question.ja` · JA: 変えたい気持ちが具体的な行動につながった日はありましたか？
-- `tutorGuidance.ko` · KO: 결정의 옳고 그름을 말하지 말고 실제 행동 한 가지를 따라가세요. 말하기 불편한 내용은 건너뛰고, 편한 범위에서만 답하게 해 주세요.
 - `followUp.1.ko` · KO: 누구와 이야기했어요?
 - `followUp.2.ko` · KO: 몇 분이나 이야기했어요?
 - `followUp.3.ko` · KO: 무엇을 적거나 찾아봤어요?
@@ -2205,7 +2100,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 수입이나 비용도 이유였다면 편한 범위에서 어떻게 영향을 줬어요?
 - `question.ja` · JA: 収入や費用も理由だったなら、話せる範囲でどう影響しましたか？
-- `tutorGuidance.ko` · KO: 돈이 이유가 아니면 건너뛰세요. 정확한 액수나 현재 소득은 요구하지 마세요. 말하기 불편한 내용은 건너뛰고, 편한 범위에서만 답하게 해 주세요.
 - `followUp.1.ko` · KO: 늘리고 싶었어요, 안정시키고 싶었어요?
 - `followUp.2.ko` · KO: 어느 정도 차이라고 느꼈어요?
 - `followUp.3.ko` · KO: 돈보다 더 중요했던 조건도 있었어요?
@@ -2214,7 +2108,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 크게 바꾸기 전에 먼저 바꿔 본 작은 것이 있었어요?
 - `question.ja` · JA: 大きく変える前に、先に変えてみた小さなことはありましたか？
-- `tutorGuidance.ko` · KO: 해결책을 권하지 말고 학생이 실제로 했거나 하지 않은 선택을 묘사하게 하세요. 말하기 불편한 내용은 건너뛰고, 편한 범위에서만 답하게 해 주세요.
 - `followUp.1.ko` · KO: 일정이나 장소를 바꿨어요?
 - `followUp.2.ko` · KO: 얼마 동안 해 봤어요?
 - `followUp.3.ko` · KO: 무엇이 그대로였어요?
@@ -2223,7 +2116,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 바꾸려다 그대로 두기로 한 것이 있어요?
 - `question.ja` · JA: では反対に、変えようとしたものの、そのままにすると決めたことはありますか？
-- `tutorGuidance.ko` · KO: 남아 있거나 바꾸지 않은 선택도 평가 없이 하나의 경험으로 받아 주세요. 말하기 불편한 내용은 건너뛰고, 편한 범위에서만 답하게 해 주세요.
 - `followUp.1.ko` · KO: 무엇을 그대로 뒀어요?
 - `followUp.2.ko` · KO: 언제 마음이 달라졌어요?
 - `followUp.3.ko` · KO: 그 뒤 실제 생활은 어땠어요?
@@ -2231,7 +2123,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-intermediate/lessons/08-why-i-wanted-a-change/lesson.html`
-- sha256: `d312e1378b2e70b470e4b994948f7576470dcaeaa72acce61a4983865aee2f37`
+- sha256: `53e7c088e49187fca509112ee5178d750f2e66bb870aa18f833c801d9031f408`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2307,7 +2199,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 최근에 일·공부·생활에서 조금 바꾸고 싶었던 것이 있어요?
 - `question.ja` · JA: 最近、仕事・勉強・生活で少し変えたいと思ったことはありますか？
-- `tutorGuidance.ko` · KO: 큰 진로가 아니어도 시간표, 역할, 방식처럼 편한 주제로 시작하세요. 말하기 불편한 내용은 건너뛰고, 편한 범위에서만 답하게 해 주세요.
 - `followUp.1.ko` · KO: 언제 그런 생각이 들었어요?
 - `followUp.2.ko` · KO: 무엇을 바꾸고 싶었어요?
 - `followUp.3.ko` · KO: 지금도 같은 생각이에요?
@@ -2316,7 +2207,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 생각이 가장 강했던 한 장면을 말할 수 있어요?
 - `question.ja` · JA: その思いが最も強かった一つの場面を話せますか？
-- `tutorGuidance.ko` · KO: 말하기 편한 범위만 고르고, 직접 경험이 없으면 가까이서 본 변화도 괜찮아요. 말하기 불편한 내용은 건너뛰고, 편한 범위에서만 답하게 해 주세요.
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
 - `followUp.1.ko` · KO: 어디에 있었어요?
 - `followUp.2.ko` · KO: 누가 함께 있었어요?
 - `followUp.3.ko` · KO: 그날 무슨 일이 있었어요?
@@ -2325,7 +2216,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 바꾸고 싶었던 것이 있다면, 가장 큰 이유는 뭐였어요?
 - `question.ja` · JA: 変えたいことがあったなら、いちばん大きな理由は何でしたか？
-- `tutorGuidance.ko` · KO: 현재 직장이 있다고 전제하지 마세요. 경험이 없으면 작은 일정 변화나 관찰한 사람으로 넓혀 주세요. 말하기 불편한 내용은 건너뛰고, 편한 범위에서만 답하게 해 주세요.
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
 - `followUp.1.ko` · KO: 그 이유는 언제부터 있었어요?
 - `followUp.2.ko` · KO: 한 번의 사건이었어요, 반복됐어요?
 - `followUp.3.ko` · KO: 몇 달 정도 이어졌어요?
@@ -2334,7 +2225,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 이유를 두세 가지로 나누면 각각 뭐였어요?
 - `question.ja` · JA: その理由を二、三に分けると、それぞれ何でしたか？
-- `tutorGuidance.ko` · KO: 사람을 평가하지 말고 시간, 일의 양, 환경, 소통처럼 관찰 가능한 요소로 나눠요. 말하기 불편한 내용은 건너뛰고, 편한 범위에서만 답하게 해 주세요.
 - `followUp.1.ko` · KO: 가장 큰 것은 어느 쪽이었어요?
 - `followUp.2.ko` · KO: 숫자로 설명할 부분이 있어요?
 - `followUp.3.ko` · KO: 처음과 나중에 이유가 달라졌어요?
@@ -2343,7 +2233,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 바꾸고 싶어서 실제로 한 행동이 있어요?
 - `question.ja` · JA: 変えたいと思って、実際にしたことはありますか？
-- `tutorGuidance.ko` · KO: 결정의 옳고 그름을 말하지 말고 실제 행동 한 가지를 따라가세요. 말하기 불편한 내용은 건너뛰고, 편한 범위에서만 답하게 해 주세요.
 - `followUp.1.ko` · KO: 누구와 이야기했어요?
 - `followUp.2.ko` · KO: 몇 분이나 이야기했어요?
 - `followUp.3.ko` · KO: 무엇을 적거나 찾아봤어요?
@@ -2352,7 +2241,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 수입이나 비용도 이유였다면 편한 범위에서 어떻게 영향을 줬어요?
 - `question.ja` · JA: 収入や費用も理由だったなら、話せる範囲でどう影響しましたか？
-- `tutorGuidance.ko` · KO: 돈이 이유가 아니면 건너뛰세요. 정확한 액수나 현재 소득은 요구하지 마세요. 말하기 불편한 내용은 건너뛰고, 편한 범위에서만 답하게 해 주세요.
 - `followUp.1.ko` · KO: 늘리고 싶었어요, 안정시키고 싶었어요?
 - `followUp.2.ko` · KO: 어느 정도 차이라고 느꼈어요?
 - `followUp.3.ko` · KO: 돈보다 더 중요했던 조건도 있었어요?
@@ -2361,7 +2249,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 크게 바꾸기 전에 먼저 바꿔 본 작은 것이 있었어요?
 - `question.ja` · JA: 大きく変える前に、先に変えてみた小さなことはありましたか？
-- `tutorGuidance.ko` · KO: 해결책을 권하지 말고 학생이 실제로 했거나 하지 않은 선택을 묘사하게 하세요. 말하기 불편한 내용은 건너뛰고, 편한 범위에서만 답하게 해 주세요.
 - `followUp.1.ko` · KO: 일정이나 장소를 바꿨어요?
 - `followUp.2.ko` · KO: 얼마 동안 해 봤어요?
 - `followUp.3.ko` · KO: 무엇이 그대로였어요?
@@ -2370,7 +2257,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 바꾸려다 그대로 두기로 한 것이 있어요?
 - `question.ja` · JA: では反対に、変えようとしたものの、そのままにすると決めたことはありますか？
-- `tutorGuidance.ko` · KO: 남아 있거나 바꾸지 않은 선택도 평가 없이 하나의 경험으로 받아 주세요. 말하기 불편한 내용은 건너뛰고, 편한 범위에서만 답하게 해 주세요.
 - `followUp.1.ko` · KO: 무엇을 그대로 뒀어요?
 - `followUp.2.ko` · KO: 언제 마음이 달라졌어요?
 - `followUp.3.ko` · KO: 그 뒤 실제 생활은 어땠어요?
@@ -2380,7 +2266,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-advanced/lessons/09-best-and-worst-bosses/lesson.html`
-- sha256: `7f46af0826c382d41c50fa05f9deb73917eec7873d3c600286c1cd19d262c936`
+- sha256: `10e49088271e92e8adfa1e707a04e1c4ed88bf5119945a612957b380ec51a0bc`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2456,7 +2342,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 함께 일을 이끌어 준 사람 중 기억나는 사람이 있어요?
 - `question.ja` · JA: 一緒に物事を進めてくれた人で、記憶に残る人はいますか？
-- `tutorGuidance.ko` · KO: 상사 경험이 없으면 선생님, 모임 리더, 가족 프로젝트의 사람도 괜찮아요. 이름은 말하지 않아도 됩니다. 이름이나 불편한 내용은 건너뛰고, 편한 범위에서만 답하게 해 주세요.
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
 - `followUp.1.ko` · KO: 어떤 자리에서 만났어요?
 - `followUp.2.ko` · KO: 얼마 동안 함께했어요?
 - `followUp.3.ko` · KO: 처음 기억나는 행동은 뭐예요?
@@ -2465,7 +2351,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 사람이 한 행동 중 도움이 됐던 한 가지는 뭐예요?
 - `question.ja` · JA: その人がした行動の中で、役立ったことは何ですか？
-- `tutorGuidance.ko` · KO: 좋은 사람이라는 평가보다 실제 말이나 행동으로 좁혀 주세요. 이름이나 불편한 내용은 건너뛰고, 편한 범위에서만 답하게 해 주세요.
 - `followUp.1.ko` · KO: 언제 그런 행동을 했어요?
 - `followUp.2.ko` · KO: 그때 무엇이 쉬워졌어요?
 - `followUp.3.ko` · KO: 얼마나 자주 해 줬어요?
@@ -2474,7 +2359,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 상사·선생님·모임 리더 중 함께하기 좋았던 사람은 어떤 행동을 했어요?
 - `question.ja` · JA: 上司・先生・グループのリーダーの中で、一緒にやりやすかった人はどんな行動をしましたか？
-- `tutorGuidance.ko` · KO: 현재 직장이나 상사가 있다고 전제하지 말고, 말하기 편한 관계를 고르게 해 주세요. 이름이나 불편한 내용은 건너뛰고, 편한 범위에서만 답하게 해 주세요.
 - `followUp.1.ko` · KO: 구체적으로 뭐라고 말했어요?
 - `followUp.2.ko` · KO: 언제 그 행동이 도움이 됐어요?
 - `followUp.3.ko` · KO: 본인의 행동은 어떻게 달라졌어요?
@@ -2483,7 +2367,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 사람과 함께한 가장 선명한 장면은 뭐예요?
 - `question.ja` · JA: その人と一緒にいた最も鮮明な場面は何ですか？
-- `tutorGuidance.ko` · KO: 장소, 시간, 한 문장을 넣어 사건으로 만들어요. 이름이나 불편한 내용은 건너뛰고, 편한 범위에서만 답하게 해 주세요.
 - `followUp.1.ko` · KO: 어디에 있었어요?
 - `followUp.2.ko` · KO: 몇 명이 함께 있었어요?
 - `followUp.3.ko` · KO: 그날 결과는 어땠어요?
@@ -2492,7 +2375,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 반대로 함께하기 힘들었던 사람은 어떤 행동을 반복했어요?
 - `question.ja` · JA: 反対に、一緒にやりにくかった人はどんな行動を繰り返しましたか？
-- `tutorGuidance.ko` · KO: 사람의 성격을 단정하지 말고 반복된 행동 하나만 다뤄 주세요. 이름은 필요 없어요. 이름이나 불편한 내용은 건너뛰고, 편한 범위에서만 답하게 해 주세요.
 - `followUp.1.ko` · KO: 얼마나 자주 있었어요?
 - `followUp.2.ko` · KO: 가장 힘들었던 때는 언제예요?
 - `followUp.3.ko` · KO: 일정이나 결과에 어떤 영향이 있었어요?
@@ -2501,7 +2383,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 두 사람의 소통 방식은 구체적으로 무엇이 달랐어요?
 - `question.ja` · JA: 二人のコミュニケーション方法は具体的に何が違いましたか？
-- `tutorGuidance.ko` · KO: 좋고 나쁨보다 요청 시점, 설명 길이, 질문 반응을 비교하세요. 이름이나 불편한 내용은 건너뛰고, 편한 범위에서만 답하게 해 주세요.
 - `followUp.1.ko` · KO: 마감을 언제 알려 줬어요?
 - `followUp.2.ko` · KO: 질문했을 때 어떻게 답했어요?
 - `followUp.3.ko` · KO: 회의 시간은 얼마나 달랐어요?
@@ -2510,7 +2391,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 경험 뒤에 사람과 함께 일하는 내 방식이 달라졌어요?
 - `question.ja` · JA: その経験の後、人と一緒に取り組む自分のやり方は変わりましたか？
-- `tutorGuidance.ko` · KO: 교훈을 강요하지 말고 실제로 달라진 행동이 있는지만 확인하세요. 이름이나 불편한 내용은 건너뛰고, 편한 범위에서만 답하게 해 주세요.
 - `followUp.1.ko` · KO: 먼저 확인하는 것이 생겼어요?
 - `followUp.2.ko` · KO: 어떤 말을 더 자주 하게 됐어요?
 - `followUp.3.ko` · KO: 달라지지 않은 것도 있어요?
@@ -2519,7 +2399,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 처음에는 힘들었지만 나중에 이해된 행동이 있어요?
 - `question.ja` · JA: では反対に、最初は大変だったけれど後で理解できた行動はありますか？
-- `tutorGuidance.ko` · KO: 상대를 미화하거나 용서하게 하지 말고 관점이 달라진 사건만 묘사하게 해 주세요. 이름이나 불편한 내용은 건너뛰고, 편한 범위에서만 답하게 해 주세요.
 - `followUp.1.ko` · KO: 언제 생각이 달라졌어요?
 - `followUp.2.ko` · KO: 새로 알게 된 상황이 있었어요?
 - `followUp.3.ko` · KO: 그래도 불편하게 남은 점은 뭐예요?
@@ -2527,7 +2406,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-intermediate/lessons/09-best-and-worst-bosses/lesson.html`
-- sha256: `220637eca4be9765f2b48663c9d305d8bb2c7e2a104c3809bdda912a6f82fbe7`
+- sha256: `f58d9ccdc3d8b1e7f777cdda606488df915ee2289da19d7baa6e633f25e814a3`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2603,7 +2482,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 함께 일을 이끌어 준 사람 중 기억나는 사람이 있어요?
 - `question.ja` · JA: 一緒に物事を進めてくれた人で、記憶に残る人はいますか？
-- `tutorGuidance.ko` · KO: 상사 경험이 없으면 선생님, 모임 리더, 가족 프로젝트의 사람도 괜찮아요. 이름은 말하지 않아도 됩니다. 이름이나 불편한 내용은 건너뛰고, 편한 범위에서만 답하게 해 주세요.
+- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
 - `followUp.1.ko` · KO: 어떤 자리에서 만났어요?
 - `followUp.2.ko` · KO: 얼마 동안 함께했어요?
 - `followUp.3.ko` · KO: 처음 기억나는 행동은 뭐예요?
@@ -2612,7 +2491,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 사람이 한 행동 중 도움이 됐던 한 가지는 뭐예요?
 - `question.ja` · JA: その人がした行動の中で、役立ったことは何ですか？
-- `tutorGuidance.ko` · KO: 좋은 사람이라는 평가보다 실제 말이나 행동으로 좁혀 주세요. 이름이나 불편한 내용은 건너뛰고, 편한 범위에서만 답하게 해 주세요.
 - `followUp.1.ko` · KO: 언제 그런 행동을 했어요?
 - `followUp.2.ko` · KO: 그때 무엇이 쉬워졌어요?
 - `followUp.3.ko` · KO: 얼마나 자주 해 줬어요?
@@ -2621,7 +2499,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 함께하기 편했던 리더는 무엇을 했어요?
 - `question.ja` · JA: 一緒にやりやすかったリーダーは何をしましたか？
-- `tutorGuidance.ko` · KO: 현재 직장이나 상사가 있다고 전제하지 말고, 말하기 편한 관계를 고르게 해 주세요. 이름이나 불편한 내용은 건너뛰고, 편한 범위에서만 답하게 해 주세요.
 - `followUp.1.ko` · KO: 구체적으로 뭐라고 말했어요?
 - `followUp.2.ko` · KO: 언제 그 행동이 도움이 됐어요?
 - `followUp.3.ko` · KO: 본인의 행동은 어떻게 달라졌어요?
@@ -2630,7 +2507,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 사람과 함께한 가장 선명한 장면은 뭐예요?
 - `question.ja` · JA: その人と一緒にいた最も鮮明な場面は何ですか？
-- `tutorGuidance.ko` · KO: 장소, 시간, 한 문장을 넣어 사건으로 만들어요. 이름이나 불편한 내용은 건너뛰고, 편한 범위에서만 답하게 해 주세요.
 - `followUp.1.ko` · KO: 어디에 있었어요?
 - `followUp.2.ko` · KO: 몇 명이 함께 있었어요?
 - `followUp.3.ko` · KO: 그날 결과는 어땠어요?
@@ -2639,7 +2515,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 반대로 함께하기 힘들었던 사람은 어떤 행동을 반복했어요?
 - `question.ja` · JA: 反対に、一緒にやりにくかった人はどんな行動を繰り返しましたか？
-- `tutorGuidance.ko` · KO: 사람의 성격을 단정하지 말고 반복된 행동 하나만 다뤄 주세요. 이름은 필요 없어요. 이름이나 불편한 내용은 건너뛰고, 편한 범위에서만 답하게 해 주세요.
 - `followUp.1.ko` · KO: 얼마나 자주 있었어요?
 - `followUp.2.ko` · KO: 가장 힘들었던 때는 언제예요?
 - `followUp.3.ko` · KO: 일정이나 결과에 어떤 영향이 있었어요?
@@ -2648,7 +2523,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 두 사람은 이야기하는 방식이 어떻게 달랐어요?
 - `question.ja` · JA: 二人は話し方がどう違いましたか？
-- `tutorGuidance.ko` · KO: 좋고 나쁨보다 요청 시점, 설명 길이, 질문 반응을 비교하세요. 이름이나 불편한 내용은 건너뛰고, 편한 범위에서만 답하게 해 주세요.
 - `followUp.1.ko` · KO: 마감을 언제 알려 줬어요?
 - `followUp.2.ko` · KO: 질문했을 때 어떻게 답했어요?
 - `followUp.3.ko` · KO: 회의 시간은 얼마나 달랐어요?
@@ -2657,7 +2531,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 경험 뒤에 사람과 함께 일하는 내 방식이 달라졌어요?
 - `question.ja` · JA: その経験の後、人と一緒に取り組む自分のやり方は変わりましたか？
-- `tutorGuidance.ko` · KO: 교훈을 강요하지 말고 실제로 달라진 행동이 있는지만 확인하세요. 이름이나 불편한 내용은 건너뛰고, 편한 범위에서만 답하게 해 주세요.
 - `followUp.1.ko` · KO: 먼저 확인하는 것이 생겼어요?
 - `followUp.2.ko` · KO: 어떤 말을 더 자주 하게 됐어요?
 - `followUp.3.ko` · KO: 달라지지 않은 것도 있어요?
@@ -2666,7 +2539,6 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그럼 반대로, 처음에는 힘들었지만 나중에 이해된 행동이 있어요?
 - `question.ja` · JA: では反対に、最初は大変だったけれど後で理解できた行動はありますか？
-- `tutorGuidance.ko` · KO: 상대를 미화하거나 용서하게 하지 말고 관점이 달라진 사건만 묘사하게 해 주세요. 이름이나 불편한 내용은 건너뛰고, 편한 범위에서만 답하게 해 주세요.
 - `followUp.1.ko` · KO: 언제 생각이 달라졌어요?
 - `followUp.2.ko` · KO: 새로 알게 된 상황이 있었어요?
 - `followUp.3.ko` · KO: 그래도 불편하게 남은 점은 뭐예요?
