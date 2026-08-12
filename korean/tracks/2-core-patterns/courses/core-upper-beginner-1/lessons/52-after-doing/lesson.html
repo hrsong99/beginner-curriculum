@@ -248,7 +248,7 @@
 
     <div class="section" data-page-id="p2-teach">
       <h2 class="section-title">오늘의 패턴 <span class="title-ja">(今日のパターン)</span></h2>
-      <p class="section-subtitle pattern-meaning"><span class="meaning-kicker">뜻과 쓰임 <small>意味・使い方</small></span><span class="ko">‘~し終えたら’예요. 앞일이 다 끝나야 비로소 다음이 생긴다고 말할 때 써요. 받침은 안 봐요. 제가 읽을게요. 잘 듣고 따라 읽어 보세요.</span><span class="ja">「〜し終えたら」。前のことが終わって、はじめて次が起きると言うときに使います。パッチムは見ません。 私が読みます。よく聞いて、まねして読んでみましょう。</span></p>
+      <p class="section-subtitle pattern-meaning"><span class="meaning-kicker">뜻과 쓰임 <small>意味・使い方</small></span><span class="ko">‘~し終えたら’예요. 앞일이 다 끝나야 비로소 다음이 생긴다고 말할 때 써요. 받침은 안 봐요. 뒤에 또 다른 동작이 오면 후에하고 거의 같아서 둘 다 써도 돼요. 갈리는 건 뒤에 쉬워요, 편해요 같은 상태가 올 때예요 — 그때는 고 나면만 자연스러워요. 제가 읽을게요. 잘 듣고 따라 읽어 보세요.</span><span class="ja">「〜し終えたら」。前のことが終わって、はじめて次が起きると言うときに使います。パッチムは見ません。うしろにまた別の動作が来るときは후에とほとんど同じで、どちらを使っても大丈夫です。分かれるのは、うしろに쉬워요・편해요のような状態が来るとき — そのときだけ고 나면が自然です。 私が読みます。よく聞いて、まねして読んでみましょう。</span></p>
       <div class="sent-hero">
         <span class="korean">이거 다 먹<span class="ending">고 나면</span> 나가요.</span><span class="yomi">イゴ タ モクコ ナミョン ナガヨ</span>
         <span class="translation">これを全部<span class="ending">食べ終えたら</span>出かけます。</span>
@@ -286,28 +286,15 @@
          is a condition for the second one. Every row is decided by whether the
          Japanese says 「後に」 or 「たら」. -->
 
-    <div class="section" data-page-id="p2-choose">
-      <h2 class="section-title">후에와 고 나면 <span class="title-ja">(후에 と 고 나면、どっち？)</span></h2>
-      <p class="section-subtitle"><span class="ko">위에 있는 일본어를 보세요. 그냥 순서면 후에, 끝나야 비로소 그렇게 되면 고 나면이에요.</span><span class="ja">上にある日本語を見てください。ただの順番なら후에、終わってはじめてそうなるなら고 나면です。</span></p>
-      <div class="choose-list">
-        <div class="choose-row sentence" data-sync-id="p2-c-out" data-sync-kind="selection" data-sync-state="chosen">
-          <span class="translation">これを全部食べ終えたら出かけます。</span>
-          <span class="choose-sentence">이거 다 <span class="opt" data-sync-option="nam" data-correct>먹고 나면</span><span class="sep">/</span><span class="opt" data-sync-option="hue">먹은 후에</span> 나가요.<span class="yomi">イゴ タ … ナガヨ</span></span>
-        </div>
-        <div class="choose-row sentence" data-sync-id="p2-c-walk" data-sync-kind="selection" data-sync-state="chosen">
-          <span class="translation">ごはんを食べた後に散歩します。</span>
-          <span class="choose-sentence">밥을 <span class="opt" data-sync-option="hue" data-correct>먹은 후에</span><span class="sep">/</span><span class="opt" data-sync-option="nam">먹고 나면</span> 산책해요.<span class="yomi">パブル … サンチェケヨ</span></span>
-        </div>
-        <div class="choose-row sentence" data-sync-id="p2-c-easy" data-sync-kind="selection" data-sync-state="chosen">
-          <span class="translation">一度作ってしまえば簡単です。</span>
-          <span class="choose-sentence">한 번 <span class="opt" data-sync-option="hue">만든 후에</span><span class="sep">/</span><span class="opt" data-sync-option="nam" data-correct>만들고 나면</span> 쉬워요.<span class="yomi">ハン ボン … シュィウォヨ</span></span>
-        </div>
-        <div class="choose-row sentence" data-sync-id="p2-c-call" data-sync-kind="selection" data-sync-state="chosen">
-          <span class="translation">仕事が終わった後に電話しますね。</span>
-          <span class="choose-sentence">일이 <span class="opt" data-sync-option="nam">끝나고 나면</span><span class="sep">/</span><span class="opt" data-sync-option="hue" data-correct>끝난 후에</span> 전화할게요.<span class="yomi">イリ … チョヌァハルケヨ</span></span>
-        </div>
-      </div>
-    </div>
+    <!-- p2-choose is deliberately absent. It asked 후에 vs 고 나면 in four rows
+         and three of them marked natural Korean wrong: 이거 다 먹은 후에 나가요,
+         밥을 먹고 나면 산책해요 and 일이 끝나고 나면 전화할게요 are all things a
+         native says. The two forms overlap almost completely when the second
+         clause is an ACTION; they only separate when it is a STATE (한 번 만들고
+         나면 쉬워요 — 만든 후에 쉬워요 is odd). One honest row is not a page, and
+         ux-philosophy says to omit the choose page rather than manufacture a
+         distinction. The real contrast is drawn where it belongs: in the teach
+         box and the native tip. -->
 
     <div class="section" data-page-id="p2-reorder">
       <h2 class="section-title">문장 만들기 <span class="title-ja">(文を組み立てよう)</span></h2>
@@ -356,7 +343,7 @@
     <div class="section" data-page-id="p2-fill">
       <h2 class="section-title">빈칸을 채워요 <span class="title-ja">(空欄をうめよう)</span></h2>
       <p class="section-subtitle"><span class="ko">빈칸에 들어갈 말을 넣어서, 문장을 통째로 소리 내어 말해 보세요.</span><span class="ja">空欄に入ることばを入れて、文をまるごと声に出して言ってみましょう。</span></p>
-      <div class="tutor-note">학생이 말한 대로 빈칸에 적어 주세요. 2번은 순서라서 후에 자리예요.</div>
+      <div class="tutor-note">학생이 말한 대로 빈칸에 적어 주세요. 2번은 일본어가 「後に」라서 후에로 받았어요 — 고 나면이라고 해도 틀린 말은 아니에요.</div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">これを全部<span class='target'>食べ終えたら</span>出かけます。</span>
