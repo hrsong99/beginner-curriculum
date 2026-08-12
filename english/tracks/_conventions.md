@@ -189,11 +189,17 @@ does not fit rather than bending a component into a wrong teaching.
 3. **No `.yomi`, no katakana over any English word, and `yomi.js` is not loaded.** See
    `../AGENTS.md` — this is the rule most likely to be broken by an agent that read the Korean
    instructions first.
-4. Render at 480px and look at it. These are visual documents; a page that reads fine as markup can
-   be unusable as a page.
-5. **Check every page for a tail hidden under the pager.** Korean documented three separate wrong
+4. **Tutor script sentence parity** — same sentence count on both sides of every `.section-subtitle`
+   (`.pattern-meaning` exempt). Mismatched counts make `script-lines.js` give up silently and the
+   box renders as bunched text. Script in `../LESSON-CREATION-WORKFLOW.md` §6.
+5. **Reorder chunking** — one criterion per page, written into a comment above it, and every row
+   checked against that one sentence. Mixed criteria are the defect; the count is only the symptom.
+6. Render at 480px and look at it. These are visual documents; a page that reads fine as markup can
+   be unusable as a page. Both of the checks above were added *because the pilot passed every other
+   check and still shipped them* — markup review does not catch either.
+7. **Check every page for a tail hidden under the pager.** Korean documented three separate wrong
    ways to measure this, each of which passed on all 59 decks while the defect was live. Read
    `../../korean/tracks/_conventions.md` § "Before you call a lesson done" item 4 and use its probe
    — measure the page's own height with the viewport prop removed, against the smallest screen this
    has to work on, not against your monitor.
-6. Append whatever you spent — scene, payoff word, new vocabulary — to this file.
+8. Append whatever you spent — scene, payoff word, new vocabulary — to this file.

@@ -35,7 +35,7 @@
     <div class="transition-page" data-page-id="lesson-goal" data-act="Asking for help">
       <span class="transition-kicker">GOAL</span>
       <h2 class="transition-title">Today's goal <span class="title-ja">(今日のゴール)</span></h2>
-      <p class="section-subtitle"><span class="ko">By the end of today, you can ask someone for help — and answer when someone asks you.</span><span class="ja">今日の授業が終わると、人に手伝いを頼めるようになります。そして、頼まれたときに答えられるようになります。</span></p>
+      <p class="section-subtitle"><span class="ko">By the end of today, you can ask someone for help. And you can answer when someone asks you.</span><span class="ja">今日の授業が終わると、人に手伝いを頼めるようになります。そして、頼まれたときに答えられるようになります。</span></p>
       <div class="known lines">
         <div class="known-row"><span class="k">Could you help me with these boxes?</span><span class="j">この箱、手伝ってもらえますか？</span></div>
         <div class="known-row"><span class="k">Sure, I can help with the boxes.</span><span class="j">もちろん、箱を手伝えますよ。</span></div>
@@ -106,7 +106,7 @@
          hunting for a pronunciation rule that does not exist. -->
     <div class="section" data-page-id="p1-rule">
       <h2 class="section-title">with, or no with? <span class="title-ja">(with がいる？いらない？)</span></h2>
-      <p class="section-subtitle"><span class="ko">Look at what comes after "help me". A thing takes "with". An action takes no "with".</span><span class="ja">「help me」のあとに何が来るかを見てください。ものなら with、動作なら with はいりません。</span></p>
+      <p class="section-subtitle"><span class="ko">Look at what comes after "help me". A thing takes "with". An action takes no "with".</span><span class="ja">「help me」のあとに何が来るかを見てください。ものなら with がいります。動作なら with はいりません。</span></p>
       <!-- .ending-rule, not bare .batchim: the diagram is about the same taught
            frame the deck marks with .ending everywhere else, so it takes the
            same hue. Bare .batchim is violet, which in the Korean decks means
@@ -156,19 +156,26 @@
 
     <!-- drill · English word order is the thing a Japanese speaker has to
          rebuild, so the chips are the sentence taken apart and shuffled.
-         Boundaries: [modal+subject] [verb+object] [complement] [politeness].
-         "with these boxes" is one chip — a preposition does not come off its
-         noun any more than a particle does. -->
+
+         ONE cutting criterion, applied to all four rows: one meaning unit per
+         chip. "with + noun" never splits — a preposition does not come off its
+         noun any more than a particle does — while "verb + object" does, and an
+         opener or a politeness word takes its own chip.
+
+         This page first shipped 3/4/3/4, and the 4s came from tacking "please"
+         onto two rows. That is padding two sentences rather than analysing four
+         the same way, which is the thing the four-chunk rule exists to stop. -->
     <div class="section" data-page-id="p1-reorder">
       <h2 class="section-title">Build the sentence <span class="title-ja">(文を組み立てよう)</span></h2>
       <p class="section-subtitle"><span class="ko">Put the words in order, then say the whole sentence out loud.</span><span class="ja">単語を順番に並べて、文をまるごと声に出して言ってみましょう。</span></p>
       <div class="task-block">
         <div class="answer-box small">
-          <span class="answer-label">この箱、手伝ってもらえますか？</span>
-          <span class="answer-space" data-sync-id="p1-order-boxes">Could you help me with these boxes?</span>
+          <span class="answer-label">すみません、この箱、手伝ってもらえますか？</span>
+          <span class="answer-space" data-sync-id="p1-order-boxes">Excuse me, could you help me with these boxes?</span>
         </div>
         <span class="choice" data-item-id="b-with">with these boxes?</span>
-        <span class="choice" data-item-id="b-could">Could you</span>
+        <span class="choice" data-item-id="b-could">could you</span>
+        <span class="choice" data-item-id="b-excuse">Excuse me,</span>
         <span class="choice" data-item-id="b-help">help me</span>
       </div>
       <div class="task-block">
@@ -186,18 +193,19 @@
           <span class="answer-label">駅を探すの、手伝ってもらえますか？</span>
           <span class="answer-space" data-sync-id="p1-order-find">Could you help me find the station?</span>
         </div>
-        <span class="choice" data-item-id="f-find">find the station?</span>
+        <span class="choice" data-item-id="f-station">the station?</span>
         <span class="choice" data-item-id="f-could">Could you</span>
+        <span class="choice" data-item-id="f-find">find</span>
         <span class="choice" data-item-id="f-help">help me</span>
       </div>
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">スーツケースを運ぶの、手伝ってもらえますか？</span>
-          <span class="answer-space" data-sync-id="p1-order-carry">Could you help me carry my suitcase, please?</span>
+          <span class="answer-space" data-sync-id="p1-order-carry">Could you help me carry my suitcase?</span>
         </div>
-        <span class="choice" data-item-id="c-carry">carry my suitcase,</span>
-        <span class="choice" data-item-id="c-please">please?</span>
+        <span class="choice" data-item-id="c-suitcase">my suitcase?</span>
         <span class="choice" data-item-id="c-help">help me</span>
+        <span class="choice" data-item-id="c-carry">carry</span>
         <span class="choice" data-item-id="c-could">Could you</span>
       </div>
     </div>
@@ -320,7 +328,7 @@
          of this lesson a Japanese speaker actually has to install. -->
     <div class="section" data-page-id="p2-rule">
       <h2 class="section-title">Answering with a thing or an action <span class="title-ja">(もので答える？動作で答える？)</span></h2>
-      <p class="section-subtitle"><span class="ko">Same rule as before, from the other side. A thing takes "with". An action comes straight after "can".</span><span class="ja">さっきと同じルールを、答えるほうから見ます。ものなら with、動作なら can のすぐあとに続けます。</span></p>
+      <p class="section-subtitle"><span class="ko">Same rule as before, from the other side. A thing takes "with". An action comes straight after "can".</span><span class="ja">さっきと同じルールを、答えるほうから見ます。ものなら with がいります。動作なら can のすぐあとに続けます。</span></p>
       <div class="batchim ending-rule">
         <div class="bt-box">
           <span class="bt-eq">
@@ -343,6 +351,12 @@
          would be "can help" against an invented wrong form, and a manufactured
          wrong answer is not a taught distinction. -->
 
+    <!-- drill · three chips on every row here, and that is the honest count.
+         "I can help" is Pattern B's own frame (Sure, I can help with ___), so
+         splitting "I" off "can help" would cut the taught pattern in half —
+         the same reason the Korean decks keep 저는 as one chip. There is no
+         fourth unit being glued to a neighbour; the sentences hold three.
+         Same criterion on all four rows, which is what the rule asks for. -->
     <div class="section" data-page-id="p2-reorder">
       <h2 class="section-title">Build the sentence <span class="title-ja">(文を組み立てよう)</span></h2>
       <p class="section-subtitle"><span class="ko">Put the words in order, then say the whole sentence out loud.</span><span class="ja">単語を順番に並べて、文をまるごと声に出して言ってみましょう。</span></p>
@@ -449,7 +463,7 @@
 
     <div class="section" data-page-id="p2-write">
       <h2 class="section-title">Your own answer <span class="title-ja">(自分の答えを作ろう)</span></h2>
-      <p class="section-subtitle"><span class="ko">I'm carrying a lot today. Ask me — no, wait. I'll ask you. What can you help me with?</span><span class="ja">今日は荷物が多いんです。何を手伝ってもらえますか。自分の言葉で答えてみましょう。</span></p>
+      <p class="section-subtitle"><span class="ko">I'm carrying a lot today. What can you help me with? Answer in your own words.</span><span class="ja">今日は荷物が多いんです。何を手伝ってもらえますか。自分の言葉で答えてみましょう。</span></p>
       <div class="tutor-note">学生が言った文をここに書いてください。</div>
       <div class="task-block">
         <div class="answer-box tall">
@@ -471,7 +485,7 @@
          answered, never asked for in a learner slot. -->
     <div class="section" data-page-id="p3-model">
       <h2 class="section-title">Read the conversation <span class="title-ja">(会話を読もう)</span></h2>
-      <p class="section-subtitle"><span class="ko">I'll read my part. You read yours — you're moving into a new office today.</span><span class="ja">私は自分のパートを読みます。あなたは自分のパートを読んでください。今日、新しいオフィスに引っこす日です。</span></p>
+      <p class="section-subtitle"><span class="ko">I'll read my part. You read yours. Today you're moving into a new office.</span><span class="ja">私は自分のパートを読みます。あなたは自分のパートを読んでください。今日、新しいオフィスに引っこす日です。</span></p>
       <div class="dialogue">
         <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">Me</span></span><div class="bubble me"><span class="korean">Excuse me, <span class="ending">could you help me with</span> these boxes?</span><span class="translation">すみません、この箱、手伝ってもらえますか？</span></div></div>
         <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">Tutor</span></span><div class="bubble"><span class="korean">Of course. What do you need?</span><span class="translation">もちろん。何が必要ですか？</span></div></div>

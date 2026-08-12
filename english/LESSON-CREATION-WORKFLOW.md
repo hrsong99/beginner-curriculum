@@ -217,6 +217,45 @@ Static checks:
 - unique page and sync ids
 - **no `.yomi`, no katakana over English, `yomi.js` not loaded**
 - no inline CSS/JS, no accidental shared-runtime changes
+- **every tutor script box has the same number of sentences on both sides**
+- **every reorder page uses one chunking criterion down the page**
+
+### The two checks that fail silently
+
+Both of these produce a page that is *valid markup and wrong on screen*, with nothing in the
+console. The pilot deck shipped both. Run them.
+
+**1 · Tutor script sentence parity.** `runtime/js/script-lines.js` rebuilds the blue box as one
+sentence per line, English above its own Japanese — but only when the two sides have **equal
+sentence counts**. When they differ it deliberately does nothing, because mis-pairing would print
+"this Japanese is the translation of this English" as a lie. The failure mode is a wall of bunched
+text that looks merely ugly rather than broken. `AUTHORING.md` §2 has always said the two must be
+the same sentences; this is what enforces it.
+
+`.pattern-meaning` is exempt — it owns its own pairing and is skipped on purpose. Keep its text
+short instead; nothing will split it for you.
+
+```js
+// paste into the rendered deck
+[...document.querySelectorAll(".section-subtitle")].filter(b=>!b.classList.contains("pattern-meaning"))
+  .map(b=>{const ko=b.querySelector(":scope > .ko"),ja=b.querySelector(":scope > .ja");if(!ko||!ja)return null;
+    const c=(t,e)=>[...t].filter(x=>e.includes(x)).length||1;
+    const k=c(ko.textContent,".!?"),j=c(ja.textContent,"。！？");
+    return k===j?null:`${b.closest("[data-page-id]").dataset.pageId} EN=${k} JA=${j}`;}).filter(Boolean)
+```
+
+**2 · Reorder chunking consistency.** Four chunks is the ceiling and the working default; three is
+allowed only when the sentence honestly holds three. The trap is not the count — it is **mixing
+criteria on one page**. The pilot shipped 3/4/3/4 because `please` had been tacked onto two rows,
+which is padding two sentences rather than analysing four the same way.
+
+Write the page's criterion into an HTML comment above it, then check every row against that one
+sentence. If a row needs a different criterion to reach its count, the count is wrong.
+
+```js
+[...document.querySelectorAll("[data-page-id]")].filter(p=>/reorder/.test(p.dataset.pageId))
+  .map(p=>({page:p.dataset.pageId,counts:[...p.querySelectorAll(".task-block")].map(b=>b.querySelectorAll(".choice").length)}))
+```
 
 Interactive checks at both **480px and 360px**:
 
