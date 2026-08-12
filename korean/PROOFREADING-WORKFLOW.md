@@ -22,18 +22,27 @@ order as a learner**, not as disconnected HTML fragments. A pass must cover thes
 1. **Outcome contract:** the goal presents the lesson's two observable outcomes distinctly; each
    outcome maps to one taught pattern and is earned again in the final application. A fluent tutor
    and a Japanese learner should both be able to say what the two takeaways are.
+   For Contextual Korean, also reject legacy shell drift: the opening order is `episode-card` →
+   `scene` → `lesson-goal` → `expressions`, the two targets use the canonical `.known-row`
+   markup, and each target reappears verbatim in its `pN-teach .sent-hero`.
 2. **Scene and roles:** dialogue is believable, every turn follows from the previous one, speaker
    ownership stays stable and narrative continuity agrees with adjacent episodes. Receptive lessons
    may reconstruct the partner's line, but instructions must say so and production must not quietly
    switch roles.
+   Read the visible episode card as content too: course label, episode number, title and cast must
+   match the lesson being audited. A copied cover from another course is a confirmed error even
+   when metadata and the inner lesson are correct.
 3. **Teaching:** each pattern receives a short Korean/Japanese meaning-and-use box on `pN-teach`;
    formation belongs on `pN-rule`, not a dark transition page. Explanations must be short enough to
    point at, accurate enough to prevent a false generalization and supported by the examples shown.
 4. **Activity value:** every page does teaching or retrieval work. Closed activities retain four
-   questions; reorder rows use up to four meaningful chunks; a choose page exists only for a real,
+   questions; reorder rows use up to four meaningful chunks presented out of answer order (a row
+   that arrives already solved has no retrieval value); a choose page exists only for a real,
    taught distinction. Do not use grammatical alternatives whose choice needs untaught nuance, nor
    an obviously random character as a distractor. One prompt and one visible answer area must ask
    for the same amount of work.
+   A retained choose page must use the runtime-wired `.choose-row .opt` contract; legacy
+   `.choice-row` markup is a broken interaction even when its two alternatives look correct.
 5. **Application and nuance:** the replay and completion reconstruct the opening scene. Contextual
    free talk is reciprocal—tutor asks, learner answers, learner asks, tutor gives an editable native
    answer. A native tip adds adjacent register, prosody, contraction, collocation or intensity; it

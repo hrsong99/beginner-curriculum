@@ -146,6 +146,13 @@ for exactly this reason: the four-chunk rule was written during the Contextual b
 blueprint and trial deck both said nothing about a count.
 
 - One activity per page; Korean-first title; one blue tutor-script box.
+- Keep the Contextual shell canonical instead of copying an older deck variant: open with
+  `episode-card` → `scene` → `lesson-goal` → `expressions`; put the two exact target
+  lines in `.known.lines > .known-row`; name the two open production pages `p1-write` and
+  `p2-write`. The opening scene must already contain both target lines, and each `pN-teach`
+  repeats its target verbatim in `.sent-hero` before adding examples in `.sent-more`.
+  Before handing off, read the rendered episode card itself: its course label, episode number,
+  title and cast must belong to the assigned course, not to the deck that supplied the markup.
 - Keep `partN-intro` as a pacing and story bridge: pattern name plus one short Japanese line that
   moves from the scene into the next beat. Do not teach grammar on the dark transition page.
 - Open `pN-teach` with one compact `.section-subtitle.pattern-meaning` box. Give the short meaning
@@ -158,6 +165,8 @@ blueprint and trial deck both said nothing about a count.
   to reach four, and never reach four by splitting a compound noun, a particle off its noun or an
   ending off its stem. Do not stop short either — if a fourth unit is already in the sentence, give it
   its own chip rather than gluing it to a neighbour, and chunk every sentence on a page the same way.
+  Present those chips in a genuinely scrambled source order; a row that already reads as its answer
+  does no retrieval work even when its chunk count is correct.
 - A spoken prompt that feeds one answer box asks one question. Two only when the second narrows the
   first (either/or, or a yes/no setting up the real question); never three, and never two unrelated
   questions joined with 그리고. Three answers wanted means three turns, not one crowded box.
@@ -173,6 +182,9 @@ blueprint and trial deck both said nothing about a count.
   narrow column; multiword results may wrap only at an authored space, never between Korean syllables.
 - Include a choose page only for an honest, taught distinction. Omit it when one option is merely a
   fake ending or when both answers are grammatical and choosing requires an unintroduced nuance.
+  When it exists, use the current `.choose-list > .choose-row.sentence` contract with two `.opt`
+  elements, one `data-correct`, and row-level sync metadata; do not revive the old
+  `.choice-rows` / `.choice-row` widget, which the shared activity runtime does not wire.
 - A native tip adds one adjacent choice not already taught: register, softening, contraction,
   prosody, collocation or a useful difference in intensity. It is not a recap or a delayed core
   explanation. When both expressions are valid, show them with `.nuance-compare`: equal visual
