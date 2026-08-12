@@ -311,6 +311,12 @@ Contextual Korean의 `p3-freetalk` 은 반드시 네 차례로 닫습니다: **�
 설명은 글로 쓰는 카드(옛 `.card` + `.tip` + `.example-card`)로 돌아가지 마세요 — 상자가
 세 겹이 되고, 정작 무엇이 바뀌었는지는 학습자가 되짚어야 합니다.
 
+**`.nuance-compare` 는 발음 표기를 달 수 없습니다.** `.nuance-choice` 는 `> .korean` 과
+`> .translation` 만 스타일이 있고, 시트에 기본 `.yomi` 규칙이 없어서 그 안에 넣은 `.yomi` 는
+본문 크기 그대로 나옵니다. 이 컴포넌트는 발음 표기를 안 다는 트랙(3-contextual, 중급)에서
+왔기 때문입니다. 초중급 덱에서 쓸 때는 두 카드에서 읽기를 빼고, 필요하면 튜터 대본 쪽에
+넣으세요. 규칙은 런타임 큐에 있습니다.
+
 둘 다 맞고 상황에 따라 고르는 표현은 `.swap` 이 아니라 `.nuance-compare` 를 씁니다.
 각 `.nuance-choice` 의 `.nuance-when` 에 한국어 상황 이름과 일본어 설명을 함께 적고,
 가운데 `.nuance-or` 는 `상황에 따라 <small>場面で選ぶ</small>` 로 둡니다. 두 카드의 시각적

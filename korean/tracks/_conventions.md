@@ -253,6 +253,7 @@ class today. Verify against the CDN before assuming a component exists.
 | `.bt-word` | local only, **not in v1.3.0** | groups a dictionary form as one word in a rule diagram |
 | `.pattern-meaning` / `.meaning-kicker` | local only, **not in v1.3.0** — **now the top of this queue** | the 뜻과 쓰임 box every `pN-teach` opens with. **115 core teach pages across 46 decks** now carry it, plus 12/12 contextual decks. Until it ships, every one of them renders the box unstyled in class |
 | `.nuance-compare` | local only, **not in v1.3.0** | both-valid pairs shown at equal weight instead of `.swap`'s correction arrow. Same exposure as above |
+| `.nuance-choice > .yomi` | not written | `.nuance-compare` styles only `> .korean` and `> .translation`. It comes from the contextual track, which is 중급 and never shows readings, so **a `.yomi` inside it has no rule at all and renders as plain body text** — 과 47 shipped that way for one commit. There is no base `.yomi` rule in the sheet; every context defines its own. Until this lands, a 초중급 deck using `.nuance-compare` must leave the readings off |
 | a third inline accent token | not written | see the two-class section below |
 | three-case `.batchim` layout | not written | see the ㄹ-stem section below |
 | `.choose-word` in `spotlight.js`'s SPOT list | not written | the tutor cannot point at that activity |
