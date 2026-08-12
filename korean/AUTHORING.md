@@ -5,7 +5,7 @@
 전에 이 목록에 이미 있는 것을 먼저 찾아보세요 — 어휘가 하나 늘 때마다 덱 사이의
 일관성이 한 칸씩 줄어듭니다.
 
-설계 원칙은 [`ux-philosophy.md`](./ux-philosophy.md) 에 있습니다.
+설계 원칙은 [`ux-philosophy.md`](../ux-philosophy.md) 에 있습니다.
 이 문서는 **무엇을 쓸 수 있는가**만 적습니다.
 
 > **그래도 새 컴포넌트를 만들었다면, 이름을 `runtime/js/spotlight.js` 의 `SPOT`
@@ -13,14 +13,20 @@
 > 아무 에러가 나지 않습니다 — 그 블록만 조용히 안 켜집니다. 블록 안에서 따로 짚을
 > 이름이 있는 부품(예: 규칙 카드 안의 글자 하나)도 같이 넣으면 됩니다. 한 겹씩
 > 들어가는 방식이라 부품을 넣는다고 블록을 못 짚게 되지는 않습니다.
-> 이유는 [`ux-philosophy.md` § The shared pointer](./ux-philosophy.md) 에 있습니다.
+> 이유는 [`ux-philosophy.md` § The shared pointer](../ux-philosophy.md) 에 있습니다.
 
 ---
 
 ## 1 · 파일 뼈대
 
-경로는 `trial/lessons/deck.html` 처럼 **두 단계 아래**에 있는 덱 기준입니다.
-한 단계(`tracks/2-core-patterns/`)에 두면 `../` 하나를 빼세요.
+경로는 `korean/trial/lessons/deck.html` 처럼 **저장소 루트에서 세 단계 아래**에 있는 덱
+기준입니다. 한 단계 위(`korean/tracks/2-core-patterns/`)에 두면 `../` 하나를 빼고,
+실제 레슨 자리(`korean/tracks/<t>/courses/<c>/lessons/<slug>/`)는 일곱 단계라
+`../` 가 일곱 개입니다.
+
+> **`runtime/` 은 이제 저장소 루트에 있습니다** — `korean/` 안이 아닙니다. 한국어와 영어
+> 커리큘럼이 같은 런타임을 씁니다. `trial/assets/` 는 옮기지 않았으므로 그대로 `korean/`
+> 안에 있고, 그쪽 경로는 예전과 같습니다.
 
 ```html
 <!DOCTYPE html>
@@ -32,8 +38,8 @@
   <meta name="podo:lesson-id" content="trial-2-selfintro">
   <meta name="podo:content-version" content="2026-08-05">
   <title>…</title>
-  <link rel="stylesheet" href="../../runtime/css/lesson-card.css">
-  <link rel="stylesheet" href="../../runtime/css/trial.css">
+  <link rel="stylesheet" href="../../../runtime/css/lesson-card.css">
+  <link rel="stylesheet" href="../../../runtime/css/trial.css">
 </head>
 <body>
   <div class="phone">
@@ -51,14 +57,14 @@
 
   <img class="stamp-art" src="../assets/well-done.svg" alt="">   <!-- .phone 바깥! -->
 
-  <script src="../../runtime/js/activities.js"></script>
-  <script src="../../runtime/js/pager.js"></script>
-  <script src="../../runtime/js/script-lines.js"></script>
-  <script src="../../runtime/js/spotlight.js"></script>
-  <script src="../../runtime/js/tutor-notes.js"></script>
-  <script src="../../runtime/js/highlight.js"></script>
-  <script src="../../runtime/js/stamp.js"></script>
-  <script src="../../runtime/js/yomi.js"></script>          <!-- 발음 표기를 쓰는 덱만 -->
+  <script src="../../../runtime/js/activities.js"></script>
+  <script src="../../../runtime/js/pager.js"></script>
+  <script src="../../../runtime/js/script-lines.js"></script>
+  <script src="../../../runtime/js/spotlight.js"></script>
+  <script src="../../../runtime/js/tutor-notes.js"></script>
+  <script src="../../../runtime/js/highlight.js"></script>
+  <script src="../../../runtime/js/stamp.js"></script>
+  <script src="../../../runtime/js/yomi.js"></script>          <!-- 발음 표기를 쓰는 덱만 -->
 </body>
 </html>
 ```

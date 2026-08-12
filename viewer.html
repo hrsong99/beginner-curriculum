@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>문서 — 한국어 커리큘럼</title>
+<title>문서 — 커리큘럼</title>
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <style>
   @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
@@ -247,7 +247,7 @@
         docEl.innerHTML = marked.parse(md, { gfm: true, breaks: false });
         // set page title from the first heading
         var h1 = docEl.querySelector('h1, h2');
-        if (h1) document.title = h1.textContent.trim() + ' — 한국어 커리큘럼';
+        if (h1) document.title = h1.textContent.trim() + ' — 커리큘럼';
         statusEl.style.display = 'none';
         docEl.style.display = '';
         buildToc(docEl);

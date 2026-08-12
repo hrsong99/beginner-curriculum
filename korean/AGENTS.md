@@ -1,6 +1,6 @@
 # Working in `korean/`
 
-**Read [`ux-philosophy.md`](./ux-philosophy.md) before touching anything in this folder — every
+**Read [`ux-philosophy.md`](../ux-philosophy.md) before touching anything in this folder — every
 time, including small edits.** It is the contract for every lesson page: one activity per page,
 instant clarity, minimal everything, Korean-first titles, one blue tutor-script box, one boxed
 component that *fills* the page, receptive → productive.
@@ -225,10 +225,15 @@ same document, so anything in the markup is already on the learner's screen.
   **Read [`AUTHORING.md`](./AUTHORING.md) before building a new deck.** It is
   the component vocabulary — page types, every activity's markup, the colour and spacing
   tokens, and the file skeleton. Reach for an existing component before inventing one.
-- **`runtime/`** — everything a deck loads at run time: `css/` (the design system plus each
-  track's sheet) and `js/` (the shared modules). This folder is the publish set — it is what
-  gets mirrored to a public repo and served from a CDN, so nothing private may live in it.
-  See [`runtime/README.md`](./runtime/README.md).
+- **`../runtime/`** — **at the repo root, not in this folder.** Everything a deck loads at run
+  time: `css/` (the design system plus each track's sheet) and `js/` (the shared modules). It sits
+  above both language folders because Korean and English decks load the same runtime, and it is
+  the publish set — mirrored to a public repo and served from a CDN — so nothing private may live
+  in it. See [`../runtime/README.md`](../runtime/README.md).
+
+  **`trial/assets/` did not move** and is still inside `korean/`, so a deck's `../` count differs
+  by one between the two. A lesson deck reaches the runtime with seven `../` and the assets with
+  six; `new_lesson.py` handles the difference, but a hand-edited path will not.
 - **`interaction-protocol.md`** — the `data-sync` contract. Documentation only; the code
   decks load lives in `runtime/`. Packaging a deck for upload is not done here at all —
   `podo-curriculum` owns it (`tools/build.py`), because the zip is a deploy artefact and
@@ -243,8 +248,10 @@ same document, so anything in the markup is already on the learner's screen.
   **not part of the read path**: never cite one as precedent, never copy markup out of one, and
   don't search them when looking for how something is done. If a grep turns up an `_archive/`
   hit, the live answer is elsewhere in `korean/`.
-- `index.html` / `viewer.html` at the root are the navigation; `AGENTS.md` stays at the root as
-  the canonical shared instructions, and `CLAUDE.md` imports it for Claude Code.
+- `index.html` here is this curriculum's navigation. **`viewer.html` and `ux-philosophy.md` are at
+  the repo root now**, shared with English — the viewer rejects any `?doc=` containing `..`, so its
+  links from here read `../viewer.html?doc=korean/<path>`. `AGENTS.md` stays in this folder as the
+  canonical Korean instructions, and `CLAUDE.md` imports it for Claude Code.
 - **`catalog.html` + `catalog/` are generated — never hand-edit them.** `catalog.html` is the
   gateway (hero, five track cards, 완성된 레슨 덱, level ladder); `catalog/<track>.html` is that
   track's full contents — every 과, what it teaches, and the pattern marked inside its own example
