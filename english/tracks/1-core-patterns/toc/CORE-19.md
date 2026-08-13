@@ -37,13 +37,13 @@
 
 - **Already learned:** Core 1–18.
 - **Not yet:** Core 20–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-16 What time do you get up? · CORE-17 How often do you exercise? · CORE-18 I'm not sure
+- **Most recent available forms:** CORE-16 What time do you get up? · CORE-17 How often do you exercise? · CORE-18 Can you drive?
 - **Nearest protected forms:** CORE-20 Could you help me with this? · CORE-21 Can I try this on? · CORE-22 I'd like the chicken, please
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
 ## Continuity
 
-- **Previous:** CORE-18 · I'm not sure
+- **Previous:** CORE-18 · Can you drive?
 - **Next:** CORE-20 · Could you help me with this?
 
 ## Authoring inputs — read in order

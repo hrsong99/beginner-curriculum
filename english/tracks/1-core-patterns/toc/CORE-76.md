@@ -12,7 +12,7 @@
 
 ## Outcome
 
-- **Can do:** say you arranged a service, and ask where to get one.
+- **Can do:** distinguish arranging a service from arranging for a particular person to act.
 - **Unit:** 14 · Getting things done
 
 ## Required production
@@ -24,27 +24,27 @@
 
 ### Pattern 2
 
-- **Model:** Where can I get this cleaned?
-- **Frame:** `Where can I get this ___ed?`
+- **Model:** I got someone to look at it.
+- **Frame:** `I got ___ to ___.`
 
 ## Supporting content
 
-- **Expressions:** `while you wait` · `it's under warranty`
+- **Expressions:** `Where can I get this ___ed?` · `while you wait`
 - **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
-- **Japanese-L1 risk:** Japanese `〜てもらう` maps well and is one of the few places where the Japanese structure is *more* explicit than the English. Lean on that — the learner already thinks this way.
+- **Japanese-L1 risk:** Japanese `〜てもらう` covers both ideas. English changes the shape depending on whether the focus is the finished thing (`have` + thing + participle) or the person who acts (`get` + person + `to`). Teach the contrast in one scene rather than as two unrelated rules.
 
 ## Sequence guardrails
 
 - **Already learned:** Core 1–75.
 - **Not yet:** Core 77–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-73 The train had already left · CORE-74 I was going to call, but · CORE-75 I used to walk to school
-- **Nearest protected forms:** CORE-77 I got someone to look at it · CORE-78 This time tomorrow I'll be flying · CORE-79 By Friday I'll have finished
+- **Nearest protected forms:** CORE-77 It was supposed to be ready · CORE-78 This time tomorrow I'll be flying · CORE-79 I should have it ready by Friday
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
 ## Continuity
 
 - **Previous:** CORE-75 · I used to walk to school
-- **Next:** CORE-77 · I got someone to look at it
+- **Next:** CORE-77 · It was supposed to be ready
 
 ## Authoring inputs — read in order
 

@@ -25,7 +25,7 @@
 - **Model:** I think we're on the wrong train.
 - **Frame:** `I think we're on the wrong ___.`
 - **Partner:** 相手: Where are you trying to get to?
-- **Core ownership:** Core 18
+- **Treatment:** teach as a bounded chunk; do not expand its grammar here
 
 ### Pattern 2
 
@@ -42,7 +42,7 @@
 ## Sequence guardrails
 
 - **Assumed productive floor:** Core 1–53.
-- **Pattern owners used here:** Core 18, Core 40.
+- **Pattern owners used here:** Core 40.
 - A pattern more than two Core units above the floor must remain marked `chunk`; do not teach its grammar in this episode.
 - Partner reactions and `Understand` are receptive; they do not add production targets.
 

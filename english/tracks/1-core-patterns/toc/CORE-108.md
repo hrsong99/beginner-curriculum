@@ -24,8 +24,8 @@
 
 ### Pattern 2
 
-- **Model:** Can you send it over?
-- **Frame:** `Can you ___?`
+- **Model:** Can you send it over when you get a sec?
+- **Frame:** `Can you ___ when you get a sec?`
 
 ## Supporting content
 
@@ -37,7 +37,7 @@
 
 - **Already learned:** Core 1–107.
 - **Not yet:** Core 109–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-105 Not only did we finish, we finished early · CORE-106 There's one thing I'd change · CORE-107 As for the budget,
+- **Most recent available forms:** CORE-105 The sooner we start, the better · CORE-106 There's one thing I'd change · CORE-107 As for the budget,
 - **Nearest protected forms:** CORE-109 To put it bluntly · CORE-110 I hate to say it, but · CORE-111 Just so you know,
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 

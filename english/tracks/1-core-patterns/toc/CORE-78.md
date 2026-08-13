@@ -37,14 +37,14 @@
 
 - **Already learned:** Core 1–77.
 - **Not yet:** Core 79–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-75 I used to walk to school · CORE-76 I had my phone repaired · CORE-77 I got someone to look at it
-- **Nearest protected forms:** CORE-79 By Friday I'll have finished · CORE-80 Let me know once it's ready · CORE-81 I'm responsible for customer support
+- **Most recent available forms:** CORE-75 I used to walk to school · CORE-76 I had my phone repaired · CORE-77 It was supposed to be ready
+- **Nearest protected forms:** CORE-79 I should have it ready by Friday · CORE-80 Let me know once it's ready · CORE-81 I'm responsible for customer support
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
 ## Continuity
 
-- **Previous:** CORE-77 · I got someone to look at it
-- **Next:** CORE-79 · By Friday I'll have finished
+- **Previous:** CORE-77 · It was supposed to be ready
+- **Next:** CORE-79 · I should have it ready by Friday
 
 ## Authoring inputs — read in order
 

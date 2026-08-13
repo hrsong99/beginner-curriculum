@@ -38,7 +38,7 @@
 - **Already learned:** Core 1–118.
 - **Not yet:** Core 120–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-116 If anything, it's got worse · CORE-117 On balance, I'd say · CORE-118 That's one way of putting it
-- **Nearest protected forms:** CORE-120 You might want to check that · CORE-121 Let's just say it was memorable · CORE-122 It's not that simple
+- **Nearest protected forms:** CORE-120 You might want to check that · CORE-121 I'd rather not go into it · CORE-122 It's not that simple
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
 ## Continuity

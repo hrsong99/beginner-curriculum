@@ -37,13 +37,13 @@
 
 - **Already learned:** Core 1–112.
 - **Not yet:** Core 114–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-110 I hate to say it, but · CORE-111 Just so you know, · CORE-112 With all due respect
+- **Most recent available forms:** CORE-110 I hate to say it, but · CORE-111 Just so you know, · CORE-112 That came across as rude
 - **Nearest protected forms:** CORE-114 That holds true up to a point · CORE-115 Granted, but that overlooks · CORE-116 If anything, it's got worse
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
 ## Continuity
 
-- **Previous:** CORE-112 · With all due respect
+- **Previous:** CORE-112 · That came across as rude
 - **Next:** CORE-114 · That holds true up to a point
 
 ## Authoring inputs — read in order

@@ -38,13 +38,13 @@
 - **Already learned:** Core 1–119.
 - **Not yet:** Core 121–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-117 On balance, I'd say · CORE-118 That's one way of putting it · CORE-119 I'll leave it at that
-- **Nearest protected forms:** CORE-121 Let's just say it was memorable · CORE-122 It's not that simple
+- **Nearest protected forms:** CORE-121 I'd rather not go into it · CORE-122 It's not that simple
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
 ## Continuity
 
 - **Previous:** CORE-119 · I'll leave it at that
-- **Next:** CORE-121 · Let's just say it was memorable
+- **Next:** CORE-121 · I'd rather not go into it
 
 ## Authoring inputs — read in order
 

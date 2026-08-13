@@ -25,7 +25,7 @@
 - **Model:** Let's just say we'll miss you.
 - **Frame:** `Let's just say ___.`
 - **Partner:** Ray: Don't. I'll be back for the summer anyway.
-- **Core ownership:** Core 121
+- **Core ownership:** Core 119
 - **Treatment:** teach as a bounded chunk; do not expand its grammar here
 
 ### Pattern 2
@@ -44,7 +44,7 @@
 ## Sequence guardrails
 
 - **Assumed productive floor:** Core 1–86.
-- **Pattern owners used here:** Core 119, Core 121.
+- **Pattern owners used here:** Core 119.
 - A pattern more than two Core units above the floor must remain marked `chunk`; do not teach its grammar in this episode.
 - Partner reactions and `Understand` are receptive; they do not add production targets.
 

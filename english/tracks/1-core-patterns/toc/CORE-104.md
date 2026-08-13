@@ -38,13 +38,13 @@
 - **Already learned:** Core 1–103.
 - **Not yet:** Core 105–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-101 It depends on whether · CORE-102 Otherwise, we'd have to start again · CORE-103 What worries me most is the cost
-- **Nearest protected forms:** CORE-105 Not only did we finish, we finished early · CORE-106 There's one thing I'd change · CORE-107 As for the budget,
+- **Nearest protected forms:** CORE-105 The sooner we start, the better · CORE-106 There's one thing I'd change · CORE-107 As for the budget,
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
 ## Continuity
 
 - **Previous:** CORE-103 · What worries me most is the cost
-- **Next:** CORE-105 · Not only did we finish, we finished early
+- **Next:** CORE-105 · The sooner we start, the better
 
 ## Authoring inputs — read in order
 

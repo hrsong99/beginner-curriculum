@@ -38,7 +38,7 @@
 - **Already learned:** Core 1–23.
 - **Not yet:** Core 25–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-21 Can I try this on? · CORE-22 I'd like the chicken, please · CORE-23 Two cups of coffee
-- **Nearest protected forms:** CORE-25 I'm working from home today · CORE-26 I usually drive, but today I'm walking · CORE-27 I don't understand
+- **Nearest protected forms:** CORE-25 I'm working from home today · CORE-26 I usually drive, but today I'm walking · CORE-27 I like cooking
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
 ## Continuity

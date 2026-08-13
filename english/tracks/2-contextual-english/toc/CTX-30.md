@@ -30,8 +30,8 @@
 
 ### Pattern 2
 
-- **Model:** I'm not sure that would work for our side.
-- **Frame:** `I'm not sure ___.`
+- **Model:** The part I'm not sure about is the timing.
+- **Frame:** `The part I'm not sure about is ___.`
 - **Partner:** Dana: Hm. Say more — you're closer to it than I am.
 - **Core ownership:** Core 85
 - **Treatment:** teach as a bounded chunk; do not expand its grammar here

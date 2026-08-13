@@ -37,7 +37,7 @@
 
 - **Already learned:** Core 1–28.
 - **Not yet:** Core 30–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-26 I usually drive, but today I'm walking · CORE-27 I don't understand · CORE-28 Are you free on Friday?
+- **Most recent available forms:** CORE-26 I usually drive, but today I'm walking · CORE-27 I like cooking · CORE-28 Are you free on Friday?
 - **Nearest protected forms:** CORE-30 I was really tired yesterday · CORE-31 We watched a movie last night · CORE-32 We went out for dinner
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 

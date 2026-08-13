@@ -24,8 +24,8 @@
 
 ### Pattern 2
 
-- **Model:** I'm not sure that would work for us.
-- **Frame:** `I'm not sure ___.`
+- **Model:** The part I'm not sure about is the timing.
+- **Frame:** `The part I'm not sure about is ___.`
 
 ## Supporting content
 

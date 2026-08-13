@@ -12,7 +12,7 @@
 
 ## Outcome
 
-- **Can do:** check availability and agree on a time.
+- **Can do:** check availability and invite someone to do something.
 - **Unit:** 5 · Now and usually
 
 ## Required production
@@ -24,26 +24,26 @@
 
 ### Pattern 2
 
-- **Model:** Let's meet at three.
-- **Frame:** `Let's meet at ___.`
+- **Model:** Would you like to have dinner?
+- **Frame:** `Would you like to ___?`
 
 ## Supporting content
 
-- **Expressions:** `works for me` · `Let me check.`
-- **Grammar:** `on` a day, `at` a time, `in` a month. Learn them with the word.
-- **Japanese-L1 risk:** Japanese `に` covers all three, so this is a pure memorisation cost with no rule to derive. Chunk them.
+- **Expressions:** `I'd love to, but ___` · `Maybe another time.`
+- **Grammar:** `Would you like to` + plain verb makes an invitation. It is different from `I'd like` in 22, which says what **I** want.
+- **Japanese-L1 risk:** Japanese invitations often use a negative question (`〜ませんか`). Do not copy that shape word for word; `Would you like to ___?` is the ordinary English invitation.
 
 ## Sequence guardrails
 
 - **Already learned:** Core 1–27.
 - **Not yet:** Core 29–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-25 I'm working from home today · CORE-26 I usually drive, but today I'm walking · CORE-27 I don't understand
+- **Most recent available forms:** CORE-25 I'm working from home today · CORE-26 I usually drive, but today I'm walking · CORE-27 I like cooking
 - **Nearest protected forms:** CORE-29 I'm meeting Sam at six · CORE-30 I was really tired yesterday · CORE-31 We watched a movie last night
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
 ## Continuity
 
-- **Previous:** CORE-27 · I don't understand
+- **Previous:** CORE-27 · I like cooking
 - **Next:** CORE-29 · I'm meeting Sam at six
 
 ## Authoring inputs — read in order

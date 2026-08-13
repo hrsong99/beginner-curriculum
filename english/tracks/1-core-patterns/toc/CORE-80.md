@@ -37,13 +37,13 @@
 
 - **Already learned:** Core 1–79.
 - **Not yet:** Core 81–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-77 I got someone to look at it · CORE-78 This time tomorrow I'll be flying · CORE-79 By Friday I'll have finished
+- **Most recent available forms:** CORE-77 It was supposed to be ready · CORE-78 This time tomorrow I'll be flying · CORE-79 I should have it ready by Friday
 - **Nearest protected forms:** CORE-81 I'm responsible for customer support · CORE-82 We're on track, but · CORE-83 So what you're saying is
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
 ## Continuity
 
-- **Previous:** CORE-79 · By Friday I'll have finished
+- **Previous:** CORE-79 · I should have it ready by Friday
 - **Next:** CORE-81 · I'm responsible for customer support
 
 ## Authoring inputs — read in order

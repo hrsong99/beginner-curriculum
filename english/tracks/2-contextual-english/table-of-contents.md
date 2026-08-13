@@ -300,7 +300,7 @@ something.*
 
 *場面: the airport. Priya asks how 私 will describe the year back home.*
 *Can-do: sum something up without listing it.*
-- 私: "Let's just say it was a good year." — `Let's just say ___.` **(Core 121)** `chunk`
+- 私: "Let's just say it was a good year." — `Let's just say ___.` **(Core 119)** `chunk`
   → Priya: "That's it? A whole year, and that's the summary?"
 - 私: "On balance, it changed everything." — `On balance, ___.` **(Core 117)** `chunk`
   → Priya: "Better. Now go, they're calling your flight."
@@ -458,7 +458,7 @@ with Dana in front of everyone, and is right.
 *Can-do: disagree with someone senior and stay on good terms.*
 - 私: "I see your point, but the timing worries me." — `I see your point, but ___.` **(Core 85)** `chunk`
   → Dana: "Go on."
-- 私: "I'm not sure that would work for our side." — `I'm not sure ___.` **(Core 85)** `chunk`
+- 私: "The part I'm not sure about is the timing." — `The part I'm not sure about is ___.` **(Core 85)** `chunk`
   → Dana: "Hm. Say more — you're closer to it than I am."
 - *Expressions:* `fair enough` · `where I'm coming from`
 - *継続:* 私 was right. Kenji's caution was wrong here, and the show says so without making him a fool.
@@ -647,7 +647,7 @@ connection, a lost bag, and one genuinely kind stranger.
 
 *場面: twenty minutes in, and the station names are wrong.*
 *Can-do: realise a mistake and fix it with someone's help.*
-- 私: "I think we're on the wrong train." — `I think we're on the wrong ___.` **(Core 18)**
+- 私: "I think we're on the wrong train." — `I think we're on the wrong ___.` `chunk`
   → 相手: "Where are you trying to get to?"
 - 私: "Where should we get off?" — `Where should we ___?` **(Core 40)**
   → 相手: "Next stop. Cross the platform and go back two."
@@ -833,7 +833,7 @@ disagreement, and one conversation that matters.
 
 *場面: Ray's last Saturday. Nobody wants a speech.*
 *Can-do: say something that matters without overstating it.*
-- 私: "Let's just say we'll miss you." — `Let's just say ___.` **(Core 121)** `chunk`
+- 私: "Let's just say we'll miss you." — `Let's just say ___.` **(Core 119)** `chunk`
   → Ray: "Don't. I'll be back for the summer anyway."
 - 私: "I'll leave it at that." — `I'll leave it at that.` **(Core 119)** `chunk`
   → Ray: "Good. Now climb something, you're wasting the session."

@@ -38,7 +38,7 @@
 - **Already learned:** Core 1–102.
 - **Not yet:** Core 104–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-100 As a result, we had to reschedule · CORE-101 It depends on whether · CORE-102 Otherwise, we'd have to start again
-- **Nearest protected forms:** CORE-104 It's the timing that matters · CORE-105 Not only did we finish, we finished early · CORE-106 There's one thing I'd change
+- **Nearest protected forms:** CORE-104 It's the timing that matters · CORE-105 The sooner we start, the better · CORE-106 There's one thing I'd change
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
 ## Continuity

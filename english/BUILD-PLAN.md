@@ -23,7 +23,9 @@ here only when it changes the starting point for future work.
 | Blueprints | Core, Contextual and Freetalking complete |
 | Generated author packets | 315 item briefs plus 4 indexes |
 | Review surface | generated 303-item catalog; native review in progress |
-| Automated quality | 18 regression tests; existing English deck passes with 0 errors and 0 warnings |
+| Core evidence | 122-row generated triage ledger complete; row-level EGP checks remain open |
+| Core audit | targeted revision applied with stable IDs; affected catalog rows require fresh native review |
+| Automated quality | 24 regression tests; existing English deck passes with 0 errors and 0 warnings |
 | Deployment | not ready: course identity, manifests and external sync path remain open |
 
 The curriculum is no longer waiting for basic architecture or tooling. Its main content risk is
@@ -105,8 +107,8 @@ the owner/product system supplies the final values.
 - `build_running_lexicon.py` generates the authored vocabulary ledger from lesson metadata.
 - `check_deck.py` checks identity, references, duplicate ids, inline code, no-yomi, tutor-script
   parity, reorder chunking and vocabulary ownership/load.
-- Eighteen regression tests prove parser contracts, shell retargeting, generated brief/map/lexicon
-  freshness and review-intake failure cases.
+- Twenty-four regression tests prove parser contracts, shell retargeting, generated
+  brief/map/ledger/catalog/lexicon freshness and review-intake failure cases.
 
 ### 4. Shared foundation
 
@@ -133,6 +135,11 @@ The owner is reviewing `english/catalog.html`. While that review is open:
 The hold prevents avoidable content rework. It does not block read-only evidence gathering,
 decision preparation, tooling that holds no curriculum facts, or documentation repair.
 
+The owner separately approved the targeted Core audit corrections on 2026-08-13. Those corrections
+preserve all stable IDs, but they invalidate native-review snapshots only for Core 18, 27, 28, 76,
+77, 79, 85, 95, 105, 108, 112 and 121, plus the repaired cross-track rows CTX-18, CTX-30, CTX-45,
+CTX-60, FT-70, FT-86 and FT-102. Re-review those rows; do not discard unaffected feedback.
+
 ---
 
 ## Remaining work, in execution order
@@ -141,16 +148,30 @@ decision preparation, tooling that holds no curriculum facts, or documentation r
 
 #### A1. Build the Core evidence ledger
 
-Create a generated or strictly validated 122-row ledger connecting each Core lesson to:
+The generated [`reference/core-evidence-ledger.md`](./reference/core-evidence-ledger.md) now
+connects all 122 lessons to a Core Inventory category or explicit gap and to the nearest CEFR
+Companion Volume scale. It deliberately distinguishes broad function support from exact exponent
+or level evidence. The targeted audit revision removed the clearest band mismatch and now surfaces
+Core 76, 77, 79, 84 and 105 as the highest-priority exact-source gaps.
+
+The remaining A1 work is to replace the ledger's visible EGP `pending` results with exact
+form-and-meaning matches or explicit `no matching entry` results. The former Cambridge database
+host did not resolve and its legacy public route returned 404 when checked on 2026-08-13, so those
+results need a restored first-party source or an authorized archive/export rather than inference
+from the Core Inventory. Keep the ledger generated and compact; do not add corpus naturalness or
+learner-performance data to it.
+
+The ledger records:
 
 - the relevant Core Inventory item or equivalent source;
 - EGP form-and-meaning evidence where applicable;
 - a CEFR descriptor or an explicit “no direct descriptor” result;
 - the current working band and an evidence status.
 
-Do not convert a missing citation into invented confidence. This work may flag rows, but it does
-not edit the active TOC while native review is open. Until the ledger exists, B1+–C1 remains a
-working organization rather than a validated CEFR claim.
+Do not convert a missing citation into invented confidence. The owner-approved audit corrections
+are already reflected in the live TOC; any further evidence-led rewrite waits for native review.
+Until the EGP results and flagged rows are resolved, B1+–C1 remains a working organization rather
+than a validated CEFR claim.
 
 #### A2. Run the corpus/naturalness audit
 
@@ -230,9 +251,9 @@ After the level and identity decisions are approved:
 
 ## Immediate next action
 
-Unless native feedback arrives first, the next agent-owned action is **A1: build the 122-row Core
-evidence ledger without changing the live curriculum**. In parallel, the owner can finish catalog
-review. After A1, proceed to corpus/naturalness evidence and then the product-decision packet.
+Unless native feedback arrives first, the next agent-owned action is the **targeted remainder of
+A1**: resolve the five priority rows and batch the remaining EGP results without changing the live
+curriculum. Then proceed to corpus/naturalness evidence and the product-decision packet.
 
 If native feedback arrives at any point, switch to section B before authoring another lesson.
 

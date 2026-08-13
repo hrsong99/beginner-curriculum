@@ -25,7 +25,7 @@
 - **Model:** Let's just say it was a good year.
 - **Frame:** `Let's just say ___.`
 - **Partner:** Priya: That's it? A whole year, and that's the summary?
-- **Core ownership:** Core 121
+- **Core ownership:** Core 119
 - **Treatment:** teach as a bounded chunk; do not expand its grammar here
 
 ### Pattern 2
@@ -44,7 +44,7 @@
 ## Sequence guardrails
 
 - **Assumed productive floor:** Core 1–70.
-- **Pattern owners used here:** Core 117, Core 121.
+- **Pattern owners used here:** Core 117, Core 119.
 - A pattern more than two Core units above the floor must remain marked `chunk`; do not teach its grammar in this episode.
 - Partner reactions and `Understand` are receptive; they do not add production targets.
 

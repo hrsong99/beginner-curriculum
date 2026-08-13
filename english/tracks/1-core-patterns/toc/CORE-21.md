@@ -37,7 +37,7 @@
 
 - **Already learned:** Core 1–20.
 - **Not yet:** Core 22–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-18 I'm not sure · CORE-19 How much is this? · CORE-20 Could you help me with this?
+- **Most recent available forms:** CORE-18 Can you drive? · CORE-19 How much is this? · CORE-20 Could you help me with this?
 - **Nearest protected forms:** CORE-22 I'd like the chicken, please · CORE-23 Two cups of coffee · CORE-24 Sorry, could you say that again?
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 

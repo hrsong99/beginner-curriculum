@@ -38,7 +38,7 @@
 - **Already learned:** Core 1–73.
 - **Not yet:** Core 75–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-71 I should have called earlier · CORE-72 I might have left it at home · CORE-73 The train had already left
-- **Nearest protected forms:** CORE-75 I used to walk to school · CORE-76 I had my phone repaired · CORE-77 I got someone to look at it
+- **Nearest protected forms:** CORE-75 I used to walk to school · CORE-76 I had my phone repaired · CORE-77 It was supposed to be ready
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
 ## Continuity

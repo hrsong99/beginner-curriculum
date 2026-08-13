@@ -37,7 +37,7 @@
 
 - **Already learned:** Core 1–106.
 - **Not yet:** Core 108–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-104 It's the timing that matters · CORE-105 Not only did we finish, we finished early · CORE-106 There's one thing I'd change
+- **Most recent available forms:** CORE-104 It's the timing that matters · CORE-105 The sooner we start, the better · CORE-106 There's one thing I'd change
 - **Nearest protected forms:** CORE-108 Would you be able to · CORE-109 To put it bluntly · CORE-110 I hate to say it, but
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 

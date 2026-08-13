@@ -37,7 +37,7 @@
 
 - **Already learned:** Core 1–81.
 - **Not yet:** Core 83–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-79 By Friday I'll have finished · CORE-80 Let me know once it's ready · CORE-81 I'm responsible for customer support
+- **Most recent available forms:** CORE-79 I should have it ready by Friday · CORE-80 Let me know once it's ready · CORE-81 I'm responsible for customer support
 - **Nearest protected forms:** CORE-83 So what you're saying is · CORE-84 I was wondering if you could · CORE-85 I see your point, but
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 

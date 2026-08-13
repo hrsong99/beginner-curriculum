@@ -38,13 +38,13 @@
 - **Already learned:** Core 1–16.
 - **Not yet:** Core 18–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-14 I don't drive to work · CORE-15 She works downtown · CORE-16 What time do you get up?
-- **Nearest protected forms:** CORE-18 I'm not sure · CORE-19 How much is this? · CORE-20 Could you help me with this?
+- **Nearest protected forms:** CORE-18 Can you drive? · CORE-19 How much is this? · CORE-20 Could you help me with this?
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
 ## Continuity
 
 - **Previous:** CORE-16 · What time do you get up?
-- **Next:** CORE-18 · I'm not sure
+- **Next:** CORE-18 · Can you drive?
 
 ## Authoring inputs — read in order
 

@@ -19,7 +19,7 @@
 - [`CORE-15`](CORE-15.md) · She works downtown
 - [`CORE-16`](CORE-16.md) · What time do you get up?
 - [`CORE-17`](CORE-17.md) · How often do you exercise?
-- [`CORE-18`](CORE-18.md) · I'm not sure
+- [`CORE-18`](CORE-18.md) · Can you drive?
 - [`CORE-19`](CORE-19.md) · How much is this?
 - [`CORE-20`](CORE-20.md) · Could you help me with this?
 - [`CORE-21`](CORE-21.md) · Can I try this on?
@@ -28,7 +28,7 @@
 - [`CORE-24`](CORE-24.md) · Sorry, could you say that again?
 - [`CORE-25`](CORE-25.md) · I'm working from home today
 - [`CORE-26`](CORE-26.md) · I usually drive, but today I'm walking
-- [`CORE-27`](CORE-27.md) · I don't understand
+- [`CORE-27`](CORE-27.md) · I like cooking
 - [`CORE-28`](CORE-28.md) · Are you free on Friday?
 - [`CORE-29`](CORE-29.md) · I'm meeting Sam at six
 - [`CORE-30`](CORE-30.md) · I was really tired yesterday
@@ -78,9 +78,9 @@
 - [`CORE-74`](CORE-74.md) · I was going to call, but
 - [`CORE-75`](CORE-75.md) · I used to walk to school
 - [`CORE-76`](CORE-76.md) · I had my phone repaired
-- [`CORE-77`](CORE-77.md) · I got someone to look at it
+- [`CORE-77`](CORE-77.md) · It was supposed to be ready
 - [`CORE-78`](CORE-78.md) · This time tomorrow I'll be flying
-- [`CORE-79`](CORE-79.md) · By Friday I'll have finished
+- [`CORE-79`](CORE-79.md) · I should have it ready by Friday
 - [`CORE-80`](CORE-80.md) · Let me know once it's ready
 - [`CORE-81`](CORE-81.md) · I'm responsible for customer support
 - [`CORE-82`](CORE-82.md) · We're on track, but
@@ -106,14 +106,14 @@
 - [`CORE-102`](CORE-102.md) · Otherwise, we'd have to start again
 - [`CORE-103`](CORE-103.md) · What worries me most is the cost
 - [`CORE-104`](CORE-104.md) · It's the timing that matters
-- [`CORE-105`](CORE-105.md) · Not only did we finish, we finished early
+- [`CORE-105`](CORE-105.md) · The sooner we start, the better
 - [`CORE-106`](CORE-106.md) · There's one thing I'd change
 - [`CORE-107`](CORE-107.md) · As for the budget,
 - [`CORE-108`](CORE-108.md) · Would you be able to
 - [`CORE-109`](CORE-109.md) · To put it bluntly
 - [`CORE-110`](CORE-110.md) · I hate to say it, but
 - [`CORE-111`](CORE-111.md) · Just so you know,
-- [`CORE-112`](CORE-112.md) · With all due respect
+- [`CORE-112`](CORE-112.md) · That came across as rude
 - [`CORE-113`](CORE-113.md) · The underlying issue is
 - [`CORE-114`](CORE-114.md) · That holds true up to a point
 - [`CORE-115`](CORE-115.md) · Granted, but that overlooks
@@ -122,5 +122,5 @@
 - [`CORE-118`](CORE-118.md) · That's one way of putting it
 - [`CORE-119`](CORE-119.md) · I'll leave it at that
 - [`CORE-120`](CORE-120.md) · You might want to check that
-- [`CORE-121`](CORE-121.md) · Let's just say it was memorable
+- [`CORE-121`](CORE-121.md) · I'd rather not go into it
 - [`CORE-122`](CORE-122.md) · It's not that simple

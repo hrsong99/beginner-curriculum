@@ -37,7 +37,7 @@
 
 - **Already learned:** Core 1–113.
 - **Not yet:** Core 115–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-111 Just so you know, · CORE-112 With all due respect · CORE-113 The underlying issue is
+- **Most recent available forms:** CORE-111 Just so you know, · CORE-112 That came across as rude · CORE-113 The underlying issue is
 - **Nearest protected forms:** CORE-115 Granted, but that overlooks · CORE-116 If anything, it's got worse · CORE-117 On balance, I'd say
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 

@@ -656,7 +656,7 @@ know who did → would you actually want it
 *Opens:* "Has anything about your day actually changed because of AI?"
 *Ladder:* what's different → what do you use it for → what did it replace → what does it get wrong →
 what would you never hand over → what will change next
-*Moves:* `I use it for ___ now.` **(Core 12)** · `It still can't ___.` **(Core 20)**
+*Moves:* `I use it for ___ now.` **(Core 12)** · `It still can't ___.` **(Core 18)**
 *Shared:* KR 7-7
 
 **71. Why I've thought about leaving** `story` `深く`
@@ -775,7 +775,7 @@ what would be different → was it luck or a decision
 *Opens:* "What do your family say you were like as a kid?"
 *Ladder:* what were you like → who says so → do you agree → one specific memory → how much is still
 true → what would that child think of you
-*Moves:* `Apparently I was ___.` **(Core 30)** · `I don't remember it that way.` **(Core 27)**
+*Moves:* `Apparently I was ___.` **(Core 30)** · `I don't remember it that way.` `chunk`
 *Shared:* **NEW → KR**
 
 **87. A place from childhood that's gone** `story`
@@ -899,7 +899,7 @@ manages it better than you → what would you tell a fourteen-year-old
 *Opens:* "What part of what you do would AI get wrong?"
 *Ladder:* which part → why exactly → have you tested it → what has it done well → what would you
 never hand over → what will that look like in five years
-*Moves:* `It still can't ___.` **(Core 20)** · `That suggests that ___.` **(Core 99)** `chunk`
+*Moves:* `It still can't ___.` **(Core 18)** · `That suggests that ___.` **(Core 99)** `chunk`
 *Shared:* KR 10-3
 
 **103. Money and happiness** `opinion` `深く`

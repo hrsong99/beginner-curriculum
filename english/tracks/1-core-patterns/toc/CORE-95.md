@@ -12,24 +12,24 @@
 
 ## Outcome
 
-- **Can do:** disagree at length while keeping the relationship.
+- **Can do:** identify the specific weakness in an argument without rejecting the whole position.
 - **Unit:** 17 · Diplomacy and disagreement
 
 ## Required production
 
 ### Pattern 1
 
-- **Model:** I take your point, but the timing worries me.
-- **Frame:** `I take your point, but ___.`
-
-### Pattern 2
-
 - **Model:** Where I'd push back is on the cost.
 - **Frame:** `Where I'd push back is on ___.`
 
+### Pattern 2
+
+- **Model:** I don't think that takes the delay into account.
+- **Frame:** `I don't think that takes ___ into account.`
+
 ## Supporting content
 
-- **Expressions:** `respectfully` · `let's park that`
+- **Expressions:** `I take your point` · `let's park that`
 - **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
 - **Japanese-L1 risk:** explicit disagreement markers are what allow English speakers to disagree *and* stay warm. Without them the learner's options are silence or bluntness.
 

@@ -38,13 +38,13 @@
 - **Already learned:** Core 1–25.
 - **Not yet:** Core 27–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-23 Two cups of coffee · CORE-24 Sorry, could you say that again? · CORE-25 I'm working from home today
-- **Nearest protected forms:** CORE-27 I don't understand · CORE-28 Are you free on Friday? · CORE-29 I'm meeting Sam at six
+- **Nearest protected forms:** CORE-27 I like cooking · CORE-28 Are you free on Friday? · CORE-29 I'm meeting Sam at six
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
 ## Continuity
 
 - **Previous:** CORE-25 · I'm working from home today
-- **Next:** CORE-27 · I don't understand
+- **Next:** CORE-27 · I like cooking
 
 ## Authoring inputs — read in order
 

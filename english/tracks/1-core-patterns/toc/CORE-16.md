@@ -38,7 +38,7 @@
 - **Already learned:** Core 1–15.
 - **Not yet:** Core 17–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-13 Do you drink coffee? · CORE-14 I don't drive to work · CORE-15 She works downtown
-- **Nearest protected forms:** CORE-17 How often do you exercise? · CORE-18 I'm not sure · CORE-19 How much is this?
+- **Nearest protected forms:** CORE-17 How often do you exercise? · CORE-18 Can you drive? · CORE-19 How much is this?
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
 ## Continuity
