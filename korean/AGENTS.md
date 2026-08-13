@@ -68,6 +68,15 @@ Structural checks alone never approve a pilot. If the pilot is rejected, rewrite
 do not use it as a template. After approval, draft three structurally different lessons, review
 those, and only then expand the remaining batch as described in the workflow.
 
+## Reviewing many existing lessons
+
+For a curriculum-wide proofreading, consistency check or other judgment-heavy audit, read
+[`PROOFREADING-WORKFLOW.md`](./PROOFREADING-WORKFLOW.md), especially **Token-efficient projected
+audits**. Do not give whole lesson HTML files to parallel reviewers when the question concerns a
+small semantic field. Project only the relevant `{source, pageId, field, current, context}` records,
+have reviewers return exact-match proposals without editing decks, and validate centrally before
+applying anything.
+
 Four inputs, in this order. Read them all — the budget saved by the first two is there to be
 spent on the last one.
 

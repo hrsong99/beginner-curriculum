@@ -79,6 +79,47 @@ it easy to overwrite markup or a newer correction. Instead:
 4. An editor applies approved changes to `lesson.html` explicitly.
 5. The projection is regenerated and checked.
 
+## Token-efficient projected audits
+
+Use this pattern when many decks need the **same narrow human judgment**—for example quoted-form
+boundaries, terminology consistency, Japanese parity, instruction clarity, vocabulary ownership,
+chip boundaries or component misuse. Do not send complete HTML decks to reviewers when the target
+can be represented as a few text fields.
+
+1. **Filter mechanically first.** Parse the HTML once and select only plausible candidates with a
+   deterministic rule. Export compact records such as
+   `{source, pageId, field, current, pairedText, context}`. Keep the source path and exact current
+   text so every proposed edit can be located without rereading the deck.
+2. **Batch by course, not by file.** A course-sized packet gives enough local terminology and
+   teaching context while avoiding repeated instructions for every lesson. Split only on disjoint
+   source sets so parallel reviewers cannot edit the same line.
+3. **Reviewers propose; they do not write.** Give reviewers the compact packet plus one short,
+   explicit decision contract. Their output contains exact `current` and `suggested` strings (or
+   old/new values for paired fields). They never open or modify `lesson.html`.
+4. **Make the allowed mutation mechanically provable.** For a quote-only pass, removing the newly
+   inserted quote characters from `suggested` must reproduce `current` byte-for-byte. For another
+   audit, define an equally narrow invariant rather than relying on a reviewer saying it changed
+   only the intended thing.
+5. **Validate centrally before applying.** Reject stale or non-unique source text, malformed or
+   unbalanced markup, no-ops, one-sided paired-language changes, wording drift and conflicting
+   proposals for the same source field. Apply accepted edits from one coordinator using explicit
+   paths, then run the repository's structural/runtime checks.
+6. **Audit the skips.** A conservative first pass should prefer leaving an uncertain candidate
+   alone. Give the skipped set—not the whole corpus—to a second reviewer, then inspect any large or
+   surprising recovery before applying it. This catches false negatives without paying for a
+   second full read.
+
+The projection is disposable; the **extractor, decision contract and validator are the durable
+method**. Save those in the repository when an audit will recur, but do not commit one-time packet
+or proposal output. Static checks should enforce objective invariants; projected human review is
+for questions where the same markup can be either correct or wrong depending on meaning.
+
+For paired tutor scripts specifically, project the direct `.section-subtitle > .ko` and `.ja`
+text plus `data-page-id`. Japanese prose containing a Hangul run is a strong citation-boundary
+signal, but not proof: role names, register names and bare jamo used as phonological conditions can
+legitimately remain unquoted. The canonical quote rules are in `AUTHORING.md`; sentence splitting
+must agree with `runtime/js/script-lines.js`, including its quote-aware behavior.
+
 If either the lesson hash or current field text changed after extraction, issue validation fails.
 The reviewer then uses a newly generated packet instead of guessing how to merge stale prose.
 
