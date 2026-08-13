@@ -30,7 +30,10 @@ import urllib.error
 import urllib.request
 
 KOREAN = pathlib.Path(__file__).resolve().parent.parent
-RUNTIME = KOREAN / "runtime"
+# runtime/ sits at the repo root, not inside korean/ — the Korean and English
+# curricula share one runtime, so it is nobody's language folder.
+ROOT = KOREAN.parent
+RUNTIME = ROOT / "runtime"
 
 # Where the production repo usually sits, so the pin can be read rather than
 # typed. Falls back to asking, because a wrong pin is worse than no answer.

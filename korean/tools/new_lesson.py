@@ -126,11 +126,17 @@ def find_course(track_dir: Path, lesson_no: int) -> str:
 
 
 def redepth(page: str, out: Path) -> str:
-    """Rewrite `../../runtime/…` for wherever the deck actually landed.
+    """Rewrite `../…/runtime/…` and `../…/trial/…` for wherever the deck landed.
 
     The skeleton is lifted off a deck at the track root, but lessons live four
     levels deeper under courses/<course>/lessons/<slug>/. Getting this wrong
     gives a deck that renders unstyled with nothing in the console to explain it.
+
+    **The two targets no longer sit at the same level.** `runtime/` was hoisted to
+    the repo root so the Korean and English curricula can share one copy;
+    `trial/assets/` stayed inside `korean/`. So a ref out to the runtime needs one
+    more `../` than a ref out to the assets, and a single depth applied to both —
+    which is what this function used to do — silently 404s one of them.
     """
     try:
         depth = len(out.resolve().parent.relative_to(KOREAN).parts)
@@ -139,7 +145,13 @@ def redepth(page: str, out: Path) -> str:
         # refs alone and say so rather than writing paths that cannot resolve.
         print(f"! {out} is outside {KOREAN} — runtime refs left as-is and will not resolve")
         return page
-    return REL_REF_RE.sub(lambda m: m.group(1) + "../" * depth + m.group(2) + "/", page)
+
+    def fix(m: "re.Match[str]") -> str:
+        target = m.group(2)
+        ups = depth + 1 if target == "runtime" else depth
+        return m.group(1) + "../" * ups + target + "/"
+
+    return REL_REF_RE.sub(fix, page)
 
 
 def retarget(head: str, *, lesson_id: str, level: str, titles: dict, version: str) -> str:

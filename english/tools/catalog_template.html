@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Podo English Review Catalog</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<style>
+  @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+  :root{
+    --ground:#FFFFFF; --surface:#FFFFFF; --sunk:#F5F7F8; --band:#EEF2FD;
+    --ink:#16181A; --ink-2:#454A4F; --ink-3:#70777D;
+    --line:#E6E8EA; --line-2:#D7DCE0;
+    --accent:#2B5FD9; --accent-soft:#EEF2FD;
+    --pattern-mark:#FFDFC7; --pattern-ink:#9B4616;
+    --warn:#8A5A08; --warn-soft:#FBF1DF;
+    --radius:4px; --radius-sm:2px;
+  }
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+    --ground:#111317; --surface:#181B20; --sunk:#20242A; --band:#1B294A;
+    --ink:#F1F3F5; --ink-2:#BEC4CA; --ink-3:#8D959D;
+    --line:#2D3239; --line-2:#3A414A;
+    --accent:#8EAEFF; --accent-soft:#1D2944;
+    --pattern-mark:#4B2D1E; --pattern-ink:#FFB27E;
+    --warn:#E0B25C; --warn-soft:#2F2412;
+  }}
+  :root[data-theme="dark"]{
+    --ground:#111317; --surface:#181B20; --sunk:#20242A; --band:#1B294A;
+    --ink:#F1F3F5; --ink-2:#BEC4CA; --ink-3:#8D959D;
+    --line:#2D3239; --line-2:#3A414A;
+    --accent:#8EAEFF; --accent-soft:#1D2944;
+    --pattern-mark:#4B2D1E; --pattern-ink:#FFB27E;
+    --warn:#E0B25C; --warn-soft:#2F2412;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--ground);color:var(--ink);
+    font:400 16px/1.6 "Pretendard",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+    -webkit-font-smoothing:antialiased;}
+  code{font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,monospace;font-size:.88em;}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 28px 100px;}
+
+  header{padding:46px 0 30px;border-bottom:1px solid var(--line-2);}
+  .eyebrow{font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3);font-weight:600;margin:0 0 12px;}
+  h1{font-size:clamp(32px,5vw,44px);line-height:1.08;font-weight:780;margin:0 0 14px;
+    letter-spacing:-.04em;}
+  .lede{font-size:17px;color:var(--ink-2);margin:0 0 20px;max-width:64ch;text-wrap:pretty;}
+  .how{background:var(--accent-soft);border-radius:var(--radius);padding:16px 19px;font-size:15px;color:var(--ink-2);max-width:68ch;}
+  .how b{color:var(--ink);}
+  .how code{background:var(--surface);padding:.1em .4em;border-radius:3px;}
+
+  nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--ground) 94%,transparent);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--line);margin-bottom:8px;}
+  nav .inner{max-width:1040px;margin:0 auto;padding:0 28px;display:flex;gap:2px;align-items:center;overflow-x:auto;}
+  nav a{font-size:13px;font-weight:650;text-decoration:none;color:var(--ink-3);border-bottom:2px solid transparent;
+    padding:13px 14px 11px;white-space:nowrap;}
+  nav a:hover{border-bottom-color:var(--accent);color:var(--accent);}
+  nav .n{font-variant-numeric:tabular-nums;color:var(--ink-3);margin-left:5px;}
+
+  h2.track{font-size:28px;font-weight:780;margin:56px 0 6px;letter-spacing:-.035em;scroll-margin-top:64px;}
+  .track-note{color:var(--ink-3);font-size:15px;margin:0 0 26px;max-width:64ch;}
+  h2.show{font-size:20px;font-weight:750;
+    margin:44px 0 4px;color:var(--accent);}
+  h3.grp{font-size:12px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);
+    font-weight:700;margin:34px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line);}
+
+  .it{border:1px solid color-mix(in srgb,var(--accent) 36%,var(--line-2));border-radius:var(--radius);
+    background:color-mix(in srgb,var(--accent-soft) 58%,var(--surface));
+    padding:20px 22px 15px;margin-bottom:12px;scroll-margin-top:64px;}
+  .it:target{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft);}
+  .hd{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px;}
+  .rid{font-family:ui-monospace,Menlo,monospace;font-size:10.5px;font-weight:750;
+    letter-spacing:.02em;color:#fff;background:var(--accent);border-radius:var(--radius-sm);
+    text-decoration:none;padding:3px 7px;}
+  .rid:hover{color:#fff;filter:brightness(.88);}
+  .hd h4{font-size:17px;font-weight:750;margin:0;letter-spacing:-.018em;color:var(--ink);}
+  .flag,.tag{font-size:10px;font-weight:650;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--ink-3);}
+  .tag.deep{text-transform:none;letter-spacing:0;color:var(--warn);}
+  .scene{font-size:12.5px;color:var(--ink-3);margin:-7px 0 16px;line-height:1.6;font-style:italic;}
+
+  /* The same five-level lesson detail hierarchy as the Korean catalog. */
+  .field + .field{margin-top:20px;}
+  .field > .lbl{display:inline-flex;align-items:center;margin-bottom:10px;padding:4px 7px;
+    border-radius:var(--radius-sm);background:color-mix(in srgb,var(--accent) 10%,var(--surface));
+    color:var(--accent);font-size:10.5px;letter-spacing:.045em;}
+  .field-goal{position:relative;padding:14px 16px 14px 46px;border-radius:var(--radius-sm);
+    background:color-mix(in srgb,var(--surface) 82%,transparent);}
+  .field-goal::before{content:"";position:absolute;left:17px;top:17px;width:22px;height:22px;
+    border-radius:var(--radius-sm);background:var(--accent);}
+  .field-goal::after{content:"";position:absolute;left:25px;top:21px;width:5px;height:10px;
+    border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg);}
+  .field-goal > .lbl{margin-bottom:5px;padding:0;background:none;}
+  .goal{margin:0;max-width:62ch;color:var(--ink);font-size:15px;font-weight:650;line-height:1.65;text-wrap:pretty;}
+
+  .pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;}
+  .say{position:relative;min-width:0;padding:16px;border-radius:var(--radius-sm);
+    background:color-mix(in srgb,var(--surface) 88%,transparent);}
+  .pn{position:absolute;right:14px;top:14px;color:var(--accent);font-family:ui-monospace,Menlo,monospace;
+    font-size:10px;font-weight:800;letter-spacing:.06em;opacity:.72;}
+  .model{padding-right:24px;font-size:18.5px;line-height:1.45;color:var(--ink);margin:0;
+    font-weight:720;letter-spacing:-.025em;text-wrap:pretty;}
+  .frame{margin:10px 0 0;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12.5px;line-height:1.6;color:var(--pattern-ink);letter-spacing:-.01em;font-weight:650;}
+  .slot{display:inline-block;background:var(--pattern-mark);color:var(--pattern-ink);font-weight:800;
+    border-radius:var(--radius-sm);padding:0 3px;margin:0 -1px;line-height:1.35;}
+  .who{font-size:10.5px;font-weight:700;letter-spacing:.07em;color:var(--ink-3);
+    margin-right:7px;text-transform:uppercase;}
+  .reply{margin:9px 0 0;font-size:13px;color:var(--ink-3);line-height:1.55;}
+  .reply::before{content:"\21B3";color:var(--ink-3);margin-right:6px;}
+  .core{font-size:10.5px;color:var(--ink-3);margin-left:8px;white-space:nowrap;opacity:.8;}
+
+  .lbl{font-size:9.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+    color:var(--ink-3);margin-right:8px;}
+  .said{display:flex;flex-wrap:wrap;gap:6px;}
+  .said > span{padding:5px 10px;border-radius:var(--radius-sm);
+    background:color-mix(in srgb,var(--surface) 88%,transparent);color:var(--ink-2);
+    font-size:12.5px;font-weight:600;}
+  .said code{font-family:inherit;font-size:inherit;font-weight:650;}
+  .rule,.transfer{margin:0;max-width:68ch;color:var(--ink-2);font-size:12.5px;line-height:1.7;text-wrap:pretty;}
+  .rule code,.transfer code{background:none;color:inherit;font-weight:650;}
+  .field-transfer{padding-left:14px;border-left:2px solid var(--line-2);}
+  .field-transfer > .lbl{margin-bottom:5px;padding:0;background:none;color:var(--ink-3);}
+  .transfer{color:var(--ink-3);}
+  .field-opening .pair{grid-template-columns:1fr;}
+
+  /* ---------- review layer ---------- */
+  .it.flagged{border-color:var(--warn);}
+  .it.flagged::before{content:"";position:absolute;left:-1px;top:-1px;bottom:-1px;width:3px;
+    background:var(--warn);border-radius:var(--radius) 0 0 var(--radius);}
+  .it{position:relative;}
+  .it.flagged .rid{background:var(--warn);color:#fff;}
+  .rev{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:20px;padding-top:11px;
+    border-top:1px solid color-mix(in srgb,var(--line) 75%,transparent);
+    justify-content:flex-end;}
+  .btn{font:inherit;font-size:12px;font-weight:600;cursor:pointer;border:none;
+    background:none;color:var(--ink-3);padding:2px 0;line-height:1.5;}
+  .btn:hover{color:var(--accent);}
+  .btn[aria-pressed="true"]{color:var(--warn);}
+  .btn[aria-pressed="true"]::before{content:"\2715";margin-right:5px;font-size:10px;}
+  .note{flex:1 0 100%;font:inherit;font-size:14px;color:var(--ink);background:var(--sunk);
+    border:1px solid var(--line-2);border-radius:7px;padding:9px 11px;resize:vertical;
+    min-height:40px;display:none;margin-top:4px;}
+  .note.on{display:block;}
+  .has-note .btn.cmt{color:var(--accent);}
+
+  #bar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--surface);
+    border-top:1px solid var(--line-2);box-shadow:0 -6px 20px rgba(0,0,0,.08);}
+  #bar .inner{max-width:1040px;margin:0 auto;padding:11px 28px;display:flex;
+    gap:14px;align-items:center;flex-wrap:wrap;}
+  #tally{font-size:14px;color:var(--ink-2);font-variant-numeric:tabular-nums;}
+  #tally b{color:var(--ink);}
+  #bar .spacer{flex:1;}
+  .btn.primary{background:var(--accent);color:var(--ground);padding:7px 17px;
+    font-size:13.5px;border-radius:7px;}
+  .btn.ghost{border:1px solid var(--line-2);border-radius:7px;padding:6px 14px;}
+  #saved{font-size:12.5px;color:var(--ink-3);}
+
+  #wrapup{margin-top:64px;padding:26px;border:1px solid var(--line-2);border-radius:var(--radius);
+    background:var(--surface);}
+  #wrapup h2{font-size:22px;margin:0 0 8px;font-weight:750;letter-spacing:-.02em;}
+  #wrapup p{color:var(--ink-2);font-size:15px;margin:0 0 15px;max-width:62ch;}
+  #general{width:100%;font:inherit;font-size:15px;color:var(--ink);background:var(--sunk);
+    border:1px solid var(--line-2);border-radius:8px;padding:12px 14px;min-height:120px;resize:vertical;}
+  #out{width:100%;font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:var(--ink-2);
+    background:var(--sunk);border:1px solid var(--line);border-radius:8px;padding:12px;
+    min-height:150px;margin-top:14px;display:none;white-space:pre;overflow:auto;}
+  #out.on{display:block;}
+  body{padding-bottom:74px;}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;}}
+
+  footer{margin-top:64px;padding-top:22px;border-top:1px solid var(--line);
+    color:var(--ink-3);font-size:14px;}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+  @media (max-width:700px){
+    .wrap{padding:0 18px 80px;}
+    nav .inner{padding:0 18px;}
+    .it{padding:17px 16px 14px;}
+    .pair{grid-template-columns:1fr;}
+    .say{padding:14px;}
+    .model{font-size:17px;}
+    .field-goal{padding:14px 14px 14px 46px;}
+    #bar .inner{padding:10px 18px;}
+  }
+</style>
+</head>
+<body>
+
+<nav><div class="inner">
+  <a href="#core">Core<span class="n">{{N_CORE}}</span></a>
+  <a href="#ctx">Contextual<span class="n">{{N_CTX}}</span></a>
+  <a href="#ft">Freetalking<span class="n">{{N_FT}}</span></a>
+</div></nav>
+
+<div class="wrap">
+<header>
+  <p class="eyebrow">Podo · English for Japanese speakers · for native review</p>
+  <h1>Everything the curriculum asks a learner to say</h1>
+  <p class="lede">{{N_ALL}} items across three tracks, and <b>none of it has been read by a native speaker yet</b>. The sentences are set large because they are the thing being judged; frames, Core links and difficulty notes are context, sized to stay out of the way.</p>
+  <div class="how">
+    <p style="margin:0 0 9px"><b>What to look for:</b> would a native speaker actually say this, in this situation? Not whether it is grammatical — everything here is. Whether it is what a person reaches for.</p>
+    <p style="margin:0"><b>How to flag it:</b> every item has an id. Write <code>CORE-31: nobody says this</code> and it is unambiguous. A rejected sentence is not deleted — it moves to the expressions line, so the learner still meets it but is not asked to produce it.</p>
+  </div>
+</header>
+
+<h2 class="track" id="core">Core Patterns</h2>
+<p class="track-note">The main sequence, Pre-A1 to C1. Two frames per lesson, and they have to work together in one exchange. Lessons past 70 are Part 2 — written scene-first, but Korean's equivalent lost 28 of 120 patterns at this stage, so expect a cull rather than a pass.</p>
+{{CORE}}
+
+<h2 class="track" id="ctx">Contextual English</h2>
+<p class="track-note">Four shows with a cast, told in seasons of six episodes. The learner plays 私; the reply after each line is what the other character says back. Judge the exchange, not just the sentence — a line that reads fine alone can be wrong as an answer.</p>
+{{CTX}}
+
+<h2 class="track" id="ft">Freetalking</h2>
+<p class="track-note">One topic per session. The line shown is the <i>opening question</i> — the sentence the tutor actually says first, which is what has to land within three seconds. The ladder is the pool of follow-ups, not a script.</p>
+{{FT}}
+
+<section id="wrapup">
+  <h2>Anything general?</h2>
+  <p>Things that apply across many items — a register that is off throughout, a word this curriculum keeps reaching for that natives do not, a whole track that feels wrong. This is often more useful than the individual flags.</p>
+  <textarea id="general" placeholder="e.g. The workplace episodes read American to me — a British speaker would say &quot;have a look&quot;, not &quot;take a look&quot;, throughout."></textarea>
+  <div style="display:flex;gap:9px;margin-top:15px;flex-wrap:wrap;align-items:center">
+    <button class="btn primary" id="copy2" type="button">Copy review to clipboard</button>
+    <button class="btn ghost" id="show" type="button">Show as text</button>
+    <button class="btn ghost" id="reset" type="button">Clear everything</button>
+  </div>
+  <textarea id="out" readonly aria-label="Review as plain text"></textarea>
+</section>
+
+<footer>Generated from the three <code>table-of-contents.md</code> files by <code>english/tools/build_catalog.py</code>. It holds no facts of its own — a wrong line here is a wrong line in a TOC. Re-run after any change; never hand-edit.</footer>
+</div>
+
+<div id="bar"><div class="inner">
+  <span id="tally">Nothing marked yet</span>
+  <span id="saved"></span>
+  <span class="spacer"></span>
+  <button class="btn primary" id="copy1" type="button">Copy review</button>
+</div></div>
+
+<script>
+(function(){
+  "use strict";
+  var KEY="podo-en-review-v1", st={items:{},general:""};
+  try{ st=Object.assign(st, JSON.parse(localStorage.getItem(KEY)||"{}")); }catch(e){}
+  if(!st.items) st.items={};
+
+  var savedEl=document.getElementById("saved"), tmr;
+  function save(){
+    try{ localStorage.setItem(KEY, JSON.stringify(st)); }catch(e){}
+    savedEl.textContent="saved"; clearTimeout(tmr);
+    tmr=setTimeout(function(){ savedEl.textContent=""; },1600);
+    tally();
+  }
+  function rec(id){ return st.items[id]||(st.items[id]={flag:false,note:""}); }
+
+  var arts=[].slice.call(document.querySelectorAll("article.it"));
+  arts.forEach(function(a){
+    var id=a.id, r=st.items[id]||{flag:false,note:""};
+    var row=document.createElement("div"); row.className="rev";
+
+    var flag=document.createElement("button");
+    flag.type="button"; flag.className="btn"; flag.textContent="Flag this";
+    flag.setAttribute("aria-pressed", r.flag?"true":"false");
+    flag.setAttribute("aria-label","Flag "+id+" as wrong");
+
+    var cmt=document.createElement("button");
+    cmt.type="button"; cmt.className="btn cmt"; cmt.textContent="Comment";
+    cmt.setAttribute("aria-expanded", r.note?"true":"false");
+
+    var note=document.createElement("textarea");
+    note.className="note"; note.value=r.note||"";
+    note.placeholder="What is wrong with it, or what would you say instead?";
+    note.setAttribute("aria-label","Comment on "+id);
+
+    if(r.flag) a.classList.add("flagged");
+    if(r.note){ note.classList.add("on"); a.classList.add("has-note"); }
+
+    flag.addEventListener("click",function(){
+      var v=flag.getAttribute("aria-pressed")!=="true";
+      flag.setAttribute("aria-pressed", v?"true":"false");
+      a.classList.toggle("flagged",v); rec(id).flag=v; save();
+    });
+    cmt.addEventListener("click",function(){
+      var on=note.classList.toggle("on");
+      cmt.setAttribute("aria-expanded", on?"true":"false");
+      if(on) note.focus();
+    });
+    note.addEventListener("input",function(){
+      rec(id).note=note.value;
+      a.classList.toggle("has-note", !!note.value.trim()); save();
+    });
+
+    row.appendChild(flag); row.appendChild(cmt); row.appendChild(note);
+    a.appendChild(row);
+  });
+
+  var gen=document.getElementById("general");
+  gen.value=st.general||"";
+  gen.addEventListener("input",function(){ st.general=gen.value; save(); });
+
+  function counts(){
+    var f=0,c=0;
+    Object.keys(st.items).forEach(function(k){
+      var r=st.items[k];
+      if(r.flag) f++;
+      if(r.note && r.note.trim()) c++;
+    });
+    return {f:f,c:c};
+  }
+  function tally(){
+    var n=counts();
+    document.getElementById("tally").innerHTML =
+      (n.f||n.c) ? "<b>"+n.f+"</b> flagged &middot; <b>"+n.c+"</b> commented"
+                 : "Nothing marked yet";
+  }
+  function build(){
+    var n=counts(), L=[];
+    L.push("PODO ENGLISH CURRICULUM — NATIVE REVIEW");
+    L.push(arts.length+" items · "+n.f+" flagged · "+n.c+" commented");
+    L.push("");
+    if((st.general||"").trim()){ L.push("## GENERAL"); L.push(st.general.trim()); L.push(""); }
+    var flg=[], note=[];
+    arts.forEach(function(a){
+      var r=st.items[a.id]; if(!r) return;
+      var has=r.note && r.note.trim();
+      if(!r.flag && !has) return;
+      var h=a.querySelector("h4"), m=a.querySelector(".model");
+      // Contextual model lines carry a `.who` speaker chip; without this the
+      // label runs straight into the sentence ("私We're on track...").
+      var say="";
+      if(m){
+        var who=m.querySelector(".who");
+        say=(who? who.textContent.trim()+": " : "")+
+            (who? m.textContent.slice(who.textContent.length) : m.textContent).trim();
+      }
+      var e=a.id+"  "+(h?h.textContent.trim():"")+
+            "\n    says: "+say+
+            (has ? "\n    → "+r.note.trim().replace(/\n/g,"\n      ") : "");
+      (r.flag?flg:note).push(e);
+    });
+    if(flg.length){ L.push("## FLAGGED — "+flg.length); L.push(flg.join("\n\n")); L.push(""); }
+    if(note.length){ L.push("## COMMENTS, not flagged — "+note.length); L.push(note.join("\n\n")); L.push(""); }
+    if(!flg.length && !note.length && !(st.general||"").trim()) L.push("(nothing marked)");
+    return L.join("\n");
+  }
+  function copy(btn){
+    var txt=build(), old=btn.textContent;
+    function ok(){ btn.textContent="Copied ✓"; setTimeout(function(){ btn.textContent=old; },1800); }
+    function fb(){
+      var o=document.getElementById("out");
+      o.value=txt; o.classList.add("on"); o.focus(); o.select();
+      try{ document.execCommand("copy"); ok(); }
+      catch(e){ btn.textContent="Copy the text below"; setTimeout(function(){ btn.textContent=old; },2600); }
+    }
+    if(navigator.clipboard && navigator.clipboard.writeText)
+      navigator.clipboard.writeText(txt).then(ok, fb);
+    else fb();
+  }
+  document.getElementById("copy1").addEventListener("click",function(){ copy(this); });
+  document.getElementById("copy2").addEventListener("click",function(){ copy(this); });
+  document.getElementById("show").addEventListener("click",function(){
+    var o=document.getElementById("out"); o.value=build(); o.classList.toggle("on");
+  });
+  document.getElementById("reset").addEventListener("click",function(){
+    if(!confirm("Clear every flag and comment? This cannot be undone.")) return;
+    try{ localStorage.removeItem(KEY); }catch(e){}
+    location.reload();
+  });
+  tally();
+})();
+</script>
+</body>
+</html>
