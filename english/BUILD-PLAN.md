@@ -265,7 +265,7 @@ copy of anything. Same rule here.
 - [ ] **T3.12 — Regenerate the grammar coverage map.** It is bannered stale: it describes the
   retired 72-lesson spine, every row number is wrong, and it has no column for the `JP:` difficulty
   field the new TOC carries. Not a find-and-replace — the restructure split and merged lessons.
-- [ ] **T3.13 — Re-derive Contextual and Freetalking prerequisites.** 72 `Core N` references across
+- [x] **T3.13 — Contextual half DONE**; Freetalking still stale. Re-derive Contextual and Freetalking prerequisites. 72 `Core N` references across
   the two tracks now point at the wrong lessons. Folded into the D7 rebuild, which rewrites those
   courses anyway.
 
@@ -273,7 +273,8 @@ copy of anything. Same rule here.
 
 ## Phase 5 · Track rebuilds and new tracks — **size XL**
 
-- [ ] **T5.1** — **Contextual identity** (gated on D7). If "show": season bibles, named casts,
+- [x] **T5.1 — DONE 2026-08-13.** Contextual rebuilt as 4 shows · 10 seasons · 60 episodes, each with a cast, an arc, a `場面:` line and a partner reaction per learner line. Also clears **T3.13** — all 71 Core references re-derived against the 122-lesson spine and verified in range.
+- [x] ~~**T5.1 (old)** — Contextual identity (gated on D7).~~ If "show": season bibles, named casts,
   relationship state, episode arcs, a scenes-spent ledger. Korean's stated failure mode is the
   reverse direction — teaching grammar and sprinkling in themed vocabulary.
 - [ ] **T5.2** — **Freetalking repair.** Currently 24 topics vs Korean's 105 × 2 levels = 210.

@@ -50,9 +50,16 @@ contextual deck onward, the way `korean/tracks/_conventions.md` is for the drama
 **Contextual English** — one work per course, each with its own cast, photo avatars, and a
 relationship state that carries across episodes.
 
-| Course | Work title | Cast | Relationship state |
+| Show | Seasons | Cast | Arc |
 | --- | --- | --- | --- |
-| *(none yet)* | | | |
+| **The Exchange** | 3 · eps 1–18 | Ellie (housemate, blunt) · Marcus (tutor) · Priya (fellow international student) | stranger → housemate → friend leaving |
+| **The 9 A.M. Call** | 3 · eps 19–36 | Dana (overseas counterpart, direct) · Kenji (私's JP manager) · Tom (engineer, informal) | polite silence → flagging risk → owning a decision |
+| **Two Weeks** | 2 · eps 37–48 | Sana (travel companion) · 相手 (a different stranger each episode) | transactions → problems → thanking someone |
+| **Saturday People** | 2 · eps 49–60 | Ray (Australian, leaving) · Mei (bilingual bridge) · Jonas (newer than 私) | nodding → belonging → advising Ray |
+
+**Names are spent.** Do not reuse Ellie, Marcus, Priya, Dana, Kenji, Tom, Sana, Ray, Mei or Jonas
+for a different person in another show — a learner taking two shows will read them as the same
+character.
 
 **The learner is a role, not a spectator.** The speaker of every learner line is `私` — the part
 the learner performs. The tutor reads the other role.
@@ -75,6 +82,11 @@ the learner meets today's pattern somewhere they have not been yet.
 | --- | --- | --- |
 | Airport check-in counter, too much luggage | Core 20 `in-the-wild` | core |
 | New office, moving boxes in | Core 20 `p3-model` (main dialogue, **not** available as a transfer scene) | core |
+| **60 contextual scenes** — every episode's `場面:` line | `2-contextual-english` eps 1–60 | contextual |
+
+**The contextual track assigns its own scenes in the TOC**, one per episode, which is the
+up-front assignment Korean recommends for a parallel batch. Do not pick a contextual scene
+yourself — take the `場面:` line from the episode. Core transfer scenes must not reuse one.
 
 **Assign scenes up front for a parallel batch, one per lesson**, and let the assignment travel in
 each writer's packet. Korean assigned 과 11–45 in advance precisely so parallel writers could not
