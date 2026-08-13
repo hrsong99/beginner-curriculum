@@ -89,6 +89,24 @@ def inline(s):
     return s
 
 
+def field_block(label, value, kind="rule"):
+    """Render one Korean-catalog-style detail field.
+
+    Short reusable phrases become individual tiles; explanatory material stays
+    a single quiet line so it cannot compete with the learning outcome or the
+    two production patterns.
+    """
+    if not value:
+        return ""
+    if kind == "said":
+        parts = [p.strip() for p in value.split(" · ") if p.strip()]
+        content = '<div class="said">' + "".join(
+            f"<span>{inline(p)}</span>" for p in parts) + "</div>"
+    else:
+        content = f'<p class="{kind}">{inline(value)}</p>'
+    return f'<section class="field field-{kind}"><span class="lbl">{label}</span>{content}</section>'
+
+
 # ---------------------------------------------------------------- parsers
 
 def parse_core():
@@ -176,21 +194,21 @@ def render_core(items):
         if kind == "unit":
             h.append(f'<h3 class="grp">{html.escape(it)}</h3>')
             continue
-        rows = '<div class="pair">' + "".join(
+        rows = '<section class="field field-patterns"><span class="lbl">Patterns</span><div class="pair">' + "".join(
             f'<div class="say"><span class="pn">{i}</span>'
             f'<p class="model">{html.escape(m)}</p>'
             f'<p class="frame">{frame(f)}{inline(tail)}</p></div>'
-            for i, (m, f, tail) in enumerate(it["models"], 1)) + '</div>' 
-        meta = "".join(
-            f'<p class="meta"><span class="lbl">{lbl}</span>{inline(v)}</p>'
-            for lbl, v in (("Expressions", it["expr"]), ("Grammar", it["gram"])) if v)
-        jp = f'<p class="jp"><span class="lbl">JP</span>{inline(it["jp"])}</p>' if it["jp"] else ""
+            for i, (m, f, tail) in enumerate(it["models"], 1)) + '</div></section>'
+        goal = (f'<section class="field field-goal"><span class="lbl">Learning outcome</span>'
+                f'<p class="goal">{html.escape(it["cando"])}</p></section>')
+        meta = field_block("Expressions", it["expr"], "said") + field_block("Grammar", it["gram"])
+        jp = field_block("Japanese transfer note", it["jp"], "transfer")
         flag = '<span class="flag">unreviewed</span>' if it["part"] else ""
         h.append(
             f'<article class="it" id="{it["id"]}">'
             f'<div class="hd"><a class="rid" href="#{it["id"]}">{it["id"]}</a>'
             f'<h4>{html.escape(it["title"])}</h4>{flag}</div>'
-            f'<p class="cando">{html.escape(it["cando"])}</p>{rows}{meta}{jp}</article>')
+            f'{goal}{rows}{meta}{jp}</article>')
     return "".join(h)
 
 
@@ -201,21 +219,22 @@ def render_ctx(items):
             h.append(f'<h2 class="show">{html.escape(it["show"])}</h2>')
             lastshow = it["show"]
         h.append(f'<h3 class="grp">{html.escape(it["unit"])}</h3>' if it["n"] % 6 == 1 else "")
-        turns = '<div class="pair">' + "".join(
+        turns = '<section class="field field-patterns"><span class="lbl">Learner lines</span><div class="pair">' + "".join(
             f'<div class="say"><span class="pn">{i}</span>'
             f'<p class="model">{html.escape(l)}</p>'
             f'<p class="frame">{frame(f)}{inline(tail)}</p>'
             f'<p class="reply"><span class="who">{html.escape(who)}</span>{html.escape(rep)}</p></div>'
-            for i, (l, f, tail, who, rep) in enumerate(it["turns"], 1)) + '</div>' 
-        extra = "".join(
-            f'<p class="meta"><span class="lbl">{lbl}</span>{inline(v)}</p>'
-            for lbl, v in (("Expressions", it["expr"]), ("Understand", it["understand"])) if v)
+            for i, (l, f, tail, who, rep) in enumerate(it["turns"], 1)) + '</div></section>'
+        goal = (f'<section class="field field-goal"><span class="lbl">Learning outcome</span>'
+                f'<p class="goal">{html.escape(it["cando"])}</p></section>')
+        extra = (field_block("Expressions", it["expr"], "said")
+                 + field_block("Understand", it["understand"], "said"))
         h.append(
             f'<article class="it" id="{it["id"]}">'
             f'<div class="hd"><a class="rid" href="#{it["id"]}">{it["id"]}</a>'
             f'<h4>{html.escape(it["title"])}</h4><span class="flag">unreviewed</span></div>'
             f'<p class="scene">{html.escape(it["scene"])}</p>'
-            f'<p class="cando">{html.escape(it["cando"])}</p>{turns}{extra}</article>')
+            f'{goal}{turns}{extra}</article>')
     return "".join(h)
 
 
@@ -227,15 +246,16 @@ def render_ft(items):
             continue
         tags = (f'<span class="tag">{it["fmt"]}</span>' if it["fmt"] else "") + \
                ('<span class="tag deep">深く</span>' if it["deep"] else "")
+        opening = (f'<section class="field field-patterns field-opening"><span class="lbl">Opening question</span>'
+                   f'<div class="pair"><div class="say"><span class="pn">Q</span>'
+                   f'<p class="model">{html.escape(it["opens"])}</p></div></div></section>')
+        support = (field_block("Follow-up ladder", it["ladder"])
+                   + field_block("Useful moves", it["moves"], "said"))
         h.append(
             f'<article class="it" id="{it["id"]}">'
             f'<div class="hd"><a class="rid" href="#{it["id"]}">{it["id"]}</a>'
             f'<h4>{html.escape(it["title"])}</h4>{tags}</div>'
-            f'<div class="pair"><div class="say"><span class="pn">Q</span>'
-            f'<p class="model">{html.escape(it["opens"])}</p></div></div>'
-            f'<p class="meta"><span class="lbl">Ladder</span>{inline(it["ladder"])}</p>'
-            + (f'<p class="meta"><span class="lbl">Moves</span>{inline(it["moves"])}</p>' if it["moves"] else "")
-            + f'</article>')
+            f'{opening}{support}</article>')
     return "".join(h)
 
 
