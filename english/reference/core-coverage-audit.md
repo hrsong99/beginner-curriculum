@@ -1,8 +1,8 @@
 # Core Coverage and Disposition Audit
 
-**Status:** targeted recommendations applied; affected rows require native re-review  
-**Audited:** 2026-08-13  
-**Applied:** 2026-08-13  
+**Status:** targeted recommendations applied; affected rows require native re-review
+**Audited:** 2026-08-13
+**Applied:** 2026-08-13
 **Scope:** 122 Core lessons; stable IDs preserved
 
 ## Verdict
