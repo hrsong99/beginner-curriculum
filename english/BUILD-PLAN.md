@@ -277,7 +277,11 @@ copy of anything. Same rule here.
 - [x] ~~**T5.1 (old)** — Contextual identity (gated on D7).~~ If "show": season bibles, named casts,
   relationship state, episode arcs, a scenes-spent ledger. Korean's stated failure mode is the
   reverse direction — teaching grammar and sprinkling in themed vocabulary.
-- [x] **T5.2 — DONE 2026-08-13.** Freetalking rebuilt: 24 topics → **10 themes · 50 topics × 2 levels**, a ladder per topic, the two-version method stated, and the essay prompts removed. ~~Freetalking repair.~~ Currently 24 topics vs Korean's 105 × 2 levels = 210.
+- [x] **T5.2 — DONE 2026-08-13, then rebuilt again against the full Korean track.** Freetalking is
+  now **11 themes · 121 topics × 2 levels**, deliberately mirroring `korean/tracks/4-freetalking`
+  so the two curricula share one topic inventory. **103 of Korean's 105 topics ported**; the two
+  that did not are named with reasons. 18 originals written here are proposed back in
+  [`tracks/3-freetalking/proposals-to-korean.md`](./tracks/3-freetalking/proposals-to-korean.md).
   - Replace the essay-prompt topics. Korean's TOC diagnoses this exactly: 「~란 무엇인가」 titles
     look deep in a contents list but produce no answer within three seconds even in the L1.
     English ships *"What does success mean to you?"* as topic #1, plus *"What makes a job
