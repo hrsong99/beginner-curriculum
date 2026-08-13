@@ -265,7 +265,7 @@ copy of anything. Same rule here.
 - [ ] **T3.12 — Regenerate the grammar coverage map.** It is bannered stale: it describes the
   retired 72-lesson spine, every row number is wrong, and it has no column for the `JP:` difficulty
   field the new TOC carries. Not a find-and-replace — the restructure split and merged lessons.
-- [x] **T3.13 — Contextual half DONE**; Freetalking still stale. Re-derive Contextual and Freetalking prerequisites. 72 `Core N` references across
+- [x] **T3.13 — DONE 2026-08-13.** All Core references in Contextual (71) and Freetalking (44) re-derived against the 122-lesson spine and mechanically verified in range. Stale banners removed from both. 72 `Core N` references across
   the two tracks now point at the wrong lessons. Folded into the D7 rebuild, which rewrites those
   courses anyway.
 
@@ -277,7 +277,7 @@ copy of anything. Same rule here.
 - [x] ~~**T5.1 (old)** — Contextual identity (gated on D7).~~ If "show": season bibles, named casts,
   relationship state, episode arcs, a scenes-spent ledger. Korean's stated failure mode is the
   reverse direction — teaching grammar and sprinkling in themed vocabulary.
-- [ ] **T5.2** — **Freetalking repair.** Currently 24 topics vs Korean's 105 × 2 levels = 210.
+- [x] **T5.2 — DONE 2026-08-13.** Freetalking rebuilt: 24 topics → **10 themes · 50 topics × 2 levels**, a ladder per topic, the two-version method stated, and the essay prompts removed. ~~Freetalking repair.~~ Currently 24 topics vs Korean's 105 × 2 levels = 210.
   - Replace the essay-prompt topics. Korean's TOC diagnoses this exactly: 「~란 무엇인가」 titles
     look deep in a contents list but produce no answer within three seconds even in the L1.
     English ships *"What does success mean to you?"* as topic #1, plus *"What makes a job
