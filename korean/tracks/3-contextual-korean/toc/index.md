@@ -145,7 +145,7 @@ Lesson numbers may restart per course. Always identify a lesson by both course c
 - [`007`](ctx-travel-shopping-upper-beginner/lesson-007.md) 결제 수단
 - [`008`](ctx-travel-shopping-upper-beginner/lesson-008.md) 선물 포장
 - [`009`](ctx-travel-shopping-upper-beginner/lesson-009.md) 교환 & 환불
-- [`010`](ctx-travel-shopping-upper-beginner/lesson-010.md) 택스 리펀
+- [`010`](ctx-travel-shopping-upper-beginner/lesson-010.md) 택스 리펀드
 
 ## `ctx-travel-staying-upper-beginner` · 상황별 한국어 · 숙소 & 문제 해결 · 초중급
 

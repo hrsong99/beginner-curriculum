@@ -254,6 +254,7 @@ class today. Verify against the CDN before assuming a component exists.
 | `.bt-word` | local only, **not in v1.3.0** | groups a dictionary form as one word in a rule diagram |
 | `.pattern-meaning` / `.meaning-kicker` | local only, **not in v1.3.0** — **now the top of this queue** | the 뜻과 쓰임 box every `pN-teach` opens with. **115 core teach pages across 46 decks** now carry it, plus 12/12 contextual decks. Until it ships, every one of them renders the box unstyled in class |
 | `.nuance-compare` | local only, **not in v1.3.0** | both-valid pairs shown at equal weight instead of `.swap`'s correction arrow. Same exposure as above |
+| `.nuance-choice > .yomi` | not written | `.nuance-compare` styles only `> .korean` and `> .translation`. It comes from the contextual track, which is 중급 and never shows readings, so **a `.yomi` inside it has no rule at all and renders as plain body text** — 과 47 shipped that way for one commit. There is no base `.yomi` rule in the sheet; every context defines its own. Until this lands, a 초중급 deck using `.nuance-compare` must leave the readings off |
 | a third inline accent token | not written | see the two-class section below |
 | three-case `.batchim` layout | not written | see the ㄹ-stem section below |
 | `.choose-word` in `spotlight.js`'s SPOT list | not written | the tutor cannot point at that activity |
@@ -412,6 +413,37 @@ Each of these cost a rewrite. They are not style preferences.
 질문을 `그리고` 로 잇는 것도 안 된다. **답이 세 개 필요하면 턴을 세 번 준다.** 그리고
 **던진 질문은 모범 답이 받아야 한다** — 과 27 은 「지금은 괜찮아요?」 를 묻고 답에서
 그냥 지나쳤다. 학습자는 답할 수 없는 질문 앞에서 멈춘다.
+
+## 고르기의 오답은 **틀려야** 한다 — 덜 어울리는 정도로는 부족하다
+
+과 52 가 후에 / 고 나면 을 네 줄 물었는데 세 줄의 오답이 원어민이 실제로 하는
+말이었다. 과 46 은 께서 / 께서는 을 형태 문제로 그렸다가 뜯었다. 같은 실수가
+두 번 나왔으니 검사를 적어 둔다.
+
+**한 줄씩 이 질문을 통과시킨다: 오답을 그 문장에 그대로 넣으면, 위에 적힌
+일본어에 대해 여전히 맞는 한국어인가?** 맞다면 그 줄은 문법을 가르치는 게
+아니라 우리가 정한 번역 관례를 외우게 하는 것이다.
+
+좋은 오답은 둘 중 하나다.
+
+- **있을 수 없는 형태** — 좋아하으세요 · 예쁘은 · 살는 · 먹ㄴ 후에.
+- **실재하지만 이 자리에서 틀린 형태**, 그리고 틀린 이유를 그 과가 이미
+  가르쳤다 — 사람한테 있으세요, 친구한테 께서, 3인칭에 고 싶어요.
+
+애매하면 셋 중 하나를 고른다.
+
+1. **괄호로 상황을 못 박는다.** 과 35 가 이렇게 한다 — 「私は運転のやり方を
+   知っています。（習ったので）」 / 「私は明日行けます。（時間があるので）」.
+   과 36 의 려고 해요 · ㄹ 거예요 도 이 방법으로 살렸다(（まだ決めていない） ·
+   （もう約束した）). 두 형태가 진짜로 갈리는 자리를 괄호가 가리킨다.
+2. **대조를 teach 상자로 옮긴다.** 형태가 아니라 뜻이 갈리는 것이면 규칙
+   페이지가 아니라 뜻과 쓰임 상자가 말해야 한다.
+3. **페이지를 뺀다.** `ux-philosophy.md` 가 명시한다 — 둘 다 문법적이고
+   고르려면 안 가르친 뉘앙스가 필요하면 고르기를 넣지 않는다. 과 52 파트2가
+   그 경우다.
+
+트랙 전체 384줄을 이 기준으로 훑었다. 걸린 건 과 36 한 곳이고, 과 31(인칭) ·
+과 32(받침) · 과 35(괄호) · 과 52 파트1(불가능한 형태)은 정직하다.
 
 ## Before you call a lesson done
 

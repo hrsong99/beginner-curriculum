@@ -17,17 +17,487 @@
 <body>
   <div class="phone">
 
-    <!-- ============================================================
-         PAGES GO HERE — one .phone child per page, one activity per page.
+    <div class="transition-page" data-page-id="lesson-goal" data-act="-(으)ㄴ 후에 · -고 나면">
+      <span class="transition-kicker">목표</span>
+      <h2 class="transition-title">오늘의 목표 <span class="title-ja">(今日のゴール)</span></h2>
+      <p class="section-subtitle"><span class="ko">22과에서 고로 두 문장을 이었죠? 오늘은 앞이 확실히 끝난 뒤라고 못을 박아요.</span><span class="ja">22課では고で2つの文をつなぎましたよね？今日は、前が確実に終わってからだと、はっきりさせます。</span></p>
+      <div class="known lines">
+        <div class="known-row"><span class="k">밥을 먹은 후에 산책해요.</span><span class="yomi">パブル モグン フエ サンチェケヨ</span><span class="j">ごはんを食べた後に散歩します</span></div>
+        <div class="known-row"><span class="k">숙제를 하고 나서 게임해요.</span><span class="yomi">スクチェルル ハゴ ナソ ケイメヨ</span><span class="j">宿題をしてからゲームします</span></div>
+        <div class="known-row"><span class="k">이거 다 먹고 나면 나가요.</span><span class="yomi">イゴ タ モクコ ナミョン ナガヨ</span><span class="j">これを全部食べたら出かけます</span></div>
+      </div>
+    </div>
 
-         Plan the arc from  lesson-blueprint.md
-         Take the content from  toc/lesson-052.md
-         Copy component markup and tutor voice from the deck this
-         skeleton came from — do not invent components.
+    <div class="section" data-page-id="words-you-know">
+      <h2 class="section-title">이미 아는 단어 <span class="title-ja">(もう知っている単語)</span></h2>
+      <p class="section-subtitle"><span class="ko">오늘은 순서를 정하는 이야기예요. 오늘 쓸 단어, 이것도 한자에서 왔어요.</span><span class="ja">今日は順番を決める話です。今日使う単語、これも漢字から来ています。</span></p>
+      <div class="bridge">
+        <div class="br-row"><span class="br-cn">散策</span><span class="br-eq">→</span><span class="br-ko">산책<small class="yomi">サンチェク</small></span></div>
+        <div class="br-row"><span class="br-cn">宿題</span><span class="br-eq">→</span><span class="br-ko">숙제<small class="yomi">スクチェ</small></span></div>
+        <div class="br-row"><span class="br-cn">料理</span><span class="br-eq">→</span><span class="br-ko">요리<small class="yomi">ヨリ</small></span></div>
+      </div>
+    </div>
 
-         The first page must carry data-act, since the cover that used
-         to supply it is a trial-only page and is not here.
-         ============================================================ -->
+    <!-- ============ PART 1 · -(으)ㄴ 후에 ============ -->
+
+    <div class="transition-page" data-page-id="part1-intro" data-act="-(으)ㄴ 후에">
+      <span class="transition-kicker">パート 1</span>
+      <h2 class="transition-title">-(으)ㄴ 후에<span class="yomi">ウン フエ / ン フエ</span></h2>
+      <p class="transition-copy">「〜した後に」。50課の過去の連体形が、そのまま 후에 の前に入ります。新しいのは 후에 だけです。</p>
+    </div>
+
+    <div class="section" data-page-id="p1-teach">
+      <h2 class="section-title">오늘의 패턴 <span class="title-ja">(今日のパターン)</span></h2>
+      <p class="section-subtitle pattern-meaning"><span class="meaning-kicker">뜻과 쓰임 <small>意味・使い方</small></span><span class="ko">‘~した後に’예요. 앞의 일이 다 끝나고 나서 다음 일을 한다고 순서를 못 박을 때 써요. 제가 읽을게요. 잘 듣고 따라 읽어 보세요.</span><span class="ja">「〜した後に」。前のことが終わってから次のことをすると、順番をはっきりさせるときに使います。 私が読みます。よく聞いて、まねして読んでみましょう。</span></p>
+      <div class="sent-hero">
+        <span class="korean">밥을 먹<span class="ending">은 후에</span> 산책해요.</span><span class="yomi">パブル モグン フエ サンチェケヨ</span>
+        <span class="translation">ごはんを<span class="ending">食べた後に</span>散歩します。</span>
+      </div>
+      <div class="sent-more">
+        <div><span class="korean">숙제를 <span class="ending">한 후에</span> 게임해요.</span><span class="yomi">スクチェルル ハン フエ ケイメヨ</span><span class="translation">宿題を<span class="ending">した後に</span>ゲームします。</span></div>
+        <div><span class="korean">일이 <span class="ending">끝난 후에</span> 전화할게요.</span><span class="yomi">イリ ックンナン フエ チョヌァハルケヨ</span><span class="translation">仕事が<span class="ending">終わった後に</span>電話しますね。</span></div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p1-read">
+      <h2 class="section-title">같이 읽어요 <span class="title-ja">(一緒に読もう)</span></h2>
+      <p class="section-subtitle"><span class="ko">이번엔 혼자 읽어 보세요. 네 문장이에요. 끝나다는 'おわる'예요.</span><span class="ja">今度はひとりで読んでみましょう。4つの文です。끝나다は「おわる」です。</span></p>
+      <div class="model-list">
+        <div class="model-line"><span class="korean">밥을 먹<span class="ending">은 후에</span> 산책해요.</span><span class="yomi">パブル モグン フエ サンチェケヨ</span><span class="translation">ごはんを<span class="ending">食べた後に</span>散歩します。</span></div>
+        <div class="model-line"><span class="korean">숙제를 <span class="ending">한 후에</span> 게임해요.</span><span class="yomi">スクチェルル ハン フエ ケイメヨ</span><span class="translation">宿題を<span class="ending">した後に</span>ゲームします。</span></div>
+        <div class="model-line"><span class="korean">일이 <span class="ending">끝난 후에</span> 전화할게요.</span><span class="yomi">イリ ックンナン フエ チョヌァハルケヨ</span><span class="translation">仕事が<span class="ending">終わった後に</span>電話しますね。</span></div>
+        <div class="model-line"><span class="korean">영화를 <span class="ending">본 후에</span> 커피 마셔요.</span><span class="yomi">ヨンファルル ポン フエ コピ マショヨ</span><span class="translation">映画を<span class="ending">見た後に</span>コーヒーを飲みます。</span></div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p1-rule">
+      <h2 class="section-title">ㄴ 후에와 은 후에 <span class="title-ja">(ㄴ 후에 と 은 후에、どっち？)</span></h2>
+      <p class="section-subtitle"><span class="ko">50과에서 배운 과거 관형사형 그대로예요. 받침이 없으면 ㄴ, 있으면 은. ㄹ 받침은 ㄹ이 빠지고 ㄴ이 들어와요. 뒤에 후에만 붙이면 끝이에요.</span><span class="ja">50課で習った過去の連体形そのままです。パッチムがなければㄴ、あれば은。ㄹパッチムはㄹが落ちてㄴが入ります。うしろに후에をつけるだけです。</span></p>
+      <div class="batchim ending-rule">
+        <div class="bt-box">
+          <span class="bt-eq"><span class="bt-syl off">하</span><span class="bt-arrow" aria-hidden="true">→</span><span class="bt-out">ㄴ 후에<span class="yomi">ン フエ</span></span></span>
+          <span class="bt-head">받침 없음<small>パッチムなし</small></span>
+          <span class="bt-ex"><span>하 → <b>한 후에</b><span class="yomi">ハン フエ</span></span><span>보 → <b>본 후에</b><span class="yomi">ポン フエ</span></span></span>
+        </div>
+        <div class="bt-box">
+          <span class="bt-eq"><span class="bt-syl on">먹</span><span class="bt-arrow" aria-hidden="true">→</span><span class="bt-out">은 후에<span class="yomi">ウン フエ</span></span></span>
+          <span class="bt-head">받침 있음<small>パッチムあり</small></span>
+          <span class="bt-ex"><span>먹 → <b>먹은 후에</b><span class="yomi">モグン フエ</span></span><span>읽 → <b>읽은 후에</b><span class="yomi">イルグン フエ</span></span></span>
+        </div>
+        <div class="bt-box">
+          <span class="bt-eq"><span class="bt-syl on">놀</span><span class="bt-arrow" aria-hidden="true">→</span><span class="bt-out">논 후에<span class="yomi">ノン フエ</span></span></span>
+          <span class="bt-head">ㄹ 받침 — ㄹ이 빠져요<small>ㄹ パッチムは ㄹ が落ちる</small></span>
+          <span class="bt-ex"><span>놀다 → <b>논 후에</b><span class="yomi">ノン フエ</span></span><span>만들다 → <b>만든 후에</b><span class="yomi">マンドゥン フエ</span></span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 22과의 -고 is the wrong pill in every row: it is grammatical Korean and
+         means "and then" without saying the first thing finished. The Japanese
+         above each row is what decides it. -->
+
+    <div class="section" data-page-id="p1-choose">
+      <h2 class="section-title">알맞은 말 고르기 <span class="title-ja">(正しい言い方を選ぼう)</span></h2>
+      <p class="section-subtitle"><span class="ko">동사 마지막 글자의 받침을 보고, 맞는 쪽을 눌러 보세요.</span><span class="ja">動詞の最後の文字のパッチムを見て、正しいほうをタップしてください。</span></p>
+      <div class="choose-list">
+        <div class="choose-row sentence" data-sync-id="p1-c-eat" data-sync-kind="selection" data-sync-state="chosen">
+          <span class="translation">ごはんを食べた後に散歩します。</span>
+          <span class="choose-sentence">밥을 <span class="opt" data-sync-option="eun" data-correct>먹은 후에</span><span class="sep">/</span><span class="opt" data-sync-option="n">먹ㄴ 후에</span> 산책해요.<span class="yomi">パブル … サンチェケヨ</span></span>
+        </div>
+        <div class="choose-row sentence" data-sync-id="p1-c-do" data-sync-kind="selection" data-sync-state="chosen">
+          <span class="translation">宿題をした後にゲームします。</span>
+          <span class="choose-sentence">숙제를 <span class="opt" data-sync-option="eun">하은 후에</span><span class="sep">/</span><span class="opt" data-sync-option="n" data-correct>한 후에</span> 게임해요.<span class="yomi">スクチェルル … ケイメヨ</span></span>
+        </div>
+        <div class="choose-row sentence" data-sync-id="p1-c-play" data-sync-kind="selection" data-sync-state="chosen">
+          <span class="translation">友だちと遊んだ後に家に帰ります。</span>
+          <span class="choose-sentence">친구하고 <span class="opt" data-sync-option="eun">놀은 후에</span><span class="sep">/</span><span class="opt" data-sync-option="n" data-correct>논 후에</span> 집에 가요.<span class="yomi">チングハゴ … チベ カヨ</span></span>
+        </div>
+        <div class="choose-row sentence" data-sync-id="p1-c-read" data-sync-kind="selection" data-sync-state="chosen">
+          <span class="translation">本を読んだ後に寝ます。</span>
+          <span class="choose-sentence">책을 <span class="opt" data-sync-option="n">읽ㄴ 후에</span><span class="sep">/</span><span class="opt" data-sync-option="eun" data-correct>읽은 후에</span> 자요.<span class="yomi">チェグル … チャヨ</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p1-reorder">
+      <h2 class="section-title">문장 만들기 <span class="title-ja">(文を組み立てよう)</span></h2>
+      <p class="section-subtitle"><span class="ko">단어를 순서대로 놓고, 소리 내어 말해 보세요.</span><span class="ja">単語を順番に並べて、声に出して言ってみましょう。</span></p>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">私はごはんを食べた後に散歩します。</span>
+          <span class="answer-space" data-sync-id="p1-order-walk">저는 밥을 먹은 후에 산책해요</span>
+        </div>
+        <span class="choice" data-item-id="p1-order-walk-3">먹은 후에<span class="yomi">モグン フエ</span></span>
+        <span class="choice" data-item-id="p1-order-walk-1">저는<span class="yomi">チョヌン</span></span>
+        <span class="choice" data-item-id="p1-order-walk-4">산책해요<span class="yomi">サンチェケヨ</span></span>
+        <span class="choice" data-item-id="p1-order-walk-2">밥을<span class="yomi">パブル</span></span>
+      </div>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">宿題をした後にゲームします。</span>
+          <span class="answer-space" data-sync-id="p1-order-game">숙제를 한 후에 게임해요</span>
+        </div>
+        <span class="choice" data-item-id="p1-order-game-2">한 후에<span class="yomi">ハン フエ</span></span>
+        <span class="choice" data-item-id="p1-order-game-1">숙제를<span class="yomi">スクチェルル</span></span>
+        <span class="choice" data-item-id="p1-order-game-3">게임해요<span class="yomi">ケイメヨ</span></span>
+      </div>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">仕事が終わった後にすぐ電話しますね。</span>
+          <span class="answer-space" data-sync-id="p1-order-call">일이 끝난 후에 바로 전화할게요</span>
+        </div>
+        <span class="choice" data-item-id="p1-order-call-4">전화할게요<span class="yomi">チョヌァハルケヨ</span></span>
+        <span class="choice" data-item-id="p1-order-call-2">끝난 후에<span class="yomi">ックンナン フエ</span></span>
+        <span class="choice" data-item-id="p1-order-call-1">일이<span class="yomi">イリ</span></span>
+        <span class="choice" data-item-id="p1-order-call-3">바로<span class="yomi">パロ</span></span>
+      </div>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">友だちと遊んだ後に家に帰ります。</span>
+          <span class="answer-space" data-sync-id="p1-order-home">친구하고 논 후에 집에 가요</span>
+        </div>
+        <span class="choice" data-item-id="p1-order-home-3">집에<span class="yomi">チベ</span></span>
+        <span class="choice" data-item-id="p1-order-home-1">친구하고<span class="yomi">チングハゴ</span></span>
+        <span class="choice" data-item-id="p1-order-home-4">가요<span class="yomi">カヨ</span></span>
+        <span class="choice" data-item-id="p1-order-home-2">논 후에<span class="yomi">ノン フエ</span></span>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p1-fill">
+      <h2 class="section-title">빈칸을 채워요 <span class="title-ja">(空欄をうめよう)</span></h2>
+      <p class="section-subtitle"><span class="ko">빈칸에 들어갈 말을 넣어서, 문장을 통째로 소리 내어 말해 보세요.</span><span class="ja">空欄に入ることばを入れて、文をまるごと声に出して言ってみましょう。</span></p>
+      <div class="tutor-note">학생이 말한 대로 빈칸에 적어 주세요. 4번은 ㄹ이 빠지는 자리예요.</div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">ごはんを<span class='target'>食べた後に</span>散歩します。</span>
+          <span class="answer-fill"><span class="korean">밥을 <span class="slot" data-sync-id="p1-f-eat">먹은 후에</span> 산책해요.</span><span class="yomi">パブル ＿＿＿ サンチェケヨ</span></span><span class="hint"><span class="hint-chip">食べる:먹다<span class="yomi">モクタ</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">宿題を<span class='target'>した後に</span>ゲームします。</span>
+          <span class="answer-fill"><span class="korean">숙제를 <span class="slot" data-sync-id="p1-f-do">한 후에</span> 게임해요.</span><span class="yomi">スクチェルル ＿＿＿ ケイメヨ</span></span><span class="hint"><span class="hint-chip">する:하다<span class="yomi">ハダ</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">本を<span class='target'>読んだ後に</span>寝ます。</span>
+          <span class="answer-fill"><span class="korean">책을 <span class="slot" data-sync-id="p1-f-read">읽은 후에</span> 자요.</span><span class="yomi">チェグル ＿＿＿ チャヨ</span></span><span class="hint"><span class="hint-chip">読む:읽다<span class="yomi">イクタ</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">友だちと<span class='target'>遊んだ後に</span>家に帰ります。</span>
+          <span class="answer-fill"><span class="korean">친구하고 <span class="slot" data-sync-id="p1-f-play">논 후에</span> 집에 가요.</span><span class="yomi">チングハゴ ＿＿＿ チベ カヨ</span></span><span class="hint"><span class="hint-chip">遊ぶ:놀다<span class="yomi">ノルダ</span></span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p1-translate">
+      <h2 class="section-title">한국어로 바꿔요 <span class="title-ja">(韓国語にしよう)</span></h2>
+      <p class="section-subtitle"><span class="ko">일본어를 보고, 한국어로 말해 보세요.</span><span class="ja">日本語を見て、韓国語で言ってみましょう。</span></p>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">ごはんを食べた後に散歩します。</span>
+          <span class="answer-space" data-sync-id="p1-t-walk">밥을 먹은 후에 산책해요</span>
+          <span class="hint"><span class="hint-chip">ごはん:밥<span class="yomi">パプ</span></span><span class="hint-chip">散歩する:산책하다<span class="yomi">サンチェカダ</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">宿題をした後にゲームします。</span>
+          <span class="answer-space" data-sync-id="p1-t-game">숙제를 한 후에 게임해요</span>
+          <span class="hint"><span class="hint-chip">宿題:숙제<span class="yomi">スクチェ</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">仕事が終わった後に電話しますね。</span>
+          <span class="answer-space" data-sync-id="p1-t-call">일이 끝난 후에 전화할게요</span>
+          <span class="hint"><span class="hint-chip">おわる:끝나다<span class="yomi">ックンナダ</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">友だちと遊んだ後に家に帰ります。</span>
+          <span class="answer-space" data-sync-id="p1-t-home">친구하고 논 후에 집에 가요</span>
+          <span class="hint"><span class="hint-chip">遊ぶ:놀다<span class="yomi">ノルダ</span></span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p1-write">
+      <h2 class="section-title">내 문장 만들기 <span class="title-ja">(自分の文を作ろう)</span></h2>
+      <p class="section-subtitle"><span class="ko">이번엔 진짜 자기 이야기예요. 오늘 저녁에 뭘 하고, 그다음에 뭘 해요? 한 문장으로 말해 보세요.</span><span class="ja">今度は本当に自分の話です。今日の夕方に何をして、そのあと何をしますか？1つの文で言ってみましょう。</span></p>
+      <div class="tutor-note">학생이 말한 문장을 여기에 적어 주세요.</div>
+      <div class="task-block">
+        <div class="answer-box tall">
+          <span class="answer-space" data-sync-id="p1-free-order"></span>
+          <span class="hint"><span class="hint-chip">ごはん:밥<span class="yomi">パプ</span></span><span class="hint-chip">宿題:숙제<span class="yomi">スクチェ</span></span><span class="hint-chip">仕事:일<span class="yomi">イル</span></span><span class="hint-chip">散歩する:산책하다<span class="yomi">サンチェカダ</span></span><span class="hint-chip">休む:쉬다<span class="yomi">シダ</span></span><span class="hint-chip">見る:보다<span class="yomi">ポダ</span></span><span class="hint-chip">おわる:끝나다<span class="yomi">ックンナダ</span></span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ PART 2 · -고 나면 ============ -->
+
+    <div class="transition-page" data-page-id="part2-intro" data-act="-고 나면">
+      <span class="transition-kicker">パート 2</span>
+      <h2 class="transition-title">-고 나면<span class="yomi">コ ナミョン</span></h2>
+      <p class="transition-copy">「〜し終えたら」。パート1は順番でした。ここは条件です — 前が終わって、はじめて次が起きます。</p>
+    </div>
+
+    <div class="section" data-page-id="p2-teach">
+      <h2 class="section-title">오늘의 패턴 <span class="title-ja">(今日のパターン)</span></h2>
+      <p class="section-subtitle pattern-meaning"><span class="meaning-kicker">뜻과 쓰임 <small>意味・使い方</small></span><span class="ko">‘~し終えたら’예요. 앞일이 다 끝나야 비로소 다음이 생긴다고 말할 때 써요. 받침은 안 봐요. 뒤에 또 다른 동작이 오면 후에하고 거의 같아서 둘 다 써도 돼요. 갈리는 건 뒤에 쉬워요, 편해요 같은 상태가 올 때예요 — 그때는 고 나면만 자연스러워요. 제가 읽을게요. 잘 듣고 따라 읽어 보세요.</span><span class="ja">「〜し終えたら」。前のことが終わって、はじめて次が起きると言うときに使います。パッチムは見ません。うしろにまた別の動作が来るときは후에とほとんど同じで、どちらを使っても大丈夫です。分かれるのは、うしろに쉬워요・편해요のような状態が来るとき — そのときだけ고 나면が自然です。 私が読みます。よく聞いて、まねして読んでみましょう。</span></p>
+      <div class="sent-hero">
+        <span class="korean">이거 다 먹<span class="ending">고 나면</span> 나가요.</span><span class="yomi">イゴ タ モクコ ナミョン ナガヨ</span>
+        <span class="translation">これを全部<span class="ending">食べ終えたら</span>出かけます。</span>
+      </div>
+      <div class="sent-more">
+        <div><span class="korean">숙제를 하<span class="ending">고 나면</span> 쉴 거예요.</span><span class="yomi">スクチェルル ハゴ ナミョン シュィル コエヨ</span><span class="translation">宿題を<span class="ending">し終えたら</span>休むつもりです。</span></div>
+        <div><span class="korean">이 일이 끝나<span class="ending">고 나면</span> 좀 편해요.</span><span class="yomi">イ イリ ックンナゴ ナミョン チョム ピョネヨ</span><span class="translation">この仕事が<span class="ending">終わったら</span>少し楽になります。</span></div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p2-read">
+      <h2 class="section-title">같이 읽어요 <span class="title-ja">(一緒に読もう)</span></h2>
+      <p class="section-subtitle"><span class="ko">이번엔 혼자 읽어 보세요. 네 문장이에요. 편하다는 'らくだ'예요.</span><span class="ja">今度はひとりで読んでみましょう。4つの文です。편하다は「らくだ」です。</span></p>
+      <div class="model-list">
+        <div class="model-line"><span class="korean">이거 다 먹<span class="ending">고 나면</span> 나가요.</span><span class="yomi">イゴ タ モクコ ナミョン ナガヨ</span><span class="translation">これを全部<span class="ending">食べ終えたら</span>出かけます。</span></div>
+        <div class="model-line"><span class="korean">숙제를 하<span class="ending">고 나면</span> 쉴 거예요.</span><span class="yomi">スクチェルル ハゴ ナミョン シュィル コエヨ</span><span class="translation">宿題を<span class="ending">し終えたら</span>休むつもりです。</span></div>
+        <div class="model-line"><span class="korean">이 일이 끝나<span class="ending">고 나면</span> 좀 편해요.</span><span class="yomi">イ イリ ックンナゴ ナミョン チョム ピョネヨ</span><span class="translation">この仕事が<span class="ending">終わったら</span>少し楽になります。</span></div>
+        <div class="model-line"><span class="korean">한 번 만들<span class="ending">고 나면</span> 쉬워요.</span><span class="yomi">ハン ボン マンドゥルゴ ナミョン シュィウォヨ</span><span class="translation">一度<span class="ending">作ってしまえば</span>簡単です。</span></div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p2-rule">
+      <h2 class="section-title">고 나면은 하나 <span class="title-ja">(고 나면 は ひとつだけ)</span></h2>
+      <p class="section-subtitle"><span class="ko">이건 받침을 볼 필요가 없어요. 동사 어간에 고 나면만 붙이면 끝이에요. ㄹ 받침도 그대로 남아요.</span><span class="ja">これはパッチムを見る必要がありません。動詞の語幹に고 나면をつけるだけです。ㄹパッチムもそのまま残ります。</span></p>
+      <div class="batchim ending-rule">
+        <div class="bt-box">
+          <span class="bt-eq"><span class="bt-out">고 나면<span class="yomi">コ ナミョン</span></span></span>
+          <span class="bt-head">모든 동사 — 받침을 안 봐요<small>動詞は すべて、パッチムを見ない</small></span>
+          <span class="bt-ex"><span>먹 → <b>먹고 나면</b><span class="yomi">モクコ ナミョン</span></span><span>만들 → <b>만들고 나면</b><span class="yomi">マンドゥルゴ ナミョン</span></span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- the honest binary of this part: 후에 is the order of two things, 고 나면
+         is a condition for the second one. Every row is decided by whether the
+         Japanese says 「後に」 or 「たら」. -->
+
+    <!-- p2-choose is deliberately absent. It asked 후에 vs 고 나면 in four rows
+         and three of them marked natural Korean wrong: 이거 다 먹은 후에 나가요,
+         밥을 먹고 나면 산책해요 and 일이 끝나고 나면 전화할게요 are all things a
+         native says. The two forms overlap almost completely when the second
+         clause is an ACTION; they only separate when it is a STATE (한 번 만들고
+         나면 쉬워요 — 만든 후에 쉬워요 is odd). One honest row is not a page, and
+         ux-philosophy says to omit the choose page rather than manufacture a
+         distinction. The real contrast is drawn where it belongs: in the teach
+         box and the native tip. -->
+
+    <div class="section" data-page-id="p2-reorder">
+      <h2 class="section-title">문장 만들기 <span class="title-ja">(文を組み立てよう)</span></h2>
+      <p class="section-subtitle"><span class="ko">단어를 순서대로 놓고, 소리 내어 말해 보세요.</span><span class="ja">単語を順番に並べて、声に出して言ってみましょう。</span></p>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">これを全部食べ終えたらすぐ出かけます。</span>
+          <span class="answer-space" data-sync-id="p2-order-out">이거 다 먹고 나면 바로 나가요</span>
+        </div>
+        <span class="choice" data-item-id="p2-order-out-3">먹고 나면<span class="yomi">モクコ ナミョン</span></span>
+        <span class="choice" data-item-id="p2-order-out-1">이거<span class="yomi">イゴ</span></span>
+        <span class="choice" data-item-id="p2-order-out-4">바로 나가요<span class="yomi">パロ ナガヨ</span></span>
+        <span class="choice" data-item-id="p2-order-out-2">다<span class="yomi">タ</span></span>
+      </div>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">宿題をし終えたら休むつもりです。</span>
+          <span class="answer-space" data-sync-id="p2-order-rest">숙제를 하고 나면 쉴 거예요</span>
+        </div>
+        <span class="choice" data-item-id="p2-order-rest-2">하고 나면<span class="yomi">ハゴ ナミョン</span></span>
+        <span class="choice" data-item-id="p2-order-rest-3">쉴 거예요<span class="yomi">シュィル コエヨ</span></span>
+        <span class="choice" data-item-id="p2-order-rest-1">숙제를<span class="yomi">スクチェルル</span></span>
+      </div>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">一度作ってしまえば本当に簡単です。</span>
+          <span class="answer-space" data-sync-id="p2-order-easy">한 번 만들고 나면 진짜 쉬워요</span>
+        </div>
+        <span class="choice" data-item-id="p2-order-easy-4">쉬워요<span class="yomi">シュィウォヨ</span></span>
+        <span class="choice" data-item-id="p2-order-easy-1">한 번<span class="yomi">ハン ボン</span></span>
+        <span class="choice" data-item-id="p2-order-easy-3">진짜<span class="yomi">チンチャ</span></span>
+        <span class="choice" data-item-id="p2-order-easy-2">만들고 나면<span class="yomi">マンドゥルゴ ナミョン</span></span>
+      </div>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">この仕事が終わったら少し楽になります。</span>
+          <span class="answer-space" data-sync-id="p2-order-easy2">이 일이 끝나고 나면 좀 편해요</span>
+        </div>
+        <span class="choice" data-item-id="p2-order-easy2-2">끝나고 나면<span class="yomi">ックンナゴ ナミョン</span></span>
+        <span class="choice" data-item-id="p2-order-easy2-1">이 일이<span class="yomi">イ イリ</span></span>
+        <span class="choice" data-item-id="p2-order-easy2-4">편해요<span class="yomi">ピョネヨ</span></span>
+        <span class="choice" data-item-id="p2-order-easy2-3">좀<span class="yomi">チョム</span></span>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p2-fill">
+      <h2 class="section-title">빈칸을 채워요 <span class="title-ja">(空欄をうめよう)</span></h2>
+      <p class="section-subtitle"><span class="ko">빈칸에 들어갈 말을 넣어서, 문장을 통째로 소리 내어 말해 보세요.</span><span class="ja">空欄に入ることばを入れて、文をまるごと声に出して言ってみましょう。</span></p>
+      <div class="tutor-note">학생이 말한 대로 빈칸에 적어 주세요. 2번은 일본어가 「後に」라서 후에로 받았어요 — 고 나면이라고 해도 틀린 말은 아니에요.</div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">これを全部<span class='target'>食べ終えたら</span>出かけます。</span>
+          <span class="answer-fill"><span class="korean">이거 다 <span class="slot" data-sync-id="p2-f-out">먹고 나면</span> 나가요.</span><span class="yomi">イゴ タ ＿＿＿ ナガヨ</span></span><span class="hint"><span class="hint-chip">食べる:먹다<span class="yomi">モクタ</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">ごはんを<span class='target'>食べた後に</span>散歩します。</span>
+          <span class="answer-fill"><span class="korean">밥을 <span class="slot" data-sync-id="p2-f-walk">먹은 후에</span> 산책해요.</span><span class="yomi">パブル ＿＿＿ サンチェケヨ</span></span><span class="hint"><span class="hint-chip">食べる:먹다<span class="yomi">モクタ</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">一度<span class='target'>作ってしまえば</span>簡単です。</span>
+          <span class="answer-fill"><span class="korean">한 번 <span class="slot" data-sync-id="p2-f-easy">만들고 나면</span> 쉬워요.</span><span class="yomi">ハン ボン ＿＿＿ シュィウォヨ</span></span><span class="hint"><span class="hint-chip">作る:만들다<span class="yomi">マンドゥルダ</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box">
+          <span class="answer-label">宿題を<span class='target'>し終えたら</span>休むつもりです。</span>
+          <span class="answer-fill"><span class="korean">숙제를 <span class="slot" data-sync-id="p2-f-rest">하고 나면</span> 쉴 거예요.</span><span class="yomi">スクチェルル ＿＿＿ シュィル コエヨ</span></span><span class="hint"><span class="hint-chip">する:하다<span class="yomi">ハダ</span></span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p2-translate">
+      <h2 class="section-title">한국어로 바꿔요 <span class="title-ja">(韓国語にしよう)</span></h2>
+      <p class="section-subtitle"><span class="ko">일본어를 보고, 한국어로 말해 보세요.</span><span class="ja">日本語を見て、韓国語で言ってみましょう。</span></p>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">これを全部食べ終えたら出かけます。</span>
+          <span class="answer-space" data-sync-id="p2-t-out">이거 다 먹고 나면 나가요</span>
+          <span class="hint"><span class="hint-chip">全部:다<span class="yomi">タ</span></span><span class="hint-chip">出かける:나가다<span class="yomi">ナガダ</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">宿題をし終えたら休むつもりです。</span>
+          <span class="answer-space" data-sync-id="p2-t-rest">숙제를 하고 나면 쉴 거예요</span>
+          <span class="hint"><span class="hint-chip">休む:쉬다<span class="yomi">シダ</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">一度作ってしまえば簡単です。</span>
+          <span class="answer-space" data-sync-id="p2-t-easy">한 번 만들고 나면 쉬워요</span>
+          <span class="hint"><span class="hint-chip">作る:만들다<span class="yomi">マンドゥルダ</span></span><span class="hint-chip">簡単だ:쉽다<span class="yomi">シュィプタ</span></span></span>
+        </div>
+      </div>
+      <div class="task-block">
+        <div class="answer-box small">
+          <span class="answer-label">この仕事が終わったら少し楽になります。</span>
+          <span class="answer-space" data-sync-id="p2-t-work">이 일이 끝나고 나면 좀 편해요</span>
+          <span class="hint"><span class="hint-chip">らくだ:편하다<span class="yomi">ピョナダ</span></span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p2-write">
+      <h2 class="section-title">내 문장 만들기 <span class="title-ja">(自分の文を作ろう)</span></h2>
+      <p class="section-subtitle"><span class="ko">이번엔 진짜 자기 이야기예요. 지금 하는 일이 다 끝나고 나면 뭐 할 거예요? 한 문장으로 말해 보세요.</span><span class="ja">今度は本当に自分の話です。今していることが終わったら、何をしますか？1つの文で言ってみましょう。</span></p>
+      <div class="tutor-note">학생이 말한 문장을 여기에 적어 주세요. 순서인지 조건인지 같이 확인해 주세요.</div>
+      <div class="task-block">
+        <div class="answer-box tall">
+          <span class="answer-space" data-sync-id="p2-free-after"></span>
+          <span class="hint"><span class="hint-chip">宿題:숙제<span class="yomi">スクチェ</span></span><span class="hint-chip">仕事:일<span class="yomi">イル</span></span><span class="hint-chip">勉強する:공부하다<span class="yomi">コンブハダ</span></span><span class="hint-chip">休む:쉬다<span class="yomi">シダ</span></span><span class="hint-chip">寝る:자다<span class="yomi">チャダ</span></span><span class="hint-chip">出かける:나가다<span class="yomi">ナガダ</span></span><span class="hint-chip">らくだ:편하다<span class="yomi">ピョナダ</span></span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ PART 3 · 오늘 순서 ============ -->
+
+    <div class="transition-page" data-page-id="part3-intro" data-act="오늘 순서">
+      <span class="transition-kicker">パート 3</span>
+      <h2 class="transition-title">오늘 순서<span class="yomi">オヌル スンソ</span></h2>
+      <p class="transition-copy">2つがそろいました。ハナとハルカが今日の段取りを決めます。먼저・그다음에・마지막으로 が骨組みです。</p>
+    </div>
+
+    <div class="section" data-page-id="p3-model">
+      <h2 class="section-title">대화 읽기 <span class="title-ja">(会話を読もう)</span></h2>
+      <p class="section-subtitle"><span class="ko">하나하고 하루카가 오늘 순서를 정해요. 제가 하나 쪽을 읽을게요. 하루카가 되어서 읽어 보세요.</span><span class="ja">ハナとハルカが今日の順番を決めます。私がハナのほうを読みます。ハルカになって読んでみましょう。</span></p>
+      <div class="dialogue">
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">오늘 뭐 먼저 해요?</span><span class="yomi">オヌル ムォ モンジョ ヘヨ</span><span class="translation">今日は何を先にしますか？</span></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><span class="korean">먼저 숙제를 해요. 숙제를 <span class="ending">한 후에</span> 나가요.</span><span class="yomi">モンジョ スクチェルル ヘヨ。 スクチェルル ハン フエ ナガヨ</span><span class="translation">先に宿題をします。宿題をした後に出かけます。</span></div></div>
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">좋아요. 그다음에는요?</span><span class="yomi">チョアヨ。 クダウメヌンニョ</span><span class="translation">いいですね。そのあとは？</span></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><span class="korean">밥을 <span class="ending">먹은 후에</span> 산책해요. 그리고 카페에 가요.</span><span class="yomi">パブル モグン フエ サンチェケヨ。 クリゴ カペエ カヨ</span><span class="translation">ごはんを食べた後に散歩します。それからカフェに行きます。</span></div></div>
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">와, 바쁘네요! 다 하고 나면 안 피곤해요?</span><span class="yomi">ワ、パップネヨ！ タ ハゴ ナミョン アン ピゴネヨ</span><span class="translation">わあ、忙しいですね！全部し終えたら疲れませんか？</span></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><span class="korean">다 하<span class="ending">고 나면</span> 좀 편해요. 마지막으로 집에서 쉬어요.</span><span class="yomi">タ ハゴ ナミョン チョム ピョネヨ。 マジマグロ チベソ シュィオヨ</span><span class="translation">全部し終えたら少し楽になります。最後に家で休みます。</span></div></div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p3-complete">
+      <h2 class="section-title">대화 채우기 <span class="title-ja">(会話をうめよう)</span></h2>
+      <p class="section-subtitle"><span class="ko">이번엔 하루카 대사가 비어 있어요. 하루카가 되어서 문장을 소리 내어 말해 보세요.</span><span class="ja">今度はハルカのセリフが空いています。ハルカになって、文を声に出して言ってみましょう。</span></p>
+      <div class="tutor-note">학생이 말한 대로 빈칸에 적어 주세요. 마지막 칸만 고 나면이에요.</div>
+      <div class="dialogue">
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">오늘 뭐 먼저 해요?</span><span class="yomi">オヌル ムォ モンジョ ヘヨ</span><span class="translation">今日は何を先にしますか？</span></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">先に宿題をします。<span class="target">宿題をした後に出かけます</span>。</span><span class="answer-fill"><span class="korean">먼저 숙제를 해요. <span class="slot" data-sync-id="p3-c-hw">숙제를 한 후에 나가요</span>.</span><span class="yomi">モンジョ スクチェルル ヘヨ。 ＿＿＿</span></span><span class="hint"><span class="hint-chip">出かける:나가다<span class="yomi">ナガダ</span></span></span></div></div></div>
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">좋아요. 그다음에는요?</span><span class="yomi">チョアヨ。 クダウメヌンニョ</span><span class="translation">いいですね。そのあとは？</span></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label"><span class="target">ごはんを食べた後に散歩します</span>。それからカフェに行きます。</span><span class="answer-fill"><span class="korean"><span class="slot" data-sync-id="p3-c-walk">밥을 먹은 후에 산책해요</span>. 그리고 카페에 가요.</span><span class="yomi">＿＿＿ クリゴ カペエ カヨ</span></span><span class="hint"><span class="hint-chip">散歩する:산책하다<span class="yomi">サンチェカダ</span></span></span></div></div></div>
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">와, 바쁘네요! 다 하고 나면 안 피곤해요?</span><span class="yomi">ワ、パップネヨ！ タ ハゴ ナミョン アン ピゴネヨ</span><span class="translation">わあ、忙しいですね！全部し終えたら疲れませんか？</span></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label"><span class="target">全部し終えたら少し楽になります</span>。最後に家で休みます。</span><span class="answer-fill"><span class="korean"><span class="slot" data-sync-id="p3-c-easy">다 하고 나면 좀 편해요</span>. 마지막으로 집에서 쉬어요.</span><span class="yomi">＿＿＿ マジマグロ チベソ シュィオヨ</span></span><span class="hint"><span class="hint-chip">らくだ:편하다<span class="yomi">ピョナダ</span></span></span></div></div></div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="p3-freetalk">
+      <h2 class="section-title">자유 대화 <span class="title-ja">(フリートーク)</span></h2>
+      <p class="section-subtitle"><span class="ko">이번엔 진짜 자기 이야기예요. 제 질문에 하나씩 대답해 보세요.</span><span class="ja">今度は本当に自分の話です。私の質問に1つずつ答えてみましょう。</span></p>
+      <div class="tutor-note">순서를 말하면 후에, 끝나야 생기는 일이면 고 나면. 학생이 섞으면 일본어 쪽을 짚어 주세요.</div>
+      <div class="dialogue">
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">先生</span></span><div class="bubble"><span class="korean">오늘 이 수업이 끝난 후에 뭐 해요?</span><span class="yomi">オヌル イ スオビ ックンナン フエ ムォ ヘヨ</span><span class="translation">今日、この授業が終わった後に何をしますか？</span></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label">수업이 끝난 후에 〜해요.<span class="task">自分のこと</span></span><span class="answer-space" data-sync-id="p3-ft-after"></span><span class="hint"><span class="hint-chip">ごはん:밥<span class="yomi">パプ</span></span><span class="hint-chip">休む:쉬다<span class="yomi">シダ</span></span><span class="hint-chip">仕事:일<span class="yomi">イル</span></span><span class="hint-chip">散歩する:산책하다<span class="yomi">サンチェカダ</span></span></span></div></div></div>
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">先生</span></span><div class="bubble"><span class="korean">그 일이 다 끝나고 나면 어때요?</span><span class="yomi">ク イリ タ ックンナゴ ナミョン オッテヨ</span><span class="translation">それが全部終わったらどうですか？</span></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label">다 하고 나면 〜해요.<span class="task">自分のこと</span></span><span class="answer-space" data-sync-id="p3-ft-feel"></span><span class="hint"><span class="hint-chip">らくだ:편하다<span class="yomi">ピョナダ</span></span><span class="hint-chip">うれしい:기쁘다<span class="yomi">キップダ</span></span><span class="hint-chip">疲れる:피곤하다<span class="yomi">ピゴナダ</span></span></span></div></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label">先生は仕事が終わった後に何をなさいますか？<span class="task">先生にも聞いてみましょう</span></span><span class="answer-space" data-sync-id="p3-ft-question">선생님은 일이 끝난 후에 뭐 하세요?</span></div></div></div>
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">先生</span></span><div class="bubble"><div class="answer-box small"><span class="answer-label">先生の答え</span><span class="answer-space" data-sync-id="p3-ft-tutor"></span></div></div></div>
+      </div>
+    </div>
+
+    <!-- bonus scene · 요리 교실. A recipe is nothing but this grammar: every
+         step waits for the one before it, and the teacher says so out loud. -->
+
+    <div class="section" data-page-id="korea-trip">
+      <h2 class="section-title">요리 교실 <span class="title-ja">(料理教室)</span></h2>
+      <p class="section-subtitle"><span class="ko">보너스! 한국 요리 교실이에요. 오늘은 김밥을 만들어요. 빈칸 대사를 말해 주세요.</span><span class="ja">ボーナス！韓国の料理教室です。今日はキンパを作ります。空欄のセリフを言ってください。</span></p>
+      <div class="dialogue">
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">相手</span></span><div class="bubble"><span class="korean">자, 먼저 밥을 준비하세요. 다음은 뭘까요?</span><span class="yomi">チャ、モンジョ パブル チュンビハセヨ。 タウムン ムォルッカヨ</span><span class="translation">さあ、まずごはんを準備してください。次は何でしょう？</span></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label"><span class="target">ごはんを準備した後に</span>野菜を切ります。</span><span class="answer-fill"><span class="korean"><span class="slot" data-sync-id="trip-rice">밥을 준비한 후에</span> 야채를 썰어요.</span><span class="yomi">＿＿＿ ヤチェルル ッソロヨ</span></span><span class="hint"><span class="hint-chip">準備する:준비하다<span class="yomi">チュンビハダ</span></span></span></div></div></div>
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">相手</span></span><div class="bubble"><span class="korean">맞아요! 야채를 다 썰고 나면 저를 부르세요.</span><span class="yomi">マジャヨ！ ヤチェルル タ ッソルゴ ナミョン チョルル プルセヨ</span><span class="translation">そうです！野菜を全部切り終えたら私を呼んでください。</span></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">はい！<span class="target">切り終えたら呼びます</span>。</span><span class="answer-fill"><span class="korean">네! <span class="slot" data-sync-id="trip-cut">다 썰고 나면 부를게요</span>.</span><span class="yomi">ネ！ ＿＿＿</span></span><span class="hint"><span class="hint-chip">切る:썰다<span class="yomi">ッソルダ</span></span></span></div></div></div>
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">相手</span></span><div class="bubble"><span class="korean">좋아요. 이제 김에 올리세요. 다 만들고 나면 같이 먹어요!</span><span class="yomi">チョアヨ。 イジェ キメ オルリセヨ。 タ マンドゥルゴ ナミョン カチ モゴヨ</span><span class="translation">いいですね。今度はのりにのせてください。全部作り終えたら一緒に食べましょう！</span></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label"><span class="target">作った後に</span>写真も撮ります！</span><span class="answer-fill"><span class="korean"><span class="slot" data-sync-id="trip-photo">만든 후에</span> 사진도 찍어요!</span><span class="yomi">＿＿＿ サジンド ッチゴヨ</span></span><span class="hint"><span class="hint-chip">作る:만들다<span class="yomi">マンドゥルダ</span></span></span></div></div></div>
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">相手</span></span><div class="bubble"><span class="korean">하하, 좋아요! 사진 찍고 나면 진짜 맛있게 드세요.</span><span class="yomi">ハハ、チョアヨ！ サジン ッチクコ ナミョン チンチャ マシッケ トゥセヨ</span><span class="translation">はは、いいですね！写真を撮り終えたら、本当においしく召し上がってください。</span></div></div>
+      </div>
+    </div>
+
+    <div class="section" data-page-id="native-tip">
+      <h2 class="section-title">원어민 팁 <span class="title-ja">(ネイティブのひとこと)</span></h2>
+      <p class="section-subtitle"><span class="ko">말할 때는 후에보다 다음에를 훨씬 많이 써요. 뜻은 같고, 후에가 조금 더 갖춘 느낌이에요. 둘 다 앞은 똑같은 모양이에요.</span><span class="ja">話すときは후에より다음에のほうがずっとよく使います。意味は同じで、후에のほうが少しあらたまった感じです。前の形はどちらも同じです。</span></p>
+      <div class="tutor-note">위아래로 한 줄씩 읽어 주세요. 아래쪽이 더 편하게 들리게요.</div>
+      <div class="swap">
+        <div class="swap-row">
+          <span class="translation">ごはんを食べた後に散歩します。</span>
+          <span class="sw-from">밥을 먹<span class="ending">은 후에</span> 산책해요.<span class="yomi">パブル モグン フエ サンチェケヨ</span></span>
+          <span class="sw-to">밥을 먹<span class="ending">은 다음에</span> 산책해요.<span class="yomi">パブル モグン タウメ サンチェケヨ</span></span>
+        </div>
+        <div class="swap-row">
+          <span class="translation">宿題をした後にゲームします。</span>
+          <span class="sw-from">숙제를 <span class="ending">한 후에</span> 게임해요.<span class="yomi">スクチェルル ハン フエ ケイメヨ</span></span>
+          <span class="sw-to">숙제를 <span class="ending">한 다음에</span> 게임해요.<span class="yomi">スクチェルル ハン タウメ ケイメヨ</span></span>
+        </div>
+      </div>
+    </div>
   </div>
 
 
