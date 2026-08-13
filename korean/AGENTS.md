@@ -106,6 +106,24 @@ production actually serves. Deployed decks load that tag, not this folder — so
 the two differ, the page you approved at 480px is not the page the learner gets, and
 nothing errors to tell you. A component that only exists locally just renders unstyled.
 
+### Checking a deck you just wrote
+
+Seven `check_*` scripts verify the things a reader cannot see. Run them on the decks you
+touched before committing; several also take no arguments and sweep the whole repo.
+
+| script | catches |
+| --- | --- |
+| `check_structure.py <deck…>` | unbalanced tags, duplicate `data-page-id`, missing sync ids |
+| `check_reorder.py [deck…]` | **a word-tile that is not in its own answer.** Replays `activities.js`'s own comparison and asks whether some permutation of the tiles reconstructs the answer exactly. Silent breakage otherwise — the page looks fine and can never be solved |
+| `check_syllabus.py [track]` | a deck using grammar a later 과 owns. Strips the tutor's spoken script first, since that may run ahead of the syllabus. Reports set phrases too (`반갑습니다`), so read hits before acting |
+| `check_distractors.py <deck…>` | a wrong option that is real Korean somewhere else. Surfaces candidates only — whether it is *also correct in this slot* is a human call |
+| `check_quotes.py [deck…]` | a cited expression not wrapped per `AUTHORING.md` § 인용한 표현 |
+| `check_chips.py [track…]` | word-tile counts per sentence against the four-chunk rule |
+| `check_render.sh <deck…>` | tallest page, stray `.yomi`, and horizontal overflow at 480px. Needs the Orca browser with a tab already open |
+
+`check_reorder.py` is the one to run every time. It has caught twelve sentences in this
+track whose tiles could not build their own answer — a class of bug no other check sees.
+
 ## Getting a lesson to production
 
 This folder is the authoring tree; `re-speak/podo-curriculum` is what deploys. **Keep
@@ -251,6 +269,9 @@ same document, so anything in the markup is already on the learner's screen.
   briefs; delegates Core to its richer `shard_toc.py`), `new_lesson.py` (deck skeleton) and
   `build_catalog.py` (five TOCs → `catalog.html`). All three derive their
   output from files that already exist, so none holds a second copy of anything.
+  The `check_*` scripts verify a written deck — see 「Checking a deck you just wrote」 above.
+  They only read, take deck paths as arguments, and find the repo from their own location,
+  so they run from anywhere.
 - **`references/`** — source textbook scans (internal reference only).
 - **Archive — deliberately not here.** Retired drafts, design variations and capture files live in
   `_archive/` at the *repo* root, under their original paths. They are kept for history and are
