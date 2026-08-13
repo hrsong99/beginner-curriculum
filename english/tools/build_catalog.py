@@ -72,6 +72,13 @@ def field(body, label):
     return m.group(1).strip() if m else ""
 
 
+def frame(f):
+    """Render a pattern frame, marking its blanks — the changeable part is the
+    whole point of a frame, so it should be visible as such rather than as
+    three underscores in the same colour as the rest."""
+    return html.escape(f).replace("___", '<span class="slot">___</span>')
+
+
 def inline(s):
     """Escape, then re-render the TOC's inline markup as spans."""
     s = html.escape(s)
@@ -169,10 +176,11 @@ def render_core(items):
         if kind == "unit":
             h.append(f'<h3 class="grp">{html.escape(it)}</h3>')
             continue
-        rows = "".join(
-            f'<div class="say"><p class="model">{html.escape(m)}</p>'
-            f'<p class="frame"><code>{html.escape(f)}</code>{inline(tail)}</p></div>'
-            for m, f, tail in it["models"])
+        rows = '<div class="pair">' + "".join(
+            f'<div class="say"><span class="pn">{i}</span>'
+            f'<p class="model">{html.escape(m)}</p>'
+            f'<p class="frame">{frame(f)}{inline(tail)}</p></div>'
+            for i, (m, f, tail) in enumerate(it["models"], 1)) + '</div>' 
         meta = "".join(
             f'<p class="meta"><span class="lbl">{lbl}</span>{inline(v)}</p>'
             for lbl, v in (("Expressions", it["expr"]), ("Grammar", it["gram"])) if v)
@@ -193,11 +201,12 @@ def render_ctx(items):
             h.append(f'<h2 class="show">{html.escape(it["show"])}</h2>')
             lastshow = it["show"]
         h.append(f'<h3 class="grp">{html.escape(it["unit"])}</h3>' if it["n"] % 6 == 1 else "")
-        turns = "".join(
-            f'<div class="say"><p class="model"><span class="who">私</span>{html.escape(l)}</p>'
-            f'<p class="frame"><code>{html.escape(f)}</code>{inline(tail)}</p>'
+        turns = '<div class="pair">' + "".join(
+            f'<div class="say"><span class="pn">{i}</span>'
+            f'<p class="model">{html.escape(l)}</p>'
+            f'<p class="frame">{frame(f)}{inline(tail)}</p>'
             f'<p class="reply"><span class="who">{html.escape(who)}</span>{html.escape(rep)}</p></div>'
-            for l, f, tail, who, rep in it["turns"])
+            for i, (l, f, tail, who, rep) in enumerate(it["turns"], 1)) + '</div>' 
         extra = "".join(
             f'<p class="meta"><span class="lbl">{lbl}</span>{inline(v)}</p>'
             for lbl, v in (("Expressions", it["expr"]), ("Understand", it["understand"])) if v)
@@ -222,7 +231,8 @@ def render_ft(items):
             f'<article class="it" id="{it["id"]}">'
             f'<div class="hd"><a class="rid" href="#{it["id"]}">{it["id"]}</a>'
             f'<h4>{html.escape(it["title"])}</h4>{tags}</div>'
-            f'<div class="say"><p class="model">{html.escape(it["opens"])}</p></div>'
+            f'<div class="pair"><div class="say"><span class="pn">Q</span>'
+            f'<p class="model">{html.escape(it["opens"])}</p></div></div>'
             f'<p class="meta"><span class="lbl">Ladder</span>{inline(it["ladder"])}</p>'
             + (f'<p class="meta"><span class="lbl">Moves</span>{inline(it["moves"])}</p>' if it["moves"] else "")
             + f'</article>')
