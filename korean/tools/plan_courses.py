@@ -129,7 +129,7 @@ ID_META = re.compile(r'<meta name="podo:lesson-id" content="([^"]*)">')
 TITLE_META = re.compile(r'<meta name="podo:title-(ko|en|ja)" content="([^"]*)">')
 # schemas/lesson.schema.json — metadata.slug. Kept verbatim so a mismatch shows
 # up while writing rather than at the merge gate.
-SLUG_RE = re.compile(r"^[0-9]{2}-[a-z0-9]+(-[a-z0-9]+)*$")
+SLUG_RE = re.compile(r"^[0-9]{2,3}-[a-z0-9]+(-[a-z0-9]+)*$")
 
 
 def pack_core(units: list) -> list[dict]:
@@ -358,7 +358,7 @@ def plan_track(track: pathlib.Path, dry: bool, only_course: str | None = None) -
         decks: dict[int, pathlib.Path] = {}
         if (cdir / "lessons").is_dir():
             for deck in sorted((cdir / "lessons").glob("*/lesson.html")):
-                m = re.match(r"(\d{2})-", deck.parent.name)
+                m = re.match(r"(\d{2,3})-", deck.parent.name)
                 if m:
                     decks[int(m.group(1))] = deck
                 else:

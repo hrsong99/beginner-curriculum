@@ -37,7 +37,7 @@ PHONE_OPEN = '<div class="phone">'
 PHONE_CLOSE_RE = re.compile(r"^  </div>\s*$")
 # schemas/lesson.schema.json — metadata.slug. The deck sits in a directory of
 # this name, so the id and the directory are one string.
-SLUG_RE = re.compile(r"^[0-9]{2}-[a-z0-9]+(-[a-z0-9]+)*$")
+SLUG_RE = re.compile(r"^[0-9]{2,3}-[a-z0-9]+(-[a-z0-9]+)*$")
 # every relative ref out of the deck, so depth can be fixed after placement
 REL_REF_RE = re.compile(r'((?:href|src)=")(?:\.\./)+(runtime|trial)/')
 
