@@ -30,19 +30,23 @@
   }
 
   .intro {
-    display: grid;
-    grid-template-columns: 12px minmax(0, 760px);
-    gap: 28px;
-    padding-bottom: clamp(46px, 7vw, 68px);
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    display: block;
+    max-width: none;
+    padding: clamp(38px, 6vw, 58px) clamp(24px, 5vw, 48px);
+    border: 1px solid #e6e8ea;
+    border-radius: 8px;
+    background:
+      radial-gradient(circle at 3% 12%, rgba(112,174,43,.12), transparent 28%),
+      radial-gradient(circle at 98% 8%, rgba(45,100,224,.11), transparent 29%),
+      radial-gradient(circle at 88% 100%, rgba(210,58,111,.09), transparent 30%),
+      #fbfcfd;
   }
-  .spectrum { display: grid; grid-template-rows: repeat(5, 1fr); min-height: 250px; }
-  .spectrum i { display: block; }
-  .spectrum i:nth-child(1) { background: #4f7d10; }
-  .spectrum i:nth-child(2) { background: #2b5fd9; }
-  .spectrum i:nth-child(3) { background: #c22a5f; }
-  .spectrum i:nth-child(4) { background: #0080a8; }
-  .spectrum i:nth-child(5) { background: #69737d; }
-  .intro__copy { align-self: center; }
+  .intro::after { content: ""; position: absolute; z-index: -1; width: 250px; height: 250px; right: -105px; top: -145px; border: 46px solid rgba(45,100,224,.055); border-radius: 50%; }
+  .spectrum { display: none; }
+  .intro__copy { max-width: 780px; }
   .eyebrow {
     margin: 0 0 18px;
     color: #526842;
@@ -68,7 +72,7 @@
     text-wrap: pretty;
   }
 
-  .section-label { margin: 0 0 14px; color: var(--site-muted); font-size: 12px; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+  .section-label { margin: 42px 0 14px; color: var(--site-muted); font-size: 12px; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
   .curricula { display: grid; gap: 14px; }
   .curriculum {
     --accent: #4f7d10;
@@ -82,7 +86,7 @@
     border: 1px solid color-mix(in srgb, var(--accent) 22%, var(--site-line));
     border-top: 6px solid var(--accent);
     border-radius: 4px;
-    background: color-mix(in srgb, var(--tint) 52%, white);
+    background: linear-gradient(145deg, color-mix(in srgb, var(--tint) 80%, white), #fff 58%);
   }
   .curriculum.english { --accent: #2b5fd9; --tint: #eef2fd; }
   .curriculum__title { margin: 0; font-size: clamp(30px, 4vw, 42px); line-height: 1.08; letter-spacing: -.04em; }
@@ -126,8 +130,7 @@
 
   @media (max-width: 760px) {
     .home { width: min(100% - 28px, 600px); padding-top: 64px; }
-    .intro { grid-template-columns: 7px minmax(0,1fr); gap: 18px; }
-    .spectrum { min-height: 220px; }
+    .intro { padding: 34px 22px; border-radius: 6px; }
     .curriculum { grid-template-columns: 1fr; gap: 22px; padding: 27px 22px; }
     .actions { flex-direction: row; flex-wrap: wrap; min-width: 0; }
     .action { flex: 1 1 150px; }
