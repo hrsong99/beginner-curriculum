@@ -83,6 +83,49 @@
     color:var(--ink-3);margin-right:9px;}
   .meta code,.jp code{background:var(--band);padding:.1em .35em;border-radius:3px;}
 
+
+  /* ---------- review layer ---------- */
+  .it.flagged{border-color:var(--warn);background:var(--warn-soft);}
+  .it.flagged .rid{background:var(--warn);color:var(--surface);}
+  .rev{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin-top:11px;
+    padding-top:11px;border-top:1px dashed var(--line-2);}
+  .btn{font:inherit;font-size:12.5px;font-weight:600;cursor:pointer;
+    border:1px solid var(--line-2);background:var(--surface);color:var(--ink-2);
+    border-radius:6px;padding:4px 11px;line-height:1.5;}
+  .btn:hover{border-color:var(--accent);color:var(--accent);}
+  .btn[aria-pressed="true"]{background:var(--warn);border-color:var(--warn);color:var(--ground);}
+  .note{flex:1 0 100%;font:inherit;font-size:14px;color:var(--ink);background:var(--sunk);
+    border:1px solid var(--line-2);border-radius:6px;padding:7px 10px;resize:vertical;
+    min-height:38px;display:none;}
+  .note.on{display:block;}
+  .has-note .btn.cmt{border-color:var(--accent);color:var(--accent);}
+
+  #bar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--surface);
+    border-top:1px solid var(--line-2);box-shadow:0 -6px 20px rgba(0,0,0,.08);}
+  #bar .inner{max-width:880px;margin:0 auto;padding:11px 22px;display:flex;
+    gap:14px;align-items:center;flex-wrap:wrap;}
+  #tally{font-size:14px;color:var(--ink-2);font-variant-numeric:tabular-nums;}
+  #tally b{color:var(--ink);}
+  #bar .spacer{flex:1;}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--ground);
+    padding:6px 16px;font-size:13.5px;}
+  .btn.ghost{background:transparent;}
+  #saved{font-size:12.5px;color:var(--ink-3);}
+
+  #wrapup{margin-top:64px;padding:26px;border:1px solid var(--line-2);border-radius:10px;
+    background:var(--surface);}
+  #wrapup h2{font-family:ui-serif,"Iowan Old Style",Georgia,serif;font-size:22px;
+    margin:0 0 8px;font-weight:600;}
+  #wrapup p{color:var(--ink-2);font-size:15px;margin:0 0 15px;max-width:62ch;}
+  #general{width:100%;font:inherit;font-size:15px;color:var(--ink);background:var(--sunk);
+    border:1px solid var(--line-2);border-radius:8px;padding:12px 14px;min-height:120px;resize:vertical;}
+  #out{width:100%;font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:var(--ink-2);
+    background:var(--sunk);border:1px solid var(--line);border-radius:8px;padding:12px;
+    min-height:150px;margin-top:14px;display:none;white-space:pre;overflow:auto;}
+  #out.on{display:block;}
+  body{padding-bottom:74px;}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;}}
+
   footer{margin-top:64px;padding-top:22px;border-top:1px solid var(--line);
     color:var(--ink-3);font-size:14px;}
   a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
@@ -118,5 +161,157 @@
 <p class="track-note">One topic per session. The line shown is the <i>opening question</i> — the sentence the tutor actually says first, which is what has to land within three seconds. The ladder is the pool of follow-ups, not a script.</p>
 {{FT}}
 
+<section id="wrapup">
+  <h2>Anything general?</h2>
+  <p>Things that apply across many items — a register that is off throughout, a word this curriculum keeps reaching for that natives do not, a whole track that feels wrong. This is often more useful than the individual flags.</p>
+  <textarea id="general" placeholder="e.g. The workplace episodes read American to me — a British speaker would say &quot;have a look&quot;, not &quot;take a look&quot;, throughout."></textarea>
+  <div style="display:flex;gap:9px;margin-top:15px;flex-wrap:wrap;align-items:center">
+    <button class="btn primary" id="copy2" type="button">Copy review to clipboard</button>
+    <button class="btn ghost" id="show" type="button">Show as text</button>
+    <button class="btn ghost" id="reset" type="button">Clear everything</button>
+  </div>
+  <textarea id="out" readonly aria-label="Review as plain text"></textarea>
+</section>
+
 <footer>Generated from the three <code>table-of-contents.md</code> files by <code>english/tools/build_catalog.py</code>. It holds no facts of its own — a wrong line here is a wrong line in a TOC. Re-run after any change; never hand-edit.</footer>
 </div>
+
+<div id="bar"><div class="inner">
+  <span id="tally">Nothing marked yet</span>
+  <span id="saved"></span>
+  <span class="spacer"></span>
+  <button class="btn primary" id="copy1" type="button">Copy review</button>
+</div></div>
+
+<script>
+(function(){
+  "use strict";
+  var KEY="podo-en-review-v1", st={items:{},general:""};
+  try{ st=Object.assign(st, JSON.parse(localStorage.getItem(KEY)||"{}")); }catch(e){}
+  if(!st.items) st.items={};
+
+  var savedEl=document.getElementById("saved"), tmr;
+  function save(){
+    try{ localStorage.setItem(KEY, JSON.stringify(st)); }catch(e){}
+    savedEl.textContent="saved"; clearTimeout(tmr);
+    tmr=setTimeout(function(){ savedEl.textContent=""; },1600);
+    tally();
+  }
+  function rec(id){ return st.items[id]||(st.items[id]={flag:false,note:""}); }
+
+  var arts=[].slice.call(document.querySelectorAll("article.it"));
+  arts.forEach(function(a){
+    var id=a.id, r=st.items[id]||{flag:false,note:""};
+    var row=document.createElement("div"); row.className="rev";
+
+    var flag=document.createElement("button");
+    flag.type="button"; flag.className="btn"; flag.textContent="Flag this";
+    flag.setAttribute("aria-pressed", r.flag?"true":"false");
+    flag.setAttribute("aria-label","Flag "+id+" as wrong");
+
+    var cmt=document.createElement("button");
+    cmt.type="button"; cmt.className="btn cmt"; cmt.textContent="Comment";
+    cmt.setAttribute("aria-expanded", r.note?"true":"false");
+
+    var note=document.createElement("textarea");
+    note.className="note"; note.value=r.note||"";
+    note.placeholder="What is wrong with it, or what would you say instead?";
+    note.setAttribute("aria-label","Comment on "+id);
+
+    if(r.flag) a.classList.add("flagged");
+    if(r.note){ note.classList.add("on"); a.classList.add("has-note"); }
+
+    flag.addEventListener("click",function(){
+      var v=flag.getAttribute("aria-pressed")!=="true";
+      flag.setAttribute("aria-pressed", v?"true":"false");
+      a.classList.toggle("flagged",v); rec(id).flag=v; save();
+    });
+    cmt.addEventListener("click",function(){
+      var on=note.classList.toggle("on");
+      cmt.setAttribute("aria-expanded", on?"true":"false");
+      if(on) note.focus();
+    });
+    note.addEventListener("input",function(){
+      rec(id).note=note.value;
+      a.classList.toggle("has-note", !!note.value.trim()); save();
+    });
+
+    row.appendChild(flag); row.appendChild(cmt); row.appendChild(note);
+    a.appendChild(row);
+  });
+
+  var gen=document.getElementById("general");
+  gen.value=st.general||"";
+  gen.addEventListener("input",function(){ st.general=gen.value; save(); });
+
+  function counts(){
+    var f=0,c=0;
+    Object.keys(st.items).forEach(function(k){
+      var r=st.items[k];
+      if(r.flag) f++;
+      if(r.note && r.note.trim()) c++;
+    });
+    return {f:f,c:c};
+  }
+  function tally(){
+    var n=counts();
+    document.getElementById("tally").innerHTML =
+      (n.f||n.c) ? "<b>"+n.f+"</b> flagged &middot; <b>"+n.c+"</b> commented"
+                 : "Nothing marked yet";
+  }
+  function build(){
+    var n=counts(), L=[];
+    L.push("PODO ENGLISH CURRICULUM — NATIVE REVIEW");
+    L.push(arts.length+" items · "+n.f+" flagged · "+n.c+" commented");
+    L.push("");
+    if((st.general||"").trim()){ L.push("## GENERAL"); L.push(st.general.trim()); L.push(""); }
+    var flg=[], note=[];
+    arts.forEach(function(a){
+      var r=st.items[a.id]; if(!r) return;
+      var has=r.note && r.note.trim();
+      if(!r.flag && !has) return;
+      var h=a.querySelector("h4"), m=a.querySelector(".model");
+      // Contextual model lines carry a `.who` speaker chip; without this the
+      // label runs straight into the sentence ("私We're on track...").
+      var say="";
+      if(m){
+        var who=m.querySelector(".who");
+        say=(who? who.textContent.trim()+": " : "")+
+            (who? m.textContent.slice(who.textContent.length) : m.textContent).trim();
+      }
+      var e=a.id+"  "+(h?h.textContent.trim():"")+
+            "\n    says: "+say+
+            (has ? "\n    → "+r.note.trim().replace(/\n/g,"\n      ") : "");
+      (r.flag?flg:note).push(e);
+    });
+    if(flg.length){ L.push("## FLAGGED — "+flg.length); L.push(flg.join("\n\n")); L.push(""); }
+    if(note.length){ L.push("## COMMENTS, not flagged — "+note.length); L.push(note.join("\n\n")); L.push(""); }
+    if(!flg.length && !note.length && !(st.general||"").trim()) L.push("(nothing marked)");
+    return L.join("\n");
+  }
+  function copy(btn){
+    var txt=build(), old=btn.textContent;
+    function ok(){ btn.textContent="Copied ✓"; setTimeout(function(){ btn.textContent=old; },1800); }
+    function fb(){
+      var o=document.getElementById("out");
+      o.value=txt; o.classList.add("on"); o.focus(); o.select();
+      try{ document.execCommand("copy"); ok(); }
+      catch(e){ btn.textContent="Copy the text below"; setTimeout(function(){ btn.textContent=old; },2600); }
+    }
+    if(navigator.clipboard && navigator.clipboard.writeText)
+      navigator.clipboard.writeText(txt).then(ok, fb);
+    else fb();
+  }
+  document.getElementById("copy1").addEventListener("click",function(){ copy(this); });
+  document.getElementById("copy2").addEventListener("click",function(){ copy(this); });
+  document.getElementById("show").addEventListener("click",function(){
+    var o=document.getElementById("out"); o.value=build(); o.classList.toggle("on");
+  });
+  document.getElementById("reset").addEventListener("click",function(){
+    if(!confirm("Clear every flag and comment? This cannot be undone.")) return;
+    try{ localStorage.removeItem(KEY); }catch(e){}
+    location.reload();
+  });
+  tally();
+})();
+</script>
