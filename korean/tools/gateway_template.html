@@ -7,8 +7,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google" content="notranslate">
+<meta name="theme-color" content="#ffffff">
 <title>커리큘럼 카탈로그 · PODO 한국어</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="../site.css">
 <style>
   @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
@@ -49,8 +52,6 @@
   a { color: inherit; text-decoration: none; }
   :focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; border-radius: var(--radius-sm); }
 
-  .topback { display: inline-block; margin-bottom: 24px; color: var(--ink-4); font-size: 12.5px; font-weight: 600; }
-  .topback:hover { color: var(--ink); }
 
   /* ---------- hero ---------- */
   .hero { position: relative; isolation: isolate; overflow: hidden; padding: 50px 32px; border: 1px solid var(--line);
@@ -171,9 +172,17 @@
 </style>
 </head>
 <body>
-<div class="wrap">
-
-  <a class="topback" href="index.html">← 한국어 커리큘럼</a>
+<a class="podo-skip" href="#main">본문으로 건너뛰기</a>
+<header class="podo-bar">
+  <div class="podo-bar__inner">
+    <a class="podo-brand" href="../index.html"><img src="../favicon.svg" width="28" height="28" alt="">PODO Curriculum</a>
+    <nav class="podo-nav" aria-label="커리큘럼 탐색">
+      <a href="catalog.html" aria-current="page">한국어</a>
+      <a href="../english/catalog.html">English</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap" id="main">
 
   <header class="hero">
     <span class="kicker">PODO · 한국어 커리큘럼</span>
@@ -213,7 +222,7 @@
     <code>python3 korean/tools/build_catalog.py</code> 를 다시 실행하세요.
   </footer>
 
-</div>
+</main>
 
 <script>
 const DATA = /*__DATA__*/null;

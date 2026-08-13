@@ -1,285 +1,231 @@
 #!/usr/bin/env python3
-"""Build the English review catalog from the three table-of-contents files.
+"""Generate the English curriculum gateway and one review page per track.
 
-    python3 english/tools/build_catalog.py            # writes english/catalog.html
+    python3 english/tools/build_catalog.py
 
-The catalog exists to be **reviewed**, not browsed. A native speaker's question
-is "does anyone actually say this?", so the model sentences are the thing the
-page puts in front of them; frames, Core links and the JP-difficulty note are
-context sized to stay out of the way.
+Outputs:
+    english/catalog.html
+    english/catalog/1-core-patterns.html
+    english/catalog/2-contextual-english.html
+    english/catalog/3-freetalking.html
+    english/catalog/4-pronunciation.html
 
-It holds no facts of its own. Everything comes from:
-
-    tracks/1-core-patterns/table-of-contents.md
-    tracks/2-contextual-english/table-of-contents.md
-    tracks/3-freetalking/table-of-contents.md
-
-so a wrong line here is a wrong line in a TOC. Re-run after any TOC change.
-Never hand-edit `catalog.html`.
-
-Every item gets a stable id — CORE-31, CTX-12, FT-45 — so a reviewer can write
-"CORE-31: nobody says that" and it is unambiguous.
+The four table-of-contents files remain the source of truth. Parsing is owned by
+``track_parsers.py`` so the catalog, briefs, and audits cannot silently disagree.
 """
 
-import html
-import pathlib
-import re
-import sys
+from __future__ import annotations
 
-ROOT = pathlib.Path(__file__).resolve().parent.parent
-TRACKS = ROOT / "tracks"
+import json
+from pathlib import Path
+
+import track_parsers
+
+
+ROOT = Path(__file__).resolve().parent.parent
+TOOLS = Path(__file__).resolve().parent
 OUT = ROOT / "catalog.html"
+OUT_DIR = ROOT / "catalog"
+
+LEVELS = ["Pre-A1", "A1", "A2", "B1", "B1+", "B2", "C1", "Intermediate", "Advanced"]
 
 
-def read(p):
-    return (TRACKS / p).read_text(encoding="utf-8")
-
-
-def blocks(text, start_marker=None):
-    """Split a TOC into (number, heading, body) per numbered item.
-
-    The heading line may carry trailing markup after the closing `**` — the
-    freetalking track puts its format tag there (`**9. Title** `story``) — so
-    that tail is captured and appended to the heading rather than anchoring the
-    match to end-of-line, which silently matched only one topic in 121.
-    """
-    if start_marker:
-        text = text.split(start_marker, 1)[1]
-    parts = re.split(r"^\*\*(\d+)\. (.+?)\*\*(.*)$", text, flags=re.M)
-    out = []
-    for i in range(1, len(parts), 4):
-        out.append((int(parts[i]), parts[i + 1] + parts[i + 2], parts[i + 3]))
-    return out
-
-
-def units(text, pattern):
-    """Map item number -> the unit/season/theme heading it sits under."""
-    owner, cur = {}, "—"
-    for line in text.splitlines():
-        h = re.match(pattern, line)
-        if h:
-            cur = h.group(1).strip()
-            continue
-        n = re.match(r"^\*\*(\d+)\. ", line)
-        if n:
-            owner[int(n.group(1))] = cur
-    return owner
-
-
-def field(body, label):
-    """Core and Contextual write `- *Label:* ...`; Freetalking omits the dash."""
-    m = re.search(rf"^-? ?\*{label}:\* (.+)$", body, re.M)
-    return m.group(1).strip() if m else ""
-
-
-def frame(f):
-    """Render a pattern frame, marking its blanks — the changeable part is the
-    whole point of a frame, so it should be visible as such rather than as
-    three underscores in the same colour as the rest."""
-    return html.escape(f).replace("___", '<span class="slot">___</span>')
-
-
-def inline(s):
-    """Escape, then re-render the TOC's inline markup as spans."""
-    s = html.escape(s)
-    s = re.sub(r"`([^`]+)`", r'<code>\1</code>', s)
-    s = re.sub(r"\*\*\(Core ([^)]+)\)\*\*", r'<span class="core">Core \1</span>', s)
-    s = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", s)
-    s = re.sub(r"\*(.+?)\*", r"<i>\1</i>", s)
-    return s
-
-
-def field_block(label, value, kind="rule"):
-    """Render one Korean-catalog-style detail field.
-
-    Short reusable phrases become individual tiles; explanatory material stays
-    a single quiet line so it cannot compete with the learning outcome or the
-    two production patterns.
-    """
+def inline_text(value: str | None) -> str:
+    """Remove the small amount of Markdown used inside TOC fields."""
     if not value:
         return ""
-    if kind == "said":
-        parts = [p.strip() for p in value.split(" · ") if p.strip()]
-        content = '<div class="said">' + "".join(
-            f"<span>{inline(p)}</span>" for p in parts) + "</div>"
-    else:
-        content = f'<p class="{kind}">{inline(value)}</p>'
-    return f'<section class="field field-{kind}"><span class="lbl">{label}</span>{content}</section>'
+    return value.replace("`", "").replace("**", "").replace("*", "").strip()
 
 
-# ---------------------------------------------------------------- parsers
-
-def parse_core():
-    t = read("1-core-patterns/table-of-contents.md")
-    owner = units(t, r"^## (Unit \d+ · [^·]+)")
-    items = []
-    for n, head, body in blocks(t, "# Part 1"):
-        title, _, cando_hint = head.partition(" — ")
-        lines = [l for l in body.splitlines() if re.match(r'^- ["`]', l)]
-        models = []
-        for l in lines:
-            m = re.match(r'^- "(.+?)" — `(.+?)`(.*)$', l)
-            if m:
-                models.append((m.group(1), m.group(2), m.group(3)))
-        items.append(dict(
-            id=f"CORE-{n}", n=n, unit=owner.get(n, "—"),
-            title=title.strip(),
-            # Core writes `*Can-do: ...*` — asterisks wrap the whole line, not
-            # just the label, so field() (which expects `*Label:* value`) misses it.
-            cando=(re.search(r"^\*Can-do: (.+?)\*$", body, re.M).group(1)
-                   if re.search(r"^\*Can-do: (.+?)\*$", body, re.M) else cando_hint),
-            models=models, expr=field(body, "Expressions"),
-            gram=field(body, "Grammar"), jp=field(body, "JP"),
-            part="Part 2 · unreviewed" if n > 70 else "",
-        ))
-    return items
+def level_span(value: str) -> list[str]:
+    if value == "Intermediate / Advanced versions":
+        return ["Intermediate", "Advanced"]
+    if value == "planning only":
+        return []
+    normalized = value.replace("–", " → ").replace("—", " → ")
+    names = [part.strip() for part in normalized.split("→")]
+    hits = [level for level in LEVELS if level in names]
+    if len(hits) == 2:
+        a, b = LEVELS.index(hits[0]), LEVELS.index(hits[1])
+        return LEVELS[a:b + 1]
+    return hits
 
 
-def parse_ctx():
-    t = read("2-contextual-english/table-of-contents.md")
-    owner = units(t, r"^## (Season \d+ · [^·]+)")
-    show = units(t, r"^# (Show \d+ · .+)$")
-    items = []
-    for n, head, body in blocks(t):
-        scene = re.search(r"^\*場面: (.+?)\*$", body, re.M)
-        cando = re.search(r"^\*Can-do: (.+?)\*$", body, re.M)
-        turns = []
-        for m in re.finditer(r'^- 私: "(.+?)" — `(.+?)`(.*?)$\n\s*→ (.+?): "(.+?)"', body, re.M):
-            turns.append((m.group(1), m.group(2), m.group(3), m.group(4), m.group(5)))
-        items.append(dict(
-            id=f"CTX-{n}", n=n, unit=owner.get(n, "—"), show=show.get(n, ""),
-            title=head.strip(), scene=scene.group(1) if scene else "",
-            cando=cando.group(1) if cando else "", turns=turns,
-            expr=field(body, "Expressions"), understand=field(body, "Understand"),
-        ))
-    return items
+def lesson(item: dict, *, kind: str) -> dict:
+    models = []
+    for model in item.get("models", []):
+        models.append({
+            "ex": model.get("model", ""),
+            "pat": model.get("pattern", ""),
+            "reply": (f'{model.get("partner")}: {model.get("reaction")}'
+                      if model.get("reaction") else ""),
+        })
+
+    notes = []
+    for label, key in (("Expressions", "expressions"), ("Grammar", "grammar"),
+                       ("Japanese transfer", "jp"), ("Understand", "understand"),
+                       ("Follow-up ladder", "ladder"), ("Useful moves", "moves"),
+                       ("Japanese habit", "habit"), ("Examples", "examples")):
+        if item.get(key):
+            notes.append({"k": label, "v": inline_text(item[key])})
+
+    primary = (models[0]["ex"] if models else item.get("opening")
+               or item.get("fix") or item.get("canDo") or "")
+    return {
+        "id": item["id"], "n": item["no"], "title": item["title"],
+        "can": inline_text(item.get("canDo")), "scene": inline_text(item.get("scene")),
+        "pats": models, "notes": notes, "level": item.get("level", ""),
+        "kind": kind, "primary": inline_text(primary),
+        "deep": bool(item.get("deep")), "formats": item.get("formats", []),
+        "floor": item.get("floor"), "fix": inline_text(item.get("fix")),
+    }
 
 
-def parse_ft():
-    t = read("3-freetalking/table-of-contents.md")
-    owner = units(t, r"^# (Theme \d+ · [^·]+)")
-    items = []
-    for n, head, body in blocks(t):
-        fmt = re.findall(r"`(story|choose|両国|opinion)`", head)
-        items.append(dict(
-            id=f"FT-{n}", n=n, unit=owner.get(n, "—"),
-            title=re.sub(r"\s*`[^`]+`", "", head).split(" — ")[0].strip(),
-            fmt=fmt[0] if fmt else "",
-            deep="深く" in head,
-            # Balance-game topics carry their opening line in the heading as an
-            # italic clause instead of an *Opens:* field — see the theme note.
-            opens=field(body, "Opens").strip() or (
-                (re.search(r"— \*(.+?)\*", head).group(1) if re.search(r"— \*(.+?)\*", head) else "")),
-            ladder=field(body, "Ladder"), moves=field(body, "Moves"),
-            shared=field(body, "Shared"),
-        ))
-    return items
+def grouped(items: list[dict], key, make_group, kind: str) -> list[dict]:
+    groups: list[dict] = []
+    current = object()
+    for item in items:
+        owner = key(item)
+        if owner != current:
+            groups.append({**make_group(item), "lessons": []})
+            current = owner
+        groups[-1]["lessons"].append(lesson(item, kind=kind))
+    return groups
 
 
-# ---------------------------------------------------------------- render
-
-def group(items):
-    out, last = [], None
-    for it in items:
-        if it["unit"] != last:
-            out.append(("unit", it.get("show", ""), it["unit"]))
-            last = it["unit"]
-        out.append(("item", None, it))
-    return out
+def distribution(groups: list[dict]) -> dict[str, int]:
+    counts: dict[str, int] = {}
+    for group in groups:
+        span = group.get("levels") or level_span(group.get("level", ""))
+        for level in span:
+            counts[level] = counts.get(level, 0) + len(group["lessons"])
+    return counts
 
 
-def render_core(items):
-    h = []
-    for kind, extra, it in group(items):
-        if kind == "unit":
-            h.append(f'<h3 class="grp">{html.escape(it)}</h3>')
-            continue
-        rows = '<section class="field field-patterns"><span class="lbl">Patterns</span><div class="pair">' + "".join(
-            f'<div class="say"><span class="pn">{i}</span>'
-            f'<p class="model">{html.escape(m)}</p>'
-            f'<p class="frame">{frame(f)}{inline(tail)}</p></div>'
-            for i, (m, f, tail) in enumerate(it["models"], 1)) + '</div></section>'
-        goal = (f'<section class="field field-goal"><span class="lbl">Learning outcome</span>'
-                f'<p class="goal">{html.escape(it["cando"])}</p></section>')
-        meta = field_block("Expressions", it["expr"], "said") + field_block("Grammar", it["gram"])
-        jp = field_block("Japanese transfer note", it["jp"], "transfer")
-        flag = '<span class="flag">unreviewed</span>' if it["part"] else ""
-        h.append(
-            f'<article class="it" id="{it["id"]}">'
-            f'<div class="hd"><a class="rid" href="#{it["id"]}">{it["id"]}</a>'
-            f'<h4>{html.escape(it["title"])}</h4>{flag}</div>'
-            f'{goal}{rows}{meta}{jp}</article>')
-    return "".join(h)
+def build() -> dict:
+    core = track_parsers.parse_core()
+    contextual = track_parsers.parse_contextual()
+    freetalking = track_parsers.parse_freetalking()
+    pronunciation = track_parsers.parse_pronunciation()
+
+    core_groups = grouped(
+        core,
+        lambda x: (x["part"], x["unitNo"]),
+        lambda x: {"label": f'Unit {x["unitNo"]}', "title": x["unit"],
+                   "subtitle": x["part"], "level": x["level"]},
+        "core",
+    )
+    contextual_groups = grouped(
+        contextual,
+        lambda x: (x["showNo"], x["seasonNo"]),
+        lambda x: {"label": f'Show {x["showNo"]} · Season {x["seasonNo"]}',
+                   "title": f'{x["show"]} — {x["season"]}', "level": x["level"],
+                   "meta": f'Core {x["floor"]} floor'},
+        "contextual",
+    )
+    ft_groups = grouped(
+        freetalking,
+        lambda x: x["themeNo"],
+        lambda x: {"label": f'Theme {x["themeNo"]}', "title": x["theme"],
+                   "level": x["level"], "levels": ["Intermediate", "Advanced"],
+                   "meta": x["themeFormat"]},
+        "freetalking",
+    )
+    pronunciation_groups = grouped(
+        pronunciation,
+        lambda x: x["partNo"],
+        lambda x: {"label": f'Part {x["partNo"]}', "title": x["part"],
+                   "level": "planning only", "meta": "Planning stage"},
+        "pronunciation",
+    )
+
+    specs = [
+        {
+            "id": "1-core-patterns", "no": 1, "name": "Core Patterns", "short": "Core",
+            "glyph": "Aa", "status": "review", "accent": "#2b5fd9", "tint": "#eef2fd",
+            "unitWord": "units", "itemWord": "lessons",
+            "desc": "The main speaking sequence, from first introductions to precise argument. Each lesson pairs one practical outcome with two production patterns.",
+            "note": "Review the model sentences first. Frames, grammar notes, and Japanese transfer notes explain why each item exists.",
+            "stats": [(len(core), "lessons"), (len(core_groups), "units"),
+                      (sum(len(x["models"]) for x in core), "patterns")],
+            "groups": core_groups,
+        },
+        {
+            "id": "2-contextual-english", "no": 2, "name": "Contextual English", "short": "Contextual",
+            "glyph": "劇", "status": "review", "accent": "#c22a5f", "tint": "#fdeff3",
+            "unitWord": "seasons", "itemWord": "episodes",
+            "desc": "Four continuing shows turn the Core sequence into exchanges with characters, consequences, and a reason to speak.",
+            "note": "Judge each learner line together with the reply that follows it. A sentence can be natural alone and still fail as a turn in the scene.",
+            "stats": [(len(contextual), "episodes"), (len(contextual_groups), "seasons"),
+                      (len({x["showNo"] for x in contextual}), "shows")],
+            "groups": contextual_groups,
+        },
+        {
+            "id": "3-freetalking", "no": 3, "name": "Freetalking", "short": "Freetalking",
+            "glyph": "話", "status": "review", "accent": "#0080a8", "tint": "#e9f6fa",
+            "unitWord": "themes", "itemWord": "topics",
+            "desc": "A topic-led curriculum for sustained conversation, with an opening question, a follow-up ladder, and reusable speaking moves.",
+            "note": "Each topic supports separate Intermediate and Advanced sessions. The ladder is a pool of routes, not a script to complete.",
+            "stats": [(len(freetalking), "topics"), (len(ft_groups), "themes"), (2, "levels")],
+            "groups": ft_groups,
+        },
+        {
+            "id": "4-pronunciation", "no": 4, "name": "Pronunciation", "short": "Pronunciation",
+            "glyph": "音", "status": "plan", "accent": "#69737d", "tint": "#f4f5f7",
+            "unitWord": "parts", "itemWord": "lessons",
+            "desc": "A closed list of the English sound and rhythm problems that most often reduce intelligibility for Japanese speakers.",
+            "note": "Planning only: no lesson decks are authorized yet. The order follows impact on intelligibility rather than how famous a contrast is.",
+            "stats": [(len(pronunciation), "lessons"), (len(pronunciation_groups), "parts"),
+                      (0, "lesson decks")],
+            "groups": pronunciation_groups,
+        },
+    ]
+
+    for track in specs:
+        track["stats"] = [{"v": value, "k": label} for value, label in track["stats"]]
+        track["total"] = sum(len(group["lessons"]) for group in track["groups"])
+        track["dist"] = distribution(track["groups"])
+        track["span"] = [level for level in LEVELS if track["dist"].get(level)]
+
+    return {
+        "levels": LEVELS,
+        "tracks": specs,
+        "totals": {"tracks": len(specs), "items": sum(t["total"] for t in specs),
+                   "review": sum(t["total"] for t in specs if t["status"] == "review"),
+                   "units": sum(len(t["groups"]) for t in specs)},
+    }
 
 
-def render_ctx(items):
-    h, lastshow = [], None
-    for it in items:
-        if it["show"] != lastshow:
-            h.append(f'<h2 class="show">{html.escape(it["show"])}</h2>')
-            lastshow = it["show"]
-        h.append(f'<h3 class="grp">{html.escape(it["unit"])}</h3>' if it["n"] % 6 == 1 else "")
-        turns = '<section class="field field-patterns"><span class="lbl">Learner lines</span><div class="pair">' + "".join(
-            f'<div class="say"><span class="pn">{i}</span>'
-            f'<p class="model">{html.escape(l)}</p>'
-            f'<p class="frame">{frame(f)}{inline(tail)}</p>'
-            f'<p class="reply"><span class="who">{html.escape(who)}</span>{html.escape(rep)}</p></div>'
-            for i, (l, f, tail, who, rep) in enumerate(it["turns"], 1)) + '</div></section>'
-        goal = (f'<section class="field field-goal"><span class="lbl">Learning outcome</span>'
-                f'<p class="goal">{html.escape(it["cando"])}</p></section>')
-        extra = (field_block("Expressions", it["expr"], "said")
-                 + field_block("Understand", it["understand"], "said"))
-        h.append(
-            f'<article class="it" id="{it["id"]}">'
-            f'<div class="hd"><a class="rid" href="#{it["id"]}">{it["id"]}</a>'
-            f'<h4>{html.escape(it["title"])}</h4><span class="flag">unreviewed</span></div>'
-            f'<p class="scene">{html.escape(it["scene"])}</p>'
-            f'{goal}{turns}{extra}</article>')
-    return "".join(h)
+def render(template: str, data: dict, output: Path) -> None:
+    source = (TOOLS / template).read_text(encoding="utf-8")
+    output.write_text(source.replace("/*__DATA__*/null", json.dumps(
+        data, ensure_ascii=False, separators=(",", ":"))), encoding="utf-8")
 
 
-def render_ft(items):
-    h = []
-    for kind, _x, it in group(items):
-        if kind == "unit":
-            h.append(f'<h3 class="grp">{html.escape(it)}</h3>')
-            continue
-        tags = (f'<span class="tag">{it["fmt"]}</span>' if it["fmt"] else "") + \
-               ('<span class="tag deep">深く</span>' if it["deep"] else "")
-        opening = (f'<section class="field field-patterns field-opening"><span class="lbl">Opening question</span>'
-                   f'<div class="pair"><div class="say"><span class="pn">Q</span>'
-                   f'<p class="model">{html.escape(it["opens"])}</p></div></div></section>')
-        support = (field_block("Follow-up ladder", it["ladder"])
-                   + field_block("Useful moves", it["moves"], "said"))
-        h.append(
-            f'<article class="it" id="{it["id"]}">'
-            f'<div class="hd"><a class="rid" href="#{it["id"]}">{it["id"]}</a>'
-            f'<h4>{html.escape(it["title"])}</h4>{tags}</div>'
-            f'{opening}{support}</article>')
-    return "".join(h)
+def main() -> int:
+    data = build()
+    OUT_DIR.mkdir(exist_ok=True)
+    summaries = [{key: value for key, value in track.items() if key != "groups"}
+                 for track in data["tracks"]]
+    render("gateway_template.html", {**data, "tracks": summaries}, OUT)
 
+    nav = [{key: track[key] for key in ("id", "no", "name", "short", "accent")}
+           for track in data["tracks"]]
+    review_index = {
+        item["id"]: {"title": item["title"], "primary": item["primary"]}
+        for track in data["tracks"] if track["status"] == "review"
+        for group in track["groups"] for item in group["lessons"]
+    }
+    for track in data["tracks"]:
+        render("track_template.html", {"levels": LEVELS, "track": track, "nav": nav,
+                                       "review": review_index},
+               OUT_DIR / f'{track["id"]}.html')
 
-def main():
-    core, ctx, ft = parse_core(), parse_ctx(), parse_ft()
-    counts = (len(core), len(ctx), len(ft))
-    if counts != (122, 60, 121):
-        print(f"! parsed {counts}, expected (122, 60, 121) — a TOC changed shape "
-              f"or the parser is stale", file=sys.stderr)
-
-    tpl = (pathlib.Path(__file__).parent / "catalog_template.html").read_text(encoding="utf-8")
-    OUT.write_text(
-        tpl.replace("{{CORE}}", render_core(core))
-           .replace("{{CTX}}", render_ctx(ctx))
-           .replace("{{FT}}", render_ft(ft))
-           .replace("{{N_CORE}}", str(len(core)))
-           .replace("{{N_CTX}}", str(len(ctx)))
-           .replace("{{N_FT}}", str(len(ft)))
-           .replace("{{N_ALL}}", str(sum(counts))),
-        encoding="utf-8")
-    print(f"wrote {OUT.relative_to(ROOT.parent)} — {counts[0]} lessons, "
-          f"{counts[1]} episodes, {counts[2]} topics")
+    counts = [track["total"] for track in data["tracks"]]
+    print(f"wrote {OUT.relative_to(ROOT.parent)} + {OUT_DIR.relative_to(ROOT.parent)}/*.html "
+          f"— {counts[0]} / {counts[1]} / {counts[2]} review items, {counts[3]} planned")
     return 0
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    raise SystemExit(main())

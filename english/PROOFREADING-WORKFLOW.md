@@ -13,7 +13,8 @@ it does not approve a future deck, prove a CEFR band or validate mobile layout.
 
 ## Native catalog review — the active stage
 
-The generated `catalog.html` is the review surface. Reviewers may flag an item, leave an item
+The generated `catalog.html` is the review gateway; each generated page under `catalog/` is a
+track-specific review surface. Reviewers may flag an item, leave an item
 comment, add general comments and use **Copy review**. The copied text includes a stable id, title
 and first-line snapshot so feedback can be checked against the current TOCs.
 
