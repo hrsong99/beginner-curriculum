@@ -26,11 +26,22 @@ class LessonShellTests(unittest.TestCase):
 
     def test_retarget_changes_all_identity_fields(self):
         head, _foot = new_lesson.split_shell(PILOT.read_text(encoding="utf-8"))
-        changed = new_lesson.retarget(head, lesson_id="31-past-action", level="A2", title="Past action", version="2099-01-02")
+        changed = new_lesson.retarget(
+            head,
+            review_id="CORE-31",
+            lesson_id="31-past-action",
+            level="A2",
+            title="Past action",
+            version="2099-01-02",
+        )
+        self.assertIn('content="CORE-31"', changed)
         self.assertIn('content="31-past-action"', changed)
         self.assertIn('content="A2"', changed)
         self.assertIn('content="2099-01-02"', changed)
         self.assertIn('<title>Past action — PODO English</title>', changed)
+        self.assertIn('name="podo:vocabulary-status" content="todo"', changed)
+        self.assertIn('name="podo:vocabulary:new" content=""', changed)
+        self.assertNotIn('box|箱', changed)
 
     def test_redepth_resolves_shared_refs_from_a_planned_deck_location(self):
         with tempfile.TemporaryDirectory(dir=new_lesson.ENGLISH / "tracks/1-core-patterns") as tmp:

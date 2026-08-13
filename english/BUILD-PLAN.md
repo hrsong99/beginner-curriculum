@@ -232,8 +232,11 @@ is wrong, and the rhythm of the examples.
 
 ### 3c · Cross-cutting
 
-- [ ] **T3.9** — Build the **running lexicon**. `lesson-template.md` caps new content words at
-  6–8 per lesson; there is no word inventory anywhere, so the rule is unenforceable today.
+- [x] **T3.9 — DONE 2026-08-13.** Authored decks now declare new, recycled, assumed-known and
+  receptive-only vocabulary in machine-readable metadata. `build_running_lexicon.py` generates the
+  working ledger from those declarations; `check_deck.py` rejects undeclared hint-chip vocabulary,
+  copied-shell `todo` status and Core/Contextual loads above eight unless a written waiver surfaces
+  the exception. The approved Core 20 pilot starts the ledger at five new content words.
 - [x] **T3.10 — DONE 2026-08-13.** Contextual defines `Understand` as an optional receptive-only
   field and the blueprint gives it a dedicated recognition page. Seven episodes currently need it;
   absence elsewhere means the episode has no extra receptive target, not a missing required field.
@@ -278,9 +281,10 @@ copy of anything. Same rule here.
   Run against the Korean tree it finds **94 pre-existing errors in 318 decks** — 39 parity, 54
   mixed-chip-count pages, 1 deck shipping inline `<style>`. The chip figure independently confirms
   the problem Korean's own `_conventions.md` records ("348문장 중 51문장"), which is still open.
-- [x] **T4.6b — CORE GENERATORS COVERED 2026-08-13.** Thirteen regression tests now cover all
+- [x] **T4.6b — CORE GENERATORS COVERED 2026-08-13.** Eighteen regression tests now cover all
   four parsers, canonical-shell extraction/retargeting/path depth, exact generated grammar-map and
-  315-brief freshness, and catalog-review intake including stale/duplicate/unknown feedback.
+  315-brief freshness, catalog-review intake including stale/duplicate/unknown feedback, and the
+  vocabulary ownership/cap/ledger contract. New shells clear copied vocabulary and stay `todo`.
   Future `plan_courses.py` and authored-deck packet tooling add their own tests when built.
 - [x] **T3.12 — DONE 2026-08-13.** `build_grammar_map.py` regenerates the 122-row function,
   two-pattern, grammar, band, sequence and JP-risk map from the Core TOC. It surfaced rather than

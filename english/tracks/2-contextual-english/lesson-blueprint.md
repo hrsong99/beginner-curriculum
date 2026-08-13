@@ -120,6 +120,8 @@ not the tutor's voice or the partner's receptive line.
 - One answer box answers one question. A second prompt may only narrow the first.
 - Blank only the target frame. Hint chips contain `JP:EN` vocabulary, never articles, auxiliaries
   or inflections.
+- Declare each content word as new, recycled, assumed-known or receptive-only in deck metadata.
+  Contextual normally adds no more than eight; every hint-chip English value must be declared.
 - Omit `pN-rule` or `pN-choose` when the pattern has no honest formation branch or binary choice.
 
 ---

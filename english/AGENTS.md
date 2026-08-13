@@ -131,6 +131,10 @@ lifted, Core still needs three structurally different lessons reviewed together 
    one worth paying for: the blueprint carries structure, but the tutor's voice, the way a wrong
    answer is made wrong for a reason, and the rhythm of the example sentences live only in the
    deck itself. A lesson written from the blueprint alone comes out correctly shaped and lifeless.
+5. **The generated running lexicon.** Read `reference/running-lexicon.md`, classify every content
+   word as new, recycled, assumed-known or receptive-only in the deck metadata, then set
+   `podo:vocabulary-status` from `todo` to `reviewed`. The shell deliberately clears the pilot's
+   vocabulary so copied words cannot acquire false provenance.
 
 ### Two constraints that are easy to lose
 
@@ -139,7 +143,9 @@ lifted, Core still needs three structurally different lessons reviewed together 
   into tutor speech makes the English stilted, which is worse.
 - **Scaffold every non-target word.** Blanks target only the pattern being practiced. Hint chips
   list vocabulary only (`JP:EN`) — never articles, auxiliaries or inflections, which are the
-  English analogue of the particles-and-endings rule in `ux-philosophy.md`.
+  English analogue of the particles-and-endings rule in `ux-philosophy.md`. Every hint-chip English
+  value must appear in exactly one vocabulary metadata category; Core and Contextual normally add
+  no more than eight new content words.
 
 ---
 

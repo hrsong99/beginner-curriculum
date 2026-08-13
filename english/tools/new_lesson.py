@@ -48,9 +48,10 @@ def split_shell(text: str) -> tuple[str, str]:
     return head, foot
 
 
-def retarget(head: str, *, lesson_id: str, level: str, title: str, version: str) -> str:
+def retarget(head: str, *, review_id: str, lesson_id: str, level: str, title: str, version: str) -> str:
     substitutions = [
         (r'(<meta name="podo:lesson-id" content=")[^"]*(")', lesson_id),
+        (r'(<meta name="podo:review-id" content=")[^"]*(")', review_id),
         (r'(<meta name="podo:level" content=")[^"]*(")', level),
         (r'(<meta name="podo:content-version" content=")[^"]*(")', version),
         (r"(<title>).*?(</title>)", title + " — PODO English"),
@@ -59,6 +60,23 @@ def retarget(head: str, *, lesson_id: str, level: str, title: str, version: str)
         head, count = re.subn(pattern, lambda m: m.group(1) + value + m.group(2), head, count=1)
         if count != 1:
             raise ValueError(f"canonical deck is missing required identity field {pattern!r}")
+    # Vocabulary is editorial lesson content, not shell content. Keep the four
+    # category slots but force the writer to classify the new deck from zero.
+    head, count = re.subn(
+        r'(<meta name="podo:vocabulary:(?:new|recycled|assumed|receptive)" content=")[^"]*(")',
+        r"\1\2",
+        head,
+    )
+    if count != 4:
+        raise ValueError(f"canonical deck has {count} vocabulary categories, expected 4")
+    head, count = re.subn(
+        r'(<meta name="podo:vocabulary-status" content=")[^"]*(")',
+        r"\1todo\2",
+        head,
+        count=1,
+    )
+    if count != 1:
+        raise ValueError("canonical deck is missing podo:vocabulary-status")
     return head
 
 
@@ -108,7 +126,14 @@ def main() -> int:
         parser.error(f"refusing to overwrite existing deck: {out}")
 
     head, foot = split_shell(source.read_text(encoding="utf-8"))
-    head = retarget(head, lesson_id=args.id, level=args.level, title=args.title, version=dt.date.today().isoformat())
+    head = retarget(
+        head,
+        review_id=args.review_id,
+        lesson_id=args.id,
+        level=args.level,
+        title=args.title,
+        version=dt.date.today().isoformat(),
+    )
     page = redepth(head + PLACEHOLDER.format(brief=brief.relative_to(track)) + foot, out)
     if "yomi.js" in page or 'class="yomi"' in page:
         parser.error("canonical shell contains forbidden English yomi support")

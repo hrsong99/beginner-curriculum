@@ -37,6 +37,8 @@ import re
 import sys
 from collections import Counter
 
+import vocabulary
+
 REPO = pathlib.Path(__file__).resolve().parent.parent.parent
 
 EN_END = ".!?"
@@ -89,6 +91,8 @@ def check(path):
         # is what the production importer reads. A track-root sample-lesson.html is
         # a cut of the canonical trial deck and has no course directory to match.
         errs.append(f"podo:lesson-id {m.group(1)!r} != directory {path.parent.name!r}")
+    if is_english and not re.search(r'name="podo:review-id" content="(?:CORE|CTX|FT)-\d+"', html):
+        errs.append("missing or invalid podo:review-id — use the stable TOC id")
 
     # ---- references resolve ----------------------------------------------
     for ref in sorted(set(LOCAL_REF.findall(html))):
@@ -114,6 +118,38 @@ def check(path):
                         "the error instead of scaffolding the word (see english/AGENTS.md)")
         if re.search(r"<script[^>]*yomi\.js", html):
             errs.append("English deck loads yomi.js")
+
+        # ---- vocabulary ownership and load -------------------------------
+        try:
+            vocab = vocabulary.parse(html, source=path)
+        except vocabulary.VocabularyError as exc:
+            errs.append(str(exc).removeprefix(f"{path}: "))
+        else:
+            if vocab["status"] != "reviewed":
+                errs.append(
+                    f"vocabulary status is {vocab['status']!r} — classify the deck's "
+                    "new, recycled, assumed-known and receptive-only words"
+                )
+            capped_track = any(part in {"1-core-patterns", "2-contextual-english"} for part in path.parts)
+            load = vocabulary.load_result(vocab) if capped_track else None
+            if load:
+                (warns if load[0] == "warning" else errs).append(load[1])
+            declared = {
+                entry["english"].casefold()
+                for entries in vocab["categories"].values()
+                for entry in entries
+            }
+            try:
+                hints = vocabulary.hint_words(html)
+            except vocabulary.VocabularyError as exc:
+                errs.append(str(exc))
+            else:
+                undeclared = sorted(hints - declared)
+                if undeclared:
+                    errs.append(
+                        "hint-chip vocabulary missing from the ownership declaration: "
+                        + ", ".join(undeclared)
+                    )
 
     # ---- 1 · tutor script sentence parity ---------------------------------
     for pid, chunk in pages(html):

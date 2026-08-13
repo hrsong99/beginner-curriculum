@@ -111,32 +111,26 @@ over this list.
 
 ### Vocabulary in circulation
 
-`shared/lesson-template.md` caps new content words at **six to eight per lesson**. That cap is
-currently unenforceable because no word inventory exists — building one is `BUILD-PLAN.md` → T3.9,
-and this is where its per-track working copy lives once it does.
+[`../reference/running-lexicon.md`](../reference/running-lexicon.md) is the generated working copy.
+Lesson HTML owns the four-way editorial declaration: **new**, **recycled** (with its earlier stable
+id), **assumed-known**, and **receptive-only**. `build_running_lexicon.py` projects those declarations;
+never hand-edit the generated ledger or maintain a second word list here.
 
-Reuse what is already in circulation rather than inventing synonyms.
-
-**Core Patterns** — in circulation after Core 20. Reuse these rather than inventing synonyms:
-
-```
-box · suitcase · bag · menu · Wi-Fi · station · counter
-carry · find · help
-big · small · one (the big one / the small one — substitution, Core 19)
-```
+For Core and Contextual, `shared/lesson-template.md`'s normal ceiling of eight new content words is
+enforced by `check_deck.py`. A genuine exception needs a written `podo:vocabulary-waiver`, which is
+surfaced as a warning rather than silently accepted. Every `JP:EN` hint-chip word must appear in
+exactly one declaration category. Reuse what is already in circulation rather than inventing
+synonyms.
 
 Supporting expressions heard but never asked for in a learner slot:
 `What do you need?` (Core 20) · `Anything else?` (Core 9) · `Do you need help?` (receptive)
 
-**Contextual English** — *(none yet)*
-
 ### Receptive-only
 
 Words and forms that appear in partner lines but are never asked for in a learner-produced slot go
-here, with the reason. Korean's example: a counter that no lesson owns yet, kept receptive until
-the TOC assigns it. Keep that restraint rather than quietly promoting a word to productive.
-
-*(none yet)*
+in the deck's `podo:vocabulary:receptive` declaration. Korean's example is a counter that no lesson
+owns yet, kept receptive until the TOC assigns it. Keep that restraint rather than quietly
+promoting a word to productive.
 
 ---
 

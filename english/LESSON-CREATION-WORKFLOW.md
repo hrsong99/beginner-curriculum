@@ -100,6 +100,7 @@ Before writing pages, read these in full and in order:
 5. the brief (or the TOC entry, per step 2)
 6. the canonical deck named by the blueprint
 7. `tracks/_conventions.md`
+8. `reference/running-lexicon.md`
 
 **The canonical deck is not optional.** The blueprint gives structure; the deck carries the tutor's
 voice, believable distractors and activity rhythm. A lesson written from the blueprint alone comes
@@ -156,6 +157,10 @@ writers copy. Korean spent 348 reorder sentences at the wrong chip count for exa
 
 - **No katakana over English. Ever. `yomi.js` is not loaded.** See `AGENTS.md`. This is the rule
   most likely to be broken by an agent that read the Korean instructions first.
+- Classify vocabulary in the four `podo:vocabulary:*` metadata fields before changing
+  `podo:vocabulary-status` from `todo` to `reviewed`. New shells deliberately inherit no word list.
+  Every `JP:EN` hint chip belongs to exactly one category. Core and Contextual normally introduce
+  at most eight content words; a genuine exception needs a written `podo:vocabulary-waiver`.
 - One activity per page; English-first title with a Japanese gloss; one blue tutor-script box.
 - Keep the pattern-intro page as a pacing bridge: pattern name plus one short Japanese line moving
   from the scene into the next beat. Do not teach grammar on the dark transition page.
@@ -219,6 +224,7 @@ Static checks:
 - no inline CSS/JS, no accidental shared-runtime changes
 - **every tutor script box has the same number of sentences on both sides**
 - **every reorder page uses one chunking criterion down the page**
+- reviewed four-way vocabulary ownership; every hint chip declared; Core/Contextual new-word cap
 
 ### Run the checker
 
@@ -226,6 +232,7 @@ Static checks:
 python3 english/tools/check_deck.py english/tracks      # a tree
 python3 english/tools/check_deck.py path/to/lesson.html # one deck
 python3 english/tools/check_deck.py --all               # every deck in the repo
+python3 english/tools/build_running_lexicon.py           # regenerate the author ledger
 ```
 
 It covers every static check above and exits non-zero on any error, so it can gate a batch. It

@@ -141,6 +141,8 @@ below were paid for again by this track's own pilot, because they were not writt
   question that has no landing place.
 - **Blank only the pattern.** Every other word the learner needs is given. Hint chips are
   `JP:EN` vocabulary only — never articles, auxiliaries or inflections.
+- Declare each content word as new, recycled, assumed-known or receptive-only in deck metadata.
+  Core normally adds no more than eight; every hint-chip English value must be declared.
 - **Omit `pN-choose` when there is no honest binary.** Do not manufacture a wrong form for an
   invariant pattern, and do not offer two grammatical options whose difference needs a nuance
   lecture the lesson has not given.

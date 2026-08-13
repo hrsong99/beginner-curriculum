@@ -201,6 +201,9 @@ before closing.
 - All learner-facing support is Japanese; English is the target language.
 - No `.yomi`, no katakana pronunciation scaffold and no `yomi.js`.
 - Vocabulary support is `JP:EN` only. Never put articles, auxiliaries or inflections in hint chips.
+- Declare each supported content word as new, recycled, assumed-known or receptive-only in deck
+  metadata, and make every hint-chip English value belong to exactly one category. Freetalking's
+  load is recorded but is not governed by the Core/Contextual eight-word ceiling.
 - Every `data-page-id`, feedback id and sync id is unique.
 - Scrolling is allowed; split only when the activity's scope or pager access becomes unclear.
 
