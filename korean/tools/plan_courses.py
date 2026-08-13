@@ -51,6 +51,9 @@ import sys
 
 import track_parsers
 
+VALID_COUNTRY_CODES = {"KR", "JP"}
+MARKET_COUNTRY_CODE = "JP"
+
 # --- 2-core-patterns packing ------------------------------------------------
 TARGET = 12            # a course should look like the ones already shipping
 MAX_AFTER_MERGE = 15   # a trailing stub may join the previous course up to this
@@ -233,7 +236,21 @@ def deck_meta(deck: pathlib.Path) -> tuple[dict, str | None]:
     return dict(TITLE_META.findall(raw)), (m.group(1) if m else None)
 
 
-def course_yaml(course, cfg, class_level, track, written) -> str:
+def market_country_code(value: str | None) -> str:
+    """Validate the downstream market identity for this authoring tree."""
+    if value is None:
+        raise ValueError("countryCode is required")
+    if value not in VALID_COUNTRY_CODES:
+        raise ValueError(
+            f"countryCode must be one of {sorted(VALID_COUNTRY_CODES)}; got {value!r}")
+    if value != "JP":
+        raise ValueError(
+            f"Japanese-market Korean courses require countryCode JP; got {value!r}")
+    return value
+
+
+def course_yaml(course, cfg, class_level, track, written,
+                country_code: str | None = MARKET_COUNTRY_CODE) -> str:
     plan = "\n".join(
         f"#   {l['no']:>3}  {'✓ ' + written[l['no']] if l['no'] in written else '·  '}"
         f"{l['title']}{' [깊게]' if l.get('deep') else ''}"
@@ -254,6 +271,7 @@ metadata:
 
 spec:
   curriculumType: {cfg['type']}
+  countryCode: {market_country_code(country_code)}
   # 자연키의 일부다 — 바꾸면 같은 코스의 수정이 아니라 다른 코스가 된다.
   classLevel: "{class_level}"
   lessonTime: 25

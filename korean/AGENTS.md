@@ -168,10 +168,10 @@ trial decks sit there and nothing else should.
 cannot collide across languages even where they coincide. Avoid very large bands such as
 `10000`: `CLASS_LEVEL` is handled as a Java `Float`, making three-decimal slots needlessly
 fragile at that magnitude. **Audience is
-`GT_CLASS_COURSE.COUNTRY_CODE`**, not the level — the column exists, defaults to `KR`, and is
-`KR` on every row today. If "English for Japanese speakers" ever has to coexist with "English
-for Korean speakers", that is the column to use; the sync manifest does not send it yet, so
-it needs a grape-side change rather than a new number scheme.
+`GT_CLASS_COURSE.COUNTRY_CODE`**, not the level. `spec.countryCode` is required by the downstream
+course schema and is part of grape's natural key. This Japanese-market authoring tree always emits
+`countryCode: JP`. Changing it on an already-deployed course addresses a different identity; first
+deploy the old identity with `enabled: false`, then change `countryCode` and deploy the new identity.
 
 **A track is not a course.** 2-core-patterns is 116 lessons; a deployable course is one
 `classLevel` with weeks 1..N and no gaps. `tools/plan_courses.py` cuts the track against
@@ -184,9 +184,10 @@ Lesson slugs are `NN-english-words` (`07-daily-routine`) because the schema dema
 the deck's `podo:lesson-id` must equal its directory name. `lesson.yaml` is written only for
 lessons that have a deck; the rest of the plan lives as comments in `course.yaml`.
 
-Over there, in order: `sync-from-authoring.py` → `import-track-lessons.py <track>`
-→ `repoint-shared.py` → `validate.py`. `podo:lesson-id` and `podo:title-{ko,en,ja}` are
-load-bearing — `new_lesson.py` writes them and they must not be removed.
+`sync-from-authoring.py` does **not** copy these manifests or ordinary track lessons. Over there,
+run the explicit course importer for the Korean track so it copies into `courses/kr/` without
+translating `countryCode`, then `repoint-shared.py` → `validate.py`. `podo:lesson-id` and
+`podo:title-{ko,en,ja}` are load-bearing — `new_lesson.py` writes them and they must not be removed.
 
 **Never edit `shared/` or `sandbox/` in podo-curriculum.** Both are sync destinations
 and get replaced wholesale; a fix made there disappears on the next sync with no error.
