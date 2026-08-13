@@ -10,11 +10,11 @@ The places where it does **not** are listed under *English deltas* below — rea
 Do not design a page, add a component, or write copy here until you have read both. If a change
 you are about to make conflicts with either, say so and ask — don't quietly deviate.
 
-**This folder is early.** Korean has 316 written decks, 8 build tools and a review pipeline;
-English has a table of contents and this file. [`BUILD-PLAN.md`](./BUILD-PLAN.md) is the ordered
-list of what is missing and who unblocks whom. When something below says a tool or file does not
-exist yet, that is current fact, not an invitation to invent a local substitute — check the plan
-and report the gap.
+**This folder is pre-production, not empty.** It has four TOCs (315 planned items), an approved
+Core pilot, three production blueprints, strict parsers, generated briefs and grammar map, a deck
+checker and a native-review catalog. [`BUILD-PLAN.md`](./BUILD-PLAN.md) is the reconciled list of
+what remains and who unblocks whom. The owner has paused further decks until catalog feedback
+returns; infrastructure readiness is not permission to expand lesson volume.
 
 ---
 
@@ -110,25 +110,21 @@ So:
 
 ### Mandatory pilot gate
 
-Treat the workflow's pilot sequence as a stop gate, not advice. **No English lesson deck exists
-yet**, so the very first one is a pilot by definition: author it by hand, verify its complete
-narrative, pedagogy, component markup and every page at 480px, then **stop for explicit user
-approval**. Do not use a generic content generator, assign a lesson batch, or present additional
-decks as finished before that approval. Structural checks alone never approve a pilot. If the
-pilot is rejected, rewrite and re-review it; do not use it as a template. After approval, draft
-three structurally different lessons, review those, and only then expand.
+Core's first pilot is approved and is the track's canonical deck. **Further Core decks remain on
+an explicit owner hold until native catalog feedback returns.** Contextual and Freetalking still
+have no pilot: the first deck in each track is a pilot, must be authored and visually reviewed by
+hand, then stops for explicit approval. Structural checks never approve a pilot. After the hold is
+lifted, Core still needs three structurally different lessons reviewed together before expansion.
 
 ### The inputs, in order
 
-1. **A deck skeleton.** Korean has `tools/new_lesson.py`, which lifts the meta block, stylesheet
-   links and the load-order-bearing script tags off the track's canonical deck so they cannot
-   drift. **English has no such tool yet** (`BUILD-PLAN.md` → T4.3). Until it exists, copy the
-   skeleton from the approved English pilot deck — not from a Korean deck, whose script list
-   includes `yomi.js`.
-2. **The lesson brief.** Korean generates course-scoped briefs from its TOC. **English has no
-   brief generator yet** (`BUILD-PLAN.md` → T4.2), so read the entry in the track's
-   `table-of-contents.md` directly — and read the entries on either side of it, which is what a
-   brief would have given you for free.
+1. **A deck skeleton.** `tools/new_lesson.py` lifts metadata, shared paths and the load-order-bearing
+   scripts from an approved English canonical deck, removes its pages, checks references and
+   refuses overwrite. Core defaults to its approved pilot. Other tracks require their own approved
+   pilot before `--from-deck` is legitimate. Never use a Korean deck, whose shell loads `yomi.js`.
+2. **The generated lesson brief.** Run `tools/build_lesson_briefs.py`; read the stable-id brief in
+   `tracks/<track>/toc/`. It carries the exact TOC facts, adjacent context and negative sequence
+   guardrails. Never hand-edit it.
 3. **`tracks/<track>/lesson-blueprint.md`** — which pages, in what order, doing what. Plan the arc
    from here. *(Written per track as each track's pilot lands.)*
 4. **The canonical deck the blueprint names**, in full. This is the expensive read and it is the
@@ -166,17 +162,16 @@ not a matter of taste.
 
 ## Layout
 
-- **`tracks/`** — the learner-facing curriculum, in learning order: `1-core-patterns` ·
-  `2-contextual-english` · `3-freetalking`. Each track holds `table-of-contents.md`, and will hold
-  `lesson-blueprint.md` and its lesson HTML as those land.
+- **`tracks/`** — the learner-facing curriculum: `1-core-patterns` · `2-contextual-english` ·
+  `3-freetalking`, plus planning-only `4-pronunciation`. The three production-facing tracks now
+  have a blueprint; only Core has an approved canonical deck.
 - **`reference/`** — the author-only source trail: teaching philosophy and the pattern standard,
   the source hierarchy and provenance policy, the proposed evidence-first build method, the
   grammar coverage map, the rationale, and the transformation map from the linked Podolingo doc.
   **This is the strongest part of the English folder** and it is more rigorous than anything on the
   Korean side; it should eventually be back-ported rather than diluted.
-- **`shared/`** — `lesson-template.md`, the two-pattern lesson spec. Note it is a *prose* spec: it
-  does not yet correspond to any page structure or component. Reconciling it with a real blueprint
-  is part of the pilot.
+- **`shared/`** — `lesson-template.md`, the two-pattern lesson spec. Core and Contextual translate
+  that hierarchy into page arcs; Freetalking deliberately uses a correction loop instead.
 - **`BUILD-PLAN.md`** — the ordered gap list and its decisions. Read it before proposing work.
 - **Archive — deliberately not here.** Retired drafts live in `_archive/` at the *repo* root. They
   are **not part of the read path**: never cite one as precedent, never copy markup out of one.
@@ -184,8 +179,9 @@ not a matter of taste.
 
 ## Getting a lesson to production
 
-**Not yet possible, and nothing here should pretend otherwise.** English has no course codes, no
-`classLevel` band, no `course.yaml`, no catalog and no sync path (`BUILD-PLAN.md` → Phase 7).
+**Deployment is not yet possible, and nothing here should pretend otherwise.** English has a
+review catalog, but still has no final course codes, `classLevel` mapping, generated manifests or
+production sync path (`BUILD-PLAN.md` → D4–D5 and Phase 7).
 
 Two constraints are already fixed and worth knowing before anyone designs around them, both from
 `../korean/AGENTS.md`:

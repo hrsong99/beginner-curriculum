@@ -6,9 +6,9 @@ applies to the three production-facing English tracks; pronunciation remains pla
 [`../ux-philosophy.md`](../ux-philosophy.md) first; this document defines the
 production sequence and ownership boundaries.
 
-**Read [`BUILD-PLAN.md`](./BUILD-PLAN.md) before proposing any batch.** Several steps below name a
-tool that does not exist yet. Those are marked **[not built]** and say what to do instead. Do not
-build a local substitute for one without saying so.
+**Read [`BUILD-PLAN.md`](./BUILD-PLAN.md) before proposing any batch.** Course planning and product
+sync do not exist yet, and further decks are on hold during native review. Do not treat the
+presence of parsers, briefs or a skeleton generator as permission to cross either gate.
 
 The workflow is course-aware. A lesson is identified by:
 
@@ -286,10 +286,16 @@ below the fold.
 ## 7. Then regenerate the derived files
 
 ```sh
-# all [not built] — BUILD-PLAN.md → Phase 4
+# [not built] — gated on D4/D5
 python3 english/tools/plan_courses.py english/tracks/<track>
+
+# built — regenerate review material after accepted TOC changes
+python3 english/tools/build_lesson_briefs.py --all
+python3 english/tools/build_grammar_map.py
 python3 english/tools/build_catalog.py
-python3 english/tools/check_runtime_drift.py
+
+# shared-runtime drift checker currently lives on the Korean side
+python3 korean/tools/check_runtime_drift.py
 ```
 
 **`check_runtime_drift.py` matters before you trust any local render.** Deployed decks load a

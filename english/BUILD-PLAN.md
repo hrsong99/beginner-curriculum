@@ -1,8 +1,8 @@
 # English Curriculum — Build Plan
 
-**Status:** Phase 0 decided · Phase 1 in progress
+**Status:** infrastructure ready · native catalog review in progress · further decks on hold
 **Written:** 2026-08-12
-**Basis:** full read-through of `english/` (11 files) against `korean/` (316 written decks, 5 tracks, 8 build tools, 7 process docs)
+**Last reconciled:** 2026-08-13
 
 ---
 
@@ -10,17 +10,17 @@
 
 | | Korean | English |
 |---|---:|---:|
-| Tracks | 5 | 3 |
-| TOC lines | 3,650 | 953 |
-| Process / authoring docs | 7 (1,464 lines) | 0 |
-| Build tools | 8 + tests | 0 |
-| Written lesson decks | 316 | **0** |
-| Trial decks · catalog · review pipeline | yes | none |
+| Tracks | 5 | 4 (pronunciation plan-only) |
+| Planned items | 316 written decks | 315 TOC items |
+| Process / authoring docs | mature | working contract + three production blueprints |
+| Build tools | 8 + tests | parser, briefs, grammar map, catalog, checker, skeleton + tests |
+| Written lesson decks | 316 | **1 approved Core pilot** |
+| Catalog / review surface | yes | 303-item review catalog; native review active |
 
-English has a **curriculum specification**. Korean has a **production system**. The spec is good
-— `curriculum-source-hierarchy.md` and `proposed-authoritative-build-method.md` are more rigorous
-than anything on the Korean side and should eventually be back-ported. But almost everything
-between "we know what to teach" and "a lesson exists" is missing.
+English now has the production spine that was missing when this plan was written: guarded
+authoring, an approved Core pilot, strict TOC parsing, generated briefs and grammar map, a deck
+checker and a review catalog. The main uncertainty has moved from **can this be built?** to **which
+reviewed patterns survive, and how does the product identify the resulting courses?**
 
 The plan below is ordered so that **each phase unblocks the next**, and so that the cheapest
 work that removes the most uncertainty happens first.
@@ -40,7 +40,8 @@ work that removes the most uncertainty happens first.
 | **6** | Native / corpus / learner validation | calling it CEFR-aligned | L | human + agent |
 | **7** | Product & deploy identity | shipping to app | M | agent + backend |
 
-Phases 1–3 can run concurrently. Phase 2 has a **hard stop gate** before any batch work.
+Phases 1–5 are substantially complete. Phase 6 native review is active. The owner has explicitly
+held further deck production until that feedback returns; Phase 7 remains gated on D4–D5.
 
 ---
 
@@ -84,7 +85,7 @@ be written until the answer exists.
 - [ ] **D3b — Is there any pronunciation scaffold at all?** Given D3, does an English deck mark
   stress, linking or rhythm on model lines — and with what? Deferred until the pilot deck shows
   whether a model line needs one.
-- [ ] **D4 — Level ladder and its mapping.** English uses CEFR (Pre-A1 → B1+). The product's
+- [ ] **D4 — Level ladder and its mapping.** English uses CEFR (Pre-A1 → C1). The product's
   trial report (`korean/trial/plan-logic.md`) runs on 왕초급/초급/초중급/중급/고급. No mapping
   exists between them. *Downstream:* trial report, catalog, course recommendation logic.
 - [ ] **D5 — Product identity numbers.** `classLevel` band, `LANG_TYPE`, course-code scheme.
@@ -191,50 +192,51 @@ is wrong, and the rhythm of the examples.
   shipped as bare `.batchim`, which renders **violet — the Korean 조사 colour**, a category English
   does not have. Now `batchim ending-rule`, so orange means "the taught frame" on every page.
 - [x] **T2.5 — APPROVED 2026-08-13.** The pilot is the canonical deck for `1-core-patterns`.
-- [ ] **T2.6 — ON HOLD by owner decision.** Approved, but no further decks until the review comes
-  back. Correct call: Korean's precedent says a chunk of Part 2 will not survive native review, and
-  a deck written from a pattern that gets cut is a deck rewritten.
+- [ ] **T2.6 — ON HOLD by owner decision.** After native review, author three structurally
+  different Core lessons (a narrative one, a comparison one and a B1+ one) and review them together
+  before any wider batch. The pilot is approved, but no further decks are written while the review
+  is open. Correct call: Korean's precedent says a chunk of Part 2 will not survive native review,
+  and a deck written from a pattern that gets cut is a deck rewritten.
 - [x] ~~**T2.5 (old)** — STOP. Explicit owner approval.~~ Structural checks do not approve a pilot. If
   rejected, rewrite and re-review; do not use a rejected pilot as a template.
-- [ ] **T2.6** — After approval: three structurally different lessons (e.g. a narrative one, a
-  comparison one, a B1+ one), reviewed together, before any wider batch.
-- [ ] **T2.7** — Blueprints for tracks 2 and 3, written after the Core pilot holds up.
+- [x] **T2.7 — DONE 2026-08-13.** Contextual and Freetalking now have production blueprints.
+  Contextual gives `Understand` a receptive-only lane, defines marked-chunk treatment and owns the
+  teaser/continuity contract. Freetalking defines four format-specific model pages, the two load
+  versions, the eight-question ladder and the correction contract. Neither creates or approves a
+  track pilot.
 
 ---
 
 ## Phase 3 · TOC repair — **size M, parallelizable with 1–2**
 
-### 3a · Core (72 lessons) — correctness first
+### 3a · Core (122 lessons) — correctness first
 
-- [ ] **T3.1** — Fix six frames that violate the curriculum's own pattern standard.
-  `teaching-philosophy.md` §4 rejects `We ___ed ___ last night` as "a past-tense formula, not a
-  retrievable frame"; `lesson-template.md` bans grammar formulas as patterns. Currently shipping:
-  - L59 `My ___ was ___ yesterday.` — literally the rejected shape
-  - L42 `I'm ___ed because it's ___ing.` — two inflected slots, almost no fixed language
-  - L30 `I was ___ing when you ___ed.`
-  - L41 `It's the ___est option.` · L40 `This one is ___er than that one.`
-- [ ] **T3.2** — L65: model line says "The traffic must have been bad," frame reads `It must have ___`.
-- [ ] **T3.3** — Add the learner-facing grammar line to all 72 entries. `teaching-philosophy.md` §3
-  promises it exists; `grammar-coverage-map.md` is explicitly author-only; so today it exists nowhere.
-- [ ] **T3.4** — Normalize supporting expressions. Core carries them on ~10 of 72 lessons;
-  Contextual carries 2 on every lesson. One standard, applied to both.
-- [ ] **T3.5** — Unit framing lines (what this unit does, where the load is) and checkpoint form
-  summaries.
+- [x] **T3.1 — DONE 2026-08-13.** The 12 Core and 2 Contextual frames that failed the pattern
+  standard were rewritten; defensible open frames were retained with reasons.
+- [x] **T3.2 — DONE 2026-08-13.** The past-deduction model/frame mismatch was corrected in the
+  rebuilt spine (now Core 72).
+- [~] **T3.3 — PART 1 DONE; PART 2 WAITS ON REVIEW.** Core 1–70 have learner-facing `Grammar:`
+  support. Core 71–122 have none; the generated grammar map and every affected brief expose those
+  52 gaps instead of inventing explanations for patterns that native review may demote.
+- [~] **T3.4 — 180/182 DONE.** All 122 Core lessons and 58/60 Contextual episodes carry supporting
+  expressions. CTX-54 and CTX-58 remain missing; fill them together with accepted catalog feedback
+  rather than changing the active review surface underneath the reviewer.
+- [x] **T3.5 — DONE 2026-08-13.** All 22 Core units carry framing and checkpoint/review summaries.
 
-### 3b · Contextual (48 lessons)
+### 3b · Contextual (60 episodes)
 
-- [ ] **T3.6** — Add a can-do line to all 48. Core has one per lesson; Contextual has none.
-- [ ] **T3.7** — Add a scene line (who · where · what's happening) per lesson. Without it the deck
-  writer invents the situation on the spot.
-- [ ] **T3.8** — Add partner reactions to model lines. Korean's finding: two lines with no reply
-  are examples, not a script.
+- [x] **T3.6 — DONE 2026-08-13.** All 60 episodes carry a can-do.
+- [x] **T3.7 — DONE 2026-08-13.** All 60 episodes carry a who/where/what scene.
+- [x] **T3.8 — DONE 2026-08-13.** Every episode has two learner lines and two partner reactions;
+  the strict parser tests the contract, including non-Latin dialogue quotes.
 
 ### 3c · Cross-cutting
 
 - [ ] **T3.9** — Build the **running lexicon**. `lesson-template.md` caps new content words at
   6–8 per lesson; there is no word inventory anywhere, so the rule is unenforceable today.
-- [ ] **T3.10** — Add a receptive-only tier (Korean's `이해`) for language the learner must
-  recognize but not produce — announcements, clerk speech, signage.
+- [x] **T3.10 — DONE 2026-08-13.** Contextual defines `Understand` as an optional receptive-only
+  field and the blueprint gives it a dedicated recognition page. Seven episodes currently need it;
+  absence elsewhere means the episode has no extra receptive target, not a missing required field.
 - [x] **T3.11 — DONE 2026-08-13.** Generated briefs now carry the negative sequence constraint.
   Core lists exact already-learned/not-yet ranges and nearby boundaries; Contextual names the
   productive floor and chunk exception; Freetalking is explicitly retrieval-only. These are
@@ -261,7 +263,6 @@ copy of anything. Same rule here.
   refs/no-yomi, and refuses overwrite. Non-Core tracks remain gated on their own approved pilots.
 - [ ] **T4.4** — `plan_courses.py` — cut tracks into deployable courses on unit boundaries;
   emit `course.yaml` / `lesson.yaml` validating against podo-curriculum's schemas.
-- [ ] **T4.5** — `build_catalog.py` — English catalog gateway + per-track pages.
 - [x] **T4.5 / T7.3 — DONE 2026-08-13.** `english/tools/build_catalog.py` + `catalog_template.html`
   generate `english/catalog.html` from the three TOCs — 303 items, every one with a stable id
   (`CORE-31`, `CTX-12`, `FT-45`) so review feedback is unambiguous. Model sentences are set large
@@ -277,7 +278,10 @@ copy of anything. Same rule here.
   Run against the Korean tree it finds **94 pre-existing errors in 318 decks** — 39 parity, 54
   mixed-chip-count pages, 1 deck shipping inline `<style>`. The chip figure independently confirms
   the problem Korean's own `_conventions.md` records ("348문장 중 51문장"), which is still open.
-- [ ] **T4.6b** — Tests for the tools, matching `test_track_parsers.py`.
+- [x] **T4.6b — CORE GENERATORS COVERED 2026-08-13.** Thirteen regression tests now cover all
+  four parsers, canonical-shell extraction/retargeting/path depth, exact generated grammar-map and
+  315-brief freshness, and catalog-review intake including stale/duplicate/unknown feedback.
+  Future `plan_courses.py` and authored-deck packet tooling add their own tests when built.
 - [x] **T3.12 — DONE 2026-08-13.** `build_grammar_map.py` regenerates the 122-row function,
   two-pattern, grammar, band, sequence and JP-risk map from the Core TOC. It surfaced rather than
   papered over the remaining curriculum gap: Core 71–122 have no learner-facing `Grammar:` field.
@@ -307,15 +311,13 @@ copy of anything. Same rule here.
   - Two versions of each topic (accessible / full), same theme and skeleton, differing only in
     the language load — not two separate idea lists.
   - Session page skeleton.
-- [ ] **T5.3** — **Pronunciation track** (gated on D1 + D6). Korean's is not generic phonetics: it
-  is a *closed, predictable, L1-contrastive* list. The Korean-L1-for-English list is equally
-  closed — /r/–/l/, /f/–/p/, /v/–/b/, /θ/, /z/, final-consonant vowel epenthesis, consonant
-  clusters, syllable- vs stress-timing, /æ/–/e/. Note `curriculum-rationale.md` §5 declined a
-  pronunciation syllabus on *generic* grounds, before the L1 was ever named — worth re-taking.
-- [ ] **T5.4** — **Decoding track** (gated on D6) — the `1-hangul` analogue: sound↔spelling,
-  connected speech, and the loanword interference that makes written English unrecoverable in speech.
-- [ ] **T5.5** — **Part 2 / B2–C1** (gated on D6). English currently stops at B1+ with an explicit
-  scope boundary; Korean Core runs to 고급 in one file.
+- [x] **T5.3 — PLANNED, DECKS DEFERRED 2026-08-13.** The 12-lesson Japanese-L1 contrastive
+  pronunciation TOC is written and parsed. Per D6, it remains planning-only until Core is further
+  along; D3b still controls any scaffold choice.
+- [x] **T5.4 — NOT APPLICABLE by D6.** There is no Hangul-style decoding track: the learner already
+  reads Latin script. Sound/spelling and connected-speech needs belong in pronunciation planning.
+- [x] **T5.5 — WRITTEN, UNDER REVIEW 2026-08-13.** Core Part 2 extends B1+→C1 through lesson 122.
+  It is explicitly unvalidated and expected to shrink under native/corpus review.
 
 ---
 
@@ -329,15 +331,15 @@ coverage map are exactly that shape.
 - [~] **T6.1 — IN PROGRESS, owner reviewing.** Surface is `english/catalog.html`. Rejected patterns
   get **demoted to the expressions line, not deleted** — the learner still meets them but is no
   longer asked to produce them.
-- [ ] ~~T6.1 (old)~~ Native-speaker pass over all 144 Core patterns + 96 Contextual patterns. Demote
-  rather than delete — Korean moved rejects to the expression/grammar line so learners still meet
-  them but are not asked to produce them.
 - [ ] **T6.2** — Corpus/naturalness check on model sentences (Step 6 of the proposed method).
 - [ ] **T6.3** — Row-level source audit: Core Inventory item + EGP form-and-meaning + CEFR
   descriptor for every grammar-map row. `proposed-authoritative-build-method.md` lists this as
   not done; until it is, `B1+` stays a working band, not a claim.
-- [ ] **T6.4** — `english/PROOFREADING-WORKFLOW.md` + packet builder, mirroring Korean's
-  reviewer-tree pipeline.
+- [~] **T6.4 — CATALOG INTAKE DONE; DECK PACKETS DEFERRED.** `PROOFREADING-WORKFLOW.md` separates
+  catalog, lesson and rendered review. `parse_catalog_review.py` validates copied feedback against
+  current stable ids, titles and first-line snapshots and emits structured JSON without editing
+  TOCs. Build the one-way authored-HTML packet projection after the representative three-Core-deck
+  gate; building it from one pilot would encode one lesson's structure as universal.
 - [ ] **T6.5** — Learner pilot: two lessons per level, recorded task performance, delayed retrieval
   at one week, transfer check.
 
@@ -347,7 +349,8 @@ coverage map are exactly that shape.
 
 - [ ] **T7.1** — Assign the `classLevel` band and per-course decimal slots (gated on D5).
 - [ ] **T7.2** — Course codes; `course.yaml` / `lesson.yaml` generation.
-- [ ] **T7.3** — English catalog (gateway + per-track pages), generated, never hand-edited.
+- [x] **T7.3 — DONE 2026-08-13.** The generated 303-item catalog is the active native-review
+  surface. Product publication remains separate from the review artifact.
 - [ ] **T7.4** — Trial material: trial decks per track, short cuts, the report deck, and an English
   `plan-logic.md` (level ladder, duration formula, the 5-month sales floor). This is the sales
   front door and currently does not exist in any form.
@@ -358,11 +361,9 @@ coverage map are exactly that shape.
 
 ## Sequencing note
 
-The temptation is to start with Phase 3 because the TOC is the thing that exists and editing it
-feels productive. Resist it. Phase 3 is real work but it does not reduce uncertainty — we already
-know what those edits are. **Phase 2 is where the unknowns live**: nobody has yet proved that an
-English lesson can be built out of this component vocabulary at all, and every estimate in
-Phases 4–7 is a guess until one deck exists.
+The next critical path is now: **native feedback → TOC decisions → regenerate derived artifacts →
+three varied Core lessons → batch gate.** In parallel, D4–D5 unblock course planning and product
+identity. Do not create lesson volume merely because the infrastructure can now stamp shells.
 
 Phase 1 is a few hours and removes a live risk (agents working in an unguarded folder). Do it
 alongside.

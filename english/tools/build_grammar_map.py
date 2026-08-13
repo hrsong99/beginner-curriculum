@@ -17,8 +17,7 @@ def cell(value: str | None) -> str:
     return (value or "").replace("|", "\\|").replace("\n", " ")
 
 
-def main() -> int:
-    lessons = track_parsers.parse_core()
+def render(lessons: list[dict]) -> str:
     missing_grammar = [lesson["no"] for lesson in lessons if not lesson["grammar"]]
     lines = [
         "# Core Grammar and Function Coverage Map",
@@ -72,7 +71,13 @@ def main() -> int:
         "curriculum claim; it does not make that claim authoritative merely by tabulating it.",
         "",
     ]
-    OUT.write_text("\n".join(lines), encoding="utf-8")
+    return "\n".join(lines)
+
+
+def main() -> int:
+    lessons = track_parsers.parse_core()
+    OUT.write_text(render(lessons), encoding="utf-8")
+    missing_grammar = [lesson["no"] for lesson in lessons if not lesson["grammar"]]
     print(f"wrote {OUT.relative_to(ROOT.parent)} — {len(lessons)} rows; {len(missing_grammar)} grammar gaps surfaced")
     return 0
 

@@ -4,15 +4,13 @@
 order and what each page is for. Do not copy markup or tone from here — take those from the
 canonical deck.
 
-- **Canonical deck (source of truth):** *not yet authored.* The pilot is
-  `courses/<course>/lessons/20-asking-for-help/lesson.html` (Core 20, `Could you help me with ___?`).
-  Until it exists and is approved, the nearest reference for **structure and component markup** is
-  [`../../../korean/tracks/2-core-patterns/sample-lesson.html`](../../../korean/tracks/2-core-patterns/sample-lesson.html)
-  — read it for shape only. Its *language contract is different from ours* (see the katakana rule
-  in [`../../AGENTS.md`](../../AGENTS.md)), so nothing about its readings transfers.
-- **What goes in this lesson:** the entry in [`table-of-contents.md`](./table-of-contents.md), plus
-  the entries on either side, plus the `Depends on` row in
-  [`../../reference/grammar-coverage-map.md`](../../reference/grammar-coverage-map.md).
+- **Canonical deck (source of truth):**
+  [`courses/core-first-exchanges-2/lessons/20-asking-for-help/lesson.html`](./courses/core-first-exchanges-2/lessons/20-asking-for-help/lesson.html)
+  — the approved Core 20 pilot. The course directory remains provisional until product course
+  planning lands; the deck's component composition and tutor voice are canonical now.
+- **What goes in this lesson:** the generated stable-id brief in [`toc/`](./toc/). It carries the
+  authoritative TOC entry, adjacent lessons and already-learned/not-yet guardrails. Fix the TOC or
+  parser and regenerate; never hand-edit the brief.
 - **Component markup:** [`../../../korean/AUTHORING.md`](../../../korean/AUTHORING.md) §2–§3.
 - **What may be a pattern at all:** [`../../reference/teaching-philosophy.md`](../../reference/teaching-philosophy.md) §4.
 
