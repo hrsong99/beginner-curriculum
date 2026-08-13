@@ -619,6 +619,18 @@
           </div>
           <img class="lvbig-img" src="../assets/levels/lv-1.png" alt="">
         </div>
+        <div class="lv-src" hidden>
+          <img data-lv="1" src="../assets/levels/lv-1.png" alt="">
+          <img data-lv="2" src="../assets/levels/lv-2.png" alt="">
+          <img data-lv="3" src="../assets/levels/lv-3.png" alt="">
+          <img data-lv="4" src="../assets/levels/lv-4.png" alt="">
+          <img data-lv="5" src="../assets/levels/lv-5.png" alt="">
+          <img data-lv="6" src="../assets/levels/lv-6.png" alt="">
+          <img data-lv="7" src="../assets/levels/lv-7.png" alt="">
+          <img data-lv="8" src="../assets/levels/lv-8.png" alt="">
+          <img data-lv="9" src="../assets/levels/lv-9.png" alt="">
+          <img data-lv="10" src="../assets/levels/lv-10.png" alt="">
+        </div>
         <hr class="rline">
         <ul class="chk lv-ev"></ul>
         <p class="topikrow"><i>TOPIK 1급</i><span>—</span></p>
@@ -734,6 +746,19 @@
 
         <!-- 다섯 줄 · 좋아요/아쉬운 점 · 추천 모두 renderAspects() 가 그린다 -->
         <div class="axbars"></div>
+        <!-- 항목 칩의 그림 · 레벨 그림(.lv-src)·코스 아이콘(.ico-src)과 같은 이유로
+             마크업에 한 번씩 적어 둔다. 패키저는 마크업의 src 만 번들·평탄화하므로,
+             JS 가 경로를 지어내면 로컬에서만 되고 보드에서 404 가 난다.
+             다섯 중 넷은 Figma 에서 내려받은 SVG 그대로다 — 선 그림이라 어느 화면
+             배율에서도 또렷하고 파일도 가볍다. 어휘만 PNG 인데, 그쪽은 Figma 에서
+             조각 다섯으로 나뉘어 나와 한 파일로 합쳐야 해서 아직 래스터다. -->
+        <div class="ax-src" hidden>
+          <img data-ax="acc" src="../assets/report-icons/ax-acc.svg" alt="">
+          <img data-ax="voc" src="../assets/report-icons/ax-voc.png" alt="">
+          <img data-ax="flu" src="../assets/report-icons/ax-flu.svg" alt="">
+          <img data-ax="pron" src="../assets/report-icons/ax-pron.svg" alt="">
+          <img data-ax="lis" src="../assets/report-icons/ax-lis.svg" alt="">
+        </div>
         <div class="axsum">
           <div class="axs good"><h4><img src="../assets/report-icons/good.svg" alt="">잘하고 있어요!</h4><ul></ul></div>
           <div class="axs weak"><h4><img src="../assets/report-icons/bad.svg" alt="">아쉬워요!</h4><ul></ul></div>
@@ -795,6 +820,34 @@
           <img data-cov="drama" src="../assets/art/cov/cov-drama.png" alt="">
           <img data-cov="banmal" src="../assets/art/cov/cov-banmal.png" alt="">
           <img data-cov="free" src="../assets/art/cov/cov-free.png" alt="">
+        </div>
+
+        <!-- 코스 전용 그림과 장면 사진 · 경로를 마크업에 적어 두는 이유는 .lv-src 와
+             같다: 패키저는 마크업의 src 만 번들·평탄화하므로, JS 가 경로를 지어내면
+             로컬에서만 되고 보드에서 404 가 난다. -->
+        <div class="ico-src" hidden>
+          <img data-ico="hangul" src="../assets/course-icons/ic-hangul.png" alt="">
+          <img data-ico="core"   src="../assets/course-icons/ic-core.png" alt="">
+          <img data-ico="free"   src="../assets/course-icons/ic-free.png" alt="">
+          <img data-ico="drama"  src="../assets/course-icons/ic-drama.png" alt="">
+          <img data-ico="goal"   src="../assets/course-icons/ic-goal.png" alt="">
+        </div>
+        <div class="pic-src" hidden>
+          <img data-pic="drama1"  src="../assets/scenes/drama-1.png" alt="">
+          <img data-pic="drama2"  src="../assets/scenes/drama-2.png" alt="">
+          <img data-pic="drama3"  src="../assets/scenes/drama-3.png" alt="">
+          <!-- 아래 아홉은 아직 자리만 잡아 둔 것이다 — 드라마 사진을 그대로 빌려
+               쓰고 있다. 코스별 진짜 장면이 나오면 여기 src 만 갈아 끼우면 되고,
+               report.js 는 손대지 않는다(코스마다 제 키를 이미 들고 있다). -->
+          <img data-pic="travel1" src="../assets/scenes/drama-1.png" alt="">
+          <img data-pic="travel2" src="../assets/scenes/drama-2.png" alt="">
+          <img data-pic="travel3" src="../assets/scenes/drama-3.png" alt="">
+          <img data-pic="banmal1" src="../assets/scenes/drama-1.png" alt="">
+          <img data-pic="banmal2" src="../assets/scenes/drama-2.png" alt="">
+          <img data-pic="banmal3" src="../assets/scenes/drama-3.png" alt="">
+          <img data-pic="free1"   src="../assets/scenes/drama-1.png" alt="">
+          <img data-pic="free2"   src="../assets/scenes/drama-2.png" alt="">
+          <img data-pic="free3"   src="../assets/scenes/drama-3.png" alt="">
         </div>
 
         <div class="road-card pm-road">
