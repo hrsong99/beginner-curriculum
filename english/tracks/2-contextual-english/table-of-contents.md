@@ -553,7 +553,7 @@ connection, a lost bag, and one genuinely kind stranger.
 
 *場面: the airport, checking in. Sana has pushed 私 to the front.*
 *Can-do: check in and ask for what you want.*
-- 私: "Two, together if possible." — `___, ___ if possible.` **(Core 9)**
+- 私: "Two, together if possible." — `___, together if possible.` **(Core 9)**
   → 相手: "Let me see... yes, I can do 24A and B."
 - 私: "Could we have a window seat?" — `Could we have ___?` **(Core 20)**
   → 相手: "24A is the window. You're all set."
@@ -766,7 +766,7 @@ disagreement, and one conversation that matters.
 
 *場面: packing up. Nobody has said whether this is a regular thing.*
 *Can-do: turn a one-off into an arrangement.*
-- 私: "Same time next week?" — `Same ___ next ___?` **(Core 28)**
+- 私: "Same time next week?" — `Same time next ___?` **(Core 28)**
   → Mei: "We're always here Saturday. You don't need to ask."
 - 私: "I'll be here." — `I'll ___.` **(Core 38)**
   → Ray: "Good. Bring Jonas."

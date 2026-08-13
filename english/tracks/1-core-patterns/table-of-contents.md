@@ -200,7 +200,7 @@ that mean nothing at all, and the first real article decision.*
 **9. Two coffees, please — say how many**
 
 *Can-do: order or count more than one of something.*
-- "Two coffees, please." — `___ ___s, please.`
+- "Two coffees, please." — `Two ___s, please.`
 - "Just one, thanks." — `Just one ___, thanks.`
 - *Expressions:* `Anything else?` · `That's all, thanks.`
 - *Grammar:* more than one takes `-s`. It is not optional, even when the number is already there.
@@ -211,7 +211,7 @@ that mean nothing at all, and the first real article decision.*
 **10. The café on the corner — say which one ▸ articles**
 
 *Can-do: mention something new, then refer back to it.*
-- "There's a café on the corner." — `There's a ___ ___.`
+- "There's a café on the corner." — `There's a ___ on the corner.`
 - "The café closes at six." — `The ___ ___s at ___.`
 - *Expressions:* `you know the one` · `the same one`
 - *Grammar:* `a` introduces it. `the` points at the one you both now have in mind.
@@ -223,7 +223,7 @@ that mean nothing at all, and the first real article decision.*
 
 *Can-do: ask where a place is and understand the answer.*
 - "Where's the station?" — `Where's the ___?`
-- "It's behind the post office." — `It's ___ the ___.`
+- "It's behind the post office." — `It's behind the ___.`
 - *Expressions:* `How do I get there?` · `It's about five minutes.`
 - *Grammar:* place words come with the noun: `at` the station, `in` the building, `on` the corner.
 - *JP:* Japanese `に`/`で` map onto several English prepositions depending on the verb, so a
@@ -241,7 +241,7 @@ Japanese equivalent and gets its own lesson here rather than being spread thin.*
 **12. I start work at nine — talk about your routine**
 
 *Can-do: say what you do regularly and when.*
-- "I start work at nine." — `I ___ at ___.`
+- "I start work at nine." — `I start work at ___.`
 - "I usually finish around six." — `I usually ___ around ___.`
 - *Expressions:* `every day` · `How about you?`
 - *Grammar:* frequency words go before the verb: `I **usually** start`.
@@ -273,7 +273,7 @@ Japanese equivalent and gets its own lesson here rather than being spread thin.*
 **15. She works downtown — talk about someone else**
 
 *Can-do: exchange information about a third person.*
-- "She works downtown." — `She ___s ___.`
+- "She works downtown." — `She works ___.`
 - "Does she like it?" — `Does she ___?`
 - *Expressions:* `I think so` · `as far as I know`
 - *Grammar:* he/she/it adds `-s`. In the question the `-s` moves onto `does`, so the verb is plain
@@ -295,7 +295,7 @@ Japanese equivalent and gets its own lesson here rather than being spread thin.*
 
 *Can-do: ask how often something happens and answer approximately.*
 - "How often do you exercise?" — `How often do you ___?`
-- "About twice a week." — `About ___ a ___.`
+- "About twice a week." — `About ___ a week.`
 - *Expressions:* `once in a while` · `almost never`
 - *Grammar:* `twice a week`, `three times a month` — `a` here means *per*.
 - *JP:* another article use with no Japanese counterpart, and it hides inside a frequency phrase.
@@ -480,7 +480,7 @@ irregular forms and, again, the auxiliary.*
 
 *Can-do: tell a short account using the most frequent irregular verbs.*
 - "We went to the market and had lunch." — `We went to ___ and had ___.`
-- "Then I bought a souvenir." — `Then I ___ ___.`
+- "Then I bought a souvenir and came home." — `Then I ___ and came home.`
 - *Expressions:* `after that` · `on the way home`
 - *Grammar:* the twenty most common past verbs are irregular. Learn them as words, not as a rule.
 - *JP:* nothing transfers and nothing is derivable; this is pure memory load. Keep the set small
@@ -604,7 +604,7 @@ the fact.*
 **43. It's a small, quiet café — describe something**
 
 *Can-do: describe a thing with two useful details.*
-- "It's a small, quiet café." — `It's a ___, ___ ___.`
+- "It's a small, quiet place." — `It's a ___, ___ place.`
 - "I'm looking for something cheaper." — `I'm looking for something ___er.`
 - *Expressions:* `kind of` · `not really my thing`
 - *Grammar:* adjectives go **before** the noun and do not change for plural: `two small cafés`.
@@ -785,7 +785,7 @@ continuous.*
 **59. I went there to see a client — say why you did it**
 
 *Can-do: explain your purpose and recommend a method.*
-- "I went there to see a client." — `I ___ to ___.`
+- "I went there to see a client." — `I went there to ___.`
 - "The best way to get there is to take the bus." — `The best way to ___ is to ___.`
 - *Expressions:* `it's worth it` · `save time`
 - *Grammar:* `to` + plain verb answers *why*.
@@ -855,8 +855,8 @@ identify one person by what they did.*
 **65. It's made in Japan — put the result first**
 
 *Can-do: describe how something is produced or what happened to it.*
-- "It's made in Japan." — `It's ___ in ___.`
-- "My wallet was stolen." — `My ___ was ___.`
+- "It's made in Japan." — `It's made in ___.`
+- "My wallet was stolen." — `My ___ was stolen.`
 - *Expressions:* `apparently` · `it turns out`
 - *Grammar:* use this when who did it doesn't matter or isn't known.
 - *JP:* Japanese passive often carries a sense of being adversely affected (迷惑の受身), which
@@ -1111,7 +1111,7 @@ you've understood, make a difficult request, and postpone one decision.*
 **88. Hardly anyone came — near-zero quantity**
 
 *Can-do: describe an amount close to none without saying "not many".*
-- "Hardly anyone came." — `Hardly ___ ___.`
+- "Hardly anyone came." — `Hardly anyone ___.`
 - "There's barely any left." — `There's barely any ___.`
 - *Expressions:* `next to nothing` · `few and far between`
 - *JP:* `hardly` is not a negative word but behaves like one, so `hardly anyone didn't come` is
