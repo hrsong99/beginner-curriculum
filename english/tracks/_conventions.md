@@ -240,3 +240,21 @@ does not fit rather than bending a component into a wrong teaching.
    — measure the page's own height with the viewport prop removed, against the smallest screen this
    has to work on, not against your monitor.
 8. Append whatever you spent — scene, payoff word, new vocabulary — to this file.
+
+---
+
+## Runtime republish — decided, with a known gap
+
+**v1.4.0 ships as-is** (owner decision, 2026-08-13). It carries `.pattern-meaning`,
+`.meaning-kicker` and `.nuance-compare`, which is what 115 Korean teach pages were waiting for.
+
+It does **not** carry the shared type-scale fix, which landed after that release was staged. So
+until a follow-up publish:
+
+- `.known.lines .k` renders at **22px** in class, not 18px — a goal page is a stack of
+  title-sized lines in both languages.
+- `.br-cn` / `.br-ko` render at **33px**, so a 6-glyph katakana loanword breaks mid-word.
+
+**This is a known, accepted gap, not a defect to re-report.** The fix is committed in
+`runtime/css/trial.css` and goes out with the next runtime publish. Do not work around it in a
+deck — a deck that compensates for it will be wrong once the follow-up ships.

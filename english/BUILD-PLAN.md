@@ -190,7 +190,11 @@ is wrong, and the rhythm of the examples.
   One defect found and fixed by looking at it, which is the argument for the rule: the rule diagram
   shipped as bare `.batchim`, which renders **violet — the Korean 조사 colour**, a category English
   does not have. Now `batchim ending-rule`, so orange means "the taught frame" on every page.
-- [ ] **T2.5** — **STOP. Explicit owner approval.** Structural checks do not approve a pilot. If
+- [x] **T2.5 — APPROVED 2026-08-13.** The pilot is the canonical deck for `1-core-patterns`.
+- [ ] **T2.6 — ON HOLD by owner decision.** Approved, but no further decks until the review comes
+  back. Correct call: Korean's precedent says a chunk of Part 2 will not survive native review, and
+  a deck written from a pattern that gets cut is a deck rewritten.
+- [x] ~~**T2.5 (old)** — STOP. Explicit owner approval.~~ Structural checks do not approve a pilot. If
   rejected, rewrite and re-review; do not use a rejected pilot as a template.
 - [ ] **T2.6** — After approval: three structurally different lessons (e.g. a narrative one, a
   comparison one, a B1+ one), reviewed together, before any wider batch.
@@ -251,6 +255,11 @@ copy of anything. Same rule here.
 - [ ] **T4.4** — `plan_courses.py` — cut tracks into deployable courses on unit boundaries;
   emit `course.yaml` / `lesson.yaml` validating against podo-curriculum's schemas.
 - [ ] **T4.5** — `build_catalog.py` — English catalog gateway + per-track pages.
+- [x] **T4.5 / T7.3 — DONE 2026-08-13.** `english/tools/build_catalog.py` + `catalog_template.html`
+  generate `english/catalog.html` from the three TOCs — 303 items, every one with a stable id
+  (`CORE-31`, `CTX-12`, `FT-45`) so review feedback is unambiguous. Model sentences are set large
+  because they are what a native reviewer judges; frames, Core links and JP notes are context.
+  Holds no facts of its own; re-run after any TOC change and never hand-edit.
 - [x] **T4.6a — DONE, ahead of the rest of Phase 4.** `english/tools/check_deck.py` — the static
   deck checker. Built early because the pilot shipped two defects that pass markup review and leave
   nothing in the console, and a checklist item only reaches whoever was told to read the checklist.
@@ -309,7 +318,10 @@ not actually say. Its TOC names the cause precisely: the parts built *from scene
 part built *from a grammar list* did not (28 of 120 in Part 2). English's B1+ bridge and grammar
 coverage map are exactly that shape.
 
-- [ ] **T6.1** — Native-speaker pass over all 144 Core patterns + 96 Contextual patterns. Demote
+- [~] **T6.1 — IN PROGRESS, owner reviewing.** Surface is `english/catalog.html`. Rejected patterns
+  get **demoted to the expressions line, not deleted** — the learner still meets them but is no
+  longer asked to produce them.
+- [ ] ~~T6.1 (old)~~ Native-speaker pass over all 144 Core patterns + 96 Contextual patterns. Demote
   rather than delete — Korean moved rejects to the expression/grammar line so learners still meet
   them but are not asked to produce them.
 - [ ] **T6.2** — Corpus/naturalness check on model sentences (Step 6 of the proposed method).

@@ -1,0 +1,122 @@
+<title>Podo English Review Catalog</title>
+<style>
+  :root{
+    --ground:#FBFAFC; --surface:#FFFFFF; --sunk:#F5F3F8; --band:#EFEBF5;
+    --ink:#17141C; --ink-2:#4A4356; --ink-3:#7A7286;
+    --line:#E4E0EB; --line-2:#CFC8DA;
+    --accent:#6B3D96; --accent-soft:#F0E8F8;
+    --warn:#8A5A08; --warn-soft:#FBF1DF;
+  }
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+    --ground:#121016; --surface:#1A1621; --sunk:#221D2B; --band:#251F30;
+    --ink:#EFEBF4; --ink-2:#B6AEC2; --ink-3:#8A8296;
+    --line:#2D2738; --line-2:#3E3650;
+    --accent:#C29DEA; --accent-soft:#2A2036;
+    --warn:#E0B25C; --warn-soft:#2F2412;
+  }}
+  :root[data-theme="dark"]{
+    --ground:#121016; --surface:#1A1621; --sunk:#221D2B; --band:#251F30;
+    --ink:#EFEBF4; --ink-2:#B6AEC2; --ink-3:#8A8296;
+    --line:#2D2738; --line-2:#3E3650;
+    --accent:#C29DEA; --accent-soft:#2A2036;
+    --warn:#E0B25C; --warn-soft:#2F2412;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--ground);color:var(--ink);
+    font:400 16px/1.6 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+    -webkit-font-smoothing:antialiased;}
+  code{font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,monospace;font-size:.88em;}
+  .wrap{max-width:880px;margin:0 auto;padding:0 22px 100px;}
+
+  header{padding:52px 0 28px;border-bottom:2px solid var(--ink);}
+  .eyebrow{font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3);font-weight:600;margin:0 0 12px;}
+  h1{font-family:ui-serif,"Iowan Old Style",Georgia,serif;font-size:clamp(30px,5vw,40px);
+    line-height:1.12;font-weight:600;margin:0 0 14px;letter-spacing:-.015em;}
+  .lede{font-size:17px;color:var(--ink-2);margin:0 0 20px;max-width:64ch;text-wrap:pretty;}
+  .how{background:var(--accent-soft);border-radius:9px;padding:16px 19px;font-size:15px;color:var(--ink-2);max-width:64ch;}
+  .how b{color:var(--ink);}
+  .how code{background:var(--surface);padding:.1em .4em;border-radius:3px;}
+
+  nav{position:sticky;top:0;z-index:5;background:var(--ground);
+    border-bottom:1px solid var(--line);padding:11px 0;margin-bottom:8px;}
+  nav .inner{max-width:880px;margin:0 auto;padding:0 22px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
+  nav a{font-size:13.5px;text-decoration:none;color:var(--ink-2);border:1px solid var(--line-2);
+    border-radius:20px;padding:4px 13px;white-space:nowrap;}
+  nav a:hover{border-color:var(--accent);color:var(--accent);}
+  nav .n{font-variant-numeric:tabular-nums;color:var(--ink-3);margin-left:5px;}
+
+  h2.track{font-family:ui-serif,"Iowan Old Style",Georgia,serif;font-size:27px;font-weight:600;
+    margin:56px 0 6px;letter-spacing:-.01em;scroll-margin-top:64px;}
+  .track-note{color:var(--ink-3);font-size:15px;margin:0 0 26px;max-width:64ch;}
+  h2.show{font-family:ui-serif,"Iowan Old Style",Georgia,serif;font-size:20px;font-weight:600;
+    margin:44px 0 4px;color:var(--accent);}
+  h3.grp{font-size:12px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);
+    font-weight:700;margin:34px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line);}
+
+  .it{border:1px solid var(--line);border-radius:9px;background:var(--surface);
+    padding:17px 19px;margin-bottom:11px;scroll-margin-top:64px;}
+  .it:target{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft);}
+  .hd{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:7px;}
+  .rid{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;font-weight:700;
+    letter-spacing:.03em;color:var(--accent);background:var(--accent-soft);
+    padding:2px 8px;border-radius:4px;text-decoration:none;}
+  .hd h4{font-size:16.5px;font-weight:650;margin:0;letter-spacing:-.005em;}
+  .flag,.tag{font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+    padding:2px 7px;border-radius:3px;background:var(--sunk);color:var(--ink-3);}
+  .flag{background:var(--warn-soft);color:var(--warn);}
+  .tag.deep{background:var(--warn-soft);color:var(--warn);text-transform:none;letter-spacing:0;}
+  .cando,.scene{font-size:14px;color:var(--ink-3);margin:0 0 12px;}
+  .scene{font-style:italic;}
+
+  .say{border-left:2px solid var(--line-2);padding-left:14px;margin:0 0 11px;}
+  .model{font-size:18px;line-height:1.45;color:var(--ink);margin:0 0 3px;font-weight:450;text-wrap:pretty;}
+  .who{font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--ink-3);
+    margin-right:8px;text-transform:uppercase;}
+  .frame{margin:0;font-size:13px;color:var(--ink-3);}
+  .frame code{background:var(--sunk);padding:.12em .4em;border-radius:3px;}
+  .reply{margin:6px 0 0;font-size:15px;color:var(--ink-2);}
+  .core{font-size:11px;color:var(--ink-3);margin-left:7px;white-space:nowrap;}
+
+  .meta,.jp{font-size:13.5px;color:var(--ink-2);margin:7px 0 0;}
+  .jp{background:var(--sunk);border-radius:6px;padding:9px 12px;margin-top:11px;color:var(--ink-3);font-size:13px;}
+  .lbl{font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--ink-3);margin-right:9px;}
+  .meta code,.jp code{background:var(--band);padding:.1em .35em;border-radius:3px;}
+
+  footer{margin-top:64px;padding-top:22px;border-top:1px solid var(--line);
+    color:var(--ink-3);font-size:14px;}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+  @media (max-width:560px){.wrap{padding:0 15px 80px;} .model{font-size:16.5px;}}
+</style>
+
+<nav><div class="inner">
+  <a href="#core">Core<span class="n">{{N_CORE}}</span></a>
+  <a href="#ctx">Contextual<span class="n">{{N_CTX}}</span></a>
+  <a href="#ft">Freetalking<span class="n">{{N_FT}}</span></a>
+</div></nav>
+
+<div class="wrap">
+<header>
+  <p class="eyebrow">Podo · English for Japanese speakers · for native review</p>
+  <h1>Everything the curriculum asks a learner to say</h1>
+  <p class="lede">{{N_ALL}} items across three tracks, and <b>none of it has been read by a native speaker yet</b>. The sentences are set large because they are the thing being judged; frames, Core links and difficulty notes are context, sized to stay out of the way.</p>
+  <div class="how">
+    <p style="margin:0 0 9px"><b>What to look for:</b> would a native speaker actually say this, in this situation? Not whether it is grammatical — everything here is. Whether it is what a person reaches for.</p>
+    <p style="margin:0"><b>How to flag it:</b> every item has an id. Write <code>CORE-31: nobody says this</code> and it is unambiguous. A rejected sentence is not deleted — it moves to the expressions line, so the learner still meets it but is not asked to produce it.</p>
+  </div>
+</header>
+
+<h2 class="track" id="core">Core Patterns</h2>
+<p class="track-note">The main sequence, Pre-A1 to C1. Two frames per lesson, and they have to work together in one exchange. Lessons past 70 are Part 2 — written scene-first, but Korean's equivalent lost 28 of 120 patterns at this stage, so expect a cull rather than a pass.</p>
+{{CORE}}
+
+<h2 class="track" id="ctx">Contextual English</h2>
+<p class="track-note">Four shows with a cast, told in seasons of six episodes. The learner plays 私; the reply after each line is what the other character says back. Judge the exchange, not just the sentence — a line that reads fine alone can be wrong as an answer.</p>
+{{CTX}}
+
+<h2 class="track" id="ft">Freetalking</h2>
+<p class="track-note">One topic per session. The line shown is the <i>opening question</i> — the sentence the tutor actually says first, which is what has to land within three seconds. The ladder is the pool of follow-ups, not a script.</p>
+{{FT}}
+
+<footer>Generated from the three <code>table-of-contents.md</code> files by <code>english/tools/build_catalog.py</code>. It holds no facts of its own — a wrong line here is a wrong line in a TOC. Re-run after any change; never hand-edit.</footer>
+</div>
