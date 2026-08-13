@@ -1246,9 +1246,15 @@ body:not(.no-yomi) .sent-more .yomi + .translation { margin-top: 7px; }
   gap: 5px;
 }
 
+/* A sentence set at 18px, not the 22px a WORD in the two-column .known-row
+   takes. 22px is `.section-title`'s size, so a stack of these read as a page of
+   headlines rather than as the exchange being promised — in Korean as much as
+   in English. Nothing here was ever near wrapping in Korean (the longest goal
+   line is 208px in a 342px row), so this is a legibility choice, not a fitting
+   one; English is the language it also happens to rescue, at 320px. */
 .known.lines .known-row .k {
   width: auto;
-  font-size: 22px;
+  font-size: 18px;
 }
 
 /* ---------- payoff counter ---------- */
@@ -2354,9 +2360,16 @@ body.teaching .section-subtitle.pattern-meaning:has(+ .tutor-note) {
   text-align: center;
 }
 
+/* 26px, not the 33px this started at. Each side of the row gets 155px, and
+   Pretendard sets full-width glyphs at .923em — so 33px fit the 2–4 kanji a
+   Korean deck puts here and nothing longer. A katakana loanword runs 5–7
+   glyphs and overflowed: スーツケース broke mid-word and its row rendered 37px
+   taller than its neighbours. 26px carries 6 glyphs, which is the working
+   ceiling for this component; a 7-glyph loanword still wraps, so prefer
+   スーツケース over コンピューター when the choice is free. */
 .br-cn {
   color: var(--gray-500);
-  font-size: 33px;
+  font-size: 26px;
   font-weight: 800;
   line-height: 1.1;
 }
@@ -2365,14 +2378,14 @@ body.teaching .section-subtitle.pattern-meaning:has(+ .tutor-note) {
 .br-eq { color: var(--ink); font-size: 22px; font-weight: 900; line-height: 1; }
 
 .br-ko {
-  font-size: 33px;
+  font-size: 26px;
   font-weight: 800;
   line-height: 1.1;
 }
 
 /* the reading under the Korean here is a .yomi like every other one in the
    deck, so it takes its colour — it only sits closer and a step larger,
-   because the Korean above it is 33px */
+   because the Korean above it is 26px */
 .br-ko small {
   display: block;
   margin-top: 5px;

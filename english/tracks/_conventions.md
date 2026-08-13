@@ -176,12 +176,35 @@ its author and **unstyled in class**.
 So: if a lesson needs something the runtime cannot do, **stop and report it — do not fix it.** Note
 what is missing, build the page with what exists, and say so.
 
+### The type scale came down — for both languages, with no English branch
+
+This was queued here as *"the type scale is calibrated for CJK density · affects every English
+deck"*, and it is now written, so it has left the queue. **There is no English-only class.** The
+first attempt added one; it was thrown away, because the sizes turned out to be too large in
+Korean too — a Korean goal line was never near wrapping at 22px, it was simply a sentence set at
+`.section-title` size. Fixing the shared value fixed both languages and removed a concept.
+
+Measured at 480px, Korean decks against Core 20:
+
+| | was | now | Why |
+| --- | --- | --- | --- |
+| `.known.lines .k` | 22px | **18px** | Exactly `.section-title`'s size, so a stack of these read as a page of headlines instead of the exchange being promised. The row is 342px wide inside: a Korean line needs 208px of it and an English one needed all 342, so English *also* wrapped and the goal page grew 501px → 674px. 18px is a legibility choice that happens to fit English at 320px |
+| `.br-cn` / `.br-ko` | 33px | **26px** | Each side of the row gets 155px, and Pretendard sets full-width glyphs at .923em. 33px fits the 2–4 kanji a Korean deck puts here and nothing longer — a 6-glyph katakana loanword broke `スーツケース` mid-word and rendered its row 37px taller than its neighbours |
+
+Columns stay `1fr · 26px · 1fr`. Asymmetric columns would buy a larger size for katakana, but only
+by making a Korean row visibly lopsided, and the equal split is what makes the arrow read as an
+equals sign.
+
+**26px carries six full-width glyphs. That is the working ceiling for this component**, so a
+seven-glyph loanword (`コンピューター`, `スマートフォン`) wraps and its row grows. Prefer
+`スーツケース` when the choice is free; a loanword bridge almost always has a shorter candidate.
+It is not worth losing the right example over — take the wrap and note it.
+
 ### Runtime queue — English gaps waiting on a decision
 
 | Needed | State | Why |
 | --- | --- | --- |
-| **Republish the runtime** | **blocking for class use** | `.pattern-meaning`, `.meaning-kicker` and `.nuance-compare` exist locally but are **not in the published CDN tag** (Korean's own queue says so). Core 20 uses all three. Until the runtime is republished the deck renders correctly for its author and **unstyled in class** — the exact failure this repo keeps warning about |
-| **The type scale is calibrated for CJK density** | not written · **affects every English deck** | The single biggest visual problem, and it is not a per-deck mistake. Measured across 974 Korean rows against Core 20: `.known-row .k` is **22px** — the same size as `.section-title` — because a Korean goal line runs a median of **15 characters**; an English one runs **32**, so the opening page becomes a wall of title-sized text. `.br-cn`/`.br-ko` are **33px**, 1.7× body copy, because a Korean bridge row holds **2–4 kanji**; a katakana loanword holds **5–6 full-width glyphs**, so `スーツケース` wraps and its row grows taller than its neighbours. Both components are *showpieces* in Korean — a handful of glyphs set large. English sentences are 2–3× longer at the same point size. **A deck cannot fix this**; shortening the content means dropping the lesson's best example, which is the wrong trade. The runtime needs an English type scale for `.known-row` and `.bridge`, or a length-aware size step |
+| **Republish the runtime** | **blocking for class use** | `.pattern-meaning`, `.meaning-kicker` and `.nuance-compare` exist locally but are **not in the published CDN tag** — and neither is the type scale above, which now changes Korean rendering as well as English. `python3 ../../korean/tools/check_runtime_drift.py` names what has drifted. Publishing is a `podo-curriculum` action, not one taken from this repo |
 | A three-branch rule diagram | not written | inherited from Korean and **worse here**: `do/does/did`, `a/an/the` and `-s/-es/-ies` are all three-case, and `.batchim` is single-column. Core 20 dodged it (its rule is an honest two-brancher). The next lesson that does not, ships two boxes and reports it |
 | `.ko` / `.korean` class names | naming only, not a defect | they mean "the line the tutor reads" and "the target-language span". English decks reuse them as-is, because renaming is a runtime change touching 316 Korean decks. Worth knowing before someone reads an English deck and thinks it is mislabelled |
 | A second inline accent for English | not written | see the mark-vocabulary section above. Not needed yet |

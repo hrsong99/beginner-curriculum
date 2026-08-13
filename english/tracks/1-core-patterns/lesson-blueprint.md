@@ -57,6 +57,12 @@ Handle it carefully:
   installs the error rather than scaffolding the word.
 - Keep it to three or four rows. Korean measured six and the last one fell under the pager while the
   tutor's line still promised it.
+- **Six full-width glyphs per source word is the ceiling.** The bridge sets both columns at 26px in
+  a 155px column, which carries six — `スーツケース` fits, `コンピューター` and `スマートフォン`
+  (seven) wrap and make that row taller than its neighbours. A loanword bridge almost always has a
+  shorter candidate, so prefer one; but if the seven-glyph word is the *right* example, take the
+  wrap rather than losing it. This is a content constraint, not a runtime branch — both languages
+  share one type scale and there is no English-only class to reach for.
 
 ---
 
