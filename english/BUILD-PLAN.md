@@ -90,9 +90,11 @@ be written until the answer exists.
 - [ ] **D5 — Product identity numbers.** `classLevel` band, `LANG_TYPE`, course-code scheme.
   `korean/AGENTS.md` reserves the shape ("stay `BASIC`, use unused `classLevel` values, do not
   create `BASIC_V3`") but assigns nothing for English. *Downstream:* `course.yaml`, sync, catalog.
-- [ ] **D6 — Track scope.** Does English get a decoding track, a pronunciation track, a Part 2
-  (B2/C1)? *Downstream:* Phase 5 size. Note D1 makes the pronunciation track's contents knowable
-  today — the Japanese-L1 collision list for English is closed and short.
+- [x] **D6 — DECIDED 2026-08-13. Core runs to C1; pronunciation gets a plan, not decks.**
+  Core extended Pre-A1 → C1 (122 lessons), matching Korean's reach. A pronunciation track exists as
+  `tracks/4-pronunciation/table-of-contents.md` in **planning state only** — no decks are to be
+  written until Core is further along, exactly the state `korean/tracks/5-pronunciation` has sat in
+  for the mirror-image learner. No decoding track: the learner already reads Latin script.
 - [x] **D7 — Contextual English is rebuilt as shows with a cast and episodes.** Korean's answer,
   adopted. The existing 48 situation lessons stay as the underlying inventory of what must be
   covered; the courses on top of them get a work title, a named cast, a relationship state, an
@@ -171,8 +173,8 @@ is wrong, and the rhythm of the examples.
     `a/an/the`, `-s/-es/-ies` are all three-case rules and `.batchim` is single-column. The
     instruction is Korean's — ship the honest two-box split, keep the third case out of
     learner-produced language, and report it rather than compressing into a misleading tile.
-- [x] **T2.3 — DONE.** Core 22 authored end to end at
-  `tracks/1-core-patterns/courses/core-first-exchanges-2/lessons/22-asking-for-help/lesson.html`
+- [x] **T2.3 — DONE.** Core 20 authored end to end at
+  `tracks/1-core-patterns/courses/core-first-exchanges-2/lessons/20-asking-for-help/lesson.html`
   — 25 pages, no inline CSS or JS, no `yomi.js`, zero `.yomi` elements.
 
   The lesson's form rule turned out to be the best thing in it: **`help me with` + a thing vs
@@ -260,6 +262,12 @@ copy of anything. Same rule here.
   mixed-chip-count pages, 1 deck shipping inline `<style>`. The chip figure independently confirms
   the problem Korean's own `_conventions.md` records ("348문장 중 51문장"), which is still open.
 - [ ] **T4.6b** — Tests for the tools, matching `test_track_parsers.py`.
+- [ ] **T3.12 — Regenerate the grammar coverage map.** It is bannered stale: it describes the
+  retired 72-lesson spine, every row number is wrong, and it has no column for the `JP:` difficulty
+  field the new TOC carries. Not a find-and-replace — the restructure split and merged lessons.
+- [ ] **T3.13 — Re-derive Contextual and Freetalking prerequisites.** 72 `Core N` references across
+  the two tracks now point at the wrong lessons. Folded into the D7 rebuild, which rewrites those
+  courses anyway.
 
 ---
 

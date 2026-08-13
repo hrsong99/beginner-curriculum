@@ -1,5 +1,13 @@
 # English Freetalking — Launch Topics
 
+> **⚠ The `Core N` prerequisites below are stale.** Core was rebuilt to 122 lessons on 2026-08-13
+> and renumbered throughout, so every number in this file points at the wrong lesson. They are not
+> mechanically remappable — the restructure split and merged lessons rather than shifting them.
+>
+> They get re-derived as part of this track's own rebuild (`BUILD-PLAN.md` → D7 and T5.1/T5.2),
+> which is rewriting these courses anyway. Until then, treat the prerequisite column as
+> **unreliable** and read the Core TOC directly.
+
 **Goal:** use known English to hold the floor, react, ask follow-ups, and express a real point of view.
 
 This is the open-ended track. It introduces no grammar syllabus of its own. Each session selects **two conversation moves** from Core and Contextual English, or makes a transparent discourse-level expansion of them, and uses the pair repeatedly around one interesting question.

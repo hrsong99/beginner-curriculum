@@ -1,5 +1,21 @@
 # Core Grammar and Function Coverage Map
 
+> **⚠ STALE — do not trust this file. It describes the retired 72-lesson spine.**
+>
+> The Core table of contents was rebuilt on 2026-08-13 to **122 lessons (Pre-A1 → C1)** after
+> [`jp-l1-difficulty-inventory.md`](./jp-l1-difficulty-inventory.md) showed the old sequence had
+> been weighted without a learner. Lessons were added, split, moved and renumbered, so **every row
+> number below is wrong** and several rows describe lessons that no longer exist in that shape.
+>
+> It is left in place rather than deleted because it is the only written record of the old
+> dependency graph, and regenerating it is a real task, not a find-and-replace: the new spine needs
+> a row per lesson **plus** the `JP:` difficulty field the TOC now carries, which this map has no
+> column for. Tracked as `BUILD-PLAN.md` → T3.12.
+>
+> Until then, **the table of contents is the only source of truth for Core.** Do not use the numbers
+> below to set a prerequisite, and do not "fix" them by shifting them — the restructure was not a
+> uniform offset.
+
 This is an **author-only index** for [`Core English Speaking Patterns`](../tracks/1-core-patterns/table-of-contents.md). Grammar tags verify coverage and prerequisites; they are not learner-facing lesson titles or patterns.
 
 **Provenance:** the map was backfilled from the communicative patterns; it was not copied from an official CEFR grammar list. CEFR is language-neutral and non-prescriptive. Use the EAQUALS/British Council Core Inventory as the primary English-specific coverage baseline and the Cambridge English Grammar Profile as a granular corpus-informed cross-check. See [`curriculum-source-hierarchy.md`](./curriculum-source-hierarchy.md) for the source roles, decision rule, current limitations, and required row-level audit.

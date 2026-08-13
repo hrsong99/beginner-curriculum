@@ -13,7 +13,7 @@ used. This is the one file a lesson-writer is expected to edit — **unless you 
 batch**, in which case report it and let the orchestrator write it. Ten writers editing one file is
 how the file gets lost.
 
-> **Status: one deck written.** Core 22 (`Could you help me with ___?`) is the pilot and the
+> **Status: one deck written.** Core 20 (`Could you help me with ___?`) is the pilot and the
 > canonical deck for `1-core-patterns`. The ledgers below carry what it spent. Contextual and
 > Freetalking have no decks yet, so their rows are empty by fact rather than by oversight.
 
@@ -73,8 +73,8 @@ the learner meets today's pattern somewhere they have not been yet.
 
 | Scene | Where | Track |
 | --- | --- | --- |
-| Airport check-in counter, too much luggage | Core 22 `in-the-wild` | core |
-| New office, moving boxes in | Core 22 `p3-model` (main dialogue, **not** available as a transfer scene) | core |
+| Airport check-in counter, too much luggage | Core 20 `in-the-wild` | core |
+| New office, moving boxes in | Core 20 `p3-model` (main dialogue, **not** available as a transfer scene) | core |
 
 **Assign scenes up front for a parallel batch, one per lesson**, and let the assignment travel in
 each writer's packet. Korean assigned 과 11–45 in advance precisely so parallel writers could not
@@ -95,7 +95,7 @@ over this list.
 
 | Track | Spent | By |
 | --- | --- | --- |
-| 1-core-patterns | `I can carry the small one.` — the line the transfer scene lands on | Core 22 |
+| 1-core-patterns | `I can carry the small one.` — the line the transfer scene lands on | Core 20 |
 
 ### Vocabulary in circulation
 
@@ -105,16 +105,16 @@ and this is where its per-track working copy lives once it does.
 
 Reuse what is already in circulation rather than inventing synonyms.
 
-**Core Patterns** — in circulation after Core 22. Reuse these rather than inventing synonyms:
+**Core Patterns** — in circulation after Core 20. Reuse these rather than inventing synonyms:
 
 ```
 box · suitcase · bag · menu · Wi-Fi · station · counter
 carry · find · help
-big · small · one (the big one / the small one — substitution, Core 20)
+big · small · one (the big one / the small one — substitution, Core 19)
 ```
 
 Supporting expressions heard but never asked for in a learner slot:
-`What do you need?` (Core 22) · `Anything else?` (Core 16) · `Do you need help?` (receptive)
+`What do you need?` (Core 20) · `Anything else?` (Core 9) · `Do you need help?` (receptive)
 
 **Contextual English** — *(none yet)*
 
@@ -168,9 +168,9 @@ what is missing, build the page with what exists, and say so.
 
 | Needed | State | Why |
 | --- | --- | --- |
-| **Republish the runtime** | **blocking for class use** | `.pattern-meaning`, `.meaning-kicker` and `.nuance-compare` exist locally but are **not in the published CDN tag** (Korean's own queue says so). Core 22 uses all three. Until the runtime is republished the deck renders correctly for its author and **unstyled in class** — the exact failure this repo keeps warning about |
-| **The type scale is calibrated for CJK density** | not written · **affects every English deck** | The single biggest visual problem, and it is not a per-deck mistake. Measured across 974 Korean rows against Core 22: `.known-row .k` is **22px** — the same size as `.section-title` — because a Korean goal line runs a median of **15 characters**; an English one runs **32**, so the opening page becomes a wall of title-sized text. `.br-cn`/`.br-ko` are **33px**, 1.7× body copy, because a Korean bridge row holds **2–4 kanji**; a katakana loanword holds **5–6 full-width glyphs**, so `スーツケース` wraps and its row grows taller than its neighbours. Both components are *showpieces* in Korean — a handful of glyphs set large. English sentences are 2–3× longer at the same point size. **A deck cannot fix this**; shortening the content means dropping the lesson's best example, which is the wrong trade. The runtime needs an English type scale for `.known-row` and `.bridge`, or a length-aware size step |
-| A three-branch rule diagram | not written | inherited from Korean and **worse here**: `do/does/did`, `a/an/the` and `-s/-es/-ies` are all three-case, and `.batchim` is single-column. Core 22 dodged it (its rule is an honest two-brancher). The next lesson that does not, ships two boxes and reports it |
+| **Republish the runtime** | **blocking for class use** | `.pattern-meaning`, `.meaning-kicker` and `.nuance-compare` exist locally but are **not in the published CDN tag** (Korean's own queue says so). Core 20 uses all three. Until the runtime is republished the deck renders correctly for its author and **unstyled in class** — the exact failure this repo keeps warning about |
+| **The type scale is calibrated for CJK density** | not written · **affects every English deck** | The single biggest visual problem, and it is not a per-deck mistake. Measured across 974 Korean rows against Core 20: `.known-row .k` is **22px** — the same size as `.section-title` — because a Korean goal line runs a median of **15 characters**; an English one runs **32**, so the opening page becomes a wall of title-sized text. `.br-cn`/`.br-ko` are **33px**, 1.7× body copy, because a Korean bridge row holds **2–4 kanji**; a katakana loanword holds **5–6 full-width glyphs**, so `スーツケース` wraps and its row grows taller than its neighbours. Both components are *showpieces* in Korean — a handful of glyphs set large. English sentences are 2–3× longer at the same point size. **A deck cannot fix this**; shortening the content means dropping the lesson's best example, which is the wrong trade. The runtime needs an English type scale for `.known-row` and `.bridge`, or a length-aware size step |
+| A three-branch rule diagram | not written | inherited from Korean and **worse here**: `do/does/did`, `a/an/the` and `-s/-es/-ies` are all three-case, and `.batchim` is single-column. Core 20 dodged it (its rule is an honest two-brancher). The next lesson that does not, ships two boxes and reports it |
 | `.ko` / `.korean` class names | naming only, not a defect | they mean "the line the tutor reads" and "the target-language span". English decks reuse them as-is, because renaming is a runtime change touching 316 Korean decks. Worth knowing before someone reads an English deck and thinks it is mislabelled |
 | A second inline accent for English | not written | see the mark-vocabulary section above. Not needed yet |
 

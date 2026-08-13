@@ -5,7 +5,7 @@ order and what each page is for. Do not copy markup or tone from here — take t
 canonical deck.
 
 - **Canonical deck (source of truth):** *not yet authored.* The pilot is
-  `courses/<course>/lessons/22-asking-for-help/lesson.html` (Core 22, `Could you help me with ___?`).
+  `courses/<course>/lessons/20-asking-for-help/lesson.html` (Core 20, `Could you help me with ___?`).
   Until it exists and is approved, the nearest reference for **structure and component markup** is
   [`../../../korean/tracks/2-core-patterns/sample-lesson.html`](../../../korean/tracks/2-core-patterns/sample-lesson.html)
   — read it for shape only. Its *language contract is different from ours* (see the katakana rule

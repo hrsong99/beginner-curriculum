@@ -1,5 +1,13 @@
 # Contextual English — Table of Contents
 
+> **⚠ The `Core N` prerequisites below are stale.** Core was rebuilt to 122 lessons on 2026-08-13
+> and renumbered throughout, so every number in this file points at the wrong lesson. They are not
+> mechanically remappable — the restructure split and merged lessons rather than shifting them.
+>
+> They get re-derived as part of this track's own rebuild (`BUILD-PLAN.md` → D7 and T5.1/T5.2),
+> which is rewriting these courses anyway. Until then, treat the prerequisite column as
+> **unreliable** and read the Core TOC directly.
+
 **48 lessons · 96 trainable patterns.** This track reuses and deliberately extends Core language in four high-value domains: everyday life, travel, relationships, and work.
 
 > **Two-pattern rule:** every lesson contains two model lines that belong in the same exchange. One or two fixed expressions and one brief grammar-support note may support the scene, but do not become extra teaching targets. Context creates the need; the learner extracts the frames and reuses them with new details. See the full [`teaching-philosophy.md`](../../reference/teaching-philosophy.md).
