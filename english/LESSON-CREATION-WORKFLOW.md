@@ -2,7 +2,7 @@
 
 This is the operating procedure for requests such as **create a curriculum**, **create a course**,
 **create lessons**, **generate the remaining lessons**, or **write lessons from the TOC**. It
-applies to all three English tracks. Read [`AGENTS.md`](./AGENTS.md) and
+applies to the three production-facing English tracks; pronunciation remains planning-only. Read [`AGENTS.md`](./AGENTS.md) and
 [`../ux-philosophy.md`](../ux-philosophy.md) first; this document defines the
 production sequence and ownership boundaries.
 
@@ -16,9 +16,10 @@ The workflow is course-aware. A lesson is identified by:
 track + course code + lesson number
 ```
 
-**Never identify a lesson by number alone.** Contextual English and Freetalking restart at 1 in
-every course, so `2-contextual-english / 3` names eight different lessons. Core Patterns is the one
-exception — its numbers are globally unique, 1 through 72.
+**Never identify a lesson by number alone.** Use the stable TOC/review id (`CORE-31`, `CTX-32`,
+`FT-107`) in briefs and feedback, and the deck slug inside a course. All current TOCs happen to use
+global numbers, but deployable course boundaries are still undecided and must not be inferred from
+those numbers.
 
 ## Source hierarchy
 
@@ -27,7 +28,7 @@ When sources disagree, fix the higher source and regenerate the lower one:
 1. `tracks/<track>/table-of-contents.md` — curriculum facts, course order, lesson outcomes, content
 2. `tracks/<track>/lesson-blueprint.md` — the page arc and track-specific pedagogy
 3. the track's canonical deck — voice, component composition, interaction rhythm
-4. `tracks/<track>/toc/<course-code>/lesson-NNN.md` — generated writing packet **[not built]**
+4. `tracks/<track>/toc/<REVIEW-ID>.md` — generated writing packet
 5. `courses/<course-code>/course.yaml` — generated deploy plan **[not built]**
 6. `courses/<course-code>/lessons/<slug>/lesson.html` — the authored lesson
 
@@ -64,19 +65,15 @@ Until it exists, a "course" is whatever the TOC says it is, and no deploy plan i
 ## 2. Generate textual lesson briefs
 
 ```sh
-# [not built] — BUILD-PLAN.md → T4.2
-python3 english/tools/build_lesson_briefs.py english/tracks/<track>
+python3 english/tools/build_lesson_briefs.py <track-name>
+# or regenerate all four tracks
+python3 english/tools/build_lesson_briefs.py --all
 ```
 
-The brief repeats the course code, course context, exact lesson content, adjacent lessons, and
-both ledgers: **already learned** and **not yet**. The second one is the load-bearing half — it is
-the negative constraint that stops a writer using untaught language, and it cannot be derived from
-the TOC's forward dependency column by eye.
-
-**Until the generator exists:** read the lesson's own TOC entry, the entries on either side of it,
-and the `Depends on` column in `reference/grammar-coverage-map.md` for that lesson. Then construct
-the "not yet" list yourself by taking every later row in that map — and say in your report that you
-did so by hand, because that is exactly the step the generator exists to make reliable.
+The brief repeats the exact source content, adjacent lessons and sequence guardrails. Core gets
+explicit **already learned** and **not yet** ranges; Contextual gets its productive floor, pattern
+ownership and chunk treatment; Freetalking gets its retrieval-only constraint. The negative half
+is load-bearing: it stops a writer quietly teaching future grammar inside an earlier deck.
 
 Briefs are generated text: **never hand-edit one.** If a brief is weak or wrong, improve the TOC or
 the parser and regenerate.
@@ -84,12 +81,15 @@ the parser and regenerate.
 ## 3. Prove one lesson before multiplying it
 
 ```sh
-# [not built] — BUILD-PLAN.md → T4.3
-python3 english/tools/new_lesson.py --track <track> --course <course-code> --lesson <n> ...
+python3 english/tools/new_lesson.py --track <track> --review-id <CORE-N|CTX-N|FT-N> \
+  --course <course-code> --lesson <n> --id <NN-slug> --title <title> --level <level>
 ```
 
-Until it exists, copy the skeleton from the approved English pilot deck. **Not from a Korean
-deck** — the Korean script list loads `yomi.js`, which English decks must not.
+The tool lifts the shell from an approved English canonical deck, removes its pages and identity
+comments, retargets metadata and shared paths, checks references, and refuses to overwrite. Core
+defaults to its approved pilot. Contextual and Freetalking deliberately require `--from-deck`
+until their own pilots are explicitly approved. **Never use a Korean deck** — its script list loads
+`yomi.js`, which English must not.
 
 Before writing pages, read these in full and in order:
 

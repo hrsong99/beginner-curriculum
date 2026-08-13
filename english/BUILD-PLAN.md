@@ -235,9 +235,10 @@ is wrong, and the rhythm of the examples.
   6–8 per lesson; there is no word inventory anywhere, so the rule is unenforceable today.
 - [ ] **T3.10** — Add a receptive-only tier (Korean's `이해`) for language the learner must
   recognize but not produce — announcements, clerk speech, signage.
-- [ ] **T3.11** — Define the per-lesson **"not yet" list**. The `Depends on` column is a forward
-  dependency; the negative constraint is what actually stops a writer using untaught grammar.
-  This should be *generated* from the TOC in Phase 4, not hand-maintained.
+- [x] **T3.11 — DONE 2026-08-13.** Generated briefs now carry the negative sequence constraint.
+  Core lists exact already-learned/not-yet ranges and nearby boundaries; Contextual names the
+  productive floor and chunk exception; Freetalking is explicitly retrieval-only. These are
+  regenerated from the TOCs rather than maintained as a second curriculum.
 
 ---
 
@@ -246,12 +247,18 @@ is wrong, and the rhythm of the examples.
 Korean's eight tools all derive their output from files that already exist, so none holds a second
 copy of anything. Same rule here.
 
-- [ ] **T4.1** — English TOC parser (`tools/track_parsers.py` equivalent). Must represent
-  can-do, patterns, expressions, grammar line, prerequisites and scene without guessing.
-- [ ] **T4.2** — `build_lesson_briefs.py` — course-scoped briefs, including the generated
-  "already learned / not yet" ledger (T3.11).
-- [ ] **T4.3** — `new_lesson.py` — deck skeleton, so the meta block, stylesheet links and
-  load-order-bearing script tags are never retyped.
+- [x] **T4.1 — DONE 2026-08-13.** `tools/track_parsers.py` strictly parses all four TOCs into one
+  shared shape: 122 Core lessons, 60 Contextual episodes, 121 Freetalking topics and 12 planned
+  pronunciation lessons. It raises on missing or discontinuous source structure instead of
+  silently dropping items. Regression tests cover counts, two-pattern/reaction contracts, Core
+  reference ranges, opening/ladder fields and pronunciation's planning-only state.
+- [x] **T4.2 — DONE 2026-08-13.** `build_lesson_briefs.py` generates 315 stable-id briefs plus
+  indexes. Core carries explicit already-learned/not-yet ranges; Contextual carries floor, Core
+  ownership and chunk rules; Freetalking carries retrieval-only constraints. No course-code scheme
+  is invented while D5 remains open.
+- [x] **T4.3 — DONE 2026-08-13.** `new_lesson.py` lifts only the shell from an approved canonical
+  English deck, removes its pages and identity comments, retargets metadata and paths, verifies
+  refs/no-yomi, and refuses overwrite. Non-Core tracks remain gated on their own approved pilots.
 - [ ] **T4.4** — `plan_courses.py` — cut tracks into deployable courses on unit boundaries;
   emit `course.yaml` / `lesson.yaml` validating against podo-curriculum's schemas.
 - [ ] **T4.5** — `build_catalog.py` — English catalog gateway + per-track pages.
@@ -271,9 +278,10 @@ copy of anything. Same rule here.
   mixed-chip-count pages, 1 deck shipping inline `<style>`. The chip figure independently confirms
   the problem Korean's own `_conventions.md` records ("348문장 중 51문장"), which is still open.
 - [ ] **T4.6b** — Tests for the tools, matching `test_track_parsers.py`.
-- [ ] **T3.12 — Regenerate the grammar coverage map.** It is bannered stale: it describes the
-  retired 72-lesson spine, every row number is wrong, and it has no column for the `JP:` difficulty
-  field the new TOC carries. Not a find-and-replace — the restructure split and merged lessons.
+- [x] **T3.12 — DONE 2026-08-13.** `build_grammar_map.py` regenerates the 122-row function,
+  two-pattern, grammar, band, sequence and JP-risk map from the Core TOC. It surfaced rather than
+  papered over the remaining curriculum gap: Core 71–122 have no learner-facing `Grammar:` field.
+  Those 52 rows are visibly marked and remain catalog/native-review-dependent authorship.
 - [x] **T3.13 — DONE 2026-08-13.** All Core references in Contextual (71) and Freetalking (44) re-derived against the 122-lesson spine and mechanically verified in range. Stale banners removed from both. 72 `Core N` references across
   the two tracks now point at the wrong lessons. Folded into the D7 rebuild, which rewrites those
   courses anyway.
