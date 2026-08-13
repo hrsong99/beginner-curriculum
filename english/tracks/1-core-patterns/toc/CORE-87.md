@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-88 Hardly anyone came · CORE-89 It's not so much a problem as a delay · CORE-90 The vast majority of people
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-86 · Let me get back to you
 - **Next:** CORE-88 · Hardly anyone came

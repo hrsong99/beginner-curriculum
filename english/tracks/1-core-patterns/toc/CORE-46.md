@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-47 I'm bored and it's boring · CORE-48 Have you ever been to Kyoto? · CORE-49 I've already finished
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-45 · This one's cheaper
 - **Next:** CORE-47 · I'm bored and it's boring

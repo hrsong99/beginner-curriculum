@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-56 I like it, but it's expensive · CORE-57 If it rains, I'll stay in · CORE-58 I'll call you when I get there
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-54 · I stayed home because I was sick
 - **Next:** CORE-56 · I like it, but it's expensive

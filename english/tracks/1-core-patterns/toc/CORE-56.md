@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-57 If it rains, I'll stay in · CORE-58 I'll call you when I get there · CORE-59 I went there to see a client
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-55 · She's the one who called
 - **Next:** CORE-57 · If it rains, I'll stay in

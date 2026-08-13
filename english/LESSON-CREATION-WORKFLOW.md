@@ -48,10 +48,11 @@ stable purpose, retrievable fixed language, clear boundaries, four natural compl
 appropriate load, readiness. A frame that is mostly slots (`My ___ was ___ yesterday.`) is a
 grammar formula, not a pattern, and the philosophy rejects it by name.
 
-For a **contextual course**, also write a season bible in the TOC: work title, cast, relationship
-state, setting and course-level dramatic movement. Each episode states its scene, learner lines,
-partner reactions, patterns and any continuity-changing note. *A list of grammar slots is not a
-narrative course plan.*
+For a **contextual course**, state the practical area, learner need, level band, entry floor, and
+coverage boundary. Each lesson states a self-contained who/where/what scene, learner lines, partner
+reactions, and patterns. Course order may raise language load, but no lesson may require a cast,
+plot event, or relationship state from another lesson. *A list of grammar slots is not a practical
+course plan; a list of situations with no coverage logic is not one either.*
 
 Then generate and validate the course plan:
 
@@ -126,7 +127,7 @@ The **orchestrator alone** may change:
 - TOCs, parsers, blueprints and generated briefs
 - the runtime, `AGENTS.md`, `ux-philosophy.md` and this workflow
 - course plans, catalogs and `tracks/_conventions.md`
-- the season bible and cross-lesson continuity ledger
+- practical course coverage, scene allocation, and the cross-lesson duplication ledger
 
 Each **writer** receives one explicit assignment packet:
 
@@ -142,9 +143,10 @@ Each writer edits only its assigned `lesson.html`. It must not alter the runtime
 blueprint, the brief, the course plan or another lesson. **If shared infrastructure is missing, the
 writer reports the need to the orchestrator instead of solving it locally.**
 
-For a contextual course, review and integrate **in episode order** even if writers draft in
-parallel. The orchestrator checks names, chronology, relationship state, callbacks and the teaser
-chain. Do not fan out all episodes until the season bible and pilot have held up under review.
+For a contextual course, review and integrate **in course order** even if writers draft in
+parallel. The orchestrator checks coverage, difficulty, duplicated situations, clear local roles,
+and final-transfer collisions. Do not fan out a course until its practical boundary and pilot have
+held up under review.
 
 ## 5. Authoring rules every writer checks
 
@@ -194,8 +196,9 @@ writers copy. Korean spent 348 reorder sentences at the wrong chip count for exa
 - Contextual free-talk is a **reciprocal exchange**, not a single student prompt: the tutor asks,
   the student answers, the student asks a related question, and the tutor gives a real personal
   answer in the editable field. Do not end the page after the student's answer.
-- The final teaser is a complete **5–7-turn mini-scene** with 2–3 learner completions, uses both of
-  today's patterns, advances the relationship or conflict, and ends on an unresolved hook.
+- The final Contextual transfer is a complete **5–7-turn mini-scene** with 2–3 learner completions,
+  uses both of today's patterns, changes at least two meaningful scene variables, and resolves the
+  same practical job without introducing another lesson's target.
 - Use existing components and `data-sync` contracts. An element is shared **only** if it has a
   `data-sync-id`; verdicts are never shared — send the choice and let each side derive
   correct/wrong locally.
@@ -207,10 +210,10 @@ writers copy. Korean spent 348 reorder sentences at the wrong chip count for exa
 
 Scrolling is allowed. Split a long page only when its size creates another problem: the pager hides
 an unfinished task, the learner cannot tell the activity's scope, or one page asks them to retain
-too many turns at once. Split dialogue at a meaningful dramatic beat, never at an arbitrary height.
+too many turns at once. Split dialogue at a meaningful conversational beat, never at an arbitrary height.
 
-For contextual lessons, the native tip comes **before** the final teaser. Nothing follows the
-teaser; it is the last image the learner leaves with.
+For contextual lessons, the native tip comes **before** the final transfer scene. Nothing follows
+the transfer; it is the last image the learner leaves with.
 
 ## 6. Verify each deck and the integrated course
 

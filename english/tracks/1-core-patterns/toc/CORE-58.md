@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-59 I went there to see a client · CORE-60 Would you mind opening the window? · CORE-61 Do you mind if I sit here?
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-57 · If it rains, I'll stay in
 - **Next:** CORE-59 · I went there to see a client

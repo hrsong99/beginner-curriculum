@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-77 It was supposed to be ready · CORE-78 This time tomorrow I'll be flying · CORE-79 I should have it ready by Friday
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-75 · I used to walk to school
 - **Next:** CORE-77 · It was supposed to be ready

@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-62 Do you know where it is? · CORE-63 Coffee is expensive here · CORE-64 It won't turn on
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-60 · Would you mind opening the window?
 - **Next:** CORE-62 · Do you know where it is?

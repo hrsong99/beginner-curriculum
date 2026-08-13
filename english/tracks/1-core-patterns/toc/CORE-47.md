@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-48 Have you ever been to Kyoto? · CORE-49 I've already finished · CORE-50 I went there last year
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-46 · It's the best one here
 - **Next:** CORE-48 · Have you ever been to Kyoto?

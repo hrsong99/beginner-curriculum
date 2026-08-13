@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-9 Two coffees, please · CORE-10 The café on the corner · CORE-11 Where's the station?
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-7 · There's a café near here
 - **Next:** CORE-9 · Two coffees, please

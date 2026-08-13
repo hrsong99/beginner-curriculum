@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-21 Can I try this on? · CORE-22 I'd like the chicken, please · CORE-23 Two cups of coffee
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-19 · How much is this?
 - **Next:** CORE-21 · Can I try this on?

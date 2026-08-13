@@ -22,7 +22,7 @@
 
 - Planning only. Do not create a deck until the pronunciation track receives an explicit pilot approval.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** PRON-3 · `-ed` and `-s` are sounds, not syllables
 - **Next:** PRON-5 · Weak forms and the schwa

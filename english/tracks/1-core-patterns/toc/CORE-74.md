@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-75 I used to walk to school · CORE-76 I had my phone repaired · CORE-77 It was supposed to be ready
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-73 · The train had already left
 - **Next:** CORE-75 · I used to walk to school

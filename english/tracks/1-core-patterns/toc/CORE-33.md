@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-34 I didn't sleep well · CORE-35 First we ate, then we walked around · CORE-36 I was cooking when you called
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-32 · We went out for dinner
 - **Next:** CORE-34 · I didn't sleep well

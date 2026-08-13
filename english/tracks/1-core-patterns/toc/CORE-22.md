@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-23 Two cups of coffee · CORE-24 Sorry, could you say that again? · CORE-25 I'm working from home today
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-21 · Can I try this on?
 - **Next:** CORE-23 · Two cups of coffee

@@ -22,7 +22,7 @@
 
 - Planning only. Do not create a deck until the pronunciation track receives an explicit pilot approval.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** PRON-8 · /r/ vs /l/
 - **Next:** PRON-10 · /θ/ and /ð/

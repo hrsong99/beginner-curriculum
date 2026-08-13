@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-72 I might have left it at home · CORE-73 The train had already left · CORE-74 I was going to call, but
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-70 · She told me to wait
 - **Next:** CORE-72 · I might have left it at home

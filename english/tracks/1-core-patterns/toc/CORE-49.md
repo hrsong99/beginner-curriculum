@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-50 I went there last year · CORE-51 I've lived here for five years · CORE-52 I've been working all morning
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-48 · Have you ever been to Kyoto?
 - **Next:** CORE-50 · I went there last year

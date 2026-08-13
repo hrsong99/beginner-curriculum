@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-55 She's the one who called · CORE-56 I like it, but it's expensive · CORE-57 If it rains, I'll stay in
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-53 · We've done three of the five
 - **Next:** CORE-55 · She's the one who called

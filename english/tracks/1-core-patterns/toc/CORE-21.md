@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-22 I'd like the chicken, please · CORE-23 Two cups of coffee · CORE-24 Sorry, could you say that again?
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-20 · Could you help me with this?
 - **Next:** CORE-22 · I'd like the chicken, please

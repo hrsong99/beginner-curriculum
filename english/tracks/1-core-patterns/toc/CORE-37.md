@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-38 I'll help you · CORE-39 I might be late · CORE-40 You should get some rest
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-36 · I was cooking when you called
 - **Next:** CORE-38 · I'll help you

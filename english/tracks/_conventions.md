@@ -13,9 +13,10 @@ used. This is the one file a lesson-writer is expected to edit — **unless you 
 batch**, in which case report it and let the orchestrator write it. Ten writers editing one file is
 how the file gets lost.
 
-> **Status: one deck written.** Core 20 (`Could you help me with ___?`) is the pilot and the
-> canonical deck for `1-core-patterns`. The ledgers below carry what it spent. Contextual and
-> Freetalking have no decks yet, so their rows are empty by fact rather than by oversight.
+> **Status: all authorable production-track pilots are written.** Core 20
+> (`Could you help me with ___?`) is approved and canonical for `1-core-patterns`. The old CTX-1
+> deck is a superseded four-area prototype and must not be approved or copied. Both language-load
+> versions of FT-1 are awaiting explicit approval. Pronunciation remains planning-only.
 
 ---
 
@@ -39,35 +40,22 @@ Consequences a writer has to honour:
 
 ---
 
-## Cast
+## Roles
 
-**Decided:** Contextual English is built as **shows with a named cast and episodes**
-(`BUILD-PLAN.md` → D7), not as situation menus. So this table is load-bearing from the first
-contextual deck onward, the way `korean/tracks/_conventions.md` is for the drama track.
+**Decided:** Contextual English is built as **standalone practical situations**, grouped into five
+Travel and five Business courses. Both begin at low-intermediate and progress to B2–C1-bridge
+tasks. Everyday or social language belongs here only when it completes a travel or workplace job.
+It does not inherit Korean Contextual's continuing drama architecture. Course order communicates
+coverage and language load, not plot chronology.
 
-**Core Patterns** — practice dialogues only, no story cast: `Tutor` and `Me`, icon avatars.
+**Core Patterns** — practice dialogues use `Tutor` and `Me` with icon avatars.
 
-**Contextual English** — one work per course, each with its own cast, photo avatars, and a
-relationship state that carries across episodes.
+**Contextual English** — every lesson gives `私` one immediate practical job and gives the tutor the
+other role: colleague, staff member, customer, traveller, stranger, or decision-maker. A local name may
+make one scene natural, but no name, relationship, or fact may be required by another lesson.
 
-| Show | Seasons | Cast | Arc |
-| --- | --- | --- | --- |
-| **The Exchange** | 3 · eps 1–18 | Ellie (housemate, blunt) · Marcus (tutor) · Priya (fellow international student) | stranger → housemate → friend leaving |
-| **The 9 A.M. Call** | 3 · eps 19–36 | Dana (overseas counterpart, direct) · Kenji (私's JP manager) · Tom (engineer, informal) | polite silence → flagging risk → owning a decision |
-| **Two Weeks** | 2 · eps 37–48 | Sana (travel companion) · 相手 (a different stranger each episode) | transactions → problems → thanking someone |
-| **Saturday People** | 2 · eps 49–60 | Ray (Australian, leaving) · Mei (bilingual bridge) · Jonas (newer than 私) | nodding → belonging → advising Ray |
-
-**Names are spent.** Do not reuse Ellie, Marcus, Priya, Dana, Kenji, Tom, Sana, Ray, Mei or Jonas
-for a different person in another show — a learner taking two shows will read them as the same
-character.
-
-**The learner is a role, not a spectator.** The speaker of every learner line is `私` — the part
-the learner performs. The tutor reads the other role.
-
-Korean's equivalent file carries a warning worth pre-empting here: **the learner may legitimately
-have two names across frames** — a role name inside a story dialogue, and a stand-in name in
-example sentences and bonus scenes. If that ever becomes true here, write it down at the moment it
-is decided. Korean lost two bonus-scene punchlines to a later writer "fixing" the inconsistency.
+**The learner is a role, not a spectator.** The speaker of every learner line is `私`. The tutor
+reads the other role, and the final transfer scene changes at least two meaningful variables.
 
 **Named third parties in example sentences:** *(none yet)*
 
@@ -82,11 +70,12 @@ the learner meets today's pattern somewhere they have not been yet.
 | --- | --- | --- |
 | Airport check-in counter, too much luggage | Core 20 `in-the-wild` | core |
 | New office, moving boxes in | Core 20 `p3-model` (main dialogue, **not** available as a transfer scene) | core |
-| **60 contextual scenes** — every episode's `場面:` line | `2-contextual-english` eps 1–60 | contextual |
+| **60 contextual main scenes** — every lesson's `場面:` line | `2-contextual-english` CTX-1–60 | contextual |
+| Student flat, meeting Sam and checking the front-door code | superseded CTX-1 prototype; unavailable | contextual |
 
-**The contextual track assigns its own scenes in the TOC**, one per episode, which is the
-up-front assignment Korean recommends for a parallel batch. Do not pick a contextual scene
-yourself — take the `場面:` line from the episode. Core transfer scenes must not reuse one.
+**The contextual track assigns its main scenes in the TOC**, one per lesson. Do not replace one
+inside a deck assignment—take the `場面:` line from the brief. The writer proposes a distinct final
+transfer scene, and the orchestrator checks it against this ledger and neighbouring lessons.
 
 **Assign scenes up front for a parallel batch, one per lesson**, and let the assignment travel in
 each writer's packet. Korean assigned 과 11–45 in advance precisely so parallel writers could not
@@ -108,6 +97,8 @@ over this list.
 | Track | Spent | By |
 | --- | --- | --- |
 | 1-core-patterns | `I can carry the small one.` — the line the transfer scene lands on | Core 20 |
+| 2-contextual-english | `Got it. No worries. Thank you!` — retired with the superseded prototype | old CTX-1 |
+| 3-freetalking | `What ordinary part of life in Japan might surprise me?` — the flipped close shared by both language loads | FT-1 |
 
 ### Vocabulary in circulation
 
@@ -115,6 +106,10 @@ over this list.
 Lesson HTML owns the four-way editorial declaration: **new**, **recycled** (with its earlier stable
 id), **assumed-known**, and **receptive-only**. `build_running_lexicon.py` projects those declarations;
 never hand-edit the generated ledger or maintain a second word list here.
+
+Accessible and full Freetalking decks with the same `FT-N` are two language-load renderings of one
+curricular topic, so the generated ledger permits them to share new-word ownership. Different
+`FT-N` topics still cannot both declare the same word new.
 
 For Core and Contextual, `shared/lesson-template.md`'s normal ceiling of eight new content words is
 enforced by `check_deck.py`. A genuine exception needs a written `podo:vocabulary-waiver`, which is

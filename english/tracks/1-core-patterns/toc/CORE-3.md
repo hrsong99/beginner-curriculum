@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-4 This is my friend, Leo · CORE-5 Is this your bag? · CORE-6 Are you a student?
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-2 · I'm a designer
 - **Next:** CORE-4 · This is my friend, Leo

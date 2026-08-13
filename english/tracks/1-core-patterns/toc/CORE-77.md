@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-78 This time tomorrow I'll be flying · CORE-79 I should have it ready by Friday · CORE-80 Let me know once it's ready
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-76 · I had my phone repaired
 - **Next:** CORE-78 · This time tomorrow I'll be flying

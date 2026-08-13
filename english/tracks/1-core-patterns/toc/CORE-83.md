@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-84 I was wondering if you could · CORE-85 I see your point, but · CORE-86 Let me get back to you
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-82 · We're on track, but
 - **Next:** CORE-84 · I was wondering if you could

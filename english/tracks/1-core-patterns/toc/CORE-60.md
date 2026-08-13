@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-61 Do you mind if I sit here? · CORE-62 Do you know where it is? · CORE-63 Coffee is expensive here
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-59 · I went there to see a client
 - **Next:** CORE-61 · Do you mind if I sit here?

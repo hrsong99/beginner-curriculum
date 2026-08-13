@@ -22,7 +22,7 @@
 
 - Planning only. Do not create a deck until the pronunciation track receives an explicit pilot approval.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** track opening
 - **Next:** PRON-2 · Consonant clusters stay together

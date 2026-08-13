@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-96 That's not quite what I meant · CORE-97 I'd rather not, if that's OK · CORE-98 This is largely due to
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-94 · Wouldn't it be better if
 - **Next:** CORE-96 · That's not quite what I meant

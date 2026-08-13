@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-27 I like cooking · CORE-28 Are you free on Friday? · CORE-29 I'm meeting Sam at six
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-25 · I'm working from home today
 - **Next:** CORE-27 · I like cooking

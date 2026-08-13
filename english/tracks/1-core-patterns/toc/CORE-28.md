@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-29 I'm meeting Sam at six · CORE-30 I was really tired yesterday · CORE-31 We watched a movie last night
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-27 · I like cooking
 - **Next:** CORE-29 · I'm meeting Sam at six

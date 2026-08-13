@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-117 On balance, I'd say · CORE-118 That's one way of putting it · CORE-119 I'll leave it at that
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-115 · Granted, but that overlooks
 - **Next:** CORE-117 · On balance, I'd say

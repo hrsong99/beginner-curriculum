@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-93 To be fair, · CORE-94 Wouldn't it be better if · CORE-95 I take your point, but
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-91 · There's barely enough to go around
 - **Next:** CORE-93 · To be fair,

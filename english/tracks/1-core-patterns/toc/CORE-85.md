@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-86 Let me get back to you · CORE-87 It's slightly more expensive · CORE-88 Hardly anyone came
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-84 · I was wondering if you could
 - **Next:** CORE-86 · Let me get back to you

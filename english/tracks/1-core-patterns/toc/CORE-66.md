@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-67 I wish I could drive · CORE-68 He must be busy · CORE-69 She said she was busy
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-65 · It's made in Japan
 - **Next:** CORE-67 · I wish I could drive

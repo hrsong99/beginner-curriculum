@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-112 That came across as rude · CORE-113 The underlying issue is · CORE-114 That holds true up to a point
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-110 · I hate to say it, but
 - **Next:** CORE-112 · That came across as rude

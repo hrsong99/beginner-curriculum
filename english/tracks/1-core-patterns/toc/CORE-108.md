@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-109 To put it bluntly · CORE-110 I hate to say it, but · CORE-111 Just so you know,
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-107 · As for the budget,
 - **Next:** CORE-109 · To put it bluntly

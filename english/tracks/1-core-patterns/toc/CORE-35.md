@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-36 I was cooking when you called · CORE-37 I'm going to look for a new job · CORE-38 I'll help you
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-34 · I didn't sleep well
 - **Next:** CORE-36 · I was cooking when you called

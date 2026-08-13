@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-94 Wouldn't it be better if · CORE-95 I take your point, but · CORE-96 That's not quite what I meant
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-92 · I'm not entirely convinced
 - **Next:** CORE-94 · Wouldn't it be better if

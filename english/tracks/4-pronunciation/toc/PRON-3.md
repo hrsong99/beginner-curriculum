@@ -22,7 +22,7 @@
 
 - Planning only. Do not create a deck until the pronunciation track receives an explicit pilot approval.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** PRON-2 · Consonant clusters stay together
 - **Next:** PRON-4 · One strong beat per word

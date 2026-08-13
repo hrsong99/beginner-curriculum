@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-18 Can you drive? · CORE-19 How much is this? · CORE-20 Could you help me with this?
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-16 · What time do you get up?
 - **Next:** CORE-18 · Can you drive?

@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-104 It's the timing that matters · CORE-105 The sooner we start, the better · CORE-106 There's one thing I'd change
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-102 · Otherwise, we'd have to start again
 - **Next:** CORE-104 · It's the timing that matters

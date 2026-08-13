@@ -22,7 +22,7 @@
 
 - Planning only. Do not create a deck until the pronunciation track receives an explicit pilot approval.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** PRON-5 · Weak forms and the schwa
 - **Next:** PRON-7 · Linking across words

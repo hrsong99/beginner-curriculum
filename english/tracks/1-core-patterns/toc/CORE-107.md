@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-108 Would you be able to · CORE-109 To put it bluntly · CORE-110 I hate to say it, but
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-106 · There's one thing I'd change
 - **Next:** CORE-108 · Would you be able to

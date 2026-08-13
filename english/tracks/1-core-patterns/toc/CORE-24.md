@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-25 I'm working from home today · CORE-26 I usually drive, but today I'm walking · CORE-27 I like cooking
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-23 · Two cups of coffee
 - **Next:** CORE-25 · I'm working from home today

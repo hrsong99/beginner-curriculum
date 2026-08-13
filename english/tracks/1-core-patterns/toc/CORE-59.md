@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-60 Would you mind opening the window? · CORE-61 Do you mind if I sit here? · CORE-62 Do you know where it is?
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-58 · I'll call you when I get there
 - **Next:** CORE-60 · Would you mind opening the window?

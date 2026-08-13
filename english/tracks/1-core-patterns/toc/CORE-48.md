@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-49 I've already finished · CORE-50 I went there last year · CORE-51 I've lived here for five years
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-47 · I'm bored and it's boring
 - **Next:** CORE-49 · I've already finished

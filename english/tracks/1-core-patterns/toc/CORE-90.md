@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-91 There's barely enough to go around · CORE-92 I'm not entirely convinced · CORE-93 To be fair,
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-89 · It's not so much a problem as a delay
 - **Next:** CORE-91 · There's barely enough to go around

@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-79 I should have it ready by Friday · CORE-80 Let me know once it's ready · CORE-81 I'm responsible for customer support
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-77 · It was supposed to be ready
 - **Next:** CORE-79 · I should have it ready by Friday

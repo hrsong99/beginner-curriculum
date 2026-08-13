@@ -22,7 +22,7 @@
 
 - Planning only. Do not create a deck until the pronunciation track receives an explicit pilot approval.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** PRON-1 · Consonants can end a word
 - **Next:** PRON-3 · `-ed` and `-s` are sounds, not syllables

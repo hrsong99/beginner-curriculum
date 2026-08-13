@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-35 First we ate, then we walked around · CORE-36 I was cooking when you called · CORE-37 I'm going to look for a new job
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-33 · Did you have a good time?
 - **Next:** CORE-35 · First we ate, then we walked around

@@ -20,10 +20,13 @@ This folder adapts the teaching architecture in `korean/tracks/` to English. The
 | Track | Job | Size | Recommended point of use |
 | --- | --- | ---: | --- |
 | [`1-core-patterns`](./tracks/1-core-patterns/table-of-contents.md) | Build the main inventory of reusable speaking frames | 72 lessons · 144 patterns | Main sequence, Pre-A1 to B1+ |
-| [`2-contextual-english`](./tracks/2-contextual-english/table-of-contents.md) | Reuse and extend Core patterns in daily, travel, social, and work situations | 48 lessons · 96 patterns | Use the staged pathway and per-lesson prerequisites |
+| [`2-contextual-english`](./tracks/2-contextual-english/table-of-contents.md) | Complete standalone Travel and Business tasks by combining Core language | 60 lessons · 120 patterns | Enter at low-intermediate; progress to B2–C1-bridge tasks |
 | [`3-freetalking`](./tracks/3-freetalking/table-of-contents.md) | Develop opinions, interaction, and fluency with recycled language | 24 graded launch topics · growing | Enter by topic prerequisite, from A2 |
 
-The tracks become parallel after the opening stage. Core introduces frames in small exchanges; Contextual English combines them to complete larger situations; Freetalking retrieves them while the learner expresses genuine ideas.
+The tracks become parallel after the opening stage. Core introduces frames in small exchanges;
+Contextual English combines them to complete larger practical situations; Freetalking retrieves
+them while the learner expresses genuine ideas. Contextual course order reflects useful coverage
+and language load, but every lesson stands alone rather than continuing a fictional show.
 
 ## Lesson contract
 

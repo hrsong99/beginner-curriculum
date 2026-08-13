@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-13 Do you drink coffee? · CORE-14 I don't drive to work · CORE-15 She works downtown
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-11 · Where's the station?
 - **Next:** CORE-13 · Do you drink coffee?

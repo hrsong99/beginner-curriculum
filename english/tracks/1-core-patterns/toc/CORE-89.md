@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-90 The vast majority of people · CORE-91 There's barely enough to go around · CORE-92 I'm not entirely convinced
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-88 · Hardly anyone came
 - **Next:** CORE-90 · The vast majority of people

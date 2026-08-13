@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-101 It depends on whether · CORE-102 Otherwise, we'd have to start again · CORE-103 What worries me most is the cost
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-99 · That suggests that
 - **Next:** CORE-101 · It depends on whether

@@ -19,13 +19,13 @@ here only when it changes the starting point for future work.
 | Curriculum | 4 tracks · 315 planned items |
 | Production-facing catalog | 303 items: 122 Core · 60 Contextual · 121 Freetalking |
 | Planning-only catalog | 12 pronunciation lessons; no pronunciation decks authorized |
-| Authored lessons | 1 approved Core pilot: Core 20 |
+| Authored lessons | Core 20 approved; old CTX-1 superseded; FT-1 full + accessible awaiting approval |
 | Blueprints | Core, Contextual and Freetalking complete |
 | Generated author packets | 315 item briefs plus 4 indexes |
 | Review surface | generated 303-item catalog; native review in progress |
 | Core evidence | 122-row generated triage ledger complete; row-level EGP checks remain open |
 | Core audit | targeted revision applied with stable IDs; affected catalog rows require fresh native review |
-| Automated quality | 24 regression tests; existing English deck passes with 0 errors and 0 warnings |
+| Automated quality | 30 regression tests; all 4 English deck files pass with 0 errors and 0 warnings |
 | Deployment | not ready: course identity, manifests and external sync path remain open |
 
 The curriculum is no longer waiting for basic architecture or tooling. Its main content risk is
@@ -42,22 +42,24 @@ These are constraints, not open tasks.
 - **Support language:** Japanese throughout; English is the target language.
 - **Pronunciation readings:** no katakana over English, no `.yomi`, and no `yomi.js` at any level.
 - **Core reach:** Pre-A1 through working C1, currently 122 lessons.
-- **Contextual identity:** scene-first shows with casts, season arcs and episode continuity.
+- **Contextual identity:** scene-first, standalone practical lessons grouped into five Travel and
+  five Business courses; both start at low-intermediate and rise to B2–C1-bridge tasks; no
+  continuing fictional plot.
 - **Freetalking identity:** 121 shared topics, each designed for accessible and full versions.
 - **Pronunciation:** a 12-lesson plan exists, but decks are deferred until Core is substantially
   further along.
 - **Decoding:** no separate alphabet/decoding track; the learner already reads Latin script.
 - **Product family:** remain `curriculumType: BASIC`; do not invent a version-suffixed family.
-- **Audience separation:** country/audience belongs in `GT_CLASS_COURSE.COUNTRY_CODE`, not in a
-  new level-number scheme.
+- **Audience separation:** required `spec.countryCode` persists as
+  `GT_CLASS_COURSE.COUNTRY_CODE`; it belongs there, not in a new level-number scheme.
 
-### Decisions still required
+### Open or deferred gates
 
 | Decision | Why it is open | What it blocks |
 | --- | --- | --- |
-| Native catalog dispositions | The owner is reviewing the generated catalog | final Core/Contextual content, more decks |
-| CEFR → product ladder mapping | Trial/report bands do not yet map to Pre-A1–C1 | recommendation logic, trial report |
-| Product identity | No English `classLevel`, `LANG_TYPE` confirmation or course-code allocation | manifests, course generator, sync |
+| Native catalog dispositions | The owner is reviewing the generated catalog | final Core content, more Core decks |
+| CEFR → product ladder mapping | Owner deferred trial/report mapping on 2026-08-13 | recommendation logic, trial report |
+| Prestudy contract | Owner deferred prestudy on 2026-08-13 | deployable lesson manifests and shipping |
 | Pronunciation notation | No model-line scaffold has been approved | only future pronunciation/scaffold work; not current Core authoring |
 
 Do not invent answers to the product decisions inside a generator. Prepare evidence and options;
@@ -72,9 +74,10 @@ the owner/product system supplies the final values.
 - **Core:** 122 ordered two-pattern lessons in 22 units, Pre-A1 through working C1. All lessons
   have can-dos, two patterns, expressions and Japanese-L1 risk notes. Core 1–70 have learner-facing
   grammar support; Core 71–122 deliberately expose 52 missing grammar fields pending review.
-- **Contextual:** 4 shows, 10 seasons and 60 episodes. Every episode has a can-do, who/where/what
-  scene, two learner lines and two partner reactions. Seven episodes carry an optional
-  receptive-only `Understand` target. CTX-54 and CTX-58 are the only missing expression fields.
+- **Contextual:** 2 practical areas, 10 courses and 60 standalone lessons. Every lesson has a
+  can-do, who/where/what scene, two learner lines and two partner reactions. Seven lessons carry an
+  optional receptive-only `Understand` target. CTX-54 and CTX-58 are the only missing expression
+  fields. Stable CTX ids and reviewed pattern language survived the architectural replacement.
 - **Freetalking:** 11 themes and 121 topics with four explicit formats (`story`, `opinion`,
   `choose`, `両国`), an immediate opening and question ladder. The blueprint defines accessible
   and full language loads, correction loops and format-specific model pages.
@@ -89,6 +92,11 @@ the owner/product system supplies the final values.
   `tracks/_conventions.md` define the English-specific production and review rules.
 - Core, Contextual and Freetalking each have a production blueprint.
 - Core 20 is an approved, visually reviewed 25-page canonical deck.
+- The authored CTX-1 deck belongs to the retired four-area curriculum. It is a superseded prototype,
+  not an approval candidate or canonical source. Select and author a new low-intermediate Travel or
+  Business pilot after the revised catalog row passes review.
+- FT-1 is authored as separate 13-page full and accessible pilots, visually reviewed at 480px and
+  360px, and waiting for explicit approval before either becomes canonical.
 - `new_lesson.py` copies only an approved English shell, retargets stable identity and paths,
   clears inherited vocabulary, refuses overwrite and keeps non-Core tracks behind their pilot gate.
 - The running lexicon classifies new, recycled, assumed-known and receptive-only vocabulary.
@@ -181,17 +189,21 @@ Core 71–122, then any row the native reviewer flags.
 
 #### A3. Prepare the product-decision packet
 
-Inspect the consuming product and curriculum repositories and present concrete, collision-checked
-options for:
+The [`reference/product-decision-packet.md`](./reference/product-decision-packet.md) now records a
+collision-checked recommendation for:
 
 - CEFR-to-trial/report bands;
 - English `classLevel` allocation;
 - confirmed `LANG_TYPE` behavior;
 - course-code conventions and course boundaries;
-- the `COUNTRY_CODE` change required by the sync manifest.
+- the required `countryCode: JP` authoring and downstream import contract.
 
-This produces a decision packet, not final identifiers. Once the owner chooses, course generation
-can proceed without rediscovery.
+The owner fixed `LANG_TYPE=EN`, `COUNTRY_CODE=JP`, `BASIC`, 25-minute lessons, natural Core arcs and
+separate accessible/full Freetalking courses on 2026-08-13. Trial mapping and prestudy were deferred.
+The owner approved the replacement Contextual direction on 2026-08-13: practical, standalone
+courses rather than shows. The packet now records the corresponding ten natural course cuts. It
+does not reserve identifiers or modify product data. No lesson is deployable while prestudy is
+deferred.
 
 ### B. Land native feedback
 
@@ -215,33 +227,35 @@ missing required expression and no stale generated artifact.
 3. Fix the blueprint or shared conventions when a repeated problem is structural; do not patch the
    same defect independently into multiple decks.
 4. Stop for explicit approval before any wider Core batch.
-5. Author one Contextual pilot from its show/episode blueprint; visually review and obtain explicit
-   approval before treating it as canonical.
-6. Author one Freetalking topic in both accessible and full versions; visually review and obtain
-   explicit approval before treating either structure as canonical.
+5. Author one Contextual pilot from the approved two-area blueprint; choose a low-intermediate
+   Travel or Business lesson that demonstrates both the task-first opening and the final standalone
+   transfer, then stop for approval. Do not reuse the superseded CTX-1 deck.
+6. Review the authored FT-1 accessible and full pilots and obtain explicit approval before treating
+   either structure as canonical.
 7. Only after the representative set exists, build the one-way authored-HTML proofreading packet
    projection. One Core pilot is not enough evidence for a universal packet schema.
 
 ### D. Create product structure
 
-After the level and identity decisions are approved:
+Within the approved curriculum scope:
 
-1. Build `plan_courses.py` to cut tracks at authored unit/season/theme boundaries.
-2. Generate schema-valid `course.yaml` and `lesson.yaml`; never maintain a second curriculum copy
-   inside the generator.
+1. Maintain `plan_courses.py` cuts for approved Core units, Contextual practical courses, and
+   Freetalking themes.
+2. Generate schema-valid disabled `course.yaml` with required `countryCode: JP` only. Do not generate deployable `lesson.yaml`
+   while prestudy is deferred; never maintain a second curriculum copy inside the generator.
 3. Assign final course codes, `classLevel`, `LANG_TYPE` and per-course slots.
-4. Build trial materials only from approved representative content: track trials, short cuts,
-   report deck and English `plan-logic.md`.
-5. Update and verify the external sync path, including the root-runtime move and audience country.
+4. Do not build trial materials while trial mapping remains deferred.
+5. Update and verify the explicit external course-import path, including the root-runtime move and
+   verbatim audience country. `sync-from-authoring.py` does not import deployable courses.
 6. Prove the full path through sync, import, shared-reference repointing and validation in the
    consuming repository.
 
 ### E. Scale and validate
 
 1. Author by approved course batches, with writers owning disjoint lesson files and an orchestrator
-   owning TOCs, generated artifacts, continuity and shared conventions.
+   owning TOCs, generated artifacts, coverage boundaries and shared conventions.
 2. Run static checks, exact-generation tests, proofreading and rendered QA for every batch.
-3. Maintain the running lexicon and Contextual continuity in lesson order.
+3. Maintain the running lexicon and audit Contextual scenes and outcomes for duplication in course order.
 4. Conduct learner pilots: two lessons per level, recorded task performance, delayed retrieval at
    one week and a transfer task.
 5. Revisit pronunciation notation and deck production only after Core evidence, representative

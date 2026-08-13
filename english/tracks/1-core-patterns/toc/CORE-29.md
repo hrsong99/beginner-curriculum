@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-30 I was really tired yesterday · CORE-31 We watched a movie last night · CORE-32 We went out for dinner
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-28 · Are you free on Friday?
 - **Next:** CORE-30 · I was really tired yesterday

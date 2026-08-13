@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-43 It's a small, quiet café · CORE-44 It's too small · CORE-45 This one's cheaper
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-41 · You have to show ID
 - **Next:** CORE-43 · It's a small, quiet café

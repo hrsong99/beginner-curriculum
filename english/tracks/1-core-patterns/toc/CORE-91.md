@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-92 I'm not entirely convinced · CORE-93 To be fair, · CORE-94 Wouldn't it be better if
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-90 · The vast majority of people
 - **Next:** CORE-92 · I'm not entirely convinced

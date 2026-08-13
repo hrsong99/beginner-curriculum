@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-3 I live in Tokyo · CORE-4 This is my friend, Leo · CORE-5 Is this your bag?
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-1 · Hi, I'm Mina
 - **Next:** CORE-3 · I live in Tokyo

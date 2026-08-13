@@ -40,7 +40,7 @@
 - **Nearest protected forms:** CORE-2 I'm a designer · CORE-3 I live in Tokyo · CORE-4 This is my friend, Leo
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** track opening
 - **Next:** CORE-2 · I'm a designer

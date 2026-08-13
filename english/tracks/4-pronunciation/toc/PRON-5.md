@@ -22,7 +22,7 @@
 
 - Planning only. Do not create a deck until the pronunciation track receives an explicit pilot approval.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** PRON-4 · One strong beat per word
 - **Next:** PRON-6 · Sentence stress carries the meaning

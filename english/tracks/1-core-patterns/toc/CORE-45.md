@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-46 It's the best one here · CORE-47 I'm bored and it's boring · CORE-48 Have you ever been to Kyoto?
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-44 · It's too small
 - **Next:** CORE-46 · It's the best one here

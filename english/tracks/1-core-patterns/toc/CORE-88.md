@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-89 It's not so much a problem as a delay · CORE-90 The vast majority of people · CORE-91 There's barely enough to go around
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-87 · It's slightly more expensive
 - **Next:** CORE-89 · It's not so much a problem as a delay

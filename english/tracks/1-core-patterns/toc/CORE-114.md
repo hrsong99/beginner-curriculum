@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-115 Granted, but that overlooks · CORE-116 If anything, it's got worse · CORE-117 On balance, I'd say
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-113 · The underlying issue is
 - **Next:** CORE-115 · Granted, but that overlooks

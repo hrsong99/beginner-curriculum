@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-20 Could you help me with this? · CORE-21 Can I try this on? · CORE-22 I'd like the chicken, please
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-18 · Can you drive?
 - **Next:** CORE-20 · Could you help me with this?

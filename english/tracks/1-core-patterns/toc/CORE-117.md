@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-118 That's one way of putting it · CORE-119 I'll leave it at that · CORE-120 You might want to check that
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-116 · If anything, it's got worse
 - **Next:** CORE-118 · That's one way of putting it

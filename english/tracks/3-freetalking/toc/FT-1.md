@@ -30,7 +30,7 @@
 - Keep the same topic intent in both versions. Simplify language load, not intellectual interest.
 - The opening must still pass the three-second test in the learner's L1.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** track opening
 - **Next:** FT-2 · What people get wrong about Japan

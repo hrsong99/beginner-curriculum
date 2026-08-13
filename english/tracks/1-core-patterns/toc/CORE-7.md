@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-8 It's cold today · CORE-9 Two coffees, please · CORE-10 The café on the corner
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-6 · Are you a student?
 - **Next:** CORE-8 · It's cold today

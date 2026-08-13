@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-31 We watched a movie last night · CORE-32 We went out for dinner · CORE-33 Did you have a good time?
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-29 · I'm meeting Sam at six
 - **Next:** CORE-31 · We watched a movie last night

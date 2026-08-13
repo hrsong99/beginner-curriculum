@@ -90,8 +90,8 @@ workflow, track blueprint, generated brief and canonical deck, then inspect ever
    out of learner production unless explicitly chunked.
 4. **Activities:** one activity per page, four closed questions, consistent meaningful reorder
    chunks, one prompt per answer box and believable distractors.
-5. **Application:** Core merges both patterns; Contextual replays the opening scene and preserves
-   role/continuity; Freetalking maintains one question plus the correction loop.
+5. **Application:** Core merges both patterns; Contextual replays the opening scene and proves
+   standalone transfer in a second situation; Freetalking maintains one question plus the correction loop.
 6. **Scaffolding:** every non-target word is supported; hint chips are vocabulary only; no katakana
    reading or `yomi.js` appears.
 7. **Scripts:** English/Japanese sentence counts match and tutor notes do not expose answers.

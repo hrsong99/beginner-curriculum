@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-19 How much is this? · CORE-20 Could you help me with this? · CORE-21 Can I try this on?
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-17 · How often do you exercise?
 - **Next:** CORE-19 · How much is this?

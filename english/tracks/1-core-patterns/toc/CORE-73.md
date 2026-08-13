@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-74 I was going to call, but · CORE-75 I used to walk to school · CORE-76 I had my phone repaired
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-72 · I might have left it at home
 - **Next:** CORE-74 · I was going to call, but

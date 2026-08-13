@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-11 Where's the station? · CORE-12 I start work at nine · CORE-13 Do you drink coffee?
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-9 · Two coffees, please
 - **Next:** CORE-11 · Where's the station?

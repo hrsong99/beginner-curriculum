@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-110 I hate to say it, but · CORE-111 Just so you know, · CORE-112 That came across as rude
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-108 · Would you be able to
 - **Next:** CORE-110 · I hate to say it, but

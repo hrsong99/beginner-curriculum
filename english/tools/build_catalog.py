@@ -64,6 +64,7 @@ def lesson(item: dict, *, kind: str) -> dict:
     notes = []
     for label, key in (("Expressions", "expressions"), ("Grammar", "grammar"),
                        ("Japanese transfer", "jp"), ("Understand", "understand"),
+                       ("Author note", "authorNote"),
                        ("Follow-up ladder", "ladder"), ("Useful moves", "moves"),
                        ("Japanese habit", "habit"), ("Examples", "examples")):
         if item.get(key):
@@ -117,9 +118,9 @@ def build() -> dict:
     )
     contextual_groups = grouped(
         contextual,
-        lambda x: (x["showNo"], x["seasonNo"]),
-        lambda x: {"label": f'Show {x["showNo"]} · Season {x["seasonNo"]}',
-                   "title": f'{x["show"]} — {x["season"]}', "level": x["level"],
+        lambda x: x["courseNo"],
+        lambda x: {"label": f'Course {x["courseNo"]} · {x["area"]}',
+                   "title": x["course"], "level": x["level"],
                    "meta": f'Core {x["floor"]} floor'},
         "contextual",
     )
@@ -152,12 +153,12 @@ def build() -> dict:
         },
         {
             "id": "2-contextual-english", "no": 2, "name": "Contextual English", "short": "Contextual",
-            "glyph": "劇", "status": "review", "accent": "#c22a5f", "tint": "#fdeff3",
-            "unitWord": "seasons", "itemWord": "episodes",
-            "desc": "Four continuing shows turn the Core sequence into exchanges with characters, consequences, and a reason to speak.",
-            "note": "Judge each learner line together with the reply that follows it. A sentence can be natural alone and still fail as a turn in the scene.",
-            "stats": [(len(contextual), "episodes"), (len(contextual_groups), "seasons"),
-                      (len({x["showNo"] for x in contextual}), "shows")],
+            "glyph": "場", "status": "review", "accent": "#c22a5f", "tint": "#fdeff3",
+            "unitWord": "courses", "itemWord": "lessons",
+            "desc": "Standalone Travel and Business tasks that turn Core language into practical performance from low-intermediate upward.",
+            "note": "Judge the practical coverage and each learner line together with its reply. Every lesson must work without story context from another lesson.",
+            "stats": [(len(contextual), "lessons"), (len(contextual_groups), "courses"),
+                      (len({x["areaNo"] for x in contextual}), "practical areas")],
             "groups": contextual_groups,
         },
         {

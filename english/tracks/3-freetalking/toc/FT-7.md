@@ -30,7 +30,7 @@
 - Keep the same topic intent in both versions. Simplify language load, not intellectual interest.
 - The opening must still pass the three-second test in the learner's L1.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** FT-6 · Words that don't translate
 - **Next:** FT-8 · New Year, and everything around it

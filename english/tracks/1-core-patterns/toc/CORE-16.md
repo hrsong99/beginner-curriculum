@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-17 How often do you exercise? · CORE-18 Can you drive? · CORE-19 How much is this?
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-15 · She works downtown
 - **Next:** CORE-17 · How often do you exercise?

@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-33 Did you have a good time? · CORE-34 I didn't sleep well · CORE-35 First we ate, then we walked around
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-31 · We watched a movie last night
 - **Next:** CORE-33 · Did you have a good time?

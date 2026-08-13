@@ -22,7 +22,7 @@
 
 - Planning only. Do not create a deck until the pronunciation track receives an explicit pilot approval.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** PRON-6 · Sentence stress carries the meaning
 - **Next:** PRON-8 · /r/ vs /l/

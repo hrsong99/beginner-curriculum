@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-32 We went out for dinner · CORE-33 Did you have a good time? · CORE-34 I didn't sleep well
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-30 · I was really tired yesterday
 - **Next:** CORE-32 · We went out for dinner

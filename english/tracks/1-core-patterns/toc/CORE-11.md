@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-12 I start work at nine · CORE-13 Do you drink coffee? · CORE-14 I don't drive to work
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-10 · The café on the corner
 - **Next:** CORE-12 · I start work at nine

@@ -168,19 +168,24 @@ def parse_contextual() -> list[dict]:
     tops, sections = _owner_maps(lines)
     lessons = []
     for number, heading, _tail, body in _items(lines):
-        season_heading = sections.get(number, {}).get("heading", "")
-        season = re.match(r"Season (\d+) · (.+?) · (\d+) episodes · \*\*(.+?)\*\* · floor: Core (\d+)", season_heading)
-        show_heading = tops.get(number, {}).get("heading", "")
-        show = re.match(r"Show (\d+) · (.+)", show_heading)
-        _require(season, path, number, "a valid Season heading")
-        _require(show, path, number, "a valid Show heading")
+        course_heading = sections.get(number, {}).get("heading", "")
+        course = re.match(r"Course (\d+) · (.+?) · (\d+) lessons · \*\*(.+?)\*\* · floor: Core (\d+)", course_heading)
+        area_heading = tops.get(number, {}).get("heading", "")
+        area = re.match(r"Area (\d+) · (.+)", area_heading)
+        _require(course, path, number, "a valid Course heading")
+        _require(area, path, number, "a valid Area heading")
         exchanges = []
         for i, line in enumerate(body):
             match = re.match(r'^- 私: "(.+?)" — `(.+?)`(.*?)$', line)
             if not match:
                 continue
             reaction = re.match(r'^\s+→ (.+?): ["「](.+?)["」]$', body[i + 1]) if i + 1 < len(body) else None
-            refs = [int(n) for n in re.findall(r"Core (\d+)", match.group(3))]
+            # Accept both ``Core 36, Core 56`` and the older shorthand
+            # ``Core 36, 56``. References describe actual form ownership, so
+            # silently dropping the second owner would corrupt author briefs.
+            refs = []
+            for group in re.findall(r"Core\s+(\d+(?:\s*,\s*(?:Core\s+)?\d+)*)", match.group(3)):
+                refs.extend(int(n) for n in re.findall(r"\d+", group))
             exchanges.append({
                 "model": match.group(1), "pattern": match.group(2),
                 "coreRefs": refs, "chunk": "`chunk`" in match.group(3),
@@ -195,11 +200,11 @@ def parse_contextual() -> list[dict]:
             "canDo": _require(can_do, path, number, "Can-do"),
             "models": exchanges, "patterns": [x["pattern"] for x in exchanges],
             "expressions": _field(body, "Expressions"), "understand": _field(body, "Understand"),
-            "continuity": _field(body, "継続"),
-            "showNo": int(show.group(1)), "show": show.group(2).strip(),
-            "seasonNo": int(season.group(1)), "season": season.group(2).strip(),
-            "seasonSize": int(season.group(3)), "level": season.group(4).strip(),
-            "floor": int(season.group(5)),
+            "authorNote": _field(body, "Author note"),
+            "areaNo": int(area.group(1)), "area": area.group(2).strip(),
+            "courseNo": int(course.group(1)), "course": course.group(2).strip(),
+            "courseSize": int(course.group(3)), "level": course.group(4).strip(),
+            "floor": int(course.group(5)),
         })
         if len(exchanges) != 2 or any(not x["reaction"] for x in exchanges):
             raise ParseError(f"{path}: CTX {number} needs exactly 2 learner lines with partner reactions")

@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-73 The train had already left · CORE-74 I was going to call, but · CORE-75 I used to walk to school
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-71 · I should have called earlier
 - **Next:** CORE-73 · The train had already left

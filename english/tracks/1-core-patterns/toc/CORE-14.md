@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-15 She works downtown · CORE-16 What time do you get up? · CORE-17 How often do you exercise?
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-13 · Do you drink coffee?
 - **Next:** CORE-15 · She works downtown

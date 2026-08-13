@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-66 If I had more time, I'd travel · CORE-67 I wish I could drive · CORE-68 He must be busy
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-64 · It won't turn on
 - **Next:** CORE-66 · If I had more time, I'd travel

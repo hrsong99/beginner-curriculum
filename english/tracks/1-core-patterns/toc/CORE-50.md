@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-51 I've lived here for five years · CORE-52 I've been working all morning · CORE-53 We've done three of the five
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-49 · I've already finished
 - **Next:** CORE-51 · I've lived here for five years

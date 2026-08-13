@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-81 I'm responsible for customer support · CORE-82 We're on track, but · CORE-83 So what you're saying is
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-79 · I should have it ready by Friday
 - **Next:** CORE-81 · I'm responsible for customer support

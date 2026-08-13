@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-106 There's one thing I'd change · CORE-107 As for the budget, · CORE-108 Would you be able to
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-104 · It's the timing that matters
 - **Next:** CORE-106 · There's one thing I'd change

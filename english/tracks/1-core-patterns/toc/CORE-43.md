@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-44 It's too small · CORE-45 This one's cheaper · CORE-46 It's the best one here
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-42 · Don't you like it?
 - **Next:** CORE-44 · It's too small

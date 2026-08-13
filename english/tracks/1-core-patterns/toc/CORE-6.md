@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-7 There's a café near here · CORE-8 It's cold today · CORE-9 Two coffees, please
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-5 · Is this your bag?
 - **Next:** CORE-7 · There's a café near here

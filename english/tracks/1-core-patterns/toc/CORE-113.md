@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-114 That holds true up to a point · CORE-115 Granted, but that overlooks · CORE-116 If anything, it's got worse
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-112 · That came across as rude
 - **Next:** CORE-114 · That holds true up to a point

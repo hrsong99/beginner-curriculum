@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-40 You should get some rest · CORE-41 You have to show ID · CORE-42 Don't you like it?
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-38 · I'll help you
 - **Next:** CORE-40 · You should get some rest

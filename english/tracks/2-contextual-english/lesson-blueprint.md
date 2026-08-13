@@ -1,50 +1,57 @@
-# Contextual English — the page arc of one episode
+# Contextual English — the page arc of one practical lesson
 
 **This is a map, not a table of contents or a markup source.** It fixes the order and job of the
-pages in one episode. Take story facts from the TOC and generated brief; take component markup and
+pages in one lesson. Take situation facts from the TOC and generated brief; take component markup and
 tutor voice from the canonical deck after the track pilot is approved.
 
-- **Canonical English deck:** not yet authored. This track has its own pilot gate; do not treat the
-  Core pilot or a Korean deck as an approved English Contextual template.
+- **Superseded prototype — historical reference only:**
+  [`courses/arriving-and-getting-settled/lessons/01-the-room-is-fine-but/lesson.html`](courses/arriving-and-getting-settled/lessons/01-the-room-is-fine-but/lesson.html).
+  It implements the retired four-area curriculum and is not an approval candidate. Do not copy it,
+  review it as current content, or use it to seed a batch.
+- **Next pilot:** choose one revised low-intermediate Travel or Business lesson only after its TOC
+  row passes review. No current Contextual deck is canonical.
 - **Structural precedent only:**
   [`../../../korean/tracks/3-contextual-korean/sample-lesson.html`](../../../korean/tracks/3-contextual-korean/sample-lesson.html).
-- **Episode facts:** [`table-of-contents.md`](./table-of-contents.md) and the generated
+- **Lesson facts:** [`table-of-contents.md`](./table-of-contents.md) and the generated
   [`toc/`](./toc/) brief with the same `CTX-N` id.
 - **Shared page contract:** [`../../../ux-philosophy.md`](../../../ux-philosophy.md) plus
   [`../../AGENTS.md`](../../AGENTS.md).
 
-Read this map, then the complete canonical English deck once one exists. This track sells a scene,
-not a grammar sequence; the dramatic timing, believable reactions and tutor voice cannot be
-recovered from a page table.
+Read this map, then the complete canonical English deck once one exists. This track sells useful
+English for a recognisable situation, not a grammar sequence. Believable reactions, pressure, and
+tutor voice cannot be recovered from a page table.
 
 ---
 
-## What makes this an episode
+## What makes this a situational lesson
 
-The learner is a cast member. Every learner line is `私`; the tutor reads every other named role.
+The learner takes the active role. Every learner line is `私`; the tutor reads the other person.
 
 - **Scene before objective.** The learner hears the situation and exchange before being told what
   it teaches. Without the scene, these are Core drills wearing travel or workplace nouns.
 - **The reply is part of the line.** The TOC's partner reaction is never optional decoration. It is
-  the consequence that makes the learner's line an action inside a story.
-- **Core owns grammar.** An episode retrieves a known form or teaches a marked future form as a
+  the consequence that makes the learner's line an action inside a situation.
+- **Core owns grammar.** A lesson retrieves a known form or teaches a marked future form as a
   bounded chunk. It never opens a second grammar syllabus.
 - **Reception has a real lane.** `Understand` items are what staff, signs and other characters say
   back. They are heard and recognised, never turned into learner production targets.
-- **The last page sells the next episode.** Nothing follows the teaser—not a recap, tip or score.
+- **The lesson stands alone.** It assumes no cast, plot, callback, or earlier lesson. Course order
+  reflects language load and useful grouping only.
+- **The last page proves transfer.** It changes at least two scene variables while keeping the same
+  communicative job; nothing follows it.
 - **No katakana readings.** The target is English; this track never loads `yomi.js` at any level.
 
 ---
 
 ## The skeleton
 
-One episode is normally **29 pages**: five scene-setting pages, two pattern ladders, a return to the
-scene, one adjacent native choice and one teaser. Omit an untaught or dishonest choice/rule page
+One lesson is normally **29 pages**: five scene-setting pages, two pattern ladders, a return to the
+scene, one adjacent native choice and one transfer scene. Omit an untaught or dishonest choice/rule page
 rather than padding to reach a fixed count.
 
 | # | `data-page-id` | Job |
 | ---: | --- | --- |
-| 1 | `episode-card` | Show · season · episode · cast. Establish who the learner is playing |
+| 1 | `situation-card` | Practical area · course · situation. Establish the learner's immediate job |
 | 2 | `scene` | The TOC exchange, complete: learner lines and partner reactions |
 | 3 | `lesson-goal` | Connect the scene to the one observable can-do |
 | 4 | `expressions` | One or two production-ready chunks already doing work in the scene |
@@ -53,18 +60,19 @@ rather than padding to reach a fixed count.
 | 15–23 | `part2-*` | Pattern B, beginning with its line from `scene` |
 | 24–27 | `part3-*` | Replay the same scene, then vary it with the learner's facts |
 | 28 | `native-tip` | One new adjacent choice: register, softening, stress, contraction or collocation |
-| 29 | `next-episode` | A 5–7-turn teaser ending on an unresolved dramatic beat |
+| 29 | `transfer-scene` | A second 5–7-turn situation using both patterns with changed facts |
 
-The first page carries the episode's short `data-act`. Track lessons contain no sales cover.
+The first page carries the lesson's short `data-act`. Track lessons contain no sales cover.
 
 ### The five opening pages
 
-`episode-card` uses the show and season bible already written in the TOC. Name only characters who
-appear in this episode; an avatar never replaces the printed short speaker name.
+`situation-card` names the practical area, course, place, partner role, and immediate need. Include
+only facts required to understand this lesson; an avatar never replaces the printed short speaker
+name.
 
-`scene` stages the two learner lines and both partner reactions exactly as a small dramatic
+`scene` stages the two learner lines and both partner reactions exactly as a small conversational
 exchange. It may add the minimum connective turns needed for a coherent scene, but it may not
-replace the reviewed target lines. If it must split for height, split on a dramatic beat and reuse
+replace the reviewed target lines. If it must split for height, split on a conversational beat and reuse
 the identical boundary in `p3-model-*`.
 
 `lesson-goal` says: *that scene you just heard is what you will be able to handle.* Its success
@@ -92,11 +100,11 @@ heard in `scene`.
 | `pN-reorder` | `.task-block` ×4 | Rebuild four sentences from meaningful chunks | no |
 | `pN-fill` | `.task-block` ×4 | Fill only the pattern slot | no |
 | `pN-translate` | `.task-block` ×4 | Japanese scene cue → English | no |
-| `pN-write` | `.answer-box tall` | One open line that belongs in this episode's situation | no |
+| `pN-write` | `.answer-box tall` | One open line that belongs in this lesson's situation | no |
 
 ### Marked chunks do not receive a hidden grammar lesson
 
-The generated brief names the season's productive Core floor and each pattern's Core owner. A TOC
+The generated brief names the course's productive Core floor and each pattern's Core owner. A TOC
 line marked `chunk` is deliberately too far ahead to derive here.
 
 For a chunk:
@@ -143,39 +151,37 @@ bubble; it is not a canned model and it does not expose a hidden answer to the l
 
 ---
 
-## Native choice and next-episode teaser
+## Native choice and final transfer
 
 `native-tip` adds exactly one usable choice adjacent to today's lines. If it repeats Expressions,
 the meaning box or the rule, replace it. When both options are valid, present equal-weight situation
 labels; never use a correction arrow to rank two contextual choices.
 
-`next-episode` is the last page and a complete **5–7-turn mini-scene**:
+`transfer-scene` is the last page and a complete **5–7-turn mini-scene**:
 
 - it uses both reviewed patterns through 2–3 learner completions;
-- it advances the show's relationship, problem or decision;
-- it takes its premise from the next TOC episode without teaching that episode's new grammar;
-- it ends on an unresolved question, discovery, condition or reaction;
+- it changes at least two meaningful variables: partner, place, object, reason, urgency, or outcome;
+- it preserves today's communicative job without copying the opening dialogue;
+- it ends with the practical outcome resolved or clearly handed off;
 - no page follows it.
 
-The first and final episode of a season need deliberate variants. A season opener may establish a
-new cast relationship; a finale's teaser points to the next season or closes the work honestly
-rather than pretending another episode exists.
+The transfer scene is not a preview of another lesson and never introduces its grammar. Its job is
+to show that the learner can carry today's frames into a second plausible encounter.
 
 ---
 
-## Continuity ownership
+## Standalone ownership
 
-The orchestrator, not an individual deck writer, owns the show bible. Integrate drafts in episode
-order and check:
+The orchestrator owns coverage across the practical course. Integrate drafts in course order and
+check:
 
-- canonical names, roles and speaker labels;
-- what each character knows at this point;
-- relationship state and unresolved conflict;
-- the TOC's `継続` fact;
-- callbacks already spent and promises not yet paid off;
-- teaser → next episode continuity.
+- course titles still describe the jobs the lessons actually cover;
+- adjacent lessons do not duplicate the same outcome or situation;
+- partner roles and speaker labels are clear inside each lesson;
+- no lesson requires a character, fact, or event from another lesson;
+- final transfer scenes do not steal a neighbouring lesson's target.
 
-A writer may report a conflict but may not repair another episode or rewrite the TOC from inside a
+A writer may report a coverage conflict but may not repair another lesson or rewrite the TOC from inside a
 lesson assignment.
 
 ---
@@ -188,5 +194,6 @@ lesson assignment.
 - invent a third target pattern because a scene contains another useful phrase;
 - put two activities on one page;
 - add katakana readings or load `yomi.js`;
-- append anything after the next-episode teaser;
-- create episode batches before this track's own pilot is explicitly approved.
+- add a continuing plot, callback, unresolved teaser, or required cast history;
+- append anything after the final transfer scene;
+- create lesson batches before this track's own pilot is explicitly approved.

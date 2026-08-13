@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-68 He must be busy · CORE-69 She said she was busy · CORE-70 She told me to wait
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-66 · If I had more time, I'd travel
 - **Next:** CORE-68 · He must be busy

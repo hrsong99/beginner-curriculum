@@ -38,7 +38,7 @@ def _patterns(lesson: dict) -> list[str]:
     return rows
 
 
-def _continuity(lessons: list[dict], index: int) -> list[str]:
+def _neighbors(lessons: list[dict], index: int) -> list[str]:
     prior = lessons[index - 1] if index else None
     following = lessons[index + 1] if index + 1 < len(lessons) else None
     return [
@@ -77,8 +77,8 @@ def render(track: str, lessons: list[dict], index: int) -> str:
     if track == "1-core-patterns":
         lines += _line("Unit", f"{lesson['unitNo']} · {lesson['unit']}")
     elif track == "2-contextual-english":
-        lines += _line("Work", lesson["show"])
-        lines += _line("Season", f"{lesson['seasonNo']} · {lesson['season']}")
+        lines += _line("Practical area", f"{lesson['areaNo']} · {lesson['area']}")
+        lines += _line("Course", f"{lesson['courseNo']} · {lesson['course']}")
         lines += _line("Scene", lesson["scene"])
         lines += _line("Entry floor", f"Core {lesson['floor']}")
     elif track == "3-freetalking":
@@ -104,7 +104,7 @@ def render(track: str, lessons: list[dict], index: int) -> str:
         lines += ["## Supporting content", ""]
         lines += _line("Expressions", lesson.get("expressions"))
         lines += _line("Receptive only", lesson.get("understand"))
-        lines += _line("Continuity change", lesson.get("continuity"))
+        lines += _line("Author note", lesson.get("authorNote"))
     elif track == "3-freetalking":
         retrieval = []
         retrieval += _line("Moves", lesson.get("moves"))
@@ -120,9 +120,10 @@ def render(track: str, lessons: list[dict], index: int) -> str:
         refs = sorted({n for model in lesson["models"] for n in model["coreRefs"]})
         lines += [
             f"- **Assumed productive floor:** Core 1–{lesson['floor']}.",
-            f"- **Pattern owners used here:** {', '.join(f'Core {n}' for n in refs)}.",
-            "- A pattern more than two Core units above the floor must remain marked `chunk`; do not teach its grammar in this episode.",
+            f"- **Pattern owners used here:** {', '.join(f'Core {n}' for n in refs) if refs else 'no exact Core owner; bounded situational chunks only'}.",
+            "- A pattern more than two Core units above the floor must remain marked `chunk`; do not teach its grammar in this lesson.",
             "- Partner reactions and `Understand` are receptive; they do not add production targets.",
+            "- This lesson is standalone. Do not invent plot history, callbacks, or a next-lesson teaser.",
         ]
     elif track == "3-freetalking":
         lines += [
@@ -133,7 +134,7 @@ def render(track: str, lessons: list[dict], index: int) -> str:
     else:
         lines += ["- Planning only. Do not create a deck until the pronunciation track receives an explicit pilot approval."]
 
-    lines += ["", "## Continuity", ""] + _continuity(lessons, index)
+    lines += ["", "## Neighbouring items", ""] + _neighbors(lessons, index)
     lines += [
         "", "## Authoring inputs — read in order", "", "1. `../../../../ux-philosophy.md`",
         "2. `../../../AGENTS.md`", "3. `../../../LESSON-CREATION-WORKFLOW.md`",

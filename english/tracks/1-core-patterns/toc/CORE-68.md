@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-69 She said she was busy · CORE-70 She told me to wait · CORE-71 I should have called earlier
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-67 · I wish I could drive
 - **Next:** CORE-69 · She said she was busy

@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-113 The underlying issue is · CORE-114 That holds true up to a point · CORE-115 Granted, but that overlooks
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-111 · Just so you know,
 - **Next:** CORE-113 · The underlying issue is

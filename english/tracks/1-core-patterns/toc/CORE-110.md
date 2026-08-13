@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-111 Just so you know, · CORE-112 That came across as rude · CORE-113 The underlying issue is
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-109 · To put it bluntly
 - **Next:** CORE-111 · Just so you know,

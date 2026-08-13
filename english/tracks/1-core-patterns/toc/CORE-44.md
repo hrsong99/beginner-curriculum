@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-45 This one's cheaper · CORE-46 It's the best one here · CORE-47 I'm bored and it's boring
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-43 · It's a small, quiet café
 - **Next:** CORE-45 · This one's cheaper

@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-105 The sooner we start, the better · CORE-106 There's one thing I'd change · CORE-107 As for the budget,
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-103 · What worries me most is the cost
 - **Next:** CORE-105 · The sooner we start, the better

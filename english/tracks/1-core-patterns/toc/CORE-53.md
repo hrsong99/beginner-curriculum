@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-54 I stayed home because I was sick · CORE-55 She's the one who called · CORE-56 I like it, but it's expensive
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-52 · I've been working all morning
 - **Next:** CORE-54 · I stayed home because I was sick

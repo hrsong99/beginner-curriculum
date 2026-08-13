@@ -185,18 +185,23 @@ not a matter of taste.
 
 ## Getting a lesson to production
 
-**Deployment is not yet possible, and nothing here should pretend otherwise.** English has a
-review catalog, but still has no final course codes, `classLevel` mapping, generated manifests or
-production sync path (`BUILD-PLAN.md` → D4–D5 and Phase 7).
+**Lesson deployment is not yet possible, and nothing here should pretend otherwise.** English has
+approved course codes and `classLevel` mapping plus generated disabled `course.yaml` plans, but
+prestudy remains deferred, so the generator must not create `lesson.yaml` or represent a lesson as
+deployable (`BUILD-PLAN.md` → D4–D5 and Phase 7).
 
 Two constraints are already fixed and worth knowing before anyone designs around them, both from
 `../korean/AGENTS.md`:
 
 - **Stay `curriculumType: BASIC`.** It is a supported product line recognized by `podo-app`,
   `podo-backend` and `grape`. Do not create a version-suffixed variant.
-- **Audience is `GT_CLASS_COURSE.COUNTRY_CODE`, not the level.** That column is what would
-  separate this curriculum from an English-for-Korean-speakers line later. The sync manifest does
-  not send it yet, so it needs a grape-side change rather than a new number scheme.
+- **Audience is `spec.countryCode`, not the level.** It is required downstream, persists as
+  `GT_CLASS_COURSE.COUNTRY_CODE`, and is part of the natural key. This Japanese-market curriculum
+  emits `countryCode: JP`. Changing it on an already-deployed course creates a different identity:
+  first deploy the old identity with `enabled: false`, then change `countryCode` and deploy the new
+  identity.
 
 `LANG_TYPE` separates English from the Korean and Japanese curricula, so band numbers cannot
-collide across languages even where they coincide.
+collide across languages even where they coincide. Do not add it to `course.yaml`: the consuming
+repository derives `EN` from the `courses/en/` destination directory. Its explicit course importer,
+not `sync-from-authoring.py`, must copy the manifests verbatim into that directory.

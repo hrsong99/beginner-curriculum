@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-24 Sorry, could you say that again? · CORE-25 I'm working from home today · CORE-26 I usually drive, but today I'm walking
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-22 · I'd like the chicken, please
 - **Next:** CORE-24 · Sorry, could you say that again?

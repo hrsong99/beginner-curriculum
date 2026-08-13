@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-16 What time do you get up? · CORE-17 How often do you exercise? · CORE-18 Can you drive?
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-14 · I don't drive to work
 - **Next:** CORE-16 · What time do you get up?

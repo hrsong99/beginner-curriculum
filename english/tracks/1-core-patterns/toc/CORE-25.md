@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-26 I usually drive, but today I'm walking · CORE-27 I like cooking · CORE-28 Are you free on Friday?
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-24 · Sorry, could you say that again?
 - **Next:** CORE-26 · I usually drive, but today I'm walking

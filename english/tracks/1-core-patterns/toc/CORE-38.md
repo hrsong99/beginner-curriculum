@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-39 I might be late · CORE-40 You should get some rest · CORE-41 You have to show ID
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-37 · I'm going to look for a new job
 - **Next:** CORE-39 · I might be late

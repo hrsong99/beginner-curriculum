@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-85 I see your point, but · CORE-86 Let me get back to you · CORE-87 It's slightly more expensive
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-83 · So what you're saying is
 - **Next:** CORE-85 · I see your point, but

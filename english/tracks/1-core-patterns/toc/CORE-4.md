@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-5 Is this your bag? · CORE-6 Are you a student? · CORE-7 There's a café near here
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-3 · I live in Tokyo
 - **Next:** CORE-5 · Is this your bag?

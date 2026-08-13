@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-52 I've been working all morning · CORE-53 We've done three of the five · CORE-54 I stayed home because I was sick
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-50 · I went there last year
 - **Next:** CORE-52 · I've been working all morning

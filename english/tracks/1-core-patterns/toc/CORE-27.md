@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-28 Are you free on Friday? · CORE-29 I'm meeting Sam at six · CORE-30 I was really tired yesterday
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-26 · I usually drive, but today I'm walking
 - **Next:** CORE-28 · Are you free on Friday?

@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-10 The café on the corner · CORE-11 Where's the station? · CORE-12 I start work at nine
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-8 · It's cold today
 - **Next:** CORE-10 · The café on the corner

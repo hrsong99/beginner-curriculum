@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-76 I had my phone repaired · CORE-77 It was supposed to be ready · CORE-78 This time tomorrow I'll be flying
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-74 · I was going to call, but
 - **Next:** CORE-76 · I had my phone repaired

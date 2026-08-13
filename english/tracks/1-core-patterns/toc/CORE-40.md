@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-41 You have to show ID · CORE-42 Don't you like it? · CORE-43 It's a small, quiet café
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-39 · I might be late
 - **Next:** CORE-41 · You have to show ID

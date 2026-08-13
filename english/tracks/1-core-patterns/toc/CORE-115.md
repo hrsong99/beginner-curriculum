@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-116 If anything, it's got worse · CORE-117 On balance, I'd say · CORE-118 That's one way of putting it
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-114 · That holds true up to a point
 - **Next:** CORE-116 · If anything, it's got worse

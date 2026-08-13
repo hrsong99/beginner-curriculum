@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-6 Are you a student? · CORE-7 There's a café near here · CORE-8 It's cold today
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-4 · This is my friend, Leo
 - **Next:** CORE-6 · Are you a student?

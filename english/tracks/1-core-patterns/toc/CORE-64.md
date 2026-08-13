@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-65 It's made in Japan · CORE-66 If I had more time, I'd travel · CORE-67 I wish I could drive
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-63 · Coffee is expensive here
 - **Next:** CORE-65 · It's made in Japan

@@ -20,9 +20,10 @@ and the first English deck shipped both:
    required the two sides to be the same sentences; nothing enforced it.
 
 2. **Reorder chunking consistency.** Four chunks is the ceiling and the working
-   default, three is allowed when a sentence honestly holds three — but the
-   criterion has to be the same down the page. Mixed counts on one page are the
-   symptom of two criteria, which is what the rule exists to stop.
+   default. Mixed counts are an error in English authoring. In Korean they are a
+   review candidate rather than proof of a defect: short agglutinative beginner
+   sentences can honestly have two units beside a four-unit sentence. They are
+   therefore warnings, while impossible answers and counts above four still fail.
 
 Neither is caught by reading markup, which is why they are here rather than in a
 checklist. A checklist item only reaches the writers who were told to read it.
@@ -32,6 +33,7 @@ things a human should look at and may legitimately sign off on.
 """
 
 import argparse
+import html as html_lib
 import pathlib
 import re
 import sys
@@ -56,13 +58,48 @@ CHOICE = re.compile(r'class="choice"')
 LOCAL_REF = re.compile(r'(?:href|src)="((?!https?:|data:|#)[^"]+)"')
 INLINE_STYLE = re.compile(r"<style[\s>]")
 INLINE_SCRIPT = re.compile(r"<script(?![^>]*\ssrc=)[^>]*>")
+META_TAG = re.compile(r"<meta\b[^>]*>", re.I)
+ATTRIBUTE = re.compile(r'''([\w:-]+)\s*=\s*(["'])(.*?)\2''', re.S)
+QUOTE_OPEN = "“‘「『"
+QUOTE_CLOSE = "”’」』"
 
 
-def sentences(text, enders):
-    """Count sentences the way script-lines.js does: one per terminal mark."""
-    plain = TAG.sub("", text)
-    n = sum(1 for ch in plain if ch in enders)
-    return n or 1
+def meta_content(source, name):
+    """Read a meta value without depending on attribute order."""
+    for tag in META_TAG.findall(source):
+        attrs = {key.lower(): value for key, _, value in ATTRIBUTE.findall(tag)}
+        if attrs.get("name") == name:
+            return attrs.get("content", "")
+    return None
+
+
+def sentences(text, enders, *, spaced):
+    """Split exactly like runtime/js/script-lines.js.
+
+    Quoted teaching expressions often contain punctuation that is not the end
+    of the tutor's sentence. Korean also requires whitespace after a real
+    sentence ending; Japanese does not.
+    """
+    plain = html_lib.unescape(TAG.sub("", text))
+    out, current, depth = [], [], 0
+    for index, char in enumerate(plain):
+        current.append(char)
+        if char in QUOTE_OPEN:
+            depth += 1
+        elif char in QUOTE_CLOSE and depth:
+            depth -= 1
+        if depth or char not in enders:
+            continue
+        ends = index + 1 >= len(plain) or plain[index + 1].isspace()
+        if not spaced or ends:
+            sentence = "".join(current).strip()
+            if sentence:
+                out.append(sentence)
+            current = []
+    remainder = "".join(current).strip()
+    if remainder:
+        out.append(remainder)
+    return out or [plain.strip()]
 
 
 def pages(html):
@@ -80,18 +117,19 @@ def check(path):
     is_english = "english/tracks" in path.as_posix()
 
     # ---- identity and metadata -------------------------------------------
-    if 'name="google" content="notranslate"' not in html:
+    if meta_content(html, "google") != "notranslate":
         errs.append("missing <meta name=\"google\" content=\"notranslate\"> — "
                     "Chrome will auto-translate and mangle the mixed content")
-    m = re.search(r'name="podo:lesson-id" content="([^"]+)"', html)
-    if not m:
+    lesson_id = meta_content(html, "podo:lesson-id")
+    if lesson_id is None:
         errs.append("missing podo:lesson-id")
-    elif "lessons" in path.parts and m.group(1) != path.parent.name:
+    elif "lessons" in path.parts and lesson_id != path.parent.name:
         # The id must equal its directory only for a deck placed in a course, which
         # is what the production importer reads. A track-root sample-lesson.html is
         # a cut of the canonical trial deck and has no course directory to match.
-        errs.append(f"podo:lesson-id {m.group(1)!r} != directory {path.parent.name!r}")
-    if is_english and not re.search(r'name="podo:review-id" content="(?:CORE|CTX|FT)-\d+"', html):
+        errs.append(f"podo:lesson-id {lesson_id!r} != directory {path.parent.name!r}")
+    review_id = meta_content(html, "podo:review-id")
+    if is_english and not (review_id and re.fullmatch(r"(?:CORE|CTX|FT)-\d+", review_id)):
         errs.append("missing or invalid podo:review-id — use the stable TOC id")
 
     # ---- references resolve ----------------------------------------------
@@ -159,12 +197,13 @@ def check(path):
             ko, ja = SPAN_KO.search(body), SPAN_JA.search(body)
             if not (ko and ja):
                 continue
-            a = sentences(ko.group(1), EN_END if is_english else KO_END)
-            b = sentences(ja.group(1), JA_END)
-            if a != b:
+            a = sentences(ko.group(1), EN_END if is_english else KO_END,
+                          spaced=True)
+            b = sentences(ja.group(1), JA_END, spaced=False)
+            if len(a) != len(b):
                 errs.append(
                     f"{pid}: tutor script sentence counts differ "
-                    f"({'EN' if is_english else 'KO'}={a} JA={b}) — script-lines.js "
+                    f"({'EN' if is_english else 'KO'}={len(a)} JA={len(b)}) — script-lines.js "
                     f"will silently leave the box unsplit")
 
     # ---- 2 · reorder chunking consistency ---------------------------------
@@ -176,11 +215,11 @@ def check(path):
         if not counts:
             continue
         if len(set(counts)) > 1:
-            errs.append(
+            (errs if is_english else warns).append(
                 f"{pid}: mixed chip counts {counts} on one page — four is the "
                 f"ceiling and working default, three is allowed only when a "
                 f"sentence honestly holds three, and the criterion must be the "
-                f"same down the page")
+                f"same down the page; Korean rows require semantic sign-off")
         elif counts[0] > 4:
             errs.append(f"{pid}: {counts[0]} chips — four is the ceiling")
         elif counts[0] < 3:

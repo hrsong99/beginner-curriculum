@@ -37,6 +37,28 @@ class LiveCurriculumTests(unittest.TestCase):
         lessons = track_parsers.parse_contextual()
         self.assertTrue(all(len(lesson["models"]) == 2 for lesson in lessons))
         self.assertTrue(all(model["reaction"] for lesson in lessons for model in lesson["models"]))
+        self.assertEqual({lesson["areaNo"] for lesson in lessons}, {1, 2})
+        self.assertEqual({lesson["courseNo"] for lesson in lessons}, set(range(1, 11)))
+        self.assertTrue(all(lesson["courseSize"] == 6 for lesson in lessons))
+        self.assertEqual([lesson["area"] for lesson in lessons[:30]], ["Travel English"] * 30)
+        self.assertEqual([lesson["area"] for lesson in lessons[30:]], ["Business English"] * 30)
+        self.assertEqual(
+            [lessons[index]["floor"] for index in range(0, 60, 6)],
+            [47, 59, 70, 91, 103, 47, 59, 81, 92, 103],
+        )
+        self.assertGreaterEqual(min(lesson["floor"] for lesson in lessons), 47)
+        self.assertEqual(lessons[7]["models"][1]["coreRefs"], [57, 60])
+        self.assertEqual(lessons[25]["models"][1]["coreRefs"], [72, 65])
+        self.assertFalse(
+            [
+                (lesson["id"], model["pattern"], ref)
+                for lesson in lessons
+                for model in lesson["models"]
+                for ref in model["coreRefs"]
+                if ref > lesson["floor"] + 12 and not model["chunk"]
+            ],
+            "patterns more than about two Core units above the course floor must be bounded chunks",
+        )
         refs = [ref for lesson in lessons for model in lesson["models"] for ref in model["coreRefs"]]
         self.assertTrue(refs)
         self.assertTrue(all(1 <= ref <= 122 for ref in refs))

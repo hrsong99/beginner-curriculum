@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-14 I don't drive to work · CORE-15 She works downtown · CORE-16 What time do you get up?
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-12 · I start work at nine
 - **Next:** CORE-14 · I don't drive to work

@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-37 I'm going to look for a new job · CORE-38 I'll help you · CORE-39 I might be late
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-35 · First we ate, then we walked around
 - **Next:** CORE-37 · I'm going to look for a new job

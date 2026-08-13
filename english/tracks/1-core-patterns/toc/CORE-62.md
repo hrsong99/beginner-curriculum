@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-63 Coffee is expensive here · CORE-64 It won't turn on · CORE-65 It's made in Japan
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-61 · Do you mind if I sit here?
 - **Next:** CORE-63 · Coffee is expensive here

@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-121 I'd rather not go into it · CORE-122 It's not that simple
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-119 · I'll leave it at that
 - **Next:** CORE-121 · I'd rather not go into it

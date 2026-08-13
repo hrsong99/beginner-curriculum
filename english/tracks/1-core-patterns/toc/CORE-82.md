@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-83 So what you're saying is · CORE-84 I was wondering if you could · CORE-85 I see your point, but
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-81 · I'm responsible for customer support
 - **Next:** CORE-83 · So what you're saying is

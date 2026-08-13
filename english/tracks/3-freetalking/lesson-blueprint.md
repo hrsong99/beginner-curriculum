@@ -5,7 +5,9 @@ session and the standards for writing its questions. Topic facts come from the T
 brief. Component markup and tutor voice come from the canonical English deck after the track pilot
 is approved.
 
-- **Canonical English deck:** not yet authored. Freetalking has its own pilot gate.
+- **Pilot candidates:** [`courses/talk-between-two-countries-full/lessons/01-this-surprised-me/lesson.html`](./courses/talk-between-two-countries-full/lessons/01-this-surprised-me/lesson.html)
+  and [`courses/talk-between-two-countries-accessible/lessons/01-this-surprised-me/lesson.html`](./courses/talk-between-two-countries-accessible/lessons/01-this-surprised-me/lesson.html).
+  They are authored and visually checked, but are **not canonical until explicit owner approval**.
 - **Structural precedent only:**
   [`../../../korean/tracks/4-freetalking/sample-lesson.html`](../../../korean/tracks/4-freetalking/sample-lesson.html).
 - **Topic facts and format:** [`table-of-contents.md`](./table-of-contents.md) and the generated

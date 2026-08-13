@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-58 I'll call you when I get there · CORE-59 I went there to see a client · CORE-60 Would you mind opening the window?
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-56 · I like it, but it's expensive
 - **Next:** CORE-58 · I'll call you when I get there

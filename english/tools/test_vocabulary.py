@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import pathlib
 import sys
+import tempfile
 import unittest
 
 
@@ -28,6 +29,10 @@ def metadata(new: str = "box|箱", *, status: str = "reviewed", waiver: str = ""
 <meta name="podo:vocabulary:receptive" content="counter|カウンター">
 {waiver_meta}
 """
+
+
+def deck_metadata(review_id: str, new: str = "surprise|驚かせる") -> str:
+    return f'<meta name="podo:review-id" content="{review_id}">\n' + metadata(new)
 
 
 class VocabularyTests(unittest.TestCase):
@@ -56,6 +61,30 @@ class VocabularyTests(unittest.TestCase):
         records = build_running_lexicon.collect(build_running_lexicon.decks())
         actual = (ROOT / "reference/running-lexicon.md").read_text(encoding="utf-8")
         self.assertEqual(actual, build_running_lexicon.render(records))
+
+    def test_freetalking_versions_share_one_review_id_owner(self):
+        with tempfile.TemporaryDirectory(dir=ROOT / "tracks/3-freetalking") as tmp:
+            base = pathlib.Path(tmp)
+            paths = []
+            for course in ("talk-topic-accessible", "talk-topic-full"):
+                path = base / course / "lessons/01-topic/lesson.html"
+                path.parent.mkdir(parents=True)
+                path.write_text(deck_metadata("FT-1"), encoding="utf-8")
+                paths.append(path)
+            records = build_running_lexicon.collect(paths)
+            self.assertEqual([record["review_id"] for record in records], ["FT-1", "FT-1"])
+
+    def test_different_freetalking_topics_cannot_both_own_a_new_word(self):
+        with tempfile.TemporaryDirectory(dir=ROOT / "tracks/3-freetalking") as tmp:
+            base = pathlib.Path(tmp)
+            paths = []
+            for number, review_id in ((1, "FT-1"), (2, "FT-2")):
+                path = base / f"talk-topic-{number}" / f"lessons/{number:02d}-topic/lesson.html"
+                path.parent.mkdir(parents=True)
+                path.write_text(deck_metadata(review_id), encoding="utf-8")
+                paths.append(path)
+            with self.assertRaisesRegex(vocabulary.VocabularyError, "also declared new"):
+                build_running_lexicon.collect(paths)
 
 
 if __name__ == "__main__":

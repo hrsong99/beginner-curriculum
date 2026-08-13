@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-120 You might want to check that · CORE-121 I'd rather not go into it · CORE-122 It's not that simple
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-118 · That's one way of putting it
 - **Next:** CORE-120 · You might want to check that

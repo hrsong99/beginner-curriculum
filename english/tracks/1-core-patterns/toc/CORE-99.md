@@ -41,7 +41,7 @@
 - **Nearest protected forms:** CORE-100 As a result, we had to reschedule · CORE-101 It depends on whether · CORE-102 Otherwise, we'd have to start again
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
-## Continuity
+## Neighbouring items
 
 - **Previous:** CORE-98 · This is largely due to
 - **Next:** CORE-100 · As a result, we had to reschedule
