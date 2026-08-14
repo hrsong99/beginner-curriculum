@@ -133,6 +133,7 @@ Each **writer** receives one explicit assignment packet:
 
 ```text
 track · course code · lesson number and output path
+required read path: ../ux-philosophy.md · AGENTS.md · LESSON-CREATION-WORKFLOW.md
 track blueprint
 the brief (or TOC entry + constructed "not yet" list)
 the complete canonical deck
@@ -164,6 +165,10 @@ writers copy. Korean spent 348 reorder sentences at the wrong chip count for exa
   Every `JP:EN` hint chip belongs to exactly one category. Core and Contextual normally introduce
   at most eight content words; a genuine exception needs a written `podo:vocabulary-waiver`.
 - One activity per page; English-first title with a Japanese gloss; one blue tutor-script box.
+- Tutor scripts use the shortest natural, conversational line that preserves the learner's next
+  action or the page's meaning. Do not narrate visible setup, inventory later activities, or pad a
+  goal with `Today we'll...` / `By the end of the lesson...`. Rewrite the Japanese in the same
+  change so meaning, sentence count and conversational tone still match.
 - Keep the pattern-intro page as a pacing bridge: pattern name plus one short Japanese line moving
   from the scene into the next beat. Do not teach grammar on the dark transition page.
 - Open the first teaching page of each pattern with one compact meaning-and-use box: what this
@@ -227,6 +232,7 @@ Static checks:
 - no inline CSS/JS, no accidental shared-runtime changes
 - **every tutor script box has the same number of sentences on both sides**
 - **every reorder page uses one chunking criterion down the page**
+- **every reorder chip set can reconstruct its own `data-a` answer under the runtime's comparison**
 - reviewed four-way vocabulary ownership; every hint chip declared; Core/Contextual new-word cap
 
 ### Run the checker
@@ -238,15 +244,14 @@ python3 english/tools/check_deck.py --all               # every deck in the repo
 python3 english/tools/build_running_lexicon.py           # regenerate the author ledger
 ```
 
-It covers every static check above and exits non-zero on any error, so it can gate a batch. It
-exists because the two checks below **cannot be caught by reading markup**, and a checklist item
-only reaches the writers who were told to read the checklist. The first English deck passed every
-other check and still shipped both.
+It enforces the machine-verifiable static checks above and exits non-zero on any error, so it can
+gate a batch. Naturalness, honest meaning-unit boundaries and whether a distractor is believable
+remain human review decisions. The checker exists because several silent failures look plausible
+in markup and a checklist item only reaches the writers who were told to read it.
 
-### The two checks that fail silently
+### Checks that fail silently
 
-Both of these produce a page that is *valid markup and wrong on screen*, with nothing in the
-console. The pilot deck shipped both. Run them.
+These produce a page that is *valid markup and wrong on screen*, with nothing in the console.
 
 **1 · Tutor script sentence parity.** `runtime/js/script-lines.js` rebuilds the blue box as one
 sentence per line, English above its own Japanese — but only when the two sides have **equal
@@ -279,6 +284,11 @@ sentence. If a row needs a different criterion to reach its count, the count is 
 [...document.querySelectorAll("[data-page-id]")].filter(p=>/reorder/.test(p.dataset.pageId))
   .map(p=>({page:p.dataset.pageId,counts:[...p.querySelectorAll(".task-block")].map(b=>b.querySelectorAll(".choice").length)}))
 ```
+
+**3 · Reorder solvability.** A page can have the right number of chips and still be impossible if
+one word is missing or a chip belongs to another answer. `check_deck.py` mirrors
+`activities.js`'s normalization and verifies that some ordering of each task block's chips exactly
+reconstructs its own `data-a`. This is a hard error, not an editorial warning.
 
 Interactive checks at both **480px and 360px**:
 

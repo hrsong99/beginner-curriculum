@@ -126,6 +126,10 @@ below were paid for again by this track's own pilot, because they were not writt
   the wrong translation to the wrong line. So a mismatch does not error — it just renders as a
   block of bunched prose. Write the English, then write exactly that many Japanese sentences.
   `.pattern-meaning` is exempt (it owns its own pairing), so keep *its* text short instead.
+- **Conversational brevity is part of correctness.** Say only the learner's next action or the
+  meaning the page must supply. Do not narrate visible setup, preview later activities, or pad a
+  goal with `Today we'll...` / `By the end of the lesson...`. Rewrite the Japanese to preserve the
+  shorter English line's meaning, sentence count and tone.
 
 - **Four questions in every closed activity** — read, choose, reorder, fill, translate. Difficulty
   must not taper by silently dropping questions. Free-writing stays one open prompt.

@@ -8,8 +8,8 @@
 Why this exists
 ---------------
 A deck can be valid HTML, pass every reference check, render without a console
-error, and still be wrong on screen. Two defects in particular leave no trace,
-and the first English deck shipped both:
+error, and still be wrong on screen. Three defects in particular leave no
+trace:
 
 1. **Tutor script sentence parity.** `runtime/js/script-lines.js` rebuilds the
    blue box as one sentence per line, each with its own translation underneath —
@@ -23,7 +23,12 @@ and the first English deck shipped both:
    default. Mixed counts are an error in English authoring. In Korean they are a
    review candidate rather than proof of a defect: short agglutinative beginner
    sentences can honestly have two units beside a four-unit sentence. They are
-   therefore warnings, while impossible answers and counts above four still fail.
+   therefore warnings, while counts above four still fail.
+
+3. **Reorder solvability.** A row can have the expected chip count while one
+   chip is missing or belongs to another answer. This checker mirrors
+   `activities.js`'s normalization and proves that some ordering of the chips in
+   each English task block reconstructs that block's `data-a` exactly.
 
 Neither is caught by reading markup, which is why they are here rather than in a
 checklist. A checklist item only reaches the writers who were told to read it.
@@ -38,6 +43,7 @@ import pathlib
 import re
 import sys
 from collections import Counter
+from itertools import permutations
 
 import vocabulary
 
@@ -55,6 +61,8 @@ SPAN_KO = re.compile(r'<span class="ko">(.*?)</span>', re.S)
 SPAN_JA = re.compile(r'<span class="ja">(.*?)</span>', re.S)
 TASK_BLOCK = re.compile(r'<div class="task-block">')
 CHOICE = re.compile(r'class="choice"')
+SPAN_TAG = re.compile(r"<span\b[^>]*>|</span>", re.I)
+SPAN_OPEN = re.compile(r"<span\b[^>]*>", re.I)
 LOCAL_REF = re.compile(r'(?:href|src)="((?!https?:|data:|#)[^"]+)"')
 INLINE_STYLE = re.compile(r"<style[\s>]")
 INLINE_SCRIPT = re.compile(r"<script(?![^>]*\ssrc=)[^>]*>")
@@ -110,6 +118,63 @@ def pages(html):
     for i, (pos, pid) in enumerate(marks):
         end = marks[i + 1][0] if i + 1 < len(marks) else len(html)
         yield pid, html[pos:end]
+
+
+def span_body(source, start):
+    """Return the inner HTML of the span whose opening tag ends at start."""
+    depth = 1
+    for match in SPAN_TAG.finditer(source, start):
+        depth += -1 if match.group(0).lower() == "</span>" else 1
+        if depth == 0:
+            return source[start:match.start()]
+    return source[start:]
+
+
+def reorder_norm(source):
+    """Normalize exactly like runtime/js/activities.js before grading."""
+    plain = html_lib.unescape(TAG.sub("", source))
+    return re.sub(r"[\s　?？.。!！,、·~〜…]", "", plain)
+
+
+def reorder_solvability_errors(page_id, chunk):
+    """Find English reorder task blocks whose chips cannot build data-a."""
+    errors = []
+    for block in TASK_BLOCK.split(chunk)[1:]:
+        zone = None
+        for match in SPAN_OPEN.finditer(block):
+            attrs = {key.lower(): value for key, _, value in ATTRIBUTE.findall(match.group(0))}
+            classes = attrs.get("class", "").split()
+            if "build-zone" in classes and attrs.get("data-sync-kind") == "order":
+                zone = (match, attrs)
+                break
+        if zone is None:
+            continue
+
+        match, attrs = zone
+        sync_id = attrs.get("data-sync-id", "unnamed reorder")
+        if "data-a" not in attrs:
+            errors.append(f"{page_id}: {sync_id} reorder build-zone has no data-a")
+            continue
+
+        chips = []
+        for choice in SPAN_OPEN.finditer(block, match.end()):
+            choice_attrs = {
+                key.lower(): value for key, _, value in ATTRIBUTE.findall(choice.group(0))
+            }
+            if "choice" in choice_attrs.get("class", "").split():
+                chips.append(reorder_norm(span_body(block, choice.end())))
+
+        if not chips:
+            errors.append(f"{page_id}: {sync_id} reorder build-zone has no chips")
+            continue
+
+        answer = reorder_norm(attrs["data-a"])
+        if not any("".join(order) == answer for order in permutations(chips)):
+            errors.append(
+                f"{page_id}: {sync_id} chips cannot reconstruct data-a "
+                f"(answer={answer!r}, chips={chips!r})"
+            )
+    return errors
 
 
 def check(path):
@@ -234,6 +299,8 @@ def check(path):
         elif counts[0] < 3:
             warns.append(f"{pid}: {counts[0]} chips per sentence — confirm no "
                          f"fourth unit is glued to a neighbour")
+        if is_english:
+            errs.extend(reorder_solvability_errors(pid, chunk))
 
     return errs, warns
 

@@ -85,9 +85,12 @@ So:
   `lime` = brand chrome only, never state. `gray-200` = ordinary outlines. Dashed grey = "write
   here". Adding a second meaning to any of these is the single easiest way to make a page
   unreadable — see the table in `ux-philosophy.md`.
-- **The blue `.section-subtitle` box is the tutor's spoken script.** Natural spoken English, no
-  grammar jargon, written in the first person (`I'll read it first` — never `the teacher will`).
-  Its Japanese line is a direct translation of the English, not extra teaching content.
+- **The blue `.section-subtitle` box is the tutor's spoken script.** Use the shortest natural,
+  conversational English that preserves the learner's next action or the page's meaning. Do not
+  inventory later activities, narrate what the page already shows, or add framing such as
+  `Today we'll...` and `By the end of the lesson...`. Use no grammar jargon and write in the first
+  person (`I'll read it first` — never `the teacher will`). Its Japanese line is a direct
+  translation with the same conversational tone, not extra teaching content.
 - **Lessons are audio-only.** The learner hears the tutor but never sees them, so no instruction
   may depend on watching the tutor — no "watch my mouth", no gestures, no "look at me". Model a
   sound by *saying* it. Describing the learner's **own** mouth is fine and matters more here than

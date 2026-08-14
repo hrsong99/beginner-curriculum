@@ -122,6 +122,10 @@ not the tutor's voice or the partner's receptive line.
 
 - Every ordinary blue script box has the same number of English and Japanese sentences.
   `.pattern-meaning` owns its own pairing and remains short.
+- Tutor scripts use the shortest natural, conversational line that preserves the learner's next
+  action or the page's meaning. They do not narrate visible setup, preview later activities, or
+  repeat `Today we'll...` / `By the end of the lesson...` framing. Japanese matches the shorter
+  English line's meaning, sentence count and tone.
 - Every closed read/choose/reorder/fill/translate activity has **four questions**.
 - Reorder uses four meaningful chunks as ceiling and default; three is allowed only when the
   sentence genuinely has three. One page uses one chunking criterion throughout.

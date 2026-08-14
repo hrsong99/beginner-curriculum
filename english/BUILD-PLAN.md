@@ -25,7 +25,7 @@ here only when it changes the starting point for future work.
 | Review surface | generated 303-item catalog; native review in progress |
 | Core evidence | 122-row generated triage ledger complete; row-level EGP checks remain open |
 | Core audit | final progression, cognitive-load, naturalness and slot-quality pass applied with stable IDs; affected catalog rows require fresh native review |
-| Automated quality | 42 regression tests; all 4 English deck files pass with 0 errors and 0 warnings |
+| Automated quality | 44 regression tests; all 4 English deck files pass with 0 errors and 0 warnings |
 | Deployment | not ready: course identity, manifests and external sync path remain open |
 
 The curriculum is no longer waiting for basic architecture or tooling. Its main content risk is
@@ -122,7 +122,7 @@ the owner/product system supplies the final values.
 - `build_running_lexicon.py` generates the authored vocabulary ledger from lesson metadata.
 - `check_deck.py` checks identity, references, duplicate ids, inline code, no-yomi, tutor-script
   parity, reorder chunking and vocabulary ownership/load.
-- Forty-two regression tests prove parser contracts, shell retargeting, generated
+- Forty-four regression tests prove parser contracts, shell retargeting, generated
   brief/map/ledger/catalog/lexicon freshness and review-intake failure cases.
 
 ### 4. Shared foundation

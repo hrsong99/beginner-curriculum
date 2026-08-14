@@ -199,6 +199,10 @@ before closing.
 ## Counting and language rules mirrored from the workflow
 
 - One blue script box per page; English and Japanese carry the same sentence count.
+- Tutor scripts use the shortest natural, conversational line that preserves the learner's next
+  action or the page's meaning. They do not narrate visible setup, preview later activities, or
+  repeat `Today we'll...` / `By the end of the lesson...` framing. Japanese matches the shorter
+  English line's meaning, sentence count and tone.
 - One printed question per question page, plus 2–3 private follow-ups.
 - All learner-facing support is Japanese; English is the target language.
 - No `.yomi`, no katakana pronunciation scaffold and no `yomi.js`.

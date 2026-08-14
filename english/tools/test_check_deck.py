@@ -87,6 +87,36 @@ class DeckCheckTests(unittest.TestCase):
             errors, _ = check_deck.check(deck)
             self.assertFalse(any("runtime-promoted control" in item for item in errors))
 
+    def test_reorder_accepts_any_chip_order_without_id_convention(self):
+        chunk = (
+            '<div data-page-id="p1-reorder">'
+            '<div class="task-block">'
+            '<span class="answer-space build-zone" data-sync-id="p1-row" '
+            'data-sync-kind="order" data-a="Could you help me?"></span>'
+            '<span class="choice" data-item-id="arbitrary-a">help</span>'
+            '<span class="choice" data-item-id="arbitrary-b">me?</span>'
+            '<span class="choice" data-item-id="arbitrary-c">Could you</span>'
+            '</div></div>'
+        )
+        self.assertEqual(
+            check_deck.reorder_solvability_errors("p1-reorder", chunk),
+            [],
+        )
+
+    def test_reorder_rejects_chips_that_cannot_build_answer(self):
+        chunk = (
+            '<div data-page-id="p1-reorder">'
+            '<div class="task-block">'
+            '<span class="answer-space build-zone" data-sync-id="p1-row" '
+            'data-sync-kind="order" data-a="Could you help me?"></span>'
+            '<span class="choice">help</span>'
+            '<span class="choice">them?</span>'
+            '<span class="choice">Could you</span>'
+            '</div></div>'
+        )
+        errors = check_deck.reorder_solvability_errors("p1-reorder", chunk)
+        self.assertTrue(any("cannot reconstruct data-a" in item for item in errors))
+
 
 if __name__ == "__main__":
     unittest.main()

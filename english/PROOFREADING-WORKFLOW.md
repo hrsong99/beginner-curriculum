@@ -55,10 +55,6 @@ comments become a separate cross-cutting work list; do not duplicate them onto e
 7. Re-run the catalog and generated-artifact tests.
 8. Publish a fresh catalog only after the round is internally consistent.
 
-The currently missing Core 71–122 `Grammar:` lines and CTX-54/CTX-58 Expressions are filled after
-the pattern decisions in the same review round. Do not write support for a pattern that is about to
-be demoted.
-
 ---
 
 ## Corpus and source validation
@@ -94,7 +90,10 @@ workflow, track blueprint, generated brief and canonical deck, then inspect ever
    standalone transfer in a second situation; Freetalking maintains one question plus the correction loop.
 6. **Scaffolding:** every non-target word is supported; hint chips are vocabulary only; no katakana
    reading or `yomi.js` appears.
-7. **Scripts:** English/Japanese sentence counts match and tutor notes do not expose answers.
+7. **Scripts:** each line is the shortest natural, conversational wording that preserves the
+   learner's next action or the page's meaning; it does not narrate visible setup, inventory later
+   activities or repeat framing such as “today” / “by the end of the lesson.” English and Japanese
+   match in meaning, sentence count and tone, and tutor notes do not expose answers.
 8. **Rendered behaviour:** every page works at 480px and 360px, including interaction, sync,
    teaching mode, scrolling, pager clearance and console state.
 
