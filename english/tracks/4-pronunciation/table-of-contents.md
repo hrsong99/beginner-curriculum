@@ -1,7 +1,8 @@
 # English Pronunciation for Japanese Speakers — Table of Contents
 
-> **Status: planning stage.** There is not a single lesson deck yet, and none should be written
-> until Core is further along. This file is the syllabus to follow when it is built. It mirrors
+> **Status: planned only — not in active development.** There is not a single lesson deck yet,
+> and none is currently authorized. This file is the syllabus to follow if development starts
+> after Core is further along. It mirrors
 > `korean/tracks/5-pronunciation`, which has sat in exactly this state for the mirror-image learner.
 
 **Goal:** fix **the specific places** where Japanese phonology collides with English — not

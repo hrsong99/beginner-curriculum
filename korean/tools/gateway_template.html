@@ -83,23 +83,18 @@
   .band p { margin: 0; color: var(--ink-3); font-size: 12px; font-weight: 600; }
 
   /* ---------- 트랙 카드 ---------- */
-  .cards { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin-top: 15px; }
-  .card { grid-column: span 2; }
-  .card:nth-child(4) { grid-column: 2 / span 2; }
-  .card:nth-child(5) { grid-column: 4 / span 2; }
-  @media (max-width: 900px) {
-    .cards { grid-template-columns: repeat(2, 1fr); }
-    .card, .card:nth-child(4), .card:nth-child(5) { grid-column: auto; }
-  }
-  @media (max-width: 620px) { .cards { grid-template-columns: 1fr; } }
+  .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 15px; }
 
-  .card { position: relative; isolation: isolate; display: flex; flex-direction: column; padding: 22px;
+  .card { position: relative; isolation: isolate; display: flex; flex-direction: column; min-height: 235px; padding: 22px;
     border: 1px solid color-mix(in srgb, var(--ac) 12%, var(--line)); border-radius: var(--radius); overflow: hidden;
     background: linear-gradient(145deg, color-mix(in srgb, var(--tint) 80%, white), #fff 58%);
     box-shadow: none; transition: border-color .16s, background .16s; }
   .card:hover { border-color: color-mix(in srgb, var(--ac) 55%, var(--line));
     background: linear-gradient(145deg, color-mix(in srgb, var(--tint) 92%, white), #fff 58%); }
-  .card[data-status="plan"] { filter: saturate(.72); }
+  .card[data-status="plan"] { border: 2px dashed #9ba2a8;
+    background: repeating-linear-gradient(135deg, #f3f4f5 0 9px, #fff 9px 18px); }
+  .card[data-status="plan"]:hover { border-color: #69737d;
+    background: repeating-linear-gradient(135deg, #eef0f1 0 9px, #fff 9px 18px); }
   .card-head { display: flex; align-items: center; gap: 13px; padding-right: 40px; }
   .glyph { display: grid; place-items: center; flex: 0 0 auto; width: 42px; height: 42px; border-radius: var(--radius-sm);
     background: var(--tint); color: var(--ac); font-size: 22px; font-weight: 800; }
@@ -107,10 +102,13 @@
     font-variant-numeric: tabular-nums; opacity: .5; }
   .card-t { font-size: 18px; font-weight: 750; letter-spacing: -.03em; }
   .card-en { display: block; margin-top: 1px; color: var(--ink-3); font-size: 12px; font-weight: 500; }
+  .card-state { display: inline-flex; margin-top: 5px; padding: 3px 7px; border-radius: 1px;
+    background: #555d64; color: #fff; font-size: 10px; font-weight: 800; letter-spacing: -.01em; }
   .card-d { flex: 1 1 auto; display: -webkit-box; margin: 15px 0 0; overflow: hidden; color: var(--ink-2);
     font-size: 13px; line-height: 1.65; word-break: keep-all; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
   .card-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px;
     margin-top: 17px; padding: 10px 11px; border-radius: var(--radius-sm); background: rgba(255,255,255,.76); }
+  .card[data-status="plan"] .card-foot { box-shadow: inset 0 0 0 1px #d7dadd; }
   .card-figs { display: flex; flex-wrap: wrap; gap: 4px 12px; }
   .card-figs div { color: var(--ink-3); font-size: 12px; font-weight: 600; white-space: nowrap; }
   .card-figs div b { margin-right: 3px; color: var(--ink); font-size: 12.5px; font-weight: 750;
@@ -123,6 +121,8 @@
     .stats { gap: 7px 22px; }
     .hero { padding: 38px 20px; border-radius: 6px; }
     .band { margin-top: 38px; }
+    .cards { grid-template-columns: 1fr; }
+    .card { min-height: 0; }
     .card-foot { align-items: flex-start; flex-direction: column; }
   }
 
@@ -207,7 +207,7 @@
       <div class="lhead"><div></div><div class="laxis" id="ladder-axis"></div></div>
       <div id="ladder"></div>
     </div>
-    <p class="lfoot">발음 교정은 특정 레벨에 묶이지 않습니다 — 튜터가 문제를 들은 시점에 한 과씩 꺼내 씁니다.</p>
+    <p class="lfoot">발음 교정은 계획 목차이며 특정 레벨에 묶이지 않습니다. 현재 사용할 수 있는 레슨 덱은 없습니다.</p>
   </div>
 
   <div class="band">
@@ -243,13 +243,14 @@ document.getElementById("stats").innerHTML = [
 document.getElementById("cards").innerHTML = DATA.tracks.map(t => {
   const span = t.span.length ? (t.span.length === 1 ? t.span[0] : `${t.span[0]} — ${t.span[t.span.length - 1]}`) : "전 레벨";
   const dot = t.span.length ? t.span[0] : "";
-  const flag = t.status === "plan" ? "계획 단계" : t.status === "open" ? "계속 추가" : "";
+  const flag = t.status === "open" ? "계속 추가" : "";
   return `<a class="card" data-status="${esc(t.status)}" href="catalog/${esc(t.id)}.html" style="--ac:${t.accent};--tint:${t.tint}">
     <span class="card-no">${String(t.no).padStart(2, "0")}</span>
     ${flag ? `<span class="flag">${flag}</span>` : ""}
     <div class="card-head">
       <div class="glyph">${esc(t.glyph)}</div>
-      <div class="card-t">${esc(t.ko)}<span class="card-en">${esc(t.en)}</span></div>
+      <div class="card-t">${esc(t.ko)}<span class="card-en">${esc(t.en)}</span>
+        ${t.status === "plan" ? `<span class="card-state">계획만 있음 · 현재 개발하지 않음</span>` : ""}</div>
     </div>
     <p class="card-d">${esc(t.desc)}</p>
     <div class="card-foot">
@@ -276,7 +277,7 @@ document.getElementById("cards").innerHTML = DATA.tracks.map(t => {
 document.getElementById("ladder-axis").innerHTML = LEVELS.map(l => `<span>${l}</span>`).join("");
 document.getElementById("ladder").innerHTML = DATA.tracks.map(t => {
   const cells = (t.status === "plan" || !t.span.length)
-    ? `<div class="lseg plan">전 레벨 · 계획 단계 · ${t.total}과</div>`
+    ? `<div class="lseg plan">전 레벨 · 계획만 있음 · 현재 개발하지 않음 · ${t.total}과</div>`
     : LEVELS.map(lv => {
         const n = t.dist[lv] || 0;
         if (!n) return `<div></div>`;
