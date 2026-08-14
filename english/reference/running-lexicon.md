@@ -18,7 +18,7 @@
 
 | Lesson | New | Recycled | Assumed-known | Receptive-only |
 | --- | --- | --- | --- | --- |
-| [20-asking-for-help](../tracks/1-core-patterns/courses/core-first-exchanges-2/lessons/20-asking-for-help/lesson.html) · **5/8 new** | `box` · 箱<br>`bag` · かばん<br>`station` · 駅<br>`carry` · 運ぶ<br>`find` · 探す | `big` · 大きい ← CORE-19<br>`small` · 小さい ← CORE-19<br>`one` · ほう ← CORE-19 | `suitcase` · スーツケース<br>`menu` · メニュー<br>`Wi-Fi` · Wi-Fi | `counter` · カウンター |
+| [20-asking-for-help](../tracks/1-core-patterns/courses/core-first-exchanges-2/lessons/20-asking-for-help/lesson.html) · **2/8 new** | `box` · 箱<br>`bag` · かばん | — | `suitcase` · スーツケース<br>`menu` · メニュー<br>`Wi-Fi` · Wi-Fi | `counter` · カウンター |
 
 ## `2-contextual-english`
 
