@@ -12,7 +12,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-advanced/lessons/01-heart-fluttering-moment/lesson.html`
-- sha256: `c7bb49249735b79bb11970a2be2a8b46e6f856b68dcbb1d5fe7e5cd60009337b`
+- sha256: `7a3c837ee7b262256edf104041c6c48176ab1cd0b3266cf080f3d669d855906e`
 - source kind: `model-story`
 
 #### `metadata`
@@ -24,8 +24,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 설레는 순간
-- `goal.ko` · KO: 오늘은 사람에게 마음이 움직이는 순간과, 기억에 남은 작은 행동을 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は人に心が動く瞬間と、印象に残った小さな行動についてじっくり話してみましょう。
+- `goal.ko` · KO: 사람에게 마음이 움직이는 순간과, 기억에 남은 작은 행동을 이야기해 볼게요.
+- `goal.ja` · JA: 人に心が動く瞬間と、印象に残った小さな行動について話してみましょう。
 - `axis.1.ko` · KO: 마음이 움직인 순간을 소개해요.
 - `axis.1.ja` · JA: 心が動いた瞬間を紹介します。
 - `axis.2.ko` · KO: 기억에 남은 행동을 설명해요.
@@ -152,7 +152,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-intermediate/lessons/01-heart-fluttering-moment/lesson.html`
-- sha256: `b4bca4c28b04b56d6c52ab29322e87b9acd14b9aea7d334205892be265380f06`
+- sha256: `370035841d25397b796e9ba9c96cbfc31ea13692c64d85ceac36b3bcc4133a8f`
 - source kind: `model-story`
 
 #### `metadata`
@@ -164,8 +164,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 설레는 순간
-- `goal.ko` · KO: 오늘은 사람에게 마음이 움직이는 순간과, 기억에 남은 작은 행동을 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は人に心が動く瞬間と、印象に残った小さな行動についてじっくり話してみましょう。
+- `goal.ko` · KO: 사람에게 마음이 움직이는 순간과, 기억에 남은 작은 행동을 이야기해 볼게요.
+- `goal.ja` · JA: 人に心が動く瞬間と、印象に残った小さな行動について話してみましょう。
 - `axis.1.ko` · KO: 마음이 움직인 순간을 소개해요.
 - `axis.1.ja` · JA: 心が動いた瞬間を紹介します。
 - `axis.2.ko` · KO: 기억에 남은 행동을 설명해요.
@@ -294,7 +294,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-advanced/lessons/02-words-that-kill-the-mood/lesson.html`
-- sha256: `37cd5f070f7c57023624b7d6a18f010b56838d4ccc9f965a6ca3e44e5eb85ac1`
+- sha256: `e344008b83ac1819f6c8317fdd007b300dd37df57af8237378fb3b4078ba6fe9`
 - source kind: `model-story`
 
 #### `metadata`
@@ -306,8 +306,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 정떨어지는 한마디
-- `goal.ko` · KO: 오늘은 좋은 인상을 한순간에 바꾸는 말과, 그 말에서 느껴지는 태도를 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日はよい印象を一瞬で変える言葉と、その言葉から感じる態度についてじっくり話してみましょう。
+- `goal.ko` · KO: 좋은 인상을 한순간에 바꾸는 말과, 그 말에서 느껴지는 태도를 이야기해 볼게요.
+- `goal.ja` · JA: よい印象を一瞬で変える言葉と、その言葉から感じる態度について話してみましょう。
 - `axis.1.ko` · KO: 인상을 바꾼 말을 소개해요.
 - `axis.1.ja` · JA: 印象を変えた言葉を紹介します。
 - `axis.2.ko` · KO: 그때의 분위기를 설명해요.
@@ -434,7 +434,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-intermediate/lessons/02-words-that-kill-the-mood/lesson.html`
-- sha256: `5ec1e4979785a9a8dbfba601bbf313239ea278ebfb88707e9ce199f14e08d403`
+- sha256: `21d326d6db14c1abc70a95892a8ed0252738c182d6cbb5b567a1dc7f41c6d36f`
 - source kind: `model-story`
 
 #### `metadata`
@@ -446,8 +446,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 정떨어지는 한마디
-- `goal.ko` · KO: 오늘은 좋은 인상을 한순간에 바꾸는 말과, 그 말에서 느껴지는 태도를 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日はよい印象を一瞬で変える言葉と、その言葉から感じる態度についてじっくり話してみましょう。
+- `goal.ko` · KO: 좋은 인상을 한순간에 바꾸는 말과, 그 말에서 느껴지는 태도를 이야기해 볼게요.
+- `goal.ja` · JA: よい印象を一瞬で変える言葉と、その言葉から感じる態度について話してみましょう。
 - `axis.1.ko` · KO: 인상을 바꾼 말을 소개해요.
 - `axis.1.ja` · JA: 印象を変えた言葉を紹介します。
 - `axis.2.ko` · KO: 그때의 분위기를 설명해요.
@@ -576,7 +576,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-advanced/lessons/03-one-must-have-quality/lesson.html`
-- sha256: `3993e9a124fd6075ffbb1df95d15f5f711ce193d4347116e1babd7b7a1b8217b`
+- sha256: `0aaeafa40f7315aaef30f23ed30c2289b4db474ec68661376af02f4adb35fe4c`
 - source kind: `model-story`
 
 #### `metadata`
@@ -588,8 +588,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 이상형의 조건
-- `goal.ko` · KO: 오늘은 이상형을 떠올릴 때 양보하기 어려운 조건 하나와, 그 기준이 생긴 이유를 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は理想のタイプを考えるときに譲りにくい条件を一つ選び、その基準が生まれた理由についてじっくり話してみましょう。
+- `goal.ko` · KO: 이상형을 떠올릴 때 양보하기 어려운 조건 하나와, 그 기준이 생긴 이유를 이야기해 볼게요.
+- `goal.ja` · JA: 理想のタイプを考えるときに譲りにくい条件を一つ選び、その基準が生まれた理由について話してみましょう。
 - `axis.1.ko` · KO: 중요한 조건을 소개해요.
 - `axis.1.ja` · JA: 大切な条件を紹介します。
 - `axis.2.ko` · KO: 그 조건의 의미를 설명해요.
@@ -716,7 +716,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-intermediate/lessons/03-one-must-have-quality/lesson.html`
-- sha256: `c283104600149689f7a2c6a2925668e816a15121faf2fc0ba6879917ab8cfe99`
+- sha256: `4561e5817608896e1115dd828f4e4debff00c0806686e7c32eae4494d0f93f8d`
 - source kind: `model-story`
 
 #### `metadata`
@@ -728,8 +728,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 이상형의 조건
-- `goal.ko` · KO: 오늘은 이상형을 떠올릴 때 양보하기 어려운 조건 하나와, 그 기준이 생긴 이유를 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は理想のタイプを考えるときに譲りにくい条件を一つ選び、その基準が生まれた理由についてじっくり話してみましょう。
+- `goal.ko` · KO: 이상형을 떠올릴 때 양보하기 어려운 조건 하나와, 그 기준이 생긴 이유를 이야기해 볼게요.
+- `goal.ja` · JA: 理想のタイプを考えるときに譲りにくい条件を一つ選び、その基準が生まれた理由について話してみましょう。
 - `axis.1.ko` · KO: 중요한 조건을 소개해요.
 - `axis.1.ja` · JA: 大切な条件を紹介します。
 - `axis.2.ko` · KO: 그 조건의 의미를 설명해요.
@@ -858,7 +858,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-advanced/lessons/04-my-bad-dating-habit/lesson.html`
-- sha256: `2db011d9984aca8713378f1bb63e8f84a1a19fd0e6a3a5dea90ef25b60d6e74c`
+- sha256: `3b3b5f5c2c3f7dbacb7a1b9ea82d1669bda123ef0ce81ec6d20eb7a90e970cf3`
 - source kind: `model-story`
 
 #### `metadata`
@@ -870,8 +870,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 나의 나쁜 습관
-- `goal.ko` · KO: 오늘은 관계에서 반복하기 쉬운 나쁜 습관과, 그것을 알아차린 장면을 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は関係の中で繰り返しやすい悪い癖と、それに気づいた場面についてじっくり話してみましょう。
+- `goal.ko` · KO: 관계에서 반복하기 쉬운 나쁜 습관과, 그것을 알아차린 장면을 이야기해 볼게요.
+- `goal.ja` · JA: 関係の中で繰り返しやすい悪い癖と、それに気づいた場面について話してみましょう。
 - `axis.1.ko` · KO: 반복되는 습관을 소개해요.
 - `axis.1.ja` · JA: 繰り返す癖を紹介します。
 - `axis.2.ko` · KO: 문제가 된 장면을 설명해요.
@@ -998,7 +998,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-intermediate/lessons/04-my-bad-dating-habit/lesson.html`
-- sha256: `ff20cf3ebe91a2402107f26314d4b42e40bd9462cf4dde134095490e6434707f`
+- sha256: `6e95beca79683312e163e7dee085e30be79d575aa4340c8620a18ae8ce5881a1`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1010,8 +1010,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 나의 나쁜 습관
-- `goal.ko` · KO: 오늘은 관계에서 반복하기 쉬운 나쁜 습관과, 그것을 알아차린 장면을 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は関係の中で繰り返しやすい悪い癖と、それに気づいた場面についてじっくり話してみましょう。
+- `goal.ko` · KO: 관계에서 반복하기 쉬운 나쁜 습관과, 그것을 알아차린 장면을 이야기해 볼게요.
+- `goal.ja` · JA: 関係の中で繰り返しやすい悪い癖と、それに気づいた場面について話してみましょう。
 - `axis.1.ko` · KO: 반복되는 습관을 소개해요.
 - `axis.1.ja` · JA: 繰り返す癖を紹介します。
 - `axis.2.ko` · KO: 문제가 된 장면을 설명해요.
@@ -1140,7 +1140,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-advanced/lessons/05-dream-wedding/lesson.html`
-- sha256: `9628b8152cc265257b3a725fca9f85c8b7621f7d450aa081f297bf9412770820`
+- sha256: `f1a21e267e57442ed7b8f0054e8157cb8f82f15f0e3715b2c3b38aa0616f17b1`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1152,8 +1152,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 결혼식 로망
-- `goal.ko` · KO: 오늘은 결혼식에서 꼭 해 보고 싶은 것과, 절대 하고 싶지 않은 것을 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は結婚式でぜひやってみたいことと、絶対にやりたくないことについてじっくり話してみましょう。
+- `goal.ko` · KO: 결혼식에서 꼭 해 보고 싶은 것과, 절대 하고 싶지 않은 것을 이야기해 볼게요.
+- `goal.ja` · JA: 結婚式でぜひやってみたいことと、絶対にやりたくないことについて話してみましょう。
 - `axis.1.ko` · KO: 원하는 장면을 소개해요.
 - `axis.1.ja` · JA: 望む場面を紹介します。
 - `axis.2.ko` · KO: 중요한 요소를 설명해요.
@@ -1280,7 +1280,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-intermediate/lessons/05-dream-wedding/lesson.html`
-- sha256: `c2e3df24f593f2e42fe002ae815c8ff8819b9e930bcd5ed3c86e578d82edafc5`
+- sha256: `825d04df69fa1926419aab436a37769254ada93444428cc0706288693681663e`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1292,8 +1292,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 결혼식 로망
-- `goal.ko` · KO: 오늘은 결혼식에서 꼭 해 보고 싶은 것과, 절대 하고 싶지 않은 것을 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は結婚式でぜひやってみたいことと、絶対にやりたくないことについてじっくり話してみましょう。
+- `goal.ko` · KO: 결혼식에서 꼭 해 보고 싶은 것과, 절대 하고 싶지 않은 것을 이야기해 볼게요.
+- `goal.ja` · JA: 結婚式でぜひやってみたいことと、絶対にやりたくないことについて話してみましょう。
 - `axis.1.ko` · KO: 원하는 장면을 소개해요.
 - `axis.1.ja` · JA: 望む場面を紹介します。
 - `axis.2.ko` · KO: 중요한 요소를 설명해요.
@@ -1422,7 +1422,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-advanced/lessons/06-hardest-breakup/lesson.html`
-- sha256: `b72b4bfd7dc8e98cd2a6fe4bed09f35731c5b32fbcbf9a8195fafb0c73e8c2a0`
+- sha256: `97cec564300573b568f818eebba8c8ce252f2623e7332f2b94e2dccbda69fb82`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1434,8 +1434,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 말할 수 있는 이별
-- `goal.ko` · KO: 오늘은 말하고 싶은 범위에서만 이별의 한 장면과, 그 뒤에 달라진 점을 이야기해 볼게요.
-- `goal.ja` · JA: 今日は話したい範囲だけで、別れの一場面と、その後変わったことについて話してみましょう。
+- `goal.ko` · KO: 편한 범위에서 이별의 한 장면과, 그 뒤에 달라진 점을 이야기해 볼게요.
+- `goal.ja` · JA: 話せる範囲で、別れの一場面と、その後変わったことについて話してみましょう。
 - `axis.1.ko` · KO: 편한 범위의 장면을 소개해요.
 - `axis.1.ja` · JA: 話しやすい範囲の場面を紹介します。
 - `axis.2.ko` · KO: 그때의 마음을 설명해요.
@@ -1562,7 +1562,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-intermediate/lessons/06-hardest-breakup/lesson.html`
-- sha256: `7d1547a540176ab8a5ca799297ddfea395902e623e58412771ab410c5225005a`
+- sha256: `ede2ea8626cfbf59d740948651c4dbfb50833ee6104370338f3d65bfabb3f003`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1574,8 +1574,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 말할 수 있는 이별
-- `goal.ko` · KO: 오늘은 말하고 싶은 범위에서만 이별의 한 장면과, 그 뒤에 달라진 점을 이야기해 볼게요.
-- `goal.ja` · JA: 今日は話したい範囲だけで、別れの一場面と、その後変わったことについて話してみましょう。
+- `goal.ko` · KO: 편한 범위에서 이별의 한 장면과, 그 뒤에 달라진 점을 이야기해 볼게요.
+- `goal.ja` · JA: 話せる範囲で、別れの一場面と、その後変わったことについて話してみましょう。
 - `axis.1.ko` · KO: 편한 범위의 장면을 소개해요.
 - `axis.1.ja` · JA: 話しやすい範囲の場面を紹介します。
 - `axis.2.ko` · KO: 그때의 마음을 설명해요.
@@ -1704,7 +1704,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-advanced/lessons/07-thoughts-on-single-life-and-dink/lesson.html`
-- sha256: `99c04013fea5779ed67bb73822104d79fde86f280bd59eace99f35ecd4292dd1`
+- sha256: `c65ee9292b4a31da758dcc4ac679b2b7452a4385366d25e47609bc914c82f4cb`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1716,8 +1716,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 비혼과 딩크
-- `goal.ko` · KO: 오늘은 말하고 싶은 범위에서만 비혼과 딩크에 대한 생각과, 그 이유를 이야기해 볼게요.
-- `goal.ja` · JA: 今日は話したい範囲だけで、非婚やDINKについての考えと、その理由を話してみましょう。
+- `goal.ko` · KO: 편한 범위에서 비혼과 딩크에 대한 생각과, 그 이유를 이야기해 볼게요.
+- `goal.ja` · JA: 話せる範囲で、非婚やDINKについての考えと、その理由を話してみましょう。
 - `axis.1.ko` · KO: 서로 다른 선택을 소개해요.
 - `axis.1.ja` · JA: 異なる選択を紹介します。
 - `axis.2.ko` · KO: 내 생각의 이유를 설명해요.
@@ -1844,7 +1844,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-intermediate/lessons/07-thoughts-on-single-life-and-dink/lesson.html`
-- sha256: `291afb50b0e4d4e696296a7c0e0c7770e13778bd971e85c322a430ede00674f2`
+- sha256: `cda557453393218b048c210294c8825f5ca9d7ac6d4f2555ce5753b2af9bf623`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1856,8 +1856,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 비혼과 딩크
-- `goal.ko` · KO: 오늘은 말하고 싶은 범위에서만 비혼과 딩크에 대한 생각과, 그 이유를 이야기해 볼게요.
-- `goal.ja` · JA: 今日は話したい範囲だけで、非婚やDINKについての考えと、その理由を話してみましょう。
+- `goal.ko` · KO: 편한 범위에서 비혼과 딩크에 대한 생각과, 그 이유를 이야기해 볼게요.
+- `goal.ja` · JA: 話せる範囲で、非婚やDINKについての考えと、その理由を話してみましょう。
 - `axis.1.ko` · KO: 서로 다른 선택을 소개해요.
 - `axis.1.ja` · JA: 異なる選択を紹介します。
 - `axis.2.ko` · KO: 내 생각의 이유를 설명해요.

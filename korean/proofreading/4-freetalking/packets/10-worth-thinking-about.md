@@ -12,7 +12,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-worth-thinking-about-advanced/lessons/01-life-without-social-media/lesson.html`
-- sha256: `e36aef429270377e5a1dae2032ff7ac4d1bdaff1d8419d87f96a2c52256745d8`
+- sha256: `fcd077a404eac1a68fd20a04c6ea9d02d47a3e3eb0303fede05cf79092f5c2af`
 - source kind: `article`
 
 #### `metadata`
@@ -24,8 +24,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: SNS 없는 생활
-- `goal.ko` · KO: 오늘은 SNS 없이 지낼 수 있는 기간과, 남기거나 줄이고 싶은 기능을 근거와 함께 이야기해 볼게요.
-- `goal.ja` · JA: 今日はSNSなしで過ごせる期間と、残したい機能や減らしたい機能を理由とともに話してみましょう。
+- `goal.ko` · KO: SNS 없이 얼마나 지낼 수 있는지, SNS의 장단점에 대해 이야기해 볼게요.
+- `goal.ja` · JA: SNSなしでどのくらい過ごせるか、SNSのメリットとデメリットについて話してみましょう。
 - `axis.1.ko` · KO: SNS를 쓰는 장면을 소개해요.
 - `axis.1.ja` · JA: SNSを使う場面を紹介します。
 - `axis.2.ko` · KO: 필요한 기능을 설명해요.
@@ -167,7 +167,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-worth-thinking-about-intermediate/lessons/01-life-without-social-media/lesson.html`
-- sha256: `a23c1a809ec18d280c2b5366b4c17100b8b2e04abc627f59d0173fed844ec190`
+- sha256: `44e416ea5aa29cf93b9b009f7998147105f81ce2aca7978e87096e55e01b76a8`
 - source kind: `article`
 
 #### `metadata`
@@ -179,8 +179,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: SNS 없는 생활
-- `goal.ko` · KO: 오늘은 SNS 없이 지낼 수 있는 기간과, 남기거나 줄이고 싶은 기능을 근거와 함께 이야기해 볼게요.
-- `goal.ja` · JA: 今日はSNSなしで過ごせる期間と、残したい機能や減らしたい機能を理由とともに話してみましょう。
+- `goal.ko` · KO: SNS 없이 얼마나 지낼 수 있는지, SNS의 장단점에 대해 이야기해 볼게요.
+- `goal.ja` · JA: SNSなしでどのくらい過ごせるか、SNSのメリットとデメリットについて話してみましょう。
 - `axis.1.ko` · KO: SNS를 쓰는 장면을 소개해요.
 - `axis.1.ja` · JA: SNSを使う場面を紹介します。
 - `axis.2.ko` · KO: 필요한 기능을 설명해요.
@@ -324,7 +324,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-worth-thinking-about-advanced/lessons/02-what-i-do-for-environment/lesson.html`
-- sha256: `bc716e29bbd9b7df2f52475c466b39f5e45dc243b3323f96566a9f75bb365b66`
+- sha256: `99a93a3582ece964e56644a0b10d5e6ab6f5890c82d684caaf782765fe37eba9`
 - source kind: `article`
 
 #### `metadata`
@@ -336,8 +336,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 환경을 위한 행동
-- `goal.ko` · KO: 오늘은 환경을 위해 실제로 계속하는 행동과, 하다가 그만둔 행동을 이유와 함께 이야기해 볼게요.
-- `goal.ja` · JA: 今日は環境のために実際に続けている行動と、途中でやめた行動を理由とともに話してみましょう。
+- `goal.ko` · KO: 환경을 위해 실제로 계속하는 행동과, 하다가 그만둔 행동을 이유와 함께 이야기해 볼게요.
+- `goal.ja` · JA: 環境のために実際に続けている行動と、途中でやめた行動を理由とともに話してみましょう。
 - `axis.1.ko` · KO: 계속하는 행동을 소개해요.
 - `axis.1.ja` · JA: 続けている行動を紹介します。
 - `axis.2.ko` · KO: 그만둔 이유를 설명해요.
@@ -479,7 +479,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-worth-thinking-about-intermediate/lessons/02-what-i-do-for-environment/lesson.html`
-- sha256: `d843452a36951df18dafdf8a432c6efe48eed449ea990018527622ebf64be77f`
+- sha256: `458bf633e228c20818f2034bed1016d53997247da9abddc4ea616a07771be5ea`
 - source kind: `article`
 
 #### `metadata`
@@ -491,8 +491,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 환경을 위한 행동
-- `goal.ko` · KO: 오늘은 환경을 위해 실제로 계속하는 행동과, 하다가 그만둔 행동을 이유와 함께 이야기해 볼게요.
-- `goal.ja` · JA: 今日は環境のために実際に続けている行動と、途中でやめた行動を理由とともに話してみましょう。
+- `goal.ko` · KO: 환경을 위해 실제로 계속하는 행동과, 하다가 그만둔 행동을 이유와 함께 이야기해 볼게요.
+- `goal.ja` · JA: 環境のために実際に続けている行動と、途中でやめた行動を理由とともに話してみましょう。
 - `axis.1.ko` · KO: 계속하는 행동을 소개해요.
 - `axis.1.ja` · JA: 続けている行動を紹介します。
 - `axis.2.ko` · KO: 그만둔 이유를 설명해요.
@@ -636,7 +636,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-worth-thinking-about-advanced/lessons/03-work-ai-cannot-do/lesson.html`
-- sha256: `5f76fbfc3492825de9fb91aa0d9f46b37ae8c1cd566ae0b8201804b8458b01f4`
+- sha256: `cc2bd0db3df34622ec468e542b6fae9c4ff390d20f3bfe0022890b81bce58694`
 - source kind: `article`
 
 #### `metadata`
@@ -648,8 +648,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: AI가 못 하는 일
-- `goal.ko` · KO: 오늘은 내 일이나 공부에서 AI가 잘하는 일과, 맡기기 어려운 일을 근거와 함께 이야기해 볼게요.
-- `goal.ja` · JA: 今日は自分の仕事や勉強でAIが得意なことと、任せにくいことを理由とともに話してみましょう。
+- `goal.ko` · KO: 내 일이나 공부에서 AI가 잘하는 일과, 맡기기 어려운 일을 근거와 함께 이야기해 볼게요.
+- `goal.ja` · JA: 自分の仕事や勉強でAIが得意なことと、任せにくいことを理由とともに話してみましょう。
 - `axis.1.ko` · KO: AI가 하는 일을 소개해요.
 - `axis.1.ja` · JA: AIがすることを紹介します。
 - `axis.2.ko` · KO: 맡기기 어려운 일을 설명해요.
@@ -791,7 +791,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-worth-thinking-about-intermediate/lessons/03-work-ai-cannot-do/lesson.html`
-- sha256: `a690ea23a7ce390304a3b71a1e48bd1af3486e78129f8c5efb556d92361745ec`
+- sha256: `4e16b1f11ecf7fa52580de63f1a36f74e17d71d68e4120b23c0418d91079deb9`
 - source kind: `article`
 
 #### `metadata`
@@ -803,8 +803,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: AI가 못 하는 일
-- `goal.ko` · KO: 오늘은 내 일이나 공부에서 AI가 잘하는 일과, 맡기기 어려운 일을 근거와 함께 이야기해 볼게요.
-- `goal.ja` · JA: 今日は自分の仕事や勉強でAIが得意なことと、任せにくいことを理由とともに話してみましょう。
+- `goal.ko` · KO: 내 일이나 공부에서 AI가 잘하는 일과, 맡기기 어려운 일을 근거와 함께 이야기해 볼게요.
+- `goal.ja` · JA: 自分の仕事や勉強でAIが得意なことと、任せにくいことを理由とともに話してみましょう。
 - `axis.1.ko` · KO: AI가 하는 일을 소개해요.
 - `axis.1.ja` · JA: AIがすることを紹介します。
 - `axis.2.ko` · KO: 맡기기 어려운 일을 설명해요.
@@ -948,7 +948,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-worth-thinking-about-advanced/lessons/04-money-and-happiness/lesson.html`
-- sha256: `1e8a54f5daa83e233e7e1cc6cd6e62fcee7a2e23fb09a8ee3255e19ce73341e4`
+- sha256: `454d452c5ab6ff38ce8bd2dd5b0f6e4dfae9feeabd78b3ac35b08da2af3d0208`
 - source kind: `article`
 
 #### `metadata`
@@ -960,8 +960,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 돈과 행복
-- `goal.ko` · KO: 오늘은 말하고 싶은 범위에서만 돈이 행복에 주는 영향과, 나에게 충분하다는 기준을 이야기해 볼게요.
-- `goal.ja` · JA: 今日は話したい範囲だけで、お金が幸せに与える影響と、自分にとって十分という基準を話してみましょう。
+- `goal.ko` · KO: 편한 범위에서 돈이 행복에 주는 영향과, 나에게 충분하다는 기준을 이야기해 볼게요.
+- `goal.ja` · JA: 話せる範囲で、お金が幸せに与える影響と、自分にとって十分という基準を話してみましょう。
 - `axis.1.ko` · KO: 돈이 주는 안정을 소개해요.
 - `axis.1.ja` · JA: お金が与える安心を紹介します。
 - `axis.2.ko` · KO: 충분함의 기준을 설명해요.
@@ -1103,7 +1103,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-worth-thinking-about-intermediate/lessons/04-money-and-happiness/lesson.html`
-- sha256: `9f9c2228eba155904c6f51b049e96aefd1aa66e8a273f5bb15f373172c78deaa`
+- sha256: `d88ac4642cb0c208c6f46b68420e579d26fc37ac3d0ae2b6fe5af5d0853301ea`
 - source kind: `article`
 
 #### `metadata`
@@ -1115,8 +1115,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 돈과 행복
-- `goal.ko` · KO: 오늘은 말하고 싶은 범위에서만 돈이 행복에 주는 영향과, 나에게 충분하다는 기준을 이야기해 볼게요.
-- `goal.ja` · JA: 今日は話したい範囲だけで、お金が幸せに与える影響と、自分にとって十分という基準を話してみましょう。
+- `goal.ko` · KO: 편한 범위에서 돈이 행복에 주는 영향과, 나에게 충분하다는 기준을 이야기해 볼게요.
+- `goal.ja` · JA: 話せる範囲で、お金が幸せに与える影響と、自分にとって十分という基準を話してみましょう。
 - `axis.1.ko` · KO: 돈이 주는 안정을 소개해요.
 - `axis.1.ja` · JA: お金が与える安心を紹介します。
 - `axis.2.ko` · KO: 충분함의 기준을 설명해요.
@@ -1260,7 +1260,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-worth-thinking-about-advanced/lessons/05-best-age/lesson.html`
-- sha256: `b87df7cf8653f19dd41afc76b047066334e9d6ac9f6f1fdf6044decb9d1b86c8`
+- sha256: `b8446964ea218d274d17291c046ffda7e92b517b4e135ee9a4998744c09bc244`
 - source kind: `article`
 
 #### `metadata`
@@ -1272,8 +1272,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 좋은 나이
-- `goal.ko` · KO: 오늘은 말하고 싶은 범위에서만 어떤 나이가 좋아 보이는지와, 나이 든다는 것의 양면을 이야기해 볼게요.
-- `goal.ja` · JA: 今日は話したい範囲だけで、どの年齢がよく見えるかと、年を重ねることの両面を話してみましょう。
+- `goal.ko` · KO: 편한 범위에서 어떤 나이가 좋아 보이는지와, 나이 든다는 것의 양면을 이야기해 볼게요.
+- `goal.ja` · JA: 話せる範囲で、どの年齢がよく見えるかと、年を重ねることの両面を話してみましょう。
 - `axis.1.ko` · KO: 좋아 보이는 나이를 소개해요.
 - `axis.1.ja` · JA: よく見える年齢を紹介します。
 - `axis.2.ko` · KO: 그 나이의 장점을 설명해요.
@@ -1415,7 +1415,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-worth-thinking-about-intermediate/lessons/05-best-age/lesson.html`
-- sha256: `c4e1c20f1f3438d43f61877c89543d866ad3c00b7dbef28dbe95161bd04bbe7b`
+- sha256: `d7d43b709b5785ad3af07146c8f7fe85b3867288984197b50cd076b9c1fed22d`
 - source kind: `article`
 
 #### `metadata`
@@ -1427,8 +1427,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 좋은 나이
-- `goal.ko` · KO: 오늘은 말하고 싶은 범위에서만 어떤 나이가 좋아 보이는지와, 나이 든다는 것의 양면을 이야기해 볼게요.
-- `goal.ja` · JA: 今日は話したい範囲だけで、どの年齢がよく見えるかと、年を重ねることの両面を話してみましょう。
+- `goal.ko` · KO: 편한 범위에서 어떤 나이가 좋아 보이는지와, 나이 든다는 것의 양면을 이야기해 볼게요.
+- `goal.ja` · JA: 話せる範囲で、どの年齢がよく見えるかと、年を重ねることの両面を話してみましょう。
 - `axis.1.ko` · KO: 좋아 보이는 나이를 소개해요.
 - `axis.1.ja` · JA: よく見える年齢を紹介します。
 - `axis.2.ko` · KO: 그 나이의 장점을 설명해요.
@@ -1572,7 +1572,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-worth-thinking-about-advanced/lessons/06-life-without-regret/lesson.html`
-- sha256: `54d97fef9cb35679705ea1e1de4bf9cc4c6a51ed72c8da89ede606d6994735ee`
+- sha256: `d336b07054b023d6f6a44f623c27b7aca91157963be62715cbaa102b033dc2dc`
 - source kind: `article`
 
 #### `metadata`
@@ -1584,8 +1584,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 후회 없는 삶
-- `goal.ko` · KO: 오늘은 말하고 싶은 범위에서만 후회 없는 삶이 가능한지 입장을 정하고, 작은 경험을 근거로 이야기해 볼게요.
-- `goal.ja` · JA: 今日は話したい範囲だけで、後悔のない人生が可能かどうかについて立場を決め、小さな経験を根拠に話してみましょう。
+- `goal.ko` · KO: 편한 범위에서 후회 없는 삶이 가능한지 입장을 정하고, 작은 경험을 근거로 이야기해 볼게요.
+- `goal.ja` · JA: 話せる範囲で、後悔のない人生が可能かどうかについて立場を決め、小さな経験を根拠に話してみましょう。
 - `axis.1.ko` · KO: 후회에 대한 입장을 소개해요.
 - `axis.1.ja` · JA: 後悔についての立場を紹介します。
 - `axis.2.ko` · KO: 작은 경험으로 설명해요.
@@ -1727,7 +1727,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-worth-thinking-about-intermediate/lessons/06-life-without-regret/lesson.html`
-- sha256: `466c26769841f6ae287a8dc7e18dfb6c02b1b65d150b4ad0615fff5cde981b37`
+- sha256: `5e7fc8ead5b72c5f3fe33b45e546dc211a6745a2149de10a415ab249f8ec0d15`
 - source kind: `article`
 
 #### `metadata`
@@ -1739,8 +1739,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 후회 없는 삶
-- `goal.ko` · KO: 오늘은 말하고 싶은 범위에서만 후회 없는 삶이 가능한지 입장을 정하고, 작은 경험을 근거로 이야기해 볼게요.
-- `goal.ja` · JA: 今日は話したい範囲だけで、後悔のない人生が可能かどうかについて立場を決め、小さな経験を根拠に話してみましょう。
+- `goal.ko` · KO: 편한 범위에서 후회 없는 삶이 가능한지 입장을 정하고, 작은 경험을 근거로 이야기해 볼게요.
+- `goal.ja` · JA: 話せる範囲で、後悔のない人生が可能かどうかについて立場を決め、小さな経験を根拠に話してみましょう。
 - `axis.1.ko` · KO: 후회에 대한 입장을 소개해요.
 - `axis.1.ja` · JA: 後悔についての立場を紹介します。
 - `axis.2.ko` · KO: 작은 경험으로 설명해요.

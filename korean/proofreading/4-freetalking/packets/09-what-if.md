@@ -12,7 +12,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-advanced/lessons/01-if-i-won-the-lottery/lesson.html`
-- sha256: `51ce768bd3e6de43545a5e4d494b0a3c7a4961dfff941c8b1b0f21ab70f03712`
+- sha256: `6bc875d89691497d2d90f64a4db89cb666cfcfe068e412e5cee88c6759197a0c`
 - source kind: `article`
 
 #### `metadata`
@@ -24,8 +24,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 로또에 당첨된다면
-- `goal.ko` · KO: 오늘은 로또 1등에 당첨된다면 가장 먼저 할 일을 고르고, 그 이유와 달라질 삶까지 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日はロトで1等に当たったら最初に何をするかを決め、その理由や変わる暮らしまでじっくり話してみましょう。
+- `goal.ko` · KO: 로또 1등에 당첨된다면 가장 먼저 할 일을 고르고, 그 이유와 달라질 삶까지 이야기해 볼게요.
+- `goal.ja` · JA: ロトで1等に当たったら最初に何をするかを決め、その理由や変わる暮らしまで話してみましょう。
 - `axis.1.ko` · KO: 가장 먼저 할 일을 골라요.
 - `axis.1.ja` · JA: 最初にすることを選びます。
 - `axis.2.ko` · KO: 왜 그 일을 먼저 할지 설명해요.
@@ -176,7 +176,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-intermediate/lessons/01-if-i-won-the-lottery/lesson.html`
-- sha256: `d95731e995c41261da6e167cc34d5ffcffd909c3457a7b800421a3a91b97bb3d`
+- sha256: `966ce276f201cc9daf2c5ea87eca0830bcb301e34f1a2374f2e0f799a646554b`
 - source kind: `article`
 
 #### `metadata`
@@ -188,8 +188,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 로또에 당첨된다면
-- `goal.ko` · KO: 오늘은 로또 1등에 당첨된다면 가장 먼저 할 일을 고르고, 그 이유와 달라질 삶까지 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日はロトで1等に当たったら最初に何をするかを決め、その理由や変わる暮らしまでじっくり話してみましょう。
+- `goal.ko` · KO: 로또 1등에 당첨된다면 가장 먼저 할 일을 고르고, 그 이유와 달라질 삶까지 이야기해 볼게요.
+- `goal.ja` · JA: ロトで1等に当たったら最初に何をするかを決め、その理由や変わる暮らしまで話してみましょう。
 - `axis.1.ko` · KO: 가장 먼저 할 일을 골라요.
 - `axis.1.ja` · JA: 最初にすることを選びます。
 - `axis.2.ko` · KO: 왜 그 일을 먼저 할지 설명해요.
@@ -336,7 +336,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-advanced/lessons/02-three-things-on-a-desert-island/lesson.html`
-- sha256: `63c175dddf823649be1d3e1686a7d78b11137636fe7a45394448a50ef82698e1`
+- sha256: `be162806c4b4c81f6deb6b0a52b8d3030878ee781352af8faf65556ff4c51b4c`
 - source kind: `model-story`
 
 #### `metadata`
@@ -348,8 +348,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 무인도에 세 가지
-- `goal.ko` · KO: 오늘은 무인도에 가져갈 세 가지를 빠르게 고르고, 선택한 기준과 그곳에서의 생활까지 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は無人島に持っていく三つをすぐに選び、その基準や島での暮らしまでじっくり話してみましょう。
+- `goal.ko` · KO: 무인도에 가져갈 세 가지를 빠르게 고르고, 선택한 기준과 그곳에서의 생활까지 이야기해 볼게요.
+- `goal.ja` · JA: 無人島に持っていく三つをすぐに選び、その基準や島での暮らしまで話してみましょう。
 - `axis.1.ko` · KO: 가져갈 세 가지를 골라요.
 - `axis.1.ja` · JA: 持っていく三つを選びます。
 - `axis.2.ko` · KO: 각 물건이 필요한 이유를 설명해요.
@@ -475,7 +475,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-intermediate/lessons/02-three-things-on-a-desert-island/lesson.html`
-- sha256: `d41db5a12aa58d7f74c77b57aa1dffc55b80b03c57b27384c052f46e5d4f2b4c`
+- sha256: `acc8244937a9238d40d4300b7624d75d35f35596bc3828f820620653304b88a1`
 - source kind: `model-story`
 
 #### `metadata`
@@ -487,8 +487,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 무인도에 세 가지
-- `goal.ko` · KO: 오늘은 무인도에 가져갈 세 가지를 빠르게 고르고, 선택한 기준과 그곳에서의 생활까지 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は無人島に持っていく三つをすぐに選び、その基準や島での暮らしまでじっくり話してみましょう。
+- `goal.ko` · KO: 무인도에 가져갈 세 가지를 빠르게 고르고, 선택한 기준과 그곳에서의 생활까지 이야기해 볼게요.
+- `goal.ja` · JA: 無人島に持っていく三つをすぐに選び、その基準や島での暮らしまで話してみましょう。
 - `axis.1.ko` · KO: 가져갈 세 가지를 골라요.
 - `axis.1.ja` · JA: 持っていく三つを選びます。
 - `axis.2.ko` · KO: 각 물건이 필요한 이유를 설명해요.
@@ -616,7 +616,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-advanced/lessons/03-be-someone-else-for-a-day/lesson.html`
-- sha256: `f131423e895191c41c6b4511ea257037175b267e84d94e280be1ee6897f33e14`
+- sha256: `981008ef8fca628037879bb82b26929ad03cda7a4526b0a4522242f7334ab458`
 - source kind: `model-story`
 
 #### `metadata`
@@ -628,8 +628,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 다른 사람의 하루
-- `goal.ko` · KO: 오늘은 하루 동안 살아 보고 싶은 사람을 고르고, 그 사람의 일상과 내 생각이 어떻게 달라질지 이야기해 볼게요.
-- `goal.ja` · JA: 今日は一日だけなってみたい人を選び、その人の日常や自分の考えがどう変わるかを話してみましょう。
+- `goal.ko` · KO: 하루 동안 살아 보고 싶은 사람을 고르고, 그 사람의 일상과 내 생각이 어떻게 달라질지 이야기해 볼게요.
+- `goal.ja` · JA: 一日だけなってみたい人を選び、その人の日常や自分の考えがどう変わるかを話してみましょう。
 - `axis.1.ko` · KO: 살아 보고 싶은 사람을 골라요.
 - `axis.1.ja` · JA: なってみたい人を選びます。
 - `axis.2.ko` · KO: 궁금한 하루의 장면을 설명해요.
@@ -755,7 +755,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-intermediate/lessons/03-be-someone-else-for-a-day/lesson.html`
-- sha256: `8767cc4616c169d37fa62dd6f6d489b0db85e94327b8f40d31bbcfb43e5c171d`
+- sha256: `0951e3d6ed069eb778a2848217c25ec1e790671b1c9d5ee2658d0559020e5c1e`
 - source kind: `model-story`
 
 #### `metadata`
@@ -767,8 +767,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 다른 사람의 하루
-- `goal.ko` · KO: 오늘은 하루 동안 살아 보고 싶은 사람을 고르고, 그 사람의 일상과 내 생각이 어떻게 달라질지 이야기해 볼게요.
-- `goal.ja` · JA: 今日は一日だけなってみたい人を選び、その人の日常や自分の考えがどう変わるかを話してみましょう。
+- `goal.ko` · KO: 하루 동안 살아 보고 싶은 사람을 고르고, 그 사람의 일상과 내 생각이 어떻게 달라질지 이야기해 볼게요.
+- `goal.ja` · JA: 一日だけなってみたい人を選び、その人の日常や自分の考えがどう変わるかを話してみましょう。
 - `axis.1.ko` · KO: 살아 보고 싶은 사람을 골라요.
 - `axis.1.ja` · JA: なってみたい人を選びます。
 - `axis.2.ko` · KO: 궁금한 하루의 장면을 설명해요.
@@ -896,7 +896,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-advanced/lessons/04-one-superpower/lesson.html`
-- sha256: `871ea2b2fcbca671545ea54b20388158ebb6429af855905a621910ff93748d35`
+- sha256: `745a8440d4d6120f8097646fa10670f6b59aafc91f0af3edbef1ca1b7b675e6e`
 - source kind: `model-story`
 
 #### `metadata`
@@ -908,8 +908,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 초능력 하나
-- `goal.ko` · KO: 오늘은 갖고 싶은 초능력 하나를 고르고, 어디에 쓰며 내 생활이 어떻게 달라질지 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は欲しい超能力を一つ選び、どこで使い、自分の生活がどう変わるかをじっくり話してみましょう。
+- `goal.ko` · KO: 갖고 싶은 초능력 하나를 고르고, 어디에 쓰며 내 생활이 어떻게 달라질지 이야기해 볼게요.
+- `goal.ja` · JA: 欲しい超能力を一つ選び、どこで使い、自分の生活がどう変わるかを話してみましょう。
 - `axis.1.ko` · KO: 초능력 하나를 골라요.
 - `axis.1.ja` · JA: 超能力を一つ選びます。
 - `axis.2.ko` · KO: 처음 쓸 장면을 설명해요.
@@ -1035,7 +1035,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-intermediate/lessons/04-one-superpower/lesson.html`
-- sha256: `d57f05e439c09708fe72db623a91d6f3f98a6eddf2465af044ce06acf376443f`
+- sha256: `6fa844cc89174f2c139d958a22c27712bb6c6b258c277c1f57890cf0077a0cdf`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1047,8 +1047,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 초능력 하나
-- `goal.ko` · KO: 오늘은 갖고 싶은 초능력 하나를 고르고, 어디에 쓰며 내 생활이 어떻게 달라질지 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は欲しい超能力を一つ選び、どこで使い、自分の生活がどう変わるかをじっくり話してみましょう。
+- `goal.ko` · KO: 갖고 싶은 초능력 하나를 고르고, 어디에 쓰며 내 생활이 어떻게 달라질지 이야기해 볼게요.
+- `goal.ja` · JA: 欲しい超能力を一つ選び、どこで使い、自分の生活がどう変わるかを話してみましょう。
 - `axis.1.ko` · KO: 초능력 하나를 골라요.
 - `axis.1.ja` · JA: 超能力を一つ選びます。
 - `axis.2.ko` · KO: 처음 쓸 장면을 설명해요.
@@ -1177,7 +1177,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-advanced/lessons/05-one-food-for-life/lesson.html`
-- sha256: `556c67d58c4bded5de7d11d0f699b33d9b1b1a31d36d1456bc887f9dd924179b`
+- sha256: `dab5c39ab5de558864304354022517f97f6385a95e4e3fa033807b2e92029de6`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1189,8 +1189,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 평생 한 가지 음식
-- `goal.ko` · KO: 오늘은 평생 먹을 한 가지 음식을 고르고, 질리지 않을 이유와 포기해야 할 것까지 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は一生食べる一つの料理を選び、飽きない理由や諦めるものまでじっくり話してみましょう。
+- `goal.ko` · KO: 평생 먹을 한 가지 음식을 고르고, 질리지 않을 이유와 포기해야 할 것까지 이야기해 볼게요.
+- `goal.ja` · JA: 一生食べる一つの料理を選び、飽きない理由や諦めるものまで話してみましょう。
 - `axis.1.ko` · KO: 평생 먹을 음식을 골라요.
 - `axis.1.ja` · JA: 一生食べる料理を選びます。
 - `axis.2.ko` · KO: 질리지 않을 이유를 설명해요.
@@ -1316,7 +1316,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-intermediate/lessons/05-one-food-for-life/lesson.html`
-- sha256: `a553b11b21646f4c7eb4841d64df485ada1c4c57ded432ccdc496ce94b4dc410`
+- sha256: `94d452cb3d0fd96022fa4d784ccf8c6c5ee02e3126c6d98537dc49df62d033a9`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1328,8 +1328,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 평생 한 가지 음식
-- `goal.ko` · KO: 오늘은 평생 먹을 한 가지 음식을 고르고, 질리지 않을 이유와 포기해야 할 것까지 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は一生食べる一つの料理を選び、飽きない理由や諦めるものまでじっくり話してみましょう。
+- `goal.ko` · KO: 평생 먹을 한 가지 음식을 고르고, 질리지 않을 이유와 포기해야 할 것까지 이야기해 볼게요.
+- `goal.ja` · JA: 一生食べる一つの料理を選び、飽きない理由や諦めるものまで話してみましょう。
 - `axis.1.ko` · KO: 평생 먹을 음식을 골라요.
 - `axis.1.ja` · JA: 一生食べる料理を選びます。
 - `axis.2.ko` · KO: 질리지 않을 이유를 설명해요.
@@ -1457,7 +1457,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-advanced/lessons/06-one-thing-free-for-life/lesson.html`
-- sha256: `5d29ead0ebea7a05d0de1eaf81403e6e08a51d68317f7708926a93c0d733a99e`
+- sha256: `f02c82021952d7aa2f93ec5bdddb7002eb54869e565bcea335da3ba44799cfac`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1469,8 +1469,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 평생 하나가 공짜
-- `goal.ko` · KO: 오늘은 평생 공짜로 누릴 하나를 고르고, 얼마나 쓰며 돈과 습관이 어떻게 달라질지 이야기해 볼게요.
-- `goal.ja` · JA: 今日は一生無料で使えるものを一つ選び、どれくらい使い、お金や習慣がどう変わるかを話してみましょう。
+- `goal.ko` · KO: 평생 공짜로 누릴 하나를 고르고, 얼마나 쓰며 돈과 습관이 어떻게 달라질지 이야기해 볼게요.
+- `goal.ja` · JA: 一生無料で使えるものを一つ選び、どれくらい使い、お金や習慣がどう変わるかを話してみましょう。
 - `axis.1.ko` · KO: 공짜로 누릴 하나를 골라요.
 - `axis.1.ja` · JA: 無料で使うものを一つ選びます。
 - `axis.2.ko` · KO: 실제로 쓸 장면을 설명해요.
@@ -1596,7 +1596,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-intermediate/lessons/06-one-thing-free-for-life/lesson.html`
-- sha256: `9963152fa216224de8f7d5e9673dfa3cc162e4c92613736471c2a20086274e40`
+- sha256: `27b80cc15892a635632dd25e7d315501deee060519363e70d1d77d9b11654b16`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1608,8 +1608,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 평생 하나가 공짜
-- `goal.ko` · KO: 오늘은 평생 공짜로 누릴 하나를 고르고, 얼마나 쓰며 돈과 습관이 어떻게 달라질지 이야기해 볼게요.
-- `goal.ja` · JA: 今日は一生無料で使えるものを一つ選び、どれくらい使い、お金や習慣がどう変わるかを話してみましょう。
+- `goal.ko` · KO: 평생 공짜로 누릴 하나를 고르고, 얼마나 쓰며 돈과 습관이 어떻게 달라질지 이야기해 볼게요.
+- `goal.ja` · JA: 一生無料で使えるものを一つ選び、どれくらい使い、お金や習慣がどう変わるかを話してみましょう。
 - `axis.1.ko` · KO: 공짜로 누릴 하나를 골라요.
 - `axis.1.ja` · JA: 無料で使うものを一つ選びます。
 - `axis.2.ko` · KO: 실제로 쓸 장면을 설명해요.
@@ -1737,7 +1737,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-advanced/lessons/07-one-week-without-a-smartphone/lesson.html`
-- sha256: `8eb166bfd84b682323501625b58289f6cc10c3fefcd92e49ffeb6593e90e223f`
+- sha256: `78a25c48e97cd3d82ea5f26bb4b260164f2ba4659709de2fbe28b92dba97d39b`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1749,8 +1749,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 스마트폰 없는 일주일
-- `goal.ko` · KO: 오늘은 산속 리조트에서 스마트폰 없이 지낼지 선택하고, 어려운 순간과 달라질 습관까지 이야기해 볼게요.
-- `goal.ja` · JA: 今日は山のリゾートでスマホなしで過ごせるかを選び、困る瞬間や変わる習慣まで話してみましょう。
+- `goal.ko` · KO: 산속 리조트에서 스마트폰 없이 지낼지 선택하고, 어려운 순간과 달라질 습관까지 이야기해 볼게요.
+- `goal.ja` · JA: 山のリゾートでスマホなしで過ごせるかを選び、困る瞬間や変わる習慣まで話してみましょう。
 - `axis.1.ko` · KO: 일주일을 버틸지 선택해요.
 - `axis.1.ja` · JA: 一週間耐えられるか選びます。
 - `axis.2.ko` · KO: 가장 어려운 순간을 설명해요.
@@ -1876,7 +1876,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-intermediate/lessons/07-one-week-without-a-smartphone/lesson.html`
-- sha256: `ac648e0abf1c9831c40f21293a2c516de7432536631d1f751025462b6fe61ddc`
+- sha256: `98b6859c858628db239be7a9595ec994a9a3833e1723a106dda980b706648b7b`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1888,8 +1888,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 스마트폰 없는 일주일
-- `goal.ko` · KO: 오늘은 산속 리조트에서 스마트폰 없이 지낼지 선택하고, 어려운 순간과 달라질 습관까지 이야기해 볼게요.
-- `goal.ja` · JA: 今日は山のリゾートでスマホなしで過ごせるかを選び、困る瞬間や変わる習慣まで話してみましょう。
+- `goal.ko` · KO: 산속 리조트에서 스마트폰 없이 지낼지 선택하고, 어려운 순간과 달라질 습관까지 이야기해 볼게요.
+- `goal.ja` · JA: 山のリゾートでスマホなしで過ごせるかを選び、困る瞬間や変わる習慣まで話してみましょう。
 - `axis.1.ko` · KO: 일주일을 버틸지 선택해요.
 - `axis.1.ja` · JA: 一週間耐えられるか選びます。
 - `axis.2.ko` · KO: 가장 어려운 순간을 설명해요.
@@ -2017,7 +2017,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-advanced/lessons/08-ai-does-my-job/lesson.html`
-- sha256: `2c95beb323d60ae5366d53193fee476e088c671b20b100dd62f5e86f49ed5bbe`
+- sha256: `27680becba48eea7abda141fc200dbfd1504848f9267be24d573994c917b6c24`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2029,8 +2029,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: AI가 일을 다 한다면
-- `goal.ko` · KO: 오늘은 AI가 일을 다 해 주는 상황을 고르고, 남는 시간과 달라질 일의 의미까지 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日はAIが仕事を全部してくれる状況を考え、余る時間や変わる仕事の意味までじっくり話してみましょう。
+- `goal.ko` · KO: AI가 일을 다 해 주는 상황을 고르고, 남는 시간과 달라질 일의 의미까지 이야기해 볼게요.
+- `goal.ja` · JA: AIが仕事を全部してくれる状況を考え、余る時間や変わる仕事の意味まで話してみましょう。
 - `axis.1.ko` · KO: 남는 시간에 할 일을 골라요.
 - `axis.1.ja` · JA: 余る時間にすることを選びます。
 - `axis.2.ko` · KO: 새로운 하루를 설명해요.
@@ -2156,7 +2156,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-intermediate/lessons/08-ai-does-my-job/lesson.html`
-- sha256: `3af362faf75f3b0e9700eb480e77f5dc993d699d7c5f0c817c427c51c4594b50`
+- sha256: `deb3c21efc31c4ee488f2a2a2eaecb2e14b249fbccb5cc95d9c178e879e62805`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2168,8 +2168,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: AI가 일을 다 한다면
-- `goal.ko` · KO: 오늘은 AI가 일을 다 해 주는 상황을 고르고, 남는 시간과 달라질 일의 의미까지 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日はAIが仕事を全部してくれる状況を考え、余る時間や変わる仕事の意味までじっくり話してみましょう。
+- `goal.ko` · KO: AI가 일을 다 해 주는 상황을 고르고, 남는 시간과 달라질 일의 의미까지 이야기해 볼게요.
+- `goal.ja` · JA: AIが仕事を全部してくれる状況を考え、余る時間や変わる仕事の意味まで話してみましょう。
 - `axis.1.ko` · KO: 남는 시간에 할 일을 골라요.
 - `axis.1.ja` · JA: 余る時間にすることを選びます。
 - `axis.2.ko` · KO: 새로운 하루를 설명해요.
@@ -2297,7 +2297,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-advanced/lessons/09-if-i-were-an-animal/lesson.html`
-- sha256: `5eab251754ed51b4d55bfc28034b25c3eb7990be4d7d1ce5efcf9ed2ca5c91bb`
+- sha256: `380268247ec1de722a87959c40191dea98a1f9f63c76c6cf84d89d6896925994`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2309,8 +2309,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 나를 닮은 동물
-- `goal.ko` · KO: 오늘은 나를 표현하는 동물 하나를 고르고, 닮은 행동과 다른 사람이 보는 모습까지 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は自分を表す動物を一つ選び、似ている行動や他人から見える姿までじっくり話してみましょう。
+- `goal.ko` · KO: 나를 표현하는 동물 하나를 고르고, 닮은 행동과 다른 사람이 보는 모습까지 이야기해 볼게요.
+- `goal.ja` · JA: 自分を表す動物を一つ選び、似ている行動や他人から見える姿まで話してみましょう。
 - `axis.1.ko` · KO: 나를 닮은 동물을 골라요.
 - `axis.1.ja` · JA: 自分に似た動物を選びます。
 - `axis.2.ko` · KO: 닮은 행동을 장면으로 설명해요.
@@ -2436,7 +2436,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-intermediate/lessons/09-if-i-were-an-animal/lesson.html`
-- sha256: `7dc98190e7b79815ba33268bba8accb3a2be58936c3351281f6c53d6c79f81f8`
+- sha256: `3b36c0bf03819313b296e00a33c20b69e73e9081a9028e197733fb44e3f1046d`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2448,8 +2448,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 나를 닮은 동물
-- `goal.ko` · KO: 오늘은 나를 표현하는 동물 하나를 고르고, 닮은 행동과 다른 사람이 보는 모습까지 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は自分を表す動物を一つ選び、似ている行動や他人から見える姿までじっくり話してみましょう。
+- `goal.ko` · KO: 나를 표현하는 동물 하나를 고르고, 닮은 행동과 다른 사람이 보는 모습까지 이야기해 볼게요.
+- `goal.ja` · JA: 自分を表す動物を一つ選び、似ている行動や他人から見える姿まで話してみましょう。
 - `axis.1.ko` · KO: 나를 닮은 동물을 골라요.
 - `axis.1.ja` · JA: 自分に似た動物を選びます。
 - `axis.2.ko` · KO: 닮은 행동을 장면으로 설명해요.
@@ -2577,7 +2577,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-advanced/lessons/10-country-in-my-next-life/lesson.html`
-- sha256: `173d43a98e6a3533ff069a25e85ecef32858458e64cc50cf0736087e7fa80fc2`
+- sha256: `d1d74367bad53a4f8f100422a77c689d2e2b5400d02185c7159ae07f0f92a71d`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2589,8 +2589,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 다시 태어날 나라
-- `goal.ko` · KO: 오늘은 다시 태어나 살고 싶은 나라를 고르고, 그곳의 하루와 적응해야 할 현실까지 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は生まれ変わって住みたい国を選び、そこでの一日や適応すべき現実までじっくり話してみましょう。
+- `goal.ko` · KO: 다시 태어나 살고 싶은 나라를 고르고, 그곳의 하루와 적응해야 할 현실까지 이야기해 볼게요.
+- `goal.ja` · JA: 生まれ変わって住みたい国を選び、そこでの一日や適応すべき現実まで話してみましょう。
 - `axis.1.ko` · KO: 살고 싶은 나라를 골라요.
 - `axis.1.ja` · JA: 住みたい国を選びます。
 - `axis.2.ko` · KO: 그곳의 하루를 설명해요.
@@ -2717,7 +2717,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-intermediate/lessons/10-country-in-my-next-life/lesson.html`
-- sha256: `4528d273923966af7d5da6e236d9372667f6f325f1389c8ae363c13fc4189510`
+- sha256: `44c2604b6eddc319a79870858d059a742e18cb576d0aefdf76fedbc157f494a1`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2729,8 +2729,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 다시 태어날 나라
-- `goal.ko` · KO: 오늘은 다시 태어나 살고 싶은 나라를 고르고, 그곳의 하루와 적응해야 할 현실까지 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は生まれ変わって住みたい国を選び、そこでの一日や適応すべき現実までじっくり話してみましょう。
+- `goal.ko` · KO: 다시 태어나 살고 싶은 나라를 고르고, 그곳의 하루와 적응해야 할 현실까지 이야기해 볼게요.
+- `goal.ja` · JA: 生まれ変わって住みたい国を選び、そこでの一日や適応すべき現実まで話してみましょう。
 - `axis.1.ko` · KO: 살고 싶은 나라를 골라요.
 - `axis.1.ja` · JA: 住みたい国を選びます。
 - `axis.2.ko` · KO: 그곳의 하루를 설명해요.
@@ -2859,7 +2859,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-advanced/lessons/11-this-day-ten-years-later/lesson.html`
-- sha256: `4264d85d501feff0d48618ea7326877c95af9b84f8dbce1a2bd2a3b97cf5aa1e`
+- sha256: `a0866b536d16d7b615b3e4c77ffac58f56cd376fc8c98dde16782e7cb496162d`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2871,8 +2871,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 10년 뒤 오늘
-- `goal.ko` · KO: 오늘은 10년 뒤 오늘의 모습을 고르고, 평범한 하루와 지금부터 이어 갈 선택까지 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は10年後の今日の姿を思い描き、普通の一日や今からつながる選択までじっくり話してみましょう。
+- `goal.ko` · KO: 10년 뒤 오늘의 모습을 고르고, 평범한 하루와 지금부터 이어 갈 선택까지 이야기해 볼게요.
+- `goal.ja` · JA: 10年後の今日の姿を思い描き、普通の一日や今からつながる選択まで話してみましょう。
 - `axis.1.ko` · KO: 10년 뒤의 장소와 일을 골라요.
 - `axis.1.ja` · JA: 10年後の場所と仕事を選びます。
 - `axis.2.ko` · KO: 평범한 하루를 설명해요.
@@ -2999,7 +2999,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-if-intermediate/lessons/11-this-day-ten-years-later/lesson.html`
-- sha256: `609440fc747e15bbb7c33ce557196e4c797a217206c7a81b8c9eafb94973a277`
+- sha256: `9d98c2226cbe27306532e1dab923361337c84e5ea6fcd7270d4c37b7c5d59e76`
 - source kind: `model-story`
 
 #### `metadata`
@@ -3011,8 +3011,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 10년 뒤 오늘
-- `goal.ko` · KO: 오늘은 10년 뒤 오늘의 모습을 고르고, 평범한 하루와 지금부터 이어 갈 선택까지 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は10年後の今日の姿を思い描き、普通の一日や今からつながる選択までじっくり話してみましょう。
+- `goal.ko` · KO: 10년 뒤 오늘의 모습을 고르고, 평범한 하루와 지금부터 이어 갈 선택까지 이야기해 볼게요.
+- `goal.ja` · JA: 10年後の今日の姿を思い描き、普通の一日や今からつながる選択まで話してみましょう。
 - `axis.1.ko` · KO: 10년 뒤의 장소와 일을 골라요.
 - `axis.1.ja` · JA: 10年後の場所と仕事を選びます。
 - `axis.2.ko` · KO: 평범한 하루를 설명해요.

@@ -12,7 +12,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/01-more-money-or-more-time/lesson.html`
-- sha256: `130c23a57c38ace3bba8aff5c3a1c3557f37441c42d565a8374b0864485ca95e`
+- sha256: `5d2123fe9c0d7af479b25b5bdaf773d27a2a336a7c76b20fcf209d2df73d3f65`
 - source kind: `article`
 
 #### `metadata`
@@ -24,8 +24,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 돈 vs 시간
-- `goal.ko` · KO: 오늘은 돈이 많은 삶과 시간이 많은 삶 중 지금 더 필요한 쪽을 고르고, 실제 장면과 조건 변화로 선택의 이유를 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、お金に余裕のある暮らしと時間に余裕のある暮らしのうち、今必要なほうを選び、具体的な場面や条件の変化を通して理由をじっくり話してみましょう。
+- `goal.ko` · KO: 돈이 많은 삶과 시간이 많은 삶 중 지금 더 필요한 쪽을 고르고, 그 이유를 이야기해 볼게요.
+- `goal.ja` · JA: お金に余裕のある暮らしと時間に余裕のある暮らしのうち、今必要なほうを選び、理由を話してみましょう。
 - `axis.1.ko` · KO: 지금 더 필요한 쪽을 골라요.
 - `axis.1.ja` · JA: 今必要なほうを選びます。
 - `axis.2.ko` · KO: 실제 생활 장면으로 이유를 설명해요.
@@ -169,7 +169,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/01-more-money-or-more-time/lesson.html`
-- sha256: `edc43ed41f33d2603adea21ec2fbe129ec08f8331f9dae073cd91acbd8acd513`
+- sha256: `8810f4394ff06a641a9f0434d3289aaf75707be51ceeb8c13647b92f5de1ae3a`
 - source kind: `article`
 
 #### `metadata`
@@ -181,8 +181,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 돈 vs 시간
-- `goal.ko` · KO: 오늘은 돈이 많은 삶과 시간이 많은 삶 중 지금 더 필요한 쪽을 고르고, 생활 장면과 바뀌는 조건으로 이유를 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、お金に余裕のある暮らしと時間に余裕のある暮らしのうち、今必要なほうを選び、生活の場面や条件の変化をもとに理由を話してみましょう。
+- `goal.ko` · KO: 돈이 많은 삶과 시간이 많은 삶 중 지금 더 필요한 쪽을 고르고, 그 이유를 이야기해 볼게요.
+- `goal.ja` · JA: お金に余裕のある暮らしと時間に余裕のある暮らしのうち、今必要なほうを選び、理由を話してみましょう。
 - `axis.1.ko` · KO: 지금 더 필요한 쪽을 골라요.
 - `axis.1.ja` · JA: 今必要なほうを選びます。
 - `axis.2.ko` · KO: 생활 장면으로 이유를 설명해요.
@@ -328,7 +328,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/02-many-friends-or-three-close-friends/lesson.html`
-- sha256: `1e943b7d1263955a82a093a8a5fe4c01302fe58ba745ad47ad4a12e904927122`
+- sha256: `e6028f5f8d2ecf533088f828f6813d93e343575760b453ccbd5432689c71464c`
 - source kind: `article`
 
 #### `metadata`
@@ -340,8 +340,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 넓이 vs 깊이
-- `goal.ko` · KO: 오늘은 친구 100명 vs 진짜 친구 3명 중 하나를 고르고, 실제 장면과 조건 변화로 선택의 이유를 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、友達100人 vs 親友3人のどちらかを選び、具体的な場面や条件の変化をもとに選んだ理由をじっくり話してみましょう。
+- `goal.ko` · KO: 친구 100명 vs 진짜 친구 3명 중 하나를 고르고, 그 이유를 이야기해 볼게요.
+- `goal.ja` · JA: 友達100人 vs 親友3人のどちらかを選び、選んだ理由を話してみましょう。
 - `axis.1.ko` · KO: 지금 더 끌리는 쪽을 골라요.
 - `axis.1.ja` · JA: 今いちばん引かれるほうを選びます。
 - `axis.2.ko` · KO: 실제 생활 장면으로 이유를 설명해요.
@@ -484,7 +484,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/02-many-friends-or-three-close-friends/lesson.html`
-- sha256: `7b1f96287684e4885769b1d5d9ccc7abf630afa2eb15fe458bb76e4d18535b71`
+- sha256: `f231a3817da4b3be41513f6c090a88d37680c01f8e35bc96baabcf9cf0c7a7e9`
 - source kind: `article`
 
 #### `metadata`
@@ -496,8 +496,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 넓이 vs 깊이
-- `goal.ko` · KO: 오늘은 친구 100명 vs 진짜 친구 3명 중 하나를 고르고, 실제 장면과 조건 변화로 이유를 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、友達100人 vs 親友3人のどちらかを選び、具体的な場面や条件の変化をもとに理由を話してみましょう。
+- `goal.ko` · KO: 친구 100명 vs 진짜 친구 3명 중 하나를 고르고, 그 이유를 이야기해 볼게요.
+- `goal.ja` · JA: 友達100人 vs 親友3人のどちらかを選び、理由を話してみましょう。
 - `axis.1.ko` · KO: 지금 더 끌리는 쪽을 골라요.
 - `axis.1.ja` · JA: 今いちばん引かれるほうを選びます。
 - `axis.2.ko` · KO: 실제 생활 장면으로 이유를 설명해요.
@@ -642,7 +642,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/03-eternal-summer-or-winter/lesson.html`
-- sha256: `58001942d67697b0b408c0058705dfb9df955cd5b14528b239d8d8b7f4ebaf29`
+- sha256: `4e4689ce35fdbe2a4d73214a64a22937f7d926a91ea5d3b85c1bc8b880012554`
 - source kind: `article`
 
 #### `metadata`
@@ -654,8 +654,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 여름 vs 겨울
-- `goal.ko` · KO: 오늘은 평생 여름 vs 평생 겨울 중 하나를 고르고, 실제 장면과 조건 변화로 선택의 이유를 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、一生夏 vs 一生冬のどちらかを選び、具体的な場面や条件の変化をもとに選んだ理由をじっくり話してみましょう。
+- `goal.ko` · KO: 평생 여름 vs 평생 겨울 중 하나를 고르고, 그 이유를 이야기해 볼게요.
+- `goal.ja` · JA: 一生夏 vs 一生冬のどちらかを選び、選んだ理由を話してみましょう。
 - `axis.1.ko` · KO: 지금 더 끌리는 쪽을 골라요.
 - `axis.1.ja` · JA: 今いちばん引かれるほうを選びます。
 - `axis.2.ko` · KO: 실제 생활 장면으로 이유를 설명해요.
@@ -798,7 +798,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/03-eternal-summer-or-winter/lesson.html`
-- sha256: `12a8784aa4345d8f8cbfc8f7b5b2af33ba1cdfdd934845ea0062ebd125596765`
+- sha256: `1c49db465ce3530607a9d916acdc1d9ab8279d7a2eda0ad486be5c6483456684`
 - source kind: `article`
 
 #### `metadata`
@@ -810,8 +810,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 여름 vs 겨울
-- `goal.ko` · KO: 오늘은 평생 여름 vs 평생 겨울 중 하나를 고르고, 실제 장면과 조건 변화로 이유를 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、一生夏 vs 一生冬のどちらかを選び、具体的な場面や条件の変化をもとに理由を話してみましょう。
+- `goal.ko` · KO: 평생 여름 vs 평생 겨울 중 하나를 고르고, 그 이유를 이야기해 볼게요.
+- `goal.ja` · JA: 一生夏 vs 一生冬のどちらかを選び、理由を話してみましょう。
 - `axis.1.ko` · KO: 지금 더 끌리는 쪽을 골라요.
 - `axis.1.ja` · JA: 今いちばん引かれるほうを選びます。
 - `axis.2.ko` · KO: 실제 생활 장면으로 이유를 설명해요.
@@ -956,7 +956,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/04-morning-person-or-night-owl/lesson.html`
-- sha256: `909cc0ec319324bb4bebdb541eeda49eb719baf9541df16a36ef104ba07e0c1a`
+- sha256: `6dc6662c1366af82b696dfd588b0219f3982114719d7b4e37daf279b5fc4707b`
 - source kind: `article`
 
 #### `metadata`
@@ -968,8 +968,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 아침 vs 밤
-- `goal.ko` · KO: 오늘은 아침형 인간 vs 밤형 인간 중 하나를 고르고, 실제 장면과 조건 변화로 선택의 이유를 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、朝型 vs 夜型のどちらかを選び、具体的な場面や条件の変化をもとに選んだ理由をじっくり話してみましょう。
+- `goal.ko` · KO: 아침형 인간 vs 밤형 인간 중 하나를 고르고, 그 이유를 이야기해 볼게요.
+- `goal.ja` · JA: 朝型 vs 夜型のどちらかを選び、選んだ理由を話してみましょう。
 - `axis.1.ko` · KO: 지금 더 끌리는 쪽을 골라요.
 - `axis.1.ja` · JA: 今いちばん引かれるほうを選びます。
 - `axis.2.ko` · KO: 실제 생활 장면으로 이유를 설명해요.
@@ -1112,7 +1112,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/04-morning-person-or-night-owl/lesson.html`
-- sha256: `1e02038addbb975612c4393a4d0824091ffa09597af3f84e0d395d480df5a2e8`
+- sha256: `0a203a9eccbf98f664021dc910a408c9885d0c0e4803101bbb18c48978e95d51`
 - source kind: `article`
 
 #### `metadata`
@@ -1124,8 +1124,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 아침 vs 밤
-- `goal.ko` · KO: 오늘은 아침형 인간 vs 밤형 인간 중 하나를 고르고, 실제 장면과 조건 변화로 이유를 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、朝型 vs 夜型のどちらかを選び、具体的な場面や条件の変化をもとに理由を話してみましょう。
+- `goal.ko` · KO: 아침형 인간 vs 밤형 인간 중 하나를 고르고, 그 이유를 이야기해 볼게요.
+- `goal.ja` · JA: 朝型 vs 夜型のどちらかを選び、理由を話してみましょう。
 - `axis.1.ko` · KO: 지금 더 끌리는 쪽을 골라요.
 - `axis.1.ja` · JA: 今いちばん引かれるほうを選びます。
 - `axis.2.ko` · KO: 실제 생활 장면으로 이유를 설명해요.
@@ -1270,7 +1270,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/05-planned-or-spontaneous-trip/lesson.html`
-- sha256: `8abd07cb8f37910eb6ae224f939527518255325c3069f950f20d0d18a6266bfe`
+- sha256: `5a6792038fac252a64f1c3acb4a5ab58c04c0684c3d7a2b0e7aabc6e0f82dc68`
 - source kind: `article`
 
 #### `metadata`
@@ -1282,8 +1282,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 계획 vs 즉흥
-- `goal.ko` · KO: 오늘은 계획 여행 vs 즉흥 여행 중 하나를 고르고, 실제 장면과 조건 변화로 선택의 이유를 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、計画旅行 vs 行き当たりばったりの旅行のどちらかを選び、具体的な場面や条件の変化をもとに選んだ理由をじっくり話してみましょう。
+- `goal.ko` · KO: 계획 여행 vs 즉흥 여행 중 하나를 고르고, 그 이유를 이야기해 볼게요.
+- `goal.ja` · JA: 計画旅行 vs 行き当たりばったりの旅行のどちらかを選び、選んだ理由を話してみましょう。
 - `axis.1.ko` · KO: 지금 더 끌리는 쪽을 골라요.
 - `axis.1.ja` · JA: 今いちばん引かれるほうを選びます。
 - `axis.2.ko` · KO: 실제 생활 장면으로 이유를 설명해요.
@@ -1426,7 +1426,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/05-planned-or-spontaneous-trip/lesson.html`
-- sha256: `4009dca319d5a6eea8fdad44678569063f971bd501a401d90283ba2cc5a69ba8`
+- sha256: `f979d8661032594ef568fc2e584c778bf4cc90202f7c2e39e1b76b3772fc0967`
 - source kind: `article`
 
 #### `metadata`
@@ -1438,8 +1438,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 계획 vs 즉흥
-- `goal.ko` · KO: 오늘은 계획 여행 vs 즉흥 여행 중 하나를 고르고, 실제 장면과 조건 변화로 이유를 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、計画旅行 vs 行き当たりばったりの旅行のどちらかを選び、具体的な場面や条件の変化をもとに理由を話してみましょう。
+- `goal.ko` · KO: 계획 여행 vs 즉흥 여행 중 하나를 고르고, 그 이유를 이야기해 볼게요.
+- `goal.ja` · JA: 計画旅行 vs 行き当たりばったりの旅行のどちらかを選び、理由を話してみましょう。
 - `axis.1.ko` · KO: 지금 더 끌리는 쪽을 골라요.
 - `axis.1.ja` · JA: 今いちばん引かれるほうを選びます。
 - `axis.2.ko` · KO: 실제 생활 장면으로 이유를 설명해요.
@@ -1584,7 +1584,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/06-solo-or-group-travel/lesson.html`
-- sha256: `4e34cdb8bd9c15967772c4b5165f395d980991817c38541aac0ef1243b206e4b`
+- sha256: `899f84afe309fade340392b3d1b3eb7f3497e073402a0fef97c76611747edd51`
 - source kind: `article`
 
 #### `metadata`
@@ -1596,8 +1596,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 혼자 vs 같이
-- `goal.ko` · KO: 오늘은 혼자 여행 vs 같이 여행 중 하나를 고르고, 실제 장면과 조건 변화로 선택의 이유를 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、一人旅 vs 誰かとの旅行のどちらかを選び、具体的な場面や条件の変化をもとに選んだ理由をじっくり話してみましょう。
+- `goal.ko` · KO: 혼자 여행 vs 같이 여행 중 하나를 고르고, 그 이유를 이야기해 볼게요.
+- `goal.ja` · JA: 一人旅 vs 誰かとの旅行のどちらかを選び、選んだ理由を話してみましょう。
 - `axis.1.ko` · KO: 지금 더 끌리는 쪽을 골라요.
 - `axis.1.ja` · JA: 今いちばん引かれるほうを選びます。
 - `axis.2.ko` · KO: 실제 생활 장면으로 이유를 설명해요.
@@ -1740,7 +1740,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/06-solo-or-group-travel/lesson.html`
-- sha256: `d7c7aaa331edb18f04bcb05434b362c3b6aa48ce883bb0981a90afec388204b3`
+- sha256: `2b19c6a8c404ccc8bd7df7c2dc4074319453579b0fe1d265442af127614187b0`
 - source kind: `article`
 
 #### `metadata`
@@ -1752,8 +1752,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 혼자 vs 같이
-- `goal.ko` · KO: 오늘은 혼자 여행 vs 같이 여행 중 하나를 고르고, 실제 장면과 조건 변화로 이유를 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、一人旅 vs 誰かとの旅行のどちらかを選び、具体的な場面や条件の変化をもとに理由を話してみましょう。
+- `goal.ko` · KO: 혼자 여행 vs 같이 여행 중 하나를 고르고, 그 이유를 이야기해 볼게요.
+- `goal.ja` · JA: 一人旅 vs 誰かとの旅行のどちらかを選び、理由を話してみましょう。
 - `axis.1.ko` · KO: 지금 더 끌리는 쪽을 골라요.
 - `axis.1.ja` · JA: 今いちばん引かれるほうを選びます。
 - `axis.2.ko` · KO: 실제 생활 장면으로 이유를 설명해요.
@@ -1898,7 +1898,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/07-city-or-countryside/lesson.html`
-- sha256: `c8c39884c8548a0af609942cda10745cd61d14c6381d927f22f4aefbe7e358bd`
+- sha256: `d7143d23673abbf1f9d45d9af90b10c5c3f192086f9d1c379b28c8d360662c3b`
 - source kind: `article`
 
 #### `metadata`
@@ -1910,8 +1910,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 도시 vs 시골
-- `goal.ko` · KO: 오늘은 도시 생활 vs 시골 생활 중 하나를 고르고, 실제 장면과 조건 변화로 선택의 이유를 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、都会暮らし vs 田舎暮らしのどちらかを選び、具体的な場面や条件の変化をもとに選んだ理由をじっくり話してみましょう。
+- `goal.ko` · KO: 도시 생활 vs 시골 생활 중 하나를 고르고, 그 이유를 이야기해 볼게요.
+- `goal.ja` · JA: 都会暮らし vs 田舎暮らしのどちらかを選び、選んだ理由を話してみましょう。
 - `axis.1.ko` · KO: 지금 더 끌리는 쪽을 골라요.
 - `axis.1.ja` · JA: 今いちばん引かれるほうを選びます。
 - `axis.2.ko` · KO: 실제 생활 장면으로 이유를 설명해요.
@@ -2054,7 +2054,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/07-city-or-countryside/lesson.html`
-- sha256: `fe492f7831d58cc99fde41d0301ae10b0745fac89964525c5d54689d27501b41`
+- sha256: `1af41212bf237cfc1bef0c657f022b087c55708150b7b4cfe77d864bc0b9bb6c`
 - source kind: `article`
 
 #### `metadata`
@@ -2066,8 +2066,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 도시 vs 시골
-- `goal.ko` · KO: 오늘은 도시 생활 vs 시골 생활 중 하나를 고르고, 실제 장면과 조건 변화로 이유를 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、都会暮らし vs 田舎暮らしのどちらかを選び、具体的な場面や条件の変化をもとに理由を話してみましょう。
+- `goal.ko` · KO: 도시 생활 vs 시골 생활 중 하나를 고르고, 그 이유를 이야기해 볼게요.
+- `goal.ja` · JA: 都会暮らし vs 田舎暮らしのどちらかを選び、理由を話してみましょう。
 - `axis.1.ko` · KO: 지금 더 끌리는 쪽을 골라요.
 - `axis.1.ja` · JA: 今いちばん引かれるほうを選びます。
 - `axis.2.ko` · KO: 실제 생활 장면으로 이유를 설명해요.
@@ -2212,7 +2212,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/08-no-internet-or-no-air-conditioning/lesson.html`
-- sha256: `5c37275bf9712dfdcfb4a7b3d54a1fd41457f8adcd6c6ac66f8487881a7d0995`
+- sha256: `99ade5bc14e4609791b52a180520dfce7703566a389bd5cf93a420a0c56d86f9`
 - source kind: `article`
 
 #### `metadata`
@@ -2224,8 +2224,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 인터넷 vs 냉방
-- `goal.ko` · KO: 오늘은 인터넷 없이 vs 에어컨 없이 중 하나를 고르고, 실제 장면과 조건 변화로 선택의 이유를 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、インターネットなし vs エアコンなしのどちらかを選び、具体的な場面や条件の変化をもとに選んだ理由をじっくり話してみましょう。
+- `goal.ko` · KO: 인터넷 없이 vs 에어컨 없이 중 하나를 고르고, 그 이유를 이야기해 볼게요.
+- `goal.ja` · JA: インターネットなし vs エアコンなしのどちらかを選び、選んだ理由を話してみましょう。
 - `axis.1.ko` · KO: 지금 더 끌리는 쪽을 골라요.
 - `axis.1.ja` · JA: 今いちばん引かれるほうを選びます。
 - `axis.2.ko` · KO: 실제 생활 장면으로 이유를 설명해요.
@@ -2375,7 +2375,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/08-no-internet-or-no-air-conditioning/lesson.html`
-- sha256: `3518f025f0e3b5bce78164aa30d3ba9c226e0bfbf7a86a8c92e527edadb921b6`
+- sha256: `c9c2269279b1eec3b5f13a92bdf9f284c0ea86dab47df2f5af13ff4dbdf904f7`
 - source kind: `article`
 
 #### `metadata`
@@ -2387,8 +2387,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 인터넷 vs 냉방
-- `goal.ko` · KO: 오늘은 인터넷 없이 vs 에어컨 없이 중 하나를 고르고, 실제 장면과 조건 변화로 이유를 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、インターネットなし vs エアコンなしのどちらかを選び、具体的な場面や条件の変化をもとに理由を話してみましょう。
+- `goal.ko` · KO: 인터넷 없이 vs 에어컨 없이 중 하나를 고르고, 그 이유를 이야기해 볼게요.
+- `goal.ja` · JA: インターネットなし vs エアコンなしのどちらかを選び、理由を話してみましょう。
 - `axis.1.ko` · KO: 지금 더 끌리는 쪽을 골라요.
 - `axis.1.ja` · JA: 今いちばん引かれるほうを選びます。
 - `axis.2.ko` · KO: 실제 생활 장면으로 이유를 설명해요.
@@ -2540,7 +2540,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/09-work-life-balance-or-high-salary/lesson.html`
-- sha256: `0733d4bb1422dd6512fcaea382c7609d70f3d0896fa7d86f26a446a454ff111a`
+- sha256: `0c47ce18450e7aa8ef15cc371fd6a2125d71f1108c7a78dfc8aa65b8bfbd0790`
 - source kind: `article`
 
 #### `metadata`
@@ -2552,8 +2552,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 균형 vs 수입
-- `goal.ko` · KO: 오늘은 워라밸 vs 높은 월급 중 하나를 고르고, 실제 장면과 조건 변화로 선택의 이유를 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、ワークライフバランス vs 高収入のどちらかを選び、具体的な場面や条件の変化をもとに選んだ理由をじっくり話してみましょう。
+- `goal.ko` · KO: 워라밸 vs 높은 월급 중 하나를 고르고, 그 이유를 이야기해 볼게요.
+- `goal.ja` · JA: ワークライフバランス vs 高収入のどちらかを選び、選んだ理由を話してみましょう。
 - `axis.1.ko` · KO: 지금 더 끌리는 쪽을 골라요.
 - `axis.1.ja` · JA: 今いちばん引かれるほうを選びます。
 - `axis.2.ko` · KO: 실제 생활 장면으로 이유를 설명해요.
@@ -2703,7 +2703,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/09-work-life-balance-or-high-salary/lesson.html`
-- sha256: `d06b304316458c77a5eff653d0f3b31b84aac4da8ea15d815ce379e0242fa665`
+- sha256: `13c47b6e9311b5743c8a116f6d0753e72ef7772826f08dc363fc58728f2b6bc6`
 - source kind: `article`
 
 #### `metadata`
@@ -2715,8 +2715,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 균형 vs 수입
-- `goal.ko` · KO: 오늘은 워라밸 vs 높은 월급 중 하나를 고르고, 실제 장면과 조건 변화로 이유를 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、ワークライフバランス vs 高収入のどちらかを選び、具体的な場面や条件の変化をもとに理由を話してみましょう。
+- `goal.ko` · KO: 워라밸 vs 높은 월급 중 하나를 고르고, 그 이유를 이야기해 볼게요.
+- `goal.ja` · JA: ワークライフバランス vs 高収入のどちらかを選び、理由を話してみましょう。
 - `axis.1.ko` · KO: 지금 더 끌리는 쪽을 골라요.
 - `axis.1.ja` · JA: 今いちばん引かれるほうを選びます。
 - `axis.2.ko` · KO: 실제 생활 장면으로 이유를 설명해요.
@@ -2868,7 +2868,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/10-remote-work-or-office/lesson.html`
-- sha256: `715d646bfa8cdeca42deab44b5594c59ffe9d011e1abc35de1d297422bf3eb56`
+- sha256: `5283746b77e99effcef42a4d8f304f79f7d1729911d89317dcc84063de7e611f`
 - source kind: `article`
 
 #### `metadata`
@@ -2880,8 +2880,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 재택 vs 출근
-- `goal.ko` · KO: 오늘은 재택근무 vs 출근 중 하나를 고르고, 실제 장면과 조건 변화로 선택의 이유를 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、在宅勤務 vs 出勤のどちらかを選び、具体的な場面や条件の変化をもとに選んだ理由をじっくり話してみましょう。
+- `goal.ko` · KO: 재택근무 vs 출근 중 하나를 고르고, 그 이유를 이야기해 볼게요.
+- `goal.ja` · JA: 在宅勤務 vs 出勤のどちらかを選び、選んだ理由を話してみましょう。
 - `axis.1.ko` · KO: 지금 더 끌리는 쪽을 골라요.
 - `axis.1.ja` · JA: 今いちばん引かれるほうを選びます。
 - `axis.2.ko` · KO: 실제 생활 장면으로 이유를 설명해요.
@@ -3031,7 +3031,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/10-remote-work-or-office/lesson.html`
-- sha256: `277e13cc4744f6d300f283de1124a18838e31f9ed3ee3f5400ab59078fd0a7b1`
+- sha256: `fc3df4c324952dcb5578ed1da640f62fae65e943c7f04ea148d50fea08b7fefe`
 - source kind: `article`
 
 #### `metadata`
@@ -3043,8 +3043,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 재택 vs 출근
-- `goal.ko` · KO: 오늘은 재택근무 vs 출근 중 하나를 고르고, 실제 장면과 조건 변화로 이유를 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、在宅勤務 vs 出勤のどちらかを選び、具体的な場面や条件の変化をもとに理由を話してみましょう。
+- `goal.ko` · KO: 재택근무 vs 출근 중 하나를 고르고, 그 이유를 이야기해 볼게요.
+- `goal.ja` · JA: 在宅勤務 vs 出勤のどちらかを選び、理由を話してみましょう。
 - `axis.1.ko` · KO: 지금 더 끌리는 쪽을 골라요.
 - `axis.1.ja` · JA: 今いちばん引かれるほうを選びます。
 - `axis.2.ko` · KO: 실제 생활 장면으로 이유를 설명해요.
@@ -3196,7 +3196,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/11-cafe-or-home-study/lesson.html`
-- sha256: `560f596df199ded2e75581e6684512fc86ba401a3b4d63625edb923399cccc0c`
+- sha256: `af5bdacbdb8a36a194b2d06adff9e77d372f35b9cdc9cc1be1350761ecc8a6d8`
 - source kind: `article`
 
 #### `metadata`
@@ -3208,8 +3208,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 카페 vs 집
-- `goal.ko` · KO: 오늘은 카페 공부 vs 집 공부 중 하나를 고르고, 실제 장면과 조건 변화로 선택의 이유를 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、カフェで勉強 vs 家で勉強のどちらかを選び、具体的な場面や条件の変化をもとに選んだ理由をじっくり話してみましょう。
+- `goal.ko` · KO: 카페 공부 vs 집 공부 중 하나를 고르고, 그 이유를 이야기해 볼게요.
+- `goal.ja` · JA: カフェで勉強 vs 家で勉強のどちらかを選び、選んだ理由を話してみましょう。
 - `axis.1.ko` · KO: 지금 더 끌리는 쪽을 골라요.
 - `axis.1.ja` · JA: 今いちばん引かれるほうを選びます。
 - `axis.2.ko` · KO: 실제 생활 장면으로 이유를 설명해요.
@@ -3352,7 +3352,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/11-cafe-or-home-study/lesson.html`
-- sha256: `59d3bd221ba36be2f788dda675d4058c2b98cc43044329f21c64a1fdbd0597cb`
+- sha256: `c66687a73c7f5b6f5a380600a0f0a538191c156fc5053bc5955c838072c79f0f`
 - source kind: `article`
 
 #### `metadata`
@@ -3364,8 +3364,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 카페 vs 집
-- `goal.ko` · KO: 오늘은 카페 공부 vs 집 공부 중 하나를 고르고, 실제 장면과 조건 변화로 이유를 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、カフェで勉強 vs 家で勉強のどちらかを選び、具体的な場面や条件の変化をもとに理由を話してみましょう。
+- `goal.ko` · KO: 카페 공부 vs 집 공부 중 하나를 고르고, 그 이유를 이야기해 볼게요.
+- `goal.ja` · JA: カフェで勉強 vs 家で勉強のどちらかを選び、理由を話してみましょう。
 - `axis.1.ko` · KO: 지금 더 끌리는 쪽을 골라요.
 - `axis.1.ja` · JA: 今いちばん引かれるほうを選びます。
 - `axis.2.ko` · KO: 실제 생활 장면으로 이유를 설명해요.
@@ -3510,7 +3510,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/12-online-or-in-store-shopping/lesson.html`
-- sha256: `7fb6dcae0edc9d87e94f1d7069b0c74a4f0672819a2f452f7fe26703f8d794d3`
+- sha256: `d073e7b9a69f43b4393ba9709020b1094f4e9375a2db336d3f8ab927c5e027e3`
 - source kind: `article`
 
 #### `metadata`
@@ -3522,8 +3522,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 온라인 vs 매장
-- `goal.ko` · KO: 오늘은 인터넷 쇼핑 vs 매장 쇼핑 중 하나를 고르고, 실제 장면과 조건 변화로 선택의 이유를 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、ネットショッピング vs 店頭ショッピングのどちらかを選び、具体的な場面や条件の変化をもとに選んだ理由をじっくり話してみましょう。
+- `goal.ko` · KO: 인터넷 쇼핑 vs 매장 쇼핑 중 하나를 고르고, 그 이유를 이야기해 볼게요.
+- `goal.ja` · JA: ネットショッピング vs 店頭ショッピングのどちらかを選び、選んだ理由を話してみましょう。
 - `axis.1.ko` · KO: 지금 더 끌리는 쪽을 골라요.
 - `axis.1.ja` · JA: 今いちばん引かれるほうを選びます。
 - `axis.2.ko` · KO: 실제 생활 장면으로 이유를 설명해요.
@@ -3666,7 +3666,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/12-online-or-in-store-shopping/lesson.html`
-- sha256: `a704e26a2526723daff0e9074a9f95fbdeb1607f583d56ab7d6ceba4d6b8b826`
+- sha256: `2848ebbd399904333b8c08d84fe5c2dc702f224ceb5c6a0868dd59776877fc66`
 - source kind: `article`
 
 #### `metadata`
@@ -3678,8 +3678,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 온라인 vs 매장
-- `goal.ko` · KO: 오늘은 인터넷 쇼핑 vs 매장 쇼핑 중 하나를 고르고, 실제 장면과 조건 변화로 이유를 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、ネットショッピング vs 店頭ショッピングのどちらかを選び、具体的な場面や条件の変化をもとに理由を話してみましょう。
+- `goal.ko` · KO: 인터넷 쇼핑 vs 매장 쇼핑 중 하나를 고르고, 그 이유를 이야기해 볼게요.
+- `goal.ja` · JA: ネットショッピング vs 店頭ショッピングのどちらかを選び、理由を話してみましょう。
 - `axis.1.ko` · KO: 지금 더 끌리는 쪽을 골라요.
 - `axis.1.ja` · JA: 今いちばん引かれるほうを選びます。
 - `axis.2.ko` · KO: 실제 생활 장면으로 이유를 설명해요.
@@ -3824,7 +3824,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/13-never-forget-or-choose-what-to-forget/lesson.html`
-- sha256: `2624160dfc7bdc4426bc3a4b60b33497f27bcb9c2cebe213ab324e8a7cb5de5d`
+- sha256: `38b1a3a86954b80b648a1adc38bdc01c1cd9d55ae24c22724f39400b98b1c1df`
 - source kind: `article`
 
 #### `metadata`
@@ -3836,8 +3836,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 기억 vs 망각
-- `goal.ko` · KO: 오늘은 모든 일을 선명하게 기억하기 vs 힘든 일을 빨리 잊기 중 하나를 고르고, 실제 장면과 조건 변화로 선택의 이유를 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、すべてを鮮明に覚える vs つらいことを早く忘れるのどちらかを選び、具体的な場面や条件の変化をもとに選んだ理由をじっくり話してみましょう。
+- `goal.ko` · KO: 모든 일을 선명하게 기억하기 vs 힘든 일을 빨리 잊기 중 하나를 고르고, 그 이유를 이야기해 볼게요.
+- `goal.ja` · JA: すべてを鮮明に覚える vs つらいことを早く忘れるのどちらかを選び、選んだ理由を話してみましょう。
 - `axis.1.ko` · KO: 지금 더 끌리는 쪽을 골라요.
 - `axis.1.ja` · JA: 今いちばん引かれるほうを選びます。
 - `axis.2.ko` · KO: 실제 생활 장면으로 이유를 설명해요.
@@ -3987,7 +3987,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/13-never-forget-or-choose-what-to-forget/lesson.html`
-- sha256: `a3734ad7685f12159dc029b458d3686bc30aa3984c8286a94d9201662e6333e8`
+- sha256: `19548a323fe4c16339ca30446956060c370cbd4bbfca334351d953aadc5b1dd1`
 - source kind: `article`
 
 #### `metadata`
@@ -3999,8 +3999,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 기억 vs 망각
-- `goal.ko` · KO: 오늘은 모든 일을 선명하게 기억하기 vs 힘든 일을 빨리 잊기 중 하나를 고르고, 실제 장면과 조건 변화로 이유를 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、すべてを鮮明に覚える vs つらいことを早く忘れるのどちらかを選び、具体的な場面や条件の変化をもとに理由を話してみましょう。
+- `goal.ko` · KO: 모든 일을 선명하게 기억하기 vs 힘든 일을 빨리 잊기 중 하나를 고르고, 그 이유를 이야기해 볼게요.
+- `goal.ja` · JA: すべてを鮮明に覚える vs つらいことを早く忘れるのどちらかを選び、理由を話してみましょう。
 - `axis.1.ko` · KO: 지금 더 끌리는 쪽을 골라요.
 - `axis.1.ja` · JA: 今いちばん引かれるほうを選びます。
 - `axis.2.ko` · KO: 실제 생활 장면으로 이유를 설명해요.
@@ -4152,7 +4152,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/14-hidden-rich-or-respected-ordinary/lesson.html`
-- sha256: `8f0c4302950fc19f608100ffa79a42268c8a9d28c019949d148acc31510048ed`
+- sha256: `5e8839b127739319d6fdb103ec644bdf0e5813b36cfa6192028309e7e41db89c`
 - source kind: `article`
 
 #### `metadata`
@@ -4164,8 +4164,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 부 vs 존경
-- `goal.ko` · KO: 오늘은 숨은 부자 vs 존경받는 보통 사람 중 하나를 고르고, 말하고 싶은 범위에서 실제 장면과 조건 변화로 선택의 이유를 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、人知れず裕福 vs 尊敬される普通の人のどちらかを選び、話したい範囲で、具体的な場面や条件の変化をもとに選んだ理由をじっくり話してみましょう。
+- `goal.ko` · KO: 숨은 부자 vs 존경받는 보통 사람 중 하나를 고르고, 그 이유를 편한 범위에서 이야기해 볼게요.
+- `goal.ja` · JA: 人知れず裕福 vs 尊敬される普通の人のどちらかを選び、話せる範囲で、選んだ理由を話してみましょう。
 - `axis.1.ko` · KO: 지금 더 끌리는 쪽을 골라요.
 - `axis.1.ja` · JA: 今いちばん引かれるほうを選びます。
 - `axis.2.ko` · KO: 실제 생활 장면으로 이유를 설명해요.
@@ -4315,7 +4315,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/14-hidden-rich-or-respected-ordinary/lesson.html`
-- sha256: `d70e6852c40ba05f7f5f860c1955f7e48bf2babaef48ac4bd0b35351c36d6f0f`
+- sha256: `7e0552e6af5b715022314b06096585abf58ed8f0a4dcb8f4740f50500a051f5d`
 - source kind: `article`
 
 #### `metadata`
@@ -4327,8 +4327,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 부 vs 존경
-- `goal.ko` · KO: 오늘은 숨은 부자 vs 존경받는 보통 사람 중 하나를 고르고, 말하고 싶은 범위에서 실제 장면과 조건 변화로 이유를 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、人知れず裕福 vs 尊敬される普通の人のどちらかを選び、話したい範囲で、具体的な場面や条件の変化をもとに理由を話してみましょう。
+- `goal.ko` · KO: 숨은 부자 vs 존경받는 보통 사람 중 하나를 고르고, 그 이유를 편한 범위에서 이야기해 볼게요.
+- `goal.ja` · JA: 人知れず裕福 vs 尊敬される普通の人のどちらかを選び、話せる範囲で、理由を話してみましょう。
 - `axis.1.ko` · KO: 지금 더 끌리는 쪽을 골라요.
 - `axis.1.ja` · JA: 今いちばん引かれるほうを選びます。
 - `axis.2.ko` · KO: 실제 생활 장면으로 이유를 설명해요.
