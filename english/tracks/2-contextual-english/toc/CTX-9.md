@@ -22,10 +22,10 @@
 
 ### Pattern 1
 
-- **Model:** What would you recommend?
-- **Frame:** `What would you recommend?`
+- **Model:** I'm allergic to nuts. What would you recommend?
+- **Frame:** `I'm allergic to ___. What would you recommend?`
 - **Partner:** Server: The fish is popular today.
-- **Core ownership:** Core 40
+- **Treatment:** teach as a bounded chunk; do not expand its grammar here
 
 ### Pattern 2
 
@@ -36,12 +36,12 @@
 
 ## Supporting content
 
-- **Expressions:** `I'm allergic to` · `contains dairy`
+- **Expressions:** `nut-free` · `contains dairy`
 
 ## Sequence guardrails
 
 - **Assumed productive floor:** Core 1–59.
-- **Pattern owners used here:** Core 13, Core 40.
+- **Pattern owners used here:** Core 13.
 - A pattern more than two Core units above the floor must remain marked `chunk`; do not teach its grammar in this lesson.
 - Partner reactions and `Understand` are receptive; they do not add production targets.
 - This lesson is standalone. Do not invent plot history, callbacks, or a next-lesson teaser.

@@ -37,7 +37,7 @@
 
 - **Already learned:** Core 1–33.
 - **Not yet:** Core 35–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-31 We watched a movie last night · CORE-32 We went out for dinner · CORE-33 Did you have a good time?
+- **Most recent available forms:** CORE-31 I went out last night · CORE-32 We went out for dinner · CORE-33 Did you have a good time?
 - **Nearest protected forms:** CORE-35 First we ate, then we walked around · CORE-36 I was cooking when you called · CORE-37 I'm going to look for a new job
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 

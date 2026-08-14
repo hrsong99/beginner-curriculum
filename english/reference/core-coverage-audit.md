@@ -1,9 +1,26 @@
 # Core Coverage and Disposition Audit
 
-**Status:** targeted recommendations applied; affected rows require native re-review
+**Status:** targeted recommendations and 2026-08-14 naturalness follow-up applied; affected rows require native re-review
 **Audited:** 2026-08-13
 **Applied:** 2026-08-13
 **Scope:** 122 Core lessons; stable IDs preserved
+
+## 2026-08-14 naturalness and transfer follow-up
+
+A learner-view audit then checked whether each displayed target was both a reusable frame and a
+sentence a proficient speaker would plausibly say. It corrected three recurring problems without
+renumbering the curriculum:
+
+- fixed replies or questions masquerading as productive slot patterns were moved to Expressions or
+  replaced with a second reusable learner move;
+- frames such as bare `I don't ___`, impossible `___er`, and template text shown as a model were
+  replaced with bounded, meaningful slots and complete natural examples;
+- lessons whose two targets did unrelated jobs were narrowed to one coherent can-do, while advanced
+  stance and repair lessons received actual variable frames rather than memorised formulas.
+
+The main affected Core rows are 8–10, 14, 21, 23, 31, 38, 41–42, 47, 51, 63, 65, 74, 78, 87, 92,
+95–96, 105, 107–108, 112, 114 and 117–121. Their stable IDs remain valid, but their old catalog
+snapshots do not.
 
 ## Verdict
 

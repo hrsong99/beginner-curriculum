@@ -12,7 +12,7 @@
 
 ## Outcome
 
-- **Can do:** ask whether something is allowed, and respond.
+- **Can do:** ask permission in two common ways.
 - **Unit:** 4 · Ask for things
 
 ## Required production
@@ -24,12 +24,12 @@
 
 ### Pattern 2
 
-- **Model:** Sure, go ahead.
-- **Frame:** `Sure, ___.`
+- **Model:** Is it OK if I take a photo?
+- **Frame:** `Is it OK if I ___?`
 
 ## Supporting content
 
-- **Expressions:** `Of course.` · `I'm afraid not.`
+- **Expressions:** `Sure, go ahead.` · `I'm afraid not.`
 - **Grammar:** `Can I` asks about **me**; `Could you` asks about **you**. Different jobs.
 - **Japanese-L1 risk:** both are `〜てもいいですか` territory, so the two get confused. Contrast them directly.
 

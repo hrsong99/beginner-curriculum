@@ -38,7 +38,7 @@
 - **Already learned:** Core 1–44.
 - **Not yet:** Core 46–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-42 Don't you like it? · CORE-43 It's a small, quiet café · CORE-44 It's too small
-- **Nearest protected forms:** CORE-46 It's the best one here · CORE-47 I'm bored and it's boring · CORE-48 Have you ever been to Kyoto?
+- **Nearest protected forms:** CORE-46 It's the best one here · CORE-47 I was bored during the movie · CORE-48 Have you ever been to Kyoto?
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
 ## Neighbouring items

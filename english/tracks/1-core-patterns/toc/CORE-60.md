@@ -38,7 +38,7 @@
 - **Already learned:** Core 1–59.
 - **Not yet:** Core 61–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-57 If it rains, I'll stay in · CORE-58 I'll call you when I get there · CORE-59 I went there to see a client
-- **Nearest protected forms:** CORE-61 Do you mind if I sit here? · CORE-62 Do you know where it is? · CORE-63 Coffee is expensive here
+- **Nearest protected forms:** CORE-61 Do you mind if I sit here? · CORE-62 Do you know where it is? · CORE-63 I generally prefer coffee
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
 ## Neighbouring items

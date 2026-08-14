@@ -1,6 +1,6 @@
 # Contextual English semantic audit
 
-**Audit date:** 2026-08-13
+**Audit date:** 2026-08-13; naturalness and ownership follow-up applied 2026-08-14
 **Scope:** all 60 Travel and Business lesson specifications
 **Source of truth:** [`../tracks/2-contextual-english/table-of-contents.md`](../tracks/2-contextual-english/table-of-contents.md)
 
@@ -122,3 +122,10 @@ The audit did require substantive corrections:
 
 Future edits must rerun this audit logic. A sentence is not approved merely because it is
 grammatical, and an important situation does not rescue two unrelated target patterns.
+
+### 2026-08-14 follow-up
+
+The learner-view follow-up tightened CTX-9, 10, 11, 13, 17, 18, 21, 23, 25, 28, 36, 38 and 52.
+The changes removed false Core ownership, bounded fixed service language as chunks, repaired
+translated-sounding wording, and constrained slots so that changing them cannot silently break the
+scene. The 60-lesson order and all stable IDs remain unchanged.

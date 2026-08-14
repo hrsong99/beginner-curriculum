@@ -38,7 +38,7 @@
 - **Already learned:** Core 1–60.
 - **Not yet:** Core 62–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-58 I'll call you when I get there · CORE-59 I went there to see a client · CORE-60 Would you mind opening the window?
-- **Nearest protected forms:** CORE-62 Do you know where it is? · CORE-63 Coffee is expensive here · CORE-64 It won't turn on
+- **Nearest protected forms:** CORE-62 Do you know where it is? · CORE-63 I generally prefer coffee · CORE-64 It won't turn on
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
 ## Neighbouring items

@@ -12,7 +12,7 @@
 
 ## Outcome
 
-- **Can do:** order or count more than one of something.
+- **Can do:** order a counted item and correct the quantity if needed.
 - **Unit:** 2 · Say what is around you
 
 ## Required production
@@ -24,8 +24,8 @@
 
 ### Pattern 2
 
-- **Model:** Just one, thanks.
-- **Frame:** `Just one ___, thanks.`
+- **Model:** Actually, just one coffee, thanks.
+- **Frame:** `Actually, just one ___, thanks.`
 
 ## Supporting content
 

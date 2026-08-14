@@ -143,17 +143,17 @@ the learner travel successfully.
 
 *場面: at a restaurant, 私 cannot understand the menu and must avoid nuts.*
 *Can-do: get a recommendation that meets a dietary need.*
-- 私: "What would you recommend?" — `What would you recommend?` **(Core 40)**
+- 私: "I'm allergic to nuts. What would you recommend?" — `I'm allergic to ___. What would you recommend?` `chunk`
   → Server: "The fish is popular today."
 - 私: "Does it contain any nuts?" — `Does it contain any ___?` **(Core 13)**
   → Server: "No nuts, but the sauce contains dairy."
-- *Expressions:* `I'm allergic to` · `contains dairy`
+- *Expressions:* `nut-free` · `contains dairy`
 
 **10. Correct an order politely**
 
 *場面: at a café, 私 receives the wrong drink and needs it replaced.*
 *Can-do: identify an order error and ask for the correct item.*
-- 私: "Sorry, I ordered the iced coffee, not the hot one." — `I ordered ___, not ___.` **(Core 31)**
+- 私: "Sorry, I ordered the iced coffee, not the hot one." — `I ordered ___, not ___.` `chunk`
   → Server: "I'm sorry—I picked up the wrong ticket."
 - 私: "Could I have the iced one instead?" — `Could I have ___ instead?` **(Core 60)**
   → Server: "Absolutely. It'll just take a minute."
@@ -163,7 +163,7 @@ the learner travel successfully.
 
 *場面: at a shop, a travel adapter bought yesterday does not work.*
 *Can-do: explain a fault and request an exchange or refund.*
-- 私: "I bought this yesterday, but it doesn't work." — `I bought ___, but ___.` **(Core 31, Core 56)**
+- 私: "I bought this yesterday, but it doesn't work." — `I bought ___, but ___.` **(Core 32, Core 56)**
   → Clerk: "Do you have the receipt?"
 - 私: "Could I exchange it for another one?" — `Could I exchange ___ for ___?` **(Core 60)**
   → Clerk: "Yes. Let me test the replacement first."
@@ -187,7 +187,7 @@ the learner travel successfully.
 *Can-do: explain the disruption and obtain a replacement itinerary.*
 - 私: "Our first flight was delayed, so we missed our connection." — `___ was delayed, so we missed ___.` **(Core 54)**
   → Agent: "Let me see what else is available."
-- 私: "What's the earliest flight you can put us on?" — `What's the earliest ___ you can ___?` **(Core 46)**
+- 私: "What's the earliest flight you can put us on?" — `What's the earliest ___ you can put us on?` **(Core 46)** `chunk`
   → Agent: "There's one at 6:40 with two seats left."
 - *Expressions:* `connecting flight` · `rebook us`
 
@@ -225,7 +225,7 @@ the learner travel successfully.
 
 *場面: at hotel checkout, the bill includes minibar items 私 did not use.*
 *Can-do: question a charge and get the bill corrected.*
-- 私: "I don't think this minibar charge is ours." — `I don't think ___ is ours.` **(Core 92)** `chunk`
+- 私: "I don't think this minibar charge is ours." — `I don't think ___ is ours.` `chunk`
   → Receptionist: "It shows two drinks on Tuesday."
 - 私: "Could you check that again? We weren't here on Tuesday." — `Could you check ___ again?` **(Core 24)**
   → Receptionist: "You're right. I'll remove it."
@@ -235,7 +235,7 @@ the learner travel successfully.
 
 *場面: at a pharmacy, 私 has worsening symptoms and needs to know whether to see a doctor.*
 *Can-do: describe the problem and ask what level of help is appropriate.*
-- 私: "I've had a fever and a cough for three days." — `I've had ___ for ___.` **(Core 51)**
+- 私: "I've had a fever and a cough for three days." — `I've had ___ for ___.` **(Core 51)** `chunk`
   → Pharmacist: "Any trouble breathing?"
 - 私: "Do you think I should see a doctor?" — `Do you think I should ___?` **(Core 40)**
   → Pharmacist: "Yes. There's a clinic two streets away."
@@ -267,7 +267,7 @@ the learner travel successfully.
 
 *場面: after a tour, 私 wants to invite two travellers to dinner without pressuring them.*
 *Can-do: propose a shared plan and leave room for refusal.*
-- 私: "We're thinking of getting dinner nearby." — `We're thinking of ___ing ___.` `chunk`
+- 私: "We're thinking of getting dinner nearby." — `We're thinking of getting ___ nearby.` `chunk`
   → Traveller: "That sounds good. What time?"
 - 私: "You're welcome to join us if you're free." — `You're welcome to ___ if ___.` **(Core 57)**
   → Traveller: "Thanks—we'd love to."
@@ -287,7 +287,7 @@ the learner travel successfully.
 
 *場面: a host thinks 私 disliked dinner because 私 left food on the plate.*
 *Can-do: repair an unintended social message without blaming the other person.*
-- 私: "I'm sorry—that's not what I meant at all." — `That's not what I meant.` **(Core 96)**
+- 私: "I'm sorry—I meant that I was full, not that I disliked it." — `I meant ___, not ___.` **(Core 96)**
   → Host: "Oh. I thought you didn't like it."
 - 私: "I was trying to be polite, but I got it wrong." — `I was trying to ___, but ___.` **(Core 36, 56)**
   → Host: "No harm done. Now I understand."
@@ -311,7 +311,7 @@ the learner travel successfully.
 *Can-do: explain the consequence, state the priority, and seek an alternative.*
 - 私: "What matters most is arriving before tomorrow morning." — `What matters most is ___.` **(Core 103)**
   → Agent: "The direct flights are all full."
-- 私: "Could you check routes through another city?" — `Could you check ___ through ___?` **(Core 24)**
+- 私: "Could you check routes through another city?" — `Could you check routes through ___?` **(Core 24)** `chunk`
   → Agent: "There may be one through Frankfurt."
 - *Expressions:* `earliest possible arrival` · `alternative routing`
 
@@ -339,7 +339,7 @@ the learner travel successfully.
 
 *場面: a booking email includes breakfast, but the hotel system says it does not.*
 *Can-do: reconcile contradictory records and obtain written confirmation.*
-- 私: "The confirmation says breakfast is included, whereas your system says it isn't." — `___ says ___, whereas ___ says ___.` `chunk`
+- 私: "My confirmation says breakfast is included, whereas your system says it isn't." — `My confirmation says ___, whereas your system says ___.` `chunk`
   → Manager: "I can see the discrepancy."
 - 私: "Could you confirm in writing how this will be resolved?" — `Could you confirm in writing ___?` **(Core 60)**
   → Manager: "Yes. I'll email you now and add a note to the booking."
@@ -429,7 +429,7 @@ lesson Business English; each lesson must produce a workplace result.
 
 *場面: one hour before a client demo, 私 cannot access the shared environment.*
 *Can-do: report the failure with enough diagnostic detail for someone to act.*
-- 私: "I can't access the demo environment." — `I can't access ___.` **(Core 14)**
+- 私: "I can't access the demo environment." — `I can't access ___.` **(Core 18)**
   → Engineer: "Was it working earlier?"
 - 私: "It was working this morning, but now I get a permission error." — `It was working ___, but now ___.` **(Core 36, 56)**
   → Engineer: "It sounds like your access has expired. Give me five minutes."
@@ -453,7 +453,7 @@ lesson Business English; each lesson must produce a workplace result.
 *Can-do: expose ambiguous ownership and assign the next action.*
 - 私: "Just to clarify, who's contacting the supplier?" — `Just to clarify, who's ___ing ___?` **(Core 83)** `chunk`
   → Colleague: "I thought your team was doing it."
-- 私: "I'm happy to take it if no one else is assigned." — `I'm happy to ___ if ___.` **(Core 57)**
+- 私: "I'm happy to contact them if no one else is doing it." — `I'm happy to ___ if no one else is doing it.` **(Core 57)** `chunk`
   → Colleague: "Thanks. Please copy me."
 - *Expressions:* `action owner` · `copy you in`
 
@@ -595,7 +595,7 @@ lesson Business English; each lesson must produce a workplace result.
 
 *場面: decision-makers want lower cost and faster delivery, but achieving both would reduce quality.*
 *Can-do: make the trade-off explicit and ask which priority governs.*
-- 私: "The faster we move, the less time we have for testing." — `The ___er we ___, the less ___.` **(Core 100)**
+- 私: "The faster we move, the less time we'll have for testing." — `The faster we move, the less time we'll have for ___.` **(Core 105)** `chunk`
   → Director: "So you're saying speed increases risk."
 - 私: "The question is whether cost or reliability matters more." — `The question is whether ___ or ___ matters more.` **(Core 101)**
   → Director: "Reliability. Adjust the plan accordingly."

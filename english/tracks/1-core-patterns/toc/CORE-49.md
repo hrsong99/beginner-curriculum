@@ -37,8 +37,8 @@
 
 - **Already learned:** Core 1–48.
 - **Not yet:** Core 50–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-46 It's the best one here · CORE-47 I'm bored and it's boring · CORE-48 Have you ever been to Kyoto?
-- **Nearest protected forms:** CORE-50 I went there last year · CORE-51 I've lived here for five years · CORE-52 I've been working all morning
+- **Most recent available forms:** CORE-46 It's the best one here · CORE-47 I was bored during the movie · CORE-48 Have you ever been to Kyoto?
+- **Nearest protected forms:** CORE-50 I went there last year · CORE-51 How long have you been here? · CORE-52 I've been working all morning
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
 ## Neighbouring items

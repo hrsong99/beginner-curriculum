@@ -24,7 +24,7 @@
 
 ### Pattern 2
 
-- **Model:** Coming back to the timeline, ___.
+- **Model:** Coming back to the timeline, we need a firm date.
 - **Frame:** `Coming back to ___, ___.`
 
 ## Supporting content

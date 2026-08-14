@@ -37,13 +37,13 @@
 
 - **Already learned:** Core 1–31.
 - **Not yet:** Core 33–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-29 I'm meeting Sam at six · CORE-30 I was really tired yesterday · CORE-31 We watched a movie last night
+- **Most recent available forms:** CORE-29 I'm meeting Sam at six · CORE-30 I was really tired yesterday · CORE-31 I went out last night
 - **Nearest protected forms:** CORE-33 Did you have a good time? · CORE-34 I didn't sleep well · CORE-35 First we ate, then we walked around
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
 ## Neighbouring items
 
-- **Previous:** CORE-31 · We watched a movie last night
+- **Previous:** CORE-31 · I went out last night
 - **Next:** CORE-33 · Did you have a good time?
 
 ## Authoring inputs — read in order

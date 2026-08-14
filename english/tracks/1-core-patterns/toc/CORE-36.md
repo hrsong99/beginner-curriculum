@@ -38,7 +38,7 @@
 - **Already learned:** Core 1–35.
 - **Not yet:** Core 37–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-33 Did you have a good time? · CORE-34 I didn't sleep well · CORE-35 First we ate, then we walked around
-- **Nearest protected forms:** CORE-37 I'm going to look for a new job · CORE-38 I'll help you · CORE-39 I might be late
+- **Nearest protected forms:** CORE-37 I'm going to look for a new job · CORE-38 Let me help · CORE-39 I might be late
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
 ## Neighbouring items

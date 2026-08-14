@@ -12,7 +12,7 @@
 
 ## Outcome
 
-- **Can do:** distinguish required, optional and forbidden.
+- **Can do:** distinguish what is required from what is optional.
 - **Unit:** 7 · Plans, rules and advice
 
 ## Required production
@@ -37,7 +37,7 @@
 
 - **Already learned:** Core 1–40.
 - **Not yet:** Core 42–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-38 I'll help you · CORE-39 I might be late · CORE-40 You should get some rest
+- **Most recent available forms:** CORE-38 Let me help · CORE-39 I might be late · CORE-40 You should get some rest
 - **Nearest protected forms:** CORE-42 Don't you like it? · CORE-43 It's a small, quiet café · CORE-44 It's too small
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 

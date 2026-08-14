@@ -24,8 +24,8 @@
 
 ### Pattern 2
 
-- **Model:** I'd planned to finish it today.
-- **Frame:** `I'd planned to ___.`
+- **Model:** I'd planned to finish it today, but I ran out of time.
+- **Frame:** `I'd planned to ___, but ___.`
 
 ## Supporting content
 

@@ -24,8 +24,8 @@
 
 ### Pattern 2
 
-- **Model:** I didn't mean it that way.
-- **Frame:** `I didn't mean it that way.`
+- **Model:** I didn't mean to sound rude.
+- **Frame:** `I didn't mean to sound ___.`
 
 ## Supporting content
 
@@ -38,7 +38,7 @@
 - **Already learned:** Core 1–111.
 - **Not yet:** Core 113–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-109 To put it bluntly · CORE-110 I hate to say it, but · CORE-111 Just so you know,
-- **Nearest protected forms:** CORE-113 The underlying issue is · CORE-114 That holds true up to a point · CORE-115 Granted, but that overlooks
+- **Nearest protected forms:** CORE-113 The underlying issue is · CORE-114 That may be true for some people · CORE-115 Granted, but that overlooks
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
 ## Neighbouring items

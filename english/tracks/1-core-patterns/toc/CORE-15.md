@@ -29,7 +29,7 @@
 
 ## Supporting content
 
-- **Expressions:** `I think so` · `as far as I know`
+- **Expressions:** `I think so.` · `I don't know.`
 - **Grammar:** he/she/it adds `-s`. In the question the `-s` moves onto `does`, so the verb is plain again: `Does she **like**`.
 - **Japanese-L1 risk:** no agreement exists in Japanese, so `She work` and `Does she likes` are both predicted — the second more stubbornly, because it looks like the rule being applied.
 

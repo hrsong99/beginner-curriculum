@@ -37,13 +37,13 @@
 
 - **Already learned:** Core 1–114.
 - **Not yet:** Core 116–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-112 That came across as rude · CORE-113 The underlying issue is · CORE-114 That holds true up to a point
-- **Nearest protected forms:** CORE-116 If anything, it's got worse · CORE-117 On balance, I'd say · CORE-118 That's one way of putting it
+- **Most recent available forms:** CORE-112 That came across as rude · CORE-113 The underlying issue is · CORE-114 That may be true for some people
+- **Nearest protected forms:** CORE-116 If anything, it's got worse · CORE-117 On balance, I'd say · CORE-118 You could see it that way
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
 ## Neighbouring items
 
-- **Previous:** CORE-114 · That holds true up to a point
+- **Previous:** CORE-114 · That may be true for some people
 - **Next:** CORE-116 · If anything, it's got worse
 
 ## Authoring inputs — read in order

@@ -3,7 +3,7 @@
 **Status:** curriculum architecture and authoring infrastructure are ready · native catalog review
 is active · further lesson decks are intentionally on hold
 
-**Current as of:** 2026-08-13
+**Current as of:** 2026-08-14
 
 This is an operational plan, not a diary. It states what exists now, what remains, and what
 unblocks what. Git history preserves the implementation chronology; completed work is summarized
@@ -24,8 +24,8 @@ here only when it changes the starting point for future work.
 | Generated author packets | 315 item briefs plus 4 indexes |
 | Review surface | generated 303-item catalog; native review in progress |
 | Core evidence | 122-row generated triage ledger complete; row-level EGP checks remain open |
-| Core audit | targeted revision applied with stable IDs; affected catalog rows require fresh native review |
-| Automated quality | 30 regression tests; all 4 English deck files pass with 0 errors and 0 warnings |
+| Core audit | naturalness, transfer and slot-quality revision applied with stable IDs; affected catalog rows require fresh native review |
+| Automated quality | 38 regression tests; all 4 English deck files pass with 0 errors and 0 warnings |
 | Deployment | not ready: course identity, manifests and external sync path remain open |
 
 The curriculum is no longer waiting for basic architecture or tooling. Its main content risk is
@@ -79,8 +79,10 @@ the owner/product system supplies the final values.
   optional receptive-only `Understand` target. CTX-54 and CTX-58 are the only missing expression
   fields. Stable CTX ids and reviewed pattern language survived the architectural replacement.
 - **Freetalking:** 11 themes and 121 topics with four explicit formats (`story`, `opinion`,
-  `choose`, `両国`), an immediate opening and question ladder. The blueprint defines accessible
-  and full language loads, correction loops and format-specific model pages.
+  `choose`, `両国`), a learner-facing English title, an immediate opening and a question ladder.
+  Titles name a personal experience, concrete angle or natural choice rather than using translated
+  category labels. The blueprint defines accessible and full language loads, correction loops and
+  format-specific model pages.
 - **Pronunciation:** 12 Japanese-L1 contrastive lessons are planned and parsed, but remain
   planning-only.
 - Cross-track Core references were re-derived against the 122-lesson spine and mechanically
@@ -100,7 +102,7 @@ the owner/product system supplies the final values.
 - `new_lesson.py` copies only an approved English shell, retargets stable identity and paths,
   clears inherited vocabulary, refuses overwrite and keeps non-Core tracks behind their pilot gate.
 - The running lexicon classifies new, recycled, assumed-known and receptive-only vocabulary.
-  Core 20 currently owns five new content words. Deck validation enforces declarations, hint-chip
+  Core 20 currently owns two new content words. Deck validation enforces declarations, hint-chip
   coverage and the normal eight-word Core/Contextual ceiling.
 
 ### 3. Generated infrastructure
@@ -115,7 +117,7 @@ the owner/product system supplies the final values.
 - `build_running_lexicon.py` generates the authored vocabulary ledger from lesson metadata.
 - `check_deck.py` checks identity, references, duplicate ids, inline code, no-yomi, tutor-script
   parity, reorder chunking and vocabulary ownership/load.
-- Twenty-four regression tests prove parser contracts, shell retargeting, generated
+- Thirty-eight regression tests prove parser contracts, shell retargeting, generated
   brief/map/ledger/catalog/lexicon freshness and review-intake failure cases.
 
 ### 4. Shared foundation
@@ -143,10 +145,14 @@ The owner is reviewing `english/catalog.html`. While that review is open:
 The hold prevents avoidable content rework. It does not block read-only evidence gathering,
 decision preparation, tooling that holds no curriculum facts, or documentation repair.
 
-The owner separately approved the targeted Core audit corrections on 2026-08-13. Those corrections
-preserve all stable IDs, but they invalidate native-review snapshots only for Core 18, 27, 28, 76,
-77, 79, 85, 95, 105, 108, 112 and 121, plus the repaired cross-track rows CTX-18, CTX-30, CTX-45,
-CTX-60, FT-70, FT-86 and FT-102. Re-review those rows; do not discard unaffected feedback.
+The owner approved the broader naturalness and transfer revision on 2026-08-14. It preserves every
+stable ID but changes catalog-visible wording across Core, Contextual and Freetalking, including
+many Freetalking ownership labels. The English title pass subsequently replaced all 121
+Freetalking title snapshots while preserving their IDs. The generated catalog was rebuilt after
+the revision. Do not
+submit a copied review form made from a pre-2026-08-14 catalog; open the current catalog and carry
+forward only feedback whose row snapshot is unchanged. Pronunciation planning was also corrected,
+but it remains outside the production-facing review catalog.
 
 ---
 

@@ -37,7 +37,7 @@
 
 - **Already learned:** Core 1–66.
 - **Not yet:** Core 68–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-64 It won't turn on · CORE-65 It's made in Japan · CORE-66 If I had more time, I'd travel
+- **Most recent available forms:** CORE-64 It won't turn on · CORE-65 My wallet was stolen · CORE-66 If I had more time, I'd travel
 - **Nearest protected forms:** CORE-68 He must be busy · CORE-69 She said she was busy · CORE-70 She told me to wait
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 

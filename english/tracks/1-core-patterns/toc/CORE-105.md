@@ -19,13 +19,13 @@
 
 ### Pattern 1
 
-- **Model:** The more we wait, the harder it gets.
-- **Frame:** `The more we ___, the ___er it gets.`
+- **Model:** The longer we wait, the harder it'll be to catch up.
+- **Frame:** `The longer we ___, the harder it'll be to ___.`
 
 ### Pattern 2
 
-- **Model:** The sooner we start, the better.
-- **Frame:** `The sooner we ___, the better.`
+- **Model:** The sooner we start, the sooner we can finish.
+- **Frame:** `The sooner we ___, the sooner we can ___.`
 
 ## Supporting content
 

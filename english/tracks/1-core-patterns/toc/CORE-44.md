@@ -38,7 +38,7 @@
 - **Already learned:** Core 1–43.
 - **Not yet:** Core 45–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-41 You have to show ID · CORE-42 Don't you like it? · CORE-43 It's a small, quiet café
-- **Nearest protected forms:** CORE-45 This one's cheaper · CORE-46 It's the best one here · CORE-47 I'm bored and it's boring
+- **Nearest protected forms:** CORE-45 This one's cheaper · CORE-46 It's the best one here · CORE-47 I was bored during the movie
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
 ## Neighbouring items

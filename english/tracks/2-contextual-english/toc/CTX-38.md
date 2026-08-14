@@ -30,10 +30,11 @@
 
 ### Pattern 2
 
-- **Model:** I'm happy to take it if no one else is assigned.
-- **Frame:** `I'm happy to ___ if ___.`
+- **Model:** I'm happy to contact them if no one else is doing it.
+- **Frame:** `I'm happy to ___ if no one else is doing it.`
 - **Partner:** Colleague: Thanks. Please copy me.
 - **Core ownership:** Core 57
+- **Treatment:** teach as a bounded chunk; do not expand its grammar here
 
 ## Supporting content
 

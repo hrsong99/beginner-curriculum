@@ -22,8 +22,8 @@
 
 ### Pattern 1
 
-- **Model:** The confirmation says breakfast is included, whereas your system says it isn't.
-- **Frame:** `___ says ___, whereas ___ says ___.`
+- **Model:** My confirmation says breakfast is included, whereas your system says it isn't.
+- **Frame:** `My confirmation says ___, whereas your system says ___.`
 - **Partner:** Manager: I can see the discrepancy.
 - **Treatment:** teach as a bounded chunk; do not expand its grammar here
 

@@ -24,14 +24,14 @@
 
 ### Pattern 2
 
-- **Model:** I'll take the smaller one.
-- **Frame:** `I'll take the ___ one.`
+- **Model:** I'll take the chicken.
+- **Frame:** `I'll take ___.`
 
 ## Supporting content
 
 - **Expressions:** `for here or to go?` · `Sounds good.`
-- **Grammar:** `I'd like` is the polite `I want`. `I want` is not rude, but it is flat.
-- **Japanese-L1 risk:** `〜がほしい` maps to `I want`, so the learner reaches for the blunt form by default. This is the same politeness gap as 20, in the one place it is most visible to strangers.
+- **Grammar:** `I'd like` is the polite frame. On a shared menu, learn the choice with its article: `the chicken`.
+- **Japanese-L1 risk:** `〜がほしい` maps to `I want`, so the learner reaches for the blunt form by default. This is the same politeness gap as 20, in the one place it is most visible to strangers. Keep `the chicken` attached as a menu chunk; do not turn this into a second article lecture.
 
 ## Sequence guardrails
 

@@ -72,6 +72,28 @@ def _field(body: list[str], label: str, *, wrapped: bool = False) -> str | None:
     return None
 
 
+def _wrapped_field(body: list[str], label: str) -> str | None:
+    """Read ``*Label:* value`` fields whose prose wraps as ordinary Markdown.
+
+    Freetalking fields deliberately wrap at the repository line length.  Their
+    continuation lines are not indented list content, so ``_field`` must remain
+    strict for the other TOCs while this reader consumes prose up to the next
+    field or paragraph boundary.
+    """
+    pattern = re.compile(rf"^\*{re.escape(label)}:\* (.+)$")
+    for i, line in enumerate(body):
+        match = pattern.match(line)
+        if not match:
+            continue
+        value = [match.group(1).strip()]
+        for following in body[i + 1:]:
+            if not following.strip() or re.match(r"^\*[^*]+:\* ", following):
+                break
+            value.append(following.strip())
+        return " ".join(value)
+    return None
+
+
 def _italic_paragraph(body: list[str], label: str) -> str | None:
     """Read ``*Label: ...*`` even when Markdown wraps it across lines."""
     for i, line in enumerate(body):
@@ -234,19 +256,19 @@ def parse_freetalking() -> list[dict]:
         formats = re.findall(r"`(story|choose|両国|opinion)`", full_heading)
         if not formats:
             formats = [theme.group(3)]
-        opening = _field(body, "Opens")
+        opening = _wrapped_field(body, "Opens")
         if not opening:
             balance = re.search(r"— \*(.+?)\*", full_heading)
             opening = balance.group(1) if balance else None
         theme_no = int(theme.group(1))
-        moves = _field(body, "Moves")
+        moves = _wrapped_field(body, "Moves")
         lessons.append({
             "id": f"FT-{number}", "no": number, "track": "3-freetalking",
             "title": heading.split(" — ")[0].strip(), "canDo": opening,
             "opening": _require(opening, path, number, "Opens"),
-            "ladder": _require(_field(body, "Ladder") or theme_ladders.get(theme_no), path, number, "Ladder"),
+            "ladder": _require(_wrapped_field(body, "Ladder") or theme_ladders.get(theme_no), path, number, "Ladder"),
             "moves": moves, "coreRefs": [int(n) for n in re.findall(r"Core (\d+)", moves or "")],
-            "shared": _field(body, "Shared"),
+            "shared": _wrapped_field(body, "Shared"),
             "formats": _require(formats, path, number, "format tag"), "deep": "深く" in full_heading,
             "themeNo": theme_no, "theme": theme.group(2).strip(),
             "themeFormat": theme.group(3), "level": "Intermediate / Advanced versions",

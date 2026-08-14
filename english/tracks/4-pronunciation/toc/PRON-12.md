@@ -12,10 +12,10 @@
 
 ## Outcome
 
-- **Can do:** /iː/ tongue high and tight · /ɪ/ relaxed and slightly lower — a short /iː/ is still wrong
+- **Can do:** The pairs differ in vowel quality as well as context-sensitive duration. Teach tongue position first, then preserve the natural timing of the word
 - **Part:** 4 · Vowels English splits and Japanese does not
-- **Japanese habit:** Japanese distinguishes length; English distinguishes **tension**, and length only follows
-- **Correction target:** /iː/ tongue high and tight · /ɪ/ relaxed and slightly lower — a short /iː/ is still wrong
+- **Japanese habit:** A learner may hear the contrast mainly as long versus short
+- **Correction target:** The pairs differ in vowel quality as well as context-sensitive duration. Teach tongue position first, then preserve the natural timing of the word
 - **Examples:** sheep / ship · feel / fill · least / list · pool / pull · fool / full
 
 ## Sequence guardrails
@@ -24,7 +24,7 @@
 
 ## Neighbouring items
 
-- **Previous:** PRON-11 · /æ/ · /ʌ/ · /ɑ/
+- **Previous:** PRON-11 · /æ/ · /ʌ/ · /ɒ/
 - **Next:** track ending
 
 ## Authoring inputs — read in order

@@ -38,13 +38,13 @@
 - **Already learned:** Core 1–29.
 - **Not yet:** Core 31–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-27 I like cooking · CORE-28 Are you free on Friday? · CORE-29 I'm meeting Sam at six
-- **Nearest protected forms:** CORE-31 We watched a movie last night · CORE-32 We went out for dinner · CORE-33 Did you have a good time?
+- **Nearest protected forms:** CORE-31 I went out last night · CORE-32 We went out for dinner · CORE-33 Did you have a good time?
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
 ## Neighbouring items
 
 - **Previous:** CORE-29 · I'm meeting Sam at six
-- **Next:** CORE-31 · We watched a movie last night
+- **Next:** CORE-31 · I went out last night
 
 ## Authoring inputs — read in order
 

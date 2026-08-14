@@ -20,7 +20,7 @@
 ### Pattern 1
 
 - **Model:** Two cups of coffee, please.
-- **Frame:** `___ ___s of ___, please.`
+- **Frame:** `Two cups of ___, please.`
 
 ### Pattern 2
 

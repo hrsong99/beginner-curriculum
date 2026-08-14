@@ -38,13 +38,13 @@
 - **Already learned:** Core 1–45.
 - **Not yet:** Core 47–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-43 It's a small, quiet café · CORE-44 It's too small · CORE-45 This one's cheaper
-- **Nearest protected forms:** CORE-47 I'm bored and it's boring · CORE-48 Have you ever been to Kyoto? · CORE-49 I've already finished
+- **Nearest protected forms:** CORE-47 I was bored during the movie · CORE-48 Have you ever been to Kyoto? · CORE-49 I've already finished
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
 ## Neighbouring items
 
 - **Previous:** CORE-45 · This one's cheaper
-- **Next:** CORE-47 · I'm bored and it's boring
+- **Next:** CORE-47 · I was bored during the movie
 
 ## Authoring inputs — read in order
 

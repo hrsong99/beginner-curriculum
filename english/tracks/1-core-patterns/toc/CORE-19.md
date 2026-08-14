@@ -24,8 +24,8 @@
 
 ### Pattern 2
 
-- **Model:** Sorry, did you say fifteen or fifty?
-- **Frame:** `Did you say ___ or ___?`
+- **Model:** Sorry, is that fifteen or fifty?
+- **Frame:** `Is that ___ or ___?`
 
 ## Supporting content
 

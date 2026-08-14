@@ -37,7 +37,7 @@
 
 - **Already learned:** Core 1–67.
 - **Not yet:** Core 69–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-65 It's made in Japan · CORE-66 If I had more time, I'd travel · CORE-67 I wish I could drive
+- **Most recent available forms:** CORE-65 My wallet was stolen · CORE-66 If I had more time, I'd travel · CORE-67 I wish I could drive
 - **Nearest protected forms:** CORE-69 She said she was busy · CORE-70 She told me to wait · CORE-71 I should have called earlier
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 

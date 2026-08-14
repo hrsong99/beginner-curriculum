@@ -45,8 +45,8 @@ Only **7 of 72 rows** touched any of the things Japanese gives this learner no s
 
 **1. Articles are a thread, not a lesson.** No single lesson can carry them: Japanese has no article
 system, so the learner has no slot in which the choice occurs. They arrive as bounded chunks
-(`I'm **a** designer`), become a decision at first-vs-later mention (10), extend to unique and
-shared reference (24), and finish at generic and zero article (63). Marked **`▸ articles`** wherever
+(`I'm **a** designer`), become a decision at first-vs-later mention (10), extend to shared
+reference on a menu (22), and finish at generic and zero article (63). Marked **`▸ articles`** wherever
 the thread advances.
 
 **2. Word order came forward.** It was at lesson 57. SOV→SVO is the day-one difficulty, and it
@@ -87,7 +87,7 @@ all of it needs learner-performance validation.
 | --- | --- | --- |
 | **Can-do** | the one thing the learner can do afterwards | the pass condition |
 | **Two patterns** | retrievable frames with slots, that need each other in one exchange | **production** — without the model on screen |
-| ***Expressions*** | fixed chunks that make the exchange sound natural | **production** — usable, not analysed |
+| ***Expressions*** | fixed chunks that make the exchange sound natural | **reception first** at Pre-A1/A1 — optional use, not assessed |
 | ***Grammar*** | the smallest form note needed to control the two patterns | **understanding** — not a third objective |
 | ***JP*** | what a Japanese speaker gets wrong here, and why | author-facing; shapes the drills |
 
@@ -187,21 +187,21 @@ that mean nothing at all, and the first real article decision.*
 - *JP:* `ある`/`いる` needs no dummy subject, so `Near here a café is` is predicted. Teach `there is`
   as one unanalysed chunk first; the structure can wait.
 
-**8. It's cold today — talk about weather and time**
+**8. It's cold today — talk about today's weather**
 
-*Can-do: comment on the weather and say what time it is.*
-- "It's cold today." — `It's ___ today.`
-- "It's about three o'clock." — `It's about ___.`
-- *Expressions:* `How's the weather?` · `What time is it?`
-- *Grammar:* this `it` is not a thing. Weather, time and distance all take `it` with no meaning.
+*Can-do: ask and say what today's weather is like.*
+- "Is it cold today?" — `Is it ___ today?`
+- "Yes, it's very cold." — `Yes, it's very ___.`
+- *Expressions:* `How's the weather?` · `Not really.`
+- *Grammar:* this `it` is not a thing. Weather takes `it` with no meaning.
 - *JP:* `寒いです` has no subject at all, so `Cold today` and `Is cold` are predicted and feel
   complete to the learner. This is pure grammar with no semantic hook — it needs its own slot.
 
 **9. Two coffees, please — say how many**
 
-*Can-do: order or count more than one of something.*
+*Can-do: order a counted item and correct the quantity if needed.*
 - "Two coffees, please." — `Two ___s, please.`
-- "Just one, thanks." — `Just one ___, thanks.`
+- "Actually, just one coffee, thanks." — `Actually, just one ___, thanks.`
 - *Expressions:* `Anything else?` · `That's all, thanks.`
 - *Grammar:* more than one takes `-s`. It is not optional, even when the number is already there.
 - *JP:* Japanese does not obligatorily mark plural — `二つの本` marks number once, not twice. So
@@ -211,8 +211,8 @@ that mean nothing at all, and the first real article decision.*
 **10. The café on the corner — say which one ▸ articles**
 
 *Can-do: mention something new, then refer back to it.*
-- "There's a café on the corner." — `There's a ___ on the corner.`
-- "The café closes at six." — `The ___ ___s at ___.`
+- "There's a café on the corner." — `There's a ___ on ___.`
+- "The café is open until six." — `The ___ is open until ___.`
 - *Expressions:* `you know the one` · `the same one`
 - *Grammar:* `a` introduces it. `the` points at the one you both now have in mind.
 - *JP:* **the core article lesson.** Japanese marks this contrast with `は`/`が` and word order, none
@@ -265,7 +265,7 @@ Japanese equivalent and gets its own lesson here rather than being spread thin.*
 *Can-do: contrast something you do with something you don't.*
 - "I don't drive to work." — `I don't ___.`
 - "I take the train instead." — `I ___ instead.`
-- *Expressions:* `hardly ever` · `not anymore`
+- *Expressions:* `not every day` · `on weekends`
 - *Grammar:* `don't` + the plain verb. Never `don't drives`.
 - *JP:* the same insertion as 13, now in the negative. Japanese negates by inflecting the verb
   itself, so `I no drive` and `I not drive` are predicted.
@@ -275,7 +275,7 @@ Japanese equivalent and gets its own lesson here rather than being spread thin.*
 *Can-do: exchange information about a third person.*
 - "She works downtown." — `She works ___.`
 - "Does she like it?" — `Does she ___?`
-- *Expressions:* `I think so` · `as far as I know`
+- *Expressions:* `I think so.` · `I don't know.`
 - *Grammar:* he/she/it adds `-s`. In the question the `-s` moves onto `does`, so the verb is plain
   again: `Does she **like**`.
 - *JP:* no agreement exists in Japanese, so `She work` and `Does she likes` are both predicted — the
@@ -296,7 +296,7 @@ Japanese equivalent and gets its own lesson here rather than being spread thin.*
 *Can-do: ask how often something happens and answer approximately.*
 - "How often do you exercise?" — `How often do you ___?`
 - "About twice a week." — `About ___ a week.`
-- *Expressions:* `once in a while` · `almost never`
+- *Expressions:* `every day` · `not very often`
 - *Grammar:* `twice a week`, `three times a month` — `a` here means *per*.
 - *JP:* another article use with no Japanese counterpart, and it hides inside a frequency phrase.
   Teach the whole phrase as a chunk.
@@ -325,7 +325,7 @@ it just has nowhere to attach in English.*
 
 *Can-do: ask a price and check what you heard.*
 - "How much is this one?" — `How much is ___?`
-- "Sorry, did you say fifteen or fifty?" — `Did you say ___ or ___?`
+- "Sorry, is that fifteen or fifty?" — `Is that ___ or ___?`
 - *Expressions:* `That's a bit expensive.` · `I'll take it.`
 - *Grammar:* `this one` / `that one` avoids repeating the noun.
 - *JP:* fifteen/fifty and thirteen/thirty are a listening problem, not a grammar one, and they cost
@@ -337,36 +337,37 @@ it just has nowhere to attach in English.*
 - "Could you help me with this?" — `Could you help me with ___?`
 - "Sure, I can help with the boxes." — `Sure, I can help with ___.`
 - *Expressions:* `What do you need?` · `No problem.`
-- *Grammar:* a thing takes `with`; an action takes no `with` — *help me **with** the boxes* /
-  *help me **carry** the boxes*.
+- *Grammar:* keep the request together: `Could you help me with` + a thing.
 - *JP:* **the politeness install.** Keigo is grammatical; English politeness is lexical and
   syntactic, so a learner looking for an inflection finds none and produces `Help me` — perfect
-  grammar, blunt English. Also 「手伝う」 hides the with/no-with split entirely, which is the form
-  point above and the hardest thing in the lesson.
+  grammar, blunt English. At this level, keep the complete polite frame intact instead of opening a
+  second `with`/no-`with` decision inside it.
 
 **21. Can I try this on? — ask permission**
 
-*Can-do: ask whether something is allowed, and respond.*
+*Can-do: ask permission in two common ways.*
 - "Can I try this on?" — `Can I ___?`
-- "Sure, go ahead." — `Sure, ___.`
-- *Expressions:* `Of course.` · `I'm afraid not.`
+- "Is it OK if I take a photo?" — `Is it OK if I ___?`
+- *Expressions:* `Sure, go ahead.` · `I'm afraid not.`
 - *Grammar:* `Can I` asks about **me**; `Could you` asks about **you**. Different jobs.
 - *JP:* both are `〜てもいいですか` territory, so the two get confused. Contrast them directly.
 
-**22. I'd like the chicken, please — order and choose**
+**22. I'd like the chicken, please — order and choose ▸ articles**
 
 *Can-do: order politely and choose between options.*
 - "I'd like the chicken, please." — `I'd like ___, please.`
-- "I'll take the smaller one." — `I'll take the ___ one.`
+- "I'll take the chicken." — `I'll take ___.`
 - *Expressions:* `for here or to go?` · `Sounds good.`
-- *Grammar:* `I'd like` is the polite `I want`. `I want` is not rude, but it is flat.
+- *Grammar:* `I'd like` is the polite frame. On a shared menu, learn the choice with its article:
+  `the chicken`.
 - *JP:* `〜がほしい` maps to `I want`, so the learner reaches for the blunt form by default. This is
-  the same politeness gap as 20, in the one place it is most visible to strangers.
+  the same politeness gap as 20, in the one place it is most visible to strangers. Keep `the
+  chicken` attached as a menu chunk; do not turn this into a second article lecture.
 
 **23. Two cups of coffee — say how much of something**
 
 *Can-do: ask for an amount of something you cannot count.*
-- "Two cups of coffee, please." — `___ ___s of ___, please.`
+- "Two cups of coffee, please." — `Two cups of ___, please.`
 - "How much rice do we need?" — `How much ___ do we need?`
 - *Expressions:* `a little` · `a lot of`
 - *Grammar:* some things are not counted directly — you count the container: `a cup of`, `a piece
@@ -375,20 +376,20 @@ it just has nowhere to attach in English.*
   nouns are non-count is unpredictable (`advice`, `information`, `furniture`). Treat it as
   vocabulary: the countability rides on the word from first contact.
 
-**24. Sorry, could you say that again? — repair a conversation ▸ articles**
+**24. Sorry, could you say that again? — repair a conversation**
 
 *Can-do: ask for repetition or slower speech without stalling.*
 - "Sorry, could you say that again?" — `Could you ___ again?`
-- "Could you speak a bit more slowly?" — `Could you ___ a bit more ___?`
+- "Could you speak slowly?" — `Could you speak ___?`
 - *Expressions:* `I didn't catch that.` · `What does ___ mean?`
-- *Grammar:* `the` also points at the only one there is — `the manager`, `the bill`, `the time`.
-- *JP:* **the article thread's second step** — unique reference, not just second mention. Also the
-  most important survival lesson in the unit: a learner who cannot ask for repetition stops talking.
+- *Grammar:* `Could you` + plain verb: `say`, `speak`. Keep the request frame whole.
+- *JP:* this is the most important survival lesson in the unit: a learner who cannot ask for
+  repetition stops talking. Do not add a second article objective to the repair work.
 
 *▸ Checkpoint 4 · Perform: buy something, ask permission, request help, and repair one
 misunderstanding — all without dropping into blunt forms.*
-*Review: `Could you` vs `Can I` · `I'd like` · containers for non-count nouns · `the` for the
-only one.*
+*Review: `Could you` vs `Can I` · `I'd like` · containers for non-count nouns · `the` with a shared
+menu choice.*
 
 ## Unit 5 · Now and usually · 5 lessons · **A1**
 
@@ -399,7 +400,7 @@ split gets installed here and completed in Unit 9.*
 
 *Can-do: say what you are doing at the moment.*
 - "I'm working from home today." — `I'm ___ing today.`
-- "What are you working on?" — `What are you ___ing?`
+- "What are you doing?" — `What are you ___ing?`
 - *Expressions:* `right now` · `at the moment`
 - *Grammar:* `be` + `-ing` = happening now, not every day.
 - *JP:* **the ている split, part one.** `〜ている` covers this *and* the resulting state English
@@ -411,7 +412,7 @@ split gets installed here and completed in Unit 9.*
 *Can-do: say how today differs from your normal routine.*
 - "I usually drive to work." — `I usually ___.`
 - "But today I'm walking." — `But today I'm ___ing.`
-- *Expressions:* `for a change` · `as usual`
+- *Expressions:* `every day` · `not today`
 - *Grammar:* usually → plain verb. Right now → `be` + `-ing`. The contrast is the lesson.
 - *JP:* the two English forms have to be told apart by *meaning*, since Japanese would use the same
   form for both. Drilling them apart is the whole point; drilling them separately is not enough.
@@ -432,7 +433,7 @@ split gets installed here and completed in Unit 9.*
 *Can-do: check availability and invite someone to do something.*
 - "Are you free on Friday?" — `Are you free on ___?`
 - "Would you like to have dinner?" — `Would you like to ___?`
-- *Expressions:* `I'd love to, but ___` · `Maybe another time.`
+- *Expressions:* `Yes, I'd love to.` · `Sorry, I can't.`
 - *Grammar:* `Would you like to` + plain verb makes an invitation. It is different from `I'd like`
   in 22, which says what **I** want.
 - *JP:* Japanese invitations often use a negative question (`〜ませんか`). Do not copy that shape
@@ -443,7 +444,7 @@ split gets installed here and completed in Unit 9.*
 *Can-do: state an arrangement you have already made.*
 - "I'm meeting Sam at six." — `I'm ___ing ___ at ___.`
 - "Are you still coming on Tuesday?" — `Are you still ___ing on ___?`
-- *Expressions:* `I've got plans.` · `Let me get back to you.`
+- *Expressions:* `What time?` · `See you then.`
 - *Grammar:* the same `be` + `-ing` also covers a plan that is already arranged.
 - *JP:* the learner has just been told `-ing` means *now*, so this looks like a contradiction.
   Present it as *already decided*, not as a future tense — the diary is the mental image.
@@ -466,13 +467,14 @@ irregular forms and, again, the auxiliary.*
 - *Grammar:* `was` for I/he/she/it, `were` for you/we/they.
 - *JP:* Japanese has one past form for all persons, so `We was` is predicted. Low-stakes but visible.
 
-**31. We watched a movie last night — say what you did**
+**31. I went out last night — say what you did**
 
-*Can-do: report one finished action and when it happened.*
-- "We watched a movie last night." — `We ___ed ___ last night.`
-- "What did you do on the weekend?" — `What did you do ___?`
+*Can-do: say whether you went out or stayed in and add one detail.*
+- "I went to a concert last night." — `I went to ___ last night.`
+- "I stayed home and watched a movie." — `I stayed home and ___.`
 - *Expressions:* `nothing special` · `it was fun`
-- *Grammar:* regular verbs add `-ed`. The `-ed` is a sound, not a syllable — `watched` is one beat.
+- *Grammar:* finished actions use the past form. Regular verbs add `-ed`; common answers such as
+  `went to` and `stayed home` are learned inside complete speaking frames.
 - *JP:* the pronunciation note matters more than the spelling one: `ウォッチド` turns one syllable
   into three. See pronunciation track lesson 3.
 
@@ -541,10 +543,10 @@ interruption — then answer three questions about it.*
 - *Grammar:* `going to` = already decided, before now.
 - *JP:* `〜つもり` maps well. The trap is choosing between this and `will` — settled in 38.
 
-**38. I'll help you — decide right now**
+**38. Let me help — offer and promise**
 
 *Can-do: offer help on the spot and promise something.*
-- "I'll help you with that." — `I'll ___.`
+- "Let me carry that for you." — `Let me ___ for you.`
 - "Don't worry, I'll send it by noon." — `Don't worry, I'll ___ by ___.`
 - *Expressions:* `no rush` · `I've got it`
 - *Grammar:* `will` = decided *as you speak*. `going to` = decided earlier.
@@ -572,7 +574,7 @@ interruption — then answer three questions about it.*
 
 **41. You have to show ID — explain a rule**
 
-*Can-do: distinguish required, optional and forbidden.*
+*Can-do: distinguish what is required from what is optional.*
 - "You have to show your ID." — `You have to ___.`
 - "But you don't have to book ahead." — `But you don't have to ___.`
 - *Expressions:* `you're allowed to` · `that's not allowed`
@@ -584,11 +586,11 @@ interruption — then answer three questions about it.*
 **42. Don't you like it? — answer a negative question**
 
 *Can-do: answer a negative question without being misunderstood.*
-- "Don't you like it?" — `Don't you ___?`
-- "No, I don't. Sorry." / "Actually, I do." — `No, I don't.` / `Actually, I do.`
-- *Expressions:* `not really` · `it's not that, it's just...`
-- *Grammar:* answer the **fact**, not the question. If you like it, say `Yes` — even though the
-  question was negative.
+- "Actually, I do. I watch it every week." — `Actually, I do. I ___ every ___.`
+- "No, I don't. I prefer comedies." — `No, I don't. I prefer ___.`
+- *Expressions:* `Don't you like it?` · `not really`
+- *Grammar:* answer the **fact**, not the question. If you like it, say `Yes` or `Actually, I do` —
+  even though the question was negative.
 - *JP:* **Japanese agrees with the proposition; English agrees with the fact.** `はい` to
   「好きじゃないんですか」 means *"correct, I don't"* — in English that same `Yes` means *"I do"*.
   Low frequency, but every occurrence is a real misunderstanding rather than an accent. Cheap to
@@ -641,11 +643,11 @@ the fact.*
 - *JP:* another article that has to be there for a structural reason the learner cannot see.
   `It's best one` is predicted.
 
-**47. I'm bored and it's boring — feeling and cause**
+**47. I was bored during the movie — feeling and cause**
 
 *Can-do: describe your reaction and the thing that caused it.*
-- "I'm bored because it's boring." — `I'm ___ed because it's ___ing.`
-- "You look tired." — `You look ___.`
+- "I was bored during the movie." — `I was ___ed during ___.`
+- "The movie was really boring." — `___ was really ___ing.`
 - *Expressions:* `I'm not really into it` · `it's a bit much`
 - *Grammar:* `-ed` is how **you** feel. `-ing` is what the **thing** is like.
 - *JP:* Japanese i-adjectives do not split experiencer from stimulus, so `I am boring` is predicted
@@ -694,11 +696,11 @@ form where English uses two, and lesson 50 is where the split is finally named.*
   `I have been there yesterday` is the classic output. Teach it as a rule about **time phrases**,
   which is checkable, rather than about aspect, which is not.
 
-**51. I've lived here for five years — say how long**
+**51. How long have you been here? — say how long**
 
-*Can-do: say how long a continuing situation has lasted.*
-- "I've lived here for five years." — `I've ___ for ___.`
-- "How long have you been in Tokyo?" — `How long have you ___?`
+*Can-do: ask and say how long someone has been in a place.*
+- "How long have you been in Tokyo?" — `How long have you been in ___?`
+- "I've been here for five years." — `I've been here for ___.`
 - *Expressions:* `since I was a kid` · `on and off`
 - *Grammar:* `for` + a length of time. `since` + a starting point.
 - *JP:* Japanese uses the **present** for this — `五年住んでいます` — so `I live here for five
@@ -830,11 +832,11 @@ identify one person by what they did.*
 - *JP:* the un-inversion is the difficulty — English asks the learner to undo the very thing lesson
   13 installed. Previewed at 18, taught properly here.
 
-**63. Coffee is expensive here — talking in general ▸ articles**
+**63. I generally prefer coffee — talking in general ▸ articles**
 
-*Can-do: make a general statement about a category.*
-- "Coffee is expensive here." — `___ is expensive here.`
-- "I don't like crowded places." — `I don't like ___ ___s.`
+*Can-do: state a general preference and something you usually avoid.*
+- "I generally prefer coffee to tea." — `I generally prefer ___ to ___.`
+- "I tend to avoid crowded places." — `I tend to avoid ___ places.`
 - *Expressions:* `in general` · `as a rule`
 - *Grammar:* to talk about something in general, use the plural with no article — or no article at
   all for things you can't count.
@@ -852,11 +854,11 @@ identify one person by what they did.*
 - *JP:* a non-obvious use of `will` with no Japanese counterpart; teach it as a fixed frame for
   broken things.
 
-**65. It's made in Japan — put the result first**
+**65. My wallet was stolen — report what happened**
 
-*Can-do: describe how something is produced or what happened to it.*
-- "It's made in Japan." — `It's made in ___.`
+*Can-do: report what happened to a possession and where it happened.*
 - "My wallet was stolen." — `My ___ was stolen.`
+- "It was taken from my bag." — `It was taken from ___.`
 - *Expressions:* `apparently` · `it turns out`
 - *Grammar:* use this when who did it doesn't matter or isn't known.
 - *JP:* Japanese passive often carries a sense of being adversely affected (迷惑の受身), which
@@ -975,7 +977,7 @@ someone else said.*
 
 *Can-do: explain something you meant to do and why it didn't happen.*
 - "I was going to call, but I ran out of time." — `I was going to ___, but ___.`
-- "I'd planned to finish it today." — `I'd planned to ___.`
+- "I'd planned to finish it today, but I ran out of time." — `I'd planned to ___, but ___.`
 - *Expressions:* `it slipped my mind` · `something came up`
 - *JP:* `〜つもりだった` maps cleanly. Useful precisely because it is a socially necessary excuse
   frame — high payoff for low grammatical cost.
@@ -1012,12 +1014,13 @@ someone else said.*
 
 **78. This time tomorrow I'll be flying — in progress at a future moment**
 
-*Can-do: distinguish a timetable from an activity in progress later.*
+*Can-do: say what will be in progress at two future points.*
 - "This time tomorrow, I'll be flying home." — `This time ___, I'll be ___ing.`
-- "The train leaves at six." — `The ___ leaves at ___.`
+- "At six, I'll still be travelling." — `At ___, I'll still be ___ing.`
 - *Expressions:* `all being well` · `fingers crossed`
-- *JP:* the timetable present is the odd one — a present form used for a fixed future. Japanese uses
-  a plain non-past here too, so it transfers better than it looks.
+- *JP:* Japanese often uses one non-past form for both a future event and an activity in progress.
+  English uses `will be ___ing` to place the listener inside that later moment; keep the time anchor
+  attached to the frame.
 
 **79. I should have it ready by Friday — give a completion estimate**
 
@@ -1103,7 +1106,7 @@ you've understood, make a difficult request, and postpone one decision.*
 **87. It's slightly more expensive — say how much more**
 
 *Can-do: compare with precision instead of a bare comparative.*
-- "It's slightly more expensive." — `It's slightly ___er.`
+- "It's slightly more expensive." — `It's slightly more ___.`
 - "It's nowhere near as fast." — `It's nowhere near as ___ as ___.`
 - *Expressions:* `marginally` · `a fraction more`
 - *JP:* Japanese degree adverbs map roughly but the English set is finely graded
@@ -1150,8 +1153,8 @@ you've understood, make a difficult request, and postpone one decision.*
 **92. I'm not entirely convinced — reject something softly**
 
 *Can-do: signal disagreement without stating it flatly.*
-- "I'm not entirely convinced." — `I'm not entirely ___.`
-- "I'd want to see the numbers first." — `I'd want to ___ first.`
+- "I'm not entirely convinced that it'll work." — `I'm not entirely convinced that ___.`
+- "I'd want to see the numbers before deciding." — `I'd want to see ___ before ___ing.`
 - *Expressions:* `I have my doubts` · `on paper, yes`
 - *JP:* understatement as disagreement is culturally familiar; the English *forms* are what's
   missing. Fast lesson, high payoff.
@@ -1174,7 +1177,7 @@ you've understood, make a difficult request, and postpone one decision.*
 - *JP:* the negative question form is a trap given lesson 42 — but here it is rhetorical and expects
   agreement, not a yes/no. Name that difference.
 
-**95. I take your point, but — structured disagreement**
+**95. Where I'd push back is on the cost — structured disagreement**
 
 *Can-do: identify the specific weakness in an argument without rejecting the whole position.*
 - "Where I'd push back is on the cost." — `Where I'd push back is on ___.`
@@ -1183,11 +1186,11 @@ you've understood, make a difficult request, and postpone one decision.*
 - *JP:* explicit disagreement markers are what allow English speakers to disagree *and* stay warm.
   Without them the learner's options are silence or bluntness.
 
-**96. That's not quite what I meant — repair a misunderstanding**
+**96. I meant next Friday, not this Friday — repair a misunderstanding**
 
 *Can-do: correct a misreading of your own words.*
-- "That's not quite what I meant." — `That's not quite ___.`
-- "What I was trying to say is ___." — `What I was trying to say is ___.`
+- "I meant next Friday, not this Friday." — `I meant ___, not ___.`
+- "What I was trying to say is that we need more time." — `What I was trying to say is that ___.`
 - *Expressions:* `let me rephrase` · `I put that badly`
 - *JP:* taking the blame for the misunderstanding (`I put that badly`) is a strong English politeness
   move and maps well onto Japanese instincts. Very learnable here.
@@ -1272,8 +1275,8 @@ tool to choose, and that is the difference between B1 and B2 English.*
 **105. The sooner we start, the better — show linked change**
 
 *Can-do: explain that changing one thing will change another with it.*
-- "The more we wait, the harder it gets." — `The more we ___, the ___er it gets.`
-- "The sooner we start, the better." — `The sooner we ___, the better.`
+- "The longer we wait, the harder it'll be to catch up." — `The longer we ___, the harder it'll be to ___.`
+- "The sooner we start, the sooner we can finish." — `The sooner we ___, the sooner we can ___.`
 - *Expressions:* `every day counts` · `the less, the better`
 - *JP:* Japanese can express the same relationship with `〜ば〜ほど`, but English repeats `the`
   and changes the order. Keep both halves short enough to retrieve as one linked comparison.
@@ -1290,7 +1293,7 @@ tool to choose, and that is the difference between B1 and B2 English.*
 
 *Can-do: move to a new topic without losing the thread.*
 - "As for the budget, we're still waiting." — `As for ___, ___.`
-- "Coming back to the timeline, ___." — `Coming back to ___, ___.`
+- "Coming back to the timeline, we need a firm date." — `Coming back to ___, ___.`
 - *Expressions:* `on that note` · `while I remember`
 - *JP:* `〜については` maps almost exactly. Easy, and it makes long turns sound organised.
 
@@ -1298,13 +1301,13 @@ tool to choose, and that is the difference between B1 and B2 English.*
 
 **108. Would you be able to — match the register**
 
-*Can-do: pitch the same request at three levels of formality.*
+*Can-do: pitch the same request at a careful and an informal level.*
 - "Would you be able to send it over?" — `Would you be able to ___?`
 - "Can you send it over when you get a sec?" — `Can you ___ when you get a sec?`
 - *Expressions:* `when you get a sec` · `at your earliest convenience`
 - *JP:* the learner's instinct is that more words = more polite, which mostly holds — but
-  over-formality with a close colleague reads as coldness or sarcasm. Teach the whole ladder and
-  when each rung is wrong.
+  over-formality with a close colleague reads as coldness or sarcasm. Contrast the two levels and
+  teach when each one is wrong.
 
 **109. To put it bluntly — flag your own tone**
 
@@ -1337,7 +1340,7 @@ tool to choose, and that is the difference between B1 and B2 English.*
 
 *Can-do: say how someone's wording sounded and repair an unintended tone.*
 - "That came across as rude." — `That came across as ___.`
-- "I didn't mean it that way." — `I didn't mean it that way.`
+- "I didn't mean to sound rude." — `I didn't mean to sound ___.`
 - *Expressions:* `That wasn't my intention.` · `Let me rephrase that.`
 - *JP:* Japanese often handles unintended tone through apology without naming the interpretation.
   English can name how it **came across** while separating impact from intent; keep the description
@@ -1354,10 +1357,10 @@ tool to choose, and that is the difference between B1 and B2 English.*
 - *JP:* abstract nouns are the vocabulary tax of C1 and the reason opinion topics stall — see the
   Freetalking track's topic-selection rule. Build the nouns here so Freetalking can use them.
 
-**114. That holds true up to a point — qualify a claim**
+**114. That may be true for some people — qualify a claim**
 
 *Can-do: accept a claim within limits.*
-- "That holds true up to a point." — `___ up to a point.`
+- "That may be true for large teams, but not for small ones." — `That may be true for ___, but not for ___.`
 - "It's more complicated than that." — `It's more ___ than that.`
 - *Expressions:* `broadly speaking` · `with some caveats`
 - *JP:* partial agreement is native territory for this learner; the English forms turn a vague
@@ -1384,7 +1387,7 @@ tool to choose, and that is the difference between B1 and B2 English.*
 
 *Can-do: sum up competing considerations and land somewhere.*
 - "On balance, I'd say it's worth it." — `On balance, I'd say ___.`
-- "The deciding factor for me is ___." — `The deciding factor for me is ___.`
+- "The deciding factor for me is the cost." — `The deciding factor for me is ___.`
 - *Expressions:* `all things considered` · `net-net`
 - *JP:* the closing move of an argument. Pairs directly with the Freetalking follow-up ladder's
   final rung, *has your answer changed?*
@@ -1394,20 +1397,20 @@ tool to choose, and that is the difference between B1 and B2 English.*
 *The last unit is about implication. Everything here is heard more than it is said, so the receptive
 target comes first and production is deliberately gated.*
 
-**118. That's one way of putting it — disagree without saying so**
+**118. You could see it that way — disagree indirectly**
 
 *Can-do: signal reservation while appearing to accept.*
-- "That's one way of putting it." — `That's one way of ___ing it.`
-- "I suppose you could see it like that." — `I suppose you could ___.`
+- "You could see it as cautious, but I think it's too slow." — `You could see it as ___, but ___.`
+- "I can see why you'd call it a success, though." — `I can see why you'd call it ___, though.`
 - *Expressions:* `hmm, maybe` · `if you like`
 - *JP:* Japanese does this constantly, so the *skill* is native and only the English exponents are
   missing. Unusually fast for a C1 lesson.
 
-**119. I'll leave it at that — signal restraint**
+**119. Let's just say it didn't go well — signal restraint**
 
 *Can-do: stop short deliberately and let the listener infer.*
-- "I'll leave it at that." — `I'll leave it at ___.`
 - "Let's just say it didn't go well." — `Let's just say ___.`
+- "All I'll say is that we disagreed." — `All I'll say is that ___.`
 - *Expressions:* `enough said` · `read into that what you will`
 - *JP:* highly compatible with Japanese discourse, and it lets the learner be indirect *on purpose*
   rather than by accident.
@@ -1425,7 +1428,7 @@ target comes first and production is deliberately gated.*
 
 *Can-do: decline to give detail clearly without rejecting the other person.*
 - "I'd rather not go into the details." — `I'd rather not go into ___.`
-- "Can we leave it there?" — `Can we leave it there?`
+- "Can we leave that there for now?" — `Can we leave ___ there for now?`
 - *Expressions:* `long story` · `another time, maybe`
 - *JP:* Japanese can set the boundary by trailing off; English listeners may hear that as hesitation.
   State the boundary explicitly, then soften the relationship rather than inventing a reason.

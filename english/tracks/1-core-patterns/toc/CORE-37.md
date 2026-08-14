@@ -38,13 +38,13 @@
 - **Already learned:** Core 1–36.
 - **Not yet:** Core 38–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-34 I didn't sleep well · CORE-35 First we ate, then we walked around · CORE-36 I was cooking when you called
-- **Nearest protected forms:** CORE-38 I'll help you · CORE-39 I might be late · CORE-40 You should get some rest
+- **Nearest protected forms:** CORE-38 Let me help · CORE-39 I might be late · CORE-40 You should get some rest
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
 ## Neighbouring items
 
 - **Previous:** CORE-36 · I was cooking when you called
-- **Next:** CORE-38 · I'll help you
+- **Next:** CORE-38 · Let me help
 
 ## Authoring inputs — read in order
 

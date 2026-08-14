@@ -20,12 +20,12 @@
 ### Pattern 1
 
 - **Model:** There's a café on the corner.
-- **Frame:** `There's a ___ on the corner.`
+- **Frame:** `There's a ___ on ___.`
 
 ### Pattern 2
 
-- **Model:** The café closes at six.
-- **Frame:** `The ___ ___s at ___.`
+- **Model:** The café is open until six.
+- **Frame:** `The ___ is open until ___.`
 
 ## Supporting content
 

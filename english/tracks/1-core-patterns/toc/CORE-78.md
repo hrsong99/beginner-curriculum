@@ -12,7 +12,7 @@
 
 ## Outcome
 
-- **Can do:** distinguish a timetable from an activity in progress later.
+- **Can do:** say what will be in progress at two future points.
 - **Unit:** 14 · Getting things done
 
 ## Required production
@@ -24,14 +24,14 @@
 
 ### Pattern 2
 
-- **Model:** The train leaves at six.
-- **Frame:** `The ___ leaves at ___.`
+- **Model:** At six, I'll still be travelling.
+- **Frame:** `At ___, I'll still be ___ing.`
 
 ## Supporting content
 
 - **Expressions:** `all being well` · `fingers crossed`
 - **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
-- **Japanese-L1 risk:** the timetable present is the odd one — a present form used for a fixed future. Japanese uses a plain non-past here too, so it transfers better than it looks.
+- **Japanese-L1 risk:** Japanese often uses one non-past form for both a future event and an activity in progress. English uses `will be ___ing` to place the listener inside that later moment; keep the time anchor attached to the frame.
 
 ## Sequence guardrails
 

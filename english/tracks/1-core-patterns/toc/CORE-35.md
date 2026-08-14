@@ -38,7 +38,7 @@
 - **Already learned:** Core 1–34.
 - **Not yet:** Core 36–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-32 We went out for dinner · CORE-33 Did you have a good time? · CORE-34 I didn't sleep well
-- **Nearest protected forms:** CORE-36 I was cooking when you called · CORE-37 I'm going to look for a new job · CORE-38 I'll help you
+- **Nearest protected forms:** CORE-36 I was cooking when you called · CORE-37 I'm going to look for a new job · CORE-38 Let me help
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
 ## Neighbouring items

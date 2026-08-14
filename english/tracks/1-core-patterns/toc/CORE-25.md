@@ -24,7 +24,7 @@
 
 ### Pattern 2
 
-- **Model:** What are you working on?
+- **Model:** What are you doing?
 - **Frame:** `What are you ___ing?`
 
 ## Supporting content

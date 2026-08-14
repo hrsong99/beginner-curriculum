@@ -19,18 +19,18 @@
 
 ### Pattern 1
 
-- **Model:** Don't you like it?
-- **Frame:** `Don't you ___?`
+- **Model:** Actually, I do. I watch it every week.
+- **Frame:** `Actually, I do. I ___ every ___.`
 
 ### Pattern 2
 
-- **Model:** No, I don't. Sorry." / "Actually, I do.
-- **Frame:** `No, I don't.`
+- **Model:** No, I don't. I prefer comedies.
+- **Frame:** `No, I don't. I prefer ___.`
 
 ## Supporting content
 
-- **Expressions:** `not really` · `it's not that, it's just...`
-- **Grammar:** answer the **fact**, not the question. If you like it, say `Yes` — even though the question was negative.
+- **Expressions:** `Don't you like it?` · `not really`
+- **Grammar:** answer the **fact**, not the question. If you like it, say `Yes` or `Actually, I do` — even though the question was negative.
 - **Japanese-L1 risk:** **Japanese agrees with the proposition; English agrees with the fact.** `はい` to 「好きじゃないんですか」 means *"correct, I don't"* — in English that same `Yes` means *"I do"*. Low frequency, but every occurrence is a real misunderstanding rather than an accent. Cheap to fix, so it gets its own slot.
 
 ## Sequence guardrails

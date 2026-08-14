@@ -37,7 +37,7 @@
 
 - **Already learned:** Core 1–52.
 - **Not yet:** Core 54–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-50 I went there last year · CORE-51 I've lived here for five years · CORE-52 I've been working all morning
+- **Most recent available forms:** CORE-50 I went there last year · CORE-51 How long have you been here? · CORE-52 I've been working all morning
 - **Nearest protected forms:** CORE-54 I stayed home because I was sick · CORE-55 She's the one who called · CORE-56 I like it, but it's expensive
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 

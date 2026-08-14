@@ -29,7 +29,7 @@
 
 ## Supporting content
 
-- **Expressions:** `I've got plans.` · `Let me get back to you.`
+- **Expressions:** `What time?` · `See you then.`
 - **Grammar:** the same `be` + `-ing` also covers a plan that is already arranged.
 - **Japanese-L1 risk:** the learner has just been told `-ing` means *now*, so this looks like a contradiction. Present it as *already decided*, not as a future tense — the diary is the mental image.
 
@@ -38,7 +38,7 @@
 - **Already learned:** Core 1–28.
 - **Not yet:** Core 30–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-26 I usually drive, but today I'm walking · CORE-27 I like cooking · CORE-28 Are you free on Friday?
-- **Nearest protected forms:** CORE-30 I was really tired yesterday · CORE-31 We watched a movie last night · CORE-32 We went out for dinner
+- **Nearest protected forms:** CORE-30 I was really tired yesterday · CORE-31 I went out last night · CORE-32 We went out for dinner
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
 ## Neighbouring items

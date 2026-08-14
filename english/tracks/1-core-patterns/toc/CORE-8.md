@@ -12,25 +12,25 @@
 
 ## Outcome
 
-- **Can do:** comment on the weather and say what time it is.
+- **Can do:** ask and say what today's weather is like.
 - **Unit:** 2 · Say what is around you
 
 ## Required production
 
 ### Pattern 1
 
-- **Model:** It's cold today.
-- **Frame:** `It's ___ today.`
+- **Model:** Is it cold today?
+- **Frame:** `Is it ___ today?`
 
 ### Pattern 2
 
-- **Model:** It's about three o'clock.
-- **Frame:** `It's about ___.`
+- **Model:** Yes, it's very cold.
+- **Frame:** `Yes, it's very ___.`
 
 ## Supporting content
 
-- **Expressions:** `How's the weather?` · `What time is it?`
-- **Grammar:** this `it` is not a thing. Weather, time and distance all take `it` with no meaning.
+- **Expressions:** `How's the weather?` · `Not really.`
+- **Grammar:** this `it` is not a thing. Weather takes `it` with no meaning.
 - **Japanese-L1 risk:** `寒いです` has no subject at all, so `Cold today` and `Is cold` are predicted and feel complete to the learner. This is pure grammar with no semantic hook — it needs its own slot.
 
 ## Sequence guardrails

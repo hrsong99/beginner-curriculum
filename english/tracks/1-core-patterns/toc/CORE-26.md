@@ -29,7 +29,7 @@
 
 ## Supporting content
 
-- **Expressions:** `for a change` · `as usual`
+- **Expressions:** `every day` · `not today`
 - **Grammar:** usually → plain verb. Right now → `be` + `-ing`. The contrast is the lesson.
 - **Japanese-L1 risk:** the two English forms have to be told apart by *meaning*, since Japanese would use the same form for both. Drilling them apart is the whole point; drilling them separately is not enough.
 

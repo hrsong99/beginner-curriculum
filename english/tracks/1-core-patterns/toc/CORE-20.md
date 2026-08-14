@@ -30,8 +30,8 @@
 ## Supporting content
 
 - **Expressions:** `What do you need?` · `No problem.`
-- **Grammar:** a thing takes `with`; an action takes no `with` — *help me **with** the boxes* / *help me **carry** the boxes*.
-- **Japanese-L1 risk:** **the politeness install.** Keigo is grammatical; English politeness is lexical and syntactic, so a learner looking for an inflection finds none and produces `Help me` — perfect grammar, blunt English. Also 「手伝う」 hides the with/no-with split entirely, which is the form point above and the hardest thing in the lesson.
+- **Grammar:** keep the request together: `Could you help me with` + a thing.
+- **Japanese-L1 risk:** **the politeness install.** Keigo is grammatical; English politeness is lexical and syntactic, so a learner looking for an inflection finds none and produces `Help me` — perfect grammar, blunt English. At this level, keep the complete polite frame intact instead of opening a second `with`/no-`with` decision inside it.
 
 ## Sequence guardrails
 

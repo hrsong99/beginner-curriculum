@@ -22,8 +22,8 @@
 
 ### Pattern 1
 
-- **Model:** I'm sorry—that's not what I meant at all.
-- **Frame:** `That's not what I meant.`
+- **Model:** I'm sorry—I meant that I was full, not that I disliked it.
+- **Frame:** `I meant ___, not ___.`
 - **Partner:** Host: Oh. I thought you didn't like it.
 - **Core ownership:** Core 96
 

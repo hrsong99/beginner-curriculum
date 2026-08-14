@@ -37,13 +37,13 @@
 
 - **Already learned:** Core 1–47.
 - **Not yet:** Core 49–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-45 This one's cheaper · CORE-46 It's the best one here · CORE-47 I'm bored and it's boring
-- **Nearest protected forms:** CORE-49 I've already finished · CORE-50 I went there last year · CORE-51 I've lived here for five years
+- **Most recent available forms:** CORE-45 This one's cheaper · CORE-46 It's the best one here · CORE-47 I was bored during the movie
+- **Nearest protected forms:** CORE-49 I've already finished · CORE-50 I went there last year · CORE-51 How long have you been here?
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
 ## Neighbouring items
 
-- **Previous:** CORE-47 · I'm bored and it's boring
+- **Previous:** CORE-47 · I was bored during the movie
 - **Next:** CORE-49 · I've already finished
 
 ## Authoring inputs — read in order

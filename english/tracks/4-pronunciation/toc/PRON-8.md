@@ -12,10 +12,10 @@
 
 ## Outcome
 
-- **Can do:** /l/ = tongue tip touches behind the teeth · /r/ = tongue tip touches **nothing** and the lips round slightly
+- **Can do:** For a common English /l/, the tongue tip touches the ridge behind the teeth; for approximant /r/, it does not. Lip rounding varies, so do not make it the pass condition
 - **Part:** 3 · Consonants Japanese merges
 - **Japanese habit:** Both land on ラ行, which is neither
-- **Correction target:** /l/ = tongue tip touches behind the teeth · /r/ = tongue tip touches **nothing** and the lips round slightly
+- **Correction target:** For a common English /l/, the tongue tip touches the ridge behind the teeth; for approximant /r/, it does not. Lip rounding varies, so do not make it the pass condition
 - **Examples:** right / light · rice / lice · collect / correct · pray / play · arrive / alive
 
 ## Sequence guardrails

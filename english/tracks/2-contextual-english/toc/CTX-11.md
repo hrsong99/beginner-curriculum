@@ -25,7 +25,7 @@
 - **Model:** I bought this yesterday, but it doesn't work.
 - **Frame:** `I bought ___, but ___.`
 - **Partner:** Clerk: Do you have the receipt?
-- **Core ownership:** Core 31, Core 56
+- **Core ownership:** Core 32, Core 56
 
 ### Pattern 2
 
@@ -41,7 +41,7 @@
 ## Sequence guardrails
 
 - **Assumed productive floor:** Core 1–59.
-- **Pattern owners used here:** Core 31, Core 56, Core 60.
+- **Pattern owners used here:** Core 32, Core 56, Core 60.
 - A pattern more than two Core units above the floor must remain marked `chunk`; do not teach its grammar in this lesson.
 - Partner reactions and `Understand` are receptive; they do not add production targets.
 - This lesson is standalone. Do not invent plot history, callbacks, or a next-lesson teaser.

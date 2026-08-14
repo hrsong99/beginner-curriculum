@@ -37,7 +37,7 @@
 
 - **Already learned:** Core 1–98.
 - **Not yet:** Core 100–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-96 That's not quite what I meant · CORE-97 I'd rather not, if that's OK · CORE-98 This is largely due to
+- **Most recent available forms:** CORE-96 I meant next Friday, not this Friday · CORE-97 I'd rather not, if that's OK · CORE-98 This is largely due to
 - **Nearest protected forms:** CORE-100 As a result, we had to reschedule · CORE-101 It depends on whether · CORE-102 Otherwise, we'd have to start again
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 

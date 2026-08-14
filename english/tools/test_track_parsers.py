@@ -32,11 +32,15 @@ class LiveCurriculumTests(unittest.TestCase):
         self.assertTrue(all(lesson["jp"] for lesson in lessons))
         self.assertEqual(sum(bool(lesson["grammar"]) for lesson in lessons), 70)
         self.assertEqual([lesson["no"] for lesson in lessons if not lesson["grammar"]], list(range(71, 123)))
+        self.assertTrue(all("___" in pattern for lesson in lessons for pattern in lesson["patterns"]))
+        self.assertTrue(all("___" not in model["model"] for lesson in lessons for model in lesson["models"]))
 
     def test_contextual_reactions_and_core_references_are_structured(self):
         lessons = track_parsers.parse_contextual()
         self.assertTrue(all(len(lesson["models"]) == 2 for lesson in lessons))
         self.assertTrue(all(model["reaction"] for lesson in lessons for model in lesson["models"]))
+        self.assertTrue(all("___" in pattern for lesson in lessons for pattern in lesson["patterns"]))
+        self.assertTrue(all("___" not in model["model"] for lesson in lessons for model in lesson["models"]))
         self.assertEqual({lesson["areaNo"] for lesson in lessons}, {1, 2})
         self.assertEqual({lesson["courseNo"] for lesson in lessons}, set(range(1, 11)))
         self.assertTrue(all(lesson["courseSize"] == 6 for lesson in lessons))
@@ -67,6 +71,12 @@ class LiveCurriculumTests(unittest.TestCase):
         lessons = track_parsers.parse_freetalking()
         self.assertTrue(all(lesson["opening"] and lesson["ladder"] for lesson in lessons))
         self.assertEqual({lesson["themeNo"] for lesson in lessons}, set(range(1, 12)))
+        self.assertTrue(lessons[0]["opening"].endswith("a coworker)*"))
+        self.assertTrue(lessons[0]["ladder"].endswith("what would surprise *me* about Japan"))
+        self.assertIn("the essay prompt this track exists to avoid", lessons[65]["shared"])
+        self.assertEqual(lessons[8]["title"], "A purchase that was worth it")
+        self.assertEqual(lessons[106]["title"], "More money or more time?")
+        self.assertFalse([lesson["id"] for lesson in lessons if lesson["title"].startswith("My ")])
 
     def test_pronunciation_stays_planning_only(self):
         lessons = track_parsers.parse_pronunciation()

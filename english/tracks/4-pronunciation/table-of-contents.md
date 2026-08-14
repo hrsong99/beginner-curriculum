@@ -7,11 +7,10 @@
 **Goal:** fix **the specific places** where Japanese phonology collides with English — not
 "English pronunciation" in general, and not an accent.
 
-**12 lessons.** The point of this track is that the problem list is **closed and knowable in
-advance.** Japanese phonology collides with English at a small number of predictable points, and
-the list below is all of them. There is not one general pronunciation tip here. Every lesson exists
-because Japanese has one slot where English has two or three, or because Japanese has a habit
-English does not allow.
+**12 lessons.** This is a prioritised first syllabus, not a claim to contain every difficulty a
+Japanese speaker may have. The list concentrates on recurring contrasts and timing habits that can
+affect intelligibility. A learner diagnostic and pilot evidence should decide which lesson comes
+first for an individual and whether the syllabus needs another target.
 
 Lessons are independent. They can be taken in order, or a tutor can pull one out the moment they
 hear the problem.
@@ -22,30 +21,27 @@ the tutor's.
 
 ---
 
-## The order is by damage, not by fame
+## The order is a working priority to test, not a universal ranking
 
-Most courses open with /r/ vs /l/ because it is the famous one. It is not the expensive one.
-
-**What actually stops a Japanese speaker from being understood is rhythm and inserted vowels** —
-they distort the shape of every word in the sentence, whereas a merged consonant distorts one
-segment of one word, which context usually repairs. A learner who says *light* for *right* is
-understood nine times out of ten. A learner who says `ストロング` for *strong* has changed a
-one-syllable word into five and there is nothing left to repair from.
-
-So Parts 1 and 2 come first, and they are the two to build if only two ever get built.
+Many courses open with /r/ vs /l/ because it is the best-known contrast. This plan starts with
+inserted vowels and rhythm because they can affect the shape of many words across a whole turn.
+Segmental contrasts can also be decisive, especially in short words, so the diagnostic may send a
+learner directly to Parts 3 or 4. Build Parts 1 and 2 first only as a programme-level default, then
+revise the priority from intelligibility data rather than reputation.
 
 ---
 
-## Part 1 · The inserted vowel — the single most expensive habit
+## Part 1 · The inserted vowel — a high-reach Japanese-L1 habit
 
-Japanese syllables are (C)V. English is full of consonants with no vowel after them, and the
-learner's phonology supplies one automatically and inaudibly to them.
+Japanese strongly favours vowel-bearing morae, although moraic /N/, the first half of a geminate
+and the second half of a long vowel are important exceptions. English permits final consonants and
+consonant clusters, so learners may perceive or produce an extra vowel where English has none.
 
 | Lesson | The Japanese habit | The fix | Minimal contrast |
 | --- | --- | --- | --- |
-| **1. Consonants can end a word** | `and` → アンド · `good` → グッド. A vowel appears after every final consonant | Stop the airflow and leave it stopped. The mouth closes and does not reopen | and / andoh · good / goodoh · like / likuh · cat / catto |
-| **2. Consonant clusters stay together** | `street` → ストリート turns one syllable into four | Say the consonants with no gap. Build up: `-treet` → `street` | street · spring · desks · asked · texts · world |
-| **3. `-ed` and `-s` are sounds, not syllables** | `walked` → ウォークト as two beats; `books` → ブックス | `-ed` is one added sound (/t/ /d/ /ɪd/), `-s` is one (/s/ /z/ /ɪz/). Only after t/d and s/z/ʃ/tʃ does it become a syllable | walked · played · wanted / books · bags · watches |
+| **1. Final consonants need no added vowel** | An extra vowel may follow the final consonant in words such as `and` and `good` | For a final stop, close and do not release into a vowel. For a continuant, keep only the consonant sound | and · good · like · cat |
+| **2. Consonant clusters stay together** | A word such as `street` may acquire vowels between consonants and expand into several beats | Say the consonants with no gap. Build the /str/ cluster first, then add /iːt/ | street · spring · desks · asked · texts · world |
+| **3. `-ed` and `-s` are sounds, not automatic syllables** | `walked` and `books` may acquire an extra vowel after the ending | `-ed` is /t/, /d/ or /ɪd/; only /ɪd/ after /t/ or /d/ adds a syllable. `-s` is /s/, /z/ or /ɪz/; /ɪz/ follows /s z ʃ ʒ tʃ dʒ/ | walked · played · wanted / books · bags · watches |
 
 ## Part 2 · Rhythm — the beat is the word, not the mora
 
@@ -55,8 +51,8 @@ timing sounds robotic and, worse, makes the stressed syllable impossible to find
 
 | Lesson | The Japanese habit | The fix | Example |
 | --- | --- | --- | --- |
-| **4. One strong beat per word** | Every syllable gets equal weight, so no syllable stands out | Each word has exactly one strongest syllable. Say it longer and higher, and let the rest shrink | **ba**nana · **com**fortable · pho**to**grapher · **rec**ord (n) / re**cord** (v) |
-| **5. Weak forms and the schwa** | Function words are said in full: `to` as トゥー, `for` as フォー | `to`, `for`, `of`, `a`, `can`, `and` reduce to a schwa in ordinary speech. This is not sloppiness — full forms sound emphatic | a cup **of** tea · I want **to** go · fish **and** chips |
+| **4. One main stress in a multisyllabic word** | Every syllable gets equal weight, so no syllable stands out | A multisyllabic lexical word has one primary stress. Make that syllable prominent and let unstressed syllables reduce | **ba**nana · **com**fortable · pho**to**grapher · **rec**ord (n) / re**cord** (v) |
+| **5. Weak forms and the schwa** | Function words such as `to` and `for` remain in their strong citation forms in every position | In unstressed positions, `to`, `for`, `of`, `a`, `can` and `and` often contain schwa or reduce further. A full form may signal contrast or emphasis | a cup **of** tea · I want **to** go · fish **and** chips |
 | **6. Sentence stress carries the meaning** | Flat delivery, or stress placed by word order | Content words take the beat, function words fall between. Moving the stress changes what the sentence means | I didn't say **he** stole it. / I didn't say he **stole** it. |
 | **7. Linking across words** | Each word is said separately, as it is written | A final consonant joins the next vowel. `an apple` is one shape, not two words | an_apple · pick_it_up · turn_it_off · a lot_of |
 
@@ -64,16 +60,16 @@ timing sounds robotic and, worse, makes the stressed syllable impossible to find
 
 | Lesson | The Japanese habit | The fix | Minimal pairs |
 | --- | --- | --- | --- |
-| **8. /r/ vs /l/** | Both land on ラ行, which is neither | /l/ = tongue tip touches behind the teeth · /r/ = tongue tip touches **nothing** and the lips round slightly | right / light · rice / lice · collect / correct · pray / play · arrive / alive |
-| **9. /f/ and /v/** | ファ is made with both lips; /v/ has no Japanese slot at all and becomes /b/ | Top teeth on the bottom lip for both. /f/ is breath only, /v/ adds voice | food / hood · fan / han · vote / boat · very / berry · leave / leaf |
-| **10. /θ/ and /ð/** | Both become /s/ and /z/ | Tongue tip lightly between the teeth. /θ/ breath, /ð/ voice | think / sink · thank / sank · they / day · breathe / breeze · mouth / mouse |
+| **8. /r/ vs /l/** | Both land on ラ行, which is neither | For a common English /l/, the tongue tip touches the ridge behind the teeth; for approximant /r/, it does not. Lip rounding varies, so do not make it the pass condition | right / light · rice / lice · collect / correct · pray / play · arrive / alive |
+| **9. /f/ and /v/** | Japanese /ɸ/ uses both lips; English /v/ may be replaced by /b/ | Top teeth on the bottom lip for both. /f/ has no voicing; /v/ has voicing | food / hood · fan / han · vote / boat · very / berry · leave / leaf |
+| **10. /θ/ and /ð/** | They may be replaced by /s/, /z/ or /d/ | Tongue tip lightly between or against the teeth. /θ/ has no voicing; /ð/ has voicing | think / sink · thank / sank · they / day · breathe / breeze · mouth / mouse |
 
 ## Part 4 · Vowels English splits and Japanese does not
 
 | Lesson | The Japanese habit | The fix | Minimal pairs |
 | --- | --- | --- | --- |
-| **11. /æ/ · /ʌ/ · /ɑ/** | All three collapse onto ア | /æ/ jaw down and lips wide · /ʌ/ relaxed and central · /ɑ/ jaw down and lips open | cat / cut / cot · bat / but / bought · match / much |
-| **12. /iː/ vs /ɪ/ and /uː/ vs /ʊ/** | Japanese distinguishes length; English distinguishes **tension**, and length only follows | /iː/ tongue high and tight · /ɪ/ relaxed and slightly lower — a short /iː/ is still wrong | sheep / ship · feel / fill · least / list · pool / pull · fool / full |
+| **11. /æ/ · /ʌ/ · /ɒ/** | The three may be pulled toward Japanese ア; examples here use a British-compatible model | /æ/ front and open · /ʌ/ central · /ɒ/ back, open and rounded. Keep the vowel quality distinct rather than relying on spelling | cat / cut / cot · cap / cup / cop · hat / hut / hot |
+| **12. /iː/ vs /ɪ/ and /uː/ vs /ʊ/** | A learner may hear the contrast mainly as long versus short | The pairs differ in vowel quality as well as context-sensitive duration. Teach tongue position first, then preserve the natural timing of the word | sheep / ship · feel / fill · least / list · pool / pull · fool / full |
 
 ---
 
@@ -86,14 +82,17 @@ timing sounds robotic and, worse, makes the stressed syllable impossible to find
 - **Intelligibility is the pass mark, not accent.** `curriculum-rationale.md` §5 is the standing
   policy and it does not change here: the course does not promise a native accent. A lesson passes
   when a listener recovers the word, not when the vowel is beautiful.
+- **Declare one pronunciation model per deck.** The vowel symbols and examples must belong to the
+  same model. This plan uses British-compatible `/ɒ/` examples in lesson 11; an American-English
+  version must replace both the symbol and the affected contrasts rather than mixing the systems.
 - **This track never carries katakana.** It would be self-defeating everywhere, and here most of
   all — this is the track whose entire job is undoing katakana phonology. See `AGENTS.md`. If a
   visual scaffold is needed it is IPA, or a mouth description, or a stress mark.
 - **Mouth-shape art has to be drawn for English.** `korean/trial/assets/mouth/` covers six Korean
   vowels and transfers to none of these. Lessons 8–12 are the ones that would want it; Parts 1–2
   need rhythm and timing visuals instead, which do not exist in the runtime at all.
-- **Build order if only some get built:** **1, 2, 4, 5.** Inserted vowels and rhythm cause the most
-  breakdowns, and unlike /r/–/l/ they are almost never taught anywhere.
+- **Programme-default build order if only some get built:** **1, 2, 4, 5.** These targets have broad
+  reach across a turn, but the diagnostic—not this default—chooses the first lesson for a learner.
 - **A short diagnostic is worth making alongside the first deck** — a fixed set of minimal pairs
   and one read-aloud sentence, so a tutor picks the right lesson from evidence instead of guessing.
 - **Lessons 1–3 overlap Core's vocabulary work**, but the job is different: Core teaches the word,

@@ -24,7 +24,7 @@
 
 ### Pattern 2
 
-- **Model:** The deciding factor for me is ___.
+- **Model:** The deciding factor for me is the cost.
 - **Frame:** `The deciding factor for me is ___.`
 
 ## Supporting content
@@ -37,14 +37,14 @@
 
 - **Already learned:** Core 1–116.
 - **Not yet:** Core 118–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-114 That holds true up to a point · CORE-115 Granted, but that overlooks · CORE-116 If anything, it's got worse
-- **Nearest protected forms:** CORE-118 That's one way of putting it · CORE-119 I'll leave it at that · CORE-120 You might want to check that
+- **Most recent available forms:** CORE-114 That may be true for some people · CORE-115 Granted, but that overlooks · CORE-116 If anything, it's got worse
+- **Nearest protected forms:** CORE-118 You could see it that way · CORE-119 Let's just say it didn't go well · CORE-120 You might want to check that
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
 ## Neighbouring items
 
 - **Previous:** CORE-116 · If anything, it's got worse
-- **Next:** CORE-118 · That's one way of putting it
+- **Next:** CORE-118 · You could see it that way
 
 ## Authoring inputs — read in order
 

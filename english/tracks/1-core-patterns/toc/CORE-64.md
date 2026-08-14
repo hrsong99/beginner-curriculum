@@ -37,14 +37,14 @@
 
 - **Already learned:** Core 1–63.
 - **Not yet:** Core 65–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-61 Do you mind if I sit here? · CORE-62 Do you know where it is? · CORE-63 Coffee is expensive here
-- **Nearest protected forms:** CORE-65 It's made in Japan · CORE-66 If I had more time, I'd travel · CORE-67 I wish I could drive
+- **Most recent available forms:** CORE-61 Do you mind if I sit here? · CORE-62 Do you know where it is? · CORE-63 I generally prefer coffee
+- **Nearest protected forms:** CORE-65 My wallet was stolen · CORE-66 If I had more time, I'd travel · CORE-67 I wish I could drive
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
 ## Neighbouring items
 
-- **Previous:** CORE-63 · Coffee is expensive here
-- **Next:** CORE-65 · It's made in Japan
+- **Previous:** CORE-63 · I generally prefer coffee
+- **Next:** CORE-65 · My wallet was stolen
 
 ## Authoring inputs — read in order
 

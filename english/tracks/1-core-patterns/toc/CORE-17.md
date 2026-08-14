@@ -29,7 +29,7 @@
 
 ## Supporting content
 
-- **Expressions:** `once in a while` · `almost never`
+- **Expressions:** `every day` · `not very often`
 - **Grammar:** `twice a week`, `three times a month` — `a` here means *per*.
 - **Japanese-L1 risk:** another article use with no Japanese counterpart, and it hides inside a frequency phrase. Teach the whole phrase as a chunk.
 

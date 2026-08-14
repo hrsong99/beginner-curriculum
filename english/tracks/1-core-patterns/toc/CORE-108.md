@@ -12,7 +12,7 @@
 
 ## Outcome
 
-- **Can do:** pitch the same request at three levels of formality.
+- **Can do:** pitch the same request at a careful and an informal level.
 - **Unit:** 20 · Register and tone
 
 ## Required production
@@ -31,7 +31,7 @@
 
 - **Expressions:** `when you get a sec` · `at your earliest convenience`
 - **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
-- **Japanese-L1 risk:** the learner's instinct is that more words = more polite, which mostly holds — but over-formality with a close colleague reads as coldness or sarcasm. Teach the whole ladder and when each rung is wrong.
+- **Japanese-L1 risk:** the learner's instinct is that more words = more polite, which mostly holds — but over-formality with a close colleague reads as coldness or sarcasm. Contrast the two levels and teach when each one is wrong.
 
 ## Sequence guardrails
 

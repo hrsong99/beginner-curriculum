@@ -37,7 +37,7 @@
 
 - **Already learned:** Core 1–121.
 - **Not yet:** none inside Core.
-- **Most recent available forms:** CORE-119 I'll leave it at that · CORE-120 You might want to check that · CORE-121 I'd rather not go into it
+- **Most recent available forms:** CORE-119 Let's just say it didn't go well · CORE-120 You might want to check that · CORE-121 I'd rather not go into it
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
 ## Neighbouring items

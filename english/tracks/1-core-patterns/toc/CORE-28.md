@@ -29,7 +29,7 @@
 
 ## Supporting content
 
-- **Expressions:** `I'd love to, but ___` · `Maybe another time.`
+- **Expressions:** `Yes, I'd love to.` · `Sorry, I can't.`
 - **Grammar:** `Would you like to` + plain verb makes an invitation. It is different from `I'd like` in 22, which says what **I** want.
 - **Japanese-L1 risk:** Japanese invitations often use a negative question (`〜ませんか`). Do not copy that shape word for word; `Would you like to ___?` is the ordinary English invitation.
 
@@ -38,7 +38,7 @@
 - **Already learned:** Core 1–27.
 - **Not yet:** Core 29–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-25 I'm working from home today · CORE-26 I usually drive, but today I'm walking · CORE-27 I like cooking
-- **Nearest protected forms:** CORE-29 I'm meeting Sam at six · CORE-30 I was really tired yesterday · CORE-31 We watched a movie last night
+- **Nearest protected forms:** CORE-29 I'm meeting Sam at six · CORE-30 I was really tired yesterday · CORE-31 I went out last night
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
 ## Neighbouring items

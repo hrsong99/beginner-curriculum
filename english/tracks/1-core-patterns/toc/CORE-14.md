@@ -29,7 +29,7 @@
 
 ## Supporting content
 
-- **Expressions:** `hardly ever` · `not anymore`
+- **Expressions:** `not every day` · `on weekends`
 - **Grammar:** `don't` + the plain verb. Never `don't drives`.
 - **Japanese-L1 risk:** the same insertion as 13, now in the negative. Japanese negates by inflecting the verb itself, so `I no drive` and `I not drive` are predicted.
 

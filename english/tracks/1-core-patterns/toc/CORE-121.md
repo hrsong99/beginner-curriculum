@@ -24,8 +24,8 @@
 
 ### Pattern 2
 
-- **Model:** Can we leave it there?
-- **Frame:** `Can we leave it there?`
+- **Model:** Can we leave that there for now?
+- **Frame:** `Can we leave ___ there for now?`
 
 ## Supporting content
 
@@ -37,7 +37,7 @@
 
 - **Already learned:** Core 1–120.
 - **Not yet:** Core 122–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-118 That's one way of putting it · CORE-119 I'll leave it at that · CORE-120 You might want to check that
+- **Most recent available forms:** CORE-118 You could see it that way · CORE-119 Let's just say it didn't go well · CORE-120 You might want to check that
 - **Nearest protected forms:** CORE-122 It's not that simple
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 

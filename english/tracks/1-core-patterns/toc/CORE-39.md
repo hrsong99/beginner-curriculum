@@ -37,13 +37,13 @@
 
 - **Already learned:** Core 1–38.
 - **Not yet:** Core 40–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-36 I was cooking when you called · CORE-37 I'm going to look for a new job · CORE-38 I'll help you
+- **Most recent available forms:** CORE-36 I was cooking when you called · CORE-37 I'm going to look for a new job · CORE-38 Let me help
 - **Nearest protected forms:** CORE-40 You should get some rest · CORE-41 You have to show ID · CORE-42 Don't you like it?
 - The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
 
 ## Neighbouring items
 
-- **Previous:** CORE-38 · I'll help you
+- **Previous:** CORE-38 · Let me help
 - **Next:** CORE-40 · You should get some rest
 
 ## Authoring inputs — read in order

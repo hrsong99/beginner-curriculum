@@ -24,14 +24,14 @@
 
 ### Pattern 2
 
-- **Model:** Could you speak a bit more slowly?
-- **Frame:** `Could you ___ a bit more ___?`
+- **Model:** Could you speak slowly?
+- **Frame:** `Could you speak ___?`
 
 ## Supporting content
 
 - **Expressions:** `I didn't catch that.` · `What does ___ mean?`
-- **Grammar:** `the` also points at the only one there is — `the manager`, `the bill`, `the time`.
-- **Japanese-L1 risk:** **the article thread's second step** — unique reference, not just second mention. Also the most important survival lesson in the unit: a learner who cannot ask for repetition stops talking.
+- **Grammar:** `Could you` + plain verb: `say`, `speak`. Keep the request frame whole.
+- **Japanese-L1 risk:** this is the most important survival lesson in the unit: a learner who cannot ask for repetition stops talking. Do not add a second article objective to the repair work.
 
 ## Sequence guardrails
 
