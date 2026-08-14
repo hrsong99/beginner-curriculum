@@ -12,10 +12,10 @@
 
 ## Outcome
 
-- **Can do:** Tongue tip lightly between the teeth. /θ/ breath, /ð/ voice
+- **Can do:** Tongue tip lightly between or against the teeth. /θ/ has no voicing; /ð/ has voicing
 - **Part:** 3 · Consonants Japanese merges
-- **Japanese habit:** Both become /s/ and /z/
-- **Correction target:** Tongue tip lightly between the teeth. /θ/ breath, /ð/ voice
+- **Japanese habit:** They may be replaced by /s/, /z/ or /d/
+- **Correction target:** Tongue tip lightly between or against the teeth. /θ/ has no voicing; /ð/ has voicing
 - **Examples:** think / sink · thank / sank · they / day · breathe / breeze · mouth / mouse
 
 ## Sequence guardrails
@@ -25,7 +25,7 @@
 ## Neighbouring items
 
 - **Previous:** PRON-9 · /f/ and /v/
-- **Next:** PRON-11 · /æ/ · /ʌ/ · /ɑ/
+- **Next:** PRON-11 · /æ/ · /ʌ/ · /ɒ/
 
 ## Authoring inputs — read in order
 

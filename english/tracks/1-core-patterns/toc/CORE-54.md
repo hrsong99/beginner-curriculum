@@ -33,13 +33,22 @@
 - **Grammar:** `because` introduces the reason; `so` introduces the result.
 - **Japanese-L1 risk:** `から`/`ので` come *after* the reason clause, English `because` comes *before* it — the clause order flips. Expect `I was sick because I stayed home` from a faithful translation.
 
+## Planned spiral review
+
+- **AGR-01 · transfer:** mark third-person singular present without double-marking
+- **ASPECT-02 · controlled:** distinguish an ongoing activity from its present result
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–53.
 - **Not yet:** Core 55–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-51 I've lived here for five years · CORE-52 I've been working all morning · CORE-53 We've done three of the five
+- **Most recent available forms:** CORE-51 How long have you been here? · CORE-52 I've been working all morning · CORE-53 We've done three of the five
 - **Nearest protected forms:** CORE-55 She's the one who called · CORE-56 I like it, but it's expensive · CORE-57 If it rains, I'll stay in
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

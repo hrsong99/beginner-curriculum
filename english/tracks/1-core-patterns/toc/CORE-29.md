@@ -29,17 +29,26 @@
 
 ## Supporting content
 
-- **Expressions:** `I've got plans.` · `Let me get back to you.`
+- **Expressions:** `What time?` · `See you then.`
 - **Grammar:** the same `be` + `-ing` also covers a plan that is already arranged.
 - **Japanese-L1 risk:** the learner has just been told `-ing` means *now*, so this looks like a contradiction. Present it as *already decided*, not as a future tense — the diary is the mental image.
+
+## Planned spiral review
+
+- **ASPECT-01 · checkpoint:** distinguish routine/state from action in progress
+- **PREP-01 · transfer:** store prepositions with their noun or verb
 
 ## Sequence guardrails
 
 - **Already learned:** Core 1–28.
 - **Not yet:** Core 30–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-26 I usually drive, but today I'm walking · CORE-27 I like cooking · CORE-28 Are you free on Friday?
-- **Nearest protected forms:** CORE-30 I was really tired yesterday · CORE-31 We watched a movie last night · CORE-32 We went out for dinner
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- **Nearest protected forms:** CORE-30 I was really tired yesterday · CORE-31 I went out last night · CORE-32 We went out for dinner
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

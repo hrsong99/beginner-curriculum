@@ -33,13 +33,21 @@
 - **Grammar:** `already` for sooner than expected, `yet` for still waiting, `just` for a moment ago.
 - **Japanese-L1 risk:** `もう`/`まだ` map onto these, but the word order differs and `yet` only appears in questions and negatives.
 
+## Planned spiral review
+
+- **PERF-01 · controlled:** distinguish present relevance/duration from finished past time
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–48.
 - **Not yet:** Core 50–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-46 It's the best one here · CORE-47 I'm bored and it's boring · CORE-48 Have you ever been to Kyoto?
-- **Nearest protected forms:** CORE-50 I went there last year · CORE-51 I've lived here for five years · CORE-52 I've been working all morning
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- **Most recent available forms:** CORE-46 It's the best one here · CORE-47 I was bored during the movie · CORE-48 Have you ever been to Kyoto?
+- **Nearest protected forms:** CORE-50 I went there last year · CORE-51 How long have you been here? · CORE-52 I've been working all morning
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

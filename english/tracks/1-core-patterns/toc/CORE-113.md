@@ -33,18 +33,26 @@
 - **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
 - **Japanese-L1 risk:** abstract nouns are the vocabulary tax of C1 and the reason opinion topics stall — see the Freetalking track's topic-selection rule. Build the nouns here so Freetalking can use them.
 
+## Planned spiral review
+
+- **ART-02 · transfer:** choose first/generic reference versus shared/specific `the`
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–112.
 - **Not yet:** Core 114–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-110 I hate to say it, but · CORE-111 Just so you know, · CORE-112 That came across as rude
-- **Nearest protected forms:** CORE-114 That holds true up to a point · CORE-115 Granted, but that overlooks · CORE-116 If anything, it's got worse
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- **Nearest protected forms:** CORE-114 That may be true for some people · CORE-115 Granted, but that overlooks · CORE-116 If anything, it's got worse
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 
 - **Previous:** CORE-112 · That came across as rude
-- **Next:** CORE-114 · That holds true up to a point
+- **Next:** CORE-114 · That may be true for some people
 
 ## Authoring inputs — read in order
 

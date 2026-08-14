@@ -33,13 +33,21 @@
 - **Grammar:** same rule as 57 — present tense after `when` and `unless`.
 - **Japanese-L1 risk:** `unless` has no clean Japanese equivalent and is frequently inverted in meaning. Consider teaching it as `if ___ not` first and only then the single word.
 
+## Planned spiral review
+
+- **MODAL-01 · transfer:** use a plain verb after a modal
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–57.
 - **Not yet:** Core 59–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-55 She's the one who called · CORE-56 I like it, but it's expensive · CORE-57 If it rains, I'll stay in
 - **Nearest protected forms:** CORE-59 I went there to see a client · CORE-60 Would you mind opening the window? · CORE-61 Do you mind if I sit here?
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

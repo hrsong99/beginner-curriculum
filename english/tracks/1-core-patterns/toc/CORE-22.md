@@ -12,7 +12,7 @@
 
 ## Outcome
 
-- **Can do:** order politely and choose between options.
+- **Can do:** order something politely in two common ways.
 - **Unit:** 4 · Ask for things
 
 ## Required production
@@ -24,22 +24,32 @@
 
 ### Pattern 2
 
-- **Model:** I'll take the smaller one.
-- **Frame:** `I'll take the ___ one.`
+- **Model:** Can I have a coffee, please?
+- **Frame:** `Can I have ___, please?`
 
 ## Supporting content
 
-- **Expressions:** `for here or to go?` · `Sounds good.`
-- **Grammar:** `I'd like` is the polite `I want`. `I want` is not rude, but it is flat.
-- **Japanese-L1 risk:** `〜がほしい` maps to `I want`, so the learner reaches for the blunt form by default. This is the same politeness gap as 20, in the one place it is most visible to strangers.
+- **Expressions:** `This one, please.` · `for here or to go?`
+- **Grammar:** `I'd like` stays one complete ordering frame. `Can I have` recycles the known `Can I` request with the plain verb `have`; the slot is the complete thing being ordered.
+- **Bounded survival chunk:** `I'd like ___, please.` is one ordering frame. Keep `I'd like` whole; do not unpack or contrast `would` at A1.
+- **Japanese-L1 risk:** `〜がほしい` maps to `I want`, so the learner reaches for the blunt form by default. This is the same politeness gap as 20, in the one place it is most visible to strangers. Keep `the chicken` attached as a menu chunk; do not turn this into a second article lecture.
+
+## Planned spiral review
+
+- **ART-01 · transfer:** attach `a`/`an` to a singular count noun
+- **POLITE-01 · controlled:** express politeness with an English frame, not an inflection
 
 ## Sequence guardrails
 
 - **Already learned:** Core 1–21.
 - **Not yet:** Core 23–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-19 How much is this? · CORE-20 Could you help me with this? · CORE-21 Can I try this on?
-- **Nearest protected forms:** CORE-23 Two cups of coffee · CORE-24 Sorry, could you say that again? · CORE-25 I'm working from home today
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- **Nearest protected forms:** CORE-23 Two cups of coffee · CORE-24 Sorry, can you say that again? · CORE-25 I'm working from home today
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

@@ -32,11 +32,52 @@ class LiveCurriculumTests(unittest.TestCase):
         self.assertTrue(all(lesson["jp"] for lesson in lessons))
         self.assertEqual(sum(bool(lesson["grammar"]) for lesson in lessons), 70)
         self.assertEqual([lesson["no"] for lesson in lessons if not lesson["grammar"]], list(range(71, 123)))
+        self.assertTrue(all("___" in pattern for lesson in lessons for pattern in lesson["patterns"]))
+        self.assertTrue(all("___" not in model["model"] for lesson in lessons for model in lesson["models"]))
+        self.assertEqual(len(lessons[0]["reviewRegistry"]), 20)
+        self.assertEqual(sum(bool(lesson["spiralReviews"]) for lesson in lessons), 98)
+        self.assertEqual(sum(len(lesson["spiralReviews"]) for lesson in lessons), 155)
+        self.assertTrue(all(len(lesson["spiralReviews"]) <= 2 for lesson in lessons))
+        self.assertEqual(
+            [(lesson["no"], lesson["boundedChunk"]) for lesson in lessons if lesson["boundedChunk"]],
+            [
+                (20, "`Could you help me with ___?` is the approved early survival request. Keep `could you help me with` whole; do not generalise past-form politeness at A1."),
+                (22, "`I'd like ___, please.` is one ordering frame. Keep `I'd like` whole; do not unpack or contrast `would` at A1."),
+                (28, "`Would you like to ___?` is the unit's one survival invitation frame. Keep `would like to` intact; do not contrast or transform `would` at A1."),
+            ],
+        )
+
+    def test_early_core_models_close_prerequisite_leaks(self):
+        lessons = {lesson["no"]: lesson for lesson in track_parsers.parse_core()}
+        self.assertEqual(lessons[1]["models"][1]["model"], "My name is Mina.")
+        self.assertEqual(lessons[2]["models"][1]["model"], "I'm an engineer.")
+        self.assertEqual(lessons[9]["patterns"][0], "Two ___, please.")
+        self.assertEqual(lessons[21]["patterns"], ["Can I ___?", "Sure, you can ___."])
+        self.assertEqual(lessons[22]["patterns"], ["I'd like ___, please.", "Can I have ___, please?"])
+        self.assertEqual(lessons[24]["patterns"], ["Can you say ___ again?", "Can you speak ___?"])
+
+    def test_spiral_reviews_are_delayed_and_reach_independent_retrieval(self):
+        lessons = track_parsers.parse_core()
+        registry = lessons[0]["reviewRegistry"]
+        for target, meta in registry.items():
+            returns = [
+                (lesson["no"], review["mode"])
+                for lesson in lessons
+                for review in lesson["spiralReviews"]
+                if review["id"] == target
+            ]
+            with self.subTest(target=target):
+                self.assertGreaterEqual(len(returns), 3)
+                self.assertGreaterEqual(len({mode for _number, mode in returns}), 2)
+                self.assertTrue({mode for _number, mode in returns} & {"transfer", "checkpoint"})
+                self.assertTrue(any(number >= meta["introduced"] + 8 for number, _mode in returns))
 
     def test_contextual_reactions_and_core_references_are_structured(self):
         lessons = track_parsers.parse_contextual()
         self.assertTrue(all(len(lesson["models"]) == 2 for lesson in lessons))
         self.assertTrue(all(model["reaction"] for lesson in lessons for model in lesson["models"]))
+        self.assertTrue(all("___" in pattern for lesson in lessons for pattern in lesson["patterns"]))
+        self.assertTrue(all("___" not in model["model"] for lesson in lessons for model in lesson["models"]))
         self.assertEqual({lesson["areaNo"] for lesson in lessons}, {1, 2})
         self.assertEqual({lesson["courseNo"] for lesson in lessons}, set(range(1, 11)))
         self.assertTrue(all(lesson["courseSize"] == 6 for lesson in lessons))
@@ -67,6 +108,12 @@ class LiveCurriculumTests(unittest.TestCase):
         lessons = track_parsers.parse_freetalking()
         self.assertTrue(all(lesson["opening"] and lesson["ladder"] for lesson in lessons))
         self.assertEqual({lesson["themeNo"] for lesson in lessons}, set(range(1, 12)))
+        self.assertTrue(lessons[0]["opening"].endswith("a coworker)*"))
+        self.assertTrue(lessons[0]["ladder"].endswith("what would surprise *me* about Japan"))
+        self.assertIn("the essay prompt this track exists to avoid", lessons[65]["shared"])
+        self.assertEqual(lessons[8]["title"], "A purchase that was worth it")
+        self.assertEqual(lessons[106]["title"], "More money or more time?")
+        self.assertFalse([lesson["id"] for lesson in lessons if lesson["title"].startswith("My ")])
 
     def test_pronunciation_stays_planning_only(self):
         lessons = track_parsers.parse_pronunciation()

@@ -33,13 +33,22 @@
 - **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
 - **Japanese-L1 risk:** present-after-time-word again (see 58). It resurfaces here under workplace load, which is where it actually breaks.
 
+## Planned spiral review
+
+- **ASPECT-02 · checkpoint:** distinguish an ongoing activity from its present result
+- **PREP-01 · transfer:** store prepositions with their noun or verb
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–79.
 - **Not yet:** Core 81–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-77 It was supposed to be ready · CORE-78 This time tomorrow I'll be flying · CORE-79 I should have it ready by Friday
 - **Nearest protected forms:** CORE-81 I'm responsible for customer support · CORE-82 We're on track, but · CORE-83 So what you're saying is
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

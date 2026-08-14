@@ -20,7 +20,7 @@
 ### Pattern 1
 
 - **Model:** Two cups of coffee, please.
-- **Frame:** `___ ___s of ___, please.`
+- **Frame:** `Two cups of ___, please.`
 
 ### Pattern 2
 
@@ -33,18 +33,27 @@
 - **Grammar:** some things are not counted directly — you count the container: `a cup of`, `a piece of`, `a bottle of`.
 - **Japanese-L1 risk:** Japanese counts everything with a counter, so the *idea* transfers — but **which** English nouns are non-count is unpredictable (`advice`, `information`, `furniture`). Treat it as vocabulary: the countability rides on the word from first contact.
 
+## Planned spiral review
+
+- **NUM-01 · contrast:** mark plural nouns even when quantity is already clear
+- **ART-02 · transfer:** choose first/generic reference versus shared/specific `the`
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–22.
 - **Not yet:** Core 24–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-20 Could you help me with this? · CORE-21 Can I try this on? · CORE-22 I'd like the chicken, please
-- **Nearest protected forms:** CORE-24 Sorry, could you say that again? · CORE-25 I'm working from home today · CORE-26 I usually drive, but today I'm walking
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- **Nearest protected forms:** CORE-24 Sorry, can you say that again? · CORE-25 I'm working from home today · CORE-26 I usually drive, but today I'm walking
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 
 - **Previous:** CORE-22 · I'd like the chicken, please
-- **Next:** CORE-24 · Sorry, could you say that again?
+- **Next:** CORE-24 · Sorry, can you say that again?
 
 ## Authoring inputs — read in order
 

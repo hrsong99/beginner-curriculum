@@ -25,7 +25,7 @@
 - **Model:** Sorry, I ordered the iced coffee, not the hot one.
 - **Frame:** `I ordered ___, not ___.`
 - **Partner:** Server: I'm sorry—I picked up the wrong ticket.
-- **Core ownership:** Core 31
+- **Treatment:** teach as a bounded chunk; do not expand its grammar here
 
 ### Pattern 2
 
@@ -41,7 +41,7 @@
 ## Sequence guardrails
 
 - **Assumed productive floor:** Core 1–59.
-- **Pattern owners used here:** Core 31, Core 60.
+- **Pattern owners used here:** Core 60.
 - A pattern more than two Core units above the floor must remain marked `chunk`; do not teach its grammar in this lesson.
 - Partner reactions and `Understand` are receptive; they do not add production targets.
 - This lesson is standalone. Do not invent plot history, callbacks, or a next-lesson teaser.

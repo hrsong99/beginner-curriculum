@@ -37,13 +37,17 @@
 
 - **Already learned:** Core 1–114.
 - **Not yet:** Core 116–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-112 That came across as rude · CORE-113 The underlying issue is · CORE-114 That holds true up to a point
-- **Nearest protected forms:** CORE-116 If anything, it's got worse · CORE-117 On balance, I'd say · CORE-118 That's one way of putting it
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- **Most recent available forms:** CORE-112 That came across as rude · CORE-113 The underlying issue is · CORE-114 That may be true for some people
+- **Nearest protected forms:** CORE-116 If anything, it's got worse · CORE-117 On balance, I'd say · CORE-118 You could see it that way
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 
-- **Previous:** CORE-114 · That holds true up to a point
+- **Previous:** CORE-114 · That may be true for some people
 - **Next:** CORE-116 · If anything, it's got worse
 
 ## Authoring inputs — read in order

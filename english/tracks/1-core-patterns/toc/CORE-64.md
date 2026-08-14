@@ -33,18 +33,27 @@
 - **Grammar:** `won't` here isn't the future — it means *refuses to*.
 - **Japanese-L1 risk:** a non-obvious use of `will` with no Japanese counterpart; teach it as a fixed frame for broken things.
 
+## Planned spiral review
+
+- **ASPECT-02 · contrast:** distinguish an ongoing activity from its present result
+- **MODAL-01 · transfer:** use a plain verb after a modal
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–63.
 - **Not yet:** Core 65–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-61 Do you mind if I sit here? · CORE-62 Do you know where it is? · CORE-63 Coffee is expensive here
-- **Nearest protected forms:** CORE-65 It's made in Japan · CORE-66 If I had more time, I'd travel · CORE-67 I wish I could drive
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- **Most recent available forms:** CORE-61 Do you mind if I sit here? · CORE-62 Do you know where it is? · CORE-63 I generally prefer coffee
+- **Nearest protected forms:** CORE-65 My wallet was stolen · CORE-66 If I had more time, I'd travel · CORE-67 I wish I could drive
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 
-- **Previous:** CORE-63 · Coffee is expensive here
-- **Next:** CORE-65 · It's made in Japan
+- **Previous:** CORE-63 · I generally prefer coffee
+- **Next:** CORE-65 · My wallet was stolen
 
 ## Authoring inputs — read in order
 

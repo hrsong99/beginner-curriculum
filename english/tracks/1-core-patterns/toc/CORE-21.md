@@ -12,7 +12,7 @@
 
 ## Outcome
 
-- **Can do:** ask whether something is allowed, and respond.
+- **Can do:** ask permission and answer a permission request.
 - **Unit:** 4 · Ask for things
 
 ## Required production
@@ -24,22 +24,31 @@
 
 ### Pattern 2
 
-- **Model:** Sure, go ahead.
-- **Frame:** `Sure, ___.`
+- **Model:** Sure, you can take a photo.
+- **Frame:** `Sure, you can ___.`
 
 ## Supporting content
 
-- **Expressions:** `Of course.` · `I'm afraid not.`
-- **Grammar:** `Can I` asks about **me**; `Could you` asks about **you**. Different jobs.
-- **Japanese-L1 risk:** both are `〜てもいいですか` territory, so the two get confused. Contrast them directly.
+- **Expressions:** `Go ahead.` · `Sorry, not here.`
+- **Grammar:** `Can I` asks permission for **me**; `you can` gives permission to **you**. Keep the verb plain after `can`.
+- **Japanese-L1 risk:** Japanese uses `〜てもいいですか` and answers without repeating a modal. Recycle the known `can` + plain-verb shape rather than adding an untaught `if` clause inside the fixed frame.
+
+## Planned spiral review
+
+- **MODAL-01 · transfer:** use a plain verb after a modal
+- **POLITE-01 · contrast:** express politeness with an English frame, not an inflection
 
 ## Sequence guardrails
 
 - **Already learned:** Core 1–20.
 - **Not yet:** Core 22–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-18 Can you drive? · CORE-19 How much is this? · CORE-20 Could you help me with this?
-- **Nearest protected forms:** CORE-22 I'd like the chicken, please · CORE-23 Two cups of coffee · CORE-24 Sorry, could you say that again?
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- **Nearest protected forms:** CORE-22 I'd like the chicken, please · CORE-23 Two cups of coffee · CORE-24 Sorry, can you say that again?
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

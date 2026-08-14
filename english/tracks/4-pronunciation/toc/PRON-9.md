@@ -12,10 +12,10 @@
 
 ## Outcome
 
-- **Can do:** Top teeth on the bottom lip for both. /f/ is breath only, /v/ adds voice
+- **Can do:** Top teeth on the bottom lip for both. /f/ has no voicing; /v/ has voicing
 - **Part:** 3 · Consonants Japanese merges
-- **Japanese habit:** ファ is made with both lips; /v/ has no Japanese slot at all and becomes /b/
-- **Correction target:** Top teeth on the bottom lip for both. /f/ is breath only, /v/ adds voice
+- **Japanese habit:** Japanese /ɸ/ uses both lips; English /v/ may be replaced by /b/
+- **Correction target:** Top teeth on the bottom lip for both. /f/ has no voicing; /v/ has voicing
 - **Examples:** food / hood · fan / han · vote / boat · very / berry · leave / leaf
 
 ## Sequence guardrails

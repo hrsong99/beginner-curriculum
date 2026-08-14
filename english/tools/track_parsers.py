@@ -22,6 +22,7 @@ class ParseError(ValueError):
 
 
 ITEM = re.compile(r"^\*\*(\d+)\. (.+?)\*\*(.*)$")
+REVIEW_MODES = {"recognition", "controlled", "contrast", "transfer", "checkpoint"}
 
 
 def slugify(text: str) -> str:
@@ -66,6 +67,28 @@ def _field(body: list[str], label: str, *, wrapped: bool = False) -> str | None:
         value = [match.group(1).strip()]
         for following in body[i + 1:]:
             if not following.startswith("  "):
+                break
+            value.append(following.strip())
+        return " ".join(value)
+    return None
+
+
+def _wrapped_field(body: list[str], label: str) -> str | None:
+    """Read ``*Label:* value`` fields whose prose wraps as ordinary Markdown.
+
+    Freetalking fields deliberately wrap at the repository line length.  Their
+    continuation lines are not indented list content, so ``_field`` must remain
+    strict for the other TOCs while this reader consumes prose up to the next
+    field or paragraph boundary.
+    """
+    pattern = re.compile(rf"^\*{re.escape(label)}:\* (.+)$")
+    for i, line in enumerate(body):
+        match = pattern.match(line)
+        if not match:
+            continue
+        value = [match.group(1).strip()]
+        for following in body[i + 1:]:
+            if not following.strip() or re.match(r"^\*[^*]+:\* ", following):
                 break
             value.append(following.strip())
         return " ".join(value)
@@ -124,9 +147,91 @@ def _continuous(path: pathlib.Path, lessons: list[dict], expected: int) -> None:
         raise ParseError(f"{path}: lesson numbers must be continuous 1..{expected}; got {numbers[:5]}…{numbers[-5:]}")
 
 
+def _review_registry(path: pathlib.Path, lines: list[str]) -> dict[str, dict]:
+    registry = {}
+    pattern = re.compile(r"^\| `([A-Z]+-\d{2})` \| (.+?) \| Core (\d+) \|$")
+    for line in lines:
+        if not (match := pattern.match(line)):
+            continue
+        target, description, introduced = match.groups()
+        if target in registry:
+            raise ParseError(f"{path}: duplicate spiral-review target {target}")
+        registry[target] = {
+            "id": target,
+            "description": description,
+            "introduced": int(introduced),
+        }
+    if not registry:
+        raise ParseError(f"{path}: missing Japanese-L1 spiral review registry")
+    return registry
+
+
+def _spiral_reviews(
+    path: pathlib.Path,
+    number: int,
+    value: str | None,
+    registry: dict[str, dict],
+) -> list[dict]:
+    if not value:
+        return []
+    matches = re.findall(r"`([A-Z]+-\d{2}):([a-z]+)`", value)
+    if not matches or len(matches) != value.count("`") // 2:
+        raise ParseError(f"{path}: Core {number} has malformed Spiral review metadata: {value}")
+    if len(matches) > 2:
+        raise ParseError(f"{path}: Core {number} has more than two spiral-review targets")
+    if len({target for target, _mode in matches}) != len(matches):
+        raise ParseError(f"{path}: Core {number} repeats a spiral-review target")
+    reviews = []
+    for target, mode in matches:
+        if target not in registry:
+            raise ParseError(f"{path}: Core {number} references unknown spiral-review target {target}")
+        if mode not in REVIEW_MODES:
+            raise ParseError(f"{path}: Core {number} uses unknown spiral-review mode {mode}")
+        meta = registry[target]
+        if number <= meta["introduced"]:
+            raise ParseError(
+                f"{path}: Core {number} reviews {target} before or during its Core {meta['introduced']} introduction"
+            )
+        reviews.append({**meta, "mode": mode})
+    return reviews
+
+
+def _validate_core_spiral(path: pathlib.Path, lessons: list[dict], registry: dict[str, dict]) -> None:
+    lesson_by_no = {lesson["no"]: lesson for lesson in lessons}
+    for target, meta in registry.items():
+        if meta["introduced"] not in lesson_by_no:
+            raise ParseError(f"{path}: {target} has unknown introduction Core {meta['introduced']}")
+        returns = [
+            (lesson["no"], review["mode"])
+            for lesson in lessons
+            for review in lesson["spiralReviews"]
+            if review["id"] == target
+        ]
+        if len(returns) < 3:
+            raise ParseError(f"{path}: {target} needs at least three planned review returns; got {returns}")
+        modes = {mode for _number, mode in returns}
+        if len(modes) < 2:
+            raise ParseError(f"{path}: {target} needs at least two review modes; got {sorted(modes)}")
+        if not modes.intersection({"transfer", "checkpoint"}):
+            raise ParseError(f"{path}: {target} never reaches transfer or checkpoint retrieval")
+        if returns[0][0] > meta["introduced"] + 12:
+            raise ParseError(f"{path}: {target} has no timely return after Core {meta['introduced']}")
+        if not any(number >= meta["introduced"] + 8 for number, _mode in returns):
+            raise ParseError(f"{path}: {target} has no delayed return eight or more lessons later")
+
+    for index, lesson in enumerate(lessons):
+        next_unit = lessons[index + 1]["unitNo"] if index + 1 < len(lessons) else None
+        for review in lesson["spiralReviews"]:
+            if review["mode"] == "checkpoint" and next_unit == lesson["unitNo"]:
+                raise ParseError(
+                    f"{path}: Core {lesson['no']} marks {review['id']} as checkpoint before the unit ends"
+                )
+
+
 def parse_core() -> list[dict]:
     path, lines = _read("1-core-patterns")
     tops, sections = _owner_maps(lines)
+    review_registry = _review_registry(path, lines)
     lessons = []
     for number, heading, _tail, body in _items(lines, after="# Part 1"):
         title, sep, hint = heading.partition(" — ")
@@ -143,6 +248,8 @@ def parse_core() -> list[dict]:
         unit_match = re.match(r"Unit (\d+) · (.+?) · (\d+) lessons · \*\*(.+?)\*\*", section)
         _require(unit_match, path, number, "a valid Unit heading")
         part = tops.get(number, {}).get("heading", "")
+        bounded_chunk = _field(body, "Bounded chunk")
+        spiral_reviews = _spiral_reviews(path, number, _field(body, "Spiral review"), review_registry)
         lessons.append({
             "id": f"CORE-{number}", "no": number, "track": "1-core-patterns",
             "title": title, "canDo": _require(_field(body, "Can-do", wrapped=True) or hint if sep else None, path, number, "Can-do"),
@@ -153,6 +260,9 @@ def parse_core() -> list[dict]:
             # that absence so generated audits can expose it; never invent one.
             "grammar": _field(body, "Grammar"),
             "jp": _require(_field(body, "JP"), path, number, "JP"),
+            "boundedChunk": bounded_chunk,
+            "spiralReviews": spiral_reviews,
+            "reviewRegistry": review_registry,
             "part": part,
             "unitNo": int(unit_match.group(1)), "unit": unit_match.group(2).strip(),
             "unitSize": int(unit_match.group(3)), "level": unit_match.group(4).strip(),
@@ -160,6 +270,7 @@ def parse_core() -> list[dict]:
         if len(models) != 2:
             raise ParseError(f"{path}: Core {number} has {len(models)} patterns, expected exactly 2")
     _continuous(path, lessons, 122)
+    _validate_core_spiral(path, lessons, review_registry)
     return lessons
 
 
@@ -234,19 +345,19 @@ def parse_freetalking() -> list[dict]:
         formats = re.findall(r"`(story|choose|両国|opinion)`", full_heading)
         if not formats:
             formats = [theme.group(3)]
-        opening = _field(body, "Opens")
+        opening = _wrapped_field(body, "Opens")
         if not opening:
             balance = re.search(r"— \*(.+?)\*", full_heading)
             opening = balance.group(1) if balance else None
         theme_no = int(theme.group(1))
-        moves = _field(body, "Moves")
+        moves = _wrapped_field(body, "Moves")
         lessons.append({
             "id": f"FT-{number}", "no": number, "track": "3-freetalking",
             "title": heading.split(" — ")[0].strip(), "canDo": opening,
             "opening": _require(opening, path, number, "Opens"),
-            "ladder": _require(_field(body, "Ladder") or theme_ladders.get(theme_no), path, number, "Ladder"),
+            "ladder": _require(_wrapped_field(body, "Ladder") or theme_ladders.get(theme_no), path, number, "Ladder"),
             "moves": moves, "coreRefs": [int(n) for n in re.findall(r"Core (\d+)", moves or "")],
-            "shared": _field(body, "Shared"),
+            "shared": _wrapped_field(body, "Shared"),
             "formats": _require(formats, path, number, "format tag"), "deep": "深く" in full_heading,
             "themeNo": theme_no, "theme": theme.group(2).strip(),
             "themeFormat": theme.group(3), "level": "Intermediate / Advanced versions",

@@ -33,13 +33,22 @@
 - **Grammar:** place words come with the noun: `at` the station, `in` the building, `on` the corner.
 - **Japanese-L1 risk:** Japanese `に`/`で` map onto several English prepositions depending on the verb, so a one-to-one substitution fails. Store each preposition **attached to its noun**, never as a list.
 
+## Planned spiral review
+
+- **ART-02 · checkpoint:** choose first/generic reference versus shared/specific `the`
+- **ORDER-01 · controlled:** keep English constituent and question order
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–10.
 - **Not yet:** Core 12–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-8 It's cold today · CORE-9 Two coffees, please · CORE-10 The café on the corner
 - **Nearest protected forms:** CORE-12 I start work at nine · CORE-13 Do you drink coffee? · CORE-14 I don't drive to work
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

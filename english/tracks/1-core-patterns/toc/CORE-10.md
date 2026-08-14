@@ -20,12 +20,12 @@
 ### Pattern 1
 
 - **Model:** There's a café on the corner.
-- **Frame:** `There's a ___ on the corner.`
+- **Frame:** `There's a ___ on ___.`
 
 ### Pattern 2
 
-- **Model:** The café closes at six.
-- **Frame:** `The ___ ___s at ___.`
+- **Model:** The café is open until six.
+- **Frame:** `The ___ is open until ___.`
 
 ## Supporting content
 
@@ -33,13 +33,22 @@
 - **Grammar:** `a` introduces it. `the` points at the one you both now have in mind.
 - **Japanese-L1 risk:** **the core article lesson.** Japanese marks this contrast with `は`/`が` and word order, none of which surfaces as a word — so the learner has the *concept* and no slot to put it in. Teach it as first-mention → later-mention across two sentences, never as a rule about nouns.
 
+## Planned spiral review
+
+- **DUMMY-01 · controlled:** retain dummy `there` and weather/time `it`
+- **NUM-01 · controlled:** mark plural nouns even when quantity is already clear
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–9.
 - **Not yet:** Core 11–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-7 There's a café near here · CORE-8 It's cold today · CORE-9 Two coffees, please
 - **Nearest protected forms:** CORE-11 Where's the station? · CORE-12 I start work at nine · CORE-13 Do you drink coffee?
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

@@ -33,13 +33,21 @@
 - **Grammar:** `there` here is not a place. It is the word English uses to say something exists.
 - **Japanese-L1 risk:** `ある`/`いる` needs no dummy subject, so `Near here a café is` is predicted. Teach `there is` as one unanalysed chunk first; the structure can wait.
 
+## Planned spiral review
+
+- **PREP-01 · controlled:** store prepositions with their noun or verb
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–6.
 - **Not yet:** Core 8–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-4 This is my friend, Leo · CORE-5 Is this your bag? · CORE-6 Are you a student?
 - **Nearest protected forms:** CORE-8 It's cold today · CORE-9 Two coffees, please · CORE-10 The café on the corner
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

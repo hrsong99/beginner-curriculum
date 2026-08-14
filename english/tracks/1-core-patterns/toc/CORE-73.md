@@ -33,13 +33,22 @@
 - **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
 - **Japanese-L1 risk:** Japanese marks sequence with connectives rather than tense, so the past perfect feels redundant to the learner — the `when` clause already says it. Teach it where the order is genuinely ambiguous without it, or it will read as decoration.
 
+## Planned spiral review
+
+- **PERF-01 · transfer:** distinguish present relevance/duration from finished past time
+- **ASPECT-02 · transfer:** distinguish an ongoing activity from its present result
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–72.
 - **Not yet:** Core 74–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-70 She told me to wait · CORE-71 I should have called earlier · CORE-72 I might have left it at home
 - **Nearest protected forms:** CORE-74 I was going to call, but · CORE-75 I used to walk to school · CORE-76 I had my phone repaired
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

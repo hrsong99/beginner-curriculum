@@ -12,10 +12,10 @@
 
 ## Outcome
 
-- **Can do:** `to`, `for`, `of`, `a`, `can`, `and` reduce to a schwa in ordinary speech. This is not sloppiness — full forms sound emphatic
+- **Can do:** In unstressed positions, `to`, `for`, `of`, `a`, `can` and `and` often contain schwa or reduce further. A full form may signal contrast or emphasis
 - **Part:** 2 · Rhythm — the beat is the word, not the mora
-- **Japanese habit:** Function words are said in full: `to` as トゥー, `for` as フォー
-- **Correction target:** `to`, `for`, `of`, `a`, `can`, `and` reduce to a schwa in ordinary speech. This is not sloppiness — full forms sound emphatic
+- **Japanese habit:** Function words such as `to` and `for` remain in their strong citation forms in every position
+- **Correction target:** In unstressed positions, `to`, `for`, `of`, `a`, `can` and `and` often contain schwa or reduce further. A full form may signal contrast or emphasis
 - **Examples:** a cup **of** tea · I want **to** go · fish **and** chips
 
 ## Sequence guardrails
@@ -24,7 +24,7 @@
 
 ## Neighbouring items
 
-- **Previous:** PRON-4 · One strong beat per word
+- **Previous:** PRON-4 · One main stress in a multisyllabic word
 - **Next:** PRON-6 · Sentence stress carries the meaning
 
 ## Authoring inputs — read in order

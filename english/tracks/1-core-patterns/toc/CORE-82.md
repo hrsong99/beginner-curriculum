@@ -33,13 +33,21 @@
 - **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
 - **Japanese-L1 risk:** delivering bad news early and directly is an English workplace norm that conflicts with a Japanese preference for preparing the ground. Name that explicitly — it is a pragmatics lesson wearing a grammar lesson's clothes.
 
+## Planned spiral review
+
+- **ORDER-01 · transfer:** keep English constituent and question order
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–81.
 - **Not yet:** Core 83–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-79 I should have it ready by Friday · CORE-80 Let me know once it's ready · CORE-81 I'm responsible for customer support
 - **Nearest protected forms:** CORE-83 So what you're saying is · CORE-84 I was wondering if you could · CORE-85 I see your point, but
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

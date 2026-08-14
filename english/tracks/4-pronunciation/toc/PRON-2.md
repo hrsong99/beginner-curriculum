@@ -12,10 +12,10 @@
 
 ## Outcome
 
-- **Can do:** Say the consonants with no gap. Build up: `-treet` → `street`
-- **Part:** 1 · The inserted vowel — the single most expensive habit
-- **Japanese habit:** `street` → ストリート turns one syllable into four
-- **Correction target:** Say the consonants with no gap. Build up: `-treet` → `street`
+- **Can do:** Say the consonants with no gap. Build the /str/ cluster first, then add /iːt/
+- **Part:** 1 · The inserted vowel — a high-reach Japanese-L1 habit
+- **Japanese habit:** A word such as `street` may acquire vowels between consonants and expand into several beats
+- **Correction target:** Say the consonants with no gap. Build the /str/ cluster first, then add /iːt/
 - **Examples:** street · spring · desks · asked · texts · world
 
 ## Sequence guardrails
@@ -24,8 +24,8 @@
 
 ## Neighbouring items
 
-- **Previous:** PRON-1 · Consonants can end a word
-- **Next:** PRON-3 · `-ed` and `-s` are sounds, not syllables
+- **Previous:** PRON-1 · Final consonants need no added vowel
+- **Next:** PRON-3 · `-ed` and `-s` are sounds, not automatic syllables
 
 ## Authoring inputs — read in order
 

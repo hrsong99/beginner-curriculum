@@ -33,13 +33,21 @@
 - **Grammar:** subject → verb → the rest. The verb comes second, always.
 - **Japanese-L1 risk:** **the word-order install.** Japanese is verb-final, so `I Tokyo live` is the natural output. This is the first lesson with a real verb, so it is where the order is set — drill it as order, not as vocabulary.
 
+## Planned spiral review
+
+- **SUBJ-01 · controlled:** keep an explicit English subject
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–2.
 - **Not yet:** Core 4–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-1 Hi, I'm Mina · CORE-2 I'm a designer
 - **Nearest protected forms:** CORE-4 This is my friend, Leo · CORE-5 Is this your bag? · CORE-6 Are you a student?
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

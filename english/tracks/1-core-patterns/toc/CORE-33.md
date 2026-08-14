@@ -33,13 +33,21 @@
 - **Grammar:** `did` takes the tense, so the verb goes back to plain: `Did you **have**`, not `had`.
 - **Japanese-L1 risk:** **do-support again, and the failure is different this time.** `Did you went?` marks tense twice — the learner has understood the rule and applied it too well. Drill the plain verb after `did`, not the question form.
 
+## Planned spiral review
+
+- **DO-01 · contrast:** insert `do` and leave the main verb plain
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–32.
 - **Not yet:** Core 34–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-30 I was really tired yesterday · CORE-31 We watched a movie last night · CORE-32 We went out for dinner
+- **Most recent available forms:** CORE-30 I was really tired yesterday · CORE-31 I went out last night · CORE-32 We went out for dinner
 - **Nearest protected forms:** CORE-34 I didn't sleep well · CORE-35 First we ate, then we walked around · CORE-36 I was cooking when you called
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

@@ -33,13 +33,22 @@
 - **Grammar:** `still need to` for what's left.
 - **Japanese-L1 risk:** straightforward; this lesson is where the unit's grammar becomes useful at work, which is what makes the unit worth its length.
 
+## Planned spiral review
+
+- **NUM-01 · transfer:** mark plural nouns even when quantity is already clear
+- **PERF-01 · checkpoint:** distinguish present relevance/duration from finished past time
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–52.
 - **Not yet:** Core 54–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-50 I went there last year · CORE-51 I've lived here for five years · CORE-52 I've been working all morning
+- **Most recent available forms:** CORE-50 I went there last year · CORE-51 How long have you been here? · CORE-52 I've been working all morning
 - **Nearest protected forms:** CORE-54 I stayed home because I was sick · CORE-55 She's the one who called · CORE-56 I like it, but it's expensive
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

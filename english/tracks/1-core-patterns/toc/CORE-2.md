@@ -12,7 +12,7 @@
 
 ## Outcome
 
-- **Can do:** say your job and the field you work in.
+- **Can do:** say your job with `a` or `an`.
 - **Unit:** 1 · Say who you are
 
 ## Required production
@@ -24,13 +24,13 @@
 
 ### Pattern 2
 
-- **Model:** I work in technology.
-- **Frame:** `I work in ___.`
+- **Model:** I'm an engineer.
+- **Frame:** `I'm an ___.`
 
 ## Supporting content
 
 - **Expressions:** `What do you do?` · `How about you?`
-- **Grammar:** a job takes `a`/`an` — `a designer`, `an engineer`. Learn it attached to the word.
+- **Grammar:** a job takes `a` before a consonant sound and `an` before a vowel sound. Learn the article attached to the job: `a designer`, `an engineer`.
 - **Japanese-L1 risk:** **first article contact.** Do not explain the system; teach `a ___` as part of the job chunk. Japanese has no article slot at all, so the goal here is that the word never gets stored without it.
 
 ## Sequence guardrails
@@ -39,7 +39,11 @@
 - **Not yet:** Core 3–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-1 Hi, I'm Mina
 - **Nearest protected forms:** CORE-3 I live in Tokyo · CORE-4 This is my friend, Leo · CORE-5 Is this your bag?
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

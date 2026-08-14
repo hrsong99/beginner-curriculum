@@ -33,17 +33,25 @@
 - **Grammar:** `might` + plain verb. No `to`, no `-s`.
 - **Japanese-L1 risk:** `かもしれない` maps well; the error is `might to be` from over-generalising `have to`.
 
+## Planned spiral review
+
+- **MODAL-01 · transfer:** use a plain verb after a modal
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–38.
 - **Not yet:** Core 40–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-36 I was cooking when you called · CORE-37 I'm going to look for a new job · CORE-38 I'll help you
+- **Most recent available forms:** CORE-36 I was cooking when you called · CORE-37 I'm going to look for a new job · CORE-38 Let me help
 - **Nearest protected forms:** CORE-40 You should get some rest · CORE-41 You have to show ID · CORE-42 Don't you like it?
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 
-- **Previous:** CORE-38 · I'll help you
+- **Previous:** CORE-38 · Let me help
 - **Next:** CORE-40 · You should get some rest
 
 ## Authoring inputs — read in order

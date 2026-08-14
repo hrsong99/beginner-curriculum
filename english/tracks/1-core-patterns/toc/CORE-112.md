@@ -24,8 +24,8 @@
 
 ### Pattern 2
 
-- **Model:** I didn't mean it that way.
-- **Frame:** `I didn't mean it that way.`
+- **Model:** I didn't mean to sound rude.
+- **Frame:** `I didn't mean to sound ___.`
 
 ## Supporting content
 
@@ -33,13 +33,22 @@
 - **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
 - **Japanese-L1 risk:** Japanese often handles unintended tone through apology without naming the interpretation. English can name how it **came across** while separating impact from intent; keep the description specific and give the other person a repair path.
 
+## Planned spiral review
+
+- **ADJ-01 · checkpoint:** distinguish experiencer `-ed` from stimulus `-ing`
+- **POLITE-01 · transfer:** express politeness with an English frame, not an inflection
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–111.
 - **Not yet:** Core 113–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-109 To put it bluntly · CORE-110 I hate to say it, but · CORE-111 Just so you know,
-- **Nearest protected forms:** CORE-113 The underlying issue is · CORE-114 That holds true up to a point · CORE-115 Granted, but that overlooks
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- **Nearest protected forms:** CORE-113 The underlying issue is · CORE-114 That may be true for some people · CORE-115 Granted, but that overlooks
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

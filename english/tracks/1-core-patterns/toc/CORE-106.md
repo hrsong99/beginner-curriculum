@@ -33,13 +33,22 @@
 - **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
 - **Japanese-L1 risk:** uses the empty `there` from lesson 7 at full strength — a nice payoff for a Pre-A1 install.
 
+## Planned spiral review
+
+- **REL-01 · transfer:** place an English relative clause after its noun
+- **DUMMY-01 · transfer:** retain dummy `there` and weather/time `it`
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–105.
 - **Not yet:** Core 107–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-103 What worries me most is the cost · CORE-104 It's the timing that matters · CORE-105 The sooner we start, the better
 - **Nearest protected forms:** CORE-107 As for the budget, · CORE-108 Would you be able to · CORE-109 To put it bluntly
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

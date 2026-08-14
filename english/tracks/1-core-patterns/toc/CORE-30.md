@@ -33,18 +33,27 @@
 - **Grammar:** `was` for I/he/she/it, `were` for you/we/they.
 - **Japanese-L1 risk:** Japanese has one past form for all persons, so `We was` is predicted. Low-stakes but visible.
 
+## Planned spiral review
+
+- **DUMMY-01 · transfer:** retain dummy `there` and weather/time `it`
+- **NUM-01 · transfer:** mark plural nouns even when quantity is already clear
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–29.
 - **Not yet:** Core 31–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-27 I like cooking · CORE-28 Are you free on Friday? · CORE-29 I'm meeting Sam at six
-- **Nearest protected forms:** CORE-31 We watched a movie last night · CORE-32 We went out for dinner · CORE-33 Did you have a good time?
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- **Nearest protected forms:** CORE-31 I went out last night · CORE-32 We went out for dinner · CORE-33 Did you have a good time?
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 
 - **Previous:** CORE-29 · I'm meeting Sam at six
-- **Next:** CORE-31 · We watched a movie last night
+- **Next:** CORE-31 · I went out last night
 
 ## Authoring inputs — read in order
 

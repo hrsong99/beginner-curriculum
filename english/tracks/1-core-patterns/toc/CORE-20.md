@@ -30,8 +30,14 @@
 ## Supporting content
 
 - **Expressions:** `What do you need?` · `No problem.`
-- **Grammar:** a thing takes `with`; an action takes no `with` — *help me **with** the boxes* / *help me **carry** the boxes*.
-- **Japanese-L1 risk:** **the politeness install.** Keigo is grammatical; English politeness is lexical and syntactic, so a learner looking for an inflection finds none and produces `Help me` — perfect grammar, blunt English. Also 「手伝う」 hides the with/no-with split entirely, which is the form point above and the hardest thing in the lesson.
+- **Grammar:** keep the request together: `Could you help me with` + a thing.
+- **Bounded survival chunk:** `Could you help me with ___?` is the approved early survival request. Keep `could you help me with` whole; do not generalise past-form politeness at A1.
+- **Japanese-L1 risk:** **the politeness install.** Keigo is grammatical; English politeness is lexical and syntactic, so a learner looking for an inflection finds none and produces `Help me` — perfect grammar, blunt English. At this level, keep the complete polite frame intact instead of opening a second `with`/no-`with` decision inside it.
+
+## Planned spiral review
+
+- **PREP-01 · transfer:** store prepositions with their noun or verb
+- **MODAL-01 · controlled:** use a plain verb after a modal
 
 ## Sequence guardrails
 
@@ -39,7 +45,11 @@
 - **Not yet:** Core 21–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-17 How often do you exercise? · CORE-18 Can you drive? · CORE-19 How much is this?
 - **Nearest protected forms:** CORE-21 Can I try this on? · CORE-22 I'd like the chicken, please · CORE-23 Two cups of coffee
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

@@ -30,9 +30,10 @@
 ### Pattern 2
 
 - **Model:** Could you check routes through another city?
-- **Frame:** `Could you check ___ through ___?`
+- **Frame:** `Could you check routes through ___?`
 - **Partner:** Agent: There may be one through Frankfurt.
 - **Core ownership:** Core 24
+- **Treatment:** teach as a bounded chunk; do not expand its grammar here
 
 ## Supporting content
 

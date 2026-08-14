@@ -33,17 +33,26 @@
 - **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
 - **Japanese-L1 risk:** **recognising this as an instruction is the lesson.** A learner who hears `you might want to` as optional will not act on it, and in a workplace that is a real cost. Receptive first.
 
+## Planned spiral review
+
+- **MODAL-01 · transfer:** use a plain verb after a modal
+- **POLITE-01 · transfer:** express politeness with an English frame, not an inflection
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–119.
 - **Not yet:** Core 121–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-117 On balance, I'd say · CORE-118 That's one way of putting it · CORE-119 I'll leave it at that
+- **Most recent available forms:** CORE-117 On balance, I'd say · CORE-118 You could see it that way · CORE-119 Let's just say it didn't go well
 - **Nearest protected forms:** CORE-121 I'd rather not go into it · CORE-122 It's not that simple
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 
-- **Previous:** CORE-119 · I'll leave it at that
+- **Previous:** CORE-119 · Let's just say it didn't go well
 - **Next:** CORE-121 · I'd rather not go into it
 
 ## Authoring inputs — read in order

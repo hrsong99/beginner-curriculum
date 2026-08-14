@@ -33,13 +33,21 @@
 - **Grammar:** when the reporting verb is past, the reported verb usually steps back too.
 - **Japanese-L1 risk:** Japanese `〜と言っていた` keeps the original tense, so `She said she is busy` is predicted and is in fact acceptable in many contexts — teach the backshift, but don't over-correct.
 
+## Planned spiral review
+
+- **REL-01 · transfer:** place an English relative clause after its noun
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–68.
 - **Not yet:** Core 70–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-66 If I had more time, I'd travel · CORE-67 I wish I could drive · CORE-68 He must be busy
 - **Nearest protected forms:** CORE-70 She told me to wait · CORE-71 I should have called earlier · CORE-72 I might have left it at home
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

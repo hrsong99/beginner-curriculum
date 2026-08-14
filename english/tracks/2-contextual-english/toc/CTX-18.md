@@ -26,6 +26,7 @@
 - **Frame:** `I've had ___ for ___.`
 - **Partner:** Pharmacist: Any trouble breathing?
 - **Core ownership:** Core 51
+- **Treatment:** teach as a bounded chunk; do not expand its grammar here
 
 ### Pattern 2
 

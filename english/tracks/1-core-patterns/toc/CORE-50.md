@@ -33,18 +33,27 @@
 - **Grammar:** the moment you say **when**, you must switch to the plain past. `I've been there last year` is not possible.
 - **Japanese-L1 risk:** **this is the payoff lesson for the ている split, and the single hardest thing in Unit 9.** Japanese does not force a choice here, so both English forms feel interchangeable, and `I have been there yesterday` is the classic output. Teach it as a rule about **time phrases**, which is checkable, rather than about aspect, which is not.
 
+## Planned spiral review
+
+- **PERF-01 · contrast:** distinguish present relevance/duration from finished past time
+- **NEGQ-01 · recognition:** answer negative questions according to the fact
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–49.
 - **Not yet:** Core 51–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-47 I'm bored and it's boring · CORE-48 Have you ever been to Kyoto? · CORE-49 I've already finished
-- **Nearest protected forms:** CORE-51 I've lived here for five years · CORE-52 I've been working all morning · CORE-53 We've done three of the five
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- **Most recent available forms:** CORE-47 I was bored during the movie · CORE-48 Have you ever been to Kyoto? · CORE-49 I've already finished
+- **Nearest protected forms:** CORE-51 How long have you been here? · CORE-52 I've been working all morning · CORE-53 We've done three of the five
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 
 - **Previous:** CORE-49 · I've already finished
-- **Next:** CORE-51 · I've lived here for five years
+- **Next:** CORE-51 · How long have you been here?
 
 ## Authoring inputs — read in order
 

@@ -30,9 +30,10 @@
 ### Pattern 2
 
 - **Model:** What's the earliest flight you can put us on?
-- **Frame:** `What's the earliest ___ you can ___?`
+- **Frame:** `What's the earliest ___ you can put us on?`
 - **Partner:** Agent: There's one at 6:40 with two seats left.
 - **Core ownership:** Core 46
+- **Treatment:** teach as a bounded chunk; do not expand its grammar here
 
 ## Supporting content
 

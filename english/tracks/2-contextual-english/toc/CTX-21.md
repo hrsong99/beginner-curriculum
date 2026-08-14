@@ -23,7 +23,7 @@
 ### Pattern 1
 
 - **Model:** We're thinking of getting dinner nearby.
-- **Frame:** `We're thinking of ___ing ___.`
+- **Frame:** `We're thinking of getting ___ nearby.`
 - **Partner:** Traveller: That sounds good. What time?
 - **Treatment:** teach as a bounded chunk; do not expand its grammar here
 

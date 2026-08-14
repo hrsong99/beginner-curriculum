@@ -33,13 +33,22 @@
 - **Grammar:** `didn't` + plain verb. Same trap as 33.
 - **Japanese-L1 risk:** `I didn't slept` is predicted for the same reason as `Did you went`.
 
+## Planned spiral review
+
+- **DO-01 · transfer:** insert `do` and leave the main verb plain
+- **COUNT-01 · controlled:** store and retrieve count versus non-count behavior
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–33.
 - **Not yet:** Core 35–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-31 We watched a movie last night · CORE-32 We went out for dinner · CORE-33 Did you have a good time?
+- **Most recent available forms:** CORE-31 I went out last night · CORE-32 We went out for dinner · CORE-33 Did you have a good time?
 - **Nearest protected forms:** CORE-35 First we ate, then we walked around · CORE-36 I was cooking when you called · CORE-37 I'm going to look for a new job
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

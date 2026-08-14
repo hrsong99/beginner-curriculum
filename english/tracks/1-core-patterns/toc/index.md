@@ -25,21 +25,21 @@
 - [`CORE-21`](CORE-21.md) · Can I try this on?
 - [`CORE-22`](CORE-22.md) · I'd like the chicken, please
 - [`CORE-23`](CORE-23.md) · Two cups of coffee
-- [`CORE-24`](CORE-24.md) · Sorry, could you say that again?
+- [`CORE-24`](CORE-24.md) · Sorry, can you say that again?
 - [`CORE-25`](CORE-25.md) · I'm working from home today
 - [`CORE-26`](CORE-26.md) · I usually drive, but today I'm walking
 - [`CORE-27`](CORE-27.md) · I like cooking
 - [`CORE-28`](CORE-28.md) · Are you free on Friday?
 - [`CORE-29`](CORE-29.md) · I'm meeting Sam at six
 - [`CORE-30`](CORE-30.md) · I was really tired yesterday
-- [`CORE-31`](CORE-31.md) · We watched a movie last night
+- [`CORE-31`](CORE-31.md) · I went out last night
 - [`CORE-32`](CORE-32.md) · We went out for dinner
 - [`CORE-33`](CORE-33.md) · Did you have a good time?
 - [`CORE-34`](CORE-34.md) · I didn't sleep well
 - [`CORE-35`](CORE-35.md) · First we ate, then we walked around
 - [`CORE-36`](CORE-36.md) · I was cooking when you called
 - [`CORE-37`](CORE-37.md) · I'm going to look for a new job
-- [`CORE-38`](CORE-38.md) · I'll help you
+- [`CORE-38`](CORE-38.md) · Let me help
 - [`CORE-39`](CORE-39.md) · I might be late
 - [`CORE-40`](CORE-40.md) · You should get some rest
 - [`CORE-41`](CORE-41.md) · You have to show ID
@@ -48,11 +48,11 @@
 - [`CORE-44`](CORE-44.md) · It's too small
 - [`CORE-45`](CORE-45.md) · This one's cheaper
 - [`CORE-46`](CORE-46.md) · It's the best one here
-- [`CORE-47`](CORE-47.md) · I'm bored and it's boring
+- [`CORE-47`](CORE-47.md) · I was bored during the movie
 - [`CORE-48`](CORE-48.md) · Have you ever been to Kyoto?
 - [`CORE-49`](CORE-49.md) · I've already finished
 - [`CORE-50`](CORE-50.md) · I went there last year
-- [`CORE-51`](CORE-51.md) · I've lived here for five years
+- [`CORE-51`](CORE-51.md) · How long have you been here?
 - [`CORE-52`](CORE-52.md) · I've been working all morning
 - [`CORE-53`](CORE-53.md) · We've done three of the five
 - [`CORE-54`](CORE-54.md) · I stayed home because I was sick
@@ -64,9 +64,9 @@
 - [`CORE-60`](CORE-60.md) · Would you mind opening the window?
 - [`CORE-61`](CORE-61.md) · Do you mind if I sit here?
 - [`CORE-62`](CORE-62.md) · Do you know where it is?
-- [`CORE-63`](CORE-63.md) · Coffee is expensive here
+- [`CORE-63`](CORE-63.md) · I generally prefer coffee
 - [`CORE-64`](CORE-64.md) · It won't turn on
-- [`CORE-65`](CORE-65.md) · It's made in Japan
+- [`CORE-65`](CORE-65.md) · My wallet was stolen
 - [`CORE-66`](CORE-66.md) · If I had more time, I'd travel
 - [`CORE-67`](CORE-67.md) · I wish I could drive
 - [`CORE-68`](CORE-68.md) · He must be busy
@@ -96,8 +96,8 @@
 - [`CORE-92`](CORE-92.md) · I'm not entirely convinced
 - [`CORE-93`](CORE-93.md) · To be fair,
 - [`CORE-94`](CORE-94.md) · Wouldn't it be better if
-- [`CORE-95`](CORE-95.md) · I take your point, but
-- [`CORE-96`](CORE-96.md) · That's not quite what I meant
+- [`CORE-95`](CORE-95.md) · Where I'd push back is on the cost
+- [`CORE-96`](CORE-96.md) · I meant next Friday, not this Friday
 - [`CORE-97`](CORE-97.md) · I'd rather not, if that's OK
 - [`CORE-98`](CORE-98.md) · This is largely due to
 - [`CORE-99`](CORE-99.md) · That suggests that
@@ -115,12 +115,12 @@
 - [`CORE-111`](CORE-111.md) · Just so you know,
 - [`CORE-112`](CORE-112.md) · That came across as rude
 - [`CORE-113`](CORE-113.md) · The underlying issue is
-- [`CORE-114`](CORE-114.md) · That holds true up to a point
+- [`CORE-114`](CORE-114.md) · That may be true for some people
 - [`CORE-115`](CORE-115.md) · Granted, but that overlooks
 - [`CORE-116`](CORE-116.md) · If anything, it's got worse
 - [`CORE-117`](CORE-117.md) · On balance, I'd say
-- [`CORE-118`](CORE-118.md) · That's one way of putting it
-- [`CORE-119`](CORE-119.md) · I'll leave it at that
+- [`CORE-118`](CORE-118.md) · You could see it that way
+- [`CORE-119`](CORE-119.md) · Let's just say it didn't go well
 - [`CORE-120`](CORE-120.md) · You might want to check that
 - [`CORE-121`](CORE-121.md) · I'd rather not go into it
 - [`CORE-122`](CORE-122.md) · It's not that simple
