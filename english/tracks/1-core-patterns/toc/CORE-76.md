@@ -12,7 +12,7 @@
 
 ## Outcome
 
-- **Can do:** distinguish arranging a service from arranging for a particular person to act.
+- **Can do:** say what service you arranged and what still needs to be done.
 - **Unit:** 14 · Getting things done
 
 ## Required production
@@ -24,14 +24,14 @@
 
 ### Pattern 2
 
-- **Model:** I got someone to look at it.
-- **Frame:** `I got ___ to ___.`
+- **Model:** I need to get the screen replaced.
+- **Frame:** `I need to get ___ ___ed.`
 
 ## Supporting content
 
 - **Expressions:** `Where can I get this ___ed?` · `while you wait`
 - **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
-- **Japanese-L1 risk:** Japanese `〜てもらう` covers both ideas. English changes the shape depending on whether the focus is the finished thing (`have` + thing + participle) or the person who acts (`get` + person + `to`). Teach the contrast in one scene rather than as two unrelated rules.
+- **Japanese-L1 risk:** Japanese `〜てもらう` covers the same service relationship. Keep both patterns on `have/get + thing + past participle`; adding `get someone to do something` would create a second causative system and overload the lesson.
 
 ## Sequence guardrails
 

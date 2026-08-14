@@ -12,7 +12,7 @@
 
 ## Outcome
 
-- **Can do:** explain the consequence, state the priority, and seek an alternative.
+- **Can do:** state the non-negotiable priority and seek an alternative.
 - **Practical area:** 1 · Travel English
 - **Course:** 5 · Complex travel decisions and advocacy
 - **Scene:** after a cancelled flight, the offered replacement would make 私 miss an important event.

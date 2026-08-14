@@ -547,14 +547,14 @@ good at this → what do you do when it fails
 *Opens:* "How many people did you see socially five years ago, compared to now?"
 *Ladder:* what's the number → who dropped off → was it anyone's fault → is it distance, time or
 change → is that normal or a problem → what would you do about it
-*Moves:* `It's not that ___, it's more that ___.` **(Core 89)** · `On balance, ___.` **(Core 117)** `chunk`
+*Moves:* `It's not that ___, it's more that ___.` **(Core 89)** · `Overall, I'd say ___.` **(Core 117)** `chunk`
 *Shared:* KR 5-7
 
 **54. The person you talk to most** `story`
 *Opens:* "Who did you last message, and what about?"
 *Ladder:* who → how often → what do you actually talk about → has that changed → who was it five
 years ago → what happened
-*Moves:* `Probably my ___.` `chunk` · `We talk about nothing, mostly.` **(Core 12)**
+*Moves:* `Probably my ___.` `chunk` · `We mostly talk about ___.` **(Core 12)**
 *Shared:* **NEW → KR**
 
 **55. Advice that stayed with you** `story`
@@ -639,7 +639,7 @@ on now → what did it teach you
 *Shared:* KR 7-1
 
 **65. Something you were proud to finish** `story`
-*Opens:* "When did you last finish something and think, that was good?"
+*Opens:* "When did you last finish something and feel proud of it?"
 *Ladder:* what → who noticed → did you say anything → why did it matter → what's the last thing you
 were *not* proud of → what would you want to be known for
 *Moves:* `I was actually proud of ___.` **(Core 30)** · `Nobody said anything, but ___.` **(Core 56)**
@@ -708,7 +708,7 @@ against. Opening on *leaving time* lets anyone answer.
 *Opens:* "What did you do between nine and eleven this morning?"
 *Ladder:* walk me through it → which part takes longest → which part do you like → what would
 surprise an outsider → has it changed → what would you cut
-*Moves:* `Most of my day is ___ing.` **(Core 52)** · `The part people don't see is ___.` **(Core 103)** `chunk`
+*Moves:* `Most of my day is spent ___ing.` `chunk` · `The part people don't see is ___.` **(Core 103)** `chunk`
 *Shared:* **NEW → KR**
 
 **75. One thing you would change about your work or school** `opinion`
@@ -858,7 +858,7 @@ what could you give up easily → would you take a boring one that's healthy
 *Opens:* "Coffee, taxis, films, flights — one is free for life. Which?"
 *Ladder:* which → how much would you actually use it → what would change about your week → who would
 benefit besides you → what's the boring correct answer → would you resell it
-*Moves:* `I'd take ___, easily.` **(Core 66)** · `I'd use it more than ___.` **(Core 45)**
+*Moves:* `I'd choose ___, easily.` **(Core 46)** · `I'd use it more than ___.` **(Core 45)**
 *Shared:* KR 9-6
 
 **95. Going a week without your phone** `story`
@@ -928,21 +928,21 @@ never hand over → what will that look like in five years
 *Opens:* "What's the smallest amount of money that would stop you worrying?"
 *Ladder:* what number → what would change → what wouldn't → do you know anyone above that line →
 are they happier → what would you do with the worry gone
-*Moves:* `Up to a point, ___.` `chunk` · `On balance, ___.` **(Core 117)** `chunk`
+*Moves:* `That's true up to a point, but ___.` `chunk` · `Overall, I'd say ___.` **(Core 117)** `chunk`
 *Shared:* KR 10-4
 
 **104. The age you would choose to be forever** `opinion` `深く`
 *Opens:* "What age would you go back to and stay at?"
 *Ladder:* what age → what was good about it → what was bad → what do you have now that you didn't →
 what would you lose → is any age actually best
-*Moves:* `If anything, ___.` **(Core 116)** `chunk` · `Granted, but ___.` **(Core 115)** `chunk`
+*Moves:* `If anything, ___.` **(Core 116)** `chunk` · `That's true, but it doesn't account for ___.` **(Core 115)** `chunk`
 *Shared:* KR 10-5
 
 **105. One thing you would do differently** `opinion` `深く`
 *Opens:* "Name one thing you'd do differently. Just one."
 *Ladder:* what → would it have worked → what did it lead to → is regret useful → do you know anyone
 with none → would you want none
-*Moves:* `I'd have ___ differently.` `chunk` · `That holds up to a point.` `chunk`
+*Moves:* `I'd have ___ differently.` `chunk` · `It still made sense at the time.` `chunk`
 *Shared:* KR 10-6 · the former abstract title was an essay prompt; the personal title and bounded
 opening keep the learner out of a prepared speech
 
@@ -950,7 +950,7 @@ opening keep the learner out of a prepared speech
 *Opens:* "Has speaking English changed how you say things in Japanese?"
 *Ladder:* what have you noticed → about English or about Japanese → has it changed who you talk to →
 what's been hardest → what surprised you → would you start again knowing that
-*Moves:* `I've noticed that ___.` **(Core 49)** · `On balance, it's made me ___.` **(Core 117)** `chunk`
+*Moves:* `I've noticed that ___.` **(Core 49)** · `Overall, it's made me ___.` **(Core 117)** `chunk`
 *Shared:* **NEW → KR** · the one fully reflective topic, and it works because the learner has a
 hundred sessions of evidence. **The closing topic of the track.**
 
@@ -966,21 +966,21 @@ real scene → a time you chose the opposite → change the conditions → what 
 where your choice flips. Neither side is correct, and **the tutor must be able to give their own
 pick and a reason** — otherwise it is a quiz.*
 
-**107. More money or more time?** — *which do you need more of right now?* `KR 11-1`
-**108. A hundred friends or three close ones?** — *which do you actually have?* `KR 11-2`
-**109. Endless summer or endless winter?** — *pick, then tell me about your worst season* `KR 11-3`
-**110. Morning person or night owl?** — *when did you actually get up today?* `KR 11-4`
-**111. A planned trip or a spontaneous one?** — *what did you do on your last trip?* `KR 11-5`
-**112. Travelling alone or with other people?** — *which was your last trip?* `KR 11-6`
-**113. Life in the city or the countryside?** — *where do you live now, and is that a choice?* `KR 11-7`
-**114. A summer without internet or air conditioning?** — *for one summer* `KR 11-8`
-**115. Better work-life balance or a higher salary?** — *which does your current job give you?* `KR 11-9`
-**116. Working from home or going into the office?** — *which did you do most this week?* `KR 11-10`
-**117. Studying in a café or at home?** — *where were you last time you concentrated?* `KR 11-11`
-**118. Shopping online or in a shop?** — *what did you last buy, and how?* `KR 11-12`
-**119. Remembering everything or forgetting bad memories?** — *what would you forget first?* `KR 11-13`
-**120. Being rich and anonymous or respected on an ordinary income?** — *which would you choose?* `KR 11-14` `深く`
-**121. Being great at one thing or good at many?** — *which are you now?* **NEW → KR**
+**107. More money or more time?** — *"Which do you need more of right now?"* `KR 11-1`
+**108. A hundred friends or three close ones?** — *"Which do you actually have: lots of friends or a few close ones?"* `KR 11-2`
+**109. Endless summer or endless winter?** — *"Pick one, then tell me about your worst season."* `KR 11-3`
+**110. Morning person or night owl?** — *"What time did you actually get up today?"* `KR 11-4`
+**111. A planned trip or a spontaneous one?** — *"Think about your last trip. Was it planned or spontaneous?"* `KR 11-5`
+**112. Travelling alone or with other people?** — *"On your last trip, did you travel alone or with other people?"* `KR 11-6`
+**113. Life in the city or the countryside?** — *"Where do you live now, and is that a choice?"* `KR 11-7`
+**114. A summer without internet or air conditioning?** — *"One whole summer: no internet or no air conditioning?"* `KR 11-8`
+**115. Better work-life balance or a higher salary?** — *"Which does your current job give you more of: time or money?"* `KR 11-9`
+**116. Working from home or going into the office?** — *"Which did you do more this week: work from home or go into the office?"* `KR 11-10`
+**117. Studying in a café or at home?** — *"Where were you the last time you really concentrated?"* `KR 11-11`
+**118. Shopping online or in a shop?** — *"What did you last buy, and did you buy it online or in a shop?"* `KR 11-12`
+**119. Remembering everything or forgetting bad memories?** — *"Would you rather remember everything or forget your worst memory?"* `KR 11-13`
+**120. Being rich and anonymous or respected on an ordinary income?** — *"Would you rather be rich and anonymous or respected on an ordinary income?"* `KR 11-14` `深く`
+**121. Being great at one thing or good at many?** — *"Right now, are you great at one thing or good at many?"* **NEW → KR**
 
 *Every entry's italic line is its `Opens:`* — each one converts an abstract either/or into a
 question about the learner's actual week, which is what makes the choice arrive in three seconds.

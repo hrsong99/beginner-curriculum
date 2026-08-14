@@ -42,7 +42,7 @@
 - **Already learned:** Core 1–112.
 - **Not yet:** Core 114–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-110 I hate to say it, but · CORE-111 Just so you know, · CORE-112 That came across as rude
-- **Nearest protected forms:** CORE-114 That may be true for some people · CORE-115 Granted, but that overlooks · CORE-116 If anything, it's got worse
+- **Nearest protected forms:** CORE-114 That may be true for some people · CORE-115 That's true, but it doesn't account for · CORE-116 If anything, it's got worse
 - The readiness gate applies to the complete learner-produced model, including every fixed word.
 - Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
 - At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.

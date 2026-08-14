@@ -22,10 +22,10 @@
 
 ### Pattern 1
 
-- **Model:** The last time I definitely had it was at the station.
-- **Frame:** `The last time I definitely had ___ was ___.`
+- **Model:** I definitely had it at the station.
+- **Frame:** `I definitely had ___ at ___.`
 - **Partner:** Agent: And when did you notice it was missing?
-- **Core ownership:** Core 104
+- **Core ownership:** Core 32
 
 ### Pattern 2
 
@@ -41,7 +41,7 @@
 ## Sequence guardrails
 
 - **Assumed productive floor:** Core 1–103.
-- **Pattern owners used here:** Core 65, Core 72, Core 104.
+- **Pattern owners used here:** Core 32, Core 65, Core 72.
 - A pattern more than two Core units above the floor must remain marked `chunk`; do not teach its grammar in this lesson.
 - Partner reactions and `Understand` are receptive; they do not add production targets.
 - This lesson is standalone. Do not invent plot history, callbacks, or a next-lesson teaser.

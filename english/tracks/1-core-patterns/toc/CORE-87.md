@@ -24,7 +24,7 @@
 
 ### Pattern 2
 
-- **Model:** It's nowhere near as fast.
+- **Model:** It's nowhere near as fast as the train.
 - **Frame:** `It's nowhere near as ___ as ___.`
 
 ## Supporting content

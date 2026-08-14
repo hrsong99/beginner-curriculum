@@ -99,7 +99,7 @@
 - [`CORE-95`](CORE-95.md) · Where I'd push back is on the cost
 - [`CORE-96`](CORE-96.md) · I meant next Friday, not this Friday
 - [`CORE-97`](CORE-97.md) · I'd rather not, if that's OK
-- [`CORE-98`](CORE-98.md) · This is largely due to
+- [`CORE-98`](CORE-98.md) · That's mostly because of
 - [`CORE-99`](CORE-99.md) · That suggests that
 - [`CORE-100`](CORE-100.md) · As a result, we had to reschedule
 - [`CORE-101`](CORE-101.md) · It depends on whether
@@ -116,9 +116,9 @@
 - [`CORE-112`](CORE-112.md) · That came across as rude
 - [`CORE-113`](CORE-113.md) · The underlying issue is
 - [`CORE-114`](CORE-114.md) · That may be true for some people
-- [`CORE-115`](CORE-115.md) · Granted, but that overlooks
+- [`CORE-115`](CORE-115.md) · That's true, but it doesn't account for
 - [`CORE-116`](CORE-116.md) · If anything, it's got worse
-- [`CORE-117`](CORE-117.md) · On balance, I'd say
+- [`CORE-117`](CORE-117.md) · Overall, I'd say
 - [`CORE-118`](CORE-118.md) · You could see it that way
 - [`CORE-119`](CORE-119.md) · Let's just say it didn't go well
 - [`CORE-120`](CORE-120.md) · You might want to check that

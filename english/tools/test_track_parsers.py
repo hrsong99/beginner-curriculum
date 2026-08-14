@@ -85,21 +85,18 @@ class LiveCurriculumTests(unittest.TestCase):
         self.assertEqual([lesson["area"] for lesson in lessons[30:]], ["Business English"] * 30)
         self.assertEqual(
             [lessons[index]["floor"] for index in range(0, 60, 6)],
-            [47, 59, 70, 91, 103, 47, 59, 81, 92, 103],
+            [47, 59, 70, 91, 103, 47, 59, 86, 101, 103],
         )
         self.assertGreaterEqual(min(lesson["floor"] for lesson in lessons), 47)
-        self.assertEqual(lessons[7]["models"][1]["coreRefs"], [57, 60])
+        self.assertEqual(lessons[7]["models"][1]["coreRefs"], [21])
         self.assertEqual(lessons[25]["models"][1]["coreRefs"], [72, 65])
-        self.assertFalse(
-            [
-                (lesson["id"], model["pattern"], ref)
-                for lesson in lessons
-                for model in lesson["models"]
-                for ref in model["coreRefs"]
-                if ref > lesson["floor"] + 12 and not model["chunk"]
-            ],
-            "patterns more than about two Core units above the course floor must be bounded chunks",
-        )
+        self.assertFalse([
+            (lesson["id"], model["pattern"], ref)
+            for lesson in lessons
+            for model in lesson["models"]
+            for ref in model["coreRefs"]
+            if ref > lesson["floor"] and not model["chunk"]
+        ])
         refs = [ref for lesson in lessons for model in lesson["models"] for ref in model["coreRefs"]]
         self.assertTrue(refs)
         self.assertTrue(all(1 <= ref <= 122 for ref in refs))
@@ -114,6 +111,8 @@ class LiveCurriculumTests(unittest.TestCase):
         self.assertEqual(lessons[8]["title"], "A purchase that was worth it")
         self.assertEqual(lessons[106]["title"], "More money or more time?")
         self.assertFalse([lesson["id"] for lesson in lessons if lesson["title"].startswith("My ")])
+        self.assertTrue(all(lesson["opening"].startswith('"') for lesson in lessons[106:]))
+        self.assertTrue(all(lesson["opening"].endswith(('?"', '."')) for lesson in lessons[106:]))
 
     def test_pronunciation_stays_planning_only(self):
         lessons = track_parsers.parse_pronunciation()

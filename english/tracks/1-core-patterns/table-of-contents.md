@@ -158,7 +158,7 @@ has no Japanese equivalent.*
 
 **1. Hi, I'm Mina — exchange names**
 
-*Can-do: introduce yourself two ways and learn someone's name.*
+*Can-do: introduce yourself in two common ways.*
 - "Hi, I'm Mina." — `Hi, I'm ___.`
 - "My name is Mina." — `My name is ___.`
 - *Expressions:* `What's your name?` · `Nice to meet you.`
@@ -280,7 +280,7 @@ that mean nothing at all, and the first real article decision.*
 
 **11. Where's the station? — ask where something is**
 
-*Can-do: ask where a place is and understand the answer.*
+*Can-do: ask where a place is and describe where it is.*
 - "Where's the station?" — `Where's the ___?`
 - "It's behind the post office." — `It's behind the ___.`
 - *Expressions:* `How do I get there?` · `It's about five minutes.`
@@ -714,11 +714,12 @@ the fact.*
 
 *Can-do: describe a thing with two useful details.*
 - "It's a small, quiet place." — `It's a ___, ___ place.`
-- "I'm looking for something cheaper." — `I'm looking for something ___er.`
-- *Expressions:* `kind of` · `not really my thing`
+- "It's near the station." — `It's near ___.`
+- *Expressions:* `a little` · `not far from here`
 - *Grammar:* adjectives go **before** the noun and do not change for plural: `two small cafés`.
 - *JP:* pre-modification matches Japanese, so this is easy — but `two smalls cafés` appears from
-  over-applying the plural rule from lesson 9.
+  over-applying the plural rule from lesson 9. The second pattern recycles a known place phrase;
+  comparison does not begin until lesson 45.
 
 - *Spiral review:* `ART-01:transfer`
 
@@ -1085,16 +1086,16 @@ someone else said.*
 
 # Part 2 · B1+ → C1
 
-> **Status: written, not yet spoken-checked.** Part 2 has had no native review and no corpus pass.
-> This warning is here because the Korean curriculum ran exactly this experiment and published the
+> **Status: final internal spoken-naturalness pass applied; native catalog review remains open.**
+> This warning remains because the Korean curriculum ran exactly this experiment and published the
 > result: its Part 1 and contextual track were built **from scenes**, its Part 2 was built **from a
 > grammar list**, and a native review then removed **28 of 120 patterns** from Part 2 as things
 > people do not actually say. Part 2 shrank from 60 lessons to 45.
 >
-> Part 2 below was written scene-first for that reason. It should still be assumed to carry a
-> similar cull until [`curriculum-source-hierarchy.md`](../../reference/curriculum-source-hierarchy.md)
-> §5 has been applied to it — corpus check, naturalness note, four attested substitutions per frame.
-> **Expect this section to get shorter, not longer.** When a pattern fails review, demote it to the
+> Part 2 below was written scene-first for that reason. The 2026-08-14 deep pass removed the clearest
+> written-register defaults, weak slots and overloaded pairs, but it is not corpus or learner-pilot
+> evidence. It may still shrink when [`curriculum-source-hierarchy.md`](../../reference/curriculum-source-hierarchy.md)
+> §5 is completed. When a pattern fails review, demote it to the
 > *Expressions* or *Grammar* line rather than deleting it: the learner still meets it, but is no
 > longer asked to produce it.
 
@@ -1158,15 +1159,15 @@ someone else said.*
 
 ## Unit 14 · Getting things done · 5 lessons · **B1+**
 
-**76. I had my phone repaired — arrange for someone else to act**
+**76. I had my phone repaired — arrange a service**
 
-*Can-do: distinguish arranging a service from arranging for a particular person to act.*
+*Can-do: say what service you arranged and what still needs to be done.*
 - "I had my phone repaired." — `I had my ___ ___ed.`
-- "I got someone to look at it." — `I got ___ to ___.`
+- "I need to get the screen replaced." — `I need to get ___ ___ed.`
 - *Expressions:* `Where can I get this ___ed?` · `while you wait`
-- *JP:* Japanese `〜てもらう` covers both ideas. English changes the shape depending on whether the
-  focus is the finished thing (`have` + thing + participle) or the person who acts (`get` + person
-  + `to`). Teach the contrast in one scene rather than as two unrelated rules.
+- *JP:* Japanese `〜てもらう` covers the same service relationship. Keep both patterns on
+  `have/get + thing + past participle`; adding `get someone to do something` would create a second
+  causative system and overload the lesson.
 
 **77. It was supposed to be ready — follow up on a service**
 
@@ -1288,7 +1289,7 @@ you've understood, make a difficult request, and postpone one decision.*
 
 *Can-do: compare with precision instead of a bare comparative.*
 - "It's slightly more expensive." — `It's slightly more ___.`
-- "It's nowhere near as fast." — `It's nowhere near as ___ as ___.`
+- "It's nowhere near as fast as the train." — `It's nowhere near as ___ as ___.`
 - *Expressions:* `marginally` · `a fraction more`
 - *JP:* Japanese degree adverbs map roughly but the English set is finely graded
   (`slightly` < `somewhat` < `considerably` < `far`). Teach as a scale, not as synonyms.
@@ -1393,9 +1394,9 @@ you've understood, make a difficult request, and postpone one decision.*
 **97. I'd rather not, if that's OK — decline gracefully**
 
 *Can-do: refuse something without giving offence or a false reason.*
-- "I'd rather not, if that's OK." — `I'd rather not ___, if that's OK.`
+- "I'd rather not join, if that's OK." — `I'd rather not ___, if that's OK.`
 - "Could we do it another time?" — `Could we ___ another time?`
-- *Expressions:* `I'll pass` · `rain check`
+- *Expressions:* `I'll pass` · `take a rain check`
 - *JP:* Japanese refusal by trailing off is read in English as indecision, not refusal. The whole
   lesson is: in English, decline *explicitly* and soften *lexically*.
 
@@ -1403,13 +1404,14 @@ you've understood, make a difficult request, and postpone one decision.*
 
 ## Unit 18 · Cause, evidence, consequence · 5 lessons · **B2**
 
-**98. This is largely due to — attribute a cause**
+**98. That's mostly because of — attribute a cause**
 
 *Can-do: explain what is mainly responsible for a situation.*
-- "This is largely due to the delay." — `This is largely due to ___.`
-- "It stems from a misunderstanding." — `It stems from ___.`
-- *Expressions:* `in part because` · `chiefly`
-- *JP:* `due to` + noun vs `because` + clause is the error line; `due to we were late` is predicted.
+- "That's mostly because of the delay." — `That's mostly because of ___.`
+- "A lot of it comes from a misunderstanding." — `A lot of it comes from ___.`
+- *Expressions:* `partly because of` · `the main reason`
+- *JP:* cause is easy; **degree of cause** is new. Keep the production anchors spoken and concrete;
+  more formal alternatives such as `largely due to` can stay receptive.
 
 - *Spiral review:* `PREP-01:contrast`
 
@@ -1442,7 +1444,7 @@ you've understood, make a difficult request, and postpone one decision.*
 
 *Can-do: state what would happen if the condition fails.*
 - "Otherwise, we'd have to start again." — `Otherwise, we'd have to ___.`
-- "Failing that, we could ask them." — `Failing that, we could ___.`
+- "If that doesn't work, we could ask them." — `If that doesn't work, we could ___.`
 - *Expressions:* `as a last resort` · `plan B`
 - *JP:* `otherwise` compresses a whole conditional clause into one word; learners tend to expand it
   back out. That is fine but wordy — show the compression.
@@ -1587,31 +1589,32 @@ tool to choose, and that is the difference between B1 and B2 English.*
 
 - *Spiral review:* `NUM-01:transfer`
 
-**115. Granted, but that overlooks — concede and counter**
+**115. That's true, but it doesn't account for — concede and counter**
 
 *Can-do: accept a point and show what it misses.*
-- "Granted, but that overlooks the cost." — `Granted, but that overlooks ___.`
-- "Even so, the risk stands." — `Even so, ___.`
-- *Expressions:* `be that as it may` · `all the same`
+- "That's true, but it doesn't account for the cost." — `That's true, but it doesn't account for ___.`
+- "Even so, we still need to reduce the risk." — `Even so, we still need to ___.`
+- *Expressions:* `the problem is` · `that still leaves`
 - *JP:* the strongest argumentative move in the unit and the least available to a learner working
-  from Japanese discourse norms, where the counter is often left implicit.
+  from Japanese discourse norms, where the counter is often left implicit. Keep formal debate
+  markers receptive rather than making them the learner's default voice.
 
 **116. If anything, it's got worse — reverse the expected direction**
 
 *Can-do: correct an assumption by pointing the opposite way.*
 - "If anything, it's got worse." — `If anything, ___.`
-- "Quite the opposite, actually." — `Quite the opposite, ___.`
-- *Expressions:* `far from it` · `on the contrary`
+- "It's actually the opposite: demand has gone up." — `It's actually the opposite: ___.`
+- *Expressions:* `far from it` · `not at all`
 - *JP:* compact, very frequent in speech, and almost never taught. Good keep.
 
 - *Spiral review:* `PERF-01:transfer`
 
-**117. On balance, I'd say — weigh up and conclude**
+**117. Overall, I'd say — weigh up and conclude**
 
 *Can-do: sum up competing considerations and land somewhere.*
-- "On balance, I'd say it's worth it." — `On balance, I'd say ___.`
-- "The deciding factor for me is the cost." — `The deciding factor for me is ___.`
-- *Expressions:* `all things considered` · `net-net`
+- "Overall, I'd say it's worth it." — `Overall, I'd say ___.`
+- "What it comes down to for me is the cost." — `What it comes down to for me is ___.`
+- *Expressions:* `all in all` · `at the end of the day`
 - *JP:* the closing move of an argument. Pairs directly with the Freetalking follow-up ladder's
   final rung, *has your answer changed?*
 
@@ -1657,7 +1660,7 @@ target comes first and production is deliberately gated.*
 
 *Can-do: decline to give detail clearly without rejecting the other person.*
 - "I'd rather not go into the details." — `I'd rather not go into ___.`
-- "Can we leave that there for now?" — `Can we leave ___ there for now?`
+- "Can we leave this for now?" — `Can we leave ___ for now?`
 - *Expressions:* `long story` · `another time, maybe`
 - *JP:* Japanese can set the boundary by trailing off; English listeners may hear that as hesitation.
   State the boundary explicitly, then soften the relationship rather than inventing a reason.

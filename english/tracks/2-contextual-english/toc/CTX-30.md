@@ -29,10 +29,10 @@
 
 ### Pattern 2
 
-- **Model:** The route is worth taking, provided you have some flexibility.
-- **Frame:** `___ is worth ___ing, provided ___.`
+- **Model:** I'd only take that route if you have some flexibility.
+- **Frame:** `I'd only ___ if ___.`
 - **Partner:** Colleague: That's exactly what I needed to know.
-- **Treatment:** teach as a bounded chunk; do not expand its grammar here
+- **Core ownership:** Core 66, Core 57
 
 ## Supporting content
 
@@ -41,7 +41,7 @@
 ## Sequence guardrails
 
 - **Assumed productive floor:** Core 1–103.
-- **Pattern owners used here:** Core 103.
+- **Pattern owners used here:** Core 57, Core 66, Core 103.
 - A pattern more than two Core units above the floor must remain marked `chunk`; do not teach its grammar in this lesson.
 - Partner reactions and `Understand` are receptive; they do not add production targets.
 - This lesson is standalone. Do not invent plot history, callbacks, or a next-lesson teaser.

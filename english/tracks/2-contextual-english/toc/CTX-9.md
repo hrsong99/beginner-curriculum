@@ -12,7 +12,7 @@
 
 ## Outcome
 
-- **Can do:** get a recommendation that meets a dietary need.
+- **Can do:** state a dietary restriction and check that a recommendation is safe.
 - **Practical area:** 1 · Travel English
 - **Course:** 2 · Hotels, food and daily travel
 - **Scene:** at a restaurant, 私 cannot understand the menu and must avoid nuts.
@@ -22,9 +22,9 @@
 
 ### Pattern 1
 
-- **Model:** I'm allergic to nuts. What would you recommend?
-- **Frame:** `I'm allergic to ___. What would you recommend?`
-- **Partner:** Server: The fish is popular today.
+- **Model:** I'm allergic to nuts.
+- **Frame:** `I'm allergic to ___.`
+- **Partner:** Server: Then I'd recommend the fish.
 - **Treatment:** teach as a bounded chunk; do not expand its grammar here
 
 ### Pattern 2

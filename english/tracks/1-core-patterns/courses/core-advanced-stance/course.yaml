@@ -32,12 +32,12 @@ spec:
 # Planned lessons only. Prestudy is deferred, so this generator intentionally
 # does not create lesson.yaml or represent any English lesson as deployable.
 #   113  ·  CORE-113 · The underlying issue is
-#   114  ·  CORE-114 · That holds true up to a point
-#   115  ·  CORE-115 · Granted, but that overlooks
+#   114  ·  CORE-114 · That may be true for some people
+#   115  ·  CORE-115 · That's true, but it doesn't account for
 #   116  ·  CORE-116 · If anything, it's got worse
-#   117  ·  CORE-117 · On balance, I'd say
-#   118  ·  CORE-118 · That's one way of putting it
-#   119  ·  CORE-119 · I'll leave it at that
+#   117  ·  CORE-117 · Overall, I'd say
+#   118  ·  CORE-118 · You could see it that way
+#   119  ·  CORE-119 · Let's just say it didn't go well
 #   120  ·  CORE-120 · You might want to check that
 #   121  ·  CORE-121 · I'd rather not go into it
 #   122  ·  CORE-122 · It's not that simple

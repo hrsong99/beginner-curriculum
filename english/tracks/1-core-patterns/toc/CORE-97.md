@@ -19,7 +19,7 @@
 
 ### Pattern 1
 
-- **Model:** I'd rather not, if that's OK.
+- **Model:** I'd rather not join, if that's OK.
 - **Frame:** `I'd rather not ___, if that's OK.`
 
 ### Pattern 2
@@ -29,7 +29,7 @@
 
 ## Supporting content
 
-- **Expressions:** `I'll pass` · `rain check`
+- **Expressions:** `I'll pass` · `take a rain check`
 - **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
 - **Japanese-L1 risk:** Japanese refusal by trailing off is read in English as indecision, not refusal. The whole lesson is: in English, decline *explicitly* and soften *lexically*.
 
@@ -43,7 +43,7 @@
 - **Already learned:** Core 1–96.
 - **Not yet:** Core 98–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-94 Wouldn't it be better if · CORE-95 Where I'd push back is on the cost · CORE-96 I meant next Friday, not this Friday
-- **Nearest protected forms:** CORE-98 This is largely due to · CORE-99 That suggests that · CORE-100 As a result, we had to reschedule
+- **Nearest protected forms:** CORE-98 That's mostly because of · CORE-99 That suggests that · CORE-100 As a result, we had to reschedule
 - The readiness gate applies to the complete learner-produced model, including every fixed word.
 - Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
 - At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
@@ -53,7 +53,7 @@
 ## Neighbouring items
 
 - **Previous:** CORE-96 · I meant next Friday, not this Friday
-- **Next:** CORE-98 · This is largely due to
+- **Next:** CORE-98 · That's mostly because of
 
 ## Authoring inputs — read in order
 

@@ -26,6 +26,7 @@
 - **Frame:** `I meant ___, not ___.`
 - **Partner:** Host: Oh. I thought you didn't like it.
 - **Core ownership:** Core 96
+- **Treatment:** teach as a bounded chunk; do not expand its grammar here
 
 ### Pattern 2
 

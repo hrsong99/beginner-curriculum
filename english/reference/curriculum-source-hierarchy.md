@@ -80,7 +80,7 @@ Use the sources in this order:
 
 The authoritative sources constrain the curriculum; they do not replace curriculum judgment. No lesson should exist merely because a grammar item appears on a list, and no grammar item should be assigned a level merely because it “feels right.”
 
-## Provenance of the current 72-lesson Core
+## Provenance of the current 122-lesson Core
 
 The current sequence was produced in this order:
 

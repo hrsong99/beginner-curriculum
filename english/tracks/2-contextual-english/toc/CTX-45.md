@@ -8,7 +8,7 @@
 
 - **Track:** `2-contextual-english`
 - **Stable review id:** `CTX-45`
-- **Level:** B1–B2
+- **Level:** B1+–B2
 
 ## Outcome
 
@@ -16,23 +16,23 @@
 - **Practical area:** 2 · Business English
 - **Course:** 8 · Meetings, presentations and decisions
 - **Scene:** presenting three options to managers, 私 must lead with the recommendation rather than the background.
-- **Entry floor:** Core 81
+- **Entry floor:** Core 86
 
 ## Required production
 
 ### Pattern 1
 
-- **Model:** I'd recommend option B.
-- **Frame:** `I'd recommend ___.`
+- **Model:** I recommend option B.
+- **Frame:** `I recommend ___.`
 - **Partner:** Manager: Why B?
-- **Core ownership:** Core 40
+- **Treatment:** teach as a bounded chunk; do not expand its grammar here
 
 ### Pattern 2
 
-- **Model:** The main reason is the implementation time.
-- **Frame:** `The main reason is ___.`
+- **Model:** It's faster to implement.
+- **Frame:** `It's ___er to ___.`
 - **Partner:** Manager: Good. Show us the comparison.
-- **Core ownership:** Core 54
+- **Core ownership:** Core 45, Core 59
 
 ## Supporting content
 
@@ -40,8 +40,8 @@
 
 ## Sequence guardrails
 
-- **Assumed productive floor:** Core 1–81.
-- **Pattern owners used here:** Core 40, Core 54.
+- **Assumed productive floor:** Core 1–86.
+- **Pattern owners used here:** Core 45, Core 59.
 - A pattern more than two Core units above the floor must remain marked `chunk`; do not teach its grammar in this lesson.
 - Partner reactions and `Understand` are receptive; they do not add production targets.
 - This lesson is standalone. Do not invent plot history, callbacks, or a next-lesson teaser.

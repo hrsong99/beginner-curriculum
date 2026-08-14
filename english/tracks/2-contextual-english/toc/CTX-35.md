@@ -22,17 +22,17 @@
 
 ### Pattern 1
 
-- **Model:** We've completed three of the five reviews.
-- **Frame:** `We've completed ___ of ___.`
+- **Model:** We finished three of the five reviews.
+- **Frame:** `We finished ___ of ___.`
 - **Partner:** Manager: What remains?
-- **Core ownership:** Core 53
+- **Core ownership:** Core 32
 
 ### Pattern 2
 
-- **Model:** We still need to confirm the budget and timeline.
-- **Frame:** `We still need to ___.`
+- **Model:** Next, we need to confirm the budget and timeline.
+- **Frame:** `Next, we need to ___.`
 - **Partner:** Manager: Fine. Please do that by Thursday.
-- **Core ownership:** Core 53
+- **Core ownership:** Core 40
 
 ## Supporting content
 
@@ -41,7 +41,7 @@
 ## Sequence guardrails
 
 - **Assumed productive floor:** Core 1–47.
-- **Pattern owners used here:** Core 53.
+- **Pattern owners used here:** Core 32, Core 40.
 - A pattern more than two Core units above the floor must remain marked `chunk`; do not teach its grammar in this lesson.
 - Partner reactions and `Understand` are receptive; they do not add production targets.
 - This lesson is standalone. Do not invent plot history, callbacks, or a next-lesson teaser.

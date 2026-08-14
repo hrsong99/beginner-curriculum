@@ -29,8 +29,8 @@
 
 ### Pattern 2
 
-- **Model:** On balance, I'd rather postpone than take the risk.
-- **Frame:** `On balance, I'd rather ___ than ___.`
+- **Model:** Overall, I'd rather postpone than take the risk.
+- **Frame:** `Overall, I'd rather ___ than ___.`
 - **Partner:** Companion: All right. Let's call them.
 - **Core ownership:** Core 117
 - **Treatment:** teach as a bounded chunk; do not expand its grammar here

@@ -22,16 +22,16 @@
 
 ### Pattern 1
 
-- **Model:** On balance, I recommend proceeding with a limited first phase.
-- **Frame:** `On balance, I recommend ___ing ___.`
+- **Model:** Overall, I recommend proceeding with a limited first phase.
+- **Frame:** `Overall, I recommend ___ing ___.`
 - **Partner:** Executive: Why proceed if the forecast is uncertain?
 - **Core ownership:** Core 117
 - **Treatment:** teach as a bounded chunk; do not expand its grammar here
 
 ### Pattern 2
 
-- **Model:** The deciding factor is that we can limit the downside while testing demand.
-- **Frame:** `The deciding factor is that ___.`
+- **Model:** What it comes down to is that we can limit the downside while testing demand.
+- **Frame:** `What it comes down to is that ___.`
 - **Partner:** Executive: Good. Bring us a phased plan next week.
 - **Core ownership:** Core 117
 - **Treatment:** teach as a bounded chunk; do not expand its grammar here

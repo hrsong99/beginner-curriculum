@@ -12,7 +12,7 @@
 
 ## Outcome
 
-- **Can do:** connect a recommendation to each stakeholder's concern.
+- **Can do:** explain how one proposal serves two stakeholders' priorities.
 - **Practical area:** 2 · Business English
 - **Course:** 10 · Leadership and high-stakes communication
 - **Scene:** finance wants lower cost while operations wants reliability, and 私 needs support for a balanced proposal.
@@ -29,8 +29,8 @@
 
 ### Pattern 2
 
-- **Model:** For operations, it reduces the risk of unplanned downtime.
-- **Frame:** `For ___, it reduces the risk of ___.`
+- **Model:** For operations, it addresses the risk of unplanned downtime.
+- **Frame:** `For ___, it addresses the risk of ___.`
 - **Partner:** Operations lead: That addresses my main concern.
 - **Treatment:** teach as a bounded chunk; do not expand its grammar here
 

@@ -33,7 +33,7 @@
 - **Model:** I mainly work with the design team.
 - **Frame:** `I mainly work with ___.`
 - **Partner:** Colleague: Then you should meet Tom after this.
-- **Core ownership:** Core 3
+- **Core ownership:** Core 12
 
 ## Supporting content
 
@@ -42,7 +42,7 @@
 ## Sequence guardrails
 
 - **Assumed productive floor:** Core 1–47.
-- **Pattern owners used here:** Core 3, Core 81.
+- **Pattern owners used here:** Core 12, Core 81.
 - A pattern more than two Core units above the floor must remain marked `chunk`; do not teach its grammar in this lesson.
 - Partner reactions and `Understand` are receptive; they do not add production targets.
 - This lesson is standalone. Do not invent plot history, callbacks, or a next-lesson teaser.

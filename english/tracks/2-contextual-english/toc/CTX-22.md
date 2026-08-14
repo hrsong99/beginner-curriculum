@@ -22,10 +22,10 @@
 
 ### Pattern 1
 
-- **Model:** I see why you want to go, but I'd rather stay nearby.
-- **Frame:** `I see why ___, but I'd rather ___.`
+- **Model:** I see why you want to go, but I prefer staying nearby.
+- **Frame:** `I see why ___, but I prefer ___.`
 - **Partner:** Companion: I don't want to waste the afternoon, though.
-- **Core ownership:** Core 85, Core 97
+- **Core ownership:** Core 62, Core 63
 
 ### Pattern 2
 
@@ -33,6 +33,7 @@
 - **Frame:** `What if we ___ and ___?`
 - **Partner:** Companion: I can live with that.
 - **Core ownership:** Core 94
+- **Treatment:** teach as a bounded chunk; do not expand its grammar here
 
 ## Supporting content
 
@@ -41,7 +42,7 @@
 ## Sequence guardrails
 
 - **Assumed productive floor:** Core 1–91.
-- **Pattern owners used here:** Core 85, Core 94, Core 97.
+- **Pattern owners used here:** Core 62, Core 63, Core 94.
 - A pattern more than two Core units above the floor must remain marked `chunk`; do not teach its grammar in this lesson.
 - Partner reactions and `Understand` are receptive; they do not add production targets.
 - This lesson is standalone. Do not invent plot history, callbacks, or a next-lesson teaser.

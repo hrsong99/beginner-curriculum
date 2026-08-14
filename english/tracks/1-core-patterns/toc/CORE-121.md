@@ -24,8 +24,8 @@
 
 ### Pattern 2
 
-- **Model:** Can we leave that there for now?
-- **Frame:** `Can we leave ___ there for now?`
+- **Model:** Can we leave this for now?
+- **Frame:** `Can we leave ___ for now?`
 
 ## Supporting content
 

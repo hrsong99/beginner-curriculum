@@ -32,7 +32,7 @@
 - **Model:** What would you choose if you only had one day?
 - **Frame:** `What would you choose if ___?`
 - **Partner:** Local: The coastal walk, definitely.
-- **Core ownership:** Core 94
+- **Core ownership:** Core 66
 
 ## Supporting content
 
@@ -41,7 +41,7 @@
 ## Sequence guardrails
 
 - **Assumed productive floor:** Core 1–91.
-- **Pattern owners used here:** Core 89, Core 94.
+- **Pattern owners used here:** Core 66, Core 89.
 - A pattern more than two Core units above the floor must remain marked `chunk`; do not teach its grammar in this lesson.
 - Partner reactions and `Understand` are receptive; they do not add production targets.
 - This lesson is standalone. Do not invent plot history, callbacks, or a next-lesson teaser.

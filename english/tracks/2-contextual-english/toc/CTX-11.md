@@ -29,10 +29,10 @@
 
 ### Pattern 2
 
-- **Model:** Could I exchange it for another one?
-- **Frame:** `Could I exchange ___ for ___?`
+- **Model:** Can I exchange it for another one?
+- **Frame:** `Can I exchange ___ for ___?`
 - **Partner:** Clerk: Yes. Let me test the replacement first.
-- **Core ownership:** Core 60
+- **Core ownership:** Core 21
 
 ## Supporting content
 
@@ -41,7 +41,7 @@
 ## Sequence guardrails
 
 - **Assumed productive floor:** Core 1–59.
-- **Pattern owners used here:** Core 32, Core 56, Core 60.
+- **Pattern owners used here:** Core 21, Core 32, Core 56.
 - A pattern more than two Core units above the floor must remain marked `chunk`; do not teach its grammar in this lesson.
 - Partner reactions and `Understand` are receptive; they do not add production targets.
 - This lesson is standalone. Do not invent plot history, callbacks, or a next-lesson teaser.

@@ -29,10 +29,10 @@
 
 ### Pattern 2
 
-- **Model:** Could I have the iced one instead?
-- **Frame:** `Could I have ___ instead?`
+- **Model:** Can I have the iced one instead?
+- **Frame:** `Can I have ___ instead?`
 - **Partner:** Server: Absolutely. It'll just take a minute.
-- **Core ownership:** Core 60
+- **Core ownership:** Core 22
 
 ## Supporting content
 
@@ -41,7 +41,7 @@
 ## Sequence guardrails
 
 - **Assumed productive floor:** Core 1–59.
-- **Pattern owners used here:** Core 60.
+- **Pattern owners used here:** Core 22.
 - A pattern more than two Core units above the floor must remain marked `chunk`; do not teach its grammar in this lesson.
 - Partner reactions and `Understand` are receptive; they do not add production targets.
 - This lesson is standalone. Do not invent plot history, callbacks, or a next-lesson teaser.

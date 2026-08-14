@@ -129,3 +129,10 @@ The learner-view follow-up tightened CTX-9, 10, 11, 13, 17, 18, 21, 23, 25, 28, 
 The changes removed false Core ownership, bounded fixed service language as chunks, repaired
 translated-sounding wording, and constrained slots so that changing them cannot silently break the
 scene. The 60-lesson order and all stable IDs remain unchanged.
+
+The final deep pass later that day tightened the whole-line prerequisite rule. It simplified early
+Travel and Business patterns where later grammar added no practical value, raised the Meetings and
+Negotiation course floors to Core 86 and Core 101, removed hidden third speech acts, and replaced
+the propagated `On balance` conclusion frame. The shared parser now rejects any future-Core
+reference above a course floor unless that learner line is explicitly marked as a bounded chunk.
+See [`final-curriculum-deep-audit.md`](./final-curriculum-deep-audit.md).

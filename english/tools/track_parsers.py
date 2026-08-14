@@ -319,6 +319,13 @@ def parse_contextual() -> list[dict]:
         })
         if len(exchanges) != 2 or any(not x["reaction"] for x in exchanges):
             raise ParseError(f"{path}: CTX {number} needs exactly 2 learner lines with partner reactions")
+        for exchange in exchanges:
+            late_refs = [ref for ref in exchange["coreRefs"] if ref > int(course.group(5))]
+            if late_refs and not exchange["chunk"]:
+                raise ParseError(
+                    f"{path}: CTX {number} uses Core {late_refs} above its Core {course.group(5)} "
+                    "course floor without marking the pattern as a bounded chunk"
+                )
     _continuous(path, lessons, 60)
     return lessons
 

@@ -22,10 +22,10 @@
 
 ### Pattern 1
 
-- **Model:** What's the best way to get to the museum?
-- **Frame:** `What's the best way to get to ___?`
+- **Model:** How do I get to the museum?
+- **Frame:** `How do I get to ___?`
 - **Partner:** Local: Take the north exit and then the number eight bus.
-- **Core ownership:** Core 59
+- **Core ownership:** Core 11
 
 ### Pattern 2
 
@@ -41,7 +41,7 @@
 ## Sequence guardrails
 
 - **Assumed productive floor:** Core 1–47.
-- **Pattern owners used here:** Core 13, Core 59.
+- **Pattern owners used here:** Core 11, Core 13.
 - A pattern more than two Core units above the floor must remain marked `chunk`; do not teach its grammar in this lesson.
 - Partner reactions and `Understand` are receptive; they do not add production targets.
 - This lesson is standalone. Do not invent plot history, callbacks, or a next-lesson teaser.

@@ -37,7 +37,7 @@
 
 - **Already learned:** Core 1–100.
 - **Not yet:** Core 102–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-98 This is largely due to · CORE-99 That suggests that · CORE-100 As a result, we had to reschedule
+- **Most recent available forms:** CORE-98 That's mostly because of · CORE-99 That suggests that · CORE-100 As a result, we had to reschedule
 - **Nearest protected forms:** CORE-102 Otherwise, we'd have to start again · CORE-103 What worries me most is the cost · CORE-104 It's the timing that matters
 - The readiness gate applies to the complete learner-produced model, including every fixed word.
 - Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.

@@ -42,7 +42,7 @@
 
 - **Already learned:** Core 1–117.
 - **Not yet:** Core 119–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-115 Granted, but that overlooks · CORE-116 If anything, it's got worse · CORE-117 On balance, I'd say
+- **Most recent available forms:** CORE-115 That's true, but it doesn't account for · CORE-116 If anything, it's got worse · CORE-117 Overall, I'd say
 - **Nearest protected forms:** CORE-119 Let's just say it didn't go well · CORE-120 You might want to check that · CORE-121 I'd rather not go into it
 - The readiness gate applies to the complete learner-produced model, including every fixed word.
 - Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
@@ -52,7 +52,7 @@
 
 ## Neighbouring items
 
-- **Previous:** CORE-117 · On balance, I'd say
+- **Previous:** CORE-117 · Overall, I'd say
 - **Next:** CORE-119 · Let's just say it didn't go well
 
 ## Authoring inputs — read in order

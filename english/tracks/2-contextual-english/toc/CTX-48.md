@@ -8,7 +8,7 @@
 
 - **Track:** `2-contextual-english`
 - **Stable review id:** `CTX-48`
-- **Level:** B1–B2
+- **Level:** B1+–B2
 
 ## Outcome
 
@@ -16,7 +16,7 @@
 - **Practical area:** 2 · Business English
 - **Course:** 8 · Meetings, presentations and decisions
 - **Scene:** a meeting has circled around three options without choosing one, and 私 is chairing.
-- **Entry floor:** Core 81
+- **Entry floor:** Core 86
 
 ## Required production
 
@@ -42,7 +42,7 @@
 
 ## Sequence guardrails
 
-- **Assumed productive floor:** Core 1–81.
+- **Assumed productive floor:** Core 1–86.
 - **Pattern owners used here:** Core 94, Core 103.
 - A pattern more than two Core units above the floor must remain marked `chunk`; do not teach its grammar in this lesson.
 - Partner reactions and `Understand` are receptive; they do not add production targets.

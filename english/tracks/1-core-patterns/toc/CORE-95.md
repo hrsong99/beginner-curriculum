@@ -42,7 +42,7 @@
 - **Already learned:** Core 1–94.
 - **Not yet:** Core 96–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-92 I'm not entirely convinced · CORE-93 To be fair, · CORE-94 Wouldn't it be better if
-- **Nearest protected forms:** CORE-96 I meant next Friday, not this Friday · CORE-97 I'd rather not, if that's OK · CORE-98 This is largely due to
+- **Nearest protected forms:** CORE-96 I meant next Friday, not this Friday · CORE-97 I'd rather not, if that's OK · CORE-98 That's mostly because of
 - The readiness gate applies to the complete learner-produced model, including every fixed word.
 - Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
 - At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.

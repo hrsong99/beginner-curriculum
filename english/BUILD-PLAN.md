@@ -24,8 +24,8 @@ here only when it changes the starting point for future work.
 | Generated author packets | 315 item briefs plus 4 indexes |
 | Review surface | generated 303-item catalog; native review in progress |
 | Core evidence | 122-row generated triage ledger complete; row-level EGP checks remain open |
-| Core audit | naturalness, transfer and slot-quality revision applied with stable IDs; affected catalog rows require fresh native review |
-| Automated quality | 38 regression tests; all 4 English deck files pass with 0 errors and 0 warnings |
+| Core audit | final progression, cognitive-load, naturalness and slot-quality pass applied with stable IDs; affected catalog rows require fresh native review |
+| Automated quality | 40 regression tests; all 4 English deck files pass with 0 errors and 0 warnings |
 | Deployment | not ready: course identity, manifests and external sync path remain open |
 
 The curriculum is no longer waiting for basic architecture or tooling. Its main content risk is
@@ -150,11 +150,12 @@ The owner is reviewing `english/catalog.html`. While that review is open:
 The hold prevents avoidable content rework. It does not block read-only evidence gathering,
 decision preparation, tooling that holds no curriculum facts, or documentation repair.
 
-The owner approved the broader naturalness and transfer revision on 2026-08-14. It preserves every
-stable ID but changes catalog-visible wording across Core, Contextual and Freetalking, including
-many Freetalking ownership labels. The English title pass subsequently replaced all 121
-Freetalking title snapshots while preserving their IDs. The generated catalog was rebuilt after
-the revision. Do not
+The owner approved the broader naturalness and transfer revision on 2026-08-14. The final deep pass
+then removed remaining prerequisite leaks, overloaded pairs, weak slots and written-register
+defaults while preserving every stable ID. It also raised the two advanced Business course floors
+to Core 86 and Core 101 and made future-Core use mechanically require a bounded-chunk label. The
+English title pass replaced all 121 Freetalking title snapshots while preserving their IDs. The
+generated catalog was rebuilt after these revisions. Do not
 submit a copied review form made from a pre-2026-08-14 catalog; open the current catalog and carry
 forward only feedback whose row snapshot is unchanged. Pronunciation planning was also corrected,
 but it remains outside the production-facing review catalog.

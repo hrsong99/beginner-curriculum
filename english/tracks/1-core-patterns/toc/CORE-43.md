@@ -24,14 +24,14 @@
 
 ### Pattern 2
 
-- **Model:** I'm looking for something cheaper.
-- **Frame:** `I'm looking for something ___er.`
+- **Model:** It's near the station.
+- **Frame:** `It's near ___.`
 
 ## Supporting content
 
-- **Expressions:** `kind of` · `not really my thing`
+- **Expressions:** `a little` · `not far from here`
 - **Grammar:** adjectives go **before** the noun and do not change for plural: `two small cafés`.
-- **Japanese-L1 risk:** pre-modification matches Japanese, so this is easy — but `two smalls cafés` appears from over-applying the plural rule from lesson 9.
+- **Japanese-L1 risk:** pre-modification matches Japanese, so this is easy — but `two smalls cafés` appears from over-applying the plural rule from lesson 9. The second pattern recycles a known place phrase; comparison does not begin until lesson 45.
 
 ## Planned spiral review
 

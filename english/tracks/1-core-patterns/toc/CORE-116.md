@@ -24,12 +24,12 @@
 
 ### Pattern 2
 
-- **Model:** Quite the opposite, actually.
-- **Frame:** `Quite the opposite, ___.`
+- **Model:** It's actually the opposite: demand has gone up.
+- **Frame:** `It's actually the opposite: ___.`
 
 ## Supporting content
 
-- **Expressions:** `far from it` · `on the contrary`
+- **Expressions:** `far from it` · `not at all`
 - **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
 - **Japanese-L1 risk:** compact, very frequent in speech, and almost never taught. Good keep.
 
@@ -41,8 +41,8 @@
 
 - **Already learned:** Core 1–115.
 - **Not yet:** Core 117–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-113 The underlying issue is · CORE-114 That may be true for some people · CORE-115 Granted, but that overlooks
-- **Nearest protected forms:** CORE-117 On balance, I'd say · CORE-118 You could see it that way · CORE-119 Let's just say it didn't go well
+- **Most recent available forms:** CORE-113 The underlying issue is · CORE-114 That may be true for some people · CORE-115 That's true, but it doesn't account for
+- **Nearest protected forms:** CORE-117 Overall, I'd say · CORE-118 You could see it that way · CORE-119 Let's just say it didn't go well
 - The readiness gate applies to the complete learner-produced model, including every fixed word.
 - Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
 - At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
@@ -51,8 +51,8 @@
 
 ## Neighbouring items
 
-- **Previous:** CORE-115 · Granted, but that overlooks
-- **Next:** CORE-117 · On balance, I'd say
+- **Previous:** CORE-115 · That's true, but it doesn't account for
+- **Next:** CORE-117 · Overall, I'd say
 
 ## Authoring inputs — read in order
 

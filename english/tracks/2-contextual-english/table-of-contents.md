@@ -101,7 +101,7 @@ the learner travel successfully.
 
 *場面: outside a station, 私 needs to reach a museum without taking the wrong exit.*
 *Can-do: obtain directions and check the critical step.*
-- 私: "What's the best way to get to the museum?" — `What's the best way to get to ___?` **(Core 59)**
+- 私: "How do I get to the museum?" — `How do I get to ___?` **(Core 11)**
   → Local: "Take the north exit and then the number eight bus."
 - 私: "Do I take the north exit first?" — `Do I ___ first?` **(Core 13)**
   → Local: "Exactly. The bus stop is across the road."
@@ -125,7 +125,7 @@ the learner travel successfully.
 *Can-do: establish the booking and negotiate a useful interim solution.*
 - 私: "I have a reservation under Tanaka." — `I have a reservation under ___.` **(Core 5)**
   → Receptionist: "Yes, but your room won't be ready until three."
-- 私: "Is there any chance we could leave our bags here?" — `Is there any chance we could ___?` **(Core 60)**
+- 私: "Can we leave our bags here until three?" — `Can we leave ___ here until ___?` **(Core 21)**
   → Receptionist: "Of course. I'll give you a receipt."
 - *Expressions:* `check-in time` · `luggage room`
 
@@ -133,18 +133,18 @@ the learner travel successfully.
 
 *場面: in a hotel room, the air conditioning is running but the room remains hot.*
 *Can-do: describe a malfunction and request a specific remedy.*
-- 私: "The air conditioning isn't working properly." — `The ___ isn't working properly.` **(Core 64)**
+- 私: "The air conditioning doesn't work." — `The ___ doesn't work.` **(Core 14)**
   → Receptionist: "I'll send someone up to look at it."
-- 私: "If it can't be fixed, could we change rooms?" — `If ___, could we ___?` **(Core 57, 60)**
+- 私: "Can we change rooms?" — `Can we ___?` **(Core 21)**
   → Receptionist: "Yes. I'll hold another room for you."
 - *Expressions:* `send someone up` · `change rooms`
 
 **9. Order with a dietary restriction**
 
 *場面: at a restaurant, 私 cannot understand the menu and must avoid nuts.*
-*Can-do: get a recommendation that meets a dietary need.*
-- 私: "I'm allergic to nuts. What would you recommend?" — `I'm allergic to ___. What would you recommend?` `chunk`
-  → Server: "The fish is popular today."
+*Can-do: state a dietary restriction and check that a recommendation is safe.*
+- 私: "I'm allergic to nuts." — `I'm allergic to ___.` `chunk`
+  → Server: "Then I'd recommend the fish."
 - 私: "Does it contain any nuts?" — `Does it contain any ___?` **(Core 13)**
   → Server: "No nuts, but the sauce contains dairy."
 - *Expressions:* `nut-free` · `contains dairy`
@@ -155,7 +155,7 @@ the learner travel successfully.
 *Can-do: identify an order error and ask for the correct item.*
 - 私: "Sorry, I ordered the iced coffee, not the hot one." — `I ordered ___, not ___.` `chunk`
   → Server: "I'm sorry—I picked up the wrong ticket."
-- 私: "Could I have the iced one instead?" — `Could I have ___ instead?` **(Core 60)**
+- 私: "Can I have the iced one instead?" — `Can I have ___ instead?` **(Core 22)**
   → Server: "Absolutely. It'll just take a minute."
 - *Expressions:* `the wrong order` · `no problem`
 
@@ -165,7 +165,7 @@ the learner travel successfully.
 *Can-do: explain a fault and request an exchange or refund.*
 - 私: "I bought this yesterday, but it doesn't work." — `I bought ___, but ___.` **(Core 32, Core 56)**
   → Clerk: "Do you have the receipt?"
-- 私: "Could I exchange it for another one?" — `Could I exchange ___ for ___?` **(Core 60)**
+- 私: "Can I exchange it for another one?" — `Can I exchange ___ for ___?` **(Core 21)**
   → Clerk: "Yes. Let me test the replacement first."
 - *Expressions:* `proof of purchase` · `refund`
 
@@ -173,9 +173,9 @@ the learner travel successfully.
 
 *場面: on the phone with a restaurant, 私 needs to move a dinner reservation by one hour.*
 *Can-do: request a booking change and confirm the revised details.*
-- 私: "Could we move our reservation to eight?" — `Could we move ___ to ___?` **(Core 60)**
+- 私: "Can we move our reservation to eight?" — `Can we move ___ to ___?` **(Core 21)**
   → Host: "I can do eight-fifteen, but not eight."
-- 私: "Eight-fifteen works. Could you confirm it's still for four?" — `Could you confirm ___?` **(Core 83)** `chunk`
+- 私: "Is it still for four people?" — `Is it still for ___ people?` **(Core 8)**
   → Host: "Yes—four people at eight-fifteen."
 - *Expressions:* `under the name` · `change the booking`
 
@@ -215,7 +215,7 @@ the learner travel successfully.
 
 *場面: calling a restaurant, 私 believes a wallet was left there at lunch.*
 *Can-do: explain where an item may be and help staff identify it.*
-- 私: "I may have left my wallet at your restaurant." — `I may have left ___ at ___.` **(Core 72)**
+- 私: "I think I left my wallet at your restaurant." — `I think I left ___ at ___.` **(Core 32)**
   → Manager: "What does it look like?"
 - 私: "Has anyone handed in a brown leather wallet?" — `Has anyone handed in ___?` **(Core 49)**
   → Manager: "Yes, we have one behind the counter."
@@ -249,7 +249,7 @@ the learner travel successfully.
 *Can-do: state selection criteria and obtain a tailored recommendation.*
 - 私: "We're looking for somewhere quiet rather than touristy." — `We're looking for ___ rather than ___.` **(Core 89)**
   → Local: "Then skip the main beach and go north."
-- 私: "What would you choose if you only had one day?" — `What would you choose if ___?` **(Core 94)**
+- 私: "What would you choose if you only had one day?" — `What would you choose if ___?` **(Core 66)**
   → Local: "The coastal walk, definitely."
 - *Expressions:* `off the beaten track` · `worth the trip`
 
@@ -277,9 +277,9 @@ the learner travel successfully.
 
 *場面: two travel companions want different plans for the only free afternoon.*
 *Can-do: acknowledge the other preference and propose a workable compromise.*
-- 私: "I see why you want to go, but I'd rather stay nearby." — `I see why ___, but I'd rather ___.` **(Core 85, 97)**
+- 私: "I see why you want to go, but I prefer staying nearby." — `I see why ___, but I prefer ___.` **(Core 62, Core 63)**
   → Companion: "I don't want to waste the afternoon, though."
-- 私: "What if we did the short route and came back by six?" — `What if we ___ and ___?` **(Core 94)**
+- 私: "What if we did the short route and came back by six?" — `What if we ___ and ___?` **(Core 94)** `chunk`
   → Companion: "I can live with that."
 - *Expressions:* `meet halfway` · `work for both of us`
 
@@ -287,7 +287,7 @@ the learner travel successfully.
 
 *場面: a host thinks 私 disliked dinner because 私 left food on the plate.*
 *Can-do: repair an unintended social message without blaming the other person.*
-- 私: "I'm sorry—I meant that I was full, not that I disliked it." — `I meant ___, not ___.` **(Core 96)**
+- 私: "I'm sorry—I meant that I was full, not that I disliked it." — `I meant ___, not ___.` **(Core 96)** `chunk`
   → Host: "Oh. I thought you didn't like it."
 - 私: "I was trying to be polite, but I got it wrong." — `I was trying to ___, but ___.` **(Core 36, 56)**
   → Host: "No harm done. Now I understand."
@@ -308,7 +308,7 @@ the learner travel successfully.
 **25. Escalate a cancellation with clear priorities**
 
 *場面: after a cancelled flight, the offered replacement would make 私 miss an important event.*
-*Can-do: explain the consequence, state the priority, and seek an alternative.*
+*Can-do: state the non-negotiable priority and seek an alternative.*
 - 私: "What matters most is arriving before tomorrow morning." — `What matters most is ___.` **(Core 103)**
   → Agent: "The direct flights are all full."
 - 私: "Could you check routes through another city?" — `Could you check routes through ___?` **(Core 24)** `chunk`
@@ -319,7 +319,7 @@ the learner travel successfully.
 
 *場面: reporting a stolen camera by phone, 私 must separate known facts from uncertain details.*
 *Can-do: give a precise incident account without overstating certainty.*
-- 私: "The last time I definitely had it was at the station." — `The last time I definitely had ___ was ___.` **(Core 104)**
+- 私: "I definitely had it at the station." — `I definitely had ___ at ___.` **(Core 32)**
   → Agent: "And when did you notice it was missing?"
 - 私: "It may have been taken on the train, but I can't be certain." — `It may have ___, but I can't be certain.` **(Core 72, Core 65)**
   → Agent: "That's fine. I'll record it as unknown."
@@ -351,7 +351,7 @@ the learner travel successfully.
 *Can-do: weigh uncertainty and decide whether to proceed.*
 - 私: "The fact that it hasn't been cancelled doesn't necessarily mean it's safe." — `The fact that ___ doesn't necessarily mean ___.` `chunk`
   → Companion: "True, but the operator knows the area."
-- 私: "On balance, I'd rather postpone than take the risk." — `On balance, I'd rather ___ than ___.` **(Core 117)** `chunk`
+- 私: "Overall, I'd rather postpone than take the risk." — `Overall, I'd rather ___ than ___.` **(Core 117)** `chunk`
   → Companion: "All right. Let's call them."
 - *Expressions:* `err on the side of caution` · `weather advisory`
 
@@ -361,7 +361,7 @@ the learner travel successfully.
 *Can-do: turn mixed experience into a qualified recommendation.*
 - 私: "What I'd recommend is allowing an extra day for the connection." — `What I'd recommend is ___ing ___.` **(Core 103)**
   → Colleague: "Even if the flights are on one ticket?"
-- 私: "The route is worth taking, provided you have some flexibility." — `___ is worth ___ing, provided ___.` `chunk`
+- 私: "I'd only take that route if you have some flexibility." — `I'd only ___ if ___.` **(Core 66, Core 57)**
   → Colleague: "That's exactly what I needed to know."
 - *Expressions:* `with hindsight` · `build in extra time`
 
@@ -381,7 +381,7 @@ lesson Business English; each lesson must produce a workplace result.
 *Can-do: explain responsibility and working relationships concisely.*
 - 私: "I'm responsible for the project schedule." — `I'm responsible for ___.` **(Core 81)** `chunk`
   → Colleague: "Great—I'll send any questions about timing to you."
-- 私: "I mainly work with the design team." — `I mainly work with ___.` **(Core 3)**
+- 私: "I mainly work with the design team." — `I mainly work with ___.` **(Core 12)**
   → Colleague: "Then you should meet Tom after this."
 - *Expressions:* `nice to e-meet you` · `point of contact`
 
@@ -419,9 +419,9 @@ lesson Business English; each lesson must produce a workplace result.
 
 *場面: in a weekly status call, 私 has thirty seconds to report completed and remaining work.*
 *Can-do: state progress and the next outstanding task.*
-- 私: "We've completed three of the five reviews." — `We've completed ___ of ___.` **(Core 53)**
+- 私: "We finished three of the five reviews." — `We finished ___ of ___.` **(Core 32)**
   → Manager: "What remains?"
-- 私: "We still need to confirm the budget and timeline." — `We still need to ___.` **(Core 53)**
+- 私: "Next, we need to confirm the budget and timeline." — `Next, we need to ___.` **(Core 40)**
   → Manager: "Fine. Please do that by Thursday."
 - *Expressions:* `on track` · `outstanding items`
 
@@ -431,7 +431,7 @@ lesson Business English; each lesson must produce a workplace result.
 *Can-do: report the failure with enough diagnostic detail for someone to act.*
 - 私: "I can't access the demo environment." — `I can't access ___.` **(Core 18)**
   → Engineer: "Was it working earlier?"
-- 私: "It was working this morning, but now I get a permission error." — `It was working ___, but now ___.` **(Core 36, 56)**
+- 私: "It worked this morning, but now I get a permission error." — `It worked ___, but now I get ___.` **(Core 32, Core 14)**
   → Engineer: "It sounds like your access has expired. Give me five minutes."
 - *Expressions:* `permission error` · `blocking the demo`
 
@@ -443,7 +443,7 @@ lesson Business English; each lesson must produce a workplace result.
 *Can-do: surface the conflict and obtain a priority order.*
 - 私: "I can finish two by Friday, but probably not all three." — `I can ___, but probably not ___.` **(Core 56)**
   → Manager: "Which one would slip?"
-- 私: "Which task would you like me to prioritise?" — `Which ___ would you like me to prioritise?` **(Core 28)**
+- 私: "Which task should I do first?" — `Which ___ should I ___ first?` **(Core 40)**
   → Manager: "Do the client report first. Move the audit to Monday."
 - *Expressions:* `top priority` · `move the deadline`
 
@@ -497,7 +497,7 @@ lesson Business English; each lesson must produce a workplace result.
   → Manager: "Good. Please put that in the notes."
 - *Expressions:* `action items` · `by close of business`
 
-## Course 8 · Meetings, presentations and decisions · 6 lessons · **B1–B2** · floor: Core 81
+## Course 8 · Meetings, presentations and decisions · 6 lessons · **B1+–B2** · floor: Core 86
 
 **43. Interrupt to clarify a key point**
 
@@ -523,9 +523,9 @@ lesson Business English; each lesson must produce a workplace result.
 
 *場面: presenting three options to managers, 私 must lead with the recommendation rather than the background.*
 *Can-do: state a recommendation and its deciding reason clearly.*
-- 私: "I'd recommend option B." — `I'd recommend ___.` **(Core 40)**
+- 私: "I recommend option B." — `I recommend ___.` `chunk`
   → Manager: "Why B?"
-- 私: "The main reason is the implementation time." — `The main reason is ___.` **(Core 54)**
+- 私: "It's faster to implement." — `It's ___er to ___.` **(Core 45, Core 59)**
   → Manager: "Good. Show us the comparison."
 - *Expressions:* `bottom line` · `recommended option`
 
@@ -559,7 +559,7 @@ lesson Business English; each lesson must produce a workplace result.
   → Participant: "Yes. Then we can decide."
 - *Expressions:* `decision criteria` · `come to a decision`
 
-## Course 9 · Negotiation and diplomatic language · 6 lessons · **B2** · floor: Core 92
+## Course 9 · Negotiation and diplomatic language · 6 lessons · **B2** · floor: Core 101
 
 **49. Reframe a problem more accurately**
 
@@ -656,10 +656,10 @@ lesson Business English; each lesson must produce a workplace result.
 **58. Persuade stakeholders with competing interests**
 
 *場面: finance wants lower cost while operations wants reliability, and 私 needs support for a balanced proposal.*
-*Can-do: connect a recommendation to each stakeholder's concern.*
+*Can-do: explain how one proposal serves two stakeholders' priorities.*
 - 私: "For finance, the key benefit is predictable cost." — `For ___, the key benefit is ___.` `chunk`
   → Finance lead: "And what does operations gain?"
-- 私: "For operations, it reduces the risk of unplanned downtime." — `For ___, it reduces the risk of ___.` `chunk`
+- 私: "For operations, it addresses the risk of unplanned downtime." — `For ___, it addresses the risk of ___.` `chunk`
   → Operations lead: "That addresses my main concern."
 - *Expressions:* `shared objective` · `addresses the concern`
 
@@ -677,9 +677,9 @@ lesson Business English; each lesson must produce a workplace result.
 
 *場面: senior leaders ask 私 whether to proceed with an investment despite incomplete forecasts.*
 *Can-do: weigh uncertainty, name the deciding factor, and land on a qualified position.*
-- 私: "On balance, I recommend proceeding with a limited first phase." — `On balance, I recommend ___ing ___.` **(Core 117)** `chunk`
+- 私: "Overall, I recommend proceeding with a limited first phase." — `Overall, I recommend ___ing ___.` **(Core 117)** `chunk`
   → Executive: "Why proceed if the forecast is uncertain?"
-- 私: "The deciding factor is that we can limit the downside while testing demand." — `The deciding factor is that ___.` **(Core 117)** `chunk`
+- 私: "What it comes down to is that we can limit the downside while testing demand." — `What it comes down to is that ___.` **(Core 117)** `chunk`
   → Executive: "Good. Bring us a phased plan next week."
 - *Expressions:* `limited first phase` · `limit the downside`
 

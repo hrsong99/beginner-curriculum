@@ -22,17 +22,17 @@
 
 ### Pattern 1
 
-- **Model:** The air conditioning isn't working properly.
-- **Frame:** `The ___ isn't working properly.`
+- **Model:** The air conditioning doesn't work.
+- **Frame:** `The ___ doesn't work.`
 - **Partner:** Receptionist: I'll send someone up to look at it.
-- **Core ownership:** Core 64
+- **Core ownership:** Core 14
 
 ### Pattern 2
 
-- **Model:** If it can't be fixed, could we change rooms?
-- **Frame:** `If ___, could we ___?`
+- **Model:** Can we change rooms?
+- **Frame:** `Can we ___?`
 - **Partner:** Receptionist: Yes. I'll hold another room for you.
-- **Core ownership:** Core 57, Core 60
+- **Core ownership:** Core 21
 
 ## Supporting content
 
@@ -41,7 +41,7 @@
 ## Sequence guardrails
 
 - **Assumed productive floor:** Core 1–59.
-- **Pattern owners used here:** Core 57, Core 60, Core 64.
+- **Pattern owners used here:** Core 14, Core 21.
 - A pattern more than two Core units above the floor must remain marked `chunk`; do not teach its grammar in this lesson.
 - Partner reactions and `Understand` are receptive; they do not add production targets.
 - This lesson is standalone. Do not invent plot history, callbacks, or a next-lesson teaser.

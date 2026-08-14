@@ -29,10 +29,10 @@
 
 ### Pattern 2
 
-- **Model:** Which task would you like me to prioritise?
-- **Frame:** `Which ___ would you like me to prioritise?`
+- **Model:** Which task should I do first?
+- **Frame:** `Which ___ should I ___ first?`
 - **Partner:** Manager: Do the client report first. Move the audit to Monday.
-- **Core ownership:** Core 28
+- **Core ownership:** Core 40
 
 ## Supporting content
 
@@ -41,7 +41,7 @@
 ## Sequence guardrails
 
 - **Assumed productive floor:** Core 1–59.
-- **Pattern owners used here:** Core 28, Core 56.
+- **Pattern owners used here:** Core 40, Core 56.
 - A pattern more than two Core units above the floor must remain marked `chunk`; do not teach its grammar in this lesson.
 - Partner reactions and `Understand` are receptive; they do not add production targets.
 - This lesson is standalone. Do not invent plot history, callbacks, or a next-lesson teaser.

@@ -29,10 +29,10 @@
 
 ### Pattern 2
 
-- **Model:** Is there any chance we could leave our bags here?
-- **Frame:** `Is there any chance we could ___?`
+- **Model:** Can we leave our bags here until three?
+- **Frame:** `Can we leave ___ here until ___?`
 - **Partner:** Receptionist: Of course. I'll give you a receipt.
-- **Core ownership:** Core 60
+- **Core ownership:** Core 21
 
 ## Supporting content
 
@@ -41,7 +41,7 @@
 ## Sequence guardrails
 
 - **Assumed productive floor:** Core 1–59.
-- **Pattern owners used here:** Core 5, Core 60.
+- **Pattern owners used here:** Core 5, Core 21.
 - A pattern more than two Core units above the floor must remain marked `chunk`; do not teach its grammar in this lesson.
 - Partner reactions and `Understand` are receptive; they do not add production targets.
 - This lesson is standalone. Do not invent plot history, callbacks, or a next-lesson teaser.

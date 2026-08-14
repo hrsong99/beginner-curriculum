@@ -12,7 +12,7 @@
 
 ## Outcome
 
-- **Can do:** ask where a place is and understand the answer.
+- **Can do:** ask where a place is and describe where it is.
 - **Unit:** 2 · Say what is around you
 
 ## Required production

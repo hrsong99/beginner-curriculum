@@ -37,7 +37,7 @@
 
 - **Already learned:** Core 1–98.
 - **Not yet:** Core 100–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-96 I meant next Friday, not this Friday · CORE-97 I'd rather not, if that's OK · CORE-98 This is largely due to
+- **Most recent available forms:** CORE-96 I meant next Friday, not this Friday · CORE-97 I'd rather not, if that's OK · CORE-98 That's mostly because of
 - **Nearest protected forms:** CORE-100 As a result, we had to reschedule · CORE-101 It depends on whether · CORE-102 Otherwise, we'd have to start again
 - The readiness gate applies to the complete learner-produced model, including every fixed word.
 - Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
@@ -47,7 +47,7 @@
 
 ## Neighbouring items
 
-- **Previous:** CORE-98 · This is largely due to
+- **Previous:** CORE-98 · That's mostly because of
 - **Next:** CORE-100 · As a result, we had to reschedule
 
 ## Authoring inputs — read in order

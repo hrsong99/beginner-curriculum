@@ -24,8 +24,8 @@
 
 ### Pattern 2
 
-- **Model:** Failing that, we could ask them.
-- **Frame:** `Failing that, we could ___.`
+- **Model:** If that doesn't work, we could ask them.
+- **Frame:** `If that doesn't work, we could ___.`
 
 ## Supporting content
 

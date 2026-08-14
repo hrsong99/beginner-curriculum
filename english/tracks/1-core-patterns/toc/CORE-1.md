@@ -12,7 +12,7 @@
 
 ## Outcome
 
-- **Can do:** introduce yourself two ways and learn someone's name.
+- **Can do:** introduce yourself in two common ways.
 - **Unit:** 1 · Say who you are
 
 ## Required production

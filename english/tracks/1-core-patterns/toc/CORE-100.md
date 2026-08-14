@@ -37,7 +37,7 @@
 
 - **Already learned:** Core 1–99.
 - **Not yet:** Core 101–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-97 I'd rather not, if that's OK · CORE-98 This is largely due to · CORE-99 That suggests that
+- **Most recent available forms:** CORE-97 I'd rather not, if that's OK · CORE-98 That's mostly because of · CORE-99 That suggests that
 - **Nearest protected forms:** CORE-101 It depends on whether · CORE-102 Otherwise, we'd have to start again · CORE-103 What worries me most is the cost
 - The readiness gate applies to the complete learner-produced model, including every fixed word.
 - Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.

@@ -29,10 +29,10 @@
 
 ### Pattern 2
 
-- **Model:** It was working this morning, but now I get a permission error.
-- **Frame:** `It was working ___, but now ___.`
+- **Model:** It worked this morning, but now I get a permission error.
+- **Frame:** `It worked ___, but now I get ___.`
 - **Partner:** Engineer: It sounds like your access has expired. Give me five minutes.
-- **Core ownership:** Core 36, Core 56
+- **Core ownership:** Core 32, Core 14
 
 ## Supporting content
 
@@ -41,7 +41,7 @@
 ## Sequence guardrails
 
 - **Assumed productive floor:** Core 1–47.
-- **Pattern owners used here:** Core 18, Core 36, Core 56.
+- **Pattern owners used here:** Core 14, Core 18, Core 32.
 - A pattern more than two Core units above the floor must remain marked `chunk`; do not teach its grammar in this lesson.
 - Partner reactions and `Understand` are receptive; they do not add production targets.
 - This lesson is standalone. Do not invent plot history, callbacks, or a next-lesson teaser.

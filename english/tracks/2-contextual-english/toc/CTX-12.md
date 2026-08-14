@@ -22,18 +22,17 @@
 
 ### Pattern 1
 
-- **Model:** Could we move our reservation to eight?
-- **Frame:** `Could we move ___ to ___?`
+- **Model:** Can we move our reservation to eight?
+- **Frame:** `Can we move ___ to ___?`
 - **Partner:** Host: I can do eight-fifteen, but not eight.
-- **Core ownership:** Core 60
+- **Core ownership:** Core 21
 
 ### Pattern 2
 
-- **Model:** Eight-fifteen works. Could you confirm it's still for four?
-- **Frame:** `Could you confirm ___?`
+- **Model:** Is it still for four people?
+- **Frame:** `Is it still for ___ people?`
 - **Partner:** Host: Yes—four people at eight-fifteen.
-- **Core ownership:** Core 83
-- **Treatment:** teach as a bounded chunk; do not expand its grammar here
+- **Core ownership:** Core 8
 
 ## Supporting content
 
@@ -42,7 +41,7 @@
 ## Sequence guardrails
 
 - **Assumed productive floor:** Core 1–59.
-- **Pattern owners used here:** Core 60, Core 83.
+- **Pattern owners used here:** Core 8, Core 21.
 - A pattern more than two Core units above the floor must remain marked `chunk`; do not teach its grammar in this lesson.
 - Partner reactions and `Understand` are receptive; they do not add production targets.
 - This lesson is standalone. Do not invent plot history, callbacks, or a next-lesson teaser.

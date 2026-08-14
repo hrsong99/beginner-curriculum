@@ -16,7 +16,7 @@
 - **Practical area:** 2 · Business English
 - **Course:** 9 · Negotiation and diplomatic language
 - **Scene:** negotiating scope, 私 can accept an earlier date only if one feature is removed.
-- **Entry floor:** Core 92
+- **Entry floor:** Core 101
 
 ## Required production
 
@@ -40,7 +40,7 @@
 
 ## Sequence guardrails
 
-- **Assumed productive floor:** Core 1–92.
+- **Assumed productive floor:** Core 1–101.
 - **Pattern owners used here:** Core 57.
 - A pattern more than two Core units above the floor must remain marked `chunk`; do not teach its grammar in this lesson.
 - Partner reactions and `Understand` are receptive; they do not add production targets.

@@ -22,10 +22,10 @@
 
 ### Pattern 1
 
-- **Model:** I may have left my wallet at your restaurant.
-- **Frame:** `I may have left ___ at ___.`
+- **Model:** I think I left my wallet at your restaurant.
+- **Frame:** `I think I left ___ at ___.`
 - **Partner:** Manager: What does it look like?
-- **Core ownership:** Core 72
+- **Core ownership:** Core 32
 
 ### Pattern 2
 
@@ -41,7 +41,7 @@
 ## Sequence guardrails
 
 - **Assumed productive floor:** Core 1–70.
-- **Pattern owners used here:** Core 49, Core 72.
+- **Pattern owners used here:** Core 32, Core 49.
 - A pattern more than two Core units above the floor must remain marked `chunk`; do not teach its grammar in this lesson.
 - Partner reactions and `Understand` are receptive; they do not add production targets.
 - This lesson is standalone. Do not invent plot history, callbacks, or a next-lesson teaser.
