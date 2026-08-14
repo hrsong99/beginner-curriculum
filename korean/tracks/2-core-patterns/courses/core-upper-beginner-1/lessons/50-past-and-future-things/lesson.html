@@ -223,10 +223,9 @@
       <h2 class="section-title">내 문장 만들기 <span class="title-ja">(自分の文を作ろう)</span></h2>
       <p class="section-subtitle"><span class="ko">이번엔 진짜 자기 이야기예요. 어제 한 일 중에 하나만 골라서, 그걸 명사로 묶어 말해 보세요.</span><span class="ja">今度は本当に自分の話です。昨日したことを1つ選んで、それを名詞にまとめて言ってみましょう。</span></p>
       <div class="tutor-note">학생이 말한 문장을 여기에 적어 주세요.</div>
-      <div class="task-block">
-        <div class="answer-box tall">
-          <span class="answer-space as-input"><textarea class="free-input" data-sync-id="p1-free-yesterday" rows="2" spellcheck="false" maxlength="2000"></textarea></span><span class="hint"><span class="hint-chip">食べる:먹다<span class="yomi">モクタ</span></span><span class="hint-chip">見る:보다<span class="yomi">ポダ</span></span><span class="hint-chip">買う:사다<span class="yomi">サダ</span></span><span class="hint-chip">作る:만들다<span class="yomi">マンドゥルダ</span></span><span class="hint-chip">会う:만나다<span class="yomi">マンナダ</span></span><span class="hint-chip">昨日:어제<span class="yomi">オジェ</span></span><span class="hint-chip">さっき:아까<span class="yomi">アッカ</span></span></span>
-        </div>
+      <div class="fb-compose">
+        <div class="fb" data-fb="p1-free-yesterday"><span class="hint"><span class="hint-chip">食べる:먹다<span class="yomi">モクタ</span></span><span class="hint-chip">見る:보다<span class="yomi">ポダ</span></span><span class="hint-chip">買う:사다<span class="yomi">サダ</span></span><span class="hint-chip">作る:만들다<span class="yomi">マンドゥルダ</span></span><span class="hint-chip">会う:만나다<span class="yomi">マンナダ</span></span><span class="hint-chip">昨日:어제<span class="yomi">オジェ</span></span><span class="hint-chip">さっき:아까<span class="yomi">アッカ</span></span></span></div>
+        <div class="fb-adds"><button class="fb-add" data-add="fix" type="button">＋ 교정</button><button class="fb-add" data-add="note" type="button">＋ 노트</button></div>
       </div>
     </div>
 
@@ -412,10 +411,9 @@
       <h2 class="section-title">내 문장 만들기 <span class="title-ja">(自分の文を作ろう)</span></h2>
       <p class="section-subtitle"><span class="ko">이번엔 진짜 자기 이야기예요. 오늘이나 내일 할 일을 하나 골라서 명사로 묶어 말해 보세요.</span><span class="ja">今度は本当に自分の話です。今日か明日することを1つ選んで、名詞にまとめて言ってみましょう。</span></p>
       <div class="tutor-note">학생이 말한 문장을 여기에 적어 주세요. 아직 안 한 일이면 을/ㄹ이에요.</div>
-      <div class="task-block">
-        <div class="answer-box tall">
-          <span class="answer-space as-input"><textarea class="free-input" data-sync-id="p2-free-tomorrow" rows="2" spellcheck="false" maxlength="2000"></textarea></span><span class="hint"><span class="hint-chip">する:하다<span class="yomi">ハダ</span></span><span class="hint-chip">見る:보다<span class="yomi">ポダ</span></span><span class="hint-chip">食べる:먹다<span class="yomi">モクタ</span></span><span class="hint-chip">買う:사다<span class="yomi">サダ</span></span><span class="hint-chip">会う:만나다<span class="yomi">マンナダ</span></span><span class="hint-chip">こと:일<span class="yomi">イル</span></span><span class="hint-chip">約束:약속<span class="yomi">ヤクソク</span></span></span>
-        </div>
+      <div class="fb-compose">
+        <div class="fb" data-fb="p2-free-tomorrow"><span class="hint"><span class="hint-chip">する:하다<span class="yomi">ハダ</span></span><span class="hint-chip">見る:보다<span class="yomi">ポダ</span></span><span class="hint-chip">食べる:먹다<span class="yomi">モクタ</span></span><span class="hint-chip">買う:사다<span class="yomi">サダ</span></span><span class="hint-chip">会う:만나다<span class="yomi">マンナダ</span></span><span class="hint-chip">こと:일<span class="yomi">イル</span></span><span class="hint-chip">約束:약속<span class="yomi">ヤクソク</span></span></span></div>
+        <div class="fb-adds"><button class="fb-add" data-add="fix" type="button">＋ 교정</button><button class="fb-add" data-add="note" type="button">＋ 노트</button></div>
       </div>
     </div>
 
@@ -515,6 +513,7 @@
   <!-- ACTIVITIES · 점선 칸 · 고르기 · 문장 만들기. 공유 스크립트.
        페이저보다 먼저 와야 한다 — 티칭 모드가 여기 만든 유령 답을 쓴다. -->
   <script src="../../../../../../../runtime/js/activities.js"></script>
+  <script src="../../../../../../../runtime/js/feedback.js"></script>
 
 
   <!-- ================================================================

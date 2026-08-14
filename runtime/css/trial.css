@@ -3647,6 +3647,13 @@ button.opt-row:active { transform: scale(.99); }
    남는 높이를 위아래로 갈라 가운데에 세워 봤더니 둘 사이가 벌어져서,
    질문을 읽고 눈이 한참 내려가야 칸이 나왔다. 지금은 위에서부터 쌓고,
    대신 두 덩어리를 키운다. 교정이 여러 개면 아래로 넘치는 게 낫다. */
+.fb-compose {
+  margin-top: 26px;
+}
+
+.fb-compose + .fb-compose { margin-top: var(--item-gap); }
+.fb-compose > .fb { margin-top: 0; }
+
 .fb {
   display: grid;
   gap: var(--item-gap);
@@ -3703,6 +3710,46 @@ button.opt-row:active { transform: scale(.99); }
   background: #fff;
   overflow: hidden;
 }
+
+/* Core·Contextual 문장 만들기는 발화 과제가 따로 있을 수 있다. 같은 카드의
+   머리띠로 붙여, 교정 카드 안에서 무엇을 말할지 먼저 읽고 바로 받아 적는다. */
+.fb-task {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 6px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--gray-200);
+  background: var(--gray-50);
+  color: var(--gray-500);
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.fb-task::before {
+  content: "やること";
+  flex: none;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: rgba(28, 28, 28, .09);
+  color: inherit;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: .02em;
+  white-space: nowrap;
+}
+
+/* 어휘 힌트는 원래 발화를 만드는 스캐폴드라 첫 교정 카드의 바닥에만 붙는다.
+   뒤에 교정이나 노트를 더 열어도 어느 문장을 위한 힌트인지 흐려지지 않는다. */
+.fb-block > .hint {
+  margin: 0;
+  padding: 9px 14px;
+  border-top: 1px solid var(--gray-200);
+  background: var(--gray-50);
+}
+
+.fb-block > .hint > .hint-chip { border-color: transparent; }
 
 /* 지우기는 열려 있는 칸이면 늘 있다 — 잘못 연 빈 칸도 닫을 수 있어야 한다.
    예외는 하나, 마지막 남은 빈 칸이다: 지워도 그 자리는 다시 열려 있어야 해서

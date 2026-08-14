@@ -219,10 +219,9 @@
       <h2 class="section-title">내 문장 만들기 <span class="title-ja">(自分の文を作ろう)</span></h2>
       <p class="section-subtitle"><span class="ko">이번엔 진짜 자기 이야기예요. 언제 제일 기분이 좋아요? '~할 때'로 말해 보세요.</span><span class="ja">今度は本当に自分の話です。いつがいちばん気分がいいですか？「〜するとき」で言ってみましょう。</span></p>
       <div class="tutor-note">학생이 말한 문장을 여기에 적어 주세요.</div>
-      <div class="task-block">
-        <div class="answer-box tall">
-          <span class="answer-space as-input"><textarea class="free-input" data-sync-id="p1-free-when" rows="2" spellcheck="false" maxlength="2000"></textarea></span><span class="hint"><span class="hint-chip">休む:쉬다<span class="yomi">シダ</span></span><span class="hint-chip">会う:만나다<span class="yomi">マンナダ</span></span><span class="hint-chip">見る:보다<span class="yomi">ポダ</span></span><span class="hint-chip">遊ぶ:놀다<span class="yomi">ノルダ</span></span><span class="hint-chip">食べる:먹다<span class="yomi">モクタ</span></span><span class="hint-chip">幼い:어리다<span class="yomi">オリダ</span></span><span class="hint-chip">学生:학생<span class="yomi">ハクセン</span></span></span>
-        </div>
+      <div class="fb-compose">
+        <div class="fb" data-fb="p1-free-when"><span class="hint"><span class="hint-chip">休む:쉬다<span class="yomi">シダ</span></span><span class="hint-chip">会う:만나다<span class="yomi">マンナダ</span></span><span class="hint-chip">見る:보다<span class="yomi">ポダ</span></span><span class="hint-chip">遊ぶ:놀다<span class="yomi">ノルダ</span></span><span class="hint-chip">食べる:먹다<span class="yomi">モクタ</span></span><span class="hint-chip">幼い:어리다<span class="yomi">オリダ</span></span><span class="hint-chip">学生:학생<span class="yomi">ハクセン</span></span></span></div>
+        <div class="fb-adds"><button class="fb-add" data-add="fix" type="button">＋ 교정</button><button class="fb-add" data-add="note" type="button">＋ 노트</button></div>
       </div>
     </div>
 
@@ -401,10 +400,9 @@
       <h2 class="section-title">내 문장 만들기 <span class="title-ja">(自分の文を作ろう)</span></h2>
       <p class="section-subtitle"><span class="ko">이번엔 진짜 자기 이야기예요. 자기 전에 꼭 하는 일이 있어요? 한 문장으로 말해 보세요.</span><span class="ja">今度は本当に自分の話です。寝る前に必ずすることはありますか？1つの文で言ってみましょう。</span></p>
       <div class="tutor-note">학생이 말한 문장을 여기에 적어 주세요. 기 전에 앞이 사전 모양인지 같이 봐 주세요.</div>
-      <div class="task-block">
-        <div class="answer-box tall">
-          <span class="answer-space as-input"><textarea class="free-input" data-sync-id="p2-free-before" rows="2" spellcheck="false" maxlength="2000"></textarea></span><span class="hint"><span class="hint-chip">寝る:자다<span class="yomi">チャダ</span></span><span class="hint-chip">出かける:나가다<span class="yomi">ナガダ</span></span><span class="hint-chip">食べる:먹다<span class="yomi">モクタ</span></span><span class="hint-chip">歯をみがく:양치하다<span class="yomi">ヤンチハダ</span></span><span class="hint-chip">洗う:씻다<span class="yomi">ッシッタ</span></span><span class="hint-chip">読む:읽다<span class="yomi">イクタ</span></span></span>
-        </div>
+      <div class="fb-compose">
+        <div class="fb" data-fb="p2-free-before"><span class="hint"><span class="hint-chip">寝る:자다<span class="yomi">チャダ</span></span><span class="hint-chip">出かける:나가다<span class="yomi">ナガダ</span></span><span class="hint-chip">食べる:먹다<span class="yomi">モクタ</span></span><span class="hint-chip">歯をみがく:양치하다<span class="yomi">ヤンチハダ</span></span><span class="hint-chip">洗う:씻다<span class="yomi">ッシッタ</span></span><span class="hint-chip">読む:읽다<span class="yomi">イクタ</span></span></span></div>
+        <div class="fb-adds"><button class="fb-add" data-add="fix" type="button">＋ 교정</button><button class="fb-add" data-add="note" type="button">＋ 노트</button></div>
       </div>
     </div>
 
@@ -493,6 +491,7 @@
   <!-- ACTIVITIES · 점선 칸 · 고르기 · 문장 만들기. 공유 스크립트.
        페이저보다 먼저 와야 한다 — 티칭 모드가 여기 만든 유령 답을 쓴다. -->
   <script src="../../../../../../../runtime/js/activities.js"></script>
+  <script src="../../../../../../../runtime/js/feedback.js"></script>
 
 
   <!-- ================================================================

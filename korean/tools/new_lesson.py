@@ -8,7 +8,7 @@
         --act "매일 운동해요"
 
 The skeleton is ~70 lines that must be byte-exact every time: the meta block, the
-stylesheet links, and sixteen script tags whose *load order is load-bearing*
+stylesheet links, and shared script bundle whose *load order is load-bearing*
 (pager after activities, highlight after the ja→ko tooltips, stamp outside
 .phone, …). Hand-copying that is pure downside — it is not creative work and a
 silent reorder breaks the deck in ways that only show up on the other person's
@@ -17,7 +17,7 @@ screen.
 So this does not hold a copy of the skeleton. It reads the track's canonical
 deck and lifts the head and foot off it, which means the skeleton can never
 drift from the real one and per-track differences (a hangul deck's extra
-hangul-activities.js, a freetalk deck's freetalk-activities.js) come along for
+hangul-activities.js, shared feedback.js, a freetalk deck's freetalk-activities.js) come along for
 free. Writing the pages is the only thing left to do. ``--copy-pages`` is the
 narrow exception for promoting an already-finished sample into its planned
 course slot without re-authoring it.

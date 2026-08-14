@@ -249,11 +249,9 @@
       <h2 class="section-title">내 문장 만들기 <span class="title-ja">(自分の文を作ろう)</span></h2>
       <p class="section-subtitle"><span class="ko">이번엔 진짜 자기 이야기예요. 지금 가게 앞이라고 생각하고, 한 문장 말해 보세요.</span><span class="ja">今度は本当に自分の話です。今お店の前にいると思って、1つの文で言ってみましょう。</span></p>
       <div class="tutor-note">학생이 말한 문장을 여기에 적어 주세요.</div>
-      <div class="task-block">
-        <div class="answer-box tall">
-          <span class="answer-space as-input"><textarea class="free-input" data-sync-id="p1-free-order" rows="2" spellcheck="false" maxlength="2000"></textarea></span>
-                  <span class="hint"><span class="hint-chip">りんご:사과<span class="yomi">サグァ</span></span><span class="hint-chip">コーヒー:커피<span class="yomi">コピ</span></span><span class="hint-chip">水:물<span class="yomi">ムル</span></span><span class="hint-chip">パン:빵<span class="yomi">パン</span></span><span class="hint-chip">キムチ:김치<span class="yomi">キムチ</span></span><span class="hint-chip">個:개<span class="yomi">ケ</span></span><span class="hint-chip">杯:잔<span class="yomi">チャン</span></span><span class="hint-chip">本(びん):병<span class="yomi">ピョン</span></span><span class="hint-chip">もっと:더<span class="yomi">ト</span></span></span>
-        </div>
+      <div class="fb-compose">
+        <div class="fb" data-fb="p1-free-order"><span class="hint"><span class="hint-chip">りんご:사과<span class="yomi">サグァ</span></span><span class="hint-chip">コーヒー:커피<span class="yomi">コピ</span></span><span class="hint-chip">水:물<span class="yomi">ムル</span></span><span class="hint-chip">パン:빵<span class="yomi">パン</span></span><span class="hint-chip">キムチ:김치<span class="yomi">キムチ</span></span><span class="hint-chip">個:개<span class="yomi">ケ</span></span><span class="hint-chip">杯:잔<span class="yomi">チャン</span></span><span class="hint-chip">本(びん):병<span class="yomi">ピョン</span></span><span class="hint-chip">もっと:더<span class="yomi">ト</span></span></span></div>
+        <div class="fb-adds"><button class="fb-add" data-add="fix" type="button">＋ 교정</button><button class="fb-add" data-add="note" type="button">＋ 노트</button></div>
       </div>
     </div>
 
@@ -422,11 +420,9 @@
       <h2 class="section-title">내 질문 만들기 <span class="title-ja">(自分の質問を作ろう)</span></h2>
       <p class="section-subtitle"><span class="ko">저한테 하고 싶은 질문을 하나 말해 보세요. ‘몇 개’, ‘몇 명’, ‘몇 잔’, 아무거나 좋아요.</span><span class="ja">私に聞いてみたい質問を1つ言ってみましょう。「몇 개」、「몇 명」、「몇 잔」、何でもいいです。</span></p>
       <div class="tutor-note">학생이 말한 질문을 여기에 적어 주세요.</div>
-      <div class="task-block">
-        <div class="answer-box tall">
-          <span class="answer-space as-input"><textarea class="free-input" data-sync-id="p2-free-question" rows="2" spellcheck="false" maxlength="2000"></textarea></span>
-                  <span class="hint"><span class="hint-chip">家族:가족<span class="yomi">カジョク</span></span><span class="hint-chip">猫:고양이<span class="yomi">コヤンイ</span></span><span class="hint-chip">コーヒー:커피<span class="yomi">コピ</span></span><span class="hint-chip">りんご:사과<span class="yomi">サグァ</span></span><span class="hint-chip">水:물<span class="yomi">ムル</span></span><span class="hint-chip">パン:빵<span class="yomi">パン</span></span><span class="hint-chip">個:개<span class="yomi">ケ</span></span><span class="hint-chip">人:명<span class="yomi">ミョン</span></span><span class="hint-chip">杯:잔<span class="yomi">チャン</span></span><span class="hint-chip">匹:마리<span class="yomi">マリ</span></span></span>
-        </div>
+      <div class="fb-compose">
+        <div class="fb" data-fb="p2-free-question"><span class="hint"><span class="hint-chip">家族:가족<span class="yomi">カジョク</span></span><span class="hint-chip">猫:고양이<span class="yomi">コヤンイ</span></span><span class="hint-chip">コーヒー:커피<span class="yomi">コピ</span></span><span class="hint-chip">りんご:사과<span class="yomi">サグァ</span></span><span class="hint-chip">水:물<span class="yomi">ムル</span></span><span class="hint-chip">パン:빵<span class="yomi">パン</span></span><span class="hint-chip">個:개<span class="yomi">ケ</span></span><span class="hint-chip">人:명<span class="yomi">ミョン</span></span><span class="hint-chip">杯:잔<span class="yomi">チャン</span></span><span class="hint-chip">匹:마리<span class="yomi">マリ</span></span></span></div>
+        <div class="fb-adds"><button class="fb-add" data-add="fix" type="button">＋ 교정</button><button class="fb-add" data-add="note" type="button">＋ 노트</button></div>
       </div>
     </div>
 
@@ -525,6 +521,7 @@
   <!-- ACTIVITIES · 점선 칸 · 고르기 · 문장 만들기. 공유 스크립트.
        페이저보다 먼저 와야 한다 — 티칭 모드가 여기 만든 유령 답을 쓴다. -->
   <script src="../../../../../../../runtime/js/activities.js"></script>
+  <script src="../../../../../../../runtime/js/feedback.js"></script>
 
 
   <!-- ================================================================

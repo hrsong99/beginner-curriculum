@@ -222,10 +222,9 @@
       <h2 class="section-title">내 문장 만들기 <span class="title-ja">(自分の文を作ろう)</span></h2>
       <p class="section-subtitle"><span class="ko">이번엔 진짜 자기 이야기예요. 우리 집 어른이 어제 뭘 하셨어요? 한 문장으로 말해 보세요.</span><span class="ja">今度は本当に自分の話です。家の目上の方が昨日何をなさいましたか？1つの文で言ってみましょう。</span></p>
       <div class="tutor-note">학생이 말한 문장을 여기에 적어 주세요. 어제 일이니까 셨어요 자리예요.</div>
-      <div class="task-block">
-        <div class="answer-box tall">
-          <span class="answer-space as-input"><textarea class="free-input" data-sync-id="p1-free-yesterday" rows="2" spellcheck="false" maxlength="2000"></textarea></span><span class="hint"><span class="hint-chip">おじいさん:할아버지<span class="yomi">ハラボジ</span></span><span class="hint-chip">おばあさん:할머니<span class="yomi">ハルモニ</span></span><span class="hint-chip">両親:부모님<span class="yomi">プモニム</span></span><span class="hint-chip">読む:읽다<span class="yomi">イクタ</span></span><span class="hint-chip">行ってくる:다녀오다<span class="yomi">タニョオダ</span></span><span class="hint-chip">運動する:운동하다<span class="yomi">ウンドンハダ</span></span><span class="hint-chip">休む:쉬다<span class="yomi">シダ</span></span></span>
-        </div>
+      <div class="fb-compose">
+        <div class="fb" data-fb="p1-free-yesterday"><span class="hint"><span class="hint-chip">おじいさん:할아버지<span class="yomi">ハラボジ</span></span><span class="hint-chip">おばあさん:할머니<span class="yomi">ハルモニ</span></span><span class="hint-chip">両親:부모님<span class="yomi">プモニム</span></span><span class="hint-chip">読む:읽다<span class="yomi">イクタ</span></span><span class="hint-chip">行ってくる:다녀오다<span class="yomi">タニョオダ</span></span><span class="hint-chip">運動する:운동하다<span class="yomi">ウンドンハダ</span></span><span class="hint-chip">休む:쉬다<span class="yomi">シダ</span></span></span></div>
+        <div class="fb-adds"><button class="fb-add" data-add="fix" type="button">＋ 교정</button><button class="fb-add" data-add="note" type="button">＋ 노트</button></div>
       </div>
     </div>
 
@@ -414,10 +413,9 @@
       <h2 class="section-title">내 문장 만들기 <span class="title-ja">(自分の文を作ろう)</span></h2>
       <p class="section-subtitle"><span class="ko">이번엔 진짜예요. 저한테 하나 여쭤보세요. 성함이든 댁이든 좋아요.</span><span class="ja">今度は本当です。私に1つ尋ねてみてください。お名前でもお住まいでもいいですよ。</span></p>
       <div class="tutor-note">학생이 여쭌 말을 여기에 적고, 실제로 대답해 주세요.</div>
-      <div class="task-block">
-        <div class="answer-box tall">
-          <span class="answer-space as-input"><textarea class="free-input" data-sync-id="p2-free-ask" rows="2" spellcheck="false" maxlength="2000"></textarea></span><span class="hint"><span class="hint-chip">失礼ですが:실례지만<span class="yomi">シルレジマン</span></span><span class="hint-chip">お名前:성함<span class="yomi">ソンハム</span></span><span class="hint-chip">お年:연세<span class="yomi">ヨンセ</span></span><span class="hint-chip">お住まい:댁<span class="yomi">テク</span></span></span>
-        </div>
+      <div class="fb-compose">
+        <div class="fb" data-fb="p2-free-ask"><span class="hint"><span class="hint-chip">失礼ですが:실례지만<span class="yomi">シルレジマン</span></span><span class="hint-chip">お名前:성함<span class="yomi">ソンハム</span></span><span class="hint-chip">お年:연세<span class="yomi">ヨンセ</span></span><span class="hint-chip">お住まい:댁<span class="yomi">テク</span></span></span></div>
+        <div class="fb-adds"><button class="fb-add" data-add="fix" type="button">＋ 교정</button><button class="fb-add" data-add="note" type="button">＋ 노트</button></div>
       </div>
     </div>
 
@@ -506,6 +504,7 @@
   <!-- ACTIVITIES · 점선 칸 · 고르기 · 문장 만들기. 공유 스크립트.
        페이저보다 먼저 와야 한다 — 티칭 모드가 여기 만든 유령 답을 쓴다. -->
   <script src="../../../../../../../runtime/js/activities.js"></script>
+  <script src="../../../../../../../runtime/js/feedback.js"></script>
 
 
   <!-- ================================================================

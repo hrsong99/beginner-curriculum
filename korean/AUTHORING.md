@@ -58,6 +58,7 @@
   <img class="stamp-art" src="../assets/well-done.svg" alt="">   <!-- .phone 바깥! -->
 
   <script src="../../../runtime/js/activities.js"></script>
+  <script src="../../../runtime/js/feedback.js"></script>     <!-- 문장 피드백을 쓰는 덱 -->
   <script src="../../../runtime/js/pager.js"></script>
   <script src="../../../runtime/js/script-lines.js"></script>
   <script src="../../../runtime/js/spotlight.js"></script>
@@ -69,7 +70,7 @@
 </html>
 ```
 
-**로드 순서는 지켜야 합니다.** `activities` → `pager`(티칭 모드가 activities 가 만든
+**로드 순서는 지켜야 합니다.** `activities` → `feedback`(쓰는 덱만) → `pager`(티칭 모드가 activities 가 만든
 유령 답을 부른다) → `script-lines` → `tutor-notes`(페이지를 다 센 뒤에 칸을 끼운다) →
 `highlight`(글자에 긋는 형광펜 — 마크업이 다 선 뒤에 `<mark>` 를 끼운다) → `stamp`.
 
@@ -78,8 +79,8 @@
 | 과 | 추가 |
 | --- | --- |
 | 한글(자모·음절) | `runtime/js/hangul-activities.js` |
-| 자유 대화(피드백·고르기) | `runtime/js/freetalk-activities.js` |
-| 문장 패턴 | 없음 — `activities.js` 만으로 충분 |
+| Core·Contextual·자유 대화의 문장 피드백 | `runtime/js/feedback.js` |
+| 자유 대화(고르기·예습 지문) | `runtime/js/freetalk-activities.js` |
 
 ---
 
@@ -282,6 +283,29 @@ closing
 - **힌트 칩은 그 빈칸의 답에 실제로 쓰이는 낱말만** 답니다. 화면에 이미 찍혀 있는 말
   (`네! 일본에 ▁?` 의 일본)은 힌트가 아니라 소음이고, 있어야 할 낱말을 밀어냅니다.
   자유 작문 칸은 답이 정해져 있지 않으므로, 고를 수 있는 어휘를 그대로 늘어놓습니다.
+
+### 말한 문장 피드백
+
+Core·Contextual의 `p1-write`·`p2-write`와 자유 대화 질문은 같은 피드백 활동을 씁니다.
+튜터가 `학생 문장`에 들은 대로 적으면 `교정`이 같은 내용으로 따라 채워지고, 고친 자리만
+diff로 남습니다. `＋ 교정`과 `＋ 노트`로 필요한 만큼 아래에 덧붙일 수 있습니다.
+
+```html
+<div class="fb-compose">
+  <div class="fb" data-fb="p1-write-answer">
+    <span class="fb-task">自分の状況で一文作ろう</span> <!-- 별도 발화 과제가 있을 때만 -->
+    <span class="hint"><span class="hint-chip">座る:앉다</span></span>
+  </div>
+  <div class="fb-adds">
+    <button class="fb-add" data-add="fix" type="button">＋ 교정</button>
+    <button class="fb-add" data-add="note" type="button">＋ 노트</button>
+  </div>
+</div>
+```
+
+`.fb-task`와 `.hint`는 로드될 때 첫 피드백 카드의 머리와 바닥으로 들어갑니다. 뒤에 카드를
+더 열어도 힌트는 첫 카드에만 남습니다. 한 페이지에 서로 다른 발화 과제가 여러 개라면
+각 과제에 고유한 `data-fb`를 가진 `.fb-compose`를 하나씩 둡니다.
 
 ### 문장 만들기 (칩 배열)
 

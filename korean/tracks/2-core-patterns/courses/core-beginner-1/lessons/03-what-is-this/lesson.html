@@ -240,11 +240,9 @@
       <h2 class="section-title">내 질문 만들기 <span class="title-ja">(自分の質問を作ろう)</span></h2>
       <p class="section-subtitle"><span class="ko">이번엔 진짜 질문이에요. 지금 눈앞에 있는 물건을 하나 골라서, 저한테 물어보세요.</span><span class="ja">今度は本当の質問です。今、目の前にあるものを一つ選んで、私に聞いてみてください。</span></p>
       <div class="tutor-note">학생이 말한 질문을 여기에 적어 주세요.</div>
-      <div class="task-block">
-        <div class="answer-box tall">
-          <span class="answer-space as-input"><textarea class="free-input" data-sync-id="p1-free-question" rows="2" spellcheck="false" maxlength="2000"></textarea></span>
-          <span class="hint"><span class="hint-chip">これ:이거<span class="yomi">イゴ</span></span><span class="hint-chip">それ:그거<span class="yomi">クゴ</span></span><span class="hint-chip">あれ:저거<span class="yomi">チョゴ</span></span><span class="hint-chip">何:뭐<span class="yomi">ムォ</span></span><span class="hint-chip">かばん:가방<span class="yomi">カバン</span></span><span class="hint-chip">傘:우산<span class="yomi">ウサン</span></span><span class="hint-chip">本:책<span class="yomi">チェク</span></span><span class="hint-chip">コーヒー:커피<span class="yomi">コピ</span></span></span>
-        </div>
+      <div class="fb-compose">
+        <div class="fb" data-fb="p1-free-question"><span class="hint"><span class="hint-chip">これ:이거<span class="yomi">イゴ</span></span><span class="hint-chip">それ:그거<span class="yomi">クゴ</span></span><span class="hint-chip">あれ:저거<span class="yomi">チョゴ</span></span><span class="hint-chip">何:뭐<span class="yomi">ムォ</span></span><span class="hint-chip">かばん:가방<span class="yomi">カバン</span></span><span class="hint-chip">傘:우산<span class="yomi">ウサン</span></span><span class="hint-chip">本:책<span class="yomi">チェク</span></span><span class="hint-chip">コーヒー:커피<span class="yomi">コピ</span></span></span></div>
+        <div class="fb-adds"><button class="fb-add" data-add="fix" type="button">＋ 교정</button><button class="fb-add" data-add="note" type="button">＋ 노트</button></div>
       </div>
     </div>
 
@@ -441,11 +439,9 @@
       <h2 class="section-title">내 문장 만들기 <span class="title-ja">(自分の文を作ろう)</span></h2>
       <p class="section-subtitle"><span class="ko">지금 방에 있는 물건을 하나 골라서, ‘이’ 하고 같이 한 문장으로 말해 보세요.</span><span class="ja">今、部屋にあるものを一つ選んで、「이」といっしょに1つの文で言ってみましょう。</span></p>
       <div class="tutor-note">학생이 말한 문장을 여기에 적어 주세요.</div>
-      <div class="task-block">
-        <div class="answer-box tall">
-          <span class="answer-space as-input"><textarea class="free-input" data-sync-id="p2-free-statement" rows="2" spellcheck="false" maxlength="2000"></textarea></span>
-          <span class="hint"><span class="hint-chip">かばん:가방<span class="yomi">カバン</span></span><span class="hint-chip">傘:우산<span class="yomi">ウサン</span></span><span class="hint-chip">本:책<span class="yomi">チェク</span></span><span class="hint-chip">コーヒー:커피<span class="yomi">コピ</span></span><span class="hint-chip">水:물<span class="yomi">ムル</span></span><span class="hint-chip">キムチ:김치<span class="yomi">キムチ</span></span><span class="hint-chip">キンパ:김밥<span class="yomi">キムパプ</span></span><span class="hint-chip">人:사람<span class="yomi">サラム</span></span></span>
-        </div>
+      <div class="fb-compose">
+        <div class="fb" data-fb="p2-free-statement"><span class="hint"><span class="hint-chip">かばん:가방<span class="yomi">カバン</span></span><span class="hint-chip">傘:우산<span class="yomi">ウサン</span></span><span class="hint-chip">本:책<span class="yomi">チェク</span></span><span class="hint-chip">コーヒー:커피<span class="yomi">コピ</span></span><span class="hint-chip">水:물<span class="yomi">ムル</span></span><span class="hint-chip">キムチ:김치<span class="yomi">キムチ</span></span><span class="hint-chip">キンパ:김밥<span class="yomi">キムパプ</span></span><span class="hint-chip">人:사람<span class="yomi">サラム</span></span></span></div>
+        <div class="fb-adds"><button class="fb-add" data-add="fix" type="button">＋ 교정</button><button class="fb-add" data-add="note" type="button">＋ 노트</button></div>
       </div>
     </div>
 
@@ -542,6 +538,7 @@
   <!-- ACTIVITIES · 점선 칸 · 고르기 · 문장 만들기. 공유 스크립트.
        페이저보다 먼저 와야 한다 — 티칭 모드가 여기 만든 유령 답을 쓴다. -->
   <script src="../../../../../../../runtime/js/activities.js"></script>
+  <script src="../../../../../../../runtime/js/feedback.js"></script>
 
 
   <!-- ================================================================

@@ -221,10 +221,9 @@
       <h2 class="section-title">내 문장 만들기 <span class="title-ja">(自分の文を作ろう)</span></h2>
       <p class="section-subtitle"><span class="ko">오늘 날씨를 한번 보세요. 그 계절 기준으로 보면 어때요? 치고는으로 말해 주세요.</span><span class="ja">今日の天気を一度見てください。その季節を基準に見るとどうですか？치고는で言ってみてください。</span></p>
       <div class="tutor-note">뒤에 평가가 오는지 봐 주세요. 치고는에서 끝나면 한 마디 더 붙여 보게 해 주세요.</div>
-      <div class="task-block">
-        <div class="answer-box tall">
-          <span class="answer-space as-input"><textarea class="free-input" data-sync-id="p1-free-forwhat" rows="2" spellcheck="false" maxlength="2000"></textarea></span><span class="hint"><span class="hint-chip">天気:날씨</span><span class="hint-chip">暖かい:따뜻하다</span><span class="hint-chip">寒い:춥다</span><span class="hint-chip">値段:가격</span><span class="hint-chip">人:사람</span><span class="hint-chip">意外に:의외로</span></span>
-        </div>
+      <div class="fb-compose">
+        <div class="fb" data-fb="p1-free-forwhat"><span class="hint"><span class="hint-chip">天気:날씨</span><span class="hint-chip">暖かい:따뜻하다</span><span class="hint-chip">寒い:춥다</span><span class="hint-chip">値段:가격</span><span class="hint-chip">人:사람</span><span class="hint-chip">意外に:의외로</span></span></div>
+        <div class="fb-adds"><button class="fb-add" data-add="fix" type="button">＋ 교정</button><button class="fb-add" data-add="note" type="button">＋ 노트</button></div>
       </div>
     </div>
 
@@ -411,10 +410,9 @@
       <h2 class="section-title">내 문장 만들기 <span class="title-ja">(自分の文を作ろう)</span></h2>
       <p class="section-subtitle"><span class="ko">일본 사람이면 다들 그렇다 싶은 게 하나 있어요? 치고로 말해 주세요. 뒤에 꼭 부정문을 붙여야 해요.</span><span class="ja">日本の人ならみんなそうだと思うことが一つありますか？치고で言ってみてください。後ろに必ず否定文をつけます。</span></p>
       <div class="tutor-note">뒤에 없어요나 안이 왔는지 꼭 봐 주세요. 안 오면 문장이 성립하지 않아요.</div>
-      <div class="task-block">
-        <div class="answer-box tall">
-          <span class="answer-space as-input"><textarea class="free-input" data-sync-id="p2-free-noexception" rows="2" spellcheck="false" maxlength="2000"></textarea></span><span class="hint"><span class="hint-chip">日本の人:일본 사람</span><span class="hint-chip">学生:학생</span><span class="hint-chip">親:부모님</span><span class="hint-chip">知らない:모르다</span><span class="hint-chip">好きだ:좋아하다</span><span class="hint-chip">例外:예외</span></span>
-        </div>
+      <div class="fb-compose">
+        <div class="fb" data-fb="p2-free-noexception"><span class="hint"><span class="hint-chip">日本の人:일본 사람</span><span class="hint-chip">学生:학생</span><span class="hint-chip">親:부모님</span><span class="hint-chip">知らない:모르다</span><span class="hint-chip">好きだ:좋아하다</span><span class="hint-chip">例外:예외</span></span></div>
+        <div class="fb-adds"><button class="fb-add" data-add="fix" type="button">＋ 교정</button><button class="fb-add" data-add="note" type="button">＋ 노트</button></div>
       </div>
     </div>
 
@@ -503,6 +501,7 @@
   <!-- ACTIVITIES · 점선 칸 · 고르기 · 문장 만들기. 공유 스크립트.
        페이저보다 먼저 와야 한다 — 티칭 모드가 여기 만든 유령 답을 쓴다. -->
   <script src="../../../../../../../runtime/js/activities.js"></script>
+  <script src="../../../../../../../runtime/js/feedback.js"></script>
 
 
   <!-- ================================================================

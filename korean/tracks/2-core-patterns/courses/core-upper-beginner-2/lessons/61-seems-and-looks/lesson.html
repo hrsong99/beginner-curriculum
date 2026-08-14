@@ -225,10 +225,9 @@
       <h2 class="section-title">내 문장 만들기 <span class="title-ja">(自分の文を作ろう)</span></h2>
       <p class="section-subtitle"><span class="ko">이번엔 진짜예요. 지금 밖 날씨가 어떤 것 같아요? 단정하지 말고 ‘것 같아요’로 말해 보세요.</span><span class="ja">今度は本当です。今の外の天気はどんなようですか？言い切らずに「것 같아요」で言ってみましょう。</span></p>
       <div class="tutor-note">학생이 말한 문장을 여기에 적어 주세요. 앞말이 형용사인지 동사인지 같이 봐 주세요.</div>
-      <div class="task-block">
-        <div class="answer-box tall">
-          <span class="answer-space as-input"><textarea class="free-input" data-sync-id="p1-free-guess" rows="2" spellcheck="false" maxlength="2000"></textarea></span><span class="hint"><span class="hint-chip">よい:좋다<span class="yomi">チョタ</span></span><span class="hint-chip">寒い:춥다<span class="yomi">チュプタ</span></span><span class="hint-chip">暑い:덥다<span class="yomi">トプタ</span></span><span class="hint-chip">降る:오다<span class="yomi">オダ</span></span><span class="hint-chip">おいしい:맛있다<span class="yomi">マシッタ</span></span><span class="hint-chip">多い:많다<span class="yomi">マンタ</span></span></span>
-        </div>
+      <div class="fb-compose">
+        <div class="fb" data-fb="p1-free-guess"><span class="hint"><span class="hint-chip">よい:좋다<span class="yomi">チョタ</span></span><span class="hint-chip">寒い:춥다<span class="yomi">チュプタ</span></span><span class="hint-chip">暑い:덥다<span class="yomi">トプタ</span></span><span class="hint-chip">降る:오다<span class="yomi">オダ</span></span><span class="hint-chip">おいしい:맛있다<span class="yomi">マシッタ</span></span><span class="hint-chip">多い:많다<span class="yomi">マンタ</span></span></span></div>
+        <div class="fb-adds"><button class="fb-add" data-add="fix" type="button">＋ 교정</button><button class="fb-add" data-add="note" type="button">＋ 노트</button></div>
       </div>
     </div>
 
@@ -415,10 +414,9 @@
       <h2 class="section-title">내 문장 만들기 <span class="title-ja">(自分の文を作ろう)</span></h2>
       <p class="section-subtitle"><span class="ko">이번엔 저를 보고 말해 보세요. 제가 오늘 어때 보여요? ‘아/어 보여요’로 하나만 말해 주세요.</span><span class="ja">今度は私を見て言ってみてください。私は今日どう見えますか？「아/어 보여요」で1つだけ言ってください。</span></p>
       <div class="tutor-note">학생이 말한 문장을 여기에 적어 주세요. 맞았는지 아닌지 솔직하게 대답해 주시면 더 재미있어요.</div>
-      <div class="task-block">
-        <div class="answer-box tall">
-          <span class="answer-space as-input"><textarea class="free-input" data-sync-id="p2-free-howilook" rows="2" spellcheck="false" maxlength="2000"></textarea></span><span class="hint"><span class="hint-chip">疲れている:피곤하다<span class="yomi">ピゴナダ</span></span><span class="hint-chip">よい:좋다<span class="yomi">チョタ</span></span><span class="hint-chip">忙しい:바쁘다<span class="yomi">パップダ</span></span><span class="hint-chip">若い:젊다<span class="yomi">チョムタ</span></span><span class="hint-chip">幸せだ:행복하다<span class="yomi">ヘンボカダ</span></span><span class="hint-chip">元気だ:건강하다<span class="yomi">コンガンハダ</span></span></span>
-        </div>
+      <div class="fb-compose">
+        <div class="fb" data-fb="p2-free-howilook"><span class="hint"><span class="hint-chip">疲れている:피곤하다<span class="yomi">ピゴナダ</span></span><span class="hint-chip">よい:좋다<span class="yomi">チョタ</span></span><span class="hint-chip">忙しい:바쁘다<span class="yomi">パップダ</span></span><span class="hint-chip">若い:젊다<span class="yomi">チョムタ</span></span><span class="hint-chip">幸せだ:행복하다<span class="yomi">ヘンボカダ</span></span><span class="hint-chip">元気だ:건강하다<span class="yomi">コンガンハダ</span></span></span></div>
+        <div class="fb-adds"><button class="fb-add" data-add="fix" type="button">＋ 교정</button><button class="fb-add" data-add="note" type="button">＋ 노트</button></div>
       </div>
     </div>
 
@@ -507,6 +505,7 @@
   <!-- ACTIVITIES · 점선 칸 · 고르기 · 문장 만들기. 공유 스크립트.
        페이저보다 먼저 와야 한다 — 티칭 모드가 여기 만든 유령 답을 쓴다. -->
   <script src="../../../../../../../runtime/js/activities.js"></script>
+  <script src="../../../../../../../runtime/js/feedback.js"></script>
 
 
   <!-- ================================================================

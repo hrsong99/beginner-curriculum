@@ -8,6 +8,7 @@ runtime/
   css/   lesson-card.css   디자인 시스템 — 모든 트랙이 쓴다
          trial.css         체험 레슨 트랙의 시트 (lesson-card.css 다음에 로드)
   js/    activities.js     정적 입력칸·고르기·문장 만들기 + lessonSync 스텁
+         feedback.js       말한 문장·교정·diff·추가 노트 (Core·Contextual·자유 대화 공통)
          pager.js          페이지 넘김·스크러버·티칭 모드
          hangul-activities.js / freetalk-activities.js / report.js / report-consult.js
                            과 성격별 활동
@@ -51,7 +52,7 @@ runtime/
   `input.slot-input`, `input.space-input`, `textarea.free-input`, `.build-zone`을
   새로 만들거나 다른 태그로 바꾸지 않고 동작만 연결합니다. Lemonboard의 정적
   검증기와 수업 중 라이브 바인더가 같은 DOM을 보게 하는 계약입니다.
-- **로드 순서가 있습니다.** `activities` → `pager` → `script-lines` →
+- **로드 순서가 있습니다.** `activities` → `feedback`(쓰는 덱만) → `pager` → `script-lines` →
   `spotlight` → `tutor-notes` → `highlight` → `stamp`. 이유는 각 파일 머리말에
   적혀 있고, 덱 뼈대는 [`AUTHORING.md`](../korean/AUTHORING.md) 에 있습니다.
 - **CSS 는 두 장이 한 벌입니다.** `lesson-card.css` 다음에 트랙 시트. 패키저가

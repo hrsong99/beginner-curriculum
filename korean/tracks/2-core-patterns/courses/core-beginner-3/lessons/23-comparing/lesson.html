@@ -240,11 +240,9 @@
       <h2 class="section-title">내 문장 만들기 <span class="title-ja">(自分の文を作ろう)</span></h2>
       <p class="section-subtitle"><span class="ko">이번엔 진짜 자기 이야기예요. 좋아하는 것 두 개를 비교해서 한 문장 말해 보세요.</span><span class="ja">今度は本当に自分の話です。好きなもの2つを比べて、1つの文で言ってみましょう。</span></p>
       <div class="tutor-note">학생이 말한 문장을 여기에 적어 주세요.</div>
-      <div class="task-block">
-        <div class="answer-box tall">
-          <span class="answer-space as-input"><textarea class="free-input" data-sync-id="p1-free-compare" rows="2" spellcheck="false" maxlength="2000"></textarea></span>
-                  <span class="hint"><span class="hint-chip">コーヒー:커피<span class="yomi">コピ</span></span><span class="hint-chip">お茶:차<span class="yomi">チャ</span></span><span class="hint-chip">ごはん:밥<span class="yomi">パプ</span></span><span class="hint-chip">パン:빵<span class="yomi">ッパン</span></span><span class="hint-chip">映画:영화<span class="yomi">ヨンファ</span></span><span class="hint-chip">ドラマ:드라마<span class="yomi">ドゥラマ</span></span><span class="hint-chip">音楽:음악<span class="yomi">ウマク</span></span><span class="hint-chip">ずっと:훨씬<span class="yomi">フォルッシン</span></span></span>
-        </div>
+      <div class="fb-compose">
+        <div class="fb" data-fb="p1-free-compare"><span class="hint"><span class="hint-chip">コーヒー:커피<span class="yomi">コピ</span></span><span class="hint-chip">お茶:차<span class="yomi">チャ</span></span><span class="hint-chip">ごはん:밥<span class="yomi">パプ</span></span><span class="hint-chip">パン:빵<span class="yomi">ッパン</span></span><span class="hint-chip">映画:영화<span class="yomi">ヨンファ</span></span><span class="hint-chip">ドラマ:드라마<span class="yomi">ドゥラマ</span></span><span class="hint-chip">音楽:음악<span class="yomi">ウマク</span></span><span class="hint-chip">ずっと:훨씬<span class="yomi">フォルッシン</span></span></span></div>
+        <div class="fb-adds"><button class="fb-add" data-add="fix" type="button">＋ 교정</button><button class="fb-add" data-add="note" type="button">＋ 노트</button></div>
       </div>
     </div>
 
@@ -440,11 +438,9 @@
       <h2 class="section-title">내 문장 만들기 <span class="title-ja">(自分の文を作ろう)</span></h2>
       <p class="section-subtitle"><span class="ko">이번엔 여럿 중에서 하나예요. 제일 좋아하는 걸 한 문장으로 말해 보세요.</span><span class="ja">今度はたくさんの中から1つです。いちばん好きなものを1つの文で言ってみましょう。</span></p>
       <div class="tutor-note">학생이 말한 문장을 여기에 적어 주세요.</div>
-      <div class="task-block">
-        <div class="answer-box tall">
-          <span class="answer-space as-input"><textarea class="free-input" data-sync-id="p2-free-best" rows="2" spellcheck="false" maxlength="2000"></textarea></span>
-                  <span class="hint"><span class="hint-chip">食べ物:음식<span class="yomi">ウムシク</span></span><span class="hint-chip">果物:과일<span class="yomi">クァイル</span></span><span class="hint-chip">りんご:사과<span class="yomi">サグァ</span></span><span class="hint-chip">キムチ:김치<span class="yomi">キムチ</span></span><span class="hint-chip">週末:주말<span class="yomi">チュマル</span></span><span class="hint-chip">韓国語:한국어<span class="yomi">ハングゴ</span></span><span class="hint-chip">ドラマ:드라마<span class="yomi">ドゥラマ</span></span><span class="hint-chip">音楽:음악<span class="yomi">ウマク</span></span></span>
-        </div>
+      <div class="fb-compose">
+        <div class="fb" data-fb="p2-free-best"><span class="hint"><span class="hint-chip">食べ物:음식<span class="yomi">ウムシク</span></span><span class="hint-chip">果物:과일<span class="yomi">クァイル</span></span><span class="hint-chip">りんご:사과<span class="yomi">サグァ</span></span><span class="hint-chip">キムチ:김치<span class="yomi">キムチ</span></span><span class="hint-chip">週末:주말<span class="yomi">チュマル</span></span><span class="hint-chip">韓国語:한국어<span class="yomi">ハングゴ</span></span><span class="hint-chip">ドラマ:드라마<span class="yomi">ドゥラマ</span></span><span class="hint-chip">音楽:음악<span class="yomi">ウマク</span></span></span></div>
+        <div class="fb-adds"><button class="fb-add" data-add="fix" type="button">＋ 교정</button><button class="fb-add" data-add="note" type="button">＋ 노트</button></div>
       </div>
     </div>
 
@@ -556,6 +552,7 @@
   <!-- ACTIVITIES · 점선 칸 · 고르기 · 문장 만들기. 공유 스크립트.
        페이저보다 먼저 와야 한다 — 티칭 모드가 여기 만든 유령 답을 쓴다. -->
   <script src="../../../../../../../runtime/js/activities.js"></script>
+  <script src="../../../../../../../runtime/js/feedback.js"></script>
 
 
   <!-- ================================================================

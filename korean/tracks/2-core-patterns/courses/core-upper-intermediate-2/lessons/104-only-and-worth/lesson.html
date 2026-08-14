@@ -221,10 +221,9 @@
       <h2 class="section-title">내 문장 만들기 <span class="title-ja">(自分の文を作ろう)</span></h2>
       <p class="section-subtitle"><span class="ko">제가 학생을 칭찬해 볼게요. ‘한국말 정말 잘하시네요!’ 겸손하게 한번 받아 주세요.</span><span class="ja">私が学生をほめてみます。「韓国語本当にお上手ですね！」謙遜して受けてみてください。</span></p>
       <div class="tutor-note">‘아니에요’로만 끝나면, ‘뿐이에요’로 한 번 더 만들어 보게 해 주세요.</div>
-      <div class="task-block">
-        <div class="answer-box tall">
-          <span class="answer-space as-input"><textarea class="free-input" data-sync-id="p1-free-justonly" rows="2" spellcheck="false" maxlength="2000"></textarea></span><span class="hint"><span class="hint-chip">学生:학생</span><span class="hint-chip">初心者:초보</span><span class="hint-chip">少し:조금</span><span class="hint-chip">習う:배우다</span><span class="hint-chip">好きだ:좋아하다</span><span class="hint-chip">ただ:그냥</span></span>
-        </div>
+      <div class="fb-compose">
+        <div class="fb" data-fb="p1-free-justonly"><span class="hint"><span class="hint-chip">学生:학생</span><span class="hint-chip">初心者:초보</span><span class="hint-chip">少し:조금</span><span class="hint-chip">習う:배우다</span><span class="hint-chip">好きだ:좋아하다</span><span class="hint-chip">ただ:그냥</span></span></div>
+        <div class="fb-adds"><button class="fb-add" data-add="fix" type="button">＋ 교정</button><button class="fb-add" data-add="note" type="button">＋ 노트</button></div>
       </div>
     </div>
 
@@ -411,10 +410,9 @@
       <h2 class="section-title">내 문장 만들기 <span class="title-ja">(自分の文を作ろう)</span></h2>
       <p class="section-subtitle"><span class="ko">제가 다음 주에 일본에 가요. 크게 유명하지 않아도 한 번쯤 가 볼 만한 데 하나만 알려 주세요.</span><span class="ja">私は来週日本に行きます。すごく有名でなくても、一度くらい行ってみる価値のあるところを一つ教えてください。</span></p>
       <div class="tutor-note">크게 칭찬하는 말이 아니에요. 조심스럽게 권하는 느낌이면 잘한 거예요.</div>
-      <div class="task-block">
-        <div class="answer-box tall">
-          <span class="answer-space as-input"><textarea class="free-input" data-sync-id="p2-free-worthit" rows="2" spellcheck="false" maxlength="2000"></textarea></span><span class="hint"><span class="hint-chip">行く:가다</span><span class="hint-chip">見る:보다</span><span class="hint-chip">食べる:먹다</span><span class="hint-chip">店:집</span><span class="hint-chip">公園:공원</span><span class="hint-chip">おすすめする:추천하다</span></span>
-        </div>
+      <div class="fb-compose">
+        <div class="fb" data-fb="p2-free-worthit"><span class="hint"><span class="hint-chip">行く:가다</span><span class="hint-chip">見る:보다</span><span class="hint-chip">食べる:먹다</span><span class="hint-chip">店:집</span><span class="hint-chip">公園:공원</span><span class="hint-chip">おすすめする:추천하다</span></span></div>
+        <div class="fb-adds"><button class="fb-add" data-add="fix" type="button">＋ 교정</button><button class="fb-add" data-add="note" type="button">＋ 노트</button></div>
       </div>
     </div>
 
@@ -503,6 +501,7 @@
   <!-- ACTIVITIES · 점선 칸 · 고르기 · 문장 만들기. 공유 스크립트.
        페이저보다 먼저 와야 한다 — 티칭 모드가 여기 만든 유령 답을 쓴다. -->
   <script src="../../../../../../../runtime/js/activities.js"></script>
+  <script src="../../../../../../../runtime/js/feedback.js"></script>
 
 
   <!-- ================================================================

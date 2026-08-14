@@ -56,6 +56,14 @@ def answer_input(sync_id: str, answer: str = "") -> str:
     return f'<span class="answer-space as-input">{control}</span>'
 
 
+def feedback_activity(sync_id: str, task: str = "") -> str:
+    """A spoken response the tutor can transcribe, correct, and annotate."""
+    prompt = f'<span class="fb-task">{esc(task)}</span>' if task else ''
+    return (f'<div class="fb-compose"><div class="fb" data-fb="{esc(sync_id)}">{prompt}</div>'
+            '<div class="fb-adds"><button class="fb-add" data-add="fix" type="button">＋ 교정</button>'
+            '<button class="fb-add" data-add="note" type="button">＋ 노트</button></div></div>')
+
+
 def build_zone(sync_id: str, answer: str) -> str:
     """A validator-visible custom order control; activities.js supplies the kind."""
     return (f'<span class="answer-space build-zone" data-sync-id="{esc(sync_id)}" '
@@ -279,8 +287,7 @@ def render_lesson(item: dict, course_name: str, final: bool) -> str:
         page('p1-translate', '한국어로 말하기', '韓国語で言おう', p1_translate,
              ('일본어를 보고 문장 전체를 한국어로 말해 보세요.', '日本語を見て文全体を韓国語で言いましょう。')),
         page('p1-write', '내 이야기로 바꾸기', '自分の話に変えよう',
-             '<div class="answer-box tall"><span class="answer-label task">自分の状況で一文作ろう</span>'
-             f'{answer_input("p1-write-answer")}</div>',
+             feedback_activity('p1-write-answer', '自分の状況で一文作ろう'),
              (p1.get('writeKo', '같은 표현으로 내 상황에 맞는 문장을 만들어 보세요.'), p1.get('writeJa', '同じ表現で自分の状況に合う文を作りましょう。'))),
         transition('part2-intro', 'パート 2', p2['pattern'], '次の表現', p2['ja'], p2['pattern']),
         page('p2-teach', p2.get('teachTitleKo', '두 번째 표현'), p2.get('teachTitleJa', '次の表現'),
@@ -308,8 +315,7 @@ def render_lesson(item: dict, course_name: str, final: bool) -> str:
         page('p2-translate', '한국어로 말하기', '韓国語で言おう', p2_translate,
              ('일본어를 보고 문장 전체를 한국어로 말해 보세요.', '日本語を見て文全体を韓国語で言いましょう。')),
         page('p2-write', '내 이야기로 바꾸기', '自分の話に変えよう',
-             '<div class="answer-box tall"><span class="answer-label task">自分の状況で一文作ろう</span>'
-             f'{answer_input("p2-write-answer")}</div>',
+             feedback_activity('p2-write-answer', '自分の状況で一文作ろう'),
              (p2.get('writeKo', '같은 표현으로 내 상황에 맞는 문장을 만들어 보세요.'), p2.get('writeJa', '同じ表現で自分の状況に合う文を作りましょう。'))),
         transition('part3-intro', 'パート 3', '장면으로 돌아가기', '場面に戻ろう',
                    '二つの表現を一つの会話で使います。', '장면 복습'),
