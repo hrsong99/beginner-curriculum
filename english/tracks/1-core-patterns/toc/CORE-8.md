@@ -33,13 +33,22 @@
 - **Grammar:** this `it` is not a thing. Weather takes `it` with no meaning.
 - **Japanese-L1 risk:** `寒いです` has no subject at all, so `Cold today` and `Is cold` are predicted and feel complete to the learner. This is pure grammar with no semantic hook — it needs its own slot.
 
+## Planned spiral review
+
+- **SUBJ-01 · contrast:** keep an explicit English subject
+- **DUMMY-01 · recognition:** retain dummy `there` and weather/time `it`
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–7.
 - **Not yet:** Core 9–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-5 Is this your bag? · CORE-6 Are you a student? · CORE-7 There's a café near here
 - **Nearest protected forms:** CORE-9 Two coffees, please · CORE-10 The café on the corner · CORE-11 Where's the station?
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

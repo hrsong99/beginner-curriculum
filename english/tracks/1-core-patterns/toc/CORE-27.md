@@ -33,13 +33,22 @@
 - **Grammar:** an activity after `like`, `love` or `hate` can use `verb-ing`: `like cooking`, not `like cook`. These preference verbs stay simple, not progressive: `I like`, not `I'm liking`.
 - **Japanese-L1 risk:** Japanese turns an action into a topic with `〜こと` or `〜の`. English often attaches `-ing` directly, while the preference itself remains a state rather than an action in progress.
 
+## Planned spiral review
+
+- **ASPECT-01 · transfer:** distinguish routine/state from action in progress
+- **NUM-01 · transfer:** mark plural nouns even when quantity is already clear
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–26.
 - **Not yet:** Core 28–122. Do not use their forms in learner-produced language.
-- **Most recent available forms:** CORE-24 Sorry, could you say that again? · CORE-25 I'm working from home today · CORE-26 I usually drive, but today I'm walking
+- **Most recent available forms:** CORE-24 Sorry, can you say that again? · CORE-25 I'm working from home today · CORE-26 I usually drive, but today I'm walking
 - **Nearest protected forms:** CORE-28 Are you free on Friday? · CORE-29 I'm meeting Sam at six · CORE-30 I was really tired yesterday
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

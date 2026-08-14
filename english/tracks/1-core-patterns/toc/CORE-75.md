@@ -33,13 +33,22 @@
 - **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
 - **Japanese-L1 risk:** `よく〜した` covers habit but not the *and not now* implication that `used to` carries. That implication is the lesson; the form is easy.
 
+## Planned spiral review
+
+- **ASPECT-01 · checkpoint:** distinguish routine/state from action in progress
+- **DO-01 · transfer:** insert `do` and leave the main verb plain
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–74.
 - **Not yet:** Core 76–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-72 I might have left it at home · CORE-73 The train had already left · CORE-74 I was going to call, but
 - **Nearest protected forms:** CORE-76 I had my phone repaired · CORE-77 It was supposed to be ready · CORE-78 This time tomorrow I'll be flying
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

@@ -33,13 +33,21 @@
 - **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
 - **Japanese-L1 risk:** compact, very frequent in speech, and almost never taught. Good keep.
 
+## Planned spiral review
+
+- **PERF-01 · transfer:** distinguish present relevance/duration from finished past time
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–115.
 - **Not yet:** Core 117–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-113 The underlying issue is · CORE-114 That may be true for some people · CORE-115 Granted, but that overlooks
 - **Nearest protected forms:** CORE-117 On balance, I'd say · CORE-118 You could see it that way · CORE-119 Let's just say it didn't go well
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

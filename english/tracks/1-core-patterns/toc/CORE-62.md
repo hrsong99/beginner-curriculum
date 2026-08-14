@@ -33,13 +33,22 @@
 - **Grammar:** after `Do you know where`, the order goes back to normal: `where **it is**`.
 - **Japanese-L1 risk:** the un-inversion is the difficulty — English asks the learner to undo the very thing lesson 13 installed. Previewed at 18, taught properly here.
 
+## Planned spiral review
+
+- **ORDER-01 · transfer:** keep English constituent and question order
+- **REL-01 · contrast:** place an English relative clause after its noun
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–61.
 - **Not yet:** Core 63–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-59 I went there to see a client · CORE-60 Would you mind opening the window? · CORE-61 Do you mind if I sit here?
 - **Nearest protected forms:** CORE-63 I generally prefer coffee · CORE-64 It won't turn on · CORE-65 My wallet was stolen
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

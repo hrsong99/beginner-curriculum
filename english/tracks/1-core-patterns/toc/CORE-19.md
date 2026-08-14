@@ -33,13 +33,22 @@
 - **Grammar:** `this one` / `that one` avoids repeating the noun.
 - **Japanese-L1 risk:** fifteen/fifty and thirteen/thirty are a listening problem, not a grammar one, and they cost real money. The repair frame is the point of the lesson.
 
+## Planned spiral review
+
+- **BEQ-01 · transfer:** invert `be` in questions and repeat it in short answers
+- **ART-02 · transfer:** choose first/generic reference versus shared/specific `the`
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–18.
 - **Not yet:** Core 20–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-16 What time do you get up? · CORE-17 How often do you exercise? · CORE-18 Can you drive?
 - **Nearest protected forms:** CORE-20 Could you help me with this? · CORE-21 Can I try this on? · CORE-22 I'd like the chicken, please
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

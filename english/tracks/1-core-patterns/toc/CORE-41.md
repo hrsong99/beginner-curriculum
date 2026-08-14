@@ -33,13 +33,21 @@
 - **Grammar:** `don't have to` = you can if you want. `mustn't` = don't do it. These are opposites, not variations.
 - **Japanese-L1 risk:** `〜なくてもいい` vs `〜てはいけない` exists, so the concept transfers — but the English surface forms look similar and get swapped. Teach them as opposites, side by side.
 
+## Planned spiral review
+
+- **MODAL-01 · transfer:** use a plain verb after a modal
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–40.
 - **Not yet:** Core 42–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-38 Let me help · CORE-39 I might be late · CORE-40 You should get some rest
 - **Nearest protected forms:** CORE-42 Don't you like it? · CORE-43 It's a small, quiet café · CORE-44 It's too small
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

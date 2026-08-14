@@ -33,13 +33,21 @@
 - **Grammar:** `should` = a good idea. `need to` = it's necessary.
 - **Japanese-L1 risk:** `〜たほうがいい` is stronger than `should` feels to a native ear, so learners under-soften. Pair it with the politeness work from Unit 4.
 
+## Planned spiral review
+
+- **MODAL-01 · contrast:** use a plain verb after a modal
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–39.
 - **Not yet:** Core 41–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-37 I'm going to look for a new job · CORE-38 Let me help · CORE-39 I might be late
 - **Nearest protected forms:** CORE-41 You have to show ID · CORE-42 Don't you like it? · CORE-43 It's a small, quiet café
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

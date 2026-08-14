@@ -33,13 +33,21 @@
 - **Grammar:** adjectives go **before** the noun and do not change for plural: `two small cafés`.
 - **Japanese-L1 risk:** pre-modification matches Japanese, so this is easy — but `two smalls cafés` appears from over-applying the plural rule from lesson 9.
 
+## Planned spiral review
+
+- **ART-01 · transfer:** attach `a`/`an` to a singular count noun
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–42.
 - **Not yet:** Core 44–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-40 You should get some rest · CORE-41 You have to show ID · CORE-42 Don't you like it?
 - **Nearest protected forms:** CORE-44 It's too small · CORE-45 This one's cheaper · CORE-46 It's the best one here
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

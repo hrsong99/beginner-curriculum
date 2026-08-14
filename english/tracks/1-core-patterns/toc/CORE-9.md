@@ -20,7 +20,7 @@
 ### Pattern 1
 
 - **Model:** Two coffees, please.
-- **Frame:** `Two ___s, please.`
+- **Frame:** `Two ___, please.`
 
 ### Pattern 2
 
@@ -33,13 +33,21 @@
 - **Grammar:** more than one takes `-s`. It is not optional, even when the number is already there.
 - **Japanese-L1 risk:** Japanese does not obligatorily mark plural — `二つの本` marks number once, not twice. So `two coffee` and `many thing` are predicted, and they persist because the number already carried the meaning. Drill the redundancy, since that is exactly what feels wrong to the learner.
 
+## Planned spiral review
+
+- **ART-01 · contrast:** attach `a`/`an` to a singular count noun
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–8.
 - **Not yet:** Core 10–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-6 Are you a student? · CORE-7 There's a café near here · CORE-8 It's cold today
 - **Nearest protected forms:** CORE-10 The café on the corner · CORE-11 Where's the station? · CORE-12 I start work at nine
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

@@ -19,6 +19,7 @@ def cell(value: str | None) -> str:
 
 def render(lessons: list[dict]) -> str:
     missing_grammar = [lesson["no"] for lesson in lessons if not lesson["grammar"]]
+    registry = lessons[0]["reviewRegistry"]
     lines = [
         "# Core Grammar and Function Coverage Map",
         "",
@@ -37,6 +38,9 @@ def render(lessons: list[dict]) -> str:
         f"- **Lessons with two production patterns:** {sum(len(x['patterns']) == 2 for x in lessons)}",
         f"- **Lessons with a JP-risk note:** {sum(bool(x['jp']) for x in lessons)}",
         f"- **Lessons with learner-facing grammar support:** {sum(bool(x['grammar']) for x in lessons)}",
+        f"- **Lessons with planned spiral review:** {sum(bool(x['spiralReviews']) for x in lessons)}",
+        f"- **Planned review returns:** {sum(len(x['spiralReviews']) for x in lessons)} across {len(registry)} stable targets",
+        f"- **Explicit bounded survival chunks:** {sum(bool(x['boundedChunk']) for x in lessons)}",
         f"- **Missing grammar support:** {len(missing_grammar)} — Core {missing_grammar[0]}–{missing_grammar[-1]}",
         "",
         "> **Open gap:** Part 2 (Core 71–122) has patterns, expressions and JP-risk notes but no",
@@ -44,25 +48,48 @@ def render(lessons: list[dict]) -> str:
         "> explanation from the patterns. Adding those lines is curriculum authorship and should follow",
         "> native review; it is not safe mechanical work while the catalog is under review.",
         "",
+        "## Japanese-L1 spiral health",
+        "",
+        "| Target | Persistent difficulty | Introduced | Planned returns | Modes |",
+        "| --- | --- | ---: | --- | --- |",
+    ]
+    for target, meta in registry.items():
+        returns = [
+            (lesson["no"], review["mode"])
+            for lesson in lessons
+            for review in lesson["spiralReviews"]
+            if review["id"] == target
+        ]
+        lines.append(
+            f"| `{target}` | {cell(meta['description'])} | Core {meta['introduced']} | "
+            f"{' · '.join(f'Core {number} `{mode}`' for number, mode in returns)} | "
+            f"{', '.join(sorted({mode for _number, mode in returns}))} |"
+        )
+    lines += [
+        "",
         "## Sequence",
         "",
-        "| Lesson | Unit / band | Communicative function | Two production patterns | Learner-facing grammar support | Sequence guardrail | Japanese-L1 risk |",
-        "| ---: | --- | --- | --- | --- | --- | --- |",
+        "| Lesson | Unit / band | Communicative function | Two production patterns | Learner-facing grammar support | Bounded chunk | Spiral review | Sequence guardrail | Japanese-L1 risk |",
+        "| ---: | --- | --- | --- | --- | --- | --- | --- | --- |",
     ]
     for lesson in lessons:
         patterns = "<br>".join(f"`{cell(pattern)}`" for pattern in lesson["patterns"])
         guardrail = "opening lesson" if lesson["no"] == 1 else f"may assume Core 1–{lesson['no'] - 1}"
         grammar = cell(lesson["grammar"]) if lesson["grammar"] else "⚠ **not specified in TOC**"
+        bounded = cell(lesson["boundedChunk"]) or "—"
+        spiral = " · ".join(f"`{x['id']}:{x['mode']}`" for x in lesson["spiralReviews"]) or "—"
         lines.append(
             f"| {lesson['no']} | Unit {lesson['unitNo']} · {cell(lesson['level'])} | "
-            f"{cell(lesson['canDo'])} | {patterns} | {grammar} | {guardrail} | {cell(lesson['jp'])} |"
+            f"{cell(lesson['canDo'])} | {patterns} | {grammar} | {bounded} | {spiral} | "
+            f"{guardrail} | {cell(lesson['jp'])} |"
         )
     lines += [
         "",
         "## Author audit rule",
         "",
-        "A feature is covered only when the learner uses it to complete the lesson can-do. A mention in",
-        "an explanation or optional expression does not count. Contextual and Freetalking material may",
+        "A feature is introduced only when the learner uses it to complete the lesson can-do. A review",
+        "return counts only when the learner retrieves it in the declared mode; a mention in an",
+        "explanation or optional expression does not count. Contextual and Freetalking material may",
         "reuse a Core pattern or label a deliberately memorised chunk; it must not silently turn a later",
         "Core target into assumed productive grammar.",
         "",

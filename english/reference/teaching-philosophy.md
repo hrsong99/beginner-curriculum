@@ -51,6 +51,33 @@ production unless the expression is promoted to one of the two primary patterns.
 language is valuable; silently turning every natural phrase into a third or fourth production
 target is not.
 
+### Production-language gate
+
+For Pre-A1 and A1, readiness applies to the **whole learner-produced sentence**, including the
+words that never change. A fixed frame is not cognitively free: the learner still has to map it to
+meaning, hold its sound sequence in memory, and retrieve it while changing the slot.
+
+Every learner-produced model at these levels therefore uses language already established earlier
+in Core, except for:
+
+1. the lesson's explicitly taught, level-appropriate new operation; and
+2. at most one explicitly labelled **bounded survival chunk** when ordinary communication would
+   otherwise become seriously less useful.
+
+If a new pattern contains an internal grammar operation reserved for a later lesson, the pattern
+counts as that bounded survival chunk. Calling the whole line today's pattern does not make its
+future grammar disappear from the learner's workload.
+
+A bounded survival chunk is short, high-frequency and situationally transparent. It stays whole:
+authors do not open an internal slot, contrast its internal grammar, transform its parts, or assess
+those parts separately. `Nice to meet you.` can appear before infinitives because it remains one
+greeting. It must not become `Nice to ___ you.` at that point.
+
+Partner and tutor language is a third category. It may run ahead when the scene and Japanese
+support make the meaning immediately clear, but future grammar in that channel remains receptive
+and cannot quietly become learner production. "Bounded chunk" is an exception with a cost, not a
+general exemption from prerequisite order.
+
 ### Learner-facing grammar support
 
 This is the smallest form explanation needed to control the patterns—for example, “After *would you mind*, use the `-ing` form.” It supports production rather than becoming a third lesson objective.
@@ -114,6 +141,18 @@ Useful recycling has three stages:
 3. freer combination with other known frames.
 
 When a contextual or freetalking lesson requires a later structure, move the lesson, simplify the frame, or name the higher prerequisite. Do not hide the jump.
+
+For Japanese-L1 features that are frequent, invisible in Japanese, and prone to fossilisation,
+recycling follows a planned spiral rather than incidental repetition:
+
+1. **recognition** — notice the form in a known frame;
+2. **controlled** — supply it with the meaning and vocabulary constrained;
+3. **contrast** — choose it against the learner's likely competing form;
+4. **transfer** — retrieve it while completing a different communicative task;
+5. **checkpoint** — retrieve it cumulatively without a local grammar reminder.
+
+An ordinary lesson carries no more than two spiral-review targets. Review should reuse the current
+lesson's scene; it must not create a second lesson or increase the number of primary patterns.
 
 ## 8. Keep the teaching hierarchy visible
 

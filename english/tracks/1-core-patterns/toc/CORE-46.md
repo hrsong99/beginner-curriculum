@@ -33,13 +33,21 @@
 - **Grammar:** superlatives always take `the` — there is only one best.
 - **Japanese-L1 risk:** another article that has to be there for a structural reason the learner cannot see. `It's best one` is predicted.
 
+## Planned spiral review
+
+- **ART-02 · transfer:** choose first/generic reference versus shared/specific `the`
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–45.
 - **Not yet:** Core 47–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-43 It's a small, quiet café · CORE-44 It's too small · CORE-45 This one's cheaper
 - **Nearest protected forms:** CORE-47 I was bored during the movie · CORE-48 Have you ever been to Kyoto? · CORE-49 I've already finished
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

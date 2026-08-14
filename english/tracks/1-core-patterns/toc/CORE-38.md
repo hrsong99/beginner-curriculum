@@ -33,13 +33,21 @@
 - **Grammar:** `will` = decided *as you speak*. `going to` = decided earlier.
 - **Japanese-L1 risk:** Japanese does not force this distinction, so either form gets used for both. Teach it as *when did you decide*, which is a question the learner can actually answer.
 
+## Planned spiral review
+
+- **MODAL-01 · contrast:** use a plain verb after a modal
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–37.
 - **Not yet:** Core 39–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-35 First we ate, then we walked around · CORE-36 I was cooking when you called · CORE-37 I'm going to look for a new job
 - **Nearest protected forms:** CORE-39 I might be late · CORE-40 You should get some rest · CORE-41 You have to show ID
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

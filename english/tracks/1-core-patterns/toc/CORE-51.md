@@ -33,13 +33,22 @@
 - **Grammar:** `for` + a length of time. `since` + a starting point.
 - **Japanese-L1 risk:** Japanese uses the **present** for this — `五年住んでいます` — so `I live here for five years` is directly predicted by the L1. This and 50 are the two that need the most drilling.
 
+## Planned spiral review
+
+- **PERF-01 · transfer:** distinguish present relevance/duration from finished past time
+- **PREP-01 · transfer:** store prepositions with their noun or verb
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–50.
 - **Not yet:** Core 52–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-48 Have you ever been to Kyoto? · CORE-49 I've already finished · CORE-50 I went there last year
 - **Nearest protected forms:** CORE-52 I've been working all morning · CORE-53 We've done three of the five · CORE-54 I stayed home because I was sick
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

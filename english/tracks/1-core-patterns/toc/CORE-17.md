@@ -33,13 +33,21 @@
 - **Grammar:** `twice a week`, `three times a month` — `a` here means *per*.
 - **Japanese-L1 risk:** another article use with no Japanese counterpart, and it hides inside a frequency phrase. Teach the whole phrase as a chunk.
 
+## Planned spiral review
+
+- **AGR-01 · controlled:** mark third-person singular present without double-marking
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–16.
 - **Not yet:** Core 18–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-14 I don't drive to work · CORE-15 She works downtown · CORE-16 What time do you get up?
 - **Nearest protected forms:** CORE-18 Can you drive? · CORE-19 How much is this? · CORE-20 Could you help me with this?
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

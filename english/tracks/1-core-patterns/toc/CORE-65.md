@@ -33,13 +33,22 @@
 - **Grammar:** use this when who did it doesn't matter or isn't known.
 - **Japanese-L1 risk:** Japanese passive often carries a sense of being adversely affected (迷惑の受身), which English passive does not. Expect over-use of the passive for ordinary events.
 
+## Planned spiral review
+
+- **REL-01 · transfer:** place an English relative clause after its noun
+- **PREP-01 · checkpoint:** store prepositions with their noun or verb
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–64.
 - **Not yet:** Core 66–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-62 Do you know where it is? · CORE-63 I generally prefer coffee · CORE-64 It won't turn on
 - **Nearest protected forms:** CORE-66 If I had more time, I'd travel · CORE-67 I wish I could drive · CORE-68 He must be busy
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

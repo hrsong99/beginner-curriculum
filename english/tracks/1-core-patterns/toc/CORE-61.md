@@ -33,13 +33,22 @@
 - **Grammar:** `No` means *yes, you can*. The polite answer is `Not at all`, not `Yes`.
 - **Japanese-L1 risk:** the same polarity trap as lesson 42, now with a social cost attached. Drill the answer, not the question.
 
+## Planned spiral review
+
+- **NEGQ-01 · controlled:** answer negative questions according to the fact
+- **POLITE-01 · transfer:** express politeness with an English frame, not an inflection
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–60.
 - **Not yet:** Core 62–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-58 I'll call you when I get there · CORE-59 I went there to see a client · CORE-60 Would you mind opening the window?
 - **Nearest protected forms:** CORE-62 Do you know where it is? · CORE-63 I generally prefer coffee · CORE-64 It won't turn on
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

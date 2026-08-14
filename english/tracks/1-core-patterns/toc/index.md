@@ -25,7 +25,7 @@
 - [`CORE-21`](CORE-21.md) · Can I try this on?
 - [`CORE-22`](CORE-22.md) · I'd like the chicken, please
 - [`CORE-23`](CORE-23.md) · Two cups of coffee
-- [`CORE-24`](CORE-24.md) · Sorry, could you say that again?
+- [`CORE-24`](CORE-24.md) · Sorry, can you say that again?
 - [`CORE-25`](CORE-25.md) · I'm working from home today
 - [`CORE-26`](CORE-26.md) · I usually drive, but today I'm walking
 - [`CORE-27`](CORE-27.md) · I like cooking

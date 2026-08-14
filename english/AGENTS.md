@@ -138,9 +138,17 @@ lifted, Core still needs three structurally different lessons reviewed together 
 
 ### Two constraints that are easy to lose
 
-- **The "not yet" constraint binds the learner, not the tutor.** The tutor's spoken
-  `.section-subtitle` is natural English and may run ahead of the syllabus. Forcing the syllabus
-  into tutor speech makes the English stilted, which is worse.
+- **The "not yet" constraint binds the learner's whole produced sentence, not only its blank.** At
+  Pre-A1/A1, every fixed word in learner production must come from earlier Core or from the two
+  patterns explicitly taught here. At most one TOC-labelled bounded survival chunk may run ahead;
+  keep it whole and never transform or assess its internal grammar. The tutor's spoken
+  `.section-subtitle` and partner turns may run ahead only as supported receptive English. Forcing
+  the syllabus into tutor speech makes it stilted, but silently turning that speech into a learner
+  target breaks the sequence.
+- **Implement the TOC's spiral review metadata.** A `Spiral review:` target is retrieval inside the
+  current can-do, not a third pattern or a second explanation. Match its declared mode
+  (`recognition`, `controlled`, `contrast`, `transfer`, or `checkpoint`) and carry no more than two
+  targets in one ordinary lesson.
 - **Scaffold every non-target word.** Blanks target only the pattern being practiced. Hint chips
   list vocabulary only (`JP:EN`) — never articles, auxiliaries or inflections, which are the
   English analogue of the particles-and-endings rule in `ux-philosophy.md`. Every hint-chip English

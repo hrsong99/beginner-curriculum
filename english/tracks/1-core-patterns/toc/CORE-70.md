@@ -33,13 +33,22 @@
 - **Grammar:** `tell` needs a person (`told **me** to`); `say` does not take one.
 - **Japanese-L1 risk:** the `say`/`tell` split has no Japanese counterpart — 「言う」 covers both. `He said me` is the predicted error and it is extremely persistent.
 
+## Planned spiral review
+
+- **REPORT-01 · checkpoint:** control `say`/`tell`, backshift, and the reported perspective
+- **DO-01 · transfer:** insert `do` and leave the main verb plain
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–69.
 - **Not yet:** Core 71–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-67 I wish I could drive · CORE-68 He must be busy · CORE-69 She said she was busy
 - **Nearest protected forms:** CORE-71 I should have called earlier · CORE-72 I might have left it at home · CORE-73 The train had already left
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

@@ -33,13 +33,22 @@
 - **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
 - **Japanese-L1 risk:** Japanese does this constantly, so the *skill* is native and only the English exponents are missing. Unusually fast for a C1 lesson.
 
+## Planned spiral review
+
+- **NEGQ-01 · transfer:** answer negative questions according to the fact
+- **REPORT-01 · transfer:** control `say`/`tell`, backshift, and the reported perspective
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–117.
 - **Not yet:** Core 119–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-115 Granted, but that overlooks · CORE-116 If anything, it's got worse · CORE-117 On balance, I'd say
 - **Nearest protected forms:** CORE-119 Let's just say it didn't go well · CORE-120 You might want to check that · CORE-121 I'd rather not go into it
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

@@ -60,7 +60,13 @@ def _core_guardrail(lessons: list[dict], index: int) -> list[str]:
         lines.append("- **Most recent available forms:** " + " · ".join(f"{x['id']} {x['title']}" for x in recent))
     if upcoming:
         lines.append("- **Nearest protected forms:** " + " · ".join(f"{x['id']} {x['title']}" for x in upcoming))
-    lines.append("- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.")
+    lines += [
+        "- The readiness gate applies to the complete learner-produced model, including every fixed word.",
+        "- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.",
+        "- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.",
+        "- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.",
+        "- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.",
+    ]
     return lines
 
 
@@ -99,7 +105,12 @@ def render(track: str, lessons: list[dict], index: int) -> str:
         lines += ["## Supporting content", ""]
         lines += _line("Expressions", lesson["expressions"])
         lines += _line("Grammar", lesson.get("grammar") or "⚠ missing from the TOC; do not invent it inside a deck assignment")
+        lines += _line("Bounded survival chunk", lesson.get("boundedChunk"))
         lines += _line("Japanese-L1 risk", lesson["jp"])
+        if lesson["spiralReviews"]:
+            lines += ["", "## Planned spiral review", ""]
+            for review in lesson["spiralReviews"]:
+                lines.append(f"- **{review['id']} · {review['mode']}:** {review['description']}")
     elif track == "2-contextual-english":
         lines += ["## Supporting content", ""]
         lines += _line("Expressions", lesson.get("expressions"))

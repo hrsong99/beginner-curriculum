@@ -33,13 +33,22 @@
 - **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
 - **Japanese-L1 risk:** Japanese refusal by trailing off is read in English as indecision, not refusal. The whole lesson is: in English, decline *explicitly* and soften *lexically*.
 
+## Planned spiral review
+
+- **POLITE-01 · checkpoint:** express politeness with an English frame, not an inflection
+- **MODAL-01 · transfer:** use a plain verb after a modal
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–96.
 - **Not yet:** Core 98–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-94 Wouldn't it be better if · CORE-95 Where I'd push back is on the cost · CORE-96 I meant next Friday, not this Friday
 - **Nearest protected forms:** CORE-98 This is largely due to · CORE-99 That suggests that · CORE-100 As a result, we had to reschedule
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

@@ -39,7 +39,11 @@
 - **Not yet:** Core 45–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-41 You have to show ID · CORE-42 Don't you like it? · CORE-43 It's a small, quiet café
 - **Nearest protected forms:** CORE-45 This one's cheaper · CORE-46 It's the best one here · CORE-47 I was bored during the movie
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

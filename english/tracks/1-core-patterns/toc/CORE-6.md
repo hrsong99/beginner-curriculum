@@ -33,13 +33,22 @@
 - **Grammar:** short answers repeat the verb: `Yes, I am` / `No, I'm not`. Not just `yes`.
 - **Japanese-L1 risk:** bare `yes`/`no` sounds curt in English, and Japanese has no equivalent of the echoed auxiliary. Also the first place to warn about negative questions — see 41.
 
+## Planned spiral review
+
+- **ART-01 · checkpoint:** attach `a`/`an` to a singular count noun
+- **BEQ-01 · controlled:** invert `be` in questions and repeat it in short answers
+
 ## Sequence guardrails
 
 - **Already learned:** Core 1–5.
 - **Not yet:** Core 7–122. Do not use their forms in learner-produced language.
 - **Most recent available forms:** CORE-3 I live in Tokyo · CORE-4 This is my friend, Leo · CORE-5 Is this your bag?
 - **Nearest protected forms:** CORE-7 There's a café near here · CORE-8 It's cold today · CORE-9 Two coffees, please
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

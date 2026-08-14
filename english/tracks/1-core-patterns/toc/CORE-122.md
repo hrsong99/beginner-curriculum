@@ -38,7 +38,11 @@
 - **Already learned:** Core 1–121.
 - **Not yet:** none inside Core.
 - **Most recent available forms:** CORE-119 Let's just say it didn't go well · CORE-120 You might want to check that · CORE-121 I'd rather not go into it
-- The tutor's natural spoken English may run ahead; the restriction binds learner production and unscaffolded task language.
+- The readiness gate applies to the complete learner-produced model, including every fixed word.
+- Apart from this lesson's two taught patterns, productive grammar must come from earlier Core lessons.
+- At Pre-A1/A1, at most one explicitly declared bounded survival chunk may run ahead; keep it whole and do not transform or assess its internal grammar.
+- Tutor and partner English may run ahead only as supported receptive language; it must not become an unlabelled learner target.
+- Spiral review reuses the current can-do and does not add a third pattern or a second grammar explanation.
 
 ## Neighbouring items
 

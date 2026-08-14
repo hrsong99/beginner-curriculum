@@ -108,8 +108,13 @@ the owner/product system supplies the final values.
 ### 3. Generated infrastructure
 
 - One strict parser covers all four TOCs and rejects discontinuous or malformed source structure.
+- Core's parser also validates 20 stable Japanese-L1 spiral targets: reviews cannot precede their
+  introduction, exceed two per lesson, use unknown modes, remain shallow, or omit delayed return.
 - `build_lesson_briefs.py` generates all 315 briefs and four indexes.
-- `build_grammar_map.py` generates the 122-row Core sequence/coverage map and surfaces all 52 gaps.
+- Core briefs carry the whole-model production gate, any explicit bounded survival chunk, and the
+  lesson's planned spiral-review targets and modes.
+- `build_grammar_map.py` generates the 122-row Core sequence/coverage map, a review-spiral health
+  table, and all 52 currently open grammar-support gaps.
 - `build_catalog.py` generates the 303-item native-review catalog; the catalog holds no curriculum
   facts of its own.
 - `parse_catalog_review.py` validates copied feedback against stable ids, titles and first-line
@@ -117,7 +122,7 @@ the owner/product system supplies the final values.
 - `build_running_lexicon.py` generates the authored vocabulary ledger from lesson metadata.
 - `check_deck.py` checks identity, references, duplicate ids, inline code, no-yomi, tutor-script
   parity, reorder chunking and vocabulary ownership/load.
-- Thirty-eight regression tests prove parser contracts, shell retargeting, generated
+- Forty regression tests prove parser contracts, shell retargeting, generated
   brief/map/ledger/catalog/lexicon freshness and review-intake failure cases.
 
 ### 4. Shared foundation
