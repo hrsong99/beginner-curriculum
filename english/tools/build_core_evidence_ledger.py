@@ -56,19 +56,27 @@ ROW_OVERRIDES = {
     28: ("A2 · Invitations; `would like` + infinitive", "Conversation · pp. 73–74", "supported", "The lesson preserves availability language and now adds the missing invitation function."),
     52: ("B1 · Present perfect continuous", "Conversation · pp. 73–74", "supported", "The working A2→B1 label should be read conservatively as B1 for productive control of this form."),
     62: ("B1 · questions and interaction management", "Information exchange · pp. 78–79", "supported", "Public Cambridge EGP guidance explicitly identifies indirect questions at B1."),
-    76: ("No direct Core Inventory item for the service causative", "Obtaining goods and services · pp. 77–78", "needs-evidence", "The lesson now stays within have/get + object + participle; its exact productive band still needs an EGP row-level result."),
-    77: ("B1/B2 · service problems, expectations and follow-up", "Obtaining goods and services · pp. 77–78", "needs-evidence", "The service function is supported; the exact level and naturalness of both follow-up frames still need direct evidence."),
-    79: ("B1/B2 · workplace estimates and qualified prediction; no exact form match recorded", "Goal-oriented co-operation / Information exchange · pp. 76–79", "needs-evidence", "The future-perfect mismatch has been removed; the replacement estimate frames still need exact form-and-level evidence."),
-    84: ("B2 · formal discussion / hedged requests; no exact form match recorded", "Formal discussion (meetings) · pp. 75–76", "needs-evidence", "Naturalness and exact form level remain separate checks."),
-    105: ("B2 · comparison with adjectives/adverbs; no exact correlative form match recorded", "Propositional precision / thematic development · pp. 139–142", "needs-evidence", "The C1 inversion mismatch has been removed; the linked-comparison construction still needs an exact productive-band result."),
+    76: ("No direct Core Inventory item for the service causative", "Obtaining goods and services · pp. 77–78", "form-supported-band-open", "Cambridge Grammar Today attests both have/get + object + participle and identifies the construction as common in speech. No exact EGP productive-band result was located, so B1+ remains a working placement."),
+    77: ("B1/B2 · service problems, expectations and follow-up", "Obtaining goods and services · pp. 77–78", "supported", "The EGP places past arrangements that may not have happened at B1 and expectation/obligation at B2. B1+ is a defensible bridge placement; the follow-up question reuses already-owned present-perfect and indirect-question language."),
+    79: ("B1/B2 · workplace estimates and qualified prediction", "Goal-oriented co-operation / Information exchange · pp. 76–79", "supported", "Cambridge labels probability/expectation should as B1 and gives a service-ready-by-deadline example. The replacement is no longer a future-perfect level mismatch."),
+    84: ("B1/B2 · formal discussion and hedged requests", "Formal discussion (meetings) · pp. 75–76", "supported", "Cambridge labels wonder used to begin a polite request as B1 and Grammar Today attests the exact past-continuous polite-distance frame. B1+ is conservative."),
+    105: ("B2 · comparison with adjectives/adverbs", "Propositional precision / thematic development · pp. 139–142", "form-supported-band-open", "Cambridge Grammar Today directly attests repeated the + comparative clauses for linked change. No exact EGP productive-band result was located, so B2 remains a working placement rather than a certification claim."),
     112: ("C1 · register, impact and repair", "Sociolinguistic appropriateness · pp. 136–137", "function-supported", "The risky disagreement formula has been replaced by a productive impact-and-intent repair sequence; exact exponent evidence remains open."),
 }
 
 
-def _egp_result(number: int) -> str:
-    if number == 62:
-        return "public match · indirect questions at B1"
-    return "pending · row-level database check"
+GRANULAR_RESULTS = {
+    62: "public EGP match · indirect questions at B1",
+    76: "Cambridge usage match · no exact EGP band result",
+    77: "EGP match · past expectation B1; expectation/obligation B2",
+    79: "Cambridge Dictionary match · probability/expectation `should` B1",
+    84: "Cambridge Dictionary/Grammar Today match · polite `wonder` request B1",
+    105: "Cambridge usage match · no exact EGP band result",
+}
+
+
+def _granular_result(number: int) -> str:
+    return GRANULAR_RESULTS.get(number, "not selected · broad-source alignment only")
 
 
 def _cell(value: str) -> str:
@@ -97,10 +105,9 @@ def render(lessons: list[dict]) -> str:
         "- Every can-do is connected to the nearest CEFR Companion Volume scale, or a broad scale when no",
         "  one-to-one descriptor exists.",
         "- Consequential mismatches are called out rather than averaged away at unit level.",
-        "- English Grammar Profile (EGP) work is visibly pending except where a public Cambridge source gives",
-        "  an explicit result. The former Cambridge database host did not resolve and its legacy public route",
-        "  returned 404 when checked on 2026-08-13; no result was inferred from a grammar label or from the",
-        "  Core Inventory.",
+        "- The restored English Grammar Profile app and other first-party Cambridge grammar sources resolve",
+        "  the previously named high-risk rows. A granular result is not invented for the remaining broad-source",
+        "  rows; those receive exact follow-up only when native review or a band decision makes it consequential.",
         "",
         "It does **not** prove that a model line is natural, frequent, teachable, or retrievable. Those claims",
         "belong to the corpus/naturalness audit and learner pilots.",
@@ -114,7 +121,7 @@ def render(lessons: list[dict]) -> str:
         "- **CEFR locator:** *CEFR Companion Volume* (2020), named scale and printed page shown below.",
         "- **Current band:** copied from the live TOC at generation time.",
         "- **Status:** `supported` is a broad source alignment, not proof of the exact two patterns. `mixed`,",
-        "  `partial`, `bounded-early`, `early`, and `needs-evidence` require human disposition before a CEFR",
+        "  `partial`, `bounded-early`, and `form-supported-band-open` require human disposition before a CEFR",
         "  claim is frozen. `function-supported` means the communicative move is sourced but its exponent is not.",
         "- When sources disagree, use the more conservative productive band unless the earlier item is explicitly",
         "  approved as a bounded lexical chunk.",
@@ -122,37 +129,46 @@ def render(lessons: list[dict]) -> str:
         "Primary sources: [Core Inventory](https://www.eaquals.org/wp-content/uploads/EAQUALS_British_Council_Core_Curriculum_April2011.pdf) · "
         "[CEFR Companion Volume](https://rm.coe.int/common-european-framework-of-reference-for-languages-learning-teaching/16809ea0d4) · "
         "[Core Inventory validation study](https://www.britishcouncil.org/research-insight/validating-core-inventory-general-english) · "
+        "[English Grammar Profile Online](https://englishprofile.org/?menu=egp-online) · "
         "[Cambridge EGP methodology](https://www.cambridge.org/elt/blog/2015/11/11/introducing-english-grammar-profile-1-building-profile/) · "
-        "[public indirect-question example](https://www.cambridge.org/elt/blog/2021/06/23/using-cefr-criterial-features-for-grammar-instruction/)",
+        "[public indirect-question example](https://www.cambridge.org/elt/blog/2021/06/23/using-cefr-criterial-features-for-grammar-instruction/) · "
+        "[Cambridge Grammar Today](https://dictionary.cambridge.org/grammar/british-grammar/)",
+        "",
+        "Priority-row locators: [service causative](https://dictionary.cambridge.org/grammar/british-grammar/passive-other-forms) · "
+        "[`should` for probability](https://dictionary.cambridge.org/grammar/british-grammar/should) · "
+        "[polite past-form distancing](https://dictionary.cambridge.org/grammar/british-grammar/politeness_2) · "
+        "[linked comparatives](https://dictionary.cambridge.org/grammar/british-grammar/comparison-adjectives-)",
         "",
         "## Health",
         "",
         f"- Rows: **{len(lessons)} / 122**",
         "- Statuses: " + " · ".join(f"**{name}: {count}**" for name, count in sorted(statuses.items())),
-        f"- EGP row-level results: **{sum(_egp_result(x['no']).startswith('public match') for x in lessons)} / {len(lessons)}**",
-        "- Highest-priority source gaps: **Core 76, 77, 79, 84 and 105**",
+        f"- Granular first-party results: **{len(GRANULAR_RESULTS)} / {len(lessons)}**",
+        "- Named priority rows resolved: **Core 76, 77, 79, 84 and 105**",
+        "- Productive-band evidence still open: **Core 76 and Core 105**; their forms are attested, but the",
+        "  present B1+/B2 placements remain working curriculum bands pending learner performance.",
         "",
         "## Rows",
         "",
-        "| ID | Current band | Can-do | Core Inventory evidence | CEFR evidence | EGP result | Status | Decision note |",
+        "| ID | Current band | Can-do | Core Inventory evidence | CEFR evidence | Granular first-party result | Status | Decision note |",
         "| --- | --- | --- | --- | --- | --- | --- | --- |",
     ]
     for lesson in lessons:
         inventory, cefr, status, note = evidence_for(lesson)
         lines.append(
             f"| {lesson['id']} | {_cell(lesson['level'])} | {_cell(lesson['canDo'])} | "
-            f"{_cell(inventory)} | {_cell(cefr)} | {_cell(_egp_result(lesson['no']))} | "
+            f"{_cell(inventory)} | {_cell(cefr)} | {_cell(_granular_result(lesson['no']))} | "
             f"{status} | {_cell(note)} |"
         )
     lines += [
         "",
         "## Next pass",
         "",
-        "1. Resolve the five named high-priority rows against the EGP before changing any band.",
-        "2. Batch-check the remaining grammar-focused rows in the EGP and replace `pending` with an exact",
-        "   form-and-meaning result or `no matching entry`.",
-        "3. Feed native-review flags into the separate corpus/naturalness audit; do not rewrite the TOC here.",
-        "4. After learner pilots, add performance evidence elsewhere rather than widening this ledger.",
+        "1. Feed native-review flags into the separate corpus/naturalness audit; do not rewrite the TOC here.",
+        "2. Add another granular EGP result only when a native disposition or product band decision depends on it.",
+        "3. Resolve Core 76 and 105 productive placement through representative lessons and delayed retrieval;",
+        "   first-party form attestation alone does not certify their current bands.",
+        "4. Keep learner-performance evidence elsewhere rather than widening this compact source ledger.",
         "",
     ]
     return "\n".join(lines)

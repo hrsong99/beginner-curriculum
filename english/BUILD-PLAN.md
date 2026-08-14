@@ -23,13 +23,13 @@ here only when it changes the starting point for future work.
 | Blueprints | Core, Contextual and Freetalking complete |
 | Generated author packets | 315 item briefs plus 4 indexes |
 | Review surface | generated 303-item catalog; native review in progress |
-| Core evidence | 122-row generated triage ledger complete; row-level EGP checks remain open |
-| Core audit | final progression, cognitive-load, naturalness and slot-quality pass applied with stable IDs; affected catalog rows require fresh native review |
+| Core evidence | 122-row generated triage ledger complete; five priority rows resolved against current first-party sources; Core 76/105 productive bands remain provisional |
+| Core audit | final progression pass plus a 52-row corpus-informed naturalness audit for Core 71–122; no audit-led TOC changes are pending |
 | Automated quality | 44 regression tests; all 4 English deck files pass with 0 errors and 0 warnings |
 | Deployment | not ready: course identity, manifests and external sync path remain open |
 
 The curriculum is no longer waiting for basic architecture or tooling. Its main content risk is
-whether the reviewed patterns—especially Core 71–122—survive native and evidence review. Its main
+whether the reviewed patterns—especially Core 71–122—survive native review and learner pilots. Its main
 product risk is the still-unassigned level and course identity scheme.
 
 ---
@@ -121,7 +121,7 @@ the owner/product system supplies the final values.
   snapshots, then emits structured JSON without editing a TOC.
 - `build_running_lexicon.py` generates the authored vocabulary ledger from lesson metadata.
 - `check_deck.py` checks identity, references, duplicate ids, inline code, no-yomi, tutor-script
-  parity, reorder chunking and vocabulary ownership/load.
+  parity, reorder chunking, reorder answer solvability and vocabulary ownership/load.
 - Forty-four regression tests prove parser contracts, shell retargeting, generated
   brief/map/ledger/catalog/lexicon freshness and review-intake failure cases.
 
@@ -167,20 +167,22 @@ but it remains outside the production-facing review catalog.
 
 ### A. Work that can proceed during native review
 
-#### A1. Build the Core evidence ledger
+#### A1. Maintain the Core evidence ledger
 
-The generated [`reference/core-evidence-ledger.md`](./reference/core-evidence-ledger.md) now
-connects all 122 lessons to a Core Inventory category or explicit gap and to the nearest CEFR
-Companion Volume scale. It deliberately distinguishes broad function support from exact exponent
-or level evidence. The targeted audit revision removed the clearest band mismatch and now surfaces
-Core 76, 77, 79, 84 and 105 as the highest-priority exact-source gaps.
+The generated [`reference/core-evidence-ledger.md`](./reference/core-evidence-ledger.md) connects
+all 122 lessons to a Core Inventory category or explicit gap and to the nearest CEFR Companion
+Volume scale. It deliberately distinguishes broad function support from exact exponent or level
+evidence. The current English Grammar Profile app and first-party Cambridge usage sources resolved
+the five priority rows: Core 77 has a direct EGP B1/B2 progression; Core 79 and 84 have exact B1
+use evidence; Core 76 and 105 have direct natural-form attestation but no exact EGP productive-band
+result. Their B1+/B2 placements therefore remain working curriculum bands.
 
-The remaining A1 work is to replace the ledger's visible EGP `pending` results with exact
-form-and-meaning matches or explicit `no matching entry` results. The former Cambridge database
-host did not resolve and its legacy public route returned 404 when checked on 2026-08-13, so those
-results need a restored first-party source or an authorized archive/export rather than inference
-from the Core Inventory. Keep the ledger generated and compact; do not add corpus naturalness or
-learner-performance data to it.
+The former blanket task to replace all 122 rows with individual EGP results is no longer a gate.
+Many Core rows are interactional or lexical rather than a discrete EGP grammar claim, and the EGP
+is a profile rather than a prescribed teaching sequence. Add granular evidence when a native
+disposition or band decision depends on it; do not manufacture a one-to-one match for every row.
+Keep the ledger generated and compact, and keep corpus naturalness and learner performance in their
+own artifacts.
 
 The ledger records:
 
@@ -191,14 +193,17 @@ The ledger records:
 
 Do not convert a missing citation into invented confidence. The owner-approved audit corrections
 are already reflected in the live TOC; any further evidence-led rewrite waits for native review.
-Until the EGP results and flagged rows are resolved, B1+–C1 remains a working organization rather
-than a validated CEFR claim.
+Until representative lessons and learner evidence resolve the two open productive placements,
+B1+–C1 remains a working organization rather than a validated CEFR claim.
 
-#### A2. Run the corpus/naturalness audit
+#### A2. Maintain the corpus/naturalness audit
 
-Check Core model sentences and frames against appropriate corpus or primary usage evidence. Record
-queries, evidence and verdicts in a review artifact; do not silently rewrite the TOC. Prioritize
-Core 71–122, then any row the native reviewer flags.
+[`reference/core-corpus-naturalness-audit.md`](./reference/core-corpus-naturalness-audit.md) now
+records construction queries, first-party corpus-informed evidence, pair-load judgments and
+verdicts for all 52 Core 71–122 rows without changing the live TOC. All 104 primary model lines
+pass; eleven rows carry bounded author watches for morphology, register, regionality or pragmatic
+delivery. Re-run an exact row when native feedback changes its snapshot; do not repeat the whole
+audit for unchanged rows or turn supporting-expression watches into third production objectives.
 
 #### A3. Prepare the product-decision packet
 
@@ -271,16 +276,17 @@ Within the approved curriculum scope:
 3. Maintain the running lexicon and audit Contextual scenes and outcomes for duplication in course order.
 4. Conduct learner pilots: two lessons per level, recorded task performance, delayed retrieval at
    one week and a transfer task.
-5. Revisit pronunciation notation and deck production only after Core evidence, representative
+5. Revisit pronunciation notation and deck production only after the remaining Core band evidence, representative
    lessons and the owner gate justify it.
 
 ---
 
 ## Immediate next action
 
-Unless native feedback arrives first, the next agent-owned action is the **targeted remainder of
-A1**: resolve the five priority rows and batch the remaining EGP results without changing the live
-curriculum. Then proceed to corpus/naturalness evidence and the product-decision packet.
+The priority evidence and Core 71–122 naturalness work are complete. Unless native feedback arrives
+first, the next agent-owned action is to keep generated artifacts current and prepare the
+representative-lesson selection and product decisions that do not require inventing a native
+disposition. Do not author the representative Core set until the catalog gate opens.
 
 If native feedback arrives at any point, switch to section B before authoring another lesson.
 
