@@ -158,6 +158,10 @@ def node_text(node: Node, skip: set[int] | None = None) -> str:
             return item
         if id(item) in skip:
             return ""
+        if item.attrs.get("data-answer"):
+            return item.attrs["data-answer"]
+        if has_class(item, "build-zone") and item.attrs.get("data-a"):
+            return item.attrs["data-a"]
         return "".join(collect(child) for child in item.children)
 
     return re.sub(r"\s+", " ", collect(node)).strip()
@@ -172,6 +176,12 @@ def semantic_text(node: Node) -> str:
             normalized = re.sub(r"\s+", " ", item).strip()
             if normalized:
                 parts.append(normalized)
+            return
+        if item.attrs.get("data-answer"):
+            parts.append(item.attrs["data-answer"])
+            return
+        if has_class(item, "build-zone") and item.attrs.get("data-a"):
+            parts.append(item.attrs["data-a"])
             return
         for child in item.children:
             collect(child)
@@ -206,6 +216,14 @@ def validate_deck_shell(path: pathlib.Path, root: Node, *, allow_yomi: bool = Fa
                 if node.attrs.get("data-sync-id")]
     if len(sync_ids) != len(set(sync_ids)):
         raise ValueError(f"{relative(path)}: duplicate data-sync-id values")
+
+    legacy = [node.attrs.get("data-sync-id", "?") for node in walk(root)
+              if node.tag == "span"
+              and node.attrs.get("class") in {"slot", "answer-space"}
+              and node.attrs.get("data-sync-id")]
+    if legacy:
+        raise ValueError(
+            f"{relative(path)}: runtime-promoted control shells: {legacy[:3]}")
 
     for node in walk(root):
         for attr in ("href", "src"):

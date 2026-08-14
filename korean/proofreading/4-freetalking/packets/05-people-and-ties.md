@@ -12,7 +12,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-advanced/lessons/01-choosing-friends/lesson.html`
-- sha256: `f6b5fc65f30f47986567cd49a2c2f541f0baceff5381bb49ed247e26268665a0`
+- sha256: `0b274fb878da33adbb5cb0179fe0925f8befcf94978bcd9dae100712616671f5`
 - source kind: `model-story`
 
 #### `metadata`
@@ -151,7 +151,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-intermediate/lessons/01-choosing-friends/lesson.html`
-- sha256: `0784d0de061e77b079ecfcedc45f8002f3e6a5221452b66ae17a087bd4a7e1d9`
+- sha256: `a29ec2d113b809bcfb1dad3c5b9d91c032c2399a8a37c8ac0daedb424879f658`
 - source kind: `model-story`
 
 #### `metadata`
@@ -292,7 +292,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-advanced/lessons/02-first-impression-changed/lesson.html`
-- sha256: `3527e5479339ced84cb1aa268a81b645db7e723587e3f3de801f28e66cd82a2c`
+- sha256: `8e0d693d7c2e38148b7c03a3b76a522fcfffd3df1354516c7af01f4bcf6fb2ef`
 - source kind: `model-story`
 
 #### `metadata`
@@ -431,7 +431,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-intermediate/lessons/02-first-impression-changed/lesson.html`
-- sha256: `724f2037a3efe26c642d4011ec0196392534521421f26504969c94fae65b47cc`
+- sha256: `06e1428068bb6e26ba73f67b17aa46e472eebc2799e7fab5b266d0a369cf437a`
 - source kind: `model-story`
 
 #### `metadata`
@@ -572,7 +572,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-advanced/lessons/03-do-you-believe-mbti/lesson.html`
-- sha256: `696e2a1f9402766a5ebc64efe816406c682ff386fdfa95ab924ae3cc1c52d664`
+- sha256: `3679460a1fad54b69e44ab9e310346051da314babfbd6961d3f1b764f0e48a5a`
 - source kind: `model-story`
 
 #### `metadata`
@@ -711,7 +711,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-intermediate/lessons/03-do-you-believe-mbti/lesson.html`
-- sha256: `1ac793df986b4bcd62ead26580da3b24f23c3b111ae885731b402c92963b4c75`
+- sha256: `32ad26f0e55838fcdb8b84be94f5fd42c91371db702d9f4584cf7942955febe2`
 - source kind: `model-story`
 
 #### `metadata`
@@ -852,7 +852,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-advanced/lessons/04-doing-things-alone/lesson.html`
-- sha256: `0e7439ec603872059eaff82ebbd77e8ef352e3cc80a94f95fe359766e62c3994`
+- sha256: `f610c567a28fad4d3052c9a116dacc348752dd0e3f799deacef1e931d19c2f51`
 - source kind: `model-story`
 
 #### `metadata`
@@ -992,7 +992,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-intermediate/lessons/04-doing-things-alone/lesson.html`
-- sha256: `a79575c621fa816e53acc234fddcfe79f3f669bfe1733834ba083248eefc1ed3`
+- sha256: `5da1869f264f88a5f02a59b2adcefd4444ab268cafceeeb8fa9ffd6e14c12c28`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1134,7 +1134,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-advanced/lessons/05-five-minutes-with-a-stranger/lesson.html`
-- sha256: `1585d99b4e538f2918a34110aa4402c7664a517675633ed6c2d75787bd6bd32d`
+- sha256: `0b2138159d8518e49fb8ab3051586ac3a672efdd21993c0bcc401f0225eaa115`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1273,7 +1273,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-intermediate/lessons/05-five-minutes-with-a-stranger/lesson.html`
-- sha256: `cfdbdb0a49397f712f53d86f0c1fbf548bd67dc4b2e9ab190eed4273d8090c88`
+- sha256: `4b53425ff70d9dcfb9f7dc44814932b2a60d1bb097f95bfdecf11b9725d4901c`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1414,7 +1414,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-advanced/lessons/06-making-up-after-a-fight/lesson.html`
-- sha256: `72ff855d6cdd7cc557de7ed1bc5d491456dd4895c1e707126f8739635c8db18f`
+- sha256: `1bc21c37e575ea3390a5366758e7370877a87091a383f0f1583f9a252a7aedbd`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1553,7 +1553,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-intermediate/lessons/06-making-up-after-a-fight/lesson.html`
-- sha256: `c8479d0d1455d82b69f687dfbef189fdf16e482a8484d80243a8dea49a0e8cc2`
+- sha256: `7339ca9d344e3b048cff2bdf05755aff47abd4543081f88f15f4a798edd3311a`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1694,7 +1694,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-advanced/lessons/07-why-friends-decrease-with-age/lesson.html`
-- sha256: `570c213753cdd784a5f4509c4c555ba055b82d5ecfeb72af5bb7db36ed595365`
+- sha256: `dc96b0c4c0f10db7cb7d049f4d5599de63552572062dcd72dfd495fd13c51fc3`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1833,7 +1833,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-intermediate/lessons/07-why-friends-decrease-with-age/lesson.html`
-- sha256: `85807a8ff0bb47f0b0a2950ad7a17835b90c0a8a87a13779e93722ac3d3fe4f1`
+- sha256: `94a3f7dc9803031a31c1110b739a7d855479aaef91e9c8775d0bb0b5287b95c5`
 - source kind: `model-story`
 
 #### `metadata`

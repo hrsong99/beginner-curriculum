@@ -8,7 +8,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 01 · 01-ticketing
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-kpop-fan-life-intermediate/lessons/01-ticketing/lesson.html`
-- sha256: `52d9573c187bbb214a0b7c7a65e7ae7f75ae3058f265acaf292585c185d6d84d`
+- sha256: `864cdb25a716c8a363e4a0a1f2fb965f8b89b93ac84e7be64a09481c823daba9`
 - level: 중급
 
 ### `metadata`
@@ -402,7 +402,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 02 · 02-streaming
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-kpop-fan-life-intermediate/lessons/02-streaming/lesson.html`
-- sha256: `a62bde88548dc332648b70bfd9b34de775e330beb96a0f98d82752cac53077f3`
+- sha256: `e98640b3ab7c882cf4b9d8f0bd9d0d2c249141f0f1487e5325c798d65fd5770c`
 - level: 중급
 
 ### `metadata`
@@ -796,7 +796,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 03 · 03-concert-prep
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-kpop-fan-life-intermediate/lessons/03-concert-prep/lesson.html`
-- sha256: `0fb6379d30c96653f7afb977b4a9c14103c6437539feb5c4f7a54abe7a3951b6`
+- sha256: `83fb4a79a1f8d70cd18bb9e07bc56f60981cd72407fa66b96192d87d715cd66b`
 - level: 중급
 
 ### `metadata`
@@ -1190,7 +1190,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 04 · 04-merchandise
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-kpop-fan-life-intermediate/lessons/04-merchandise/lesson.html`
-- sha256: `fe31f8c5868ee398566043c3b291dc5765f673a061990e095646b5bc42c5966a`
+- sha256: `3d9bb757b7c5ed959f751e8650bdc88ea467a3a73ffe9180292532557ec706fb`
 - level: 중급
 
 ### `metadata`
@@ -1583,7 +1583,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 05 · 05-birthday-cafe
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-kpop-fan-life-intermediate/lessons/05-birthday-cafe/lesson.html`
-- sha256: `10c016f5ed2887694aee1fca8a4499dcedd79265ee0ad0a8be08ad34cffd22f1`
+- sha256: `bede2bee9c0b90bd7c6bf41d5399a0e3ab063fe7e9a9da215aa4569919b6d63e`
 - level: 중급
 
 ### `metadata`
@@ -1977,7 +1977,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 06 · 06-fandom-friends
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-kpop-fan-life-intermediate/lessons/06-fandom-friends/lesson.html`
-- sha256: `f6297a9ee83b1e11ec3ec95e385e1062c4415366de573074b0342b39831d81d8`
+- sha256: `681ffffd4b11536708339f79a4a28c15e8c717eaafe2d8bad580be63bff37866`
 - level: 중급
 
 ### `metadata`
@@ -2375,7 +2375,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 07 · 07-real-life-vs-fandom
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-kpop-fan-life-intermediate/lessons/07-real-life-vs-fandom/lesson.html`
-- sha256: `5d015179c47d626f47b9fb9fb804da62b7aac48305b245c9f1a54507d4f8dac5`
+- sha256: `446c13db9f4366bcfff32a8f19abe9b4d033c973c24ab385fb094942fab46dd5`
 - level: 중급
 
 ### `metadata`
@@ -2749,7 +2749,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 08 · 08-avoiding-spoilers
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-kpop-fan-life-intermediate/lessons/08-avoiding-spoilers/lesson.html`
-- sha256: `1c3eafff9b76a68540ed22fb9e3981d75df6c36d4138dadb39396dd03dc708bb`
+- sha256: `e13604e25894ebccdb665a86f89a3a4f740a1fd03bc2875407d21f732915ae27`
 - level: 중급
 
 ### `metadata`
@@ -3125,7 +3125,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 09 · 09-denial-phase
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-kpop-fan-life-intermediate/lessons/09-denial-phase/lesson.html`
-- sha256: `d4f66654d74d39d2a0967dd76b9d393b22b507fd22320a5f9d10566f76dd9b2d`
+- sha256: `8c8b1c1a9ff4f93d849e0ff63c5b7668cb091f2ac61c6cc9393c9bc0c81f5fd1`
 - level: 중급
 
 ### `metadata`
@@ -3520,7 +3520,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 10 · 10-merch-trading
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-kpop-fan-life-intermediate/lessons/10-merch-trading/lesson.html`
-- sha256: `c758d2cd980743e626728568a84130dca0e12e2ff2773873c1c89c74985cbb15`
+- sha256: `f25cfde905511aac4f6e8890f648ff4969e539eb42574723ea18063bab97530a`
 - level: 중급
 
 ### `metadata`

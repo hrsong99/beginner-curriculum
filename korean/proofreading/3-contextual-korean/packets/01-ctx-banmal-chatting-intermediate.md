@@ -8,7 +8,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 01 · 01-empathizing
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-banmal-chatting-intermediate/lessons/01-empathizing/lesson.html`
-- sha256: `aeb486c68c0522e6a6e47726dbecdb52bccbe09ea5edbdb33b1556349206cc43`
+- sha256: `e062b40398cd0a6a2d855c33953bdd5475af5da1b2e6359ce0c418a1305ca5cb`
 - level: 중급
 
 ### `metadata`
@@ -375,7 +375,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 02 · 02-seeking-agreement
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-banmal-chatting-intermediate/lessons/02-seeking-agreement/lesson.html`
-- sha256: `92aeee441d12aa3c7be18f5d35ca28ce0e1d8622fa452327ed030d47a0db1513`
+- sha256: `496e0bc244fd0aa924b561eb1fec2f1cb28a32514934684e47c1a488e1975eac`
 - level: 중급
 
 ### `metadata`
@@ -743,7 +743,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 03 · 03-surprise-and-twists
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-banmal-chatting-intermediate/lessons/03-surprise-and-twists/lesson.html`
-- sha256: `3875193d1d8c08aa45ad4e6c3f2fee31413abc411dfe59d52db06224f3f99fab`
+- sha256: `234f30be704a8d63414e8c090b0a77c8180aa8a9bf182fd63ff9bbea672ad087`
 - level: 중급
 
 ### `metadata`
@@ -1113,7 +1113,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 04 · 04-hearsay
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-banmal-chatting-intermediate/lessons/04-hearsay/lesson.html`
-- sha256: `872d928167c5e8cfeb8117146ed47df685b7c486ad26e92b84723bc2e94d35fc`
+- sha256: `c421acf6b7e62d12ba97e4e76ee2a4d9d3ed1a65ac6614bbbc766359d0259785`
 - level: 중급
 
 ### `metadata`
@@ -1483,7 +1483,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 05 · 05-gentle-disagreement
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-banmal-chatting-intermediate/lessons/05-gentle-disagreement/lesson.html`
-- sha256: `79793450078033a18120a39a29b360f3b435047dab659da98174155b291f6210`
+- sha256: `9bbfea9c013d47db03eaa108271aacbee0a65ea7b9580913abbdacb940fc49fb`
 - level: 중급
 
 ### `metadata`
@@ -1852,7 +1852,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 06 · 06-teasing
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-banmal-chatting-intermediate/lessons/06-teasing/lesson.html`
-- sha256: `ce1fdf74bd9c9043d327a08eeafebad711ef2c1387e29cad8cfcaf122e972aac`
+- sha256: `d8418108b17a33449d6e710d0181ffa4833fc9cebd7f1d1ee5bd68d06970f7b8`
 - level: 중급
 
 ### `metadata`
@@ -2222,7 +2222,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 07 · 07-complaining
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-banmal-chatting-intermediate/lessons/07-complaining/lesson.html`
-- sha256: `dc2a4e649c2def4b94d14bbb6ad5e3992ff003d3de3fe9e6f9c2f3082b2402eb`
+- sha256: `eda6f41a4160a1d0c0a76da040125ceb884f6279e0dc327ac50bc4cfe084596b`
 - level: 중급
 
 ### `metadata`
@@ -2591,7 +2591,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 08 · 08-comforting
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-banmal-chatting-intermediate/lessons/08-comforting/lesson.html`
-- sha256: `27ce4d4e8e5cec2efa3eb5f38e8da53ff5cab252be673fecccedb095898ae11a`
+- sha256: `851c7d1420d52ebd74a08b1bd0d1a302180c9127e541221badbb51533fb5294a`
 - level: 중급
 
 ### `metadata`
@@ -2960,7 +2960,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 09 · 09-relief-and-regret
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-banmal-chatting-intermediate/lessons/09-relief-and-regret/lesson.html`
-- sha256: `42607e3b18ee2755420eeff04a37d6fc6d161a579146afbb9d234cb4d90384a4`
+- sha256: `7f12e0464aa14a4862b8949bf0ed461158d3a67cace650ee0d6346f1cd3dfde6`
 - level: 중급
 
 ### `metadata`
@@ -3329,7 +3329,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 10 · 10-kakao-style
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-banmal-chatting-intermediate/lessons/10-kakao-style/lesson.html`
-- sha256: `56278aa19b0f7fcc3809636de909f60d792496c876bef8cc78ff5178f995da33`
+- sha256: `40c83dde00cd181dce01e2e93e5699c39c5503e5462eee44a2b110e705de368f`
 - level: 중급
 
 ### `metadata`

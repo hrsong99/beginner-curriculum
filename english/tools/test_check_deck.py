@@ -59,6 +59,34 @@ class DeckCheckTests(unittest.TestCase):
             self.assertEqual(errors, [])
             self.assertTrue(any("mixed chip counts" in item for item in warnings))
 
+    def test_runtime_promoted_control_shell_is_an_error(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            lesson = pathlib.Path(temporary) / "01-test"
+            lesson.mkdir()
+            deck = lesson / "lesson.html"
+            deck.write_text(
+                '<meta name="google" content="notranslate">'
+                '<meta name="podo:lesson-id" content="01-test">'
+                '<span class="slot" data-sync-id="answer">yes</span>',
+                encoding="utf-8",
+            )
+            errors, _ = check_deck.check(deck)
+            self.assertTrue(any("runtime-promoted control" in item for item in errors))
+
+    def test_static_control_is_not_reported_as_a_shell(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            lesson = pathlib.Path(temporary) / "01-test"
+            lesson.mkdir()
+            deck = lesson / "lesson.html"
+            deck.write_text(
+                '<meta name="google" content="notranslate">'
+                '<meta name="podo:lesson-id" content="01-test">'
+                '<input class="slot-input" data-sync-id="answer" data-answer="yes">',
+                encoding="utf-8",
+            )
+            errors, _ = check_deck.check(deck)
+            self.assertFalse(any("runtime-promoted control" in item for item in errors))
+
 
 if __name__ == "__main__":
     unittest.main()

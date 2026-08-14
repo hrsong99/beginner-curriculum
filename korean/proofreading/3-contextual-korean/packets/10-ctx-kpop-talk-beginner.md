@@ -8,7 +8,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 01 · 01-favorite-member
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-kpop-talk-beginner/lessons/01-favorite-member/lesson.html`
-- sha256: `7a1b41ff3a4f4a01eebc5ca6aedb7c187a013eebcce85e1ae8904eb58403d111`
+- sha256: `6bab3c69f10216947f71c717b63d8723ab2a78fc184ca173ac18f8cd2b7ea899`
 - level: 초급
 
 ### `metadata`
@@ -375,7 +375,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 02 · 02-member-count
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-kpop-talk-beginner/lessons/02-member-count/lesson.html`
-- sha256: `d066d829c835995e96a3c0e89c6740b8c1f1947bf6c4aeaa152275efccbe5936`
+- sha256: `08b94de6620e4d72e24cacc2ba32a8f15c99252147305f9e04fb757d405b2450`
 - level: 초급
 
 ### `metadata`
@@ -744,7 +744,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 03 · 03-member-roles
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-kpop-talk-beginner/lessons/03-member-roles/lesson.html`
-- sha256: `2ab16bd2f0ef49eacec69802a7fea7990510fc4f0fb801b55603ba630e07ec17`
+- sha256: `016a2570e8460781c106b233a3cab3a55af91904dcc46de55dc5f8f644e4deec`
 - level: 초급
 
 ### `metadata`
@@ -1113,7 +1113,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 04 · 04-becoming-a-fan
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-kpop-talk-beginner/lessons/04-becoming-a-fan/lesson.html`
-- sha256: `20842e9196521ea2aa295813c094a472d92dc6e2ea2a2b7e0f0a1eb5d7bb7cac`
+- sha256: `c0c0e02ff20a5b504d50ba1e8d3afefd746c26cb5ee973f37effc49a55b7d1df`
 - level: 초급
 
 ### `metadata`
@@ -1482,7 +1482,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 05 · 05-why-this-member
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-kpop-talk-beginner/lessons/05-why-this-member/lesson.html`
-- sha256: `b7e7bfb54ff524159344a519a45805601eca5e33891fe54462a7b2fb862923fc`
+- sha256: `0e428763b0ce9c312f04cfec5dfc2bba8afcdf98ac80ad196a008bab42e0a41b`
 - level: 초급
 
 ### `metadata`
@@ -1851,7 +1851,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 06 · 06-comparing-songs
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-kpop-talk-beginner/lessons/06-comparing-songs/lesson.html`
-- sha256: `dab63fb6fed945105825f7d641812fde04ce5c640dd033d9cd8e709321e3703e`
+- sha256: `d51b317e03edcdec465ccb23029a333e94d57c0a8be8149cc2f41e06d9e4c3ea`
 - level: 초급
 
 ### `metadata`
@@ -2221,7 +2221,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 07 · 07-describing-charm
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-kpop-talk-beginner/lessons/07-describing-charm/lesson.html`
-- sha256: `1085add8690f7e74a4839655a00b66b739b3f85816d157791c253dd8fadd364f`
+- sha256: `107fac8698fb0cfeff732e0772186199714c34137faa53e396447f7b69124321`
 - level: 초급
 
 ### `metadata`
@@ -2590,7 +2590,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 08 · 08-recommending-a-song
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-kpop-talk-beginner/lessons/08-recommending-a-song/lesson.html`
-- sha256: `d622692270303b953308f5fdaacd1b76fca732801dc6289682b4c1efb70752ba`
+- sha256: `446ee7ad32f80cd764b36a07d1fb3f61390573f2873f0cce74585be5e21615f3`
 - level: 초급
 
 ### `metadata`
@@ -2959,7 +2959,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 09 · 09-asking-about-favorites
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-kpop-talk-beginner/lessons/09-asking-about-favorites/lesson.html`
-- sha256: `b896219929902db394c257f86db722a03a2004772edc938e97e951820af040ab`
+- sha256: `7973b97613e48ade5bd32a0850714c9b0e9425e8ebf5d94711c55c24c163790c`
 - level: 초급
 
 ### `metadata`
@@ -3327,7 +3327,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 10 · 10-fan-experience-and-hopes
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-kpop-talk-beginner/lessons/10-fan-experience-and-hopes/lesson.html`
-- sha256: `3e2077d48a99be7211d8f8f52f684b98922fccc28ed80750349be883d2b142b6`
+- sha256: `9f01520ae402af734374ee4c6d344285a183a6b0a74236fc1422d2e42c4ce217`
 - level: 초급
 
 ### `metadata`

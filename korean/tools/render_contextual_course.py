@@ -39,6 +39,29 @@ def yomi_span(value: str | None) -> str:
     return f'<span class="yomi">{esc(value)}</span>' if value else ''
 
 
+def slot_input(sync_id: str, answer: str) -> str:
+    """A validator-visible inline blank, already present in the source HTML."""
+    return (f'<input class="slot-input" type="text" data-sync-id="{esc(sync_id)}" '
+            f'data-answer="{esc(answer)}" autocomplete="off" spellcheck="false">')
+
+
+def answer_input(sync_id: str, answer: str = "") -> str:
+    """A full-width exact-answer input, or an open textarea when no answer exists."""
+    if answer:
+        control = (f'<input class="space-input" type="text" data-sync-id="{esc(sync_id)}" '
+                   f'data-answer="{esc(answer)}" autocomplete="off" spellcheck="false">')
+    else:
+        control = (f'<textarea class="free-input" data-sync-id="{esc(sync_id)}" rows="2" '
+                   'spellcheck="false" maxlength="2000"></textarea>')
+    return f'<span class="answer-space as-input">{control}</span>'
+
+
+def build_zone(sync_id: str, answer: str) -> str:
+    """A validator-visible custom order control; activities.js supplies the kind."""
+    return (f'<span class="answer-space build-zone" data-sync-id="{esc(sync_id)}" '
+            f'data-sync-kind="order" data-a="{esc(answer)}"></span>')
+
+
 def turn(role: str, ko: str, ja: str, *, slot: str | None = None, yomi: str | None = None) -> str:
     mine = role == "나"
     who = AVATAR if mine else HANA
@@ -46,8 +69,8 @@ def turn(role: str, ko: str, ja: str, *, slot: str | None = None, yomi: str | No
     cls = "turn me" if mine else "turn other"
     if slot:
         content = (f'<div class="answer-box"><span class="answer-label">{esc(ja)}</span>'
-                   f'<span class="answer-fill"><span class="korean"><span class="slot" '
-                   f'data-sync-id="{slot}">{esc(ko)}</span></span></span></div>')
+                   f'<span class="answer-fill"><span class="korean">'
+                   f'{slot_input(slot, ko)}</span></span></div>')
     else:
         reading = f'<span class="yomi">{esc(yomi)}</span>' if yomi else ''
         content = f'<span class="korean">{esc(ko)}</span>{reading}<span class="translation">{esc(ja)}</span>'
@@ -64,8 +87,8 @@ def open_turn(role: str, label: str, sync_id: str, *, seed: str = "", tall: bool
     size = " tall" if tall else " small"
     return (f'<div class="{cls}"><span class="who">{who}<span class="who-name">{esc(role)}</span>'
             f'</span><div class="{bubble}"><div class="answer-box{size}">'
-            f'<span class="answer-label task">{esc(label)}</span><span class="answer-space" '
-            f'data-sync-id="{sync_id}">{esc(seed)}</span></div></div></div>')
+            f'<span class="answer-label task">{esc(label)}</span>'
+            f'{answer_input(sync_id, seed)}</div></div></div>')
 
 
 def page(page_id: str, title: str, title_ja: str, body: str, subtitle: tuple[str, str] | None = None,
@@ -176,16 +199,16 @@ def activities(part: str, examples: list[dict]) -> tuple[str, str, str]:
             for j, chunk in enumerate(ko_chunks, 1)
         )
         reorder.append(f'<div class="task-block"><div class="answer-box small">'
-                       f'<span class="answer-label">{esc(ja)}</span><span class="answer-space" '
-                       f'data-sync-id="{part}-order-{i}">{esc(answer)}</span></div>{chips}</div>')
+                       f'<span class="answer-label">{esc(ja)}</span>'
+                       f'{build_zone(f"{part}-order-{i}", answer)}</div>{chips}</div>')
         fill.append(f'<div class="task-block"><div class="answer-box"><span class="answer-label">'
-                    f'{esc(ja)}</span><span class="answer-fill"><span class="korean"><span '
-                    f'class="slot" data-sync-id="{part}-fill-{i}">{esc(ko)}</span></span></span>'
+                    f'{esc(ja)}</span><span class="answer-fill"><span class="korean">'
+                    f'{slot_input(f"{part}-fill-{i}", ko)}</span></span>'
                     f'{yomi_span("＿＿＿" if yomi else None)}'
                     f'</div></div>')
         translate.append(f'<div class="task-block"><div class="answer-box"><span class="answer-label">'
-                         f'{esc(ja)}</span><span class="answer-space" '
-                         f'data-sync-id="{part}-translate-{i}">{esc(ko)}</span></div></div>')
+                         f'{esc(ja)}</span>{answer_input(f"{part}-translate-{i}", ko)}'
+                         f'</div></div>')
     return ''.join(reorder), ''.join(fill), ''.join(translate)
 
 
@@ -257,7 +280,7 @@ def render_lesson(item: dict, course_name: str, final: bool) -> str:
              ('일본어를 보고 문장 전체를 한국어로 말해 보세요.', '日本語を見て文全体を韓国語で言いましょう。')),
         page('p1-write', '내 이야기로 바꾸기', '自分の話に変えよう',
              '<div class="answer-box tall"><span class="answer-label task">自分の状況で一文作ろう</span>'
-             '<span class="answer-space" data-sync-id="p1-write-answer"></span></div>',
+             f'{answer_input("p1-write-answer")}</div>',
              (p1.get('writeKo', '같은 표현으로 내 상황에 맞는 문장을 만들어 보세요.'), p1.get('writeJa', '同じ表現で自分の状況に合う文を作りましょう。'))),
         transition('part2-intro', 'パート 2', p2['pattern'], '次の表現', p2['ja'], p2['pattern']),
         page('p2-teach', p2.get('teachTitleKo', '두 번째 표현'), p2.get('teachTitleJa', '次の表現'),
@@ -286,7 +309,7 @@ def render_lesson(item: dict, course_name: str, final: bool) -> str:
              ('일본어를 보고 문장 전체를 한국어로 말해 보세요.', '日本語を見て文全体を韓国語で言いましょう。')),
         page('p2-write', '내 이야기로 바꾸기', '自分の話に変えよう',
              '<div class="answer-box tall"><span class="answer-label task">自分の状況で一文作ろう</span>'
-             '<span class="answer-space" data-sync-id="p2-write-answer"></span></div>',
+             f'{answer_input("p2-write-answer")}</div>',
              (p2.get('writeKo', '같은 표현으로 내 상황에 맞는 문장을 만들어 보세요.'), p2.get('writeJa', '同じ表現で自分の状況に合う文を作りましょう。'))),
         transition('part3-intro', 'パート 3', '장면으로 돌아가기', '場面に戻ろう',
                    '二つの表現を一つの会話で使います。', '장면 복습'),

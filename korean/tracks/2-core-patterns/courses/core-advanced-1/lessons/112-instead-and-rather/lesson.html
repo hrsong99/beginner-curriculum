@@ -119,7 +119,7 @@
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">今日は私がごはんをおごる代わりにコーヒーを買ってください。</span>
-          <span class="answer-space" data-sync-id="p1-o-buy">오늘은 제가 밥을 사는 대신에 커피를 사세요</span>
+          <span class="answer-space build-zone" data-sync-id="p1-o-buy" data-sync-kind="order" data-a="오늘은 제가 밥을 사는 대신에 커피를 사세요"></span>
         </div>
         <span class="choice" data-item-id="p1-o-buy-3">사는 대신에</span>
         <span class="choice" data-item-id="p1-o-buy-1">오늘은</span>
@@ -129,7 +129,7 @@
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">私が手伝う代わりに今度ごはん一度おごってください。</span>
-          <span class="answer-space" data-sync-id="p1-o-help">제가 도와주는 대신에 다음에 밥 한번 사 주세요</span>
+          <span class="answer-space build-zone" data-sync-id="p1-o-help" data-sync-kind="order" data-a="제가 도와주는 대신에 다음에 밥 한번 사 주세요"></span>
         </div>
         <span class="choice" data-item-id="p1-o-help-4">밥 한번 사 주세요</span>
         <span class="choice" data-item-id="p1-o-help-2">도와주는 대신에</span>
@@ -139,7 +139,7 @@
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">週末に働く代わりに月曜日にゆっくり休みます。</span>
-          <span class="answer-space" data-sync-id="p1-o-work">주말에 일하는 대신에 월요일에 푹 쉬어요</span>
+          <span class="answer-space build-zone" data-sync-id="p1-o-work" data-sync-kind="order" data-a="주말에 일하는 대신에 월요일에 푹 쉬어요"></span>
         </div>
         <span class="choice" data-item-id="p1-o-work-2">일하는 대신에</span>
         <span class="choice" data-item-id="p1-o-work-4">푹 쉬어요</span>
@@ -149,7 +149,7 @@
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">今日の朝はごはんの代わりにパンを食べました。</span>
-          <span class="answer-space" data-sync-id="p1-o-bread">오늘 아침엔 밥 대신 빵을 먹었어요</span>
+          <span class="answer-space build-zone" data-sync-id="p1-o-bread" data-sync-kind="order" data-a="오늘 아침엔 밥 대신 빵을 먹었어요"></span>
         </div>
         <span class="choice" data-item-id="p1-o-bread-3">빵을</span>
         <span class="choice" data-item-id="p1-o-bread-1">오늘 아침엔</span>
@@ -165,25 +165,25 @@
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">私がごはんを<span class='target'>おごる代わりに</span>コーヒーを買ってください。</span>
-          <span class="answer-fill"><span class="korean">제가 밥을 <span class="slot" data-sync-id="p1-f-buy">사는 대신에</span> 커피를 사세요.</span></span><span class="hint"><span class="hint-chip">買う:사다</span></span>
+          <span class="answer-fill"><span class="korean">제가 밥을 <input class="slot-input" type="text" data-sync-id="p1-f-buy" data-answer="사는 대신에" autocomplete="off" spellcheck="false"> 커피를 사세요.</span></span><span class="hint"><span class="hint-chip">買う:사다</span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">私が<span class='target'>手伝う代わりに</span>ごはん一度おごってください。</span>
-          <span class="answer-fill"><span class="korean">제가 <span class="slot" data-sync-id="p1-f-help">도와주는 대신에</span> 밥 한번 사 주세요.</span></span><span class="hint"><span class="hint-chip">手伝う:도와주다</span></span>
+          <span class="answer-fill"><span class="korean">제가 <input class="slot-input" type="text" data-sync-id="p1-f-help" data-answer="도와주는 대신에" autocomplete="off" spellcheck="false"> 밥 한번 사 주세요.</span></span><span class="hint"><span class="hint-chip">手伝う:도와주다</span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">週末に<span class='target'>働く代わりに</span>月曜日に休みます。</span>
-          <span class="answer-fill"><span class="korean">주말에 <span class="slot" data-sync-id="p1-f-work">일하는 대신에</span> 월요일에 쉬어요.</span></span><span class="hint"><span class="hint-chip">働く:일하다</span></span>
+          <span class="answer-fill"><span class="korean">주말에 <input class="slot-input" type="text" data-sync-id="p1-f-work" data-answer="일하는 대신에" autocomplete="off" spellcheck="false"> 월요일에 쉬어요.</span></span><span class="hint"><span class="hint-chip">働く:일하다</span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">今日は<span class='target'>ごはんの代わりに</span>パンを食べました。</span>
-          <span class="answer-fill"><span class="korean">오늘은 <span class="slot" data-sync-id="p1-f-bread">밥 대신</span> 빵을 먹었어요.</span></span><span class="hint"><span class="hint-chip">ごはん:밥</span></span>
+          <span class="answer-fill"><span class="korean">오늘은 <input class="slot-input" type="text" data-sync-id="p1-f-bread" data-answer="밥 대신" autocomplete="off" spellcheck="false"> 빵을 먹었어요.</span></span><span class="hint"><span class="hint-chip">ごはん:밥</span></span>
         </div>
       </div>
     </div>
@@ -194,25 +194,25 @@
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">私がごはんをおごる代わりにコーヒーを買ってください。</span>
-          <span class="answer-space" data-sync-id="p1-t-buy">제가 밥을 사는 대신에 커피를 사세요</span><span class="hint"><span class="hint-chip">コーヒー:커피</span></span>
+          <span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p1-t-buy" data-answer="제가 밥을 사는 대신에 커피를 사세요" autocomplete="off" spellcheck="false"></span><span class="hint"><span class="hint-chip">コーヒー:커피</span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">私が手伝う代わりにごはん一度おごってください。</span>
-          <span class="answer-space" data-sync-id="p1-t-help">제가 도와주는 대신에 밥 한번 사 주세요</span><span class="hint"><span class="hint-chip">手伝う:도와주다</span></span>
+          <span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p1-t-help" data-answer="제가 도와주는 대신에 밥 한번 사 주세요" autocomplete="off" spellcheck="false"></span><span class="hint"><span class="hint-chip">手伝う:도와주다</span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">週末に働く代わりに月曜日に休みます。</span>
-          <span class="answer-space" data-sync-id="p1-t-work">주말에 일하는 대신에 월요일에 쉬어요</span><span class="hint"><span class="hint-chip">休む:쉬다</span></span>
+          <span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p1-t-work" data-answer="주말에 일하는 대신에 월요일에 쉬어요" autocomplete="off" spellcheck="false"></span><span class="hint"><span class="hint-chip">休む:쉬다</span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">ごはんの代わりにパンを食べました。</span>
-          <span class="answer-space" data-sync-id="p1-t-bread">밥 대신 빵을 먹었어요</span><span class="hint"><span class="hint-chip">パン:빵</span></span>
+          <span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p1-t-bread" data-answer="밥 대신 빵을 먹었어요" autocomplete="off" spellcheck="false"></span><span class="hint"><span class="hint-chip">パン:빵</span></span>
         </div>
       </div>
     </div>
@@ -223,7 +223,7 @@
       <div class="tutor-note">주고받는 조건이 되는지 봐 주세요. 한쪽만 있으면 이 표현이 안 어울려요.</div>
       <div class="task-block">
         <div class="answer-box tall">
-          <span class="answer-space" data-sync-id="p1-free-instead"></span><span class="hint"><span class="hint-chip">代わりに:대신</span><span class="hint-chip">休む:쉬다</span><span class="hint-chip">早く:일찍</span><span class="hint-chip">終わる:끝나다</span><span class="hint-chip">宿題:숙제</span><span class="hint-chip">コーヒー:커피</span></span>
+          <span class="answer-space as-input"><textarea class="free-input" data-sync-id="p1-free-instead" rows="2" spellcheck="false" maxlength="2000"></textarea></span><span class="hint"><span class="hint-chip">代わりに:대신</span><span class="hint-chip">休む:쉬다</span><span class="hint-chip">早く:일찍</span><span class="hint-chip">終わる:끝나다</span><span class="hint-chip">宿題:숙제</span><span class="hint-chip">コーヒー:커피</span></span>
         </div>
       </div>
     </div>
@@ -309,7 +309,7 @@
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">ここであきらめるくらいならいっそもう一度やってみます。</span>
-          <span class="answer-space" data-sync-id="p2-o-give">여기서 포기하느니 차라리 한 번 더 해 볼래요</span>
+          <span class="answer-space build-zone" data-sync-id="p2-o-give" data-sync-kind="order" data-a="여기서 포기하느니 차라리 한 번 더 해 볼래요"></span>
         </div>
         <span class="choice" data-item-id="p2-o-give-3">차라리</span>
         <span class="choice" data-item-id="p2-o-give-1">여기서</span>
@@ -319,7 +319,7 @@
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">三十分待つくらいならいっそ歩いたほうがましです。</span>
-          <span class="answer-space" data-sync-id="p2-o-wait">삼십 분 기다리느니 차라리 걸어가는 게 나아요</span>
+          <span class="answer-space build-zone" data-sync-id="p2-o-wait" data-sync-kind="order" data-a="삼십 분 기다리느니 차라리 걸어가는 게 나아요"></span>
         </div>
         <span class="choice" data-item-id="p2-o-wait-4">걸어가는 게 나아요</span>
         <span class="choice" data-item-id="p2-o-wait-2">기다리느니</span>
@@ -329,7 +329,7 @@
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">そんなふうにするくらいならいっそやらないほうがましです。</span>
-          <span class="answer-space" data-sync-id="p2-o-do">그렇게 하느니 차라리 아예 안 하는 게 나아요</span>
+          <span class="answer-space build-zone" data-sync-id="p2-o-do" data-sync-kind="order" data-a="그렇게 하느니 차라리 아예 안 하는 게 나아요"></span>
         </div>
         <span class="choice" data-item-id="p2-o-do-2">차라리</span>
         <span class="choice" data-item-id="p2-o-do-4">안 하는 게 나아요</span>
@@ -339,7 +339,7 @@
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">今食べるくらいならいっそあとでちゃんと食べます。</span>
-          <span class="answer-space" data-sync-id="p2-o-eat">지금 먹느니 차라리 이따가 제대로 먹을래요</span>
+          <span class="answer-space build-zone" data-sync-id="p2-o-eat" data-sync-kind="order" data-a="지금 먹느니 차라리 이따가 제대로 먹을래요"></span>
         </div>
         <span class="choice" data-item-id="p2-o-eat-3">이따가</span>
         <span class="choice" data-item-id="p2-o-eat-1">지금 먹느니</span>
@@ -355,25 +355,25 @@
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label"><span class='target'>あきらめるくらいなら</span>いっそもう一度やってみます。</span>
-          <span class="answer-fill"><span class="korean"><span class="slot" data-sync-id="p2-f-give">포기하느니</span> 차라리 한 번 더 해 볼래요.</span></span><span class="hint"><span class="hint-chip">あきらめる:포기하다</span></span>
+          <span class="answer-fill"><span class="korean"><input class="slot-input" type="text" data-sync-id="p2-f-give" data-answer="포기하느니" autocomplete="off" spellcheck="false"> 차라리 한 번 더 해 볼래요.</span></span><span class="hint"><span class="hint-chip">あきらめる:포기하다</span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label"><span class='target'>待つくらいなら</span>いっそ歩いたほうがましです。</span>
-          <span class="answer-fill"><span class="korean"><span class="slot" data-sync-id="p2-f-wait">기다리느니</span> 차라리 걸어가는 게 나아요.</span></span><span class="hint"><span class="hint-chip">待つ:기다리다</span></span>
+          <span class="answer-fill"><span class="korean"><input class="slot-input" type="text" data-sync-id="p2-f-wait" data-answer="기다리느니" autocomplete="off" spellcheck="false"> 차라리 걸어가는 게 나아요.</span></span><span class="hint"><span class="hint-chip">待つ:기다리다</span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label"><span class='target'>そんなふうにするくらいなら</span>いっそやらないほうがましです。</span>
-          <span class="answer-fill"><span class="korean"><span class="slot" data-sync-id="p2-f-do">그렇게 하느니</span> 차라리 안 하는 게 나아요.</span></span><span class="hint"><span class="hint-chip">そうする:그렇게 하다</span></span>
+          <span class="answer-fill"><span class="korean"><input class="slot-input" type="text" data-sync-id="p2-f-do" data-answer="그렇게 하느니" autocomplete="off" spellcheck="false"> 차라리 안 하는 게 나아요.</span></span><span class="hint"><span class="hint-chip">そうする:그렇게 하다</span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label"><span class='target'>今食べるくらいなら</span>いっそあとでちゃんと食べます。</span>
-          <span class="answer-fill"><span class="korean"><span class="slot" data-sync-id="p2-f-eat">지금 먹느니</span> 차라리 이따가 먹을래요.</span></span><span class="hint"><span class="hint-chip">食べる:먹다</span></span>
+          <span class="answer-fill"><span class="korean"><input class="slot-input" type="text" data-sync-id="p2-f-eat" data-answer="지금 먹느니" autocomplete="off" spellcheck="false"> 차라리 이따가 먹을래요.</span></span><span class="hint"><span class="hint-chip">食べる:먹다</span></span>
         </div>
       </div>
     </div>
@@ -384,25 +384,25 @@
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">あきらめるくらいならいっそもう一度やってみます。</span>
-          <span class="answer-space" data-sync-id="p2-t-give">포기하느니 차라리 한 번 더 해 볼래요</span><span class="hint"><span class="hint-chip">あきらめる:포기하다</span></span>
+          <span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p2-t-give" data-answer="포기하느니 차라리 한 번 더 해 볼래요" autocomplete="off" spellcheck="false"></span><span class="hint"><span class="hint-chip">あきらめる:포기하다</span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">待つくらいならいっそ歩いたほうがましです。</span>
-          <span class="answer-space" data-sync-id="p2-t-wait">기다리느니 차라리 걸어가는 게 나아요</span><span class="hint"><span class="hint-chip">待つ:기다리다</span></span>
+          <span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p2-t-wait" data-answer="기다리느니 차라리 걸어가는 게 나아요" autocomplete="off" spellcheck="false"></span><span class="hint"><span class="hint-chip">待つ:기다리다</span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">そうするくらいならいっそやらないほうがましです。</span>
-          <span class="answer-space" data-sync-id="p2-t-do">그렇게 하느니 차라리 안 하는 게 나아요</span><span class="hint"><span class="hint-chip">そうする:그렇게 하다</span></span>
+          <span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p2-t-do" data-answer="그렇게 하느니 차라리 안 하는 게 나아요" autocomplete="off" spellcheck="false"></span><span class="hint"><span class="hint-chip">そうする:그렇게 하다</span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">今食べるくらいならいっそあとで食べます。</span>
-          <span class="answer-space" data-sync-id="p2-t-eat">지금 먹느니 차라리 이따가 먹을래요</span><span class="hint"><span class="hint-chip">あとで:이따가</span></span>
+          <span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p2-t-eat" data-answer="지금 먹느니 차라리 이따가 먹을래요" autocomplete="off" spellcheck="false"></span><span class="hint"><span class="hint-chip">あとで:이따가</span></span>
         </div>
       </div>
     </div>
@@ -413,7 +413,7 @@
       <div class="tutor-note">실제로 뒤의 선택을 해도 맞아요. 강한 불만이나 과장을 담아 말해도 자연스러워요.</div>
       <div class="task-block">
         <div class="answer-box tall">
-          <span class="answer-space" data-sync-id="p2-free-ratherthan"></span><span class="hint"><span class="hint-chip">待つ:기다리다</span><span class="hint-chip">並ぶ:줄 서다</span><span class="hint-chip">あきらめる:포기하다</span><span class="hint-chip">いっそ:차라리</span><span class="hint-chip">寝る:자다</span><span class="hint-chip">家:집</span></span>
+          <span class="answer-space as-input"><textarea class="free-input" data-sync-id="p2-free-ratherthan" rows="2" spellcheck="false" maxlength="2000"></textarea></span><span class="hint"><span class="hint-chip">待つ:기다리다</span><span class="hint-chip">並ぶ:줄 서다</span><span class="hint-chip">あきらめる:포기하다</span><span class="hint-chip">いっそ:차라리</span><span class="hint-chip">寝る:자다</span><span class="hint-chip">家:집</span></span>
         </div>
       </div>
     </div>
@@ -443,11 +443,11 @@
       <div class="tutor-note">학생이 말한 대로 빈칸에 적어 주세요. ‘느니’와 ‘대신에’가 번갈아 나오는 흥정이에요.</div>
       <div class="dialogue">
         <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">현장 판매 표가 있대요. 세 시간만 줄 서면 돼요.</span><span class="translation">当日券があるそうです。三時間並べばいいんです。</span></div></div>
-        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">三時間ですか？<span class="target">待つくらいなら</span>いっそ家で見ます。</span><span class="answer-fill"><span class="korean">세 시간이요? <span class="slot" data-sync-id="p3-c-wait">기다리느니</span> 차라리 집에서 볼래요.</span></span><span class="hint"><span class="hint-chip">待つ:기다리다</span></span></div></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">三時間ですか？<span class="target">待つくらいなら</span>いっそ家で見ます。</span><span class="answer-fill"><span class="korean">세 시간이요? <input class="slot-input" type="text" data-sync-id="p3-c-wait" data-answer="기다리느니" autocomplete="off" spellcheck="false"> 차라리 집에서 볼래요.</span></span><span class="hint"><span class="hint-chip">待つ:기다리다</span></span></div></div></div>
         <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">에이, 같이 가요. 제가 자리 잡고 있을게요.</span><span class="translation">えー、一緒に行きましょう。私が場所取りしてますよ。</span></div></div>
-        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">じゃあ私が<span class="target">並ぶ代わりに</span>夕飯おごってください。</span><span class="answer-fill"><span class="korean">그럼 제가 <span class="slot" data-sync-id="p3-c-line">줄 서는 대신에</span> 저녁 사 주세요.</span></span><span class="hint"><span class="hint-chip">並ぶ:줄 서다</span></span></div></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">じゃあ私が<span class="target">並ぶ代わりに</span>夕飯おごってください。</span><span class="answer-fill"><span class="korean">그럼 제가 <input class="slot-input" type="text" data-sync-id="p3-c-line" data-answer="줄 서는 대신에" autocomplete="off" spellcheck="false"> 저녁 사 주세요.</span></span><span class="hint"><span class="hint-chip">並ぶ:줄 서다</span></span></div></div></div>
         <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">좋아요! 그 정도는 해야죠.</span><span class="translation">いいですよ！それくらいはしないと。</span></div></div>
-        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">約束しましたよ。<span class="target">あきらめるくらいなら</span>いっそ行くほうがましですね。</span><span class="answer-fill"><span class="korean">약속했어요. <span class="slot" data-sync-id="p3-c-give">포기하느니</span> 차라리 가는 게 낫죠.</span></span><span class="hint"><span class="hint-chip">あきらめる:포기하다</span></span></div></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">約束しましたよ。<span class="target">あきらめるくらいなら</span>いっそ行くほうがましですね。</span><span class="answer-fill"><span class="korean">약속했어요. <input class="slot-input" type="text" data-sync-id="p3-c-give" data-answer="포기하느니" autocomplete="off" spellcheck="false"> 차라리 가는 게 낫죠.</span></span><span class="hint"><span class="hint-chip">あきらめる:포기하다</span></span></div></div></div>
       </div>
     </div>
 
@@ -457,11 +457,11 @@
       <div class="tutor-note">첫 질문은 ‘대신에’로, 두 번째는 ‘느니 차라리’로 답하게 돼요. 두 번째는 톤이 센지 봐 주세요.</div>
       <div class="dialogue">
         <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">先生</span></span><div class="bubble"><span class="korean">제가 다음 수업을 삼십 분 일찍 시작하고 싶어요. 대신 뭘 달라고 하시겠어요?</span><span class="translation">次の授業を30分早く始めたいです。代わりに何を求めますか？</span></div></div>
-        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label">〜는 대신에 〜세요.<span class="task">自分のこと</span></span><span class="answer-space" data-sync-id="p3-ft-instead"></span><span class="hint"><span class="hint-chip">代わりに:대신</span><span class="hint-chip">早く:일찍</span><span class="hint-chip">終わる:끝나다</span><span class="hint-chip">宿題:숙제</span></span></div></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label">〜는 대신에 〜세요.<span class="task">自分のこと</span></span><span class="answer-space as-input"><textarea class="free-input" data-sync-id="p3-ft-instead" rows="2" spellcheck="false" maxlength="2000"></textarea></span><span class="hint"><span class="hint-chip">代わりに:대신</span><span class="hint-chip">早く:일찍</span><span class="hint-chip">終わる:끝나다</span><span class="hint-chip">宿題:숙제</span></span></div></div></div>
         <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">先生</span></span><div class="bubble"><span class="korean">세 시간 줄을 서면 좋아하는 가수를 볼 수 있어요. 어떠세요?</span><span class="translation">三時間並べば好きな歌手が見られます。どうですか？</span></div></div>
-        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label">〜느니 차라리 〜.<span class="task">自分のこと</span></span><span class="answer-space" data-sync-id="p3-ft-ratherthan"></span><span class="hint"><span class="hint-chip">待つ:기다리다</span><span class="hint-chip">並ぶ:줄 서다</span><span class="hint-chip">いっそ:차라리</span><span class="hint-chip">家:집</span></span></div></div></div>
-        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label">先生なら三時間並びますか？<span class="task">先生にも聞いてみましょう</span></span><span class="answer-space" data-sync-id="p3-ft-question">선생님이라면 세 시간 줄 서시겠어요?</span></div></div></div>
-        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">先生</span></span><div class="bubble"><div class="answer-box small"><span class="answer-label">先生の答え</span><span class="answer-space" data-sync-id="p3-freetalk-tutor"></span></div></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label">〜느니 차라리 〜.<span class="task">自分のこと</span></span><span class="answer-space as-input"><textarea class="free-input" data-sync-id="p3-ft-ratherthan" rows="2" spellcheck="false" maxlength="2000"></textarea></span><span class="hint"><span class="hint-chip">待つ:기다리다</span><span class="hint-chip">並ぶ:줄 서다</span><span class="hint-chip">いっそ:차라리</span><span class="hint-chip">家:집</span></span></div></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label">先生なら三時間並びますか？<span class="task">先生にも聞いてみましょう</span></span><span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p3-ft-question" data-answer="선생님이라면 세 시간 줄 서시겠어요?" autocomplete="off" spellcheck="false"></span></div></div></div>
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">先生</span></span><div class="bubble"><div class="answer-box small"><span class="answer-label">先生の答え</span><span class="answer-space as-input"><textarea class="free-input" data-sync-id="p3-freetalk-tutor" rows="2" spellcheck="false" maxlength="2000"></textarea></span></div></div></div>
       </div>
     </div>
 
@@ -470,11 +470,11 @@
       <p class="section-subtitle"><span class="ko">보너스! 유명한 맛집 앞인데 대기가 두 시간이에요. 직원이 안내해요.</span><span class="ja">ボーナス！有名店の前ですが、待ち時間が2時間です。スタッフが案内します。</span></p>
       <div class="dialogue">
         <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">相手</span></span><div class="bubble"><span class="korean">지금 대기 두 시간이세요. 이름 올려 드릴까요?</span><span class="translation">今お待ち2時間です。お名前入れましょうか？</span></div></div>
-        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">二時間ですか…<span class="target">待つくらいなら</span>いっそ他のところに行きます。</span><span class="answer-fill"><span class="korean">두 시간이요… <span class="slot" data-sync-id="trip-wait">기다리느니</span> 차라리 다른 데 갈래요.</span></span><span class="hint"><span class="hint-chip">待つ:기다리다</span></span></div></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">二時間ですか…<span class="target">待つくらいなら</span>いっそ他のところに行きます。</span><span class="answer-fill"><span class="korean">두 시간이요… <input class="slot-input" type="text" data-sync-id="trip-wait" data-answer="기다리느니" autocomplete="off" spellcheck="false"> 차라리 다른 데 갈래요.</span></span><span class="hint"><span class="hint-chip">待つ:기다리다</span></span></div></div></div>
         <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">相手</span></span><div class="bubble"><span class="korean">아, 그럼 포장은 어떠세요? 포장은 이십 분이면 돼요.</span><span class="translation">あ、ではお持ち帰りはどうですか？お持ち帰りなら20分で大丈夫です。</span></div></div>
-        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">いいですね。<span class="target">店で食べる代わりに</span>持ち帰ります。</span><span class="answer-fill"><span class="korean">좋네요. <span class="slot" data-sync-id="trip-instead">가게에서 먹는 대신에</span> 포장할게요.</span></span><span class="hint"><span class="hint-chip">店:가게</span><span class="hint-chip">持ち帰る:포장하다</span></span></div></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">いいですね。<span class="target">店で食べる代わりに</span>持ち帰ります。</span><span class="answer-fill"><span class="korean">좋네요. <input class="slot-input" type="text" data-sync-id="trip-instead" data-answer="가게에서 먹는 대신에" autocomplete="off" spellcheck="false"> 포장할게요.</span></span><span class="hint"><span class="hint-chip">店:가게</span><span class="hint-chip">持ち帰る:포장하다</span></span></div></div></div>
         <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">相手</span></span><div class="bubble"><span class="korean">네. 저쪽 공원에서 드시면 자리도 좋아요.</span><span class="translation">はい。あちらの公園で召し上がると場所もいいですよ。</span></div></div>
-        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">ありがとうございます。<span class="target">あきらめるくらいなら</span>いっそそうするほうがましですね。</span><span class="answer-fill"><span class="korean">감사합니다. <span class="slot" data-sync-id="trip-give">포기하느니</span> 차라리 그게 낫죠.</span></span><span class="hint"><span class="hint-chip">あきらめる:포기하다</span></span></div></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">ありがとうございます。<span class="target">あきらめるくらいなら</span>いっそそうするほうがましですね。</span><span class="answer-fill"><span class="korean">감사합니다. <input class="slot-input" type="text" data-sync-id="trip-give" data-answer="포기하느니" autocomplete="off" spellcheck="false"> 차라리 그게 낫죠.</span></span><span class="hint"><span class="hint-chip">あきらめる:포기하다</span></span></div></div></div>
         <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">相手</span></span><div class="bubble"><span class="korean">맞아요. 이십 분만 기다려 주세요!</span><span class="translation">そうですね。20分だけお待ちください！</span></div></div>
       </div>
     </div>

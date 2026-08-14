@@ -66,6 +66,14 @@ def audit(deck: Path):
             bad.append("inline <script>")
             break
 
+    # Lemonboard validates the source HTML without running activities.js. A
+    # synced placeholder span therefore has no resolvable kind even if runtime
+    # code later replaces it with an input. Controls must be static in markup.
+    legacy = re.findall(
+        r'<span class="(?:slot|answer-space)"\s+data-sync-id="([^"]+)"', src)
+    if legacy:
+        bad.append(f"runtime-promoted control shell(s): {legacy[:3]}")
+
     # shared state must be uniquely addressed
     dup = [i for i, n in Counter(re.findall(r'data-sync-id="([^"]+)"', src)).items() if n > 1]
     if dup:

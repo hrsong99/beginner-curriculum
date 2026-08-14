@@ -8,7 +8,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 01 · 01-getting-a-table
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-travel-eating-out-upper-beginner/lessons/01-getting-a-table/lesson.html`
-- sha256: `eb7d5990e55e9e68b9a5cfd2425f67ee117545a8fd18838089b7b446273e46e3`
+- sha256: `0af647829fdb630115b37b034de3016b14dba781ad2eabd9e3a10daaca202fc9`
 - level: 초중급
 
 ### `metadata`
@@ -445,7 +445,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 02 · 02-getting-recommendations
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-travel-eating-out-upper-beginner/lessons/02-getting-recommendations/lesson.html`
-- sha256: `c9a2183c34bbb1217e25574ad6040c9d9158656d6f16b93af16d4744e55a20c6`
+- sha256: `1963b85ef43fd9398469715cddb1d2981c2f2d22fb3c92534c988be90f7e3fe5`
 - level: 초중급
 
 ### `metadata`
@@ -861,7 +861,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 03 · 03-customizing-an-order
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-travel-eating-out-upper-beginner/lessons/03-customizing-an-order/lesson.html`
-- sha256: `06f0c364f26befa699d3d7836d2a8d15b27dbc3c5720d6db6a63d52bcbd95804`
+- sha256: `20bc397fdff2de4667e69ddb2067ead417e8fe1ffea26895747a58f488d8feef`
 - level: 초중급
 
 ### `metadata`
@@ -1267,7 +1267,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 04 · 04-refills-and-extras
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-travel-eating-out-upper-beginner/lessons/04-refills-and-extras/lesson.html`
-- sha256: `e25918206b92402852d620bc9738785f0256da4ff498caa33dbc96140d9c9fb2`
+- sha256: `cc287b93b941bbcbbfa5eac0f1865cc8aee370bc6b9bedcb15d9a0a180a4ecf5`
 - level: 초중급
 
 ### `metadata`
@@ -1666,7 +1666,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 05 · 05-packing-leftovers
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-travel-eating-out-upper-beginner/lessons/05-packing-leftovers/lesson.html`
-- sha256: `15000f3c3178309021d40d7f3125b8b960fc6fd0bab7166f846ad108c7640647`
+- sha256: `4b58bbcb714581bf80c030a27ab40d994c86cd4233d3d072aa302a92aa7b5272`
 - level: 초중급
 
 ### `metadata`
@@ -2065,7 +2065,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 06 · 06-describing-the-taste
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-travel-eating-out-upper-beginner/lessons/06-describing-the-taste/lesson.html`
-- sha256: `ea881ededf6937b170a99434ac0cd14cc9fd692502893700d742eb9415facbdb`
+- sha256: `72cbfffb88159e394dd62a9faa2d5fea24d302d325de361ff62d2d15ae12f96f`
 - level: 초중급
 
 ### `metadata`
@@ -2452,7 +2452,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 07 · 07-raising-a-problem
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-travel-eating-out-upper-beginner/lessons/07-raising-a-problem/lesson.html`
-- sha256: `bea4c9516f40d54856c35470b37b8be0e454ae0f1f92ba77b09d51dc8de4930e`
+- sha256: `96a318029694ee771d50b3a34c5121aa846c118fc499e53e37f5300037af00b7`
 - level: 초중급
 
 ### `metadata`
@@ -2857,7 +2857,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 08 · 08-splitting-the-bill
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-travel-eating-out-upper-beginner/lessons/08-splitting-the-bill/lesson.html`
-- sha256: `28ece6910980e681e73bb15466f29eb9dc4cf2c4fd426435e10161da079fbaab`
+- sha256: `364c71e12cddb3d43ae41b5f00a6929602404009aa6e6b2544c5173b4c1f3ccf`
 - level: 초중급
 
 ### `metadata`
@@ -3282,7 +3282,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 09 · 09-asking-for-a-receipt
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-travel-eating-out-upper-beginner/lessons/09-asking-for-a-receipt/lesson.html`
-- sha256: `eeb4f9afc7591840c75854db4f5940a459edabaf3edcd30c8a13b689684eaa0f`
+- sha256: `822f3e14a99590c9ade70e7702209342c4738beda03fdaa90bcec2b0bf4ed87a`
 - level: 초중급
 
 ### `metadata`
@@ -3681,7 +3681,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 10 · 10-joining-the-waitlist
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-travel-eating-out-upper-beginner/lessons/10-joining-the-waitlist/lesson.html`
-- sha256: `4b0f9dd5846a8c4855e456079f4003ce90361ab06bab0ecf5754d7102504385a`
+- sha256: `e7ad3e7a6f474360068f69aadede0e81cfc70353003c376fe31b453370e10b61`
 - level: 초중급
 
 ### `metadata`

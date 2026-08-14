@@ -8,7 +8,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 01 · 01-first-meeting
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-crush-intermediate/lessons/01-first-meeting/lesson.html`
-- sha256: `852306ce04ab682676533000873a2f35d46d86df997f94c024effaa9696fa16f`
+- sha256: `bc6c0e31284aca4b096d37ffe2fc4539fac45cd4d55dcae0280b349a78e94db4`
 - level: 중급
 
 ### `metadata`
@@ -460,7 +460,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 02 · 02-keeps-crossing-my-mind
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-crush-intermediate/lessons/02-keeps-crossing-my-mind/lesson.html`
-- sha256: `1b421df55605d47c1a47cf326089c28a7c976aa5f26aae829a89aba40e77b034`
+- sha256: `ee77d39de0d9776c199a9a34f63c1cecb930dbb2072e1eecc191671f25c332ae`
 - level: 중급
 
 ### `metadata`
@@ -865,7 +865,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 03 · 03-push-and-pull
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-crush-intermediate/lessons/03-push-and-pull/lesson.html`
-- sha256: `4fbc049b0a2207f71a220b1b5378a1a9fc5bc634d3a85c3128e1ed591d5b7af4`
+- sha256: `515d876fd3628e010410078cb1a9a60a3cdb5b9a20dbe01c4d731dd84d22dd6f`
 - level: 중급
 
 ### `metadata`
@@ -1290,7 +1290,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 04 · 04-first-date
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-crush-intermediate/lessons/04-first-date/lesson.html`
-- sha256: `e425f5ea8620263a6fbabc86b258b8c8ba91cac61122d3d9883c570375b8d3b7`
+- sha256: `854eabe24ac4fe1ff171ea3a76d69b23cd1107cd584b1056f6ccd5e92e66fe3e`
 - level: 중급
 
 ### `metadata`
@@ -1735,7 +1735,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 05 · 05-butterflies
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-crush-intermediate/lessons/05-butterflies/lesson.html`
-- sha256: `e9128cab3bbce200925a5ee1e4d146e821d767e67b791e555ad8889e77723d34`
+- sha256: `db7cb0d8d579eb1678f7cdf80f4cc0371e4f52543ceb2b99f1ceaabb1d03dd08`
 - level: 중급
 
 ### `metadata`
@@ -2154,7 +2154,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 06 · 06-jealousy
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-crush-intermediate/lessons/06-jealousy/lesson.html`
-- sha256: `a45a3f90d137827ef56781952a1656e1f59eb3f09d7baca6140e210247536023`
+- sha256: `698c514663c6de44ba85f728efd21a08460f807a7de0245046a8370209d2b330`
 - level: 중급
 
 ### `metadata`
@@ -2579,7 +2579,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 07 · 07-courage
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-crush-intermediate/lessons/07-courage/lesson.html`
-- sha256: `1e2d9fcf6c0d1ab04eed7c81319697319181d2122795b744747ac561150261b7`
+- sha256: `a5f342e02f0f23f0bddc7a5d4006a093fa683dee3f985193edf7e56736f555bd`
 - level: 중급
 
 ### `metadata`
@@ -3004,7 +3004,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 08 · 08-confession
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-crush-intermediate/lessons/08-confession/lesson.html`
-- sha256: `c0c345bc090f71bb5484256cf8296b831b973a4933b6d1caba9826a81d8cb6d1`
+- sha256: `a1643275a6c519ecfe4e0074aef75d0399bdc208f083901ca4f803632af38f9f`
 - level: 중급
 
 ### `metadata`
@@ -3449,7 +3449,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 09 · 09-wavering
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-crush-intermediate/lessons/09-wavering/lesson.html`
-- sha256: `43bca6d43cd9b9940395242e76706218f5d0203ddaf0bd26864481f8acaf6924`
+- sha256: `9eb8f3dc76ac95db3653d7cd3f159a7969802acf690b178fb5de07519ee668cb`
 - level: 중급
 
 ### `metadata`
@@ -3894,7 +3894,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 10 · 10-certainty
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-crush-intermediate/lessons/10-certainty/lesson.html`
-- sha256: `aa852c83f1e8798395009fe6b6cfbf5111ce0cb71d6ded6d0a12f58d8be14e12`
+- sha256: `94a8568ac80ce50613783ee290ec4410050fd094d1ce142d6be694c1f06ee863`
 - level: 중급
 
 ### `metadata`

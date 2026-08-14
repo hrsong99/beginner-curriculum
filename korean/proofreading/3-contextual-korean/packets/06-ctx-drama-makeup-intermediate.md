@@ -8,7 +8,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 01 · 01-argument
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-makeup-intermediate/lessons/01-argument/lesson.html`
-- sha256: `5cf937cc73ccf60262f49076689b8d3e35b22370eeda99e3caaa637856f500f1`
+- sha256: `6c05e2d85f09302b5623196dec99d88e68a9f4f83a8ce03bde20b42a3681d74e`
 - level: 중급
 
 ### `metadata`
@@ -432,7 +432,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 02 · 02-hurt-feelings
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-makeup-intermediate/lessons/02-hurt-feelings/lesson.html`
-- sha256: `fcd0b2c62dfe309b5c2aa2fd72ac15bb06d9137845a1b7fe7446dede3cabd189`
+- sha256: `a730802d84325f6d4408168643543f5bd6ac017561f836460c19cd147e3ece6d`
 - level: 중급
 
 ### `metadata`
@@ -880,7 +880,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 03 · 03-cold-war
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-makeup-intermediate/lessons/03-cold-war/lesson.html`
-- sha256: `d2c27c08a1272339e3e552126bf1a4b35d3269750c2f3af74501cd37c9eff2b1`
+- sha256: `20b870be93df7d0cd4cac94c1fff76d28358a36ee0b9a6bad1471c99e4bc7d38`
 - level: 중급
 
 ### `metadata`
@@ -1308,7 +1308,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 04 · 04-confrontation
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-makeup-intermediate/lessons/04-confrontation/lesson.html`
-- sha256: `0af31d9f8702ebab79485f151e2f185b32b67ccc598fda171643e89532d07733`
+- sha256: `93f693dc15e74a2e007109a5fcb57919089c62c9f248ddc6e3eb99630001aad0`
 - level: 중급
 
 ### `metadata`
@@ -1736,7 +1736,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 05 · 05-misunderstanding
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-makeup-intermediate/lessons/05-misunderstanding/lesson.html`
-- sha256: `d987382792b52c471485e51e3dc12edf5dec300818fa249f9302d7ba2e502332`
+- sha256: `1f3397db4326064ce3c883ad0019ac29a96f6d8bd54873379b6cde96298cc380`
 - level: 중급
 
 ### `metadata`
@@ -2185,7 +2185,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 06 · 06-explosion
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-makeup-intermediate/lessons/06-explosion/lesson.html`
-- sha256: `cb1c83a818c1e81c93ceb3ff2ad0bdcc6ca18331367dfd38c965076b34e535d3`
+- sha256: `16081cf2d67dfe6379cbcc3a78493f3d0ce0fd37eb06e78bb9ad907d208ac9c5`
 - level: 중급
 
 ### `metadata`
@@ -2610,7 +2610,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 07 · 07-apology
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-makeup-intermediate/lessons/07-apology/lesson.html`
-- sha256: `f6eb42aacabb4a7d2fe5182a53c73dd7030a6152bf27b6e97fca8d7577deda38`
+- sha256: `8b4745e5cd79fbb1836e0c11aa086490c2f301687b9db2f993bcee73b7c3105d`
 - level: 중급
 
 ### `metadata`
@@ -3057,7 +3057,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 08 · 08-sincerity
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-makeup-intermediate/lessons/08-sincerity/lesson.html`
-- sha256: `3f0821720bace601c8f8ca7acadb716fb975d426019b695c57cde3aeb247e479`
+- sha256: `582330e9ce3c15ee98e63593df9d4197915091338c2e235892982e99bc3fa012`
 - level: 중급
 
 ### `metadata`
@@ -3484,7 +3484,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 09 · 09-reconciliation
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-makeup-intermediate/lessons/09-reconciliation/lesson.html`
-- sha256: `3f211ea99fdf833bdd0fa734456a8a0a07e7f8ca6f950b0fa5ca831353f47b4c`
+- sha256: `3033db44aeebadeb0b3895d8aac63bd6a2cfd4acf13a6949c0af5c71075ab6fe`
 - level: 중급
 
 ### `metadata`
@@ -3911,7 +3911,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 10 · 10-breakup
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-makeup-intermediate/lessons/10-breakup/lesson.html`
-- sha256: `03d2d8cbb29ba753586ae5c1bdf7b5a22a7377ff1e740ed39865f197e1da4535`
+- sha256: `f03d9695b3115f3de4762f3ea8cba3fde991a36b462d2035cc7f49dc2e93d637`
 - level: 중급
 
 ### `metadata`

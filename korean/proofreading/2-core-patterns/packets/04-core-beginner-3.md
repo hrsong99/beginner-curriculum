@@ -8,7 +8,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 20 · 20-with-and-to
 
 - source: `korean/tracks/2-core-patterns/courses/core-beginner-3/lessons/20-with-and-to/lesson.html`
-- sha256: `903b271b549bede764a5a321554c4ee4f553d3dea0c08667cd907fff6e49e1c8`
+- sha256: `c2806b2f6e6eae27ecccc12ca66a74e3442253014553e04e87e3f2ff9a6c6fb9`
 - level: 초급
 
 ### `metadata`
@@ -405,7 +405,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 21 · 21-too-and-only
 
 - source: `korean/tracks/2-core-patterns/courses/core-beginner-3/lessons/21-too-and-only/lesson.html`
-- sha256: `4697a1e9a43da435723a6c7ad75747e87ad64ba678ced2acb9ea2634447f69f4`
+- sha256: `69cec0d733e410a4e8427ad268f8b9f834a20aa24d2a003cac87754a7f3aa2b5`
 - level: 초급
 
 ### `metadata`
@@ -796,7 +796,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 22 · 22-and-then
 
 - source: `korean/tracks/2-core-patterns/courses/core-beginner-3/lessons/22-and-then/lesson.html`
-- sha256: `92d165e155a42cadf4b5ee6d83eaebcb8e1c1d714e56bb09bb395ef2ddc40c2d`
+- sha256: `3325b879b44f1dbcc04de0a53abc677564517cc8bf14d0569e92a78da048a83b`
 - level: 초급
 
 ### `metadata`
@@ -1233,7 +1233,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 23 · 23-comparing
 
 - source: `korean/tracks/2-core-patterns/courses/core-beginner-3/lessons/23-comparing/lesson.html`
-- sha256: `924f3c3c6a323996260ac3ff9451afbc93e839c3435cc0cefd4adc1e49232b0f`
+- sha256: `c182cd88711050fe3f9d8d71cf2ddb5bebd724530cb8448db8dd28aac007411a`
 - level: 초급
 
 ### `metadata`
@@ -1655,7 +1655,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 24 · 24-formal-speech
 
 - source: `korean/tracks/2-core-patterns/courses/core-beginner-3/lessons/24-formal-speech/lesson.html`
-- sha256: `ad1be0b53fa5bb0e585d652bf518043e2c9a21711ba004cdc4bfb9883ffc8c62`
+- sha256: `5f37ab9162b06433b1b5c29e88f7c6051ab6dcc19c9678a11737435bbbe7e5d9`
 - level: 초급
 
 ### `metadata`
@@ -2083,7 +2083,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 25 · 25-past-tense
 
 - source: `korean/tracks/2-core-patterns/courses/core-beginner-3/lessons/25-past-tense/lesson.html`
-- sha256: `87d978676bfcfb052ae86a3bebdfbbd8b466071ffb0f0caae804fecf7de9daea`
+- sha256: `aace90027bd550a78d4e0897cc70f978c23742d43254032388402f9e8fabd1b0`
 - level: 초급
 
 ### `metadata`
@@ -2500,7 +2500,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 26 · 26-when-was-it
 
 - source: `korean/tracks/2-core-patterns/courses/core-beginner-3/lessons/26-when-was-it/lesson.html`
-- sha256: `f56f9afd27bcf57028b94e72fbe845cbbcdd71b5bf879fd9f49f2399b5a8d837`
+- sha256: `fc36471b8ee002d3423ee34defc77e425972425660ffb356c589ab1cfd230e94`
 - level: 초급
 
 ### `metadata`
@@ -2898,7 +2898,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 27 · 27-why-and-because
 
 - source: `korean/tracks/2-core-patterns/courses/core-beginner-3/lessons/27-why-and-because/lesson.html`
-- sha256: `7e3e30ecc7ea8e6b05b47876fb813bef8bf3d8d9ad9b375309c92b0d006a6cd1`
+- sha256: `ade3f253839a3d0e34ddf30b306275aa5a6836c3a820a24d873f1b56e0c24c04`
 - level: 초급
 
 ### `metadata`
@@ -3331,7 +3331,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 28 · 28-but-and-still
 
 - source: `korean/tracks/2-core-patterns/courses/core-beginner-3/lessons/28-but-and-still/lesson.html`
-- sha256: `20e79e3111a7e1a35ffff7ecf9206da9190566737de94e27aa35969e76387378`
+- sha256: `2a7a281b250eb0d63f2b1c295a5a7215c22c6d2a186af652f84656e1f13b5e82`
 - level: 초급
 
 ### `metadata`
@@ -3761,7 +3761,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 29 · 29-how-do-i-get-there
 
 - source: `korean/tracks/2-core-patterns/courses/core-beginner-3/lessons/29-how-do-i-get-there/lesson.html`
-- sha256: `59886721b8ecb1b7ab2ee2584180be0b1a31e912c54cd89653cdc5fc2090962d`
+- sha256: `c75df3a153864efecb2ca00af79a1f643ef125f9afffa1920edd097df39753c0`
 - level: 초급
 
 ### `metadata`
@@ -4183,7 +4183,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 30 · 30-how-long-its-been
 
 - source: `korean/tracks/2-core-patterns/courses/core-beginner-3/lessons/30-how-long-its-been/lesson.html`
-- sha256: `7ab7c99c8dfb680201a92ff48504a118026179f7c28c0d238097d457e8fb2df5`
+- sha256: `5aa6edc7a6e115cddc974a00bd487c1cf78e332e595769b2962ae95d207a50e9`
 - level: 초급
 
 ### `metadata`

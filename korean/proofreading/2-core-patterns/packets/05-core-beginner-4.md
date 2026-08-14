@@ -8,7 +8,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 31 · 31-what-i-want
 
 - source: `korean/tracks/2-core-patterns/courses/core-beginner-4/lessons/31-what-i-want/lesson.html`
-- sha256: `ced00733e073cbffe91b64713e4b1280c666d3b2bb9c7f4bd34873fd75079b28`
+- sha256: `addee24c411f8beeeee92956b83f1d8409bddbaae83a20e1282dcc391d39d0eb`
 - level: 초급
 
 ### `metadata`
@@ -432,7 +432,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 32 · 32-making-plans
 
 - source: `korean/tracks/2-core-patterns/courses/core-beginner-4/lessons/32-making-plans/lesson.html`
-- sha256: `8ec4868bb3fe560633e07e9e25226e0b15c91bc112c23be1067b5435cf973b94`
+- sha256: `ec9467a380ff75007bccb5cc7a34093c3b6757924a381b8f5ac98ffb7ebf643e`
 - level: 초급
 
 ### `metadata`
@@ -852,7 +852,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 33 · 33-ill-do-it
 
 - source: `korean/tracks/2-core-patterns/courses/core-beginner-4/lessons/33-ill-do-it/lesson.html`
-- sha256: `536dcda90b9ef8eb7dffae417e670b85fd48360d0cdc96fbf7e24a0dfb06aba7`
+- sha256: `843eef47d9a6d4507d4439617a82a528a8397dc5822ee89dcb8cdd31d095eb0d`
 - level: 초급
 
 ### `metadata`
@@ -1274,7 +1274,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 34 · 34-going-to-do
 
 - source: `korean/tracks/2-core-patterns/courses/core-beginner-4/lessons/34-going-to-do/lesson.html`
-- sha256: `f2c2a716a0445d40dec2f8da50b50d9b0595a535500b0668d87251e642fc6d69`
+- sha256: `1d23b29bb79e796c18b2be74a279260fb3e648082c65d5f13e7f0697b3a8b103`
 - level: 초급
 
 ### `metadata`
@@ -1698,7 +1698,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 35 · 35-can-you
 
 - source: `korean/tracks/2-core-patterns/courses/core-beginner-4/lessons/35-can-you/lesson.html`
-- sha256: `b11c7104ea25c7828ede2a98ff7b970b337ae01ae854e97b477b6dd0d78b8161`
+- sha256: `b9b487573cb5c12d7cc16f97aa61469e0c8f780e170772051ad11ff39255242d`
 - level: 초급
 
 ### `metadata`
@@ -2124,7 +2124,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 36 · 36-intending-to
 
 - source: `korean/tracks/2-core-patterns/courses/core-beginner-4/lessons/36-intending-to/lesson.html`
-- sha256: `c6461abf167ce8dca10c911050aeb50e5cb2b276218b0eb3249587a8361927af`
+- sha256: `784f9d65946e6886b2fdec4583298c401fa7285867d26b1ead8ed5285e9f4a53`
 - level: 초급
 
 ### `metadata`
@@ -2550,7 +2550,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 37 · 37-if-and-when
 
 - source: `korean/tracks/2-core-patterns/courses/core-beginner-4/lessons/37-if-and-when/lesson.html`
-- sha256: `507f15e34f0a378f2857c1b85b1e16773e3c2430999911b364ea86956a6294af`
+- sha256: `0ad7223694d1ba6a37362373c46c2d8122e4dffbc885a9efa66f711dff1f001e`
 - level: 초급
 
 ### `metadata`
@@ -2959,7 +2959,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 38 · 38-may-i
 
 - source: `korean/tracks/2-core-patterns/courses/core-beginner-4/lessons/38-may-i/lesson.html`
-- sha256: `29826bd38277846697a3a93013780feee6539741e45e148652a27662e75ce87d`
+- sha256: `4f79698fd7bde4e40661aa3a605e0e59ba58331e961cc6ca809c3a620a302e4c`
 - level: 초급
 
 ### `metadata`
@@ -3373,7 +3373,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 39 · 39-thats-all-you-need
 
 - source: `korean/tracks/2-core-patterns/courses/core-beginner-4/lessons/39-thats-all-you-need/lesson.html`
-- sha256: `dc9ed328b7bc0579efacaedf1273a9deea203833157a1b6a3af1065cabf98468`
+- sha256: `e27cdbcf2fa6588c75133b1a2639b92b34a1b91c8c92099267a6afafad7f5f1d`
 - level: 초급
 
 ### `metadata`
@@ -3794,7 +3794,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 40 · 40-i-have-to
 
 - source: `korean/tracks/2-core-patterns/courses/core-beginner-4/lessons/40-i-have-to/lesson.html`
-- sha256: `bf183530a1f984b3bba6f1cf842321114a1c45facd6469407c000fd59baa7457`
+- sha256: `2c18bbba20189e4b449d227f85bc5340f4ccfae7380577d542a56fa67cb13d0d`
 - level: 초급
 
 ### `metadata`
@@ -4215,7 +4215,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 41 · 41-in-progress
 
 - source: `korean/tracks/2-core-patterns/courses/core-beginner-4/lessons/41-in-progress/lesson.html`
-- sha256: `99dd5ecf956d341079eb306612cb5200ca8d87b8eff4535826074ad7043cf306`
+- sha256: `5845f753834761a98de07ddcf6ceeacfe92b0bafc02d90e27d607a440b22d8b0`
 - level: 초급
 
 ### `metadata`
@@ -4646,7 +4646,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 42 · 42-give-it-a-try
 
 - source: `korean/tracks/2-core-patterns/courses/core-beginner-4/lessons/42-give-it-a-try/lesson.html`
-- sha256: `c309e605215689a96ec18175695a1095abbe038745fdae4c5ca7a67fd2051141`
+- sha256: `a54edb31c39a5884a45f0b26a4e7e00153772a307e00b9ceae61c2db53f20eb6`
 - level: 초급
 
 ### `metadata`
@@ -5072,7 +5072,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 43 · 43-banmal-basics
 
 - source: `korean/tracks/2-core-patterns/courses/core-beginner-4/lessons/43-banmal-basics/lesson.html`
-- sha256: `132bd57964ca703583ac272c92f758327c98d164f9798d45d2f841407a84c202`
+- sha256: `3f21e136d6dbb43386567e7c9ecdd4aa8f1236b7b0d55d09957a6a4271b2d540`
 - level: 초급
 
 ### `metadata`
@@ -5497,7 +5497,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 44 · 44-banmal-past-future
 
 - source: `korean/tracks/2-core-patterns/courses/core-beginner-4/lessons/44-banmal-past-future/lesson.html`
-- sha256: `0965efe02e1b28e395680f72b88961e33c9a9f4c58e57e573eef7d2927d8a611`
+- sha256: `e7251a62f2f1372855469ab16c677c4f8e933c2a6e41d1e8d156509baf68540f`
 - level: 초급
 
 ### `metadata`
@@ -5913,7 +5913,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 45 · 45-banmal-lets-go
 
 - source: `korean/tracks/2-core-patterns/courses/core-beginner-4/lessons/45-banmal-lets-go/lesson.html`
-- sha256: `dc85529b7081a05e3ccbe26f07378759f46f8ed03c18da10902778ef04fdd918`
+- sha256: `66efa90667b54014f6f08b9af680a9d4e0b94aa585cc64580b26ea52231dc3c6`
 - level: 초급
 
 ### `metadata`

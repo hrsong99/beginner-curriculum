@@ -138,7 +138,7 @@
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">これは何ですか。</span>
-          <span class="answer-space" data-sync-id="p1-order-this">이건 뭐예요?</span>
+          <span class="answer-space build-zone" data-sync-id="p1-order-this" data-sync-kind="order" data-a="이건 뭐예요?"></span>
         </div>
         <span class="choice" data-item-id="what-1">뭐예요?<span class="yomi">ムォエヨ</span></span>
         <span class="choice" data-item-id="this-1">이건<span class="yomi">イゴン</span></span>
@@ -146,7 +146,7 @@
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">あれは何ですか。</span>
-          <span class="answer-space" data-sync-id="p1-order-over-there">저건 뭐예요?</span>
+          <span class="answer-space build-zone" data-sync-id="p1-order-over-there" data-sync-kind="order" data-a="저건 뭐예요?"></span>
         </div>
         <span class="choice" data-item-id="over-there-1">저건<span class="yomi">チョゴン</span></span>
         <span class="choice" data-item-id="what-2">뭐예요?<span class="yomi">ムォエヨ</span></span>
@@ -154,7 +154,7 @@
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">それはキンパです。</span>
-          <span class="answer-space" data-sync-id="p1-order-gimbap">그건 김밥이에요</span>
+          <span class="answer-space build-zone" data-sync-id="p1-order-gimbap" data-sync-kind="order" data-a="그건 김밥이에요"></span>
         </div>
         <span class="choice" data-item-id="ieyo-1">이에요<span class="yomi">イエヨ</span></span>
         <span class="choice" data-item-id="that-1">그건<span class="yomi">クゴン</span></span>
@@ -163,7 +163,7 @@
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">これは傘ですか？</span>
-          <span class="answer-space" data-sync-id="p1-order-umbrella">이건 우산이에요?</span>
+          <span class="answer-space build-zone" data-sync-id="p1-order-umbrella" data-sync-kind="order" data-a="이건 우산이에요?"></span>
         </div>
         <span class="choice" data-item-id="ieyo-2">이에요?<span class="yomi">イエヨ</span></span>
         <span class="choice" data-item-id="umbrella-1">우산<span class="yomi">ウサン</span></span>
@@ -179,25 +179,25 @@
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">これは<span class="target ending">何ですか</span>？</span>
-          <span class="answer-fill"><span class="korean">이건 <span class="slot" data-sync-id="p1-fill-this">뭐예요</span>?</span><span class="yomi">イゴン ＿＿＿</span></span>
+          <span class="answer-fill"><span class="korean">이건 <input class="slot-input" type="text" data-sync-id="p1-fill-this" data-answer="뭐예요" autocomplete="off" spellcheck="false">?</span><span class="yomi">イゴン ＿＿＿</span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">あれは<span class="target ending">何ですか</span>？</span>
-          <span class="answer-fill"><span class="korean">저건 <span class="slot" data-sync-id="p1-fill-over-there">뭐예요</span>?</span><span class="yomi">チョゴン ＿＿＿</span></span>
+          <span class="answer-fill"><span class="korean">저건 <input class="slot-input" type="text" data-sync-id="p1-fill-over-there" data-answer="뭐예요" autocomplete="off" spellcheck="false">?</span><span class="yomi">チョゴン ＿＿＿</span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label"><span class="target topic">それは</span>キムチです。</span>
-          <span class="answer-fill"><span class="korean"><span class="slot" data-sync-id="p1-fill-that">그건</span> 김치예요.</span><span class="yomi">＿＿＿ キムチエヨ</span></span>
+          <span class="answer-fill"><span class="korean"><input class="slot-input" type="text" data-sync-id="p1-fill-that" data-answer="그건" autocomplete="off" spellcheck="false"> 김치예요.</span><span class="yomi">＿＿＿ キムチエヨ</span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label"><span class="target topic">これは</span>かばんですか？</span>
-          <span class="answer-fill"><span class="korean"><span class="slot" data-sync-id="p1-fill-bag">이건</span> 가방이에요?</span><span class="yomi">＿＿＿ カバンイエヨ</span></span>
+          <span class="answer-fill"><span class="korean"><input class="slot-input" type="text" data-sync-id="p1-fill-bag" data-answer="이건" autocomplete="off" spellcheck="false"> 가방이에요?</span><span class="yomi">＿＿＿ カバンイエヨ</span></span>
         </div>
       </div>
     </div>
@@ -208,28 +208,28 @@
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">これは何ですか。</span>
-          <span class="answer-space" data-sync-id="p1-translate-this">이건 뭐예요?</span>
+          <span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p1-translate-this" data-answer="이건 뭐예요?" autocomplete="off" spellcheck="false"></span>
           <span class="hint"><span class="hint-chip">何:뭐<span class="yomi">ムォ</span></span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">それはキンパですか？</span>
-          <span class="answer-space" data-sync-id="p1-translate-gimbap">그건 김밥이에요?</span>
+          <span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p1-translate-gimbap" data-answer="그건 김밥이에요?" autocomplete="off" spellcheck="false"></span>
           <span class="hint"><span class="hint-chip">キンパ:김밥<span class="yomi">キムパプ</span></span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">あれは何ですか。</span>
-          <span class="answer-space" data-sync-id="p1-translate-over-there">저건 뭐예요?</span>
+          <span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p1-translate-over-there" data-answer="저건 뭐예요?" autocomplete="off" spellcheck="false"></span>
           <span class="hint"><span class="hint-chip">何:뭐<span class="yomi">ムォ</span></span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">これは水です。</span>
-          <span class="answer-space" data-sync-id="p1-translate-water">이건 물이에요</span>
+          <span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p1-translate-water" data-answer="이건 물이에요" autocomplete="off" spellcheck="false"></span>
           <span class="hint"><span class="hint-chip">水:물<span class="yomi">ムル</span></span></span>
         </div>
       </div>
@@ -242,7 +242,7 @@
       <div class="tutor-note">학생이 말한 질문을 여기에 적어 주세요.</div>
       <div class="task-block">
         <div class="answer-box tall">
-          <span class="answer-space" data-sync-id="p1-free-question"></span>
+          <span class="answer-space as-input"><textarea class="free-input" data-sync-id="p1-free-question" rows="2" spellcheck="false" maxlength="2000"></textarea></span>
           <span class="hint"><span class="hint-chip">これ:이거<span class="yomi">イゴ</span></span><span class="hint-chip">それ:그거<span class="yomi">クゴ</span></span><span class="hint-chip">あれ:저거<span class="yomi">チョゴ</span></span><span class="hint-chip">何:뭐<span class="yomi">ムォ</span></span><span class="hint-chip">かばん:가방<span class="yomi">カバン</span></span><span class="hint-chip">傘:우산<span class="yomi">ウサン</span></span><span class="hint-chip">本:책<span class="yomi">チェク</span></span><span class="hint-chip">コーヒー:커피<span class="yomi">コピ</span></span></span>
         </div>
       </div>
@@ -339,7 +339,7 @@
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">この人はハナさんです。</span>
-          <span class="answer-space" data-sync-id="p2-order-person">이 사람은 하나 씨예요</span>
+          <span class="answer-space build-zone" data-sync-id="p2-order-person" data-sync-kind="order" data-a="이 사람은 하나 씨예요"></span>
         </div>
         <span class="choice" data-item-id="p2-person">사람은<span class="yomi">サラムン</span></span>
         <span class="choice" data-item-id="p2-hana">하나 씨예요<span class="yomi">ハナ シエヨ</span></span>
@@ -348,7 +348,7 @@
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">そのかばんは何ですか？</span>
-          <span class="answer-space" data-sync-id="p2-order-bag">그 가방은 뭐예요?</span>
+          <span class="answer-space build-zone" data-sync-id="p2-order-bag" data-sync-kind="order" data-a="그 가방은 뭐예요?"></span>
         </div>
         <span class="choice" data-item-id="p2-what">뭐예요?<span class="yomi">ムォエヨ</span></span>
         <span class="choice" data-item-id="p2-geu-1">그<span class="yomi">ク</span></span>
@@ -357,7 +357,7 @@
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">あの人は先生ですか？</span>
-          <span class="answer-space" data-sync-id="p2-order-teacher">저 사람은 선생님이에요?</span>
+          <span class="answer-space build-zone" data-sync-id="p2-order-teacher" data-sync-kind="order" data-a="저 사람은 선생님이에요?"></span>
         </div>
         <span class="choice" data-item-id="p2-teacher">선생님이에요?<span class="yomi">ソンセンニミエヨ</span></span>
         <span class="choice" data-item-id="p2-person-2">사람은<span class="yomi">サラムン</span></span>
@@ -366,7 +366,7 @@
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">この本は韓国語の本です。</span>
-          <span class="answer-space" data-sync-id="p2-order-book">이 책은 한국어 책이에요</span>
+          <span class="answer-space build-zone" data-sync-id="p2-order-book" data-sync-kind="order" data-a="이 책은 한국어 책이에요"></span>
         </div>
         <span class="choice" data-item-id="p2-i-2">이<span class="yomi">イ</span></span>
         <span class="choice" data-item-id="p2-krbook">한국어 책이에요<span class="yomi">ハングゴ チェギエヨ</span></span>
@@ -381,25 +381,25 @@
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label"><span class="target topic">この</span>人はハナさんです。</span>
-          <span class="answer-fill"><span class="korean"><span class="slot" data-sync-id="p2-fill-person">이</span> 사람은 하나 씨예요.</span><span class="yomi">＿ サラムン ハナ シエヨ</span></span>
+          <span class="answer-fill"><span class="korean"><input class="slot-input" type="text" data-sync-id="p2-fill-person" data-answer="이" autocomplete="off" spellcheck="false"> 사람은 하나 씨예요.</span><span class="yomi">＿ サラムン ハナ シエヨ</span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label"><span class="target topic">その</span>かばんは何ですか？</span>
-          <span class="answer-fill"><span class="korean"><span class="slot" data-sync-id="p2-fill-bag">그</span> 가방은 뭐예요?</span><span class="yomi">＿ カバンウン ムォエヨ</span></span>
+          <span class="answer-fill"><span class="korean"><input class="slot-input" type="text" data-sync-id="p2-fill-bag" data-answer="그" autocomplete="off" spellcheck="false"> 가방은 뭐예요?</span><span class="yomi">＿ カバンウン ムォエヨ</span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label"><span class="target topic">あの</span>人は先生です。</span>
-          <span class="answer-fill"><span class="korean"><span class="slot" data-sync-id="p2-fill-teacher">저</span> 사람은 선생님이에요.</span><span class="yomi">＿ サラムン ソンセンニミエヨ</span></span>
+          <span class="answer-fill"><span class="korean"><input class="slot-input" type="text" data-sync-id="p2-fill-teacher" data-answer="저" autocomplete="off" spellcheck="false"> 사람은 선생님이에요.</span><span class="yomi">＿ サラムン ソンセンニミエヨ</span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label"><span class="target topic">この</span>傘は日本の傘です。</span>
-          <span class="answer-fill"><span class="korean"><span class="slot" data-sync-id="p2-fill-umbrella">이</span> 우산은 일본 우산이에요.</span><span class="yomi">＿ ウサヌン イルボン ウサニエヨ</span></span>
+          <span class="answer-fill"><span class="korean"><input class="slot-input" type="text" data-sync-id="p2-fill-umbrella" data-answer="이" autocomplete="off" spellcheck="false"> 우산은 일본 우산이에요.</span><span class="yomi">＿ ウサヌン イルボン ウサニエヨ</span></span>
         </div>
       </div>
     </div>
@@ -410,28 +410,28 @@
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">この人は田中さんです。</span>
-          <span class="answer-space" data-sync-id="p2-translate-person">이 사람은 다나카 씨예요</span>
+          <span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p2-translate-person" data-answer="이 사람은 다나카 씨예요" autocomplete="off" spellcheck="false"></span>
           <span class="hint"><span class="hint-chip">人:사람<span class="yomi">サラム</span></span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">そのかばんは何ですか？</span>
-          <span class="answer-space" data-sync-id="p2-translate-bag">그 가방은 뭐예요?</span>
+          <span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p2-translate-bag" data-answer="그 가방은 뭐예요?" autocomplete="off" spellcheck="false"></span>
           <span class="hint"><span class="hint-chip">かばん:가방<span class="yomi">カバン</span></span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">あの本は何ですか？</span>
-          <span class="answer-space" data-sync-id="p2-translate-book">저 책은 뭐예요?</span>
+          <span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p2-translate-book" data-answer="저 책은 뭐예요?" autocomplete="off" spellcheck="false"></span>
           <span class="hint"><span class="hint-chip">本:책<span class="yomi">チェク</span></span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">この傘は日本の傘です。</span>
-          <span class="answer-space" data-sync-id="p2-translate-umbrella">이 우산은 일본 우산이에요</span>
+          <span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p2-translate-umbrella" data-answer="이 우산은 일본 우산이에요" autocomplete="off" spellcheck="false"></span>
           <span class="hint"><span class="hint-chip">傘:우산<span class="yomi">ウサン</span></span></span>
         </div>
       </div>
@@ -443,7 +443,7 @@
       <div class="tutor-note">학생이 말한 문장을 여기에 적어 주세요.</div>
       <div class="task-block">
         <div class="answer-box tall">
-          <span class="answer-space" data-sync-id="p2-free-statement"></span>
+          <span class="answer-space as-input"><textarea class="free-input" data-sync-id="p2-free-statement" rows="2" spellcheck="false" maxlength="2000"></textarea></span>
           <span class="hint"><span class="hint-chip">かばん:가방<span class="yomi">カバン</span></span><span class="hint-chip">傘:우산<span class="yomi">ウサン</span></span><span class="hint-chip">本:책<span class="yomi">チェク</span></span><span class="hint-chip">コーヒー:커피<span class="yomi">コピ</span></span><span class="hint-chip">水:물<span class="yomi">ムル</span></span><span class="hint-chip">キムチ:김치<span class="yomi">キムチ</span></span><span class="hint-chip">キンパ:김밥<span class="yomi">キムパプ</span></span><span class="hint-chip">人:사람<span class="yomi">サラム</span></span></span>
         </div>
       </div>
@@ -477,11 +477,11 @@
       <p class="section-subtitle"><span class="ko">이번엔 하루카 대사예요. 하루카가 되어 말해 보세요.</span><span class="ja">今度はハルカのセリフです。ハルカになって言ってみましょう。</span></p>
       <div class="tutor-note">학생이 말한 대로 빈칸에 적어 주세요.</div>
       <div class="dialogue">
-        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label"><span class="target">これは何ですか</span>？</span><span class="answer-fill"><span class="korean"><span class="slot" data-sync-id="p3-complete-what">이건 뭐예요</span>?</span><span class="yomi">＿＿＿</span></span><span class="hint"><span class="hint-chip">何:뭐<span class="yomi">ムォ</span></span></span></div></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label"><span class="target">これは何ですか</span>？</span><span class="answer-fill"><span class="korean"><input class="slot-input" type="text" data-sync-id="p3-complete-what" data-answer="이건 뭐예요" autocomplete="off" spellcheck="false">?</span><span class="yomi">＿＿＿</span></span><span class="hint"><span class="hint-chip">何:뭐<span class="yomi">ムォ</span></span></span></div></div></div>
         <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">그건 김밥이에요.</span><span class="yomi">クゴン キムパビエヨ</span><span class="translation">それはキンパです。</span></div></div>
-        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">あ、そうなんだ！<span class="target">あれは何ですか</span>？</span><span class="answer-fill"><span class="korean">아, 그렇구나! <span class="slot" data-sync-id="p3-complete-over-there">저건 뭐예요</span>?</span><span class="yomi">ア、クロクナ！ ＿＿＿</span></span><span class="hint"><span class="hint-chip">あれ:저거<span class="yomi">チョゴ</span></span></span></div></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">あ、そうなんだ！<span class="target">あれは何ですか</span>？</span><span class="answer-fill"><span class="korean">아, 그렇구나! <input class="slot-input" type="text" data-sync-id="p3-complete-over-there" data-answer="저건 뭐예요" autocomplete="off" spellcheck="false">?</span><span class="yomi">ア、クロクナ！ ＿＿＿</span></span><span class="hint"><span class="hint-chip">あれ:저거<span class="yomi">チョゴ</span></span></span></div></div></div>
         <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">저건 김치예요.</span><span class="yomi">チョゴン キムチエヨ</span><span class="translation">あれはキムチです。</span></div></div>
-        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">じゃあ<span class="target">この写真は</span>何ですか？</span><span class="answer-fill"><span class="korean">그럼 <span class="slot" data-sync-id="p3-complete-photo">이 사진은</span> 뭐예요?</span><span class="yomi">クロム ＿＿＿ ムォエヨ</span></span><span class="hint"><span class="hint-chip">写真:사진<span class="yomi">サジン</span></span></span></div></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">じゃあ<span class="target">この写真は</span>何ですか？</span><span class="answer-fill"><span class="korean">그럼 <input class="slot-input" type="text" data-sync-id="p3-complete-photo" data-answer="이 사진은" autocomplete="off" spellcheck="false"> 뭐예요?</span><span class="yomi">クロム ＿＿＿ ムォエヨ</span></span><span class="hint"><span class="hint-chip">写真:사진<span class="yomi">サジン</span></span></span></div></div></div>
         <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">그건 서울 사진이에요.</span><span class="yomi">クゴン ソウル サジニエヨ</span><span class="translation">それはソウルの写真です。</span></div></div>
       </div>
     </div>
@@ -492,9 +492,9 @@
       <div class="tutor-note">학생이 말한 물건으로 한 번 더 물어봐 주세요.</div>
       <div class="dialogue">
         <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">先生</span></span><div class="bubble"><span class="korean">지금 앞에 뭐가 보여요? 하나만 말해 주세요. 저도 지금 하나 들고 있어요.</span><span class="yomi">チグム アペ ムォガ ポヨヨ？ ハナマン マレ ジュセヨ。 チョド チグム ハナ トゥルゴ イッソヨ</span><span class="translation">今、目の前に何が見えますか？一つだけ言ってください。私も今、一つ持っています。</span></div></div>
-        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label task">目の前のものを一つ</span><span class="answer-space" data-sync-id="p3-freetalk-my-thing"></span><span class="hint"><span class="hint-chip">かばん:가방<span class="yomi">カバン</span></span><span class="hint-chip">傘:우산<span class="yomi">ウサン</span></span><span class="hint-chip">本:책<span class="yomi">チェク</span></span><span class="hint-chip">コーヒー:커피<span class="yomi">コピ</span></span><span class="hint-chip">水:물<span class="yomi">ムル</span></span><span class="hint-chip">写真:사진<span class="yomi">サジン</span></span></span></div></div></div>
-        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label">先生、それは何ですか？<span class="task">先生にも聞いてみましょう</span></span><span class="answer-space" data-sync-id="p3-freetalk-question">선생님, 그건 뭐예요?</span></div></div></div>
-        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">先生</span></span><div class="bubble"><div class="answer-box small"><span class="answer-label">先生の答え</span><span class="answer-space" data-sync-id="p3-freetalk-tutor-answer"></span></div></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label task">目の前のものを一つ</span><span class="answer-space as-input"><textarea class="free-input" data-sync-id="p3-freetalk-my-thing" rows="2" spellcheck="false" maxlength="2000"></textarea></span><span class="hint"><span class="hint-chip">かばん:가방<span class="yomi">カバン</span></span><span class="hint-chip">傘:우산<span class="yomi">ウサン</span></span><span class="hint-chip">本:책<span class="yomi">チェク</span></span><span class="hint-chip">コーヒー:커피<span class="yomi">コピ</span></span><span class="hint-chip">水:물<span class="yomi">ムル</span></span><span class="hint-chip">写真:사진<span class="yomi">サジン</span></span></span></div></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label">先生、それは何ですか？<span class="task">先生にも聞いてみましょう</span></span><span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p3-freetalk-question" data-answer="선생님, 그건 뭐예요?" autocomplete="off" spellcheck="false"></span></div></div></div>
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">先生</span></span><div class="bubble"><div class="answer-box small"><span class="answer-label">先生の答え</span><span class="answer-space as-input"><textarea class="free-input" data-sync-id="p3-freetalk-tutor-answer" rows="2" spellcheck="false" maxlength="2000"></textarea></span></div></div></div>
       </div>
     </div>
 
@@ -506,11 +506,11 @@
       <p class="section-subtitle"><span class="ko">보너스! 한국 시장 반찬가게 앞이에요. 이름을 모르는 게 잔뜩 있어요. 빈칸 대사를 말해 주세요.</span><span class="ja">ボーナス！韓国の市場、おかず屋さんの前です。名前のわからないものだらけ。空欄のセリフを言ってください。</span></p>
       <div class="dialogue">
         <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">相手</span></span><div class="bubble"><span class="korean">안녕하세요! 어서 오세요.</span><span class="yomi">アンニョンハセヨ！ オソ オセヨ</span><span class="translation">こんにちは！いらっしゃいませ。</span></div></div>
-        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">こんにちは。<span class="target">これは何ですか</span>？</span><span class="answer-fill"><span class="korean">안녕하세요. <span class="slot" data-sync-id="trip-ask-what">이건 뭐예요</span>?</span><span class="yomi">アンニョンハセヨ。 ＿＿＿</span></span><span class="hint"><span class="hint-chip">何:뭐<span class="yomi">ムォ</span></span></span></div></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">こんにちは。<span class="target">これは何ですか</span>？</span><span class="answer-fill"><span class="korean">안녕하세요. <input class="slot-input" type="text" data-sync-id="trip-ask-what" data-answer="이건 뭐예요" autocomplete="off" spellcheck="false">?</span><span class="yomi">アンニョンハセヨ。 ＿＿＿</span></span><span class="hint"><span class="hint-chip">何:뭐<span class="yomi">ムォ</span></span></span></div></div></div>
         <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">相手</span></span><div class="bubble"><span class="korean">그건 김치예요. 저건 오이김치예요.</span><span class="yomi">クゴン キムチエヨ。 チョゴン オイキムチエヨ</span><span class="translation">それはキムチです。あれはきゅうりキムチです。</span></div></div>
-        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">あ、そうなんだ！じゃあ<span class="target">このおかずは</span>何ですか？</span><span class="answer-fill"><span class="korean">아, 그렇구나! 그럼 <span class="slot" data-sync-id="trip-ask-banchan">이 반찬은</span> 뭐예요?</span><span class="yomi">ア、クロクナ！ クロム ＿＿＿ ムォエヨ</span></span><span class="hint"><span class="hint-chip">おかず:반찬<span class="yomi">パンチャン</span></span></span></div></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">あ、そうなんだ！じゃあ<span class="target">このおかずは</span>何ですか？</span><span class="answer-fill"><span class="korean">아, 그렇구나! 그럼 <input class="slot-input" type="text" data-sync-id="trip-ask-banchan" data-answer="이 반찬은" autocomplete="off" spellcheck="false"> 뭐예요?</span><span class="yomi">ア、クロクナ！ クロム ＿＿＿ ムォエヨ</span></span><span class="hint"><span class="hint-chip">おかず:반찬<span class="yomi">パンチャン</span></span></span></div></div></div>
         <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">相手</span></span><div class="bubble"><span class="korean">그건 김밥이에요. 아, 그 가방, 일본 가방이에요?</span><span class="yomi">クゴン キムパビエヨ。 ア、ク カバン、イルボン カバンイエヨ</span><span class="translation">それはキンパです。あ、そのかばん、日本のかばんですか？</span></div></div>
-        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">はい！<span class="target">このかばんは</span>日本のかばんです。</span><span class="answer-fill"><span class="korean">네! <span class="slot" data-sync-id="trip-answer-bag">이 가방은</span> 일본 가방이에요.</span><span class="yomi">ネ！ ＿＿＿ イルボン カバンイエヨ</span></span><span class="hint"><span class="hint-chip">かばん:가방<span class="yomi">カバン</span></span></span></div></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">はい！<span class="target">このかばんは</span>日本のかばんです。</span><span class="answer-fill"><span class="korean">네! <input class="slot-input" type="text" data-sync-id="trip-answer-bag" data-answer="이 가방은" autocomplete="off" spellcheck="false"> 일본 가방이에요.</span><span class="yomi">ネ！ ＿＿＿ イルボン カバンイエヨ</span></span><span class="hint"><span class="hint-chip">かばん:가방<span class="yomi">カバン</span></span></span></div></div></div>
       </div>
     </div>
 

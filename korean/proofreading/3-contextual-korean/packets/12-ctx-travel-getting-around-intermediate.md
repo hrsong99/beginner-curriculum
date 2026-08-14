@@ -8,7 +8,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 01 · 01-asking-directions
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-travel-getting-around-intermediate/lessons/01-asking-directions/lesson.html`
-- sha256: `940fc82ef1f15a6a4ad404ee38f643585ce7cbb0b6960ebcf8d6b13b976c7a55`
+- sha256: `f1cb58bf3ab95dce2e67553398f7eb7ee7961ea8aa5d8a5b5f78cafa98bf32d2`
 - level: 중급
 
 ### `metadata`
@@ -426,7 +426,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 02 · 02-confirming-directions
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-travel-getting-around-intermediate/lessons/02-confirming-directions/lesson.html`
-- sha256: `7745ca679371ca111699afcd2e0aef0ca37ea1428051399fb9784b8efed918f4`
+- sha256: `c11d0fdc908e78b5d86b1cee8fc2836c09fe77397292e9a701a94df21b9ab050`
 - level: 중급
 
 ### `metadata`
@@ -808,7 +808,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 03 · 03-distance-and-time
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-travel-getting-around-intermediate/lessons/03-distance-and-time/lesson.html`
-- sha256: `b127b060f8a302636bdb95a42351d922b1f0940cc282fbdf14d82b107f735e8a`
+- sha256: `e7b15a418e87bc3f5103b869daea71e938bd640a71ef47f4e9d3adb130e94724`
 - level: 중급
 
 ### `metadata`
@@ -1202,7 +1202,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 04 · 04-public-transport
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-travel-getting-around-intermediate/lessons/04-public-transport/lesson.html`
-- sha256: `12da363f1de557a6cb63430d62e78028a92af96f43f1750efb83d5485a63801b`
+- sha256: `94209dbe323953595fda570e6b57733c30c3d66c39a84c54eeca4b8f185a43d6`
 - level: 중급
 
 ### `metadata`
@@ -1589,7 +1589,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 05 · 05-taking-a-taxi
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-travel-getting-around-intermediate/lessons/05-taking-a-taxi/lesson.html`
-- sha256: `cd694d75a8628ec7618bb20d1ba20d3889e567bc44590a56f798a8c09bdd87ee`
+- sha256: `4738eb329a8e25bf5487bc494fb66857ab75be14c781e745d9d8c3b3ebcd4a0d`
 - level: 중급
 
 ### `metadata`
@@ -1991,7 +1991,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 06 · 06-taking-the-bus
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-travel-getting-around-intermediate/lessons/06-taking-the-bus/lesson.html`
-- sha256: `da8489db7ca795ab4bd1384db53dc0fee495d1677973b3f6940dde6f9c6dc499`
+- sha256: `6804daa9b354c5e2479aa46e731ba4c60f692f96b251bc7eecff491b266131a0`
 - level: 중급
 
 ### `metadata`
@@ -2380,7 +2380,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 07 · 07-getting-off-the-bus
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-travel-getting-around-intermediate/lessons/07-getting-off-the-bus/lesson.html`
-- sha256: `af07b7d3be176a2f34c4a6493d147e60d26c9c6ab2068db5740963aa60a90a3e`
+- sha256: `c80f5d307e6d6c578ccd9e8870e9a043dda9f8aecc8b213609cdcf4bc74234dc`
 - level: 중급
 
 ### `metadata`
@@ -2769,7 +2769,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 08 · 08-getting-lost
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-travel-getting-around-intermediate/lessons/08-getting-lost/lesson.html`
-- sha256: `15eb2b962876cd2002b4290231c916bc3965d79fcea6c07d707c174f6b5ec08a`
+- sha256: `66a5f1a560781ebed12b938ab113af093a4b198043f259353a0c11cb4779eaaa`
 - level: 중급
 
 ### `metadata`
@@ -3161,7 +3161,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 09 · 09-transit-card
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-travel-getting-around-intermediate/lessons/09-transit-card/lesson.html`
-- sha256: `eccf4b07876dc5318071e480a1dea9abae39d0837659efc7f3d9c3139dbc34ca`
+- sha256: `848d364b6fa07ebd64fd436fcfab2e3d592f6c798c5febd9e2253783d56d1057`
 - level: 중급
 
 ### `metadata`
@@ -3545,7 +3545,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 10 · 10-last-train
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-travel-getting-around-intermediate/lessons/10-last-train/lesson.html`
-- sha256: `48421ac0d7430c66b15107e828cf10dcdc00e099b41137c5b467b2703947eb40`
+- sha256: `1fb08bc4c165ccf3386a2c37c9a666ca4e964426ee7717b6f0fa16fecf1d66b2`
 - level: 중급
 
 ### `metadata`

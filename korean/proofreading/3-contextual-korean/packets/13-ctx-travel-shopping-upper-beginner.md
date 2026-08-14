@@ -8,7 +8,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 01 · 01-browsing
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-travel-shopping-upper-beginner/lessons/01-browsing/lesson.html`
-- sha256: `c3988ed2add5b5ba9e87a4ce799e03fee3d0aac8b2f51208df9c1de745588b2d`
+- sha256: `cc8c42905f9e3a8e5764717ace1a6ed49ca8525b686a3f4c06251639491e6bf0`
 - level: 초중급
 
 ### `metadata`
@@ -441,7 +441,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 02 · 02-sizes-and-stock
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-travel-shopping-upper-beginner/lessons/02-sizes-and-stock/lesson.html`
-- sha256: `cba5a0028c67baf358210454165ed9fd64750b5434b4b57e015b6b6333ebf0d3`
+- sha256: `dec504819c3dafd96fefba131ce679ca81b3f3c8d21afbb28c371456c4bcfc2b`
 - level: 초중급
 
 ### `metadata`
@@ -872,7 +872,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 03 · 03-discounts-and-deals
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-travel-shopping-upper-beginner/lessons/03-discounts-and-deals/lesson.html`
-- sha256: `9c1ab6977910e10d32b1de32a9d0b9fee4aa2610b6ba684fa6c4559e3cf2a6f1`
+- sha256: `67a25e5c4b2f87a6372761797f3b0189b9d39569b5e39c1b7c3f94ee93de85ba`
 - level: 초중급
 
 ### `metadata`
@@ -1282,7 +1282,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 04 · 04-trying-things-on
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-travel-shopping-upper-beginner/lessons/04-trying-things-on/lesson.html`
-- sha256: `78ab5ce569d877f37411f3fcadb5d7005c748c678072f09ef544b8c619b92905`
+- sha256: `d1f3319b91f5dfcf5a628a5c799eaf927af5a00bf5a31ec3c545137adcd0193f`
 - level: 초중급
 
 ### `metadata`
@@ -1689,7 +1689,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 05 · 05-checking-the-price
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-travel-shopping-upper-beginner/lessons/05-checking-the-price/lesson.html`
-- sha256: `ff2fa2b9d1bc558a43b774c5132ac430dfe81af6a22bcfb24dc56cb347a756fc`
+- sha256: `00e80138f3e1111300313f8eddfb566452da4fa5c768220c37b612440195f1d6`
 - level: 초중급
 
 ### `metadata`
@@ -2108,7 +2108,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 06 · 06-comparing-products
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-travel-shopping-upper-beginner/lessons/06-comparing-products/lesson.html`
-- sha256: `392329bc392e8115dc8fba39b91a768032c8d92a69348ba589847e5e88e4ef79`
+- sha256: `5a1202206320c6da0a782f139e840cce6200af5ab5360e0d566c4654acfbe03a`
 - level: 초중급
 
 ### `metadata`
@@ -2487,7 +2487,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 07 · 07-payment-methods
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-travel-shopping-upper-beginner/lessons/07-payment-methods/lesson.html`
-- sha256: `e583ddaff07be681eae1056206e8df82a3f0eabe2a25f41692293eeb07130015`
+- sha256: `0eecce6909daf618173655936140b9ee4b75d5dba240f88eb1b067e4d31961fa`
 - level: 초중급
 
 ### `metadata`
@@ -2866,7 +2866,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 08 · 08-gift-wrapping
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-travel-shopping-upper-beginner/lessons/08-gift-wrapping/lesson.html`
-- sha256: `df9ad7e33055d8800e5877b61f05a8da738c84087155415d7780adc95408d5fb`
+- sha256: `b537b1fae18a0768bd3c85443c49f4cbfe998d9e95e675486f423ac18ec27282`
 - level: 초중급
 
 ### `metadata`
@@ -3218,7 +3218,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 09 · 09-exchanges-and-refunds
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-travel-shopping-upper-beginner/lessons/09-exchanges-and-refunds/lesson.html`
-- sha256: `3fbc94d688ce794848ff429530b76e503802d7a719e917ec9740946ef7d62f86`
+- sha256: `31a8c4aad31acd15729d364decf4259abfc28dca46f611a3e3507c86f4c7a899`
 - level: 초중급
 
 ### `metadata`
@@ -3558,7 +3558,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 10 · 10-tax-refund
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-travel-shopping-upper-beginner/lessons/10-tax-refund/lesson.html`
-- sha256: `ad8f3791e6f1a2b5627b7dbe85a2a6c62a49dc8f994560f4459ef05d5b60075f`
+- sha256: `a7db07c06fdeaeea9b1d96d5de1491336be10596c2408ac8d3f942c53273dd06`
 - level: 초중급
 
 ### `metadata`

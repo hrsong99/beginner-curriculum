@@ -7,7 +7,7 @@
 runtime/
   css/   lesson-card.css   디자인 시스템 — 모든 트랙이 쓴다
          trial.css         체험 레슨 트랙의 시트 (lesson-card.css 다음에 로드)
-  js/    activities.js     점선 칸·고르기·문장 만들기 + lessonSync 스텁
+  js/    activities.js     정적 입력칸·고르기·문장 만들기 + lessonSync 스텁
          pager.js          페이지 넘김·스크러버·티칭 모드
          hangul-activities.js / freetalk-activities.js / report.js / report-consult.js
                            과 성격별 활동
@@ -22,32 +22,37 @@ runtime/
 영어 커리큘럼이 같은 런타임을 쓰기 때문입니다. `korean/trial/assets/` 는 옮기지
 않았으므로 여전히 한국어 폴더 안에 있고, 덱에서 두 경로의 `../` 개수가 하나 다릅니다.
 
-**곧 공개 저장소로 미러링할 대상이 정확히 이 폴더입니다.** 지금은 덱이 상대
-경로로 부르지만(`../../../runtime/js/pager.js`), 공개 저장소 + CDN 으로 옮기면
-절대 URL 하나만 바뀝니다. 무엇이 나가고 무엇이 남는지를 폴더 경계로 못박아
-두면, 미러링 규칙이 "이 폴더를 그대로"가 되어 목록을 손으로 관리할 일이 없습니다.
+**배포 저장소와 CDN으로 미러링할 대상이 정확히 이 폴더입니다.** 여기서는 덱이 상대
+경로로 부르고(`../../../runtime/js/pager.js`), `podo-curriculum`의
+`sync-from-authoring.py --runtime-only`가 이 폴더를 `shared/{css,js}`로 그대로
+옮깁니다. 그 사본을 `publish-shared.py`가 불변 태그로 공개 미러에 게시하고,
+`repoint-shared.py`가 배포 덱을 그 태그로 가리킵니다.
 
 공개해도 되는 것만 둡니다 — 여기 있는 파일에는 교재 스캔도, 가격도, 내부 메모도
 없습니다. 그런 것이 이 폴더에 들어가려 하면 그건 런타임이 아닙니다.
 
-## 옮길 때 (아직 아님)
+## 배포할 때
 
-1. 이 폴더를 공개 저장소(`podo-lesson-runtime` 같은)로 미러링하는 액션을 붙입니다.
-2. 버전은 **경로로** 끊습니다 — `…/v1/js/pager.js`. 이미 올라간 덱이 조용히
-   바뀌지 않도록, 한 번 올린 경로는 덮어쓰지 않습니다.
-3. 덱의 `<link>` · `<script src>` 를 그 URL 로 바꿉니다. 패키저는 절대 URL 을
-   건드리지 않고 그대로 두므로(`podo-curriculum` 의 `docs/packaging.md`), zip 은 자동으로
-   HTML + 이미지만 남습니다.
-4. 덱을 새 버전으로 올리는 것은 그때마다 **의도적으로** 합니다. 그게 이 방식의
-   요점입니다 — 수업 중인 화면이 배포 때문에 바뀌지 않습니다.
+1. 이 저장소에서 런타임을 수정·검증하고 먼저 커밋합니다.
+2. `podo-curriculum`의 stage 기반 브랜치에서 `sync-from-authoring.py --runtime-only`를
+   실행해 `shared/`가 이 폴더와 같은지 확인합니다.
+3. `curriculum.yaml`의 `spec.sharedRuntime.version`을 올린 뒤
+   `publish-shared.py`를 먼저 실행합니다. 태그는 불변이라 이미 게시한 버전을
+   덮어쓰지 않습니다.
+4. `repoint-shared.py`로 덱을 새 태그에 고정하고 stage 검증·배포 뒤 production으로
+   승격합니다. 배포 중인 덱은 명시적으로 repoint하기 전까지 이전 태그를 계속 씁니다.
 
 ## 규칙
 
 - **덱은 인라인 CSS·JS 를 갖지 않습니다.** 새로 필요한 것이 생기면 여기에
   넣고 공유합니다. 한 덱에만 둔 수정은 그 덱에만 남습니다 — 스크러버와
   스크롤바 자리가 실제로 그렇게 한 덱에만 있었습니다.
+- **입력 컨트롤은 HTML에 정적으로 존재합니다.** `activities.js`는
+  `input.slot-input`, `input.space-input`, `textarea.free-input`, `.build-zone`을
+  새로 만들거나 다른 태그로 바꾸지 않고 동작만 연결합니다. Lemonboard의 정적
+  검증기와 수업 중 라이브 바인더가 같은 DOM을 보게 하는 계약입니다.
 - **로드 순서가 있습니다.** `activities` → `pager` → `script-lines` →
   `spotlight` → `tutor-notes` → `highlight` → `stamp`. 이유는 각 파일 머리말에
-  적혀 있고, 덱 뼈대는 [`AUTHORING.md`](../AUTHORING.md) 에 있습니다.
+  적혀 있고, 덱 뼈대는 [`AUTHORING.md`](../korean/AUTHORING.md) 에 있습니다.
 - **CSS 는 두 장이 한 벌입니다.** `lesson-card.css` 다음에 트랙 시트. 패키저가
   링크 순서대로 이어 붙이므로 순서가 곧 캐스케이드입니다.

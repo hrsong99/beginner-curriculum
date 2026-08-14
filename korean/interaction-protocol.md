@@ -51,7 +51,7 @@ page would compute; and a tutor-only reveal has to stay tutor-only, which it can
 the verdict is broadcast the moment the tutor sees it.
 
 > **This does not hide the answer key.** Both participants load the same document, so
-> `data-ok`, `data-correct`, `data-answers` and the initial text of a `.slot` are all in
+> `data-ok`, `data-correct`, `data-answers` and a `.slot-input`'s `data-answer` are all in
 > the learner's DOM already. What the contract guarantees is that the *reveal toggle* and
 > the *verdict* aren't pushed across. If an answer must genuinely be unavailable to the
 > learner, it cannot live in the lesson HTML at all.

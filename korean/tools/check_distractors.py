@@ -23,8 +23,8 @@ def txt(x):
 attested = set()
 for d in DECKS:
     s = d.read_text(encoding="utf-8")
-    for pat in (r'<span class="answer-space"[^>]*>(.*?)</span>',
-                r'<span class="slot"[^>]*>(.*?)</span>',
+    for pat in (r'\bdata-answer="([^"]+)"',
+                r'<span class="answer-space build-zone"[^>]*\bdata-a="([^"]+)"',
                 r'<div class="model-line">.*?<span class="korean">(.*?)</span>',
                 r'<div class="sent-hero">\s*<span class="korean">(.*?)</span>',
                 r'<div class="bubble[^"]*"><span class="korean">(.*?)</span>'):

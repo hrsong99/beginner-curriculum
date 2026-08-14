@@ -8,7 +8,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 111 · 111-not-only-but-also
 
 - source: `korean/tracks/2-core-patterns/courses/core-advanced-1/lessons/111-not-only-but-also/lesson.html`
-- sha256: `83cbc73f5b56e62379f74dfc9e5bb403be0c0322cf09c47df92cbbae6ceba89d`
+- sha256: `233974cacdcc0c770d484f1102eeec584b16d97ceb557c383d1f226acea605ff`
 - level: 고급
 
 ### `metadata`
@@ -415,7 +415,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 112 · 112-instead-and-rather
 
 - source: `korean/tracks/2-core-patterns/courses/core-advanced-1/lessons/112-instead-and-rather/lesson.html`
-- sha256: `69d3a26e5e0b1e3fb305348cadff29b9cce23d066bb92f253fcc7ebc7e0345eb`
+- sha256: `45f94e5a9c3ce46b6dcd55bf8023d18c40f9c54ae77a8c1b78a5fff73be74062`
 - level: 고급
 
 ### `metadata`
@@ -822,7 +822,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 113 · 113-and-then-and-warning
 
 - source: `korean/tracks/2-core-patterns/courses/core-advanced-1/lessons/113-and-then-and-warning/lesson.html`
-- sha256: `9dd6a2da8457aa670f5e409f5b7884f3e13800618d23c3e75ff7c788e8996baa`
+- sha256: `cb76f29f930f909507992582e8eb759516374441887d99cda675e3bf1fb42544`
 - level: 고급
 
 ### `metadata`
@@ -1229,7 +1229,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 114 · 114-like-and-how-much
 
 - source: `korean/tracks/2-core-patterns/courses/core-advanced-1/lessons/114-like-and-how-much/lesson.html`
-- sha256: `eb9668b21006d1051b76cd5add905f9027e362e332bcd1716b904f0a69547e91`
+- sha256: `a2e8f7c5c5596a3cb1f3dec5e71cf539a631b4acc543eb5a86cba24989cc0329`
 - level: 고급
 
 ### `metadata`
@@ -1636,7 +1636,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 115 · 115-obviously-and-unless
 
 - source: `korean/tracks/2-core-patterns/courses/core-advanced-1/lessons/115-obviously-and-unless/lesson.html`
-- sha256: `0b543164f099d300dccba583c140ce6a1976fe9d59af48b956dfdeb66c043a92`
+- sha256: `f9e471721a2761728e5d45ae31ba1aa1af791fc87638de0abb0cb17f67e2f5f7`
 - level: 고급
 
 ### `metadata`
@@ -2043,7 +2043,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 116 · 116-cant-believe-and-no-intention
 
 - source: `korean/tracks/2-core-patterns/courses/core-advanced-1/lessons/116-cant-believe-and-no-intention/lesson.html`
-- sha256: `fe7548ebcd4796601cf7091ef3ddb82e3874abc037b3f644fcf81cfd7cb106b1`
+- sha256: `176b4122c5ea6b11daa88cacbb058436741bc8c0ca1870c1e0d591c60896802c`
 - level: 고급
 
 ### `metadata`

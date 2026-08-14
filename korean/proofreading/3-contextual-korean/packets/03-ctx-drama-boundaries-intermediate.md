@@ -8,7 +8,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 01 · 01-warning
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-boundaries-intermediate/lessons/01-warning/lesson.html`
-- sha256: `16e9e29ea3839e803c73eb71687c52f5b692f970661b5ad10c78c8bd50e79371`
+- sha256: `5fb14f5ee8e2550952ed7803fbf4439ba88934bec668152130d673cc90f417f0`
 - level: 중급
 
 ### `metadata`
@@ -447,7 +447,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 02 · 02-being-firm
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-boundaries-intermediate/lessons/02-being-firm/lesson.html`
-- sha256: `4b6537a1d4e5cccec0bf248547630396bb2d84a8f297221a2d644d5d53836ae1`
+- sha256: `705feb173c734d45dfb032d35b93f05341190666fb13bd079297d3cc2924445a`
 - level: 중급
 
 ### `metadata`
@@ -866,7 +866,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 03 · 03-power-struggle
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-boundaries-intermediate/lessons/03-power-struggle/lesson.html`
-- sha256: `da514584f18a06b830bdb3e91acd707b7dd872115c334c80115706c8585af1ac`
+- sha256: `626bef7757df3f906cfa164e8231cfd0459910e7692b507a79ca0877344aee48`
 - level: 중급
 
 ### `metadata`
@@ -1295,7 +1295,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 04 · 04-refusal
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-boundaries-intermediate/lessons/04-refusal/lesson.html`
-- sha256: `5733e2c516e445db322d2740846f76b11c40a646fc1fe3532cc1c2b8e4422fe0`
+- sha256: `5a54ef612cabc4afdcff1becde543ccfa7dfc264b5166888c1dea90e40964609`
 - level: 중급
 
 ### `metadata`
@@ -1724,7 +1724,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 05 · 05-responsibility
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-boundaries-intermediate/lessons/05-responsibility/lesson.html`
-- sha256: `fb72f54e97169f133689e87df7077f1ac069aa358d06b2438d1a299a5df42948`
+- sha256: `71cdbe239da7719e84c2d1006bdb5f992b5a0204ef503b766d432dcc8dde4273`
 - level: 중급
 
 ### `metadata`
@@ -2175,7 +2175,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 06 · 06-crisis-response
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-boundaries-intermediate/lessons/06-crisis-response/lesson.html`
-- sha256: `adeb4b030c50b26c1ca5b6c08be1c0f140849d6d9364b07ac8eef171e40b57d3`
+- sha256: `b44bf5ed8c1ed1a269fee36cb706b7e3e563be8d0e5a56e985f44b62447eb2b8`
 - level: 중급
 
 ### `metadata`
@@ -2579,7 +2579,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 07 · 07-resolve
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-boundaries-intermediate/lessons/07-resolve/lesson.html`
-- sha256: `332fc81c328469c90369be035d29dd2917d37f65df630e1d12ed60ed954c5712`
+- sha256: `8c965bef7df7d4db83f3d1aafcabd545cb93c44850e87eb09143ed683c5b779d`
 - level: 중급
 
 ### `metadata`
@@ -2977,7 +2977,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 08 · 08-confrontation
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-boundaries-intermediate/lessons/08-confrontation/lesson.html`
-- sha256: `9ea4a4223229f19f2e25e9fe0cdf94374daaf761b99658fd7c01872b4d39f65f`
+- sha256: `b1d90234a070fb97f32321d01f1fb161d523fc93e42e02d7735d101cbd1cfbd7`
 - level: 중급
 
 ### `metadata`
@@ -3381,7 +3381,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 09 · 09-regret
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-boundaries-intermediate/lessons/09-regret/lesson.html`
-- sha256: `bda5eb0cd8d65ec7addbb3e1af2c716543ef3f240c61e13c321ca3419243a6a7`
+- sha256: `c6aa616cba569616c0515080083d79bdeb3bb63094fcf47b925cce7de2509f2f`
 - level: 중급
 
 ### `metadata`
@@ -3766,7 +3766,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 10 · 10-ending-the-relationship
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-boundaries-intermediate/lessons/10-ending-the-relationship/lesson.html`
-- sha256: `b536a436401c9b276f78df8b0798fef27802697ffb114bf16ca296cb1435cad7`
+- sha256: `06681d6d98c671f6e765fce22e05553dde580cdfac9154e772d1999b763236e0`
 - level: 중급
 
 ### `metadata`

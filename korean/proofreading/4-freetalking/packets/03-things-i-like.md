@@ -12,7 +12,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-advanced/lessons/01-life-changing-movie/lesson.html`
-- sha256: `857fdc615c9adae61bdaa5f1fbb97c872ae112d2822329046c8ff6dfccfb210b`
+- sha256: `fd31e48e71f67c737ad18568e92915fa7ff3bdd6025c02718d7465de6321369e`
 - source kind: `model-story`
 
 #### `metadata`
@@ -151,7 +151,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-intermediate/lessons/01-life-changing-movie/lesson.html`
-- sha256: `58624b241ab91dbc11f8165cc95126cc52ece4b7d46be24b6036e7a4184f9419`
+- sha256: `81f65bf7e648b6c9bb5167a7c226bd30f95a8960ca4f8ddcf4d7f4e747f8962d`
 - source kind: `model-story`
 
 #### `metadata`
@@ -292,7 +292,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-advanced/lessons/02-first-korean-favorite/lesson.html`
-- sha256: `a49e2dda579b56e4aab0dfadf6fd5a6b1b6239185779b84b6c3232f1b7b0de0a`
+- sha256: `0e9ef378e5a5db8bfbda98aa6c9efdf566f25edb97c7d58e67e129d1f60c7571`
 - source kind: `model-story`
 
 #### `metadata`
@@ -431,7 +431,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-intermediate/lessons/02-first-korean-favorite/lesson.html`
-- sha256: `9969c30c87a58c5cecd463fbfc26f318af1efd9490cbc1d2b76d1be6d42b9015`
+- sha256: `2ec32f09c281dc5d3c7489854652b228d4cf08ca7606cc8ac95f283ef0456b9d`
 - source kind: `model-story`
 
 #### `metadata`
@@ -572,7 +572,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-advanced/lessons/03-my-playlist/lesson.html`
-- sha256: `20bf1604ecbe06e0724bf6621a5c1ec7d1333ffa9346ed1b1f6a4ab4c283c635`
+- sha256: `6ec3015c317017e1c913b85a0c2c73937c57e0ebef2075c9a3b782d3558b2179`
 - source kind: `model-story`
 
 #### `metadata`
@@ -711,7 +711,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-intermediate/lessons/03-my-playlist/lesson.html`
-- sha256: `a590e48005b38be4852fee63f2cf6c349e84cc3b4e6b9b25f5e18b175f205efb`
+- sha256: `428ee1d0ab7bdb112b02998b65719b712a1aa60ea7307a5dea7a8c2d045099f6`
 - source kind: `model-story`
 
 #### `metadata`
@@ -852,7 +852,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-advanced/lessons/04-karaoke-favorite/lesson.html`
-- sha256: `709f8f22a475af8311102cbe46adfbbf8cbf0277d9454e6c8a8dda8c17b80741`
+- sha256: `91e065bbf6974756ac7c7b40f05ac19394e71b585e2946539a88d7faee183bdf`
 - source kind: `model-story`
 
 #### `metadata`
@@ -991,7 +991,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-intermediate/lessons/04-karaoke-favorite/lesson.html`
-- sha256: `036c378bfd818d808a97db687b2c4cfdd9a5cace794d51019bbac08082c8769a`
+- sha256: `f95ea9fd2ece8934ff2e38e86688ebc3a1da25569d265e8beb983609ad98b363`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1132,7 +1132,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-advanced/lessons/05-favorite-late-night-food/lesson.html`
-- sha256: `6ad0964d6d26fcb547ca324f3da4a8b17c9eea94a0d2987a6d1e54922548a0b5`
+- sha256: `f6e5db92e8112e219e5ebc70495a97770336ee0a256249a8de9f8e92c1657ad1`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1271,7 +1271,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-intermediate/lessons/05-favorite-late-night-food/lesson.html`
-- sha256: `7575926bf61d73f518bd8c0c6cce3bb0187f28ea994dc33b33f997944e72feb0`
+- sha256: `dec1c106f4b20a939601a95b891dc813c1d3674091f46e18b6ab4904e8cd3d15`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1412,7 +1412,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-advanced/lessons/06-food-combination-i-cant-understand/lesson.html`
-- sha256: `f1e2c5163ce18b5763834494f4a4bc059da2cd02750205917cad3ab4db852957`
+- sha256: `7b0c366ab798493d4d2a82034232158c3f8d3a624c78220eb40069b73779108c`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1551,7 +1551,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-intermediate/lessons/06-food-combination-i-cant-understand/lesson.html`
-- sha256: `4e898e3c5b496bd35504d5284c9d0236302c853e6b759bef376f8c408f87e58c`
+- sha256: `4f6dae5686d16bb582edb71329910c2eecc98eabd8a9a16034f244622774ac03`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1692,7 +1692,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-advanced/lessons/07-secret-favorite-restaurant/lesson.html`
-- sha256: `3d123633c81fda6b95236938e52d9a9c711075670f3de504fdab47f3f080775d`
+- sha256: `bb5e9e46c1849a0ad8eb5cb59354b6d02d46572daaf10ed994bbf8215c146c3f`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1831,7 +1831,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-intermediate/lessons/07-secret-favorite-restaurant/lesson.html`
-- sha256: `76d32700280ee7111ed15c38dd5132bb1972145a4da8816b1ca988c0a7efe64a`
+- sha256: `edea798bc504f374f17ad48495d5ac423e229e9a055495c0144f4a19e3c99e11`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1972,7 +1972,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-advanced/lessons/08-life-changing-book/lesson.html`
-- sha256: `724b88837e0b90dd0b6a2b0459867f2704fbaa2c6fde8f938c38c9a31df80269`
+- sha256: `83740020703de9c66f31fd3c5b54be95ad1685b5f077e7532d7a215bd53f0c20`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2111,7 +2111,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-intermediate/lessons/08-life-changing-book/lesson.html`
-- sha256: `d0dab2f66022cbc13c5520cdd127b78a1d8f69d8bcd15983cf31e997bc26f2c8`
+- sha256: `60bcca03e4bcf35d7fe6571e51e7c1771820d19bfe9311af3c513a85e2665668`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2252,7 +2252,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-advanced/lessons/09-proud-of-my-hobby/lesson.html`
-- sha256: `264d00601961d0bd5c95b5b2c3104417623b9cb0b8ad23f623f4bb8b7d2059ca`
+- sha256: `889e78c8e155d9266a08fc7d4e4e7f4037b8ad541ce0a59e86146bd2d199db54`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2391,7 +2391,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-intermediate/lessons/09-proud-of-my-hobby/lesson.html`
-- sha256: `93b79092194011df5acc78c52c72971234fee14485f559abf7f008fb6bec21fe`
+- sha256: `565bf44711da46832b719629cf416c4e6d3ab4194f3ea817581d490b16fc36b0`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2532,7 +2532,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-advanced/lessons/10-most-treasured-thing/lesson.html`
-- sha256: `1a904983f557c082e596e8d4a569b72464ffba23ed1e58f04d2ca2e836be92a5`
+- sha256: `fef8f3aeec7276f09ca470b178bd8c865b8cc7ad44b3be67e16207b476a47e33`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2671,7 +2671,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-intermediate/lessons/10-most-treasured-thing/lesson.html`
-- sha256: `3fdac2a3d7967eec973149e36897005e4b3eade519a49983704927ee37c6435e`
+- sha256: `2493968e52fe2bd080e30d48b14c2dce6e58967091ab05759825c86d9357b431`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2812,7 +2812,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-advanced/lessons/11-favorite-clothing-style/lesson.html`
-- sha256: `ad24c95ee8d1e670c90908879b3b768313a0547955f25c3828229d3b2cf611fa`
+- sha256: `d5ef7443250e3826e40aa49e4f71714f4b865eb1d19e9ffd46bbb05e307441c3`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2951,7 +2951,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-intermediate/lessons/11-favorite-clothing-style/lesson.html`
-- sha256: `daa0605f5f5aa3957a5151049b78047249e9d81c1499d58ea3b277a80136dc31`
+- sha256: `8091f16f861cb3f016a678717c16508da9ea3ef78c792fc723b473140e9fa134`
 - source kind: `model-story`
 
 #### `metadata`

@@ -58,6 +58,8 @@ CHOICE = re.compile(r'class="choice"')
 LOCAL_REF = re.compile(r'(?:href|src)="((?!https?:|data:|#)[^"]+)"')
 INLINE_STYLE = re.compile(r"<style[\s>]")
 INLINE_SCRIPT = re.compile(r"<script(?![^>]*\ssrc=)[^>]*>")
+LEGACY_CONTROL = re.compile(
+    r'<span class="(?:slot|answer-space)"\s+data-sync-id="([^"]+)"')
 META_TAG = re.compile(r"<meta\b[^>]*>", re.I)
 ATTRIBUTE = re.compile(r'''([\w:-]+)\s*=\s*(["'])(.*?)\2''', re.S)
 QUOTE_OPEN = "“‘「『"
@@ -148,6 +150,13 @@ def check(path):
         errs.append("inline <style> — component CSS belongs in the shared runtime")
     if INLINE_SCRIPT.search(html):
         errs.append("inline <script> — behaviour belongs in the shared runtime")
+    legacy_controls = LEGACY_CONTROL.findall(html)
+    if legacy_controls:
+        errs.append(
+            "runtime-promoted control shell(s): "
+            + ", ".join(legacy_controls[:3])
+            + " — write the input, textarea, or build-zone directly in HTML"
+        )
 
     # ---- English decks carry no readings ----------------------------------
     if is_english:

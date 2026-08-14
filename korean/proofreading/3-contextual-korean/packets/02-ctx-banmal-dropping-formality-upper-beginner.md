@@ -8,7 +8,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 01 · 01-suggesting-banmal
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-banmal-dropping-formality-upper-beginner/lessons/01-suggesting-banmal/lesson.html`
-- sha256: `ce57f1c406bc17ec1c81f69ce331c2a08118e7801446d989f3201c3f6d8f2b0e`
+- sha256: `b5318c7655ef2c44404a5137431f86593734bc0e548626ad82b3347796aa8762`
 - level: 초중급
 
 ### `metadata`
@@ -376,7 +376,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 02 · 02-choosing-address-terms
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-banmal-dropping-formality-upper-beginner/lessons/02-choosing-address-terms/lesson.html`
-- sha256: `a30ba1203b1f46a2127a1f46987e7f35a4c5c783b51b642e2a1461b757a3ca5f`
+- sha256: `91ceb4f831a727d378fee0547e4170e75d3195dc9346a724e6cd86e5b2760dec`
 - level: 초중급
 
 ### `metadata`
@@ -743,7 +743,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 03 · 03-jeo-to-na
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-banmal-dropping-formality-upper-beginner/lessons/03-jeo-to-na/lesson.html`
-- sha256: `44edf41c74ac725143591dc3244451f27a2ee524732a3804ab491aa454cd1bdc`
+- sha256: `0c5bf24d6a983b8b37a596da4612fc5395caace56cdbdb6414ea1646615f7e70`
 - level: 초중급
 
 ### `metadata`
@@ -1112,7 +1112,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 04 · 04-switching-statements
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-banmal-dropping-formality-upper-beginner/lessons/04-switching-statements/lesson.html`
-- sha256: `7d80a89ebeb3ea76ec167ea16564981a2dfae837eee8c9b1592086b4f4606447`
+- sha256: `a5ec2897f320ddd61179e7163f547d6bd2397c6acbf4f6b9c21600f6a13bf3c1`
 - level: 초중급
 
 ### `metadata`
@@ -1481,7 +1481,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 05 · 05-asking-questions
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-banmal-dropping-formality-upper-beginner/lessons/05-asking-questions/lesson.html`
-- sha256: `bd9eedf17ca06ebe34cd9c4ae4126316748c06e138149b0f83456c8a9a0fcabc`
+- sha256: `5bc71a260bd8d4396079a02e88ad7095910ebd6e00a7711322ee6278039bc647`
 - level: 초중급
 
 ### `metadata`
@@ -1850,7 +1850,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 06 · 06-suggestions-and-commands
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-banmal-dropping-formality-upper-beginner/lessons/06-suggestions-and-commands/lesson.html`
-- sha256: `599d252589765cc2ba5cdc5528e185eadf31be4672bd0490b5eb81b4b520c8c8`
+- sha256: `673fcdbfbe0085ae057d5ed6b62a6c169636808567f2d94aaa0aa16e7ebe17bd`
 - level: 초중급
 
 ### `metadata`
@@ -2219,7 +2219,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 07 · 07-greetings-and-responses
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-banmal-dropping-formality-upper-beginner/lessons/07-greetings-and-responses/lesson.html`
-- sha256: `46a6a93833acf12b95dbe24fdf83c6af30cb42892e6f40b7131e2036e9d99516`
+- sha256: `bc237c82232e61fd017bf21e0f5a742bca1d75e7583b4374951319fd57d36e99`
 - level: 초중급
 
 ### `metadata`
@@ -2588,7 +2588,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 08 · 08-mixed-hierarchy
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-banmal-dropping-formality-upper-beginner/lessons/08-mixed-hierarchy/lesson.html`
-- sha256: `257019e6a3a5800fc668c9b15e259f2e834884c70dda3712c44a624f59171f65`
+- sha256: `c5e8a2f58fd02575e4b908cb30252a7b38f66ad0325e63f8c965bd796865c976`
 - level: 초중급
 
 ### `metadata`
@@ -2957,7 +2957,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 09 · 09-semi-formal-speech
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-banmal-dropping-formality-upper-beginner/lessons/09-semi-formal-speech/lesson.html`
-- sha256: `10e27ddf7084a7497e7af1a17ddad3812354c3ce61b6f15caa0ef23ee0e02d88`
+- sha256: `1fc22cf1624798e57dc4e4b12e1c0d432f60a8fa6f8e821d986620215033590a`
 - level: 초중급
 
 ### `metadata`
@@ -3326,7 +3326,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 10 · 10-returning-to-polite-speech
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-banmal-dropping-formality-upper-beginner/lessons/10-returning-to-polite-speech/lesson.html`
-- sha256: `de24cd87dd50b7025e196684d5f4322ae63c1a9805d4fae8a5532e2c6b061e55`
+- sha256: `607cfca53b0c7ae392b788f6c996271a4e852fc836286220386239910752d550`
 - level: 초중급
 
 ### `metadata`

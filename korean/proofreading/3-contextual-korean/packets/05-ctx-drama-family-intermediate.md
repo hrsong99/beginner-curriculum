@@ -8,7 +8,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 01 · 01-nagging
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-family-intermediate/lessons/01-nagging/lesson.html`
-- sha256: `4551e493c6cd9ac4623aa110e59f5815ef733a13642148556af2278cf6b8a0c0`
+- sha256: `e8b60c1cc3d1d7adcee62003f812ea85ac01a41a15520ce802d76ec0cbd8ddbe`
 - level: 중급
 
 ### `metadata`
@@ -421,7 +421,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 02 · 02-worry
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-family-intermediate/lessons/02-worry/lesson.html`
-- sha256: `4dfca7a9eb55eb2332f17acc93616a7b9fa4e3c91f56035b7a7374a04ab82874`
+- sha256: `41e1a05cc26d2e836f761503750a4da8147729f457f1e039e092d627cfd5822c`
 - level: 중급
 
 ### `metadata`
@@ -842,7 +842,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 03 · 03-errand
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-family-intermediate/lessons/03-errand/lesson.html`
-- sha256: `828f8043b2c50ac847a3f0e34d56483d8fdd8a44df2394ee06c74fc979ec7a00`
+- sha256: `d06ec90cb26435f42d81cf820472faeebb0ade5c2679d8d6315571a299e11520`
 - level: 중급
 
 ### `metadata`
@@ -1249,7 +1249,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 04 · 04-complaining
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-family-intermediate/lessons/04-complaining/lesson.html`
-- sha256: `069daa12bc011a5d0deba7ed230fb30dc262889f92560f11003ab1c381d6b19a`
+- sha256: `4efa4511d7ebafc88e44b28f69e77d921ee9415be48377489b14489f7692babc`
 - level: 중급
 
 ### `metadata`
@@ -1650,7 +1650,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 05 · 05-reprimand
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-family-intermediate/lessons/05-reprimand/lesson.html`
-- sha256: `873d0fa0b810cda765524e8a92ba6a4ab87bec40a5bde163952bab3ad47cceb5`
+- sha256: `9eed761d64c4ec16364a0fc57b03544b86a49183b70fba581639ffdaee7374fd`
 - level: 중급
 
 ### `metadata`
@@ -2049,7 +2049,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 06 · 06-mealtime
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-family-intermediate/lessons/06-mealtime/lesson.html`
-- sha256: `a21b3edc5dcc6587952913b0d5f20b48827eb6bf8ecbf1a59bcfe6751a8def59`
+- sha256: `200de3e242272cef5a501e3cdeaea9ecc21591cfee36b3c93d04c432807f1668`
 - level: 중급
 
 ### `metadata`
@@ -2448,7 +2448,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 07 · 07-comfort
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-family-intermediate/lessons/07-comfort/lesson.html`
-- sha256: `5de5d7e7b9aa4ed264f6203c23a66c0b943540234247fd4835e5ec90e07b87d2`
+- sha256: `773eca7e7c11f3342836d8aeae377094f24f549a7866659fda2de19704058861`
 - level: 중급
 
 ### `metadata`
@@ -2887,7 +2887,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 08 · 08-encouragement
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-family-intermediate/lessons/08-encouragement/lesson.html`
-- sha256: `acef4daf58450587881e51d6979ba52aa6fe537b40a642982efa057eef7bff04`
+- sha256: `0fd663684cdf511d6aced9a16d2f0f5076eb4971deb06553400610a2685fe64b`
 - level: 중급
 
 ### `metadata`
@@ -3291,7 +3291,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 09 · 09-reconciliation
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-family-intermediate/lessons/09-reconciliation/lesson.html`
-- sha256: `4da8f1e4c0bb9404980ee66dc5d10c87adccbbf89891f54cfc64d2b8c6857138`
+- sha256: `71d6af2e5314a49e3680eba58805a7e13e96490e16662f19ae28875375728f5b`
 - level: 중급
 
 ### `metadata`
@@ -3726,7 +3726,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 10 · 10-filial-devotion
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-drama-family-intermediate/lessons/10-filial-devotion/lesson.html`
-- sha256: `2d4c64fe13e72e76b63d01ca48a0628069951ab5613dc06f04b9de21444d4ab2`
+- sha256: `1abec9c25e15ff01f49a4d2450f70e06f0f94694c40ee1288e523beb25266461`
 - level: 중급
 
 ### `metadata`

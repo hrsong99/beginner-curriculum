@@ -17,6 +17,7 @@ instead, and .yomi subtrees are dropped with their text before comparing.
 import re
 import sys
 import unicodedata
+import html
 from itertools import permutations
 from pathlib import Path
 
@@ -55,12 +56,15 @@ def norm(s):
 def check(path):
     src = path.read_text(encoding="utf-8")
     problems = []
-    for m in re.finditer(r'<span class="answer-space" data-sync-id="([^"]+)">', src):
+    zone = re.compile(
+        r'<span class="answer-space build-zone" data-sync-id="([^"]+)" '
+        r'data-sync-kind="order" data-a="([^"]*)"></span>')
+    for m in zone.finditer(src):
         sid = m.group(1)
-        answer, after = span_body(src, m.end())
-        # chips for this sid follow, before the next answer-space
-        nxt = src.find('<span class="answer-space"', after)
-        region = src[after:nxt if nxt != -1 else len(src)]
+        answer = html.unescape(m.group(2))
+        # chips for this sid follow, before the next build zone
+        nxt = zone.search(src, m.end())
+        region = src[m.end():nxt.start() if nxt else len(src)]
         chips = []
         for c in re.finditer(r'<span class="choice" data-item-id="' + re.escape(sid) + r'-(\d+)">', region):
             body, _ = span_body(region, c.end())

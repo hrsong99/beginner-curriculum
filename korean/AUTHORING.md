@@ -252,21 +252,26 @@ closing
 <div class="task-block">
   <div class="answer-box">                     <!-- .tall 이면 자유 작문 높이 -->
     <span class="answer-label">私は学生<span class="target ending">です</span>。</span>
-    <span class="answer-fill"><span class="korean">저는 학생<span class="slot" data-sync-id="p1-fill-student">이에요</span>.</span></span>
+    <span class="answer-fill"><span class="korean">저는 학생<input class="slot-input" type="text" data-sync-id="p1-fill-student" data-answer="이에요" autocomplete="off" spellcheck="false">.</span></span>
     <span class="hint"><span class="hint-chip">学生:학생</span></span>   <!-- 칸 안에 넣으면 아래 띠가 된다 -->
   </div>
 </div>
 ```
 
-- `.slot` 안에 적은 글자가 **정답**입니다. 로드될 때 점선 입력칸으로 바뀝니다.
+- 입력 컨트롤은 HTML에 처음부터 실제 `<input>`·`<textarea>`로 적습니다. Lemonboard
+  검증기는 스크립트를 실행하지 않으므로, `<span>` 껍데기를 로드 후 입력칸으로 바꾸면
+  검증기와 수업 화면이 서로 다른 DOM을 보게 됩니다.
+- `.slot-input`의 `data-answer`가 **정답**입니다. `data-sync-id`는 실제 입력칸에 둡니다.
 - 빈칸이 **문장 한 토막**이어도(대화 채우기처럼 서술어 전체를 말하게 하는 자리) 그냥
-  `.slot` 입니다. 크기를 지정하는 클래스는 없습니다 — 로드될 때 답을 실제로 그려 보고
+  `.slot-input` 입니다. 크기를 지정하는 클래스는 없습니다 — 로드될 때 답을 실제로 그려 보고
   그 너비로 칸을 잡으므로, 앞말이 짧으면 한 줄에 들어가고 길면 알아서 아랫줄로
   넘어갑니다. 공유 런타임이 칸과 대화 턴을 현재 답 상자 너비 안에 제한하므로, 긴 답을
   억지로 짧게 쪼개거나 덱별 폭 스타일을 만들지 마세요. 넘어간 칸이 윗글에 붙어 보이지
   않도록 `.dialogue .answer-fill` 의 줄
   간격이 넉넉하게 잡혀 있으니, 여백을 따로 손대지 마세요.
-- `.answer-space` 는 답이 적혀 있으면 채점칸, 비어 있으면 자유 작문칸이 됩니다.
+- 문장 전체를 채점하는 칸은 `.answer-space.as-input` 안의
+  `input.space-input[data-answer]`, 자유 작문칸은 같은 껍데기 안의
+  `textarea.free-input`입니다. 자유 작문에는 `maxlength="2000"`을 둡니다.
 - **머리띠(`.answer-label`)는 아래 한국어의 일본어 번역입니다.** 세 장만 지나면 학습자는
   이 자리를 그렇게 읽습니다. 번역할 것이 없어(아직 한국어가 없고 학습자가 지어냅니다)
   **할 일**을 적어야 하면 `.task` 를 답니다 — 「やること」 배지가 CSS 에서 붙고 글자 무게가
@@ -284,7 +289,7 @@ closing
 <div class="task-block">
   <div class="answer-box small">
     <span class="answer-label">私は日本人です。</span>
-    <span class="answer-space" data-sync-id="p2-order-japanese">저는 일본 사람이에요</span>
+    <span class="answer-space build-zone" data-sync-id="p2-order-japanese" data-sync-kind="order" data-a="저는 일본 사람이에요"></span>
   </div>
   <span class="choice" data-item-id="japanese">일본 사람</span>
   <span class="choice" data-item-id="me">저는</span>
@@ -317,7 +322,7 @@ Contextual Korean의 `p3-freetalk` 은 반드시 네 차례로 닫습니다: **�
 <div class="turn other"><span class="who">…<span class="who-name">선생님</span></span>
   <div class="bubble"><div class="answer-box small">
     <span class="answer-label">先生の答え</span>
-    <span class="answer-space" data-sync-id="p3-freetalk-tutor-answer"></span>
+    <span class="answer-space as-input"><textarea class="free-input" data-sync-id="p3-freetalk-tutor-answer" rows="2" spellcheck="false" maxlength="2000"></textarea></span>
   </div></div></div>
 ```
 
@@ -399,7 +404,8 @@ Contextual Korean의 `p3-freetalk` 은 반드시 네 차례로 닫습니다: **�
   `.bt-out`/`.bt-ex` · `.choice`/`.choose-word` · `.answer-fill` ·
   `.example-card` · `.combi` 타일 · `.brand-title`/`.transition-title`.
 - **안 붙는 곳**: `.section-title`(옆의 `.title-ja` 가 이미 무슨 장인지 말한다),
-  `.section-subtitle`(튜터가 읽는 줄), `.tutor-note`, `.slot`·`.answer-space`(정답).
+  `.section-subtitle`(튜터가 읽는 줄), `.tutor-note`, `.slot-input`·`.space-input`·
+  `.free-input`·`.build-zone`(정답 또는 입력 컨트롤).
 - **둘 중 하나를 고르는 알약(`.opt`)에는 넣지 않습니다.** 거기 들어가는 것은 그 장이
   방금 가르친 패턴뿐이라(이에요/예요, 은/는) 고를 때쯤엔 도움이 아니라 2em 짜리
   과녁 안의 두 번째 줄이 되고, 네 줄이면 한눈에 보던 것이 문단이 됩니다. 옆의 **낱말**

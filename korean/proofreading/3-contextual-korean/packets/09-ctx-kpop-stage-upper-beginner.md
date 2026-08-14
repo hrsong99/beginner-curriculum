@@ -8,7 +8,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 01 · 01-first-impression
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-kpop-stage-upper-beginner/lessons/01-first-impression/lesson.html`
-- sha256: `03b39f78f138edba3641a647e2aa77a14f9df5663306b030267f8088d0a431d1`
+- sha256: `a48319d1717ce9d3aefe948d4ff0b9aa434921baf2d2c60b2ca99603fbbfb092`
 - level: 초중급
 
 ### `metadata`
@@ -377,7 +377,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 02 · 02-song-review
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-kpop-stage-upper-beginner/lessons/02-song-review/lesson.html`
-- sha256: `d744abafe9467751f6bbf7ad7e37550ad6294b24f9cb13c79b0e2548990a9994`
+- sha256: `c965856480b0c996e27d2a4e2aacc385998aeee00390cddf2944a8de04b4c563`
 - level: 초중급
 
 ### `metadata`
@@ -746,7 +746,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 03 · 03-live-stage
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-kpop-stage-upper-beginner/lessons/03-live-stage/lesson.html`
-- sha256: `a3197b5cab38b8856f223ed2d70c142b57417ef7378a16d473af285634b9cc6d`
+- sha256: `8a5ec89864a5c4d05eec9788576315d3b376757d19e0d5fab2920df15ef0a17a`
 - level: 초중급
 
 ### `metadata`
@@ -1115,7 +1115,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 04 · 04-visual-concept
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-kpop-stage-upper-beginner/lessons/04-visual-concept/lesson.html`
-- sha256: `6f878c77cd9ac8bf905fc94a4670ecd82d43cde5ca467d6b07434ea164048946`
+- sha256: `b49b5608dd9e94e7413fa7ba92a7e5e49849a2083e7d268a9b330230eb1b1674`
 - level: 초중급
 
 ### `metadata`
@@ -1484,7 +1484,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 05 · 05-album-comparison
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-kpop-stage-upper-beginner/lessons/05-album-comparison/lesson.html`
-- sha256: `31b9ecd3118428f246ae7c722f10e59835b13930af4b9d17d7a15621dc92fb1e`
+- sha256: `55326dee94caf7ab6a9ceba5c11c85ea52c7dd85dd331a3279ab38416acca496`
 - level: 초중급
 
 ### `metadata`
@@ -1855,7 +1855,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 06 · 06-recommending-a-track
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-kpop-stage-upper-beginner/lessons/06-recommending-a-track/lesson.html`
-- sha256: `dee792f615410c802b2a3014c0e7294ca3b1d6337ac79634188d43c3fd223089`
+- sha256: `7a5edebeb05b1d6b9fd9f71e42bc886a12c1f4930fae804f41b15fdacfdf24f4`
 - level: 초중급
 
 ### `metadata`
@@ -2224,7 +2224,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 07 · 07-comeback-reaction
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-kpop-stage-upper-beginner/lessons/07-comeback-reaction/lesson.html`
-- sha256: `c692470220c8b1dad2a604eddd53c2c36914e0f538d707815b38162a63f3d4f6`
+- sha256: `9f6818566f26cc6bc5d9928a97bc245c643629e65f1c5e8d8c2ae848ea4ebdf1`
 - level: 초중급
 
 ### `metadata`
@@ -2593,7 +2593,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 08 · 08-choreography-review
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-kpop-stage-upper-beginner/lessons/08-choreography-review/lesson.html`
-- sha256: `f96a576f8bd25db5734e1c67c3fed4259aeac5a8cd602469036ff11aad98acee`
+- sha256: `0defe441b5b5ab219d11506e02b565befdf108a17a6bef275854294c8fb9fb7e`
 - level: 초중급
 
 ### `metadata`
@@ -2963,7 +2963,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 09 · 09-praising-vocals
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-kpop-stage-upper-beginner/lessons/09-praising-vocals/lesson.html`
-- sha256: `f09d6e2d0ef44efab094e25662901c250ef349451b08986b438b551332f5f68d`
+- sha256: `8f36788bc08e789ab455f3251548b6793d7e8e22b1796a593761f5a5557ee3c5`
 - level: 초중급
 
 ### `metadata`
@@ -3332,7 +3332,7 @@ HTML이 원본이다. 이 파일은 언어·지시·활동 의미를 검수하�
 ## 10 · 10-overall-review
 
 - source: `korean/tracks/3-contextual-korean/courses/ctx-kpop-stage-upper-beginner/lessons/10-overall-review/lesson.html`
-- sha256: `2ea0e7d9cc793cced734fe87fb76312622da65c1a113399fdf23f9dfa19027c6`
+- sha256: `dc15b4714b06c02b7f0fe0a7385a458c7edfe2ff5cfff1999d2fc8048c5b1876`
 - level: 초중급
 
 ### `metadata`

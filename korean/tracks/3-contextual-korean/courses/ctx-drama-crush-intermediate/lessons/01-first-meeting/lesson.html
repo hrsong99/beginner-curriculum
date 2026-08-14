@@ -195,7 +195,7 @@
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">あのカフェに行ったことがあります。</span>
-          <span class="answer-space" data-sync-id="p1-order-go">전에 그 카페에 간 적 있어요</span>
+          <span class="answer-space build-zone" data-sync-id="p1-order-go" data-sync-kind="order" data-a="전에 그 카페에 간 적 있어요"></span>
         </div>
         <span class="choice" data-item-id="went">간 적</span>
         <span class="choice" data-item-id="have-go">있어요</span>
@@ -205,7 +205,7 @@
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">トッポッキを食べたことがあります。</span>
-          <span class="answer-space" data-sync-id="p1-order-eat">저는 떡볶이 먹은 적 있어요</span>
+          <span class="answer-space build-zone" data-sync-id="p1-order-eat" data-sync-kind="order" data-a="저는 떡볶이 먹은 적 있어요"></span>
         </div>
         <span class="choice" data-item-id="have-eat">있어요</span>
         <span class="choice" data-item-id="tteokbokki">떡볶이</span>
@@ -215,7 +215,7 @@
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">そのドラマ、見たことがありません。</span>
-          <span class="answer-space" data-sync-id="p1-order-see">저는 그 드라마 본 적 없어요</span>
+          <span class="answer-space build-zone" data-sync-id="p1-order-see" data-sync-kind="order" data-a="저는 그 드라마 본 적 없어요"></span>
         </div>
         <span class="choice" data-item-id="no-have">없어요</span>
         <span class="choice" data-item-id="saw">본 적</span>
@@ -225,7 +225,7 @@
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">あの人に会ったことがありますか？</span>
-          <span class="answer-space" data-sync-id="p1-order-meet">혹시 그 사람 만난 적 있어요?</span>
+          <span class="answer-space build-zone" data-sync-id="p1-order-meet" data-sync-kind="order" data-a="혹시 그 사람 만난 적 있어요?"></span>
         </div>
         <span class="choice" data-item-id="met">만난 적</span>
         <span class="choice" data-item-id="person">그 사람</span>
@@ -242,25 +242,25 @@
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">あのカフェに<span class="target ending">行ったこと</span>があります。</span>
-          <span class="answer-fill"><span class="korean">그 카페에 <span class="slot" data-sync-id="p1-fill-go">간 적</span> 있어요.</span></span>
+          <span class="answer-fill"><span class="korean">그 카페에 <input class="slot-input" type="text" data-sync-id="p1-fill-go" data-answer="간 적" autocomplete="off" spellcheck="false"> 있어요.</span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">トッポッキを<span class="target ending">食べたこと</span>があります。</span>
-          <span class="answer-fill"><span class="korean">떡볶이 <span class="slot" data-sync-id="p1-fill-eat">먹은 적</span> 있어요.</span></span>
+          <span class="answer-fill"><span class="korean">떡볶이 <input class="slot-input" type="text" data-sync-id="p1-fill-eat" data-answer="먹은 적" autocomplete="off" spellcheck="false"> 있어요.</span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">そのドラマ、<span class="target ending">見たこと</span>がありません。</span>
-          <span class="answer-fill"><span class="korean">그 드라마 <span class="slot" data-sync-id="p1-fill-see">본 적</span> 없어요.</span></span>
+          <span class="answer-fill"><span class="korean">그 드라마 <input class="slot-input" type="text" data-sync-id="p1-fill-see" data-answer="본 적" autocomplete="off" spellcheck="false"> 없어요.</span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">あの人に<span class="target ending">会ったこと</span>がありますか？</span>
-          <span class="answer-fill"><span class="korean">그 사람 <span class="slot" data-sync-id="p1-fill-meet">만난 적</span> 있어요?</span></span>
+          <span class="answer-fill"><span class="korean">그 사람 <input class="slot-input" type="text" data-sync-id="p1-fill-meet" data-answer="만난 적" autocomplete="off" spellcheck="false"> 있어요?</span></span>
         </div>
       </div>
     </div>
@@ -271,28 +271,28 @@
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">あのカフェに行ったことがあります。</span>
-          <span class="answer-space" data-sync-id="p1-translate-go">그 카페에 간 적 있어요</span>
+          <span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p1-translate-go" data-answer="그 카페에 간 적 있어요" autocomplete="off" spellcheck="false"></span>
                   <span class="hint"><span class="hint-chip">カフェ:카페</span><span class="hint-chip">行く:가다</span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">トッポッキを食べたことがありますか？</span>
-          <span class="answer-space" data-sync-id="p1-translate-eat">떡볶이 먹은 적 있어요?</span>
+          <span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p1-translate-eat" data-answer="떡볶이 먹은 적 있어요?" autocomplete="off" spellcheck="false"></span>
                   <span class="hint"><span class="hint-chip">トッポッキ:떡볶이</span><span class="hint-chip">食べる:먹다</span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">そのドラマ、見たことがありません。</span>
-          <span class="answer-space" data-sync-id="p1-translate-see">그 드라마 본 적 없어요</span>
+          <span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p1-translate-see" data-answer="그 드라마 본 적 없어요" autocomplete="off" spellcheck="false"></span>
                   <span class="hint"><span class="hint-chip">ドラマ:드라마</span><span class="hint-chip">見る:보다</span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">ソウルで会ったことがあります。</span>
-          <span class="answer-space" data-sync-id="p1-translate-meet">서울에서 만난 적 있어요</span>
+          <span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p1-translate-meet" data-answer="서울에서 만난 적 있어요" autocomplete="off" spellcheck="false"></span>
                   <span class="hint"><span class="hint-chip">ソウル:서울</span><span class="hint-chip">会う:만나다</span></span>
         </div>
       </div>
@@ -305,7 +305,7 @@
       <div class="tutor-note">학생이 말한 문장을 여기에 적어 주세요.</div>
       <div class="task-block">
         <div class="answer-box tall">
-          <span class="answer-space" data-sync-id="p1-free-experience"></span>
+          <span class="answer-space as-input"><textarea class="free-input" data-sync-id="p1-free-experience" rows="2" spellcheck="false" maxlength="2000"></textarea></span>
                   <span class="hint"><span class="hint-chip">行く:가다</span><span class="hint-chip">見る:보다</span><span class="hint-chip">食べる:먹다</span><span class="hint-chip">会う:만나다</span><span class="hint-chip">習う:배우다</span><span class="hint-chip">読む:읽다</span><span class="hint-chip">韓国:한국</span><span class="hint-chip">コンサート:콘서트</span></span>
         </div>
       </div>
@@ -421,7 +421,7 @@
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">ここに座ってもいいですか？</span>
-          <span class="answer-space" data-sync-id="p2-order-sit">혹시 여기 앉아도 돼요?</span>
+          <span class="answer-space build-zone" data-sync-id="p2-order-sit" data-sync-kind="order" data-a="혹시 여기 앉아도 돼요?"></span>
         </div>
         <span class="choice" data-item-id="dweyo">돼요?</span>
         <span class="choice" data-item-id="here">여기</span>
@@ -431,7 +431,7 @@
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">写真、いっしょに撮ってもいいですか？</span>
-          <span class="answer-space" data-sync-id="p2-order-photo">사진을 같이 찍어도 돼요?</span>
+          <span class="answer-space build-zone" data-sync-id="p2-order-photo" data-sync-kind="order" data-a="사진을 같이 찍어도 돼요?"></span>
         </div>
         <span class="choice" data-item-id="take-photo">찍어도</span>
         <span class="choice" data-item-id="together">같이</span>
@@ -441,7 +441,7 @@
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">もしかして、番号を聞いてもいいですか？</span>
-          <span class="answer-space" data-sync-id="p2-order-number">혹시 전화번호를 물어봐도 돼요?</span>
+          <span class="answer-space build-zone" data-sync-id="p2-order-number" data-sync-kind="order" data-a="혹시 전화번호를 물어봐도 돼요?"></span>
         </div>
         <span class="choice" data-item-id="ask">물어봐도</span>
         <span class="choice" data-item-id="number">전화번호를</span>
@@ -451,7 +451,7 @@
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">これ、食べてもいいですか？</span>
-          <span class="answer-space" data-sync-id="p2-order-eat">저도 이거 먹어도 돼요?</span>
+          <span class="answer-space build-zone" data-sync-id="p2-order-eat" data-sync-kind="order" data-a="저도 이거 먹어도 돼요?"></span>
         </div>
         <span class="choice" data-item-id="eat">먹어도</span>
         <span class="choice" data-item-id="this">이거</span>
@@ -467,25 +467,25 @@
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">ここに<span class="target ending">座っても</span>いいですか？</span>
-          <span class="answer-fill"><span class="korean">여기 <span class="slot" data-sync-id="p2-fill-sit">앉아도</span> 돼요?</span></span>
+          <span class="answer-fill"><span class="korean">여기 <input class="slot-input" type="text" data-sync-id="p2-fill-sit" data-answer="앉아도" autocomplete="off" spellcheck="false"> 돼요?</span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">写真を<span class="target ending">撮っても</span>いいですか？</span>
-          <span class="answer-fill"><span class="korean">사진 <span class="slot" data-sync-id="p2-fill-photo">찍어도</span> 돼요?</span></span>
+          <span class="answer-fill"><span class="korean">사진 <input class="slot-input" type="text" data-sync-id="p2-fill-photo" data-answer="찍어도" autocomplete="off" spellcheck="false"> 돼요?</span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">番号を<span class="target ending">聞いても</span>いいですか？</span>
-          <span class="answer-fill"><span class="korean">번호 <span class="slot" data-sync-id="p2-fill-ask">물어봐도</span> 돼요?</span></span>
+          <span class="answer-fill"><span class="korean">번호 <input class="slot-input" type="text" data-sync-id="p2-fill-ask" data-answer="물어봐도" autocomplete="off" spellcheck="false"> 돼요?</span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">ちょっと<span class="target ending">休んでも</span>いいですか？</span>
-          <span class="answer-fill"><span class="korean">잠깐 <span class="slot" data-sync-id="p2-fill-rest">쉬어도</span> 돼요?</span></span>
+          <span class="answer-fill"><span class="korean">잠깐 <input class="slot-input" type="text" data-sync-id="p2-fill-rest" data-answer="쉬어도" autocomplete="off" spellcheck="false"> 돼요?</span></span>
         </div>
       </div>
     </div>
@@ -496,28 +496,28 @@
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">ここに座ってもいいですか？</span>
-          <span class="answer-space" data-sync-id="p2-translate-sit">여기 앉아도 돼요?</span>
+          <span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p2-translate-sit" data-answer="여기 앉아도 돼요?" autocomplete="off" spellcheck="false"></span>
                   <span class="hint"><span class="hint-chip">座る:앉다</span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">写真を撮ってもいいですか？</span>
-          <span class="answer-space" data-sync-id="p2-translate-photo">사진 찍어도 돼요?</span>
+          <span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p2-translate-photo" data-answer="사진 찍어도 돼요?" autocomplete="off" spellcheck="false"></span>
                   <span class="hint"><span class="hint-chip">写真:사진</span><span class="hint-chip">撮る:찍다</span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">もしかして、番号を聞いてもいいですか？</span>
-          <span class="answer-space" data-sync-id="p2-translate-number">혹시 번호 물어봐도 돼요?</span>
+          <span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p2-translate-number" data-answer="혹시 번호 물어봐도 돼요?" autocomplete="off" spellcheck="false"></span>
                   <span class="hint"><span class="hint-chip">番号:번호</span><span class="hint-chip">聞いてみる:물어보다</span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">これ、食べてもいいですか？</span>
-          <span class="answer-space" data-sync-id="p2-translate-eat">이거 먹어도 돼요?</span>
+          <span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p2-translate-eat" data-answer="이거 먹어도 돼요?" autocomplete="off" spellcheck="false"></span>
                   <span class="hint"><span class="hint-chip">これ:이거</span><span class="hint-chip">食べる:먹다</span></span>
         </div>
       </div>
@@ -529,7 +529,7 @@
       <div class="tutor-note">학생이 말한 질문을 여기에 적어 주세요.</div>
       <div class="task-block">
         <div class="answer-box tall">
-          <span class="answer-space" data-sync-id="p2-free-question"></span>
+          <span class="answer-space as-input"><textarea class="free-input" data-sync-id="p2-free-question" rows="2" spellcheck="false" maxlength="2000"></textarea></span>
                   <span class="hint"><span class="hint-chip">座る:앉다</span><span class="hint-chip">撮る:찍다</span><span class="hint-chip">食べる:먹다</span><span class="hint-chip">休む:쉬다</span><span class="hint-chip">聞いてみる:물어보다</span><span class="hint-chip">開ける:열다</span><span class="hint-chip">写真:사진</span><span class="hint-chip">名前:이름</span></span>
         </div>
       </div>
@@ -565,11 +565,11 @@
       <div class="dialogue">
         <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">나</span></span><div class="bubble me"><span class="korean">저기요! 이거요.</span><span class="translation">あの、すみません！これ。</span></div></div>
         <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">소희</span></span><div class="bubble"><span class="korean">아… 감사합니다.</span><span class="translation">あ…ありがとうございます。</span></div></div>
-        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">나</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">あの…もしかして、私たちどこかで<span class="target">会ったことありません</span>か？</span><span class="answer-fill"><span class="korean">저… 혹시 우리 어디서 <span class="slot" data-sync-id="p3-complete-seen">본 적 있지 않아요</span>?</span></span><span class="hint"><span class="hint-chip">見る:보다</span></span></div></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">나</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">あの…もしかして、私たちどこかで<span class="target">会ったことありません</span>か？</span><span class="answer-fill"><span class="korean">저… 혹시 우리 어디서 <input class="slot-input" type="text" data-sync-id="p3-complete-seen" data-answer="본 적 있지 않아요" autocomplete="off" spellcheck="false">?</span></span><span class="hint"><span class="hint-chip">見る:보다</span></span></div></div></div>
         <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">소희</span></span><div class="bubble"><span class="korean">네? 글쎄요… 잘 모르겠는데요.</span><span class="translation">え？さあ…よくわからないですけど。</span></div></div>
-        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">나</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">先週のあのカフェです。窓ぎわの席で<span class="target">見たことがあります</span>。</span><span class="answer-fill"><span class="korean">지난주 그 카페요. 창가 자리에서 <span class="slot" data-sync-id="p3-complete-cafe">본 적 있어요</span>.</span></span><span class="hint"><span class="hint-chip">見る:보다</span></span></div></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">나</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">先週のあのカフェです。窓ぎわの席で<span class="target">見たことがあります</span>。</span><span class="answer-fill"><span class="korean">지난주 그 카페요. 창가 자리에서 <input class="slot-input" type="text" data-sync-id="p3-complete-cafe" data-answer="본 적 있어요" autocomplete="off" spellcheck="false">.</span></span><span class="hint"><span class="hint-chip">見る:보다</span></span></div></div></div>
         <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">소희</span></span><div class="bubble"><span class="korean">아, 맞다! 그 카페! 반가워요.</span><span class="translation">あ、そうだ！あのカフェ！うれしいです。</span></div></div>
-        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">나</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">あの…もしかして、番号を<span class="target">聞いてもいいですか</span>？</span><span class="answer-fill"><span class="korean">저… 혹시 번호 <span class="slot" data-sync-id="p3-complete-number">물어봐도 돼요</span>?</span></span><span class="hint"><span class="hint-chip">聞いてみる:물어보다</span></span></div></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">나</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">あの…もしかして、番号を<span class="target">聞いてもいいですか</span>？</span><span class="answer-fill"><span class="korean">저… 혹시 번호 <input class="slot-input" type="text" data-sync-id="p3-complete-number" data-answer="물어봐도 돼요" autocomplete="off" spellcheck="false">?</span></span><span class="hint"><span class="hint-chip">聞いてみる:물어보다</span></span></div></div></div>
         <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">소희</span></span><div class="bubble"><span class="korean">네, 좋아요. 저도 반가웠어요.</span><span class="translation">はい、いいですよ。私もうれしかったです。</span></div></div>
       </div>
     </div>
@@ -580,9 +580,9 @@
       <div class="tutor-note">학생 질문을 받은 뒤, 선생님의 실제 경험으로 자연스럽게 답해 주세요.</div>
       <div class="dialogue">
         <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">선생님</span></span><div class="bubble"><span class="korean">한국에 간 적 있어요?</span><span class="translation">韓国に行ったことがありますか？</span></div></div>
-        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">나</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label task">ある？ない？いつ・どこ？くわしく答えてみよう</span><span class="answer-space" data-sync-id="p3-freetalk-answer"></span><span class="hint"><span class="hint-chip">韓国:한국</span><span class="hint-chip">行く:가다</span><span class="hint-chip">去年:작년</span></span></div></div></div>
-        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">나</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label task">先生にも「〜したことある？」を1つ聞いてみよう</span><span class="answer-space" data-sync-id="p3-freetalk-question">일본에 온 적 있어요?</span><span class="hint"><span class="hint-chip">日本:일본</span><span class="hint-chip">来る:오다</span></span></div></div></div>
-        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">선생님</span></span><div class="bubble"><div class="answer-box small"><span class="answer-label">先生の答え</span><span class="answer-space" data-sync-id="p3-freetalk-tutor-answer"></span></div></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">나</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label task">ある？ない？いつ・どこ？くわしく答えてみよう</span><span class="answer-space as-input"><textarea class="free-input" data-sync-id="p3-freetalk-answer" rows="2" spellcheck="false" maxlength="2000"></textarea></span><span class="hint"><span class="hint-chip">韓国:한국</span><span class="hint-chip">行く:가다</span><span class="hint-chip">去年:작년</span></span></div></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">나</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label task">先生にも「〜したことある？」を1つ聞いてみよう</span><span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p3-freetalk-question" data-answer="일본에 온 적 있어요?" autocomplete="off" spellcheck="false"></span><span class="hint"><span class="hint-chip">日本:일본</span><span class="hint-chip">来る:오다</span></span></div></div></div>
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">선생님</span></span><div class="bubble"><div class="answer-box small"><span class="answer-label">先生の答え</span><span class="answer-space as-input"><textarea class="free-input" data-sync-id="p3-freetalk-tutor-answer" rows="2" spellcheck="false" maxlength="2000"></textarea></span></div></div></div>
       </div>
     </div>
 
@@ -608,11 +608,11 @@
       <p class="section-subtitle"><span class="ko">일주일 뒤, 그 카페예요. 소희가 창가 자리에 앉아 있어요. 빈칸 대사를 말해 주세요.</span><span class="ja">一週間後、あのカフェです。ソヒが窓ぎわの席にすわっています。空欄のセリフを言ってください。</span></p>
       <div class="dialogue">
         <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">소희</span></span><div class="bubble"><span class="korean">어? 안녕하세요! 또 만났네요.</span><span class="translation">あれ？こんにちは！また会いましたね。</span></div></div>
-        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">나</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">あの…ここに<span class="target">座ってもいいですか</span>？</span><span class="answer-fill"><span class="korean">저기… 여기 <span class="slot" data-sync-id="ep2-sit">앉아도 돼요</span>?</span></span><span class="hint"><span class="hint-chip">座る:앉다</span></span></div></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">나</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">あの…ここに<span class="target">座ってもいいですか</span>？</span><span class="answer-fill"><span class="korean">저기… 여기 <input class="slot-input" type="text" data-sync-id="ep2-sit" data-answer="앉아도 돼요" autocomplete="off" spellcheck="false">?</span></span><span class="hint"><span class="hint-chip">座る:앉다</span></span></div></div></div>
         <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">소희</span></span><div class="bubble"><span class="korean">그럼요, 앉으세요.</span><span class="translation">もちろん、どうぞ。</span></div></div>
-        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">나</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">あの日のあと、ここに<span class="target">来たことがあります</span>か？</span><span class="answer-fill"><span class="korean">그날 이후로 여기 <span class="slot" data-sync-id="ep2-been">온 적 있어요</span>?</span></span><span class="hint"><span class="hint-chip">来る:오다</span></span></div></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">나</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">あの日のあと、ここに<span class="target">来たことがあります</span>か？</span><span class="answer-fill"><span class="korean">그날 이후로 여기 <input class="slot-input" type="text" data-sync-id="ep2-been" data-answer="온 적 있어요" autocomplete="off" spellcheck="false">?</span></span><span class="hint"><span class="hint-chip">来る:오다</span></span></div></div></div>
         <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">소희</span></span><div class="bubble"><span class="korean">네, 매일 왔어요. 혹시 만날까 해서요.</span><span class="translation">はい、毎日来ました。もしかしたら会えるかと思って。</span></div></div>
-        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">나</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">じゃあ…いっしょに<span class="target">写真を撮ってもいいですか</span>？</span><span class="answer-fill"><span class="korean">그럼… 같이 <span class="slot" data-sync-id="ep2-photo">사진 찍어도 돼요</span>?</span></span><span class="hint"><span class="hint-chip">写真:사진</span><span class="hint-chip">撮る:찍다</span></span></div></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">나</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">じゃあ…いっしょに<span class="target">写真を撮ってもいいですか</span>？</span><span class="answer-fill"><span class="korean">그럼… 같이 <input class="slot-input" type="text" data-sync-id="ep2-photo" data-answer="사진 찍어도 돼요" autocomplete="off" spellcheck="false">?</span></span><span class="hint"><span class="hint-chip">写真:사진</span><span class="hint-chip">撮る:찍다</span></span></div></div></div>
         <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">소희</span></span><div class="bubble"><span class="korean">좋아요. 이번엔 제가 이름부터 물어볼게요.</span><span class="translation">いいですよ。今度は私から名前を聞きますね。</span></div></div>
       </div>
     </div>

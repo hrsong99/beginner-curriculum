@@ -105,7 +105,7 @@
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">私は学校に行きます。</span>
-          <span class="answer-space" data-sync-id="p1-order-school">저는 학교에 가요</span>
+          <span class="answer-space build-zone" data-sync-id="p1-order-school" data-sync-kind="order" data-a="저는 학교에 가요"></span>
         </div>
         <span class="choice" data-item-id="go-1">가요<span class="yomi">カヨ</span></span>
         <span class="choice" data-item-id="school-1">학교에<span class="yomi">ハッキョエ</span></span>
@@ -114,7 +114,7 @@
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">友だちは会社に行きます。</span>
-          <span class="answer-space" data-sync-id="p1-order-company">친구는 회사에 가요</span>
+          <span class="answer-space build-zone" data-sync-id="p1-order-company" data-sync-kind="order" data-a="친구는 회사에 가요"></span>
         </div>
         <span class="choice" data-item-id="company">회사에<span class="yomi">フェサエ</span></span>
         <span class="choice" data-item-id="friend-1">친구는<span class="yomi">チングヌン</span></span>
@@ -123,7 +123,7 @@
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">私は朝に運動します。</span>
-          <span class="answer-space" data-sync-id="p1-order-morning">저는 아침에 운동해요</span>
+          <span class="answer-space build-zone" data-sync-id="p1-order-morning" data-sync-kind="order" data-a="저는 아침에 운동해요"></span>
         </div>
         <span class="choice" data-item-id="exercise">운동해요<span class="yomi">ウンドンヘヨ</span></span>
         <span class="choice" data-item-id="me-2">저는<span class="yomi">チョヌン</span></span>
@@ -132,7 +132,7 @@
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">明日、図書館に行きますか？</span>
-          <span class="answer-space" data-sync-id="p1-order-library">내일 도서관에 가요?</span>
+          <span class="answer-space build-zone" data-sync-id="p1-order-library" data-sync-kind="order" data-a="내일 도서관에 가요?"></span>
         </div>
         <span class="choice" data-item-id="go-3">가요?<span class="yomi">カヨ</span></span>
         <span class="choice" data-item-id="tomorrow">내일<span class="yomi">ネイル</span></span>
@@ -147,25 +147,25 @@
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">私は学校<span class="target topic">に</span>行きます。</span>
-          <span class="answer-fill"><span class="korean">저는 학교 <span class="slot" data-sync-id="p1-fill-school">에</span> 가요.</span><span class="yomi">チョヌン ハッキョ ＿ カヨ</span></span>
+          <span class="answer-fill"><span class="korean">저는 학교 <input class="slot-input" type="text" data-sync-id="p1-fill-school" data-answer="에" autocomplete="off" spellcheck="false"> 가요.</span><span class="yomi">チョヌン ハッキョ ＿ カヨ</span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">私は朝<span class="target topic">に</span>運動します。</span>
-          <span class="answer-fill"><span class="korean">저는 아침 <span class="slot" data-sync-id="p1-fill-morning">에</span> 운동해요.</span><span class="yomi">チョヌン アチム ＿ ウンドンヘヨ</span></span>
+          <span class="answer-fill"><span class="korean">저는 아침 <input class="slot-input" type="text" data-sync-id="p1-fill-morning" data-answer="에" autocomplete="off" spellcheck="false"> 운동해요.</span><span class="yomi">チョヌン アチム ＿ ウンドンヘヨ</span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">友だちは家<span class="target topic">に</span>来ます。</span>
-          <span class="answer-fill"><span class="korean">친구는 집 <span class="slot" data-sync-id="p1-fill-home">에</span> 와요.</span><span class="yomi">チングヌン チプ ＿ ワヨ</span></span>
+          <span class="answer-fill"><span class="korean">친구는 집 <input class="slot-input" type="text" data-sync-id="p1-fill-home" data-answer="에" autocomplete="off" spellcheck="false"> 와요.</span><span class="yomi">チングヌン チプ ＿ ワヨ</span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">週末<span class="target topic">に</span>何をしますか？</span>
-          <span class="answer-fill"><span class="korean">주말 <span class="slot" data-sync-id="p1-fill-weekend">에</span> 뭐 해요?</span><span class="yomi">チュマル ＿ ムォ ヘヨ</span></span>
+          <span class="answer-fill"><span class="korean">주말 <input class="slot-input" type="text" data-sync-id="p1-fill-weekend" data-answer="에" autocomplete="off" spellcheck="false"> 뭐 해요?</span><span class="yomi">チュマル ＿ ムォ ヘヨ</span></span>
         </div>
       </div>
     </div>
@@ -176,28 +176,28 @@
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">私は会社に行きます。</span>
-          <span class="answer-space" data-sync-id="p1-translate-company">저는 회사에 가요</span>
+          <span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p1-translate-company" data-answer="저는 회사에 가요" autocomplete="off" spellcheck="false"></span>
                   <span class="hint"><span class="hint-chip">会社:회사<span class="yomi">フェサ</span></span><span class="hint-chip">行く:가다<span class="yomi">カダ</span></span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">友だちは図書館に行きます。</span>
-          <span class="answer-space" data-sync-id="p1-translate-library">친구는 도서관에 가요</span>
+          <span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p1-translate-library" data-answer="친구는 도서관에 가요" autocomplete="off" spellcheck="false"></span>
                   <span class="hint"><span class="hint-chip">図書館:도서관<span class="yomi">トソグァン</span></span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">私は夕方に料理します。</span>
-          <span class="answer-space" data-sync-id="p1-translate-evening">저는 저녁에 요리해요</span>
+          <span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p1-translate-evening" data-answer="저는 저녁에 요리해요" autocomplete="off" spellcheck="false"></span>
                   <span class="hint"><span class="hint-chip">夕方:저녁<span class="yomi">チョニョク</span></span><span class="hint-chip">料理:요리<span class="yomi">ヨリ</span></span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">明日、家に来ますか？</span>
-          <span class="answer-space" data-sync-id="p1-translate-home">내일 집에 와요?</span>
+          <span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p1-translate-home" data-answer="내일 집에 와요?" autocomplete="off" spellcheck="false"></span>
                   <span class="hint"><span class="hint-chip">家:집<span class="yomi">チプ</span></span><span class="hint-chip">明日:내일<span class="yomi">ネイル</span></span><span class="hint-chip">来る:오다<span class="yomi">オダ</span></span></span>
         </div>
       </div>
@@ -209,7 +209,7 @@
       <div class="tutor-note">학생이 말한 문장을 여기에 적어 주세요.</div>
       <div class="task-block">
         <div class="answer-box tall">
-          <span class="answer-space" data-sync-id="p1-free-statement"></span>
+          <span class="answer-space as-input"><textarea class="free-input" data-sync-id="p1-free-statement" rows="2" spellcheck="false" maxlength="2000"></textarea></span>
                   <span class="hint"><span class="hint-chip">学校:학교<span class="yomi">ハッキョ</span></span><span class="hint-chip">会社:회사<span class="yomi">フェサ</span></span><span class="hint-chip">図書館:도서관<span class="yomi">トソグァン</span></span><span class="hint-chip">家:집<span class="yomi">チプ</span></span><span class="hint-chip">カフェ:카페<span class="yomi">カペ</span></span><span class="hint-chip">行く:가다<span class="yomi">カダ</span></span><span class="hint-chip">明日:내일<span class="yomi">ネイル</span></span><span class="hint-chip">週末:주말<span class="yomi">チュマル</span></span></span>
         </div>
       </div>
@@ -302,7 +302,7 @@
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">私はカフェで勉強します。</span>
-          <span class="answer-space" data-sync-id="p2-order-cafe">저는 카페에서 공부해요</span>
+          <span class="answer-space build-zone" data-sync-id="p2-order-cafe" data-sync-kind="order" data-a="저는 카페에서 공부해요"></span>
         </div>
         <span class="choice" data-item-id="study">공부해요<span class="yomi">コンブヘヨ</span></span>
         <span class="choice" data-item-id="cafe">카페에서<span class="yomi">カペエソ</span></span>
@@ -311,7 +311,7 @@
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">友だちは家で料理します。</span>
-          <span class="answer-space" data-sync-id="p2-order-cook">친구는 집에서 요리해요</span>
+          <span class="answer-space build-zone" data-sync-id="p2-order-cook" data-sync-kind="order" data-a="친구는 집에서 요리해요"></span>
         </div>
         <span class="choice" data-item-id="cook">요리해요<span class="yomi">ヨリヘヨ</span></span>
         <span class="choice" data-item-id="friend-2">친구는<span class="yomi">チングヌン</span></span>
@@ -320,7 +320,7 @@
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">私は図書館で本を読みます。</span>
-          <span class="answer-space" data-sync-id="p2-order-read">저는 도서관에서 책을 읽어요</span>
+          <span class="answer-space build-zone" data-sync-id="p2-order-read" data-sync-kind="order" data-a="저는 도서관에서 책을 읽어요"></span>
         </div>
         <span class="choice" data-item-id="p2-reorder-3-3">책을<span class="yomi">チェグル</span></span>
         <span class="choice" data-item-id="p2-reorder-3-4">읽어요<span class="yomi">イルゴヨ</span></span>
@@ -329,7 +329,7 @@
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">田中さんはどこでコーヒーを飲みますか？</span>
-          <span class="answer-space" data-sync-id="p2-order-where">다나카 씨는 어디에서 커피를 마셔요?</span>
+          <span class="answer-space build-zone" data-sync-id="p2-order-where" data-sync-kind="order" data-a="다나카 씨는 어디에서 커피를 마셔요?"></span>
         </div>
         <span class="choice" data-item-id="p2-reorder-4-3">커피를<span class="yomi">コピルル</span></span>
         <span class="choice" data-item-id="p2-reorder-4-1">다나카 씨는<span class="yomi">タナカ シヌン</span></span>
@@ -344,25 +344,25 @@
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">私はカフェ<span class="target topic">で</span>勉強します。</span>
-          <span class="answer-fill"><span class="korean">저는 카페 <span class="slot" data-sync-id="p2-fill-cafe">에서</span> 공부해요.</span><span class="yomi">チョヌン カペ ＿＿ コンブヘヨ</span></span>
+          <span class="answer-fill"><span class="korean">저는 카페 <input class="slot-input" type="text" data-sync-id="p2-fill-cafe" data-answer="에서" autocomplete="off" spellcheck="false"> 공부해요.</span><span class="yomi">チョヌン カペ ＿＿ コンブヘヨ</span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">私は学校<span class="target topic">に</span>行きます。</span>
-          <span class="answer-fill"><span class="korean">저는 학교 <span class="slot" data-sync-id="p2-fill-school">에</span> 가요.</span><span class="yomi">チョヌン ハッキョ ＿ カヨ</span></span>
+          <span class="answer-fill"><span class="korean">저는 학교 <input class="slot-input" type="text" data-sync-id="p2-fill-school" data-answer="에" autocomplete="off" spellcheck="false"> 가요.</span><span class="yomi">チョヌン ハッキョ ＿ カヨ</span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">友だちは図書館<span class="target topic">で</span>本を読みます。</span>
-          <span class="answer-fill"><span class="korean">친구는 도서관 <span class="slot" data-sync-id="p2-fill-library">에서</span> 책을 읽어요.</span><span class="yomi">チングヌン トソグァン ＿＿ チェグル イルゴヨ</span></span>
+          <span class="answer-fill"><span class="korean">친구는 도서관 <input class="slot-input" type="text" data-sync-id="p2-fill-library" data-answer="에서" autocomplete="off" spellcheck="false"> 책을 읽어요.</span><span class="yomi">チングヌン トソグァン ＿＿ チェグル イルゴヨ</span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">明日、家<span class="target topic">に</span>来ますか？</span>
-          <span class="answer-fill"><span class="korean">내일 집 <span class="slot" data-sync-id="p2-fill-home">에</span> 와요?</span><span class="yomi">ネイル チプ ＿ ワヨ</span></span>
+          <span class="answer-fill"><span class="korean">내일 집 <input class="slot-input" type="text" data-sync-id="p2-fill-home" data-answer="에" autocomplete="off" spellcheck="false"> 와요?</span><span class="yomi">ネイル チプ ＿ ワヨ</span></span>
         </div>
       </div>
     </div>
@@ -373,28 +373,28 @@
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">私は家で料理します。</span>
-          <span class="answer-space" data-sync-id="p2-translate-cook">저는 집에서 요리해요</span>
+          <span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p2-translate-cook" data-answer="저는 집에서 요리해요" autocomplete="off" spellcheck="false"></span>
                   <span class="hint"><span class="hint-chip">家:집<span class="yomi">チプ</span></span><span class="hint-chip">料理:요리<span class="yomi">ヨリ</span></span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">友だちはカフェでコーヒーを飲みます。</span>
-          <span class="answer-space" data-sync-id="p2-translate-cafe">친구는 카페에서 커피를 마셔요</span>
+          <span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p2-translate-cafe" data-answer="친구는 카페에서 커피를 마셔요" autocomplete="off" spellcheck="false"></span>
                   <span class="hint"><span class="hint-chip">カフェ:카페<span class="yomi">カペ</span></span><span class="hint-chip">コーヒー:커피<span class="yomi">コピ</span></span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">私は週末に図書館に行きます。</span>
-          <span class="answer-space" data-sync-id="p2-translate-weekend">저는 주말에 도서관에 가요</span>
+          <span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p2-translate-weekend" data-answer="저는 주말에 도서관에 가요" autocomplete="off" spellcheck="false"></span>
                   <span class="hint"><span class="hint-chip">週末:주말<span class="yomi">チュマル</span></span><span class="hint-chip">図書館:도서관<span class="yomi">トソグァン</span></span></span>
         </div>
       </div>
       <div class="task-block">
         <div class="answer-box">
           <span class="answer-label">田中さんはどこで勉強しますか？</span>
-          <span class="answer-space" data-sync-id="p2-translate-where">다나카 씨는 어디에서 공부해요?</span>
+          <span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p2-translate-where" data-answer="다나카 씨는 어디에서 공부해요?" autocomplete="off" spellcheck="false"></span>
                   <span class="hint"><span class="hint-chip">どこ:어디<span class="yomi">オディ</span></span><span class="hint-chip">勉強:공부<span class="yomi">コンブ</span></span></span>
         </div>
       </div>
@@ -406,7 +406,7 @@
       <div class="tutor-note">학생이 말한 문장을 여기에 적어 주세요.</div>
       <div class="task-block">
         <div class="answer-box tall">
-          <span class="answer-space" data-sync-id="p2-free-statement"></span>
+          <span class="answer-space as-input"><textarea class="free-input" data-sync-id="p2-free-statement" rows="2" spellcheck="false" maxlength="2000"></textarea></span>
                   <span class="hint"><span class="hint-chip">家:집<span class="yomi">チプ</span></span><span class="hint-chip">カフェ:카페<span class="yomi">カペ</span></span><span class="hint-chip">図書館:도서관<span class="yomi">トソグァン</span></span><span class="hint-chip">会社:회사<span class="yomi">フェサ</span></span><span class="hint-chip">勉強:공부<span class="yomi">コンブ</span></span><span class="hint-chip">食べる:먹다<span class="yomi">モクタ</span></span><span class="hint-chip">飲む:마시다<span class="yomi">マシダ</span></span><span class="hint-chip">読む:읽다<span class="yomi">イクタ</span></span></span>
         </div>
       </div>
@@ -441,11 +441,11 @@
       <div class="tutor-note">학생이 말한 대로 빈칸에 적어 주세요.</div>
       <div class="dialogue">
         <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">하루카 씨, 내일 어디에 가요?</span><span class="yomi">ハルカ シ、ネイル オディエ カヨ</span><span class="translation">ハルカさん、明日どこに行きますか？</span></div></div>
-        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label"><span class="target">私は図書館に行きます</span>。</span><span class="answer-fill"><span class="korean"><span class="slot" data-sync-id="p3-complete-go">저는 도서관에 가요</span>.</span><span class="yomi">＿＿＿</span></span><span class="hint"><span class="hint-chip">図書館:도서관<span class="yomi">トソグァン</span></span></span></div></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label"><span class="target">私は図書館に行きます</span>。</span><span class="answer-fill"><span class="korean"><input class="slot-input" type="text" data-sync-id="p3-complete-go" data-answer="저는 도서관에 가요" autocomplete="off" spellcheck="false">.</span><span class="yomi">＿＿＿</span></span><span class="hint"><span class="hint-chip">図書館:도서관<span class="yomi">トソグァン</span></span></span></div></div></div>
         <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">도서관에서 뭐 해요?</span><span class="yomi">トソグァネソ ムォ ヘヨ</span><span class="translation">図書館で何をしますか？</span></div></div>
-        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label"><span class="target">本を読みます</span>。そして勉強します。ハナさんは？</span><span class="answer-fill"><span class="korean"><span class="slot" data-sync-id="p3-complete-read">책을 읽어요</span>. 그리고 공부해요. 하나 씨는요?</span><span class="yomi">＿＿＿ クリゴ コンブヘヨ。 ハナ シヌンニョ</span></span><span class="hint"><span class="hint-chip">本:책<span class="yomi">チェク</span></span></span></div></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label"><span class="target">本を読みます</span>。そして勉強します。ハナさんは？</span><span class="answer-fill"><span class="korean"><input class="slot-input" type="text" data-sync-id="p3-complete-read" data-answer="책을 읽어요" autocomplete="off" spellcheck="false">. 그리고 공부해요. 하나 씨는요?</span><span class="yomi">＿＿＿ クリゴ コンブヘヨ。 ハナ シヌンニョ</span></span><span class="hint"><span class="hint-chip">本:책<span class="yomi">チェク</span></span></span></div></div></div>
         <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">ハナ</span></span><div class="bubble"><span class="korean">저는 주말에 집에서 요리해요.</span><span class="yomi">チョヌン チュマレ チベソ ヨリヘヨ</span><span class="translation">私は週末に家で料理します。</span></div></div>
-        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">私もです！私も<span class="target">家で料理します</span>。</span><span class="answer-fill"><span class="korean">저도요! 저도 <span class="slot" data-sync-id="p3-complete-cook">집에서 요리해요</span>.</span><span class="yomi">チョドヨ！ チョド ＿＿＿</span></span><span class="hint"><span class="hint-chip">家:집<span class="yomi">チプ</span></span></span></div></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">ハルカ</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">私もです！私も<span class="target">家で料理します</span>。</span><span class="answer-fill"><span class="korean">저도요! 저도 <input class="slot-input" type="text" data-sync-id="p3-complete-cook" data-answer="집에서 요리해요" autocomplete="off" spellcheck="false">.</span><span class="yomi">チョドヨ！ チョド ＿＿＿</span></span><span class="hint"><span class="hint-chip">家:집<span class="yomi">チプ</span></span></span></div></div></div>
       </div>
     </div>
 
@@ -455,9 +455,9 @@
       <div class="tutor-note">학생이 말한 장소로 「거기에서 뭐 해요?」 한 번 더 물어 주세요.</div>
       <div class="dialogue">
         <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">先生</span></span><div class="bubble"><span class="korean">내일 어디에 가요?</span><span class="yomi">ネイル オディエ カヨ</span><span class="translation">明日どこに行きますか？</span></div></div>
-        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label">私は〜に行きます。<span class="task">自分のこと</span></span><span class="answer-space" data-sync-id="p3-freetalk-go"></span><span class="hint"><span class="hint-chip">学校:학교<span class="yomi">ハッキョ</span></span><span class="hint-chip">会社:회사<span class="yomi">フェサ</span></span><span class="hint-chip">カフェ:카페<span class="yomi">カペ</span></span><span class="hint-chip">家:집<span class="yomi">チプ</span></span></span></div></div></div>
-        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label">先生はどこで勉強しますか？<span class="task">先生にも聞いてみましょう</span></span><span class="answer-space" data-sync-id="p3-freetalk-question">선생님은 어디에서 공부해요?</span></div></div></div>
-        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">先生</span></span><div class="bubble"><div class="answer-box small"><span class="answer-label">先生の答え</span><span class="answer-space" data-sync-id="p3-freetalk-tutor-answer"></span></div></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label">私は〜に行きます。<span class="task">自分のこと</span></span><span class="answer-space as-input"><textarea class="free-input" data-sync-id="p3-freetalk-go" rows="2" spellcheck="false" maxlength="2000"></textarea></span><span class="hint"><span class="hint-chip">学校:학교<span class="yomi">ハッキョ</span></span><span class="hint-chip">会社:회사<span class="yomi">フェサ</span></span><span class="hint-chip">カフェ:카페<span class="yomi">カペ</span></span><span class="hint-chip">家:집<span class="yomi">チプ</span></span></span></div></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label">先生はどこで勉強しますか？<span class="task">先生にも聞いてみましょう</span></span><span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p3-freetalk-question" data-answer="선생님은 어디에서 공부해요?" autocomplete="off" spellcheck="false"></span></div></div></div>
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">先生</span></span><div class="bubble"><div class="answer-box small"><span class="answer-label">先生の答え</span><span class="answer-space as-input"><textarea class="free-input" data-sync-id="p3-freetalk-tutor-answer" rows="2" spellcheck="false" maxlength="2000"></textarea></span></div></div></div>
       </div>
     </div>
 
@@ -465,9 +465,9 @@
       <h2 class="section-title">한국 지하철 <span class="title-ja">(韓国の地下鉄)</span></h2>
       <p class="section-subtitle"><span class="ko">보너스! 서울에서 길을 물어요. 빈칸 대사를 말해 주세요.</span><span class="ja">ボーナス！ソウルで道を聞きます。空欄のセリフを言ってください。</span></p>
       <div class="dialogue">
-        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">あの、この電車、<span class="target">明洞に行きますか</span>？</span><span class="answer-fill"><span class="korean">저기요, 이 지하철 <span class="slot" data-sync-id="trip-ask-go">명동에 가요</span>?</span><span class="yomi">チョギヨ、イ チハチョル ＿＿＿</span></span><span class="hint"><span class="hint-chip">明洞:명동<span class="yomi">ミョンドン</span></span><span class="hint-chip">行く:가다<span class="yomi">カダ</span></span></span></div></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">あの、この電車、<span class="target">明洞に行きますか</span>？</span><span class="answer-fill"><span class="korean">저기요, 이 지하철 <input class="slot-input" type="text" data-sync-id="trip-ask-go" data-answer="명동에 가요" autocomplete="off" spellcheck="false">?</span><span class="yomi">チョギヨ、イ チハチョル ＿＿＿</span></span><span class="hint"><span class="hint-chip">明洞:명동<span class="yomi">ミョンドン</span></span><span class="hint-chip">行く:가다<span class="yomi">カダ</span></span></span></div></div></div>
         <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">相手</span></span><div class="bubble"><span class="korean">네, 가요! 명동에서 뭐 해요?</span><span class="yomi">ネ、カヨ！ ミョンドンエソ ムォ ヘヨ</span><span class="translation">はい、行きますよ！明洞で何をしますか？</span></div></div>
-        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label"><span class="target">明洞でご飯を食べます</span>。</span><span class="answer-fill"><span class="korean"><span class="slot" data-sync-id="trip-answer-eat">명동에서 밥을 먹어요</span>.</span><span class="yomi">＿＿＿</span></span><span class="hint"><span class="hint-chip">ご飯:밥<span class="yomi">パプ</span></span><span class="hint-chip">食べる:먹다<span class="yomi">モクタ</span></span></span></div></div></div>
+        <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">私</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label"><span class="target">明洞でご飯を食べます</span>。</span><span class="answer-fill"><span class="korean"><input class="slot-input" type="text" data-sync-id="trip-answer-eat" data-answer="명동에서 밥을 먹어요" autocomplete="off" spellcheck="false">.</span><span class="yomi">＿＿＿</span></span><span class="hint"><span class="hint-chip">ご飯:밥<span class="yomi">パプ</span></span><span class="hint-chip">食べる:먹다<span class="yomi">モクタ</span></span></span></div></div></div>
         <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">相手</span></span><div class="bubble"><span class="korean">아, 그래요? 저도 거기에서 자주 먹어요!</span><span class="yomi">ア、クレヨ？ チョド コギエソ チャジュ モゴヨ</span><span class="translation">あ、そうですか？私もそこでよく食べます！</span></div></div>
       </div>
     </div>
