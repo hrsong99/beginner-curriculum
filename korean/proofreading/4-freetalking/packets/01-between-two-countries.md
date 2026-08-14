@@ -12,7 +12,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-between-two-countries-advanced/lessons/01-what-surprised-me/lesson.html`
-- sha256: `5b4716209f8d98930a322022b56f14ff989314e0f539a26b8004e9858a998377`
+- sha256: `6e88aeca2e59f247e0a505931ce8c3f67bbdc994b4f62fa9c68ece00787934cd`
 - source kind: `model-story`
 
 #### `metadata`
@@ -24,8 +24,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 놀랐던 순간
-- `goal.ko` · KO: 오늘은 한국에서나 한국 사람에게서 놀랐던 순간을, 일본에서 겪은 장면과 비교해서 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は韓国で、または韓国の人に驚いた瞬間について、日本で経験した場面と比べながらじっくり話してみましょう。
+- `goal.ko` · KO: 한국에서나 한국 사람에게서 놀랐던 순간을, 일본에서 겪은 장면과 비교해서 이야기해 볼게요.
+- `goal.ja` · JA: 韓国で、または韓国の人に驚いた瞬間について、日本で経験した場面と比べながら話してみましょう。
 - `axis.1.ko` · KO: 놀랐던 순간을 구체적으로 소개해요.
 - `axis.1.ja` · JA: 驚いた瞬間を具体的に紹介します。
 - `axis.2.ko` · KO: 일본에서 겪은 비슷한 장면과 비교해요.
@@ -151,7 +151,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-between-two-countries-intermediate/lessons/01-what-surprised-me/lesson.html`
-- sha256: `9a68ef633cae6ca2867182b3fde4055685e9380665193e3969640b30d6742401`
+- sha256: `9969c7e02d91be0d2e811cb3825c1bf073468b41e1f082d2ee249376162a8e3c`
 - source kind: `model-story`
 
 #### `metadata`
@@ -163,8 +163,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 놀랐던 순간
-- `goal.ko` · KO: 오늘은 한국에서나 한국 사람에게서 놀랐던 순간을, 일본에서 겪은 장면과 비교해서 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は韓国で、または韓国の人に驚いた瞬間について、日本で経験した場面と比べながらじっくり話してみましょう。
+- `goal.ko` · KO: 한국에서나 한국 사람에게서 놀랐던 순간을, 일본에서 겪은 장면과 비교해서 이야기해 볼게요.
+- `goal.ja` · JA: 韓国で、または韓国の人に驚いた瞬間について、日本で経験した場面と比べながら話してみましょう。
 - `axis.1.ko` · KO: 놀랐던 순간을 구체적으로 소개해요.
 - `axis.1.ja` · JA: 驚いた瞬間を具体的に紹介します。
 - `axis.2.ko` · KO: 일본에서 겪은 비슷한 장면과 비교해요.
@@ -292,7 +292,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-between-two-countries-advanced/lessons/02-misunderstood-country/lesson.html`
-- sha256: `ca0d8f85d3e61e4317b794d2782231e55af35bf57723c8cfae0a66b9f123baaa`
+- sha256: `8cdb7a75b492343dc61d5dfb01ce75709eec3e222a5a6f03761be20af0a8587c`
 - source kind: `model-story`
 
 #### `metadata`
@@ -304,8 +304,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 오해 바로잡기
-- `goal.ko` · KO: 오늘은 외국인이 일본이나 한국에 대해 자주 오해하는 부분을 실제 경험을 들어 설명해 볼게요.
-- `goal.ja` · JA: 今日は外国の人が日本や韓国についてよく誤解している点を、実際の経験を挙げながら説明してみましょう。
+- `goal.ko` · KO: 외국인이 일본이나 한국에 대해 자주 오해하는 부분을 실제 경험을 들어 설명해 볼게요.
+- `goal.ja` · JA: 外国の人が日本や韓国についてよく誤解している点を、実際の経験を挙げながら説明してみましょう。
 - `axis.1.ko` · KO: 자주 듣는 오해를 하나 소개해요.
 - `axis.1.ja` · JA: よく聞く誤解を一つ紹介します。
 - `axis.2.ko` · KO: 실제로 겪은 장면으로 바로잡아요.
@@ -431,7 +431,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-between-two-countries-intermediate/lessons/02-misunderstood-country/lesson.html`
-- sha256: `746d587817a660171a695d7202822384ff477daf335024917f03f2473bad18cd`
+- sha256: `644da1fd7691b09af99f808ccdd1997072d959bc8e3265579b86daeca56c04fa`
 - source kind: `model-story`
 
 #### `metadata`
@@ -443,8 +443,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 오해 바로잡기
-- `goal.ko` · KO: 오늘은 외국인이 일본이나 한국에 대해 자주 오해하는 부분을 실제 경험을 들어 설명해 볼게요.
-- `goal.ja` · JA: 今日は外国の人が日本や韓国についてよく誤解している点を、実際の経験を挙げながら説明してみましょう。
+- `goal.ko` · KO: 외국인이 일본이나 한국에 대해 자주 오해하는 부분을 실제 경험을 들어 설명해 볼게요.
+- `goal.ja` · JA: 外国の人が日本や韓国についてよく誤解している点を、実際の経験を挙げながら説明してみましょう。
 - `axis.1.ko` · KO: 자주 듣는 오해를 하나 소개해요.
 - `axis.1.ja` · JA: よく聞く誤解を一つ紹介します。
 - `axis.2.ko` · KO: 실제로 겪은 장면으로 바로잡아요.
@@ -572,7 +572,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-between-two-countries-advanced/lessons/03-must-try-food/lesson.html`
-- sha256: `6b61a870561aede92cb320dc5f2d7278ccd286c984cddfea2fbe059ba8e18eeb`
+- sha256: `6abf3bd147d5152e057eede0b686889e66afd9235a8b9f129a3d0a4364a17af5`
 - source kind: `model-story`
 
 #### `metadata`
@@ -584,8 +584,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 꼭 먹어 볼 음식
-- `goal.ko` · KO: 오늘은 한국에 알리고 싶은 일본 음식과 일본에 알리고 싶은 한국 음식을 구체적으로 추천해 볼게요.
-- `goal.ja` · JA: 今日は韓国に紹介したい日本料理と、日本に紹介したい韓国料理を具体的におすすめしてみましょう。
+- `goal.ko` · KO: 한국에 알리고 싶은 일본 음식과 일본에 알리고 싶은 한국 음식을 구체적으로 추천해 볼게요.
+- `goal.ja` · JA: 韓国に紹介したい日本料理と、日本に紹介したい韓国料理を具体的におすすめしてみましょう。
 - `axis.1.ko` · KO: 추천할 음식의 맛과 식감을 설명해요.
 - `axis.1.ja` · JA: おすすめする料理の味と食感を説明します。
 - `axis.2.ko` · KO: 언제 어디에서 먹으면 좋은지 말해요.
@@ -711,7 +711,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-between-two-countries-intermediate/lessons/03-must-try-food/lesson.html`
-- sha256: `94ea343adb6b4de9f7cbabd549e8b8615eaf529827553ea3c687a6fa527a1ac8`
+- sha256: `890c97fc1cb573ed08b14d207fb1ef00e3bd869211a854ca85098a9c939a020d`
 - source kind: `model-story`
 
 #### `metadata`
@@ -723,8 +723,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 꼭 먹어 볼 음식
-- `goal.ko` · KO: 오늘은 한국에 알리고 싶은 일본 음식과 일본에 알리고 싶은 한국 음식을 구체적으로 추천해 볼게요.
-- `goal.ja` · JA: 今日は韓国に紹介したい日本料理と、日本に紹介したい韓国料理を具体的におすすめしてみましょう。
+- `goal.ko` · KO: 한국에 알리고 싶은 일본 음식과 일본에 알리고 싶은 한국 음식을 구체적으로 추천해 볼게요.
+- `goal.ja` · JA: 韓国に紹介したい日本料理と、日本に紹介したい韓国料理を具体的におすすめしてみましょう。
 - `axis.1.ko` · KO: 추천할 음식의 맛과 식감을 설명해요.
 - `axis.1.ja` · JA: おすすめする料理の味と食感を説明します。
 - `axis.2.ko` · KO: 언제 어디에서 먹으면 좋은지 말해요.
@@ -852,7 +852,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-between-two-countries-advanced/lessons/04-table-manners/lesson.html`
-- sha256: `e1e79366720cdf06d96f54715b7674aedde02e03e10215b6649622aba37d01d1`
+- sha256: `25ecef579a8a11e5559892a3b0ee3a5458e8f80650e30c9a06bba554ae1a4242`
 - source kind: `model-story`
 
 #### `metadata`
@@ -864,8 +864,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 밥상 위의 차이
-- `goal.ko` · KO: 오늘은 한일 식사 자리에서 직접 본 행동을 비교하고, 그 차이가 주는 느낌을 설명해 볼게요.
-- `goal.ja` · JA: 今日は韓日の食事の場で実際に見た行動を比べ、その違いから受ける印象を説明してみましょう。
+- `goal.ko` · KO: 한일 식사 자리에서 직접 본 행동을 비교하고, 그 차이가 주는 느낌을 설명해 볼게요.
+- `goal.ja` · JA: 韓日の食事の場で実際に見た行動を比べ、その違いから受ける印象を説明してみましょう。
 - `axis.1.ko` · KO: 그릇과 젓가락을 쓰는 장면을 묘사해요.
 - `axis.1.ja` · JA: 器や箸を使う場面を描写します。
 - `axis.2.ko` · KO: 누가 먼저 먹는지 경험을 말해요.
@@ -991,7 +991,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-between-two-countries-intermediate/lessons/04-table-manners/lesson.html`
-- sha256: `f87db7000efef712e64df093bb14e29d4b65abf122db7029c3fd1f2d864296e5`
+- sha256: `f80ba8330dee02c5174a72e369009d9e8a6bb91572d5341c87c3fab6341a889a`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1003,8 +1003,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 밥상 위의 차이
-- `goal.ko` · KO: 오늘은 한일 식사 자리에서 직접 본 행동을 비교하고, 그 차이가 주는 느낌을 설명해 볼게요.
-- `goal.ja` · JA: 今日は韓日の食事の場で実際に見た行動を比べ、その違いから受ける印象を説明してみましょう。
+- `goal.ko` · KO: 한일 식사 자리에서 직접 본 행동을 비교하고, 그 차이가 주는 느낌을 설명해 볼게요.
+- `goal.ja` · JA: 韓日の食事の場で実際に見た行動を比べ、その違いから受ける印象を説明してみましょう。
 - `axis.1.ko` · KO: 그릇과 젓가락을 쓰는 장면을 묘사해요.
 - `axis.1.ja` · JA: 器や箸を使う場面を描写します。
 - `axis.2.ko` · KO: 누가 먼저 먹는지 경험을 말해요.
@@ -1132,7 +1132,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-between-two-countries-advanced/lessons/05-hidden-gem/lesson.html`
-- sha256: `8cfcd4256118c716f1b38425eab2b235bd37977dffbd7d08d08860c08e02ad3e`
+- sha256: `0044d579d7e9f257753e92b2ebf0a4efa08cb9f53d5d5ea9c2561bf03dde4394`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1144,8 +1144,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 친구를 데려갈 곳
-- `goal.ko` · KO: 오늘은 외국에서 온 친구를 데려가고 싶은 장소를, 동선과 이유까지 넣어 소개해 볼게요.
-- `goal.ja` · JA: 今日は外国から来た友人を連れて行きたい場所を、行き方や理由まで含めて紹介してみましょう。
+- `goal.ko` · KO: 외국에서 온 친구를 데려가고 싶은 장소를, 동선과 이유까지 넣어 소개해 볼게요.
+- `goal.ja` · JA: 外国から来た友人を連れて行きたい場所を、行き方や理由まで含めて紹介してみましょう。
 - `axis.1.ko` · KO: 한 장소를 구체적으로 소개해요.
 - `axis.1.ja` · JA: 一か所を具体的に紹介します。
 - `axis.2.ko` · KO: 그곳에서 보낼 시간을 그려요.
@@ -1271,7 +1271,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-between-two-countries-intermediate/lessons/05-hidden-gem/lesson.html`
-- sha256: `00b3534a071100c40e2528341c872b52edc0be8be382d790ccccd835d35e5366`
+- sha256: `c742844e2640229335d48a659f963dc85f678ff31ab3ad66780d861b0cd7c9b6`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1283,8 +1283,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 친구를 데려갈 곳
-- `goal.ko` · KO: 오늘은 외국에서 온 친구를 데려가고 싶은 장소를, 동선과 이유까지 넣어 소개해 볼게요.
-- `goal.ja` · JA: 今日は外国から来た友人を連れて行きたい場所を、行き方や理由まで含めて紹介してみましょう。
+- `goal.ko` · KO: 외국에서 온 친구를 데려가고 싶은 장소를, 동선과 이유까지 넣어 소개해 볼게요.
+- `goal.ja` · JA: 外国から来た友人を連れて行きたい場所を、行き方や理由まで含めて紹介してみましょう。
 - `axis.1.ko` · KO: 한 장소를 구체적으로 소개해요.
 - `axis.1.ja` · JA: 一か所を具体的に紹介します。
 - `axis.2.ko` · KO: 그곳에서 보낼 시간을 그려요.
@@ -1412,7 +1412,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-between-two-countries-advanced/lessons/06-workplace-culture/lesson.html`
-- sha256: `507110375ac65c977a907dd3c785e512de8e8274c057bd0b9cf946a5c1482d0d`
+- sha256: `52142137d2ac4e21609cfc3cd2cd494192dddaad00258cf67d07e227126bab08`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1424,8 +1424,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 회사의 온도 차
-- `goal.ko` · KO: 오늘은 회식, 호칭, 퇴근 시간에 관한 실제 직장 경험을 비교하고 더 편한 방식을 설명해 볼게요.
-- `goal.ja` · JA: 今日は会食、呼び方、退勤時間についての実際の職場経験を比べ、より楽なやり方を説明してみましょう。
+- `goal.ko` · KO: 회식, 호칭, 퇴근 시간에 관한 실제 직장 경험을 비교하고 더 편한 방식을 설명해 볼게요.
+- `goal.ja` · JA: 会食、呼び方、退勤時間についての実際の職場経験を比べ、より楽なやり方を説明してみましょう。
 - `axis.1.ko` · KO: 회사의 한 장면을 소개해요.
 - `axis.1.ja` · JA: 職場の一場面を紹介します。
 - `axis.2.ko` · KO: 회식·호칭·퇴근을 비교해요.
@@ -1551,7 +1551,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-between-two-countries-intermediate/lessons/06-workplace-culture/lesson.html`
-- sha256: `b0667f1140ba300f088cf489c0d3316e36c64a82973edb64ba4a6a95f36d3a0a`
+- sha256: `f8af8d47dc68f90181d00d4c9e8615b5f7dab9c90527a26bd34e03bfaf84d1c7`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1563,8 +1563,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 회사의 온도 차
-- `goal.ko` · KO: 오늘은 회식, 호칭, 퇴근 시간에 관한 실제 직장 경험을 비교하고 더 편한 방식을 설명해 볼게요.
-- `goal.ja` · JA: 今日は会食、呼び方、退勤時間についての実際の職場経験を比べ、より楽なやり方を説明してみましょう。
+- `goal.ko` · KO: 회식, 호칭, 퇴근 시간에 관한 실제 직장 경험을 비교하고 더 편한 방식을 설명해 볼게요.
+- `goal.ja` · JA: 会食、呼び方、退勤時間についての実際の職場経験を比べ、より楽なやり方を説明してみましょう。
 - `axis.1.ko` · KO: 회사의 한 장면을 소개해요.
 - `axis.1.ja` · JA: 職場の一場面を紹介します。
 - `axis.2.ko` · KO: 회식·호칭·퇴근을 비교해요.
@@ -1692,7 +1692,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-between-two-countries-advanced/lessons/07-untranslatable-words/lesson.html`
-- sha256: `98c6c741677edd5ca864aa0f0dbe1128423e4a24780433deaf78548fd636034d`
+- sha256: `580b6148bd3283f0cd15c032eb270fe7216ef2181716ab0e4c97680c829851e1`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1704,8 +1704,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 번역이 안 되는 말
-- `goal.ko` · KO: 오늘은 한 단어로 옮기기 어려운 한국어와 일본어를 실제 장면과 함께 설명해 볼게요.
-- `goal.ja` · JA: 今日は一語では訳しにくい韓国語と日本語を、実際の場面とともに説明してみましょう。
+- `goal.ko` · KO: 한 단어로 옮기기 어려운 한국어와 일본어를 실제 장면과 함께 설명해 볼게요.
+- `goal.ja` · JA: 一語では訳しにくい韓国語と日本語を、実際の場面とともに説明してみましょう。
 - `axis.1.ko` · KO: 번역하기 어려운 말을 골라요.
 - `axis.1.ja` · JA: 訳しにくい言葉を選びます。
 - `axis.2.ko` · KO: 그 말을 쓰는 장면을 보여 줘요.
@@ -1831,7 +1831,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-between-two-countries-intermediate/lessons/07-untranslatable-words/lesson.html`
-- sha256: `bed079f2530f7b904c07df03e9a2442029576a6560ee661524bd7bf062204ca9`
+- sha256: `d07c0bae9392474fe82dafb5e14d4f823fe5046268d07fbaa67ffde32c80a985`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1843,8 +1843,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 번역이 안 되는 말
-- `goal.ko` · KO: 오늘은 한 단어로 옮기기 어려운 한국어와 일본어를 실제 장면과 함께 설명해 볼게요.
-- `goal.ja` · JA: 今日は一語では訳しにくい韓国語と日本語を、実際の場面とともに説明してみましょう。
+- `goal.ko` · KO: 한 단어로 옮기기 어려운 한국어와 일본어를 실제 장면과 함께 설명해 볼게요.
+- `goal.ja` · JA: 一語では訳しにくい韓国語と日本語を、実際の場面とともに説明してみましょう。
 - `axis.1.ko` · KO: 번역하기 어려운 말을 골라요.
 - `axis.1.ja` · JA: 訳しにくい言葉を選びます。
 - `axis.2.ko` · KO: 그 말을 쓰는 장면을 보여 줘요.
@@ -1973,7 +1973,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-between-two-countries-advanced/lessons/08-convenience-showdown/lesson.html`
-- sha256: `ae6a622c9ea378e30383002146ffa31f97ec12e4e11bfe0f3897f7dbafc99300`
+- sha256: `70afdb08613c06f86cafcb45e9a828e76ca3257c59d00fca1d15b02201edb76f`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1985,8 +1985,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 생활 서비스 대결
-- `goal.ko` · KO: 오늘은 편의점, 전철, 택시, 배달을 실제 사용 장면으로 비교하고 상황별 승자를 골라 볼게요.
-- `goal.ja` · JA: 今日はコンビニ、電車、タクシー、配達を実際の利用場面で比べ、状況ごとの勝者を選びましょう。
+- `goal.ko` · KO: 편의점, 전철, 택시, 배달을 실제 사용 장면으로 비교하고 상황별 승자를 골라 볼게요.
+- `goal.ja` · JA: コンビニ、電車、タクシー、配達を実際の利用場面で比べ、状況ごとの勝者を選びましょう。
 - `axis.1.ko` · KO: 최근 쓴 서비스를 말해요.
 - `axis.1.ja` · JA: 最近使ったサービスを話します。
 - `axis.2.ko` · KO: 한국과 일본의 편리함을 비교해요.
@@ -2112,7 +2112,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-between-two-countries-intermediate/lessons/08-convenience-showdown/lesson.html`
-- sha256: `1c87230b8f3e62c84ab05b824a9f8aa96036f06e47a0dbac92b068b1ca337816`
+- sha256: `20831259623d6b77abb8b9c87791637a391de945afcd6cf95e6d1cfa2edefb72`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2124,8 +2124,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 생활 서비스 대결
-- `goal.ko` · KO: 오늘은 편의점, 전철, 택시, 배달을 실제 사용 장면으로 비교하고 상황별 승자를 골라 볼게요.
-- `goal.ja` · JA: 今日はコンビニ、電車、タクシー、配達を実際の利用場面で比べ、状況ごとの勝者を選びましょう。
+- `goal.ko` · KO: 편의점, 전철, 택시, 배달을 실제 사용 장면으로 비교하고 상황별 승자를 골라 볼게요.
+- `goal.ja` · JA: コンビニ、電車、タクシー、配達を実際の利用場面で比べ、状況ごとの勝者を選びましょう。
 - `axis.1.ko` · KO: 최근 쓴 서비스를 말해요.
 - `axis.1.ja` · JA: 最近使ったサービスを話します。
 - `axis.2.ko` · KO: 한국과 일본의 편리함을 비교해요.
@@ -2253,7 +2253,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-between-two-countries-advanced/lessons/09-drama-vs-reality/lesson.html`
-- sha256: `1733be2405dcd1a60fc527013bf87098a6adcb6e7dc032ae83f4b5eb053c5a60`
+- sha256: `fbe08c2b86409c7fd0064c3eca7cea414968309ed392458c12dbb84a409eb95c`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2265,8 +2265,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 드라마와 현실
-- `goal.ko` · KO: 오늘은 한국 드라마를 보고 상상한 모습과 실제로 본 장면을 비교해 이야기해 볼게요.
-- `goal.ja` · JA: 今日は韓国ドラマを見て想像した姿と、実際に見た場面を比べて話しましょう。
+- `goal.ko` · KO: 한국 드라마를 보고 상상한 모습과 실제로 본 장면을 비교해 이야기해 볼게요.
+- `goal.ja` · JA: 韓国ドラマを見て想像した姿と、実際に見た場面を比べて話しましょう。
 - `axis.1.ko` · KO: 드라마에서 생긴 기대를 말해요.
 - `axis.1.ja` · JA: ドラマから生まれた期待を話します。
 - `axis.2.ko` · KO: 실제로 본 장면과 비교해요.
@@ -2392,7 +2392,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-between-two-countries-intermediate/lessons/09-drama-vs-reality/lesson.html`
-- sha256: `d030f5f6b9b4884e66bb8affa8dc71f085da0074e023f4db17a6120c6bb807f9`
+- sha256: `0a29cf42669d8ef906d60bad7a967584dafb266c61de5b43ae3f9b6ab7a07f15`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2404,8 +2404,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 드라마와 현실
-- `goal.ko` · KO: 오늘은 한국 드라마를 보고 상상한 모습과 실제로 본 장면을 비교해 이야기해 볼게요.
-- `goal.ja` · JA: 今日は韓国ドラマを見て想像した姿と、実際に見た場面を比べて話しましょう。
+- `goal.ko` · KO: 한국 드라마를 보고 상상한 모습과 실제로 본 장면을 비교해 이야기해 볼게요.
+- `goal.ja` · JA: 韓国ドラマを見て想像した姿と、実際に見た場面を比べて話しましょう。
 - `axis.1.ko` · KO: 드라마에서 생긴 기대를 말해요.
 - `axis.1.ja` · JA: ドラマから生まれた期待を話します。
 - `axis.2.ko` · KO: 실제로 본 장면과 비교해요.
@@ -2533,7 +2533,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-between-two-countries-advanced/lessons/10-holiday-scenes/lesson.html`
-- sha256: `5012c692fe5e3873bf8deda2ed92ec14723a4b05bbf52be6d708fa274bd2e28f`
+- sha256: `0e9b2e44003263f9174b2a9e384af93364c89119c73179cee0d263aa77a56ea6`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2545,8 +2545,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 설날과 오쇼가쓰
-- `goal.ko` · KO: 오늘은 설날과 오쇼가쓰에 직접 겪은 풍경을 비교하고, 중요한 명절 순간을 설명해 볼게요.
-- `goal.ja` · JA: 今日はソルラルとお正月に実際に経験した風景を比べ、大切な祝日の瞬間を説明しましょう。
+- `goal.ko` · KO: 설날과 오쇼가쓰에 직접 겪은 풍경을 비교하고, 중요한 명절 순간을 설명해 볼게요.
+- `goal.ja` · JA: ソルラルとお正月に実際に経験した風景を比べ、大切な祝日の瞬間を説明しましょう。
 - `axis.1.ko` · KO: 명절 아침의 장면을 소개해요.
 - `axis.1.ja` · JA: 祝日の朝の場面を紹介します。
 - `axis.2.ko` · KO: 음식과 만나는 사람을 비교해요.
@@ -2672,7 +2672,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-between-two-countries-intermediate/lessons/10-holiday-scenes/lesson.html`
-- sha256: `bbc1b15757d0bf829dc75dfaa9fb00183c6b5a02d979655ba9fa66b9384d666f`
+- sha256: `7b767b9d199b09c0647908ae073a2d42dc00eddc79c15df8d94dfac1883dce85`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2684,8 +2684,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 설날과 오쇼가쓰
-- `goal.ko` · KO: 오늘은 설날과 오쇼가쓰에 직접 겪은 풍경을 비교하고, 중요한 명절 순간을 설명해 볼게요.
-- `goal.ja` · JA: 今日はソルラルとお正月に実際に経験した風景を比べ、大切な祝日の瞬間を説明しましょう。
+- `goal.ko` · KO: 설날과 오쇼가쓰에 직접 겪은 풍경을 비교하고, 중요한 명절 순간을 설명해 볼게요.
+- `goal.ja` · JA: ソルラルとお正月に実際に経験した風景を比べ、大切な祝日の瞬間を説明しましょう。
 - `axis.1.ko` · KO: 명절 아침의 장면을 소개해요.
 - `axis.1.ja` · JA: 祝日の朝の場面を紹介します。
 - `axis.2.ko` · KO: 음식과 만나는 사람을 비교해요.

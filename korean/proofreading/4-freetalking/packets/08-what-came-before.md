@@ -12,7 +12,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-advanced/lessons/01-childhood-nagging/lesson.html`
-- sha256: `c064a63593a61be586237bafed0372a49f250deff399f45ad6822cf4b17268b6`
+- sha256: `c7e78f85cee6c9be2dbc64da25ee6bd1be21f0e19886164c39b3f4f4a279e38d`
 - source kind: `model-story`
 
 #### `metadata`
@@ -24,8 +24,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 어릴 때 잔소리
-- `goal.ko` · KO: 오늘은 어릴 때 누가 어떤 잔소리를 자주 했는지 장면과 함께 이야기해 볼게요.
-- `goal.ja` · JA: 今日は子どものころ、誰にどんな小言をよく言われたか、場面とともに話してみましょう。
+- `goal.ko` · KO: 어릴 때 누가 어떤 잔소리를 자주 했는지 장면과 함께 이야기해 볼게요.
+- `goal.ja` · JA: 子どものころ、誰にどんな小言をよく言われたか、場面とともに話してみましょう。
 - `axis.1.ko` · KO: 자주 들은 말을 소개해요.
 - `axis.1.ja` · JA: よく言われた言葉を紹介します。
 - `axis.2.ko` · KO: 누가 언제 했는지 설명해요.
@@ -152,7 +152,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-intermediate/lessons/01-childhood-nagging/lesson.html`
-- sha256: `04b11a6848e4b8a5837988f58af5c32cd9334a5b5ac872641aef4c6595f6deb0`
+- sha256: `4bd1df7e4d763e65efe5c39426b4617887a4dc971c4a59632761da083e9514c8`
 - source kind: `model-story`
 
 #### `metadata`
@@ -164,8 +164,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 어릴 때 잔소리
-- `goal.ko` · KO: 오늘은 어릴 때 누가 어떤 잔소리를 자주 했는지 장면과 함께 이야기해 볼게요.
-- `goal.ja` · JA: 今日は子どものころ、誰にどんな小言をよく言われたか、場面とともに話してみましょう。
+- `goal.ko` · KO: 어릴 때 누가 어떤 잔소리를 자주 했는지 장면과 함께 이야기해 볼게요.
+- `goal.ja` · JA: 子どものころ、誰にどんな小言をよく言われたか、場面とともに話してみましょう。
 - `axis.1.ko` · KO: 자주 들은 말을 소개해요.
 - `axis.1.ja` · JA: よく言われた言葉を紹介します。
 - `axis.2.ko` · KO: 누가 언제 했는지 설명해요.
@@ -294,7 +294,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-advanced/lessons/02-memorable-teacher/lesson.html`
-- sha256: `97ea38f772c7a69b83da329f4706e9bc7884273d2ebd1029efac0485a788792e`
+- sha256: `6c05ed205fb2508f4785854167b846648650dbd4c080504790d70da8504b2d09`
 - source kind: `model-story`
 
 #### `metadata`
@@ -306,8 +306,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 기억 속 선생님
-- `goal.ko` · KO: 오늘은 기억에 남는 선생님 한 분과 그분을 특별하게 만든 장면을 시간 순서로 이야기해 볼게요.
-- `goal.ja` · JA: 今日は記憶に残る先生一人と、その先生を特別にした場面を時間順に話してみましょう。
+- `goal.ko` · KO: 기억에 남는 선생님 한 분과 그분을 특별하게 만든 장면을 시간 순서로 이야기해 볼게요.
+- `goal.ja` · JA: 記憶に残る先生一人と、その先生を特別にした場面を時間順に話してみましょう。
 - `axis.1.ko` · KO: 선생님을 소개해요.
 - `axis.1.ja` · JA: 先生を紹介します。
 - `axis.2.ko` · KO: 기억나는 장면을 설명해요.
@@ -433,7 +433,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-intermediate/lessons/02-memorable-teacher/lesson.html`
-- sha256: `9f75e51249b475382c3b810403fb1c3896d23f2ddd4f825ad03e26f4d240e8d1`
+- sha256: `2294442b6ff6e130f5b8feae224a45128d300b11fc8967b8bd301b2ea073b9e6`
 - source kind: `model-story`
 
 #### `metadata`
@@ -445,8 +445,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 기억 속 선생님
-- `goal.ko` · KO: 오늘은 기억에 남는 선생님 한 분과 그분을 특별하게 만든 장면을 시간 순서로 이야기해 볼게요.
-- `goal.ja` · JA: 今日は記憶に残る先生一人と、その先生を特別にした場面を時間順に話してみましょう。
+- `goal.ko` · KO: 기억에 남는 선생님 한 분과 그분을 특별하게 만든 장면을 시간 순서로 이야기해 볼게요.
+- `goal.ja` · JA: 記憶に残る先生一人と、その先生を特別にした場面を時間順に話してみましょう。
 - `axis.1.ko` · KO: 선생님을 소개해요.
 - `axis.1.ja` · JA: 先生を紹介します。
 - `axis.2.ko` · KO: 기억나는 장면을 설명해요.
@@ -574,7 +574,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-advanced/lessons/03-school-nickname/lesson.html`
-- sha256: `b0ea0503a9f1b2934b5e817c44e630d106ea46616aa6523e04e231322a21e568`
+- sha256: `3412f36c29a204badb1fab338a20e9671f2f86a36158a9f0c8bf0186d1902527`
 - source kind: `model-story`
 
 #### `metadata`
@@ -586,8 +586,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 학창시절 별명
-- `goal.ko` · KO: 오늘은 학창시절 별명이 누가 어떻게 붙였고 언제까지 불렸는지 이야기해 볼게요.
-- `goal.ja` · JA: 今日は学生時代のあだ名を誰がどう付け、いつまで呼ばれたか話してみましょう。
+- `goal.ko` · KO: 학창시절 별명이 누가 어떻게 붙였고 언제까지 불렸는지 이야기해 볼게요.
+- `goal.ja` · JA: 学生時代のあだ名を誰がどう付け、いつまで呼ばれたか話してみましょう。
 - `axis.1.ko` · KO: 별명을 소개해요.
 - `axis.1.ja` · JA: あだ名を紹介します。
 - `axis.2.ko` · KO: 붙은 순간을 설명해요.
@@ -714,7 +714,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-intermediate/lessons/03-school-nickname/lesson.html`
-- sha256: `491b7ac43784811ffcf89026c08027744257912b193919e853b34a6e00b6c38a`
+- sha256: `7f89de8e8409cb50813d6ae0572d636284f587a03bacf652dae91aa10ab57094`
 - source kind: `model-story`
 
 #### `metadata`
@@ -726,8 +726,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 학창시절 별명
-- `goal.ko` · KO: 오늘은 학창시절 별명이 누가 어떻게 붙였고 언제까지 불렸는지 이야기해 볼게요.
-- `goal.ja` · JA: 今日は学生時代のあだ名を誰がどう付け、いつまで呼ばれたか話してみましょう。
+- `goal.ko` · KO: 학창시절 별명이 누가 어떻게 붙였고 언제까지 불렸는지 이야기해 볼게요.
+- `goal.ja` · JA: 学生時代のあだ名を誰がどう付け、いつまで呼ばれたか話してみましょう。
 - `axis.1.ko` · KO: 별명을 소개해요.
 - `axis.1.ja` · JA: あだ名を紹介します。
 - `axis.2.ko` · KO: 붙은 순간을 설명해요.
@@ -856,7 +856,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-advanced/lessons/04-used-to-hate/lesson.html`
-- sha256: `5f399268634e541ef6f563f7f51a576814f65472c326cd584b63d88cc19db23e`
+- sha256: `02fc82de17e7389118e7984a6e27d837e6f922d740aabe0828a01bf9c7e82209`
 - source kind: `model-story`
 
 #### `metadata`
@@ -868,8 +868,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 싫다가 좋아진 것
-- `goal.ko` · KO: 오늘은 어릴 때 싫어했지만 어느 순간 좋아하게 된 것과 바뀐 계기를 이야기해 볼게요.
-- `goal.ja` · JA: 今日は子どものころ嫌いだったのに、ある時好きになったものと変化のきっかけを話してみましょう。
+- `goal.ko` · KO: 어릴 때 싫어했지만 어느 순간 좋아하게 된 것과 바뀐 계기를 이야기해 볼게요.
+- `goal.ja` · JA: 子どものころ嫌いだったのに、ある時好きになったものと変化のきっかけを話してみましょう。
 - `axis.1.ko` · KO: 싫어했던 것을 소개해요.
 - `axis.1.ja` · JA: 嫌いだったものを紹介します。
 - `axis.2.ko` · KO: 바뀐 계기를 설명해요.
@@ -995,7 +995,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-intermediate/lessons/04-used-to-hate/lesson.html`
-- sha256: `7cfd28d924bbbae1bc029d6051adf0335c3a2475366469b82f308eea7a58229e`
+- sha256: `852a48ceda73bf4c32f356f0ee70ad339c57953385f0503329e0ef2687527206`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1007,8 +1007,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 싫다가 좋아진 것
-- `goal.ko` · KO: 오늘은 어릴 때 싫어했지만 어느 순간 좋아하게 된 것과 바뀐 계기를 이야기해 볼게요.
-- `goal.ja` · JA: 今日は子どものころ嫌いだったのに、ある時好きになったものと変化のきっかけを話してみましょう。
+- `goal.ko` · KO: 어릴 때 싫어했지만 어느 순간 좋아하게 된 것과 바뀐 계기를 이야기해 볼게요.
+- `goal.ja` · JA: 子どものころ嫌いだったのに、ある時好きになったものと変化のきっかけを話してみましょう。
 - `axis.1.ko` · KO: 싫어했던 것을 소개해요.
 - `axis.1.ja` · JA: 嫌いだったものを紹介します。
 - `axis.2.ko` · KO: 바뀐 계기를 설명해요.
@@ -1136,7 +1136,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-advanced/lessons/05-embarrassing-mistake/lesson.html`
-- sha256: `f099a5c0cb928880d14a7cc7b3dae5bb58b1a0e22e28e036f7f01eff6ff37de8`
+- sha256: `a8f7a8989afee4b6f3143965d4b4d4a0e198f73d9d7cf7f30f46670e2de948ac`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1148,8 +1148,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 창피했던 실수
-- `goal.ko` · KO: 오늘은 지금은 웃을 수 있는 창피한 실수 하나를 일어난 순서와 이후 반응까지 이야기해 볼게요.
-- `goal.ja` · JA: 今日は今は笑える恥ずかしい失敗一つを、起きた順序とその後の反応まで話してみましょう。
+- `goal.ko` · KO: 지금은 웃을 수 있는 창피한 실수 하나를 일어난 순서와 이후 반응까지 이야기해 볼게요.
+- `goal.ja` · JA: 今は笑える恥ずかしい失敗一つを、起きた順序とその後の反応まで話してみましょう。
 - `axis.1.ko` · KO: 실수한 장면을 소개해요.
 - `axis.1.ja` · JA: 失敗した場面を紹介します。
 - `axis.2.ko` · KO: 일어난 순서를 설명해요.
@@ -1276,7 +1276,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-intermediate/lessons/05-embarrassing-mistake/lesson.html`
-- sha256: `ac510fea8863e31157b1381a7d9ab84e9701288406fa549f54be45d333d1036c`
+- sha256: `ade7a4b80d2c17afc744dc9c8b8212ff37eeffe5967c554e01a6633462790282`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1288,8 +1288,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 창피했던 실수
-- `goal.ko` · KO: 오늘은 지금은 웃을 수 있는 창피한 실수 하나를 일어난 순서와 이후 반응까지 이야기해 볼게요.
-- `goal.ja` · JA: 今日は今は笑える恥ずかしい失敗一つを、起きた順序とその後の反応まで話してみましょう。
+- `goal.ko` · KO: 지금은 웃을 수 있는 창피한 실수 하나를 일어난 순서와 이후 반응까지 이야기해 볼게요.
+- `goal.ja` · JA: 今は笑える恥ずかしい失敗一つを、起きた順序とその後の反応まで話してみましょう。
 - `axis.1.ko` · KO: 실수한 장면을 소개해요.
 - `axis.1.ja` · JA: 失敗した場面を紹介します。
 - `axis.2.ko` · KO: 일어난 순서를 설명해요.
@@ -1418,7 +1418,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-advanced/lessons/06-travel-mishap/lesson.html`
-- sha256: `480e6d01106a5be1ccafe9a66346f0c3f55c97735202c388792898dbcb415fda`
+- sha256: `7f088e81da1ae4fb91aab58057dccf2ad2a64dfc2a300fb4f78dfdd378d10aed`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1430,8 +1430,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 여행 에피소드
-- `goal.ko` · KO: 오늘은 여행에서 계획대로 되지 않았지만 오래 기억에 남은 하루를 순서대로 이야기해 볼게요.
-- `goal.ja` · JA: 今日は旅行で予定どおりにならなかったけれど長く記憶に残った一日を、順番に話してみましょう。
+- `goal.ko` · KO: 여행에서 계획대로 되지 않았지만 오래 기억에 남은 하루를 순서대로 이야기해 볼게요.
+- `goal.ja` · JA: 旅行で予定どおりにならなかったけれど長く記憶に残った一日を、順番に話してみましょう。
 - `axis.1.ko` · KO: 여행 계획을 소개해요.
 - `axis.1.ja` · JA: 旅行の予定を紹介します。
 - `axis.2.ko` · KO: 틀어진 순간을 설명해요.
@@ -1557,7 +1557,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-intermediate/lessons/06-travel-mishap/lesson.html`
-- sha256: `f64276544b148cb9fab85eab294f01f13036c03f3406b5d7d6c6c7d8f4ef9bfe`
+- sha256: `5b676f5ec53cd48483b9f8275b643c02da78fcfbf1e4b171d177d2c8ba3880df`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1569,8 +1569,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 여행 에피소드
-- `goal.ko` · KO: 오늘은 여행에서 계획대로 되지 않았지만 오래 기억에 남은 하루를 순서대로 이야기해 볼게요.
-- `goal.ja` · JA: 今日は旅行で予定どおりにならなかったけれど長く記憶に残った一日を、順番に話してみましょう。
+- `goal.ko` · KO: 여행에서 계획대로 되지 않았지만 오래 기억에 남은 하루를 순서대로 이야기해 볼게요.
+- `goal.ja` · JA: 旅行で予定どおりにならなかったけれど長く記憶に残った一日を、順番に話してみましょう。
 - `axis.1.ko` · KO: 여행 계획을 소개해요.
 - `axis.1.ja` · JA: 旅行の予定を紹介します。
 - `axis.2.ko` · KO: 틀어진 순간을 설명해요.
@@ -1698,7 +1698,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-advanced/lessons/07-return-destination/lesson.html`
-- sha256: `9b0eb60d05f04f1e395b8a7ad71e137d5271fe3301a4148e6797f0cc0df0d6fc`
+- sha256: `d78574e1a817fbb9fb20b586bcb4293b9afb9c34e0b5ae2dad28f86e33b673ee`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1710,8 +1710,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 다시 갈 여행지
-- `goal.ko` · KO: 오늘은 다시 가고 싶은 여행지와 그곳의 어떤 시간과 장면이 좋았는지 이야기해 볼게요.
-- `goal.ja` · JA: 今日はもう一度行きたい旅先と、そこでどんな時間や場面がよかったか話してみましょう。
+- `goal.ko` · KO: 다시 가고 싶은 여행지와 그곳의 어떤 시간과 장면이 좋았는지 이야기해 볼게요.
+- `goal.ja` · JA: もう一度行きたい旅先と、そこでどんな時間や場面がよかったか話してみましょう。
 - `axis.1.ko` · KO: 여행지를 소개해요.
 - `axis.1.ja` · JA: 旅先を紹介します。
 - `axis.2.ko` · KO: 좋았던 장면을 설명해요.
@@ -1837,7 +1837,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-intermediate/lessons/07-return-destination/lesson.html`
-- sha256: `574be36a02194a2b3e444eea71bc9a28c310904f1f162a87142e38ee17a97044`
+- sha256: `a71e7b68899bd3177904b6aa37bc15350beb3d14844ac1ab9eeaed4f65da32d3`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1849,8 +1849,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 다시 갈 여행지
-- `goal.ko` · KO: 오늘은 다시 가고 싶은 여행지와 그곳의 어떤 시간과 장면이 좋았는지 이야기해 볼게요.
-- `goal.ja` · JA: 今日はもう一度行きたい旅先と、そこでどんな時間や場面がよかったか話してみましょう。
+- `goal.ko` · KO: 다시 가고 싶은 여행지와 그곳의 어떤 시간과 장면이 좋았는지 이야기해 볼게요.
+- `goal.ja` · JA: もう一度行きたい旅先と、そこでどんな時間や場面がよかったか話してみましょう。
 - `axis.1.ko` · KO: 여행지를 소개해요.
 - `axis.1.ja` · JA: 旅先を紹介します。
 - `axis.2.ko` · KO: 좋았던 장면을 설명해요.
@@ -1978,7 +1978,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-advanced/lessons/08-dreams-then-now/lesson.html`
-- sha256: `b3f6492d7021117a6b85ff82463942be4bd4c9595d4d17068cfbe14fc50d2c64`
+- sha256: `4b351edcbc2fdbf13ca2fe056c630cabdd8609e514b93ffd92398301de7aad3c`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1990,8 +1990,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 꿈의 변화
-- `goal.ko` · KO: 오늘은 어릴 때 꿈이 무엇이었고 언제 어떻게 지금의 바람으로 바뀌었는지 이야기해 볼게요.
-- `goal.ja` · JA: 今日は子どものころの夢が何で、いつどう今の願いに変わったか話してみましょう。
+- `goal.ko` · KO: 어릴 때 꿈이 무엇이었고 언제 어떻게 지금의 바람으로 바뀌었는지 이야기해 볼게요.
+- `goal.ja` · JA: 子どものころの夢が何で、いつどう今の願いに変わったか話してみましょう。
 - `axis.1.ko` · KO: 어릴 때 꿈을 소개해요.
 - `axis.1.ja` · JA: 子どものころの夢を紹介します。
 - `axis.2.ko` · KO: 바뀐 시점을 설명해요.
@@ -2117,7 +2117,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-intermediate/lessons/08-dreams-then-now/lesson.html`
-- sha256: `f7483a955f12266e8da27bb92d790e63508d9ad371bda2640fd590925bcdc985`
+- sha256: `d45415ef0b92cf86ddb86221009f62f89b32d8c0f9c242f32fb9734e8682d008`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2129,8 +2129,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 꿈의 변화
-- `goal.ko` · KO: 오늘은 어릴 때 꿈이 무엇이었고 언제 어떻게 지금의 바람으로 바뀌었는지 이야기해 볼게요.
-- `goal.ja` · JA: 今日は子どものころの夢が何で、いつどう今の願いに変わったか話してみましょう。
+- `goal.ko` · KO: 어릴 때 꿈이 무엇이었고 언제 어떻게 지금의 바람으로 바뀌었는지 이야기해 볼게요.
+- `goal.ja` · JA: 子どものころの夢が何で、いつどう今の願いに変わったか話してみましょう。
 - `axis.1.ko` · KO: 어릴 때 꿈을 소개해요.
 - `axis.1.ja` · JA: 子どものころの夢を紹介します。
 - `axis.2.ko` · KO: 바뀐 시점을 설명해요.
@@ -2258,7 +2258,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-advanced/lessons/09-one-trip-to-past/lesson.html`
-- sha256: `f7d6242d4dedae145999f0f6a51fb9d7592dd6a15e99bf76b66e68862c621bca`
+- sha256: `3afbe9c0e4bb60c8278578c006bcf320f7a4143ed70f65085b6a483d06cae6f1`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2270,8 +2270,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 과거로 한 번
-- `goal.ko` · KO: 오늘은 과거의 한 시점으로 딱 한 번 간다면 언제로 가서 무엇을 하고 싶은지 이야기해 볼게요.
-- `goal.ja` · JA: 今日は過去のある時点へ一度だけ行けるなら、いつに戻って何をしたいか話してみましょう。
+- `goal.ko` · KO: 과거의 한 시점으로 딱 한 번 간다면 언제로 가서 무엇을 하고 싶은지 이야기해 볼게요.
+- `goal.ja` · JA: 過去のある時点へ一度だけ行けるなら、いつに戻って何をしたいか話してみましょう。
 - `axis.1.ko` · KO: 갈 시점을 정해요.
 - `axis.1.ja` · JA: 行く時点を決めます。
 - `axis.2.ko` · KO: 그날 할 일을 설명해요.
@@ -2398,7 +2398,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-intermediate/lessons/09-one-trip-to-past/lesson.html`
-- sha256: `02e2b32356ff486ad8e4c552f355c3c0ae95421a00f83eda48596f07678bb084`
+- sha256: `4d246cf372d9b892214871b030bc94c774ecaf86932a5722453e438e07bd3acc`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2410,8 +2410,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 과거로 한 번
-- `goal.ko` · KO: 오늘은 과거의 한 시점으로 딱 한 번 간다면 언제로 가서 무엇을 하고 싶은지 이야기해 볼게요.
-- `goal.ja` · JA: 今日は過去のある時点へ一度だけ行けるなら、いつに戻って何をしたいか話してみましょう。
+- `goal.ko` · KO: 과거의 한 시점으로 딱 한 번 간다면 언제로 가서 무엇을 하고 싶은지 이야기해 볼게요.
+- `goal.ja` · JA: 過去のある時点へ一度だけ行けるなら、いつに戻って何をしたいか話してみましょう。
 - `axis.1.ko` · KO: 갈 시점을 정해요.
 - `axis.1.ja` · JA: 行く時点を決めます。
 - `axis.2.ko` · KO: 그날 할 일을 설명해요.
@@ -2540,7 +2540,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-advanced/lessons/10-turning-point/lesson.html`
-- sha256: `997ed1dde93fd970ffd5f1f7970857391a8a4b4f3862acaf54d61d0c9749bc00`
+- sha256: `df24881e70389f9a3e799a3768653a84234303d4c6c6fd21ed3c34d7d63a8980`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2552,8 +2552,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 편한 범위의 변화
-- `goal.ko` · KO: 오늘은 취미, 이사, 사람, 일처럼 편하게 말할 수 있는 변화 하나만 골라 이야기해요. 개인적인 질문은 건너뛰어도 괜찮아요.
-- `goal.ja` · JA: 今日は趣味、引っ越し、人、仕事など、話しやすい変化を一つだけ選んで話します。個人的な質問は飛ばしても大丈夫です。
+- `goal.ko` · KO: 취미, 이사, 사람, 일처럼 편하게 말할 수 있는 변화 하나만 골라 이야기해요. 개인적인 질문은 건너뛰어도 괜찮아요.
+- `goal.ja` · JA: 趣味、引っ越し、人、仕事など、話しやすい変化を一つだけ選んで話します。個人的な質問は飛ばしても大丈夫です。
 - `axis.1.ko` · KO: 편한 변화 하나를 골라요.
 - `axis.1.ja` · JA: 話しやすい変化を一つ選びます。
 - `axis.2.ko` · KO: 전과 후를 설명해요.
@@ -2687,7 +2687,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-intermediate/lessons/10-turning-point/lesson.html`
-- sha256: `309a084db18f92fb48454cae338d7710de7664178ffece9dcd020f59683bda71`
+- sha256: `b59e9f2ae26d942b35af1baff2972d9220c9822606e84a9262479b054efa872b`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2699,8 +2699,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 편한 범위의 변화
-- `goal.ko` · KO: 오늘은 취미, 이사, 사람, 일처럼 편하게 말할 수 있는 변화 하나만 골라 이야기해요. 개인적인 질문은 건너뛰어도 괜찮아요.
-- `goal.ja` · JA: 今日は趣味、引っ越し、人、仕事など、話しやすい変化を一つだけ選んで話します。個人的な質問は飛ばしても大丈夫です。
+- `goal.ko` · KO: 취미, 이사, 사람, 일처럼 편하게 말할 수 있는 변화 하나만 골라 이야기해요. 개인적인 질문은 건너뛰어도 괜찮아요.
+- `goal.ja` · JA: 趣味、引っ越し、人、仕事など、話しやすい変化を一つだけ選んで話します。個人的な質問は飛ばしても大丈夫です。
 - `axis.1.ko` · KO: 편한 변화 하나를 골라요.
 - `axis.1.ja` · JA: 話しやすい変化を一つ選びます。
 - `axis.2.ko` · KO: 전과 후를 설명해요.

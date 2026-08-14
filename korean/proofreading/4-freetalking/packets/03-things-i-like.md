@@ -12,7 +12,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-advanced/lessons/01-life-changing-movie/lesson.html`
-- sha256: `dd678a2a6dd4d27e127a32c72aa33331985b71cfb38c761074e32fda5b0db13d`
+- sha256: `857fdc615c9adae61bdaa5f1fbb97c872ae112d2822329046c8ff6dfccfb210b`
 - source kind: `model-story`
 
 #### `metadata`
@@ -24,8 +24,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 인생 영화
-- `goal.ko` · KO: 오늘은 몇 번을 봐도 좋은 인생 영화를, 기억에 남는 장면과 함께 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は何度見ても好きな人生映画について、印象に残った場面とともにじっくり話してみましょう。
+- `goal.ko` · KO: 몇 번을 봐도 좋은 인생 영화를, 기억에 남는 장면과 함께 이야기해 볼게요.
+- `goal.ja` · JA: 何度見ても好きな人生映画について、印象に残った場面とともに話してみましょう。
 - `axis.1.ko` · KO: 좋아하는 영화를 소개해요.
 - `axis.1.ja` · JA: 好きな映画を紹介します。
 - `axis.2.ko` · KO: 기억에 남는 장면을 설명해요.
@@ -151,7 +151,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-intermediate/lessons/01-life-changing-movie/lesson.html`
-- sha256: `23a016a1c9049c8c550c0112a48fc1d6ff03ae097fe99816c455ab755c5a2cb9`
+- sha256: `58624b241ab91dbc11f8165cc95126cc52ece4b7d46be24b6036e7a4184f9419`
 - source kind: `model-story`
 
 #### `metadata`
@@ -163,8 +163,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 인생 영화
-- `goal.ko` · KO: 오늘은 몇 번을 봐도 좋은 인생 영화를, 기억에 남는 장면과 함께 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は何度見ても好きな人生映画について、印象に残った場面とともにじっくり話してみましょう。
+- `goal.ko` · KO: 몇 번을 봐도 좋은 인생 영화를, 기억에 남는 장면과 함께 이야기해 볼게요.
+- `goal.ja` · JA: 何度見ても好きな人生映画について、印象に残った場面とともに話してみましょう。
 - `axis.1.ko` · KO: 좋아하는 영화를 소개해요.
 - `axis.1.ja` · JA: 好きな映画を紹介します。
 - `axis.2.ko` · KO: 기억에 남는 장면을 설명해요.
@@ -292,7 +292,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-advanced/lessons/02-first-korean-favorite/lesson.html`
-- sha256: `bfbd43130b2a0d7f146a7925c8a45f5efe6fe89aba0755ece3524bad0b9590a9`
+- sha256: `a49e2dda579b56e4aab0dfadf6fd5a6b1b6239185779b84b6c3232f1b7b0de0a`
 - source kind: `model-story`
 
 #### `metadata`
@@ -304,8 +304,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 첫 K-작품
-- `goal.ko` · KO: 오늘은 처음 좋아하게 된 한국 작품과, 그 작품이 내게 가져온 변화를 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は初めて好きになった韓国作品と、その作品が自分にもたらした変化についてじっくり話してみましょう。
+- `goal.ko` · KO: 처음 좋아하게 된 한국 작품과, 그 작품이 내게 가져온 변화를 이야기해 볼게요.
+- `goal.ja` · JA: 初めて好きになった韓国作品と、その作品が自分にもたらした変化について話してみましょう。
 - `axis.1.ko` · KO: 처음 만난 작품을 소개해요.
 - `axis.1.ja` · JA: 初めて出会った作品を紹介します。
 - `axis.2.ko` · KO: 빠지게 된 장면을 설명해요.
@@ -431,7 +431,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-intermediate/lessons/02-first-korean-favorite/lesson.html`
-- sha256: `113e0ed94aa8d5c190a2f93f8aff81d87ddce7bbb6eb90c1e084235e61efafc2`
+- sha256: `9969c30c87a58c5cecd463fbfc26f318af1efd9490cbc1d2b76d1be6d42b9015`
 - source kind: `model-story`
 
 #### `metadata`
@@ -443,8 +443,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 첫 K-작품
-- `goal.ko` · KO: 오늘은 처음 좋아하게 된 한국 작품과, 그 작품이 내게 가져온 변화를 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は初めて好きになった韓国作品と、その作品が自分にもたらした変化についてじっくり話してみましょう。
+- `goal.ko` · KO: 처음 좋아하게 된 한국 작품과, 그 작품이 내게 가져온 변화를 이야기해 볼게요.
+- `goal.ja` · JA: 初めて好きになった韓国作品と、その作品が自分にもたらした変化について話してみましょう。
 - `axis.1.ko` · KO: 처음 만난 작품을 소개해요.
 - `axis.1.ja` · JA: 初めて出会った作品を紹介します。
 - `axis.2.ko` · KO: 빠지게 된 장면을 설명해요.
@@ -572,7 +572,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-advanced/lessons/03-my-playlist/lesson.html`
-- sha256: `aea7d7ff9062c7a31988259c7731caface1ad0517b70bc1c6ed447bf5ba12980`
+- sha256: `20bf1604ecbe06e0724bf6621a5c1ec7d1333ffa9346ed1b1f6a4ab4c283c635`
 - source kind: `model-story`
 
 #### `metadata`
@@ -584,8 +584,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 나의 플레이리스트
-- `goal.ko` · KO: 오늘은 상황에 따라 꺼내 듣는 노래와, 내 플레이리스트가 가진 분위기를 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は場面ごとに聴く曲と、自分のプレイリストが持つ雰囲気についてじっくり話してみましょう。
+- `goal.ko` · KO: 상황에 따라 꺼내 듣는 노래와, 내 플레이리스트가 가진 분위기를 이야기해 볼게요.
+- `goal.ja` · JA: 場面ごとに聴く曲と、自分のプレイリストが持つ雰囲気について話してみましょう。
 - `axis.1.ko` · KO: 자주 듣는 노래를 소개해요.
 - `axis.1.ja` · JA: よく聴く曲を紹介します。
 - `axis.2.ko` · KO: 듣는 상황을 설명해요.
@@ -711,7 +711,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-intermediate/lessons/03-my-playlist/lesson.html`
-- sha256: `9e6105ba0b8d274146264ee86bb88f6a08f518fecc66eddb2dd97f527609d424`
+- sha256: `a590e48005b38be4852fee63f2cf6c349e84cc3b4e6b9b25f5e18b175f205efb`
 - source kind: `model-story`
 
 #### `metadata`
@@ -723,8 +723,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 나의 플레이리스트
-- `goal.ko` · KO: 오늘은 상황에 따라 꺼내 듣는 노래와, 내 플레이리스트가 가진 분위기를 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は場面ごとに聴く曲と、自分のプレイリストが持つ雰囲気についてじっくり話してみましょう。
+- `goal.ko` · KO: 상황에 따라 꺼내 듣는 노래와, 내 플레이리스트가 가진 분위기를 이야기해 볼게요.
+- `goal.ja` · JA: 場面ごとに聴く曲と、自分のプレイリストが持つ雰囲気について話してみましょう。
 - `axis.1.ko` · KO: 자주 듣는 노래를 소개해요.
 - `axis.1.ja` · JA: よく聴く曲を紹介します。
 - `axis.2.ko` · KO: 듣는 상황을 설명해요.
@@ -852,7 +852,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-advanced/lessons/04-karaoke-favorite/lesson.html`
-- sha256: `2addc2b308dbea65f34f56e6ec690c8a35b54c5b5eea30deeeb70a367cf408f2`
+- sha256: `709f8f22a475af8311102cbe46adfbbf8cbf0277d9454e6c8a8dda8c17b80741`
 - source kind: `model-story`
 
 #### `metadata`
@@ -864,8 +864,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 노래방 애창곡
-- `goal.ko` · KO: 오늘은 노래방에서 꼭 부르는 한 곡과, 그 노래에 얽힌 장면을 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日はカラオケで必ず歌う一曲と、その曲にまつわる場面についてじっくり話してみましょう。
+- `goal.ko` · KO: 노래방에서 꼭 부르는 한 곡과, 그 노래에 얽힌 장면을 이야기해 볼게요.
+- `goal.ja` · JA: カラオケで必ず歌う一曲と、その曲にまつわる場面について話してみましょう。
 - `axis.1.ko` · KO: 꼭 부르는 곡을 소개해요.
 - `axis.1.ja` · JA: 必ず歌う曲を紹介します。
 - `axis.2.ko` · KO: 부르게 된 계기를 설명해요.
@@ -991,7 +991,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-intermediate/lessons/04-karaoke-favorite/lesson.html`
-- sha256: `2a6c4a59c0a74a85e887843ae41929b2502677d3a0a133ef9bb63e48943f5b7b`
+- sha256: `036c378bfd818d808a97db687b2c4cfdd9a5cace794d51019bbac08082c8769a`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1003,8 +1003,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 노래방 애창곡
-- `goal.ko` · KO: 오늘은 노래방에서 꼭 부르는 한 곡과, 그 노래에 얽힌 장면을 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日はカラオケで必ず歌う一曲と、その曲にまつわる場面についてじっくり話してみましょう。
+- `goal.ko` · KO: 노래방에서 꼭 부르는 한 곡과, 그 노래에 얽힌 장면을 이야기해 볼게요.
+- `goal.ja` · JA: カラオケで必ず歌う一曲と、その曲にまつわる場面について話してみましょう。
 - `axis.1.ko` · KO: 꼭 부르는 곡을 소개해요.
 - `axis.1.ja` · JA: 必ず歌う曲を紹介します。
 - `axis.2.ko` · KO: 부르게 된 계기를 설명해요.
@@ -1132,7 +1132,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-advanced/lessons/05-favorite-late-night-food/lesson.html`
-- sha256: `abd4a91283f8e78a2e364045b4779d031257c66ce533e44a5fb9f6daa0bc54d5`
+- sha256: `6ad0964d6d26fcb547ca324f3da4a8b17c9eea94a0d2987a6d1e54922548a0b5`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1144,8 +1144,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 최애 야식
-- `goal.ko` · KO: 오늘은 밤에 가장 당기는 음식과, 결국 주문하게 되는 순간을 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は夜にいちばん食べたくなるものと、結局注文してしまう瞬間についてじっくり話してみましょう。
+- `goal.ko` · KO: 밤에 가장 당기는 음식과, 결국 주문하게 되는 순간을 이야기해 볼게요.
+- `goal.ja` · JA: 夜にいちばん食べたくなるものと、結局注文してしまう瞬間について話してみましょう。
 - `axis.1.ko` · KO: 좋아하는 야식을 소개해요.
 - `axis.1.ja` · JA: 好きな夜食を紹介します。
 - `axis.2.ko` · KO: 주문하는 시간을 설명해요.
@@ -1271,7 +1271,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-intermediate/lessons/05-favorite-late-night-food/lesson.html`
-- sha256: `0a4d9b2816c079628bc355041a3e8ba088bcc8dcf08b86e103427fc1d6a90ce4`
+- sha256: `7575926bf61d73f518bd8c0c6cce3bb0187f28ea994dc33b33f997944e72feb0`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1283,8 +1283,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 최애 야식
-- `goal.ko` · KO: 오늘은 밤에 가장 당기는 음식과, 결국 주문하게 되는 순간을 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は夜にいちばん食べたくなるものと、結局注文してしまう瞬間についてじっくり話してみましょう。
+- `goal.ko` · KO: 밤에 가장 당기는 음식과, 결국 주문하게 되는 순간을 이야기해 볼게요.
+- `goal.ja` · JA: 夜にいちばん食べたくなるものと、結局注文してしまう瞬間について話してみましょう。
 - `axis.1.ko` · KO: 좋아하는 야식을 소개해요.
 - `axis.1.ja` · JA: 好きな夜食を紹介します。
 - `axis.2.ko` · KO: 주문하는 시간을 설명해요.
@@ -1412,7 +1412,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-advanced/lessons/06-food-combination-i-cant-understand/lesson.html`
-- sha256: `1ba4016a8c05defb76630a49a22cb3066b375263de5e1ef71658895dd2ed73fc`
+- sha256: `f1e2c5163ce18b5763834494f4a4bc059da2cd02750205917cad3ab4db852957`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1424,8 +1424,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 이해 못 하는 조합
-- `goal.ko` · KO: 오늘은 좋아하거나 이해하지 못하는 음식 조합과, 취향이 갈리는 이유를 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は好きな、または理解できない食べ合わせと、好みが分かれる理由についてじっくり話してみましょう。
+- `goal.ko` · KO: 좋아하거나 이해하지 못하는 음식 조합과, 취향이 갈리는 이유를 이야기해 볼게요.
+- `goal.ja` · JA: 好きな、または理解できない食べ合わせと、好みが分かれる理由について話してみましょう。
 - `axis.1.ko` · KO: 논쟁적인 조합을 소개해요.
 - `axis.1.ja` · JA: 意見が分かれる組み合わせを紹介します。
 - `axis.2.ko` · KO: 맛과 식감을 설명해요.
@@ -1551,7 +1551,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-intermediate/lessons/06-food-combination-i-cant-understand/lesson.html`
-- sha256: `e4ebdbdf82a66fb625136d302222700f952594a0cf094299bae0ed2359993346`
+- sha256: `4e898e3c5b496bd35504d5284c9d0236302c853e6b759bef376f8c408f87e58c`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1563,8 +1563,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 이해 못 하는 조합
-- `goal.ko` · KO: 오늘은 좋아하거나 이해하지 못하는 음식 조합과, 취향이 갈리는 이유를 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は好きな、または理解できない食べ合わせと、好みが分かれる理由についてじっくり話してみましょう。
+- `goal.ko` · KO: 좋아하거나 이해하지 못하는 음식 조합과, 취향이 갈리는 이유를 이야기해 볼게요.
+- `goal.ja` · JA: 好きな、または理解できない食べ合わせと、好みが分かれる理由について話してみましょう。
 - `axis.1.ko` · KO: 논쟁적인 조합을 소개해요.
 - `axis.1.ja` · JA: 意見が分かれる組み合わせを紹介します。
 - `axis.2.ko` · KO: 맛과 식감을 설명해요.
@@ -1692,7 +1692,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-advanced/lessons/07-secret-favorite-restaurant/lesson.html`
-- sha256: `6b5c7f7607afb75a6628f7092f290c8863c4528c7ac820310a42132b37a7e0de`
+- sha256: `3d123633c81fda6b95236938e52d9a9c711075670f3de504fdab47f3f080775d`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1704,8 +1704,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 숨겨 둔 맛집
-- `goal.ko` · KO: 오늘은 나만 알고 싶은 맛집과, 그곳을 다른 사람에게 알려 줄지 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は自分だけが知っていたい店と、その店を人に教えるかどうかについてじっくり話してみましょう。
+- `goal.ko` · KO: 나만 알고 싶은 맛집과, 그곳을 다른 사람에게 알려 줄지 이야기해 볼게요.
+- `goal.ja` · JA: 自分だけが知っていたい店と、その店を人に教えるかどうかについて話してみましょう。
 - `axis.1.ko` · KO: 숨겨 둔 가게를 소개해요.
 - `axis.1.ja` · JA: とっておきの店を紹介します。
 - `axis.2.ko` · KO: 맛과 분위기를 설명해요.
@@ -1831,7 +1831,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-intermediate/lessons/07-secret-favorite-restaurant/lesson.html`
-- sha256: `4f64aeb98bec3c92f54546a77a6730109844061075568e742bdc167600d0d9f5`
+- sha256: `76d32700280ee7111ed15c38dd5132bb1972145a4da8816b1ca988c0a7efe64a`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1843,8 +1843,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 숨겨 둔 맛집
-- `goal.ko` · KO: 오늘은 나만 알고 싶은 맛집과, 그곳을 다른 사람에게 알려 줄지 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は自分だけが知っていたい店と、その店を人に教えるかどうかについてじっくり話してみましょう。
+- `goal.ko` · KO: 나만 알고 싶은 맛집과, 그곳을 다른 사람에게 알려 줄지 이야기해 볼게요.
+- `goal.ja` · JA: 自分だけが知っていたい店と、その店を人に教えるかどうかについて話してみましょう。
 - `axis.1.ko` · KO: 숨겨 둔 가게를 소개해요.
 - `axis.1.ja` · JA: とっておきの店を紹介します。
 - `axis.2.ko` · KO: 맛과 분위기를 설명해요.
@@ -1972,7 +1972,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-advanced/lessons/08-life-changing-book/lesson.html`
-- sha256: `abe802ac4d1cf1ce3fcce9f3c5ebf45193594ce9c5555d22daea9e002d2323a4`
+- sha256: `724b88837e0b90dd0b6a2b0459867f2704fbaa2c6fde8f938c38c9a31df80269`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1984,8 +1984,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 인생 책
-- `goal.ko` · KO: 오늘은 남에게 직접 사서 주고 싶을 만큼 좋아하는 책과, 그 이유를 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は人に買って贈りたいほど好きな本と、その理由についてじっくり話してみましょう。
+- `goal.ko` · KO: 남에게 직접 사서 주고 싶을 만큼 좋아하는 책과, 그 이유를 이야기해 볼게요.
+- `goal.ja` · JA: 人に買って贈りたいほど好きな本と、その理由について話してみましょう。
 - `axis.1.ko` · KO: 좋아하는 책을 소개해요.
 - `axis.1.ja` · JA: 好きな本を紹介します。
 - `axis.2.ko` · KO: 기억에 남는 부분을 설명해요.
@@ -2111,7 +2111,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-intermediate/lessons/08-life-changing-book/lesson.html`
-- sha256: `ca08298234d2ef15d2ed9221af23b2f4b79f6da0983511feb54e8cdfb3a5163c`
+- sha256: `d0dab2f66022cbc13c5520cdd127b78a1d8f69d8bcd15983cf31e997bc26f2c8`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2123,8 +2123,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 인생 책
-- `goal.ko` · KO: 오늘은 남에게 직접 사서 주고 싶을 만큼 좋아하는 책과, 그 이유를 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は人に買って贈りたいほど好きな本と、その理由についてじっくり話してみましょう。
+- `goal.ko` · KO: 남에게 직접 사서 주고 싶을 만큼 좋아하는 책과, 그 이유를 이야기해 볼게요.
+- `goal.ja` · JA: 人に買って贈りたいほど好きな本と、その理由について話してみましょう。
 - `axis.1.ko` · KO: 좋아하는 책을 소개해요.
 - `axis.1.ja` · JA: 好きな本を紹介します。
 - `axis.2.ko` · KO: 기억에 남는 부분을 설명해요.
@@ -2252,7 +2252,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-advanced/lessons/09-proud-of-my-hobby/lesson.html`
-- sha256: `a2f81fdfc6747ec88528aaffe8f64f239a1afab143e3363bccc72b376bbe9d42`
+- sha256: `264d00601961d0bd5c95b5b2c3104417623b9cb0b8ad23f623f4bb8b7d2059ca`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2264,8 +2264,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 내 취미의 매력
-- `goal.ko` · KO: 오늘은 남들은 잘 모르는 내 취미의 매력과, 오래 즐기며 생긴 자부심을 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は人にはあまり知られていない自分の趣味の魅力と、長く楽しんで生まれた自信についてじっくり話してみましょう。
+- `goal.ko` · KO: 남들은 잘 모르는 내 취미의 매력과, 오래 즐기며 생긴 자부심을 이야기해 볼게요.
+- `goal.ja` · JA: 人にはあまり知られていない自分の趣味の魅力と、長く楽しんで生まれた自信について話してみましょう。
 - `axis.1.ko` · KO: 내 취미를 소개해요.
 - `axis.1.ja` · JA: 自分の趣味を紹介します。
 - `axis.2.ko` · KO: 숨은 매력을 설명해요.
@@ -2391,7 +2391,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-intermediate/lessons/09-proud-of-my-hobby/lesson.html`
-- sha256: `21ee3a032d16c5bdeb09714e992a4026b0c03696b7e3acc533a0a4a78d95060e`
+- sha256: `93b79092194011df5acc78c52c72971234fee14485f559abf7f008fb6bec21fe`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2403,8 +2403,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 내 취미의 매력
-- `goal.ko` · KO: 오늘은 남들은 잘 모르는 내 취미의 매력과, 오래 즐기며 생긴 자부심을 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は人にはあまり知られていない自分の趣味の魅力と、長く楽しんで生まれた自信についてじっくり話してみましょう。
+- `goal.ko` · KO: 남들은 잘 모르는 내 취미의 매력과, 오래 즐기며 생긴 자부심을 이야기해 볼게요.
+- `goal.ja` · JA: 人にはあまり知られていない自分の趣味の魅力と、長く楽しんで生まれた自信について話してみましょう。
 - `axis.1.ko` · KO: 내 취미를 소개해요.
 - `axis.1.ja` · JA: 自分の趣味を紹介します。
 - `axis.2.ko` · KO: 숨은 매력을 설명해요.
@@ -2532,7 +2532,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-advanced/lessons/10-most-treasured-thing/lesson.html`
-- sha256: `cf6c1bac449017e67d60c4e29766423e71772d2393b1d618b29bccbeab512c3c`
+- sha256: `1a904983f557c082e596e8d4a569b72464ffba23ed1e58f04d2ca2e836be92a5`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2544,8 +2544,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 아끼는 물건
-- `goal.ko` · KO: 오늘은 내 방에서 가장 아끼는 물건이 무엇이고, 왜 특별한지 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は自分の部屋でいちばん大切な物が何か、なぜ特別なのかをじっくり話してみましょう。
+- `goal.ko` · KO: 내 방에서 가장 아끼는 물건이 무엇이고, 왜 특별한지 이야기해 볼게요.
+- `goal.ja` · JA: 自分の部屋でいちばん大切な物が何か、なぜ特別なのかを話してみましょう。
 - `axis.1.ko` · KO: 아끼는 물건을 소개해요.
 - `axis.1.ja` · JA: 大切な物を紹介します。
 - `axis.2.ko` · KO: 생김새와 자리를 설명해요.
@@ -2671,7 +2671,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-intermediate/lessons/10-most-treasured-thing/lesson.html`
-- sha256: `3a07df9092a11208786d4e48d72940643c4e7ed9649903b65025257d8cc63ab7`
+- sha256: `3fdac2a3d7967eec973149e36897005e4b3eade519a49983704927ee37c6435e`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2683,8 +2683,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 아끼는 물건
-- `goal.ko` · KO: 오늘은 내 방에서 가장 아끼는 물건이 무엇이고, 왜 특별한지 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は自分の部屋でいちばん大切な物が何か、なぜ特別なのかをじっくり話してみましょう。
+- `goal.ko` · KO: 내 방에서 가장 아끼는 물건이 무엇이고, 왜 특별한지 이야기해 볼게요.
+- `goal.ja` · JA: 自分の部屋でいちばん大切な物が何か、なぜ特別なのかを話してみましょう。
 - `axis.1.ko` · KO: 아끼는 물건을 소개해요.
 - `axis.1.ja` · JA: 大切な物を紹介します。
 - `axis.2.ko` · KO: 생김새와 자리를 설명해요.
@@ -2812,7 +2812,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-advanced/lessons/11-favorite-clothing-style/lesson.html`
-- sha256: `3d95dddd563e6f76e95048d731d6061d2a6e720e05239ffdaf0a82d08d7253a0`
+- sha256: `ad24c95ee8d1e670c90908879b3b768313a0547955f25c3828229d3b2cf611fa`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2824,8 +2824,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 좋아하는 옷 스타일
-- `goal.ko` · KO: 오늘은 자주 입는 옷 스타일과, 옷장에 가장 많은 색이 무엇인지 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日はよく着る服のスタイルと、クローゼットにいちばん多い色についてじっくり話してみましょう。
+- `goal.ko` · KO: 자주 입는 옷 스타일과, 옷장에 가장 많은 색이 무엇인지 이야기해 볼게요.
+- `goal.ja` · JA: よく着る服のスタイルと、クローゼットにいちばん多い色について話してみましょう。
 - `axis.1.ko` · KO: 자주 입는 스타일을 소개해요.
 - `axis.1.ja` · JA: よく着るスタイルを紹介します。
 - `axis.2.ko` · KO: 좋아하는 색을 설명해요.
@@ -2951,7 +2951,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-things-i-like-intermediate/lessons/11-favorite-clothing-style/lesson.html`
-- sha256: `8652d2dbec0ae5c802a33bc2d5e021f737960729ef8a8d12290ca80b6504bc30`
+- sha256: `daa0605f5f5aa3957a5151049b78047249e9d81c1499d58ea3b277a80136dc31`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2963,8 +2963,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 좋아하는 옷 스타일
-- `goal.ko` · KO: 오늘은 자주 입는 옷 스타일과, 옷장에 가장 많은 색이 무엇인지 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日はよく着る服のスタイルと、クローゼットにいちばん多い色についてじっくり話してみましょう。
+- `goal.ko` · KO: 자주 입는 옷 스타일과, 옷장에 가장 많은 색이 무엇인지 이야기해 볼게요.
+- `goal.ja` · JA: よく着る服のスタイルと、クローゼットにいちばん多い色について話してみましょう。
 - `axis.1.ko` · KO: 자주 입는 스타일을 소개해요.
 - `axis.1.ja` · JA: よく着るスタイルを紹介します。
 - `axis.2.ko` · KO: 좋아하는 색을 설명해요.

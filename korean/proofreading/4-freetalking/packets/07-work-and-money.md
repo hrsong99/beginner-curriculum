@@ -12,7 +12,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-advanced/lessons/01-my-first-paycheck/lesson.html`
-- sha256: `784ac978752a9f8717a85a75748664221f24ed2796120bdc07cc8e703c564d1e`
+- sha256: `8f3aac790c991a6b8e328396d6f28229234b4dfc4621f70f054178124a3e294e`
 - source kind: `model-story`
 
 #### `metadata`
@@ -24,8 +24,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 처음 직접 번 돈
-- `goal.ko` · KO: 오늘은 첫 월급이나 처음 직접 번 돈을 떠올리고, 금액과 받은 날의 장면, 어디에 썼는지 이야기해 볼게요.
-- `goal.ja` · JA: 今日は初めての給料や自分で初めて稼いだお金を思い出し、金額、受け取った日の場面、使い道を話してみましょう。
+- `goal.ko` · KO: 첫 월급이나 처음 직접 번 돈을 떠올리고, 금액과 받은 날의 장면, 어디에 썼는지 이야기해 볼게요.
+- `goal.ja` · JA: 初めての給料や自分で初めて稼いだお金を思い出し、金額、受け取った日の場面、使い道を話してみましょう。
 - `axis.1.ko` · KO: 처음 번 돈의 금액을 말해요.
 - `axis.1.ja` · JA: 初めて稼いだ金額を話します。
 - `axis.2.ko` · KO: 받은 날의 장면을 설명해요.
@@ -154,7 +154,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-intermediate/lessons/01-my-first-paycheck/lesson.html`
-- sha256: `719fec68bdad217745e2bdc57fa1ed70e532ba8b76ba45ca0c9f0cf5bb9ebfe3`
+- sha256: `0c03a678c8f3a5a11838cfd9f170d7c188a2b6fe1b3835ecc5cd13aeacadb6eb`
 - source kind: `model-story`
 
 #### `metadata`
@@ -166,8 +166,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 처음 직접 번 돈
-- `goal.ko` · KO: 오늘은 첫 월급이나 처음 직접 번 돈을 떠올리고, 금액과 받은 날의 장면, 어디에 썼는지 이야기해 볼게요.
-- `goal.ja` · JA: 今日は初めての給料や自分で初めて稼いだお金を思い出し、金額、受け取った日の場面、使い道を話してみましょう。
+- `goal.ko` · KO: 첫 월급이나 처음 직접 번 돈을 떠올리고, 금액과 받은 날의 장면, 어디에 썼는지 이야기해 볼게요.
+- `goal.ja` · JA: 初めての給料や自分で初めて稼いだお金を思い出し、金額、受け取った日の場面、使い道を話してみましょう。
 - `axis.1.ko` · KO: 처음 번 돈의 금액을 말해요.
 - `axis.1.ja` · JA: 初めて稼いだ金額を話します。
 - `axis.2.ko` · KO: 받은 날의 장면을 설명해요.
@@ -298,7 +298,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-advanced/lessons/02-proudest-work-moment/lesson.html`
-- sha256: `a6744ab8e67d86ac9d02895893d850f73fbdc5a07e214a0f3a10f7c4e2137b4d`
+- sha256: `8b23012e9c415f9c4279f9aeae3d0a73b958d70b4a2450db0c5124ed4a4a57ea`
 - source kind: `model-story`
 
 #### `metadata`
@@ -310,8 +310,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 가장 뿌듯했던 일
-- `goal.ko` · KO: 오늘은 일, 공부, 집안일에서 가장 뿌듯했던 순간을 골라, 준비한 시간과 결과가 보이는 장면으로 이야기해 볼게요.
-- `goal.ja` · JA: 今日は仕事、勉強、家のことの中でいちばん誇らしかった瞬間を選び、準備した時間と結果が見える場面として話してみましょう。
+- `goal.ko` · KO: 일, 공부, 집안일에서 가장 뿌듯했던 순간을 골라, 준비한 시간과 결과가 보이는 장면으로 이야기해 볼게요.
+- `goal.ja` · JA: 仕事、勉強、家のことの中でいちばん誇らしかった瞬間を選び、準備した時間と結果が見える場面として話してみましょう。
 - `axis.1.ko` · KO: 뿌듯했던 일을 골라요.
 - `axis.1.ja` · JA: 誇らしかった出来事を選びます。
 - `axis.2.ko` · KO: 준비한 시간과 행동을 설명해요.
@@ -438,7 +438,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-intermediate/lessons/02-proudest-work-moment/lesson.html`
-- sha256: `551720d6e778dcea22a1bb09b3d9a614f49a367d4d38a30ded849910d4f1c3f2`
+- sha256: `e979a3c0f3e23a832eff5653cff1f867c72228e8f1d59224c9bc22bdf629454f`
 - source kind: `model-story`
 
 #### `metadata`
@@ -450,8 +450,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 가장 뿌듯했던 일
-- `goal.ko` · KO: 오늘은 일, 공부, 집안일에서 가장 뿌듯했던 순간을 골라, 준비한 시간과 결과가 보이는 장면으로 이야기해 볼게요.
-- `goal.ja` · JA: 今日は仕事、勉強、家のことの中でいちばん誇らしかった瞬間を選び、準備した時間と結果が見える場面として話してみましょう。
+- `goal.ko` · KO: 일, 공부, 집안일에서 가장 뿌듯했던 순간을 골라, 준비한 시간과 결과가 보이는 장면으로 이야기해 볼게요.
+- `goal.ja` · JA: 仕事、勉強、家のことの中でいちばん誇らしかった瞬間を選び、準備した時間と結果が見える場面として話してみましょう。
 - `axis.1.ko` · KO: 뿌듯했던 일을 골라요.
 - `axis.1.ja` · JA: 誇らしかった出来事を選びます。
 - `axis.2.ko` · KO: 준비한 시간과 행동을 설명해요.
@@ -580,7 +580,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-advanced/lessons/03-when-i-felt-successful/lesson.html`
-- sha256: `71fedc65b6c539d0f13f2fc5a45b42479a22ad52dd953eaa18c7d654a32dd966`
+- sha256: `c2a3a87c2178956feffa5bf952565f3c5761244ecb7c1f21ba78f3ed899ac3f2`
 - source kind: `model-story`
 
 #### `metadata`
@@ -592,8 +592,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 작은 성공의 순간
-- `goal.ko` · KO: 오늘은 크지 않아도 성공했다고 느낀 한순간을 골라, 목표 숫자와 걸린 시간, 그 뒤 달라진 행동까지 이야기해 볼게요.
-- `goal.ja` · JA: 今日は大きくなくても成功したと感じた瞬間を選び、目標の数字、かかった時間、その後変わった行動まで話してみましょう。
+- `goal.ko` · KO: 크지 않아도 성공했다고 느낀 한순간을 골라, 목표 숫자와 걸린 시간, 그 뒤 달라진 행동까지 이야기해 볼게요.
+- `goal.ja` · JA: 大きくなくても成功したと感じた瞬間を選び、目標の数字、かかった時間、その後変わった行動まで話してみましょう。
 - `axis.1.ko` · KO: 작은 성공 하나를 골라요.
 - `axis.1.ja` · JA: 小さな成功を一つ選びます。
 - `axis.2.ko` · KO: 숫자와 걸린 시간을 설명해요.
@@ -719,7 +719,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-intermediate/lessons/03-when-i-felt-successful/lesson.html`
-- sha256: `9175ee741abb310621ee04e3b1c7e0d3e5267187b1e251f192ce0d338d3c3114`
+- sha256: `3ae6132e9c6b6a9fda74f66ce85ac64f681de7649af1029429816f385b52cc4c`
 - source kind: `model-story`
 
 #### `metadata`
@@ -731,8 +731,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 작은 성공의 순간
-- `goal.ko` · KO: 오늘은 크지 않아도 성공했다고 느낀 한순간을 골라, 목표 숫자와 걸린 시간, 그 뒤 달라진 행동까지 이야기해 볼게요.
-- `goal.ja` · JA: 今日は大きくなくても成功したと感じた瞬間を選び、目標の数字、かかった時間、その後変わった行動まで話してみましょう。
+- `goal.ko` · KO: 크지 않아도 성공했다고 느낀 한순간을 골라, 목표 숫자와 걸린 시간, 그 뒤 달라진 행동까지 이야기해 볼게요.
+- `goal.ja` · JA: 大きくなくても成功したと感じた瞬間を選び、目標の数字、かかった時間、その後変わった行動まで話してみましょう。
 - `axis.1.ko` · KO: 작은 성공 하나를 골라요.
 - `axis.1.ja` · JA: 小さな成功を一つ選びます。
 - `axis.2.ko` · KO: 숫자와 걸린 시간을 설명해요.
@@ -860,7 +860,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-advanced/lessons/04-what-i-am-learning-now/lesson.html`
-- sha256: `4b17ed19c7bdd11f368020dca9e4af5deaa6e5d32766901aab9c28c4cfb17c8c`
+- sha256: `52874ce0363d8b6c01dc588c7594ce43b48b3e97fa257305fe305b95710e42d8`
 - source kind: `model-story`
 
 #### `metadata`
@@ -872,8 +872,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 배우는 습관
-- `goal.ko` · KO: 오늘은 요즘 배우거나 연습하는 것과 오래 이어 가는 방법, 금방 그만둔 경험을 숫자와 장면으로 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、最近学んだり練習したりしていること、長く続ける方法、すぐにやめた経験を数字と場面で話してみましょう。
+- `goal.ko` · KO: 요즘 배우거나 연습하는 것과 오래 이어 가는 방법, 금방 그만둔 경험을 숫자와 장면으로 이야기해 볼게요.
+- `goal.ja` · JA: 最近学んだり練習したりしていること、長く続ける方法、すぐにやめた経験を数字と場面で話してみましょう。
 - `axis.1.ko` · KO: 지금 배우는 것과 시간을 말해요.
 - `axis.1.ja` · JA: 今学んでいることと時間を話します。
 - `axis.2.ko` · KO: 계속할 수 있었던 장면을 설명해요.
@@ -999,7 +999,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-intermediate/lessons/04-what-i-am-learning-now/lesson.html`
-- sha256: `ee8b84b5c5e7175f3cb86e1f26f95ad4b999e78d4363cf65442cc846f18a6ada`
+- sha256: `fd4cc40bffb7b3c7492c8ad80c79d91a552dbfee392453b4f35d197f155099f1`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1011,8 +1011,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 배우는 습관
-- `goal.ko` · KO: 오늘은 요즘 배우거나 연습하는 것과 오래 이어 가는 방법, 금방 그만둔 경험을 숫자와 장면으로 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、最近学んだり練習したりしていること、長く続ける方法、すぐにやめた経験を数字と場面で話してみましょう。
+- `goal.ko` · KO: 요즘 배우거나 연습하는 것과 오래 이어 가는 방법, 금방 그만둔 경험을 숫자와 장면으로 이야기해 볼게요.
+- `goal.ja` · JA: 最近学んだり練習したりしていること、長く続ける方法、すぐにやめた経験を数字と場面で話してみましょう。
 - `axis.1.ko` · KO: 지금 배우는 것과 시간을 말해요.
 - `axis.1.ja` · JA: 今学んでいることと時間を話します。
 - `axis.2.ko` · KO: 계속할 수 있었던 장면을 설명해요.
@@ -1140,7 +1140,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-advanced/lessons/05-my-money-habit/lesson.html`
-- sha256: `587f5d095f461d449f807205f7f9ef84e43fcba0047e4d3ed8ce94a169985022`
+- sha256: `b2a9ff45cbc3e6fbce63b3837358ddbe7b1529caa12ec7a10c6ea78bf4c74123`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1152,8 +1152,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 나의 돈 습관
-- `goal.ko` · KO: 오늘은 실제로 지키는 돈 관리 습관 하나를 금액과 장면으로 설명하고, 누구에게 맞을지 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、実際に続けているお金の管理習慣を一つ、金額と場面で説明し、どんな人に合うか話してみましょう。
+- `goal.ko` · KO: 실제로 지키는 돈 관리 습관 하나를 금액과 장면으로 설명하고, 누구에게 맞을지 이야기해 볼게요.
+- `goal.ja` · JA: 実際に続けているお金の管理習慣を一つ、金額と場面で説明し、どんな人に合うか話してみましょう。
 - `axis.1.ko` · KO: 돈 습관과 금액을 말해요.
 - `axis.1.ja` · JA: お金の習慣と金額を話します。
 - `axis.2.ko` · KO: 도움이 된 장면을 설명해요.
@@ -1280,7 +1280,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-intermediate/lessons/05-my-money-habit/lesson.html`
-- sha256: `bdc5be36312b2678ff65b97a9fda9e93fa1c7cc0460d31a105fd6e9d248144e3`
+- sha256: `aae2a345ac22d7c21bd79ea99f2eea9864932ee1f182f43ccd0a862b0b47f597`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1292,8 +1292,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 나의 돈 습관
-- `goal.ko` · KO: 오늘은 실제로 지키는 돈 관리 습관 하나를 금액과 장면으로 설명하고, 누구에게 맞을지 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、実際に続けているお金の管理習慣を一つ、金額と場面で説明し、どんな人に合うか話してみましょう。
+- `goal.ko` · KO: 실제로 지키는 돈 관리 습관 하나를 금액과 장면으로 설명하고, 누구에게 맞을지 이야기해 볼게요.
+- `goal.ja` · JA: 実際に続けているお金の管理習慣を一つ、金額と場面で説明し、どんな人に合うか話してみましょう。
 - `axis.1.ko` · KO: 돈 습관과 금액을 말해요.
 - `axis.1.ja` · JA: お金の習慣と金額を話します。
 - `axis.2.ko` · KO: 도움이 된 장면을 설명해요.
@@ -1422,7 +1422,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-advanced/lessons/06-if-i-had-another-job/lesson.html`
-- sha256: `5e46c55a1863989bbcea140432a0941f786fa0e5b9f0af834b2fab2c95301ea3`
+- sha256: `1da2024a841887acf4c9493ca86b0be60d00d513e29c319e2a69b710e91be183`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1434,8 +1434,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 다른 일을 상상해요
-- `goal.ko` · KO: 오늘은 지금의 일·공부·생활 역할 말고 다른 일을 한다면 무엇을 고를지, 하루의 장면과 현실적인 조건을 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、今の仕事・勉強・生活上の役割とは別のことをするなら何を選ぶか、一日の場面と現実的な条件を話してみましょう。
+- `goal.ko` · KO: 지금의 일·공부·생활 역할 말고 다른 일을 한다면 무엇을 고를지, 하루의 장면과 현실적인 조건을 이야기해 볼게요.
+- `goal.ja` · JA: 今の仕事・勉強・生活上の役割とは別のことをするなら何を選ぶか、一日の場面と現実的な条件を話してみましょう。
 - `axis.1.ko` · KO: 다른 일 하나를 골라요.
 - `axis.1.ja` · JA: 別の仕事を一つ選びます。
 - `axis.2.ko` · KO: 그 일의 하루를 그려요.
@@ -1561,7 +1561,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-intermediate/lessons/06-if-i-had-another-job/lesson.html`
-- sha256: `3767b05774360cd52dad33ac3c057799d0823f86825593eae1d4c58d9d52078c`
+- sha256: `ff12fcf60e6545174a9e8744cc34ce86453d9358ac9c0c8ec8e9b318286c1789`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1573,8 +1573,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 다른 일을 상상해요
-- `goal.ko` · KO: 오늘은 지금의 일·공부·생활 역할 말고 다른 일을 한다면 무엇을 고를지, 하루의 장면과 현실적인 조건을 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、今の仕事・勉強・生活上の役割とは別のことをするなら何を選ぶか、一日の場面と現実的な条件を話してみましょう。
+- `goal.ko` · KO: 지금의 일·공부·생활 역할 말고 다른 일을 한다면 무엇을 고를지, 하루의 장면과 현실적인 조건을 이야기해 볼게요.
+- `goal.ja` · JA: 今の仕事・勉強・生活上の役割とは別のことをするなら何を選ぶか、一日の場面と現実的な条件を話してみましょう。
 - `axis.1.ko` · KO: 다른 일 하나를 골라요.
 - `axis.1.ja` · JA: 別の仕事を一つ選びます。
 - `axis.2.ko` · KO: 그 일의 하루를 그려요.
@@ -1702,7 +1702,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-advanced/lessons/07-how-ai-changed-my-work/lesson.html`
-- sha256: `dba11edaf95809f8001ab1509f1876c8abb31a1a1d8f2571444e082844a0d92d`
+- sha256: `b9c1f284721d9a2b1aa81d4ebae25bd7ba7b87e26aafe19c485e178a4062f9d9`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1714,8 +1714,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: AI로 달라진 장면
-- `goal.ko` · KO: 오늘은 AI 때문에 일·공부·집안일에서 실제로 달라진 한 가지를 시간과 결과로 설명하고, 사람에게 남는 역할을 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、AIによって仕事・勉強・家事で実際に変わったことを一つ、時間と結果で説明し、人に残る役割を話してみましょう。
+- `goal.ko` · KO: AI 때문에 일·공부·집안일에서 실제로 달라진 한 가지를 시간과 결과로 설명하고, 사람에게 남는 역할을 이야기해 볼게요.
+- `goal.ja` · JA: AIによって仕事・勉強・家事で実際に変わったことを一つ、時間と結果で説明し、人に残る役割を話してみましょう。
 - `axis.1.ko` · KO: AI를 쓴 장면을 말해요.
 - `axis.1.ja` · JA: AIを使った場面を話します。
 - `axis.2.ko` · KO: 전후의 시간과 결과를 비교해요.
@@ -1842,7 +1842,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-intermediate/lessons/07-how-ai-changed-my-work/lesson.html`
-- sha256: `5d1870b34368058c37e2ce381d49e3a8e238064895245b577934236c07194770`
+- sha256: `002bde2b8c5db2c1bb32751b614d72172614f6385b49c0f511729e47b1937009`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1854,8 +1854,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: AI로 달라진 장면
-- `goal.ko` · KO: 오늘은 AI 때문에 일·공부·집안일에서 실제로 달라진 한 가지를 시간과 결과로 설명하고, 사람에게 남는 역할을 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、AIによって仕事・勉強・家事で実際に変わったことを一つ、時間と結果で説明し、人に残る役割を話してみましょう。
+- `goal.ko` · KO: AI 때문에 일·공부·집안일에서 실제로 달라진 한 가지를 시간과 결과로 설명하고, 사람에게 남는 역할을 이야기해 볼게요.
+- `goal.ja` · JA: AIによって仕事・勉強・家事で実際に変わったことを一つ、時間と結果で説明し、人に残る役割を話してみましょう。
 - `axis.1.ko` · KO: AI를 쓴 장면을 말해요.
 - `axis.1.ja` · JA: AIを使った場面を話します。
 - `axis.2.ko` · KO: 전후의 시간과 결과를 비교해요.
@@ -1984,7 +1984,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-advanced/lessons/08-why-i-wanted-a-change/lesson.html`
-- sha256: `68dc61edc52f18b00a997473c0d2041b5240f5122e54f15733475c4487666140`
+- sha256: `ffe2f4923ed74119dd47b39a312b749dd593fdb476481b29281030e6d0b585b1`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1996,8 +1996,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 바꾸고 싶었던 이유
-- `goal.ko` · KO: 오늘은 일·공부·생활 역할을 바꾸고 싶었던 때가 있다면, 판단이나 조언 없이 그때의 장면과 이유, 실제로 한 작은 변화를 편한 범위에서 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、仕事・勉強・生活上の役割を変えたいと思ったことがあれば、判断や助言をせず、その場面、理由、実際に行った小さな変化を話せる範囲で話してみましょう。
+- `goal.ko` · KO: 일·공부·생활 역할을 바꾸고 싶었던 때가 있다면, 판단이나 조언 없이 그때의 장면과 이유, 실제로 한 작은 변화를 편한 범위에서 이야기해 볼게요.
+- `goal.ja` · JA: 仕事・勉強・生活上の役割を変えたいと思ったことがあれば、判断や助言をせず、その場面、理由、実際に行った小さな変化を話せる範囲で話してみましょう。
 - `axis.1.ko` · KO: 바꾸고 싶었던 장면을 말해요.
 - `axis.1.ja` · JA: 変えたいと思った場面を話します。
 - `axis.2.ko` · KO: 두세 가지 이유를 나눠요.
@@ -2125,7 +2125,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-intermediate/lessons/08-why-i-wanted-a-change/lesson.html`
-- sha256: `b292727516624f65951664e128013e6acb59ac13fb06bb665bc0a427e4bbbf66`
+- sha256: `f29b297c3018ad40371c88d58edf6b8eb4de7d5b6253e5c9a8dcc3db7cafe6fb`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2137,8 +2137,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 바꾸고 싶었던 이유
-- `goal.ko` · KO: 오늘은 일·공부·생활 역할을 바꾸고 싶었던 때가 있다면, 판단이나 조언 없이 그때의 장면과 이유, 실제로 한 작은 변화를 편한 범위에서 이야기해 볼게요.
-- `goal.ja` · JA: 今日は、仕事・勉強・生活上の役割を変えたいと思ったことがあれば、判断や助言をせず、その場面、理由、実際に行った小さな変化を話せる範囲で話してみましょう。
+- `goal.ko` · KO: 일·공부·생활 역할을 바꾸고 싶었던 때가 있다면, 판단이나 조언 없이 그때의 장면과 이유, 실제로 한 작은 변화를 편한 범위에서 이야기해 볼게요.
+- `goal.ja` · JA: 仕事・勉強・生活上の役割を変えたいと思ったことがあれば、判断や助言をせず、その場面、理由、実際に行った小さな変化を話せる範囲で話してみましょう。
 - `axis.1.ko` · KO: 바꾸고 싶었던 장면을 말해요.
 - `axis.1.ja` · JA: 変えたいと思った場面を話します。
 - `axis.2.ko` · KO: 두세 가지 이유를 나눠요.
@@ -2268,7 +2268,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-advanced/lessons/09-best-and-worst-bosses/lesson.html`
-- sha256: `b49876795f976f7a1861a5d57c010c59bc93c8c32a8133006dd41984d9597f42`
+- sha256: `0bf0573bb5f6264f6573f670c63d8b2e72da7f7dd2d9317371a538c47d2e60fb`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2280,8 +2280,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 함께 일한 사람
-- `goal.ko` · KO: 오늘은 상사·선생님·모임 리더처럼 함께 일을 이끈 사람을 떠올리고, 이름이나 평가 대신 구체적인 행동과 그 영향을 편한 범위에서 비교해 볼게요.
-- `goal.ja` · JA: 今日は、上司・先生・グループのリーダーなど一緒に物事を進めた人を思い出し、名前や評価ではなく、具体的な行動とその影響を話せる範囲で比べてみましょう。
+- `goal.ko` · KO: 상사·선생님·모임 리더처럼 함께 일을 이끈 사람을 떠올리고, 이름이나 평가 대신 구체적인 행동과 그 영향을 편한 범위에서 비교해 볼게요.
+- `goal.ja` · JA: 上司・先生・グループのリーダーなど一緒に物事を進めた人を思い出し、名前や評価ではなく、具体的な行動とその影響を話せる範囲で比べてみましょう。
 - `axis.1.ko` · KO: 함께한 사람의 행동을 말해요.
 - `axis.1.ja` · JA: 一緒にいた人の行動を話します。
 - `axis.2.ko` · KO: 좋았던 장면과 힘든 장면을 비교해요.
@@ -2408,7 +2408,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-intermediate/lessons/09-best-and-worst-bosses/lesson.html`
-- sha256: `6757e69ce3af19eee606ad743dbf3aeb0ed68f699c363322c209a6ec4b572413`
+- sha256: `3b422bb0eb0604ab75d75f82fcb98a20e79c5646b9519dbf3fd16a566c6b47a5`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2420,8 +2420,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 함께 일한 사람
-- `goal.ko` · KO: 오늘은 상사·선생님·모임 리더처럼 함께 일을 이끈 사람을 떠올리고, 이름이나 평가 대신 구체적인 행동과 그 영향을 편한 범위에서 비교해 볼게요.
-- `goal.ja` · JA: 今日は、上司・先生・グループのリーダーなど一緒に物事を進めた人を思い出し、名前や評価ではなく、具体的な行動とその影響を話せる範囲で比べてみましょう。
+- `goal.ko` · KO: 상사·선생님·모임 리더처럼 함께 일을 이끈 사람을 떠올리고, 이름이나 평가 대신 구체적인 행동과 그 영향을 편한 범위에서 비교해 볼게요.
+- `goal.ja` · JA: 上司・先生・グループのリーダーなど一緒に物事を進めた人を思い出し、名前や評価ではなく、具体的な行動とその影響を話せる範囲で比べてみましょう。
 - `axis.1.ko` · KO: 함께한 사람의 행동을 말해요.
 - `axis.1.ja` · JA: 一緒にいた人の行動を話します。
 - `axis.2.ko` · KO: 좋았던 장면과 힘든 장면을 비교해요.

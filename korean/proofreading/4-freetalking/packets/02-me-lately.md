@@ -12,7 +12,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-me-lately-advanced/lessons/01-worth-the-money/lesson.html`
-- sha256: `d8f300d5b48e6d4029a98a89fbfa4c01e2b71777f865cbae58ffde054cde81db`
+- sha256: `9ba7b6d997d19b783dee69cf7b0afb27b21516e6e6dbc4a6ae1652eeb692fcb8`
 - source kind: `model-story`
 
 #### `metadata`
@@ -24,8 +24,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 돈값 하는 템
-- `goal.ko` · KO: 오늘은 최근에 산 것 중 가장 만족스러운 물건을, 구체적인 경험과 함께 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は最近買ったものの中で、いちばん満足しているものについて、具体的な経験とともにじっくり話してみましょう。
+- `goal.ko` · KO: 최근에 산 것 중 가장 만족스러운 물건을, 구체적인 경험과 함께 이야기해 볼게요.
+- `goal.ja` · JA: 最近買ったものの中で、いちばん満足しているものについて、具体的な経験とともに話してみましょう。
 - `axis.1.ko` · KO: 최근에 산 물건을 소개해요.
 - `axis.1.ja` · JA: 最近買ったものを紹介します。
 - `axis.2.ko` · KO: 왜 돈값 하는지 설명해요.
@@ -151,7 +151,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-me-lately-intermediate/lessons/01-worth-the-money/lesson.html`
-- sha256: `86e5b8a4c7164fa1a6fb9912ae86e953be4cb444255760ff9e83fa979eb1c057`
+- sha256: `8ceb93e414abfcefbfdd938b5f0cf261889f8708e0ad311096910fa009651f3f`
 - source kind: `model-story`
 
 #### `metadata`
@@ -163,8 +163,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 돈값 하는 템
-- `goal.ko` · KO: 오늘은 최근에 산 것 중 가장 만족스러운 물건을, 구체적인 경험과 함께 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は最近買ったものの中で、いちばん満足しているものについて、具体的な経験とともにじっくり話してみましょう。
+- `goal.ko` · KO: 최근에 산 것 중 가장 만족스러운 물건을, 구체적인 경험과 함께 이야기해 볼게요.
+- `goal.ja` · JA: 最近買ったものの中で、いちばん満足しているものについて、具体的な経験とともに話してみましょう。
 - `axis.1.ko` · KO: 최근에 산 물건을 소개해요.
 - `axis.1.ja` · JA: 最近買ったものを紹介します。
 - `axis.2.ko` · KO: 왜 돈값 하는지 설명해요.
@@ -292,7 +292,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-me-lately-advanced/lessons/02-current-obsession/lesson.html`
-- sha256: `fecc36f8fe8f6ba6d50e5f9ce0e41c8a36423beffd5fbd19cad5c94376dc0fac`
+- sha256: `5e9eb257a342de38e196f869c65c173d8df4c649bb24ecb4ea715f10d5893cf8`
 - source kind: `model-story`
 
 #### `metadata`
@@ -304,8 +304,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 요즘 빠진 것
-- `goal.ko` · KO: 오늘은 최근에 시작한 취미와 그 재미에 푹 빠지게 된 과정을 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は最近始めた趣味と、そのおもしろさに夢中になった過程についてじっくり話してみましょう。
+- `goal.ko` · KO: 최근에 시작한 취미와 그 재미에 푹 빠지게 된 과정을 이야기해 볼게요.
+- `goal.ja` · JA: 最近始めた趣味と、そのおもしろさに夢中になった過程について話してみましょう。
 - `axis.1.ko` · KO: 새로 시작한 취미를 소개해요.
 - `axis.1.ja` · JA: 新しく始めた趣味を紹介します。
 - `axis.2.ko` · KO: 처음 빠지게 된 순간을 설명해요.
@@ -431,7 +431,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-me-lately-intermediate/lessons/02-current-obsession/lesson.html`
-- sha256: `1b9b923a1eb5b7757e4d1c0eab12e45659149dc5c9e5b76c9ef6f78d855959d2`
+- sha256: `1dd4419177856b2f162642bc5d7f9b2e531c4bf7cb841328eed0038ea395e3ca`
 - source kind: `model-story`
 
 #### `metadata`
@@ -443,8 +443,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 요즘 빠진 것
-- `goal.ko` · KO: 오늘은 최근에 시작한 취미와 그 재미에 푹 빠지게 된 과정을 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は最近始めた趣味と、そのおもしろさに夢中になった過程についてじっくり話してみましょう。
+- `goal.ko` · KO: 최근에 시작한 취미와 그 재미에 푹 빠지게 된 과정을 이야기해 볼게요.
+- `goal.ja` · JA: 最近始めた趣味と、そのおもしろさに夢中になった過程について話してみましょう。
 - `axis.1.ko` · KO: 새로 시작한 취미를 소개해요.
 - `axis.1.ja` · JA: 新しく始めた趣味を紹介します。
 - `axis.2.ko` · KO: 처음 빠지게 된 순간을 설명해요.
@@ -572,7 +572,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-me-lately-advanced/lessons/03-binge-watching/lesson.html`
-- sha256: `d943b9e01c4b43eafbaf5bb0471e87737e3078c8abf6a41bd66c0ba7ff559600`
+- sha256: `afde444494e16d31495bfc2dca26ce863d7c32b71bb55fb8f165a2ff25e37324`
 - source kind: `model-story`
 
 #### `metadata`
@@ -584,8 +584,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 정주행 중
-- `goal.ko` · KO: 오늘은 요즘 보고 있는 작품과 멈추지 못하고 계속 보는 이유를 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は最近見ている作品と、止められずに見続ける理由についてじっくり話してみましょう。
+- `goal.ko` · KO: 요즘 보고 있는 작품과 멈추지 못하고 계속 보는 이유를 이야기해 볼게요.
+- `goal.ja` · JA: 最近見ている作品と、止められずに見続ける理由について話してみましょう。
 - `axis.1.ko` · KO: 요즘 보는 작품을 소개해요.
 - `axis.1.ja` · JA: 最近見ている作品を紹介します。
 - `axis.2.ko` · KO: 계속 보게 되는 이유를 설명해요.
@@ -711,7 +711,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-me-lately-intermediate/lessons/03-binge-watching/lesson.html`
-- sha256: `80aabe6d64ad2e1177bb42bac8cc1303490574f01d43341f6f32300e220dd1e6`
+- sha256: `f68a730c5651d340d1a50e1eddc668f1f7bddc751e48a88e9b47aa2d5b8f0554`
 - source kind: `model-story`
 
 #### `metadata`
@@ -723,8 +723,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 정주행 중
-- `goal.ko` · KO: 오늘은 요즘 보고 있는 작품과 멈추지 못하고 계속 보는 이유를 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は最近見ている作品と、止められずに見続ける理由についてじっくり話してみましょう。
+- `goal.ko` · KO: 요즘 보고 있는 작품과 멈추지 못하고 계속 보는 이유를 이야기해 볼게요.
+- `goal.ja` · JA: 最近見ている作品と、止められずに見続ける理由について話してみましょう。
 - `axis.1.ko` · KO: 요즘 보는 작품을 소개해요.
 - `axis.1.ja` · JA: 最近見ている作品を紹介します。
 - `axis.2.ko` · KO: 계속 보게 되는 이유를 설명해요.
@@ -852,7 +852,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-me-lately-advanced/lessons/04-recent-compliment/lesson.html`
-- sha256: `676252a5e70efbdab9d0561c2434b935880c2340faf6daa5c20b95d747c3f6a3`
+- sha256: `7bbb2a8b9f1b522c23f7204fc97b5e4317e2a68d83f00c9a43588669630d71b9`
 - source kind: `model-story`
 
 #### `metadata`
@@ -864,8 +864,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 최근 받은 칭찬
-- `goal.ko` · KO: 오늘은 최근에 들은 칭찬과 그 말이 오래 기억에 남은 이유를 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は最近もらった褒め言葉と、その言葉が長く記憶に残った理由についてじっくり話してみましょう。
+- `goal.ko` · KO: 최근에 들은 칭찬과 그 말이 오래 기억에 남은 이유를 이야기해 볼게요.
+- `goal.ja` · JA: 最近もらった褒め言葉と、その言葉が長く記憶に残った理由について話してみましょう。
 - `axis.1.ko` · KO: 누가 칭찬했는지 소개해요.
 - `axis.1.ja` · JA: 誰が褒めてくれたか紹介します。
 - `axis.2.ko` · KO: 들은 말을 구체적으로 전해요.
@@ -991,7 +991,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-me-lately-intermediate/lessons/04-recent-compliment/lesson.html`
-- sha256: `5f9fc040b3c3bb73228903e7bb926cbf33c4e1c182aa9f2ea63f139ac515f9f1`
+- sha256: `868b5d1d797422711b4361d8cd098c6df458866b9d106222ee74dc2143cc6517`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1003,8 +1003,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 최근 받은 칭찬
-- `goal.ko` · KO: 오늘은 최근에 들은 칭찬과 그 말이 오래 기억에 남은 이유를 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は最近もらった褒め言葉と、その言葉が長く記憶に残った理由についてじっくり話してみましょう。
+- `goal.ko` · KO: 최근에 들은 칭찬과 그 말이 오래 기억에 남은 이유를 이야기해 볼게요.
+- `goal.ja` · JA: 最近もらった褒め言葉と、その言葉が長く記憶に残った理由について話してみましょう。
 - `axis.1.ko` · KO: 누가 칭찬했는지 소개해요.
 - `axis.1.ja` · JA: 誰が褒めてくれたか紹介します。
 - `axis.2.ko` · KO: 들은 말을 구체적으로 전해요.
@@ -1132,7 +1132,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-me-lately-advanced/lessons/05-weekend-plan/lesson.html`
-- sha256: `41271f1b0468045bb6281ad62aa9445a3321236b865a692b90092b011ccb5ab0`
+- sha256: `05d8491b9ac299bea45149404af4047b091fec07a257f9058ec07d532e8ca5a3`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1144,8 +1144,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 이번 주말 계획
-- `goal.ko` · KO: 오늘은 이번 주말에 아직 아무에게도 말하지 않은 계획과 그 시간을 보내는 방법을 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は今週末にまだ誰にも話していない予定と、その時間の過ごし方についてじっくり話してみましょう。
+- `goal.ko` · KO: 이번 주말에 아직 아무에게도 말하지 않은 계획과 그 시간을 보내는 방법을 이야기해 볼게요.
+- `goal.ja` · JA: 今週末にまだ誰にも話していない予定と、その時間の過ごし方について話してみましょう。
 - `axis.1.ko` · KO: 주말 계획을 소개해요.
 - `axis.1.ja` · JA: 週末の予定を紹介します。
 - `axis.2.ko` · KO: 아직 말하지 않은 이유를 설명해요.
@@ -1271,7 +1271,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-me-lately-intermediate/lessons/05-weekend-plan/lesson.html`
-- sha256: `30b7da77e588cc8983f41439080600431a72d809d5e06e20ad4e04fd656cd621`
+- sha256: `77b2e3ff1e6fff15d6de1e551df3f22bdd5cc3504b55bfbe4617f7296c6bfb1c`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1283,8 +1283,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 이번 주말 계획
-- `goal.ko` · KO: 오늘은 이번 주말에 아직 아무에게도 말하지 않은 계획과 그 시간을 보내는 방법을 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は今週末にまだ誰にも話していない予定と、その時間の過ごし方についてじっくり話してみましょう。
+- `goal.ko` · KO: 이번 주말에 아직 아무에게도 말하지 않은 계획과 그 시간을 보내는 방법을 이야기해 볼게요.
+- `goal.ja` · JA: 今週末にまだ誰にも話していない予定と、その時間の過ごし方について話してみましょう。
 - `axis.1.ko` · KO: 주말 계획을 소개해요.
 - `axis.1.ja` · JA: 週末の予定を紹介します。
 - `axis.2.ko` · KO: 아직 말하지 않은 이유를 설명해요.
@@ -1412,7 +1412,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-me-lately-advanced/lessons/06-one-goal-left/lesson.html`
-- sha256: `2f1095e5a0048a0fb88bb001a3dba303292b08006a69e4463b25e79c1dd1c84a`
+- sha256: `3634373e32a16baf9fdb666343938fbbcb132f6d53020aa98e1d2419ac570a9d`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1424,8 +1424,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 올해 남은 목표
-- `goal.ko` · KO: 오늘은 올해가 끝나기 전 꼭 이루고 싶은 목표 하나와 실행 방법을 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は今年が終わる前に必ず達成したい目標を一つ選び、その実行方法についてじっくり話してみましょう。
+- `goal.ko` · KO: 올해가 끝나기 전 꼭 이루고 싶은 목표 하나와 실행 방법을 이야기해 볼게요.
+- `goal.ja` · JA: 今年が終わる前に必ず達成したい目標を一つ選び、その実行方法について話してみましょう。
 - `axis.1.ko` · KO: 목표 하나를 구체적으로 정해요.
 - `axis.1.ja` · JA: 目標を一つ具体的に決めます。
 - `axis.2.ko` · KO: 그 목표가 중요한 이유를 설명해요.
@@ -1551,7 +1551,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-me-lately-intermediate/lessons/06-one-goal-left/lesson.html`
-- sha256: `b5656cae94bf84f2c9f47a2aa26e405959b322e7c682aded26c075b515eab302`
+- sha256: `83c1558713db78bc230f2be62da7364279f97fd55b0eb076c6212c9565236dc6`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1563,8 +1563,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 올해 남은 목표
-- `goal.ko` · KO: 오늘은 올해가 끝나기 전 꼭 이루고 싶은 목표 하나와 실행 방법을 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は今年が終わる前に必ず達成したい目標を一つ選び、その実行方法についてじっくり話してみましょう。
+- `goal.ko` · KO: 올해가 끝나기 전 꼭 이루고 싶은 목표 하나와 실행 방법을 이야기해 볼게요.
+- `goal.ja` · JA: 今年が終わる前に必ず達成したい目標を一つ選び、その実行方法について話してみましょう。
 - `axis.1.ko` · KO: 목표 하나를 구체적으로 정해요.
 - `axis.1.ja` · JA: 目標を一つ具体的に決めます。
 - `axis.2.ko` · KO: 그 목표가 중요한 이유를 설명해요.
@@ -1692,7 +1692,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-me-lately-advanced/lessons/07-where-my-money-goes/lesson.html`
-- sha256: `083b751d74c2ba61f85496d85eef299fa5a7bcae624fe1b7c88b4aaa0d033350`
+- sha256: `c285b9769b19a67cc0e0aaf4bb479291bf6aca583e218756406b22cd43d29ccb`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1704,8 +1704,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 요즘 지출
-- `goal.ko` · KO: 오늘은 요즘 돈을 가장 많이 쓰는 곳과 그 지출이 늘어난 이유를 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は最近いちばんお金を使っているところと、その支出が増えた理由についてじっくり話してみましょう。
+- `goal.ko` · KO: 요즘 돈을 가장 많이 쓰는 곳과 그 지출이 늘어난 이유를 이야기해 볼게요.
+- `goal.ja` · JA: 最近いちばんお金を使っているところと、その支出が増えた理由について話してみましょう。
 - `axis.1.ko` · KO: 큰 지출 항목을 소개해요.
 - `axis.1.ja` · JA: 大きな支出項目を紹介します。
 - `axis.2.ko` · KO: 돈을 많이 쓰는 이유를 설명해요.
@@ -1833,7 +1833,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-me-lately-intermediate/lessons/07-where-my-money-goes/lesson.html`
-- sha256: `dc3e8f47ddedcd6ea869150d38496ffd56cd40972e296b5b80b06b0d79628c4d`
+- sha256: `172b276633df279c9fe4dddb47452009c5b461c5e0aff2e20d178bfd97e83c7c`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1845,8 +1845,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 요즘 지출
-- `goal.ko` · KO: 오늘은 요즘 돈을 가장 많이 쓰는 곳과 그 지출이 늘어난 이유를 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は最近いちばんお金を使っているところと、その支出が増えた理由についてじっくり話してみましょう。
+- `goal.ko` · KO: 요즘 돈을 가장 많이 쓰는 곳과 그 지출이 늘어난 이유를 이야기해 볼게요.
+- `goal.ja` · JA: 最近いちばんお金を使っているところと、その支出が増えた理由について話してみましょう。
 - `axis.1.ko` · KO: 큰 지출 항목을 소개해요.
 - `axis.1.ja` · JA: 大きな支出項目を紹介します。
 - `axis.2.ko` · KO: 돈을 많이 쓰는 이유를 설명해요.
@@ -1976,7 +1976,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-me-lately-advanced/lessons/08-first-time-lately/lesson.html`
-- sha256: `999f2ee0221820dc2070477a57e82b83cfebc3b210c8f57ba2c248ddcaad0ab7`
+- sha256: `eecb42c4f1c930855a576c4141d72c90f7afb6db81d29862432717c099a42490`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1988,8 +1988,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 처음 해 본 것
-- `goal.ko` · KO: 오늘은 최근에 처음 해 본 경험과 예상과 달랐던 점을 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は最近初めて体験したことと、予想と違った点についてじっくり話してみましょう。
+- `goal.ko` · KO: 최근에 처음 해 본 경험과 예상과 달랐던 점을 이야기해 볼게요.
+- `goal.ja` · JA: 最近初めて体験したことと、予想と違った点について話してみましょう。
 - `axis.1.ko` · KO: 처음 한 경험을 소개해요.
 - `axis.1.ja` · JA: 初めての経験を紹介します。
 - `axis.2.ko` · KO: 예상과 달랐던 점을 설명해요.
@@ -2115,7 +2115,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-me-lately-intermediate/lessons/08-first-time-lately/lesson.html`
-- sha256: `fa62add2719c9fb0e5388f6d8d92606804f574bd5d91c9e7d1eb073342a5f7f5`
+- sha256: `7930f68f38dc4319f78cab82f65065f52415970b04fc57975c98bab334967679`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2127,8 +2127,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 처음 해 본 것
-- `goal.ko` · KO: 오늘은 최근에 처음 해 본 경험과 예상과 달랐던 점을 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は最近初めて体験したことと、予想と違った点についてじっくり話してみましょう。
+- `goal.ko` · KO: 최근에 처음 해 본 경험과 예상과 달랐던 점을 이야기해 볼게요.
+- `goal.ja` · JA: 最近初めて体験したことと、予想と違った点について話してみましょう。
 - `axis.1.ko` · KO: 처음 한 경험을 소개해요.
 - `axis.1.ja` · JA: 初めての経験を紹介します。
 - `axis.2.ko` · KO: 예상과 달랐던 점을 설명해요.
@@ -2256,7 +2256,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-me-lately-advanced/lessons/09-small-win/lesson.html`
-- sha256: `bcd56e3c3d166150a05b38d2ba50a80fe8f156e69da1aa6cc6e72c3e84c1b1eb`
+- sha256: `2008ca57aa4dd985a227a0220799fcb2d49bf99ab3be21672901af6cbf34106f`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2268,8 +2268,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 작은 성공
-- `goal.ko` · KO: 오늘은 이번 달에 아무도 몰라주지만 스스로 뿌듯했던 작은 성공을 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は今月、誰にも気づかれていないけれど自分で誇らしかった小さな成功についてじっくり話してみましょう。
+- `goal.ko` · KO: 이번 달에 아무도 몰라주지만 스스로 뿌듯했던 작은 성공을 이야기해 볼게요.
+- `goal.ja` · JA: 今月、誰にも気づかれていないけれど自分で誇らしかった小さな成功について話してみましょう。
 - `axis.1.ko` · KO: 작은 성공을 소개해요.
 - `axis.1.ja` · JA: 小さな成功を紹介します。
 - `axis.2.ko` · KO: 어려웠던 순간을 설명해요.
@@ -2395,7 +2395,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-me-lately-intermediate/lessons/09-small-win/lesson.html`
-- sha256: `9cbda435e8c1f399fa069c0d6427fa25f72633527636ad84517ac13aefe2490a`
+- sha256: `539e36f017abddafc2394cb199e27bf01d7b52140fddcab0630865b85e33c9d6`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2407,8 +2407,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 작은 성공
-- `goal.ko` · KO: 오늘은 이번 달에 아무도 몰라주지만 스스로 뿌듯했던 작은 성공을 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は今月、誰にも気づかれていないけれど自分で誇らしかった小さな成功についてじっくり話してみましょう。
+- `goal.ko` · KO: 이번 달에 아무도 몰라주지만 스스로 뿌듯했던 작은 성공을 이야기해 볼게요.
+- `goal.ja` · JA: 今月、誰にも気づかれていないけれど自分で誇らしかった小さな成功について話してみましょう。
 - `axis.1.ko` · KO: 작은 성공을 소개해요.
 - `axis.1.ja` · JA: 小さな成功を紹介します。
 - `axis.2.ko` · KO: 어려웠던 순간을 설명해요.
@@ -2536,7 +2536,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-me-lately-advanced/lessons/10-on-repeat/lesson.html`
-- sha256: `d3aaff4677dc3936a242f24ea1fcbe675da003f74b196569311b95e82cb69b06`
+- sha256: `eb7d036c8d26a7c0d5041186a8d5c8e84e3d2da869ecc7aea78652176cfaf87f`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2548,8 +2548,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 반복 중인 노래
-- `goal.ko` · KO: 오늘은 요즘 계속 반복해서 듣는 노래와 그 노래가 특별해진 이유를 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は最近繰り返し聴いている曲と、その曲が特別になった理由についてじっくり話してみましょう。
+- `goal.ko` · KO: 요즘 계속 반복해서 듣는 노래와 그 노래가 특별해진 이유를 이야기해 볼게요.
+- `goal.ja` · JA: 最近繰り返し聴いている曲と、その曲が特別になった理由について話してみましょう。
 - `axis.1.ko` · KO: 요즘 듣는 노래를 소개해요.
 - `axis.1.ja` · JA: 最近聴いている曲を紹介します。
 - `axis.2.ko` · KO: 계속 듣는 이유를 설명해요.
@@ -2675,7 +2675,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-me-lately-intermediate/lessons/10-on-repeat/lesson.html`
-- sha256: `6594958985da42250c574c7abd591cc67a3a9154431399ec0d11734f2644431d`
+- sha256: `65bc531aab95fbc3797626e5e29ea64cd1bd8361504dda4c45a80f99fbee277c`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2687,8 +2687,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 반복 중인 노래
-- `goal.ko` · KO: 오늘은 요즘 계속 반복해서 듣는 노래와 그 노래가 특별해진 이유를 길게 이야기해 볼게요.
-- `goal.ja` · JA: 今日は最近繰り返し聴いている曲と、その曲が特別になった理由についてじっくり話してみましょう。
+- `goal.ko` · KO: 요즘 계속 반복해서 듣는 노래와 그 노래가 특별해진 이유를 이야기해 볼게요.
+- `goal.ja` · JA: 最近繰り返し聴いている曲と、その曲が特別になった理由について話してみましょう。
 - `axis.1.ko` · KO: 요즘 듣는 노래를 소개해요.
 - `axis.1.ja` · JA: 最近聴いている曲を紹介します。
 - `axis.2.ko` · KO: 계속 듣는 이유를 설명해요.

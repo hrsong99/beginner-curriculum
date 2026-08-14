@@ -12,7 +12,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-advanced/lessons/01-choosing-friends/lesson.html`
-- sha256: `e236b46566b1fb3d886f4f64da594680b55c63ec97d70471c6b1f75a64fc7b69`
+- sha256: `f6b5fc65f30f47986567cd49a2c2f541f0baceff5381bb49ed247e26268665a0`
 - source kind: `model-story`
 
 #### `metadata`
@@ -24,8 +24,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 친구를 고르는 기준
-- `goal.ko` · KO: 오늘은 실제 친구와 있었던 일을 꺼내고, 믿을 수 있는 친구의 기준과 참기 어려운 행동까지 이야기해 볼게요.
-- `goal.ja` · JA: 今日は実際に友達とあった出来事を思い出し、信頼できる友達の基準や我慢しにくい行動まで話してみましょう。
+- `goal.ko` · KO: 실제 친구와 있었던 일을 꺼내고, 믿을 수 있는 친구의 기준과 참기 어려운 행동까지 이야기해 볼게요.
+- `goal.ja` · JA: 実際に友達とあった出来事を思い出し、信頼できる友達の基準や我慢しにくい行動まで話してみましょう。
 - `axis.1.ko` · KO: 기억나는 친구 한 명을 소개해요.
 - `axis.1.ja` · JA: 印象に残る友達を紹介します。
 - `axis.2.ko` · KO: 신뢰가 생긴 일을 설명해요.
@@ -151,7 +151,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-intermediate/lessons/01-choosing-friends/lesson.html`
-- sha256: `112e733a902559d57869490915947b07d3bb19844c2efc630a8e0d1ba0b6f4d5`
+- sha256: `0784d0de061e77b079ecfcedc45f8002f3e6a5221452b66ae17a087bd4a7e1d9`
 - source kind: `model-story`
 
 #### `metadata`
@@ -163,8 +163,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 친구를 고르는 기준
-- `goal.ko` · KO: 오늘은 실제 친구와 있었던 일을 꺼내고, 믿을 수 있는 친구의 기준과 참기 어려운 행동까지 이야기해 볼게요.
-- `goal.ja` · JA: 今日は実際に友達とあった出来事を思い出し、信頼できる友達の基準や我慢しにくい行動まで話してみましょう。
+- `goal.ko` · KO: 실제 친구와 있었던 일을 꺼내고, 믿을 수 있는 친구의 기준과 참기 어려운 행동까지 이야기해 볼게요.
+- `goal.ja` · JA: 実際に友達とあった出来事を思い出し、信頼できる友達の基準や我慢しにくい行動まで話してみましょう。
 - `axis.1.ko` · KO: 기억나는 친구 한 명을 소개해요.
 - `axis.1.ja` · JA: 印象に残る友達を紹介します。
 - `axis.2.ko` · KO: 신뢰가 생긴 일을 설명해요.
@@ -292,7 +292,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-advanced/lessons/02-first-impression-changed/lesson.html`
-- sha256: `24eed8673a1f26918819fa80ae23f2c2b4b7171b515fbb067974a5f0008ebc2b`
+- sha256: `3527e5479339ced84cb1aa268a81b645db7e723587e3f3de801f28e66cd82a2c`
 - source kind: `model-story`
 
 #### `metadata`
@@ -304,8 +304,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 뒤집힌 첫인상
-- `goal.ko` · KO: 오늘은 첫인상이 달라진 사람을 떠올리고, 처음 본 장면과 생각을 바꾼 사건을 구체적으로 이야기해 볼게요.
-- `goal.ja` · JA: 今日は第一印象が変わった人を思い出し、初めて会った場面と考えを変えた出来事を具体的に話してみましょう。
+- `goal.ko` · KO: 첫인상이 달라진 사람을 떠올리고, 처음 본 장면과 생각을 바꾼 사건을 구체적으로 이야기해 볼게요.
+- `goal.ja` · JA: 第一印象が変わった人を思い出し、初めて会った場面と考えを変えた出来事を具体的に話してみましょう。
 - `axis.1.ko` · KO: 처음 만난 장면을 소개해요.
 - `axis.1.ja` · JA: 初めて会った場面を紹介します。
 - `axis.2.ko` · KO: 인상을 바꾼 사건을 설명해요.
@@ -431,7 +431,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-intermediate/lessons/02-first-impression-changed/lesson.html`
-- sha256: `9ac020c5f4fd1aa68dac69ec7774f2bab84d730356470ce1a5cb5ff6fde00956`
+- sha256: `724f2037a3efe26c642d4011ec0196392534521421f26504969c94fae65b47cc`
 - source kind: `model-story`
 
 #### `metadata`
@@ -443,8 +443,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 뒤집힌 첫인상
-- `goal.ko` · KO: 오늘은 첫인상이 달라진 사람을 떠올리고, 처음 본 장면과 생각을 바꾼 사건을 구체적으로 이야기해 볼게요.
-- `goal.ja` · JA: 今日は第一印象が変わった人を思い出し、初めて会った場面と考えを変えた出来事を具体的に話してみましょう。
+- `goal.ko` · KO: 첫인상이 달라진 사람을 떠올리고, 처음 본 장면과 생각을 바꾼 사건을 구체적으로 이야기해 볼게요.
+- `goal.ja` · JA: 第一印象が変わった人を思い出し、初めて会った場面と考えを変えた出来事を具体的に話してみましょう。
 - `axis.1.ko` · KO: 처음 만난 장면을 소개해요.
 - `axis.1.ja` · JA: 初めて会った場面を紹介します。
 - `axis.2.ko` · KO: 인상을 바꾼 사건을 설명해요.
@@ -572,7 +572,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-advanced/lessons/03-do-you-believe-mbti/lesson.html`
-- sha256: `9776c2474316751603a5f3735597cc8b1c732db2aa3bca2531fd7a3f3fd7530c`
+- sha256: `696e2a1f9402766a5ebc64efe816406c682ff386fdfa95ab924ae3cc1c52d664`
 - source kind: `model-story`
 
 #### `metadata`
@@ -584,8 +584,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: MBTI와 실제 성격
-- `goal.ko` · KO: 오늘은 내 MBTI 결과를 실제 행동과 비교하고, 맞는 점과 설명하지 못하는 점을 경험으로 이야기해 볼게요.
-- `goal.ja` · JA: 今日は自分のMBTI結果を実際の行動と比べ、合う点と説明できない点を経験から話してみましょう。
+- `goal.ko` · KO: 내 MBTI 결과를 실제 행동과 비교하고, 맞는 점과 설명하지 못하는 점을 경험으로 이야기해 볼게요.
+- `goal.ja` · JA: 自分のMBTI結果を実際の行動と比べ、合う点と説明できない点を経験から話してみましょう。
 - `axis.1.ko` · KO: 내 MBTI 결과를 소개해요.
 - `axis.1.ja` · JA: 自分のMBTI結果を紹介します。
 - `axis.2.ko` · KO: 맞거나 다른 행동을 설명해요.
@@ -711,7 +711,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-intermediate/lessons/03-do-you-believe-mbti/lesson.html`
-- sha256: `7ce54827b54c36f027b38231914542a3e1e6df2df0411ee4f07a5017901c1680`
+- sha256: `1ac793df986b4bcd62ead26580da3b24f23c3b111ae885731b402c92963b4c75`
 - source kind: `model-story`
 
 #### `metadata`
@@ -723,8 +723,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: MBTI와 실제 성격
-- `goal.ko` · KO: 오늘은 내 MBTI 결과를 실제 행동과 비교하고, 맞는 점과 설명하지 못하는 점을 경험으로 이야기해 볼게요.
-- `goal.ja` · JA: 今日は自分のMBTI結果を実際の行動と比べ、合う点と説明できない点を経験から話してみましょう。
+- `goal.ko` · KO: 내 MBTI 결과를 실제 행동과 비교하고, 맞는 점과 설명하지 못하는 점을 경험으로 이야기해 볼게요.
+- `goal.ja` · JA: 自分のMBTI結果を実際の行動と比べ、合う点と説明できない点を経験から話してみましょう。
 - `axis.1.ko` · KO: 내 MBTI 결과를 소개해요.
 - `axis.1.ja` · JA: 自分のMBTI結果を紹介します。
 - `axis.2.ko` · KO: 맞거나 다른 행동을 설명해요.
@@ -852,7 +852,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-advanced/lessons/04-doing-things-alone/lesson.html`
-- sha256: `b68b89e2c4f246b99505fd496b5ba6bf2e355651bd2b7c675574b759c5a4c856`
+- sha256: `0e7439ec603872059eaff82ebbd77e8ef352e3cc80a94f95fe359766e62c3994`
 - source kind: `model-story`
 
 #### `metadata`
@@ -864,8 +864,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 어디까지 혼자
-- `goal.ko` · KO: 오늘은 혼자 해 본 활동을 떠올리고, 편했던 순간과 어려웠던 순간을 바탕으로 어디까지 가능한지 이야기해 볼게요.
-- `goal.ja` · JA: 今日は一人でした活動を思い出し、楽だった瞬間と難しかった瞬間をもとに、どこまでできるか話してみましょう。
+- `goal.ko` · KO: 혼자 해 본 활동을 떠올리고, 편했던 순간과 어려웠던 순간을 바탕으로 어디까지 가능한지 이야기해 볼게요.
+- `goal.ja` · JA: 一人でした活動を思い出し、楽だった瞬間と難しかった瞬間をもとに、どこまでできるか話してみましょう。
 - `axis.1.ko` · KO: 혼자 해 본 활동을 소개해요.
 - `axis.1.ja` · JA: 一人でした活動を紹介します。
 - `axis.2.ko` · KO: 편하거나 어려웠던 장면을 설명해요.
@@ -992,7 +992,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-intermediate/lessons/04-doing-things-alone/lesson.html`
-- sha256: `6b7bfedeb86976b733a31ef2fbe159fef88f1055f170d67a0f3deb58efd843b9`
+- sha256: `a79575c621fa816e53acc234fddcfe79f3f669bfe1733834ba083248eefc1ed3`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1004,8 +1004,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 어디까지 혼자
-- `goal.ko` · KO: 오늘은 혼자 해 본 활동을 떠올리고, 편했던 순간과 어려웠던 순간을 바탕으로 어디까지 가능한지 이야기해 볼게요.
-- `goal.ja` · JA: 今日は一人でした活動を思い出し、楽だった瞬間と難しかった瞬間をもとに、どこまでできるか話してみましょう。
+- `goal.ko` · KO: 혼자 해 본 활동을 떠올리고, 편했던 순간과 어려웠던 순간을 바탕으로 어디까지 가능한지 이야기해 볼게요.
+- `goal.ja` · JA: 一人でした活動を思い出し、楽だった瞬間と難しかった瞬間をもとに、どこまでできるか話してみましょう。
 - `axis.1.ko` · KO: 혼자 해 본 활동을 소개해요.
 - `axis.1.ja` · JA: 一人でした活動を紹介します。
 - `axis.2.ko` · KO: 편하거나 어려웠던 장면을 설명해요.
@@ -1134,7 +1134,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-advanced/lessons/05-five-minutes-with-a-stranger/lesson.html`
-- sha256: `e0bacb0843099f406bd3656218d44bf732b9e18cf6da39a844375c594b2d0954`
+- sha256: `1585d99b4e538f2918a34110aa4402c7664a517675633ed6c2d75787bd6bd32d`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1146,8 +1146,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 처음 보는 사람과 5분
-- `goal.ko` · KO: 오늘은 처음 보는 사람과 대화했던 일을 떠올리고, 첫 5분에 묻는 질문과 편해지는 순간을 이야기해 볼게요.
-- `goal.ja` · JA: 今日は初対面の人と話した出来事を思い出し、最初の5分に聞くことや打ち解ける瞬間を話してみましょう。
+- `goal.ko` · KO: 처음 보는 사람과 대화했던 일을 떠올리고, 첫 5분에 묻는 질문과 편해지는 순간을 이야기해 볼게요.
+- `goal.ja` · JA: 初対面の人と話した出来事を思い出し、最初の5分に聞くことや打ち解ける瞬間を話してみましょう。
 - `axis.1.ko` · KO: 처음 만난 장면을 소개해요.
 - `axis.1.ja` · JA: 初めて会った場面を紹介します。
 - `axis.2.ko` · KO: 대화를 연 질문을 설명해요.
@@ -1273,7 +1273,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-intermediate/lessons/05-five-minutes-with-a-stranger/lesson.html`
-- sha256: `caecef3e348cf6e2e7930a4228460d1f486a8e2cc478c896e312af19a18ff1af`
+- sha256: `cfdbdb0a49397f712f53d86f0c1fbf548bd67dc4b2e9ab190eed4273d8090c88`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1285,8 +1285,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 처음 보는 사람과 5분
-- `goal.ko` · KO: 오늘은 처음 보는 사람과 대화했던 일을 떠올리고, 첫 5분에 묻는 질문과 편해지는 순간을 이야기해 볼게요.
-- `goal.ja` · JA: 今日は初対面の人と話した出来事を思い出し、最初の5分に聞くことや打ち解ける瞬間を話してみましょう。
+- `goal.ko` · KO: 처음 보는 사람과 대화했던 일을 떠올리고, 첫 5분에 묻는 질문과 편해지는 순간을 이야기해 볼게요.
+- `goal.ja` · JA: 初対面の人と話した出来事を思い出し、最初の5分に聞くことや打ち解ける瞬間を話してみましょう。
 - `axis.1.ko` · KO: 처음 만난 장면을 소개해요.
 - `axis.1.ja` · JA: 初めて会った場面を紹介します。
 - `axis.2.ko` · KO: 대화를 연 질문을 설명해요.
@@ -1414,7 +1414,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-advanced/lessons/06-making-up-after-a-fight/lesson.html`
-- sha256: `d764a3081109f81cdcfc7961ba48fcff09c5f03928a00e721b0952be20348f03`
+- sha256: `72ff855d6cdd7cc557de7ed1bc5d491456dd4895c1e707126f8739635c8db18f`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1426,8 +1426,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 싸우고 화해하는 법
-- `goal.ko` · KO: 오늘은 가까운 사람과 다퉜던 일을 떠올리고, 먼저 연락하는 방식과 관계를 회복해 가는 과정을 이야기해 볼게요.
-- `goal.ja` · JA: 今日は親しい人とけんかした出来事を思い出し、先に連絡する方法や関係を修復していく過程を話してみましょう。
+- `goal.ko` · KO: 가까운 사람과 다퉜던 일을 떠올리고, 먼저 연락하는 방식과 관계를 회복해 가는 과정을 이야기해 볼게요.
+- `goal.ja` · JA: 親しい人とけんかした出来事を思い出し、先に連絡する方法や関係を修復していく過程を話してみましょう。
 - `axis.1.ko` · KO: 다툰 사건을 소개해요.
 - `axis.1.ja` · JA: けんかした出来事を紹介します。
 - `axis.2.ko` · KO: 먼저 건넨 말을 설명해요.
@@ -1553,7 +1553,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-intermediate/lessons/06-making-up-after-a-fight/lesson.html`
-- sha256: `82d9b5a036d2fde3451a6ece7a987934ca0c211182dbc413d9d8db347c2398c6`
+- sha256: `c8479d0d1455d82b69f687dfbef189fdf16e482a8484d80243a8dea49a0e8cc2`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1565,8 +1565,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 싸우고 화해하는 법
-- `goal.ko` · KO: 오늘은 가까운 사람과 다퉜던 일을 떠올리고, 먼저 연락하는 방식과 관계를 회복해 가는 과정을 이야기해 볼게요.
-- `goal.ja` · JA: 今日は親しい人とけんかした出来事を思い出し、先に連絡する方法や関係を修復していく過程を話してみましょう。
+- `goal.ko` · KO: 가까운 사람과 다퉜던 일을 떠올리고, 먼저 연락하는 방식과 관계를 회복해 가는 과정을 이야기해 볼게요.
+- `goal.ja` · JA: 親しい人とけんかした出来事を思い出し、先に連絡する方法や関係を修復していく過程を話してみましょう。
 - `axis.1.ko` · KO: 다툰 사건을 소개해요.
 - `axis.1.ja` · JA: けんかした出来事を紹介します。
 - `axis.2.ko` · KO: 먼저 건넨 말을 설명해요.
@@ -1694,7 +1694,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-advanced/lessons/07-why-friends-decrease-with-age/lesson.html`
-- sha256: `662a699113ea709e4dbb2c6ffd3ad26ff60e4627132d2e8b8ac427e98a22eb35`
+- sha256: `570c213753cdd784a5f4509c4c555ba055b82d5ecfeb72af5bb7db36ed595365`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1706,8 +1706,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 나이와 친구 관계
-- `goal.ko` · KO: 오늘은 말하고 싶은 범위에서만 연락이 줄어든 친구를 떠올리고, 생활의 변화와 그래도 관계가 남는 순간을 이야기해 볼게요.
-- `goal.ja` · JA: 今日は話したい範囲だけで、連絡が減った友達を思い出し、生活の変化や、それでも関係が残る瞬間について話してみましょう。
+- `goal.ko` · KO: 편한 범위에서 연락이 줄어든 친구를 떠올리고, 생활의 변화와 그래도 관계가 남는 순간을 이야기해 볼게요.
+- `goal.ja` · JA: 話せる範囲で、連絡が減った友達を思い出し、生活の変化や、それでも関係が残る瞬間について話してみましょう。
 - `axis.1.ko` · KO: 연락이 줄어든 친구를 소개해요.
 - `axis.1.ja` · JA: 連絡が減った友達を紹介します。
 - `axis.2.ko` · KO: 생활에서 달라진 일을 설명해요.
@@ -1833,7 +1833,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-people-and-ties-intermediate/lessons/07-why-friends-decrease-with-age/lesson.html`
-- sha256: `ac2e9ef9602bd0abc809c5805b03f4d75193f5b5757e34098e0a84f45c7894c5`
+- sha256: `85807a8ff0bb47f0b0a2950ad7a17835b90c0a8a87a13779e93722ac3d3fe4f1`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1845,8 +1845,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 나이와 친구 관계
-- `goal.ko` · KO: 오늘은 말하고 싶은 범위에서만 연락이 줄어든 친구를 떠올리고, 생활의 변화와 그래도 관계가 남는 순간을 이야기해 볼게요.
-- `goal.ja` · JA: 今日は話したい範囲だけで、連絡が減った友達を思い出し、生活の変化や、それでも関係が残る瞬間について話してみましょう。
+- `goal.ko` · KO: 편한 범위에서 연락이 줄어든 친구를 떠올리고, 생활의 변화와 그래도 관계가 남는 순간을 이야기해 볼게요.
+- `goal.ja` · JA: 話せる範囲で、連絡が減った友達を思い出し、生活の変化や、それでも関係が残る瞬間について話してみましょう。
 - `axis.1.ko` · KO: 연락이 줄어든 친구를 소개해요.
 - `axis.1.ja` · JA: 連絡が減った友達を紹介します。
 - `axis.2.ko` · KO: 생활에서 달라진 일을 설명해요.

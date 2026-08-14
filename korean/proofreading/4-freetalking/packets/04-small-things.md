@@ -12,7 +12,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-advanced/lessons/01-petty-annoyance/lesson.html`
-- sha256: `9b9251299fab0d03682b506802ef6b34ec0ce8962709e5dd54685682ad06aad6`
+- sha256: `aea44510361fb48d598be1f4861b6adbcc741b8085e2ce9941f835e4220a5963`
 - source kind: `model-story`
 
 #### `metadata`
@@ -24,8 +24,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 사소한 짜증
-- `goal.ko` · KO: 오늘은 남들은 신경도 안 쓰지만 나만 유독 짜증 나는 순간을 웃으며 이야기해 볼게요.
-- `goal.ja` · JA: 今日は周りは気にしないのに、自分だけ妙にイラッとする瞬間について笑いながら話してみましょう。
+- `goal.ko` · KO: 남들은 신경도 안 쓰지만 나만 유독 짜증 나는 순간을 웃으며 이야기해 볼게요.
+- `goal.ja` · JA: 周りは気にしないのに、自分だけ妙にイラッとする瞬間について笑いながら話してみましょう。
 - `axis.1.ko` · KO: 짜증 난 순간을 소개해요.
 - `axis.1.ja` · JA: イラッとした瞬間を紹介します。
 - `axis.2.ko` · KO: 왜 유독 신경 쓰이는지 설명해요.
@@ -151,7 +151,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-intermediate/lessons/01-petty-annoyance/lesson.html`
-- sha256: `2308da03c1cc1ac34096394a7e8c643f4dbcd026690e2d8a914678e6d905a200`
+- sha256: `0f3822dc7db1f519eae3962166a66160ce2de1363d679f1ee827a01eadfee527`
 - source kind: `model-story`
 
 #### `metadata`
@@ -163,8 +163,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 사소한 짜증
-- `goal.ko` · KO: 오늘은 남들은 신경도 안 쓰지만 나만 유독 짜증 나는 순간을 웃으며 이야기해 볼게요.
-- `goal.ja` · JA: 今日は周りは気にしないのに、自分だけ妙にイラッとする瞬間について笑いながら話してみましょう。
+- `goal.ko` · KO: 남들은 신경도 안 쓰지만 나만 유독 짜증 나는 순간을 웃으며 이야기해 볼게요.
+- `goal.ja` · JA: 周りは気にしないのに、自分だけ妙にイラッとする瞬間について笑いながら話してみましょう。
 - `axis.1.ko` · KO: 짜증 난 순간을 소개해요.
 - `axis.1.ja` · JA: イラッとした瞬間を紹介します。
 - `axis.2.ko` · KO: 왜 유독 신경 쓰이는지 설명해요.
@@ -292,7 +292,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-advanced/lessons/02-my-tmi/lesson.html`
-- sha256: `34e8b0e3917d54cbbed891ddf175ef86bc13bced2aa5f18162a636da627f4532`
+- sha256: `00c4a2c1513c7bf1707bf704a401c2862f982ab3a3b177d28af12df358766dd5`
 - source kind: `model-story`
 
 #### `metadata`
@@ -304,8 +304,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 나의 TMI
-- `goal.ko` · KO: 오늘은 아무도 묻지 않았지만 말하고 싶은 나의 사소한 사실 하나를 재미있게 풀어 볼게요.
-- `goal.ja` · JA: 今日は誰にも聞かれていないけれど話したい、自分のささやかな事実を楽しく話してみましょう。
+- `goal.ko` · KO: 아무도 묻지 않았지만 말하고 싶은 나의 사소한 사실 하나를 재미있게 풀어 볼게요.
+- `goal.ja` · JA: 誰にも聞かれていないけれど話したい、自分のささやかな事実を楽しく話してみましょう。
 - `axis.1.ko` · KO: 나만의 TMI를 소개해요.
 - `axis.1.ja` · JA: 自分のTMIを紹介します。
 - `axis.2.ko` · KO: 언제부터 그랬는지 설명해요.
@@ -432,7 +432,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-intermediate/lessons/02-my-tmi/lesson.html`
-- sha256: `347210b041dca2dec5746c5394bf05c6421377c6e5f85d571dd36b13411602b9`
+- sha256: `a85379f8ca0ccdba728ac07ce26d7ba7feb07160044cf65d365d1e69d5e28c2e`
 - source kind: `model-story`
 
 #### `metadata`
@@ -444,8 +444,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 나의 TMI
-- `goal.ko` · KO: 오늘은 아무도 묻지 않았지만 말하고 싶은 나의 사소한 사실 하나를 재미있게 풀어 볼게요.
-- `goal.ja` · JA: 今日は誰にも聞かれていないけれど話したい、自分のささやかな事実を楽しく話してみましょう。
+- `goal.ko` · KO: 아무도 묻지 않았지만 말하고 싶은 나의 사소한 사실 하나를 재미있게 풀어 볼게요.
+- `goal.ja` · JA: 誰にも聞かれていないけれど話したい、自分のささやかな事実を楽しく話してみましょう。
 - `axis.1.ko` · KO: 나만의 TMI를 소개해요.
 - `axis.1.ja` · JA: 自分のTMIを紹介します。
 - `axis.2.ko` · KO: 언제부터 그랬는지 설명해요.
@@ -574,7 +574,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-advanced/lessons/03-weird-habit/lesson.html`
-- sha256: `d161af892bb67d8e938ab9ff81040bdc5e973e0821cee30bd0d94da5aa124cdc`
+- sha256: `35520ebdc1f956a13479250f9b02c26840cd0dbb0bf460133f8c7dfffedc5be7`
 - source kind: `model-story`
 
 #### `metadata`
@@ -586,8 +586,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 이상한 습관
-- `goal.ko` · KO: 오늘은 가족만 아는 나의 이상한 습관과 그 습관을 꼭 지키는 이유를 이야기해 볼게요.
-- `goal.ja` · JA: 今日は家族だけが知る自分の変な習慣と、その習慣を守る理由について話してみましょう。
+- `goal.ko` · KO: 가족만 아는 나의 이상한 습관과 그 습관을 꼭 지키는 이유를 이야기해 볼게요.
+- `goal.ja` · JA: 家族だけが知る自分の変な習慣と、その習慣を守る理由について話してみましょう。
 - `axis.1.ko` · KO: 이상한 습관을 소개해요.
 - `axis.1.ja` · JA: 変な習慣を紹介します。
 - `axis.2.ko` · KO: 실제로 하는 순서를 설명해요.
@@ -713,7 +713,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-intermediate/lessons/03-weird-habit/lesson.html`
-- sha256: `e3e4e99c7b4634cd1ed5854c0cbd617ad138b6a3b73bd0c9d3106346dc251f1e`
+- sha256: `b321a1e665fc92230e26ba3719fbb11543124fb3437879ef19cbdb9236807e29`
 - source kind: `model-story`
 
 #### `metadata`
@@ -725,8 +725,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 이상한 습관
-- `goal.ko` · KO: 오늘은 가족만 아는 나의 이상한 습관과 그 습관을 꼭 지키는 이유를 이야기해 볼게요.
-- `goal.ja` · JA: 今日は家族だけが知る自分の変な習慣と、その習慣を守る理由について話してみましょう。
+- `goal.ko` · KO: 가족만 아는 나의 이상한 습관과 그 습관을 꼭 지키는 이유를 이야기해 볼게요.
+- `goal.ja` · JA: 家族だけが知る自分の変な習慣と、その習慣を守る理由について話してみましょう。
 - `axis.1.ko` · KO: 이상한 습관을 소개해요.
 - `axis.1.ja` · JA: 変な習慣を紹介します。
 - `axis.2.ko` · KO: 실제로 하는 순서를 설명해요.
@@ -854,7 +854,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-advanced/lessons/04-rainy-day-me/lesson.html`
-- sha256: `ba9d4633f32429893ece8e4e39e5f471fe329608bcbe82f741b8fa13a46c49f0`
+- sha256: `9de36ad7c44cecb23f658e7cdb3ea9961b2d17cfd087e171bfea64194091ca91`
 - source kind: `model-story`
 
 #### `metadata`
@@ -866,8 +866,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 비 오는 날
-- `goal.ko` · KO: 오늘은 비 오는 날에 좋아하는 것과 싫어하는 것, 그리고 평소와 달라지는 하루를 이야기해 볼게요.
-- `goal.ja` · JA: 今日は雨の日に好きなことと嫌いなこと、そして普段と違う一日について話してみましょう。
+- `goal.ko` · KO: 비 오는 날에 좋아하는 것과 싫어하는 것, 그리고 평소와 달라지는 하루를 이야기해 볼게요.
+- `goal.ja` · JA: 雨の日に好きなことと嫌いなこと、そして普段と違う一日について話してみましょう。
 - `axis.1.ko` · KO: 비 오는 날의 기분을 소개해요.
 - `axis.1.ja` · JA: 雨の日の気分を紹介します。
 - `axis.2.ko` · KO: 그날 하는 행동을 설명해요.
@@ -993,7 +993,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-intermediate/lessons/04-rainy-day-me/lesson.html`
-- sha256: `94137566114b55576298ed5a307ed8a54550ebb56195b6fe9e62e50a5bde48bf`
+- sha256: `583700db2d0c8294d7ffab4e11a9dbd9e581e307a245bfc6d21be73202d9d2ed`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1005,8 +1005,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 비 오는 날
-- `goal.ko` · KO: 오늘은 비 오는 날에 좋아하는 것과 싫어하는 것, 그리고 평소와 달라지는 하루를 이야기해 볼게요.
-- `goal.ja` · JA: 今日は雨の日に好きなことと嫌いなこと、そして普段と違う一日について話してみましょう。
+- `goal.ko` · KO: 비 오는 날에 좋아하는 것과 싫어하는 것, 그리고 평소와 달라지는 하루를 이야기해 볼게요.
+- `goal.ja` · JA: 雨の日に好きなことと嫌いなこと、そして普段と違う一日について話してみましょう。
 - `axis.1.ko` · KO: 비 오는 날의 기분을 소개해요.
 - `axis.1.ja` · JA: 雨の日の気分を紹介します。
 - `axis.2.ko` · KO: 그날 하는 행동을 설명해요.
@@ -1134,7 +1134,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-advanced/lessons/05-energy-reset/lesson.html`
-- sha256: `589b3e7fde0496799cd7082ae73135ec40c326751fd1659828961f99e1599be7`
+- sha256: `fd043f71db8defc2b41ddc3777f5e36858fadd4900ce7bbc5923581e122c83c1`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1146,8 +1146,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 기운 찾기
-- `goal.ko` · KO: 오늘은 아무것도 하기 싫을 때 나를 다시 움직이게 하는 작은 행동이나 사람을 이야기해 볼게요.
-- `goal.ja` · JA: 今日は何もしたくないとき、自分をまた動かしてくれる小さな行動や人について話してみましょう。
+- `goal.ko` · KO: 아무것도 하기 싫을 때 나를 다시 움직이게 하는 작은 행동이나 사람을 이야기해 볼게요.
+- `goal.ja` · JA: 何もしたくないとき、自分をまた動かしてくれる小さな行動や人について話してみましょう。
 - `axis.1.ko` · KO: 무기력한 순간을 소개해요.
 - `axis.1.ja` · JA: やる気がない瞬間を紹介します。
 - `axis.2.ko` · KO: 기운을 찾는 행동을 설명해요.
@@ -1273,7 +1273,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-intermediate/lessons/05-energy-reset/lesson.html`
-- sha256: `b6f1d100bd33ca2f9347c5463d25d25d5dd4df7d93edbbb08d441c91d396be92`
+- sha256: `ced10e6fe37261685ddfae30e40f2b5fa8dcedbe6fa49dcf4513e0a546acf5ea`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1285,8 +1285,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 기운 찾기
-- `goal.ko` · KO: 오늘은 아무것도 하기 싫을 때 나를 다시 움직이게 하는 작은 행동이나 사람을 이야기해 볼게요.
-- `goal.ja` · JA: 今日は何もしたくないとき、自分をまた動かしてくれる小さな行動や人について話してみましょう。
+- `goal.ko` · KO: 아무것도 하기 싫을 때 나를 다시 움직이게 하는 작은 행동이나 사람을 이야기해 볼게요.
+- `goal.ja` · JA: 何もしたくないとき、自分をまた動かしてくれる小さな行動や人について話してみましょう。
 - `axis.1.ko` · KO: 무기력한 순간을 소개해요.
 - `axis.1.ja` · JA: やる気がない瞬間を紹介します。
 - `axis.2.ko` · KO: 기운을 찾는 행동을 설명해요.
@@ -1414,7 +1414,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-advanced/lessons/06-stress-relief/lesson.html`
-- sha256: `37295b0f9ae7c253f95bf33af2e6432c9379bb27e8699cd3eedae4d5795e8eab`
+- sha256: `774332c8ce5015cdcd328570cb174ba2ef546e89d55913db1f6a5376d1bd76e4`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1426,8 +1426,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 스트레스 해소
-- `goal.ko` · KO: 오늘은 스트레스가 쌓였을 때 실제로 하는 나만의 작고 구체적인 해소법을 이야기해 볼게요.
-- `goal.ja` · JA: 今日はストレスがたまったときに実際にしている、自分なりの小さくて具体的な解消法について話してみましょう。
+- `goal.ko` · KO: 스트레스가 쌓였을 때 실제로 하는 나만의 작고 구체적인 해소법을 이야기해 볼게요.
+- `goal.ja` · JA: ストレスがたまったときに実際にしている、自分なりの小さくて具体的な解消法について話してみましょう。
 - `axis.1.ko` · KO: 스트레스 신호를 소개해요.
 - `axis.1.ja` · JA: ストレスのサインを紹介します。
 - `axis.2.ko` · KO: 실제로 하는 행동을 설명해요.
@@ -1553,7 +1553,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-intermediate/lessons/06-stress-relief/lesson.html`
-- sha256: `122c97a4966b22a8ce146384f194f4118d1c548f6addb556c9f0f7d5f1dd3bef`
+- sha256: `cb60aa0091fba94425a126470cdbc43a599b8c05baec2b4a3e23ab6465d2edc9`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1565,8 +1565,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 스트레스 해소
-- `goal.ko` · KO: 오늘은 스트레스가 쌓였을 때 실제로 하는 나만의 작고 구체적인 해소법을 이야기해 볼게요.
-- `goal.ja` · JA: 今日はストレスがたまったときに実際にしている、自分なりの小さくて具体的な解消法について話してみましょう。
+- `goal.ko` · KO: 스트레스가 쌓였을 때 실제로 하는 나만의 작고 구체적인 해소법을 이야기해 볼게요.
+- `goal.ja` · JA: ストレスがたまったときに実際にしている、自分なりの小さくて具体的な解消法について話してみましょう。
 - `axis.1.ko` · KO: 스트레스 신호를 소개해요.
 - `axis.1.ja` · JA: ストレスのサインを紹介します。
 - `axis.2.ko` · KO: 실제로 하는 행동을 설명해요.
@@ -1694,7 +1694,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-advanced/lessons/07-one-superstition/lesson.html`
-- sha256: `7368bd0a2ea94e6d9d30bfdb7693aaa2e4eec7fc123965c7383a552c515fa0fb`
+- sha256: `be1ec35ad863be390511c41e57d9be85812b42e5018874399f225fde3fa587b7`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1706,8 +1706,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 나의 미신
-- `goal.ko` · KO: 오늘은 미신을 믿지 않는다고 하면서도 나도 모르게 지키는 작은 규칙을 이야기해 볼게요.
-- `goal.ja` · JA: 今日は迷信を信じないと言いながらも、無意識に守っている小さなルールについて話してみましょう。
+- `goal.ko` · KO: 미신을 믿지 않는다고 하면서도 나도 모르게 지키는 작은 규칙을 이야기해 볼게요.
+- `goal.ja` · JA: 迷信を信じないと言いながらも、無意識に守っている小さなルールについて話してみましょう。
 - `axis.1.ko` · KO: 지키는 미신을 소개해요.
 - `axis.1.ja` · JA: 守っている迷信を紹介します。
 - `axis.2.ko` · KO: 생긴 계기를 설명해요.
@@ -1833,7 +1833,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-intermediate/lessons/07-one-superstition/lesson.html`
-- sha256: `d241056a6cfb134765f5df47d36fe7009186e8a0720588e0781e257b8bc5d832`
+- sha256: `38ffcbf2aa3d927d54d2269597c83d21320d7b75f60d5acda9b331714c8a4b2d`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1845,8 +1845,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 나의 미신
-- `goal.ko` · KO: 오늘은 미신을 믿지 않는다고 하면서도 나도 모르게 지키는 작은 규칙을 이야기해 볼게요.
-- `goal.ja` · JA: 今日は迷信を信じないと言いながらも、無意識に守っている小さなルールについて話してみましょう。
+- `goal.ko` · KO: 미신을 믿지 않는다고 하면서도 나도 모르게 지키는 작은 규칙을 이야기해 볼게요.
+- `goal.ja` · JA: 迷信を信じないと言いながらも、無意識に守っている小さなルールについて話してみましょう。
 - `axis.1.ko` · KO: 지키는 미신을 소개해요.
 - `axis.1.ja` · JA: 守っている迷信を紹介します。
 - `axis.2.ko` · KO: 생긴 계기를 설명해요.
@@ -1974,7 +1974,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-advanced/lessons/08-weekend-routine/lesson.html`
-- sha256: `f2bea81f83670e2ab72f5338192f86c0522842058da736a4cf5d4d40f4eb56e4`
+- sha256: `57b7b1545cbbbac01467e5de4ff1f79e71c02c4b9e7b53b7332f978ef1e1dd17`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1986,8 +1986,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 주말 루틴
-- `goal.ko` · KO: 오늘은 아무 계획 없는 주말에도 꼭 지키는 나만의 루틴과 그 속의 작은 실수를 이야기해 볼게요.
-- `goal.ja` · JA: 今日は何も予定がない週末にも必ず守る自分なりのルーティンと、その中の小さな失敗について話してみましょう。
+- `goal.ko` · KO: 아무 계획 없는 주말에도 꼭 지키는 나만의 루틴과 그 속의 작은 실수를 이야기해 볼게요.
+- `goal.ja` · JA: 何も予定がない週末にも必ず守る自分なりのルーティンと、その中の小さな失敗について話してみましょう。
 - `axis.1.ko` · KO: 주말의 순서를 소개해요.
 - `axis.1.ja` · JA: 週末の順序を紹介します。
 - `axis.2.ko` · KO: 꼭 하는 행동을 설명해요.
@@ -2113,7 +2113,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-intermediate/lessons/08-weekend-routine/lesson.html`
-- sha256: `ae8b9639ced79c121f32492eb15d386a6d26931ca6d158667fa4146791da5189`
+- sha256: `962de7e398c593920a3029b6d83a653a544b83b5df1251e0fe6e2bd3ae265e9b`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2125,8 +2125,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 주말 루틴
-- `goal.ko` · KO: 오늘은 아무 계획 없는 주말에도 꼭 지키는 나만의 루틴과 그 속의 작은 실수를 이야기해 볼게요.
-- `goal.ja` · JA: 今日は何も予定がない週末にも必ず守る自分なりのルーティンと、その中の小さな失敗について話してみましょう。
+- `goal.ko` · KO: 아무 계획 없는 주말에도 꼭 지키는 나만의 루틴과 그 속의 작은 실수를 이야기해 볼게요.
+- `goal.ja` · JA: 何も予定がない週末にも必ず守る自分なりのルーティンと、その中の小さな失敗について話してみましょう。
 - `axis.1.ko` · KO: 주말의 순서를 소개해요.
 - `axis.1.ja` · JA: 週末の順序を紹介します。
 - `axis.2.ko` · KO: 꼭 하는 행동을 설명해요.
@@ -2254,7 +2254,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-advanced/lessons/09-house-rule/lesson.html`
-- sha256: `35de58c09967c25ff35364eb7590f1918d3e44b8edc23bacfb411dc79b87eb1f`
+- sha256: `9085b0f122066c6ce8d46866c03b49b06c0663d5608498d90a19b719e8f32688`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2266,8 +2266,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 우리 집 규칙
-- `goal.ko` · KO: 오늘은 밖에 나가서야 다른 집에는 없다는 걸 알게 된 우리 집만의 규칙을 이야기해 볼게요.
-- `goal.ja` · JA: 今日は外へ出て初めて他の家にはないと知った、わが家だけのルールについて話してみましょう。
+- `goal.ko` · KO: 밖에 나가서야 다른 집에는 없다는 걸 알게 된 우리 집만의 규칙을 이야기해 볼게요.
+- `goal.ja` · JA: 外へ出て初めて他の家にはないと知った、わが家だけのルールについて話してみましょう。
 - `axis.1.ko` · KO: 집안 규칙을 소개해요.
 - `axis.1.ja` · JA: 家のルールを紹介します。
 - `axis.2.ko` · KO: 규칙을 지키는 방법을 설명해요.
@@ -2394,7 +2394,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-intermediate/lessons/09-house-rule/lesson.html`
-- sha256: `cc016e1b9f2b166458b8010fa3f49cf87946ef7d41ddf0727b5d813403470a40`
+- sha256: `050b90f690c4cb97b18864e95931d956caa2bcb86fd67ca60201a050161e138c`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2406,8 +2406,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 우리 집 규칙
-- `goal.ko` · KO: 오늘은 밖에 나가서야 다른 집에는 없다는 걸 알게 된 우리 집만의 규칙을 이야기해 볼게요.
-- `goal.ja` · JA: 今日は外へ出て初めて他の家にはないと知った、わが家だけのルールについて話してみましょう。
+- `goal.ko` · KO: 밖에 나가서야 다른 집에는 없다는 걸 알게 된 우리 집만의 규칙을 이야기해 볼게요.
+- `goal.ja` · JA: 外へ出て初めて他の家にはないと知った、わが家だけのルールについて話してみましょう。
 - `axis.1.ko` · KO: 집안 규칙을 소개해요.
 - `axis.1.ja` · JA: 家のルールを紹介します。
 - `axis.2.ko` · KO: 규칙을 지키는 방법을 설명해요.
@@ -2536,7 +2536,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-advanced/lessons/10-cringe-memory/lesson.html`
-- sha256: `c720964cda8ef1c3fb6812dfba39d7c0d8b9ac197a9495672e52bad38e7d88e3`
+- sha256: `5c46e20ae0eaf760c1104addb83f06b1d25038afcaa97b6ed275ce54abd72a68`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2548,8 +2548,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 이불킥 기억
-- `goal.ko` · KO: 오늘은 자다가도 갑자기 떠올라 이불을 차게 되는, 지금은 웃을 수 있는 장면을 이야기해 볼게요.
-- `goal.ja` · JA: 今日は寝ていても急に思い出して布団を蹴りたくなる、今は笑える場面について話してみましょう。
+- `goal.ko` · KO: 자다가도 갑자기 떠올라 이불을 차게 되는, 지금은 웃을 수 있는 장면을 이야기해 볼게요.
+- `goal.ja` · JA: 寝ていても急に思い出して布団を蹴りたくなる、今は笑える場面について話してみましょう。
 - `axis.1.ko` · KO: 민망한 장면을 소개해요.
 - `axis.1.ja` · JA: 恥ずかしい場面を紹介します。
 - `axis.2.ko` · KO: 무슨 일이 있었는지 설명해요.
@@ -2677,7 +2677,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-intermediate/lessons/10-cringe-memory/lesson.html`
-- sha256: `a46b5d0c83cdb837cc90ad114c947e42d622ee5de3dcfdc3f08a746645671431`
+- sha256: `67db18232edc0fa412b0f2ab16ebebe7592c92d3acb1a9ee47348120350b4b64`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2689,8 +2689,8 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 #### `lesson-goal`
 
 - `act.ko` · KO: 이불킥 기억
-- `goal.ko` · KO: 오늘은 자다가도 갑자기 떠올라 이불을 차게 되는, 지금은 웃을 수 있는 장면을 이야기해 볼게요.
-- `goal.ja` · JA: 今日は寝ていても急に思い出して布団を蹴りたくなる、今は笑える場面について話してみましょう。
+- `goal.ko` · KO: 자다가도 갑자기 떠올라 이불을 차게 되는, 지금은 웃을 수 있는 장면을 이야기해 볼게요.
+- `goal.ja` · JA: 寝ていても急に思い出して布団を蹴りたくなる、今は笑える場面について話してみましょう。
 - `axis.1.ko` · KO: 민망한 장면을 소개해요.
 - `axis.1.ja` · JA: 恥ずかしい場面を紹介します。
 - `axis.2.ko` · KO: 무슨 일이 있었는지 설명해요.
