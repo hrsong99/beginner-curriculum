@@ -12,7 +12,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-advanced/lessons/01-childhood-nagging/lesson.html`
-- sha256: `a85a1aae4e51fa41947dafacb8dae5955033afca57bc107a9dc6baa3ad720aa9`
+- sha256: `c064a63593a61be586237bafed0372a49f250deff399f45ad6822cf4b17268b6`
 - source kind: `model-story`
 
 #### `metadata`
@@ -144,6 +144,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 반대로, 어릴 때 더 듣고 싶었던 말은 뭐예요?
 - `question.ja` · JA: 反対に、子どものころもっと聞きたかった言葉は何ですか？
+- `tutorGuidance.ko` · KO: 가벼운 말만 골라도 되고, 가족 기억이 불편하면 건너뛰어도 된다고 안내해 주세요. 앞에서 고친 표현을 다시 쓰게 해 주세요.
 - `followUp.1.ko` · KO: 누구에게 듣고 싶었어요?
 - `followUp.2.ko` · KO: 왜 그 말이 필요했어요?
 - `followUp.3.ko` · KO: 지금은 스스로 말해 줘요?
@@ -151,7 +152,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-intermediate/lessons/01-childhood-nagging/lesson.html`
-- sha256: `e2a772ef080abdbc83c1b20e576e6a0081742bb632ebcfbbc04240717174263c`
+- sha256: `04b11a6848e4b8a5837988f58af5c32cd9334a5b5ac872641aef4c6595f6deb0`
 - source kind: `model-story`
 
 #### `metadata`
@@ -283,6 +284,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 반대로, 어릴 때 더 듣고 싶었던 말은 뭐예요?
 - `question.ja` · JA: 反対に、子どものころもっと聞きたかった言葉は何ですか？
+- `tutorGuidance.ko` · KO: 가벼운 말만 골라도 되고, 가족 기억이 불편하면 건너뛰어도 된다고 안내해 주세요. 앞에서 고친 표현을 다시 쓰게 해 주세요.
 - `followUp.1.ko` · KO: 누구에게 듣고 싶었어요?
 - `followUp.2.ko` · KO: 왜 그 말이 필요했어요?
 - `followUp.3.ko` · KO: 지금은 스스로 말해 줘요?
@@ -292,7 +294,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-advanced/lessons/02-memorable-teacher/lesson.html`
-- sha256: `6a3e3b9c190683bbc5d540cbd7d37342d6af613daa06cd0897bfa85e09ecc1fd`
+- sha256: `97ea38f772c7a69b83da329f4706e9bc7884273d2ebd1029efac0485a788792e`
 - source kind: `model-story`
 
 #### `metadata`
@@ -431,7 +433,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-intermediate/lessons/02-memorable-teacher/lesson.html`
-- sha256: `e1a84cdaa5e2b73a51b80aa287afc27118f2db95b601136f2c07b0d99fef9b4c`
+- sha256: `9f75e51249b475382c3b810403fb1c3896d23f2ddd4f825ad03e26f4d240e8d1`
 - source kind: `model-story`
 
 #### `metadata`
@@ -572,7 +574,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-advanced/lessons/03-school-nickname/lesson.html`
-- sha256: `44e777e72f706c76588a06033fa5cacfcfa0e16329b2427654649a8b101b1bbc`
+- sha256: `b0ea0503a9f1b2934b5e817c44e630d106ea46616aa6523e04e231322a21e568`
 - source kind: `model-story`
 
 #### `metadata`
@@ -664,6 +666,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 학창시절 가장 기억나는 별명은 뭐예요?
 - `question.ja` · JA: 学生時代いちばん覚えているあだ名は何ですか？
+- `tutorGuidance.ko` · KO: 좋았던 별명이나 주변에서 들은 별명으로 답해도 되고, 불편하면 건너뛰어도 된다고 안내해 주세요. 이유와 장면이 나올 때까지 기다려 주세요.
 - `followUp.1.ko` · KO: 누가 붙였어요?
 - `followUp.2.ko` · KO: 무슨 뜻이었어요?
 - `followUp.3.ko` · KO: 얼마나 오래 불렸어요?
@@ -711,7 +714,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-intermediate/lessons/03-school-nickname/lesson.html`
-- sha256: `9001aadb0a448f72d9d16fdf67a3a280ab4d322c4f4827765328bd9a12add639`
+- sha256: `491b7ac43784811ffcf89026c08027744257912b193919e853b34a6e00b6c38a`
 - source kind: `model-story`
 
 #### `metadata`
@@ -803,6 +806,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 학창시절 가장 기억나는 별명은 뭐예요?
 - `question.ja` · JA: 学生時代いちばん覚えているあだ名は何ですか？
+- `tutorGuidance.ko` · KO: 좋았던 별명이나 주변에서 들은 별명으로 답해도 되고, 불편하면 건너뛰어도 된다고 안내해 주세요. 이유와 장면이 나올 때까지 기다려 주세요.
 - `followUp.1.ko` · KO: 누가 붙였어요?
 - `followUp.2.ko` · KO: 무슨 뜻이었어요?
 - `followUp.3.ko` · KO: 얼마나 오래 불렸어요?
@@ -852,7 +856,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-advanced/lessons/04-used-to-hate/lesson.html`
-- sha256: `b710f8ce830f4b7baa80fd446389df5220bff182b95dda275467433b0a635fe8`
+- sha256: `5f399268634e541ef6f563f7f51a576814f65472c326cd584b63d88cc19db23e`
 - source kind: `model-story`
 
 #### `metadata`
@@ -991,7 +995,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-intermediate/lessons/04-used-to-hate/lesson.html`
-- sha256: `e150f1e3065474d5205466aec79edb96eb083b45ff6a7bee558434d57857ee70`
+- sha256: `7cfd28d924bbbae1bc029d6051adf0335c3a2475366469b82f308eea7a58229e`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1132,7 +1136,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-advanced/lessons/05-embarrassing-mistake/lesson.html`
-- sha256: `85533924b83cc40c7c4628d10446ff828cc514eb596994b8dd43b7feb37f0ca5`
+- sha256: `f099a5c0cb928880d14a7cc7b3dae5bb58b1a0e22e28e036f7f01eff6ff37de8`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1224,6 +1228,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 가장 창피했던 실수의 장면은 뭐예요?
 - `question.ja` · JA: いちばん恥ずかしかった失敗の場面は何ですか？
+- `tutorGuidance.ko` · KO: 지금은 웃을 수 있는 가벼운 실수만 말해도 되고, 불편하면 건너뛰어도 된다고 안내해 주세요. 이유와 장면이 나올 때까지 기다려 주세요.
 - `followUp.1.ko` · KO: 어디에서 시작됐어요?
 - `followUp.2.ko` · KO: 무슨 일이 먼저 있었어요?
 - `followUp.3.ko` · KO: 누가 함께 있었어요?
@@ -1271,7 +1276,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-intermediate/lessons/05-embarrassing-mistake/lesson.html`
-- sha256: `ea1f214a216c61587d62fc23fb17cbee30bd65ec6f294232f533627f6f3106b6`
+- sha256: `ac510fea8863e31157b1381a7d9ab84e9701288406fa549f54be45d333d1036c`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1363,6 +1368,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 가장 창피했던 실수의 장면은 뭐예요?
 - `question.ja` · JA: いちばん恥ずかしかった失敗の場面は何ですか？
+- `tutorGuidance.ko` · KO: 지금은 웃을 수 있는 가벼운 실수만 말해도 되고, 불편하면 건너뛰어도 된다고 안내해 주세요. 이유와 장면이 나올 때까지 기다려 주세요.
 - `followUp.1.ko` · KO: 어디에서 시작됐어요?
 - `followUp.2.ko` · KO: 무슨 일이 먼저 있었어요?
 - `followUp.3.ko` · KO: 누가 함께 있었어요?
@@ -1412,7 +1418,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-advanced/lessons/06-travel-mishap/lesson.html`
-- sha256: `1ec773c94a19dc006120d2791d16064a0aa06b5608d6e47e6bdad8df5ead2f39`
+- sha256: `480e6d01106a5be1ccafe9a66346f0c3f55c97735202c388792898dbcb415fda`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1551,7 +1557,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-intermediate/lessons/06-travel-mishap/lesson.html`
-- sha256: `92521ab7edde98791e86a4811c7d27bd799ff4841e6d2fb71abdf731fc251a67`
+- sha256: `f64276544b148cb9fab85eab294f01f13036c03f3406b5d7d6c6c7d8f4ef9bfe`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1692,7 +1698,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-advanced/lessons/07-return-destination/lesson.html`
-- sha256: `27ad9183d4cee6ed89c312d98d2cdacf0ca92cfaa1e416c27f3a080558e58b19`
+- sha256: `9b0eb60d05f04f1e395b8a7ad71e137d5271fe3301a4148e6797f0cc0df0d6fc`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1831,7 +1837,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-intermediate/lessons/07-return-destination/lesson.html`
-- sha256: `68857d245f496cf3a831a6061237aad75abc75d22a080e529524b070c223e35d`
+- sha256: `574be36a02194a2b3e444eea71bc9a28c310904f1f162a87142e38ee17a97044`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1972,7 +1978,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-advanced/lessons/08-dreams-then-now/lesson.html`
-- sha256: `c77ade142caab64eeb07fd0aaec8b44dc2c8bcb80c8ae62166952b33ae5159c9`
+- sha256: `b3f6492d7021117a6b85ff82463942be4bd4c9595d4d17068cfbe14fc50d2c64`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2111,7 +2117,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-intermediate/lessons/08-dreams-then-now/lesson.html`
-- sha256: `6cd79a91b33b1750d4f261f0512cc33a7aa920f10521b3f417429c872ac0ae25`
+- sha256: `f7483a955f12266e8da27bb92d790e63508d9ad371bda2640fd590925bcdc985`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2252,7 +2258,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-advanced/lessons/09-one-trip-to-past/lesson.html`
-- sha256: `35faa532f238c8f87ed96a6690ed8f0015d4398873359bb3bc3b285022e46677`
+- sha256: `f7d6242d4dedae145999f0f6a51fb9d7592dd6a15e99bf76b66e68862c621bca`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2360,6 +2366,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그날의 나에게 한 문장만 말한다면 뭐라고 할 거예요?
 - `question.ja` · JA: その日の自分に一言だけ言うなら、何と言いますか？
+- `tutorGuidance.ko` · KO: 가벼운 날을 골라도 되고, 자신에게 말하기 불편하면 다른 사람에게 말하거나 조용히 보는 것으로 답해도 된다고 안내해 주세요. 전과 후를 비교해 말하게 해 주세요.
 - `followUp.1.ko` · KO: 조언이에요?
 - `followUp.2.ko` · KO: 고맙다고 할까요?
 - `followUp.3.ko` · KO: 지금도 필요한 말이에요?
@@ -2391,7 +2398,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-intermediate/lessons/09-one-trip-to-past/lesson.html`
-- sha256: `887e57638a706873995e1f93626f28f944e0c552ff273439caf6cbdfd1806be2`
+- sha256: `02e2b32356ff486ad8e4c552f355c3c0ae95421a00f83eda48596f07678bb084`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2499,6 +2506,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그날의 나에게 한 문장만 말한다면 뭐라고 할 거예요?
 - `question.ja` · JA: その日の自分に一言だけ言うなら、何と言いますか？
+- `tutorGuidance.ko` · KO: 가벼운 날을 골라도 되고, 자신에게 말하기 불편하면 다른 사람에게 말하거나 조용히 보는 것으로 답해도 된다고 안내해 주세요. 전과 후를 비교해 말하게 해 주세요.
 - `followUp.1.ko` · KO: 조언이에요?
 - `followUp.2.ko` · KO: 고맙다고 할까요?
 - `followUp.3.ko` · KO: 지금도 필요한 말이에요?
@@ -2532,7 +2540,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-advanced/lessons/10-turning-point/lesson.html`
-- sha256: `6b6da7dc35167e7a2be342cbb8e0253b58df7681f83175138e52c4f5e2e26254`
+- sha256: `997ed1dde93fd970ffd5f1f7970857391a8a4b4f3862acaf54d61d0c9749bc00`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2679,7 +2687,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-what-came-before-intermediate/lessons/10-turning-point/lesson.html`
-- sha256: `1709a863e23a430f453db3e3752964e9c10f52aae6774e7dbe6b89cb93c9eec6`
+- sha256: `309a084db18f92fb48454cae338d7710de7664178ffece9dcd020f59683bda71`
 - source kind: `model-story`
 
 #### `metadata`

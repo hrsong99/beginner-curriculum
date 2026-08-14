@@ -9,9 +9,10 @@ language, pedagogy, narrative/role logic, activity usefulness, interaction behav
 layout. Do not silently interpret “proofread” as spelling and translation only. A user may ask for
 a narrower text-only, Japanese-only or visual-only pass explicitly.
 
-The packet implementation currently covers the complete `4-freetalking` track. Its unit of review
-is one theme containing the Advanced and Intermediate versions together. Other tracks are reviewed
-directly from their `lesson.html` files until they have an equivalent projection.
+The packet implementation covers all four release tracks. Tracks `1-hangul`, `2-core-patterns`
+and `3-contextual-korean` use one packet per course. `4-freetalking` uses one theme containing the
+Advanced and Intermediate versions together so level drift stays visible. The deferred
+`5-pronunciation` track is not part of the current release or its proofreading gate.
 
 ## Complete lesson proofreading
 
@@ -125,22 +126,27 @@ The reviewer then uses a newly generated packet instead of guessing how to merge
 
 ## Generated artifacts
 
-Run:
+Run once for each release track:
 
 ```sh
-python3 korean/tools/build_proofreading_packets.py korean/tracks/4-freetalking
+for track in 1-hangul 2-core-patterns 3-contextual-korean 4-freetalking; do
+  python3 korean/tools/build_proofreading_packets.py "korean/tracks/$track"
+done
 ```
 
-This writes `korean/proofreading/4-freetalking/`:
+This writes one matching folder under `korean/proofreading/`. Tracks 1-3 contain course packets,
+`lessons.jsonl`, `manifest.json` and a short README. Free Talking additionally includes paired
+level packets and `boilerplate.md`:
 
 | Artifact | Purpose |
 | --- | --- |
-| `packets/01-…md` through `10-…md` | One theme per packet, with each Advanced lesson immediately followed by its Intermediate sibling |
+| `packets/*.md` | One course per packet for tracks 1-3; one paired Advanced/Intermediate theme for Free Talking |
 | `lessons.jsonl` | One lesson per line, containing exact `source` / `pageId` / `field` locators and source hashes |
 | `boilerplate.md` | Every unique text variant from the repeated style and feedback pages omitted from theme packets |
 | `manifest.json` | Counts, packet membership, source-set hashes and omitted-page signatures |
 
-The theme packets retain:
+All packets retain exact source hashes and stable page/field locators. Free Talking's specialized
+theme packets retain:
 
 - three-language metadata titles;
 - the goal, its three axes and Japanese support;
@@ -228,8 +234,8 @@ python3 korean/tools/build_proofreading_packets.py \
    suggestion is the text currently in the HTML. This prevents a legitimate second-pass repair
    from making the first audit look unapplied without allowing stale suggestions to be waived.
 
-4. Run the freetalking structural/reference checks and `git diff --check`.
-5. Regenerate the packets.
+4. Run the structural/reference checks for all affected release tracks and `git diff --check`.
+5. Regenerate the affected packets.
 6. Prove they are current:
 
    ```sh
@@ -241,7 +247,8 @@ python3 korean/tools/build_proofreading_packets.py \
    article density or a deep-topic instruction.
 
 The round is complete only when issue validation happened before editing, the HTML checks pass,
-and `--check` reports all 182 decks and ten packets current.
+and `--check` reports every in-scope deck and packet current. The release-wide denominator is 480
+decks: 14 Hangul, 116 Core Patterns, 140 Contextual Korean and 210 Free Talking.
 
 Packet generation itself also enforces the static deck shell: exact page/source shape, metadata,
 unique sync IDs, resolved local `href`/`src` references, eight nonempty bilingual main prompts,

@@ -12,7 +12,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-worth-thinking-about-advanced/lessons/01-life-without-social-media/lesson.html`
-- sha256: `54757577a207500d079019e3c09f857362540388622945ed47e0962e94a8b5fc`
+- sha256: `e36aef429270377e5a1dae2032ff7ac4d1bdaff1d8419d87f96a2c52256745d8`
 - source kind: `article`
 
 #### `metadata`
@@ -167,7 +167,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-worth-thinking-about-intermediate/lessons/01-life-without-social-media/lesson.html`
-- sha256: `d09ec04fafd3970f137419da73c3ad73c70a531ffe2cecc419ed5eda4e91c9f3`
+- sha256: `a23c1a809ec18d280c2b5366b4c17100b8b2e04abc627f59d0173fed844ec190`
 - source kind: `article`
 
 #### `metadata`
@@ -324,7 +324,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-worth-thinking-about-advanced/lessons/02-what-i-do-for-environment/lesson.html`
-- sha256: `d7d9f94fe90f8819aea0928a88beb617a25b6589dd53bb93f423fd80fe2d1811`
+- sha256: `bc716e29bbd9b7df2f52475c466b39f5e45dc243b3323f96566a9f75bb365b66`
 - source kind: `article`
 
 #### `metadata`
@@ -479,7 +479,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-worth-thinking-about-intermediate/lessons/02-what-i-do-for-environment/lesson.html`
-- sha256: `4ec892877e72d925767f3f44d6f194510fa27a7b1680d1e0a53c1454c2319927`
+- sha256: `d843452a36951df18dafdf8a432c6efe48eed449ea990018527622ebf64be77f`
 - source kind: `article`
 
 #### `metadata`
@@ -636,7 +636,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-worth-thinking-about-advanced/lessons/03-work-ai-cannot-do/lesson.html`
-- sha256: `3578a6f2460e3da3406edf709a9ec3daf8d6061bde6645fb0fd3f897068e5e05`
+- sha256: `5f76fbfc3492825de9fb91aa0d9f46b37ae8c1cd566ae0b8201804b8458b01f4`
 - source kind: `article`
 
 #### `metadata`
@@ -791,7 +791,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-worth-thinking-about-intermediate/lessons/03-work-ai-cannot-do/lesson.html`
-- sha256: `a95e9b6f303b35122fc652fd558085fd3c80aac580fab4dd47afe99b2b147399`
+- sha256: `a690ea23a7ce390304a3b71a1e48bd1af3486e78129f8c5efb556d92361745ec`
 - source kind: `article`
 
 #### `metadata`
@@ -948,7 +948,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-worth-thinking-about-advanced/lessons/04-money-and-happiness/lesson.html`
-- sha256: `7a034764a1fcce1f82bf5e3151c49326a2cf342fe0c1073a4fd84433a1d30160`
+- sha256: `1e8a54f5daa83e233e7e1cc6cd6e62fcee7a2e23fb09a8ee3255e19ce73341e4`
 - source kind: `article`
 
 #### `metadata`
@@ -1103,7 +1103,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-worth-thinking-about-intermediate/lessons/04-money-and-happiness/lesson.html`
-- sha256: `0329984a2164671128d48e890c2befda8514b6ce0ede929756ba4e10f9d79b76`
+- sha256: `9f9c2228eba155904c6f51b049e96aefd1aa66e8a273f5bb15f373172c78deaa`
 - source kind: `article`
 
 #### `metadata`
@@ -1260,7 +1260,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-worth-thinking-about-advanced/lessons/05-best-age/lesson.html`
-- sha256: `147b2d2dcb3eaa1d585267a6093e7362ddf1d8a5d328b2e24aa50ee9b8345823`
+- sha256: `b87df7cf8653f19dd41afc76b047066334e9d6ac9f6f1fdf6044decb9d1b86c8`
 - source kind: `article`
 
 #### `metadata`
@@ -1415,7 +1415,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-worth-thinking-about-intermediate/lessons/05-best-age/lesson.html`
-- sha256: `2555fcafdc04aac4ec7d37ca632cfc4b04a1da2127161162f95ccec6cf60e182`
+- sha256: `c4e1c20f1f3438d43f61877c89543d866ad3c00b7dbef28dbe95161bd04bbe7b`
 - source kind: `article`
 
 #### `metadata`
@@ -1572,7 +1572,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-worth-thinking-about-advanced/lessons/06-life-without-regret/lesson.html`
-- sha256: `dbe44186724b3d7e912dc4b0ec8c5e9b2926020e8cd5e286db16623398831341`
+- sha256: `54d97fef9cb35679705ea1e1de4bf9cc4c6a51ed72c8da89ede606d6994735ee`
 - source kind: `article`
 
 #### `metadata`
@@ -1727,7 +1727,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-worth-thinking-about-intermediate/lessons/06-life-without-regret/lesson.html`
-- sha256: `ac2b0f3cf9afb4618aa7adf67f45cef486684e0740c6762a4e8d99fcfdbdb901`
+- sha256: `466c26769841f6ae287a8dc7e18dfb6c02b1b65d150b4ad0615fff5cde981b37`
 - source kind: `article`
 
 #### `metadata`

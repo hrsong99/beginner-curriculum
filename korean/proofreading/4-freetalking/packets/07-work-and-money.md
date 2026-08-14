@@ -12,7 +12,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-advanced/lessons/01-my-first-paycheck/lesson.html`
-- sha256: `eaf70cd44a50936e1ed55c5a17ac91d762016cd98172b170f5f803396ad96c19`
+- sha256: `784ac978752a9f8717a85a75748664221f24ed2796120bdc07cc8e703c564d1e`
 - source kind: `model-story`
 
 #### `metadata`
@@ -154,7 +154,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-intermediate/lessons/01-my-first-paycheck/lesson.html`
-- sha256: `709075f03744311a93cd15b279752ba0a65353f1521dd73976368c24ec930f3a`
+- sha256: `719fec68bdad217745e2bdc57fa1ed70e532ba8b76ba45ca0c9f0cf5bb9ebfe3`
 - source kind: `model-story`
 
 #### `metadata`
@@ -298,7 +298,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-advanced/lessons/02-proudest-work-moment/lesson.html`
-- sha256: `128f7f03dad692b5c640191e6b9a321ff401ab50c84308f57cc667a61264f908`
+- sha256: `a6744ab8e67d86ac9d02895893d850f73fbdc5a07e214a0f3a10f7c4e2137b4d`
 - source kind: `model-story`
 
 #### `metadata`
@@ -438,7 +438,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-intermediate/lessons/02-proudest-work-moment/lesson.html`
-- sha256: `43c9a18de19f196b3bb4f543a3c85d76aaee3f5da26afd3c8e586eda07053130`
+- sha256: `551720d6e778dcea22a1bb09b3d9a614f49a367d4d38a30ded849910d4f1c3f2`
 - source kind: `model-story`
 
 #### `metadata`
@@ -580,7 +580,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-advanced/lessons/03-when-i-felt-successful/lesson.html`
-- sha256: `1c24e72ea34df7fc8335262f31c8f6d6bfbea733920d7203a8aafd99b94b0b0b`
+- sha256: `71fedc65b6c539d0f13f2fc5a45b42479a22ad52dd953eaa18c7d654a32dd966`
 - source kind: `model-story`
 
 #### `metadata`
@@ -719,7 +719,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-intermediate/lessons/03-when-i-felt-successful/lesson.html`
-- sha256: `a2d5febe6a4ffaa06d570d35f49c38566f06d93403d0a051958659ac361ef7a5`
+- sha256: `9175ee741abb310621ee04e3b1c7e0d3e5267187b1e251f192ce0d338d3c3114`
 - source kind: `model-story`
 
 #### `metadata`
@@ -860,7 +860,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-advanced/lessons/04-what-i-am-learning-now/lesson.html`
-- sha256: `52adf494fd7c8b2fce9a5c64b179b59add8b649cfdb2dce071f386ab897c3894`
+- sha256: `4b17ed19c7bdd11f368020dca9e4af5deaa6e5d32766901aab9c28c4cfb17c8c`
 - source kind: `model-story`
 
 #### `metadata`
@@ -999,7 +999,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-intermediate/lessons/04-what-i-am-learning-now/lesson.html`
-- sha256: `cf062315b6e60903df408ae77a8d3273f07ff24583bc6245d78dc93da4bb4bdd`
+- sha256: `ee8b84b5c5e7175f3cb86e1f26f95ad4b999e78d4363cf65442cc846f18a6ada`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1140,7 +1140,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-advanced/lessons/05-my-money-habit/lesson.html`
-- sha256: `b4c38225a54c0fe43df222101e7e855f3d25556f47a66628bcd1733606d43985`
+- sha256: `587f5d095f461d449f807205f7f9ef84e43fcba0047e4d3ed8ce94a169985022`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1232,6 +1232,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 지금 실제로 지키는 나만의 돈 관리 습관은 뭐예요?
 - `question.ja` · JA: 今、実際に続けている自分なりのお金の管理習慣は何ですか？
+- `tutorGuidance.ko` · KO: 수익을 약속하는 방법이 아니라 개인 생활 습관을 이야기해요. 정확한 금액이 불편하면 범위나 비율로 답해도 된다고 안내해 주세요.
 - `followUp.1.ko` · KO: 언제 시작했어요?
 - `followUp.2.ko` · KO: 한 번에 얼마를 움직여요?
 - `followUp.3.ko` · KO: 자동이에요, 직접 해요?
@@ -1279,7 +1280,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-intermediate/lessons/05-my-money-habit/lesson.html`
-- sha256: `6136453a2b58472ef60a6cc4ec5ecb5decee39962d252f4df20b91586ec4eb2a`
+- sha256: `bdc5be36312b2678ff65b97a9fda9e93fa1c7cc0460d31a105fd6e9d248144e3`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1371,6 +1372,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 지금 지키는 돈 습관은 뭐예요?
 - `question.ja` · JA: 今続けているお金の習慣は何ですか？
+- `tutorGuidance.ko` · KO: 수익을 약속하는 방법이 아니라 개인 생활 습관을 이야기해요. 정확한 금액이 불편하면 범위나 비율로 답해도 된다고 안내해 주세요.
 - `followUp.1.ko` · KO: 언제 시작했어요?
 - `followUp.2.ko` · KO: 한 번에 얼마를 움직여요?
 - `followUp.3.ko` · KO: 자동이에요, 직접 해요?
@@ -1420,7 +1422,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-advanced/lessons/06-if-i-had-another-job/lesson.html`
-- sha256: `69e01ce5e09297750f0e40ab94048eebc5f13d07a907ec30c51dcb90f6b18d4a`
+- sha256: `5e46c55a1863989bbcea140432a0941f786fa0e5b9f0af834b2fab2c95301ea3`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1559,7 +1561,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-intermediate/lessons/06-if-i-had-another-job/lesson.html`
-- sha256: `ac7f60e71e49bb650da9d23cf30c4560b3d3ac735a78df0bba948b69427fc407`
+- sha256: `3767b05774360cd52dad33ac3c057799d0823f86825593eae1d4c58d9d52078c`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1700,7 +1702,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-advanced/lessons/07-how-ai-changed-my-work/lesson.html`
-- sha256: `846f52e9d0aaa73978643cf6922b853874e860abf92b33d94b5f0cd4bcef7d04`
+- sha256: `dba11edaf95809f8001ab1509f1876c8abb31a1a1d8f2571444e082844a0d92d`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1792,7 +1794,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: AI 때문에 실제로 달라진 일·공부·집안일 한 가지는 뭐예요?
 - `question.ja` · JA: AIによって実際に変わった仕事・勉強・家事の一つは何ですか？
-- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
+- `tutorGuidance.ko` · KO: 본인 경험이 없으면 가까이서 본 사람의 변화를 고르고, 이후 질문도 그 사람의 경험으로 이어 가세요.
 - `followUp.1.ko` · KO: 처음 쓴 날은 언제예요?
 - `followUp.2.ko` · KO: 무엇이 가장 먼저 달라졌어요?
 - `followUp.3.ko` · KO: 지금 얼마나 자주 써요?
@@ -1840,7 +1842,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-intermediate/lessons/07-how-ai-changed-my-work/lesson.html`
-- sha256: `afd537672d69887c8b8cca52cdeb8b1b1ae267414585a09553d3f166b9e2e7e2`
+- sha256: `5d1870b34368058c37e2ce381d49e3a8e238064895245b577934236c07194770`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1932,7 +1934,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: AI 때문에 달라진 일·공부·집안일은 뭐예요?
 - `question.ja` · JA: AIによって変わった仕事・勉強・家事は何ですか？
-- `tutorGuidance.ko` · KO: 주의: 실제 경험이 없으면 가까운 예나 가상 상황으로 바꿔도 됩니다.
+- `tutorGuidance.ko` · KO: 본인 경험이 없으면 가까이서 본 사람의 변화를 고르고, 이후 질문도 그 사람의 경험으로 이어 가세요.
 - `followUp.1.ko` · KO: 처음 쓴 날은 언제예요?
 - `followUp.2.ko` · KO: 무엇이 가장 먼저 달라졌어요?
 - `followUp.3.ko` · KO: 지금 얼마나 자주 써요?
@@ -1982,7 +1984,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-advanced/lessons/08-why-i-wanted-a-change/lesson.html`
-- sha256: `84c841198018436c87954519726101903db7f0d39cc0d9cec772bd3d3ae13ae0`
+- sha256: `68dc61edc52f18b00a997473c0d2041b5240f5122e54f15733475c4487666140`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2123,7 +2125,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-intermediate/lessons/08-why-i-wanted-a-change/lesson.html`
-- sha256: `53e7c088e49187fca509112ee5178d750f2e66bb870aa18f833c801d9031f408`
+- sha256: `b292727516624f65951664e128013e6acb59ac13fb06bb665bc0a427e4bbbf66`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2266,7 +2268,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-advanced/lessons/09-best-and-worst-bosses/lesson.html`
-- sha256: `10e49088271e92e8adfa1e707a04e1c4ed88bf5119945a612957b380ec51a0bc`
+- sha256: `b49876795f976f7a1861a5d57c010c59bc93c8c32a8133006dd41984d9597f42`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2406,7 +2408,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-work-and-money-intermediate/lessons/09-best-and-worst-bosses/lesson.html`
-- sha256: `f58d9ccdc3d8b1e7f777cdda606488df915ee2289da19d7baa6e633f25e814a3`
+- sha256: `6757e69ce3af19eee606ad743dbf3aeb0ed68f699c363322c209a6ec4b572413`
 - source kind: `model-story`
 
 #### `metadata`

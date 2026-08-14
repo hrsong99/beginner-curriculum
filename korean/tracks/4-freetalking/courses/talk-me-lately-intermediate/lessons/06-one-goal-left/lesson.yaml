@@ -9,7 +9,7 @@ spec:
   title:
     ko: 올해 남은 목표
     en: One goal for the rest of the year
-    ja: 今年残りの目標
+    ja: 今年中に達成したい目標
   decks:
     lecture:  { entry: lecture/index.html }    # 수업용  → CLASS_LEMONBOARD_KEY
     prestudy: { entry: prestudy/index.html }   # 예습용  → PRESTUDY_LEMONBOARD_KEY

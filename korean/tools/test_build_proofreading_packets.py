@@ -50,6 +50,48 @@ class ProofreadingPacketTests(unittest.TestCase):
         self.assertNotIn("<script", first_packet)
         self.assertNotIn("data-sync-id", first_packet)
 
+    def test_generic_release_tracks_have_complete_course_packets(self):
+        expected = {
+            "1-hangul": (14, 1),
+            "2-core-patterns": (116, 12),
+            "3-contextual-korean": (140, 14),
+        }
+        for track_name, (deck_count, packet_count) in expected.items():
+            with self.subTest(track=track_name):
+                track = packets.KOREAN / "tracks" / track_name
+                outputs, records = packets.build_outputs(track)
+                self.assertEqual(len(records), deck_count)
+                self.assertEqual(
+                    len([path for path in outputs if path.parts[0] == "packets"]),
+                    packet_count,
+                )
+                self.assertTrue(all(record["pageContexts"] for record in records))
+                for record in records:
+                    locators = [
+                        (entry["pageId"], entry["field"])
+                        for entry in record["entries"]
+                    ]
+                    self.assertEqual(len(locators), len(set(locators)))
+
+    def test_generic_packet_retains_titles_scripts_dialogue_and_task_text(self):
+        track = packets.KOREAN / "tracks" / "2-core-patterns"
+        outputs, records = packets.build_outputs(track)
+        first = records[0]
+        fields = {entry["field"] for entry in first["entries"]}
+        self.assertIn("title.ko", fields)
+        self.assertTrue(any(field.startswith("tutorScript.") for field in fields))
+        self.assertTrue(any(field.startswith("text.") for field in fields))
+        self.assertTrue(any(field.startswith("task.") for field in fields))
+        packet_path = next(path for path in outputs if path.parts[0] == "packets")
+        packet = outputs[packet_path]
+        self.assertNotIn("<script", packet)
+        self.assertNotIn("data-sync-id", packet)
+
+    def test_pronunciation_is_outside_current_release_packet_scope(self):
+        track = packets.KOREAN / "tracks" / "5-pronunciation"
+        with self.assertRaisesRegex(ValueError, "release packets cover tracks 1-4"):
+            packets.build_outputs(track)
+
     def test_generated_output_check_detects_stale_packet(self):
         with tempfile.TemporaryDirectory() as temporary:
             output = pathlib.Path(temporary)

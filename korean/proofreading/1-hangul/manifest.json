@@ -1,0 +1,19 @@
+{
+  "counts": {
+    "courses": 1,
+    "decks": 14,
+    "entries": 2266
+  },
+  "formatVersion": 1,
+  "generator": "korean/tools/build_proofreading_packets.py",
+  "htmlIsSourceOfTruth": true,
+  "packets": [
+    {
+      "course": "hangul-starter",
+      "decks": 14,
+      "file": "packets/01-hangul-starter.md",
+      "sourceSetSha256": "60a7db14f9b27abcea59da96aa65d7807fba5612cf611b4f56600cae93158073"
+    }
+  ],
+  "track": "korean/tracks/1-hangul"
+}

@@ -2639,6 +2639,35 @@ body.teaching .section-subtitle.pattern-meaning:has(+ .tutor-note) {
   background: var(--gray-50);
 }
 
+/* A listening contrast may show the real spelling as a fixed prompt beside
+   two possible heard forms. The prompt is deliberately not a button: only
+   the two sound spellings are answers. */
+.tap-row.sound-choice { grid-template-columns: 108px 1fr 1fr; }
+
+.sound-prompt {
+  min-width: 0;
+  color: var(--ink);
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 1.15;
+  text-align: center;
+  word-break: keep-all;
+}
+
+.sound-prompt small {
+  display: block;
+  margin-top: 6px;
+  color: var(--gray-500);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.tap-grid.rows.words .sound-choice .tap-tile {
+  height: 92px;
+  font-size: 27px;
+}
+
 .tap-n {
   font-size: 17px;
   font-weight: 800;

@@ -9,7 +9,7 @@ spec:
   title:
     ko: 나만 아는 명소
     en: My hidden gem
-    ja: 私だけが知る名所
+    ja: 私だけが知る穴場
   decks:
     lecture:  { entry: lecture/index.html }    # 수업용  → CLASS_LEMONBOARD_KEY
     prestudy: { entry: prestudy/index.html }   # 예습용  → PRESTUDY_LEMONBOARD_KEY

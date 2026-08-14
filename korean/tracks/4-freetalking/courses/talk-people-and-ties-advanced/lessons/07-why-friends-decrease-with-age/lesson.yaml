@@ -8,7 +8,7 @@ spec:
 
   title:
     ko: 나이 들면 왜 친구가 줄어들까
-    en: Why friendships decrease with age
+    en: Why we have fewer friends as we age
     ja: 年を取ると友達が減るのはなぜ？
   decks:
     lecture:  { entry: lecture/index.html }    # 수업용  → CLASS_LEMONBOARD_KEY

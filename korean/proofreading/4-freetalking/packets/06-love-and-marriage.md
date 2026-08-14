@@ -12,7 +12,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-advanced/lessons/01-heart-fluttering-moment/lesson.html`
-- sha256: `a2580e475ab02a4be0bb9fcef9fc6334aec4a6ffe5cc7394448d1ae6eb7435e7`
+- sha256: `c7bb49249735b79bb11970a2be2a8b46e6f856b68dcbb1d5fe7e5cd60009337b`
 - source kind: `model-story`
 
 #### `metadata`
@@ -152,7 +152,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-intermediate/lessons/01-heart-fluttering-moment/lesson.html`
-- sha256: `1a2aafade493268f001b6d52b9c20026a46c1d252c9f841a5be80c3aba3e6a32`
+- sha256: `b4bca4c28b04b56d6c52ab29322e87b9acd14b9aea7d334205892be265380f06`
 - source kind: `model-story`
 
 #### `metadata`
@@ -294,7 +294,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-advanced/lessons/02-words-that-kill-the-mood/lesson.html`
-- sha256: `1f56d890bb0fc3107d6b7f1f03590b51f7d74fb835ba6eb7f0a6595a2583311a`
+- sha256: `37cd5f070f7c57023624b7d6a18f010b56838d4ccc9f965a6ca3e44e5eb85ac1`
 - source kind: `model-story`
 
 #### `metadata`
@@ -434,7 +434,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-intermediate/lessons/02-words-that-kill-the-mood/lesson.html`
-- sha256: `31a556d6c6ab267158875f2c47fa1e7e3bdb767da99dbb18b2b314c8becc599f`
+- sha256: `5ec1e4979785a9a8dbfba601bbf313239ea278ebfb88707e9ce199f14e08d403`
 - source kind: `model-story`
 
 #### `metadata`
@@ -576,7 +576,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-advanced/lessons/03-one-must-have-quality/lesson.html`
-- sha256: `e0002595ded3776587668644d15a2560d4db5d7bae750a5c844e6005fb2bb553`
+- sha256: `3993e9a124fd6075ffbb1df95d15f5f711ce193d4347116e1babd7b7a1b8217b`
 - source kind: `model-story`
 
 #### `metadata`
@@ -716,7 +716,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-intermediate/lessons/03-one-must-have-quality/lesson.html`
-- sha256: `7ddf9c785fc9a407dbf58b80b20513a68aa66fc9bcd6ff56577c2482c7bcd23a`
+- sha256: `c283104600149689f7a2c6a2925668e816a15121faf2fc0ba6879917ab8cfe99`
 - source kind: `model-story`
 
 #### `metadata`
@@ -858,7 +858,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-advanced/lessons/04-my-bad-dating-habit/lesson.html`
-- sha256: `7c89832197a4bcb16fe9e8a4864fe0b5d594f0c5ea0fe810ab825099945664e9`
+- sha256: `2db011d9984aca8713378f1bb63e8f84a1a19fd0e6a3a5dea90ef25b60d6e74c`
 - source kind: `model-story`
 
 #### `metadata`
@@ -998,7 +998,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-intermediate/lessons/04-my-bad-dating-habit/lesson.html`
-- sha256: `a40f6260fc010e7daf5c476006f2a815be56b60e8be7edc0622d8906bfcae7e1`
+- sha256: `ff20cf3ebe91a2402107f26314d4b42e40bd9462cf4dde134095490e6434707f`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1140,7 +1140,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-advanced/lessons/05-dream-wedding/lesson.html`
-- sha256: `34a2410a890119e3572e41447cc90cacf9dc569a8d85a106ba6723fbacf427ac`
+- sha256: `9628b8152cc265257b3a725fca9f85c8b7621f7d450aa081f297bf9412770820`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1280,7 +1280,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-intermediate/lessons/05-dream-wedding/lesson.html`
-- sha256: `97b3150acae0ac5bd015b298cc74cda77cb2ac87aac9d1dfcfcb9de073f36848`
+- sha256: `c2e3df24f593f2e42fe002ae815c8ff8819b9e930bcd5ed3c86e578d82edafc5`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1422,7 +1422,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-advanced/lessons/06-hardest-breakup/lesson.html`
-- sha256: `c6f4a2f00acc2323866b3487a04c29227b9385d4005a5fa60000eebc77e1c02a`
+- sha256: `b72b4bfd7dc8e98cd2a6fe4bed09f35731c5b32fbcbf9a8195fafb0c73e8c2a0`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1562,7 +1562,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-intermediate/lessons/06-hardest-breakup/lesson.html`
-- sha256: `68f0d725140c1c12fda3f2f8638469dbbb15afa8a8d6692ef5b2b7d3ed10635a`
+- sha256: `7d1547a540176ab8a5ca799297ddfea395902e623e58412771ab410c5225005a`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1704,7 +1704,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-advanced/lessons/07-thoughts-on-single-life-and-dink/lesson.html`
-- sha256: `2910e0c007e257cfbfcb670340281fd497f3b4d8bb82217e32f2a43bf233760e`
+- sha256: `99c04013fea5779ed67bb73822104d79fde86f280bd59eace99f35ecd4292dd1`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1844,7 +1844,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-love-and-marriage-intermediate/lessons/07-thoughts-on-single-life-and-dink/lesson.html`
-- sha256: `b6b4b0b8c9d8945ce70bd0806a5813f704e0a00f3a4c6557eb1b13f85020d341`
+- sha256: `291afb50b0e4d4e696296a7c0e0c7770e13778bd971e85c322a430ede00674f2`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1953,6 +1953,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 나중에는 원하는 가족의 모습이 달라질 수도 있어요?
 - `question.ja` · JA: 将来、望む家族の形が変わることもありますか？
+- `tutorGuidance.ko` · KO: 학생이 말하고 싶은 범위까지만 답하게 해 주세요. 불편해하면 바로 다음 질문으로 넘어갑니다. 앞에서 나온 이야기와 연결해 달라질 수 있는 이유 한 가지를 말하게 해 주세요.
 - `followUp.1.ko` · KO: 경험이 생각을 바꿀 수 있어요?
 - `followUp.2.ko` · KO: 경제 상황도 영향을 줘요?
 - `followUp.3.ko` · KO: 생각이 바뀌어도 괜찮아요?

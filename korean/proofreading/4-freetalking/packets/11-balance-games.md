@@ -12,7 +12,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/01-more-money-or-more-time/lesson.html`
-- sha256: `1f4b2fe154260cd15f19702105ea00e1a98893f65b2346a84ace3e1f69cc29f7`
+- sha256: `130c23a57c38ace3bba8aff5c3a1c3557f37441c42d565a8374b0864485ca95e`
 - source kind: `article`
 
 #### `metadata`
@@ -169,7 +169,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/01-more-money-or-more-time/lesson.html`
-- sha256: `27db62314e5ae57a7868d96e8c23bba768dd807ee63e4f51c1478ae0c042d63c`
+- sha256: `edc43ed41f33d2603adea21ec2fbe129ec08f8331f9dae073cd91acbd8acd513`
 - source kind: `article`
 
 #### `metadata`
@@ -328,7 +328,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/02-many-friends-or-three-close-friends/lesson.html`
-- sha256: `b48bf4aa45fa58cdd4a09afa582c4426a60f0b802e84f5f90552932c1cfc851b`
+- sha256: `1e943b7d1263955a82a093a8a5fe4c01302fe58ba745ad47ad4a12e904927122`
 - source kind: `article`
 
 #### `metadata`
@@ -484,7 +484,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/02-many-friends-or-three-close-friends/lesson.html`
-- sha256: `7499d85b76d76da1fb3c1d62c363c65624c6d5510d6e6367c84a0be40197eabe`
+- sha256: `7b1f96287684e4885769b1d5d9ccc7abf630afa2eb15fe458bb76e4d18535b71`
 - source kind: `article`
 
 #### `metadata`
@@ -642,7 +642,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/03-eternal-summer-or-winter/lesson.html`
-- sha256: `7e259c2fd30ecb5860886133c80248334233bbe05df842b2f0f4e1f7ce0db23a`
+- sha256: `58001942d67697b0b408c0058705dfb9df955cd5b14528b239d8d8b7f4ebaf29`
 - source kind: `article`
 
 #### `metadata`
@@ -798,7 +798,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/03-eternal-summer-or-winter/lesson.html`
-- sha256: `5ce90c11667e04ae3693711a3c5f3c0112db6e64e4864790cf301c1878eb0342`
+- sha256: `12a8784aa4345d8f8cbfc8f7b5b2af33ba1cdfdd934845ea0062ebd125596765`
 - source kind: `article`
 
 #### `metadata`
@@ -956,7 +956,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/04-morning-person-or-night-owl/lesson.html`
-- sha256: `14e3bc76c5044fee6f3d49f400b52d6e66bce84805f6f2bcd776caa960e761ab`
+- sha256: `909cc0ec319324bb4bebdb541eeda49eb719baf9541df16a36ef104ba07e0c1a`
 - source kind: `article`
 
 #### `metadata`
@@ -1112,7 +1112,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/04-morning-person-or-night-owl/lesson.html`
-- sha256: `4abde5579c69baa2aa50a220a4e157cf78ddc92f433317a79bcabcfaba110c1a`
+- sha256: `1e02038addbb975612c4393a4d0824091ffa09597af3f84e0d395d480df5a2e8`
 - source kind: `article`
 
 #### `metadata`
@@ -1270,7 +1270,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/05-planned-or-spontaneous-trip/lesson.html`
-- sha256: `b509b1572f8982247664127a44314cbb348446ff270d25df5f5fb5958a6fd32b`
+- sha256: `8abd07cb8f37910eb6ae224f939527518255325c3069f950f20d0d18a6266bfe`
 - source kind: `article`
 
 #### `metadata`
@@ -1426,7 +1426,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/05-planned-or-spontaneous-trip/lesson.html`
-- sha256: `d731fa704f81b24be0d601deaf5243ae04a125603a58aad433c7dbfbe45c7a1e`
+- sha256: `4009dca319d5a6eea8fdad44678569063f971bd501a401d90283ba2cc5a69ba8`
 - source kind: `article`
 
 #### `metadata`
@@ -1584,7 +1584,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/06-solo-or-group-travel/lesson.html`
-- sha256: `1fd36555d456955607b570017f3ab8080ef4cdf40c33b9011fbe7b87c7597846`
+- sha256: `4e34cdb8bd9c15967772c4b5165f395d980991817c38541aac0ef1243b206e4b`
 - source kind: `article`
 
 #### `metadata`
@@ -1740,7 +1740,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/06-solo-or-group-travel/lesson.html`
-- sha256: `4026838d2618842d5b866fddf600661e72b9846b3c3819829742b9adb84d2c6f`
+- sha256: `d7c7aaa331edb18f04bcb05434b362c3b6aa48ce883bb0981a90afec388204b3`
 - source kind: `article`
 
 #### `metadata`
@@ -1898,7 +1898,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/07-city-or-countryside/lesson.html`
-- sha256: `42534d0e3da15bbf8b75ea397ddd8f8768658b4c72bdced5ef6e38f091904301`
+- sha256: `c8c39884c8548a0af609942cda10745cd61d14c6381d927f22f4aefbe7e358bd`
 - source kind: `article`
 
 #### `metadata`
@@ -2054,7 +2054,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/07-city-or-countryside/lesson.html`
-- sha256: `63c9a3acc92bf316152a529f48e559251e72deea980e1259e3f0c4314b9ea38b`
+- sha256: `fe492f7831d58cc99fde41d0301ae10b0745fac89964525c5d54689d27501b41`
 - source kind: `article`
 
 #### `metadata`
@@ -2212,7 +2212,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/08-no-internet-or-no-air-conditioning/lesson.html`
-- sha256: `b336668372906894ef4f58da1c403d7d6a835b540ec9c6543a57a830ea1fea02`
+- sha256: `5c37275bf9712dfdcfb4a7b3d54a1fd41457f8adcd6c6ac66f8487881a7d0995`
 - source kind: `article`
 
 #### `metadata`
@@ -2375,7 +2375,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/08-no-internet-or-no-air-conditioning/lesson.html`
-- sha256: `95ecb46c85ed70fc56e3c8709b35bc3c602939433289c0c2380c11514040c175`
+- sha256: `3518f025f0e3b5bce78164aa30d3ba9c226e0bfbf7a86a8c92e527edadb921b6`
 - source kind: `article`
 
 #### `metadata`
@@ -2540,7 +2540,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/09-work-life-balance-or-high-salary/lesson.html`
-- sha256: `05195c3abb3dd0244cef413ca76b36ad36c5812a5ab249f441ad61f0d8f806cc`
+- sha256: `0733d4bb1422dd6512fcaea382c7609d70f3d0896fa7d86f26a446a454ff111a`
 - source kind: `article`
 
 #### `metadata`
@@ -2703,7 +2703,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/09-work-life-balance-or-high-salary/lesson.html`
-- sha256: `fb19fa5a7c30eacdccab95d9446c8d3e1894a1752188c7bb00d6026485c195cd`
+- sha256: `d06b304316458c77a5eff653d0f3b31b84aac4da8ea15d815ce379e0242fa665`
 - source kind: `article`
 
 #### `metadata`
@@ -2868,7 +2868,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/10-remote-work-or-office/lesson.html`
-- sha256: `a75ca818692b5e58bd55d2c268b5ee3ebe3cef5ee1ad6cd124851113f9c84306`
+- sha256: `715d646bfa8cdeca42deab44b5594c59ffe9d011e1abc35de1d297422bf3eb56`
 - source kind: `article`
 
 #### `metadata`
@@ -3031,7 +3031,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/10-remote-work-or-office/lesson.html`
-- sha256: `ff71dc88ed1089f1ccbcdcab2577c7c18d79237f4dd6c80d7d5017465bdf18fa`
+- sha256: `277e13cc4744f6d300f283de1124a18838e31f9ed3ee3f5400ab59078fd0a7b1`
 - source kind: `article`
 
 #### `metadata`
@@ -3196,7 +3196,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/11-cafe-or-home-study/lesson.html`
-- sha256: `ee7d5b46f3e4e2a0ee1de52886122c2a1cffce7a3fc2425dbe84b739654626cf`
+- sha256: `560f596df199ded2e75581e6684512fc86ba401a3b4d63625edb923399cccc0c`
 - source kind: `article`
 
 #### `metadata`
@@ -3352,7 +3352,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/11-cafe-or-home-study/lesson.html`
-- sha256: `b0c8f49ca31b5ec17cf50ed822558cd38ca995f9c951297871e7b55c3585df23`
+- sha256: `59d3bd221ba36be2f788dda675d4058c2b98cc43044329f21c64a1fdbd0597cb`
 - source kind: `article`
 
 #### `metadata`
@@ -3510,7 +3510,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/12-online-or-in-store-shopping/lesson.html`
-- sha256: `f677b7f34eec22f40fda0e692c61784d393125ba7c391e26314178af815e784c`
+- sha256: `7fb6dcae0edc9d87e94f1d7069b0c74a4f0672819a2f452f7fe26703f8d794d3`
 - source kind: `article`
 
 #### `metadata`
@@ -3666,7 +3666,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/12-online-or-in-store-shopping/lesson.html`
-- sha256: `d1dd562785892fce5835cef37ba0141ef99b34db2aafc4e21d049e6d9339134e`
+- sha256: `a704e26a2526723daff0e9074a9f95fbdeb1607f583d56ab7d6ceba4d6b8b826`
 - source kind: `article`
 
 #### `metadata`
@@ -3824,7 +3824,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/13-never-forget-or-choose-what-to-forget/lesson.html`
-- sha256: `e806c1048d40c6899a9a23177d5cc02e66e2ea22c4c01bf4bde129aa2febdfe1`
+- sha256: `2624160dfc7bdc4426bc3a4b60b33497f27bcb9c2cebe213ab324e8a7cb5de5d`
 - source kind: `article`
 
 #### `metadata`
@@ -3987,7 +3987,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/13-never-forget-or-choose-what-to-forget/lesson.html`
-- sha256: `6c0d321b7c176a93edcfbbbdffdc58f3bba542c4d763840015d50641a107372a`
+- sha256: `a3734ad7685f12159dc029b458d3686bc30aa3984c8286a94d9201662e6333e8`
 - source kind: `article`
 
 #### `metadata`
@@ -4152,7 +4152,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-advanced/lessons/14-hidden-rich-or-respected-ordinary/lesson.html`
-- sha256: `386f1f0347602b1cef2bb99e68d63c98e1ae45e862643aea15fd1ebd98c28b04`
+- sha256: `8f0c4302950fc19f608100ffa79a42268c8a9d28c019949d148acc31510048ed`
 - source kind: `article`
 
 #### `metadata`
@@ -4315,7 +4315,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-balance-games-intermediate/lessons/14-hidden-rich-or-respected-ordinary/lesson.html`
-- sha256: `41702e96498de99badcddba89fa35bdd53b55fc72ed8e5a43ef8273277779d81`
+- sha256: `d70e6852c40ba05f7f5f860c1955f7e48bf2babaef48ac4bd0b35351c36d6f0f`
 - source kind: `article`
 
 #### `metadata`

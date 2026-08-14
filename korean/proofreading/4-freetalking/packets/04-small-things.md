@@ -12,7 +12,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-advanced/lessons/01-petty-annoyance/lesson.html`
-- sha256: `41983c9f80f6e9e158ee60d788be1318bdf727b43530dce3f08a1b5b4a81832f`
+- sha256: `9b9251299fab0d03682b506802ef6b34ec0ce8962709e5dd54685682ad06aad6`
 - source kind: `model-story`
 
 #### `metadata`
@@ -151,7 +151,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-intermediate/lessons/01-petty-annoyance/lesson.html`
-- sha256: `54d5ca413550614053faefd7161147a58d3d2a45574f1f62fd2dfab153f10fcb`
+- sha256: `2308da03c1cc1ac34096394a7e8c643f4dbcd026690e2d8a914678e6d905a200`
 - source kind: `model-story`
 
 #### `metadata`
@@ -292,7 +292,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-advanced/lessons/02-my-tmi/lesson.html`
-- sha256: `b98b8a60d317a0b0ec668240ae40fc8bcf440307d8c12ec09724dd0eb2c87f49`
+- sha256: `34e8b0e3917d54cbbed891ddf175ef86bc13bced2aa5f18162a636da627f4532`
 - source kind: `model-story`
 
 #### `metadata`
@@ -400,6 +400,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그걸 아는 사람은 어떤 반응을 보여요?
 - `question.ja` · JA: それを知っている人は、どんな反応をしますか？
+- `tutorGuidance.ko` · KO: 주변 사람이 실제로 한 말이나 표정을 구체적으로 물어보세요.
 - `followUp.1.ko` · KO: 웃었던 사람이 있어요?
 - `followUp.2.ko` · KO: 같이 하는 사람도 있어요?
 - `followUp.3.ko` · KO: 그만하라고 한 적은요?
@@ -431,7 +432,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-intermediate/lessons/02-my-tmi/lesson.html`
-- sha256: `45e5ad082f4f474ceafc3a0cbc95a5a2b4182809c2de851d5097ddc0df990918`
+- sha256: `347210b041dca2dec5746c5394bf05c6421377c6e5f85d571dd36b13411602b9`
 - source kind: `model-story`
 
 #### `metadata`
@@ -539,6 +540,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그걸 아는 사람은 어떤 반응을 보여요?
 - `question.ja` · JA: それを知っている人は、どんな反応をしますか？
+- `tutorGuidance.ko` · KO: 주변 사람이 실제로 한 말이나 표정을 구체적으로 물어보세요.
 - `followUp.1.ko` · KO: 웃었던 사람이 있어요?
 - `followUp.2.ko` · KO: 같이 하는 사람도 있어요?
 - `followUp.3.ko` · KO: 그만하라고 한 적은요?
@@ -572,7 +574,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-advanced/lessons/03-weird-habit/lesson.html`
-- sha256: `d9da0f519f32d9f52680e59da4f76df6083cf484b67e5a07948d29bc0782e217`
+- sha256: `d161af892bb67d8e938ab9ff81040bdc5e973e0821cee30bd0d94da5aa124cdc`
 - source kind: `model-story`
 
 #### `metadata`
@@ -711,7 +713,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-intermediate/lessons/03-weird-habit/lesson.html`
-- sha256: `554ff57057a345e76fd5102af7d98fab3527a0c1a03b7660e00fc35045ce909d`
+- sha256: `e3e4e99c7b4634cd1ed5854c0cbd617ad138b6a3b73bd0c9d3106346dc251f1e`
 - source kind: `model-story`
 
 #### `metadata`
@@ -852,7 +854,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-advanced/lessons/04-rainy-day-me/lesson.html`
-- sha256: `e4aa80834477dd55ce6f7e970ed60ee4b1caf6195f3ab0d9847ee671cc576c04`
+- sha256: `ba9d4633f32429893ece8e4e39e5f471fe329608bcbe82f741b8fa13a46c49f0`
 - source kind: `model-story`
 
 #### `metadata`
@@ -991,7 +993,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-intermediate/lessons/04-rainy-day-me/lesson.html`
-- sha256: `5d55226eb0c907ab1ed1b2d989733ccf1f6f9d94b2b69fef99fff5e70001f074`
+- sha256: `94137566114b55576298ed5a307ed8a54550ebb56195b6fe9e62e50a5bde48bf`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1132,7 +1134,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-advanced/lessons/05-energy-reset/lesson.html`
-- sha256: `c5b9af01011795969a881cff7264201d173da6d0f09c639b60e29e0da0bff15e`
+- sha256: `589b3e7fde0496799cd7082ae73135ec40c326751fd1659828961f99e1599be7`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1271,7 +1273,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-intermediate/lessons/05-energy-reset/lesson.html`
-- sha256: `b663c69653f3b760cc546b25aed5b00fbff3ee34b85320265934b08a563c4b5c`
+- sha256: `b6f1d100bd33ca2f9347c5463d25d25d5dd4df7d93edbbb08d441c91d396be92`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1412,7 +1414,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-advanced/lessons/06-stress-relief/lesson.html`
-- sha256: `459c563511daf819d1ed3e51916d37008dae479c814b6fb390cfc7d3665746b2`
+- sha256: `37295b0f9ae7c253f95bf33af2e6432c9379bb27e8699cd3eedae4d5795e8eab`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1551,7 +1553,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-intermediate/lessons/06-stress-relief/lesson.html`
-- sha256: `5bd48308b0f44080c4c66de37dad725ad058e9e46b775bc3d9342a15170bddc4`
+- sha256: `122c97a4966b22a8ce146384f194f4118d1c548f6addb556c9f0f7d5f1dd3bef`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1692,7 +1694,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-advanced/lessons/07-one-superstition/lesson.html`
-- sha256: `b6e3d85fe36f0d0cc24d511d1e3bbd2e236f822c2d2b9972297712a4601486f2`
+- sha256: `7368bd0a2ea94e6d9d30bfdb7693aaa2e4eec7fc123965c7383a552c515fa0fb`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1831,7 +1833,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-intermediate/lessons/07-one-superstition/lesson.html`
-- sha256: `ac5a6c009f62bee26c870c8cf07266face59bad613a079683edaad863945efc5`
+- sha256: `d241056a6cfb134765f5df47d36fe7009186e8a0720588e0781e257b8bc5d832`
 - source kind: `model-story`
 
 #### `metadata`
@@ -1972,7 +1974,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-advanced/lessons/08-weekend-routine/lesson.html`
-- sha256: `792d3d0c447f3e4d9efd8ed6a80122a5dd02400b2e33f1b1ba49dcb842a1c41d`
+- sha256: `f2bea81f83670e2ab72f5338192f86c0522842058da736a4cf5d4d40f4eb56e4`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2111,7 +2113,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-intermediate/lessons/08-weekend-routine/lesson.html`
-- sha256: `56c7ef7da4014fa3c2a49bb4996f8b1769f56c259501bc3ff75d43a1957e292a`
+- sha256: `ae8b9639ced79c121f32492eb15d386a6d26931ca6d158667fa4146791da5189`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2252,7 +2254,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-advanced/lessons/09-house-rule/lesson.html`
-- sha256: `7b7439f599bd6bc1c534c851c6ef91f776851c4383ef04a06571ca7238ddc051`
+- sha256: `35de58c09967c25ff35364eb7590f1918d3e44b8edc23bacfb411dc79b87eb1f`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2360,6 +2362,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 규칙 때문에 생긴 웃긴 일이 뭐예요?
 - `question.ja` · JA: そのルールのせいで起きたおもしろい出来事は何ですか？
+- `tutorGuidance.ko` · KO: 누가 무엇을 했는지 장면 순서대로 말하게 해 주세요.
 - `followUp.1.ko` · KO: 누가 함께 있었어요?
 - `followUp.2.ko` · KO: 왜 웃겼어요?
 - `followUp.3.ko` · KO: 가족에게 말했어요?
@@ -2391,7 +2394,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-intermediate/lessons/09-house-rule/lesson.html`
-- sha256: `fc04dd15e04e347423d15681b6179477b56f323b98bdb1a37274f686f0c3b414`
+- sha256: `cc016e1b9f2b166458b8010fa3f49cf87946ef7d41ddf0727b5d813403470a40`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2499,6 +2502,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 규칙 때문에 생긴 웃긴 일이 뭐예요?
 - `question.ja` · JA: そのルールのせいで起きたおもしろい出来事は何ですか？
+- `tutorGuidance.ko` · KO: 누가 무엇을 했는지 장면 순서대로 말하게 해 주세요.
 - `followUp.1.ko` · KO: 누가 함께 있었어요?
 - `followUp.2.ko` · KO: 왜 웃겼어요?
 - `followUp.3.ko` · KO: 가족에게 말했어요?
@@ -2532,7 +2536,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 고급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-advanced/lessons/10-cringe-memory/lesson.html`
-- sha256: `76a004e592472c808fa1e5570e42ecf9e938841a6dbfb71159471d20abf9b783`
+- sha256: `c720964cda8ef1c3fb6812dfba39d7c0d8b9ac197a9495672e52bad38e7d88e3`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2624,6 +2628,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 자다가 갑자기 떠오르는 이불킥 장면은 뭐예요?
 - `question.ja` · JA: 寝ていて急に思い出す、布団を蹴りたくなる場面は何ですか？
+- `tutorGuidance.ko` · KO: 가볍게 웃을 수 있는 기억만 말해도 되고, 떠오르지 않거나 불편하면 건너뛰어도 된다고 안내해 주세요. 이유와 장면이 나올 때까지 기다려 주세요.
 - `followUp.1.ko` · KO: 몇 년 전 일이에요?
 - `followUp.2.ko` · KO: 왜 아직 기억나요?
 - `followUp.3.ko` · KO: 함께 있던 사람은 기억할까요?
@@ -2640,6 +2645,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 일을 바로 넘기기 위해 어떤 행동을 했어요?
 - `question.ja` · JA: その出来事をすぐやり過ごすために、どんな行動をしましたか？
+- `tutorGuidance.ko` · KO: 당황한 뒤 상황을 넘기려고 한 행동을 순서대로 말하게 해 주세요.
 - `followUp.1.ko` · KO: 자리를 떠났어요?
 - `followUp.2.ko` · KO: 변명을 했어요?
 - `followUp.3.ko` · KO: 집에 가서 누구에게 말했어요?
@@ -2671,7 +2677,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 ### 중급
 
 - source: `korean/tracks/4-freetalking/courses/talk-small-things-intermediate/lessons/10-cringe-memory/lesson.html`
-- sha256: `a2dbd0b6e49426e67bc8cf1c1a85aedd0a8cfa4aa9058416cc971c32e8bdc216`
+- sha256: `a46b5d0c83cdb837cc90ad114c947e42d622ee5de3dcfdc3f08a746645671431`
 - source kind: `model-story`
 
 #### `metadata`
@@ -2763,6 +2769,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 자다가 갑자기 떠오르는 이불킥 장면은 뭐예요?
 - `question.ja` · JA: 寝ていて急に思い出す、布団を蹴りたくなる場面は何ですか？
+- `tutorGuidance.ko` · KO: 가볍게 웃을 수 있는 기억만 말해도 되고, 떠오르지 않거나 불편하면 건너뛰어도 된다고 안내해 주세요. 이유와 장면이 나올 때까지 기다려 주세요.
 - `followUp.1.ko` · KO: 몇 년 전 일이에요?
 - `followUp.2.ko` · KO: 왜 아직 기억나요?
 - `followUp.3.ko` · KO: 함께 있던 사람은 기억할까요?
@@ -2779,6 +2786,7 @@ HTML이 원본이다. 이 파일은 중요한 텍스트만 모은 검수용 투�
 
 - `question.ko` · KO: 그 일을 바로 넘기기 위해 어떤 행동을 했어요?
 - `question.ja` · JA: その出来事をすぐやり過ごすために、どんな行動をしましたか？
+- `tutorGuidance.ko` · KO: 당황한 뒤 상황을 넘기려고 한 행동을 순서대로 말하게 해 주세요.
 - `followUp.1.ko` · KO: 자리를 떠났어요?
 - `followUp.2.ko` · KO: 변명을 했어요?
 - `followUp.3.ko` · KO: 집에 가서 누구에게 말했어요?
