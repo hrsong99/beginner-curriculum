@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `it looks like` · `on the face of it`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `suggest that` is followed by the inferred clause; `would` in `That would explain` marks a tentative logical conclusion, not a future event.
 - **Japanese-L1 risk:** hedged inference is a register Japanese does well; the English frames just need supplying.
 
 ## Sequence guardrails

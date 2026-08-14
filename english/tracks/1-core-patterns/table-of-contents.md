@@ -1107,6 +1107,7 @@ someone else said.*
 - "I should have called earlier." — `I should have ___.`
 - "I shouldn't have said anything." — `I shouldn't have ___.`
 - *Expressions:* `my bad` · `lesson learned`
+- *Grammar:* `should have` + past participle looks back at a better past choice; `shouldn't have` names an action that would have been better avoided.
 - *JP:* `〜べきだった` maps well, so the meaning is free. The cost is phonological — `should've`
   reduces to /ʃʊdəv/ and learners produce `should have` in full, which sounds emphatic or stilted.
 
@@ -1118,6 +1119,7 @@ someone else said.*
 - "I might have left it at home." — `I might have ___.`
 - "The traffic must have been bad." — `___ must have been ___.`
 - *Expressions:* `come to think of it` · `that would explain it`
+- *Grammar:* `might have` + past participle gives a possible past explanation; `must have` + past participle gives a confident conclusion about the past.
 - *JP:* deduction and obligation share `must` again (see 41, 68). At this level the clash is worth
   a direct contrast rather than another mention.
 
@@ -1129,6 +1131,7 @@ someone else said.*
 - "The train had already left when we got there." — `___ had already ___ when we ___.`
 - "By the time we arrived, it had closed." — `By the time we ___, it had ___.`
 - *Expressions:* `we just missed it` · `of all days`
+- *Grammar:* use `had` + past participle for the earlier of two past events; put the later event in the simple past.
 - *JP:* Japanese marks sequence with connectives rather than tense, so the past perfect feels
   redundant to the learner — the `when` clause already says it. Teach it where the order is
   genuinely ambiguous without it, or it will read as decoration.
@@ -1141,6 +1144,7 @@ someone else said.*
 - "I was going to call, but I ran out of time." — `I was going to ___, but ___.`
 - "I'd planned to finish it today, but I ran out of time." — `I'd planned to ___, but ___.`
 - *Expressions:* `it slipped my mind` · `something came up`
+- *Grammar:* `was going to` + plain verb and `had planned to` + plain verb describe an earlier intention; the `but` clause explains why it did not happen.
 - *JP:* `〜つもりだった` maps cleanly. Useful precisely because it is a socially necessary excuse
   frame — high payoff for low grammatical cost.
 
@@ -1152,6 +1156,7 @@ someone else said.*
 - "I used to walk to school." — `I used to ___.`
 - "I don't anymore." — `I don't ___ anymore.`
 - *Expressions:* `back then` · `these days`
+- *Grammar:* `used to` + plain verb describes a past habit or state that is no longer true; `don't ... anymore` states the present contrast.
 - *JP:* `よく〜した` covers habit but not the *and not now* implication that `used to` carries.
   That implication is the lesson; the form is easy.
 
@@ -1165,6 +1170,7 @@ someone else said.*
 - "I had my phone repaired." — `I had my ___ ___ed.`
 - "I need to get the screen replaced." — `I need to get ___ ___ed.`
 - *Expressions:* `Where can I get this ___ed?` · `while you wait`
+- *Grammar:* `have/get` + thing + past participle means arranging for someone else to do a service to that thing.
 - *JP:* Japanese `〜てもらう` covers the same service relationship. Keep both patterns on
   `have/get + thing + past participle`; adding `get someone to do something` would create a second
   causative system and overload the lesson.
@@ -1175,6 +1181,7 @@ someone else said.*
 - "It was supposed to be ready today." — `It was supposed to be ___ by ___.`
 - "Could you check what's happened to it?" — `Could you check what's happened to ___?`
 - *Expressions:* `Do you have an update?` · `When can I expect it?`
+- *Grammar:* `be supposed to` + plain verb expresses an agreed expectation; `what has happened to` asks about the present result of an earlier event.
 - *JP:* `〜はずだった` gives the expectation, but English `was supposed to` can sound accusatory
   without a neutral follow-up. State the agreed expectation, then ask for the update.
 
@@ -1186,6 +1193,7 @@ someone else said.*
 - "This time tomorrow, I'll be flying home." — `This time ___, I'll be ___ing.`
 - "At six, I'll still be travelling." — `At ___, I'll still be ___ing.`
 - *Expressions:* `all being well` · `fingers crossed`
+- *Grammar:* `will be` + `-ing` places an activity in progress at a stated future time; keep the future time anchor with the frame.
 - *JP:* Japanese often uses one non-past form for both a future event and an activity in progress.
   English uses `will be ___ing` to place the listener inside that later moment; keep the time anchor
   attached to the frame.
@@ -1198,6 +1206,7 @@ someone else said.*
 - "I should have it ready by Friday." — `I should have ___ ready by ___.`
 - "It may take another two days." — `It may take another ___.`
 - *Expressions:* `with any luck` · `barring delays`
+- *Grammar:* `should have` + thing + adjective gives an expected state by a deadline; `may` + plain verb marks what is still uncertain.
 - *JP:* `should` here is an expectation, not advice, and `have it ready` describes the expected
   state rather than the future-perfect operation. Pair the estimate with honest uncertainty.
 
@@ -1207,6 +1216,7 @@ someone else said.*
 - "Let me know once it's ready." — `Let me know once ___.`
 - "I'll start as soon as I hear back." — `I'll ___ as soon as ___.`
 - *Expressions:* `no rush` · `keep me posted`
+- *Grammar:* after `once` and `as soon as`, use a present form for the future trigger; put `will` in the action that follows, not in the time clause.
 - *JP:* present-after-time-word again (see 58). It resurfaces here under workplace load, which is
   where it actually breaks.
 
@@ -1220,6 +1230,7 @@ someone else said.*
 - "I'm responsible for customer support." — `I'm responsible for ___.`
 - "I mainly work with the sales team." — `I mainly work with ___.`
 - *Expressions:* `day to day` · `I report to ___`
+- *Grammar:* `responsible for` takes a noun or `-ing` phrase; `work with` takes the person, team or thing involved.
 - *JP:* prepositions again — `responsible **for**`, `work **with**`, `report **to**`. Store each on
   its phrase; there is no rule to derive.
 
@@ -1231,6 +1242,7 @@ someone else said.*
 - "We're on track to finish by Friday." — `We're on track to ___ by ___.`
 - "The main issue is that the supplier's late." — `The main issue is that ___.`
 - *Expressions:* `heads up` · `worst case`
+- *Grammar:* `on track to` + plain verb describes projected progress; `the main issue is that` + clause names the risk affecting it.
 - *JP:* delivering bad news early and directly is an English workplace norm that conflicts with a
   Japanese preference for preparing the ground. Name that explicitly — it is a pragmatics lesson
   wearing a grammar lesson's clothes.
@@ -1243,6 +1255,7 @@ someone else said.*
 - "So what you're saying is we need more time." — `So what you're saying is ___.`
 - "What do you mean by 'ready'?" — `What do you mean by ___?`
 - *Expressions:* `just to be clear` · `correct me if I'm wrong`
+- *Grammar:* `what you're saying` acts as the subject of the first frame; `mean by` is followed by the word or idea you want clarified.
 - *JP:* asking for clarification can feel like implying the speaker was unclear. Frame it as
   competence, not criticism — the frames themselves are the reassurance.
 
@@ -1254,6 +1267,7 @@ someone else said.*
 - "I was wondering if you could extend the deadline." — `I was wondering if you could ___.`
 - "What I can do is send you the first half." — `What I can do is ___.`
 - *Expressions:* `I appreciate it` · `does that work?`
+- *Grammar:* `I was wondering if you could` + plain verb uses past forms for polite distance; `What I can do is` + plain verb introduces a concrete offer.
 - *JP:* the past form here is **distancing, not tense** — `I was wondering` is happening right now.
   That is invisible to a learner reading it as past, and it is the whole mechanism of English
   politeness. This is the lesson Unit 4 was preparing for.
@@ -1266,6 +1280,7 @@ someone else said.*
 - "I see your point, but it may cost too much." — `I see your point, but ___.`
 - "The part I'm not sure about is the timing." — `The part I'm not sure about is ___.`
 - *Expressions:* `fair enough` · `where I'm coming from`
+- *Grammar:* `but` introduces the different view; `the part ... is` focuses the disagreement on one specific point.
 - *JP:* direct contradiction is costlier in Japanese, so learners often soften into vagueness and
   are read as agreeing. The frames here let them be clear *and* polite — which is the point.
 
@@ -1275,6 +1290,7 @@ someone else said.*
 - "Let me get back to you on that." — `Let me get back to you on ___.`
 - "Can I check and confirm by tomorrow?" — `Can I ___ by ___?`
 - *Expressions:* `off the top of my head` · `leave it with me`
+- *Grammar:* after `let`, use object + plain verb (`let me get`); `by` marks the latest time for the promised follow-up.
 - *JP:* extremely high-value: it replaces the ambiguous `chotto...` which English speakers read as
   a soft yes. One of the most useful frames in Part 2.
 
@@ -1291,6 +1307,7 @@ you've understood, make a difficult request, and postpone one decision.*
 - "It's slightly more expensive." — `It's slightly more ___.`
 - "It's nowhere near as fast as the train." — `It's nowhere near as ___ as ___.`
 - *Expressions:* `marginally` · `a fraction more`
+- *Grammar:* put `slightly` before a comparative for a small difference; `nowhere near as` + adjective + `as` means far less than the comparison.
 - *JP:* Japanese degree adverbs map roughly but the English set is finely graded
   (`slightly` < `somewhat` < `considerably` < `far`). Teach as a scale, not as synonyms.
 
@@ -1300,6 +1317,7 @@ you've understood, make a difficult request, and postpone one decision.*
 - "Hardly anyone came." — `Hardly anyone ___.`
 - "There's barely any left." — `There's barely any ___.`
 - *Expressions:* `next to nothing` · `few and far between`
+- *Grammar:* `hardly` and `barely` already mean almost not, so keep the verb positive; use `anyone` for people and `any` + noun for an amount.
 - *JP:* `hardly` is not a negative word but behaves like one, so `hardly anyone didn't come` is
   predicted from double-marking.
 
@@ -1311,6 +1329,7 @@ you've understood, make a difficult request, and postpone one decision.*
 - "It's not so much a problem as a delay." — `It's not so much ___ as ___.`
 - "I'd call it a setback rather than a failure." — `I'd call it ___ rather than ___.`
 - *Expressions:* `if anything` · `strictly speaking`
+- *Grammar:* `not so much A as B` and `B rather than A` replace one description with another; keep the two sides in the same grammatical form.
 - *JP:* an elegant disagreement device with no direct Japanese counterpart, and exactly the register
   a Japanese speaker wants — softening while still being precise.
 
@@ -1322,6 +1341,7 @@ you've understood, make a difficult request, and postpone one decision.*
 - "The vast majority of people prefer it." — `The vast majority of ___ ___.`
 - "Only a handful said no." — `Only a handful ___.`
 - *Expressions:* `by and large` · `across the board`
+- *Grammar:* `the majority of` + plural group noun normally takes a plural verb; `a handful` can stand alone when the group is already clear.
 - *JP:* countability resurfaces — `the majority of **people**`, not `person`. Unit 2's plural rule
   under B2 load.
 
@@ -1333,6 +1353,7 @@ you've understood, make a difficult request, and postpone one decision.*
 - "There's barely enough to go around." — `There's barely enough to ___.`
 - "That should just about cover it." — `That should just about ___.`
 - *Expressions:* `cutting it fine` · `at a push`
+- *Grammar:* `barely enough to` + plain verb means almost insufficient; `should just about` + plain verb means expected to be only just sufficient.
 - *JP:* high-frequency in real speech, low presence in textbooks. Good candidate to keep even if
   the unit is culled.
 
@@ -1346,6 +1367,7 @@ you've understood, make a difficult request, and postpone one decision.*
 - "I'm not entirely convinced that it'll work." — `I'm not entirely convinced that ___.`
 - "I'd want to see the numbers before deciding." — `I'd want to see ___ before ___ing.`
 - *Expressions:* `I have my doubts` · `on paper, yes`
+- *Grammar:* `convinced that` is followed by a clause; use `before` + `-ing` when the person deciding is the same person already named.
 - *JP:* understatement as disagreement is culturally familiar; the English *forms* are what's
   missing. Fast lesson, high payoff.
 
@@ -1355,6 +1377,7 @@ you've understood, make a difficult request, and postpone one decision.*
 - "To be fair, they did warn us." — `To be fair, ___.`
 - "That said, we still need a date." — `That said, ___.`
 - *Expressions:* `in fairness` · `having said that`
+- *Grammar:* `To be fair` introduces a concession, and `did` + plain verb can emphasise it; `That said` turns from the concession to the counterpoint.
 - *JP:* the concede-then-counter structure is stronger in English argumentation than in Japanese,
   where the concession may be read as agreement. Teach the pair as one move.
 
@@ -1364,6 +1387,7 @@ you've understood, make a difficult request, and postpone one decision.*
 - "Wouldn't it be better if we waited?" — `Wouldn't it be better if we ___?`
 - "What if we tried it the other way?" — `What if we ___?`
 - *Expressions:* `just a thought` · `worth considering`
+- *Grammar:* both suggestion frames use a past form after `if`; here the past makes the proposal tentative rather than locating it in past time.
 - *JP:* the negative question form is a trap given lesson 42 — but here it is rhetorical and expects
   agreement, not a yes/no. Name that difference.
 
@@ -1375,6 +1399,7 @@ you've understood, make a difficult request, and postpone one decision.*
 - "Where I'd push back is on the cost." — `Where I'd push back is on ___.`
 - "I don't think that takes the delay into account." — `I don't think that takes ___ into account.`
 - *Expressions:* `I take your point` · `let's park that`
+- *Grammar:* `Where I'd push back is on` focuses one area of disagreement; `take` + thing + `into account` means include it in the judgment.
 - *JP:* explicit disagreement markers are what allow English speakers to disagree *and* stay warm.
   Without them the learner's options are silence or bluntness.
 
@@ -1386,6 +1411,7 @@ you've understood, make a difficult request, and postpone one decision.*
 - "I meant next Friday, not this Friday." — `I meant ___, not ___.`
 - "What I was trying to say is that we need more time." — `What I was trying to say is that ___.`
 - *Expressions:* `let me rephrase` · `I put that badly`
+- *Grammar:* `I meant A, not B` replaces the mistaken detail; `What I was trying to say is that` + clause restates the intended message.
 - *JP:* taking the blame for the misunderstanding (`I put that badly`) is a strong English politeness
   move and maps well onto Japanese instincts. Very learnable here.
 
@@ -1397,6 +1423,7 @@ you've understood, make a difficult request, and postpone one decision.*
 - "I'd rather not join, if that's OK." — `I'd rather not ___, if that's OK.`
 - "Could we do it another time?" — `Could we ___ another time?`
 - *Expressions:* `I'll pass` · `take a rain check`
+- *Grammar:* `would rather not` takes a plain verb without `to`; `Could we` + plain verb turns the alternative into a polite question.
 - *JP:* Japanese refusal by trailing off is read in English as indecision, not refusal. The whole
   lesson is: in English, decline *explicitly* and soften *lexically*.
 
@@ -1410,6 +1437,7 @@ you've understood, make a difficult request, and postpone one decision.*
 - "That's mostly because of the delay." — `That's mostly because of ___.`
 - "A lot of it comes from a misunderstanding." — `A lot of it comes from ___.`
 - *Expressions:* `partly because of` · `the main reason`
+- *Grammar:* `because of` and `come from` are followed by a noun or `-ing` phrase, not a full subject–verb clause.
 - *JP:* cause is easy; **degree of cause** is new. Keep the production anchors spoken and concrete;
   more formal alternatives such as `largely due to` can stay receptive.
 
@@ -1421,6 +1449,7 @@ you've understood, make a difficult request, and postpone one decision.*
 - "The drop suggests that people didn't see it." — `___ suggests that ___.`
 - "That would explain the delay." — `That would explain ___.`
 - *Expressions:* `it looks like` · `on the face of it`
+- *Grammar:* `suggest that` is followed by the inferred clause; `would` in `That would explain` marks a tentative logical conclusion, not a future event.
 - *JP:* hedged inference is a register Japanese does well; the English frames just need supplying.
 
 **100. As a result, we had to reschedule — consequence**
@@ -1429,6 +1458,7 @@ you've understood, make a difficult request, and postpone one decision.*
 - "As a result, we had to reschedule." — `As a result, ___.`
 - "That meant we lost a week." — `That meant ___.`
 - *Expressions:* `knock-on effect` · `in turn`
+- *Grammar:* `As a result` links a new sentence to the cause just given; `That meant` + clause states the practical consequence.
 - *JP:* sentence-initial connectors are common in Japanese too, so this transfers — the risk is
   overuse, giving speech a written feel.
 
@@ -1438,6 +1468,7 @@ you've understood, make a difficult request, and postpone one decision.*
 - "It depends on whether they approve it." — `It depends on whether ___.`
 - "Either way, we should prepare." — `Either way, ___.`
 - *Expressions:* `up to them` · `we'll cross that bridge`
+- *Grammar:* `depend on whether` is followed by the unresolved possibility as a clause; `Either way` introduces what is true in both possible outcomes.
 - *JP:* `whether` vs `if` in this slot is arbitrary and needs to be chunked.
 
 **102. Otherwise, we'd have to start again — the other branch**
@@ -1446,6 +1477,7 @@ you've understood, make a difficult request, and postpone one decision.*
 - "Otherwise, we'd have to start again." — `Otherwise, we'd have to ___.`
 - "If that doesn't work, we could ask them." — `If that doesn't work, we could ___.`
 - *Expressions:* `as a last resort` · `plan B`
+- *Grammar:* `Otherwise` means `if that does not happen`; `would have to` gives the consequence, while `could` + plain verb offers a possible fallback.
 - *JP:* `otherwise` compresses a whole conditional clause into one word; learners tend to expand it
   back out. That is fine but wordy — show the compression.
 
@@ -1462,6 +1494,7 @@ tool to choose, and that is the difference between B1 and B2 English.*
 - "What worries me most is the cost." — `What ___ me most is ___.`
 - "What I'd suggest is waiting a week." — `What I'd suggest is ___.`
 - *Expressions:* `the real question is` · `bottom line`
+- *Grammar:* `What` + clause + `is` puts the focus after `is`; use a noun phrase or an `-ing` action for the focused suggestion.
 - *JP:* **word order re-entry, and now it works in the learner's favour** — Japanese fronts topics
   routinely, so this structure feels natural once they see it exists in English. One of the fastest
   wins in Part 2.
@@ -1474,6 +1507,7 @@ tool to choose, and that is the difference between B1 and B2 English.*
 - "It's the timing that matters, not the price." — `It's ___ that ___, not ___.`
 - "It was Sam who suggested it." — `It was ___ who ___.`
 - *Expressions:* `precisely` · `that's the thing`
+- *Grammar:* `It is/was` + focus + `that/who` + clause singles out one element; use `who` for a person and `that` for a thing or idea.
 - *JP:* this is what `が` does in Japanese, so the *function* is completely familiar and only the
   structure is new. Teach by translation of function, not of form.
 
@@ -1485,6 +1519,7 @@ tool to choose, and that is the difference between B1 and B2 English.*
 - "The longer we wait, the harder it'll be to catch up." — `The longer we ___, the harder it'll be to ___.`
 - "The sooner we start, the sooner we can finish." — `The sooner we ___, the sooner we can ___.`
 - *Expressions:* `every day counts` · `the less, the better`
+- *Grammar:* `the` + comparative clause, `the` + comparative clause links two changes; each half states how one change moves with the other.
 - *JP:* Japanese can express the same relationship with `〜ば〜ほど`, but English repeats `the`
   and changes the order. Keep both halves short enough to retrieve as one linked comparison.
 
@@ -1494,6 +1529,7 @@ tool to choose, and that is the difference between B1 and B2 English.*
 - "There's one thing I'd change." — `There's one thing I'd ___.`
 - "There are a couple of issues worth raising." — `There are ___ worth ___ing.`
 - *Expressions:* `if I may` · `while we're on it`
+- *Grammar:* choose `There's` or `There are` to agree with the following noun; `worth` is followed by an `-ing` form.
 - *JP:* uses the empty `there` from lesson 7 at full strength — a nice payoff for a Pre-A1 install.
 
 - *Spiral review:* `REL-01:transfer` · `DUMMY-01:transfer`
@@ -1504,6 +1540,7 @@ tool to choose, and that is the difference between B1 and B2 English.*
 - "As for the budget, we're still waiting." — `As for ___, ___.`
 - "Coming back to the timeline, we need a firm date." — `Coming back to ___, ___.`
 - *Expressions:* `on that note` · `while I remember`
+- *Grammar:* `As for` + noun introduces a topic; `Coming back to` + noun returns to one, and both topic phrases are set off with a comma.
 - *JP:* `〜については` maps almost exactly. Easy, and it makes long turns sound organised.
 
 - *Spiral review:* `PREP-01:transfer` · `REL-01:checkpoint`
@@ -1516,6 +1553,7 @@ tool to choose, and that is the difference between B1 and B2 English.*
 - "Would you be able to send it over?" — `Would you be able to ___?`
 - "Can you send it over when you get a sec?" — `Can you ___ when you get a sec?`
 - *Expressions:* `when you get a sec` · `at your earliest convenience`
+- *Grammar:* `Would you be able to` and `Can you` both take a plain verb; the first creates more distance, while the second suits an informal request.
 - *JP:* the learner's instinct is that more words = more polite, which mostly holds — but
   over-formality with a close colleague reads as coldness or sarcasm. Contrast the two levels and
   teach when each one is wrong.
@@ -1528,6 +1566,7 @@ tool to choose, and that is the difference between B1 and B2 English.*
 - "To put it bluntly, it won't work." — `To put it bluntly, ___.`
 - "Honestly? I'd walk away." — `Honestly? ___.`
 - *Expressions:* `no offence, but` · `frankly`
+- *Grammar:* `To put it bluntly` and sentence-level `Honestly` sit before the main clause and comment on how directly the speaker is about to talk.
 - *JP:* English lets you license directness by announcing it. That device has no Japanese equivalent
   and it solves a real problem for this learner.
 
@@ -1537,6 +1576,7 @@ tool to choose, and that is the difference between B1 and B2 English.*
 - "I hate to say it, but we're behind." — `I hate to say it, but ___.`
 - "I'm afraid there's been a problem." — `I'm afraid ___.`
 - *Expressions:* `unfortunately` · `bear with me`
+- *Grammar:* `I hate to say it, but` and `I'm afraid` are followed by the unwelcome clause; here `afraid` cushions news rather than expressing fear.
 - *JP:* cushioning transfers well; the risk is cushioning so much the news never lands. Pair the
   cushion with an explicit statement.
 
@@ -1548,6 +1588,7 @@ tool to choose, and that is the difference between B1 and B2 English.*
 - "Just so you know, the room's booked." — `Just so you know, ___.`
 - "Heads up — they moved the meeting." — `Heads up — ___.`
 - *Expressions:* `FYI` · `for what it's worth`
+- *Grammar:* `Just so you know` is followed by a full clause; `Heads up` stands outside the clause as an informal alert.
 - *JP:* useful precisely because it is neutral: neither asking nor blaming, which is a hard tone for
   learners to hit.
 
@@ -1559,6 +1600,7 @@ tool to choose, and that is the difference between B1 and B2 English.*
 - "That came across as rude." — `That came across as ___.`
 - "I didn't mean to sound rude." — `I didn't mean to sound ___.`
 - *Expressions:* `That wasn't my intention.` · `Let me rephrase that.`
+- *Grammar:* `come across as` + adjective describes the listener's impression; `mean to` + plain verb and `sound` + adjective describe the speaker's intent and tone.
 - *JP:* Japanese often handles unintended tone through apology without naming the interpretation.
   English can name how it **came across** while separating impact from intent; keep the description
   specific and give the other person a repair path.
@@ -1573,6 +1615,7 @@ tool to choose, and that is the difference between B1 and B2 English.*
 - "The underlying issue is how we scope things." — `The underlying issue is ___.`
 - "It's symptomatic of a bigger problem." — `It's symptomatic of ___.`
 - *Expressions:* `at root` · `the bigger picture`
+- *Grammar:* `the issue is` can be followed by a noun phrase or a `how/what/why` clause; `symptomatic of` is followed by the broader problem as a noun phrase.
 - *JP:* abstract nouns are the vocabulary tax of C1 and the reason opinion topics stall — see the
   Freetalking track's topic-selection rule. Build the nouns here so Freetalking can use them.
 
@@ -1584,6 +1627,7 @@ tool to choose, and that is the difference between B1 and B2 English.*
 - "That may be true for large teams, but not for small ones." — `That may be true for ___, but not for ___.`
 - "It's more complicated than that." — `It's more ___ than that.`
 - *Expressions:* `broadly speaking` · `with some caveats`
+- *Grammar:* `may be true for A, but not for B` limits a claim to one group; `ones` can replace a repeated plural noun, and `more` + adjective + `than` makes the comparison.
 - *JP:* partial agreement is native territory for this learner; the English forms turn a vague
   impression into a precise position.
 
@@ -1595,6 +1639,7 @@ tool to choose, and that is the difference between B1 and B2 English.*
 - "That's true, but it doesn't account for the cost." — `That's true, but it doesn't account for ___.`
 - "Even so, we still need to reduce the risk." — `Even so, we still need to ___.`
 - *Expressions:* `the problem is` · `that still leaves`
+- *Grammar:* `account for` + noun names what a claim fails to include; `Even so` introduces a counterpoint, and `still` marks the need that remains.
 - *JP:* the strongest argumentative move in the unit and the least available to a learner working
   from Japanese discourse norms, where the counter is often left implicit. Keep formal debate
   markers receptive rather than making them the learner's default voice.
@@ -1605,6 +1650,7 @@ tool to choose, and that is the difference between B1 and B2 English.*
 - "If anything, it's got worse." — `If anything, ___.`
 - "It's actually the opposite: demand has gone up." — `It's actually the opposite: ___.`
 - *Expressions:* `far from it` · `not at all`
+- *Grammar:* `If anything` is a fixed correction meaning the truth points in the opposite direction; after a colon, state the evidence for that reversal as a full clause.
 - *JP:* compact, very frequent in speech, and almost never taught. Good keep.
 
 - *Spiral review:* `PERF-01:transfer`
@@ -1615,6 +1661,7 @@ tool to choose, and that is the difference between B1 and B2 English.*
 - "Overall, I'd say it's worth it." — `Overall, I'd say ___.`
 - "What it comes down to for me is the cost." — `What it comes down to for me is ___.`
 - *Expressions:* `all in all` · `at the end of the day`
+- *Grammar:* `I'd say` + clause softens a final judgment; `What it comes down to for me is` + noun phrase puts the deciding factor last for focus.
 - *JP:* the closing move of an argument. Pairs directly with the Freetalking follow-up ladder's
   final rung, *has your answer changed?*
 
@@ -1629,6 +1676,7 @@ target comes first and production is deliberately gated.*
 - "You could see it as cautious, but I think it's too slow." — `You could see it as ___, but ___.`
 - "I can see why you'd call it a success, though." — `I can see why you'd call it ___, though.`
 - *Expressions:* `hmm, maybe` · `if you like`
+- *Grammar:* `see` + thing + `as` + description takes `as`, but `call` + thing + description does not; final `though` signals the speaker still has a reservation.
 - *JP:* Japanese does this constantly, so the *skill* is native and only the English exponents are
   missing. Unusually fast for a C1 lesson.
 
@@ -1640,6 +1688,7 @@ target comes first and production is deliberately gated.*
 - "Let's just say it didn't go well." — `Let's just say ___.`
 - "All I'll say is that we disagreed." — `All I'll say is that ___.`
 - *Expressions:* `enough said` · `read into that what you will`
+- *Grammar:* after `Let's just say`, use a full clause; after `All I'll say is`, use `that` + clause to state the limited information being offered.
 - *JP:* highly compatible with Japanese discourse, and it lets the learner be indirect *on purpose*
   rather than by accident.
 
@@ -1651,6 +1700,7 @@ target comes first and production is deliberately gated.*
 - "You might want to check that again." — `You might want to ___.`
 - "It might be worth asking her." — `It might be worth ___ing.`
 - *Expressions:* `no pressure` · `up to you, of course`
+- *Grammar:* `might want to` takes a plain verb; `might be worth` takes an `-ing` form. Both make a directive sound like a suggestion.
 - *JP:* **recognising this as an instruction is the lesson.** A learner who hears `you might want
   to` as optional will not act on it, and in a workplace that is a real cost. Receptive first.
 
@@ -1662,6 +1712,7 @@ target comes first and production is deliberately gated.*
 - "I'd rather not go into the details." — `I'd rather not go into ___.`
 - "Can we leave this for now?" — `Can we leave ___ for now?`
 - *Expressions:* `long story` · `another time, maybe`
+- *Grammar:* `would rather not` takes a plain verb without `to`; `go into` + topic means discuss it in detail, while `leave` + topic + `for now` postpones it.
 - *JP:* Japanese can set the boundary by trailing off; English listeners may hear that as hesitation.
   State the boundary explicitly, then soften the relationship rather than inventing a reason.
 
@@ -1673,6 +1724,7 @@ target comes first and production is deliberately gated.*
 - "It's not that simple, though." — `It's not that ___, though.`
 - "That's not really the question." — `That's not really ___.`
 - *Expressions:* `it depends what you mean by` · `let me back up`
+- *Grammar:* in these frames, `that` points back to the listener's description or question; `not really` and final `though` soften the rejection of that framing.
 - *JP:* the final and most advanced move: declining the premise. It requires everything from 83
   (clarify), 95 (push back) and 114 (qualify), which is why it closes the curriculum.
 

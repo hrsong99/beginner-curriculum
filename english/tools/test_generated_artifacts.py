@@ -28,6 +28,7 @@ class GeneratedArtifactTests(unittest.TestCase):
         expected = build_grammar_map.render(track_parsers.parse_core())
         actual = (ROOT / "reference/grammar-coverage-map.md").read_text(encoding="utf-8")
         self.assertEqual(actual, expected)
+        self.assertIn("**Missing grammar support:** 0 — none", actual)
 
     def test_every_brief_and_index_matches_its_parser(self):
         for track in sorted(track_parsers.PARSERS):

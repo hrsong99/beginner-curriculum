@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `day to day` · `I report to ___`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `responsible for` takes a noun or `-ing` phrase; `work with` takes the person, team or thing involved.
 - **Japanese-L1 risk:** prepositions again — `responsible **for**`, `work **with**`, `report **to**`. Store each on its phrase; there is no rule to derive.
 
 ## Planned spiral review

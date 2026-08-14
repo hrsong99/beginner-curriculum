@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `off the top of my head` · `leave it with me`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** after `let`, use object + plain verb (`let me get`); `by` marks the latest time for the promised follow-up.
 - **Japanese-L1 risk:** extremely high-value: it replaces the ambiguous `chotto...` which English speakers read as a soft yes. One of the most useful frames in Part 2.
 
 ## Planned spiral review

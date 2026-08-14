@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `no offence, but` · `frankly`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `To put it bluntly` and sentence-level `Honestly` sit before the main clause and comment on how directly the speaker is about to talk.
 - **Japanese-L1 risk:** English lets you license directness by announcing it. That device has no Japanese equivalent and it solves a real problem for this learner.
 
 ## Sequence guardrails

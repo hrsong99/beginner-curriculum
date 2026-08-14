@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `as a last resort` · `plan B`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `Otherwise` means `if that does not happen`; `would have to` gives the consequence, while `could` + plain verb offers a possible fallback.
 - **Japanese-L1 risk:** `otherwise` compresses a whole conditional clause into one word; learners tend to expand it back out. That is fine but wordy — show the compression.
 
 ## Planned spiral review

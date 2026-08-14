@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `we just missed it` · `of all days`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** use `had` + past participle for the earlier of two past events; put the later event in the simple past.
 - **Japanese-L1 risk:** Japanese marks sequence with connectives rather than tense, so the past perfect feels redundant to the learner — the `when` clause already says it. Teach it where the order is genuinely ambiguous without it, or it will read as decoration.
 
 ## Planned spiral review

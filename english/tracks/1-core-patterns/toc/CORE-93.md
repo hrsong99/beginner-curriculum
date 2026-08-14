@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `in fairness` · `having said that`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `To be fair` introduces a concession, and `did` + plain verb can emphasise it; `That said` turns from the concession to the counterpoint.
 - **Japanese-L1 risk:** the concede-then-counter structure is stronger in English argumentation than in Japanese, where the concession may be read as agreement. Teach the pair as one move.
 
 ## Sequence guardrails

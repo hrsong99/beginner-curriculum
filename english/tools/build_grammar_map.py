@@ -19,6 +19,21 @@ def cell(value: str | None) -> str:
 
 def render(lessons: list[dict]) -> str:
     missing_grammar = [lesson["no"] for lesson in lessons if not lesson["grammar"]]
+    missing_summary = (
+        f"{len(missing_grammar)} — Core {missing_grammar[0]}–{missing_grammar[-1]}"
+        if missing_grammar
+        else "0 — none"
+    )
+    grammar_status = (
+        [
+            "> **Open gap:** The rows named above have no authoritative `Grammar:` field. The",
+            "> generator marks them rather than reverse-engineering an explanation from the patterns.",
+        ]
+        if missing_grammar
+        else [
+            "> **Complete:** Every Core row has an authoritative learner-facing `Grammar:` field.",
+        ]
+    )
     registry = lessons[0]["reviewRegistry"]
     lines = [
         "# Core Grammar and Function Coverage Map",
@@ -41,12 +56,9 @@ def render(lessons: list[dict]) -> str:
         f"- **Lessons with planned spiral review:** {sum(bool(x['spiralReviews']) for x in lessons)}",
         f"- **Planned review returns:** {sum(len(x['spiralReviews']) for x in lessons)} across {len(registry)} stable targets",
         f"- **Explicit bounded survival chunks:** {sum(bool(x['boundedChunk']) for x in lessons)}",
-        f"- **Missing grammar support:** {len(missing_grammar)} — Core {missing_grammar[0]}–{missing_grammar[-1]}",
+        f"- **Missing grammar support:** {missing_summary}",
         "",
-        "> **Open gap:** Part 2 (Core 71–122) has patterns, expressions and JP-risk notes but no",
-        "> `Grammar:` field. The generator marks those rows rather than reverse-engineering a grammar",
-        "> explanation from the patterns. Adding those lines is curriculum authorship and should follow",
-        "> native review; it is not safe mechanical work while the catalog is under review.",
+        *grammar_status,
         "",
         "## Japanese-L1 spiral health",
         "",

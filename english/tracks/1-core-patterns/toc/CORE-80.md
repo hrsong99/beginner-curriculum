@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `no rush` · `keep me posted`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** after `once` and `as soon as`, use a present form for the future trigger; put `will` in the action that follows, not in the time clause.
 - **Japanese-L1 risk:** present-after-time-word again (see 58). It resurfaces here under workplace load, which is where it actually breaks.
 
 ## Planned spiral review

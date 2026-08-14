@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `partly because of` · `the main reason`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `because of` and `come from` are followed by a noun or `-ing` phrase, not a full subject–verb clause.
 - **Japanese-L1 risk:** cause is easy; **degree of cause** is new. Keep the production anchors spoken and concrete; more formal alternatives such as `largely due to` can stay receptive.
 
 ## Planned spiral review

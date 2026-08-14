@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `just to be clear` · `correct me if I'm wrong`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `what you're saying` acts as the subject of the first frame; `mean by` is followed by the word or idea you want clarified.
 - **Japanese-L1 risk:** asking for clarification can feel like implying the speaker was unclear. Frame it as competence, not criticism — the frames themselves are the reassurance.
 
 ## Planned spiral review

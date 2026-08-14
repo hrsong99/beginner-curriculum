@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `if anything` · `strictly speaking`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `not so much A as B` and `B rather than A` replace one description with another; keep the two sides in the same grammatical form.
 - **Japanese-L1 risk:** an elegant disagreement device with no direct Japanese counterpart, and exactly the register a Japanese speaker wants — softening while still being precise.
 
 ## Planned spiral review

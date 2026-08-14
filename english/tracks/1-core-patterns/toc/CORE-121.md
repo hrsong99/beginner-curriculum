@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `long story` · `another time, maybe`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `would rather not` takes a plain verb without `to`; `go into` + topic means discuss it in detail, while `leave` + topic + `for now` postpones it.
 - **Japanese-L1 risk:** Japanese can set the boundary by trailing off; English listeners may hear that as hesitation. State the boundary explicitly, then soften the relationship rather than inventing a reason.
 
 ## Planned spiral review

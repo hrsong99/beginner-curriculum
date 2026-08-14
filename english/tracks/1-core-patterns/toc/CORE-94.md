@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `just a thought` · `worth considering`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** both suggestion frames use a past form after `if`; here the past makes the proposal tentative rather than locating it in past time.
 - **Japanese-L1 risk:** the negative question form is a trap given lesson 42 — but here it is rhetorical and expects agreement, not a yes/no. Name that difference.
 
 ## Planned spiral review

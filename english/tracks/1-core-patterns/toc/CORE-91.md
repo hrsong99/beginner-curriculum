@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `cutting it fine` · `at a push`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `barely enough to` + plain verb means almost insufficient; `should just about` + plain verb means expected to be only just sufficient.
 - **Japanese-L1 risk:** high-frequency in real speech, low presence in textbooks. Good candidate to keep even if the unit is culled.
 
 ## Planned spiral review

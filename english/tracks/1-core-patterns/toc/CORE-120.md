@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `no pressure` · `up to you, of course`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `might want to` takes a plain verb; `might be worth` takes an `-ing` form. Both make a directive sound like a suggestion.
 - **Japanese-L1 risk:** **recognising this as an instruction is the lesson.** A learner who hears `you might want to` as optional will not act on it, and in a workplace that is a real cost. Receptive first.
 
 ## Planned spiral review

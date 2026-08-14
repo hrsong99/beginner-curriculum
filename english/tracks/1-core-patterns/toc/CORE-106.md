@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `if I may` · `while we're on it`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** choose `There's` or `There are` to agree with the following noun; `worth` is followed by an `-ing` form.
 - **Japanese-L1 risk:** uses the empty `there` from lesson 7 at full strength — a nice payoff for a Pre-A1 install.
 
 ## Planned spiral review

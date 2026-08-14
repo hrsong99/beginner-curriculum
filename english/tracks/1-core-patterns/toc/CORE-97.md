@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `I'll pass` · `take a rain check`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `would rather not` takes a plain verb without `to`; `Could we` + plain verb turns the alternative into a polite question.
 - **Japanese-L1 risk:** Japanese refusal by trailing off is read in English as indecision, not refusal. The whole lesson is: in English, decline *explicitly* and soften *lexically*.
 
 ## Planned spiral review

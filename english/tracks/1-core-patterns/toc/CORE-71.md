@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `my bad` · `lesson learned`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `should have` + past participle looks back at a better past choice; `shouldn't have` names an action that would have been better avoided.
 - **Japanese-L1 risk:** `〜べきだった` maps well, so the meaning is free. The cost is phonological — `should've` reduces to /ʃʊdəv/ and learners produce `should have` in full, which sounds emphatic or stilted.
 
 ## Planned spiral review

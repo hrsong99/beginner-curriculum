@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `heads up` · `worst case`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `on track to` + plain verb describes projected progress; `the main issue is that` + clause names the risk affecting it.
 - **Japanese-L1 risk:** delivering bad news early and directly is an English workplace norm that conflicts with a Japanese preference for preparing the ground. Name that explicitly — it is a pragmatics lesson wearing a grammar lesson's clothes.
 
 ## Planned spiral review

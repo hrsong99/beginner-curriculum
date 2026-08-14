@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `Do you have an update?` · `When can I expect it?`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `be supposed to` + plain verb expresses an agreed expectation; `what has happened to` asks about the present result of an earlier event.
 - **Japanese-L1 risk:** `〜はずだった` gives the expectation, but English `was supposed to` can sound accusatory without a neutral follow-up. State the agreed expectation, then ask for the update.
 
 ## Planned spiral review

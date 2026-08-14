@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `all in all` · `at the end of the day`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `I'd say` + clause softens a final judgment; `What it comes down to for me is` + noun phrase puts the deciding factor last for focus.
 - **Japanese-L1 risk:** the closing move of an argument. Pairs directly with the Freetalking follow-up ladder's final rung, *has your answer changed?*
 
 ## Sequence guardrails

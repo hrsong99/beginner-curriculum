@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `every day counts` · `the less, the better`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `the` + comparative clause, `the` + comparative clause links two changes; each half states how one change moves with the other.
 - **Japanese-L1 risk:** Japanese can express the same relationship with `〜ば〜ほど`, but English repeats `the` and changes the order. Keep both halves short enough to retrieve as one linked comparison.
 
 ## Sequence guardrails

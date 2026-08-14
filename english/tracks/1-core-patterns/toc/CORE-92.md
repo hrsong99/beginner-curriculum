@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `I have my doubts` · `on paper, yes`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `convinced that` is followed by a clause; use `before` + `-ing` when the person deciding is the same person already named.
 - **Japanese-L1 risk:** understatement as disagreement is culturally familiar; the English *forms* are what's missing. Fast lesson, high payoff.
 
 ## Sequence guardrails

@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `by and large` · `across the board`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `the majority of` + plural group noun normally takes a plural verb; `a handful` can stand alone when the group is already clear.
 - **Japanese-L1 risk:** countability resurfaces — `the majority of **people**`, not `person`. Unit 2's plural rule under B2 load.
 
 ## Planned spiral review

@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `hmm, maybe` · `if you like`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `see` + thing + `as` + description takes `as`, but `call` + thing + description does not; final `though` signals the speaker still has a reservation.
 - **Japanese-L1 risk:** Japanese does this constantly, so the *skill* is native and only the English exponents are missing. Unusually fast for a C1 lesson.
 
 ## Planned spiral review

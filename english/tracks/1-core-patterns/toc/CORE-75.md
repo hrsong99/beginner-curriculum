@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `back then` · `these days`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `used to` + plain verb describes a past habit or state that is no longer true; `don't ... anymore` states the present contrast.
 - **Japanese-L1 risk:** `よく〜した` covers habit but not the *and not now* implication that `used to` carries. That implication is the lesson; the form is easy.
 
 ## Planned spiral review

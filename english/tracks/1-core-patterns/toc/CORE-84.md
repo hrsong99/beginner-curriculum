@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `I appreciate it` · `does that work?`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `I was wondering if you could` + plain verb uses past forms for polite distance; `What I can do is` + plain verb introduces a concrete offer.
 - **Japanese-L1 risk:** the past form here is **distancing, not tense** — `I was wondering` is happening right now. That is invisible to a learner reading it as past, and it is the whole mechanism of English politeness. This is the lesson Unit 4 was preparing for.
 
 ## Planned spiral review

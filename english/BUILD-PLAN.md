@@ -25,7 +25,7 @@ here only when it changes the starting point for future work.
 | Review surface | generated 303-item catalog; native review in progress |
 | Core evidence | 122-row generated triage ledger complete; row-level EGP checks remain open |
 | Core audit | final progression, cognitive-load, naturalness and slot-quality pass applied with stable IDs; affected catalog rows require fresh native review |
-| Automated quality | 40 regression tests; all 4 English deck files pass with 0 errors and 0 warnings |
+| Automated quality | 42 regression tests; all 4 English deck files pass with 0 errors and 0 warnings |
 | Deployment | not ready: course identity, manifests and external sync path remain open |
 
 The curriculum is no longer waiting for basic architecture or tooling. Its main content risk is
@@ -72,12 +72,12 @@ the owner/product system supplies the final values.
 ### 1. Curriculum architecture
 
 - **Core:** 122 ordered two-pattern lessons in 22 units, Pre-A1 through working C1. All lessons
-  have can-dos, two patterns, expressions and Japanese-L1 risk notes. Core 1–70 have learner-facing
-  grammar support; Core 71–122 deliberately expose 52 missing grammar fields pending review.
+  have can-dos, two patterns, expressions, learner-facing grammar support and Japanese-L1 risk
+  notes.
 - **Contextual:** 2 practical areas, 10 courses and 60 standalone lessons. Every lesson has a
   can-do, who/where/what scene, two learner lines and two partner reactions. Seven lessons carry an
-  optional receptive-only `Understand` target. CTX-54 and CTX-58 are the only missing expression
-  fields. Stable CTX ids and reviewed pattern language survived the architectural replacement.
+  optional receptive-only `Understand` target. Every lesson also has its required expression field.
+  Stable CTX ids and reviewed pattern language survived the architectural replacement.
 - **Freetalking:** 11 themes and 121 topics with four explicit formats (`story`, `opinion`,
   `choose`, `両国`), a learner-facing English title, an immediate opening and a question ladder.
   Titles name a personal experience, concrete angle or natural choice rather than using translated
@@ -114,7 +114,7 @@ the owner/product system supplies the final values.
 - Core briefs carry the whole-model production gate, any explicit bounded survival chunk, and the
   lesson's planned spiral-review targets and modes.
 - `build_grammar_map.py` generates the 122-row Core sequence/coverage map, a review-spiral health
-  table, and all 52 currently open grammar-support gaps.
+  table, and an explicit grammar-support completeness check.
 - `build_catalog.py` generates the 303-item native-review catalog; the catalog holds no curriculum
   facts of its own.
 - `parse_catalog_review.py` validates copied feedback against stable ids, titles and first-line
@@ -122,7 +122,7 @@ the owner/product system supplies the final values.
 - `build_running_lexicon.py` generates the authored vocabulary ledger from lesson metadata.
 - `check_deck.py` checks identity, references, duplicate ids, inline code, no-yomi, tutor-script
   parity, reorder chunking and vocabulary ownership/load.
-- Forty regression tests prove parser contracts, shell retargeting, generated
+- Forty-two regression tests prove parser contracts, shell retargeting, generated
   brief/map/ledger/catalog/lexicon freshness and review-intake failure cases.
 
 ### 4. Shared foundation
@@ -141,14 +141,15 @@ the owner/product system supplies the final values.
 The owner is reviewing `english/catalog.html`. While that review is open:
 
 - do not author additional Core decks;
-- do not invent grammar support for Core 71–122;
-- do not fill CTX-54 or CTX-58 underneath the active review surface;
 - do not hand-edit the generated catalog, briefs, grammar map or lexicon;
 - do not author pronunciation decks;
 - do not assign provisional product ids as if they were final.
 
-The hold prevents avoidable content rework. It does not block read-only evidence gathering,
-decision preparation, tooling that holds no curriculum facts, or documentation repair.
+The grammar-support pass is complete, and the earlier CTX-54/CTX-58 gap report was stale: both
+lessons already had expressions in the authoritative TOC. Neither fact pre-approves a catalog row;
+grammar and expression support must move with any row later rewritten or demoted. The hold prevents
+avoidable deck-production rework. It does not block read-only evidence gathering, decision
+preparation, tooling that holds no curriculum facts, or documentation repair.
 
 The owner approved the broader naturalness and transfer revision on 2026-08-14. The final deep pass
 then removed remaining prerequisite leaks, overloaded pairs, weak slots and written-register
@@ -222,8 +223,8 @@ deferred.
 1. Export/copy the completed review and parse it with `parse_catalog_review.py`.
 2. Triage each item as **keep, rewrite, demote, remove, or needs evidence**.
 3. Apply accepted decisions only to authoritative TOCs.
-4. On the accepted spine, write the 52 remaining Core grammar fields and the CTX-54/CTX-58
-   expression fields. If review removes or demotes rows, recalculate the gap set first.
+4. Keep each accepted row's grammar and expression support aligned with any rewrite or demotion;
+   the baseline spine has no missing required field.
 5. Re-derive every cross-track Core reference affected by a Core move.
 6. Regenerate briefs, grammar map and catalog; run all regressions and deck checks.
 7. Freeze a reviewed catalog version before lesson production resumes.
@@ -291,7 +292,7 @@ English is ready for scaled production only when all of the following are true:
 
 - native catalog feedback is resolved and regenerated artifacts are current;
 - the Core evidence/corpus audits have no untriaged high-risk rows;
-- remaining grammar and expression gaps are closed on the accepted spine;
+- grammar and expression support remains complete and aligned on the accepted spine;
 - the three representative Core lessons and both non-Core pilots are explicitly approved;
 - course and product identity decisions are fixed and manifests validate;
 - the external sync path passes end to end.

@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `when you get a sec` · `at your earliest convenience`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `Would you be able to` and `Can you` both take a plain verb; the first creates more distance, while the second suits an informal request.
 - **Japanese-L1 risk:** the learner's instinct is that more words = more polite, which mostly holds — but over-formality with a close colleague reads as coldness or sarcasm. Contrast the two levels and teach when each one is wrong.
 
 ## Planned spiral review

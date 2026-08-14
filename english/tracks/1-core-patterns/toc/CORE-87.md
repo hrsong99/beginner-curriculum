@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `marginally` · `a fraction more`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** put `slightly` before a comparative for a small difference; `nowhere near as` + adjective + `as` means far less than the comparison.
 - **Japanese-L1 risk:** Japanese degree adverbs map roughly but the English set is finely graded (`slightly` < `somewhat` < `considerably` < `far`). Teach as a scale, not as synonyms.
 
 ## Sequence guardrails

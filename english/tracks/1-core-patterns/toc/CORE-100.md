@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `knock-on effect` · `in turn`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `As a result` links a new sentence to the cause just given; `That meant` + clause states the practical consequence.
 - **Japanese-L1 risk:** sentence-initial connectors are common in Japanese too, so this transfers — the risk is overuse, giving speech a written feel.
 
 ## Sequence guardrails

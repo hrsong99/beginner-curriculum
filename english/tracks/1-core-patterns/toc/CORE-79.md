@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `with any luck` · `barring delays`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `should have` + thing + adjective gives an expected state by a deadline; `may` + plain verb marks what is still uncertain.
 - **Japanese-L1 risk:** `should` here is an expectation, not advice, and `have it ready` describes the expected state rather than the future-perfect operation. Pair the estimate with honest uncertainty.
 
 ## Sequence guardrails

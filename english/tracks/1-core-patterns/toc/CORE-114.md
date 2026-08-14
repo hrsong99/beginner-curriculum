@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `broadly speaking` · `with some caveats`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `may be true for A, but not for B` limits a claim to one group; `ones` can replace a repeated plural noun, and `more` + adjective + `than` makes the comparison.
 - **Japanese-L1 risk:** partial agreement is native territory for this learner; the English forms turn a vague impression into a precise position.
 
 ## Planned spiral review

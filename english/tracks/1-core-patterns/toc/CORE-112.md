@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `That wasn't my intention.` · `Let me rephrase that.`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `come across as` + adjective describes the listener's impression; `mean to` + plain verb and `sound` + adjective describe the speaker's intent and tone.
 - **Japanese-L1 risk:** Japanese often handles unintended tone through apology without naming the interpretation. English can name how it **came across** while separating impact from intent; keep the description specific and give the other person a repair path.
 
 ## Planned spiral review

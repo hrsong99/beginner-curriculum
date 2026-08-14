@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `far from it` · `not at all`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `If anything` is a fixed correction meaning the truth points in the opposite direction; after a colon, state the evidence for that reversal as a full clause.
 - **Japanese-L1 risk:** compact, very frequent in speech, and almost never taught. Good keep.
 
 ## Planned spiral review

@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `at root` · `the bigger picture`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `the issue is` can be followed by a noun phrase or a `how/what/why` clause; `symptomatic of` is followed by the broader problem as a noun phrase.
 - **Japanese-L1 risk:** abstract nouns are the vocabulary tax of C1 and the reason opinion topics stall — see the Freetalking track's topic-selection rule. Build the nouns here so Freetalking can use them.
 
 ## Planned spiral review

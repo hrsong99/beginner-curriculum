@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `all being well` · `fingers crossed`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `will be` + `-ing` places an activity in progress at a stated future time; keep the future time anchor with the frame.
 - **Japanese-L1 risk:** Japanese often uses one non-past form for both a future event and an activity in progress. English uses `will be ___ing` to place the listener inside that later moment; keep the time anchor attached to the frame.
 
 ## Planned spiral review

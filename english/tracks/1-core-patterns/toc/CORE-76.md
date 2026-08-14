@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `Where can I get this ___ed?` · `while you wait`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `have/get` + thing + past participle means arranging for someone else to do a service to that thing.
 - **Japanese-L1 risk:** Japanese `〜てもらう` covers the same service relationship. Keep both patterns on `have/get + thing + past participle`; adding `get someone to do something` would create a second causative system and overload the lesson.
 
 ## Sequence guardrails

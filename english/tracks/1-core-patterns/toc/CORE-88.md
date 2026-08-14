@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `next to nothing` · `few and far between`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `hardly` and `barely` already mean almost not, so keep the verb positive; use `anyone` for people and `any` + noun for an amount.
 - **Japanese-L1 risk:** `hardly` is not a negative word but behaves like one, so `hardly anyone didn't come` is predicted from double-marking.
 
 ## Planned spiral review

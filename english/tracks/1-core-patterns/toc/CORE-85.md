@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `fair enough` · `where I'm coming from`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `but` introduces the different view; `the part ... is` focuses the disagreement on one specific point.
 - **Japanese-L1 risk:** direct contradiction is costlier in Japanese, so learners often soften into vagueness and are read as agreeing. The frames here let them be clear *and* polite — which is the point.
 
 ## Sequence guardrails

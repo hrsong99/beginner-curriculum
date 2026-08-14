@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `the real question is` · `bottom line`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `What` + clause + `is` puts the focus after `is`; use a noun phrase or an `-ing` action for the focused suggestion.
 - **Japanese-L1 risk:** **word order re-entry, and now it works in the learner's favour** — Japanese fronts topics routinely, so this structure feels natural once they see it exists in English. One of the fastest wins in Part 2.
 
 ## Planned spiral review

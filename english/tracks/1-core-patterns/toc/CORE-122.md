@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `it depends what you mean by` · `let me back up`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** in these frames, `that` points back to the listener's description or question; `not really` and final `though` soften the rejection of that framing.
 - **Japanese-L1 risk:** the final and most advanced move: declining the premise. It requires everything from 83 (clarify), 95 (push back) and 114 (qualify), which is why it closes the curriculum.
 
 ## Sequence guardrails

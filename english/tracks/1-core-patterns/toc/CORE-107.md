@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `on that note` · `while I remember`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `As for` + noun introduces a topic; `Coming back to` + noun returns to one, and both topic phrases are set off with a comma.
 - **Japanese-L1 risk:** `〜については` maps almost exactly. Easy, and it makes long turns sound organised.
 
 ## Planned spiral review

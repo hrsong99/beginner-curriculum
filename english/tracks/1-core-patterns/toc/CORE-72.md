@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `come to think of it` · `that would explain it`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `might have` + past participle gives a possible past explanation; `must have` + past participle gives a confident conclusion about the past.
 - **Japanese-L1 risk:** deduction and obligation share `must` again (see 41, 68). At this level the clash is worth a direct contrast rather than another mention.
 
 ## Planned spiral review

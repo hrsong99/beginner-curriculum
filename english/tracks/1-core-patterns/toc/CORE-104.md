@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `precisely` · `that's the thing`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `It is/was` + focus + `that/who` + clause singles out one element; use `who` for a person and `that` for a thing or idea.
 - **Japanese-L1 risk:** this is what `が` does in Japanese, so the *function* is completely familiar and only the structure is new. Teach by translation of function, not of form.
 
 ## Planned spiral review

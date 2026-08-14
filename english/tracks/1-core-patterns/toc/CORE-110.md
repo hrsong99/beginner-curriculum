@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `unfortunately` · `bear with me`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `I hate to say it, but` and `I'm afraid` are followed by the unwelcome clause; here `afraid` cushions news rather than expressing fear.
 - **Japanese-L1 risk:** cushioning transfers well; the risk is cushioning so much the news never lands. Pair the cushion with an explicit statement.
 
 ## Planned spiral review

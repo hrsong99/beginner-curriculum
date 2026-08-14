@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `it slipped my mind` · `something came up`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `was going to` + plain verb and `had planned to` + plain verb describe an earlier intention; the `but` clause explains why it did not happen.
 - **Japanese-L1 risk:** `〜つもりだった` maps cleanly. Useful precisely because it is a socially necessary excuse frame — high payoff for low grammatical cost.
 
 ## Planned spiral review

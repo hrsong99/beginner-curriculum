@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `let me rephrase` · `I put that badly`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `I meant A, not B` replaces the mistaken detail; `What I was trying to say is that` + clause restates the intended message.
 - **Japanese-L1 risk:** taking the blame for the misunderstanding (`I put that badly`) is a strong English politeness move and maps well onto Japanese instincts. Very learnable here.
 
 ## Planned spiral review

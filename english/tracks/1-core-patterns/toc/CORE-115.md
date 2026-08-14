@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `the problem is` · `that still leaves`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `account for` + noun names what a claim fails to include; `Even so` introduces a counterpoint, and `still` marks the need that remains.
 - **Japanese-L1 risk:** the strongest argumentative move in the unit and the least available to a learner working from Japanese discourse norms, where the counter is often left implicit. Keep formal debate markers receptive rather than making them the learner's default voice.
 
 ## Sequence guardrails

@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `I take your point` · `let's park that`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `Where I'd push back is on` focuses one area of disagreement; `take` + thing + `into account` means include it in the judgment.
 - **Japanese-L1 risk:** explicit disagreement markers are what allow English speakers to disagree *and* stay warm. Without them the learner's options are silence or bluntness.
 
 ## Planned spiral review

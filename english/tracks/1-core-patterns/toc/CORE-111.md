@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `FYI` · `for what it's worth`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `Just so you know` is followed by a full clause; `Heads up` stands outside the clause as an informal alert.
 - **Japanese-L1 risk:** useful precisely because it is neutral: neither asking nor blaming, which is a hard tone for learners to hit.
 
 ## Planned spiral review

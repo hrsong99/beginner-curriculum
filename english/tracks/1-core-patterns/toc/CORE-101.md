@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `up to them` · `we'll cross that bridge`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** `depend on whether` is followed by the unresolved possibility as a clause; `Either way` introduces what is true in both possible outcomes.
 - **Japanese-L1 risk:** `whether` vs `if` in this slot is arbitrary and needs to be chunked.
 
 ## Sequence guardrails

@@ -30,7 +30,7 @@
 ## Supporting content
 
 - **Expressions:** `enough said` · `read into that what you will`
-- **Grammar:** ⚠ missing from the TOC; do not invent it inside a deck assignment
+- **Grammar:** after `Let's just say`, use a full clause; after `All I'll say is`, use `that` + clause to state the limited information being offered.
 - **Japanese-L1 risk:** highly compatible with Japanese discourse, and it lets the learner be indirect *on purpose* rather than by accident.
 
 ## Planned spiral review
