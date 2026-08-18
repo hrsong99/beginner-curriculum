@@ -17,8 +17,8 @@ spec:
   # ---- 아래는 레포에만 남는다. DB 로 가지 않는다 ----
   teaches:
     patterns:
-      - "-대요 · -냬요 · -래요 · -재요"
-      - 반말 축약 -대 · -냬 · -래 · -재
+      - "-대요 · -래요 · -재요"
+      - 반말 축약 -대 · -래 · -재
     canDo: 들은 말을 실제 대화에서 쓰는 짧은 형태로 전한다.
   prerequisites: []
   source: podo-curriculum-public 2-core-patterns/core-intermediate-1 · 71
