@@ -8,6 +8,21 @@
 (function () {
   'use strict';
 
+  var englishDeck = document.querySelector(
+    'meta[name="podo:target-language"][content="en"]'
+  );
+  var copy = englishDeck ? {
+    remove: "Delete",
+    spoken: "Spoken sentence",
+    correction: "Correction",
+    note: "Note"
+  } : {
+    remove: "지우기",
+    spoken: "학생 문장",
+    correction: "교정",
+    note: "노트"
+  };
+
   /* ================================================================
      (3) 말한 문장 → 고친 문장 → 달라진 곳
 
@@ -184,20 +199,20 @@
     for (var i = 1; i <= SLOTS; i++) {
       html +=
         '<div class="fb-block">' +
-          '<button class="fb-del" type="button" aria-label="지우기">✕</button>' +
+          '<button class="fb-del" type="button" aria-label="' + copy.remove + '">✕</button>' +
           '<div class="fb-row orig">' +
-            '<span class="fb-cap">학생 문장</span>' +
+            '<span class="fb-cap">' + copy.spoken + '</span>' +
             '<p class="fb-diff"></p>' +
             '<textarea class="fb-in said" data-sync-id="' + q + '-said-' + i +
               '" rows="1" spellcheck="false"></textarea>' +
           '</div>' +
           '<div class="fb-row fix">' +
-            '<span class="fb-cap">교정</span>' +
+            '<span class="fb-cap">' + copy.correction + '</span>' +
             '<textarea class="fb-in fixed" data-sync-id="' + q + '-fixed-' + i +
               '" rows="1" spellcheck="false"></textarea>' +
           '</div>' +
           '<div class="fb-row nrow">' +
-            '<span class="fb-cap">노트</span>' +
+            '<span class="fb-cap">' + copy.note + '</span>' +
             '<textarea class="fb-in memo" data-sync-id="' + q + '-note-' + i +
               '" rows="1" spellcheck="false"></textarea>' +
           '</div>' +

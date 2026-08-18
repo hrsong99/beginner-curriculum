@@ -55,5 +55,10 @@ runtime/
 - **로드 순서가 있습니다.** `activities` → `feedback`(쓰는 덱만) → `pager` → `script-lines` →
   `spotlight` → `tutor-notes` → `highlight` → `stamp`. 이유는 각 파일 머리말에
   적혀 있고, 덱 뼈대는 [`AUTHORING.md`](../korean/AUTHORING.md) 에 있습니다.
+- **생성되는 튜터 UI는 목표 언어 메타를 읽습니다.** 영어 덱은
+  `<meta name="podo:target-language" content="en">`을 선언하고, `feedback.js`,
+  `tutor-notes.js`, `stamp.js`, `trial.css`가 영어 튜터 문구를 선택합니다. 메타가 없거나
+  다른 값이면 기존 한국어 문구가 기본값입니다. `<html lang="ja">`는 학습자 지원 언어라
+  이 분기에 사용하지 않습니다.
 - **CSS 는 두 장이 한 벌입니다.** `lesson-card.css` 다음에 트랙 시트. 패키저가
   링크 순서대로 이어 붙이므로 순서가 곧 캐스케이드입니다.
