@@ -102,6 +102,12 @@ heard in `scene`.
 | `pN-translate` | `.task-block` ×4 | Japanese scene cue → English | no |
 | `pN-write` | `.answer-box tall` | One open line that belongs in this lesson's situation | no |
 
+Each `pN-teach` meaning/use box contains **one short conversational English sentence** combining
+what the frame does with when a speaker reaches for it, followed by a direct one-sentence Japanese
+counterpart. Do not put an activity instruction, Japanese wording or a lesson-number reference in
+the tutor's English line. Formation belongs on `pN-rule`; its spoken line adds only what the visible
+diagram cannot show instead of reciting the diagram's branches and examples.
+
 ### Marked chunks do not receive a hidden grammar lesson
 
 The generated brief names the course's productive Core floor and each pattern's Core owner. A TOC
@@ -126,6 +132,9 @@ not the tutor's voice or the partner's receptive line.
   action or the page's meaning. They do not narrate visible setup, preview later activities, or
   repeat `Today we'll...` / `By the end of the lesson...` framing. Japanese matches the shorter
   English line's meaning, sentence count and tone.
+- Tutor-only notes are English and appear only when the tutor must catch or do something the page
+  cannot make obvious. Put them on the production page where that action happens, not on a teaching
+  page that produces nothing yet; never repeat an answer already revealed by teaching mode.
 - Every closed read/choose/reorder/fill/translate activity has **four questions**.
 - Reorder uses four meaningful chunks as ceiling and default; three is allowed only when the
   sentence genuinely has three. One page uses one chunking criterion throughout.

@@ -30,7 +30,7 @@ trace:
    `activities.js`'s normalization and proves that some ordering of the chips in
    each English task block reconstructs that block's `data-a` exactly.
 
-4. **Freetalking article contract.** Page 2 is a six-to-eight-row pre-study-only
+4. **Freetalking article contract.** Page 2 is a 10-to-15-row pre-study-only
    article, and every highlighted item must have one matching in-context gloss
    on its own row. Its class script asks one question about learner questions;
    it does not coach the learner to read, skim, tap or operate the page. A
@@ -54,6 +54,7 @@ things a human should look at and may legitimately sign off on.
 """
 
 import argparse
+import difflib
 import html as html_lib
 import pathlib
 import re
@@ -92,6 +93,10 @@ TN_CAP = re.compile(r'<span class="tn-cap">')
 LIST_ITEM_BODY = re.compile(r'<li\b[^>]*>(.*?)</li>', re.S)
 NON_ENGLISH_SCRIPT = re.compile(r"[\u3040-\u30ff\u3400-\u9fff\uac00-\ud7af]")
 FREETALK_QUESTION_PAGES = {"warm-1", "warm-2", *(f"q{i}" for i in range(1, 7))}
+FREETALK_PAGES = [
+    "lesson-goal", "article", "lesson-style", "talk-intro",
+    "warm-1", "warm-2", "q1", "q2", "q3", "q4", "q5", "q6", "feedback",
+]
 FREETALK_STYLE_EN = "Please choose your preferred discussion style."
 FREETALK_STYLE_JA = "希望する会話の進め方を選んでください。"
 SPAN_TAG = re.compile(r"<span\b[^>]*>|</span>", re.I)
@@ -247,10 +252,9 @@ def article_structure_issues(chunk):
                 "whether the learner has questions"
             )
     rows = SENT_ROW.split(chunk)[1:]
-    if not 6 <= len(rows) <= 8:
+    if not 10 <= len(rows) <= 15:
         errors.append(
-            f"article: {len(rows)} sentence rows — use about seven (six to eight), "
-            "not a four- or five-line tutor model"
+            f"article: {len(rows)} sentence rows — use 10 to 15, not a short tutor model"
         )
     for index, row in enumerate(rows, start=1):
         keys = len(S_KEY.findall(row))
@@ -302,8 +306,14 @@ def freetalk_question_note_issues(page_id, chunk):
     subtitles = SUBTITLE.findall(chunk)
     script = SPAN_KO.search(subtitles[0][1]) if subtitles else None
     if script:
+        spoken = plain_text(script.group(1))
+        if spoken.count("?") + spoken.count("？") > 1:
+            errors.append(
+                f"{page_id}: printed prompt contains more than one question — keep one "
+                "talking job on the page and move the rest to follow-ups"
+            )
         main_question = re.sub(
-            r"[^a-z0-9]+", " ", plain_text(script.group(1)).casefold()
+            r"[^a-z0-9]+", " ", spoken.casefold()
         ).strip()
         if main_question and main_question in normalized:
             errors.append(f"{page_id}: a follow-up repeats the printed question")
@@ -311,7 +321,7 @@ def freetalk_question_note_issues(page_id, chunk):
 
 
 def freetalk_tutor_language_issues(html):
-    """English-course tutor-only guidance must not use Japanese or Korean."""
+    """Tutor-only guidance in every English track must not use Japanese or Korean."""
     errors = []
     blocks = (
         TUTOR_NOTE_BLOCK.findall(html)
@@ -325,6 +335,43 @@ def freetalk_tutor_language_issues(html):
                 "English-course tutor guidance is written for English-speaking tutors"
             )
     return errors
+
+
+def pattern_meaning_issues(page_id, chunk):
+    """Keep English meaning/use boxes to one concise bilingual sentence."""
+    errors = []
+    for cls, body in SUBTITLE.findall(chunk):
+        if "pattern-meaning" not in cls:
+            continue
+        en, ja = SPAN_KO.search(body), SPAN_JA.search(body)
+        if not en or not ja:
+            errors.append(f"{page_id}: pattern-meaning needs English and Japanese lines")
+            continue
+        en_count = len(sentences(en.group(1), EN_END, spaced=True))
+        ja_count = len(sentences(ja.group(1), JA_END, spaced=False))
+        if en_count != 1 or ja_count != 1:
+            errors.append(
+                f"{page_id}: pattern-meaning must be one concise sentence per language "
+                f"(EN={en_count} JA={ja_count})"
+            )
+        if NON_ENGLISH_SCRIPT.search(plain_text(en.group(1))):
+            errors.append(f"{page_id}: Japanese or Korean appears in the English tutor line")
+        if re.search(r"\b(?:CORE|CTX|FT)[- ]?\d+\b|\blesson\s+\d+\b", plain_text(en.group(1)), re.I):
+            errors.append(f"{page_id}: lesson-number reference in learner/tutor-facing copy")
+    return errors
+
+
+def freetalk_inventory_issues(source):
+    """Require the canonical 13-page Freetalking order with no stale page kind."""
+    actual = [page_id for page_id, _ in pages(source)]
+    if actual == FREETALK_PAGES:
+        return []
+    return [
+        "Freetalking page inventory/order must be "
+        + " > ".join(FREETALK_PAGES)
+        + "; got "
+        + " > ".join(actual)
+    ]
 
 
 def freetalk_style_issues(chunk):
@@ -388,6 +435,71 @@ def freetalk_brief_title(review_id):
     if not match or match.group(1) != review_id:
         return None
     return match.group(2)
+
+
+def freetalk_article_lines(source):
+    """Return the visible English sentence rows from one Freetalking article."""
+    article = dict(pages(source)).get("article", "")
+    return [
+        plain_text(body)
+        for body in re.findall(
+            r'<span class="s-ko">(.*?)<span class="s-mark"', article, re.S
+        )
+    ]
+
+
+def freetalk_article_glosses(source):
+    """Return normalized English glossary heads from one Freetalking article."""
+    article = dict(pages(source)).get("article", "")
+    return {
+        plain_text(body).casefold()
+        for body in re.findall(r'<span class="s-w"><b>(.*?)</b>', article, re.S)
+    }
+
+
+def freetalk_pair_issues(decks):
+    """Compare full/accessible siblings so simplification changes language, not ideas."""
+    groups = {}
+    for path in decks:
+        if "english" not in path.parts or "3-freetalking" not in path.parts:
+            continue
+        source = path.read_text(encoding="utf-8")
+        review_id = meta_content(source, "podo:review-id")
+        level = (meta_content(source, "podo:level") or "").casefold()
+        kind = "accessible" if "accessible" in level else "full" if "full" in level else None
+        if review_id and kind:
+            groups.setdefault(review_id, {})[kind] = (path, source)
+
+    errors, warnings = {}, {}
+    for review_id, pair in groups.items():
+        if set(pair) != {"full", "accessible"}:
+            continue
+        full_path, full = pair["full"]
+        accessible_path, accessible = pair["accessible"]
+        full_lines = freetalk_article_lines(full)
+        accessible_lines = freetalk_article_lines(accessible)
+        if len(full_lines) != len(accessible_lines):
+            errors.setdefault(accessible_path, []).append(
+                f"{review_id}: accessible/full articles have different row counts "
+                f"({len(accessible_lines)} vs {len(full_lines)}) — preserve the same claims"
+            )
+        similarity = difflib.SequenceMatcher(
+            None, " ".join(full_lines).casefold(), " ".join(accessible_lines).casefold()
+        ).ratio()
+        if similarity > 0.90:
+            warnings.setdefault(accessible_path, []).append(
+                f"{review_id}: accessible article is {similarity:.0%} text-identical to full — "
+                "confirm vocabulary and clause load were genuinely lowered"
+            )
+        full_glosses = freetalk_article_glosses(full)
+        accessible_glosses = freetalk_article_glosses(accessible)
+        overlap = len(full_glosses & accessible_glosses) / len(full_glosses) if full_glosses else 0
+        if overlap > 0.70:
+            warnings.setdefault(accessible_path, []).append(
+                f"{review_id}: accessible article reuses {overlap:.0%} of the full glossary — "
+                "shorter sentences do not compensate for unchanged rare vocabulary"
+            )
+    return errors, warnings
 
 
 def check(path):
@@ -481,6 +593,12 @@ def check(path):
                         + ", ".join(undeclared)
                     )
 
+        # Tutor-only operating copy is for English-speaking tutors in every
+        # track, not just in Freetalking.
+        errs.extend(freetalk_tutor_language_issues(html))
+        for page_id, chunk in pages(html):
+            errs.extend(pattern_meaning_issues(page_id, chunk))
+
     # ---- 1 · tutor script sentence parity ---------------------------------
     for pid, chunk in pages(html):
         for cls, body in SUBTITLE.findall(chunk):
@@ -523,6 +641,7 @@ def check(path):
     # ---- 4–5 · English Freetalking contracts -----------------------------
     if is_english and "3-freetalking" in path.parts:
         page_chunks = dict(pages(html))
+        errs.extend(freetalk_inventory_issues(html))
         expected_title = freetalk_brief_title(review_id) if review_id else None
         if expected_title is None:
             errs.append(
@@ -550,7 +669,6 @@ def check(path):
                 errs.append(f"Freetalking deck is missing question page {page_id!r}")
                 continue
             errs.extend(freetalk_question_note_issues(page_id, page_chunks[page_id]))
-        errs.extend(freetalk_tutor_language_issues(html))
 
     return errs, warns
 
@@ -577,9 +695,12 @@ def main():
             print(f"! no such path: {r}", file=sys.stderr)
 
     decks = [p for p in targets if PAGE_ID.search(p.read_text(encoding="utf-8"))]
+    pair_errors, pair_warnings = freetalk_pair_issues(decks)
     n_err = n_warn = 0
     for deck in decks:
         errs, warns = check(deck)
+        errs.extend(pair_errors.get(deck, []))
+        warns.extend(pair_warnings.get(deck, []))
         n_err += len(errs)
         n_warn += len(warns)
         if errs or warns:

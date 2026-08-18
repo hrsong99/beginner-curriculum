@@ -117,7 +117,7 @@ class DeckCheckTests(unittest.TestCase):
         errors = check_deck.reorder_solvability_errors("p1-reorder", chunk)
         self.assertTrue(any("cannot reconstruct data-a" in item for item in errors))
 
-    def test_freetalking_article_accepts_seven_rows_with_exact_gloss_parity(self):
+    def test_freetalking_article_accepts_twelve_rows_with_exact_gloss_parity(self):
         script = (
             '<p class="section-subtitle"><span class="ko">'
             'Did you have any questions about the article?'
@@ -127,11 +127,11 @@ class DeckCheckTests(unittest.TestCase):
             '<div class="sent"><span class="s-key">curiosity</span>'
             '<span class="s-w"><b>curiosity</b>好奇心</span></div>'
         )
-        errors, warnings = check_deck.article_structure_issues(script + row * 7)
+        errors, warnings = check_deck.article_structure_issues(script + row * 12)
         self.assertEqual(errors, [])
         self.assertEqual(warnings, [])
 
-    def test_freetalking_article_rejects_five_rows_and_mismatched_glosses(self):
+    def test_freetalking_article_rejects_short_article_and_mismatched_glosses(self):
         script = (
             '<p class="section-subtitle"><span class="ko">'
             'Did you have any questions about the article?'
@@ -142,8 +142,8 @@ class DeckCheckTests(unittest.TestCase):
             '<span class="s-w"><b>curiosity</b>好奇心</span></div>'
         )
         mismatched = '<div class="sent"><span class="s-key">curiosity</span></div>'
-        errors, _ = check_deck.article_structure_issues(script + matched * 4 + mismatched)
-        self.assertTrue(any("5 sentence rows" in item for item in errors))
+        errors, _ = check_deck.article_structure_issues(script + matched * 6 + mismatched)
+        self.assertTrue(any("7 sentence rows" in item for item in errors))
         self.assertTrue(any("1 highlighted item(s) but 0 gloss(es)" in item for item in errors))
 
     def test_freetalking_article_rejects_in_class_reading_coaching(self):
@@ -152,7 +152,7 @@ class DeckCheckTests(unittest.TestCase):
             'Did you read the article? If not, skim it now.'
             '</span><span class="ja">記事を読みましたか？ まだなら今読んでください。</span></p>'
         )
-        rows = '<div class="sent"></div>' * 7
+        rows = '<div class="sent"></div>' * 12
         errors, _ = check_deck.article_structure_issues(script + rows)
         self.assertTrue(any("one question" in item for item in errors))
         self.assertTrue(any("must ask whether the learner has questions" in item for item in errors))
@@ -202,7 +202,7 @@ class DeckCheckTests(unittest.TestCase):
         errors = check_deck.freetalk_question_note_issues("q2", chunk)
         self.assertTrue(any("repeats the printed question" in item for item in errors))
 
-    def test_freetalking_tutor_notes_reject_japanese_or_korean(self):
+    def test_english_tutor_notes_reject_japanese_or_korean(self):
         source = (
             '<div class="tutor-note">Answer questions, then move on.</div>'
             '<div class="tutor-note">質問に答えてください。</div>'
@@ -210,6 +210,61 @@ class DeckCheckTests(unittest.TestCase):
         )
         errors = check_deck.freetalk_tutor_language_issues(source)
         self.assertEqual(len(errors), 2)
+
+    def test_pattern_meaning_requires_one_sentence_per_language(self):
+        chunk = (
+            '<p class="section-subtitle pattern-meaning">'
+            '<span class="ko">Use this to ask politely. Read it with me.</span>'
+            '<span class="ja">ていねいに頼むときに使います。一緒に読みましょう。</span>'
+            '</p>'
+        )
+        errors = check_deck.pattern_meaning_issues("p1-teach", chunk)
+        self.assertTrue(any("one concise sentence" in item for item in errors))
+
+    def test_pattern_meaning_accepts_one_concise_pair(self):
+        chunk = (
+            '<p class="section-subtitle pattern-meaning">'
+            '<span class="ko">Use this when you want to ask for help politely.</span>'
+            '<span class="ja">ていねいに手伝いを頼むときに使います。</span>'
+            '</p>'
+        )
+        self.assertEqual(check_deck.pattern_meaning_issues("p1-teach", chunk), [])
+
+    def test_freetalking_inventory_requires_canonical_order(self):
+        source = "".join(
+            f'<div data-page-id="{page_id}"></div>'
+            for page_id in check_deck.FREETALK_PAGES
+        )
+        self.assertEqual(check_deck.freetalk_inventory_issues(source), [])
+        swapped = source.replace(
+            '<div data-page-id="article"></div><div data-page-id="lesson-style"></div>',
+            '<div data-page-id="lesson-style"></div><div data-page-id="article"></div>',
+        )
+        self.assertTrue(check_deck.freetalk_inventory_issues(swapped))
+
+    def test_freetalking_pair_requires_matching_claim_count(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = pathlib.Path(temporary) / "english/tracks/3-freetalking/courses"
+            full = root / "topic-full/lessons/01-topic/lesson.html"
+            accessible = root / "topic-accessible/lessons/01-topic/lesson.html"
+            full.parent.mkdir(parents=True)
+            accessible.parent.mkdir(parents=True)
+
+            def deck(level, count):
+                rows = "".join(
+                    f'<div class="sent"><span class="s-ko">Claim {i}.<span class="s-mark"></span></span></div>'
+                    for i in range(count)
+                )
+                return (
+                    '<meta name="podo:review-id" content="FT-7">'
+                    f'<meta name="podo:level" content="{level}">'
+                    f'<div data-page-id="article">{rows}</div>'
+                )
+
+            full.write_text(deck("B2-C1 full", 12), encoding="utf-8")
+            accessible.write_text(deck("B1 accessible", 11), encoding="utf-8")
+            errors, _ = check_deck.freetalk_pair_issues([full, accessible])
+            self.assertTrue(any("different row counts" in item for item in errors[accessible]))
 
     def test_freetalking_style_accepts_canonical_direct_wording(self):
         chunk = (

@@ -88,9 +88,11 @@ at that point — `pN-question-teach` / `pN-question-read`. The ladder itself do
 ### `pN-teach` opens with meaning and use, never with formation
 
 Put a `.pattern-meaning` box at the top of the blue script area with a
-`意味・使い方` kicker. First line: what this frame means in Japanese. Second line: **when a speaker
-reaches for it** (`相手に手伝ってほしいとき、失礼にならないように頼む言い方です`). Then the
-lesson's own script continues.
+`意味・使い方` kicker. Its English tutor line is **one short conversational sentence** combining
+what the frame does with when a speaker reaches for it; the Japanese line is its direct one-sentence
+counterpart. Do not add “Listen,” “Repeat,” or another activity direction here—the model directly
+below already makes the next action visible. Never put Japanese or a lesson number in the English
+line, and never refer to another lesson number in learner- or tutor-facing copy.
 
 Formation does not go here — that is `pN-rule`'s job. Korean learned this the expensive way: without
 this box, "when do I use it" has nowhere to live, drifts into the rule page, and the rule page can
@@ -100,6 +102,14 @@ only draw a form. The learner ends up with a diagram they cannot act on.
 
 A rule page draws **one block per genuine formation branch**, not one block per example. One block
 for an invariant rule; two or three only when the learner must actually distinguish them.
+
+If the content is a small set of lexical mappings such as `buy → bought`, it is not a branch
+diagram at all. Show every pair at equal weight in an `.irregular-pair-grid`; do not promote the
+first pairs into a large outcome band and leave the others looking like secondary examples.
+
+The spoken line does not recite the branches or examples already visible in the diagram. Point to
+the diagram and add only the one thing it cannot show. If the diagram already makes the action
+obvious, keep the script to the natural prompt that gets the learner using it.
 
 English has plenty of honest two-branch rules that fit the existing `.batchim` component:
 `do / does`, `is / are`, `a / an`, `some / any`, `much / many`.
@@ -130,6 +140,19 @@ below were paid for again by this track's own pilot, because they were not writt
   meaning the page must supply. Do not narrate visible setup, preview later activities, or pad a
   goal with `Today we'll...` / `By the end of the lesson...`. Rewrite the Japanese to preserve the
   shorter English line's meaning, sentence count and tone.
+- **Tutor-only notes are English and appear only when the tutor must catch or do something the
+  page cannot make obvious.** Put them on the production page where that action happens, not on a
+  teaching page that produces nothing yet. Do not repeat an answer already revealed by teaching
+  mode.
+- **Mirror target highlights in every teaching and read model.** In `.sent-hero`, `.sent-more`, and
+  `.model-line`, wrap each English target word or phrase in `.ending` and wrap its exact Japanese
+  meaning in `.ending` too. The two languages must identify the same learning target; never leave
+  only the support-language cue highlighted or highlight an entire sentence around a smaller target.
+- **Use highlights according to the learner's job.** On `pN-fill`, wrap only the Japanese segment
+  represented by the English blank in `class="target ending"`. On `pN-reorder` and
+  `pN-translate`, leave the Japanese prompt neutral because the learner is producing the whole
+  sentence rather than retrieving one marked form. On `p3-complete`, `.target` marks exactly the
+  missing learner segment. Do not apply highlights decoratively or to every occurrence of a pattern.
 
 - **Four questions in every closed activity** — read, choose, reorder, fill, translate. Difficulty
   must not taper by silently dropping questions. Free-writing stays one open prompt.
@@ -150,6 +173,15 @@ below were paid for again by this track's own pilot, because they were not writt
 - **Omit `pN-choose` when there is no honest binary.** Do not manufacture a wrong form for an
   invariant pattern, and do not offer two grammatical options whose difference needs a nuance
   lecture the lesson has not given.
+- **Put the choice at the smallest meaningful unit.** When only one or two target words differ,
+  show the sentence once and put an independent two-way `.word-choice` group at each target. Do
+  not repeat two full-sentence pills and make the learner reread identical surrounding language.
+  Full-sentence options are for alternatives whose meaning or structure genuinely differs across
+  the whole sentence. Several word groups still form one choose activity, not several activities.
+- **Mark the Japanese cue for every word-level choice.** In a `.word-choice-card`, wrap the exact
+  Japanese word or short phrase corresponding to each English choice group in `.ending`. Two
+  English choice groups require two Japanese cues. Keep both English options neutral until the
+  learner chooses; the support-language highlight locates the decision without revealing it.
 
 ---
 
@@ -165,9 +197,51 @@ Pattern A was used — question and answer, request and response, problem and re
 | `p3-complete` | `.dialogue` + `.answer-box` | Same exchange, the learner's lines empty |
 | `p3-freetalk` | `.dialogue` + `.answer-box small` | The same scene with their own facts |
 
+`p3-model` is a real exchange, not two target lines joined by a generic reaction. It needs an
+opening, an answer-dependent follow-up and a resolved ending. In `p3-complete`, preserve the exact
+same turn sequence—including the opening question and closing reaction—and replace only the
+learner's lines with answer fields. If the completion starts with a learner blank but the model
+starts with the partner, the activity is incomplete.
+
+Model and completion dialogues use profile images for both scene characters, matching Korean Core.
+Reserve generic person icons for live `Tutor` / `Me` free-talk where the actual participants are the
+people in class. Keep the speaker names short and identical across model and completion.
+
+The input type follows the **learning job**, not the visual length of the answer. The Korean Core
+ladder has three distinct levels, and English follows the same progression:
+
+- In early controlled practice (`pN-fill`), keep all non-target English visible and use a
+  single-line `.slot-input` for the target word or short target chunk.
+- In late controlled production (`p3-complete` and `in-the-wild`), the missing segment normally
+  includes both the target pattern and the content that slots into it: for example,
+  `went to a restaurant`, not only `went`, and not automatically the entire sentence. Keep the
+  surrounding conversational setup visible. Use one wrapping, auto-growing
+  `textarea.free-input.phrase-input` for each meaningful production phrase; it may contain a whole
+  utterance only when that utterance is itself the smallest honest production unit.
+- Use the full-width open `.answer-space` + `.free-input` for genuinely open or whole-utterance work:
+  `pN-translate`, free production, and an ask-back line taught as one complete question.
+
+Do not shrink a late production blank to grammar atoms merely to make the field fit, and do not
+make the learner recreate unrelated fixed language merely because one expected answer exists. The
+phrase field is designed to reach the card edge, wrap internally, and grow vertically.
+
+Mirror target highlighting across languages. In `p3-model`, each highlighted English target has a
+matching `.ending` around its direct Japanese meaning. In `p3-complete`, put `.target` around the
+specific Japanese word or phrase the learner is retrieving; do not highlight the whole translation
+when only one or two forms carry the learning target.
+
+`p3-freetalk` follows the Korean Core handoff from controlled practice to real information. It must
+include: a real-fact tutor question, a usable target-language sentence scaffold with a Japanese
+`.task`, a compact set of relevant hint chips, an ask-back line, and a field for the tutor's real
+answer. If an answer-dependent follow-up is needed to make it a conversation, give the tutor one
+short operational note to ask about a detail the learner actually mentioned. Never substitute a
+generic label such as “Use both patterns” for the scaffold the learner needs to speak.
+
 `in-the-wild` puts the same patterns in a **different** place to check transfer — the scene assigned
 to this lesson in [`../_conventions.md`](../_conventions.md), never one you pick yourself and never
-a room already used in this lesson's own dialogue.
+a room already used in this lesson's own dialogue. It is a roleplay between scene characters, so
+use profile images for both roles just as in `p3-model` and `p3-complete`. Generic `Tutor` / `Me`
+icons remain exclusive to live `p3-freetalk`.
 
 `native-tip` is **one** adjacent thing a fluent speaker does: a contraction, a softener, a stress
 shift, a collocation. Not new grammar, not a recap. Teach contractions here and alongside full forms

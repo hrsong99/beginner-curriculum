@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import pathlib
+import re
 import sys
 import tempfile
 import unittest
@@ -49,6 +50,13 @@ class LessonShellTests(unittest.TestCase):
             page = new_lesson.redepth('<link href="../../runtime/css/lesson-card.css"><img src="../../korean/trial/assets/well-done.svg">', out)
             refs = [part.split('"')[1] for part in page.split('>') if '="' in part]
             self.assertTrue(all((out.parent / ref).resolve().is_file() for ref in refs))
+
+    def test_core_shell_comment_does_not_load_yomi(self):
+        head, foot = new_lesson.split_shell(PILOT.read_text(encoding="utf-8"))
+        shell = head + foot
+        self.assertIn("NO yomi.js", shell)
+        self.assertIsNone(re.search(r'<script\b[^>]*\bsrc="[^"]*yomi\.js"', shell, re.I))
+        self.assertIsNone(re.search(r'class="[^"]*\byomi\b[^"]*"', shell, re.I))
 
 
 if __name__ == "__main__":

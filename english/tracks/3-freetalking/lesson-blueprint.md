@@ -12,11 +12,11 @@ brief. Component markup and tutor voice come from the matching approved canonica
   from `<meta name="podo:target-language" content="en">`. It still must be published and the decks
   repointed before English-speaking tutors receive that change in class. Do not hide runtime gaps
   with deck-local overrides.
-- **Older structural reference:**
+- **Structural counterpart:**
   [`../../../korean/tracks/4-freetalking/sample-lesson.html`](../../../korean/tracks/4-freetalking/sample-lesson.html).
-  Its article component, correction contract and question-page rhythm remain useful, but its
-  article script and in-class fallback are outdated. **This blueprint is authoritative** for the
-  English Freetalking pre-study boundary and tutor voice.
+  Its 10–15-sentence pre-study article, correction contract and question-page rhythm are the
+  cross-language baseline. **This blueprint and the approved English decks remain authoritative**
+  for English tutor voice, language load and glossary judgment.
 - **Topic-specific question counterparts:**
   [`../../../korean/tracks/4-freetalking/courses/talk-between-two-countries-intermediate/lessons/01-what-surprised-me/lesson.html`](../../../korean/tracks/4-freetalking/courses/talk-between-two-countries-intermediate/lessons/01-what-surprised-me/lesson.html)
   and
@@ -29,6 +29,11 @@ brief. Component markup and tutor voice come from the matching approved canonica
 
 This track has no pattern ladder and no answer key. Its instructional unit is the learner's own
 sentence becoming more natural, precise or intelligible without stopping the conversation.
+
+> **The blueprint, both approved canonical decks and `english/tools/check_deck.py` are one spec in
+> four forms.** When a countable rule changes, update all four in the same change. A prose-only rule
+> is too easy for a generated course to miss, while a checker-only rule leaves writers copying a
+> stale canonical deck.
 
 > **What the learner said → the tutor's revision → the visible difference → say it again.**
 
@@ -45,7 +50,7 @@ questions and one closing feedback page.
 | # | `data-page-id` | Job |
 | ---: | --- | --- |
 | 1 | `lesson-goal` | One observable speaking outcome; carries the short `data-act` |
-| 2 | `article` | About seven sentence rows, read only before class; open in class only to answer a learner question |
+| 2 | `article` | 10–15 sentence rows, read only before class; open in class only to answer a learner question |
 | 3 | `lesson-style` | Learner chooses discussion-first or correction-first |
 | 4 | `talk-intro` | Make clear the ladder is a pool, not a checklist |
 | 5–6 | `warm-1` · `warm-2` | Immediate experience and one concrete detail |
@@ -76,15 +81,17 @@ questions about the article. Answer those questions and move on; if there are no
 If the learner did not complete the pre-study, skip the article rather than using class time to
 read it.
 
-- Use **about seven sentence rows**, not a four- or five-line mini-story. Keep the full article on
-  one page so a learner can tap the exact sentence that caused trouble.
+- Use **10–15 sentence rows**, not a four- or five-line mini-story. The article must be long enough
+  to anchor the full question ladder, while each row still carries one readable claim. Keep the
+  full article on one page so a learner can tap the exact sentence that caused trouble.
 - Each row opens its Japanese translation and, only when needed, an in-context vocabulary gloss.
   One row stays open at a time.
 - The blue script asks only whether the learner has questions about the article. It does not tell
   them to tap, read, skim or otherwise operate the page. The tutor may open the relevant sentence
   while answering a question. A short private note records the skip rule; it is not spoken.
-- Full and accessible versions keep the same seven claims. Accessible shortens clauses and lowers
-  vocabulary; it does not remove the article's reasoning.
+- Full and accessible versions keep the same claims in the same order. Accessible lowers rare
+  vocabulary and clause load; it does not merely shorten the full version while preserving its
+  hardest words, and it does not remove the article's reasoning.
 
 | Format | What the article contributes | It must not become |
 | --- | --- | --- |
@@ -154,10 +161,10 @@ your English”; the learner's action is simply to choose a discussion style.
 
 ---
 
-## Writing the eight questions
+## Writing the eight prompts
 
 The TOC `Opens:` line becomes the first spoken prompt. Its `Ladder:` supplies the semantic climb;
-the deck author turns that compact arrow chain into eight single-question pages.
+the deck author turns that compact arrow chain into eight single-prompt pages.
 
 | Page | Job |
 | --- | --- |
@@ -168,14 +175,16 @@ the deck author turns that compact arrow chain into eight single-question pages.
 | `q4`–`q5` | The most demanding reasoning or changed condition |
 | `q6` | Flip the topic and close it; do not open a new subject |
 
-### One printed question
+### One printed prompt
 
-Each page prints exactly one question. If the sentence contains two question marks or joins two
-requests with “and,” rewrite it. Put **2–3 follow-ups and nothing else** in the English tutor note,
-never on the learner screen. Follow-ups rescue a short answer; they are not a second visible
-assignment. Do not add a coaching preamble about how to shape the answer, extend the story,
-preserve a correction frame or interpret the topic. If a rule applies across lessons, it belongs
-in this blueprint rather than being repeated in every private band.
+Each page prints exactly one talking prompt. A direct imperative such as “Tell me about the first
+time you noticed it” is valid; the rule is one conversational job, not one question mark. If the
+line contains two questions or joins two independent requests with “and,” rewrite it. Put **2–3
+follow-up questions and nothing else** in the English tutor note, never on the learner screen.
+Follow-ups rescue a short answer; they are not a second visible assignment. Do not add a coaching
+preamble about how to shape the answer, extend the story, preserve a correction frame or interpret
+the topic. If a rule applies across lessons, it belongs in this blueprint rather than being
+repeated in every private band.
 
 The English question and Japanese support line are direct equivalents. When one changes, change
 the other. Tutor notes are English and private. A non-question page may carry one short operational
@@ -207,7 +216,7 @@ Every set must pass all six checks:
    accessible version lowers language load; it does not replace a reason or perspective with “Did
    you like it?” or another generic reaction check.
 
-### Five checks for a question
+### Five checks for a prompt
 
 1. **One hypothetical layer.** Do not stack another “if” on a topic already built on a condition.
 2. **A visible object.** The learner should not first have to decide what “change” or “improve” is
@@ -269,7 +278,7 @@ before closing.
   tap, or how to advance through an obvious page. They do not narrate visible setup, preview later
   activities, or repeat `Today we'll...` / `By the end of the lesson...` framing. Japanese matches
   the shorter English line's meaning, sentence count and tone.
-- One printed question per question page, plus 2–3 private follow-ups with no coaching preamble.
+- One printed talking prompt per question page, plus 2–3 private follow-ups with no coaching preamble.
   Each follow-up earns a distinct conversational job; two strong prompts beat a filler third, and
   the accessible version preserves the full version's semantic work.
 - All learner-facing support is Japanese; English is the target language.

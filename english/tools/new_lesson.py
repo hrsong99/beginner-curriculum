@@ -135,7 +135,9 @@ def main() -> int:
         version=dt.date.today().isoformat(),
     )
     page = redepth(head + PLACEHOLDER.format(brief=brief.relative_to(track)) + foot, out)
-    if "yomi.js" in page or 'class="yomi"' in page:
+    if re.search(r'<script\b[^>]*\bsrc="[^"]*yomi\.js"', page, re.I) or re.search(
+        r'class="[^"]*\byomi\b[^"]*"', page, re.I
+    ):
         parser.error("canonical shell contains forbidden English yomi support")
     refs = re.findall(r'(?:href|src)="((?:\.\./)+[^"#]+)"', page)
     broken = [ref for ref in refs if not (out.parent / ref).resolve().is_file()]

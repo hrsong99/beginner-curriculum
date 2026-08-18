@@ -175,10 +175,20 @@ writers copy. Korean spent 348 reorder sentences at the wrong chip count for exa
   action or the page's meaning. Do not narrate visible setup, inventory later activities, or pad a
   goal with `Today we'll...` / `By the end of the lesson...`. Rewrite the Japanese in the same
   change so meaning, sentence count and conversational tone still match.
+- Core and Contextual `pattern-meaning` boxes use **one short English sentence** combining meaning
+  and communicative use, with one direct Japanese counterpart. Do not put an activity direction,
+  Japanese wording or a lesson-number reference in the English line. A rule-page script adds only
+  what its visible diagram cannot show instead of reciting the diagram.
+- Tutor-only notes are English in every track. Add one only when the tutor must catch or do
+  something the page cannot make obvious, and place it on the production page where that action
+  happens—not on a teaching page that produces nothing yet. Do not repeat a revealed answer.
 - In Freetalking, default to **no coaching in the spoken script**: use the conversation question or
   a natural transition alone. Add a procedural direction only when the learner cannot infer the
   essential interaction without it. Page 2 is read only in pre-study; the class script may ask for
   questions about the article but must never tell the learner to read or skim it during class.
+- Freetalking page 2 uses **10–15 sentence rows**. Full and accessible keep the same claims in the
+  same order; accessible lowers rare vocabulary and clause load rather than merely shortening the
+  full wording while retaining its hardest words.
 - Freetalking question-page tutor notes contain only 2–3 concise follow-up questions. Do not add a
   coaching preamble about answer shape, pacing, correction strategy or the lesson author's intent.
   Give every prompt a distinct job: concretize, cause, perspective, consequence or hindsight. Do
@@ -187,6 +197,8 @@ writers copy. Korean spent 348 reorder sentences at the wrong chip count for exa
   third. The accessible version simplifies their language without replacing open depth with generic
   yes/no prompts. Reserve a short operational note for a non-question page whose essential behavior
   is otherwise invisible, such as the article's pre-study-only skip rule.
+- A Freetalking question page prints one **talking prompt**. An imperative is valid; reject two
+  independent conversational jobs on one page rather than mechanically requiring a question mark.
 - Keep the pattern-intro page as a pacing bridge: pattern name plus one short Japanese line moving
   from the scene into the next beat. Do not teach grammar on the dark transition page.
 - Open the first teaching page of each pattern with one compact meaning-and-use box: what this
@@ -216,6 +228,10 @@ writers copy. Korean spent 348 reorder sentences at the wrong chip count for exa
   valid, show them at equal visual weight with situation labels; a correction arrow falsely turns a
   contextual decision into a right/wrong rule. **Contractions and ordinary spoken forms are taught
   alongside full forms**, not months later as "native speed" (`lesson-template.md`).
+- A form can be grammatical and still be the wrong production target. If contemporary speakers
+  rarely choose it beside a common alternative, demote it to receptive recognition or remove it;
+  do not drill it merely to complete a paradigm. Re-check the TOC and brief rather than hiding the
+  decision inside one deck.
 - Contextual free-talk is a **reciprocal exchange**, not a single student prompt: the tutor asks,
   the student answers, the student asks a related question, and the tutor gives a real personal
   answer in the editable field. Do not end the page after the student's answer.
@@ -249,9 +265,12 @@ Static checks:
 - **no `.yomi`, no katakana over English, `yomi.js` not loaded**
 - no inline CSS/JS, no accidental shared-runtime changes
 - **every tutor script box has the same number of sentences on both sides**
+- **every tutor-only block is English**
+- Core/Contextual meaning/use boxes contain one concise English sentence and one Japanese sentence
 - **every reorder page uses one chunking criterion down the page**
 - **every reorder chip set can reconstruct its own `data-a` answer under the runtime's comparison**
 - reviewed four-way vocabulary ownership; every hint chip declared; Core/Contextual new-word cap
+- Freetalking page inventory/order, 10–15-row article contract and paired full/accessible row parity
 
 ### Run the checker
 
