@@ -2,7 +2,7 @@
   "counts": {
     "courses": 12,
     "decks": 116,
-    "entries": 34304
+    "entries": 34303
   },
   "formatVersion": 1,
   "generator": "korean/tools/build_proofreading_packets.py",
@@ -12,73 +12,73 @@
       "course": "core-advanced-1",
       "decks": 6,
       "file": "packets/01-core-advanced-1.md",
-      "sourceSetSha256": "b2c128aa533eeed1b5ed2562a1323d0b253213568e30478ce4f84e706011db87"
+      "sourceSetSha256": "11841b5b0b06d15d2b3e70f86b3b69e68f95b4c6a07800b5f3f683dcf9e3214f"
     },
     {
       "course": "core-beginner-1",
       "decks": 10,
       "file": "packets/02-core-beginner-1.md",
-      "sourceSetSha256": "835055e9300491bb79e4bbc8290e4fb8764d965d06f5d08330ad1f6c21b80504"
+      "sourceSetSha256": "3695ad8f79a92cd3e60522c4c41f287b28595dcbe55fb123d146b0b96690b716"
     },
     {
       "course": "core-beginner-2",
       "decks": 9,
       "file": "packets/03-core-beginner-2.md",
-      "sourceSetSha256": "4d8ff75abea413de1012b38a69abcfc40cd4186d5f5c2307eb4c2cba5be09b4e"
+      "sourceSetSha256": "3e0f5d4630d842c6f16ced401536ced1ae84953759cbcf980585035281984775"
     },
     {
       "course": "core-beginner-3",
       "decks": 11,
       "file": "packets/04-core-beginner-3.md",
-      "sourceSetSha256": "75c5ba63fab3e76ba35bb8dc85a7f234145441a1f84658dedac94c6ec3d07a35"
+      "sourceSetSha256": "a8a162a0ae7b33bfc109c87b5c074e53cb93f89bffe4fb82a11727de28f7ce57"
     },
     {
       "course": "core-beginner-4",
       "decks": 15,
       "file": "packets/05-core-beginner-4.md",
-      "sourceSetSha256": "155cce2ba79369dd8f83837985938250777fd929a66dfc5a72886dfa042a2211"
+      "sourceSetSha256": "4572d80eb949bd0542b27c6d7dab0366c3c1195656f6ead6223b396d045755f6"
     },
     {
       "course": "core-intermediate-1",
       "decks": 10,
       "file": "packets/06-core-intermediate-1.md",
-      "sourceSetSha256": "5a880a73e04e74c73f5be6059828f6195052c0d58539bf2c4110467f100eade3"
+      "sourceSetSha256": "c56ef04ff68242e2acca696499a3094aecceb558711ae06b5979cb3864c851ba"
     },
     {
       "course": "core-intermediate-2",
       "decks": 9,
       "file": "packets/07-core-intermediate-2.md",
-      "sourceSetSha256": "b054f91ddeceb8ef2ebed5d9289056778d8f4519b54152a0904f5bb2174ebeef"
+      "sourceSetSha256": "3b7da4ea7698c02b80a727220fe5b4f931e33233b4aca92761d12f3e7bb44aba"
     },
     {
       "course": "core-intermediate-3",
       "decks": 5,
       "file": "packets/08-core-intermediate-3.md",
-      "sourceSetSha256": "5fcbf0e61e8ef722617b7006b99184abefe0ffaf39ccbd7b1dfac95dd78e00cc"
+      "sourceSetSha256": "fb59dd7d6c5fbb38cfad6b52e5c35b85092470986fab429f374f2717cfc76875"
     },
     {
       "course": "core-upper-beginner-1",
       "decks": 8,
       "file": "packets/09-core-upper-beginner-1.md",
-      "sourceSetSha256": "d632de97b139ecb5784f986d9cefc0d99c79c20c77019c2a0a0c4df042327399"
+      "sourceSetSha256": "66805ae41823399710d874d9e76cd16eaedd6d0494eac25a045b7476b4ffcbbf"
     },
     {
       "course": "core-upper-beginner-2",
       "decks": 12,
       "file": "packets/10-core-upper-beginner-2.md",
-      "sourceSetSha256": "2e880d86604ea3515facabccb08b52030a87017703f355f393466275c7da0e46"
+      "sourceSetSha256": "a146f2d24cf347d4ebfe6f9171a782c4e66820d262a9aaa111db488da9fe3be0"
     },
     {
       "course": "core-upper-intermediate-1",
       "decks": 12,
       "file": "packets/11-core-upper-intermediate-1.md",
-      "sourceSetSha256": "582fc9bf106054b4c19426904de7adf0c48ddbcb268c136a674b72d037b94e6d"
+      "sourceSetSha256": "913561d84bb6a4dd9cf0c4bb2fedd6cca581f55b32e8e7345fdfa5bcf1c80fbc"
     },
     {
       "course": "core-upper-intermediate-2",
       "decks": 9,
       "file": "packets/12-core-upper-intermediate-2.md",
-      "sourceSetSha256": "87a4fe80a054b167418825fccdca4a8b7b5649fbdc6051c432cff6e98af86a7f"
+      "sourceSetSha256": "421bf47426fff2011c3ae058f43a405679627f37f44bd15014aa546eb0319f60"
     }
   ],
   "track": "korean/tracks/2-core-patterns"
