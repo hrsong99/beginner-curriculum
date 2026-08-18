@@ -131,8 +131,9 @@ touched before committing; several also take no arguments and sweep the whole re
 | `check_teaching.py [deck…]` | **the five teaching-surface rules** — the `.anchor` slot, Japanese in a spoken line, lesson numbers anywhere, the boilerplate close, and length. Runs the whole repo with no arguments; `--rule ref` narrows to one |
 | `check_render.sh <deck…>` | tallest page, stray `.yomi`, and horizontal overflow at 480px. Needs the Orca browser with a tab already open |
 
-`check_teaching.py` and `check_reorder.py` are the two to run every time. It has caught twelve sentences in this
-track whose tiles could not build their own answer — a class of bug no other check sees.
+`check_teaching.py` and `check_reorder.py` are the two to run every time. The first is the
+gate on everything the tutor says; the second has caught twelve sentences in this track whose
+tiles could not build their own answer — a class of bug no other check sees.
 
 ## Getting a lesson to production
 
