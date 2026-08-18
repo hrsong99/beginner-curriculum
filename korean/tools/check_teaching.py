@@ -46,7 +46,8 @@ from collections import Counter
 
 REPO = Path(__file__).resolve().parent.parent.parent
 
-LIMIT = 60          # 자, the spoken line of a teach box
+LIMIT = 60            # 자, the spoken line of an anchored teach box
+UNANCHORED_LIMIT = 90 # 자, a box with no anchor — it carries the meaning too
 # A rule page's subtitle is the tutor's line while pointing at a diagram, so it
 # needs more room than a teach box. 90 was the corpus's own 75th percentile —
 # a backstop that flags a quarter of all rule pages is measuring the median,
@@ -129,6 +130,7 @@ def check(path, want):
     # English and discuss the lesson — "they are 과 3 과 1 material" tripped the
     # lesson-number rule on a deck that had no reference in it at all.
     src = COMMENT.sub("", Path(path).read_text(encoding="utf-8"))
+    needs_anchor = "/2-core-patterns/" in str(Path(path).as_posix())
     out = []
 
     def hit(rule, pid, detail, text):
@@ -139,18 +141,31 @@ def check(path, want):
         pm = PM.search(chunk)
 
         # ---- rule 1: a teach box carries an anchor slot and one sentence ----
+        # The anchor is required in 2-core-patterns, where the Japanese
+        # equivalent was already in the deck (183 boxes quoted it inline, and
+        # the ones that had stopped quoting it are exactly the ones that grew
+        # to 150 자). It is NOT required in 3-contextual-korean: no box there
+        # contains a word of Japanese, so nothing is being moved — an anchor
+        # would mean authoring 208 new Japanese lines for a Japanese-native
+        # audience, which is translation work and a separate decision. That
+        # track's problem is register, which no character count can see.
         if pm:
             inner = pm.group(1)
             ko = strip(KO.search(inner).group(1)) if KO.search(inner) else ""
-            if not ANCHOR.search(inner):
-                hit("anchor", pid, "뜻과 쓰임 상자에 .anchor 슬롯이 없음", ko)
-            elif not strip(ANCHOR.search(inner).group(2)):
-                hit("anchor", pid, ".anchor-ko 읽기가 비어 있음", ko)
+            anchored = bool(ANCHOR.search(inner))
+            if needs_anchor:
+                if not anchored:
+                    hit("anchor", pid, "뜻과 쓰임 상자에 .anchor 슬롯이 없음", ko)
+                elif not strip(ANCHOR.search(inner).group(2)):
+                    hit("anchor", pid, ".anchor-ko 읽기가 비어 있음", ko)
+            # an anchored box has one job left; an unanchored one still has to
+            # say what the form is as well as when to reach for it
+            cap, maxs = (LIMIT, 1) if anchored else (UNANCHORED_LIMIT, 2)
             n = len(sentences(ko))
-            if n > 1:
-                hit("anchor", pid, f"말하는 줄이 {n}문장 (1문장이어야 함)", ko)
-            if len(ko) > LIMIT:
-                hit("length", pid, f"{len(ko)}자 > {LIMIT}", ko)
+            if n > maxs:
+                hit("anchor", pid, f"말하는 줄이 {n}문장 ({maxs}문장 이하여야 함)", ko)
+            if len(ko) > cap:
+                hit("length", pid, f"{len(ko)}자 > {cap}", ko)
 
         # ---- rule 5b: a rule page's subtitle ----
         elif "rule" in pid:
