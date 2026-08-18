@@ -2250,6 +2250,59 @@ body.teaching .section-subtitle.pattern-meaning:has(+ .tutor-note) {
   overflow: hidden;
 }
 
+/* ---------- the anchor: what this form is, in Japanese, in one slot ----------
+   The first line of every 뜻과 쓰임 box used to be a sentence that quoted the
+   Japanese equivalent inside it — ‘~です’라는 뜻이에요. Two things went wrong.
+   Prose has no floor, so where the author could not name a clean Japanese
+   counterpart the sentence became a paragraph and the box grew to 150 자; and
+   a Korean tutor was handed a line to READ ALOUD containing script many of
+   them cannot read.
+
+   So the anchor stops being a sentence and becomes a slot. It holds the
+   Japanese and, under it, that Japanese written in Hangul so the tutor can
+   say it. Only one Korean sentence follows — the box can no longer absorb
+   formation (that is `pN-*-rule`) or a comparison with an earlier lesson
+   (that is the `.tutor-note` under this box).
+
+   The reading is NOT `.yomi`. `.yomi` is the learner's kana-over-Korean and
+   `yomi.js` hangs a shared よみがな switch on it — the learner turning kana
+   off would blank the tutor's crutch on both screens. Different reader,
+   different audience, different class, no switch. It also carries no level
+   rule: learners outgrow kana, tutors do not outgrow Japanese they never
+   read, and the anchorless decks are all 중고급 and up.
+
+   No fill and no outline — the hairline is the kicker's, so the kicker, the
+   anchor and the spoken line stack as one object. A bordered anchor inside
+   the tinted box inside the page card would be three frames deep. */
+.pattern-meaning .anchor {
+  display: grid;
+  justify-items: start;
+  gap: 1px;
+  padding: 12px 16px 11px;
+  border-bottom: 1px solid rgba(62, 91, 151, .12);
+}
+
+.pattern-meaning .anchor-ja {
+  color: var(--ink);
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -.01em;
+}
+
+/* the tutor's line, so it takes the tutor's ink — the same blue the kicker
+   uses. Tracked out a little because it is read syllable by syllable. */
+.pattern-meaning .anchor-ko {
+  color: var(--blue-ink);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: .06em;
+}
+
+.section-subtitle.pattern-meaning > .anchor + .ko {
+  padding-top: 11px;
+}
+
 /* ---------- 원어민 팁: the same sentence, the way a native says it ----------
    Some tip pages teach a genuine one-way SWAP — a redundant 저는 drops out,
    for example — and the card they used never drew it. It showed two example
@@ -2890,8 +2943,9 @@ body.teaching .section-subtitle.pattern-meaning:has(+ .tutor-note) {
    none of it exists in the page until the switch on the cover is
    turned on. Student view is the default, and reloading returns to it.
 
-   Notes are written in Korean: the tutor reads Korean, and a
-   Japanese beginner cannot, which is a second lock on the answers.
+   Notes use the deck's tutor language. Privacy still comes from teaching mode;
+   English learners may understand English tutor notes, so language is never
+   treated as an access-control boundary.
    ============================================================ */
 .tutor-note { display: none; }
 
@@ -2922,9 +2976,9 @@ body.teaching .tutor-note {
    words instead, and the fill only has to be a *step* rather than a shock —
    blue-200 is the same family as the script it hangs off, one shade down, so
    the two bands read as one card with a private second half.
-   Korean, like every tutor-facing string: the tutor reads it, a beginner
-   learner cannot, which is the second lock. Set from CSS so all 48 notes in
-   the decks get it without touching any markup. */
+   The default is Korean. English decks declare podo:target-language metadata
+   and receive an English label from the adjacent override. Set from CSS so
+   every note gets the right label without deck-local markup. */
 /* A memo written against this instruction belongs WITH it — the merged
    block's 26px would otherwise leave the memo stranded between the script and
    the activity. Lives here rather than in the shared sheet because the merged
@@ -2947,6 +3001,10 @@ body.teaching .section-subtitle + .tutor-note:has(+ .note-input) { margin-bottom
   font-size: 10.5px;
   font-weight: 800;
   white-space: nowrap;
+}
+
+html:has(meta[name="podo:target-language"][content="en"]) .tutor-note::before {
+  content: "Tutor only";
 }
 
 /* ---- MERGED WITH THE SCRIPT IT BELONGS TO ----
