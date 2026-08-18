@@ -158,6 +158,9 @@ def audit(deck: Path, baseline: dict) -> tuple[list[str], list[str]]:
                 err.append(f"s{i}: no Japanese translation")
 
     # ---- question pages ------------------------------------------------
+    # blueprint § 겉도는 질문 규칙 3 — 「주제에서 벗어났다」의 유일하게 검사 가능한
+    # 기준. 질문에 쓰인 명사·동사 하나 이상이 지문에 나와야 한다.
+    art = "".join(page2_sentences(pages[kind])) if kind else ""
     flo, fhi = PROFILE["followups"]
     for qid in PROFILE["questions"]:
         if qid not in pages:
@@ -183,6 +186,9 @@ def audit(deck: Path, baseline: dict) -> tuple[list[str], list[str]]:
         if ja and (ja.count("?") + ja.count("？")) != n:
             warn.append(f"{qid}: ko has {n} '?' but ja has "
                         f"{ja.count('?') + ja.count('？')}")
+        if art and ko and not any(t[:2] in art for t in re.findall(r"[가-힣]{2,}", ko)):
+            warn.append(f"{qid}: no word from this prompt appears in page 2 — "
+                        f"off-topic? {ko}")
         notes = blocks(pg, "tutor-note")
         items = re.findall(r"<li>(.*?)</li>", notes[0], re.S) if notes else []
         if not flo <= len(items) <= fhi:
