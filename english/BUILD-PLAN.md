@@ -263,8 +263,9 @@ Within the approved curriculum scope:
    while prestudy is deferred; never maintain a second curriculum copy inside the generator.
 3. Assign final course codes, `classLevel`, `LANG_TYPE` and per-course slots.
 4. Do not build trial materials while trial mapping remains deferred.
-5. Update and verify the explicit external course-import path, including the root-runtime move and
-   verbatim audience country. `sync-from-authoring.py` does not import deployable courses.
+5. Update and verify the explicit external promotion path, including the root-runtime move and
+   verbatim audience country. `sync-from-authoring.py` mirrors the complete tree into
+   non-deployable `sandbox/authoring/en/`; promotion into `courses/en/` remains a separate step.
 6. Prove the full path through sync, import, shared-reference repointing and validation in the
    consuming repository.
 

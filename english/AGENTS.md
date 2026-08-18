@@ -214,5 +214,6 @@ Two constraints are already fixed and worth knowing before anyone designs around
 
 `LANG_TYPE` separates English from the Korean and Japanese curricula, so band numbers cannot
 collide across languages even where they coincide. Do not add it to `course.yaml`: the consuming
-repository derives `EN` from the `courses/en/` destination directory. Its explicit course importer,
-not `sync-from-authoring.py`, must copy the manifests verbatim into that directory.
+repository derives `EN` from the destination directory. `sync-from-authoring.py` mirrors this
+complete track tree into non-deployable `sandbox/authoring/en/`; after review, an explicit
+promotion must copy a verified course verbatim into `courses/en/`.

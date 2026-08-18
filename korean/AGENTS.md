@@ -184,12 +184,13 @@ Lesson slugs are `NN-english-words` (`07-daily-routine`) because the schema dema
 the deck's `podo:lesson-id` must equal its directory name. `lesson.yaml` is written only for
 lessons that have a deck; the rest of the plan lives as comments in `course.yaml`.
 
-`sync-from-authoring.py` does **not** copy these manifests or ordinary track lessons. Over there,
-run the explicit course importer for the Korean track so it copies into `courses/kr/` without
-translating `countryCode`, then `repoint-shared.py` → `validate.py`. `podo:lesson-id` and
+`sync-from-authoring.py` copies the complete track tree — TOCs, briefs, blueprints, manifests and
+ordinary lessons — into `sandbox/authoring/kr/`. Nothing there deploys. Review that mirror first,
+then run the explicit promotion path for the Korean course so it moves into `courses/kr/` without
+translating `countryCode`, followed by `repoint-shared.py` → `validate.py`. `podo:lesson-id` and
 `podo:title-{ko,en,ja}` are load-bearing — `new_lesson.py` writes them and they must not be removed.
 
-**Never edit `shared/` or `sandbox/` in podo-curriculum.** Both are sync destinations
+**Never edit `shared/` or `sandbox/authoring/` in podo-curriculum.** Both are sync destinations
 and get replaced wholesale; a fix made there disappears on the next sync with no error.
 Fix it here instead.
 
