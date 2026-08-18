@@ -1433,7 +1433,7 @@ strong {
    inherit it from the pointer every block shares. */
 .is-spot {
   border-radius: 10px;
-  outline: 3px solid #ff2d55;
+  outline: 3px solid var(--spot-ring);
   outline-offset: 3px;
   /* The ring is drawn OUTSIDE the block, in space the next sibling owns — and
      these decks stack opaque cards edge to edge, so a later sibling paints over
@@ -1444,6 +1444,23 @@ strong {
   position: relative;
   z-index: 2;
 }
+/* Whose finger it is. The ring is red for the tutor and blue for the learner,
+   and the colour travels WITH the shared state (spotlight.js puts `by` in the
+   snapshot) — so a block the learner tapped is blue on both screens, not blue
+   on theirs and red on the tutor's. Red stays the default: a screen that never
+   told us its role is an internal review copy, and it should look like it
+   always has.
+
+   Blue rather than green because green is already spoken for. --green-500 is
+   "the outline on a chosen/correct thing" and rings tiles, pills and picks all
+   over the decks; a green pointer would say "this one is right". This blue is
+   saturated where --blue-100/-200 are pale tutor-script fills, so it never
+   reads as one of those either, and it holds up on all three grounds the ring
+   has to land on — white cards, the lime brand pages, the #1c1c1c
+   transition pages. */
+:root { --spot-ring: #ff2d55; }
+.is-spot-student { --spot-ring: #0a84ff; }
+
 [data-spot] { cursor: pointer; }
 /* a field keeps its own caret cursor — it is entered, not pointed at */
 input[data-spot], textarea[data-spot] { cursor: auto; }
