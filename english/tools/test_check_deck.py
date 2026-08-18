@@ -230,6 +230,46 @@ class DeckCheckTests(unittest.TestCase):
         )
         self.assertEqual(check_deck.pattern_meaning_issues("p1-teach", chunk), [])
 
+    def test_core_production_accepts_profiled_roleplay_and_reciprocal_freetalk(self):
+        image = '<img class="avatar" src="person.jpg" alt="">'
+        model = (
+            f'<div class="turn other"><span class="who">{image}</span>'
+            '<span class="ending">Could you help?</span></div>'
+            f'<div class="turn me"><span class="who">{image}</span></div>'
+        )
+        complete = (
+            f'<div class="turn other"><span class="who">{image}</span></div>'
+            f'<div class="turn me"><span class="who">{image}</span>'
+            '<span class="target">手伝ってもらえますか</span>'
+            '<textarea class="free-input phrase-input"></textarea></div>'
+        )
+        live = (
+            '<div class="turn other"><span class="who"><span class="avatar icon">T</span></span>'
+            '<span>What do you need?</span></div>'
+            '<div class="turn me"><span class="who"><span class="avatar icon">私</span></span>'
+            '<span>Could you help me with ~?</span></div>'
+        )
+        self.assertEqual(
+            check_deck.core_production_issues(
+                {"p3-model": model, "p3-complete": complete, "p3-freetalk": live}
+            ),
+            [],
+        )
+
+    def test_core_production_rejects_roleplay_icons_dropped_turns_and_generic_prompts(self):
+        icon_turn = '<div class="turn other"><span class="who"><span class="avatar icon">T</span></span></div>'
+        errors = check_deck.core_production_issues(
+            {
+                "p3-model": icon_turn * 2,
+                "p3-complete": icon_turn,
+                "p3-freetalk": '<div class="turn me">Use both patterns. Ask the tutor.</div>',
+            }
+        )
+        self.assertTrue(any("profile images" in item for item in errors))
+        self.assertTrue(any("turn count differs" in item for item in errors))
+        self.assertTrue(any("speaker labels" in item for item in errors))
+        self.assertTrue(any("generic production instruction" in item for item in errors))
+
     def test_freetalking_inventory_requires_canonical_order(self):
         source = "".join(
             f'<div data-page-id="{page_id}"></div>'

@@ -6,9 +6,14 @@ applies to the three production-facing English tracks; pronunciation remains pla
 [`../ux-philosophy.md`](../ux-philosophy.md) first; this document defines the
 production sequence and ownership boundaries.
 
-**Read [`BUILD-PLAN.md`](./BUILD-PLAN.md) before proposing any batch.** Course planning and product
-sync do not exist yet, and further decks are on hold during native review. Do not treat the
-presence of parsers, briefs or a skeleton generator as permission to cross either gate.
+Before review or batch generation, also apply
+[`reference/pilot-feedback-release-checklist.md`](./reference/pilot-feedback-release-checklist.md).
+It is the regression checklist distilled from pilot feedback across all three tracks; the track
+blueprints remain authoritative for page-by-page construction.
+
+**Read [`BUILD-PLAN.md`](./BUILD-PLAN.md) before proposing any batch.** Native catalog review is
+complete, but representative-lesson and product gates still control what may scale. Do not treat
+the presence of parsers, briefs or a skeleton generator as permission to cross those gates.
 
 The workflow is course-aware. A lesson is identified by:
 

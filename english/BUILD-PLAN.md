@@ -1,7 +1,7 @@
 # English Curriculum — Current Build Plan
 
-**Status:** native catalog approved · Core and paired Freetalking production unlocked · replacement
-Contextual pilot is the remaining track gate
+**Status:** native catalog and FT-1 pair approved · ten representative candidate decks authored and
+audited · wider Core and Contextual batches await owner review
 
 **Current as of:** 2026-08-18
 
@@ -15,17 +15,17 @@ here only when it changes the starting point for future work.
 
 | Area | Current state |
 | --- | --- |
-| Audience | Japanese speakers learning English; all support text is Japanese |
+| Audience | Japanese speakers learning English; learner support is Japanese and tutor-only operating copy is English |
 | Curriculum | 4 tracks · 315 planned items |
 | Production-facing catalog | 303 items: 122 Core · 60 Contextual · 121 Freetalking |
 | Planning-only catalog | 12 pronunciation lessons; no pronunciation decks authorized |
-| Authored lessons | Core 20 approved; old CTX-1 superseded; FT-1 full + accessible approved as matching canonical decks |
+| Authored lessons | 14 total: Core 20 and FT-1 full/accessible approved; Core 32/45/82, replacement CTX Travel 1, and FT 7/9/49 full/accessible are audited review candidates; old CTX-1 remains a superseded prototype |
 | Blueprints | Core, Contextual and Freetalking complete |
 | Generated author packets | 315 item briefs plus 4 indexes |
 | Review surface | current generated 303-item production catalog owner-approved on 2026-08-18 with no requested row dispositions |
 | Core evidence | 122-row generated triage ledger complete; five priority rows resolved against current first-party sources; Core 76/105 productive bands remain provisional |
 | Core audit | final progression pass plus a 52-row corpus-informed naturalness audit for Core 71–122; no audit-led TOC changes are pending |
-| Automated quality | 56 regression tests; all 4 English deck files pass with 0 errors and 0 warnings |
+| Automated quality | 63 regression tests; all 14 English decks pass with 0 errors; the one two-chunk Contextual reorder warning has human semantic sign-off; all render without horizontal overflow at 480px and 360px |
 | Deployment | not ready: course identity, manifests and external sync path remain open |
 
 The curriculum is no longer waiting for basic architecture, tooling or native catalog approval.
@@ -234,17 +234,19 @@ the approval of unchanged stable-id snapshots.
 
 ### C. Prove representative lessons before scaling
 
-1. Author three structurally different Core lessons: one narrative, one comparison and one B1+.
-2. Review the three together for pedagogy, naturalness, vocabulary load, static correctness and
-   rendered behavior at 480px and 360px.
-3. Fix the blueprint or shared conventions when a repeated problem is structural; do not patch the
-   same defect independently into multiple decks.
+1. **Complete:** authored three structurally different Core candidates: Core 32 narrative, Core 45
+   comparison, and Core 82 B1+ workplace nuance.
+2. **Complete:** reviewed them together for pedagogy, naturalness, vocabulary load, static
+   correctness and rendered behavior at 480px and 360px.
+3. **Complete:** repaired repeated failures in the shared workflow, retrospective checklist and
+   deck checker rather than leaving lesson-local exceptions.
 4. Stop for explicit approval before any wider Core batch.
-5. Author one Contextual pilot from the approved two-area blueprint; choose a low-intermediate
-   Travel or Business lesson that demonstrates both the task-first opening and the final standalone
-   transfer, then stop for approval. Do not reuse the superseded CTX-1 deck.
+5. **Candidate ready for review:** the replacement low-intermediate Travel pilot, CTX-1 check-in
+   and seat request, demonstrates the task-first opening and standalone transfer. It has passed the
+   same static and rendered audit; do not reuse the superseded CTX-1 deck as a canonical source.
 6. **Complete:** FT-1 accessible and full were explicitly approved on 2026-08-18 and are canonical
-   for their respective language loads.
+   for their respective language loads. FT-7, FT-9 and FT-49 now provide three additional audited
+   full/accessible pairs for owner review before wider topic batches.
 7. Only after the representative set exists, build the one-way authored-HTML proofreading packet
    projection. One Core pilot is not enough evidence for a universal packet schema.
 
@@ -279,12 +281,12 @@ Within the approved curriculum scope:
 
 ## Immediate next action
 
-The catalog gate is open and both Freetalking canonical decks are approved. The next authoring work
-is therefore two bounded tracks in parallel: select and author the three representative Core lessons
-required by section C, and author one replacement low-intermediate Contextual pilot from the revised
-Travel/Business TOC. Paired Freetalking batches may also begin from the approved full and accessible
-shells. Stop Core after the representative set and stop Contextual after its pilot for owner review;
-do not treat catalog approval as learner-pilot evidence.
+The catalog gate is open, both Freetalking canonical decks are approved, and the ten-deck
+representative set is authored and internally audited. The next action is owner review of Core
+32/45/82, replacement CTX Travel 1, and the FT-7/9/49 pairs. If they pass, begin course-sized Core
+and Contextual batches and paired Freetalking topic batches from the approved shells, applying the
+pilot-feedback release checklist to every deck. Do not treat catalog or deck approval as
+learner-pilot evidence.
 
 ---
 

@@ -46,6 +46,10 @@ trace:
    opening title and document title preserve the authoritative generated brief
    instead of drifting into an improvised short label.
 
+7. **Core production parity.** Model and replay keep the same turn sequence,
+   roleplays use profile images, live Free Talk labels every real speaker, and
+   completion targets remain visibly connected to their Japanese cues.
+
 These are not caught by reading markup, which is why they are here rather than in a
 checklist. A checklist item only reaches the writers who were told to read it.
 
@@ -116,6 +120,17 @@ TRANSITION_TITLE = re.compile(
 TITLE_JA = re.compile(
     r'<span\b[^>]*class="[^"]*\btitle-ja\b[^"]*"[^>]*>.*?</span>',
     re.I | re.S,
+)
+TURN_OPEN = re.compile(r'<div class="turn\b')
+PROFILE_AVATAR = re.compile(r'<img class="avatar"(?:\s|>)')
+WHO_OPEN = re.compile(r'<span class="who">')
+ENDING = re.compile(r'class="ending"')
+TARGET = re.compile(r'class="target"')
+PHRASE_INPUT = re.compile(r'class="[^"]*\bphrase-input\b')
+GENERIC_CORE_FREETALK = re.compile(
+    r"\b(?:use (?:both|the) (?:comparison )?patterns?|give the status|"
+    r"ask the tutor|tutor's real answer)\b",
+    re.I,
 )
 BRIEF_HEADING = re.compile(r"^#\s+(FT-\d+)\s+·\s+(.+?)\s*$")
 QUOTE_OPEN = "“‘「『"
@@ -361,6 +376,59 @@ def pattern_meaning_issues(page_id, chunk):
     return errors
 
 
+def core_production_issues(page_chunks):
+    """Protect the production ladder established by the approved Core pilots."""
+    errors = []
+    roleplay_pages = ("p3-model", "p3-complete", "in-the-wild")
+    for page_id in roleplay_pages:
+        chunk = page_chunks.get(page_id)
+        if not chunk:
+            continue
+        turns = len(TURN_OPEN.findall(chunk))
+        profiles = len(PROFILE_AVATAR.findall(chunk))
+        if turns and profiles != turns:
+            errors.append(
+                f"{page_id}: roleplay has {turns} turns but {profiles} profile images — "
+                "use a profile image for every roleplay turn"
+            )
+
+    model = page_chunks.get("p3-model", "")
+    complete = page_chunks.get("p3-complete", "")
+    if model and complete:
+        model_turns = len(TURN_OPEN.findall(model))
+        complete_turns = len(TURN_OPEN.findall(complete))
+        if model_turns != complete_turns:
+            errors.append(
+                "p3-complete: turn count differs from p3-model "
+                f"(model={model_turns} complete={complete_turns}) — replay the same conversation"
+            )
+        if model_turns and not ENDING.search(model):
+            errors.append("p3-model: missing mirrored target highlights")
+        phrase_inputs = len(PHRASE_INPUT.findall(complete))
+        targets = len(TARGET.findall(complete))
+        if phrase_inputs and targets != phrase_inputs:
+            errors.append(
+                "p3-complete: each phrase input needs one exact Japanese .target "
+                f"(inputs={phrase_inputs} targets={targets})"
+            )
+
+    freetalk = page_chunks.get("p3-freetalk", "")
+    if freetalk:
+        turns = len(TURN_OPEN.findall(freetalk))
+        speakers = len(WHO_OPEN.findall(freetalk))
+        if turns != speakers:
+            errors.append(
+                f"p3-freetalk: {turns} turns but {speakers} speaker labels — "
+                "show Tutor or Me on every live turn"
+            )
+        if GENERIC_CORE_FREETALK.search(plain_text(freetalk)):
+            errors.append(
+                "p3-freetalk: generic production instruction — print the actual target "
+                "scaffold, ask-back question, and tutor-answer label"
+            )
+    return errors
+
+
 def freetalk_inventory_issues(source):
     """Require the canonical 13-page Freetalking order with no stale page kind."""
     actual = [page_id for page_id, _ in pages(source)]
@@ -598,6 +666,8 @@ def check(path):
         errs.extend(freetalk_tutor_language_issues(html))
         for page_id, chunk in pages(html):
             errs.extend(pattern_meaning_issues(page_id, chunk))
+        if "1-core-patterns" in path.parts:
+            errs.extend(core_production_issues(dict(pages(html))))
 
     # ---- 1 · tutor script sentence parity ---------------------------------
     for pid, chunk in pages(html):
