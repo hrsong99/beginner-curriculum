@@ -60,10 +60,15 @@ ANCHOR = re.compile(r'<span class="anchor">\s*<span class="anchor-ja">(.*?)</spa
 
 # kana, kanji, halfwidth katakana. NOT the 「」 quotes, which are punctuation.
 JA_SCRIPT = re.compile(r"[぀-ヿ㐀-䶿一-鿿ｦ-ﾟ]")
-# 「N과」 / 「N課」 / 「68~70과」.  (?<![가-힣]) keeps the particle 과 out —
-# "파트 1과 똑같아요" is 과 the particle, not lesson 1, and it cost us a
-# false positive on the very first deck.
-LESSON_REF = re.compile(r"(?<![가-힣])\d+\s*[~～\-–]?\s*\d*\s*[과課](?![가-힣])")
+# 「N과」 / 「N課」 / 「68~70과」.
+# The first version ended in (?![가-힣]) to keep the particle 과 out. That was
+# wrong twice over: it silently skipped every real reference written 68과에서는
+# or 66과의 — 과 followed by Hangul is the NORMAL shape — and it did not
+# exclude the particle anyway, because "파트 1과 똑같아요" has a space after 과.
+# 과 as a conjunctive particle is genuinely ambiguous with 과 as "lesson", so
+# the one form this curriculum actually writes is excluded by name below.
+LESSON_REF = re.compile(r"(?<![가-힣0-9])\d+\s*[~～\-–]?\s*\d*\s*[과課]")
+PARTICLE_CTX = re.compile(r"파트\s*$")
 TAIL = re.compile(r"(제가 읽을게요|읽어 드릴게요|들려 드릴게요|잘 듣고 따라 읽어|"
                   r"따라 읽어 ?보세요|한 번에 읽을게요|이어서 읽을게요)")
 
@@ -172,6 +177,8 @@ def check(path, want):
 
         # ---- rule 3: lesson numbers, in any element on the page ----
         for m in LESSON_REF.finditer(chunk):
+            if PARTICLE_CTX.search(chunk[max(0, m.start() - 12):m.start()]):
+                continue                      # 파트 1과 — the particle 과
             seg = strip(chunk[max(0, m.start() - 60):m.end() + 30])
             hit("ref", pid, f"‘{m.group().strip()}’ 참조", seg)
 
