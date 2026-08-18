@@ -47,7 +47,13 @@ from collections import Counter
 REPO = Path(__file__).resolve().parent.parent.parent
 
 LIMIT = 60          # 자, the spoken line of a teach box
-RULE_LIMIT = 90     # 자, a rule page's subtitle — it may name a second branch
+# A rule page's subtitle is the tutor's line while pointing at a diagram, so it
+# needs more room than a teach box. 90 was the corpus's own 75th percentile —
+# a backstop that flags a quarter of all rule pages is measuring the median,
+# not the outliers. The real rule for these pages is qualitative (a subtitle
+# never recites what the diagram beside it already draws) and cannot be a
+# length; 105 is p90, which catches the paragraphs.
+RULE_LIMIT = 105
 
 TAG = re.compile(r"<[^>]+>")
 PID = re.compile(r'data-page-id="([^"]+)"')
