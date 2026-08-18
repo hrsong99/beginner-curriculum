@@ -16,7 +16,8 @@ how the file gets lost.
 > **Status: all authorable production-track pilots are written.** Core 20
 > (`Could you help me with ___?`) is approved and canonical for `1-core-patterns`. The old CTX-1
 > deck is a superseded four-area prototype and must not be approved or copied. Both language-load
-> versions of FT-1 are awaiting explicit approval. Pronunciation remains planning-only.
+> versions of FT-1 were approved as their respective canonical decks on 2026-08-18. Pronunciation
+> remains planning-only.
 
 ---
 
@@ -150,7 +151,7 @@ root, so from a lesson deck the assets are **one `../` shorter** than the runtim
 
 ---
 
-## Touching the runtime is not a deck decision
+## Touching the runtime is an orchestrator decision
 
 "No inline CSS or JS" means the deck ships none of its own. It does **not** mean the shared runtime
 is yours to change.
@@ -162,8 +163,9 @@ from the file's existing uncommitted work. Worse, it does not reach a learner: d
 CDN tag, not the working folder, so a deck depending on a local runtime change renders right for
 its author and **unstyled in class**.
 
-So: if a lesson needs something the runtime cannot do, **stop and report it — do not fix it.** Note
-what is missing, build the page with what exists, and say so.
+So: if a lesson needs something the runtime cannot do, the lesson writer **stops and reports it**.
+The orchestrator decides whether to change the one shared runtime, verifies both language paths,
+and tracks publication/repointing. The writer never adds a deck-local override.
 
 ### The type scale came down — for both languages, with no English branch
 
@@ -194,6 +196,7 @@ It is not worth losing the right example over — take the wrap and note it.
 | Needed | State | Why |
 | --- | --- | --- |
 | **Republish the runtime** | **blocking for class use** | The published `v1.7.0` contained the shared lesson-card and activity runtime that English used before this pass, but `python3 ../../korean/tools/check_runtime_drift.py` reports unpublished shared files. The verified 360px `.slot-input` fix now also creates new `lesson-card.css` and `activities.js` deltas. Publishing is a `podo-curriculum` action, not one taken from this repo |
+| Language-aware tutor-only labels | **implemented locally; publish pending** | English decks declare `podo:target-language=en`. The shared runtime now emits `Spoken sentence`, `Correction`, `Note`, `Delete`, `Tutor only`, `Message to the learner`, and `Well done stamp` for them while keeping Korean as the default. The runtime still must be published and deployed decks repointed before the change reaches class |
 | A three-branch rule diagram | not written | inherited from Korean and **worse here**: `do/does/did`, `a/an/the` and `-s/-es/-ies` are all three-case, and `.batchim` is single-column. Core 20 dodged it (its rule is an honest two-brancher). The next lesson that does not, ships two boxes and reports it |
 | `.ko` / `.korean` class names | naming only, not a defect | they mean "the line the tutor reads" and "the target-language span". English decks reuse them as-is, because renaming is a runtime change touching 316 Korean decks. Worth knowing before someone reads an English deck and thinks it is mislabelled |
 | A second inline accent for English | not written | see the mark-vocabulary section above. Not needed yet |

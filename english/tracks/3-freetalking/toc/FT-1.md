@@ -12,10 +12,10 @@
 
 ## Outcome
 
-- **Can do:** "Tell me about a time something surprised you about another country — or about someone from one." *(works for a learner who has never left Japan: a person, a film, a shop, a coworker)*
+- **Can do:** "Tell me about a time something surprised you about another country—or about someone from there." *(works for a learner who has never left Japan: a person, a film, a shop, a coworker)*
 - **Theme:** 1 · Between two countries
 - **Format:** 両国
-- **Opening:** "Tell me about a time something surprised you about another country — or about someone from one." *(works for a learner who has never left Japan: a person, a film, a shop, a coworker)*
+- **Opening:** "Tell me about a time something surprised you about another country—or about someone from there." *(works for a learner who has never left Japan: a person, a film, a shop, a coworker)*
 - **Question ladder:** what happened → what did you expect instead → where did that expectation come from → did you say anything at the time → has it changed how you see it → what would surprise *me* about Japan
 
 ## Retrieval

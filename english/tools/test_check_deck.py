@@ -117,6 +117,143 @@ class DeckCheckTests(unittest.TestCase):
         errors = check_deck.reorder_solvability_errors("p1-reorder", chunk)
         self.assertTrue(any("cannot reconstruct data-a" in item for item in errors))
 
+    def test_freetalking_article_accepts_seven_rows_with_exact_gloss_parity(self):
+        script = (
+            '<p class="section-subtitle"><span class="ko">'
+            'Did you have any questions about the article?'
+            '</span><span class="ja">記事について何か質問はありましたか？</span></p>'
+        )
+        row = (
+            '<div class="sent"><span class="s-key">curiosity</span>'
+            '<span class="s-w"><b>curiosity</b>好奇心</span></div>'
+        )
+        errors, warnings = check_deck.article_structure_issues(script + row * 7)
+        self.assertEqual(errors, [])
+        self.assertEqual(warnings, [])
+
+    def test_freetalking_article_rejects_five_rows_and_mismatched_glosses(self):
+        script = (
+            '<p class="section-subtitle"><span class="ko">'
+            'Did you have any questions about the article?'
+            '</span><span class="ja">記事について何か質問はありましたか？</span></p>'
+        )
+        matched = (
+            '<div class="sent"><span class="s-key">curiosity</span>'
+            '<span class="s-w"><b>curiosity</b>好奇心</span></div>'
+        )
+        mismatched = '<div class="sent"><span class="s-key">curiosity</span></div>'
+        errors, _ = check_deck.article_structure_issues(script + matched * 4 + mismatched)
+        self.assertTrue(any("5 sentence rows" in item for item in errors))
+        self.assertTrue(any("1 highlighted item(s) but 0 gloss(es)" in item for item in errors))
+
+    def test_freetalking_article_rejects_in_class_reading_coaching(self):
+        script = (
+            '<p class="section-subtitle"><span class="ko">'
+            'Did you read the article? If not, skim it now.'
+            '</span><span class="ja">記事を読みましたか？ まだなら今読んでください。</span></p>'
+        )
+        rows = '<div class="sent"></div>' * 7
+        errors, _ = check_deck.article_structure_issues(script + rows)
+        self.assertTrue(any("one question" in item for item in errors))
+        self.assertTrue(any("must ask whether the learner has questions" in item for item in errors))
+        self.assertTrue(any("coaches page use or in-class reading" in item for item in errors))
+
+    def test_freetalking_question_note_accepts_followups_only(self):
+        chunk = (
+            '<div class="tutor-note"><div class="tn-body">'
+            '<span class="tn-cap">Follow up</span><ul class="tn-more">'
+            '<li>What happened next?</li><li>How did you react?</li>'
+            '</ul></div></div><div class="fb"></div>'
+        )
+        self.assertEqual(check_deck.freetalk_question_note_issues("q1", chunk), [])
+
+    def test_freetalking_question_note_rejects_coaching_preamble(self):
+        chunk = (
+            '<div class="tutor-note"><div class="tn-body">Build the story in short steps.'
+            '<span class="tn-cap">Follow up</span><ul class="tn-more">'
+            '<li>What happened next?</li><li>How did you react?</li>'
+            '</ul></div></div><div class="fb"></div>'
+        )
+        errors = check_deck.freetalk_question_note_issues("q1", chunk)
+        self.assertTrue(any("has coaching before the follow-ups" in item for item in errors))
+
+    def test_freetalking_question_note_rejects_nonquestion_and_duplicate(self):
+        chunk = (
+            '<p class="section-subtitle ask"><span class="ko">What changed?</span>'
+            '<span class="ja">何が変わりましたか？</span></p>'
+            '<div class="tutor-note"><div class="tn-body">'
+            '<span class="tn-cap">Follow up</span><ul class="tn-more">'
+            '<li>Give one example.</li><li>Why did it change?</li>'
+            '<li>Why did it change?</li></ul></div></div><div class="fb"></div>'
+        )
+        errors = check_deck.freetalk_question_note_issues("q2", chunk)
+        self.assertTrue(any("is not a question" in item for item in errors))
+        self.assertTrue(any("duplicate follow-up" in item for item in errors))
+
+    def test_freetalking_question_note_rejects_repeated_main_question(self):
+        chunk = (
+            '<p class="section-subtitle ask"><span class="ko">What changed?</span>'
+            '<span class="ja">何が変わりましたか？</span></p>'
+            '<div class="tutor-note"><div class="tn-body">'
+            '<span class="tn-cap">Follow up</span><ul class="tn-more">'
+            '<li>What changed?</li><li>Why did it change?</li>'
+            '</ul></div></div><div class="fb"></div>'
+        )
+        errors = check_deck.freetalk_question_note_issues("q2", chunk)
+        self.assertTrue(any("repeats the printed question" in item for item in errors))
+
+    def test_freetalking_tutor_notes_reject_japanese_or_korean(self):
+        source = (
+            '<div class="tutor-note">Answer questions, then move on.</div>'
+            '<div class="tutor-note">質問に答えてください。</div>'
+            '<ul class="opt-note"><li>질문에 답해 주세요.</li></ul>'
+        )
+        errors = check_deck.freetalk_tutor_language_issues(source)
+        self.assertEqual(len(errors), 2)
+
+    def test_freetalking_style_accepts_canonical_direct_wording(self):
+        chunk = (
+            '<p class="section-subtitle"><span class="ko">'
+            'Please choose your preferred discussion style.'
+            '</span><span class="ja">希望する会話の進め方を選んでください。</span></p>'
+            '<button>Discussion first</button><button>Correction first</button>'
+        )
+        self.assertEqual(check_deck.freetalk_style_issues(chunk), [])
+
+    def test_freetalking_style_rejects_support_question_and_fluency_label(self):
+        chunk = (
+            '<p class="section-subtitle"><span class="ko">'
+            'How would you like me to support your English today?'
+            '</span><span class="ja">今日はどうしますか？</span></p>'
+            '<button>Fluency first</button><button>Correction first</button>'
+        )
+        errors = check_deck.freetalk_style_issues(chunk)
+        self.assertTrue(any("canonical direct script" in item for item in errors))
+        self.assertTrue(any("Discussion first" in item for item in errors))
+
+    def test_freetalking_title_accepts_exact_brief_title_with_level_suffix(self):
+        title = "Something that surprised you about another culture"
+        source = (
+            f"<title>{title} · Full — PODO English</title>"
+            '<div data-page-id="lesson-goal">'
+            f'<h2 class="transition-title">{title} '
+            '<span class="title-ja">(異文化で驚いたこと)</span></h2></div>'
+        )
+        self.assertEqual(check_deck.freetalk_title_issues(source, title), [])
+
+    def test_freetalking_title_rejects_improvised_short_title(self):
+        expected = "Something that surprised you about another culture"
+        source = (
+            "<title>This surprised me · Full — PODO English</title>"
+            '<div data-page-id="lesson-goal">'
+            '<h2 class="transition-title">This surprised me '
+            '<span class="title-ja">(驚いたこと)</span></h2></div>'
+        )
+        errors = check_deck.freetalk_title_issues(source, expected)
+        self.assertEqual(len(errors), 2)
+        self.assertTrue(any("document title" in item for item in errors))
+        self.assertTrue(any("visible title" in item for item in errors))
+
 
 if __name__ == "__main__":
     unittest.main()

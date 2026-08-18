@@ -10,11 +10,13 @@ The places where it does **not** are listed under *English deltas* below — rea
 Do not design a page, add a component, or write copy here until you have read both. If a change
 you are about to make conflicts with either, say so and ask — don't quietly deviate.
 
-**This folder is pre-production, not empty.** It has four TOCs (315 planned items), an approved
-Core pilot, three production blueprints, strict parsers, generated briefs and grammar map, a deck
-checker and a native-review catalog. [`BUILD-PLAN.md`](./BUILD-PLAN.md) is the reconciled list of
-what remains and who unblocks whom. The owner has paused further decks until catalog feedback
-returns; infrastructure readiness is not permission to expand lesson volume.
+**This folder is pre-production, not empty.** It has four TOCs (315 planned items), approved Core
+and Freetalking canonical decks, three production blueprints, strict parsers, generated briefs and
+grammar map, a deck checker and an owner-approved native-review catalog.
+[`BUILD-PLAN.md`](./BUILD-PLAN.md) is the reconciled list of what remains and who unblocks whom.
+The catalog hold was lifted on 2026-08-18. Core and Freetalking may now proceed through their
+representative/batch gates; Contextual still needs its replacement pilot, and Pronunciation remains
+planning-only.
 
 ---
 
@@ -23,14 +25,27 @@ returns; infrastructure readiness is not permission to expand lesson volume.
 **Japanese speakers learning English.** Same learner as the Korean curriculum, different target
 language.
 
-- **All support text is Japanese** — glosses, hints, instructions, answer-box labels, the
+- **All learner-facing support text is Japanese** — glosses, hints, instructions, answer-box labels, the
   translated half of the tutor's script. English is reserved for the target language itself.
   No Korean anywhere in a learner-facing English deck.
-- **Tutor notes are written in Japanese here.** In Korean decks the notes are Korean, which
-  doubles as a lock on the answers because a beginner cannot read them. That trick does not
-  transfer — an English learner reads Latin script fine — so English tutor notes rely on the
-  `チューターのみ` badge and the teaching-mode switch alone. Do not write answers into a note that
-  the page already reveals.
+- **Every English deck declares `<meta name="podo:target-language" content="en">`.** The shared
+  runtime uses that explicit signal for generated tutor controls. `<html lang="ja">` correctly
+  describes the learner-support language and must not be repurposed as the teaching-language flag.
+- **Tutor notes are written in English here.** They are operating instructions for the
+  English-speaking tutor, not learner support. Keep them behind the tutor-only badge and the
+  teaching-mode switch, because an English learner can also read them. Follow-up prompts, correction
+  controls, and mode guidance are tutor-facing too and therefore stay in English. Do not write
+  answers into a note that the page already reveals.
+- **Freetalking question-page notes are follow-ups, not coaching.** Put only 2–3 concise follow-up
+  questions in the private band. Each one must make a different conversational move—for example,
+  concretize, explain a cause, add another perspective, explore a consequence or invite hindsight.
+  Do not repeat the printed question or a later ladder question, split one idea across multiple
+  yes/no prompts, or assume the story happened in person or involved another speaker. **Two strong
+  follow-ups are better than a filler third.** Do not precede them with advice about how to shape
+  the answer, extend the story, preserve a frame, correct the learner, or interpret the topic. A
+  non-question page may carry one short operational note only when the tutor cannot infer an
+  essential contract from the page—for example, skipping the pre-study article rather than reading
+  it in class.
 
 ### **No katakana readings. Ever. At any level.**
 
@@ -67,12 +82,12 @@ So:
   existing component vocabulary before inventing a new one — consistency over novelty.
 
   **The runtime lives at the repo root and is shared with the Korean curriculum.** There is exactly
-  one copy; do not fork it, and do not change it from inside a lesson assignment. If an English
-  deck needs something the runtime cannot do, **report the gap** — record it in
-  `tracks/_conventions.md` § runtime queue, build the page with what exists, and say so. A shared
-  file changed by one of several parallel writers lands with no review, and worse, does not reach a
-  learner: decks load a pinned CDN tag, so a deck depending on a local runtime change renders right
-  for its author and **unstyled in class**.
+  one copy; do not fork it, and lesson writers do not change it from inside their assignments. If
+  an English deck needs something the runtime cannot do, the writer reports the gap to the
+  orchestrator. The orchestrator may make one coordinated shared-runtime change, test both English
+  and Korean behavior, record any publish dependency in `tracks/_conventions.md`, and keep it
+  separate from concurrent writer edits. A local fix still does not reach a learner until the
+  pinned CDN runtime is republished and the deployed decks are repointed.
 
   Two path facts that will bite a hand-edited deck:
 
@@ -91,6 +106,12 @@ So:
   `Today we'll...` and `By the end of the lesson...`. Use no grammar jargon and write in the first
   person (`I'll read it first` — never `the teacher will`). Its Japanese line is a direct
   translation with the same conversational tone, not extra teaching content.
+- **Freetalking scripts are conversation, not coaching.** The blue box should normally contain
+  only the question or natural transition the tutor actually says. Do not script directions for
+  how to answer, where to tap, how long to speak, or how to move through the page unless the
+  interaction would otherwise be impossible to understand. In particular, the Freetalking article
+  is completed only during pre-study: its in-class script asks whether the learner has questions
+  and never tells them to read, skim, or catch up during class.
 - **Lessons are audio-only.** The learner hears the tutor but never sees them, so no instruction
   may depend on watching the tutor — no "watch my mouth", no gestures, no "look at me". Model a
   sound by *saying* it. Describing the learner's **own** mouth is fine and matters more here than
@@ -113,17 +134,19 @@ So:
 
 ### Mandatory pilot gate
 
-Core's first pilot is approved and is the track's canonical deck. **Further Core decks remain on
-an explicit owner hold until native catalog feedback returns.** Contextual and Freetalking still
-have no pilot: the first deck in each track is a pilot, must be authored and visually reviewed by
-hand, then stops for explicit approval. Structural checks never approve a pilot. After the hold is
-lifted, Core still needs three structurally different lessons reviewed together before expansion.
+Core's first pilot and both Freetalking FT-1 variants are approved canonical decks. The owner also
+passed the current 303-item native-review catalog on 2026-08-18, so the catalog hold is lifted.
+Core still needs three structurally different lessons reviewed together before wider expansion.
+Freetalking may proceed in paired accessible/full course batches using the matching approved FT-1
+shell. Contextual still has no current pilot: its first revised deck must be authored and visually
+reviewed by hand, then stop for explicit approval. Structural checks never approve a pilot.
 
 ### The inputs, in order
 
 1. **A deck skeleton.** `tools/new_lesson.py` lifts metadata, shared paths and the load-order-bearing
    scripts from an approved English canonical deck, removes its pages, checks references and
-   refuses overwrite. Core defaults to its approved pilot. Other tracks require their own approved
+   refuses overwrite. Core defaults to its approved pilot. Freetalking writers pass the matching
+   approved accessible or full FT-1 deck with `--from-deck`. Contextual requires its own approved
    pilot before `--from-deck` is legitimate. Never use a Korean deck, whose shell loads `yomi.js`.
 2. **The generated lesson brief.** Run `tools/build_lesson_briefs.py`; read the stable-id brief in
    `tracks/<track>/toc/`. It carries the exact TOC facts, adjacent context and negative sequence
@@ -168,7 +191,7 @@ not a matter of taste.
 | `ux-philosophy.md` says | For English |
 | --- | --- |
 | Korean-first title, Japanese gloss in parentheses | **English-first** title, Japanese gloss in parentheses. Same shape. |
-| Tutor notes in Korean; the language locks the answers | Tutor notes in **Japanese**. The lock is gone — rely on the badge and the switch, and never restate a revealed answer. |
+| Tutor notes in Korean; the language locks the answers | Tutor notes and tutor-only controls are in **English**. The language lock is gone — rely on the badge and switch, and never restate a revealed answer. |
 | A `.yomi` reading through 초중급; the よみがな switch | **None, at any level.** See the audience section. English decks do not load `yomi.js`. |
 | "Romanize the parts" — Latin letters as phonetic labels | Not applicable; the target language *is* Latin letters. If a page needs to show a sound apart from its spelling, that is IPA and it needs a decision first. |
 | Decoding arc: Listen and pick → Read aloud → Build from the parts | No decoding track exists yet (`BUILD-PLAN.md` → D6/T5.4). The sentence arc below is the only one in use. |
@@ -181,7 +204,8 @@ not a matter of taste.
 
 - **`tracks/`** — the learner-facing curriculum: `1-core-patterns` · `2-contextual-english` ·
   `3-freetalking`, plus planning-only `4-pronunciation`. The three production-facing tracks now
-  have a blueprint; only Core has an approved canonical deck.
+  have a blueprint; Core and both Freetalking language-load variants have approved canonical decks.
+  Contextual still needs its revised pilot.
 - **`reference/`** — the author-only source trail: teaching philosophy and the pattern standard,
   the source hierarchy and provenance policy, the proposed evidence-first build method, the
   grammar coverage map, the rationale, and the transformation map from the linked Podolingo doc.

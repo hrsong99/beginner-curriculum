@@ -1,9 +1,9 @@
 # English Curriculum — Current Build Plan
 
-**Status:** curriculum architecture and authoring infrastructure are ready · native catalog review
-is active · further lesson decks are intentionally on hold
+**Status:** native catalog approved · Core and paired Freetalking production unlocked · replacement
+Contextual pilot is the remaining track gate
 
-**Current as of:** 2026-08-14
+**Current as of:** 2026-08-18
 
 This is an operational plan, not a diary. It states what exists now, what remains, and what
 unblocks what. Git history preserves the implementation chronology; completed work is summarized
@@ -19,18 +19,19 @@ here only when it changes the starting point for future work.
 | Curriculum | 4 tracks · 315 planned items |
 | Production-facing catalog | 303 items: 122 Core · 60 Contextual · 121 Freetalking |
 | Planning-only catalog | 12 pronunciation lessons; no pronunciation decks authorized |
-| Authored lessons | Core 20 approved; old CTX-1 superseded; FT-1 full + accessible awaiting approval |
+| Authored lessons | Core 20 approved; old CTX-1 superseded; FT-1 full + accessible approved as matching canonical decks |
 | Blueprints | Core, Contextual and Freetalking complete |
 | Generated author packets | 315 item briefs plus 4 indexes |
-| Review surface | generated 303-item catalog; native review in progress |
+| Review surface | current generated 303-item production catalog owner-approved on 2026-08-18 with no requested row dispositions |
 | Core evidence | 122-row generated triage ledger complete; five priority rows resolved against current first-party sources; Core 76/105 productive bands remain provisional |
 | Core audit | final progression pass plus a 52-row corpus-informed naturalness audit for Core 71–122; no audit-led TOC changes are pending |
-| Automated quality | 44 regression tests; all 4 English deck files pass with 0 errors and 0 warnings |
+| Automated quality | 56 regression tests; all 4 English deck files pass with 0 errors and 0 warnings |
 | Deployment | not ready: course identity, manifests and external sync path remain open |
 
-The curriculum is no longer waiting for basic architecture or tooling. Its main content risk is
-whether the reviewed patterns—especially Core 71–122—survive native review and learner pilots. Its main
-product risk is the still-unassigned level and course identity scheme.
+The curriculum is no longer waiting for basic architecture, tooling or native catalog approval.
+Its main content risk is whether the accepted patterns—especially Core 71–122—survive representative
+lesson review and learner pilots. Its main product risk is the still-unassigned level and course
+identity scheme.
 
 ---
 
@@ -57,7 +58,6 @@ These are constraints, not open tasks.
 
 | Decision | Why it is open | What it blocks |
 | --- | --- | --- |
-| Native catalog dispositions | The owner is reviewing the generated catalog | final Core content, more Core decks |
 | CEFR → product ladder mapping | Owner deferred trial/report mapping on 2026-08-13 | recommendation logic, trial report |
 | Prestudy contract | Owner deferred prestudy on 2026-08-13 | deployable lesson manifests and shipping |
 | Pronunciation notation | No model-line scaffold has been approved | only future pronunciation/scaffold work; not current Core authoring |
@@ -97,8 +97,8 @@ the owner/product system supplies the final values.
 - The authored CTX-1 deck belongs to the retired four-area curriculum. It is a superseded prototype,
   not an approval candidate or canonical source. Select and author a new low-intermediate Travel or
   Business pilot after the revised catalog row passes review.
-- FT-1 is authored as separate 13-page full and accessible pilots, visually reviewed at 480px and
-  360px, and waiting for explicit approval before either becomes canonical.
+- FT-1 is authored as separate 13-page full and accessible decks, visually reviewed at 480px and
+  360px, and owner-approved on 2026-08-18 as the matching canonical shells for their language loads.
 - `new_lesson.py` copies only an approved English shell, retargets stable identity and paths,
   clears inherited vocabulary, refuses overwrite and keeps non-Core tracks behind their pilot gate.
 - The running lexicon classifies new, recycled, assumed-known and receptive-only vocabulary.
@@ -136,14 +136,17 @@ the owner/product system supplies the final values.
 
 ---
 
-## Active gate
+## Native catalog approval
 
-The owner is reviewing `english/catalog.html`. While that review is open:
+The owner passed the current production-facing native catalog on 2026-08-18 with no requested row
+dispositions. That approval covers the 303 Core, Contextual and Freetalking rows generated from the
+current authoritative TOCs; Pronunciation remains planning-only and was not promoted by this pass.
+The exact approved snapshot is recorded in
+[`reference/native-catalog-approval.md`](./reference/native-catalog-approval.md).
 
-- do not author additional Core decks;
-- do not hand-edit the generated catalog, briefs, grammar map or lexicon;
-- do not author pronunciation decks;
-- do not assign provisional product ids as if they were final.
+The catalog hold on additional Core and Freetalking authoring is therefore lifted. Generated files
+remain generated—change authoritative TOCs and rebuild them—and product ids and Pronunciation remain
+behind their separate gates.
 
 The grammar-support pass is complete, and the earlier CTX-54/CTX-58 gap report was stale: both
 lessons already had expressions in the authoritative TOC. Neither fact pre-approves a catalog row;
@@ -223,19 +226,11 @@ courses rather than shows. The packet now records the corresponding ten natural 
 does not reserve identifiers or modify product data. No lesson is deployable while prestudy is
 deferred.
 
-### B. Land native feedback
+### B. Native catalog review — complete
 
-1. Export/copy the completed review and parse it with `parse_catalog_review.py`.
-2. Triage each item as **keep, rewrite, demote, remove, or needs evidence**.
-3. Apply accepted decisions only to authoritative TOCs.
-4. Keep each accepted row's grammar and expression support aligned with any rewrite or demotion;
-   the baseline spine has no missing required field.
-5. Re-derive every cross-track Core reference affected by a Core move.
-6. Regenerate briefs, grammar map and catalog; run all regressions and deck checks.
-7. Freeze a reviewed catalog version before lesson production resumes.
-
-Exit condition: no unresolved native-review disposition, no unexplained Core grammar gap, no
-missing required expression and no stale generated artifact.
+No item-specific changes were requested. The current TOC snapshots and regenerated catalog are the
+approved authoring baseline. Later revisions reopen review only for changed rows; they do not erase
+the approval of unchanged stable-id snapshots.
 
 ### C. Prove representative lessons before scaling
 
@@ -248,8 +243,8 @@ missing required expression and no stale generated artifact.
 5. Author one Contextual pilot from the approved two-area blueprint; choose a low-intermediate
    Travel or Business lesson that demonstrates both the task-first opening and the final standalone
    transfer, then stop for approval. Do not reuse the superseded CTX-1 deck.
-6. Review the authored FT-1 accessible and full pilots and obtain explicit approval before treating
-   either structure as canonical.
+6. **Complete:** FT-1 accessible and full were explicitly approved on 2026-08-18 and are canonical
+   for their respective language loads.
 7. Only after the representative set exists, build the one-way authored-HTML proofreading packet
    projection. One Core pilot is not enough evidence for a universal packet schema.
 
@@ -284,12 +279,12 @@ Within the approved curriculum scope:
 
 ## Immediate next action
 
-The priority evidence and Core 71–122 naturalness work are complete. Unless native feedback arrives
-first, the next agent-owned action is to keep generated artifacts current and prepare the
-representative-lesson selection and product decisions that do not require inventing a native
-disposition. Do not author the representative Core set until the catalog gate opens.
-
-If native feedback arrives at any point, switch to section B before authoring another lesson.
+The catalog gate is open and both Freetalking canonical decks are approved. The next authoring work
+is therefore two bounded tracks in parallel: select and author the three representative Core lessons
+required by section C, and author one replacement low-intermediate Contextual pilot from the revised
+Travel/Business TOC. Paired Freetalking batches may also begin from the approved full and accessible
+shells. Stop Core after the representative set and stop Contextual after its pilot for owner review;
+do not treat catalog approval as learner-pilot evidence.
 
 ---
 
@@ -297,10 +292,11 @@ If native feedback arrives at any point, switch to section B before authoring an
 
 English is ready for scaled production only when all of the following are true:
 
-- native catalog feedback is resolved and regenerated artifacts are current;
+- the approved native catalog snapshot is current, with any later changed rows re-reviewed;
 - the Core evidence/corpus audits have no untriaged high-risk rows;
 - grammar and expression support remains complete and aligned on the accepted spine;
-- the three representative Core lessons and both non-Core pilots are explicitly approved;
+- the three representative Core lessons and the replacement Contextual pilot are explicitly
+  approved; both Freetalking canonical decks already are;
 - course and product identity decisions are fixed and manifests validate;
 - the external sync path passes end to end.
 

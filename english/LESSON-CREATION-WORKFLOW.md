@@ -160,15 +160,33 @@ writers copy. Korean spent 348 reorder sentences at the wrong chip count for exa
 
 - **No katakana over English. Ever. `yomi.js` is not loaded.** See `AGENTS.md`. This is the rule
   most likely to be broken by an agent that read the Korean instructions first.
+- Every English shell carries `<meta name="podo:target-language" content="en">`. Shared runtime
+  controls use it to choose English tutor-facing copy while Korean decks safely keep the default.
 - Classify vocabulary in the four `podo:vocabulary:*` metadata fields before changing
   `podo:vocabulary-status` from `todo` to `reviewed`. New shells deliberately inherit no word list.
   Every `JP:EN` hint chip belongs to exactly one category. Core and Contextual normally introduce
   at most eight content words; a genuine exception needs a written `podo:vocabulary-waiver`.
 - One activity per page; English-first title with a Japanese gloss; one blue tutor-script box.
+- Preserve the authoritative TOC/generated-brief title in the document title and visible opening
+  title. A short `data-act` may summarize the activity, but it must not replace or rewrite the
+  curriculum title. If the title itself needs improving, edit the TOC and regenerate the brief and
+  catalogs first; do not improvise a different title inside one deck.
 - Tutor scripts use the shortest natural, conversational line that preserves the learner's next
   action or the page's meaning. Do not narrate visible setup, inventory later activities, or pad a
   goal with `Today we'll...` / `By the end of the lesson...`. Rewrite the Japanese in the same
   change so meaning, sentence count and conversational tone still match.
+- In Freetalking, default to **no coaching in the spoken script**: use the conversation question or
+  a natural transition alone. Add a procedural direction only when the learner cannot infer the
+  essential interaction without it. Page 2 is read only in pre-study; the class script may ask for
+  questions about the article but must never tell the learner to read or skim it during class.
+- Freetalking question-page tutor notes contain only 2–3 concise follow-up questions. Do not add a
+  coaching preamble about answer shape, pacing, correction strategy or the lesson author's intent.
+  Give every prompt a distinct job: concretize, cause, perspective, consequence or hindsight. Do
+  not restate the printed question, pre-empt a later ladder question, spend two slots on the same
+  yes/no branch, or assume an in-person scene or another speaker. Two strong prompts beat a filler
+  third. The accessible version simplifies their language without replacing open depth with generic
+  yes/no prompts. Reserve a short operational note for a non-question page whose essential behavior
+  is otherwise invisible, such as the article's pre-study-only skip rule.
 - Keep the pattern-intro page as a pacing bridge: pattern name plus one short Japanese line moving
   from the scene into the next beat. Do not teach grammar on the dark transition page.
 - Open the first teaching page of each pattern with one compact meaning-and-use box: what this

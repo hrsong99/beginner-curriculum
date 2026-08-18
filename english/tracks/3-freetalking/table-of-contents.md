@@ -151,8 +151,8 @@ here names a country — each asks about **where your tutor is from**. Two Korea
 survive that constraint and are noted at the end of the theme.
 
 **1. Something that surprised you about another culture** `両国`
-*Opens:* "Tell me about a time something surprised you about another country — or about someone from
-one." *(works for a learner who has never left Japan: a person, a film, a shop, a coworker)*
+*Opens:* "Tell me about a time something surprised you about another country—or about someone from
+there." *(works for a learner who has never left Japan: a person, a film, a shop, a coworker)*
 *Ladder:* what happened → what did you expect instead → where did that expectation come from → did
 you say anything at the time → has it changed how you see it → what would surprise *me* about Japan
 *Moves:* `I expected ___, but ___.` **(Core 56)** · `It turned out ___.` **(Core 73)** `chunk`

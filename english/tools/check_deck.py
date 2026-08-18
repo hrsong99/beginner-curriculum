@@ -30,7 +30,23 @@ trace:
    `activities.js`'s normalization and proves that some ordering of the chips in
    each English task block reconstructs that block's `data-a` exactly.
 
-Neither is caught by reading markup, which is why they are here rather than in a
+4. **Freetalking article contract.** Page 2 is a six-to-eight-row pre-study-only
+   article, and every highlighted item must have one matching in-context gloss
+   on its own row. Its class script asks one question about learner questions;
+   it does not coach the learner to read, skim, tap or operate the page. A
+   five-line tutor story, in-class catch-up direction or mismatched glossary
+   silently changes the activity while still rendering plausibly.
+
+5. **Freetalking tutor contract.** Tutor notes use English, question-page notes
+   contain actual questions rather than duplicate filler, and the discussion
+   style page keeps the approved direct wording and option order.
+
+6. **English runtime and title identity.** English decks declare their target
+   language so shared tutor controls localize correctly. Freetalking's visible
+   opening title and document title preserve the authoritative generated brief
+   instead of drifting into an improvised short label.
+
+These are not caught by reading markup, which is why they are here rather than in a
 checklist. A checklist item only reaches the writers who were told to read it.
 
 Exit status is 1 if any ERROR was found. WARNs do not fail the run: they mark
@@ -61,6 +77,23 @@ SPAN_KO = re.compile(r'<span class="ko">(.*?)</span>', re.S)
 SPAN_JA = re.compile(r'<span class="ja">(.*?)</span>', re.S)
 TASK_BLOCK = re.compile(r'<div class="task-block">')
 CHOICE = re.compile(r'class="choice"')
+SENT_ROW = re.compile(r'<div class="sent"')
+S_KEY = re.compile(r'class="s-key"')
+S_WORD = re.compile(r'class="s-w"')
+ARTICLE_COACHING = re.compile(
+    r"\b(?:tap|click|open|skim|look\s+at|read(?:ing)?\s+(?:it|this|the\s+article))\b",
+    re.I,
+)
+TUTOR_NOTE_OPEN = re.compile(r'<div class="tutor-note">')
+TUTOR_NOTE_BLOCK = re.compile(r'<div class="tutor-note">(.*?)</div>', re.S)
+OPT_NOTE_BLOCK = re.compile(r'<ul class="opt-note">(.*?)</ul>', re.S)
+FB_ADDS_BLOCK = re.compile(r'<div class="fb-adds">(.*?)</div>', re.S)
+TN_CAP = re.compile(r'<span class="tn-cap">')
+LIST_ITEM_BODY = re.compile(r'<li\b[^>]*>(.*?)</li>', re.S)
+NON_ENGLISH_SCRIPT = re.compile(r"[\u3040-\u30ff\u3400-\u9fff\uac00-\ud7af]")
+FREETALK_QUESTION_PAGES = {"warm-1", "warm-2", *(f"q{i}" for i in range(1, 7))}
+FREETALK_STYLE_EN = "Please choose your preferred discussion style."
+FREETALK_STYLE_JA = "希望する会話の進め方を選んでください。"
 SPAN_TAG = re.compile(r"<span\b[^>]*>|</span>", re.I)
 SPAN_OPEN = re.compile(r"<span\b[^>]*>", re.I)
 LOCAL_REF = re.compile(r'(?:href|src)="((?!https?:|data:|#)[^"]+)"')
@@ -70,6 +103,16 @@ LEGACY_CONTROL = re.compile(
     r'<span class="(?:slot|answer-space)"\s+data-sync-id="([^"]+)"')
 META_TAG = re.compile(r"<meta\b[^>]*>", re.I)
 ATTRIBUTE = re.compile(r'''([\w:-]+)\s*=\s*(["'])(.*?)\2''', re.S)
+DOCUMENT_TITLE = re.compile(r"<title\b[^>]*>(.*?)</title>", re.I | re.S)
+TRANSITION_TITLE = re.compile(
+    r'<h2\b[^>]*class="[^"]*\btransition-title\b[^"]*"[^>]*>(.*?)</h2>',
+    re.I | re.S,
+)
+TITLE_JA = re.compile(
+    r'<span\b[^>]*class="[^"]*\btitle-ja\b[^"]*"[^>]*>.*?</span>',
+    re.I | re.S,
+)
+BRIEF_HEADING = re.compile(r"^#\s+(FT-\d+)\s+·\s+(.+?)\s*$")
 QUOTE_OPEN = "“‘「『"
 QUOTE_CLOSE = "”’」』"
 
@@ -136,6 +179,11 @@ def reorder_norm(source):
     return re.sub(r"[\s　?？.。!！,、·~〜…]", "", plain)
 
 
+def plain_text(source):
+    """Collapse markup and whitespace for human-language comparisons."""
+    return re.sub(r"\s+", " ", html_lib.unescape(TAG.sub("", source))).strip()
+
+
 def reorder_solvability_errors(page_id, chunk):
     """Find English reorder task blocks whose chips cannot build data-a."""
     errors = []
@@ -177,6 +225,171 @@ def reorder_solvability_errors(page_id, chunk):
     return errors
 
 
+def article_structure_issues(chunk):
+    """Return errors/warnings for one English Freetalking pre-study article."""
+    errors, warnings = [], []
+    subtitles = SUBTITLE.findall(chunk)
+    script = SPAN_KO.search(subtitles[0][1]) if subtitles else None
+    if not script:
+        errors.append("article: missing English tutor script")
+    else:
+        spoken = html_lib.unescape(TAG.sub("", script.group(1))).strip()
+        if len(sentences(script.group(1), EN_END, spaced=True)) != 1 or not spoken.endswith("?"):
+            errors.append(
+                "article: class script must be one question asking whether the learner "
+                "has questions about the pre-study article"
+            )
+        if "question" not in spoken.casefold():
+            errors.append("article: class script must ask whether the learner has questions")
+        if ARTICLE_COACHING.search(spoken):
+            errors.append(
+                "article: class script coaches page use or in-class reading — ask only "
+                "whether the learner has questions"
+            )
+    rows = SENT_ROW.split(chunk)[1:]
+    if not 6 <= len(rows) <= 8:
+        errors.append(
+            f"article: {len(rows)} sentence rows — use about seven (six to eight), "
+            "not a four- or five-line tutor model"
+        )
+    for index, row in enumerate(rows, start=1):
+        keys = len(S_KEY.findall(row))
+        words = len(S_WORD.findall(row))
+        if keys != words:
+            errors.append(
+                f"article row {index}: {keys} highlighted item(s) but {words} gloss(es)"
+            )
+        if words > 2:
+            warnings.append(
+                f"article row {index}: {words} glosses — zero to two is normal; "
+                "confirm every item can genuinely block comprehension"
+            )
+    return errors, warnings
+
+
+def freetalk_question_note_issues(page_id, chunk):
+    """Require follow-up-only private notes on Freetalking question pages."""
+    errors = []
+    note = TUTOR_NOTE_OPEN.search(chunk)
+    cap = TN_CAP.search(chunk, note.end()) if note else None
+    if not note or not cap:
+        return [f"{page_id}: tutor note must contain a Follow up list"]
+
+    preamble = html_lib.unescape(TAG.sub("", chunk[note.end():cap.start()])).strip()
+    if preamble:
+        errors.append(
+            f"{page_id}: tutor note has coaching before the follow-ups — question-page "
+            "notes contain follow-up questions only"
+        )
+
+    feedback_start = chunk.find('<div class="fb"', cap.end())
+    note_tail = chunk[cap.end():feedback_start if feedback_start >= 0 else len(chunk)]
+    followups = [plain_text(body) for body in LIST_ITEM_BODY.findall(note_tail)]
+    count = len(followups)
+    if not 2 <= count <= 3:
+        errors.append(f"{page_id}: tutor note has {count} follow-ups — use two or three")
+    for index, followup in enumerate(followups, start=1):
+        if not followup.endswith("?"):
+            errors.append(
+                f"{page_id}: follow-up {index} is not a question: {followup!r}"
+            )
+
+    normalized = [re.sub(r"[^a-z0-9]+", " ", item.casefold()).strip() for item in followups]
+    duplicates = [item for item, number in Counter(normalized).items() if item and number > 1]
+    if duplicates:
+        errors.append(f"{page_id}: duplicate follow-up question(s)")
+
+    subtitles = SUBTITLE.findall(chunk)
+    script = SPAN_KO.search(subtitles[0][1]) if subtitles else None
+    if script:
+        main_question = re.sub(
+            r"[^a-z0-9]+", " ", plain_text(script.group(1)).casefold()
+        ).strip()
+        if main_question and main_question in normalized:
+            errors.append(f"{page_id}: a follow-up repeats the printed question")
+    return errors
+
+
+def freetalk_tutor_language_issues(html):
+    """English-course tutor-only guidance must not use Japanese or Korean."""
+    errors = []
+    blocks = (
+        TUTOR_NOTE_BLOCK.findall(html)
+        + OPT_NOTE_BLOCK.findall(html)
+        + FB_ADDS_BLOCK.findall(html)
+    )
+    for index, body in enumerate(blocks, start=1):
+        if NON_ENGLISH_SCRIPT.search(plain_text(body)):
+            errors.append(
+                f"tutor-only block {index}: contains Japanese or Korean script — "
+                "English-course tutor guidance is written for English-speaking tutors"
+            )
+    return errors
+
+
+def freetalk_style_issues(chunk):
+    """Keep the approved direct style-selection wording and option order."""
+    errors = []
+    subtitles = SUBTITLE.findall(chunk)
+    body = subtitles[0][1] if subtitles else ""
+    en, ja = SPAN_KO.search(body), SPAN_JA.search(body)
+    spoken = plain_text(en.group(1)) if en else ""
+    support = plain_text(ja.group(1)) if ja else ""
+    if spoken != FREETALK_STYLE_EN or support != FREETALK_STYLE_JA:
+        errors.append(
+            "lesson-style: use the canonical direct script and Japanese support from the "
+            "Freetalking blueprint"
+        )
+
+    discussion = chunk.find("Discussion first")
+    correction = chunk.find("Correction first")
+    if discussion < 0 or correction < 0 or discussion > correction:
+        errors.append(
+            "lesson-style: options must be Discussion first, then Correction first"
+        )
+    if "Fluency first" in chunk:
+        errors.append("lesson-style: use Discussion first, not Fluency first")
+    return errors
+
+
+def freetalk_title_issues(source, expected):
+    """Keep the deck opening aligned with its authoritative FT brief title."""
+    errors = []
+    document = DOCUMENT_TITLE.search(source)
+    document_text = plain_text(document.group(1)) if document else ""
+    if not (
+        document_text == f"{expected} — PODO English"
+        or document_text.startswith(f"{expected} · ")
+    ):
+        errors.append(
+            f"lesson-goal: document title must begin with the FT brief title {expected!r}"
+        )
+
+    page_chunks = dict(pages(source))
+    goal = page_chunks.get("lesson-goal", "")
+    visible = TRANSITION_TITLE.search(goal)
+    visible_body = TITLE_JA.sub("", visible.group(1)) if visible else ""
+    visible_text = plain_text(visible_body)
+    if visible_text != expected:
+        errors.append(
+            f"lesson-goal: visible title {visible_text!r} does not match the FT brief "
+            f"title {expected!r}"
+        )
+    return errors
+
+
+def freetalk_brief_title(review_id):
+    """Read the generated brief heading that mirrors the authoritative TOC."""
+    brief = REPO / "english" / "tracks" / "3-freetalking" / "toc" / f"{review_id}.md"
+    if not brief.is_file():
+        return None
+    first = brief.read_text(encoding="utf-8").splitlines()[0]
+    match = BRIEF_HEADING.fullmatch(first)
+    if not match or match.group(1) != review_id:
+        return None
+    return match.group(2)
+
+
 def check(path):
     """Return (errors, warnings) for one deck."""
     html = path.read_text(encoding="utf-8")
@@ -198,6 +411,11 @@ def check(path):
     review_id = meta_content(html, "podo:review-id")
     if is_english and not (review_id and re.fullmatch(r"(?:CORE|CTX|FT)-\d+", review_id)):
         errs.append("missing or invalid podo:review-id — use the stable TOC id")
+    if is_english and meta_content(html, "podo:target-language") != "en":
+        errs.append(
+            'missing <meta name="podo:target-language" content="en"> — shared '
+            "tutor controls will fall back to Korean"
+        )
 
     # ---- references resolve ----------------------------------------------
     for ref in sorted(set(LOCAL_REF.findall(html))):
@@ -301,6 +519,38 @@ def check(path):
                          f"fourth unit is glued to a neighbour")
         if is_english:
             errs.extend(reorder_solvability_errors(pid, chunk))
+
+    # ---- 4–5 · English Freetalking contracts -----------------------------
+    if is_english and "3-freetalking" in path.parts:
+        page_chunks = dict(pages(html))
+        expected_title = freetalk_brief_title(review_id) if review_id else None
+        if expected_title is None:
+            errs.append(
+                "Freetalking deck has no readable generated brief title for its review id"
+            )
+        else:
+            errs.extend(freetalk_title_issues(html, expected_title))
+        if "article" not in page_chunks:
+            errs.append(
+                "Freetalking deck is missing data-page-id=\"article\" — page 2 is a "
+                "pre-study article, not a tutor-read model story"
+            )
+        else:
+            article_errors, article_warnings = article_structure_issues(
+                page_chunks["article"]
+            )
+            errs.extend(article_errors)
+            warns.extend(article_warnings)
+        if "lesson-style" not in page_chunks:
+            errs.append('Freetalking deck is missing data-page-id="lesson-style"')
+        else:
+            errs.extend(freetalk_style_issues(page_chunks["lesson-style"]))
+        for page_id in sorted(FREETALK_QUESTION_PAGES):
+            if page_id not in page_chunks:
+                errs.append(f"Freetalking deck is missing question page {page_id!r}")
+                continue
+            errs.extend(freetalk_question_note_issues(page_id, page_chunks[page_id]))
+        errs.extend(freetalk_tutor_language_issues(html))
 
     return errs, warns
 
