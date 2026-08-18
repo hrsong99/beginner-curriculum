@@ -108,7 +108,7 @@ nothing errors to tell you. A component that only exists locally just renders un
 
 ### Checking a deck you just wrote
 
-Seven `check_*` scripts verify the things a reader cannot see. Run them on the decks you
+Eight `check_*` scripts verify the things a reader cannot see. Run them on the decks you
 touched before committing; several also take no arguments and sweep the whole repo.
 
 | script | catches |
@@ -119,6 +119,7 @@ touched before committing; several also take no arguments and sweep the whole re
 | `check_distractors.py <deck…>` | a wrong option that is real Korean somewhere else. Surfaces candidates only — whether it is *also correct in this slot* is a human call |
 | `check_quotes.py [deck…]` | a cited expression not wrapped per `AUTHORING.md` § 인용한 표현 |
 | `check_chips.py [track…]` | word-tile counts per sentence against the four-chunk rule |
+| `check_freetalk.py [--warnings]` | **4-freetalking pedagogy** — page inventory, page-2 length, one prompt per page, follow-up counts, vocab/highlight parity, and a soft check on 중급 decks that never simplified their 고급 sibling. The other checks verify markup; this one verifies the lesson. Blocking rules exit non-zero; `--warnings` shows the judgment calls |
 | `check_render.sh <deck…>` | tallest page, stray `.yomi`, and horizontal overflow at 480px. Needs the Orca browser with a tab already open |
 
 `check_reorder.py` is the one to run every time. It has caught twelve sentences in this
