@@ -41,9 +41,17 @@ you are about to make conflicts with it, say so and ask — don't quietly deviat
   (never inside a two-way `.opt` pill).
 - **The blue `.section-subtitle` box is the tutor's spoken script** (`.ko` = the line read
   aloud, `.ja` = its Japanese translation). Natural spoken Korean, no grammar jargon.
+- **Nothing in `.ko` that a Korean tutor cannot say.** No kana, no kanji, no lesson numbers —
+  a tutor can no more resolve 「90과」 on sight than a learner can. Japanese that genuinely
+  helps goes in `.tutor-note` with its Hangul reading in parentheses. In 2-core-patterns the
+  form's Japanese equivalent lives in the `.anchor` slot, whose reading comes from
+  `tools/ja_to_hangul.py` — never typed by hand. `tools/check_teaching.py` enforces all of it;
+  see `AUTHORING.md` § 가르치는 면에 걸리는 다섯 가지.
 - **Lessons are audio-only.** The learner hears the tutor but never sees them, so no
   instruction may depend on watching the tutor (口の形をまねして, gestures, "look at me").
-  Model sounds by saying them — 제가 먼저 읽을게요. 잘 듣고 따라 읽어 보세요.
+  Model sounds by saying them. Do not reach for 제가 읽을게요. 잘 듣고 따라 읽어 보세요. as the
+  house phrase — it was identical on 246 of 255 teach boxes and is now a `check_teaching.py`
+  finding; say the thing this page actually needs instead.
 - **Max two levels of boxes:** the page card plus ONE boxed component inside it. Never wrap
   bordered components in another bordered card.
 - Every lesson page needs `<meta name="google" content="notranslate">` or Chrome auto-translate
@@ -120,9 +128,10 @@ touched before committing; several also take no arguments and sweep the whole re
 | `check_quotes.py [deck…]` | a cited expression not wrapped per `AUTHORING.md` § 인용한 표현 |
 | `check_chips.py [track…]` | word-tile counts per sentence against the four-chunk rule |
 | `check_freetalk.py [--warnings]` | **4-freetalking pedagogy** — page inventory, page-2 length, one prompt per page, follow-up counts, vocab/highlight parity, and a soft check on 중급 decks that never simplified their 고급 sibling. The other checks verify markup; this one verifies the lesson. Blocking rules exit non-zero; `--warnings` shows the judgment calls |
+| `check_teaching.py [deck…]` | **the five teaching-surface rules** — the `.anchor` slot, Japanese in a spoken line, lesson numbers anywhere, the boilerplate close, and length. Runs the whole repo with no arguments; `--rule ref` narrows to one |
 | `check_render.sh <deck…>` | tallest page, stray `.yomi`, and horizontal overflow at 480px. Needs the Orca browser with a tab already open |
 
-`check_reorder.py` is the one to run every time. It has caught twelve sentences in this
+`check_teaching.py` and `check_reorder.py` are the two to run every time. It has caught twelve sentences in this
 track whose tiles could not build their own answer — a class of bug no other check sees.
 
 ## Getting a lesson to production
