@@ -169,7 +169,11 @@ def check(path, want):
         for m in TUTOR.finditer(chunk):
             note = strip(m.group(1))
             for run in re.finditer(r"[぀-ヿ㐀-䶿一-鿿]+", note):
-                after = note[run.end():run.end() + 2]
+                if not run.group().strip("っーぁぃぅぇぉゃゅょ"):
+                    continue          # 촉음·장음부호는 제 소리가 없다
+                # Japanese punctuation may sit between the word and its
+                # reading — 「時間ありますか？(지칸아리마스카)」
+                after = note[run.end():run.end() + 4].lstrip("？！。、」』")
                 if not after.startswith("(") and not after.startswith("（"):
                     hit("spoken-ja", pid,
                         f"튜터 노트의 ‘{run.group()}’에 한글 읽기가 없음", note)

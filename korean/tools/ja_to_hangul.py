@@ -54,6 +54,14 @@ MORA = {
     "ぴゃ": ("퍄", "퍄"), "ぴゅ": ("퓨", "퓨"), "ぴょ": ("표", "표"),
     "みゃ": ("먀", "먀"), "みゅ": ("뮤", "뮤"), "みょ": ("묘", "묘"),
     "りゃ": ("랴", "랴"), "りゅ": ("류", "류"), "りょ": ("료", "료"),
+    # katakana extensions, written with a small vowel. They only appear in
+    # loanwords (ティッシュ, イェ) but a deck glossing 휴지 needs them.
+    "いぇ": ("예", "예"), "てぃ": ("티", "티"), "でぃ": ("디", "디"),
+    "とぅ": ("투", "투"), "どぅ": ("두", "두"), "ふぁ": ("파", "파"),
+    "ふぃ": ("피", "피"), "ふぇ": ("페", "페"), "ふぉ": ("포", "포"),
+    "うぃ": ("위", "위"), "うぇ": ("웨", "웨"), "うぉ": ("워", "워"),
+    "ヴぁ": ("바", "바"), "しぇ": ("셰", "셰"), "じぇ": ("제", "제"),
+    "ちぇ": ("체", "체"), "つぁ": ("차", "차"), "つぉ": ("초", "초"),
 }
 
 # the vowel each mora ends on, for the 장음 rule
@@ -73,7 +81,8 @@ for _row, _v in (("あかさたなはまやらわがざだばぱ", "a"),
         VOWEL[_c] = _v
 for _k in MORA:
     if len(_k) == 2:
-        VOWEL[_k] = {"ゃ": "a", "ゅ": "u", "ょ": "o"}[_k[1]]
+        VOWEL[_k] = {"ゃ": "a", "ゅ": "u", "ょ": "o",
+                     "ぁ": "a", "ぃ": "i", "ぅ": "u", "ぇ": "e", "ぉ": "o"}[_k[1]]
 
 # 받침. 촉음 っ은 'ㅅ', 발음(撥音) ん은 'ㄴ' — 표기법이 예외 없이 하나로 정한다.
 JONG = {"っ": 19, "ん": 4}
@@ -91,26 +100,52 @@ PARTICLE_AFTER = set("のてでと")
 # general dictionary because the point is coverage of these decks, and a wrong
 # reading is worse than no reading — anything absent comes back as None and
 # gets written by a person.
+# Kanji, written as KANA — not as Hangul. Storing the Hangul directly looked
+# simpler and silently bypassed every positional rule in the table above: 来た
+# came out 쿠타 because the entry said 来 is くる's 쿠, and 帰ります came out
+# 카에리마스 when 표기법 wants 가에리마스 word-initially. Kana goes back through
+# the same engine, so 어두/어중, 촉음 and 장음 all apply for free.
+#
+# Keyed on whole words wherever okurigana decides the reading — 来る/来た, 降り,
+# 差し上げ. A word absent here comes back unresolved; a wrong reading is worse
+# than no reading, so this never guesses.
 KANJI = {
-    "名詞": "메이시", "動詞": "도시", "形容詞": "케이요시",
-    "後": "아토", "前": "마에", "時": "토키", "人": "히토", "方": "호",
-    "何": "나니", "誰": "다레", "中": "나카", "上": "우에", "下": "시타",
-    "聞": "키", "知": "시", "行": "이", "思": "오모", "言": "이",
-    "終": "오", "見": "미", "来": "쿠", "食": "타", "話": "하나",
-    "作": "쓰쿠", "使": "쓰카", "持": "모", "待": "마", "帰": "카에",
-    "出": "데", "入": "하이", "住": "스", "働": "하타라", "休": "야스",
-    "途中": "도추", "最中": "사이추", "大丈夫": "다이조부", "一番": "이치반",
-    "本当": "혼토", "自分": "지분", "気": "키", "度": "도", "回": "카이",
-    "予定": "요테이", "必要": "히쓰요", "一緒": "잇쇼", "外": "소토",
-    "私": "와타시", "会": "아", "個": "코", "分": "훈", "名": "메이",
-    # Compounds come first in the lookup because a character's reading is not
-    # its reading in every word: 上 is 우에 by itself and あげ inside
-    # 差し上げる, and a single-character table quietly wrote 시우에게마스.
-    "差し上げ": "사시아게", "召し上が": "메시아가", "上げ": "아게",
-    "何個": "난코", "何名": "난메이", "何月": "난가쓰", "何日": "난니치",
-    "何曜日": "난요비", "曜日": "요비", "月": "가쓰", "日": "니치",
-    "上手": "조즈", "全然": "젠젠", "何も": "나니모", "運動": "운도", "勉強": "벤쿄",
-    "同じ": "오나지", "価値": "카치", "代わり": "카와리", "別": "베쓰", "兼ねて": "카네테",
+    "名詞": "めいし", "動詞": "どうし", "形容詞": "けいようし",
+    "後": "あと", "前": "まえ", "時間": "じかん", "時": "とき", "人": "ひと",
+    "方": "ほう", "何": "なに", "誰": "だれ", "中": "なか", "上手": "じょうず",
+    "上": "うえ", "下": "した", "外": "そと", "私": "わたし",
+    "聞き": "きき", "聞く": "きく", "聞いて": "きいて",
+    "知っている": "しっている", "知らない": "しらない", "知る": "しる",
+    "知り": "しり", "知": "し",
+    "行き": "いき", "行く": "いく", "行って": "いって", "行った": "いった",
+    "思って": "おもって", "思": "おも", "言い": "いい", "言う": "いう",
+    "終えたら": "おえたら", "見る": "みる", "見て": "みて",
+    "来る": "くる", "来た": "きた", "来ました": "きました", "来て": "きて",
+    "食べ": "たべ", "話": "はなし", "作": "つく", "使": "つか",
+    "持": "も", "待": "ま", "帰り": "かえり", "帰る": "かえる",
+    "出": "で", "入": "はい", "住": "す", "働": "はたら", "休み": "やすみ",
+    "途中": "とちゅう", "最中": "さいちゅう", "大丈夫": "だいじょうぶ",
+    "一番": "いちばん", "一度": "いちど", "一緒": "いっしょ",
+    "本当": "ほんとう", "自分": "じぶん", "気": "き", "度": "ど", "回": "かい",
+    "予定": "よてい", "必要": "ひつよう", "必ず": "かならず",
+    "会": "あ", "個": "こ", "分": "ふん", "名": "めい",
+    "差し上げ": "さしあげ", "召し上が": "めしあが", "申し上げ": "もうしあげ",
+    "上げ": "あげ",
+    "何個": "なんこ", "何名": "なんめい", "何月": "なんがつ", "何日": "なんにち",
+    "何曜日": "なんようび", "曜日": "ようび", "月": "がつ", "日": "にち",
+    "全然": "ぜんぜん", "何も": "なにも", "運動": "うんどう", "勉強": "べんきょう",
+    "同じ": "おなじ", "価値": "かち", "代わり": "かわり", "別": "べつ",
+    "兼ねて": "かねて",
+    # vocabulary the read pages gloss
+    "早く": "はやく", "早": "はや", "少し": "すこし", "午前": "ごぜん",
+    "午後": "ごご", "半": "はん", "祝日": "しゅくじつ", "遠い": "とおい",
+    "近い": "ちかい", "近く": "ちかく", "向かい側": "むかいがわ", "茶": "ちゃ",
+    "安い": "やすい", "果物": "くだもの", "乗り換え": "のりかえ", "手": "て",
+    "箸": "はし", "毎月": "まいつき", "頻度": "ひんど", "今週末": "こんしゅうまつ",
+    "今度": "こんど", "約束": "やくそく", "実は": "じつわ",   # 조사 は 는 わ 로 소리 난다 "新年": "しんねん",
+    "頑張って": "がんばって", "風邪": "かぜ", "愛着": "あいちゃく",
+    "解消": "かいしょう", "存じ": "ぞんじ", "覧": "らん",
+    "降り": "ふり", "降": "ふ",
 }
 
 
@@ -132,34 +167,49 @@ def reading(text):
     if text == "は":
         return "와", []
 
+    # expand kanji to kana first, so the positional rules below see one script
+    # Each character remembers which segment it came from: author-typed kana, or
+    # one kanji's expansion. The 장음 rule needs it. おう is a long vowel inside a
+    # word (とうきょう → 도쿄) but not across a morpheme boundary: の+上 is のうえ
+    # and collapsing it gives 노에, 思(おも)+う gives 오모나라. Same segment only.
     unresolved = []
-    out = []
-    i = 0
-    prev_vowel = None
+    expanded, seg, i, sid = "", [], 0, 0
     while i < len(text):
         c = text[i]
-
-        # kanji: whole-word lookup first, then single character
         if "一" <= c <= "鿿":
-            for size in (4, 3, 2, 1):
-                word = text[i:i + size]
-                if word in KANJI:
-                    out.append(KANJI[word])
-                    prev_vowel = None
+            sid += 1
+            for size in (5, 4, 3, 2, 1):
+                if text[i:i + size] in KANJI:
+                    r = KANJI[text[i:i + size]]
+                    expanded += r
+                    seg += [sid] * len(r)
                     i += size
                     break
             else:
                 unresolved.append(c)
-                out.append("?")
-                prev_vowel = None
+                expanded += "?"
+                seg.append(sid)
                 i += 1
-            continue
+            sid += 1
+        else:
+            expanded += c
+            seg.append(0)
+            i += 1
+    text = expanded
+
+    out = []
+    i = 0
+    prev_vowel = None
+    prev_seg = None
+    while i < len(text):
+        c = text[i]
 
         # 받침
         if c in JONG:
             if out and out[-1]:
                 out[-1] = out[-1][:-1] + compose(out[-1][-1], JONG[c])
             prev_vowel = None
+            prev_seg = seg[i]
             i += 1
             continue
 
@@ -184,8 +234,14 @@ def reading(text):
             i += 1
             continue
 
-        # 장음: おう / うう 의 う 는 적지 않는다
-        if mora == "う" and prev_vowel in ("o", "u"):
+        # 장음: おう / うう / おお 를 적지 않는다 — 같은 형태소 안에서만
+        # おお only inside a kanji reading, where this file wrote the kana and
+        # knows it is a long vowel (遠い = とおい). In author-typed kana the same
+        # two characters are usually a word boundary — ~のおかげで is の + おかげ,
+        # and collapsing it gave 노카게데.
+        if seg[i] == prev_seg and ((mora == "う" and prev_vowel in ("o", "u"))
+                                   or (mora == "お" and prev_vowel == "o"
+                                       and seg[i] != 0)):
             i += 1
             continue
 
@@ -194,6 +250,7 @@ def reading(text):
         at_start = not out or out[-1] in ("・", "·", " ", "/")
         out.append(head if at_start else tail)
         prev_vowel = VOWEL[mora]
+        prev_seg = seg[i]
         i += len(mora)
 
     return "".join(out), unresolved
@@ -212,6 +269,12 @@ CASES = [
     ("しなくてもいいです", "시나쿠테모이이데스"),
     ("がっこう", "갓코"),      # 촉음은 예외 없이 ㅅ
     ("きょうしつ", "교시쓰"),           # 어두 요음도 か행 규칙을 따른다 (京都 = 교토)
+    ("~の上に", "노우에니"),             # の + 上 — 형태소가 달라 장음이 아니다
+    ("~しようと思うなら", "시요토오모우나라"),  # 思(おも) + う — 여기도 마찬가지
+    ("本当に", "혼토니"),               # 한 형태소 안이라 장음이 맞다
+    ("遠い", "도이"),                  # 한자 안의 おお 장음
+    ("~のおかげで", "노오카게데"),        # の + おかげ — 장음이 아니다
+    ("~と言う", "도이우"),              # いう 는 장음이 아니다
 ]
 
 
