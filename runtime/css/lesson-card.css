@@ -1635,6 +1635,29 @@ input[data-spot], textarea[data-spot] { cursor: auto; }
 /* fallback, if a field ever turns up with no block around it to ring */
 input.is-spot, textarea.is-spot { outline-width: 2.5px; outline-offset: 2px; }
 
+/* How much room the lit block asks for when the script scrolls it into view.
+
+   Carrying the pointer to the block is spotlight.js's job (`reveal`), but how
+   much space it needs around itself is a layout question, so the numbers live
+   here rather than as constants in the script — `reveal` reads them back off
+   the element and treats them as part of its box. They are scroll-margin
+   rather than two ad-hoc custom properties because that is exactly what
+   scroll-margin means, and it keeps the door open to handing the job back to
+   scrollIntoView if its smooth path ever applies these in full.
+
+   Sixteen all round because the ring is drawn OUTSIDE the block — a 3px
+   outline at a 3px offset — so a block scrolled flush against the edge would
+   arrive with the very thing you were sent to look at already cut off.
+
+   The bottom is different only in paged decks, where .pager floats fixed over
+   the foot of the screen: "just visible" there means "just underneath the
+   bar". 118px is not a fresh measurement, it is the same reserve
+   .phone.paged > .pg-on already subtracts from the viewport for that bar, so
+   the two move together. Scroll decks have no bar and want no such gap —
+   hence the .paged scope instead of one number for everybody. */
+.is-spot { scroll-margin: 16px; }
+.phone.paged .is-spot { scroll-margin-bottom: 118px; }
+
 /* ---------- shared highlighter (runtime/js/highlight.js) ----------
    A marker stroke over the text, mirrored to the other screen. Persistent —
    it stays until someone taps it off — so it reads as ink, not as a pointer:
