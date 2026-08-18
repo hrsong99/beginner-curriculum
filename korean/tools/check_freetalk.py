@@ -43,6 +43,9 @@ PROFILE = {
     "levels": {"중급", "고급"},
     # 중급이 고급을 그대로 베끼면 두 레벨이 같은 덱이 된다. 판단이 필요하므로 경고다.
     "level_similarity_max": 0.90,
+    # 중급이 고급의 어휘를 그대로 물려받으면 문장만 짧아지고 난이도는 그대로다.
+    # 낮춰야 하는 것은 길이가 아니라 드문 어휘다(blueprint § 같은 과의 두 레벨).
+    "level_vocab_overlap_max": 0.70,
 }
 
 COMMENT = re.compile(r"<!--.*?-->", re.S)
@@ -265,8 +268,16 @@ def main() -> int:
                     print(f"  · {x}")
 
     # soft: a 중급 deck that never simplified its 고급 sibling
-    stale = []
+    stale, shared = [], []
     for name, adv, itm in level_pairs():
+        def vocab(p):
+            t = COMMENT.sub("", p.read_text(encoding="utf-8"))
+            pm = page_map(t)
+            return set(re.findall(r'<span class="s-w"><b>(.*?)</b>',
+                                  pm.get("article") or pm.get("model-story", "")))
+        va, vi = vocab(adv), vocab(itm)
+        if va and len(va & vi) / len(va) > PROFILE["level_vocab_overlap_max"]:
+            shared.append((len(va & vi) / len(va), name))
         a = page2_sentences(page_map(COMMENT.sub("", adv.read_text(encoding="utf-8")))
                             .get("article") or
                             page_map(COMMENT.sub("", adv.read_text(encoding="utf-8")))
@@ -278,6 +289,13 @@ def main() -> int:
         r = difflib.SequenceMatcher(None, " ".join(a), " ".join(i)).ratio()
         if r > PROFILE["level_similarity_max"]:
             stale.append((r, name))
+    warns += len(shared)
+    if shared and args.warnings:
+        print("\n중급 reuses too much of 고급's vocabulary "
+              f"(> {PROFILE['level_vocab_overlap_max']:.0%}) — shorter sentences, "
+              "same rare words:")
+        for r, name in sorted(shared, reverse=True):
+            print(f"  · {r:.0%}  {name}")
     warns += len(stale)
     if stale and args.warnings:
         print("\n중급 page 2 barely differs from 고급 "
