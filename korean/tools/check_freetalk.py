@@ -49,6 +49,9 @@ PROFILE = {
 }
 
 COMMENT = re.compile(r"<!--.*?-->", re.S)
+# 프롬프트의 낱말에는 조사가 붙어 있다("밥을"). 지문에는 "밥상"으로 나오므로
+# 표면형만 비교하면 붙어 있는 낱말을 못 본다. 조사를 떼고 어간으로 견준다.
+PARTICLE = "은는이가을를에의와과도만로으라고나랑서부터까지마다처럼보다"
 TAGS = re.compile(r"<[^>]+>")
 
 
@@ -189,7 +192,13 @@ def audit(deck: Path, baseline: dict) -> tuple[list[str], list[str]]:
         if ja and (ja.count("?") + ja.count("？")) != n:
             warn.append(f"{qid}: ko has {n} '?' but ja has "
                         f"{ja.count('?') + ja.count('？')}")
-        if art and ko and not any(t[:2] in art for t in re.findall(r"[가-힣]{2,}", ko)):
+        def anchored(tok):
+            stems = {tok[:n] for n in range(2, len(tok) + 1)}
+            if len(tok) >= 2 and tok[1] in PARTICLE:
+                stems.add(tok[:1])          # 한 음절 낱말 + 조사 (팀을, 밥을)
+            return any(len(x) >= 2 and x in art or
+                       (len(x) == 1 and x in art) for x in stems)
+        if art and ko and not any(anchored(t) for t in re.findall(r"[가-힣]+", ko)):
             warn.append(f"{qid}: no word from this prompt appears in page 2 — "
                         f"off-topic? {ko}")
         notes = blocks(pg, "tutor-note")
