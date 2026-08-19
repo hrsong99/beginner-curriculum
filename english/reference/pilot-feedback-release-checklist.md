@@ -54,12 +54,24 @@ experience.
 ## Contextual English
 
 - Build one self-contained practical scene with a believable partner reaction and a complete job.
+- An English-speaking tutor must be able to run every activity without understanding Japanese.
+  Receptive meaning choices show a concise English sense label alongside Japanese learner support;
+  Japanese-only answer options are not teachable operating copy.
+- `Expressions` gives the tutor and learner a clear action. Do not use a passive page description
+  where the script should say what to read or do.
+- Mirror English/Japanese target highlights through teaching, reading, fill, model, and replay just
+  as in Core. Every controlled blank has one exact Japanese `.target`; reorder and full translation
+  prompts remain neutral.
+- Scene, model, replay, and transfer are roleplays with profile images on every turn. Only the live
+  reciprocal Tutor/Me page uses generic icons.
 - Keep the production ladder intact: notice, constrained choice, model, replay, reciprocal use,
   then transfer.
 - Reorder by semantic chunks. Three is the default working minimum, but two is correct when the
   sentence genuinely contains only two meaningful units; do not split an article from its noun or
   tear apart a fixed request frame to satisfy a count.
 - The transfer scene must let the learner resolve the situation, not merely produce one line.
+- Late replay and transfer phrases use wrapping, auto-growing fields. Do not force long English
+  production into a clipped single-line control, and do not blank an untaught closing line.
 
 ## Freetalking
 

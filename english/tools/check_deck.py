@@ -50,6 +50,16 @@ trace:
    roleplays use profile images, live Free Talk labels every real speaker, and
    completion targets remain visibly connected to their Japanese cues.
 
+8. **Cross-language target highlighting.** Every Core and Contextual teaching
+   or reading model highlights the same number of target units in English and
+   Japanese. Controlled fills mark exactly one Japanese cue per blank, and
+   compact word-choice activities mark one Japanese cue per decision.
+
+9. **Contextual tutor operability.** Roleplay pages use profile images while
+   live Tutor/Me exchange uses generic icons. Receptive `Understand` choices
+   expose an English sense label as well as Japanese support, so an
+   English-speaking tutor never has to interpret Japanese-only alternatives.
+
 These are not caught by reading markup, which is why they are here rather than in a
 checklist. A checklist item only reaches the writers who were told to read it.
 
@@ -127,6 +137,9 @@ WHO_OPEN = re.compile(r'<span class="who">')
 ENDING = re.compile(r'class="ending"')
 TARGET = re.compile(r'class="target"')
 PHRASE_INPUT = re.compile(r'class="[^"]*\bphrase-input\b')
+SLOT_INPUT = re.compile(r'<input\b[^>]*class="[^"]*\bslot-input\b')
+GENERIC_AVATAR = re.compile(r'<span class="[^"]*\bavatar\b[^\"]*\bicon\b')
+TAG_OPEN = re.compile(r'<(?:div|span)\b[^>]*>', re.I)
 GENERIC_CORE_FREETALK = re.compile(
     r"\b(?:use (?:both|the) (?:comparison )?patterns?|give the status|"
     r"ask the tutor|tutor's real answer)\b",
@@ -191,6 +204,93 @@ def span_body(source, start):
         if depth == 0:
             return source[start:match.start()]
     return source[start:]
+
+
+def class_span_bodies(source, class_name):
+    """Return inner HTML for spans containing one exact class token."""
+    out = []
+    for match in SPAN_OPEN.finditer(source):
+        attrs = {key.lower(): value for key, _, value in ATTRIBUTE.findall(match.group(0))}
+        if class_name in attrs.get("class", "").split():
+            out.append(span_body(source, match.end()))
+    return out
+
+
+def class_tag_count(source, *required):
+    """Count div/span opening tags containing every required class token."""
+    wanted = set(required)
+    count = 0
+    for match in TAG_OPEN.finditer(source):
+        attrs = {key.lower(): value for key, _, value in ATTRIBUTE.findall(match.group(0))}
+        if wanted.issubset(set(attrs.get("class", "").split())):
+            count += 1
+    return count
+
+
+def target_highlight_issues(page_chunks):
+    """Require exact bilingual cue coverage through the pattern ladder."""
+    errors = []
+
+    for page_id, chunk in page_chunks.items():
+        if not re.fullmatch(r"p[12]-(?:teach|read)", page_id):
+            continue
+        english = class_span_bodies(chunk, "korean")
+        japanese = class_span_bodies(chunk, "translation")
+        if len(english) != len(japanese):
+            errors.append(
+                f"{page_id}: {len(english)} English model row(s) but "
+                f"{len(japanese)} Japanese row(s)"
+            )
+            continue
+        for index, (en_row, ja_row) in enumerate(zip(english, japanese), start=1):
+            en_targets = class_tag_count(en_row, "ending")
+            ja_targets = class_tag_count(ja_row, "ending")
+            if not en_targets or en_targets != ja_targets:
+                errors.append(
+                    f"{page_id} row {index}: mirrored target highlights differ "
+                    f"(EN={en_targets} JA={ja_targets})"
+                )
+
+    for page_id, chunk in page_chunks.items():
+        if not re.fullmatch(r"p[12]-fill", page_id):
+            continue
+        inputs = len(SLOT_INPUT.findall(chunk))
+        cues = class_tag_count(chunk, "target")
+        if inputs and inputs != cues:
+            errors.append(
+                f"{page_id}: each controlled blank needs one exact Japanese .target "
+                f"(inputs={inputs} targets={cues})"
+            )
+
+    for page_id, chunk in page_chunks.items():
+        if not re.fullmatch(r"p[12]-choose", page_id) or "word-choice-list" not in chunk:
+            continue
+        decisions = class_tag_count(chunk, "choose-row", "word-choice")
+        cues = sum(
+            class_tag_count(body, "ending")
+            for body in class_span_bodies(chunk, "translation")
+        )
+        if decisions != cues:
+            errors.append(
+                f"{page_id}: each word-level choice needs one Japanese highlight "
+                f"(choices={decisions} cues={cues})"
+            )
+
+    for page_id in ("p3-model",):
+        chunk = page_chunks.get(page_id, "")
+        if not chunk:
+            continue
+        english = class_span_bodies(chunk, "korean")
+        japanese = class_span_bodies(chunk, "translation")
+        for index, (en_row, ja_row) in enumerate(zip(english, japanese), start=1):
+            en_targets = class_tag_count(en_row, "ending")
+            ja_targets = class_tag_count(ja_row, "ending")
+            if (en_targets or ja_targets) and en_targets != ja_targets:
+                errors.append(
+                    f"{page_id} row {index}: mirrored target highlights differ "
+                    f"(EN={en_targets} JA={ja_targets})"
+                )
+    return errors
 
 
 def reorder_norm(source):
@@ -425,6 +525,87 @@ def core_production_issues(page_chunks):
             errors.append(
                 "p3-freetalk: generic production instruction — print the actual target "
                 "scaffold, ask-back question, and tutor-answer label"
+            )
+    return errors
+
+
+def contextual_production_issues(page_chunks):
+    """Protect roleplay identity and English-only tutor operability."""
+    errors = []
+    for page_id in ("scene", "p3-model", "p3-complete", "transfer-scene"):
+        chunk = page_chunks.get(page_id, "")
+        if not chunk:
+            continue
+        turns = len(TURN_OPEN.findall(chunk))
+        profiles = len(PROFILE_AVATAR.findall(chunk))
+        if turns and profiles != turns:
+            errors.append(
+                f"{page_id}: roleplay has {turns} turns but {profiles} profile images — "
+                "use a profile image for every scene character"
+            )
+
+    situation = page_chunks.get("situation-card", "")
+    if situation:
+        cast = class_tag_count(situation, "cast-row")
+        profiles = len(PROFILE_AVATAR.findall(situation))
+        if cast and profiles != cast:
+            errors.append(
+                f"situation-card: {cast} cast rows but {profiles} profile images — "
+                "the cast must match the roleplay"
+            )
+
+    model = page_chunks.get("p3-model", "")
+    complete = page_chunks.get("p3-complete", "")
+    if model and complete:
+        model_turns = len(TURN_OPEN.findall(model))
+        complete_turns = len(TURN_OPEN.findall(complete))
+        if model_turns != complete_turns:
+            errors.append(
+                "p3-complete: turn count differs from p3-model "
+                f"(model={model_turns} complete={complete_turns})"
+            )
+        phrase_inputs = len(PHRASE_INPUT.findall(complete))
+        targets = class_tag_count(complete, "target")
+        if phrase_inputs and phrase_inputs != targets:
+            errors.append(
+                "p3-complete: each phrase input needs one exact Japanese .target "
+                f"(inputs={phrase_inputs} targets={targets})"
+            )
+
+    live = page_chunks.get("p3-freetalk", "")
+    if live:
+        turns = len(TURN_OPEN.findall(live))
+        icons = len(GENERIC_AVATAR.findall(live))
+        profiles = len(PROFILE_AVATAR.findall(live))
+        if turns and (icons != turns or profiles):
+            errors.append(
+                f"p3-freetalk: live Tutor/Me exchange needs generic icons on every turn "
+                f"(turns={turns} icons={icons} profiles={profiles})"
+            )
+
+    transfer = page_chunks.get("transfer-scene", "")
+    if transfer:
+        phrase_inputs = len(PHRASE_INPUT.findall(transfer))
+        targets = class_tag_count(transfer, "target")
+        if phrase_inputs and phrase_inputs != targets:
+            errors.append(
+                "transfer-scene: each phrase input needs one exact Japanese .target "
+                f"(inputs={phrase_inputs} targets={targets})"
+            )
+
+    understand = page_chunks.get("understand", "")
+    if understand:
+        rows = class_tag_count(understand, "choose-row", "receptive-choice")
+        options = class_tag_count(understand, "opt")
+        english_senses = class_tag_count(understand, "choice-en")
+        if rows != 4:
+            errors.append(
+                f"understand: expected four receptive meaning checks, found {rows}"
+            )
+        if options != english_senses:
+            errors.append(
+                "understand: every meaning option needs a concise English sense label "
+                f"for the tutor (options={options} English labels={english_senses})"
             )
     return errors
 
@@ -666,8 +847,13 @@ def check(path):
         errs.extend(freetalk_tutor_language_issues(html))
         for page_id, chunk in pages(html):
             errs.extend(pattern_meaning_issues(page_id, chunk))
+        page_chunks = dict(pages(html))
         if "1-core-patterns" in path.parts:
-            errs.extend(core_production_issues(dict(pages(html))))
+            errs.extend(target_highlight_issues(page_chunks))
+            errs.extend(core_production_issues(page_chunks))
+        if "2-contextual-english" in path.parts:
+            errs.extend(target_highlight_issues(page_chunks))
+            errs.extend(contextual_production_issues(page_chunks))
 
     # ---- 1 · tutor script sentence parity ---------------------------------
     for pid, chunk in pages(html):

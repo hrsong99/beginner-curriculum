@@ -1497,6 +1497,40 @@ strong {
   margin: 0 2px;
 }
 
+/* Receptive meaning choices are administered by an English-speaking tutor.
+   The tutor reads the English line in the header, so each answer must expose
+   a concise English sense as well as the learner's Japanese support. Stacking
+   the two full-width options keeps the Japanese readable at phone width. */
+.choose-row.receptive-choice > .choose-sentence {
+  display: grid;
+  gap: 8px;
+}
+
+.choose-row.receptive-choice .opt {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.choose-row.receptive-choice .choice-en {
+  font-size: 15px;
+  line-height: 1.25;
+}
+
+.choose-row.receptive-choice .opt small {
+  color: var(--gray-400);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
 /* ---------- choose specific words inside one sentence ----------
    When a binary differs only at one or two target words, repeating two full
    sentences makes the unchanged language compete with the decision. Keep one

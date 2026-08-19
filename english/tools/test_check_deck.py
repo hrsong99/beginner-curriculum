@@ -270,6 +270,65 @@ class DeckCheckTests(unittest.TestCase):
         self.assertTrue(any("speaker labels" in item for item in errors))
         self.assertTrue(any("generic production instruction" in item for item in errors))
 
+    def test_target_highlights_require_a_mirrored_pair_on_every_model_row(self):
+        pages = {
+            "p1-read": (
+                '<div class="model-line"><span class="korean">Could we '
+                '<span class="ending">have</span> a seat?</span>'
+                '<span class="translation">席をいただけますか？</span></div>'
+            )
+        }
+        errors = check_deck.target_highlight_issues(pages)
+        self.assertTrue(any("mirrored target highlights differ" in item for item in errors))
+
+    def test_target_highlights_accept_models_fills_and_word_choices(self):
+        pages = {
+            "p1-read": (
+                '<span class="korean"><span class="ending">Could we have</span> a seat?</span>'
+                '<span class="translation">席を<span class="ending">いただけますか</span>？</span>'
+            ),
+            "p1-fill": (
+                '<span class="answer-label">席を<span class="target ending">いただけますか</span>？</span>'
+                '<input class="slot-input" data-answer="Could we have">'
+            ),
+            "p1-choose": (
+                '<div class="word-choice-list"><div class="word-choice-card">'
+                '<span class="translation"><span class="ending">安い</span></span>'
+                '<span class="choose-row word-choice"><span class="opt">cheaper</span></span>'
+                '</div></div>'
+            ),
+        }
+        self.assertEqual(check_deck.target_highlight_issues(pages), [])
+
+    def test_contextual_rejects_japanese_only_receptive_choices_and_roleplay_icons(self):
+        icon = '<span class="avatar icon">A</span>'
+        pages = {
+            "scene": f'<div class="turn other"><span class="who">{icon}</span></div>',
+            "understand": (
+                '<div class="choose-row sentence receptive-choice">'
+                '<span class="opt">パスポートを見せる</span>'
+                '<span class="opt">搭乗券を見せる</span></div>' * 4
+            ),
+        }
+        errors = check_deck.contextual_production_issues(pages)
+        self.assertTrue(any("profile images" in item for item in errors))
+        self.assertTrue(any("English sense label" in item for item in errors))
+
+    def test_contextual_accepts_profiled_roleplay_and_bilingual_receptive_choices(self):
+        profile = '<img class="avatar" src="person.jpg" alt="">'
+        receptive = (
+            '<div class="choose-row sentence receptive-choice">'
+            '<span class="opt"><span class="choice-en">Show a passport</span>'
+            '<small>パスポートを見せる</small></span>'
+            '<span class="opt"><span class="choice-en">Show a ticket</span>'
+            '<small>搭乗券を見せる</small></span></div>'
+        )
+        pages = {
+            "scene": f'<div class="turn other"><span class="who">{profile}</span></div>',
+            "understand": receptive * 4,
+        }
+        self.assertEqual(check_deck.contextual_production_issues(pages), [])
+
     def test_freetalking_inventory_requires_canonical_order(self):
         source = "".join(
             f'<div data-page-id="{page_id}"></div>'

@@ -184,6 +184,15 @@ writers copy. Korean spent 348 reorder sentences at the wrong chip count for exa
   and communicative use, with one direct Japanese counterpart. Do not put an activity direction,
   Japanese wording or a lesson-number reference in the English line. A rule-page script adds only
   what its visible diagram cannot show instead of reciting the diagram.
+- Core and Contextual teaching/read models mirror every taught target with `.ending` in English and
+  on its exact Japanese meaning. Controlled fills use one Japanese `.target.ending` per blank;
+  word-level choice uses one Japanese highlight per independent decision. Reorder and whole-sentence
+  translation prompts stay neutral. Highlight presence somewhere on a page is not enough—check each
+  row and each decision.
+- Every Contextual interaction must be runnable by an English-speaking tutor who does not read
+  Japanese. `Understand` meaning options expose a concise English sense label alongside Japanese
+  support, and the English tutor note states the read order when it is not visible. Never use
+  Japanese-only alternatives as the tutor's answer key.
 - Tutor-only notes are English in every track. Add one only when the tutor must catch or do
   something the page cannot make obvious, and place it on the production page where that action
   happens—not on a teaching page that produces nothing yet. Do not repeat a revealed answer.
@@ -243,6 +252,9 @@ writers copy. Korean spent 348 reorder sentences at the wrong chip count for exa
 - The final Contextual transfer is a complete **5–7-turn mini-scene** with 2–3 learner completions,
   uses both of today's patterns, changes at least two meaningful scene variables, and resolves the
   same practical job without introducing another lesson's target.
+- Contextual scene/model/replay/transfer turns use profile images for their roleplay characters and
+  stable English speaker names; only the live Tutor/Me exchange uses generic icons. Late replay and
+  transfer blanks use wrapping `phrase-input` textareas with exact Japanese `.target` cues.
 - Use existing components and `data-sync` contracts. An element is shared **only** if it has a
   `data-sync-id`; verdicts are never shared — send the choice and let each side derive
   correct/wrong locally.

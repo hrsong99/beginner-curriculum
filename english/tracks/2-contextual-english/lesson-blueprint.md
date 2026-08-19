@@ -83,6 +83,12 @@ third or fourth primary pattern. `understand` is the inverse: partner/staff lang
 must recover but is not asked to say. A listen-and-pick or meaning match is appropriate; fill,
 translate and free-write are not.
 
+The English-speaking tutor must be able to run both pages without reading Japanese. Give
+`expressions` an explicit spoken action such as reading the phrases together, not a passive
+description of why they are useful. On `understand`, the tutor reads the English staff line; every
+tappable meaning option exposes a concise English sense label alongside the learner's Japanese
+support. Never present Japanese-only alternatives and expect the tutor to infer the answer.
+
 ---
 
 ## Pattern A and Pattern B
@@ -135,6 +141,13 @@ not the tutor's voice or the partner's receptive line.
 - Tutor-only notes are English and appear only when the tutor must catch or do something the page
   cannot make obvious. Put them on the production page where that action happens, not on a teaching
   page that produces nothing yet; never repeat an answer already revealed by teaching mode.
+- Mirror the taught target on every `pN-teach` and `pN-read` model: wrap each English target word or
+  phrase in `.ending` and wrap its exact Japanese meaning in `.ending` too. If the English frame has
+  two independently meaningful pieces, such as `We'd like` and `if possible`, both languages show
+  two corresponding highlights.
+- On `pN-fill`, put `.target.ending` around exactly the Japanese word or phrase represented by the
+  blank. Use one Japanese cue per blank. Reorder and translate prompts remain neutral because the
+  learner produces the whole sentence there.
 - Every closed read/choose/reorder/fill/translate activity has **four questions**.
 - Reorder uses four meaningful chunks as ceiling and default; three is allowed only when the
   sentence genuinely has three. One page uses one chunking criterion throughout.
@@ -159,6 +172,15 @@ not the tutor's voice or the partner's receptive line.
 `p3-model` is a return, not a bonus scene. Replacing it with a new situation removes the payoff of
 recognising the exchange that was initially opaque.
 
+`scene`, `p3-model`, `p3-complete`, and `transfer-scene` are roleplays. Use profile images for every
+turn and keep the short character names stable; the cast on `situation-card` uses the same images.
+Only `p3-freetalk` represents the actual people in class, so only that page uses generic
+`Tutor`/`Me` icons.
+
+Mirror target highlights in `p3-model`. In `p3-complete`, each missing learner phrase has one exact
+Japanese `.target` cue and one wrapping, auto-growing `textarea.free-input.phrase-input`. Do not
+put a long late-production sentence in a single-line field.
+
 `p3-freetalk` must be reciprocal. The tutor's final answer is typed live into the neutral partner
 bubble; it is not a canned model and it does not expose a hidden answer to the learner.
 
@@ -177,6 +199,10 @@ labels; never use a correction arrow to rank two contextual choices.
 - it preserves today's communicative job without copying the opening dialogue;
 - it ends with the practical outcome resolved or clearly handed off;
 - no page follows it.
+
+Its 2–3 learner completions use the same wrapping phrase fields and exact Japanese `.target` cues
+as `p3-complete`. A connective or closing line that is not one of today's targets stays visible;
+do not turn it into an extra unscaffolded production test merely to add another blank.
 
 The transfer scene is not a preview of another lesson and never introduces its grammar. Its job is
 to show that the learner can carry today's frames into a second plausible encounter.

@@ -36,6 +36,10 @@ language.
   teaching-mode switch, because an English learner can also read them. Follow-up prompts, correction
   controls, and mode guidance are tutor-facing too and therefore stay in English. Do not write
   answers into a note that the page already reveals.
+- **An English-speaking tutor never has to interpret Japanese to run an activity.** Japanese remains
+  the learner's support language, but a receptive meaning choice also exposes a short English sense
+  label, and any non-obvious read order is stated in an English tutor-only note. Japanese-only
+  alternatives may support the learner; they may not become the tutor's hidden answer key.
 - **Freetalking question-page notes are follow-ups, not coaching.** Put only 2–3 concise follow-up
   questions in the private band. Each one must make a different conversational move—for example,
   concretize, explain a cause, add another perspective, explore a consequence or invite hindsight.
