@@ -5,11 +5,16 @@
 2026-08-19, which is now the only place lessons are written *and* the place they
 deploy from.
 
-This repository is kept for one reason: the licensed textbook scans in
-`korean/references/curricula/`. They are 726MB of private source material, one
-file past GitHub's 100MB ceiling, and nothing in any build reads them. Everything
-derived from them — the pattern maps, the clean text, the wireframes — came
-across and lives at `references/kr/` there.
+This repository is kept for two things that should not follow the curriculum:
+
+- **The licensed textbook scans** in `korean/references/curricula/` — 726MB of
+  private source material, one file past GitHub's 100MB ceiling, and nothing in
+  any build reads them. Everything derived from them (the pattern maps, the clean
+  text, the wireframes) came across and lives at `references/kr/` there.
+- **`_archive/`** — retired drafts and design variations, kept so the history of a
+  design decision can be recovered. Its own README says it plainly: nothing in
+  there is current, and it is not an example to copy from. That is exactly the
+  material that should not move into the repository people now author in.
 
 ## Where things went
 
