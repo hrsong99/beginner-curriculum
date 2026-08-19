@@ -178,8 +178,12 @@ writers copy. Korean spent 348 reorder sentences at the wrong chip count for exa
   catalogs first; do not improvise a different title inside one deck.
 - Tutor scripts use the shortest natural, conversational line that preserves the learner's next
   action or the page's meaning. Do not narrate visible setup, inventory later activities, or pad a
-  goal with `Today we'll...` / `By the end of the lesson...`. Rewrite the Japanese in the same
-  change so meaning, sentence count and conversational tone still match.
+  goal with `Today we'll...` / `By the end of the lesson...`. A sentence whose whole content is a
+  count of what is already on screen (`There are four.`) narrates visible setup too — but a count
+  folded into the instruction (`Read the four sentences.`) *is* that page's instruction and stays,
+  and a find-all activity keeps its count because there the number says when to stop hunting.
+  Rewrite the Japanese in the same change so meaning, sentence count and conversational tone still
+  match.
 - Core and Contextual `pattern-meaning` boxes use **one short English sentence** combining meaning
   and communicative use, with one direct Japanese counterpart. Do not put an activity direction,
   Japanese wording or a lesson-number reference in the English line. A rule-page script adds only

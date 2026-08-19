@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verify the five rules that govern every teaching surface in a deck.
+"""Verify the six rules that govern every teaching surface in a deck.
 
 They exist because an audit of 535 뜻과 쓰임 boxes found the same four habits
 everywhere, and none of them is visible while you are writing one deck:
@@ -31,6 +31,16 @@ everywhere, and none of them is visible while you are writing one deck:
                  blueprint has asked for two sentences since it was written and
                  got 3% compliance, because prose does not hold a line. This is
                  the number that does.
+
+  6  COUNT       no sentence whose whole content is a count of what is already
+                 on the screen. 「네 문장이에요.」 stood on 126 read-along pages
+                 beside the four sentences it was counting, and 「네 개예요.」 on
+                 five more. Rule 4 deliberately left these alone — a count
+                 folded INTO an instruction (네 문장을 따라 읽어 보세요) is that
+                 page's instruction — so this rule fires only on a sentence that
+                 is nothing but the count. A find-all page is exempt: there the
+                 number is the stop condition, not a description ('웨'로 읽는
+                 글자를 모두 눌러 보세요. 세 개예요.).
 
 Rule 5's budget is deliberately loose (the contextual track's own median is 48)
 — it is a backstop against paragraphs, not a style gauge.
@@ -79,7 +89,16 @@ PARTICLE_CTX = re.compile(r"파트\s*$")
 TAIL = re.compile(r"(제가 읽을게요|읽어 드릴게요|들려 드릴게요|잘 듣고 따라 읽어|"
                   r"따라 읽어 ?보세요|한 번에 읽을게요|이어서 읽을게요)")
 
-RULES = ("anchor", "spoken-ja", "ref", "tail", "length")
+# A sentence that is only a count. 「네 문장이에요」 / 「세 개예요」 — no verb,
+# no instruction, nothing the learner cannot see by looking.
+BARE_COUNT = re.compile(
+    r"^(한|두|세|네|다섯|여섯|일곱|여덟|아홉|열|스무|\d+)\s*"
+    r"(개|문장|줄|가지)(이에요|예요|입니다)[.!]?$")
+# …unless the line asks the learner to find them all, where the count is what
+# tells them when to stop hunting rather than what they are looking at.
+FIND_ALL = re.compile(r"모두.*(눌러|골라|찾)")
+
+RULES = ("anchor", "spoken-ja", "ref", "tail", "length", "count")
 
 
 def strip(s):
@@ -185,6 +204,12 @@ def check(path, want):
             if JA_SCRIPT.search(ko):
                 found = "".join(sorted(set(JA_SCRIPT.findall(ko))))
                 hit("spoken-ja", pid, f"소리 내어 읽는 줄에 일본어 [{found}]", ko)
+
+            # ---- rule 6: a sentence that only counts what is on screen ----
+            if not FIND_ALL.search(ko):
+                for sent in sentences(ko):
+                    if BARE_COUNT.match(sent):
+                        hit("count", pid, f"화면을 세기만 하는 문장 ‘{sent}’", ko)
 
         # ---- rule 2b: Japanese in a tutor note needs its Hangul reading ----
         for m in TUTOR.finditer(chunk):
