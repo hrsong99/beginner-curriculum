@@ -205,6 +205,42 @@ translating `countryCode`, followed by `repoint-shared.py` → `validate.py`. `p
 and get replaced wholesale; a fix made there disappears on the next sync with no error.
 Fix it here instead.
 
+### What the catalogue shows, and where each string comes from
+
+`GT_CLASS_COURSE` holds one row per course *and* per lesson, and it names both in three
+columns — `BOOK_NAME` (ko), `EN_BOOK_NAME`, `JP_BOOK_NAME` — plus a `DESCRIPTION` that is an
+i18n JSON object, not prose. **The app picks a column by the learner's locale, so for this
+Japanese-market tree `ja` is the string on screen and `ko` is grape's admin label.** Writing
+only Korean well means writing well in the one language the learner never reads.
+
+| What a learner sees | Row | Source here |
+|---|---|---|
+| course title | `BOOK_TYPE=COVER`, `CLASS_WEEK=0` | `course.yaml` → `spec.title.{ko,en,ja}`, composed by `plan_courses.py` |
+| course tagline | same row's `DESCRIPTION` | `tools/course-copy.json` — `ko` may fall back to the TOC's 끝내면 할 수 있는 것 line |
+| lesson title | `BOOK_TYPE=MAIN`, `CLASS_WEEK=N` | the deck's `podo:title-{ko,en,ja}`, read into `lesson.yaml` |
+| lesson can-do | same row's `DESCRIPTION` | **not exported yet** — see below |
+
+`DIFFICULTY` is five bands wide and the live catalogue leans hardest on the two it is easiest
+to drop: `UPPER_BEGINNER` and `UPPER_INTERMEDIATE` together carry more deployed lessons than
+`BEGINNER`, `INTERMEDIATE` and `ADVANCED` combined. `초중급` and `중고급` map to them and must
+not be collapsed into their neighbours. `DIFFICULTY` is not part of the natural key, so this
+stays a cheap update — but only while a course is still `enabled: false`.
+
+**Three things this tree cannot finish on its own.** All need `re-speak/podo-curriculum`,
+whose `schemas/` reject unknown fields, so none of them may be guessed at from here:
+
+1. **A `COVER` row per course.** `course.yaml` carries a course title and description but
+   states no `BOOK_TYPE`. If the exporter writes only `MAIN` rows, the course title never
+   reaches a screen no matter how well it is written. Verify before treating this as done.
+2. **A lesson-level `DESCRIPTION`.** Every live `MAIN` row has one; ours have none.
+   `lesson.yaml` already carries `teaches.canDo`, which is the right sentence in Korean — the
+   missing pieces are a schema field to put it in and its `ja`/`en` siblings for 494 lessons.
+3. **The `"N. "` title prefix.** Live rows store it, in all three languages, matching
+   `CLASS_WEEK`; 100% of BEGINNER and ADVANCED rows carry it. Prepend it **at export from
+   `CLASS_WEEK`**, not in the deck — a course re-cut would otherwise rot every baked number by
+   hand. Topic-pick courses (Smart Talk, role-play) are never numbered, so the rule is
+   per-course, not global.
+
 ## Interactive lessons
 
 Anything the learner taps, types, or drags — and anything that has to stay in step with the

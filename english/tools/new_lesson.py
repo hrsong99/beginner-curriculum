@@ -48,12 +48,25 @@ def split_shell(text: str) -> tuple[str, str]:
     return head, foot
 
 
-def retarget(head: str, *, review_id: str, lesson_id: str, level: str, title: str, version: str) -> str:
+def attr(value: str) -> str:
+    """Escape only what a double-quoted HTML attribute cannot hold literally."""
+    return value.replace("&", "&amp;").replace("<", "&lt;").replace('"', "&quot;")
+
+
+def retarget(head: str, *, review_id: str, lesson_id: str, level: str, title: str,
+             title_ko: str, title_ja: str, version: str) -> str:
+    # podo:title-{ko,en,ja} is the deck's name in GT_CLASS_COURSE's three name
+    # columns, and the app picks one by the learner's locale — so `ja` is the
+    # one this Japanese-market track puts on screen. Stamping all three here is
+    # what keeps a written deck from reaching the catalogue unnamed.
     substitutions = [
         (r'(<meta name="podo:lesson-id" content=")[^"]*(")', lesson_id),
         (r'(<meta name="podo:review-id" content=")[^"]*(")', review_id),
         (r'(<meta name="podo:level" content=")[^"]*(")', level),
         (r'(<meta name="podo:content-version" content=")[^"]*(")', version),
+        (r'(<meta name="podo:title-ko" content=")[^"]*(")', attr(title_ko)),
+        (r'(<meta name="podo:title-en" content=")[^"]*(")', attr(title)),
+        (r'(<meta name="podo:title-ja" content=")[^"]*(")', attr(title_ja)),
         (r"(<title>).*?(</title>)", title + " — PODO English"),
     ]
     for pattern, value in substitutions:
@@ -95,7 +108,12 @@ def main() -> int:
     parser.add_argument("--course", required=True, help="provisional course directory")
     parser.add_argument("--lesson", required=True, type=int)
     parser.add_argument("--id", required=True, help="directory and podo:lesson-id, e.g. 31-past-action")
-    parser.add_argument("--title", required=True, help="English deck title")
+    parser.add_argument("--title", required=True,
+                        help="English deck title; must match the generated brief heading")
+    parser.add_argument("--title-ko", required=True,
+                        help="Korean title — grape's admin label for this lesson")
+    parser.add_argument("--title-ja", required=True,
+                        help="Japanese title — what a JP-market learner sees in the catalogue")
     parser.add_argument("--level", required=True, help="podo:level value")
     parser.add_argument("--from-deck", help="approved canonical lesson.html; Core defaults to its approved pilot")
     parser.add_argument("--out", help="override output lesson.html")
@@ -132,6 +150,8 @@ def main() -> int:
         lesson_id=args.id,
         level=args.level,
         title=args.title,
+        title_ko=args.title_ko,
+        title_ja=args.title_ja,
         version=dt.date.today().isoformat(),
     )
     page = redepth(head + PLACEHOLDER.format(brief=brief.relative_to(track)) + foot, out)

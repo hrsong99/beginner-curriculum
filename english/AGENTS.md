@@ -245,3 +245,31 @@ collide across languages even where they coincide. Do not add it to `course.yaml
 repository derives `EN` from the destination directory. `sync-from-authoring.py` mirrors this
 complete track tree into non-deployable `sandbox/authoring/en/`; after review, an explicit
 promotion must copy a verified course verbatim into `courses/en/`.
+
+### Catalogue names: three languages, always
+
+`GT_CLASS_COURSE` names a course and a lesson in three columns — `BOOK_NAME` (ko),
+`EN_BOOK_NAME`, `JP_BOOK_NAME` — and `DESCRIPTION` is an i18n JSON object rather than prose.
+**The app picks a column by the learner's locale.** This track teaches English to Japanese
+speakers, so `ja` is the string on screen, `en` is the course's own language, and `ko` is
+grape's admin label. All three are required; a deck or course with only English in all three
+slots reaches the catalogue effectively unnamed.
+
+- **Course title and description** come from `tools/course-copy.json`, keyed by slug, never
+  from the TOC. Generating them produced English in all three slots and shipped build notation
+  (`Core 25–36 · A1 → A2`, `13 topics · Full version`) as the learner-facing description.
+  `plan_courses.py` reports any missing language and `test_plan_courses.py` fails on it.
+- **The CEFR band is the last segment of every course title** and ships deliberately: English
+  learners in Japan read CEFR, and for free talking it is the only thing separating an
+  accessible course from its full sibling. It does not belong inside the description.
+- **Title length** is held at 40 characters for `en` and 30 for `ko`/`ja`. Live cover rows
+  average 13 characters in ko and 22 in en, so shorter is the house style; the titles this
+  replaced ran to 72.
+- **Lesson titles live in the deck.** `podo:title-{ko,en,ja}` is written by `new_lesson.py`
+  and required by `check_deck.py`, which also holds `podo:title-en` equal to the generated
+  brief heading. They are load-bearing and must not be removed.
+
+`DIFFICULTY` maps from the CEFR band, highest first, across all five values a course can take:
+`C1 → ADVANCED`, `B2 / B1+ → UPPER_INTERMEDIATE`, `B1 → INTERMEDIATE`, `A2 → UPPER_BEGINNER`,
+`A1 → BEGINNER`. A course is entered at its ceiling, because difficulty describes what it takes
+to finish rather than to start.

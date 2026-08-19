@@ -217,18 +217,22 @@ ladder has three distinct levels, and English follows the same progression:
 
 - In early controlled practice (`pN-fill`), keep all non-target English visible and use a
   single-line `.slot-input` for the target word or short target chunk.
-- In late controlled production (`p3-complete` and `in-the-wild`), the missing segment normally
-  includes both the target pattern and the content that slots into it: for example,
-  `went to a restaurant`, not only `went`, and not automatically the entire sentence. Keep the
-  surrounding conversational setup visible. Use one wrapping, auto-growing
-  `textarea.free-input.phrase-input` for each meaningful production phrase; it may contain a whole
-  utterance only when that utterance is itself the smallest honest production unit.
+- In late controlled production (`p3-complete` and `in-the-wild`), each inline blank contains only
+  a target word or frame already established as an editable answer in `p1-fill` or `p2-fill`.
+  Scene facts, slot vocabulary, subjects, politeness words, and connective language stay visible:
+  write `We [went] to a restaurant and [had] dinner`, not
+  `We [went to a restaurant] and [had dinner]`; write
+  `Sure, I [can help with] the Wi-Fi`, not `[Sure, I can help with the Wi-Fi]`.
+  Use one wrapping, auto-growing `textarea.free-input.phrase-input` for each independently
+  retrieved target chunk.
 - Use the full-width open `.answer-space` + `.free-input` for genuinely open or whole-utterance work:
   `pN-translate`, free production, and an ask-back line taught as one complete question.
 
-Do not shrink a late production blank to grammar atoms merely to make the field fit, and do not
-make the learner recreate unrelated fixed language merely because one expected answer exists. The
-phrase field is designed to reach the card edge, wrap internally, and grow vertically.
+The boundary comes from the learning target, not from what happens to fit visually. Do not make the
+learner recreate unrelated fixed language merely because one expected sentence exists. If the
+learning job genuinely is whole-sentence recall, use a full-width translation/open field rather
+than disguising it as an inline pattern blank. Phrase fields still wrap and grow vertically for
+target frames that are naturally long.
 
 Mirror target highlighting across languages. In `p3-model`, each highlighted English target has a
 matching `.ending` around its direct Japanese meaning. In `p3-complete`, put `.target` around the

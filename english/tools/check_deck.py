@@ -48,7 +48,9 @@ trace:
 
 7. **Core production parity.** Model and replay keep the same turn sequence,
    roleplays use profile images, live Free Talk labels every real speaker, and
-   completion targets remain visibly connected to their Japanese cues.
+   completion targets remain visibly connected to their Japanese cues. Late
+   inline blanks reuse controlled-fill targets exactly, leaving scene facts and
+   slot vocabulary visible.
 
 8. **Cross-language target highlighting.** Every Core and Contextual teaching
    or reading model highlights the same number of target units in English and
@@ -59,6 +61,11 @@ trace:
    live Tutor/Me exchange uses generic icons. Receptive `Understand` choices
    expose an English sense label as well as Japanese support, so an
    English-speaking tutor never has to interpret Japanese-only alternatives.
+
+10. **Contextual frame boundaries.** Late replay and transfer phrase fields
+    reuse the exact frame answers established on controlled fill pages. Scene
+    facts and slot vocabulary stay visible outside the editable field instead
+    of quietly turning a pattern check into whole-sentence recall.
 
 These are not caught by reading markup, which is why they are here rather than in a
 checklist. A checklist item only reaches the writers who were told to read it.
@@ -143,6 +150,7 @@ ENDING = re.compile(r'class="ending"')
 TARGET = re.compile(r'class="target"')
 PHRASE_INPUT = re.compile(r'class="[^"]*\bphrase-input\b')
 SLOT_INPUT = re.compile(r'<input\b[^>]*class="[^"]*\bslot-input\b')
+CONTROL_TAG = re.compile(r'<(?:input|textarea)\b[^>]*>', re.I)
 GENERIC_AVATAR = re.compile(r'<span class="[^"]*\bavatar\b[^\"]*\bicon\b')
 TAG_OPEN = re.compile(r'<(?:div|span)\b[^>]*>', re.I)
 GENERIC_CORE_FREETALK = re.compile(
@@ -156,12 +164,28 @@ QUOTE_CLOSE = "”’」』"
 
 
 def meta_content(source, name):
-    """Read a meta value without depending on attribute order."""
+    """Read a meta value without depending on attribute order.
+
+    Entities are resolved, so a title holding `&amp;` or `&#x27;` compares
+    equal to the text it stands for rather than to its markup.
+    """
     for tag in META_TAG.findall(source):
         attrs = {key.lower(): value for key, _, value in ATTRIBUTE.findall(tag)}
         if attrs.get("name") == name:
-            return attrs.get("content", "")
+            return html_lib.unescape(attrs.get("content", ""))
     return None
+
+
+def control_answers(source, class_name):
+    """Return normalized data-answer values for controls with one CSS class."""
+    answers = []
+    for tag in CONTROL_TAG.findall(source):
+        attrs = {key.lower(): value for key, _, value in ATTRIBUTE.findall(tag)}
+        classes = attrs.get("class", "").split()
+        answer = attrs.get("data-answer")
+        if class_name in classes and answer is not None:
+            answers.append(html_lib.unescape(answer).strip().casefold())
+    return answers
 
 
 def sentences(text, enders, *, spaced):
@@ -484,6 +508,11 @@ def pattern_meaning_issues(page_id, chunk):
 def core_production_issues(page_chunks):
     """Protect the production ladder established by the approved Core pilots."""
     errors = []
+    controlled_frames = {
+        answer
+        for page_id in ("p1-fill", "p2-fill")
+        for answer in control_answers(page_chunks.get(page_id, ""), "slot-input")
+    }
     roleplay_pages = ("p3-model", "p3-complete", "in-the-wild")
     for page_id in roleplay_pages:
         chunk = page_chunks.get(page_id)
@@ -528,6 +557,16 @@ def core_production_issues(page_chunks):
                 f"(inputs={phrase_inputs} targets={targets})"
             )
 
+    if controlled_frames:
+        for page_id in ("p3-complete", "in-the-wild"):
+            for answer in control_answers(page_chunks.get(page_id, ""), "phrase-input"):
+                if answer not in controlled_frames:
+                    errors.append(
+                        f"{page_id}: phrase input {answer!r} is not an exact controlled "
+                        "target — keep scene facts and slot vocabulary visible outside "
+                        "the editable field"
+                    )
+
     freetalk = page_chunks.get("p3-freetalk", "")
     if freetalk:
         turns = len(TURN_OPEN.findall(freetalk))
@@ -546,9 +585,14 @@ def core_production_issues(page_chunks):
     return errors
 
 
-def contextual_production_issues(page_chunks):
+def contextual_production_issues(page_chunks, *, enforce_frame_boundaries=True):
     """Protect roleplay identity and English-only tutor operability."""
     errors = []
+    controlled_frames = {
+        answer
+        for page_id in ("p1-fill", "p2-fill")
+        for answer in control_answers(page_chunks.get(page_id, ""), "slot-input")
+    }
     for page_id in ("scene", "p3-model", "p3-complete", "transfer-scene"):
         chunk = page_chunks.get(page_id, "")
         if not chunk:
@@ -627,6 +671,16 @@ def contextual_production_issues(page_chunks):
                 "transfer-scene: each phrase input needs one exact Japanese .target "
                 f"(inputs={phrase_inputs} targets={targets})"
             )
+
+    if enforce_frame_boundaries and controlled_frames:
+        for page_id in ("p3-complete", "transfer-scene"):
+            for answer in control_answers(page_chunks.get(page_id, ""), "phrase-input"):
+                if answer not in controlled_frames:
+                    errors.append(
+                        f"{page_id}: phrase input {answer!r} is not an exact controlled "
+                        "frame — keep scene facts and slot vocabulary visible outside "
+                        "the editable field"
+                    )
 
     understand = page_chunks.get("understand", "")
     if understand:
@@ -712,6 +766,29 @@ def freetalk_title_issues(source, expected):
     return title_identity_issues(source, expected)
 
 
+def catalogue_title_issues(source, expected):
+    """Require the three catalogue names a deployed lesson row needs.
+
+    GT_CLASS_COURSE stores BOOK_NAME (ko), EN_BOOK_NAME and JP_BOOK_NAME, and
+    the app picks one by the learner's locale — so for this Japanese-market
+    track `ja` is the name actually on screen. A deck that ships without them
+    reaches the catalogue unnamed, and nothing downstream can invent a title.
+    """
+    errors = []
+    for lang in ("ko", "en", "ja"):
+        if not (meta_content(source, f"podo:title-{lang}") or "").strip():
+            errors.append(
+                f'missing <meta name="podo:title-{lang}"> — the deck is the source '
+                f"of its own name in all three catalogue columns"
+            )
+    written = (meta_content(source, "podo:title-en") or "").strip()
+    if expected and written and written != expected:
+        errors.append(
+            f"podo:title-en {written!r} does not match the brief title {expected!r}"
+        )
+    return errors
+
+
 def english_brief_title(path, review_id):
     """Read the generated brief heading for the English track containing path."""
     track = next(
@@ -751,7 +828,14 @@ def live_tutor_answer_issues(page_id, chunk):
 
 def partner_turns(chunk):
     """Return normalized visible partner lines from one dialogue page."""
-    return [plain_text(body) for body in OTHER_TURN_LINE.findall(chunk)]
+    lines = []
+    for turn in re.split(r'(?=<div class="turn\b)', chunk):
+        if not re.match(r'<div class="turn other"', turn):
+            continue
+        bodies = class_span_bodies(turn, "korean")
+        if bodies:
+            lines.append(plain_text(bodies[0]))
+    return lines
 
 
 def freetalk_article_lines(source):
@@ -856,6 +940,7 @@ def check(path):
             errs.append("deck has no readable generated brief title for its review id")
         else:
             errs.extend(title_identity_issues(html, expected_title))
+        errs.extend(catalogue_title_issues(html, expected_title))
 
     # ---- references resolve ----------------------------------------------
     for ref in sorted(set(LOCAL_REF.findall(html))):
@@ -932,7 +1017,12 @@ def check(path):
             errs.extend(core_production_issues(page_chunks))
         if "2-contextual-english" in path.parts:
             errs.extend(target_highlight_issues(page_chunks))
-            errs.extend(contextual_production_issues(page_chunks))
+            errs.extend(contextual_production_issues(
+                page_chunks,
+                enforce_frame_boundaries=(
+                    meta_content(html, "podo:curriculum-status") != "superseded"
+                ),
+            ))
 
     # ---- 1 · tutor script sentence parity ---------------------------------
     for pid, chunk in pages(html):

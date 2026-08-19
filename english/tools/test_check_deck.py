@@ -285,6 +285,17 @@ class DeckCheckTests(unittest.TestCase):
             [],
         )
 
+    def test_partner_turns_ignore_compact_learner_lines(self):
+        source = (
+            '<div class="turn other"><span class="korean">Question</span>\n'
+            '<span class="translation">質問</span></div>'
+            '<div class="turn me"><span class="korean">Answer</span>'
+            '<span class="translation">答え</span></div>'
+            '<div class="turn other"><span class="korean">Follow-up</span>\n'
+            '<span class="translation">追加質問</span></div>'
+        )
+        self.assertEqual(check_deck.partner_turns(source), ["Question", "Follow-up"])
+
     def test_core_production_rejects_roleplay_icons_dropped_turns_and_generic_prompts(self):
         icon_turn = '<div class="turn other"><span class="who"><span class="avatar icon">T</span></span></div>'
         errors = check_deck.core_production_issues(
@@ -299,6 +310,24 @@ class DeckCheckTests(unittest.TestCase):
         self.assertTrue(any("turn count differs" in item for item in errors))
         self.assertTrue(any("speaker labels" in item for item in errors))
         self.assertTrue(any("generic production instruction" in item for item in errors))
+
+    def test_core_late_phrase_inputs_reuse_only_controlled_targets(self):
+        pages = {
+            "p1-fill": '<input class="slot-input" data-answer="went">',
+            "p2-fill": '<input class="slot-input" data-answer="had">',
+            "p3-complete": (
+                '<span class="target">行って</span>'
+                '<textarea class="free-input phrase-input" data-answer="went"></textarea>'
+            ),
+            "in-the-wild": (
+                '<span class="target">食べました</span>'
+                '<textarea class="free-input phrase-input" '
+                'data-answer="had dinner"></textarea>'
+            ),
+        }
+        errors = check_deck.core_production_issues(pages)
+        self.assertFalse(any("p3-complete: phrase input" in item for item in errors))
+        self.assertTrue(any("in-the-wild: phrase input" in item for item in errors))
 
     def test_target_highlights_require_a_mirrored_pair_on_every_model_row(self):
         pages = {
@@ -371,6 +400,27 @@ class DeckCheckTests(unittest.TestCase):
             "p3-complete": turn * 5,
         })
         self.assertTrue(any("replay the complete scene" in item for item in errors))
+
+    def test_contextual_late_phrase_inputs_reuse_only_controlled_frames(self):
+        pages = {
+            "p1-fill": (
+                '<input class="slot-input" data-answer="We&#x27;d like">'
+                '<input class="slot-input" data-answer="if possible">'
+            ),
+            "p2-fill": '<input class="slot-input" data-answer="Could we have">',
+            "p3-complete": (
+                '<span class="target">ほしいです</span>'
+                '<textarea class="free-input phrase-input" data-answer="We&#x27;d like"></textarea>'
+            ),
+            "transfer-scene": (
+                '<span class="target">いただけますか</span>'
+                '<textarea class="free-input phrase-input" '
+                'data-answer="Could we have two seats"></textarea>'
+            ),
+        }
+        errors = check_deck.contextual_production_issues(pages)
+        self.assertFalse(any("p3-complete: phrase input" in item for item in errors))
+        self.assertTrue(any("transfer-scene: phrase input" in item for item in errors))
 
     def test_freetalking_inventory_requires_canonical_order(self):
         source = "".join(

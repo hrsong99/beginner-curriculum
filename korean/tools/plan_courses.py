@@ -273,6 +273,26 @@ def course_copy() -> dict[str, dict]:
     return json.loads(COPY_PATH.read_text(encoding="utf-8"))["courses"]
 
 
+# Live cover titles average 13 characters in ko and run to 22. Held here for
+# the two columns this market actually reads: `ja` is on the learner's screen
+# and `ko` is grape's admin label. `en` is deliberately exempt — no learner of
+# a Korean course sees EN_BOOK_NAME, and holding it to 40 would mean rewriting
+# approved TOC theme names ("Staying & fixing problems") to save nobody a read.
+TITLE_LIMITS = {"ko": 30, "ja": 30}
+
+
+def course_title(course: dict, copy: dict[str, dict]) -> dict[str, str]:
+    """The composed title, unless this course was given a written one.
+
+    compose() builds `track · theme · level` from parts that are each short,
+    but a theme carrying its own explainer ("말 놓기 — 존댓말에서 반말로") pushes
+    the result past what a catalogue list can show. An override trims the
+    explainer without editing the TOC, where the long form is the real name.
+    """
+    written = copy.get(course["slug"], {}).get("title", {})
+    return {k: written.get(k) or course["title"][k] for k in ("ko", "en", "ja")}
+
+
 def course_description(course: dict, copy: dict[str, dict]) -> dict[str, str]:
     """The three-language description for one course.
 
@@ -311,8 +331,9 @@ def course_yaml(course, cfg, class_level, track, written,
         f"#   {l['no']:>3}  {'✓ ' + written[l['no']] if l['no'] in written else '·  '}"
         f"{l['title']}{' [깊게]' if l.get('deep') else ''}"
         for l in course["lessons"])
-    t = course["title"]
-    desc = course_description(course, copy if copy is not None else {})
+    copy = copy if copy is not None else {}
+    t = course_title(course, copy)
+    desc = course_description(course, copy)
     description = "\n".join(f"    {k}: {yaml_str(v)}" for k, v in desc.items())
     return f"""\
 apiVersion: podo.curriculum/v1
@@ -469,6 +490,12 @@ def plan_track(track: pathlib.Path, dry: bool, only_course: str | None = None) -
         if missing:
             print(f"    ! {course['slug']}: no {'/'.join(missing)} description in "
                   "tools/course-copy.json — the learner reads this field")
+        for lang, limit in TITLE_LIMITS.items():
+            length = len(course_title(course, copy)[lang])
+            if length > limit:
+                print(f"    ! {course['slug']}: {lang} title is {length} chars, over "
+                      f"{limit} — shorten it, or add a title override to "
+                      "tools/course-copy.json")
 
         if not dry:
             (cdir / "lessons").mkdir(parents=True, exist_ok=True)

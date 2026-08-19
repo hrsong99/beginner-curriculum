@@ -33,6 +33,8 @@ class LessonShellTests(unittest.TestCase):
             lesson_id="31-past-action",
             level="A2",
             title="Past action",
+            title_ko="지난 일 말하기",
+            title_ja="過去のできごと",
             version="2099-01-02",
         )
         self.assertIn('content="CORE-31"', changed)
@@ -40,6 +42,11 @@ class LessonShellTests(unittest.TestCase):
         self.assertIn('content="A2"', changed)
         self.assertIn('content="2099-01-02"', changed)
         self.assertIn('<title>Past action — PODO English</title>', changed)
+        # All three catalogue name columns, stamped from the shell's own slots.
+        self.assertIn('name="podo:title-ko" content="지난 일 말하기"', changed)
+        self.assertIn('name="podo:title-en" content="Past action"', changed)
+        self.assertIn('name="podo:title-ja" content="過去のできごと"', changed)
+        self.assertNotIn('도와주시겠어요', changed)
         self.assertIn('name="podo:vocabulary-status" content="todo"', changed)
         self.assertIn('name="podo:vocabulary:new" content=""', changed)
         self.assertNotIn('box|箱', changed)
