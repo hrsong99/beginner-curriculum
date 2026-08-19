@@ -229,6 +229,15 @@ writers copy. Korean spent 348 reorder sentences at the wrong chip count for exa
   reach four, and never reach four by splitting a compound noun, an article off its noun, an
   auxiliary off its verb, or an inflection off its stem. Do not stop short either: if a fourth unit
   is already in the sentence, give it its own chip. Chunk every sentence on a page the same way.
+  The checker flags an English three-chip page for explicit review so this default cannot silently
+  become a three-chip habit.
+- Core `p3-model` and `p3-complete` use the same **5–7-turn** exchange. The count is a guardrail,
+  not permission to pad: the dialogue still needs an opening, an answer-dependent follow-up and a
+  resolved ending, and every added turn must change or complete the interaction.
+- Contextual opening scenes use **5–9 purposeful turns** and replay the same turn sequence in
+  `p3-model` and `p3-complete`; a short excerpt is not a replay. Receptive meaning choices paraphrase
+  the complete staff line, and both options answer the same comprehension question. A staff
+  question is never matched to two possible learner answers or two bare topic labels.
 - A spoken prompt feeding one answer box asks **one question**. Two only when the second narrows
   the first (either/or, or a yes/no setting up the real question); never three, and never two
   unrelated questions joined with "and". Three answers wanted means three turns, not one crowded

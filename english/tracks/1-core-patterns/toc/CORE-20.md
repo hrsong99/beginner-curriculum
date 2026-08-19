@@ -25,12 +25,13 @@
 ### Pattern 2
 
 - **Model:** Sure, I can help with the boxes.
-- **Frame:** `Sure, I can help with ___.`
+- **Frame:** `I can help with ___.`
 
 ## Supporting content
 
 - **Expressions:** `What do you need?` · `No problem.`
 - **Grammar:** keep the request together: `Could you help me with` + a thing.
+- **Fixed support:** `Sure,` is a natural response opener, not part of the productive answer frame.
 - **Bounded survival chunk:** `Could you help me with ___?` is the approved early survival request. Keep `could you help me with` whole; do not generalise past-form politeness at A1.
 - **Japanese-L1 risk:** **the politeness install.** Keigo is grammatical; English politeness is lexical and syntactic, so a learner looking for an inflection finds none and produces `Help me` — perfect grammar, blunt English. At this level, keep the complete polite frame intact instead of opening a second `with`/no-`with` decision inside it.
 

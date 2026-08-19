@@ -105,6 +105,7 @@ def render(track: str, lessons: list[dict], index: int) -> str:
         lines += ["## Supporting content", ""]
         lines += _line("Expressions", lesson["expressions"])
         lines += _line("Grammar", lesson.get("grammar") or "⚠ missing from the TOC; do not invent it inside a deck assignment")
+        lines += _line("Fixed support", lesson.get("fixedSupport"))
         lines += _line("Bounded survival chunk", lesson.get("boundedChunk"))
         lines += _line("Japanese-L1 risk", lesson["jp"])
         if lesson["spiralReviews"]:

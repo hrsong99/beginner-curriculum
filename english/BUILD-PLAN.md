@@ -3,7 +3,7 @@
 **Status:** native catalog and FT-1 pair approved · ten representative candidate decks authored and
 audited · wider Core and Contextual batches await owner review
 
-**Current as of:** 2026-08-18
+**Current as of:** 2026-08-19
 
 This is an operational plan, not a diary. It states what exists now, what remains, and what
 unblocks what. Git history preserves the implementation chronology; completed work is summarized
@@ -25,7 +25,7 @@ here only when it changes the starting point for future work.
 | Review surface | current generated 303-item production catalog owner-approved on 2026-08-18 with no requested row dispositions |
 | Core evidence | 122-row generated triage ledger complete; five priority rows resolved against current first-party sources; Core 76/105 productive bands remain provisional |
 | Core audit | final progression pass plus a 52-row corpus-informed naturalness audit for Core 71–122; no audit-led TOC changes are pending |
-| Automated quality | 63 regression tests; all 14 English decks pass with 0 errors; the one two-chunk Contextual reorder warning has human semantic sign-off; all render without horizontal overflow at 480px and 360px |
+| Automated quality | 72 regression tests; all 14 English decks pass with 0 errors and 0 warnings; all render without horizontal overflow at 480px and 360px |
 | Deployment | not ready: course identity, manifests and external sync path remain open |
 
 The curriculum is no longer waiting for basic architecture, tooling or native catalog approval.

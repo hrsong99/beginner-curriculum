@@ -259,6 +259,7 @@ def parse_core() -> list[dict]:
             # Part 2 was drafted without learner-facing grammar lines. Preserve
             # that absence so generated audits can expose it; never invent one.
             "grammar": _field(body, "Grammar"),
+            "fixedSupport": _field(body, "Fixed support"),
             "jp": _require(_field(body, "JP"), path, number, "JP"),
             "boundedChunk": bounded_chunk,
             "spiralReviews": spiral_reviews,

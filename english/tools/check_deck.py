@@ -132,6 +132,11 @@ TITLE_JA = re.compile(
     re.I | re.S,
 )
 TURN_OPEN = re.compile(r'<div class="turn\b')
+OTHER_TURN_LINE = re.compile(
+    r'<div class="turn other".*?<span class="korean">(.*?)</span>'
+    r'<span class="translation">',
+    re.S,
+)
 PROFILE_AVATAR = re.compile(r'<img class="avatar"(?:\s|>)')
 WHO_OPEN = re.compile(r'<span class="who">')
 ENDING = re.compile(r'class="ending"')
@@ -145,7 +150,7 @@ GENERIC_CORE_FREETALK = re.compile(
     r"ask the tutor|tutor's real answer)\b",
     re.I,
 )
-BRIEF_HEADING = re.compile(r"^#\s+(FT-\d+)\s+·\s+(.+?)\s*$")
+BRIEF_HEADING = re.compile(r"^#\s+((?:CORE|CTX|FT)-\d+)\s+·\s+(.+?)\s*$")
 QUOTE_OPEN = "“‘「『"
 QUOTE_CLOSE = "”’」』"
 
@@ -497,10 +502,21 @@ def core_production_issues(page_chunks):
     if model and complete:
         model_turns = len(TURN_OPEN.findall(model))
         complete_turns = len(TURN_OPEN.findall(complete))
+        if model_turns and not 5 <= model_turns <= 7:
+            errors.append(
+                "p3-model: Core conversation has "
+                f"{model_turns} turns — use a purposeful 5–7-turn exchange with an "
+                "opening, answer-dependent follow-up and resolved ending"
+            )
         if model_turns != complete_turns:
             errors.append(
                 "p3-complete: turn count differs from p3-model "
                 f"(model={model_turns} complete={complete_turns}) — replay the same conversation"
+            )
+        if partner_turns(model) != partner_turns(complete):
+            errors.append(
+                "p3-complete: partner lines differ from p3-model — replay the exact "
+                "conversation instead of shortening or rewriting the partner turns"
             )
         if model_turns and not ENDING.search(model):
             errors.append("p3-model: missing mirrored target highlights")
@@ -526,6 +542,7 @@ def core_production_issues(page_chunks):
                 "p3-freetalk: generic production instruction — print the actual target "
                 "scaffold, ask-back question, and tutor-answer label"
             )
+        errors.extend(live_tutor_answer_issues("p3-freetalk", freetalk))
     return errors
 
 
@@ -556,13 +573,30 @@ def contextual_production_issues(page_chunks):
 
     model = page_chunks.get("p3-model", "")
     complete = page_chunks.get("p3-complete", "")
+    scene = page_chunks.get("scene", "")
+    scene_turns = len(TURN_OPEN.findall(scene)) if scene else 0
+    if scene_turns and not 5 <= scene_turns <= 9:
+        errors.append(
+            f"scene: Contextual conversation has {scene_turns} turns — use a "
+            "purposeful 5–9-turn scene with setup, response and resolution"
+        )
     if model and complete:
         model_turns = len(TURN_OPEN.findall(model))
         complete_turns = len(TURN_OPEN.findall(complete))
+        if scene_turns and model_turns != scene_turns:
+            errors.append(
+                "p3-model: turn count differs from the opening scene "
+                f"(scene={scene_turns} model={model_turns}) — replay the complete scene"
+            )
         if model_turns != complete_turns:
             errors.append(
                 "p3-complete: turn count differs from p3-model "
                 f"(model={model_turns} complete={complete_turns})"
+            )
+        if partner_turns(model) != partner_turns(complete):
+            errors.append(
+                "p3-complete: partner lines differ from p3-model — replay the exact "
+                "conversation instead of shortening or rewriting the partner turns"
             )
         phrase_inputs = len(PHRASE_INPUT.findall(complete))
         targets = class_tag_count(complete, "target")
@@ -582,6 +616,7 @@ def contextual_production_issues(page_chunks):
                 f"p3-freetalk: live Tutor/Me exchange needs generic icons on every turn "
                 f"(turns={turns} icons={icons} profiles={profiles})"
             )
+        errors.extend(live_tutor_answer_issues("p3-freetalk", live))
 
     transfer = page_chunks.get("transfer-scene", "")
     if transfer:
@@ -648,8 +683,8 @@ def freetalk_style_issues(chunk):
     return errors
 
 
-def freetalk_title_issues(source, expected):
-    """Keep the deck opening aligned with its authoritative FT brief title."""
+def title_identity_issues(source, expected):
+    """Keep a deck's first visible title aligned with its authoritative brief."""
     errors = []
     document = DOCUMENT_TITLE.search(source)
     document_text = plain_text(document.group(1)) if document else ""
@@ -658,25 +693,36 @@ def freetalk_title_issues(source, expected):
         or document_text.startswith(f"{expected} · ")
     ):
         errors.append(
-            f"lesson-goal: document title must begin with the FT brief title {expected!r}"
+            f"opening: document title must begin with the brief title {expected!r}"
         )
 
-    page_chunks = dict(pages(source))
-    goal = page_chunks.get("lesson-goal", "")
-    visible = TRANSITION_TITLE.search(goal)
+    visible = TRANSITION_TITLE.search(source)
     visible_body = TITLE_JA.sub("", visible.group(1)) if visible else ""
     visible_text = plain_text(visible_body)
     if visible_text != expected:
         errors.append(
-            f"lesson-goal: visible title {visible_text!r} does not match the FT brief "
-            f"title {expected!r}"
+            f"opening: visible title {visible_text!r} does not match the brief title "
+            f"{expected!r}"
         )
     return errors
 
 
-def freetalk_brief_title(review_id):
-    """Read the generated brief heading that mirrors the authoritative TOC."""
-    brief = REPO / "english" / "tracks" / "3-freetalking" / "toc" / f"{review_id}.md"
+def freetalk_title_issues(source, expected):
+    """Backward-compatible name for the shared title identity contract."""
+    return title_identity_issues(source, expected)
+
+
+def english_brief_title(path, review_id):
+    """Read the generated brief heading for the English track containing path."""
+    track = next(
+        (part for part in path.parts if part in {
+            "1-core-patterns", "2-contextual-english", "3-freetalking"
+        }),
+        None,
+    )
+    if not track:
+        return None
+    brief = REPO / "english" / "tracks" / track / "toc" / f"{review_id}.md"
     if not brief.is_file():
         return None
     first = brief.read_text(encoding="utf-8").splitlines()[0]
@@ -684,6 +730,28 @@ def freetalk_brief_title(review_id):
     if not match or match.group(1) != review_id:
         return None
     return match.group(2)
+
+
+def freetalk_brief_title(review_id):
+    """Read the generated brief heading that mirrors the authoritative TOC."""
+    return english_brief_title(
+        REPO / "english" / "tracks" / "3-freetalking", review_id
+    )
+
+
+def live_tutor_answer_issues(page_id, chunk):
+    """Require an English label on an editable field owned by the tutor."""
+    if "<textarea" in chunk and "Tutor's answer" not in chunk:
+        return [
+            f"{page_id}: tutor-editable answer field needs the English label "
+            '"Tutor\'s answer"; Japanese may remain as learner support'
+        ]
+    return []
+
+
+def partner_turns(chunk):
+    """Return normalized visible partner lines from one dialogue page."""
+    return [plain_text(body) for body in OTHER_TURN_LINE.findall(chunk)]
 
 
 def freetalk_article_lines(source):
@@ -777,6 +845,17 @@ def check(path):
             'missing <meta name="podo:target-language" content="en"> — shared '
             "tutor controls will fall back to Korean"
         )
+    if (
+        is_english
+        and review_id
+        and meta_content(html, "podo:curriculum-status") != "superseded"
+        and path.is_relative_to(REPO / "english" / "tracks")
+    ):
+        expected_title = english_brief_title(path, review_id)
+        if expected_title is None:
+            errs.append("deck has no readable generated brief title for its review id")
+        else:
+            errs.extend(title_identity_issues(html, expected_title))
 
     # ---- references resolve ----------------------------------------------
     for ref in sorted(set(LOCAL_REF.findall(html))):
@@ -888,6 +967,11 @@ def check(path):
                 f"same down the page; Korean rows require semantic sign-off")
         elif counts[0] > 4:
             errs.append(f"{pid}: {counts[0]} chips — four is the ceiling")
+        elif is_english and counts[0] == 3:
+            warns.append(
+                f"{pid}: three chips per sentence — four is the English working "
+                "default; confirm there is genuinely no fourth meaning unit"
+            )
         elif counts[0] < 3:
             warns.append(f"{pid}: {counts[0]} chips per sentence — confirm no "
                          f"fourth unit is glued to a neighbour")
@@ -898,13 +982,6 @@ def check(path):
     if is_english and "3-freetalking" in path.parts:
         page_chunks = dict(pages(html))
         errs.extend(freetalk_inventory_issues(html))
-        expected_title = freetalk_brief_title(review_id) if review_id else None
-        if expected_title is None:
-            errs.append(
-                "Freetalking deck has no readable generated brief title for its review id"
-            )
-        else:
-            errs.extend(freetalk_title_issues(html, expected_title))
         if "article" not in page_chunks:
             errs.append(
                 "Freetalking deck is missing data-page-id=\"article\" — page 2 is a "

@@ -14,13 +14,13 @@
   <meta name="podo:vocabulary:recycled" content="">
   <meta name="podo:vocabulary:assumed" content="suitcase|スーツケース; menu|メニュー; Wi-Fi|Wi-Fi">
   <meta name="podo:vocabulary:receptive" content="counter|カウンター">
-  <title>Could you help me with ~? · Asking for help — PODO English</title>
+  <title>Could you help me with this? — PODO English</title>
   <link rel="stylesheet" href="../../../../../../../runtime/css/lesson-card.css">
   <link rel="stylesheet" href="../../../../../../../runtime/css/trial.css">
 </head>
 <body>
   <!-- ============================================================
-       CORE 20 · Could you help me with ___? / Sure, I can help with ___.
+       CORE 20 · Could you help me with ___? / I can help with ___.
        The first English deck. Pilot for the whole track.
 
        Two things this deck decides that no English deck had decided before,
@@ -41,7 +41,7 @@
          side and hid the last one while the tutor line still promised it. -->
     <div class="transition-page" data-page-id="lesson-goal" data-act="Asking for help">
       <span class="transition-kicker">GOAL</span>
-      <h2 class="transition-title">Asking for help <span class="title-ja">(手伝いを頼む)</span></h2>
+      <h2 class="transition-title">Could you help me with this? <span class="title-ja">(これを手伝ってもらえますか？)</span></h2>
       <p class="section-subtitle"><span class="ko">Ask for help and answer when someone asks you.</span><span class="ja">手伝いを頼んで、頼まれたときにも答えましょう。</span></p>
       <div class="known lines">
         <div class="known-row"><span class="k">Could you help me with these boxes?</span><span class="j">この箱、手伝ってもらえますか？</span></div>
@@ -151,14 +151,9 @@
     <!-- drill · English word order is the thing a Japanese speaker has to
          rebuild, so the chips are the sentence taken apart and shuffled.
 
-         ONE cutting criterion, applied to all four rows: one meaning unit per
-         chip. "with + noun" never splits — a preposition does not come off its
-         noun any more than a particle does — while "verb + object" does, and an
-         opener or a politeness word takes its own chip.
-
-         This page first shipped 3/4/3/4, and the 4s came from tacking "please"
-         onto two rows. That is padding two sentences rather than analysing four
-         the same way, which is the thing the four-chunk rule exists to stop. -->
+         ONE cutting criterion, applied to all four rows: request opener, verb,
+         preposition, object. This gives four real units without splitting an
+         article from its noun or padding the sentence with an extra word. -->
     <div class="section" data-page-id="p1-reorder">
       <h2 class="section-title">Build the sentence <span class="title-ja">(文を組み立てよう)</span></h2>
       <p class="section-subtitle"><span class="ko">Put the words in order, then say the whole sentence out loud.</span><span class="ja">単語を順番に並べて、文をまるごと声に出して言ってみましょう。</span></p>
@@ -167,7 +162,8 @@
           <span class="answer-label">この箱、手伝ってもらえますか？</span>
           <span class="answer-space build-zone" data-sync-id="p1-order-boxes" data-sync-kind="order" data-a="Could you help me with these boxes?"></span>
         </div>
-        <span class="choice" data-item-id="b-with">with these boxes?</span>
+        <span class="choice" data-item-id="b-with">with</span>
+        <span class="choice" data-item-id="b-boxes">these boxes?</span>
         <span class="choice" data-item-id="b-could">Could you</span>
         <span class="choice" data-item-id="b-help">help me</span>
       </div>
@@ -178,14 +174,16 @@
         </div>
         <span class="choice" data-item-id="m-help">help me</span>
         <span class="choice" data-item-id="m-could">Could you</span>
-        <span class="choice" data-item-id="m-with">with the menu?</span>
+        <span class="choice" data-item-id="m-with">with</span>
+        <span class="choice" data-item-id="m-menu">the menu?</span>
       </div>
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">Wi-Fi、手伝ってもらえますか？</span>
           <span class="answer-space build-zone" data-sync-id="p1-order-wifi" data-sync-kind="order" data-a="Could you help me with the Wi-Fi?"></span>
         </div>
-        <span class="choice" data-item-id="w-wifi">with the Wi-Fi?</span>
+        <span class="choice" data-item-id="w-with">with</span>
+        <span class="choice" data-item-id="w-wifi">the Wi-Fi?</span>
         <span class="choice" data-item-id="w-could">Could you</span>
         <span class="choice" data-item-id="w-help">help me</span>
       </div>
@@ -194,7 +192,8 @@
           <span class="answer-label">スーツケース、手伝ってもらえますか？</span>
           <span class="answer-space build-zone" data-sync-id="p1-order-suitcase" data-sync-kind="order" data-a="Could you help me with my suitcase?"></span>
         </div>
-        <span class="choice" data-item-id="c-suitcase">with my suitcase?</span>
+        <span class="choice" data-item-id="c-with">with</span>
+        <span class="choice" data-item-id="c-suitcase">my suitcase?</span>
         <span class="choice" data-item-id="c-help">help me</span>
         <span class="choice" data-item-id="c-could">Could you</span>
       </div>
@@ -253,7 +252,6 @@
         <div class="answer-box">
           <span class="answer-label">Wi-Fi、手伝ってもらえますか？</span>
           <span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p1-translate-wifi" data-answer="Could you help me with the Wi-Fi?" autocomplete="off" spellcheck="false"></span>
-          <span class="hint"><span class="hint-chip">Wi-Fi:Wi-Fi</span></span>
         </div>
       </div>
       <div class="task-block">
@@ -272,15 +270,15 @@
       <div class="task-block">
         <div class="answer-box tall">
           <span class="answer-space as-input"><textarea class="free-input" data-sync-id="p1-free-request" rows="2" spellcheck="false" maxlength="2000"></textarea></span>
-          <span class="hint"><span class="hint-chip">箱:box</span><span class="hint-chip">スーツケース:suitcase</span><span class="hint-chip">メニュー:menu</span><span class="hint-chip">Wi-Fi:Wi-Fi</span></span>
+          <span class="hint"><span class="hint-chip">箱:box</span><span class="hint-chip">スーツケース:suitcase</span><span class="hint-chip">メニュー:menu</span></span>
         </div>
       </div>
     </div>
 
     <!-- ============ PART 2 · answering ============ -->
-    <div class="transition-page" data-page-id="part2-intro" data-act="Sure, I can help with…">
+    <div class="transition-page" data-page-id="part2-intro" data-act="I can help with…">
       <span class="transition-kicker">PART 2</span>
-      <h2 class="transition-title">Sure, I can help with ___.</h2>
+      <h2 class="transition-title">I can help with ___.</h2>
       <p class="transition-copy">頼まれたほうの返事です。「はい」と言って、何を手伝えるかを続けます。</p>
     </div>
 
@@ -288,16 +286,16 @@
       <h2 class="section-title">Today's pattern <span class="title-ja">(今日のパターン)</span></h2>
       <p class="section-subtitle pattern-meaning">
         <span class="meaning-kicker">Meaning &amp; use <small>意味・使い方</small></span>
-        <span class="ko">Use this to say yes and name what you can help with.</span>
-        <span class="ja">引き受ける返事をして、何を手伝えるかを続ける言い方です。</span>
+        <span class="ko">Use this after saying yes to name what you can help with.</span>
+        <span class="ja">引き受ける返事のあとに、何を手伝えるかを伝える言い方です。</span>
       </p>
       <div class="sent-hero">
-        <span class="korean"><span class="ending">Sure</span>, I <span class="ending">can help with</span> the boxes.</span>
-        <span class="translation"><span class="ending">もちろん</span>、箱を<span class="ending">手伝えますよ</span>。</span>
+        <span class="korean">Sure, I <span class="ending">can help with</span> the boxes.</span>
+        <span class="translation">もちろん、箱を<span class="ending">手伝えますよ</span>。</span>
       </div>
       <div class="sent-more">
-        <div><span class="korean"><span class="ending">Sure</span>, I <span class="ending">can help with</span> your suitcase.</span><span class="translation"><span class="ending">もちろん</span>、スーツケースを<span class="ending">手伝えますよ</span>。</span></div>
-        <div><span class="korean"><span class="ending">Sure</span>, I <span class="ending">can help with</span> the menu.</span><span class="translation"><span class="ending">もちろん</span>、メニューを<span class="ending">手伝えますよ</span>。</span></div>
+        <div><span class="korean">Sure, I <span class="ending">can help with</span> your suitcase.</span><span class="translation">もちろん、スーツケースを<span class="ending">手伝えますよ</span>。</span></div>
+        <div><span class="korean">Sure, I <span class="ending">can help with</span> the menu.</span><span class="translation">もちろん、メニューを<span class="ending">手伝えますよ</span>。</span></div>
       </div>
     </div>
 
@@ -305,10 +303,10 @@
       <h2 class="section-title">Read together <span class="title-ja">(一緒に読もう)</span></h2>
       <p class="section-subtitle"><span class="ko">Read the four sentences.</span><span class="ja">4つの文を読んでみましょう。</span></p>
       <div class="model-list">
-        <div class="model-line"><span class="korean"><span class="ending">Sure</span>, I <span class="ending">can help with</span> the boxes.</span><span class="translation"><span class="ending">もちろん</span>、箱を<span class="ending">手伝えますよ</span>。</span></div>
-        <div class="model-line"><span class="korean"><span class="ending">Sure</span>, I <span class="ending">can help with</span> the Wi-Fi.</span><span class="translation"><span class="ending">もちろん</span>、Wi-Fi を<span class="ending">手伝えますよ</span>。</span></div>
-        <div class="model-line"><span class="korean"><span class="ending">Sure</span>, I <span class="ending">can help with</span> your suitcase.</span><span class="translation"><span class="ending">もちろん</span>、スーツケースを<span class="ending">手伝えますよ</span>。</span></div>
-        <div class="model-line"><span class="korean"><span class="ending">Sure</span>, I <span class="ending">can help with</span> the menu.</span><span class="translation"><span class="ending">もちろん</span>、メニューを<span class="ending">手伝えますよ</span>。</span></div>
+        <div class="model-line"><span class="korean">Sure, I <span class="ending">can help with</span> the boxes.</span><span class="translation">もちろん、箱を<span class="ending">手伝えますよ</span>。</span></div>
+        <div class="model-line"><span class="korean">Sure, I <span class="ending">can help with</span> the Wi-Fi.</span><span class="translation">もちろん、Wi-Fi を<span class="ending">手伝えますよ</span>。</span></div>
+        <div class="model-line"><span class="korean">Sure, I <span class="ending">can help with</span> your suitcase.</span><span class="translation">もちろん、スーツケースを<span class="ending">手伝えますよ</span>。</span></div>
+        <div class="model-line"><span class="korean">Sure, I <span class="ending">can help with</span> the menu.</span><span class="translation">もちろん、メニューを<span class="ending">手伝えますよ</span>。</span></div>
       </div>
     </div>
 
@@ -330,12 +328,8 @@
          would be "can help" against an invented wrong form, and a manufactured
          wrong answer is not a taught distinction. -->
 
-    <!-- drill · three chips on every row here, and that is the honest count.
-         "I can help" is Pattern B's own frame (Sure, I can help with ___), so
-         splitting "I" off "can help" would cut the taught pattern in half —
-         the same reason the Korean decks keep 저는 as one chip. There is no
-         fourth unit being glued to a neighbour; the sentences hold three.
-         Same criterion on all four rows, which is what the rule asks for. -->
+    <!-- drill · four honest units on every row: response opener, subject plus
+         modal, verb plus preposition, and the object. -->
     <div class="section" data-page-id="p2-reorder">
       <h2 class="section-title">Build the sentence <span class="title-ja">(文を組み立てよう)</span></h2>
       <p class="section-subtitle"><span class="ko">Put the words in order, then say the whole sentence out loud.</span><span class="ja">単語を順番に並べて、文をまるごと声に出して言ってみましょう。</span></p>
@@ -344,17 +338,19 @@
           <span class="answer-label">もちろん、箱を手伝えますよ。</span>
           <span class="answer-space build-zone" data-sync-id="p2-order-boxes" data-sync-kind="order" data-a="Sure, I can help with the boxes."></span>
         </div>
-        <span class="choice" data-item-id="p2-b-with">with the boxes.</span>
+        <span class="choice" data-item-id="p2-b-object">the boxes.</span>
         <span class="choice" data-item-id="p2-b-sure">Sure,</span>
-        <span class="choice" data-item-id="p2-b-can">I can help</span>
+        <span class="choice" data-item-id="p2-b-can">I can</span>
+        <span class="choice" data-item-id="p2-b-help">help with</span>
       </div>
       <div class="task-block">
         <div class="answer-box small">
           <span class="answer-label">もちろん、スーツケースを手伝えますよ。</span>
           <span class="answer-space build-zone" data-sync-id="p2-order-suitcase" data-sync-kind="order" data-a="Sure, I can help with your suitcase."></span>
         </div>
-        <span class="choice" data-item-id="p2-s-can">I can help</span>
-        <span class="choice" data-item-id="p2-s-with">with your suitcase.</span>
+        <span class="choice" data-item-id="p2-s-can">I can</span>
+        <span class="choice" data-item-id="p2-s-help">help with</span>
+        <span class="choice" data-item-id="p2-s-object">your suitcase.</span>
         <span class="choice" data-item-id="p2-s-sure">Sure,</span>
       </div>
       <div class="task-block">
@@ -362,9 +358,10 @@
           <span class="answer-label">もちろん、かばんを手伝えますよ。</span>
           <span class="answer-space build-zone" data-sync-id="p2-order-bag" data-sync-kind="order" data-a="Sure, I can help with the bag."></span>
         </div>
-        <span class="choice" data-item-id="p2-g-with">with the bag.</span>
+        <span class="choice" data-item-id="p2-g-object">the bag.</span>
         <span class="choice" data-item-id="p2-g-sure">Sure,</span>
-        <span class="choice" data-item-id="p2-g-can">I can help</span>
+        <span class="choice" data-item-id="p2-g-can">I can</span>
+        <span class="choice" data-item-id="p2-g-help">help with</span>
       </div>
       <div class="task-block">
         <div class="answer-box small">
@@ -372,8 +369,9 @@
           <span class="answer-space build-zone" data-sync-id="p2-order-menu" data-sync-kind="order" data-a="Sure, I can help with the menu."></span>
         </div>
         <span class="choice" data-item-id="p2-m-sure">Sure,</span>
-        <span class="choice" data-item-id="p2-m-with">with the menu.</span>
-        <span class="choice" data-item-id="p2-m-can">I can help</span>
+        <span class="choice" data-item-id="p2-m-object">the menu.</span>
+        <span class="choice" data-item-id="p2-m-can">I can</span>
+        <span class="choice" data-item-id="p2-m-help">help with</span>
       </div>
     </div>
 
@@ -435,18 +433,17 @@
         <div class="answer-box">
           <span class="answer-label">もちろん、Wi-Fi を手伝えますよ。</span>
           <span class="answer-space as-input"><input class="space-input" type="text" data-sync-id="p2-translate-wifi" data-answer="Sure, I can help with the Wi-Fi." autocomplete="off" spellcheck="false"></span>
-          <span class="hint"><span class="hint-chip">Wi-Fi:Wi-Fi</span></span>
         </div>
       </div>
     </div>
 
     <div class="section" data-page-id="p2-write">
       <h2 class="section-title">Your own answer <span class="title-ja">(自分の答えを作ろう)</span></h2>
-      <p class="section-subtitle"><span class="ko">I have a lot of bags. What can you help me with?</span><span class="ja">かばんがたくさんあります。何を手伝ってもらえますか。</span></p>
+      <p class="section-subtitle"><span class="ko">We're getting ready for an event. What can you help with?</span><span class="ja">イベントの準備中です。何を手伝えますか？</span></p>
       <div class="task-block">
         <div class="answer-box tall">
           <span class="answer-space as-input"><textarea class="free-input" data-sync-id="p2-free-answer" rows="2" spellcheck="false" maxlength="2000"></textarea></span>
-          <span class="hint"><span class="hint-chip">箱:box</span><span class="hint-chip">スーツケース:suitcase</span><span class="hint-chip">かばん:bag</span><span class="hint-chip">メニュー:menu</span><span class="hint-chip">Wi-Fi:Wi-Fi</span></span>
+          <span class="hint"><span class="hint-chip">箱:box</span><span class="hint-chip">スーツケース:suitcase</span><span class="hint-chip">かばん:bag</span><span class="hint-chip">メニュー:menu</span></span>
         </div>
       </div>
     </div>
@@ -464,13 +461,14 @@
          answered, never asked for in a learner slot. -->
     <div class="section" data-page-id="p3-model">
       <h2 class="section-title">Read the conversation <span class="title-ja">(会話を読もう)</span></h2>
-      <p class="section-subtitle"><span class="ko">You're moving into a new office. Read your lines; I'll read the other part.</span><span class="ja">新しいオフィスに引っこす場面です。自分のセリフを読んで、私は相手のパートを読みます。</span></p>
+      <p class="section-subtitle"><span class="ko">You're setting up for an event with a coworker. Read your lines; I'll read the other part.</span><span class="ja">同僚とイベントの準備をする場面です。自分のセリフを読んで、私は相手のパートを読みます。</span></p>
       <div class="dialogue">
         <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">Me</span></span><div class="bubble me"><span class="korean">Excuse me, <span class="ending">could you help me with</span> these boxes?</span><span class="translation">すみません、この箱、<span class="ending">手伝ってもらえますか</span>？</span></div></div>
         <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">Coworker</span></span><div class="bubble"><span class="korean">Of course. What do you need?</span><span class="translation">もちろん。何が必要ですか？</span></div></div>
-        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">Me</span></span><div class="bubble me"><span class="korean"><span class="ending">Could you help me with</span> my suitcase?</span><span class="translation">スーツケース、<span class="ending">手伝ってもらえますか</span>？</span></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">Me</span></span><div class="bubble me"><span class="korean"><span class="ending">Could you help me with</span> the menu?</span><span class="translation">メニュー、<span class="ending">手伝ってもらえますか</span>？</span></div></div>
         <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">Coworker</span></span><div class="bubble"><span class="korean">No problem. Oh — <span class="ending">could you help me with</span> the Wi-Fi?</span><span class="translation">いいですよ。あ、Wi-Fi、<span class="ending">手伝ってもらえますか</span>？</span></div></div>
-        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">Me</span></span><div class="bubble me"><span class="korean"><span class="ending">Sure</span>, I <span class="ending">can help with</span> the Wi-Fi.</span><span class="translation"><span class="ending">もちろん</span>、Wi-Fi を<span class="ending">手伝えますよ</span>。</span></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">Me</span></span><div class="bubble me"><span class="korean">Sure, <span class="ending">I can help with</span> the Wi-Fi.</span><span class="translation">もちろん、Wi-Fi を<span class="ending">手伝えますよ</span>。</span></div></div>
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">Coworker</span></span><div class="bubble"><span class="korean">Thanks. Let's get everything set up.</span><span class="translation">ありがとう。全部準備しましょう。</span></div></div>
       </div>
     </div>
 
@@ -482,9 +480,10 @@
       <div class="dialogue">
         <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">Me</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">すみません、<span class="target">この箱、手伝ってもらえますか</span>？</span><span class="answer-fill"><span class="korean">Excuse me, <textarea class="free-input phrase-input" data-sync-id="p3-complete-ask" data-answer="could you help me with these boxes" rows="1" autocomplete="off" spellcheck="false"></textarea>?</span></span><span class="hint"><span class="hint-chip">箱:box</span></span></div></div></div>
         <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">Coworker</span></span><div class="bubble"><span class="korean">Of course. What do you need?</span><span class="translation">もちろん。何が必要ですか？</span></div></div>
-        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">Me</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label"><span class="target">スーツケース、手伝ってもらえますか</span>？</span><span class="answer-fill"><span class="korean"><textarea class="free-input phrase-input" data-sync-id="p3-complete-suitcase" data-answer="Could you help me with my suitcase" rows="1" autocomplete="off" spellcheck="false"></textarea>?</span></span><span class="hint"><span class="hint-chip">スーツケース:suitcase</span></span></div></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">Me</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label"><span class="target">メニュー、手伝ってもらえますか</span>？</span><span class="answer-fill"><span class="korean"><textarea class="free-input phrase-input" data-sync-id="p3-complete-menu" data-answer="Could you help me with the menu" rows="1" autocomplete="off" spellcheck="false"></textarea>?</span></span><span class="hint"><span class="hint-chip">メニュー:menu</span></span></div></div></div>
         <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">Coworker</span></span><div class="bubble"><span class="korean">No problem. Oh — could you help me with the Wi-Fi?</span><span class="translation">いいですよ。あ、Wi-Fi、手伝ってもらえますか？</span></div></div>
-        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">Me</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">もちろん、<span class="target">Wi-Fi を手伝えますよ</span>。</span><span class="answer-fill"><span class="korean"><textarea class="free-input phrase-input" data-sync-id="p3-complete-answer" data-answer="Sure, I can help with the Wi-Fi" rows="1" autocomplete="off" spellcheck="false"></textarea>.</span></span><span class="hint"><span class="hint-chip">Wi-Fi:Wi-Fi</span></span></div></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">Me</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">もちろん、<span class="target">Wi-Fi を手伝えますよ</span>。</span><span class="answer-fill"><span class="korean">Sure, <textarea class="free-input phrase-input" data-sync-id="p3-complete-answer" data-answer="I can help with the Wi-Fi" rows="1" autocomplete="off" spellcheck="false"></textarea>.</span></span></div></div></div>
+        <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">Coworker</span></span><div class="bubble"><span class="korean">Thanks. Let's get everything set up.</span><span class="translation">ありがとう。全部準備しましょう。</span></div></div>
       </div>
     </div>
 
@@ -495,10 +494,10 @@
       <h2 class="section-title">Free talk <span class="title-ja">(フリートーク)</span></h2>
       <p class="section-subtitle"><span class="ko">Answer me, then ask me for help too.</span><span class="ja">私に答えて、それから私にも手伝いを頼んでみてください。</span></p>
       <div class="dialogue">
-        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">Tutor</span></span><div class="bubble"><span class="korean">I have a lot of bags today. Could you help me with them?</span><span class="translation">今日は荷物が多いんです。手伝ってもらえますか？</span></div></div>
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">Tutor</span></span><div class="bubble"><span class="korean">We're getting ready for an event. What can you help with?</span><span class="translation">イベントの準備中です。何を手伝えますか？</span></div></div>
         <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">Me</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label">Sure, I can help with ~.<span class="task">自分の言葉で</span></span><span class="answer-space as-input"><textarea class="free-input" data-sync-id="p3-freetalk-answer" rows="2" spellcheck="false" maxlength="2000"></textarea></span><span class="hint"><span class="hint-chip">かばん:bag</span><span class="hint-chip">箱:box</span><span class="hint-chip">スーツケース:suitcase</span><span class="hint-chip">メニュー:menu</span></span></div></div></div>
         <div class="turn me"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">Me</span></span><div class="bubble me"><div class="answer-box small"><span class="answer-label">Could you help me with ~?<span class="task">先生にも頼んでみましょう</span></span><span class="answer-space as-input"><textarea class="free-input" data-sync-id="p3-freetalk-ask" rows="2" spellcheck="false" maxlength="2000"></textarea></span></div></div></div>
-        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">Tutor</span></span><div class="bubble"><div class="answer-box small"><span class="answer-label">先生の答え</span><span class="answer-space as-input"><textarea class="free-input" data-sync-id="p3-freetalk-tutor-answer" rows="2" spellcheck="false" maxlength="2000"></textarea></span></div></div></div>
+        <div class="turn other"><span class="who"><span class="avatar icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2.5c-4.7 0-8.5 2.6-8.5 5.8V22h17v-1.7c0-3.2-3.8-5.8-8.5-5.8Z"/></svg></span><span class="who-name">Tutor</span></span><div class="bubble"><div class="answer-box small"><span class="answer-label">Tutor's answer<span class="task">先生の答え</span></span><span class="answer-space as-input"><textarea class="free-input" data-sync-id="p3-freetalk-tutor-answer" rows="2" spellcheck="false" maxlength="2000"></textarea></span></div></div></div>
       </div>
     </div>
 
@@ -512,7 +511,7 @@
         <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">Agent</span></span><div class="bubble"><span class="korean">That's a lot of bags. Do you need help?</span><span class="translation">荷物が多いですね。手伝いましょうか？</span></div></div>
         <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">Me</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">はい、お願いします。<span class="target">スーツケース、手伝ってもらえますか</span>？</span><span class="answer-fill"><span class="korean">Yes, please. <textarea class="free-input phrase-input" data-sync-id="wild-ask-suitcase" data-answer="Could you help me with my suitcase" rows="1" autocomplete="off" spellcheck="false"></textarea>?</span></span><span class="hint"><span class="hint-chip">スーツケース:suitcase</span></span></div></div></div>
         <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">Agent</span></span><div class="bubble"><span class="korean">Sure. Could you help me with this bag?</span><span class="translation">もちろん。このかばんも手伝ってもらえますか？</span></div></div>
-        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">Me</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label"><span class="target">もちろん、このかばんを手伝えます</span>。</span><span class="answer-fill"><span class="korean"><textarea class="free-input phrase-input" data-sync-id="wild-answer-bag" data-answer="Sure, I can help with this bag" rows="1" autocomplete="off" spellcheck="false"></textarea>.</span></span><span class="hint"><span class="hint-chip">かばん:bag</span></span></div></div></div>
+        <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">Me</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">もちろん、<span class="target">このかばんを手伝えます</span>。</span><span class="answer-fill"><span class="korean">Sure, <textarea class="free-input phrase-input" data-sync-id="wild-answer-bag" data-answer="I can help with this bag" rows="1" autocomplete="off" spellcheck="false"></textarea>.</span></span><span class="hint"><span class="hint-chip">かばん:bag</span></span></div></div></div>
         <div class="turn other"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/hana-avatar.jpg" alt=""><span class="who-name">Agent</span></span><div class="bubble"><span class="korean">Thanks. Anything else?</span><span class="translation">ありがとう。ほかには？</span></div></div>
         <div class="turn me"><span class="who"><img class="avatar" src="https://respeak-lemonade.s3.ap-northeast-2.amazonaws.com/test/haruka-avatar.jpg" alt=""><span class="who-name">Me</span></span><div class="bubble me"><div class="answer-box"><span class="answer-label">いいえ、以上です。ありがとう！</span><span class="answer-fill"><span class="korean"><textarea class="free-input phrase-input" data-sync-id="wild-close" data-answer="No, that&#x27;s all" rows="1" autocomplete="off" spellcheck="false"></textarea>. Thank you!</span></span></div></div></div>
       </div>

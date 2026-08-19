@@ -75,6 +75,12 @@ exchange. It may add the minimum connective turns needed for a coherent scene, b
 replace the reviewed target lines. If it must split for height, split on a conversational beat and reuse
 the identical boundary in `p3-model-*`.
 
+Use **5–9 purposeful turns** for the complete opening scene and preserve the same turns, order and
+beat boundary in `p3-model` and `p3-complete`. Five is the minimum needed for an opening, a useful
+reaction or follow-up and a resolved ending; eight or nine is appropriate when the real task has a
+short setup before the two target lines. Do not call a shortened excerpt a replay. If the complete
+scene must be split for height, give both halves explicit scene page IDs and replay both halves later.
+
 `lesson-goal` says: *that scene you just heard is what you will be able to handle.* Its success
 condition is the TOC can-do, not a grammar label and not “learn two patterns.”
 
@@ -82,6 +88,13 @@ condition is the TOC can-do, not a grammar label and not “learn two patterns.�
 third or fourth primary pattern. `understand` is the inverse: partner/staff language the learner
 must recover but is not asked to say. A listen-and-pick or meaning match is appropriate; fill,
 translate and free-write are not.
+
+Each `understand` row tests the **meaning or practical intent of the complete staff line**. Write
+both options as short, natural English paraphrases of the same semantic type. For a staff question,
+both choices describe what the staff member is asking about; they are not two possible traveler
+answers. For a statement, both choices describe the statement. The distractor should represent one
+plausible local confusion, not an unrelated noun swap, an unnatural category label or a fragment.
+The correct option must add evidence of comprehension rather than merely repeat the source line.
 
 The English-speaking tutor must be able to run both pages without reading Japanese. Give
 `expressions` an explicit spoken action such as reading the phrases together, not a passive
@@ -154,6 +167,9 @@ not the tutor's voice or the partner's receptive line.
 - One answer box answers one question. A second prompt may only narrow the first.
 - Blank only the target frame. Hint chips contain `JP:EN` vocabulary, never articles, auxiliaries
   or inflections.
+- Fixed English printed around an inline blank is part of the same sentence and must render with
+  the same font family, size and weight as the editable target. Do not use typography to make
+  untargeted support language look less important.
 - Declare each content word as new, recycled, assumed-known or receptive-only in deck metadata.
   Contextual normally adds no more than eight; every hint-chip English value must be declared.
 - Omit `pN-rule` or `pN-choose` when the pattern has no honest formation branch or binary choice.
@@ -170,7 +186,8 @@ not the tutor's voice or the partner's receptive line.
 | `p3-freetalk` | Tutor asks → learner answers → learner asks back → tutor gives a real answer |
 
 `p3-model` is a return, not a bonus scene. Replacing it with a new situation removes the payoff of
-recognising the exchange that was initially opaque.
+recognising the exchange that was initially opaque. It is also not a shortened highlight reel:
+preserve the opening scene's turn count, order and connective lines exactly.
 
 `scene`, `p3-model`, `p3-complete`, and `transfer-scene` are roleplays. Use profile images for every
 turn and keep the short character names stable; the cast on `situation-card` uses the same images.

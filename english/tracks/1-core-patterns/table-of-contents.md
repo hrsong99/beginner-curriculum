@@ -402,9 +402,10 @@ it just has nowhere to attach in English.*
 
 *Can-do: make a practical request and answer one.*
 - "Could you help me with this?" — `Could you help me with ___?`
-- "Sure, I can help with the boxes." — `Sure, I can help with ___.`
+- "Sure, I can help with the boxes." — `I can help with ___.`
 - *Expressions:* `What do you need?` · `No problem.`
 - *Grammar:* keep the request together: `Could you help me with` + a thing.
+- *Fixed support:* `Sure,` is a natural response opener, not part of the productive answer frame.
 - *Bounded chunk:* `Could you help me with ___?` is the approved early survival request. Keep
   `could you help me with` whole; do not generalise past-form politeness at A1.
 - *JP:* **the politeness install.** Keigo is grammatical; English politeness is lexical and

@@ -203,6 +203,11 @@ same turn sequence—including the opening question and closing reaction—and r
 learner's lines with answer fields. If the completion starts with a learner blank but the model
 starts with the partner, the activity is incomplete.
 
+Use **5–7 turns** as the working range for `p3-model` and its exact `p3-complete` replay. Five is
+enough only when the exchange still has an opening, an answer-dependent follow-up and a resolved
+ending. Do not pad a complete four-turn exchange with empty reactions just to reach the range;
+rewrite it into a real exchange whose turns create a reason for the learner's next line.
+
 Model and completion dialogues use profile images for both scene characters, matching Korean Core.
 Reserve generic person icons for live `Tutor` / `Me` free-talk where the actual participants are the
 people in class. Keep the speaker names short and identical across model and completion.

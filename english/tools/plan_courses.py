@@ -73,11 +73,28 @@ def yaml_str(value: str) -> str:
     return value
 
 
+# CEFR band -> GT_CLASS_COURSE.DIFFICULTY. The live catalogue is five bands
+# wide and leans on the two this used to discard: UPPER_BEGINNER and
+# UPPER_INTERMEDIATE hold more deployed lessons than BEGINNER, INTERMEDIATE and
+# ADVANCED together. The old rule read "B2" anywhere in the string and returned
+# ADVANCED, which filed a B1+ → B2 course beside a C1 one.
+#
+# Read highest-first: a course spanning "A2 → B1" is entered at its ceiling,
+# because difficulty is what the learner needs to finish it, not to start.
+CEFR_DIFFICULTY = (
+    ("C1", "ADVANCED"),
+    ("B2", "UPPER_INTERMEDIATE"),
+    ("B1+", "UPPER_INTERMEDIATE"),
+    ("B1", "INTERMEDIATE"),
+    ("A2", "UPPER_BEGINNER"),
+    ("A1", "BEGINNER"),
+)
+
+
 def _level(value: str) -> str:
-    if "C1" in value or "B2" in value:
-        return "ADVANCED"
-    if "B1" in value:
-        return "INTERMEDIATE"
+    for band, difficulty in CEFR_DIFFICULTY:
+        if band in value:
+            return difficulty
     return "BEGINNER"
 
 

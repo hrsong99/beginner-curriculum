@@ -59,6 +59,29 @@ class DeckCheckTests(unittest.TestCase):
             self.assertEqual(errors, [])
             self.assertTrue(any("mixed chip counts" in item for item in warnings))
 
+    def test_english_three_chip_reorder_requires_explicit_review(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            lesson = pathlib.Path(temporary) / "english" / "tracks" / "1-core-patterns" / "lessons" / "01-test"
+            lesson.mkdir(parents=True)
+            deck = lesson / "lesson.html"
+            deck.write_text(
+                '<meta name="google" content="notranslate">'
+                '<meta name="podo:lesson-id" content="01-test">'
+                '<meta name="podo:review-id" content="CORE-1">'
+                '<meta name="podo:target-language" content="en">'
+                '<div data-page-id="p1-reorder">'
+                '<div class="task-block">'
+                '<span class="answer-space build-zone" data-sync-id="row" '
+                'data-sync-kind="order" data-a="Could you help me?"></span>'
+                '<span class="choice">Could you</span>'
+                '<span class="choice">help</span>'
+                '<span class="choice">me?</span>'
+                '</div></div>',
+                encoding="utf-8",
+            )
+            _, warnings = check_deck.check(deck)
+            self.assertTrue(any("four is the English working default" in item for item in warnings))
+
     def test_runtime_promoted_control_shell_is_an_error(self):
         with tempfile.TemporaryDirectory() as temporary:
             lesson = pathlib.Path(temporary) / "01-test"
@@ -236,12 +259,18 @@ class DeckCheckTests(unittest.TestCase):
             f'<div class="turn other"><span class="who">{image}</span>'
             '<span class="ending">Could you help?</span></div>'
             f'<div class="turn me"><span class="who">{image}</span></div>'
+            f'<div class="turn other"><span class="who">{image}</span></div>'
+            f'<div class="turn me"><span class="who">{image}</span></div>'
+            f'<div class="turn other"><span class="who">{image}</span></div>'
         )
         complete = (
             f'<div class="turn other"><span class="who">{image}</span></div>'
             f'<div class="turn me"><span class="who">{image}</span>'
             '<span class="target">手伝ってもらえますか</span>'
             '<textarea class="free-input phrase-input"></textarea></div>'
+            f'<div class="turn other"><span class="who">{image}</span></div>'
+            f'<div class="turn me"><span class="who">{image}</span></div>'
+            f'<div class="turn other"><span class="who">{image}</span></div>'
         )
         live = (
             '<div class="turn other"><span class="who"><span class="avatar icon">T</span></span>'
@@ -266,6 +295,7 @@ class DeckCheckTests(unittest.TestCase):
             }
         )
         self.assertTrue(any("profile images" in item for item in errors))
+        self.assertTrue(any("5–7-turn exchange" in item for item in errors))
         self.assertTrue(any("turn count differs" in item for item in errors))
         self.assertTrue(any("speaker labels" in item for item in errors))
         self.assertTrue(any("generic production instruction" in item for item in errors))
@@ -312,6 +342,7 @@ class DeckCheckTests(unittest.TestCase):
         }
         errors = check_deck.contextual_production_issues(pages)
         self.assertTrue(any("profile images" in item for item in errors))
+        self.assertTrue(any("5–9-turn scene" in item for item in errors))
         self.assertTrue(any("English sense label" in item for item in errors))
 
     def test_contextual_accepts_profiled_roleplay_and_bilingual_receptive_choices(self):
@@ -324,10 +355,22 @@ class DeckCheckTests(unittest.TestCase):
             '<small>搭乗券を見せる</small></span></div>'
         )
         pages = {
-            "scene": f'<div class="turn other"><span class="who">{profile}</span></div>',
+            "scene": f'<div class="turn other"><span class="who">{profile}</span></div>' * 5,
+            "p3-model": f'<div class="turn other"><span class="who">{profile}</span></div>' * 5,
+            "p3-complete": f'<div class="turn other"><span class="who">{profile}</span></div>' * 5,
             "understand": receptive * 4,
         }
         self.assertEqual(check_deck.contextual_production_issues(pages), [])
+
+    def test_contextual_replay_must_preserve_the_opening_scene(self):
+        profile = '<img class="avatar" src="person.jpg" alt="">'
+        turn = f'<div class="turn other"><span class="who">{profile}</span></div>'
+        errors = check_deck.contextual_production_issues({
+            "scene": turn * 7,
+            "p3-model": turn * 5,
+            "p3-complete": turn * 5,
+        })
+        self.assertTrue(any("replay the complete scene" in item for item in errors))
 
     def test_freetalking_inventory_requires_canonical_order(self):
         source = "".join(
@@ -407,6 +450,44 @@ class DeckCheckTests(unittest.TestCase):
         self.assertEqual(len(errors), 2)
         self.assertTrue(any("document title" in item for item in errors))
         self.assertTrue(any("visible title" in item for item in errors))
+
+    def test_shared_title_contract_accepts_exact_core_title(self):
+        title = "Could you help me with this?"
+        source = (
+            f"<title>{title} — PODO English</title>"
+            '<div data-page-id="lesson-goal">'
+            f'<h2 class="transition-title">{title} '
+            '<span class="title-ja">(これを手伝ってもらえますか？)</span></h2></div>'
+        )
+        self.assertEqual(check_deck.title_identity_issues(source, title), [])
+
+    def test_tutor_answer_field_requires_english_label(self):
+        self.assertTrue(
+            check_deck.live_tutor_answer_issues(
+                "p3-freetalk",
+                '<span class="answer-label">先生の答え</span><textarea></textarea>',
+            )
+        )
+        self.assertEqual(
+            check_deck.live_tutor_answer_issues(
+                "p3-freetalk",
+                '<span class="answer-label">Tutor\'s answer'
+                '<span class="task">先生の答え</span></span><textarea></textarea>',
+            ),
+            [],
+        )
+
+    def test_partner_turn_replay_rejects_shortened_line(self):
+        model = (
+            '<div class="turn other"><div class="bubble">'
+            '<span class="korean">True. The other one has more space.</span>'
+            '<span class="translation">そうですね。</span></div></div>'
+        )
+        complete = model.replace("True. ", "")
+        self.assertNotEqual(
+            check_deck.partner_turns(model),
+            check_deck.partner_turns(complete),
+        )
 
 
 if __name__ == "__main__":
