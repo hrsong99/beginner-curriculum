@@ -658,6 +658,10 @@ p {
   display: block;
   padding: 18px 16px 20px;
   background: #fff;
+  /* Fixed words and editable slots form one English sentence. Keep their
+     weight identical so the target blank does not look like a different
+     typeface from the language already supplied around it. */
+  font-weight: 700;
 }
 
 /* A dialogue blank is sized to its answer like every other blank, so a long
