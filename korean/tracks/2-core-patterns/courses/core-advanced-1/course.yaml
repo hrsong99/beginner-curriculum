@@ -25,9 +25,13 @@ spec:
     en: Core grammar patterns · Advanced · 1
     ja: コア文法パターン · 上級 · 1
 
+  # 학습자가 카탈로그에서 읽는 문장이다. 앱이 로케일로 고르므로 JP 마켓 코스는
+  # ja 가 화면에 뜬다 — 여기 세 언어는 tools/course-copy.json 이 원본이고,
+  # ko 만 목차의 '끝내면 할 수 있는 것' 을 그대로 쓴다.
   description:
-    ko: Unit 23 · 첨가와 강조
-    ja: 上級。6課。
+    ko: 같은 방향으로 근거를 더 얹고, 과장과 반전으로 말에 힘을 준다.
+    en: Stack reasons in one direction, and add force with exaggeration and reversal.
+    ja: 同じ方向に根拠を重ね、誇張と反転で言葉に力を持たせる。
 
   tutorGroups:
     allowRandom: []

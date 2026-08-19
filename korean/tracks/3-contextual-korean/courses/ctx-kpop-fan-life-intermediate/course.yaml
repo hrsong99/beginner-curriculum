@@ -25,9 +25,13 @@ spec:
     en: Korean in context · K-pop fan life · Intermediate
     ja: 場面別の韓国語 · K-POPファンライフ · 中級
 
+  # 학습자가 카탈로그에서 읽는 문장이다. 앱이 로케일로 고르므로 JP 마켓 코스는
+  # ja 가 화면에 뜬다 — 여기 세 언어는 tools/course-copy.json 이 원본이고,
+  # ko 만 목차의 '끝내면 할 수 있는 것' 을 그대로 쓴다.
   description:
     ko: 티켓팅·스밍·생카·굿즈 거래처럼 실제 팬 활동에 필요한 말을 하고, 팬 계정에서 거래 문의를 주고받을 수 있다.
-    ja: 中級。10課。
+    en: Handle ticketing, streaming, birthday cafés and goods trades, and take a swap through from first message to handover.
+    ja: チケッティング・ストリーミング・センイルカフェ・グッズ取引など、実際のファン活動に必要な言葉を使い、ファンアカウントで取引のやりとりができる。
 
   tutorGroups:
     allowRandom: []

@@ -8,6 +8,8 @@ spec:
 
   title:
     ko: 아플 때
+    en: Feeling sick
+    ja: 体調が悪いとき
   decks:
     lecture:  { entry: lecture/index.html }    # 수업용  → CLASS_LEMONBOARD_KEY
     prestudy: { entry: prestudy/index.html }   # 예습용  → PRESTUDY_LEMONBOARD_KEY

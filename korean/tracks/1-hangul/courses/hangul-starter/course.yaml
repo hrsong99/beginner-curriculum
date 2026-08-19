@@ -25,9 +25,13 @@ spec:
     en: Hangul reading · Starter
     ja: ハングル入門 · 超入門
 
+  # 학습자가 카탈로그에서 읽는 문장이다. 앱이 로케일로 고르므로 JP 마켓 코스는
+  # ja 가 화면에 뜬다 — 여기 세 언어는 tools/course-copy.json 이 원본이고,
+  # ko 만 목차의 '끝내면 할 수 있는 것' 을 그대로 쓴다.
   description:
     ko: 자음 · 모음 · 받침을 거쳐 간판을 읽기까지.
-    ja: 超入門。14課。
+    en: From consonants and vowels through final consonants, to reading the signs on a Korean street.
+    ja: 子音・母音・パッチムを通って、街の看板が読めるところまで。
 
   tutorGroups:
     allowRandom: []

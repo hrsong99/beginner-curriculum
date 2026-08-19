@@ -45,6 +45,8 @@ not removed.
 from __future__ import annotations
 
 import argparse
+import html as html_lib
+import json
 import pathlib
 import re
 import sys
@@ -119,8 +121,18 @@ TRACKS = {
                                      "ja": "発音の矯正"}},
 }
 
-DIFFICULTY = {"왕초급": "BEGINNER", "초급": "BEGINNER", "초중급": "BEGINNER",
-              "중급": "INTERMEDIATE", "중고급": "INTERMEDIATE", "고급": "ADVANCED"}
+# GT_CLASS_COURSE.DIFFICULTY is five bands wide and the live catalogue uses all
+# five — UPPER_BEGINNER and UPPER_INTERMEDIATE together carry more deployed
+# lessons than the other three combined. Collapsing 초중급 into BEGINNER and
+# 중고급 into INTERMEDIATE (as this map did) threw away the two bands our own
+# ladder is densest in, and sorted 초중급 courses beside 한글 떼기.
+#
+# classLevel is part of grape's natural key but DIFFICULTY is not, so this is a
+# safe update on an already-deployed row — it is only cheap while every course
+# is still `enabled: false`.
+DIFFICULTY = {"왕초급": "BEGINNER", "초급": "BEGINNER", "초중급": "UPPER_BEGINNER",
+              "중급": "INTERMEDIATE", "중고급": "UPPER_INTERMEDIATE",
+              "고급": "ADVANCED"}
 LEVEL_SLUG = {"왕초급": "starter", "초급": "beginner", "초중급": "upper-beginner",
               "중급": "intermediate", "중고급": "upper-intermediate", "고급": "advanced"}
 LEVEL_JA = {"왕초급": "超入門", "초급": "初級", "초중급": "初中級",
@@ -128,8 +140,13 @@ LEVEL_JA = {"왕초급": "超入門", "초급": "初級", "초중급": "初中�
 LEVEL_EN = {"왕초급": "Starter", "초급": "Beginner", "초중급": "Upper beginner",
             "중급": "Intermediate", "중고급": "Upper intermediate", "고급": "Advanced"}
 
-ID_META = re.compile(r'<meta name="podo:lesson-id" content="([^"]*)">')
-TITLE_META = re.compile(r'<meta name="podo:title-(ko|en|ja)" content="([^"]*)">')
+# Attribute order is not ours to rely on: a deck that has been through an HTML
+# formatter comes back as `<meta content="…" name="podo:title-ko"/>`, and the
+# two 3-contextual-korean travel courses are stored that way. Matching on
+# `name="…" content="…"` silently read no title for those 19 decks and wrote
+# lesson.yaml without `en`/`ja` — the deck was fine, the parser was not.
+META_TAG = re.compile(r"<meta\b[^>]*>")
+META_ATTR = re.compile(r'(\w[\w:-]*)\s*=\s*"([^"]*)"')
 # schemas/lesson.schema.json — metadata.slug. Kept verbatim so a mismatch shows
 # up while writing rather than at the merge gate.
 SLUG_RE = re.compile(r"^[0-9]{2,3}-[a-z0-9]+(-[a-z0-9]+)*$")
@@ -230,10 +247,48 @@ def yaml_str(value: str) -> str:
     return value
 
 
+def meta_values(raw: str) -> dict[str, str]:
+    """Every `podo:*` meta value, regardless of attribute order."""
+    out: dict[str, str] = {}
+    for tag in META_TAG.findall(raw):
+        attrs = {k.lower(): v for k, v in META_ATTR.findall(tag)}
+        name = attrs.get("name", "")
+        if name.startswith("podo:"):
+            out[name] = html_lib.unescape(attrs.get("content", ""))
+    return out
+
+
 def deck_meta(deck: pathlib.Path) -> tuple[dict, str | None]:
-    raw = deck.read_text(encoding="utf-8")
-    m = ID_META.search(raw)
-    return dict(TITLE_META.findall(raw)), (m.group(1) if m else None)
+    meta = meta_values(deck.read_text(encoding="utf-8"))
+    titles = {k: meta[f"podo:title-{k}"] for k in ("ko", "en", "ja")
+              if meta.get(f"podo:title-{k}")}
+    return titles, meta.get("podo:lesson-id")
+
+
+COPY_PATH = pathlib.Path(__file__).resolve().parent / "course-copy.json"
+
+
+def course_copy() -> dict[str, dict]:
+    """Learner-facing course copy, keyed by slug. See course-copy.json."""
+    return json.loads(COPY_PATH.read_text(encoding="utf-8"))["courses"]
+
+
+def course_description(course: dict, copy: dict[str, dict]) -> dict[str, str]:
+    """The three-language description for one course.
+
+    `ko` falls back to the TOC's 끝내면 할 수 있는 것 line, which is already a
+    can-do sentence everywhere except 2-core-patterns. `en` and `ja` have no
+    derivable form — GT_CLASS_COURSE.DESCRIPTION is what the learner reads in
+    their own locale, and synthesising it from the level and the lesson count
+    produced '初級。10課。', which described the build rather than the course.
+    """
+    written = copy.get(course["slug"], {}).get("description", {})
+    ko = written.get("ko") or course["note"] or course["title"]["ko"]
+    out = {"ko": ko}
+    for lang in ("en", "ja"):
+        if written.get(lang):
+            out[lang] = written[lang]
+    return out
 
 
 def market_country_code(value: str | None) -> str:
@@ -250,12 +305,15 @@ def market_country_code(value: str | None) -> str:
 
 
 def course_yaml(course, cfg, class_level, track, written,
-                country_code: str | None = MARKET_COUNTRY_CODE) -> str:
+                country_code: str | None = MARKET_COUNTRY_CODE,
+                copy: dict[str, dict] | None = None) -> str:
     plan = "\n".join(
         f"#   {l['no']:>3}  {'✓ ' + written[l['no']] if l['no'] in written else '·  '}"
         f"{l['title']}{' [깊게]' if l.get('deep') else ''}"
         for l in course["lessons"])
     t = course["title"]
+    desc = course_description(course, copy if copy is not None else {})
+    description = "\n".join(f"    {k}: {yaml_str(v)}" for k, v in desc.items())
     return f"""\
 apiVersion: podo.curriculum/v1
 kind: Course
@@ -284,9 +342,11 @@ spec:
     en: {yaml_str(t['en'])}
     ja: {yaml_str(t['ja'])}
 
+  # 학습자가 카탈로그에서 읽는 문장이다. 앱이 로케일로 고르므로 JP 마켓 코스는
+  # ja 가 화면에 뜬다 — 여기 세 언어는 tools/course-copy.json 이 원본이고,
+  # ko 만 목차의 '끝내면 할 수 있는 것' 을 그대로 쓴다.
   description:
-    ko: {yaml_str(course['note'] or t['ko'])}
-    ja: {yaml_str(f"{LEVEL_JA[course['level']]}。{len(course['lessons'])}課。")}
+{description}
 
   tutorGroups:
     allowRandom: []
@@ -343,6 +403,7 @@ def plan_track(track: pathlib.Path, dry: bool, only_course: str | None = None) -
     parsed = parser(track)
     courses = pack_core(parsed) if track.name == "2-core-patterns" else parsed
     courses = [compose(c, cfg) for c in courses]
+    copy = course_copy()
     selected_courses = [c for c in courses if only_course is None or c["slug"] == only_course]
     if not selected_courses:
         print(f"✗ no course '{only_course}' in track '{track.name}'")
@@ -403,11 +464,18 @@ def plan_track(track: pathlib.Path, dry: bool, only_course: str | None = None) -
                                 course["slug"]), encoding="utf-8")
             written_n += 1
 
+        missing = [lang for lang in ("en", "ja")
+                   if not copy.get(course["slug"], {}).get("description", {}).get(lang)]
+        if missing:
+            print(f"    ! {course['slug']}: no {'/'.join(missing)} description in "
+                  "tools/course-copy.json — the learner reads this field")
+
         if not dry:
             (cdir / "lessons").mkdir(parents=True, exist_ok=True)
             (cdir / "course.yaml").write_text(
                 course_yaml(course, cfg, class_level,
-                            track.name, {n: d.parent.name for n, d in decks.items()}),
+                            track.name, {n: d.parent.name for n, d in decks.items()},
+                            copy=copy),
                 encoding="utf-8")
 
         print(f"  {course['slug']:<30} {course['level']:<6} {class_level:<8} "

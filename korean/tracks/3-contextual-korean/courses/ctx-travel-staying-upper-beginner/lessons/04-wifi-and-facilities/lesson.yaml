@@ -8,6 +8,8 @@ spec:
 
   title:
     ko: 와이파이 & 시설
+    en: Wi-Fi and facilities
+    ja: Wi-Fiと施設
   decks:
     lecture:  { entry: lecture/index.html }    # 수업용  → CLASS_LEMONBOARD_KEY
     prestudy: { entry: prestudy/index.html }   # 예습용  → PRESTUDY_LEMONBOARD_KEY

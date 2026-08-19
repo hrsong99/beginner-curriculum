@@ -8,6 +8,8 @@ spec:
 
   title:
     ko: 영수증 요청
+    en: Asking for a receipt
+    ja: レシートを頼む
   decks:
     lecture:  { entry: lecture/index.html }    # 수업용  → CLASS_LEMONBOARD_KEY
     prestudy: { entry: prestudy/index.html }   # 예습용  → PRESTUDY_LEMONBOARD_KEY

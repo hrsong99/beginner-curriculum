@@ -25,9 +25,13 @@ spec:
     en: Free talking · What came before · Advanced
     ja: フリートーキング · 過ぎてきたもの · 上級
 
+  # 학습자가 카탈로그에서 읽는 문장이다. 앱이 로케일로 고르므로 JP 마켓 코스는
+  # ja 가 화면에 뜬다 — 여기 세 언어는 tools/course-copy.json 이 원본이고,
+  # ko 만 목차의 '끝내면 할 수 있는 것' 을 그대로 쓴다.
   description:
     ko: 이미 겪은 기억을 시간 순서와 디테일로 이야기한다.
-    ja: 上級。10課。
+    en: Tell what you already lived through, in order and in detail.
+    ja: すでに経験した記憶を、時間の順とディテールで語る。
 
   tutorGroups:
     allowRandom: []

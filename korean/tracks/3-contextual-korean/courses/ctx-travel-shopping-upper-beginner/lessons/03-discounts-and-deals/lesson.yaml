@@ -7,7 +7,7 @@ spec:
   week: 3                      # → CLASS_WEEK. 코스 안에서 1..N 연속이어야 한다.
 
   title:
-    ko: 흥정 &amp; 혜택
+    ko: 흥정 & 혜택
     en: Discounts and deals
     ja: 割引と特典
   decks:

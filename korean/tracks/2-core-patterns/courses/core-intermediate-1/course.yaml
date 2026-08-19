@@ -25,9 +25,13 @@ spec:
     en: Core grammar patterns · Intermediate · 1
     ja: コア文法パターン · 中級 · 1
 
+  # 학습자가 카탈로그에서 읽는 문장이다. 앱이 로케일로 고르므로 JP 마켓 코스는
+  # ja 가 화면에 뜬다 — 여기 세 언어는 tools/course-copy.json 이 원본이고,
+  # ko 만 목차의 '끝내면 할 수 있는 것' 을 그대로 쓴다.
   description:
-    ko: Unit 14–15 · 겪은 일과 들은 말 전하기 · 시간과 흐름
-    ja: 中級。10課。
+    ko: 겪은 일을 꺼내고 들은 말을 옮기며, 그 일이 언제 어떤 상태에서 있었는지 말한다.
+    en: Bring up what you went through, report what you were told, and place it in time.
+    ja: 自分の経験を切り出し、聞いた話を伝え、それがいつ・どんな状態で起きたかを話す。
 
   tutorGroups:
     allowRandom: []

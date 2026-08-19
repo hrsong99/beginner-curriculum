@@ -8,6 +8,8 @@ spec:
 
   title:
     ko: 문제 제기
+    en: Raising a problem
+    ja: 問題を伝える
   decks:
     lecture:  { entry: lecture/index.html }    # 수업용  → CLASS_LEMONBOARD_KEY
     prestudy: { entry: prestudy/index.html }   # 예습용  → PRESTUDY_LEMONBOARD_KEY

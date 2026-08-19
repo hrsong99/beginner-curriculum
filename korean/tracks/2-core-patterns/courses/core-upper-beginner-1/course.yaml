@@ -18,16 +18,20 @@ spec:
   lessonTime: 25
   # 검수 전까지는 false. true 로 바꾸는 순간 apply 가 학습자에게 노출시킨다.
   enabled: false
-  difficulty: BEGINNER
+  difficulty: UPPER_BEGINNER
 
   title:
     ko: 핵심 문법 패턴 · 초중급 · 1
     en: Core grammar patterns · Upper beginner · 1
     ja: コア文法パターン · 初中級 · 1
 
+  # 학습자가 카탈로그에서 읽는 문장이다. 앱이 로케일로 고르므로 JP 마켓 코스는
+  # ja 가 화면에 뜬다 — 여기 세 언어는 tools/course-copy.json 이 원본이고,
+  # ko 만 목차의 '끝내면 할 수 있는 것' 을 그대로 쓴다.
   description:
-    ko: Unit 10–11 · 높임말 · 명사 꾸미기
-    ja: 初中級。8課。
+    ko: 어른께 높임말로 말하고, 명사를 꾸며서 어떤 것인지·언제 것인지 콕 집어 말한다.
+    en: Speak politely to elders, and pin down which thing and from when by modifying nouns.
+    ja: 目上の人に敬語で話し、名詞を修飾して「どれか・いつのことか」を言い分ける。
 
   tutorGroups:
     allowRandom: []

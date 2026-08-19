@@ -8,6 +8,8 @@ spec:
 
   title:
     ko: 맛 평가
+    en: Describing the taste
+    ja: 味を伝える
   decks:
     lecture:  { entry: lecture/index.html }    # 수업용  → CLASS_LEMONBOARD_KEY
     prestudy: { entry: prestudy/index.html }   # 예습용  → PRESTUDY_LEMONBOARD_KEY

@@ -25,9 +25,13 @@ spec:
     en: Korean in context · Family & everyday · Intermediate
     ja: 場面別の韓国語 · 家族と日常 · 中級
 
+  # 학습자가 카탈로그에서 읽는 문장이다. 앱이 로케일로 고르므로 JP 마켓 코스는
+  # ja 가 화면에 뜬다 — 여기 세 언어는 tools/course-copy.json 이 원본이고,
+  # ko 만 목차의 '끝내면 할 수 있는 것' 을 그대로 쓴다.
   description:
     ko: 가족 사이의 잔소리·걱정·부탁·위로를 알아듣고, 손윗사람에게 받는 말과 손아랫사람에게 하는 말을 구분해 쓸 수 있다.
-    ja: 中級。10課。
+    en: Follow a family's nagging, worry, errands and comfort, and tell apart what elders say to you from what you say to juniors.
+    ja: 家族の小言・心配・頼み・慰めを聞き取り、目上から受ける言葉と目下にかける言葉を使い分けられる。
 
   tutorGroups:
     allowRandom: []

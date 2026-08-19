@@ -8,6 +8,8 @@ spec:
 
   title:
     ko: 자리 잡기
+    en: Getting a table
+    ja: 席を取る
   decks:
     lecture:  { entry: lecture/index.html }    # 수업용  → CLASS_LEMONBOARD_KEY
     prestudy: { entry: prestudy/index.html }   # 예습용  → PRESTUDY_LEMONBOARD_KEY

@@ -25,9 +25,13 @@ spec:
     en: Free talking · Things I like · Advanced
     ja: フリートーキング · 好きなもの · 上級
 
+  # 학습자가 카탈로그에서 읽는 문장이다. 앱이 로케일로 고르므로 JP 마켓 코스는
+  # ja 가 화면에 뜬다 — 여기 세 언어는 tools/course-copy.json 이 원본이고,
+  # ko 만 목차의 '끝내면 할 수 있는 것' 을 그대로 쓴다.
   description:
     ko: 좋아하는 대상과 이유를 구체적인 경험으로 설명한다.
-    ja: 上級。11課。
+    en: Explain what you like and why, through experiences specific enough to picture.
+    ja: 好きなものとその理由を、具体的な経験で説明する。
 
   tutorGroups:
     allowRandom: []

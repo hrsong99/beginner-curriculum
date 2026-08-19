@@ -8,6 +8,8 @@ spec:
 
   title:
     ko: 룸서비스 & 청소
+    en: Housekeeping and room service
+    ja: ルームサービスと清掃
   decks:
     lecture:  { entry: lecture/index.html }    # 수업용  → CLASS_LEMONBOARD_KEY
     prestudy: { entry: prestudy/index.html }   # 예습용  → PRESTUDY_LEMONBOARD_KEY

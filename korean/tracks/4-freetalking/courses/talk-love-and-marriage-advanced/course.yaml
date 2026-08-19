@@ -25,9 +25,13 @@ spec:
     en: Free talking · Love & marriage · Advanced
     ja: フリートーキング · 恋愛と結婚 · 上級
 
+  # 학습자가 카탈로그에서 읽는 문장이다. 앱이 로케일로 고르므로 JP 마켓 코스는
+  # ja 가 화면에 뜬다 — 여기 세 언어는 tools/course-copy.json 이 원본이고,
+  # ko 만 목차의 '끝내면 할 수 있는 것' 을 그대로 쓴다.
   description:
     ko: 민감도를 조절하며 연애와 결혼 경험·생각을 말한다.
-    ja: 上級。7課。
+    en: Talk about love and marriage — what you have lived and what you think — dialling the sensitivity as you go.
+    ja: 踏み込む深さを調節しながら、恋愛と結婚の経験や考えを話す。
 
   tutorGroups:
     allowRandom: []

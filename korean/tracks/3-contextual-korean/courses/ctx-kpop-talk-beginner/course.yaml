@@ -25,9 +25,13 @@ spec:
     en: Korean in context · K-pop talk · Beginner
     ja: 場面別の韓国語 · K-POPトーク · 初級
 
+  # 학습자가 카탈로그에서 읽는 문장이다. 앱이 로케일로 고르므로 JP 마켓 코스는
+  # ja 가 화면에 뜬다 — 여기 세 언어는 tools/course-copy.json 이 원본이고,
+  # ko 만 목차의 '끝내면 할 수 있는 것' 을 그대로 쓴다.
   description:
     ko: 최애와 그룹을 소개하고, 왜 좋아하는지 이유를 말하고, 상대에게 곡을 영업하고, 상대의 최애를 물어보며 존댓말로 팬 대화를 이어 갈 수 있다.
-    ja: 初級。10課。
+    en: Introduce your bias and their group, say why, sell a song, ask who theirs is, and keep a fan conversation going politely.
+    ja: 推しとグループを紹介し、好きな理由を語り、曲をすすめ、相手の推しをたずねながら、敬語でファントークを続けられる。
 
   tutorGroups:
     allowRandom: []

@@ -8,6 +8,8 @@ spec:
 
   title:
     ko: 분실 & 도움
+    en: Lost item help
+    ja: 紛失と助け
   decks:
     lecture:  { entry: lecture/index.html }    # 수업용  → CLASS_LEMONBOARD_KEY
     prestudy: { entry: prestudy/index.html }   # 예습용  → PRESTUDY_LEMONBOARD_KEY

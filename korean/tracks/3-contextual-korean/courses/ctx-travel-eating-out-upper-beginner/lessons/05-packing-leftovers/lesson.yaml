@@ -8,6 +8,8 @@ spec:
 
   title:
     ko: 남은 음식 포장
+    en: Packing leftovers
+    ja: 残った料理を持ち帰る
   decks:
     lecture:  { entry: lecture/index.html }    # 수업용  → CLASS_LEMONBOARD_KEY
     prestudy: { entry: prestudy/index.html }   # 예습용  → PRESTUDY_LEMONBOARD_KEY

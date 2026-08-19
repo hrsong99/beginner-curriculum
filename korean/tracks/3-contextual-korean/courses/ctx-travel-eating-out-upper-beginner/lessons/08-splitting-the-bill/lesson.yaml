@@ -8,6 +8,8 @@ spec:
 
   title:
     ko: 계산 방식
+    en: Splitting the bill
+    ja: 支払い方法
   decks:
     lecture:  { entry: lecture/index.html }    # 수업용  → CLASS_LEMONBOARD_KEY
     prestudy: { entry: prestudy/index.html }   # 예습용  → PRESTUDY_LEMONBOARD_KEY

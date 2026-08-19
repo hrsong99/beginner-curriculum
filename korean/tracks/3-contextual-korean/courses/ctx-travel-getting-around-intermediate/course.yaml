@@ -25,9 +25,13 @@ spec:
     en: Korean in context · Getting around · Intermediate
     ja: 場面別の韓国語 · 道と交通 · 中級
 
+  # 학습자가 카탈로그에서 읽는 문장이다. 앱이 로케일로 고르므로 JP 마켓 코스는
+  # ja 가 화면에 뜬다 — 여기 세 언어는 tools/course-copy.json 이 원본이고,
+  # ko 만 목차의 '끝내면 할 수 있는 것' 을 그대로 쓴다.
   description:
     ko: 길을 묻고, 지하철·버스·택시를 이용하고, 길을 잃었을 때 도움을 청할 수 있다. 안내 방송과 행인의 대답을 알아들을 수 있다.
-    ja: 中級。10課。
+    en: Ask the way, use the subway, buses and taxis, and get help when lost — and follow the announcements and the answers you get back.
+    ja: 道をたずね、地下鉄・バス・タクシーを使い、迷ったときに助けを求められる。車内放送や通行人の返事も聞き取れる。
 
   tutorGroups:
     allowRandom: []

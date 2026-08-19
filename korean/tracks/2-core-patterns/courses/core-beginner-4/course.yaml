@@ -25,9 +25,13 @@ spec:
     en: Core grammar patterns · Beginner · 4
     ja: コア文法パターン · 初級 · 4
 
+  # 학습자가 카탈로그에서 읽는 문장이다. 앱이 로케일로 고르므로 JP 마켓 코스는
+  # ja 가 화면에 뜬다 — 여기 세 언어는 tools/course-copy.json 이 원본이고,
+  # ko 만 목차의 '끝내면 할 수 있는 것' 을 그대로 쓴다.
   description:
-    ko: Unit 7–9 · 하고 싶은 것과 할 일 · 해도 돼요? · 반말
-    ja: 初級。15課。
+    ko: 하고 싶은 일과 할 일을 계획하고, 허락과 의무를 다루고, 반말로 바꿔 말한다.
+    en: Plan what you want and have to do, handle permission and obligation, and switch into casual speech.
+    ja: したいことと予定を組み立て、許可と義務を扱い、タメ口に切り替えて話す。
 
   tutorGroups:
     allowRandom: []

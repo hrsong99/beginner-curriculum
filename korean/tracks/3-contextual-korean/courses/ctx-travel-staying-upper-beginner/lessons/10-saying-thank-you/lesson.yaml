@@ -8,6 +8,8 @@ spec:
 
   title:
     ko: 감사 인사
+    en: Saying thank you
+    ja: お礼
   decks:
     lecture:  { entry: lecture/index.html }    # 수업용  → CLASS_LEMONBOARD_KEY
     prestudy: { entry: prestudy/index.html }   # 예습용  → PRESTUDY_LEMONBOARD_KEY

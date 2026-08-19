@@ -8,6 +8,8 @@ spec:
 
   title:
     ko: 객실 문제
+    en: Room problems
+    ja: 客室のトラブル
   decks:
     lecture:  { entry: lecture/index.html }    # 수업용  → CLASS_LEMONBOARD_KEY
     prestudy: { entry: prestudy/index.html }   # 예습용  → PRESTUDY_LEMONBOARD_KEY

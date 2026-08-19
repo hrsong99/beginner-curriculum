@@ -8,6 +8,8 @@ spec:
 
   title:
     ko: 맞춤 주문
+    en: Customizing an order
+    ja: 注文を調整する
   decks:
     lecture:  { entry: lecture/index.html }    # 수업용  → CLASS_LEMONBOARD_KEY
     prestudy: { entry: prestudy/index.html }   # 예습용  → PRESTUDY_LEMONBOARD_KEY

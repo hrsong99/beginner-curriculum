@@ -25,9 +25,13 @@ spec:
     en: Korean in context · Crush & confession · Intermediate
     ja: 場面別の韓国語 · ときめきと告白 · 中級
 
+  # 학습자가 카탈로그에서 읽는 문장이다. 앱이 로케일로 고르므로 JP 마켓 코스는
+  # ja 가 화면에 뜬다 — 여기 세 언어는 tools/course-copy.json 이 원본이고,
+  # ko 만 목차의 '끝내면 할 수 있는 것' 을 그대로 쓴다.
   description:
     ko: 호감을 돌려서 표현하고, 상대의 마음을 떠보고, 고백하고, 관계를 확정하는 말을 반말로 할 수 있다.
-    ja: 中級。10課。
+    en: Hint at interest, read the other person, confess, and settle what you are — all in casual speech.
+    ja: 好意を遠回しに伝え、相手の気持ちを探り、告白し、関係を決める言葉をタメ口で言える。
 
   tutorGroups:
     allowRandom: []

@@ -8,6 +8,8 @@ spec:
 
   title:
     ko: 리필 & 추가
+    en: Refills and extras
+    ja: おかわりと追加
   decks:
     lecture:  { entry: lecture/index.html }    # 수업용  → CLASS_LEMONBOARD_KEY
     prestudy: { entry: prestudy/index.html }   # 예습용  → PRESTUDY_LEMONBOARD_KEY

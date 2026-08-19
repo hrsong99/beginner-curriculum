@@ -8,7 +8,7 @@ spec:
 
   title:
     ko: 절대 이해 못 하는 음식 조합
-    en: Food combinations I can&#x27;t understand
+    en: Food combinations I can't understand
     ja: 理解できない食べ合わせ
   decks:
     lecture:  { entry: lecture/index.html }    # 수업용  → CLASS_LEMONBOARD_KEY

@@ -25,9 +25,13 @@ spec:
     en: Core grammar patterns · Intermediate · 2
     ja: コア文法パターン · 中級 · 2
 
+  # 학습자가 카탈로그에서 읽는 문장이다. 앱이 로케일로 고르므로 JP 마켓 코스는
+  # ja 가 화면에 뜬다 — 여기 세 언어는 tools/course-copy.json 이 원본이고,
+  # ko 만 목차의 '끝내면 할 수 있는 것' 을 그대로 쓴다.
   description:
-    ko: Unit 16–17 · 이유와 핑계 · 목적과 조건
-    ja: 中級。9課。
+    ko: 이유와 핑계를 대고, 목적과 조건을 걸어 무엇이 있어야 되는지 설명한다.
+    en: Give reasons and excuses, and set out a purpose and the conditions it needs.
+    ja: 理由や言い訳を述べ、目的と条件を立てて何が必要かを説明する。
 
   tutorGroups:
     allowRandom: []

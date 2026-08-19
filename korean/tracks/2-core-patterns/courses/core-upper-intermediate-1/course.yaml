@@ -18,16 +18,20 @@ spec:
   lessonTime: 25
   # 검수 전까지는 false. true 로 바꾸는 순간 apply 가 학습자에게 노출시킨다.
   enabled: false
-  difficulty: INTERMEDIATE
+  difficulty: UPPER_INTERMEDIATE
 
   title:
     ko: 핵심 문법 패턴 · 중고급 · 1
     en: Core grammar patterns · Upper intermediate · 1
     ja: コア文法パターン · 中上級 · 1
 
+  # 학습자가 카탈로그에서 읽는 문장이다. 앱이 로케일로 고르므로 JP 마켓 코스는
+  # ja 가 화면에 뜬다 — 여기 세 언어는 tools/course-copy.json 이 원본이고,
+  # ko 만 목차의 '끝내면 할 수 있는 것' 을 그대로 쓴다.
   description:
-    ko: Unit 19–20 · 추측과 가정 · 대조와 양보
-    ja: 中上級。12課。
+    ko: 근거를 대어 짐작하고, 가상의 상황을 가정하고, 기대와 어긋난 결과를 짚는다.
+    en: Infer from evidence, suppose a situation, and point out when it turns out otherwise.
+    ja: 根拠を挙げて推測し、仮の状況を立て、期待とずれた結果を指摘する。
 
   tutorGroups:
     allowRandom: []

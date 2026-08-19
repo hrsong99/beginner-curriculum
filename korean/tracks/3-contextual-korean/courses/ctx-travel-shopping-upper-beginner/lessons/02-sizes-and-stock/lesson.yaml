@@ -7,7 +7,7 @@ spec:
   week: 2                      # → CLASS_WEEK. 코스 안에서 1..N 연속이어야 한다.
 
   title:
-    ko: 사이즈 &amp; 재고
+    ko: 사이즈 & 재고
     en: Sizes and stock
     ja: サイズと在庫
   decks:

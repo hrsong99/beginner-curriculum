@@ -25,9 +25,13 @@ spec:
     en: Core grammar patterns · Beginner · 1
     ja: コア文法パターン · 初級 · 1
 
+  # 학습자가 카탈로그에서 읽는 문장이다. 앱이 로케일로 고르므로 JP 마켓 코스는
+  # ja 가 화면에 뜬다 — 여기 세 언어는 tools/course-copy.json 이 원본이고,
+  # ko 만 목차의 '끝내면 할 수 있는 것' 을 그대로 쓴다.
   description:
-    ko: Unit 1–2 · 이건 뭐예요? · 저는 매일 운동해요
-    ja: 初級。10課。
+    ko: 이름을 주고받고, 눈앞의 사물과 사람을 묻고, 하루 일과와 안 하는 일까지 말한다.
+    en: Exchange names, ask about the things and people in front of you, and describe your day.
+    ja: 名前をやりとりし、目の前のものや人をたずね、一日の過ごし方と「しないこと」まで話す。
 
   tutorGroups:
     allowRandom: []

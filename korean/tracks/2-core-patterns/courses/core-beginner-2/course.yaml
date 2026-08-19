@@ -25,9 +25,13 @@ spec:
     en: Core grammar patterns · Beginner · 2
     ja: コア文法パターン · 初級 · 2
 
+  # 학습자가 카탈로그에서 읽는 문장이다. 앱이 로케일로 고르므로 JP 마켓 코스는
+  # ja 가 화면에 뜬다 — 여기 세 언어는 tools/course-copy.json 이 원본이고,
+  # ko 만 목차의 '끝내면 할 수 있는 것' 을 그대로 쓴다.
   description:
-    ko: Unit 3–4 · 얼마예요? · 있어요?
-    ja: 初級。9課。
+    ko: 가격·개수·시간·날짜를 묻고, 무엇이 어디에 있는지 확인하고, 필요한 것을 부탁한다.
+    en: Ask prices, counts, times and dates, find out where something is, and make a request.
+    ja: 値段・個数・時間・日付をたずね、何がどこにあるかを確かめ、必要なものを頼む。
 
   tutorGroups:
     allowRandom: []

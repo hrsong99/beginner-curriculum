@@ -25,9 +25,13 @@ spec:
     en: Pronunciation repair · Beginner
     ja: 発音の矯正 · 初級
 
+  # 학습자가 카탈로그에서 읽는 문장이다. 앱이 로케일로 고르므로 JP 마켓 코스는
+  # ja 가 화면에 뜬다 — 여기 세 언어는 tools/course-copy.json 이 원본이고,
+  # ko 만 목차의 '끝내면 할 수 있는 것' 을 그대로 쓴다.
   description:
     ko: 일본어 습관이 무너뜨리는 대립만 골라 듣기부터 고친다.
-    ja: 初級。10課。
+    en: Take only the contrasts a Japanese ear collapses, and repair them starting from listening.
+    ja: 日本語の癖で崩れる対立だけを選び、聞き取りから直す。
 
   tutorGroups:
     allowRandom: []

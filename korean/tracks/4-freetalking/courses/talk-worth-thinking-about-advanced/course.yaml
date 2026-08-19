@@ -25,9 +25,13 @@ spec:
     en: Free talking · Worth thinking about · Advanced
     ja: フリートーキング · 考えてみたいこと · 上級
 
+  # 학습자가 카탈로그에서 읽는 문장이다. 앱이 로케일로 고르므로 JP 마켓 코스는
+  # ja 가 화면에 뜬다 — 여기 세 언어는 tools/course-copy.json 이 원본이고,
+  # ko 만 목차의 '끝내면 할 수 있는 것' 을 그대로 쓴다.
   description:
     ko: 일상에서 답할 수 있는 근거로 의견을 말하고 반대 입장까지 검토한다.
-    ja: 上級。6課。
+    en: Argue from evidence you can reach from ordinary life, and weigh the other side too.
+    ja: 日常から答えられる根拠で意見を述べ、反対の立場まで検討する。
 
   tutorGroups:
     allowRandom: []

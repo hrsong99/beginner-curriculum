@@ -25,9 +25,13 @@ spec:
     en: Korean in context · Chatting in banmal · Intermediate
     ja: 場面別の韓国語 · タメ口でおしゃべり · 中級
 
+  # 학습자가 카탈로그에서 읽는 문장이다. 앱이 로케일로 고르므로 JP 마켓 코스는
+  # ja 가 화면에 뜬다 — 여기 세 언어는 tools/course-copy.json 이 원본이고,
+  # ko 만 목차의 '끝내면 할 수 있는 것' 을 그대로 쓴다.
   description:
     ko: 친구의 말에 맞장구를 치고, 놀라고, 전해 듣고, 부드럽게 반박하고, 놀리고, 위로하며 대화를 끊기지 않게 이어 갈 수 있다.
-    ja: 中級。10課。
+    en: Backchannel, react with surprise, pass on what you heard, push back gently, tease and console — and keep the conversation from stalling.
+    ja: 友達の話に相づちを打ち、驚き、聞いた話を伝え、やわらかく反論し、からかい、慰めながら、会話を途切れさせずに続けられる。
 
   tutorGroups:
     allowRandom: []
